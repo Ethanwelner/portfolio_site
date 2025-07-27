@@ -1,0 +1,648 @@
+/* ========================================
+   MEDIA QUERIES - NESTED VERSION
+   ======================================== */
+
+/* ========================================
+   LARGE SCREENS (1800px+)
+   ======================================== */
+
+@media (min-width: 1800px) {
+    .freelance-squares {
+        width: calc(25% - 40px);
+    }
+}
+
+@media (min-width: 2200px) {
+    .mobile-mock {
+        height: 500px;
+    }
+    
+    .tab-mock {
+        height: 500px;
+    }
+}
+
+/* ========================================
+   DESKTOP (992px - 1200px)
+   ======================================== */
+
+@media only screen and (max-width: 992px) {
+    /* Container */
+    .container {
+        max-width: 90vw;
+    }
+    
+    /* Typography */
+    .hero-title {
+        font-size: 3.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .sub-title {
+        font-size: 2rem;
+    }
+    
+    /* Navigation */
+    .logo-bug, .section-logo-bug {
+        top: 5vw;
+        left: 5vw;
+    }
+    
+    .about-social-container, .section-about-social-container {
+        top: 5vw;
+        right: 5vw;
+    }
+    
+    .scroll-links, .section-scroll-links {
+        left: 5vw;
+    }
+    
+    /* Mockups */
+    .tab-mock {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+    
+    .mobile-mock {
+        height: auto;
+        width: 100%;
+        border-radius: 20px;
+        margin-right: 0px;
+    }
+    
+    /* Portfolio Gallery */
+    .portfolio-gallery-container {
+        margin-left: 0;
+    }
+    
+    .portfolio-gallery {
+        width: calc(29vw);
+        height: auto;
+        margin: 0 2vw;
+        border-radius: 20px;
+    }
+    
+    /* UX Splash */
+    .shadow-splash {
+        width: 186px;
+        height: 383px;
+        left: 0;
+    }
+    
+    .ux-splash {
+        width: 190px;
+        margin-left: -2px;
+    }
+    
+    .splash-proto {
+        width: 190px;
+        height: 350px;
+        position: absolute;
+        padding: 0px 15px 0px 7px;
+        object-fit: cover;
+        overflow: hidden;
+        margin-left: 5px;
+    }
+    
+    /* Proto Scroll Animation */
+    @keyframes proto-scroll {
+        0%   {top: 13px;}
+        10%   {top: 13px;}
+        40%  {top: -113px;}
+        45%  {top: -113px;}
+        70%  {top: -233px;}
+        80%  {top: -233px;}
+        100% {top: 13px;}
+    }
+    
+    /* Thumb Scroll */
+    .thumb-scroll {
+        height: 25px;
+        width: 25px;
+    }
+    
+    @keyframes thumb-scroll {
+        0%   {top: 170px; opacity: 0;}
+        9%   {opacity: 0;}
+        10%   {top: 170px; opacity: .5;}
+        40%  {top: 20px; opacity: .5;}
+        42% {top: 20px; opacity: 0;}
+        43% {opacity: 0;}
+        45%  {top: 170px; opacity: .5;}
+        70%  {top: 20px; opacity: .5;}
+        72%  {opacity: 0;}
+        77%  {opacity: 0;}
+        80% {top: 20px; opacity: .5;}
+        97% {opacity: .5;}
+        100% {top: 215px; opacity: 0;}
+    }
+    
+    /* Icons & Images */
+    .forecaster-logo, .terminal-svg, .magnifier {
+        width: calc(100% - 40px);
+        height: auto;
+    }
+    
+    .headshot {
+        height: 28vw;
+        width: 28vw;
+    }
+    
+    /* Surface Proto */
+    .surface-proto {
+        width: 370px;
+        height: 250px;
+        position: absolute;
+        padding: 0 40px 0 39px;
+        
+        img {
+            top: 5px;
+        }
+    }
+    
+    .surface-splash {
+        width: 370px;
+    }
+    
+    .sublime-blink {
+        margin-right: 290px;
+    }
+    
+    @keyframes sublime-scroll {
+        0%   {top: 0px;}
+        15%   {top: 0px;}
+        30%  {top: -50px;}
+        45%  {top: -50px;}
+        60%  {top: -100px;}
+        85%  {top: -100px;}
+        100% {top: 0px;}
+    }
+    
+    /* Forecaster */
+    .forecaster-squares {
+        height: 33.333vw;
+    }
+    
+    .forecaster-gallery {
+        width: 100%;
+        height: 33.333vw;
+    }
+    
+    /* Freelance */
+    .freelance-squares {
+        width: calc(33.333333% - 20px);
+        margin: 10px;
+    }
+    
+    .force-size {
+        width: auto;
+    }
+}
+
+/* ========================================
+   TABLET (768px - 991px)
+   ======================================== */
+
+@media only screen and (max-width: 767px) {
+    /* Flex Utilities */
+    .flex-1, .flex-2, .flex-3, .flex-4, .flex-5, .flex-6, .flex-7, .flex-8, .flex-9, .flex-10, .flex-11, .flex-12, .flex-13, .flex-14, .flex-15, .flex-16, .flex-17, .flex-18 {
+        flex: 1 100%;
+    }
+    
+    /* Container */
+    .container {
+        max-width: calc(100% - 40px);
+    }
+    
+    /* Navigation */
+    .logo-bug, .section-logo-bug {
+        top: 20px;
+        left: 20px;
+    }
+    
+    .about-social-container, .section-about-social-container {
+        top: 20px;
+        right: 20px;
+    }
+    
+    .about-me, .section-about-me, .social-link, .section-social-link {
+        margin-left: 15px;
+    }
+    
+    .scroll-links, .section-scroll-links {
+        top: 109px;
+        left: 20px;
+    }
+    
+    .section-scroll-links {
+        display: none;
+    }
+    
+    .scroll-links, .section-scroll-links, .about-me, .section-about-me {
+        font-size: 1.5rem;
+    }
+    
+    /* Buttons */
+    .content-btn {
+        width: auto;
+        height: auto;
+        min-width: initial;
+        min-height: initial;
+        padding: 7px 20px;
+        border-radius: 15px;
+    }
+    
+    /* Typography */
+    .emphasis {
+        font-size: 13vw;
+    }
+    
+    .hero-title {
+        font-size: 15vw;
+    }
+    
+    .section-title {
+        font-size: 7.5vw;
+    }
+    
+    .sub-title {
+        font-size: 5vw;
+    }
+    
+    .copy-title {
+        font-size: 4vw;
+    }
+    
+    .copy {
+        font-size: 3.6vw;
+    }
+    
+    .small-copy {
+        font-size: 3vw;
+    }
+    
+    /* Down Arrow */
+    .down-arrow {
+        margin-top: 20px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    /* UX Splash */
+    .ux-splash {
+        width: 103%;
+        height: auto;
+        margin-left: -4px;
+        aspect-ratio: 129 / 259;
+    }
+    
+    .shadow-splash {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin-left: 0;
+        margin-top: 20px;
+        aspect-ratio: 123 / 247;
+    }
+    
+    .splash-proto {
+        width: 100%;
+        height: auto;
+        padding: 0px 8px;
+        margin-left: -3px;
+        margin-top: 0px;
+        aspect-ratio: 128 / 228;
+    }
+    
+    /* Proto Animations */
+    @keyframes proto-scroll {
+        0%   {top: 13px;}
+        10%   {top: 13px;}
+        40%  {top: -135px;}
+        45%  {top: -135px;}
+        70%  {top: -230px;}
+        80%  {top: -230px;}
+        100% {top: 13px;}
+    }
+    
+    .thumb-scroll {
+        height: 25px;
+        width: 25px;
+    }
+    
+    @keyframes thumb-scroll {
+        0%   {top: 150px; opacity: 0;}
+        9%   {opacity: 0;}
+        10%   {top: 150px; opacity: .5;}
+        40%  {top: 20px; opacity: .5;}
+        42% {top: 20px; opacity: 0;}
+        43% {opacity: 0;}
+        45%  {top: 150px; opacity: .5;}
+        70%  {top: 20px; opacity: .5;}
+        72%  {opacity: 0;}
+        77%  {opacity: 0;}
+        80% {top: 20px; opacity: .5;}
+        97% {opacity: .5;}
+        100% {top: 175px; opacity: 0;}
+    }
+    
+    /* Mobile Proto */
+    .mobile-proto-container {
+        display: inline-flex !important;
+        position: relative;
+        width: calc(100% - 40px);
+        padding: 0px;
+    }
+    
+    .splash-proto-container {
+        display: none !important;
+    }
+    
+    /* Icons */
+    .forecaster-logo, .terminal-svg, .mindmap-anim {
+        width: 33vw;
+        margin-top: 20px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 10px 30px;
+        height: auto;
+    }
+    
+    .ux-iso {
+        margin-top: 40px;
+    }
+    
+    /* Mockups */
+    .tab-mock {
+        margin-right: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    /* Portfolio Gallery */
+    .portfolio-gallery-container {
+        margin-left: 0px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .portfolio-gallery {
+        width: auto;
+        height: 60vh;
+        margin: 0;
+        border-radius: 16px;
+        display: inline-block;
+        float: none;
+    }
+    
+    /* Browser Mock */
+    .browser-mock-container {
+        height: 70vw;
+        padding: 0;
+        margin-top: 40px;
+    }
+    
+    .browser-mock.bm-1 {
+        margin-top: 0;
+        margin-left: -1vw;
+    }
+    
+    .browser-mock.bm-2 {
+        margin-left: 5vw;
+        margin-top: 6vw;
+    }
+    
+    .browser-mock.bm-3 {
+        margin-left: 11vw;
+        margin-top: 12vw;
+    }
+    
+    /* Surface Proto */
+    .surface-proto {
+        width: 100%;
+        height: 56vw;
+        position: absolute;
+        padding: 0 8vw 0 8.5vw;
+        object-fit: cover;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            top: 1vw;
+        }
+    }
+    
+    .surface-splash {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
+    
+    @keyframes sublime-scroll {
+        0%   {top: 0px;}
+        15%   {top: 0px;}
+        30%  {top: -50px;}
+        45%  {top: -50px;}
+        60%  {top: -100px;}
+        85%  {top: -100px;}
+        100% {top: 0px;}
+    }
+    
+    /* Forecaster */
+    .forecaster-scroller-container {
+        height: 60vh;
+        margin-bottom: 100px;
+    }
+    
+    .forcaster-gallery-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0px;
+    }
+    
+    .forecaster-squares {
+        height: auto;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    
+    /* Freelance */
+    .flip-splash {
+        padding: 0 10%;
+    }
+    
+    .design-splash {
+        margin-top: 60px;
+    }
+    
+    .freelance-double {
+        width: auto;
+        height: auto;
+        align-self: center;
+        padding: 0px 10%;
+        max-width: 100%;
+    }
+    
+    .freelance-squares {
+        width: 50%;
+        margin: 0;
+    }
+    
+    /* Resume */
+    .resume-svg {
+        width: 10vw;
+        height: auto;
+    }
+    
+    /* Headshot */
+    .headshot {
+        height: 33vw;
+        width: 33vw;
+        position: absolute;
+        margin-top: -17vw;
+        margin-left: 5vw;
+    }
+    
+    /* Close X */
+    .close-x {
+        top: 20px;
+        right: 20px;
+    }
+    
+    /* Gallery Containers */
+    .meazure-gallery-container {
+        height: auto;
+        padding: 20px 20px;
+        
+        .meazure-gallery {
+            row-gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .m-g-laptop {
+            width: 100%;
+        }
+        
+        .m-g-mobile-container {
+            column-gap: 20px;
+        }
+        
+        .m-g-mobile {
+            width: calc(50% - 10px);
+        }
+    }
+    
+    .examity-gallery-container {
+        padding: 20px 20px;
+        
+        .examity-gallery {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 20px;
+        }
+    }
+    
+    /* Gallery Backgrounds */
+    .supertheme-gallery {
+        width: 100%;
+        background-size: 100% auto;
+        background-position: top center;
+    }
+    
+    .mindmap-gallery {
+        width: 100%;
+        background-size: 150vh auto;
+        background-position: top center;
+    }
+    
+    .force-size {
+        width: auto;
+    }
+    
+    /* Utilities */
+    .mobile-order-first {
+        order: -1;
+    }
+    
+    .preparedness-gallery-container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        column-gap: 0px;
+        padding: 0 20px;
+        
+        .preparedness-gallery {
+            gap: 40px;
+        }
+        
+        .ux-iso {
+            margin-top: 0;
+        }
+    }
+    
+    .email-gallery-container {
+        row-gap: 20px;
+        
+        .email-gallery {
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+    
+    .mobile-text-left {
+        text-align: left !important;
+    }
+    
+    .unlimited {
+        padding: 0 0px;
+    }
+    
+    /* Animation Controls */
+    .index-content-anim, .index-title-anim, .proto-content-anim, .proto-image-anim, .freelance-scroller-text, .freelance-scroller-img {
+        animation-name: none;
+    }
+    
+    .forecaster-scroller-container {
+        height: 60vh;
+        margin-bottom: 100px;
+        width: 100%;
+    }
+    
+    .forecaster-scroller {
+        animation-name: none;
+        width: 100%;
+    }
+}
+
+/* ========================================
+   MOBILE (480px and below)
+   ======================================== */
+
+@media only screen and (max-width: 480px) {
+    /* Add specific mobile styles here */
+}
+
+/* ========================================
+   SMALL MOBILE (320px and below)
+   ======================================== */
+
+@media only screen and (max-width: 320px) {
+    /* Add specific small mobile styles here */
+} 
