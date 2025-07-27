@@ -57,7 +57,7 @@
 		  			<div class="hero-statement pre-slide-in">
 		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>.<br/>
-						I'm a Designer <span class="red-text highlight-text">+</span> Front End Developer.
+						I'm a Designer <span class="red-text highlight-text">+</span> Front End Developer...
 
 						<a href="#ui-section">
 							<svg  width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve" class="down-arrow">
