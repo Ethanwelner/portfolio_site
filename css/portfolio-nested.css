@@ -336,11 +336,11 @@ a {
     transition: background-color .5s, margin-top 750ms !important;
     
     /* Background-specific styling */
-    .red-bg &, .blue-bg & {
+    .red-bg &, .blue-bg &, .black-bg & {
         background-color: var(--portfolio-white);
     }
     
-    .yellow-bg &, .green-bg & {
+    .yellow-bg &, .green-bg &, .white-bg & {
         background-color: var(--portfolio-black);
     }
     
@@ -359,14 +359,18 @@ a {
     .blue-bg & {
         color: var(--portfolio-blue);
     }
+
+    .black-bg & {
+        color: var(--portfolio-black);
+    }
 }
 
 /* Section Colors */
-.red-section, .blue-section {
+.red-section, .blue-section, .black-section {
     color: var(--portfolio-white) !important;
 }
 
-.yellow-section, .green-section {
+.yellow-section, .green-section, .white-section {
     color: var(--portfolio-black);
 }
 
@@ -406,6 +410,10 @@ a {
     
     .green-section & svg {
         fill: var(--portfolio-green);
+    }
+
+    .black-bg & svg {
+        fill: var(--portfolio-black);
     }
 }
 
@@ -1336,12 +1344,14 @@ a:hover svg.resume-svg {
 .yellow-bg { background-color: var(--portfolio-yellow); }
 .blue-bg { background-color: var(--portfolio-blue); }
 .green-bg { background-color: var(--portfolio-green); }
+.black-bg { background-color: var(--portfolio-black); }
 .white-bg { background-color: white; }
 .dark-bg { background-color: #595C5C; }
 .transparent-bg { background-color: transparent; }
 
 /* Text Colors */
 .red-text { color: var(--portfolio-red); }
+.black-text { color: var(--portfolio-black); }
 .yellow-text { color: var(--portfolio-yellow); }
 .blue-text { color: var(--portfolio-blue); }
 .green-text { color: var(--portfolio-green); }
