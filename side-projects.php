@@ -53,22 +53,68 @@
 
                     <div class="d-flex flex-wrap flex-xs-nowrap">
                         <div class="flex-2 d-none d-xl-inline-flex"></div>
-                        <div class="d-inline-flex align-items-center flex-7">
+                        <div class="d-inline-flex align-items-center flex-8">
                             <div>
-                                <h3 class="sub-title mb-3">Meazure Learnings Responsivity and Accessibility Redesign</h3>
-                                <div class="copy stinger red mb-3">A Design and Front End Overhaul To Bring Responsivity and Accessibility</div>
+                                <h3 class="sub-title mb-3">Building the keywording auto-bold</h3>
+                                <div class="copy stinger black mb-3">placeholder subtitle</div>
                                 <p class="copy">
-                                    Meazure Learning is an end-to-end online proctoring and testing platform provider that helps academic students and career professionals take exams and assessments from their homes. With today's heavy emphasis on accessibility and interoperability, the front end of the platform needed to become responsive and accessible. In addition, the platform needed a significant overhaul to many of its functions and components to declutter and provide an intuitive interface for a wide variety of users.
+                                    <h3>Traits</h3>
+                                    Traits, alongside a character’s Stats and Equipment are the defining characteristic that makes a character who and what they are. The Trait system is flexible and functions as a catchall category of things a character knows, things a character can do, things a character belongs to, and relationships the character may have with others. Traits are named and self-contained characteristics categorized by what the Trait is and how it interacts with characters and the game’s systems. A Trait will typically either be part of a structured category that defines how the Trait is used, or it will contain a description that describes how the Trait manifests itself.
                                     <br><br>
-                                    This was no small task; the platform had existed for over a decade as a continuously iterated-upon product with legacy requirements and quite a few skeletons in its closet. To that end, we embarked on a lengthy journey to assess user pain points, scope the full need for accessibility (full WCAG 2.2 compliance), and fulfill users' needs regardless of the device they had access to. Along the way we rebased and refactored the front end of the platform, adopted a new design standard, and implemented a newly improved component library.
+                                    Traits are almost always additive, conveying some additional capability or capacity that a character has, though a rare few can convey negative attributes or restrictions. Trait effects are wide-ranging, from bonuses to certain skill checks to combat buffs to new abilities. They can describe a character's relationships to a society, such as memberships in exclusive organizations or even a wanted status for a criminal on the run. Traits can be temporary conditions, such as describing the ramifications of a character's broken leg. Because Traits are so varied, they will typically be organized on a character’s sheet by their theme or by how they are used.
                                     <br><br>
-                                    By the end of the research, design, development, and testing process, the platform was WCAG certified, wholly responsive, and rebranded to fit within the modern company identity (it performed better too!).
+                                    Characters start with a series of Traits based on their background packages. A character’s Species, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there a character gains additional feats through accruing experience and leveling up or through in-game circumstances.
+                                    <br><br>
+                                    There are three primary ways permanent Traits are gained:
+                                    <br><br>
+                                    <ul>
+                                        <li>
+                                            They are granted by a background package when the character is created.
+                                        </li>
+                                        <li>
+                                            They are granted automatically every time a character levels up.
+                                        </li>
+                                        <li>
+                                            They are gained through in-game actions or occurrences.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    Temporary Traits can be granted through equipment or can be based on temporary circumstances, such as an injury sustained or short-term fame gained from a notorious act. Temporary Traits should have the time or circumstance of their ending in their description.
+                                    <br><br>
+                                    <ul>
+                                        <li>Traits are self-contained pieces of information assigned to a character or object with specific requirements and effects.</li>
+                                        <li>Traits will typically list their name, category, type, and effect in a single place of reference. Traits can be listed by their name on character sheets and in descriptions, with the Traits effects referenced only when needed.</li>
+                                        <li>Universal Traits or background Traits are given at every level, alternating between Universal (odd-numbered levels) or background (even-numbered levels).</li>
+                                        <li>If, when a character levels, they do not wish to gain a new Trait they can "bank" that Trait, until an in-game RP circumstance presents them with the opportunity to gain a Trait that they want. This is a good way for a player to gain Conveyed Traits without it feeling forced.</li>
+                                        <li>Backgrounds can give additional Traits, and typically provide several when adopted that provide a baseline of Traits that inform a character's background and circumstances.</li>
+                                        <li>Traits can have an outer ring skill level requirement.</li>
+                                        <li>Traits can be gained outside of leveling and can be lost.</li>
+                                        <li>Traits can be temporary.</li>
+                                        <li>Traits always have a category, like Knowledge or Condition, that determines how the Trait is used in the game.</li>
+                                        <li>Traits can have a type like (Supernatural), (Injury), or (Cybernetic). These will typically be used in concert with in-game effects that target specific types of Traits, such as a doctor healing Injury Traits. These types have no effect on their own.</li>
+                                        <li>Traits that would require training can only be gained if the character has received training relevant to that Trait or has been performing a related action for long enough. This is at DM discretion.</li>
+                                        <li>Some Traits will require a character to already possess a prerequisite Trait in order to be gained (Such as a Pilot Trait being a prerequisite for the Expert Pilot Trait).</li>
+                                        <li>Some Traits have specific, listed, role playing requirements.</li>
+                                        <li>Unless it is a Ranked Trait then a Traits effect does not stack. Multiple instances of the same Trait will only have the effect of a single instance of that Trait.</li>
+                                    </ul>
+                                    <br>
+                                    <h3>Trait Ranks</h3>
+                                    Some Traits, such as all Knowledges, can be Ranked up. These are different from Traits with successive requirements, such as Marksman being a requisite for Master Marksman. Ranked Traits do not change when Ranked Up, but provide a multiple to their bonuses equal to their rank level. As an example, Pilot: Small Boat(3) has been ranked up 3 times and provides a Roll Modifier to a piloting skill check of +30, representing the Traits bonus of 10 multiplied by the three times it has been ranked up.
+                                    <br><br>
+                                    A Trait can only be Ranked up beyond Rank (1) if the character has each required Stat for that Trait greater than or equal to 3 times the new Rank level. As an example, a character wishing to Rank Pilot: Small Boat to Rank 3 would need at least a Grace and Memory stats of 9.
+                                    <br><br>
+                                    <h3>Universal And background Traits</h3>
+                                    When a character is selecting Traits while leveling up they will pick either Universal or background Traits depending on their level. Unless a Trait is specified as background, then it is assumed to be Universal. background Traits are typically skills, areas of knowledge, or abilities that are related to a character’s Past or identity. A character selects background Traits from a list generated by their background package. Some background Traits will have RP requirements; these will be listed in that Traits requirements. As an example, a human can't just grow longer teeth, but an aged Orcs fangs can continue to grow as their power or prestige advances, conferring social benefits to them. This would be represented by the Longfanged Trait, and in its description it will describe bonuses to social situations between Orcs.
+                                    <br><br>
+                                    Many Traits in the list generated by a character's background package are Universal Traits that are thematically related to that background package. These give a character an opportunity to take or advance these Traits rapidly, especially if they are Ranked Traits. A character with a Profession of pilot will be able to take or Rank up pilot-related Traits at double the speed of a character that does not have those Traits in their background list.
+                                    <br><br>
+                                    <h3>Starter-only Traits</h3>
+                                    These are background Traits that can only be taken during character creation, representing some unique skill, nest egg, or heirloom the character possesses that they gained at some point during their lives. Many starter Traits will have specific requirements, such as the Pirate Scion Profession being required for the Starter Trait Inherited ship.
+                                    <br><br>
+                                    <h3>Conveyed Traits</h3>
+                                    These are Traits that can not be taken when a character levels up unless the DM allows it. These will often represent tangible improvements to a character that would be difficult to justify without a relevant roleplaying rationale. As an example, the Eagle Eye Trait implies a tangible and significant improvement to a character's long-distance vision. This could come about as a result of mystical training, mutation, a latent ability of a Species or Origin, or some other rationale. Conveyed Traits will often not have a minimum stat requirement.
                                 </p>
                             </div>
-                        </div>
-                        <div class="d-inline-flex align-items-center flex-1"></div>
-                        <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-                            <img class="ux-iso shadow-diffuse" src="img/respon_1.jpg">
                         </div>
                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                     </div>
