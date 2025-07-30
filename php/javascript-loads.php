@@ -44,3 +44,87 @@
 
 
 </script>
+
+
+
+<script>
+        // Function to automatically bold specific keywords
+        function autoBoldKeywords() {
+            // Array of words to be bolded (you can add more words here)
+            const keywordsToBold = [
+                // Add your keywords here
+                'background package', 'background packages', 'Background Package', 'Background Packages',
+                'background trait', 'background traits', 'Background Trait', 'Background Traits',
+				'universal trait', 'universal traits', 'Universal Trait', 'Universal Traits',
+				'equipment package', 'equipment packages', 'Equipment Package', 'Equipment Packages',
+				'temporary condition', 'temporary conditions', 'Temporary Condition', 'Temporary Conditions',
+				'ranked trait', 'ranked traits', 'Ranked Trait', 'Ranked Traits',
+				'request advantage', 'Request Advantage',
+				'requesting advantage', 'Requesting Advantage',
+				'requesting competence', 'Requesting Competence',
+				'request competence', 'Request Competence',
+				'inferred competence', 'Inferred Competence',
+                'character', 'characters', 'Character', 'Characters',
+                'trait', 'traits', 'Trait', 'Traits',
+                'advantage', 'advantages', 'Advantage', 'Advantages',
+                'competence', 'competences', 'Competence', 'Competences',
+                'dm', 'DM', 'Dm', 'Dms',
+                'skill', 'skills', 'Skill', 'Skills',
+                'roll', 'rolls', 'Roll', 'Rolls',
+                'ability', 'abilities', 'Ability', 'Abilities',
+                'stat', 'stats', 'Stat', 'Stats',
+				'species', 'species', 'Species', 'Species',
+				'origin', 'origins', 'Origin', 'Origins',
+				'profession', 'professions', 'Profession', 'Professions',
+				'past', 'Past', 'pasts', 'Pasts',
+				'equipment', 'Equipment', 'equipments', 'Equipments',
+				'power', 'Power',
+				'temporary', 'Temporary',
+				'conveyed', 'conveyed', 'Conveyed', 'Conveyed',
+				'knowledge', 'knowledge', 'Knowledge', 'Knowledge',
+				'condition', 'conditions', 'Condition', 'Conditions',
+				'knowledge', 'knowledge', 'Knowledge', 'Knowledge',
+				'ranked', 'ranked', 'Ranked', 'Ranked',
+                'background', 'backgrounds', 'Background', 'Backgrounds',
+            ];
+            
+            // Get all text content in the page
+            const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+            
+            const textNodes = [];
+            let node;
+            while (node = walker.nextNode()) {
+                textNodes.push(node);
+            }
+            
+            // Process each text node
+            textNodes.forEach(textNode => {
+                let text = textNode.textContent;
+                let hasChanges = false;
+                
+                keywordsToBold.forEach(keyword => {
+                    // Create regex to match whole words only (case insensitive)
+                    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+                    if (regex.test(text)) {
+                        text = text.replace(regex, `<span class="highlight-text">${keyword}</span>`);
+                        hasChanges = true;
+                    }
+                });
+                
+                // If changes were made, replace the text node with HTML
+                if (hasChanges) {
+                    const wrapper = document.createElement('span');
+                    wrapper.innerHTML = text;
+                    textNode.parentNode.replaceChild(wrapper, textNode);
+                }
+            });
+        }
+        
+        // Run the function when the page loads
+        document.addEventListener('DOMContentLoaded', autoBoldKeywords);
+        </script>

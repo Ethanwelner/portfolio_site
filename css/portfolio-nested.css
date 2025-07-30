@@ -121,7 +121,11 @@ a {
         &.black {
             background-color: var(--portfolio-black);
         }
-        
+
+        &.white {
+            background-color: var(--portfolio-white);
+            color: var(--portfolio-black);
+        }
     }
 }
 
@@ -135,6 +139,10 @@ a {
     line-height: 1.15;
     display: none;
     transition: margin-top 750ms;
+}
+
+.highlight-text {
+    font-weight: 500;
 }
 
 /* ========================================

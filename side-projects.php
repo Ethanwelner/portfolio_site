@@ -123,14 +123,41 @@
                     <div class="separator"></div>
 
 
-
-                    <div class="meazure-gallery-container shadow-diffuse gray-bg breakout z-1">
-                        <div class="meazure-gallery">
-                            <img class="m-g-laptop" src="img/respon_laptop.png">
-                            <div class="m-g-mobile-container">	
-                                <img class="m-g-mobile" src="img/respon_mobile_1.png">
-                                <img class="m-g-mobile" src="img/respon_mobile_2.png">
+                    <div class="breakout shadow-diffuse gray-bg white-text">
+                        <div class="container">
+                            <div class="separator"></div>
+                            <div class="d-flex flex-wrap flex-xs-nowrap">
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                <div class="d-inline-flex align-items-center flex-8">
+                                    <div>
+                                        <h3 class="sub-title mb-3">Skill Check Additional Mechanics</h3>
+                                        <div class="copy stinger white mb-3">placeholder subtitle</div>
+                                        <p class="copy">
+                                            <h3 mb-3">Requesting Advantage</h3>
+                                            <ul>
+                                                <li>A character can request advantage in a situation where they believe they are uniquely advantaged in the effort of performing some sort of task or skill or in a role-playing scenario.</li>
+                                                <li>Some feats will specify a situation where a character can request advantage that is tied to a specific skill set or physical attribute</li>
+                                                <li>Requesting advantage is an expression of both the stats written on a character sheet and the character's backstory and role-playing attributes.</li>
+                                                <li>Some races, backgrounds, or professions will infer the right to request advantage in a broad set of circumstances, such as a character with a small stature being able to request advantage when hiding or a professional soldier's ability to request advantage when learning to wield a new weapon.</li>
+                                                <li>The dm can allow or deny requested advantage and will determine the appropriate expression of the advantage</li>
+                                                <li>ex. A character with a background as a fisherman may be able to request advantage in a situation where they need to maintain balance while the airship they are on is suffering severe turbulence due to the character's past with the rocky seas. The DM could choose to give them a +5 to their grace roll to stay standing.</li>
+                                                <li>ex. A character is a pilot and is piloting the ship they built by hand and know by heart. The DM could choose to give them a bonus to a skill check or even waive the need for the skill check if the act could be considered routine.</li>
+                                            </ul>
+                                            <br>
+                                            <h3 mb-3">Requesting Competence</h3>
+                                            <ul>
+                                                <li>A character can Request competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn't be penalized as harshly or at all for lacking a specific skill.</li>
+                                                <li>A Character with expertise in wielding a sword can request competence when wielding a dagger, even if they don't have a feat giving them that skill.</li>
+                                                <li>Requested competence can result in a wide range of results, from the user being wholly proficient in the task at hand to even being granted a relevant feat that gives them that skill permanently.</li>
+                                                <li>A bard skilled with a guitar and a bass can likely argue for competence with a lute, but the DM may consider the violin to be a step too far.</li>
+                                                <li>Many feats that grant expertise in a skill also grant inferred competence in related skills.</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>
+                            <div class="separator"></div>
                         </div>
                     </div>
 
