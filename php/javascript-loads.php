@@ -88,40 +88,46 @@
                 'background', 'backgrounds', 'Background', 'Backgrounds',
             ];
             
-            // Get all text content in the page
-            const walker = document.createTreeWalker(
-                document.body,
-                NodeFilter.SHOW_TEXT,
-                null,
-                false
-            );
+            // Find all elements with the 'game-mechanics' class
+            const gameMechanicsElements = document.querySelectorAll('.game-mechanics');
             
-            const textNodes = [];
-            let node;
-            while (node = walker.nextNode()) {
-                textNodes.push(node);
-            }
-            
-            // Process each text node
-            textNodes.forEach(textNode => {
-                let text = textNode.textContent;
-                let hasChanges = false;
+            // Process each game-mechanics element
+            gameMechanicsElements.forEach(element => {
+                // Get all text content within this element
+                const walker = document.createTreeWalker(
+                    element,
+                    NodeFilter.SHOW_TEXT,
+                    null,
+                    false
+                );
                 
-                keywordsToBold.forEach(keyword => {
-                    // Create regex to match whole words only (case insensitive)
-                    const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
-                    if (regex.test(text)) {
-                        text = text.replace(regex, `<span class="highlight-text">${keyword}</span>`);
-                        hasChanges = true;
+                const textNodes = [];
+                let node;
+                while (node = walker.nextNode()) {
+                    textNodes.push(node);
+                }
+                
+                // Process each text node within this element
+                textNodes.forEach(textNode => {
+                    let text = textNode.textContent;
+                    let hasChanges = false;
+                    
+                    keywordsToBold.forEach(keyword => {
+                        // Create regex to match whole words only (case insensitive)
+                        const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
+                        if (regex.test(text)) {
+                            text = text.replace(regex, `<span class="highlight-text">${keyword}</span>`);
+                            hasChanges = true;
+                        }
+                    });
+                    
+                    // If changes were made, replace the text node with HTML
+                    if (hasChanges) {
+                        const wrapper = document.createElement('span');
+                        wrapper.innerHTML = text;
+                        textNode.parentNode.replaceChild(wrapper, textNode);
                     }
                 });
-                
-                // If changes were made, replace the text node with HTML
-                if (hasChanges) {
-                    const wrapper = document.createElement('span');
-                    wrapper.innerHTML = text;
-                    textNode.parentNode.replaceChild(wrapper, textNode);
-                }
             });
         }
         

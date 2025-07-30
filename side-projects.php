@@ -54,7 +54,7 @@
                     <div class="d-flex flex-wrap flex-xs-nowrap">
                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                         <div class="d-inline-flex align-items-center flex-8">
-                            <div>
+                            <div class="game-mechanics">
                                 <h3 class="sub-title mb-3">Building the keywording auto-bold</h3>
                                 <div class="copy stinger black mb-3">placeholder subtitle</div>
                                 <p class="copy">
@@ -129,7 +129,7 @@
                             <div class="d-flex flex-wrap flex-xs-nowrap">
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                                 <div class="d-inline-flex align-items-center flex-8">
-                                    <div>
+                                    <div class="game-mechanics">
                                         <h3 class="sub-title mb-3">Skill Check Additional Mechanics</h3>
                                         <div class="copy stinger white mb-3">placeholder subtitle</div>
                                         <p class="copy">
