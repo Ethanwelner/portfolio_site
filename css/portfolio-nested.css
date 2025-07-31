@@ -251,6 +251,14 @@ a {
     justify-content: center;
 }
 
+.flex-gap-4 {
+    gap: 4px;
+}
+
+.flex-gap-48 {
+    gap: 48px;
+}
+
 /* ========================================
    INTERACTIVE ELEMENTS
    ======================================== */

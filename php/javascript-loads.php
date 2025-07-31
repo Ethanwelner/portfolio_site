@@ -78,7 +78,6 @@
 				'profession', 'professions', 'Profession', 'Professions',
 				'past', 'Past', 'pasts', 'Pasts',
 				'equipment', 'Equipment', 'equipments', 'Equipments',
-				'power', 'Power',
 				'temporary', 'Temporary',
 				'conveyed', 'conveyed', 'Conveyed', 'Conveyed',
 				'knowledge', 'knowledge', 'Knowledge', 'Knowledge',
@@ -86,6 +85,19 @@
 				'knowledge', 'knowledge', 'Knowledge', 'Knowledge',
 				'ranked', 'ranked', 'Ranked', 'Ranked',
                 'background', 'backgrounds', 'Background', 'Backgrounds',
+                'physical', 'Physical',
+                'mental', 'Mental',
+                'social', 'Social',
+                'endurance', 'Endurance',
+				'power', 'Power',
+                'grace', 'Grace',
+                'empathy', 'Empathy',
+                'persuasion', 'Persuasion',
+                'demeanor', 'Demeanor',
+                'memory', 'Memory',
+                'intuition', 'Intuition',
+                'logic', 'Logic',
+                'complex', 'Complex',
             ];
             
             // Find all elements with the 'game-mechanics' class
