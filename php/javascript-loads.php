@@ -98,6 +98,11 @@
                 'intuition', 'Intuition',
                 'logic', 'Logic',
                 'complex', 'Complex',
+                'innate', 'Innate',
+                'condition trait', 'Condition Trait',
+                'Condition Traits', 'Condition Traits',
+                'other traits', 'Other Traits',
+                'other trait', 'Other Trait',
             ];
             
             // Find all elements with the 'game-mechanics' class

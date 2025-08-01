@@ -30,7 +30,6 @@
 			  			<h1 class="title hero-title">RESEARCH</h1>
 						<h2 class="title section-title">Building Knowledge Before Action</h2>
 					    <h3 class="sub-title non-title">Learning and Implementation</h3>
-
 					</div>
 		  		</div>
 
