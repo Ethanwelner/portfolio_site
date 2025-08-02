@@ -145,6 +145,10 @@ a {
     font-weight: 500;
 }
 
+dl, ol, ul {
+    padding-inline-start: 1rem;
+}
+
 /* ========================================
    LAYOUT COMPONENTS
    ======================================== */
@@ -222,6 +226,31 @@ a {
     width: 100vw;
 }
 
+.trait-box {
+    padding: 1rem;
+    border: 1px solid var(--portfolio-gray);
+    border-radius: 4px;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+
+    .trait-name {
+        font-weight: 600;
+        .highlight-text {
+            font-weight: 600;
+        }
+    }
+
+    .badge {
+        width: fit-content;
+        font-weight: 600;
+        .highlight-text {
+            font-weight: 600;
+        }
+    }
+}
+
 /* ========================================
    FLEX UTILITIES
    ======================================== */
@@ -253,6 +282,10 @@ a {
 
 .flex-gap-4 {
     gap: 4px;
+}
+
+.flex-gap-12 {
+    gap: 12px;
 }
 
 .flex-gap-48 {

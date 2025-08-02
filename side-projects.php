@@ -151,202 +151,407 @@
 
                             <div class="game-mechanics flex-6">
                                 <h3 class="mb-3">Traits Examples</h3>
-                                <p class="copy">
-                                    <h5>Knowledges</h5>
-                                    <strong>Knowledge: Local History - Ranked - Knowledge</strong>
-                                    <br>(Memory 3)
-                                    <br>- This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.
-                                    <br><br>
-                                    <strong>Knowledge: Terran law - Ranked - Knowledge</strong>
-                                    <br>(Memory 3)
-                                    <br>- This character has knowledge of the Terran legal code and can be assumed to be familiar with the laws and legal codes of Terran societies.
-                                    <br><br>
-                                    <strong>Knowledge: Orc Society - Ranked - Knowledge</strong>
-                                    <br>(Memory 3)
-                                    <br>- This character has knowledge orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies.
-                                    <br><br>
-                                    <strong>Knowledge: Mathematics - Ranked - Knowledge</strong>
-                                    <br>(Memory 3) (Logic 3)
-                                    <br>- This character has a knowledge of mathematics and of mathematical fields of study.
-                                    <br><br>
-                                    <strong>Knowledge: Elemental Magics - Ranked - Knowledge</strong>
-                                    <br>(Memory 3) (Intuition 5)
-                                    <br>- This character has a knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history.
 
-                                    <hr class="my-5">
+                                <h5>Knowledges</h5>
 
-                                    <h5>Languages</h5>
-                                    <strong>English (Spoken) - Language</strong>
-                                    <br>(Memory 2) (Intuition 2)
-                                    <br>- This character is conversational with the English language and can converse in it.
-                                    <br><br>
-                                    <strong>Homeworld Interlag (Spoken) (Written) - Language</strong>
-                                    <br>(Memory 2) (Intuition 2)
-                                    <br>- This character is conversational with the English language and can converse in it.
-                                    <br>- This character can read and write in Homeworld Interlag.
-                                    <br><br>
-                                    <strong>Dwarvish Runes (Written) - Language</strong>
-                                    <br>(Memory 3) (Intuition 5)
-                                    <br>- This character can read and write Dwarvish Runes.
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge: Local History - Ranked - Knowledge</div>
+                                        <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                        <div class="">- This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</div>
+                                    </div>
 
-                                    <hr class="my-5">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge: Terran law - Ranked - Knowledge</div>
+                                        <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                        <div class="">- This character has knowledge of the Terran legal code and can be assumed to be familiar with the laws and legal codes of Terran societies.</div>
+                                    </div>
 
-                                    <h5>Skills</h5>
-                                    <strong>Pilot: Helicopter - Ranked - Skill</strong>
-                                    <br>(Memory 5) (Intuition 3) (grace 3)
-                                    <br>- This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter.
-                                    <br>- Rank *10 added to skill check rolls involving helicopter piloting.
-                                    <br><br>
-                                    <strong>Expert Pilot - Mastery - Skill</strong>
-                                    <br>(Memory 5) (Intuition 10) (Grace 5) (any Pilot skill)
-                                    <br>- This character can argue for advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in.
-                                    <br><br>
-                                    <strong>Rider: Basic Animals - Ranked - Skill</strong>
-                                    <br>(Grace 4) (Empathy 4) (Persuasion 3)
-                                    <br>- This character is capable of riding a basic animal as a mount in simple scenarios without a skill check.
-                                    <br>- Rank *10 added to skill check rolls involving riding a simple animal.
-                                    <br><br>
-                                    <strong>Wielder: Longsword - Ranked - Skill</strong>
-                                    <br>(Grace 4) (Power 4) (Endurance 4) This character is capable of performing the basic tasks of maintaining a Long Sword without a skill check.
-                                    <br>- Rank *5 added to skill check rolls involving a Longsword.
-                                    <br><br>
-                                    <strong>Wielder: Musket - Ranked - Skill</strong>
-                                    <br>(Grace 3) (Power 2) (intuition 3)
-                                    <br>- This character is capable of performing the basic tasks of maintaining a musket without a skill check.
-                                    <br>- Rank *5 added to skill check rolls involving a Musket.
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge: Orc Society - Ranked - Knowledge</div>
+                                        <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                        <div class="">- This character has knowledge orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies.</div>
+                                    </div>
 
-                                    <hr class="my-5">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge: Mathematics - Ranked - Knowledge</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Logic 3</div>
+                                        </div>
+                                        <div class="">- This character has a knowledge of mathematics and of mathematical fields of study.</div>
+                                    </div>
 
-                                    <h5>Abilities</h5>
-                                    <strong>Trail Runner - Ability</strong>
-                                    <br>(Power 3) (Endurance 2) (Grace 2)
-                                    <br>- This character takes twice as long to get winded by activities that involve running, hiking, or climbing
-                                    <br><br>
-                                    <strong>Capable Student - Ability</strong>
-                                    <br>(Memory 3) (Logic 3)
-                                    <br>This character can learn a new (knowledge) feat in half the specified time
-                                    <br><br>
-                                    <strong>Knowledge Sponge - Mastery - Ability</strong>
-                                    <br>(8 memory 5) (logic 5 intuition) (Capable Student)
-                                    <br>- This character can learn a new (knowledge) feat in a quarter the specified time
-                                    <br><br>
-                                    <strong>Con Man - Ability</strong>
-                                    <br>(Persuasion 8) (Demeanor 4) (Intuition 4) (Memory 4)
-                                    <br>- Add 5 to any skill check rolls that involve lying in either written or spoken form.
-                                    <br><br>
-                                    <strong>Mental Fortitude - Ability</strong>
-                                    <br>(Endurance 8) (Logic 5) (Demeanor 5)
-                                    <br>- This Character can argue for advantage in any scenario where their mental facilities are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.
-                                    <br><br>
-                                    <strong>Sculpted - Ability</strong>
-                                    <br>(Power 5) (Endurance 5) (Demeanor 3)
-                                    <br>- This character can request advantage in situations where the appearance of athleticism can effect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)
-                                    <br><br>
-                                    <strong>Eagle Eye - Conveyed - Ability</strong>
-                                    <br>(none)
-                                    <br>This character can ask for advantage in situations that involve seeing at distance.
-                                    <br><br>
-                                    <strong>Gladiator - Ability</strong>
-                                    <br>(Physical 5) (Grace 5) (Demeanor 5)
-                                    <br>- When in combat this character can use any close combat weapon as if they had the wielder trait with a single rank for that weapon.
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge: Elemental Magics - Ranked - Knowledge</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
+                                        </div>
+                                        <div class="">- This character has a knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history.</div>
+                                    </div>
+                                    
+                                </div>
 
-                                    <hr class="my-5">
+                                <h5>Languages</h5>
 
-                                    <h5>Circumstances</h5>
-                                    <strong>Thieves Guild Membership - Conveyed - Circumstance</strong>
-                                    <br>(None)
-                                    <br>- This character is an official member of a Local Thieves Guild.
-                                    <br><br>
-                                    <strong>Tugboat Captain - Conveyed - Circumstance</strong>
-                                    <br>(None)
-                                    <br>- This has all required legal training and licenses required to command a Tugboat.
-                                    <br><br>
-                                    <strong>Wanted on Terra - Conveyed - Circumstance</strong>
-                                    <br>Temporary (Lost when the characters innocence is proclaimed or they are caught)
-                                    <br>(None)
-                                    <br>- This character is wanted on all Terran planets for past crimes.
-                                    <br>- This characters wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.
-                                    <br><br>
-                                    <strong>Short Term Fame - Conveyed - Circumstance</strong>
-                                    <br>Temporary (30 days)
-                                    <br>(None)
-                                    <br>Due to recent events this character is famous and can request advantage in social situations where the characters fame may aid them.
-                                    <br><br>
-                                    <strong>Significant Inheritance - Conveyed - Circumstance</strong>
-                                    <br>Temporary (Lost when the money is all spent)
-                                    <br>(None)
-                                    <br>- This character has access to an Inheritance of 2 million Terran Credits currently safely contained in a bank.
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+                                    <div class="trait-box">
+                                        <div class="trait-name">English (Spoken) - Language</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 2)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 2)</div>
+                                        </div>
+                                        <div class="">- This character is conversational with the English language and can converse in it.</div>
+                                    </div>
 
-                                    <hr class="my-5">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Homeworld Interlag (Spoken) (Written) - Language</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 2)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 2)</div>
+                                        </div>
+                                        <div class="">- This character is conversational with the Homeworld Interlag language and can converse in it.</div>
+                                    </div>
 
-                                    <h5>Conditions</h5>
-                                    <strong>Stone Skin - Conveyed - Condition - Enchantment</strong>
-                                    <br>Temporary (This trait lasts a number of minutes equal to the casters Rank in this ability)
-                                    <br>- This character gains Rank *3 armor against all physical damage.
-                                    <br><br>
-                                    <strong>Severely Bleeding - Conveyed - Condition - Injury</strong>
-                                    <br>Temporary (This trait is lost when this Condition is Treated)
-                                    <br>- This character loses 1 HP every combat round while in combat.
-                                    <br>- This character loses 1 HP every minute while outside of combat.
-                                    <br><br>
-                                    <strong>Dead - Conveyed - Condition - Injury</strong>
-                                    <br>Temporary (A character gains this trait if they are at 0 or less HP)
-                                    <br>- This character is dead and can not perform voluntary actions.
-                                    <br>- This character can not be healed by any means unless otherwise stated.
-                                    <br><br>
-                                    <strong>Stimm Rush - Conveyed - Condition</strong>
-                                    <br>Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)
-                                    <br>- This character gains 5 to all physical outer ring stats
-                                    <br><br>
-                                    <strong>Ghost Sight - Conveyed - Condition - Injury</strong>
-                                    <br>Temporary (A character gains this trait if they are at 0 or less HP)
-                                    <br>- This character is dead and can not perform voluntary actions.
-                                    <br>- This character can not be healed by any means unless otherwise stated.
+                                    <div class="trait-box">
+                                        <div class="trait-name">Dwarvish Runes (Written) - Language</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
+                                        </div>
+                                        <div class="">- This character can read and write Dwarvish Runes.</div>
+                                    </div>
+                                </div>
 
-                                    <hr class="my-5">
+                                <h5>Skills</h5>
 
-                                    <h5>Other</h5>
-                                    <strong>Possessed By A Spirit - Conveyed - Other</strong>
-                                    <br>Temporary (lost when the character is no longer possessed)
-                                    <br>(none)
-                                    <br>- This character has lost control over their body to supernatural entity. If this is a player character then how that player or the DM continue to operate the character is at DM discretion, as is the nature of the entity that has possessed them.
-                                    <br>- This character no longer accrues experience.
-                                    <br>- While under the control of this entity the characters Mental Stats are considered (Mental 8) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated.
-                                    <br>- If the Character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for then those Traits are to be ignored.
-                                    <br>- The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them.
-                                    <br>- This character gains the following Temporary Traits and will lose them if they cease to be possessed.
-                                    <br>	- Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1).
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
 
-                                    <hr class="my-5">
 
-                                    <h5>Background-Only</h5>
-                                    <strong>Long Toothed - Background - Condition</strong>
-                                    <br>(power 10 endurance 5 demeanor 5)(middle aged or older)
-                                    <br>- An Orks teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An ork that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long toothed ork can argue for advantage in dealings with other orks, or with any other party that may hold this belief about orks.
-                                    <br><br>
-                                    <strong>Sorcererous - Background - Condition</strong>
-                                    <br>(None)
-                                    <br>- This character may take Magic related traits and may spend stat points on the magic inner ring stat.
-                                    <br><br>
-                                    <strong>Natural Breath Weapon - Background - Ability - Ranked</strong>
-                                    <br>(Endurance 3)
-                                    <br>- This characters biology allows them to use their breath as a tool or weapon.
-                                    <br>- For each rank of this ability add another d4 to the damage the breath weapon deals.
-                                    <br><br>
-                                    <strong>Hard Shell - Background - Condition - Ranked</strong>
-                                    <br>(Endurance 5)
-                                    <br>- This character possesses a hard natural shell that protects them from harm.
-                                    <br>- Rank *3 added to this characters armor stat for attacks that hit its torso.
-                                    <br><br>
-                                    <strong>Cybernetic Intelligence - Background - Condition</strong>
-                                    <br>(None)
-                                    <br>- This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics.
-                                    <br>- This character is capable of performing significant numbers of mathematical calculations simultaneously, it is DM discretion when and how this ability is limited.
-                                    <br><br>
-                                    <strong>Supernatural - Background</strong>
-                                    <br>(None)
-                                    <br>- This character has gone beyond the realm of the real and can take supernatural related traits and may spend stat points on the supernatural inner ring stat.
-                                </p>
+                                    <div class="trait-box">
+                                        <div class="trait-name">Pilot: Helicopter - Ranked - Skill</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 3</div>
+                                        </div>
+                                        <div class="">- This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter.</div>
+                                        <div class="">- Rank *10 added to skill check rolls involving helicopter piloting.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Expert Pilot - Mastery - Skill</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 10</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Any Pilot skill</div>
+                                        </div>
+                                        <div class="">- This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Rider: Basic Animals - Ranked - Skill</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Empathy 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Persuasion 3</div>
+                                        </div>
+                                        <div class="">- This character is capable of riding a basic animal as a mount in simple scenarios without a skill check.</div>
+                                        <div class="">- Rank *10 added to skill check rolls involving riding a simple animal.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Wielder: Longsword - Ranked - Skill</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Power 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 4</div>
+                                        </div>
+                                        <div class="">- This character is capable of performing the basic tasks of maintaining a Long Sword without a skill check.</div>
+                                        <div class="">- Rank *5 added to skill check rolls involving a Longsword.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Wielder: Musket - Ranked - Skill</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Power 2</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 3</div>
+                                        </div>
+                                        <div class="">- This character is capable of performing the basic tasks of maintaining a Musket without a skill check.</div>
+                                        <div class="">- Rank *5 added to skill check rolls involving a Musket.</div>
+                                    </div>
+
+                                </div>
+
+                                <h5>Abilities</h5>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Trail Runner - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Power 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 2</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 2</div>
+                                        </div>
+                                        <div class="">- This character takes twice as long to get winded by activities that involve running, hiking, or climbing</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Capable Student - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Logic 3</div>
+                                        </div>
+                                        <div class="">- This character can learn a new (knowledge) feat in half the specified time</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Knowledge Sponge - Mastery - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Logic 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Capable Student</div>
+                                        </div>
+                                        <div class="">- This character can learn a new (knowledge) feat in a quarter the specified time</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Con Man - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Persuasion 8</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Memory 4</div>
+                                        </div>
+                                        <div class="">- Add 5 to any skill check rolls that involve lying in either written or spoken form.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Mental Fortitude - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 8</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Logic 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
+                                        </div>
+                                        <div class="">- This character can request advantage in any scenario where their mental facilities are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Sculpted - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Power 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 3</div>
+                                        </div>
+                                        <div class="">- This character can request advantage in situations where the appearance of athleticism can effect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Eagle Eye - Conveyed - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character can request advantage in situations that involve seeing at distance.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Gladiator - Ability</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Physical 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Grace 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
+                                        </div>
+                                        <div class="">- When in combat this character can use any close combat weapon as if they had the wielder trait with a single rank for that weapon.</div>
+                                    </div>
+                                </div>
+
+                                
+                                
+                                <h5>Circumstances</h5>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Thieves Guild Membership - Conveyed - Circumstance</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character is an official member of a Local Thieves Guild.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Tugboat Captain - Conveyed - Circumstance</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character has all required legal training and licenses required to command a Tugboat.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Wanted on Terra - Conveyed - Circumstance</div>
+                                        <div>Temporary (Lost when the characters innocence is proclaimed or they are caught)</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This Character is wanted on all Terran planets for Past crimes.</div>
+                                        <div class="">- This Characters wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Short Term Fame - Conveyed - Circumstance</div>
+                                        <div>Temporary (30 days)</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- Due to recent events this Character is famous and can Request Advantage in Social situations where the Characters fame may aid them.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Significant Inheritance - Conveyed - Circumstance</div>
+                                        <div>Temporary (Lost when the money is all spent)</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character has access to an Inheritance of 2 million Terran Credits currently safely contained in a bank.</div>
+                                    </div>
+
+                                </div>
+
+                                <h5>Conditions</h5>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Stone Skin - Conveyed - Condition - Enchantment</div>
+                                        <div>Temporary (This trait lasts a number of minutes equal to the casters Rank in this ability)</div>
+                                        <div class="">- This character gains Rank *3 armor against all physical damage.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Severely Bleeding - Conveyed - Condition - Injury</div>
+                                        <div>Temporary (This trait is lost when this Condition is Treated)</div>
+                                        <div class="">- This character loses 1 HP every combat round while in combat.</div>
+                                        <div class="">- This character loses 1 HP every minute while outside of combat.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Dead - Conveyed - Condition - Injury</div>
+                                        <div>Temporary (A character gains this trait if they are at 0 or less HP)</div>
+                                        <div class="">- This character is dead and can not perform voluntary actions.</div>
+                                        <div class="">- This character can not be healed by any means unless otherwise stated.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Stimm Rush - Conveyed - Condition</div>
+                                        <div>Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)</div>
+                                        <div class="">- This character gains 5 to all physical outer ring stats</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Ghost Sight - Conveyed - Condition - Injury</div>
+                                        <div>Temporary (A character gains this trait if they are at 0 or less HP)</div>
+                                        <div class="">- This character is dead and can not perform voluntary actions.</div>
+                                        <div class="">- This character can not be healed by any means unless otherwise stated.</div>
+                                    </div>
+
+
+                                </div>
+
+                                <h5>Other</h5>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Possessed By A Spirit - Conveyed - Other</div>
+                                        <div>Temporary (lost when the character is no longer possessed)</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character has lost control over their body to supernatural entity. If this is a player character then how that player or the DM continue to operate the character is at DM discretion, as is the nature of the entity that has possessed them.</div>
+                                        <div class="">- This character no longer accrues experience.</div>
+                                        <div class="">- While under the control of this entity the characters Mental Stats are considered <span class="badge bg-dark white-text d-inline-flex">(Mental 8)</span> <span class="badge bg-dark white-text d-inline-flex">(Empathy 3)</span> <span class="badge bg-dark white-text d-inline-flex">(Persuasion 9)</span> <span class="badge bg-dark white-text d-inline-flex">(Demeanor 12)</span> for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated.</div>
+                                        <div class="">- If the Character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for then those Traits are to be ignored.</div>
+                                        <div class="">- The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them.</div>
+                                        <div class="">- This character gains the following Temporary Traits and will lose them if they cease to be possessed:
+                                            <div class="d-inline-flex flex-gap-4 flex-wrap">
+                                                <div class="badge bg-dark white-text d-inline-flex">Supernatural</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Spirit Touched</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Telekinesis(1)</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Inured to pain</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Fearless</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Ghost Sight</div>
+                                                <div class="badge bg-dark white-text d-inline-flex">Knowledge: The Supernatural (1)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h5>Background-Only</h5>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Long Toothed - Background - Condition</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Power 10</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">Middle Aged or Older</div>
+                                        </div>
+                                        <div class="">- An Orks teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An ork that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long toothed ork can request advantage in dealings with other orks, or with any other party that may hold this belief about orks.</div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap flex-gap-12 mb-4">
+                                    <div class="trait-box">
+                                        <div class="trait-name">Sorcererous - Background - Condition</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character may take Magic related traits and may spend stat points on the magic inner ring stat.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Natural Breath Weapon - Background - Ability - Ranked</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 3</div>
+                                        </div>
+                                        <div class="">- This characters biology allows them to use their breath as a tool or weapon.</div>
+                                        <div class="">- For each rank of this ability add another d4 to the damage the breath weapon deals.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Hard Shell - Background - Condition - Ranked</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
+                                        </div>
+                                        <div class="">- This character possesses a hard natural shell that protects them from harm.</div>
+                                        <div class="">- Rank *3 added to this characters armor stat for attacks that hit its torso.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Cybernetic Intelligence - Background - Condition</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics.</div>
+                                        <div class="">- This character is capable of performing significant numbers of mathematical calculations simultaneously, it is DM discretion when and how this ability is limited.</div>
+                                    </div>
+
+                                    <div class="trait-box">
+                                        <div class="trait-name">Supernatural - Background</div>
+                                        <div class="d-inline-flex flex-gap-4">
+                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                        </div>
+                                        <div class="">- This character has gone beyond the realm of the real and can take supernatural related traits and may spend stat points on the supernatural inner ring stat.</div>
+                                    </div>
+
+                                </div>
                             </div>
 
                         </div>
@@ -419,7 +624,7 @@
                                                 <li>A character can Request competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn't be penalized as harshly or at all for lacking a specific skill.</li>
                                                 <li>A Character with expertise in wielding a sword can request competence when wielding a dagger, even if they don't have a feat giving them that skill.</li>
                                                 <li>Requested competence can result in a wide range of results, from the user being wholly proficient in the task at hand to even being granted a relevant feat that gives them that skill permanently.</li>
-                                                <li>A bard skilled with a guitar and a bass can likely argue for competence with a lute, but the DM may consider the violin to be a step too far.</li>
+                                                <li>A bard skilled with a guitar and a bass can likely request competence with a lute, but the DM may consider the violin to be a step too far.</li>
                                                 <li>Many feats that grant expertise in a skill also grant inferred competence in related skills.</li>
                                             </ul>
                                         </div>
