@@ -150,7 +150,7 @@
                             </div>
 
                             <div class="game-mechanics flex-6">
-                                <h3 class="mb-3">Traits Examples</h3>
+                                <h3 class="mb-3">Example Traits</h3>
 
                                 <h5>Knowledges</h5>
 
@@ -176,8 +176,8 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Knowledge: Mathematics - Ranked - Knowledge</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 3</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Logic 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Logic 3)</div>
                                         </div>
                                         <div class="">- This character has a knowledge of mathematics and of mathematical fields of study.</div>
                                     </div>
@@ -232,9 +232,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Pilot: Helicopter - Ranked - Skill</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 3</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 3)</div>
                                         </div>
                                         <div class="">- This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter.</div>
                                         <div class="">- Rank *10 added to skill check rolls involving helicopter piloting.</div>
@@ -243,10 +243,10 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Expert Pilot - Mastery - Skill</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 10</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Any Pilot skill</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 10)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Any Pilot skill)</div>
                                         </div>
                                         <div class="">- This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in.</div>
                                     </div>
@@ -254,9 +254,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Rider: Basic Animals - Ranked - Skill</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Empathy 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Persuasion 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Empathy 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Persuasion 3)</div>
                                         </div>
                                         <div class="">- This character is capable of riding a basic animal as a mount in simple scenarios without a skill check.</div>
                                         <div class="">- Rank *10 added to skill check rolls involving riding a simple animal.</div>
@@ -265,9 +265,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Wielder: Longsword - Ranked - Skill</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Power 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Power 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 4)</div>
                                         </div>
                                         <div class="">- This character is capable of performing the basic tasks of maintaining a Long Sword without a skill check.</div>
                                         <div class="">- Rank *5 added to skill check rolls involving a Longsword.</div>
@@ -276,9 +276,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Wielder: Musket - Ranked - Skill</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 3</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Power 2</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Power 2)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 3)</div>
                                         </div>
                                         <div class="">- This character is capable of performing the basic tasks of maintaining a Musket without a skill check.</div>
                                         <div class="">- Rank *5 added to skill check rolls involving a Musket.</div>
@@ -293,9 +293,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Trail Runner - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Power 3</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 2</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 2</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Power 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 2)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 2)</div>
                                         </div>
                                         <div class="">- This character takes twice as long to get winded by activities that involve running, hiking, or climbing</div>
                                     </div>
@@ -303,8 +303,8 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Capable Student - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 3</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Logic 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Logic 3)</div>
                                         </div>
                                         <div class="">- This character can learn a new (knowledge) feat in half the specified time</div>
                                     </div>
@@ -312,10 +312,10 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Knowledge Sponge - Mastery - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Logic 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Capable Student</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Logic 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Capable Student)</div>
                                         </div>
                                         <div class="">- This character can learn a new (knowledge) feat in a quarter the specified time</div>
                                     </div>
@@ -323,10 +323,10 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Con Man - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Persuasion 8</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Intuition 4</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Memory 4</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Persuasion 8)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Demeanor 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Intuition 4)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Memory 4)</div>
                                         </div>
                                         <div class="">- Add 5 to any skill check rolls that involve lying in either written or spoken form.</div>
                                     </div>
@@ -334,9 +334,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Mental Fortitude - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 8</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Logic 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 8)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Logic 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
                                         </div>
                                         <div class="">- This character can request advantage in any scenario where their mental facilities are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</div>
                                     </div>
@@ -344,9 +344,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Sculpted - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Power 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Power 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Demeanor 3)</div>
                                         </div>
                                         <div class="">- This character can request advantage in situations where the appearance of athleticism can effect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)</div>
                                     </div>
@@ -354,7 +354,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Eagle Eye - Conveyed - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character can request advantage in situations that involve seeing at distance.</div>
                                     </div>
@@ -362,9 +362,9 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Gladiator - Ability</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Physical 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Grace 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Physical 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Grace 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
                                         </div>
                                         <div class="">- When in combat this character can use any close combat weapon as if they had the wielder trait with a single rank for that weapon.</div>
                                     </div>
@@ -380,7 +380,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Thieves Guild Membership - Conveyed - Circumstance</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character is an official member of a Local Thieves Guild.</div>
                                     </div>
@@ -388,7 +388,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Tugboat Captain - Conveyed - Circumstance</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character has all required legal training and licenses required to command a Tugboat.</div>
                                     </div>
@@ -397,7 +397,7 @@
                                         <div class="trait-name">Wanted on Terra - Conveyed - Circumstance</div>
                                         <div>Temporary (Lost when the characters innocence is proclaimed or they are caught)</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This Character is wanted on all Terran planets for Past crimes.</div>
                                         <div class="">- This Characters wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</div>
@@ -407,7 +407,7 @@
                                         <div class="trait-name">Short Term Fame - Conveyed - Circumstance</div>
                                         <div>Temporary (30 days)</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- Due to recent events this Character is famous and can Request Advantage in Social situations where the Characters fame may aid them.</div>
                                     </div>
@@ -416,7 +416,7 @@
                                         <div class="trait-name">Significant Inheritance - Conveyed - Circumstance</div>
                                         <div>Temporary (Lost when the money is all spent)</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character has access to an Inheritance of 2 million Terran Credits currently safely contained in a bank.</div>
                                     </div>
@@ -498,10 +498,10 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Long Toothed - Background - Condition</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Power 10</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Demeanor 5</div>
-                                            <div class="badge bg-dark white-text d-inline-flex">Middle Aged or Older</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Power 10)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Middle Aged or Older)</div>
                                         </div>
                                         <div class="">- An Orks teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An ork that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long toothed ork can request advantage in dealings with other orks, or with any other party that may hold this belief about orks.</div>
                                     </div>
@@ -511,7 +511,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Sorcererous - Background - Condition</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character may take Magic related traits and may spend stat points on the magic inner ring stat.</div>
                                     </div>
@@ -519,7 +519,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Natural Breath Weapon - Background - Ability - Ranked</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 3</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 3)</div>
                                         </div>
                                         <div class="">- This characters biology allows them to use their breath as a tool or weapon.</div>
                                         <div class="">- For each rank of this ability add another d4 to the damage the breath weapon deals.</div>
@@ -528,7 +528,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Hard Shell - Background - Condition - Ranked</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">Endurance 5</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
                                         </div>
                                         <div class="">- This character possesses a hard natural shell that protects them from harm.</div>
                                         <div class="">- Rank *3 added to this characters armor stat for attacks that hit its torso.</div>
@@ -537,7 +537,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Cybernetic Intelligence - Background - Condition</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics.</div>
                                         <div class="">- This character is capable of performing significant numbers of mathematical calculations simultaneously, it is DM discretion when and how this ability is limited.</div>
@@ -546,7 +546,7 @@
                                     <div class="trait-box">
                                         <div class="trait-name">Supernatural - Background</div>
                                         <div class="d-inline-flex flex-gap-4">
-                                            <div class="badge bg-dark white-text d-inline-flex">None</div>
+                                            <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                                         </div>
                                         <div class="">- This character has gone beyond the realm of the real and can take supernatural related traits and may spend stat points on the supernatural inner ring stat.</div>
                                     </div>

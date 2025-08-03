@@ -27,12 +27,13 @@
     --portfolio-blue: #244479;
     --portfolio-green: #47B767;
     --portfolio-gray: #424242;
+    --portfolio-light-gray: #eaeaea;
 }
 
 /* Base HTML & Body */
 html {
     scroll-behavior: smooth;
-    background-color: #595C5C;
+    background-color: var(--portfolio-gray);
 }
 
 body {
@@ -210,7 +211,7 @@ dl, ol, ul {
     height: auto;
     min-height: 5vh;
     padding: 0 60px 0 60px;
-    background-color: #595C5C;
+    background-color: var(--portfolio-gray);
     position: relative;
 }
 
@@ -227,16 +228,24 @@ dl, ol, ul {
 }
 
 .trait-box {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
+    background-color: var(--portfolio-light-gray);
     border: 1px solid var(--portfolio-gray);
     border-radius: 4px;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
     width: 100%;
+    font-size: 14px;
 
     .trait-name {
+        font-size: 1rem;
         font-weight: 600;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        background-color: var(--portfolio-gray);
+        padding: .5rem 1rem;
+        color: var(--portfolio-white);
         .highlight-text {
             font-weight: 600;
         }
@@ -245,8 +254,13 @@ dl, ol, ul {
     .badge {
         width: fit-content;
         font-weight: 600;
+        padding: .5rem 1rem;
         .highlight-text {
             font-weight: 600;
+        }
+
+        .bg-dark {
+            background-color: var(--portfolio-gray);
         }
     }
 }
@@ -1400,7 +1414,7 @@ a:hover svg.resume-svg {
 .green-bg { background-color: var(--portfolio-green); }
 .black-bg { background-color: var(--portfolio-black); }
 .white-bg { background-color: white; }
-.dark-bg { background-color: #595C5C; }
+.dark-bg { background-color: var(--portfolio-gray); }
 .transparent-bg { background-color: transparent; }
 
 /* Text Colors */
