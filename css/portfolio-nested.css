@@ -229,9 +229,11 @@ dl, ol, ul {
 
 .trait-box {
     padding: 0 1rem 1rem 1rem;
+    color: var(--portfolio-black);
     background-color: var(--portfolio-light-gray);
     border: 1px solid var(--portfolio-gray);
     border-radius: 4px;
+    overflow: hidden;
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
@@ -243,7 +245,7 @@ dl, ol, ul {
         font-weight: 600;
         margin-left: -1rem;
         margin-right: -1rem;
-        background-color: var(--portfolio-gray);
+        background-color: var(--portfolio-black);
         padding: .5rem 1rem;
         color: var(--portfolio-white);
         .highlight-text {
@@ -810,6 +812,11 @@ img.warning-gif {
     position: relative;
     top: -3px;
     margin-right: 10px;
+}
+
+.column-image {
+    width: 100%;
+    padding: 48px;
 }
 
 /* ========================================
