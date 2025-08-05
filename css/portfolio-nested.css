@@ -2,6 +2,11 @@
    PORTFOLIO CSS - HEAVILY NESTED VERSION
    ======================================== */
 
+
+
+
+
+
 /* ========================================
    FONTS & BASE STYLES
    ======================================== */
@@ -53,6 +58,11 @@ a {
         text-decoration: inherit;
     }
 }
+
+
+
+
+
 
 /* ========================================
    TYPOGRAPHY
@@ -142,13 +152,24 @@ a {
     transition: margin-top 750ms;
 }
 
-.highlight-text {
+.higlight-text {
     font-weight: 500;
 }
 
 dl, ol, ul {
     padding-inline-start: 1rem;
 }
+
+.highlight-text {
+    font-weight: 500;
+}
+
+.mechanic-text {
+    font-weight: 500;
+}
+
+
+
 
 /* ========================================
    LAYOUT COMPONENTS
@@ -158,6 +179,10 @@ dl, ol, ul {
 .container {
     max-width: min(1920px, 100% - 120px);
     padding: 0;
+}
+
+.column-container {
+    max-width: 1280px;
 }
 
 /* Section Types */
@@ -248,7 +273,7 @@ dl, ol, ul {
         background-color: var(--portfolio-black);
         padding: .5rem 1rem;
         color: var(--portfolio-white);
-        .highlight-text {
+        .mechanic-text {
             font-weight: 600;
         }
     }
@@ -257,7 +282,7 @@ dl, ol, ul {
         width: fit-content;
         font-weight: 600;
         padding: .5rem 1rem;
-        .highlight-text {
+        .mechanic-text {
             font-weight: 600;
         }
 
@@ -266,6 +291,26 @@ dl, ol, ul {
         }
     }
 }
+
+strong {
+    font-weight: 600;
+
+    .mechanic-text {
+        font-weight: 600;
+    }
+}
+
+hr {
+    width: 100%;
+}
+.gray-bg hr {
+    border-top: 1px solid rgb(255 255 255 / 25%);
+}
+
+
+
+
+
 
 /* ========================================
    FLEX UTILITIES
@@ -307,6 +352,11 @@ dl, ol, ul {
 .flex-gap-48 {
     gap: 48px;
 }
+
+
+
+
+
 
 /* ========================================
    INTERACTIVE ELEMENTS
@@ -374,6 +424,11 @@ dl, ol, ul {
     animation-delay: .1s;
 }
 
+
+
+
+
+
 /* ========================================
    Z-INDEX UTILITIES
    ======================================== */
@@ -383,6 +438,11 @@ dl, ol, ul {
 .z-2 { z-index: 2 !important; }
 .z-3 { z-index: 3 !important; }
 .z-4 { z-index: 4 !important; }
+
+
+
+
+
 
 /* ========================================
    NAVIGATION
@@ -616,6 +676,11 @@ dl, ol, ul {
     left: -18px;
 }
 
+
+
+
+
+
 /* ========================================
    MODALS & OVERLAYS
    ======================================== */
@@ -645,6 +710,11 @@ dl, ol, ul {
     animation: bounce 3s infinite ease;
     transition: margin-top .5s;
 }
+
+
+
+
+
 
 /* ========================================
    ANIMATIONS
@@ -679,6 +749,11 @@ dl, ol, ul {
 .add-blur {
     filter: blur(5px);
 }
+
+
+
+
+
 
 /* ========================================
    IMAGES & GALLERIES
@@ -816,8 +891,14 @@ img.warning-gif {
 
 .column-image {
     width: 100%;
-    padding: 48px;
+    padding: 0 48px;
+    object-fit: contain;
 }
+
+
+
+
+
 
 /* ========================================
    GALLERY CONTAINERS
@@ -998,6 +1079,11 @@ img.warning-gif {
     background-position: center 0%;
 }
 
+
+
+
+
+
 /* ========================================
    MOCKUPS & BROWSER FRAMES
    ======================================== */
@@ -1057,6 +1143,11 @@ img.warning-gif {
 .force-size {
     max-width: 100%;
 }
+
+
+
+
+
 
 /* ========================================
    SURFACE & SUBLIME PROTOTYPES
@@ -1130,6 +1221,11 @@ img.warning-gif {
     90%   { opacity: 1;}
     100% {top: 7px;  opacity: 0;}
 }
+
+
+
+
+
 
 /* ========================================
    DESIGN & FORECASTER
@@ -1247,6 +1343,11 @@ img.warning-gif {
     background-repeat: no-repeat;
 }
 
+
+
+
+
+
 /* ========================================
    FREELANCE & FLIP
    ======================================== */
@@ -1293,6 +1394,11 @@ img.warning-gif {
 .forecaster-logo path {
     fill: var(--portfolio-black);
 }
+
+
+
+
+
 
 /* ========================================
    RESEARCH & ANIMATIONS
@@ -1409,6 +1515,11 @@ a:hover svg.resume-svg {
     opacity: .6;
 }
 
+
+
+
+
+
 /* ========================================
    COLOR UTILITIES
    ======================================== */
@@ -1447,6 +1558,11 @@ a:hover svg.resume-svg {
     box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.3);
 }
 
+
+
+
+
+
 /* ========================================
    LOADING & PROTOTYPE
    ======================================== */
@@ -1464,6 +1580,11 @@ a:hover svg.resume-svg {
     justify-content: center;
     cursor: pointer;
 }
+
+
+
+
+
 
 /* ========================================
    VIEW TIMELINE ANIMATIONS

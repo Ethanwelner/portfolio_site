@@ -64,6 +64,13 @@
 				'requesting competence', 'Requesting Competence',
 				'request competence', 'Request Competence',
 				'inferred competence', 'Inferred Competence',
+                'hit points', 'Hit Points',
+                'vibe points', 'Vibe Points',
+                'savvy points', 'Savvy Points',
+                'hp', 'HP',
+                'vp', 'VP',
+                'sp', 'SP',
+                'effect', 'effects', 'Effect', 'Effects',
                 'character', 'characters', 'Character', 'Characters',
                 'trait', 'traits', 'Trait', 'Traits',
                 'advantage', 'advantages', 'Advantage', 'Advantages',
@@ -133,7 +140,7 @@
                         // Create regex to match whole words only (case insensitive)
                         const regex = new RegExp(`\\b${keyword}\\b`, 'gi');
                         if (regex.test(text)) {
-                            text = text.replace(regex, `<span class="highlight-text">${keyword}</span>`);
+                            text = text.replace(regex, `<span class="mechanic-text">${keyword}</span>`);
                             hasChanges = true;
                         }
                     });

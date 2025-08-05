@@ -12,7 +12,7 @@
         <!-- Main Content -->
         <!------------ side projects black section ------------>
         <div class="section short-section black-bg d-flex black-section z-4">
-            <div class="section-clip d-flex align-items-center justify-content-center">
+            <div class="section-clip d-flex align-items-center justify-content-center ">
                 <!-- This loads the header -->
                 <?php include 'php/header.php'; ?>
                 <div class="title section-title d-inline-flex z-2">
@@ -46,30 +46,23 @@
             </div>
 
 
-            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0 justify-content-center">
 
 
                 <!------------  STATS ------------->
-                <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-                    <div class="flex-3 d-none d-xl-inline-flex"></div>
-                    <div class="flex-12">
+                <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
+                    <div class="flex-12 mb-4">
                         <h3 class="sub-title mb-3">Explaining Stats</h3>
                         <div class="copy stinger black mb-3">placeholder subtitle</div>
                     </div>
-                    <div class="flex-3 d-none d-xl-inline-flex"></div>
-                </div>
-
-                <div class="d-flex flex-wrap flex-xs-nowrap">
-                    <div class="flex-3 d-none d-xl-inline-flex"></div>
-                    <div class="d-inline-flex flex-12 flex-gap-48">
+                    <div class="d-inline-flex flex-12 flex-gap-48 align-items-center">
                         <div class="game-mechanics flex-6">
-                            <h3>Stats</h3>
+                            <h3 class="mb-3">Stats</h3>
                             
                             <!-- OVERVIEW -->
                             <p class="copy my-3">
                                 A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two kinds of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A Character's Species will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
                             </p>
-                            <img src="img/stat_ring.png" alt="Stat ring" class="column-image">
                             <ul>
                                 <li>When your character gains a Level you get a point to spend in any Inner Ring stat.</li>
                                 <li>Adding a point to an Inner Ring stat gives you 3 to spend in the Outer Ring of that category.</li>
@@ -82,9 +75,21 @@
                                 <li>A soldier needs to be smart enough to know how to load a musket and Graceful enough to aim it</li>
                                 <li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to remember what he sees</li>
                             </ul>
+                        </div>
+                        <div class="d-inline-flex flex-6 flex-gap-48">
+                            <img src="img/stat_ring.png" alt="Stat ring" class="column-image">
+                        </div>
+                    </div>
+                    <hr class="my-5 gray-hr">
+                </div>
 
-                            <!-- EXAMPLE STATS -->
-                            <h3>Example stats</h3>
+
+
+                <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
+                    <div class="d-inline-flex flex-12 flex-gap-48 align-items-center">
+                        <div class="game-mechanics flex-6">
+                            <!-- example stats -->
+                            <h3 class="mb-3">Example stats</h3>
                             <ul>
                                 <li>Some Species will have lowered maximums; the below example is a human and cannot exceed 15 in any inner or Outer Ring stat due to the Unexceptional Trait in the Species section of its Background.</li>
                                 <li>The below character started with 1 in each stat due to humans generalist Trait in the Species section of its Background.</li>
@@ -97,11 +102,19 @@
                                 <li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (8 Grace) (4 Intuition) with any effectiveness, even if they got their hands on one.</li>
                                 <li>They're definitely not becoming a Master Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>
                             </ul>
-                            <img src="img/stat_grid.png" alt="Stat grid" class="column-image">
-
                         </div>
+                        <div class="d-inline-flex flex-6 flex-gap-48">   
+                            <img src="img/stat_grid.png" alt="Stat grid" class="column-image">
+                        </div>
+                    </div>
+                    <hr class="my-5 gray-hr">
+                </div>
 
-                        <div class="game-mechanics flex-6">
+
+                <div class="d-flex flex-wrap flex-xs-nowrap column-container">
+                    <div class="d-inline-flex flex-12 flex-gap-48">
+                        <div class="game-mechanics">
+
                             <h3>Stat Types</h3>
                             <!-- stat types -->
                             <h4 class="mt-4">Physical</h4>
@@ -145,10 +158,79 @@
                             <p class="copy">
                                 Memory represents the character's ability to store and recall information. A high Memory will allow a character to remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
                             </p>
+
+                        </div>
+                    </div>
+
+                    <hr class="my-5 gray-hr">
+
+                    <div class="d-inline-flex flex-12 flex-gap-48">
+                        <div class="game-mechanics">
+
+                            <h3>Stat-Based Resources</h3>
+                            <h4 class="mt-4">Health and Hit Points (HP)</h4>
+                            <p class="copy my-3">
+                                Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP does not directly correspond to specific forms of damage but is instead intended as an at-a-glance measure of the health of a character or object.
+                            </p>
+                            <p class="copy my-3">
+                                HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical outer ring stat. A max-level Human who has spent every level increasing his Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
+                            </p>
+                            <p class="copy my-3">
+                                As HP's are lost a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related traits are listed following this section. Several of these traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred, but these are not directly tied to the character's hit point total, though Condition Traits such as Severe Bleeding may result in a character continuing to lose HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
+                            </p>
+                            <p class="copy my-3">
+                                At their most resilient, a maxed-out human character can sustain roughly 5 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparative systems like D&D sit at around a 30x multiplier. This system, however, does not have the same levels of exponentially increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple leveling.
+                            </p>
+                            <ul>
+                                <li><strong>Healthy - Conveyed - Condition</strong><br>
+                                Temporary (A character or object gains this trait while they are at their maximum HP total)<br>
+                                This Trait has no effect on its own.</li>
+                                <li><strong>Injured - Conveyed - Condition</strong><br>
+                                Temporary (A character gains this trait while they are below their maximum HP total)<br>
+                                This Trait has no effect on its own.</li>
+                                <li><strong>Severely Injured - Conveyed - Condition</strong><br>
+                                Temporary (A character gains this trait while they are below half their maximum HP total)<br>
+                                This Trait has no effect on its own.</li>
+                                <li><strong>Incapacitated - Conveyed - Condition</strong><br>
+                                Temporary (A character gains this trait while they are at less than a quarter of their HP total)<br>
+                                This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
+                                <li><strong>Dead - Conveyed - Condition</strong><br>
+                                Temporary (A character gains this trait if they are at 0 or less HP)<br>
+                                This character is dead and cannot perform voluntary actions.<br>
+                                This character can not be healed by any means unless otherwise stated.</li>
+                                <li><strong>Damaged - Conveyed - Condition</strong><br>
+                                Temporary (An object gains this trait if it is below their maximum HP total)<br>
+                                This Trait has no effect on its own.</li>
+                                <li><strong>Destroyed - Conveyed - Condition</strong><br>
+                                Temporary (An object gains this trait if it is at 0 or less HP)<br>
+                                This object has been destroyed and no longer functions in any intended capacity.<br>
+                                This object can not be repaired by any means unless otherwise stated.</li>
+                            </ul>
+
+                            <h4 class="mt-4">Vibe Points (VP)</h4>
+                            <p class="copy my-3">
+                                VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total number of their Social inner ring stat. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
+                            </p>
+                            <p class="copy my-3">VP's can be spent on:</p>
+                            <ul>
+                                <li>Rerolling a single die in a socially related skill check (such as to try again when lying to a guard about your motives)</li>
+                                <li>Asking the DM to improve the results of a socially related skill check (such as improving the result of a negotiation over the price of a new car).</li>
+                                <li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passer-by forget your characters face once per point spent).</li>
+                            </ul>
+
+                            <h4 class="mt-4">Savvy Points (SP)</h4>
+                            <p class="copy my-3">
+                                SP are a spendable resource that can be used to boost a characters skill checks in Mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by feats or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum SP's equal to the total number of their Mental inner ring stat. Certain Traits and equipment can increase the recovery rate of VP's. SP's can be spent on:
+                            </p>
+                            <ul>
+                                <li>Rerolling a single die in a mentally related skill check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
+                                <li>Requesting competence or advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
+                                <li>Using an Ability with a listed VP cost such as using the Born Navigator Trait to automatically succeed in discerning a ships direction when all that's available is the wind and waves to judge by.</li>
+                            </ul>
+
                         </div>
 
                     </div>
-                    <div class="flex-3 d-none d-xl-inline-flex"></div>
                 </div>
 
                 <div class="separator"></div>
@@ -911,6 +993,124 @@
                     </div>
                     <div class="flex-3 d-none d-xl-inline-flex"></div>
                 </div>
+
+
+
+                <div class="separator"></div>
+
+
+
+                <!------------ TRAITS ------------->
+                <div class="breakout shadow-diffuse gray-bg white-text">
+                    <div class="separator"></div>
+                    <div class="container">
+                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+                    <div class="flex-3 d-none d-xl-inline-flex"></div>
+                    <div class="flex-12">
+                        <h3 class="sub-title mb-3">Items, Armor, and Effects</h3>
+                        <div class="copy stinger white mb-3">placeholder subtitle</div>
+                    </div>
+                    <div class="flex-3 d-none d-xl-inline-flex"></div>
+                </div>
+
+                <div class="d-flex flex-wrap flex-xs-nowrap">
+                    <div class="flex-3 d-none d-xl-inline-flex"></div>
+                    <div class="d-inline-flex flex-12 flex-gap-48">
+                        <div class="game-mechanics flex-6">
+                            <h3 class="mb-3">Armor and Effects</h3>
+                            
+                            <h4 class="mb-3">Resisting Damage Types</h4>
+                            <p class="copy my-3">Resistances are used to reduce incoming damage by a specified amount. Resistances begin at zero. Incoming damage will always have a type, and some forms of attacks will do multiple types of damage at once. A fiery explosion will do both blunt damage through the explosion itself, as well as heat damage through the heat of the fireball. Resistances are predominantly conveyed through equipment, but some Traits may provide additional resistances. A character's resistances are cumulative; if a character has both leather armor and scaly skin, their resistance to slashing will be higher than if they had either alone.<br><br>
+                            Some resistances will have coverage areas specified, such as a helmet providing significant protection, but only on the head. How and where a character is hit is covered in the section on combat. Resistances can, in rare cases, be a negative value. In these cases they add to the damage inflicted a value equal to that negative number.</p>
+
+                            <hr class="my-5 gray-hr">
+                            
+                            <h3 class="mb-3">Damage Types</h3>
+                            
+                            <h4 class="mt-4 mb-2">Physical</h4>
+                            
+                            <h6 class=""><strong>Blunt</strong></h6>
+                            <p class="copy mb-3">Blunt attacks are those that impact evenly across a wide area, such as a strike from a club or the wide blast front of an explosion. Any sudden change in pressure, such as being thrown out an airlock, would also be tracked as blunt damage. Blunt attacks can often cause the Concussed Temporary Condition Trait.</p>
+                            
+                            <h6 class=""><strong>Slashing</strong></h6>
+                            <p class="copy mb-3">Slashing attacks are those that cut across a wide area, such as a swing from a sword or a slash from animal claws. Slashing attacks can often cause the Bleeding Temporary Condition Trait.</p>
+                            
+                            <h6 class=""><strong>Piercing</strong></h6>
+                            <p class="copy mb-3">Piercing attacks are those that impact sharply in a small area and pierce deep, such as a thrust from a spear or the impact of a bullet. Piercing attacks can often cause the Bleeding Temporary Condition Trait.</p>
+                            
+                            <h4 class="mt-4 mb-2">Elemental</h4>
+                            
+                            <h6 class=""><strong>Heat</strong></h6>
+                            <p class="copy mb-3">Heat represents the damage caused by very high thermal energy/temps being applied to an area, be it from fire, a laser, or any other source. Fire is a common form of elemental damage that can be encountered easily both in and out of combat. Heat damage can often cause the Burning Temporary Condition Trait.</p>
+                            
+                            <h6 class=""><strong>Cold</strong></h6>
+                            <p class="copy mb-3">Cold represents the damage caused by thermal energy being removed from an object or character, be it from contact with ice, exposure to the elements, or any other source. Cold damage will most commonly be a result of exposure to extremely cold climates, and the ways this damage manifests itself will often be outside of combat. Cold damage can sometimes cause the Frozen Temporary Condition Trait.</p>
+                            
+                            <h6 class=""><strong>Electrical</strong></h6>
+                            <p class="copy mb-3">Electrical represents the application of electricity to a system that isn't built to handle it, be it from lightning, a downed power line, or an electric eel. The threat of electric shock is far more common in a modern electrically powered society, but its a classic element of magic. Electrical attacks can often cause the Concussed Temporary Condition Trait.</p>
+                            
+                            <h6 class=""><strong>EMP</strong></h6>
+                            <p class="copy mb-3">EMP or Electromagnetic Pulse is a catchall term for electromagnetic damage that is specifically harmful to machines or computer systems that rely on electricity or magnetic attributes to function. EMP damage's most common interaction will be to disable or destroy mechanical or electronic systems, either intentionally or accidentally. EMPs can be caused by natural or manmade phenomena, from solar flares to nuclear explosions. EMP damage can only harm characters or objects with the Mechanical Trait.</p>
+                            
+                            <h4 class="mt-4 mb-2">Supernatural</h4>
+                            
+                            <h6 class=""><strong>Metaphysical</strong></h6>
+                            <p class="copy mb-3">Metaphysical damage represents the damage inflicted by any higher plane source and does not interact with normal matter in a scientifically understood manner. Metaphysical attacks or effects will contain a description for if and when they do extra damage or possess other effects. Metaphysical effects will often be associated with other traits or keywords that further define their interactions in the game.</p>
+                            <p class="copy mb-3">Ex. A Paladins sword that bypasses the armor of the Demonic or an enchantment that only harms the Undead.</p>
+                            
+                            <h6 class=""><strong>Death</strong></h6>
+                            <p class="copy mb-3">Death damage represents a loss of vitality or the sudden rotting of flesh that would be otherwise considered scientifically impossible. Attacks or effects with the death attribute will often describe debilitating secondary effects they inflict beyond the HP damage they cause; successful (Physical) checks can often resist these effects. Death damage or attacks can not typically harm those with the Mechanical trait.</p>
+                            
+                            <h6 class=""><strong>Psychic</strong></h6>
+                            <p class="copy mb-3">Psychic damage represents harm inflicted directly upon one's brain, ego, consciousness, or other mental capacity. Psychic attacks or damage will typically bypass all defenses and will inflict various Condition Traits with concussed being the most common. Successful (mental) or (social) checks can often resist the effects of Psychic attacks/damage.</p>
+                            
+                            <h4 class="mt-4 mb-2">Other Common Elemental Effects</h4>
+                            
+                            <h6 class=""><strong>Radiation</strong></h6>
+                            <p class="copy mb-3">Radiation is an element in nature that can cause the Irradiated(1) Condition Trait. Levels of radiation exposure can cause different and increasingly severe effects, and certain effects or resistances in the game will make a user resistant or immune to radiation. Much like in real life, radiation can spread, and a character or object with a high level of the Irradiated trait can, in turn, inflict that trait on others.</p>
+                            
+                            <h6 class=""><strong>Acidic/Corrosive</strong></h6>
+                            <p class="copy mb-3">Acidic or Corrosive effects will often cause damage to items or equipment in addition to any character wielding them. This will most commonly be represented by the Corroded(1) ranked trait to be inflicted on an object that has been affected.</p>
+                        </div>
+
+                        <div class="game-mechanics flex-6">
+
+                            
+                        <h3 class="mb-3">Items</h3>
+                            
+                            <h4 class=""><strong>What is an Item?</strong></h4>
+                            <p class="copy my-3">An item can be any physical object that a character can be in possession of. This can range from weapons to armor to currency to pets. Some items have considerable complexities of their own, such as a ship or a warhorse. Other items are as simple as a gold coin. All fall under the category of "items." Within the category of "items," there are several subcategories explained below. Items possess their own descriptions, functions, weight, and size and may confer abilities or be used by a character in a unique way. Items will typically be described somewhere external to a character's character sheet, but in cases where the item is truly unique (such as a fancy rock the character found), then the DM can describe the physical characteristics of the item in question. Items are recorded in the "items" section of the character sheet. There is no limit to the number of items a character can possess, though there are reasonable limits on what they can carry. A character may possess a house on their character sheet, but they aren't taking it around with them.</p>
+                            
+                            <p class="copy">The various types of equipment and unique attributes (if any) are described below.</p>
+                            
+                            <h4 class="mt-4"><strong>Equipment</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h4 class="mt-4"><strong>Weapons</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h4 class="mt-4"><strong>Clothing</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h4 class="mt-4"><strong>Vehicles</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h4 class="mt-4"><strong>Pets & Animals</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            
+                            <h4 class="mt-4"><strong>Misc</strong></h4>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        
+                        </div>
+
+                    </div>
+                    <div class="flex-3 d-none d-xl-inline-flex"></div>
+                </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+
+
             </div>
         </div>
 
