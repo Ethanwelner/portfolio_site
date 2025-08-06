@@ -80,7 +80,7 @@
                             <img src="img/stat_ring.png" alt="Stat ring" class="column-image">
                         </div>
                     </div>
-                    <hr class="my-5 gray-hr">
+                    <div class="separator"></div>
                 </div>
 
 
@@ -107,67 +107,100 @@
                             <img src="img/stat_grid.png" alt="Stat grid" class="column-image">
                         </div>
                     </div>
-                    <hr class="my-5 gray-hr">
+                    <div class="separator"></div>
                 </div>
 
 
                 <div class="d-flex flex-wrap flex-xs-nowrap column-container">
                     <div class="d-inline-flex flex-12 flex-gap-48">
-                        <div class="game-mechanics">
+                        <div class="game-mechanics flex-6">
 
-                            <h3>Stat Types</h3>
                             <!-- stat types -->
+                            <h3 class="mb-3">Stat Types</h3>
                             <h4 class="mt-4">Physical</h4>
-                            <h5>Endurance</h5>
+                            <div class="line-container">
+                                <h5><strong>Endurance</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Endurance represents the body's ability to resist and persist. A high Endurance means a character is hardy and resilient to the elements, attacks, and deprivation. Such a character can go longer without eating, march for longer without tiring, and ward of diseases or poisons more easily. A durable character isn't inherently strong, but they are consistent.
                             </p>
-                            <h5>Power</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Power</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Power represents the body's ability to generate force, be it lifting heavy objects or jumping high distances. A high Power means a character can lift more, push harder, run faster. Such a character has an easier time climbing, has a higher jump distance, and swings harder with an axe. A powerful character isn't inherently resilient, but they can perform impressive feats for short periods of time.
                             </p>
-                            <h5>Grace</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Grace</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Grace represents the body's ability to act with accuracy and control. A high Grace means a character can throw accurately, dance gracefully, and perform dextrous and delicate actions. A graceful character isn't inherently fast or powerful, but every action they take is made more effective by their agility and efficiency of movement.
                             </p>
 
-                            <h4 class="mt-4">Social</h4>
-                            <h5>Empathy</h5>
+                            <div class="bumper"></div>
+                            <h4 class="">Social</h4>
+
+                            <div class="line-container">
+                                <h5><strong>Empathy</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle ticks and cues in their body language, or quickly interpreting orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspicious. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
                             </p>
-                            <h5>Persuasion</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Persuasion</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Persuasion represents the character's ability to convince others, be it through a well structured argument, persuasive rhetoric, or simple force of personality. A high Persuasion means the character can get the better in negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
                             </p>
-                            <h5>Demeanor</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Demeanor</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Demeanor represents the character's control of their own vibe, be it acting cool under fire, the ability to command a room, or the ability to fade into a crowd. A high Demeanor means that a character can seem trustworthy at a glance, can look poised for the camera, and can command loyalty from their troops. A high Demeanor doesn't mean a character inherently understands or can control others, but looking the part and not cracking under pressure can go a long way.
                             </p>
 
-                            <h4 class="mt-4">Mental</h4>
-                            <h5>Logic</h5>
+                            <div class="bumper"></div>
+                            <h4 class="">Mental</h4>
+
+                            <div class="line-container">
+                                <h5><strong>Logic</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Logic represents the character's ability to work through problems in a systemic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems or during difficult situations.
                             </p>
-                            <h5>Intuition</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Intuition</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Intuition represents the character's ability to read a situation without all the facts. A high intuition means a character can make the leaps in Logic needed to get through a challenge quickly and naturally, be it estimating how long the rations will last, reading their opponent's movements for a perfect parry, or figuring out the missing ingredient in a potion. A high intuition doesn't mean a character knows or understands the situation, but it can give them an edge regardless.
                             </p>
-                            <h5>Memory</h5>
+
+                            <div class="line-container">
+                                <h5><strong>Memory</strong></h5>
+                                <div class="line"></div>
+                            </div>
                             <p class="copy">
                                 Memory represents the character's ability to store and recall information. A high Memory will allow a character to remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
                             </p>
 
                         </div>
-                    </div>
+                        
+                        <div class="game-mechanics flex-6">
 
-                    <hr class="my-5 gray-hr">
-
-                    <div class="d-inline-flex flex-12 flex-gap-48">
-                        <div class="game-mechanics">
-
-                            <h3>Stat-Based Resources</h3>
+                            <h3 class="mb-3">Stat-Based Resources</h3>
                             <h4 class="mt-4">Health and Hit Points (HP)</h4>
                             <p class="copy my-3">
                                 Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP does not directly correspond to specific forms of damage but is instead intended as an at-a-glance measure of the health of a character or object.
@@ -329,7 +362,7 @@
 
 
                             <h3 class="mb-3">Trait Categories</h3>
-                            <p class="copy">
+                            <div class="copy">
                                 Because Traits can take so many different forms, they are subdivided into seven categories. The categories listed below represent the fundamental basic categories of a Trait. The Traits category determines how it interacts with characters and the game's systems.
                                 
                                 <div class="line-container">
@@ -375,7 +408,8 @@
                                     <div class="line"></div>
                                 </div>
                                 <p>Other is a catchall category and represents special Traits that go beyond the norm. Most Other Traits are, in reality, multiple Traits listed at the same time for the sake of convenience. As an example, a character being possessed by a daemon may have that possession listed as an Other Trait, and that Traits description may describe significant alterations to how that character would otherwise function.</p>
-                            </p>
+                            </div>
+                            
                         </div>
 
                         <div class="game-mechanics flex-6">
