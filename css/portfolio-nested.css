@@ -26,6 +26,7 @@
 /* CSS Custom Properties */
 :root {
     --portfolio-white: #ffffff;
+    --portfolio-near-white: #fafafa;
     --portfolio-black: #212121;
     --portfolio-red: #eb0844;
     --portfolio-yellow: #FCB10F;
@@ -168,6 +169,25 @@ dl, ol, ul {
     font-weight: 500;
 }
 
+.tiny-text {
+    font-size: .75rem;
+}
+
+.level-badge {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--portfolio-black);
+    color: var(--portfolio-white);
+    padding: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    line-height: 0;
+}
 
 
 
@@ -345,6 +365,36 @@ hr {
     }
   }
 
+  .empty-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .empty-list.call-response {
+    li {
+        margin-bottom: .5rem;
+        font-weight: 600;
+    }
+    li:nth-child(odd) {
+        margin-bottom: 0;
+        font-weight: 300;
+    }
+  }
+
+  .c-sheet {
+    background-color: var(--portfolio-near-white);
+    padding: 2rem;
+    border: 1px solid var(--portfolio-light-gray);
+    border-radius: 24px;
+  }
+
+  .c-sheet-box {
+    padding: 2rem;
+    border: 1px solid var(--portfolio-light-gray);
+    border-radius: 4px;
+  }
+
 
 
 
@@ -385,6 +435,10 @@ hr {
 
 .flex-gap-12 {
     gap: 12px;
+}
+
+.flex-gap-24 {
+    gap: 24px;
 }
 
 .flex-gap-48 {

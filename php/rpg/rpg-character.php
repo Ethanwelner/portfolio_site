@@ -82,4 +82,105 @@
 		</div>
 	</div>
 	<div class="separator"></div>
+
+	<div class="d-flex flex-column c-sheet">
+		<div class="d-inline-flex flex-18 flex-gap-48">
+			<div class="flex-grow-1 d-flex flex-row flex-gap-24">
+				<div class="">
+					<div class="level-badge">2</div>
+				</div>
+				<div class="">
+					<h4>Erwin Stromble</h4>
+					<div class="d-flex flex-row flex-gap-12">
+						<div><span class="tiny-text"><strong>Age</strong></span>&nbsp;30</div>
+						<div><span class="tiny-text"><strong>Height</strong></span>&nbsp;6 feet</div>
+						<div><span class="tiny-text"><strong>Weight</strong></span>&nbsp;190lbs </div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-grow-1 flex-gap-12 d-flex justify-content-center">
+				<h5 class="d-inline-block mr-3"><i>10</i>&nbsp;<strong>HP</strong></h5>
+				<h5 class="d-inline-block mr-3"><i>2</i>&nbsp;<strong>VP</strong></h5>
+				<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
+			</div>
+			<div class="flex-grow-1 flex-gap-12 d-flex justify-items-end justify-content-end">
+				<h5 class="d-inline-block mr-3"><i>1</i> <strong>Blunt</strong></h5>
+				<h5 class="d-inline-block mr-3"><i>0</i> <strong>Piercing</strong></h5>
+				<h5 class="d-inline-block mr-3"><i>1</i> <strong>Slashing</strong></h5>
+				<h5 class="d-inline-block"><i>0</i> <strong>Energy</strong></h5>
+			</div>
+		</div>
+		<div class="d-inline-flex flex-12 flex-column my-5">
+			<h4 class="mb-3">Physical Description &amp; Backstory</h4>
+			<div class="d-inline-flex flex-12 c-sheet-box">
+				<ul class="empty-list call-response">
+					<li>Race</li>
+					<li>Human</li>
+					<li>Origin</li>
+					<li>Terran Demarchy</li>
+					<li>Profession</li>
+					<li>Smuggler</li>
+					<li>Past</li>
+					<li>Raised By The Streets</li>
+					<li>Cash</li>
+					<li>2,000</li>
+					<li>Wealth</li>
+					<li>15,000</li>
+					<li>Languages</li>
+					<li>Terran Standard, Spanish, Orkoid</li>
+				</ul>
+			</div>
+		</div>
+		<div class="d-inline-flex flex-12 flex-gap-48">
+			<div class="flex-7">
+				<img class="column-image p-0" src="img/erwin-stats.png" alt="erwins stats">
+			</div>
+			<div class="flex-5">
+				<h5>Knowledges</h5>
+				<ul class="empty-list">
+					<li><span class="tiny-text">Knowledge:</span> Terran history (1)</li>
+					<li><span class="tiny-text">Knowledge:</span> Terran Geography (1)</li>
+					<li><span class="tiny-text">Knowledge:</span> Terran Law (1)</li>
+					<li><span class="tiny-text">Knowledge:</span> Contraband (2)</li>
+					<li><span class="tiny-text">Knowledge:</span> Security (2)</li>
+					<li><span class="tiny-text">Knowledge:</span> Streetwise (1)</li>
+					<li><span class="tiny-text">Knowledge:</span> Criminality (1)</li>
+					<li><span class="tiny-text">Knowledge:</span> Terran Standard</li>
+					<li><span class="tiny-text">Knowledge:</span> Spanish</li>
+					<li><span class="tiny-text">Knowledge:</span> Orkoid</li>
+				</ul>
+				<h5>Skills</h5>
+				<ul class="empty-list">
+					<li>Smooth Talker (1)</li>
+					<li>Concealment (1)</li>
+					<li>Schemer</li>
+					<li>Sleight of Hand (1)</li>
+					<li>Act Natural (2)</li>
+					<li>Wheelman (1)</li>
+					<li>Pilot (basic automotive) (1)</li>
+					<li>Pilot (basic voidcraft) (1)</li>
+					<li>Backroads Traveler</li>
+					<li>Rapid Appraisal</li>
+					<li>Scrounger (1)</li>
+				</ul>
+				<h5>Other Feats and Abilities</h5>
+				<ul class="empty-list">
+					<li>Inheritence (Rickety Cargo Shuttle)</li>
+					<li>More Lucky Than Good</li>
+					<li>Forgettable Face</li>
+					<li>Contacts (1)</li>
+				</ul>
+			</div>
+			<div class="flex-grow-1 ">
+				<h5>Items and Equipment</h5>
+				<ul class="empty-list">
+					<li>Sturdy Leather Jacket (1 blunt, 1 slashing, torso)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
 </div>
