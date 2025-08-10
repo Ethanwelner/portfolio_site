@@ -83,6 +83,7 @@
 	</div>
 	<div class="separator"></div>
 
+		I'm gonna turn the character sheet table into something that is html based instead of imagery, but thats tomorrow. I'm at a bbq and this is my first fake git commit. At least I'm being honest.
 	<div class="d-flex flex-column c-sheet">
 		<div class="d-inline-flex flex-18 flex-gap-48">
 			<div class="flex-grow-1 d-flex flex-row flex-gap-24">
