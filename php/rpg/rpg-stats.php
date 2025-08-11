@@ -34,7 +34,7 @@
 
 
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
-	<div class="d-inline-flex flex-12 flex-gap-48 align-items-center">
+	<div class="d-inline-flex flex-12 flex-gap-48">
 		<div class="game-mechanics flex-6">
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
@@ -51,8 +51,255 @@
 				<li>They're definitely not becoming a Master Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex flex-6 flex-gap-48">   
-			<img src="img/stat_grid.png" alt="Stat grid" class="column-image">
+
+		<!-- stat grid -->
+		<div class="d-inline-flex flex-6 flex-gap-48 flex-column">
+			<!-- physical stats -->
+			<div class="d-flex flex-column flex-gap-12">
+				<div class="d-flex flex-row flex-gap-12 align-items-center">
+					<div class="stat-badge">9</div>
+					<h5>Physical</h5>
+				</div>
+				<div class="tiny-text">
+					<strong>Endurance - 11</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Power - 15</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Grace - 4</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+			</div>
+			<!-- social stats -->
+			<div class="d-flex flex-column flex-gap-12">
+				<div class="d-flex flex-row flex-gap-12 align-items-center">
+					<div class="stat-badge">2</div>
+					<h5>Social</h5>
+				</div>
+				<div class="tiny-text">
+					<strong>Empathy - 1</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Persuasion - 2</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Demeanor - 4</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot filled"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+			</div>
+			<!-- mental stats -->
+			<div class="d-flex flex-column flex-gap-12">
+				<div class="d-flex flex-row flex-gap-12 align-items-center">
+					<div class="stat-badge">1</div>
+					<h5>Mental</h5>
+				</div>
+				<div class="tiny-text">
+					<strong>Logic - 1</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Intuition - 2</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+				<div class="tiny-text">
+					<strong>Memory - 2</strong>
+				</div>
+				<div class="stat-line">
+					<div class="stat dot default"></div>
+					<div class="stat square filled"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square empty"></div>
+					<div class="stat dot empty"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+					<div class="stat dot unavailable"></div>
+					<div class="stat square unavailable"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="separator"></div>
