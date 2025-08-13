@@ -82,15 +82,20 @@
 	</div>
 	<div class="separator"></div>
 
-	<!-- character sheet -->
-	<div class="d-flex flex-column c-sheet flex-gap-48 flex-fill">
-		<div class="d-flex flex-18 flex-gap-48 flex-fill">
+
+
+
+
+	<!-- ------------ CHARACTER SHEET ------------ -->
+
+	<div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
+		<div class="d-flex flex-18 flex-gap-48 flex-fill c-sheet-box">
 			<div class="flex-grow-1 d-flex flex-row flex-gap-24 flex-fill">
 				<div class="">
 					<div class="level-badge">2</div>
 				</div>
 				<div class="">
-					<h4>Erwin Stromble</h4>
+					<h2>Edwin Humble</h2>
 					<div class="d-flex flex-row flex-gap-12">
 						<div><span class="tiny-text"><strong>Age</strong></span>&nbsp;30</div>
 						<div><span class="tiny-text"><strong>Height</strong></span>&nbsp;6 feet</div>
@@ -99,39 +104,52 @@
 				</div>
 			</div>
 			<div class="flex-grow-1 flex-gap-12 d-flex justify-content-center">
-				<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5>
-				<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>
+				<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5>|
+				<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>|
 				<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
 			</div>
 			<div class="flex-grow-1 flex-gap-12 d-flex justify-items-end justify-content-end">
-				<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5>
-				<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5>
-				<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5>
+				<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5>|
+				<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5>|
+				<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5>|
 				<h5 class="d-inline-block"><i>0</i> <strong>Energy</strong></h5>
 			</div>
 		</div>
-		<div class="d-inline-flex flex-12 flex-column">
-			<h4 class="mb-3">Physical Description &amp; Backstory</h4>
-			<div class="d-inline-flex flex-12 c-sheet-box">
-				<ul class="empty-list call-response mb-0">
-					<li>Race</li>
-					<li>Human</li>
-					<li>Origin</li>
-					<li>Terran Demarchy</li>
-					<li>Profession</li>
-					<li>Smuggler</li>
-					<li>Past</li>
-					<li>Raised By The Streets</li>
-					<li>Cash</li>
-					<li>2,000</li>
-					<li>Wealth</li>
-					<li>15,000</li>
-					<li>Languages</li>
-					<li>Terran Standard, Spanish, Orkoid</li>
-				</ul>
+		<div class="d-flex flex-column c-sheet-box">
+			<div class="d-inline-flex flex-12">
+				<div class="line-container d-flex flex-fill">
+					<h4 class="">Physical Description &amp; Backstory</h4>
+					<div class="line"></div>
+				</div>
+			</div>
+			<div class="d-inline-flex flex-12 flex-gap-48">
+				<div class="d-inline-flex flex-4">
+					<ul class="empty-list call-response mb-0">
+						<li>Race</li>
+						<li>Human</li>
+						<li>Origin</li>
+						<li>Terran Demarchy</li>
+						<li>Profession</li>
+						<li>Smuggler</li>
+						<li>Past</li>
+						<li>Raised By The Streets</li>
+						<li>Cash</li>
+						<li>2,000</li>
+						<li>Wealth</li>
+						<li>15,000</li>
+						<li>Languages</li>
+						<li>Terran Standard, Spanish, Orkoid</li>
+					</ul>
+				</div>
+				<div class="d-inline-flex flex-4">
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+				</div>
+				<div class="d-inline-flex flex-4">
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+				</div>
 			</div>
 		</div>
-		<div class="row c-sheet-box flex-fill flex-gap-48">
+		<div class="d-flex c-sheet-box flex-fill flex-gap-48">
 			<div class="flex-5">
 				<!-- stat grid -->
 				<div class="d-flex flex-gap-48 flex-column flex-fill">
@@ -139,7 +157,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">9</div>
-							<h5>Physical</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Physical</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Endurance - 1</strong>
@@ -221,7 +242,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">2</div>
-							<h5>Social</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Social</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Empathy - 1</strong>
@@ -303,7 +327,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">1</div>
-							<h5>Mental</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Mental</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Logic - 1</strong>
@@ -385,7 +412,10 @@
 			</div>
 			<div class="d-flex flex-3 flex-column flex-gap-48">
 				<ul class="empty-list mb-0">
-					<h5>Knowledges</h5>
+					<div class="line-container d-flex flex-fill">
+						<h5>Knowledges</h5>
+						<div class="line"></div>
+					</div>
 					<li><span class="tiny-text">Knowledge:</span> Terran history (1)</li>
 					<li><span class="tiny-text">Knowledge:</span> Terran Geography (1)</li>
 					<li><span class="tiny-text">Knowledge:</span> Terran Law (1)</li>
@@ -398,7 +428,10 @@
 					<li><span class="tiny-text">Knowledge:</span> Orkoid</li>
 				</ul>
 				<ul class="empty-list mb-0">
-					<h5>Skills</h5>
+					<div class="line-container d-flex flex-fill">
+						<h5>Skills</h5>
+						<div class="line"></div>
+					</div>
 					<li>Smooth Talker (1)</li>
 					<li>Concealment (1)</li>
 					<li>Schemer</li>
@@ -412,7 +445,10 @@
 					<li>Scrounger (1)</li>
 				</ul>
 				<ul class="empty-list mb-0">
-					<h5>Other Feats and Abilities</h5>
+					<div class="line-container d-flex flex-fill">
+						<h5>Other Feats and Abilities</h5>
+						<div class="line"></div>
+					</div>
 					<li>Inheritence (Rickety Cargo Shuttle)</li>
 					<li>More Lucky Than Good</li>
 					<li>Forgettable Face</li>
@@ -420,7 +456,10 @@
 				</ul>
 			</div>
 			<div class="flex-4">
-				<h5>Items and Equipment</h5>
+				<div class="line-container d-flex flex-fill">
+					<h5>Items and Equipment</h5>
+					<div class="line"></div>
+				</div>
 				<ul class="empty-list">
 					<li>Sturdy Leather Jacket (1 blunt, 1 slashing, torso)</li>
 				</ul>
