@@ -3,7 +3,7 @@
 		<h3 class="sub-title mb-3">Explaining Stats</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
-	<div class="d-inline-flex flex-12 flex-gap-48 align-items-center">
+	<div class="d-inline-flex flex-12 flex-gap-48 align-items-center flex-wrap flex-md-nowrap">
 		<div class="game-mechanics flex-6">
 			<h3 class="mb-3">Stats</h3>
 			
@@ -34,7 +34,7 @@
 
 
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
-	<div class="d-inline-flex flex-12 flex-gap-48">
+	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
 		<div class="game-mechanics flex-6">
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
@@ -307,7 +307,7 @@
 
 
 <div class="d-flex flex-wrap flex-xs-nowrap column-container">
-	<div class="d-inline-flex flex-12 flex-gap-48">
+	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
 		<div class="game-mechanics flex-6">
 
 			<!-- stat types -->

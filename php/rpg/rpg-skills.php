@@ -9,7 +9,7 @@
 
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-3 d-none d-xl-inline-flex"></div>
-	<div class="d-inline-flex flex-12 flex-gap-48">
+	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
 		<div class="d-inline-flex flex-6">
 			<div class="game-mechanics">
 				<h3 class="mb-4">What is a Skill Check?</h3>

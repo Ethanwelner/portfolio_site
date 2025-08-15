@@ -201,6 +201,14 @@
     .force-size {
         width: auto;
     }
+
+    .c-sheet {
+        padding: 0rem;
+      }
+    
+      .c-sheet-box {
+        padding: 1rem;
+      }
 }
 
 /* ========================================
