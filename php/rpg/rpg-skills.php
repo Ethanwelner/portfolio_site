@@ -25,7 +25,7 @@
 					Ex. A character may have to take a fear (demeanor) skill check to avoid cowering at the sight of a dragon.
 					<br><br>
 				</p>
-				<ul>
+				<ul class="copy">
 					<li>Skill check results are rolled on a d20. The result of this roll is then modified by all roll modifiers and compared against a target value. If the skill check meets or exceeds the value, it "succeeds." If the roll falls below the value, it "fails."</li>
 					<li>Most skill checks will reference an outer ring stat. When a skill check references a stat, you add the character's stat value to the total.</li>
 					<li>If a skill check references an inner ring stat, the character can choose one relevant outer ring stat to add to the die roll.</li>
@@ -45,7 +45,7 @@
 				<div class="bumper"></div>
 
 				<h3 class="mb-3">Requesting Advantage</h3>
-				<ul>
+				<ul class="copy">
 					<li>A character can request advantage in a situation where they believe they are uniquely advantaged in the effort of performing some sort of task or skill or in a role-playing scenario.</li>
 					<li>Some feats will specify a situation where a character can request advantage that is tied to a specific skill set or physical attribute</li>
 					<li>Requesting advantage is an expression of both the stats written on a character sheet and the character's backstory and role-playing attributes.</li>
@@ -58,7 +58,7 @@
 				<div class="bumper"></div>
 
 				<h3 class="mb-3">Requesting Competence</h3>
-				<ul>
+				<ul class="copy">
 					<li>A character can Request competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn't be penalized as harshly or at all for lacking a specific skill.</li>
 					<li>A Character with expertise in wielding a sword can request competence when wielding a dagger, even if they don't have a feat giving them that skill.</li>
 					<li>Requested competence can result in a wide range of results, from the user being wholly proficient in the task at hand to even being granted a relevant feat that gives them that skill permanently.</li>
@@ -81,10 +81,10 @@
 						<span class="copy-title"><strong>-10</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Breathing (endurance)
 						</div>
-						<div>
+						<div class="copy">
 							Being at the top of a tall mountain may give you a -20 difficulty modifier to breathing, giving a character with a poor endurance stat a 50/50 chance of passing out.
 						</div>
 					</div>
@@ -95,10 +95,10 @@
 						<span class="copy-title"><strong>0</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Reading (intuition)
 						</div>
-						<div>
+						<div class="copy">
 							If the script is in poor handwriting, it might give the action a -10 difficulty modifier, which gives a character with a poor intuition stat a 50/50 chance of not understanding the text.
 						</div>
 					</div>
@@ -113,10 +113,10 @@
 						<span class="copy-title"><strong>10</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Jumping a 6-foot gap (Power)
 						</div>
-						<div>
+						<div class="copy">
 							A character may have an injured leg, giving them a -10 difficulty modifier to the jump.
 						</div>
 					</div>
@@ -127,10 +127,10 @@
 						<span class="copy-title"><strong>20</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Making a fire (Mental)
 						</div>
-						<div>
+						<div class="copy">
 							A lighter could give +15 to making a fire.
 						</div>
 					</div>
@@ -145,10 +145,10 @@
 						<span class="copy-title"><strong>30</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Brewing a simple potion (Memory)(Grace)
 						</div>
-						<div>
+						<div class="copy">
 							A potion-brewing feat could give a +20 Roll modifier to this Skill, turning the impossible into the easy.
 						</div>
 					</div>
@@ -159,10 +159,10 @@
 						<span class="copy-title"><strong>40</strong></span>
 					</div>
 					<div class="d-flex flex-16 flex-column flex-gap-4">
-						<div>
+						<div class="copy">
 							Writing a complex computer program (Logic)(Intuition)
 						</div>
-						<div>
+						<div class="copy">
 							A computer use feat and a computer programming feat could combine to give +20 to this action. Repeated attempts could also allow the character to gain advantage by slowly fixing the flaws in their program.
 						</div>
 					</div>

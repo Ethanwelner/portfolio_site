@@ -6,7 +6,7 @@
 <div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
 	<div class="game-mechanics flex-6">
 		<h3 class="mb-3">Musings on the process for creating a character</h3>
-		<ul>
+		<ul class="copy">
 			<li>Character Level is tracked separately from outer ring stats.</li>
 			<li>Inner ring stats are listed as a single number docked to their outer ring lines.</li>
 			<li>The outer ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what kind of feat they gain.</li>
@@ -23,19 +23,19 @@
 	</div>
 	<div class="game-mechanics flex-6">
 		<h3 class="mb-3">Background's being used in the sample character sheet</h3>
-		<div>
+		<div class="copy">
 			<div class="line-container">
 				<h5><strong>Species: Human</strong></h5>
 				<div class="line"></div>
 			</div>
 			<h6>Generalists</h6>
-			<p>Humans start with 1 point in every outer ring stat</p>
+			<p class="copy">Humans start with 1 point in every outer ring stat</p>
 			<h6>Unexceptional</h6>
-			<p>Humans can not exceed 15 in any outer ring stat unless otherwise modified</p>
+			<p class="copy">Humans can not exceed 15 in any outer ring stat unless otherwise modified</p>
 			<h6>Versatile</h6>
-			<p>Humans can take cybernetics feats</p>
+			<p class="copy">Humans can take cybernetics feats</p>
 			<h6>Biological</h6>
-			<p>Humans can take genetic engineering feats</p>
+			<p class="copy">Humans can take genetic engineering feats</p>
 
 			<div class="line-container">
 				<h5><strong>Origin: Terran Demarchy</strong></h5>
@@ -45,7 +45,7 @@
 				Public Education<br>
 				Terrans Start with the following knowledge feats
 			</h6>
-			<p>
+			<p class="copy">
 				Homeworld Interlag (language)<br>
 				Terran history (1)<br>
 				Terran Geography (1)<br>
@@ -57,11 +57,11 @@
 				<div class="line"></div>
 			</div>
 			<h6>Skill Feats</h6>
-			<p>Smooth Talker<br>
+			<p class="copy">Smooth Talker<br>
 			Concealment<br>
 			1 additional Contact</p>
 			<h6>Knowledge Feats</h6>
-			<p>Contraband<br>
+			<p class="copy">Contraband<br>
 			Security<br>
 			1 additional Language</p>
 
@@ -70,11 +70,11 @@
 				<div class="line"></div>
 			</div>
 			<h6>Skill Feats</h6>
-			<p>Schemer<br>
+			<p class="copy">Schemer<br>
 			Sleight of Hand<br>
 			1 additional contact</p>
 			<h6>Knowledge Feats</h6>
-			<p>Streetwise<br>
+			<p class="copy">Streetwise<br>
 			Criminal Activity<br>
 			1 additional Language</p>
 		</div>
@@ -89,12 +89,12 @@
 <!-- ------------ CHARACTER SHEET ------------ -->
 
 <div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
-	<div class="d-flex flex-18 flex-gap-48 flex-fill c-sheet-box flex-wrap flex-md-nowrap">
+	<div class="d-flex flex-18 flex-gap-48 row-gap-12 flex-fill c-sheet-box flex-wrap flex-md-nowrap">
 		<div class="flex-grow-1 d-flex flex-row flex-gap-24 flex-fill">
-			<div class="">
+			<div>
 				<div class="level-badge">2</div>
 			</div>
-			<div class="">
+			<div>
 				<h2>Edwin Humble</h2>
 				<div class="d-flex flex-row flex-gap-12">
 					<div><span class="tiny-text"><strong>Age</strong></span>&nbsp;30</div>
@@ -103,15 +103,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-grow-1 flex-gap-12 d-flex justify-content-center flex-column flex-md-row">
-			<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5><span class="d-none d-md-inline">|</span>
-			<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5><span class="d-none d-md-inline">|</span>		
+		<div class="flex-grow-1 flex-gap-12 d-flex justify-content-start justify-content-md-center">
+			<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5>|
+			<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>|		
 			<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
 		</div>
-		<div class="flex-grow-1 flex-gap-12 d-flex justify-items-end justify-content-end flex-column flex-md-row">
+		<div class="flex-grow-1 flex-gap-12 d-flex justify-content-start justify-content-md-end">
 			<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5><span class="d-none d-md-inline">|</span>
-			<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5><span class="d-none d-md-inline">|</span>
-			<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5><span class="d-none d-md-inline">|</span>
+			<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5>|
+			<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5>|
 			<h5 class="d-inline-block"><i>0</i> <strong>Energy</strong></h5>
 		</div>
 	</div>
@@ -124,7 +124,7 @@
 		</div>
 		<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
 			<div class="d-inline-flex flex-4">
-				<ul class="empty-list call-response mb-0">
+				<ul class="empty-list call-response mb-0 copy">
 					<li>Race</li>
 					<li>Human</li>
 					<li>Origin</li>
@@ -142,10 +142,10 @@
 				</ul>
 			</div>
 			<div class="d-inline-flex flex-4">
-				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+				<p class="copy">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
 			</div>
 			<div class="d-inline-flex flex-4">
-				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+				<p class="copy">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
 			</div>
 		</div>
 	</div>
@@ -411,7 +411,7 @@
 			</div>
 		</div>
 		<div class="d-flex flex-3 flex-column flex-gap-24">
-			<ul class="empty-list mb-0">
+			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
 					<h5>Knowledges</h5>
 					<div class="line"></div>
@@ -427,7 +427,7 @@
 				<li><span class="tiny-text">Knowledge:</span> Spanish</li>
 				<li><span class="tiny-text">Knowledge:</span> Orkoid</li>
 			</ul>
-			<ul class="empty-list mb-0">
+			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
 					<h5>Skills</h5>
 					<div class="line"></div>
@@ -444,7 +444,7 @@
 				<li>Rapid Appraisal</li>
 				<li>Scrounger (1)</li>
 			</ul>
-			<ul class="empty-list mb-0">
+			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
 					<h5>Other Feats and Abilities</h5>
 					<div class="line"></div>
@@ -460,7 +460,7 @@
 				<h5>Items and Equipment</h5>
 				<div class="line"></div>
 			</div>
-			<ul class="empty-list">
+			<ul class="empty-list copy">
 				<li>Sturdy Leather Jacket (1 blunt, 1 slashing, torso)</li>
 			</ul>
 		</div>

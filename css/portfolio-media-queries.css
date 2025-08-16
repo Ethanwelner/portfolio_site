@@ -209,6 +209,10 @@
       .c-sheet-box {
         padding: 1rem;
       }
+
+      .column-image {
+        padding: 0;
+      }
 }
 
 /* ========================================

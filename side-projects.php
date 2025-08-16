@@ -17,7 +17,7 @@
                 <?php include 'php/header.php'; ?>
                 <div class="title section-title d-inline-flex z-2">
                     <div class="hero-statement pre-slide-in">
-                        <h1 class="title hero-title white-text ">Digitally Assisted PNP RPG</h1>
+                        <h1 class="title hero-title white-text ">Starrage</h1>
                     </div>
                 </div>
             </div>

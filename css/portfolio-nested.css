@@ -500,6 +500,10 @@ hr {
     gap: 48px;
 }
 
+.row-gap-12 {
+    row-gap: 12px;
+}
+
 
 
 

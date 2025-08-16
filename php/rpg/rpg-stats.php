@@ -11,7 +11,7 @@
 			<p class="copy my-3">
 				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two kinds of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A Character's Species will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
 			</p>
-			<ul>
+			<ul class="copy">
 				<li>When your character gains a Level you get a point to spend in any Inner Ring stat.</li>
 				<li>Adding a point to an Inner Ring stat gives you 3 to spend in the Outer Ring of that category.</li>
 				<li>The maximum that can be spent on any inner or Outer Ring stat is 20.</li>
@@ -38,7 +38,7 @@
 		<div class="game-mechanics flex-6">
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
-			<ul>
+			<ul class="copy">
 				<li>Some Species will have lowered maximums; the below example is a human and cannot exceed 15 in any inner or Outer Ring stat due to the Unexceptional Trait in the Species section of its Background.</li>
 				<li>The below character started with 1 in each stat due to humans generalist Trait in the Species section of its Background.</li>
 				<li>Humans are intended to be the average baseline in this system.</li>
@@ -409,7 +409,7 @@
 			<p class="copy my-3">
 				At their most resilient, a maxed-out human character can sustain roughly 5 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparative systems like D&D sit at around a 30x multiplier. This system, however, does not have the same levels of exponentially increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple leveling.
 			</p>
-			<ul>
+			<ul class="copy">
 				<li><strong>Healthy - Conveyed - Condition</strong><br>
 				Temporary (A character or object gains this trait while they are at their maximum HP total)<br>
 				This Trait has no effect on its own.</li>
@@ -440,7 +440,7 @@
 				VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total number of their Social inner ring stat. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
 			</p>
 			<p class="copy my-3">VP's can be spent on:</p>
-			<ul>
+			<ul class="copy">
 				<li>Rerolling a single die in a socially related skill check (such as to try again when lying to a guard about your motives)</li>
 				<li>Asking the DM to improve the results of a socially related skill check (such as improving the result of a negotiation over the price of a new car).</li>
 				<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passer-by forget your characters face once per point spent).</li>
@@ -450,7 +450,7 @@
 			<p class="copy my-3">
 				SP are a spendable resource that can be used to boost a characters skill checks in Mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by feats or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum SP's equal to the total number of their Mental inner ring stat. Certain Traits and equipment can increase the recovery rate of VP's. SP's can be spent on:
 			</p>
-			<ul>
+			<ul class="copy">
 				<li>Rerolling a single die in a mentally related skill check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
 				<li>Requesting competence or advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
 				<li>Using an Ability with a listed VP cost such as using the Born Navigator Trait to automatically succeed in discerning a ships direction when all that's available is the wind and waves to judge by.</li>
