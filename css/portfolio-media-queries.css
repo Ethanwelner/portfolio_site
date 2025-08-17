@@ -203,7 +203,7 @@
     }
 
     .c-sheet {
-        padding: 0rem;
+        padding: .5rem;
       }
     
       .c-sheet-box {
@@ -640,6 +640,32 @@
     .forecaster-scroller {
         animation-name: none;
         width: 100%;
+    }
+
+    .rpg-links {
+        left: auto;
+        top: auto;
+        right: 24px;
+        bottom: 24px;
+        align-items: end;
+    }
+
+    .c-variables {
+        column-gap: 8px
+    }
+
+    .c-variables, .c-variables h5 {
+        font-size:3.6vw;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .level-badge {
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        font-size: 1.5rem;
+        padding: .75rem;
     }
 }
 

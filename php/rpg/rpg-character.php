@@ -89,11 +89,11 @@
 <!-- ------------ CHARACTER SHEET ------------ -->
 
 <div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
+	<div class="position-absolute">
+		<div class="level-badge">2</div>
+	</div>
 	<div class="d-flex flex-18 flex-gap-48 row-gap-12 flex-fill c-sheet-box flex-wrap flex-md-nowrap">
 		<div class="flex-grow-1 d-flex flex-row flex-gap-24 flex-fill">
-			<div>
-				<div class="level-badge">2</div>
-			</div>
 			<div>
 				<h2>Edwin Humble</h2>
 				<div class="d-flex flex-row flex-gap-12">
@@ -103,13 +103,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-grow-1 flex-gap-12 d-flex justify-content-start justify-content-md-center">
+		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-center c-variables">
 			<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5>|
 			<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>|		
 			<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
 		</div>
-		<div class="flex-grow-1 flex-gap-12 d-flex justify-content-start justify-content-md-end">
-			<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5><span class="d-none d-md-inline">|</span>
+		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-end c-variables">
+			<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5>|
 			<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5>|
 			<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5>|
 			<h5 class="d-inline-block"><i>0</i> <strong>Energy</strong></h5>

@@ -96,7 +96,20 @@
 				</div>
 				<p class="copy">An item can be any physical object that a character can be in possession of. This can range from weapons to armor to currency to pets. Some items have considerable complexities of their own, such as a ship or a warhorse. Other items are as simple as a gold coin. All fall under the category of "items." Within the category of "items," there are several subcategories explained below. Items possess their own descriptions, functions, weight, and size and may confer abilities or be used by a character in a unique way. Items will typically be described somewhere external to a character's character sheet, but in cases where the item is truly unique (such as a fancy rock the character found), then the DM can describe the physical characteristics of the item in question. Items are recorded in the "items" section of the character sheet. There is no limit to the number of items a character can possess, though there are reasonable limits on what they can carry. A character may possess a house on their character sheet, but they aren't taking it around with them.</p>
 				
-				<p class="copy">The various types of equipment and unique attributes (if any) are described below.</p>
+				<p class="copy">The various types of equipment and unique attributes (if any) are described below.
+					<br><br>
+					<i>It should be noted that while these categories are used in-game to sort and describe items, these categories are not absolute and many items will have uses or effects that could place them into multiple categories.</i>
+				</p>
+				
+				<div class="line-container">
+					<h5><strong>Wearables</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					This category comprises any passively worn object or garment that is used without intention or effort. Hats, rings, and chainmail would fall under this category, as would more complex items like powered armor or even a magical force field. What separates armor from equipment is that armor is passive; it conveys its benefits or effects without the character having to take action.
+					<br><br>
+					Mundane or generic wearable items like everyday clothing do not necessarily need to be recorded on a character sheet and can be assumed to be possessed unless otherwise stated.
+				</p>
 				
 				<div class="line-container">
 					<h5><strong>Equipment</strong></h5>
