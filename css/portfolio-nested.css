@@ -333,6 +333,38 @@ hr {
     border-top: 1px solid rgb(255 255 255 / 25%);
 }
 
+
+
+
+
+/* ----------- RPG ---------- */
+
+
+.rpg-links {
+    position: fixed;
+    left: 60px;
+    top: 134px;
+    z-index: 4;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+
+    &.black {
+        z-index: 3;
+    }
+
+    .badge {
+        background-color: var(--portfolio-black);
+        color: var(--portfolio-white);
+        padding: .25rem .5rem;
+
+        .white & {
+            background-color: var(--portfolio-white);
+            color: var(--portfolio-black);
+        }
+    }
+}
+
 .line-container {
         position: relative;
         h4, h5, h6 {

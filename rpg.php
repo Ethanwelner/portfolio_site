@@ -18,7 +18,16 @@
                 <div class="title section-title d-inline-flex z-2">
                     <div class="hero-statement pre-slide-in">
                         <h1 class="title hero-title white-text ">Starrage</h1>
+						<h2 class="title section-title">A Custom RPG System</h2>
+					    <h3 class="sub-title non-title">For PnP Role Playing Games</h3>
                     </div>
+                </div>
+                <div class="rpg-links white">
+                    <a href="#stats"><badge class="badge">Stats</badge></a>
+                    <a href="#traits"><badge class="badge">Traits</badge></a>
+                    <a href="#skills"><badge class="badge">Skills</badge></a>
+                    <a href="#items"><badge class="badge">Items</badge></a>
+                    <a href="#character"><badge class="badge">Character</badge></a>
                 </div>
             </div>
         </div>
@@ -43,6 +52,14 @@
                 </a>
                 <!-- about me link -->
                 <div class="section-about-me black-text repaint about-me-link">About Me</div>
+            </div>
+
+            <div class="rpg-links black">
+                <a href="#stats"><badge class="badge">Stats</badge></a>
+                <a href="#traits"><badge class="badge">Traits</badge></a>
+                <a href="#skills"><badge class="badge">Skills</badge></a>
+                <a href="#items"><badge class="badge">Items</badge></a>
+                <a href="#character"><badge class="badge">Character</badge></a>
             </div>
 
 

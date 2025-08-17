@@ -4,7 +4,7 @@
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 		<div class="flex-3 d-none d-xl-inline-flex"></div>
 		<div class="flex-12">
-			<h3 class="sub-title mb-3">Items, Armor, and Effects</h3>
+			<h3 class="sub-title mb-3" id="items">Items, Armor, and Effects</h3>
 			<div class="copy stinger white mb-3">placeholder subtitle</div>
 		</div>
 		<div class="flex-3 d-none d-xl-inline-flex"></div>

@@ -1,6 +1,6 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
 	<div class="flex-12 mb-4">
-		<h3 class="sub-title mb-3">Explaining Stats</h3>
+		<h3 class="sub-title mb-3" id="stats">Explaining Stats</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
 	<div class="d-inline-flex flex-12 flex-gap-48 align-items-center flex-wrap flex-md-nowrap">

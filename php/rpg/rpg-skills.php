@@ -1,7 +1,7 @@
 <div class="d-flex flex-wrap flex-fill flex-xs-nowrap mb-4">
 	<div class="flex-3 d-none d-xl-inline-flex"></div>
 	<div class="flex-12">
-		<h3 class="sub-title mb-3">Skill Checks</h3>
+		<h3 class="sub-title mb-3" id="skills">Skill Checks</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
 	<div class="flex-3 d-none d-xl-inline-flex"></div>
