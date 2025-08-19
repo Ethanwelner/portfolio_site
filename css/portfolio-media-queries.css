@@ -204,6 +204,7 @@
 
     .c-sheet {
         padding: .5rem;
+        border-radius: 4px;
       }
     
       .c-sheet-box {
