@@ -96,8 +96,43 @@
 				</div>
 				<p class="copy">An item can be any physical object that a character can be in possession of. This can range from weapons to armor to currency to pets. Some items have considerable complexities of their own, such as a ship or a warhorse. Other items are as simple as a gold coin. All fall under the category of "items." Within the category of "items," there are several subcategories explained below. Items possess their own descriptions, functions, weight, and size and may confer abilities or be used by a character in a unique way. Items will typically be described somewhere external to a character's character sheet, but in cases where the item is truly unique (such as a fancy rock the character found), then the DM can describe the physical characteristics of the item in question. Items are recorded in the "items" section of the character sheet. There is no limit to the number of items a character can possess, though there are reasonable limits on what they can carry. A character may possess a house on their character sheet, but they aren't taking it around with them.</p>
 				
-				<p class="copy">The various types of equipment and unique attributes (if any) are described below.
+				<div class="line-container">
+					<h5><strong>Exclusivity</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					Some items have exclusive functionalities that can not be duplicated, whether because you can’t easily wear two pairs of shoes, only have one set of eyes to be cyberized, or a magic amulet gets… Jealous. These items will typically label themselves as exclusive and will list one or more items or categories of item. If a character has an item equipped, it can not then have another equipped that shares a type with the listed exclusion. It is at DM discretion whether or not an item is exclusive with another, and exceptions can sometimes occur.
 					<br><br>
+					EX. (exclusive: Footwear)
+				</p>
+				
+				<div class="line-container">
+					<h5><strong>Uses</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					Many items have a limited number of uses before becoming defunct or literally ceasing to exist. If an item has a limited number of uses, the number and nature of that limitation will be in its description.
+					<br><br>
+					Ex. (candy bar: uses 1: when consumed)
+				</p>
+				
+				<div class="line-container">
+					<h5><strong>Damage, Condition, and Destruction</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					Most items can be damaged or destroyed. When an item has various stages of degradation that can occur, it may be in its description, though often it will be at DM discretion, and additional descriptions may be added to an item relating to its condition. Larger or more complex and important items may have their own hit points or armor values. If no such values are present, then the DM can assign such values, or an item can simply be assumed to either be pristine or broken with no in-between. A destroyed item does not vanish except when circumstances say otherwise. A destroyed glass could still exist as glass shards waiting to be stepped on. The tracking or importance of a destroyed item is up to the player or DM.
+					<br><br>
+					Most items should not have their condition tracked unless it is important or relevant to the game (ex. A shield needn’t have its hit points tracked unless another character is explicitly trying to chip or destroy it with a weapon capable of doing so).
+				</p>
+				
+				
+				
+				<div class="line-container">
+					<h5><strong>The various types of equipment and unique attributes (if any) are described below.</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
 					<i>It should be noted that while these categories are used in-game to sort and describe items, these categories are not absolute and many items will have uses or effects that could place them into multiple categories.</i>
 				</p>
 				
@@ -106,7 +141,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					This category comprises any passively worn object or garment that is used without intention or effort. Hats, rings, and chainmail would fall under this category, as would more complex items like powered armor or even a magical force field. What separates armor from equipment is that armor is passive; it conveys its benefits or effects without the character having to take action.
+					This category comprises any passively worn object or garment that is used without intention or effort. Hats, rings, and chainmail would fall under this category, as would more complex items like powered armor or even a magical force field. What separates wearables from equipment is that wearables are passive; they convey their benefits or effects without the character having to take action.
 					<br><br>
 					Mundane or generic wearable items like everyday clothing do not necessarily need to be recorded on a character sheet and can be assumed to be possessed unless otherwise stated.
 				</p>
@@ -115,37 +150,64 @@
 					<h5><strong>Equipment</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					This catchall category comprises a wide variety of concepts. But the unifying feature is that equipment is useful and will typically have some sort of effect or feature in its description, often granting some sort of ability or benefit to a character when utilized. Watches, grappling hooks, jet packs, cell phones, or magic wands could all be considered equipment. Vehicles, weapons, wearables, and other categories of item could be considered equipment, and when they have equipment-like functionalities or natures, they will often be listed as equipment in addition to their other categories.
+				</p>
 				
 				<div class="line-container">
 					<h5><strong>Weapons</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					Weapons are a special form of equipment meant to cause damage or harm. Not every item capable of doing damage is a weapon, but most weapons exist specifically for that purpose. Weapons will convey abilities related to their use but often have a related trait or skill requirement to be used effectively. Anyone can pull a trigger, but hitting a target is a different matter. Weapons are often relatively complex forms of equipment and will need care, maintenance, or correct setup to be used correctly. Sometimes a weapon will need to be paired with another form of equipment, such as a bow requiring an arrow, but just as often they will not. Most weapons will be considered exclusive, though traits or DM discretion may allow for multiple weapons to be used simultaneously.
+				</p>
 				
 				<div class="line-container">
-					<h5><strong>Clothing</strong></h5>
+					<h5><strong>Structures</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					"Structures" is a catchall term for any item that exists, is unmoving, and can be occupied. Structures will typically be large and solid constructs built to be occupied or to accomplish some sort of task, but just like buildings in real life, they can have innumerable forms and purposes. Structures are not equipped; instead, characters will occupy a structure. The maximum total occupancy of a structure will always be defined in its description and will often feature not just total characters but other values such as the weight or size of what it can accommodate. In situations where these numbers are unset or so large that tracking them isn’t useful, a “-” will be listed, and these values are at DM discretion.
+					<br><br>
+					Structures are large and complex items and will often have hit points, armor values, and levels of destruction. When a character is occupying a structure, they are typically considered to be inside of and protected by it (presuming the threat isn’t inside the structure with them or they aren’t exposed in some other way).
+				</p>
 				
 				<div class="line-container">
 					<h5><strong>Vehicles</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					Vehicles are a special form of item that is used to move or protect characters. Like weapons, vehicles will often have a related skill requirement for their use. Unlike weapons, vehicles are not equipped; rather, characters (or other things) will occupy a vehicle like they do structures. Vehicles will always list a maximum number or nature of occupants (though in some instances that value will be listed as a “-”, similar to structures). In these instances the maximum occupancy is DM discretion.
+					<br><br>
+					A vehicle is typically ridden/piloted/driven by one or more characters, though sometimes the vehicles will either control themselves or be at the mercy of other forces (ex. A boat adrift in the tide or a runaway train). Vehicles are a relatively wide category of item that can encompass animals or structures and will typically have a list of their properties in their description.
+					<br><br>
+					Vehicles often require routine maintenance and upkeep, though if that is important or tracked within a game is at the DM's discretion. Similarly, vehicles will often have hit points or conditions listed, though it is at the DM's discretion if they want to add additional complexities to the maintenance or handling of a vehicle. (Ex.: It is at the DM's discretion if a car's gas tank explodes or if the players had to fill that gas tank or even pay attention to the concept of fuel.)
+				</p>
 				
 				<div class="line-container">
-					<h5><strong>Pets & Animals</strong></h5>
+					<h5><strong>Animals robots & animal-like NPCs</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					Animals are, in many ways, like characters. They can typically move, have hit points and defensive values, can equip and use items, and often can think and act independently. The most important distinction between an animal and a character is that the animal doesn’t warrant the creation of a character sheet and will typically have its traits listed in a compressed fashion. An animal will usually have its characteristics be derived from a baseline template that is then modified via traits.
+					<br><br>
+					Animals and animal-like NPCs have behaviors and will take actions on their own, though they are typically animalistic or robotic in nature. A trained animal or well-programmed robot will have a trait conveying that they can be interacted with and given commands. Often only specific listed characters will be able to command an animal or robot, though it is at the DM's discretion when and why this can occur.
+					<br><br>
+					Animals and animal-like NPCs can equip and use items, though the items they can use will typically be listed or at the DM's discretion.
+					<ul>
+						<li>Animals and animal-like NPCs can equip and use items, though the items they can use will typically be listed or at the DM's discretion.</li>
+						<li>Animals and animal-like NPCs will always have hit points and armor values.</li>
+						<li>Animals and animal-like NPCs will have their characteristics defined by a template and are then modified via traits.</li>
+					</ul>
+				</p>
 				
 				<div class="line-container">
 					<h5><strong>Misc</strong></h5>
 					<div class="line"></div>
 				</div>
-				<p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p class="copy">
+					Misc. items are items that do not neatly fall into another category or which are unimportant or generic objects that could have a multitude of uses. A brick would be a misc item; it could be thrown as a weapon or used to build a structure, but by itself it's just a… brick. Most items in an environment can be considered miscellaneous.
+				</p>
 			
 			</div>
 
