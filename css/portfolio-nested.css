@@ -400,15 +400,15 @@ hr {
     .gray-bg & {
         background-color: rgb(255 255 255 / 25%);
     }
-  }
+}
 
-  .empty-list {
+.empty-list {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
-  }
+}
 
-  .empty-list.call-response {
+.empty-list.call-response {
     li {
         margin-bottom: .5rem;
         font-weight: 600;
@@ -417,21 +417,27 @@ hr {
         margin-bottom: 0;
         font-weight: 300;
     }
-  }
+}
 
-  .c-sheet {
+.c-sheet {
     background-color: var(--portfolio-near-white);
     border: 1px solid var(--portfolio-light-gray);
     padding: 1rem;
     border-radius: 24px;
-  }
+}
 
-  .c-sheet-box {
+.c-sheet-box {
     padding: 2rem;
     background-color: var(--portfolio-white);
     border: 1px solid var(--portfolio-light-gray);
     border-radius: 4px;
-  }
+}
+
+.c-sheet-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
 
 .stat-line {
     display: grid;
