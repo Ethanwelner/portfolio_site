@@ -80,12 +80,12 @@
 										The new product would also need to represent a substantial upgrade in fit and finish over the previous solution, incorporating new brand standards and accessibility requirements.
 							    	</p>
 							    </div>
-						    	<img class="ux-iso shadow-diffuse" src="img/prep_3.jpg">
-						    	<img class="ux-iso shadow-diffuse" src="img/prep_4.jpg">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_3.jpg">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_4.jpg">
 						    </div>
 					    	<div class="preparedness-gallery">
-					    		<img class="ux-iso shadow-diffuse" src="img/prep_1.jpg">
-					    		<img class="ux-iso shadow-diffuse" src="img/prep_2.jpg">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_1.jpg">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_2.jpg">
 						    	<div>
 							    	<div class="copy stinger yellow mb-3">A multi-step process with pomp and circumstance</div>
 							    	<p class="copy">
@@ -101,7 +101,7 @@
 					</div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 					<div class="separator"></div>
-					<img class="ux-iso feature" src="img/preparedness_laptop.png">
+					<img class="full-width-image feature" src="img/preparedness_laptop.png">
 				</div>
 				
 

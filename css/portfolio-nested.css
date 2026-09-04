@@ -1058,8 +1058,8 @@ hr {
     border-radius: 40px;
 }
 
-/* UX ISO */
-.ux-iso {
+/* Full-width image */
+.full-width-image {
     width: 100%;
     height: auto;
     position: relative;

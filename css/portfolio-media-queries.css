@@ -387,7 +387,7 @@
         height: auto;
     }
     
-    .ux-iso {
+    .full-width-image {
         margin-top: 40px;
     }
     
@@ -599,7 +599,7 @@
             gap: 40px;
         }
         
-        .ux-iso {
+        .full-width-image {
             margin-top: 0;
         }
     }

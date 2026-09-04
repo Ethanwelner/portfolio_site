@@ -127,7 +127,7 @@
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="ux-iso" src="img/image_guide.jpg">
+				    	<img class="full-width-image" src="img/image_guide.jpg">
 				    </div>
 				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
@@ -164,7 +164,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1 "></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="ux-iso" src="img/fatplane.jpg">
+				    	<img class="full-width-image" src="img/fatplane.jpg">
 				    </div>
 				    
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
