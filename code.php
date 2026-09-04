@@ -171,10 +171,10 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-top">
 				    	<div class="browser-mock-container">
-				    		<img class="ux-iso browser-mock shadow-diffuse bm-3" src="img/browser.jpg">
-				    		<img class="ux-iso browser-mock shadow-diffuse bm-2" src="img/browser.jpg">
-				    		<img class="ux-iso browser-mock shadow-diffuse bm-1" src="img/browser.jpg">
-				    		<img class="ux-iso browser-mock shadow-diffuse bm-0" src="img/browser.jpg">
+				    		<img class="full-width-image browser-mock shadow-diffuse bm-3" src="img/browser.jpg">
+				    		<img class="full-width-image browser-mock shadow-diffuse bm-2" src="img/browser.jpg">
+				    		<img class="full-width-image browser-mock shadow-diffuse bm-1" src="img/browser.jpg">
+				    		<img class="full-width-image browser-mock shadow-diffuse bm-0" src="img/browser.jpg">
 				    	</div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1 "></div>
