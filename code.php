@@ -75,18 +75,14 @@
 					    	<h3 class="sub-title mb-3">Coding And Development</h3>
 					    	<div class="copy blue-text mb-3"><b>
 					    		HTML<br/>
-					    		Responsivity<br/>
-					    		Accessibility<br/>
-					    		AI<br/>
-								CSS<br/>
-								CSS Anim<br/>
-								SASS &amp; LESS<br/>
+								CSS, SASS &amp; LESS<br/>
+								JavaScript, jQuery<br/>
+					    		Responsivity / Accessibility<br/>
+					    		Claude Code / Cursor<br/>
+								Hardware Testing, AI Testing<br/>
+								CSS Animations<br/>
 								Bootstrap &amp; Foundation<br/>
-								JavaScript<br/>
-								Jquery<br/>
-								Google Analytics<br/>
-								Datadog<br/>
-								Hardware Testing<br/>
+								Google Analytics, Datadog, Pendo<br/>
 							</b></div>
 					    	<p class="copy">
 					    		As technology has grown in complexity and need, I've learned multiple languages, standards, and libraries to help build and prototype personal and professional projects.
