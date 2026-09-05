@@ -101,6 +101,14 @@ strong .mechanic-text {
         z-index: 3;
     }
 
+    a {
+        transition: opacity 200ms;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
     .badge {
         background-color: var(--portfolio-black);
         color: var(--portfolio-white);

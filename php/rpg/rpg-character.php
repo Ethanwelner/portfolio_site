@@ -7,35 +7,35 @@
 	<div class="game-mechanics flex-6">
 		<h3 class="mb-3">Musings on the process for creating a character</h3>
 		<ul class="copy">
-			<li>Character Level is tracked separately from outer ring stats.</li>
-			<li>Inner ring stats are listed as a single number docked to their outer ring lines.</li>
-			<li>The outer ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what kind of feat they gain.</li>
+			<li>Character Level is tracked separately from Outer Ring stats.</li>
+			<li>Inner Ring stats are listed as a single number docked to their Outer Ring lines.</li>
+			<li>The Outer Ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what kind of feat they gain.</li>
 			<li>Characters select a race, origin, profession, and past.</li>
-			<li>The characters race determines their starting stats, max stats, grants any unique ability the race may possess, and grants access to various feat categories.</li>
+			<li>The character's race determines their starting stats, max stats, grants any unique ability the race may possess, and grants access to various feat categories.</li>
 			<li>The character's origin grants access to a starting set of origin feats, typically a mix of regular and knowledge feats. It also grants access to selectable feats related to the origin as well as other RP specific things (wealth, identification, etc).</li>
 			<li>The character's profession grants access to a starting set of profession feats, typically a mix of regular and knowledge feats. It also grants access to selectable feats related to the profession as well as other RP specific things (equipment, licenses, etc).</li>
-			<li>Since characters start with outer ring stats related to their race they will typically start with a set of player-selectable feats. A human starts with 1 point in each outer ring stat, so they start with 9 universal feats in addition to the feats automatically granted to them by their race, origin, profession and past. Since they also only have a single point in each stat (plus three points for level 1) their selection will be relatively limited to less powerful and more common feats.
+			<li>Since characters start with Outer Ring stats related to their race they will typically start with a set of player-selectable feats. A human starts with 1 point in each Outer Ring stat, so they start with 9 universal feats in addition to the feats automatically granted to them by their race, origin, profession, and past. Since they also only have a single point in each stat (plus three points for level 1) their selection will be relatively limited to less powerful and more common feats.
 			</li>
 			<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized feats their character would possess and to help them differentiate from each other.</li>
-			<li>This character has selected to use two of its universal feats gained at level 1 to increase its knowledge in contraband and security, it can do this due to being a freshly created character. Future stats gains can not be used to gain knowledge feats, though this is at the DMs discretion.
+			<li>This character has selected to use two of its universal feats gained at level 1 to increase its knowledge in contraband and security; it can do this due to being a freshly created character. Future stat gains cannot be used to gain knowledge feats, though this is at the GM's discretion.
 			</li>
 		</ul>
 	</div>
 	<div class="game-mechanics flex-6">
-		<h3 class="mb-3">Background's being used in the sample character sheet</h3>
+		<h3 class="mb-3">Backgrounds being used in the sample character sheet</h3>
 		<div class="copy">
 			<div class="line-container">
 				<h5><strong>Species: Human</strong></h5>
 				<div class="line"></div>
 			</div>
 			<h6>Generalists</h6>
-			<p class="copy">Humans start with 1 point in every outer ring stat</p>
+			<p class="copy">Humans start with 1 point in every Outer Ring stat.</p>
 			<h6>Unexceptional</h6>
-			<p class="copy">Humans can not exceed 15 in any outer ring stat unless otherwise modified</p>
+			<p class="copy">Humans cannot exceed 15 in any Outer Ring stat unless otherwise modified.</p>
 			<h6>Versatile</h6>
-			<p class="copy">Humans can take cybernetics feats</p>
+			<p class="copy">Humans can take cybernetics feats.</p>
 			<h6>Biological</h6>
-			<p class="copy">Humans can take genetic engineering feats</p>
+			<p class="copy">Humans can take genetic engineering feats.</p>
 
 			<div class="line-container">
 				<h5><strong>Origin: Terran Demarchy</strong></h5>
@@ -43,11 +43,11 @@
 			</div>
 			<h6>
 				Public Education<br>
-				Terrans Start with the following knowledge feats
+				Terrans start with the following knowledge feats
 			</h6>
 			<p class="copy">
 				Homeworld Interlag (language)<br>
-				Terran history (1)<br>
+				Terran History (1)<br>
 				Terran Geography (1)<br>
 				Terran Law (1)
 			</p>
@@ -138,7 +138,7 @@
 					<li>Wealth</li>
 					<li>15,000</li>
 					<li>Languages</li>
-					<li>Terran Standard, Spanish, Orkoid</li>
+					<li>Terran Standard, Spanish, Orcoid</li>
 				</ul>
 			</div>
 			<div class="d-inline-flex flex-4">
@@ -418,7 +418,7 @@
 					<h5>Knowledges</h5>
 					<div class="line"></div>
 				</div>
-				<li><span class="tiny-text">Knowledge:</span> Terran history (1)</li>
+				<li><span class="tiny-text">Knowledge:</span> Terran History (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Terran Geography (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Terran Law (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Contraband (2)</li>
@@ -427,7 +427,7 @@
 				<li><span class="tiny-text">Knowledge:</span> Criminality (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Terran Standard</li>
 				<li><span class="tiny-text">Knowledge:</span> Spanish</li>
-				<li><span class="tiny-text">Knowledge:</span> Orkoid</li>
+				<li><span class="tiny-text">Knowledge:</span> Orcoid</li>
 			</ul>
 			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
@@ -451,7 +451,7 @@
 					<h5>Other Feats and Abilities</h5>
 					<div class="line"></div>
 				</div>
-				<li>Inheritence (Rickety Cargo Shuttle)</li>
+				<li>Inheritance (Rickety Cargo Shuttle)</li>
 				<li>More Lucky Than Good</li>
 				<li>Forgettable Face</li>
 				<li>Contacts (1)</li>
