@@ -74,6 +74,7 @@
 					    	<h3 class="copy stinger green mb-3">Interviews and Data </h3>
 					    	<div class="copy green-text mb-3"><b>
 					    		Google Analytics (GA4)<br/>
+								Pendo<br/>
 					    		Datadog<br/>
 					    		Genesys<br/>
 					    		Mailchimp<br/>
