@@ -88,18 +88,24 @@ strong .mechanic-text {
     font-weight: 600;
 }
 
-.rpg-links {
-    position: fixed;
+/* Full-height rail inside the unlimited section so the links can stick
+   while scrolling, then release at the section bottom. */
+.rpg-links-rail {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
     left: 60px;
+    z-index: 3;
+    width: max-content;
+}
+
+.rpg-links {
+    position: sticky;
     top: 134px;
-    z-index: 4;
     display: flex;
     gap: .5rem;
     flex-direction: column;
-
-    &.black {
-        z-index: 3;
-    }
+    align-self: flex-start;
 
     a {
         transition: opacity 200ms;
@@ -119,6 +125,62 @@ strong .mechanic-text {
             color: var(--portfolio-black);
         }
     }
+}
+
+/* overflow-x: hidden on body creates a scroll container that traps sticky.
+   clip keeps horizontal overflow hidden without breaking the side nav. */
+body:has(.rpg-links-rail) {
+    overflow-x: clip;
+}
+
+.rpg-tabs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+
+    .container {
+        height: auto;
+    }
+}
+
+.rpg-tab-list {
+    display: flex;
+    align-items: stretch;
+    gap: .5rem;
+}
+
+.rpg-tab {
+    appearance: none;
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    background: transparent;
+    color: var(--portfolio-white);
+    border: 1px solid var(--portfolio-white);
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+}
+
+.rpg-tab.is-active {
+    background: var(--portfolio-white);
+    color: var(--portfolio-black) !important;
+    border-color: var(--portfolio-white);
+}
+
+.rpg-panel {
+    display: none;
+}
+
+.rpg-panel.is-active {
+    display: flex;
+}
+
+.black-section .section-clip {
+    padding-bottom: 56px;
 }
 
 .line-container {
@@ -257,6 +319,10 @@ strong .mechanic-text {
    ======================================== */
 
 @media only screen and (max-width: 992px) {
+    .rpg-links-rail {
+        left: 5vw;
+    }
+
     .c-sheet {
         padding: .5rem;
         border-radius: 4px;
@@ -272,12 +338,23 @@ strong .mechanic-text {
 }
 
 @media only screen and (max-width: 767px) {
-    .rpg-links {
-        left: auto;
+    .rpg-links-rail {
+        position: fixed;
         top: auto;
-        right: 24px;
         bottom: 24px;
+        left: auto;
+        right: 24px;
+        z-index: 4;
+    }
+
+    .rpg-links {
+        position: static;
         align-items: end;
+    }
+
+    .rpg-tab {
+        font-size: 1.25rem;
+        padding: .6rem 1rem;
     }
 
     .c-variables {
