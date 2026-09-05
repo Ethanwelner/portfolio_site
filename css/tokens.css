@@ -1,0 +1,16 @@
+/* ========================================
+   DESIGN TOKENS
+   ======================================== */
+
+:root {
+    --portfolio-white: #ffffff;
+    --portfolio-near-white: #fafafa;
+    --portfolio-black: #212121;
+    --portfolio-red: #eb0844;
+    --portfolio-yellow: #FCB10F;
+    --portfolio-blue: #244479;
+    --portfolio-green: #47B767;
+    --portfolio-gray: #424242;
+    --portfolio-medium-gray: #969696;
+    --portfolio-light-gray: #eaeaea;
+}
