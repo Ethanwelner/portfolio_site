@@ -40,6 +40,60 @@
 			$( ".hero-statement" ).removeClass("pre-slide-in").addClass("post-slide-in");
 		},300);
 
+		function activateRpgTab($tab, updateHash) {
+			if ( ! $tab.length ) {
+				return;
+			}
+
+			$( ".rpg-tab" ).removeClass( "is-active" ).attr( "aria-selected", "false" );
+			$tab.addClass( "is-active" ).attr( "aria-selected", "true" );
+
+			$( ".rpg-panel" ).removeClass( "is-active" );
+			$( "#" + $tab.attr( "aria-controls" ) ).addClass( "is-active" );
+
+			if ( updateHash ) {
+				var nextHash = $tab.attr( "id" ) === "tab-setting" ? "setting" : "mechanics";
+				if ( window.location.hash.replace( /^#/, "" ) !== nextHash ) {
+					history.replaceState( null, "", "#" + nextHash );
+				}
+			}
+		}
+
+		function rpgTabFromHash() {
+			var hash = ( window.location.hash || "" ).replace( /^#/, "" ).toLowerCase();
+			if ( hash === "setting" || hash === "rpg-setting" || hash === "timeline" || hash === "technologies" || hash === "hierarchy" ) {
+				return $( "#tab-setting" );
+			}
+			return $( "#tab-mechanics" );
+		}
+
+		if ( $( ".rpg-tab" ).length ) {
+			activateRpgTab( rpgTabFromHash(), false );
+		}
+
+		$( ".rpg-tab" ).click(function() {
+			var $tab = $( this );
+			if ( $tab.hasClass( "is-active" ) ) {
+				return;
+			}
+
+			activateRpgTab( $tab, true );
+
+			var tabs = document.querySelector( ".rpg-tabs" );
+			if ( tabs ) {
+				var tabsRect = tabs.getBoundingClientRect();
+				if ( tabsRect.top < 0 || tabsRect.bottom > window.innerHeight ) {
+					window.scrollTo( { top: Math.max( 0, window.scrollY + tabsRect.top ) } );
+				}
+			}
+		});
+
+		$( window ).on( "hashchange", function() {
+			if ( $( ".rpg-tab" ).length ) {
+				activateRpgTab( rpgTabFromHash(), false );
+			}
+		});
+
 	})
 
 

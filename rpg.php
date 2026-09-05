@@ -22,19 +22,28 @@
 					    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
                     </div>
                 </div>
-                <div class="rpg-links white">
+                <!-- <div class="rpg-links white">
                     <a href="#stats"><badge class="badge">Stats</badge></a>
                     <a href="#traits"><badge class="badge">Traits</badge></a>
                     <a href="#skills"><badge class="badge">Skills</badge></a>
                     <a href="#items"><badge class="badge">Items</badge></a>
                     <a href="#character"><badge class="badge">Character</badge></a>
+                </div> -->
+            </div>
+            <div class="rpg-tabs">
+                <div class="container d-flex justify-content-center">
+                    <div class="column-container d-flex flex-fill">
+                        <div class="rpg-tab-list" role="tablist" aria-label="Starrage sections">
+                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="true">Mechanics</button>
+                            <button type="button" class="rpg-tab" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="false">Setting</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="section unlimited white-bg d-flex">
-            <a href="index.php" class="section-logo-bug black-bg repaint z-3">EW</a>
-            <div class="section-about-social-container z-3">
+        <a href="index.php" class="section-logo-bug black-bg repaint z-3">EW</a>
+        <div class="section-about-social-container z-3">
                 <!-- social links -->
                 <a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
                     <div class="social-link black-bg repaint">
@@ -52,14 +61,17 @@
                 </a>
                 <!-- about me link -->
                 <div class="section-about-me black-text repaint about-me-link">About Me</div>
-            </div>
+        </div>
 
-            <div class="rpg-links black">
-                <a href="#stats"><badge class="badge">Stats</badge></a>
-                <a href="#traits"><badge class="badge">Traits</badge></a>
-                <a href="#skills"><badge class="badge">Skills</badge></a>
-                <a href="#items"><badge class="badge">Items</badge></a>
-                <a href="#character"><badge class="badge">Character</badge></a>
+        <div class="section unlimited white-bg rpg-panel is-active" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
+            <div class="rpg-links-rail">
+                <div class="rpg-links black">
+                    <a href="#stats"><badge class="badge">Stats</badge></a>
+                    <a href="#traits"><badge class="badge">Traits</badge></a>
+                    <a href="#skills"><badge class="badge">Skills</badge></a>
+                    <a href="#items"><badge class="badge">Items</badge></a>
+                    <a href="#character"><badge class="badge">Character</badge></a>
+                </div>
             </div>
 
 
@@ -91,6 +103,26 @@
                 <!------------  SAMPLE CHARACTER SHEET ------------->
                 <?php include 'php/rpg/rpg-character.php'; ?>
 
+            </div>
+        </div>
+
+        <div class="section unlimited white-bg rpg-panel" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
+            <div class="rpg-links-rail">
+                <div class="rpg-links black">
+                    <a href="#setting"><badge class="badge">Timeline</badge></a>
+                    <a href="#technologies"><badge class="badge">Technologies</badge></a>
+                    <a href="#hierarchy"><badge class="badge">The Planes</badge></a>
+                </div>
+            </div>
+
+            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0 justify-content-center">
+                <?php include 'php/rpg/rpg-setting.php'; ?>
+                <div class="separator"></div>
+
+                <?php include 'php/rpg/rpg-technologies.php'; ?>
+                <div class="separator"></div>
+
+                <?php include 'php/rpg/rpg-planes.php'; ?>
             </div>
         </div>
 
