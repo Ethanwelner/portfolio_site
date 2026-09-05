@@ -75,7 +75,7 @@
                 'trait', 'traits', 'Trait', 'Traits',
                 'advantage', 'advantages', 'Advantage', 'Advantages',
                 'competence', 'competences', 'Competence', 'Competences',
-                'dm', 'DM', 'Dm', 'Dms',
+                'Game Master', 'GMing', "GM's", 'GMs', 'GM',
                 'skill', 'skills', 'Skill', 'Skills',
                 'roll', 'rolls', 'Roll', 'Rolls',
                 'ability', 'abilities', 'Ability', 'Abilities',

@@ -9,19 +9,19 @@
 			
 			<!-- OVERVIEW -->
 			<p class="copy my-3">
-				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two kinds of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A Character's Species will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
+				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two kinds of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A character's Species will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
 			</p>
 			<ul class="copy">
-				<li>When your character gains a Level you get a point to spend in any Inner Ring stat.</li>
+				<li>When your character gains a level you get a point to spend in any Inner Ring stat.</li>
 				<li>Adding a point to an Inner Ring stat gives you 3 to spend in the Outer Ring of that category.</li>
-				<li>The maximum that can be spent on any inner or Outer Ring stat is 20.</li>
+				<li>The maximum that can be spent on any Inner or Outer Ring stat is 20.</li>
 				<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
-				<li>Hit Points & other resource mechanics are dependent on scores from Inner Ring.</li>
+				<li>Hit Points & other resource mechanics are dependent on scores from the Inner Ring.</li>
 				<li>Skill Check bonuses and access to certain feats are dependent on scores from the Outer Ring.</li>
 				<li>Each point put into a stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's stats at a glance. Neither is strictly required, as the stats they describe can be more compactly described in other ways.</li>
 				<li>An ogre can be all physicality but may only be smart enough to use a club.</li>
-				<li>A soldier needs to be smart enough to know how to load a musket and Graceful enough to aim it</li>
-				<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to remember what he sees</li>
+				<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
+				<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to remember what he sees.</li>
 			</ul>
 		</div>
 		<div class="d-inline-flex flex-6 flex-gap-48">
@@ -39,12 +39,12 @@
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
 			<ul class="copy">
-				<li>Some Species will have lowered maximums; the below example is a human and cannot exceed 15 in any inner or Outer Ring stat due to the Unexceptional Trait in the Species section of its Background.</li>
-				<li>The below character started with 1 in each stat due to humans generalist Trait in the Species section of its Background.</li>
+				<li>Some Species will have lowered maximums; the below example is a human and cannot exceed 15 in any Inner or Outer Ring stat due to the Unexceptional Trait in the Species section of its Background.</li>
+				<li>The below character started with 1 in each stat due to the human Generalist Trait in the Species section of its Background.</li>
 				<li>Humans are intended to be the average baseline in this system.</li>
 				<li>This example character has 9 points spent in Physical so 27 to spend in the Outer Ring stats.</li>
 				<li>This character has spent only 2 points in Social and 1 in Mental, so its access to Traits that go beyond simple feats of brute strength will be very limited.</li>
-				<li>Each point gives a Trait that is Universal (circle/odd number) or based on the characters Background (square/even number).</li>
+				<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
 				<li>Universal Traits are available to any character, Background feats have requirements based on Species, Origin, or Profession.</li>
 				<li>This character has oriented their stats to be a strong, but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
 				<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (8 Grace) (4 Intuition) with any effectiveness, even if they got their hands on one.</li>
@@ -318,7 +318,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Endurance represents the body's ability to resist and persist. A high Endurance means a character is hardy and resilient to the elements, attacks, and deprivation. Such a character can go longer without eating, march for longer without tiring, and ward of diseases or poisons more easily. A durable character isn't inherently strong, but they are consistent.
+				Endurance represents the body's ability to resist and persist. A high Endurance means a character is hardy and resilient to the elements, attacks, and deprivation. Such a character can go longer without eating, march for longer without tiring, and ward off diseases or poisons more easily. A durable character isn't inherently strong, but they are consistent.
 			</p>
 
 			<div class="line-container">
@@ -334,7 +334,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Grace represents the body's ability to act with accuracy and control. A high Grace means a character can throw accurately, dance gracefully, and perform dextrous and delicate actions. A graceful character isn't inherently fast or powerful, but every action they take is made more effective by their agility and efficiency of movement.
+				Grace represents the body's ability to act with accuracy and control. A high Grace means a character can throw accurately, dance gracefully, and perform dexterous and delicate actions. A graceful character isn't inherently fast or powerful, but every action they take is made more effective by their agility and efficiency of movement.
 			</p>
 
 			<div class="bumper"></div>
@@ -345,7 +345,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle ticks and cues in their body language, or quickly interpreting orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspicious. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
+				Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle tics and cues in their body language, or quickly interpreting orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspicious. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
 			</p>
 
 			<div class="line-container">
@@ -353,7 +353,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Persuasion represents the character's ability to convince others, be it through a well structured argument, persuasive rhetoric, or simple force of personality. A high Persuasion means the character can get the better in negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
+				Persuasion represents the character's ability to convince others, be it through a well-structured argument, persuasive rhetoric, or simple force of personality. A high Persuasion means the character can get the better of negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
 			</p>
 
 			<div class="line-container">
@@ -372,7 +372,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Logic represents the character's ability to work through problems in a systemic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems or during difficult situations.
+				Logic represents the character's ability to work through problems in a systematic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems or during difficult situations.
 			</p>
 
 			<div class="line-container">
@@ -380,7 +380,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Intuition represents the character's ability to read a situation without all the facts. A high intuition means a character can make the leaps in Logic needed to get through a challenge quickly and naturally, be it estimating how long the rations will last, reading their opponent's movements for a perfect parry, or figuring out the missing ingredient in a potion. A high intuition doesn't mean a character knows or understands the situation, but it can give them an edge regardless.
+				Intuition represents the character's ability to read a situation without all the facts. A high Intuition means a character can make the leaps in logic needed to get through a challenge quickly and naturally, be it estimating how long the rations will last, reading their opponent's movements for a perfect parry, or figuring out the missing ingredient in a potion. A high Intuition doesn't mean a character knows or understands the situation, but it can give them an edge regardless.
 			</p>
 
 			<div class="line-container">
@@ -398,10 +398,10 @@
 			<h3 class="mb-3">Stat-Based Resources</h3>
 			<h4 class="mt-4">Health and Hit Points (HP)</h4>
 			<p class="copy my-3">
-				Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP does not directly correspond to specific forms of damage but is instead intended as an at-a-glance measure of the health of a character or object.
+				Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 			</p>
 			<p class="copy my-3">
-				HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical outer ring stat. A max-level Human who has spent every level increasing his Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
+				HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical Outer Ring stat. A max-level Human who has spent every level increasing their Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
 			</p>
 			<p class="copy my-3">
 				As HP's are lost a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related traits are listed following this section. Several of these traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred, but these are not directly tied to the character's hit point total, though Condition Traits such as Severe Bleeding may result in a character continuing to lose HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
@@ -425,35 +425,35 @@
 				<li><strong>Dead - Conveyed - Condition</strong><br>
 				Temporary (A character gains this trait if they are at 0 or less HP)<br>
 				This character is dead and cannot perform voluntary actions.<br>
-				This character can not be healed by any means unless otherwise stated.</li>
+				This character cannot be healed by any means unless otherwise stated.</li>
 				<li><strong>Damaged - Conveyed - Condition</strong><br>
-				Temporary (An object gains this trait if it is below their maximum HP total)<br>
+				Temporary (An object gains this trait if it is below its maximum HP total)<br>
 				This Trait has no effect on its own.</li>
 				<li><strong>Destroyed - Conveyed - Condition</strong><br>
 				Temporary (An object gains this trait if it is at 0 or less HP)<br>
 				This object has been destroyed and no longer functions in any intended capacity.<br>
-				This object can not be repaired by any means unless otherwise stated.</li>
+				This object cannot be repaired by any means unless otherwise stated.</li>
 			</ul>
 
 			<h4 class="mt-4">Vibe Points (VP)</h4>
 			<p class="copy my-3">
-				VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total number of their Social inner ring stat. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
+				VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total number of their Social Inner Ring stat. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
 			</p>
 			<p class="copy my-3">VP's can be spent on:</p>
 			<ul class="copy">
 				<li>Rerolling a single die in a socially related skill check (such as to try again when lying to a guard about your motives)</li>
-				<li>Asking the DM to improve the results of a socially related skill check (such as improving the result of a negotiation over the price of a new car).</li>
-				<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passer-by forget your characters face once per point spent).</li>
+				<li>Asking the GM to improve the results of a socially related skill check (such as improving the result of a negotiation over the price of a new car).</li>
+				<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
 			</ul>
 
 			<h4 class="mt-4">Savvy Points (SP)</h4>
 			<p class="copy my-3">
-				SP are a spendable resource that can be used to boost a characters skill checks in Mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by feats or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum SP's equal to the total number of their Mental inner ring stat. Certain Traits and equipment can increase the recovery rate of VP's. SP's can be spent on:
+				SP are a spendable resource that can be used to boost a character's skill checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by feats or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum number of SP's equal to the total number of their Mental Inner Ring stat. Certain Traits and equipment can increase the recovery rate of SP's. SP's can be spent on:
 			</p>
 			<ul class="copy">
 				<li>Rerolling a single die in a mentally related skill check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
 				<li>Requesting competence or advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
-				<li>Using an Ability with a listed VP cost such as using the Born Navigator Trait to automatically succeed in discerning a ships direction when all that's available is the wind and waves to judge by.</li>
+				<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
 			</ul>
 
 		</div>
