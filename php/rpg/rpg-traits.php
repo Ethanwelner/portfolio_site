@@ -2,18 +2,17 @@
   <div class="separator"></div>
   <div class="container">
     <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-      <div class="flex-3 d-none d-xl-inline-flex"></div>
-      <div class="flex-12">
+      <div class="flex-2 d-none d-xl-inline-flex"></div>
+      <div class="flex-14">
         <h3 class="sub-title mb-3" id="traits">Explaining Traits</h3>
         <div class="copy stinger white mb-3">placeholder subtitle</div>
       </div>
-      <div class="flex-3 d-none d-xl-inline-flex"></div>
+      <div class="flex-2 d-none d-xl-inline-flex"></div>
     </div>
 
     <div class="d-flex flex-wrap flex-xs-nowrap">
-      <div class="flex-3 d-none d-xl-inline-flex"></div>
-      <div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-        <div class="game-mechanics flex-6">
+      <div class="flex-2 d-none d-xl-inline-flex"></div>
+      <div class="game-mechanics flex-7">
           <h3 class="mb-3">Traits</h3>
           <p class="copy my-3">
             Traits, alongside a character’s Stats and Equipment, are the defining characteristics that make a character who and what they are. The Trait system is flexible and functions as a catchall category of things a character knows, things a character can do, things a character belongs to, and relationships the character may have with others. Traits are named and self-contained characteristics categorized by what the Trait is and how it interacts with characters and the game’s systems. A Trait will typically either be part of a structured category that defines how the Trait is used, or it will contain a description that describes how the Trait manifests itself.
@@ -136,9 +135,9 @@
             <p class="copy">Other is a catchall category and represents special Traits that go beyond the norm. Most Other Traits are, in reality, multiple Traits listed at the same time for the sake of convenience. As an example, a character being possessed by a daemon may have that possession listed as an Other Trait, and that Trait's description may describe significant alterations to how that character would otherwise function.</p>
           </div>
 
-        </div>
-
-        <div class="game-mechanics flex-6">
+      </div>
+      <div class="d-inline-flex align-items-center flex-1"></div>
+      <div class="game-mechanics flex-6">
           <h3 class="mb-3">Example Traits</h3>
 
           <div class="line-container">
@@ -560,9 +559,7 @@
 
           </div>
         </div>
-
-      </div>
-      <div class="flex-3 d-none d-xl-inline-flex"></div>
+      <div class="flex-2 d-none d-xl-inline-flex"></div>
     </div>
   </div>
   <div class="separator"></div>

@@ -2,18 +2,17 @@
 	<div class="separator"></div>
 	<div class="container">
 		<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-			<div class="flex-3 d-none d-xl-inline-flex"></div>
-			<div class="flex-12">
+			<div class="flex-2 d-none d-xl-inline-flex"></div>
+			<div class="flex-14">
 				<h3 class="sub-title mb-3" id="technologies">Enabling Technologies</h3>
 				<div class="copy stinger white mb-3">placeholder subtitle</div>
 			</div>
-			<div class="flex-3 d-none d-xl-inline-flex"></div>
+			<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
 
 		<div class="d-flex flex-wrap flex-xs-nowrap">
-			<div class="flex-3 d-none d-xl-inline-flex"></div>
-			<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-				<div class="flex-6">
+			<div class="flex-2 d-none d-xl-inline-flex"></div>
+			<div class="flex-7">
 					<h3 class="mb-3">Exotic</h3>
 
 					<div class="line-container">
@@ -40,7 +39,7 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci.
 					</p>
 				</div>
-
+			<div class="d-inline-flex align-items-center flex-1"></div>
 				<div class="flex-6">
 					<h3 class="mb-3">Mundane</h3>
 
@@ -68,8 +67,7 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
 					</p>
 				</div>
-			</div>
-			<div class="flex-3 d-none d-xl-inline-flex"></div>
+			<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
 	</div>
 	<div class="separator"></div>

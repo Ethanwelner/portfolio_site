@@ -1,10 +1,14 @@
-<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
-	<div class="flex-12 mb-4">
+<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="stats">Explaining Stats</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
-	<div class="d-inline-flex flex-12 flex-gap-48 align-items-center flex-wrap flex-md-nowrap">
-		<div class="game-mechanics flex-6">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+</div>
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="game-mechanics flex-7">
 			<h3 class="mb-3">Stats</h3>
 			
 			<!-- OVERVIEW -->
@@ -23,19 +27,20 @@
 				<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
 				<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to remember what he sees.</li>
 			</ul>
-		</div>
-		<div class="d-inline-flex flex-6 flex-gap-48">
-			<img src="img/stat_ring.png" alt="Stat ring" class="column-image">
-		</div>
 	</div>
-	<div class="separator"></div>
+	<div class="d-inline-flex align-items-center flex-1"></div>
+	<div class="d-inline-flex flex-6 justify-content-end align-items-center">
+		<img src="img/stat_ring.png" alt="Stat ring" class="column-image">
+	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
+<div class="separator"></div>
 
 
 
-<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
-	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-		<div class="game-mechanics flex-6">
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="game-mechanics flex-7">
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
 			<ul class="copy">
@@ -50,8 +55,8 @@
 				<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (8 Grace) (4 Intuition) with any effectiveness, even if they got their hands on one.</li>
 				<li>They're definitely not becoming a Master Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>
 			</ul>
-		</div>
-
+	</div>
+	<div class="d-inline-flex align-items-center flex-1"></div>
 		<!-- stat grid -->
 		<div class="d-inline-flex flex-6 flex-gap-48 flex-column">
 			<!-- physical stats -->
@@ -301,14 +306,14 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="separator"></div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
+<div class="separator"></div>
 
 
-<div class="d-flex flex-wrap flex-xs-nowrap column-container">
-	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-		<div class="game-mechanics flex-6">
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="game-mechanics flex-7">
 
 			<!-- stat types -->
 			<h3 class="mb-3">Stat Types</h3>
@@ -392,7 +397,7 @@
 			</p>
 
 		</div>
-
+	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="game-mechanics flex-6">
 
 			<h3 class="mb-3">Stat-Based Resources</h3>
@@ -457,6 +462,5 @@
 			</ul>
 
 		</div>
-
-	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>

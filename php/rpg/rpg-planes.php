@@ -1,16 +1,15 @@
 <div class="d-flex flex-wrap flex-fill flex-xs-nowrap mb-4">
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
-	<div class="flex-12">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="hierarchy">The Planar Hierarchy</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
 
 <div class="d-flex flex-wrap flex-xs-nowrap">
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
-	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-		<div class="flex-6">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>Higher Plane</strong></h5>
 				<div class="line"></div>
@@ -42,7 +41,7 @@
 				Material composition is highly variable since it is not baseline reality, but the state of the plane has to be physically supported by mundane physics. A universe made entirely of water, for example, needs some rationale for why it didn't all become black holes. Matter transportation between planes results in few conflicts. Compatible parallel planes are prized for colonization, mining, or research.
 			</p>
 		</div>
-
+	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>Lower Plane</strong></h5>
@@ -78,6 +77,5 @@
 				Most discovered parallel planes are highly divergent, and there appears to be an exponential decrease in a gate's ability to establish a connection as a plane's divergence decreases. This is an active area of planar physics research.
 			</p>
 		</div>
-	</div>
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>

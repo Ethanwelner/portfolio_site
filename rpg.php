@@ -31,13 +31,15 @@
                 </div> -->
             </div>
             <div class="rpg-tabs">
-                <div class="container d-flex justify-content-center">
-                    <div class="column-container d-flex flex-fill">
+                <div class="container d-flex">
+                    <div class="flex-2 d-none d-xl-inline-flex"></div>
+                    <div class="flex-14">
                         <div class="rpg-tab-list" role="tablist" aria-label="Starrage sections">
                             <button type="button" class="rpg-tab is-active" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="true">Mechanics</button>
                             <button type="button" class="rpg-tab" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="false">Setting</button>
                         </div>
                     </div>
+                    <div class="flex-2 d-none d-xl-inline-flex"></div>
                 </div>
             </div>
         </div>
@@ -66,6 +68,7 @@
         <div class="section unlimited white-bg rpg-panel is-active" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
             <div class="rpg-links-rail">
                 <div class="rpg-links black">
+                    <span class="rpg-links-dot" aria-hidden="true"></span>
                     <a href="#stats"><badge class="badge">Stats</badge></a>
                     <a href="#traits"><badge class="badge">Traits</badge></a>
                     <a href="#skills"><badge class="badge">Skills</badge></a>
@@ -75,7 +78,7 @@
             </div>
 
 
-            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0 justify-content-center">
+            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
 
 
                 <!------------  STATS ------------->
@@ -109,13 +112,14 @@
         <div class="section unlimited white-bg rpg-panel" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
             <div class="rpg-links-rail">
                 <div class="rpg-links black">
+                    <span class="rpg-links-dot" aria-hidden="true"></span>
                     <a href="#setting"><badge class="badge">Timeline</badge></a>
                     <a href="#technologies"><badge class="badge">Technologies</badge></a>
                     <a href="#hierarchy"><badge class="badge">The Planes</badge></a>
                 </div>
             </div>
 
-            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0 justify-content-center">
+            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
                 <?php include 'php/rpg/rpg-setting.php'; ?>
                 <div class="separator"></div>
 

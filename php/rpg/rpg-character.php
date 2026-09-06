@@ -1,10 +1,14 @@
-<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container">
-<div class="flex-12 mb-4">
-	<h3 class="sub-title mb-3" id="character">Sample Character Sheet</h3>
-	<div class="copy stinger black mb-3">placeholder subtitle</div>
+<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
+		<h3 class="sub-title mb-3" id="character">Sample Character Sheet</h3>
+		<div class="copy stinger black mb-3">placeholder subtitle</div>
+	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
-<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-	<div class="game-mechanics flex-6">
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="game-mechanics flex-7">
 		<h3 class="mb-3">Musings on the process for creating a character</h3>
 		<ul class="copy">
 			<li>Character Level is tracked separately from Outer Ring stats.</li>
@@ -21,6 +25,7 @@
 			</li>
 		</ul>
 	</div>
+	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="game-mechanics flex-6">
 		<h3 class="mb-3">Backgrounds being used in the sample character sheet</h3>
 		<div class="copy">
@@ -79,6 +84,7 @@
 			1 additional Language</p>
 		</div>
 	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
 <div class="separator"></div>
 
@@ -88,6 +94,9 @@
 
 <!-- ------------ CHARACTER SHEET ------------ -->
 
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 <div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
 	<div class="position-absolute">
 		<div class="level-badge">2</div>
@@ -468,8 +477,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
+	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
