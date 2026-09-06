@@ -929,6 +929,25 @@ img.warning-gif {
     background-size: 100% auto; 
 }
 
+/* Pendo / static screenshot gallery */
+.pendo-gallery-container {
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.pendo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+}
+
+.pendo-gallery-item {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* Portfolio Gallery */
 .portfolio-gallery-container {
     margin-left: -20px;

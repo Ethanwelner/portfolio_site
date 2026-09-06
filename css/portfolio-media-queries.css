@@ -566,6 +566,10 @@
         background-size: 150vh auto;
         background-position: top center;
     }
+
+    .pendo-gallery {
+        grid-template-columns: 1fr;
+    }
     
     .force-size {
         width: auto;
