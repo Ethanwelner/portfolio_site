@@ -341,6 +341,10 @@ hr {
     color: var(--portfolio-green) !important;
 }
 
+.black-bg .content-btn:hover .title {
+    color: var(--portfolio-black) !important;
+}
+
 /* Slide Animations */
 .pre-slide-in {
     margin-top: -25px;
@@ -548,6 +552,10 @@ hr {
     left: 60px;
     cursor: pointer;
     z-index: 1;
+
+    &.white-bg {
+        color: var(--portfolio-black) !important;
+    }
 }
 
 .section-scroll-links {
@@ -1439,6 +1447,15 @@ img.warning-gif {
     .line-1, .line-3, .line-6 {
         stroke-width: 4;
     }
+}
+
+#personal-section .mindmap-anim {
+    stroke: var(--portfolio-white);
+    fill: var(--portfolio-black);
+}
+
+#personal-section .social-link svg {
+    fill: var(--portfolio-white);
 }
 
 .terminal-svg {
