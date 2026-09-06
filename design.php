@@ -25,7 +25,7 @@
 		  			<div class="hero-statement pre-slide-in">
 		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			<h1 class="title hero-title">DESIGN</h1>
-						<h2 class="title section-title">Features Products and Advertising</h2>
+						<h2 class="title section-title">Featured Products and Advertising</h2>
 					    <h3 class="sub-title non-title">The Pretty Stuff</h3>
 					</div>
 		  		</div>
@@ -112,7 +112,7 @@
 		    	<div class="d-flex flex-column align-items-center text-center mobile-text-left email-gallery-container">
 		    		<div class="feature">
 				    	<div><h3 class="sub-title mb-3">Examity Overhaul Email Redesign & Recode</h3></div>
-				    	<div class="copy stinger yellow mb-3">Fun To Design Tough To Code</div>
+				    	<div class="copy stinger yellow mb-3">Fun To Design, Tough To Code</div>
 				    	<p class="copy">
 							Following the successful redesign and rebranding of the core Examity product line, I was tasked with overhauling the Examity email library. I sought to bring the same user-centric and component-driven design process to this task that served us so well in the overall redesign. Emails are a tricky beast; there’s no true coding standard, and each email client renders them differently in subtle and not-so-subtle ways. For this project, hardware testing across multiple devices, browsers, and operating systems was a must.
 							<br><br>
@@ -170,7 +170,7 @@
 					    	<p class="copy">
 					    		With Forecaster 121, I went with a traditional color combination that speaks to luxury: gold to speak to quality and black to accentuate the gold and provide a contemporary sharp contrast. Combining color identity with a sharply modern sans serif font and a modernist block logo helped to complete the initial identity, but there was a lot left to do.
 					    		<br/><br/>
-					    		This project was really fun because I got to stretch my legs in every area of design, from photography to print to digital. I was building a responsive website and mail templates at the same time I was designing 60-foot banners meant to hang from the sides of high-rises. I also got to help make proposals to the city look all the more professional and convincing, which really helped me learn the nuances of designing within the constraints of government needs..
+					    		This project was really fun because I got to stretch my legs in every area of design, from photography to print to digital. I was building a responsive website and mail templates at the same time I was designing 60-foot banners meant to hang from the sides of high-rises. I also got to help make proposals to the city look all the more professional and convincing, which really helped me learn the nuances of designing within the constraints of government needs.
 					    </p>
 					    </div>
 				    </div>
@@ -204,7 +204,7 @@
 					    	<h3 class="sub-title mb-3">Freelance and Personal Work</h3>
 					    	<div class="copy stinger yellow mb-3">Logos, Games, Photography, Paint</div>
 					    	<p class="copy">
-					    		I always enjoy keeping creative outlets for forms of art and design that my professional work may not be requiring. Besides freelance web development, I also sometimes take on graphics work (logos, posters, photography, the odd album cover) and even help with game development (mostly as a 3D artist) and game design on rare occasions. Besides work-related design, I also enjoy model construction and painting, which I find is a great way to stay creative and interested in the visual arts.
+					    		I always enjoy keeping creative outlets for forms of art and design that my professional work may not require. Besides freelance web development, I also sometimes take on graphics work (logos, posters, photography, the odd album cover) and even help with game development (mostly as a 3D artist) and game design on rare occasions. Besides work-related design, I also enjoy model construction and painting, which I find is a great way to stay creative and interested in the visual arts.
 					    		<br/><br/>
 					    		Below is a smattering of the projects, both professional and personal, that I've worked on over the last few years.
 					    	</p>

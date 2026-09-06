@@ -72,7 +72,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-6">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Coding And Development</h3>
+					    	<h3 class="sub-title mb-3">Coding and Development</h3>
 					    	<div class="copy blue-text mb-3"><b>
 					    		HTML<br/>
 								CSS, SASS &amp; LESS<br/>
@@ -148,9 +148,9 @@
 				    <div class="d-inline-flex align-items-center flex-14">
 				    	<div>
 					    	<h3 class="sub-title mb-3">Building To Delight</h3>
-					    	<div class="copy stinger blue mb-3">Good UX Engineering Is Can Pull It All Together</div>
+					    	<div class="copy stinger blue mb-3">Good UX Engineering Can Pull It All Together</div>
 					    	<p class="copy">
-					    		UX doesn’t stop at the developer handoff stage. Much of what makes a design really sing can only be built in code by someone who has an understanding of design principles. In my career, I’ve worked with a lot of great full-stack developers who needed a little one-on-one time to grasp the complexities of CSS anims, screen painting, or bleeding-edge browser capabilities that allow for all that beautiful design work to make it to the users’ screens. On many an occasion I’ve even pair programmed or taken the lead on particularly thorny pieces of functionality.
+					    		UX doesn’t stop at the developer handoff stage. Much of what makes a design really sing can only be built in code by someone who has an understanding of design principles. In my career, I’ve worked with a lot of great full-stack developers who needed a little one-on-one time to grasp the complexities of CSS anims, screen painting, or bleeding-edge browser capabilities that allow for all that beautiful design work to make it to the users’ screens. On many an occasion, I’ve even pair programmed or taken the lead on particularly thorny pieces of functionality.
 					    	</p>
 					    </div>
 				    </div>

@@ -60,7 +60,7 @@
 		  			<div class="hero-statement pre-slide-in">
 		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>.<br/>
-						I'm a Designer <span class="red-text highlight-text">+</span> Front End Developer.
+						I'm a Designer <span class="red-text highlight-text">+</span> Front-End Developer.
 
 						<a href="#ui-section">
 							<svg  width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve" class="down-arrow">
@@ -132,7 +132,7 @@
 				    	<div class="index-content-anim">
 					    	<h2 class="title section-title white-text">Interface &amp; Experience</h2>
 					    	<h3 class="sub-title white-text">More Important by the Second</h3>
-					    	<p class="copy white-text">User Interface and Experience Design isn't just a fad, in a world where every aspect of daily life is now run through digital interfaces it's become designs most important aspect. And it's fun too.</p>
+					    	<p class="copy white-text">User Interface and Experience Design isn't just a fad. In a world where every aspect of daily life is now run through digital interfaces, it's become design's most important aspect. And it's fun too.</p>
 					    	<p class="copy white-text">Accessible &#8226; Logical &#8226; Empathetic</p>
 					    	<a href="uiux.php">
 						    	<button class="content-btn transparent-bg mt-4">
@@ -203,7 +203,7 @@
 				    <div class="d-inline-flex align-items-center flex-8">
 				    	<div class="index-content-anim">
 					    	<h2 class="title section-title">The Visual</h2>
-					    	<h3 class="sub-title">But What Does the Design <i>Say</i></h3>
+					    	<h3 class="sub-title">But What Does the Design <i>Say</i>?</h3>
 					    	<p class="copy">From my early start as a digital advertising artist turned web developer to my current career as a UI/UX Designer, I've learned that the majority of design is invisible, and it's all the more important for it.</p>
 					    	<p class="copy">Beautiful &#8226; Trendy &#8226; Human</p>
 							<a href="design.php">
@@ -381,7 +381,7 @@
 				    	<div class="index-content-anim">
 					    	<h2 class="title section-title white-text">The Modern Language</h2>
 					    	<h3 class="sub-title white-text">Where Ideas Become Reality</h3>
-					    	<p class="copy white-text">Very few designers start their careers knowing they want to code, but coding is more important than any ruler or pencil for digital design work. From being able to rapidly prototype to user testing to automation and AI, coding is a skill I believe is vital.</p>
+					    	<p class="copy white-text">Very few designers start their careers knowing they want to code, but coding is more important than any ruler or pencil for digital design work. From rapid prototyping to user testing to automation and AI, coding is a skill I believe is vital.</p>
 					    	<p class="copy white-text">Adaptive &#8226; Structured &#8226; Agile</p>
 							<a href="code.php">
 						    	<button class="content-btn transparent-bg mt-4">
