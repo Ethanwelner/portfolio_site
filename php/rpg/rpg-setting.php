@@ -1,10 +1,14 @@
-<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4 column-container flex-12">
-	<div class="flex-12 mb-4">
+<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="setting">Setting</h3>
 		<div class="copy stinger black mb-3">The world of Starrage</div>
 	</div>
-	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-		<div class="flex-6">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+</div>
+<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-7">
 			<h3 class="mb-3" id="timeline">Timeline</h3>
 			<h4 class="mt-4">Major Events in the Timeline</h4>
 
@@ -184,7 +188,7 @@
 				Interdimensional colonization begins.
 			</p>
 		</div>
-
+	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<h3 class="mb-3">Major Events</h3>
 			<h4 class="mt-4">Lorem Ipsum Dolor</h4>
@@ -231,5 +235,5 @@
 				Tortor neque egestas augue, in pulvinar nunc sapien ornare nisl. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
 			</p>
 		</div>
-	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>

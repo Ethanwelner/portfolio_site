@@ -2,18 +2,17 @@
 <div class="separator"></div>
 <div class="container">
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-		<div class="flex-3 d-none d-xl-inline-flex"></div>
-		<div class="flex-12">
+		<div class="flex-2 d-none d-xl-inline-flex"></div>
+		<div class="flex-14">
 			<h3 class="sub-title mb-3" id="items">Items, Armor, and Effects</h3>
 			<div class="copy stinger white mb-3">placeholder subtitle</div>
 		</div>
-		<div class="flex-3 d-none d-xl-inline-flex"></div>
+		<div class="flex-2 d-none d-xl-inline-flex"></div>
 	</div>
 
 	<div class="d-flex flex-wrap flex-xs-nowrap">
-		<div class="flex-3 d-none d-xl-inline-flex"></div>
-		<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-			<div class="game-mechanics flex-6">
+		<div class="flex-2 d-none d-xl-inline-flex"></div>
+		<div class="game-mechanics flex-7">
 				<h3 class="mb-3">Armor and Effects</h3>
 				
 				<div class="line-container">
@@ -84,7 +83,7 @@
 				<h6 class=""><strong>Acidic/Corrosive</strong></h6>
 				<p class="copy mb-3">Acidic or Corrosive effects will often cause damage to items or equipment in addition to any character wielding them. This will most commonly be represented by the Corroded(1) ranked trait to be inflicted on an object that has been affected.</p>
 			</div>
-
+			<div class="d-inline-flex align-items-center flex-1"></div>
 			<div class="game-mechanics flex-6">
 
 				
@@ -209,9 +208,7 @@
 				</p>
 			
 			</div>
-
-			</div>
-			<div class="flex-3 d-none d-xl-inline-flex"></div>
+			<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
 	</div>
 	<div class="separator"></div>

@@ -29,10 +29,6 @@
     line-height: 0;
 }
 
-.column-container {
-    max-width: 1280px;
-}
-
 .bumper {
     height: 48px;
     width: 100%;
@@ -106,8 +102,11 @@ strong .mechanic-text {
     gap: .5rem;
     flex-direction: column;
     align-self: flex-start;
+    padding-right: 14px;
 
     a {
+        display: inline-block;
+        width: fit-content;
         transition: opacity 200ms;
 
         &:hover {
@@ -124,6 +123,25 @@ strong .mechanic-text {
             background-color: var(--portfolio-white);
             color: var(--portfolio-black);
         }
+    }
+}
+
+.rpg-links-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--portfolio-black);
+    pointer-events: none;
+    opacity: 0;
+
+    .white & {
+        background-color: var(--portfolio-white);
+    }
+
+    &.is-ready {
+        opacity: 1;
+        transition: top 200ms ease, left 200ms ease, opacity 200ms ease;
     }
 }
 
@@ -350,6 +368,8 @@ body:has(.rpg-links-rail) {
     .rpg-links {
         position: static;
         align-items: end;
+        padding-right: 14px;
+        padding-left: 0;
     }
 
     .rpg-tab {

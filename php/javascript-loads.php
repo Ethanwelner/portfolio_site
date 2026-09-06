@@ -40,6 +40,50 @@
 			$( ".hero-statement" ).removeClass("pre-slide-in").addClass("post-slide-in");
 		},300);
 
+		function moveRpgLinksDot($nav, $active) {
+			var $dot = $nav.children( ".rpg-links-dot" );
+			if ( ! $dot.length || ! $active.length ) {
+				return;
+			}
+
+			var link = $active[0];
+			var top = link.offsetTop + ( link.offsetHeight / 2 ) - ( $dot.outerHeight() / 2 );
+			var left = link.offsetLeft + link.offsetWidth + 8;
+			$dot.css( { top: top + "px", left: left + "px" } );
+			$dot.addClass( "is-ready" );
+		}
+
+		function updateRpgLinkHighlight() {
+			var $panel = $( ".rpg-panel.is-active" );
+			if ( ! $panel.length ) {
+				return;
+			}
+
+			var $nav = $panel.find( ".rpg-links" );
+			var $links = $nav.find( "a[href^='#']" );
+			if ( ! $links.length ) {
+				return;
+			}
+
+			var activationLine = 160;
+			var currentId = ( $links.first().attr( "href" ) || "" ).replace( /^#/, "" );
+
+			$links.each(function() {
+				var id = ( this.hash || "" ).replace( /^#/, "" );
+				var section = id ? document.getElementById( id ) : null;
+				if ( ! section ) {
+					return;
+				}
+				if ( section.getBoundingClientRect().top <= activationLine ) {
+					currentId = id;
+				}
+			});
+
+			$links.removeClass( "is-active" );
+			var $active = $links.filter( "[href='#" + currentId + "']" ).addClass( "is-active" );
+			moveRpgLinksDot( $nav, $active );
+		}
+
 		function activateRpgTab($tab, updateHash) {
 			if ( ! $tab.length ) {
 				return;
@@ -57,6 +101,8 @@
 					history.replaceState( null, "", "#" + nextHash );
 				}
 			}
+
+			window.requestAnimationFrame( updateRpgLinkHighlight );
 		}
 
 		function rpgTabFromHash() {
@@ -93,6 +139,20 @@
 				activateRpgTab( rpgTabFromHash(), false );
 			}
 		});
+
+		if ( $( ".rpg-links" ).length ) {
+			var rpgSpyFrame = 0;
+			$( window ).on( "scroll resize", function() {
+				if ( rpgSpyFrame ) {
+					return;
+				}
+				rpgSpyFrame = window.requestAnimationFrame(function() {
+					rpgSpyFrame = 0;
+					updateRpgLinkHighlight();
+				});
+			});
+			updateRpgLinkHighlight();
+		}
 
 	})
 

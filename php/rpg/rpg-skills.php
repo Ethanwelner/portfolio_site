@@ -1,16 +1,15 @@
 <div class="d-flex flex-wrap flex-fill flex-xs-nowrap mb-4">
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
-	<div class="flex-12">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="skills">Skill Checks</h3>
 		<div class="copy stinger black mb-3">placeholder subtitle</div>
 	</div>
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
 
 <div class="d-flex flex-wrap flex-xs-nowrap">
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
-	<div class="d-inline-flex flex-12 flex-gap-48 flex-wrap flex-md-nowrap">
-		<div class="d-inline-flex flex-6">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="d-inline-flex flex-7">
 			<div class="game-mechanics">
 				<h3 class="mb-4">What is a Skill Check?</h3>
 				<p class="copy">
@@ -67,6 +66,7 @@
 				</ul>
 			</div>
 		</div>
+		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="d-inline-flex flex-6">
 			<div class="game-mechanics">
 				<h3 class="mb-4">Skill Check Difficulty Ranges</h3>
@@ -234,6 +234,5 @@
 
 			</div>
 		</div>
-	</div>
-	<div class="flex-3 d-none d-xl-inline-flex"></div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
