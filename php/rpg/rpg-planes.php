@@ -62,11 +62,20 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>Planar Distance</strong></h5>
+				<h5><strong>Planar Divergence</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				The “Divergence” of a plane represents the scale of its difference from other planes at the same depth. This concept is only relevant to planes that are highly parallel to one another, and is mostly a way of measuring how much planes directly parallel to Earth's baseline differ from one another.
+			</p>
+			<p class="copy">
+				Planes that are higher or lower tend to have other causal factors that result in them being highly dissimilar from one another, and thus are naturally quite divergent.
+			</p>
+			<p class="copy">
+				The minimum possible planar divergence would result in a plane with an identical Earth at an identical point in its timeline: practically a mirror universe where the only difference could be an event that has only occurred recently, and could be as small as a quantum fluctuation.
+			</p>
+			<p class="copy">
+				Most discovered parallel planes are highly divergent, and there appears to be an exponential decrease in a gate's ability to establish a connection as a plane's divergence decreases. This is an active area of planar physics research.
 			</p>
 		</div>
 	</div>
