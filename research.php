@@ -175,32 +175,6 @@
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
-				
-
-
-				<div class="separator"></div>
-
-
-
-				<div class="d-flex flex-wrap flex-xs-nowrap">
-				    <div class="flex-2 d-none d-xl-inline-flex"></div><div class="d-inline-flex align-items-center flex-7">
-				    	<div>
-					    	<h3 class="sub-title mb-3">Game Theory and Building My Own Games</h3>
-					    	<div class="copy stinger green mb-3">A Hobby That Crosses Over</div>
-					    	<p class="copy">
-					    		Ever since I was a kid, I've enjoyed writing and crafting my own games. That passion has grown up as I have. The theory behind play, world-building, information architecture, and the UI and experience of a game is all fascinating to me. I've been on game development teams in the past as a designer, modeler, and writer, and in my spare time I like to keep my skills fresh with solo projects.
-					    		<br><br>
-					    		Right now I'm writing a tabletop/pen-and-paper RPG system in Obsidian that I will link here soon.
-					    	</p>
-					    </div>
-				    </div>
-				    <div class="d-inline-flex align-items-center flex-1 "></div>
-				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/fatplane.jpg">
-				    </div>
-				    
-				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				</div>
 
 
 				<div class="separator d-none d-lg-block"></div>
