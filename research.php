@@ -102,9 +102,12 @@
 
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
-
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex align-items-center flex-14">
+				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
+				    	<img class="full-width-image" src="img/pendo_dash.png" alt="Pendo analytics dashboard">
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
 				    	<div>
 					    	<h3 class="sub-title mb-3">Using Data to Improve Support Experiences</h3>
 					    	<div class="copy stinger green mb-3">UX Supports Support</div>
@@ -117,10 +120,38 @@
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
-				
 
 
 				<div class="separator"></div>
+
+
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-14">
+				    	<div>
+					    	<h3 class="sub-title mb-3">User Guides, Tutorials, and Surveys</h3>
+					    	<div class="copy stinger green mb-3">Tools for Understanding and Supporting Users</div>
+					    	<p class="copy">
+					    		While at QuantHub, I used Pendo to better understand how users interacted with our products and provide support directly within the experience. I tracked product usage to identify areas of confusion or friction, created contextual user guides and tutorials to help users navigate those areas, and deployed surveys to gather feedback directly from users. Together, these tools gave me a way to combine behavioral data and user feedback to identify opportunities for improving both the product and the support experience.
+					    		<br><br>
+					    		I also used these insights to inform ongoing design decisions. Rather than treating analytics, documentation, and surveys as separate activities, I used them together to understand where users needed help, test ways of addressing those needs, and gather feedback on whether those interventions were effective.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				</div>
+
+				<div class="pendo-gallery-container shadow-diffuse green-bg breakout z-1">
+					<div class="pendo-gallery">
+						<img class="pendo-gallery-item" src="img/pendo_guide_1.jpg" alt="Pendo onboarding guide">
+						<img class="pendo-gallery-item" src="img/pendo_guide_2.jpg" alt="Pendo in-product tutorial">
+						<img class="pendo-gallery-item" src="img/pendo_guide_3.jpg" alt="Pendo in-app survey">
+					</div>
+				</div>
+
+
+				<div class="separator .d-block .d-sm-none"></div>
+				<div class="separator d-none d-sm-block"></div>
 
 
 
