@@ -956,6 +956,24 @@ img.warning-gif {
     object-fit: cover;
 }
 
+.ai-logo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2.25rem;
+    row-gap: 2rem;
+    width: 100%;
+    max-width: 18rem;
+
+    svg {
+        width: 4rem;
+        height: 4rem;
+        fill: var(--portfolio-blue);
+        flex: 0 0 auto;
+    }
+}
+
 /* Portfolio Gallery */
 .portfolio-gallery-container {
     margin-left: -20px;
