@@ -70,8 +70,8 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Meazure Learnings Responsivity and Accessibility Redesign</h3>
-					    	<div class="copy stinger red mb-3">A Design and Front End Overhaul To Bring Responsivity and Accessibility</div>
+					    	<h3 class="sub-title mb-3">Meazure Learning's Responsivity and Accessibility Redesign</h3>
+					    	<div class="copy stinger red mb-3">A Design and Front-End Overhaul To Bring Responsivity and Accessibility</div>
 					    	<p class="copy">
 					    		Meazure Learning is an end-to-end online proctoring and testing platform provider that helps academic students and career professionals take exams and assessments from their homes. With today's heavy emphasis on accessibility and interoperability, the front end of the platform needed to become responsive and accessible. In addition, the platform needed a significant overhaul to many of its functions and components to declutter and provide an intuitive interface for a wide variety of users.
 					    		<br><br>
@@ -116,11 +116,11 @@
 				    <div class="d-inline-flex align-items-center flex-7  mobile-order-first">
 				    	<div>
 					    	<h3 class="sub-title mb-3">Examity’s Test Taker Flow Overhaul</h3>
-					    	<div class="copy stinger red mb-3">An Implementation of a Suite of New Functionalities And Rebranding</div>
+					    	<div class="copy stinger red mb-3">An Implementation of a Suite of New Functionalities and Rebranding</div>
 					    	<p class="copy">
 					    		Examity provided an extension-based testing security solution that connected users to their own test providers' platform while monitoring device and real-life security issues to help maintain academic integrity. It gave users the ability to schedule, purchase, and launch exams from within its authenticated web app.
 					    		<br><br>
-								The platform had grown significantly over the preceding years and had incorporated quite a few new technologies and features but needed a significant overhaul to incorporate those features organically in a way that delighted users and provided positive results for Examity’s clients.
+								The platform had grown significantly over the preceding years and had incorporated quite a few new technologies and features, but needed a significant overhaul to incorporate those features organically in a way that delighted users and provided positive results for Examity’s clients.
 								<br><br>
 								With those core needs in mind, a notable portion of my time spent at Examity was spent researching, designing, and guiding the iterative upgrade process that would allow the platform to shine.
 					    	</p>
@@ -139,7 +139,7 @@
 				    	<div>
 					    	<div class="copy stinger red mb-3">Professional? Playful? How to reach a broad base of users</div>
 					    	<p class="copy">
-								One of the key elements of the overhaul was the need to introduce vibrancy, boldness, and fun to the UX of Examity. Academic and professional testing is a stressful process. No one likes taking exams! A core finding of our research was that a good testing experience is a stress-free experience, and by creating a set of interfaces that provide maximum visual clarity while also being charming helps reduce the friction users feel while they navigate through the test-taking process.
+								One of the key elements of the overhaul was the need to introduce vibrancy, boldness, and fun to the UX of Examity. Academic and professional testing is a stressful process. No one likes taking exams! A core finding of our research was that a good testing experience is a stress-free experience, and creating a set of interfaces that provide maximum visual clarity while also being charming helps reduce the friction users feel while they navigate through the test-taking process.
 								<br><br>
 								My designs reduced the mono-color and text-heavy nature of the original platform while introducing a consistent brand-driven color theory and a defined set of standards for the use of imagery, animations, and iconography. Clients and users alike responded strongly to the redesign, and we followed it up with similar visual and thematic overhauls to other Examity products.
 					    	</p>
@@ -180,9 +180,9 @@
 				    	<div>
 					    	<h3 class="sub-title mb-3">Sequoia Redesign</h3>
 					    	<div class="copy stinger red mb-3">User Friendly Template and CMS System for Web and Mail</div>
-					    	<p class="copy">The Sequoia system is a large SaaS platform that allows real estate brokerages of any size to have and maintain a performant, reliable, and good-looking web presence that not only surfaces their inventory but also has deep marketing integrations and personnel management. It's a top-to-bottom, full-service system for getting a brand online to the fullest capacity..
+					    	<p class="copy">The Sequoia system is a large SaaS platform that allows real estate brokerages of any size to have and maintain a performant, reliable, and good-looking web presence that not only surfaces their inventory but also has deep marketing integrations and personnel management. It's a top-to-bottom, full-service system for getting a brand online to the fullest capacity.
 					    	<br><br>
-					    	The platform is fully content, image, font, color, theme, and component customizable, with a Google Material-like card system and a hierarchy of inheritance that makes fully customizing a business web platform from scratch with over fifty unique pages take minutes.
+					    	The platform is fully customizable across content, imagery, fonts, colors, themes, and components, with a Google Material-like card system and a hierarchy of inheritance that makes fully customizing a business web platform from scratch with over fifty unique pages take minutes.
 					    	</p>
 					    </div>
 				    </div>
@@ -207,7 +207,7 @@
 				    <div class="d-inline-flex align-items-center flex-5">
 				    	<div>
 					    	<div class="copy stinger red mb-3">How to design for user customization in an age of responsive design?</div>
-					    	<p class="copy">How do you develop a system that allows for fully custom content without overwhelming an audience traditionally outside of the technology space? And how do you do it in an age where designs have to respond to many different devices and input methods? This was a big ask, and we worked with customers and through multiple stages of design to find the best solution. Systems like Squarespace had a piece of the puzzle but are far too complex for the laymen audience.
+					    	<p class="copy">How do you develop a system that allows for fully custom content without overwhelming an audience traditionally outside of the technology space? And how do you do it in an age where designs have to respond to many different devices and input methods? This was a big ask, and we worked with customers and through multiple stages of design to find the best solution. Systems like Squarespace had a piece of the puzzle but are far too complex for a lay audience.
 					    	<br><br>
 					    	In the end, a hybrid design of internally produced layout templates, user-chosen card components, and a development focus on extensible, structured coding practices that could keep it all together proved to be the best route forward.</p>
 					    </div>
@@ -234,7 +234,7 @@
 					    	<div class="copy stinger red  mb-3">A Speed Test to Put my Professional Skills To The Test</div>
 					    	<p class="copy">The design process is an exercise in research and understanding as well as design. A design portfolio is meant to be a piece itself, and the experience that it delivers comes across just as strongly as any of the projects or stories it tells. In rebuilding this site, I wanted to make sure it came across as human, striking, and unique. Being personal but also professional is a tough needle to thread, but I decided to try to do it in a weekend.
 					    	<br><br>
-							First was brand identity. I chose a combination of strong, basic additive colors that would be instantly familiar but still impactful to anyone. Similar, but more constrained than the palette used in my last portfolio. I followed up with numerous tests for font combinations as well as some blocking to see how the colors contrasted with imagery and type. I settled on a combination of the tried and true Open Sans and the playful Bebas Neue, which provides a comic-like blocking to my headlines that suits the primary colors.</p>
+							First was brand identity. I chose a combination of strong, basic additive colors that would be instantly familiar but still impactful to anyone. It was similar to, but more constrained than, the palette used in my last portfolio. I followed up with numerous tests for font combinations as well as some blocking to see how the colors contrasted with imagery and type. I settled on a combination of the tried and true Open Sans and the playful Bebas Neue, which provides a comic-like blocking to my headlines that suits the primary colors.</p>
 							<div></div>
 							<div class="separator .d-block .d-sm-none"></div>
 							<div class="proto-colors-container">
@@ -293,7 +293,7 @@
 				    <div class="d-inline-flex align-items-center flex-12">
 				    	<div class="text-center">
 					    	<div class="copy stinger red mb-3">Full prototyping</div>
-					    	<p class="copy">Rapid prototyping of designs is a big benefit of modern design software. For this project, I used Adobe XD to do the early blocking. From there I was able to create clickable prototypes that helped me determine scale and flow, as well as figure out a bit of my navigation. There are limits to this kind of prototyping, whether it's technical or structural. For instance XD is incapable of the kind of within-page links that I use on this site. But, much like the sketch mockups, it helps to further clarify the final design as well as present weaknesses and strengths. With the prototype built, I moved on to a semi-final treatment of the design itself, still using XD but featuring functional placeholder content and text.
+					    	<p class="copy">Rapid prototyping of designs is a big benefit of modern design software. For this project, I used Adobe XD to do the early blocking. From there I was able to create clickable prototypes that helped me determine scale and flow, as well as figure out a bit of my navigation. There are limits to this kind of prototyping, whether it's technical or structural. For instance, XD is incapable of the kind of within-page links that I use on this site. But, much like the sketch mockups, it helps to further clarify the final design as well as present weaknesses and strengths. With the prototype built, I moved on to a semi-final treatment of the design itself, still using XD but featuring functional placeholder content and text.
 					    	<br><br>
 					    	The box below is a version of my early clickable prototype. Go ahead and try it out (It's interactive)!
 					    	</p>

@@ -80,9 +80,9 @@
 					    		Mailchimp<br/>
 							</b></div>
 					    	<p class="copy">
-					    		Throughout my career I’ve been benefitted greatly by a focus on early planning and data-driven decision-making backed by research. Building an understanding of the market to be served or the job to be done is the first step of my process when approaching a new problem. I’ve designed numerous products and features using the insights gathered by direct interviews, indirect observation, and combing through analytics data. Whether it's a client or user, the process always benefits from some face time with the stakeholders.
+					    		Throughout my career I’ve benefited greatly from a focus on early planning and data-driven decision-making backed by research. Building an understanding of the market to be served or the job to be done is the first step of my process when approaching a new problem. I’ve designed numerous products and features using the insights gathered by direct interviews, indirect observation, and combing through analytics data. Whether it's a client or user, the process always benefits from some face time with the stakeholders.
 					    		<br><br>
-								I’ve had the luck of working with some great UX researchers and data scientists in my career, and I’ve picked up a lot from them. In my career I’ve worked with both Google Analytics (GA4) and Datadog for direct analytics as well as Genesys and Mailchimp for chat/AI data and mail performance.
+								I’ve had the luck of working with some great UX researchers and data scientists in my career, and I’ve picked up a lot from them. In my career I’ve worked with Google Analytics (GA4), Pendo, and Datadog for direct analytics as well as Genesys and Mailchimp for chat/AI data and mail performance.
 							</p>
 					    </div>
 				    </div>
@@ -111,7 +111,7 @@
 					    	<p class="copy">
 					    		In my time at Meazure Learning, I had the fortune to be able to overhaul the support documentation and chat support functions (Zendesk and Genesys, respectively). This was a highly data-driven endeavor that involved planning the information architecture of both portions of the support platform and then getting gritty and rewriting articles and chat replies, redesigning layouts, and reconstructing an AI chatbot's call and response structure. All in service of getting users to the answers they need with a minimum of fuss.
 					    		<br><br>
-								During this process I made sure to implement analytics functions in the right place, that their functions were documented, and that results were being monitored. We updated these features in response to the real-time data that came flowing in, and the change to how Meazure looked at its support structure and interactions with its userbase was significant.
+								During this process I made sure to implement analytics functions in the right place, that their functions were documented, and that results were being monitored. We updated these features in response to the real-time data that came flowing in, and the change to how Meazure looked at its support structure and interactions with its user base was significant.
 							</p>
 					    </div>
 				    </div>
@@ -159,7 +159,7 @@
 					    	<p class="copy">
 					    		Ever since I was a kid, I've enjoyed writing and crafting my own games. That passion has grown up as I have. The theory behind play, world-building, information architecture, and the UI and experience of a game is all fascinating to me. I've been on game development teams in the past as a designer, modeler, and writer, and in my spare time I like to keep my skills fresh with solo projects.
 					    		<br><br>
-					    		Right now I'm writing a tabletop/pen-and-paper RPG system in Obsidian that I will link here soon
+					    		Right now I'm writing a tabletop/pen-and-paper RPG system in Obsidian that I will link here soon.
 					    	</p>
 					    </div>
 				    </div>
