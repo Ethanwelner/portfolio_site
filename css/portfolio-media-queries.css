@@ -409,24 +409,31 @@
     
     /* Browser Mock */
     .browser-mock-container {
-        height: 70vw;
-        padding: 0;
+        --bm-front-x: 0vw;
+        --bm-front-y: 0px;
+        --bm-step-x: 6vw;
+        --bm-step-y: 6vw;
+        --bm-slide-x: 16vw;
+        flex: 0 0 85%;
+        width: 85%;
+        max-width: 85%;
+        min-width: 0;
+        height: auto;
+        padding: 8vw 0 14vw;
         margin-top: 40px;
+        margin-left: 0;
+        margin-right: 0;
     }
     
-    .browser-mock.bm-1 {
+    .browser-mock-container .browser-mock {
         margin-top: 0;
-        margin-left: -1vw;
+        max-width: 100%;
     }
     
-    .browser-mock.bm-2 {
-        margin-left: 5vw;
-        margin-top: 6vw;
-    }
-    
-    .browser-mock.bm-3 {
-        margin-left: 11vw;
-        margin-top: 12vw;
+    .d-inline-flex:has(> .browser-mock-container) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
     
     /* Surface Proto */
