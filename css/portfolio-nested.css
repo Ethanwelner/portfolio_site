@@ -1376,7 +1376,7 @@ img.warning-gif {
     float: left;
 }
 
-.forecaster-logo, .mindmap-anim {
+.forecaster-logo, .mindmap-anim, .brain-svg {
     width: 298px;
     height: auto;
 }
@@ -1474,11 +1474,6 @@ img.warning-gif {
     .line-1, .line-3, .line-6 {
         stroke-width: 4;
     }
-}
-
-#personal-section .mindmap-anim {
-    stroke: var(--portfolio-white);
-    fill: var(--portfolio-black);
 }
 
 #personal-section .social-link svg {

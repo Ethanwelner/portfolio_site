@@ -450,23 +450,7 @@
 				    	<h1 class="title hero-title white-text index-title-anim">Pers<span class=".d-{inline-block} d-xl-none">-<br></span>onal</h1>
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
-							<svg width="281" height="262" viewBox="0 0 281 262" fill="none" xmlns="http://www.w3.org/2000/svg" class="mindmap-anim">
-								<path d="M19 139.5L142.5 131.5" class="line-1"/>
-								<path d="M56 226.5L142 133.5" class="line-2"/>
-								<path d="M152 245L143 127.5" class="line-3"/>
-								<path d="M246.5 203L142 132" class="line-4"/>
-								<path d="M231.5 51L140.5 133" class="line-5"/>
-								<path d="M143.219 35.5V132" class="line-6"/>
-								<path d="M44.5 35L140.5 130" class="line-7"/>
-								<circle cx="141.708" cy="130.698" r="45.3656" class="mindmap-circle-0"/>
-								<circle cx="48.3439" cy="38.2399" r="32.071" class="mindmap-circle-1"/>
-								<circle cx="143.522" cy="36.7291" r="13.6398" class="mindmap-circle-2"/>
-								<circle cx="230.843" cy="52.7433" r="23.0065" class="mindmap-circle-3"/>
-								<circle cx="244.742" cy="200.797" r="30.2581" class="mindmap-circle-4"/>
-								<circle cx="152.284" cy="243.098" r="12.7333" class="mindmap-circle-5"/>
-								<circle cx="55.8982" cy="224.667" r="22.7043" class="mindmap-circle-6"/>
-								<circle cx="19.3376" cy="139.762" r="13.3376" class="mindmap-circle-7"/>
-							</svg>
+							<?php include 'php/brain-svg.php'; ?>
 					    </div>
 
 				    </div>
@@ -486,23 +470,7 @@
 				    </div>
 
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center splash-proto-container">
-						<svg width="281" height="262" viewBox="0 0 281 262" fill="none" xmlns="http://www.w3.org/2000/svg" class="mindmap-anim">
-							<path d="M19 139.5L142.5 131.5" class="line-1"/>
-							<path d="M56 226.5L142 133.5" class="line-2"/>
-							<path d="M152 245L143 127.5" class="line-3"/>
-							<path d="M246.5 203L142 132" class="line-4"/>
-							<path d="M231.5 51L140.5 133" class="line-5"/>
-							<path d="M143.219 35.5V132" class="line-6"/>
-							<path d="M44.5 35L140.5 130" class="line-7"/>
-							<circle cx="141.708" cy="130.698" r="45.3656" class="mindmap-circle-0"/>
-							<circle cx="48.3439" cy="38.2399" r="32.071" class="mindmap-circle-1"/>
-							<circle cx="143.522" cy="36.7291" r="13.6398" class="mindmap-circle-2"/>
-							<circle cx="230.843" cy="52.7433" r="23.0065" class="mindmap-circle-3"/>
-							<circle cx="244.742" cy="200.797" r="30.2581" class="mindmap-circle-4"/>
-							<circle cx="152.284" cy="243.098" r="12.7333" class="mindmap-circle-5"/>
-							<circle cx="55.8982" cy="224.667" r="22.7043" class="mindmap-circle-6"/>
-							<circle cx="19.3376" cy="139.762" r="13.3376" class="mindmap-circle-7"/>
-						</svg>
+						<?php include 'php/brain-svg.php'; ?>
 				    </div>
 
 				</div>
