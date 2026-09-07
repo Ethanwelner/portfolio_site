@@ -70,9 +70,13 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex align-items-center flex-6">
+				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
 					    	<h3 class="sub-title mb-3">Coding and Development</h3>
+					    	<div class="copy stinger blue mb-3">Good UX Engineering Can Pull It All Together</div>
+					    	<p class="copy">
+					    		As technology has grown in complexity and need, I've learned multiple languages, standards, and libraries to help build and prototype personal and professional projects.
+					    	</p>
 					    	<div class="copy blue-text mb-3"><b>
 					    		HTML<br/>
 								CSS, SASS &amp; LESS<br/>
@@ -85,12 +89,12 @@
 								Google Analytics, Datadog, Pendo<br/>
 							</b></div>
 					    	<p class="copy">
-					    		As technology has grown in complexity and need, I've learned multiple languages, standards, and libraries to help build and prototype personal and professional projects.
+					    		UX doesn’t stop at the developer handoff stage. Much of what makes a design really sing can only be built in code by someone who has an understanding of design principles. In my career, I’ve worked with a lot of great full-stack developers who needed a little one-on-one time to grasp the complexities of CSS anims, screen painting, or bleeding-edge browser capabilities that allow for all that beautiful design work to make it to the users’ screens. On many an occasion, I’ve even pair programmed or taken the lead on particularly thorny pieces of functionality.
 					    	</p>
 					    </div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
-				    <div class="d-inline-flex flex-6 justify-content-end align-items-center position-relative mt-4 mt-sm-0">
+				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<div class="force-size">
 							<div class="surface-proto">
 					    		<img src="img/sublime_screen.jpg">
@@ -111,18 +115,6 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex align-items-center flex-7">
-				    	<div>
-					    	<h3 class="sub-title mb-3">Building With AI</h3>
-					    	<div class="copy stinger blue mb-3">Human Judgment, Accelerated</div>
-					    	<p class="copy">
-					    		Over the last two years, I’ve incorporated AI coding tools into my development workflow, using Cursor, Claude Code, Codex, and others to research unfamiliar technologies, explore approaches, write code, debug problems, and ship working software. I’ve also worked closely with engineers to pair program through implementations and resolve issues that arose from code generated without sufficient human oversight.
-					    		<br><br>
-					    		I believe AI is an incredibly powerful tool for accelerating development, but it works best with a careful hand guiding the process. Generated code still needs to be understood, reviewed, tested, and challenged. My experience working across product design, UX engineering, and development has given me a good sense for when an AI-generated solution solves the immediate problem while creating a larger one, and how to work with engineers to find the right solution.
-					    	</p>
-					    </div>
-				    </div>
-				    <div class="d-inline-flex flex-1 align-items-center"></div>
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<div class="ai-logo-gallery">
 				    		<svg class="claude-logo ai-logo-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
@@ -208,6 +200,18 @@
 				    		</svg>
 				    	</div>
 				    </div>
+				    <div class="d-inline-flex flex-1 align-items-center"></div>
+				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
+				    	<div>
+					    	<h3 class="sub-title mb-3">Building With AI</h3>
+					    	<div class="copy stinger blue mb-3">Human Judgment, Accelerated</div>
+					    	<p class="copy">
+					    		Over the last two years, I’ve incorporated AI coding tools into my development workflow, using Cursor, Claude Code, Codex, and others to research unfamiliar technologies, explore approaches, write code, debug problems, and ship working software. I’ve also worked closely with engineers to pair program through implementations and resolve issues that arose from code generated without sufficient human oversight.
+					    		<br><br>
+					    		I believe AI is an incredibly powerful tool for accelerating development, but it works best with a careful hand guiding the process. Generated code still needs to be understood, reviewed, tested, and challenged. My experience working across product design, UX engineering, and development has given me a good sense for when an AI-generated solution solves the immediate problem while creating a larger one, and how to work with engineers to find the right solution.
+					    	</p>
+					    </div>
+				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
 
@@ -220,6 +224,16 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-7">
+				    	<div>
+					    	<h3 class="sub-title mb-3">Building For Accessibility</h3>
+					    	<div class="copy stinger blue mb-3">One In Four People Benefit</div>
+					    	<p class="copy">
+					    		Accessibility isn’t just for government; by most accounts, between 15% and 25% of all adults have some form of disability. Designing and coding for accessibility are important to the modern world. I’ve spent years designing for clients with strict accessibility requirements, and I’ve worked within the WCAG standards for most of that time.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<svg width="80%" height="auto" viewBox="0 0 512 456" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_2020_360)">
@@ -231,37 +245,6 @@
 								</clipPath>
 							</defs>
 						</svg>
-				    </div>
-				    <div class="d-inline-flex flex-1 align-items-center "></div>
-				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
-				    	<div>
-					    	<h3 class="sub-title mb-3">Building For Accessibility</h3>
-					    	<div class="copy stinger blue mb-3">One In Four People Benefit</div>
-					    	<p class="copy">
-					    		Accessibility isn’t just for government; by most accounts, between 15% and 25% of all adults have some form of disability. Designing and coding for accessibility are important to the modern world. I’ve spent years designing for clients with strict accessibility requirements, and I’ve worked within the WCAG standards for most of that time.
-					    	</p>
-					    </div>
-				    </div>
-				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				</div>
-				
-
-
-				<div class="separator"></div>
-
-
-
-				<div class="d-flex flex-wrap flex-xs-nowrap">
-
-				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex align-items-center flex-14">
-				    	<div>
-					    	<h3 class="sub-title mb-3">Building To Delight</h3>
-					    	<div class="copy stinger blue mb-3">Good UX Engineering Can Pull It All Together</div>
-					    	<p class="copy">
-					    		UX doesn’t stop at the developer handoff stage. Much of what makes a design really sing can only be built in code by someone who has an understanding of design principles. In my career, I’ve worked with a lot of great full-stack developers who needed a little one-on-one time to grasp the complexities of CSS anims, screen painting, or bleeding-edge browser capabilities that allow for all that beautiful design work to make it to the users’ screens. On many an occasion, I’ve even pair programmed or taken the lead on particularly thorny pieces of functionality.
-					    	</p>
-					    </div>
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
