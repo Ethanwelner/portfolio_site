@@ -1267,7 +1267,9 @@ img.warning-gif {
 
 /* Force Size */
 .force-size {
+    width: 100%;
     max-width: 100%;
+    position: relative;
 }
 
 
@@ -1280,10 +1282,11 @@ img.warning-gif {
    ======================================== */
 
 .surface-proto {
-    width: 500px;
-    height: 338px;
     position: absolute;
-    padding: 0px 52px 0 54px;
+    inset: 0;
+    width: auto;
+    height: auto;
+    padding: 0 10.4% 0 10.8%;
     object-fit: cover;
     overflow: hidden;
     
@@ -1291,7 +1294,7 @@ img.warning-gif {
         width: 100%;
         height: auto;
         object-fit: cover;
-        top: 7px;
+        top: 2.07%;
         position: relative;
         animation: sublime-scroll 7s infinite ease;
         animation-delay: .1s;
@@ -1299,53 +1302,52 @@ img.warning-gif {
 }
 
 @keyframes sublime-scroll {
-    0%   {top: 7px;}
-    15%   {top: 7px;}
-    30%  {top: -75px;}
-    45%  {top: -75px;}
-    60%  {top: -125px;}
-    85%  {top: -125px;}
-    100% {top: 7px;}
+    0%   {top: 2.07%;}
+    15%   {top: 2.07%;}
+    30%  {top: -22.19%;}
+    45%  {top: -22.19%;}
+    60%  {top: -36.98%;}
+    85%  {top: -36.98%;}
+    100% {top: 2.07%;}
 }
 
 .surface-splash {
-    width: 500px;
+    width: 100%;
     height: auto;
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 .sublime-blink {
-    height: 7px;
+    height: 2.07%;
     width: 1px;
     border-radius: 0%;
     background-color: white;
     position: absolute;
-    margin: 0 auto;
-    margin-right: 360px;
-    margin-top: 158px;
-    left: 0;
-    right: 0;
+    margin: 0;
+    left: 27.8%;
+    right: auto;
+    top: 48.82%;
     opacity: 1;
     animation: sublime-blink 7s infinite ease;
     animation-delay: .1s;
 }
 
 @keyframes sublime-blink {
-    0%   {top: 7px; opacity: 0;}
+    0%   {top: 48.82%; opacity: 0;}
     10%   { opacity: 1;}
-    15%   {top: 7px;}
+    15%   {top: 48.82%;}
     20%   { opacity: 0;}
-    30%  {top: -75px; opacity: 1;}
+    30%  {top: 24.56%; opacity: 1;}
     40%   { opacity: 0;}
-    45%  {top: -75px;}
+    45%  {top: 24.56%;}
     50%   { opacity: 1;}
-    60%  {top: -125px; opacity: 0;}
+    60%  {top: 9.76%; opacity: 0;}
     70%   { opacity: 1;}
     80%   { opacity: 0;}
-    85%  {top: -125px;}
+    85%  {top: 9.76%;}
     90%   { opacity: 1;}
-    100% {top: 7px;  opacity: 0;}
+    100% {top: 48.82%;  opacity: 0;}
 }
 
 
