@@ -201,6 +201,10 @@
     .force-size {
         width: auto;
     }
+
+    .ai-logo-gallery {
+        padding: 0;
+    }
 }
 
 /* ========================================
@@ -569,6 +573,10 @@
 
     .pendo-gallery {
         grid-template-columns: 1fr;
+    }
+
+    .ai-logo-gallery {
+        padding: 2rem;
     }
     
     .force-size {

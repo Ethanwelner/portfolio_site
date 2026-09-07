@@ -956,6 +956,33 @@ img.warning-gif {
     object-fit: cover;
 }
 
+.ai-logo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40% 15%;
+    padding: 2rem;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        fill: var(--portfolio-blue);
+
+        &.ai-logo-color {
+            fill: unset;
+        }
+
+        &.cursor-logo,
+        &.openai-logo {
+            fill: #212121;
+        }
+    }
+}
+
 /* Portfolio Gallery */
 .portfolio-gallery-container {
     margin-left: -20px;
