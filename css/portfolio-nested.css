@@ -957,20 +957,29 @@ img.warning-gif {
 }
 
 .ai-logo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    column-gap: 2.25rem;
-    row-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40% 15%;
+    padding: 2rem;
     width: 100%;
-    max-width: 18rem;
+    align-items: center;
+    justify-items: center;
 
     svg {
-        width: 4rem;
-        height: 4rem;
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
         fill: var(--portfolio-blue);
-        flex: 0 0 auto;
+
+        &.ai-logo-color {
+            fill: unset;
+        }
+
+        &.cursor-logo,
+        &.openai-logo {
+            fill: #212121;
+        }
     }
 }
 
