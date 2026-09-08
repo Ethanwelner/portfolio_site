@@ -1591,10 +1591,10 @@ img.warning-gif {
         animation-timing-function: ease-in-out;
     }
     65.8% {
-        transform: translateY(0) rotate(8deg);
-        animation-timing-function: ease-out;
+        transform: translate(2px, 4px) rotate(8deg);
+        animation-timing-function: cubic-bezier(0.33, 0.1, 0.2, 1);
     }
-    66.8%, 100% {
+    72.5%, 100% {
         transform: translateY(0) rotate(0deg);
     }
 }
