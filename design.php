@@ -86,7 +86,7 @@
 					    </div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
-				    <div class="d-inline-flex flex-6 justify-content-center align-items-center mt-4 mt-sm-0">
+				    <div class="d-inline-flex flex-6 justify-content-center align-items-center mobile-order-first mb-4 mb-sm-0">
 				    	<div class="learning-icons" aria-hidden="true">
 							<svg class="learning-icon learning-icon-heart" width="71" height="60" viewBox="0 0 71 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g class="heart-outline">
@@ -126,6 +126,30 @@
 						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_open.jpg" alt="QuantHub question panel with the resource shelf open">
 						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed_lms.jpg" alt="QuantHub question panel in a 768px LMS viewport">
 					</div>
+				</div>
+
+
+				<div class="separator"></div>
+
+
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex flex-8 justify-content-end align-items-center">
+				    	<img class="full-width-image shadow-diffuse teacher-guide-shot" src="img/teacher_guide_full.jpg" alt="QuantHub teacher guide for AI for Entrepreneurship">
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
+				    	<div>
+					    	<h3 class="sub-title mb-3">Enabling Teachers<br>Through QuantHub</h3>
+					    	<div class="copy stinger yellow mb-3">Lorem Ipsum lipsum doolar</div>
+					    	<p class="copy">
+					    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<br><br>
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
 
 
