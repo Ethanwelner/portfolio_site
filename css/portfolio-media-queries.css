@@ -338,13 +338,8 @@
     }
     
     /* Icons */
-    .forecaster-logo, .terminal-svg, .mindmap-anim {
+    .forecaster-logo, .terminal-svg, .mindmap-anim, .brain-svg {
         width: 33vw;
-        margin-top: 20px;
-    }
-    
-    .brain-svg {
-        width: 40vw;
         margin-top: 20px;
     }
     
