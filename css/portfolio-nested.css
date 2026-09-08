@@ -1514,13 +1514,170 @@ img.warning-gif {
     float: left;
 }
 
-.forecaster-logo, .mindmap-anim, .brain-svg {
+.forecaster-logo, .mindmap-anim {
     width: 298px;
     height: auto;
 }
 
 .forecaster-logo path {
     fill: var(--portfolio-black);
+}
+
+.brain-svg {
+    width: 358px;
+    height: auto;
+    overflow: visible;
+    --thought-cycle: 6.4s;
+    --thought-loop: 19.2s;
+}
+
+.brain-svg .thought-bubble {
+    opacity: 0;
+    transform: scale(0);
+    transform-box: fill-box;
+    transform-origin: center;
+    animation-duration: var(--thought-cycle);
+    animation-iteration-count: infinite;
+}
+
+.brain-svg .thought-bubble-1 {
+    animation-name: thought-bubble-1;
+}
+
+.brain-svg .thought-bubble-2 {
+    animation-name: thought-bubble-2;
+}
+
+.brain-svg .thought-bubble-3 {
+    animation-name: thought-bubble-3;
+}
+
+.brain-svg .thought-item {
+    opacity: 0;
+    animation-duration: var(--thought-loop);
+    animation-iteration-count: infinite;
+}
+
+.brain-svg .thought-item-cat {
+    animation-name: thought-item-cat;
+}
+
+.brain-svg .thought-item-cards {
+    animation-name: thought-item-cards;
+}
+
+.brain-svg .thought-item-enterprise {
+    animation-name: thought-item-enterprise;
+}
+
+@keyframes thought-bubble-1 {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    4% {
+        opacity: 1;
+        transform: scale(1.18);
+    }
+    8%, 62% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    71%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes thought-bubble-2 {
+    0%, 8% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    12% {
+        opacity: 1;
+        transform: scale(1.18);
+    }
+    16%, 62% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    71%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes thought-bubble-3 {
+    0%, 16% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+    24%, 62% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    71%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes thought-item-cat {
+    0%, 33.332% {
+        opacity: 1;
+    }
+    33.333%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes thought-item-cards {
+    0%, 33.332%, 66.667%, 100% {
+        opacity: 0;
+    }
+    33.333%, 66.666% {
+        opacity: 1;
+    }
+}
+
+@keyframes thought-item-enterprise {
+    0%, 66.666% {
+        opacity: 0;
+    }
+    66.667%, 100% {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brain-svg .thought-bubble,
+    .brain-svg .thought-item {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .brain-svg .thought-item-cards,
+    .brain-svg .thought-item-enterprise {
+        opacity: 0;
+    }
 }
 
 
