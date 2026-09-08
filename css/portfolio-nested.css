@@ -1514,7 +1514,7 @@ img.warning-gif {
     float: left;
 }
 
-.forecaster-logo, .mindmap-anim {
+.forecaster-logo, .mindmap-anim, .brain-svg {
     width: 298px;
     height: auto;
 }
@@ -1524,11 +1524,9 @@ img.warning-gif {
 }
 
 .brain-svg {
-    width: 358px;
-    height: auto;
     overflow: visible;
-    --thought-cycle: 6.4s;
-    --thought-loop: 19.2s;
+    --thought-cycle: 5.48s;
+    --thought-loop: 16.44s;
 }
 
 .brain-svg .thought-bubble {
@@ -1575,65 +1573,65 @@ img.warning-gif {
         opacity: 0;
         transform: scale(0);
     }
-    4% {
+    4.67% {
         opacity: 1;
         transform: scale(1.18);
     }
-    8%, 62% {
+    9.34%, 72.41% {
         opacity: 1;
         transform: scale(1);
     }
-    70% {
+    81.75% {
         opacity: 0;
         transform: scale(0.85);
     }
-    71%, 100% {
+    82.92%, 100% {
         opacity: 0;
         transform: scale(0);
     }
 }
 
 @keyframes thought-bubble-2 {
-    0%, 8% {
+    0%, 9.34% {
         opacity: 0;
         transform: scale(0);
     }
-    12% {
+    14.01% {
         opacity: 1;
         transform: scale(1.18);
     }
-    16%, 62% {
+    18.69%, 72.41% {
         opacity: 1;
         transform: scale(1);
     }
-    70% {
+    81.75% {
         opacity: 0;
         transform: scale(0.85);
     }
-    71%, 100% {
+    82.92%, 100% {
         opacity: 0;
         transform: scale(0);
     }
 }
 
 @keyframes thought-bubble-3 {
-    0%, 16% {
+    0%, 18.69% {
         opacity: 0;
         transform: scale(0);
     }
-    20% {
+    23.36% {
         opacity: 1;
         transform: scale(1.12);
     }
-    24%, 62% {
+    28.03%, 72.41% {
         opacity: 1;
         transform: scale(1);
     }
-    70% {
+    81.75% {
         opacity: 0;
         transform: scale(0.85);
     }
-    71%, 100% {
+    82.92%, 100% {
         opacity: 0;
         transform: scale(0);
     }
