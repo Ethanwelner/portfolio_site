@@ -67,13 +67,21 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
-				    	<div>
+				    	<div class="learning-copy">
 					    	<h3 class="sub-title mb-3">Bringing Life to Learning</h3>
 					    	<div class="copy stinger yellow mb-3">Animation, Color, Scale</div>
 					    	<p class="copy">
-					    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					    		Keeping K-12 students engaged in sometimes dry topics can be a struggle, but guiding their focus to the elements of a lesson that you want them to focus on is critical to keeping them on track with the class.
 								<br><br>
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.
+								In my time at QuantHub, designing for this audience was critical, and in that effort I introduced a few key changes to their activities.
+					    	</p>
+							<ul class="copy">
+								<li>Clear contrasting colors guiding their eye to interactive elements, and de-contrasted treatments for less important elements</li>
+								<li>Clear differentiations in scale between elements of importance, keeping them focused on the right content zones</li>
+								<li>I introduced key animations on certain elements to bring some pageantry and “fun” to the experience. The gamification elements ceased to be static information readouts and became active parts of the user’s enjoyment.</li>
+							</ul>
+					    	<p class="copy">
+					    		It was also important to design an interface that could work within an LMS that would crush the interface as small as 768px at times, even on the user’s desktop or Chromebook.
 					    	</p>
 					    </div>
 				    </div>
@@ -91,14 +99,17 @@
 							<div class="learning-icon-brain">
 								<svg class="learning-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g class="brain-graphic">
-										<path d="M0 35.625C0 39.6328 2.50781 43.0547 6.04687 44.3906C5.77734 45.1641 5.625 46.0078 5.625 46.875C5.625 51.0117 8.98828 54.375 13.125 54.375C13.7812 54.375 14.4258 54.293 15.0352 54.1289C15.375 57.4336 18.1758 60 21.5625 60C25.1836 60 28.125 57.0586 28.125 53.4375V6.5625C28.125 2.94141 25.1836 0 21.5625 0C18.1758 0 15.3867 2.56641 15.0352 5.84766C11.7891 6.66797 9.375 9.62109 9.375 13.125C9.375 13.8281 9.46875 14.5195 9.65625 15.1641C6.28125 15.9023 3.75 18.9023 3.75 22.5C3.75 24.2578 4.34766 25.875 5.36719 27.1523C2.19141 28.6523 0 31.8867 0 35.625ZM31.875 6.5625V53.4375C31.875 57.0586 34.8164 60 38.4375 60C41.8242 60 44.6133 57.4336 44.9648 54.1289C45.5742 54.293 46.2188 54.375 46.875 54.375C51.0117 54.375 54.375 51.0117 54.375 46.875C54.375 46.0078 54.2227 45.1641 53.9531 44.3906C57.4922 43.0547 60 39.6328 60 35.625C60 31.8867 57.8086 28.6523 54.6328 27.1523C55.6523 25.875 56.25 24.2578 56.25 22.5C56.25 18.9023 53.7188 15.9023 50.3438 15.1641C50.5313 14.5195 50.625 13.8281 50.625 13.125C50.625 9.62109 48.2109 6.66797 44.9648 5.84766C44.6016 2.56641 41.8242 0 38.4375 0C34.8164 0 31.875 2.94141 31.875 6.5625Z" fill="#DC4B89"/>
-										<path opacity="0.7" d="M28.125 53.4375V6.5625H31.875V53.4375H28.125Z" fill="#DC4B89"/>
+										<path d="M0 35.625C0 39.6328 2.50781 43.0547 6.04687 44.3906C5.77734 45.1641 5.625 46.0078 5.625 46.875C5.625 51.0117 8.98828 54.375 13.125 54.375C13.7812 54.375 14.4258 54.293 15.0352 54.1289C15.375 57.4336 18.1758 60 21.5625 60C25.1836 60 28.125 57.0586 28.125 53.4375V6.5625C28.125 2.94141 25.1836 0 21.5625 0C18.1758 0 15.3867 2.56641 15.0352 5.84766C11.7891 6.66797 9.375 9.62109 9.375 13.125C9.375 13.8281 9.46875 14.5195 9.65625 15.1641C6.28125 15.9023 3.75 18.9023 3.75 22.5C3.75 24.2578 4.34766 25.875 5.36719 27.1523C2.19141 28.6523 0 31.8867 0 35.625ZM31.875 6.5625V53.4375C31.875 57.0586 34.8164 60 38.4375 60C41.8242 60 44.6133 57.4336 44.9648 54.1289C45.5742 54.293 46.2188 54.375 46.875 54.375C51.0117 54.375 54.375 51.0117 54.375 46.875C54.375 46.0078 54.2227 45.1641 53.9531 44.3906C57.4922 43.0547 60 39.6328 60 35.625C60 31.8867 57.8086 28.6523 54.6328 27.1523C55.6523 25.875 56.25 24.2578 56.25 22.5C56.25 18.9023 53.7188 15.9023 50.3438 15.1641C50.5313 14.5195 50.625 13.8281 50.625 13.125C50.625 9.62109 48.2109 6.66797 44.9648 5.84766C44.6016 2.56641 41.8242 0 38.4375 0C34.8164 0 31.875 2.94141 31.875 6.5625Z" fill="#EB94B9"/>
+										<path d="M28.125 53.4375V6.5625H31.875V53.4375H28.125Z" fill="#DC4B89"/>
 									</g>
 								</svg>
 								<span class="brain-score">+30</span>
 							</div>
-							<svg class="learning-icon" width="68" height="60" viewBox="0 0 68 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M41.6234 0.125881C45.0766 0.822248 47.3211 4.21034 46.6305 7.69217L46.325 9.21882C45.6211 12.7944 44.3195 16.1959 42.5 19.2893H61.625C65.1445 19.2893 68 22.1686 68 25.7173C68 28.1948 66.6055 30.3509 64.5602 31.4222C66.0078 32.6007 66.9375 34.4085 66.9375 36.4307C66.9375 39.5643 64.7063 42.1757 61.7711 42.7382C62.3555 43.7157 62.6875 44.854 62.6875 46.0727C62.6875 48.9251 60.8414 51.349 58.2914 52.1793C58.3844 52.6212 58.4375 53.0899 58.4375 53.572C58.4375 57.1208 55.582 60 52.0625 60H39.1133C36.5898 60 34.1328 59.2501 32.0344 57.8439L26.9211 54.4023C23.375 52.0186 21.25 48.0011 21.25 43.7023V38.5733V32.1453V28.8108C21.25 24.9005 23.0164 21.2177 26.0312 18.7671L27.0141 17.977C30.5336 15.1379 32.9375 11.1472 33.8141 6.70119L34.1195 5.17454C34.8102 1.69271 38.1703 -0.570485 41.6234 0.125881ZM4.25 21.432H12.75C15.1008 21.432 17 23.347 17 25.7173V55.7147C17 58.085 15.1008 60 12.75 60H4.25C1.89922 60 0 58.085 0 55.7147V25.7173C0 23.347 1.89922 21.432 4.25 21.432Z" fill="#9B9595"/>
+							<svg class="learning-icon learning-icon-thumb" width="68" height="60" viewBox="0 0 68 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g class="thumb-graphic">
+									<path class="thumb-base" d="M41.6234 0.125881C45.0766 0.822248 47.3211 4.21034 46.6305 7.69217L46.325 9.21882C45.6211 12.7944 44.3195 16.1959 42.5 19.2893H61.625C65.1445 19.2893 68 22.1686 68 25.7173C68 28.1948 66.6055 30.3509 64.5602 31.4222C66.0078 32.6007 66.9375 34.4085 66.9375 36.4307C66.9375 39.5643 64.7063 42.1757 61.7711 42.7382C62.3555 43.7157 62.6875 44.854 62.6875 46.0727C62.6875 48.9251 60.8414 51.349 58.2914 52.1793C58.3844 52.6212 58.4375 53.0899 58.4375 53.572C58.4375 57.1208 55.582 60 52.0625 60H39.1133C36.5898 60 34.1328 59.2501 32.0344 57.8439L26.9211 54.4023C23.375 52.0186 21.25 48.0011 21.25 43.7023V38.5733V32.1453V28.8108C21.25 24.9005 23.0164 21.2177 26.0312 18.7671L27.0141 17.977C30.5336 15.1379 32.9375 11.1472 33.8141 6.70119L34.1195 5.17454C34.8102 1.69271 38.1703 -0.570485 41.6234 0.125881ZM4.25 21.432H12.75C15.1008 21.432 17 23.347 17 25.7173V55.7147C17 58.085 15.1008 60 12.75 60H4.25C1.89922 60 0 58.085 0 55.7147V25.7173C0 23.347 1.89922 21.432 4.25 21.432Z" fill="#9B9595"/>
+									<path class="thumb-fill" d="M41.6234 0.125881C45.0766 0.822248 47.3211 4.21034 46.6305 7.69217L46.325 9.21882C45.6211 12.7944 44.3195 16.1959 42.5 19.2893H61.625C65.1445 19.2893 68 22.1686 68 25.7173C68 28.1948 66.6055 30.3509 64.5602 31.4222C66.0078 32.6007 66.9375 34.4085 66.9375 36.4307C66.9375 39.5643 64.7063 42.1757 61.7711 42.7382C62.3555 43.7157 62.6875 44.854 62.6875 46.0727C62.6875 48.9251 60.8414 51.349 58.2914 52.1793C58.3844 52.6212 58.4375 53.0899 58.4375 53.572C58.4375 57.1208 55.582 60 52.0625 60H39.1133C36.5898 60 34.1328 59.2501 32.0344 57.8439L26.9211 54.4023C23.375 52.0186 21.25 48.0011 21.25 43.7023V38.5733V32.1453V28.8108C21.25 24.9005 23.0164 21.2177 26.0312 18.7671L27.0141 17.977C30.5336 15.1379 32.9375 11.1472 33.8141 6.70119L34.1195 5.17454C34.8102 1.69271 38.1703 -0.570485 41.6234 0.125881ZM4.25 21.432H12.75C15.1008 21.432 17 23.347 17 25.7173V55.7147C17 58.085 15.1008 60 12.75 60H4.25C1.89922 60 0 58.085 0 55.7147V25.7173C0 23.347 1.89922 21.432 4.25 21.432Z" fill="#0077B5"/>
+								</g>
 							</svg>
 				    	</div>
 				    </div>
@@ -111,8 +122,9 @@
 
 				<div class="learning-gallery-container gray-bg breakout z-1">
 					<div class="learning-gallery">
-						<img class="shadow-diffuse" src="img/1_revised_question_panel_shelf_closed.jpg" alt="QuantHub question panel with the resource shelf closed">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed.jpg" alt="QuantHub question panel with the resource shelf closed">
 						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_open.jpg" alt="QuantHub question panel with the resource shelf open">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed_lms.jpg" alt="QuantHub question panel in a 768px LMS viewport">
 					</div>
 				</div>
 
