@@ -78,7 +78,11 @@ if (is_file($requested)) {
     }
 
     header('Content-Length: ' . filesize($real));
-    header('Cache-Control: public, max-age=86400');
+    if (in_array($ext, ['css', 'js'], true)) {
+        header('Cache-Control: no-store');
+    } else {
+        header('Cache-Control: public, max-age=86400');
+    }
     readfile($real);
     return true;
 }
