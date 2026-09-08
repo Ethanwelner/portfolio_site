@@ -64,6 +64,74 @@
 			<!------- content ------->
 			<div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0 justify-center">
 
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-7">
+				    	<div class="learning-copy">
+					    	<h3 class="sub-title mb-3">Bringing Life to Learning</h3>
+					    	<div class="copy stinger yellow mb-3">Animation, Color, Scale</div>
+					    	<p class="copy">
+					    		Keeping K-12 students engaged in sometimes dry topics can be a struggle, but guiding their focus to the elements of a lesson that you want them to focus on is critical to keeping them on track with the class.
+								<br><br>
+								In my time at QuantHub, designing for this audience was critical, and in that effort I introduced a few key changes to their activities.
+					    	</p>
+							<ul class="copy">
+								<li>Clear contrasting colors guiding their eye to interactive elements, and de-contrasted treatments for less important elements</li>
+								<li>Clear differentiations in scale between elements of importance, keeping them focused on the right content zones</li>
+								<li>I introduced key animations on certain elements to bring some pageantry and “fun” to the experience. The gamification elements ceased to be static information readouts and became active parts of the user’s enjoyment.</li>
+							</ul>
+					    	<p class="copy">
+					    		It was also important to design an interface that could work within an LMS that would crush the interface as small as 768px at times, even on the user’s desktop or Chromebook.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex flex-6 justify-content-center align-items-center mt-4 mt-sm-0">
+				    	<div class="learning-icons" aria-hidden="true">
+							<svg class="learning-icon learning-icon-heart" width="71" height="60" viewBox="0 0 71 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g class="heart-outline">
+									<path fill-rule="evenodd" d="M30.9422 58.2911L30.5996 57.9759L6.59131 35.6805C2.38438 31.7751 0 26.2938 0 20.5521V20.0998C0 10.4527 6.85167 2.17586 16.3344 0.367021C21.7335 -0.674433 27.256 0.572571 31.6547 3.66953C32.888 4.54654 34.0391 5.56059 35.0806 6.72537C35.6561 6.06761 36.2728 5.46467 36.9305 4.90283C37.4376 4.46432 37.9583 4.05322 38.5064 3.66953C42.9052 0.572571 48.4276 -0.674433 53.8268 0.353318C63.3095 2.16216 70.1611 10.4527 70.1611 20.0998V20.5521C70.1611 26.2938 67.7768 31.7751 63.5698 35.6805L39.5616 57.9759L39.219 58.2911C38.0953 59.3325 36.6153 59.9218 35.0806 59.9218C33.5458 59.9218 32.0658 59.3462 30.9422 58.2911ZM32.7647 14.0019C32.7099 13.9607 32.6688 13.9059 32.6277 13.8511L30.1885 11.1104L30.1748 11.0967C27.0093 7.54758 22.2268 5.93058 17.5677 6.8213C11.1819 8.04089 6.57761 13.6045 6.57761 20.0998V20.5521C6.57761 24.4575 8.20831 28.1985 11.0723 30.857L35.0806 53.1523L59.0888 30.857C61.9528 28.1985 63.5835 24.4575 63.5835 20.5521V20.0998C63.5835 13.6182 58.9792 8.04089 52.6072 6.8213C47.948 5.93058 43.1518 7.56128 40.0001 11.0967C40.0001 11.0967 40.0001 11.0967 39.9864 11.1104C39.9727 11.1241 39.9864 11.1104 39.9727 11.1241L37.5335 13.8648C37.4924 13.9196 37.4375 13.9607 37.3964 14.0156C36.7798 14.6322 35.9439 14.9748 35.0806 14.9748C34.2173 14.9748 33.3814 14.6322 32.7647 14.0156V14.0019Z" fill="#DD5143"/>
+								</g>
+								<g class="heart-fill">
+									<path d="M6.52279 35.3888L31.2847 58.5063C32.3125 59.4656 33.6691 60 35.0806 60C36.492 60 37.8487 59.4656 38.8764 58.5063L63.6384 35.3888C67.8042 31.5107 70.1611 26.0705 70.1611 20.3836V19.5888C70.1611 10.0102 63.241 1.84298 53.7993 0.267093C47.5506 -0.774362 41.1923 1.26744 36.725 5.73473L35.0806 7.37913L33.4362 5.73473C28.9689 1.26744 22.6105 -0.774362 16.3618 0.267093C6.92019 1.84298 0 10.0102 0 19.5888V20.3836C0 26.0705 2.35698 31.5107 6.52279 35.3888Z" fill="#DD5143"/>
+								</g>
+							</svg>
+							<div class="learning-icon-brain">
+								<svg class="learning-icon" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g class="brain-graphic">
+										<path d="M0 35.625C0 39.6328 2.50781 43.0547 6.04687 44.3906C5.77734 45.1641 5.625 46.0078 5.625 46.875C5.625 51.0117 8.98828 54.375 13.125 54.375C13.7812 54.375 14.4258 54.293 15.0352 54.1289C15.375 57.4336 18.1758 60 21.5625 60C25.1836 60 28.125 57.0586 28.125 53.4375V6.5625C28.125 2.94141 25.1836 0 21.5625 0C18.1758 0 15.3867 2.56641 15.0352 5.84766C11.7891 6.66797 9.375 9.62109 9.375 13.125C9.375 13.8281 9.46875 14.5195 9.65625 15.1641C6.28125 15.9023 3.75 18.9023 3.75 22.5C3.75 24.2578 4.34766 25.875 5.36719 27.1523C2.19141 28.6523 0 31.8867 0 35.625ZM31.875 6.5625V53.4375C31.875 57.0586 34.8164 60 38.4375 60C41.8242 60 44.6133 57.4336 44.9648 54.1289C45.5742 54.293 46.2188 54.375 46.875 54.375C51.0117 54.375 54.375 51.0117 54.375 46.875C54.375 46.0078 54.2227 45.1641 53.9531 44.3906C57.4922 43.0547 60 39.6328 60 35.625C60 31.8867 57.8086 28.6523 54.6328 27.1523C55.6523 25.875 56.25 24.2578 56.25 22.5C56.25 18.9023 53.7188 15.9023 50.3438 15.1641C50.5313 14.5195 50.625 13.8281 50.625 13.125C50.625 9.62109 48.2109 6.66797 44.9648 5.84766C44.6016 2.56641 41.8242 0 38.4375 0C34.8164 0 31.875 2.94141 31.875 6.5625Z" fill="#EB94B9"/>
+										<path d="M28.125 53.4375V6.5625H31.875V53.4375H28.125Z" fill="#DC4B89"/>
+									</g>
+								</svg>
+								<span class="brain-score">+30</span>
+							</div>
+							<svg class="learning-icon learning-icon-thumb" width="68" height="60" viewBox="0 0 68 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g class="thumb-graphic">
+									<path class="thumb-base" d="M41.6234 0.125881C45.0766 0.822248 47.3211 4.21034 46.6305 7.69217L46.325 9.21882C45.6211 12.7944 44.3195 16.1959 42.5 19.2893H61.625C65.1445 19.2893 68 22.1686 68 25.7173C68 28.1948 66.6055 30.3509 64.5602 31.4222C66.0078 32.6007 66.9375 34.4085 66.9375 36.4307C66.9375 39.5643 64.7063 42.1757 61.7711 42.7382C62.3555 43.7157 62.6875 44.854 62.6875 46.0727C62.6875 48.9251 60.8414 51.349 58.2914 52.1793C58.3844 52.6212 58.4375 53.0899 58.4375 53.572C58.4375 57.1208 55.582 60 52.0625 60H39.1133C36.5898 60 34.1328 59.2501 32.0344 57.8439L26.9211 54.4023C23.375 52.0186 21.25 48.0011 21.25 43.7023V38.5733V32.1453V28.8108C21.25 24.9005 23.0164 21.2177 26.0312 18.7671L27.0141 17.977C30.5336 15.1379 32.9375 11.1472 33.8141 6.70119L34.1195 5.17454C34.8102 1.69271 38.1703 -0.570485 41.6234 0.125881ZM4.25 21.432H12.75C15.1008 21.432 17 23.347 17 25.7173V55.7147C17 58.085 15.1008 60 12.75 60H4.25C1.89922 60 0 58.085 0 55.7147V25.7173C0 23.347 1.89922 21.432 4.25 21.432Z" fill="#9B9595"/>
+									<path class="thumb-fill" d="M41.6234 0.125881C45.0766 0.822248 47.3211 4.21034 46.6305 7.69217L46.325 9.21882C45.6211 12.7944 44.3195 16.1959 42.5 19.2893H61.625C65.1445 19.2893 68 22.1686 68 25.7173C68 28.1948 66.6055 30.3509 64.5602 31.4222C66.0078 32.6007 66.9375 34.4085 66.9375 36.4307C66.9375 39.5643 64.7063 42.1757 61.7711 42.7382C62.3555 43.7157 62.6875 44.854 62.6875 46.0727C62.6875 48.9251 60.8414 51.349 58.2914 52.1793C58.3844 52.6212 58.4375 53.0899 58.4375 53.572C58.4375 57.1208 55.582 60 52.0625 60H39.1133C36.5898 60 34.1328 59.2501 32.0344 57.8439L26.9211 54.4023C23.375 52.0186 21.25 48.0011 21.25 43.7023V38.5733V32.1453V28.8108C21.25 24.9005 23.0164 21.2177 26.0312 18.7671L27.0141 17.977C30.5336 15.1379 32.9375 11.1472 33.8141 6.70119L34.1195 5.17454C34.8102 1.69271 38.1703 -0.570485 41.6234 0.125881ZM4.25 21.432H12.75C15.1008 21.432 17 23.347 17 25.7173V55.7147C17 58.085 15.1008 60 12.75 60H4.25C1.89922 60 0 58.085 0 55.7147V25.7173C0 23.347 1.89922 21.432 4.25 21.432Z" fill="#0077B5"/>
+								</g>
+							</svg>
+				    	</div>
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="separator"></div>
+
+
+				<div class="learning-gallery-container gray-bg breakout z-1">
+					<div class="learning-gallery">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed.jpg" alt="QuantHub question panel with the resource shelf closed">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_open.jpg" alt="QuantHub question panel with the resource shelf open">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed_lms.jpg" alt="QuantHub question panel in a 768px LMS viewport">
+					</div>
+				</div>
+
+
+				<div class="separator"></div>
+
+
 				<div class="d-flex flex-wrap flex-xs-nowrap justify-center">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="flex-14">
@@ -196,53 +264,6 @@
 
 				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
-
-				<div class="d-flex flex-wrap flex-xs-nowrap">
-				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex align-items-center flex-7">
-				    	<div class="freelance-scroller-text">
-					    	<h3 class="sub-title mb-3">Freelance and Personal Work</h3>
-					    	<div class="copy stinger yellow mb-3">Logos, Games, Photography, Paint</div>
-					    	<p class="copy">
-					    		I always enjoy keeping creative outlets for forms of art and design that my professional work may not require. Besides freelance web development, I also sometimes take on graphics work (logos, posters, photography, the odd album cover) and even help with game development (mostly as a 3D artist) and game design on rare occasions. Besides work-related design, I also enjoy model construction and painting, which I find is a great way to stay creative and interested in the visual arts.
-					    		<br/><br/>
-					    		Below is a smattering of the projects, both professional and personal, that I've worked on over the last few years.
-					    	</p>
-					    </div>
-				    </div>
-				    <div class="d-inline-flex align-items-center flex-1"></div>
-				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="flip-splash freelance-scroller-img" src="img/gpc_splash.jpg">
-				    </div>
-				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				</div>
-				
-				<div class="separator d-none d-sm-block"></div>
-
-				<div class="d-flex flex-wrap flex-xs-nowrap">
-			    	<img class="freelance-double" src="img/flip_bomb_logo.png">
-			    	<img class="freelance-double mt-5 mt-sm-0" src="img/flip_bunker_logo.png">
-				</div>
-
-				<!-- <div class="supertheme-gallery-container shadow-diffuse yellow-bg breakout z-1">
-			    	<img class="freelance-gallery gallery-top" style="background-image: url('img/bike.jpg');">
-				</div> -->
-
-
-				<div class="separator"></div>
-				<div class="separator d-none d-sm-block"></div>
-
-				<div class="freelance-gallery-container">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_1.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_8.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_3.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_4.jpg">
-			    	<img class="freelance-squares shadow-diffuse d-none di-sm-block"  src="img/freelance_gal_5.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_6.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_7.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_2.jpg">
-			    	<img class="freelance-squares shadow-diffuse"  src="img/freelance_gal_9.jpg">
-			    </div>
 
 
 			</div>
