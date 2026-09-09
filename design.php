@@ -134,8 +134,19 @@
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-				    <div class="d-inline-flex flex-8 justify-content-end align-items-center">
-				    	<img class="full-width-image shadow-diffuse teacher-guide-shot" src="img/teacher_guide_full.jpg" alt="QuantHub teacher guide for AI for Entrepreneurship">
+				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
+				    	<div class="teacher-demo" aria-hidden="true">
+				    		<div class="teacher-demo-stage">
+				    			<img class="teacher-demo-sizer" src="img/teacher_guide.jpg" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-guide" src="img/teacher_guide.jpg" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-roster" src="img/roster.jpg" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-modal" src="img/student_info.png" alt="">
+				    			<div class="teacher-demo-pointer">
+				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.png" alt="">
+				    				<img class="teacher-demo-hand" src="img/pointer-hand.png" alt="">
+				    			</div>
+				    		</div>
+				    	</div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
