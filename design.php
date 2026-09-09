@@ -86,7 +86,7 @@
 					    </div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
-				    <div class="d-inline-flex flex-6 justify-content-center align-items-center mt-4 mt-sm-0">
+				    <div class="d-inline-flex flex-6 justify-content-center align-items-center mobile-order-first mb-4 mb-sm-0">
 				    	<div class="learning-icons" aria-hidden="true">
 							<svg class="learning-icon learning-icon-heart" width="71" height="60" viewBox="0 0 71 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g class="heart-outline">
@@ -117,18 +117,64 @@
 				</div>
 
 
-				<div class="separator"></div>
+				<div class="separator d-none d-md-block"></div>
 
 
 				<div class="learning-gallery-container gray-bg breakout z-1">
 					<div class="learning-gallery">
-						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed.jpg" alt="QuantHub question panel with the resource shelf closed">
-						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_open.jpg" alt="QuantHub question panel with the resource shelf open">
-						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed_lms.jpg" alt="QuantHub question panel in a 768px LMS viewport">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed.webp" alt="QuantHub question panel with the resource shelf closed">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_open.webp" alt="QuantHub question panel with the resource shelf open">
+						<img class="shadow-diffuse" src="img/revised_question_panel_shelf_closed_lms.webp" alt="QuantHub question panel in a 768px LMS viewport">
 					</div>
 				</div>
 
 
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
+				    	<div class="teacher-demo" aria-hidden="true">
+				    		<div class="teacher-demo-stage">
+				    			<img class="teacher-demo-sizer" src="img/teacher_guide.webp" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-guide" src="img/teacher_guide.webp" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-roster" src="img/roster.webp" alt="">
+				    			<img class="teacher-demo-screen teacher-demo-modal" src="img/student_info.webp" alt="">
+				    			<div class="teacher-demo-pointer">
+				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.png" alt="">
+				    				<img class="teacher-demo-hand" src="img/pointer-hand.png" alt="">
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
+				    	<div class="teacher-copy">
+					    	<h3 class="sub-title mb-3">Helping QuantHub Enable Teachers</h3>
+					    	<div class="copy stinger yellow mb-3">Teachers Are Busy Enough, So The Software Needs To Be Simple</div>
+					    	<p class="copy">
+					    		As a fast-moving startup QuantHub had a lot of spinning plates, one of which was an ever in-progress set of new and updated features for teachers on the platform. Over time that experience had become messy and uncoordinated, with different pages having different look-and-feel, verbiage, and even different branding. I undertook a concerted effort with three objectives.
+					    	</p>
+							<ul class="copy">
+								<li>Modernize and standardize the pages appearances</li>
+								<li>Standardize around user-friendly verbiage that wasn’t stuck using jargon</li>
+								<li>Refine the visuals so that these information-dense interfaces become more useful and navigable.</li>
+							</ul>
+					    	<p class="copy">
+					    		Alongside these objectives we kicked off an initiative to re-think and rebuild the more troublesome feature sets and pages holistically with the user in-mind.
+					    	</p>
+					    	<p class="copy">
+					    		We included our partners in the industry and teachers using the platform in an initiative that we called our “Customer Councils”. In these working sessions we demoed designs, discussed changes in the industry and with students, and collected valuable feedback on the platform and our ideas.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
@@ -148,12 +194,12 @@
 										The new product would also need to represent a substantial upgrade in fit and finish over the previous solution, incorporating new brand standards and accessibility requirements.
 							    	</p>
 							    </div>
-						    	<img class="full-width-image shadow-diffuse" src="img/prep_3.jpg">
-						    	<img class="full-width-image shadow-diffuse" src="img/prep_4.jpg">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_3.webp">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_4.webp">
 						    </div>
 					    	<div class="preparedness-gallery">
-					    		<img class="full-width-image shadow-diffuse" src="img/prep_1.jpg">
-					    		<img class="full-width-image shadow-diffuse" src="img/prep_2.jpg">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_1.webp">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_2.webp">
 						    	<div>
 							    	<div class="copy stinger yellow mb-3">A multi-step process with pomp and circumstance</div>
 							    	<p class="copy">
@@ -168,7 +214,7 @@
 						</div>
 					</div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
-					<div class="separator"></div>
+					<div class="separator d-none d-md-block"></div>
 					<img class="full-width-image feature" src="img/preparedness_laptop.png">
 				</div>
 				
@@ -188,10 +234,10 @@
 						</p>
 					</div>
 					<div class="email-gallery">
-						<img class="shadow-diffuse" src="img/email_1.jpg">
-						<img class="shadow-diffuse" src="img/email_2.jpg">
-						<img class="shadow-diffuse" src="img/email_3.jpg">
-						<img class="shadow-diffuse" src="img/email_4.jpg">
+						<img class="shadow-diffuse" src="img/email_1.webp">
+						<img class="shadow-diffuse" src="img/email_2.webp">
+						<img class="shadow-diffuse" src="img/email_3.webp">
+						<img class="shadow-diffuse" src="img/email_4.webp">
 					</div>
 			    </div>
 				
@@ -215,20 +261,20 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="design-splash shadow-diffuse" src="img/forecaster_interior.jpg">
+				    	<img class="design-splash shadow-diffuse" src="img/forecaster_interior.webp">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
 				
 
-				<div class="separator"></div>
+				<div class="separator d-none d-md-block"></div>
 
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-8 justify-content-start align-items-top">
 				    	<div class="forecaster-scroller-container shadow-diffuse">
-					    	<img class="forecaster-scroller" src="img/forecaster_scroller.jpg">
+					    	<img class="forecaster-scroller" src="img/forecaster_scroller.webp">
 				    	</div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
@@ -245,19 +291,19 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
 
-				<div class="separator d-none d-sm-block"></div>
-				<div class="separator"></div>
+				<div class="separator d-none d-md-block"></div>
+				<div class="separator d-none d-md-block"></div>
 
 				<div class="shadow-diffuse yellow-bg breakout z-1">
 					<div class="forcaster-gallery-container">
-				    	<img class="forecaster-squares"  src="img/design_gal_1.jpg">
-				    	<img class="forecaster-squares"  src="img/design_gal_2.jpg">
-				    	<img class="forecaster-squares"  src="img/design_gal_3.jpg">
-				    	<img class="forecaster-gallery d-none d-lg-inline-block"  src="img/courtyard_board.jpg">
-				    	<img class="forecaster-gallery d-none d-sm-inline-block"  src="img/window_covers_mockup.jpg">
-				    	<img class="forecaster-squares"  src="img/design_gal_4.jpg">
-				    	<img class="forecaster-squares"  src="img/design_gal_5.jpg">
-				    	<img class="forecaster-squares"  src="img/design_gal_6.jpg">
+				    	<img class="forecaster-squares"  src="img/design_gal_1.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_2.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_3.webp">
+				    	<img class="forecaster-gallery d-none d-lg-inline-block"  src="img/courtyard_board.webp">
+				    	<img class="forecaster-gallery d-none d-sm-inline-block"  src="img/window_covers_mockup.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_4.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_5.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_6.webp">
 				    </div>
 				</div>
 

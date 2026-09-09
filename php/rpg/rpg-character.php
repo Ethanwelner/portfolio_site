@@ -155,7 +155,7 @@
 			</div>
 			<div class="d-inline-flex flex-4">
 				<div>
-					<img src="img/placeholder_silhouette.jpg" alt="Edwin Humble" class="c-sheet-image">
+					<img src="img/placeholder_silhouette.webp" alt="Edwin Humble" class="c-sheet-image">
 				</div>
 			</div>
 		</div>

@@ -83,13 +83,13 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image shadow-diffuse" src="img/respon_1.jpg">
+				    	<img class="full-width-image shadow-diffuse" src="img/respon_1.webp">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
 				
 
-				<div class="separator"></div>
+				<div class="separator d-none d-md-block"></div>
 
 
 
@@ -104,13 +104,14 @@
 				</div>
 				
 
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image shadow-diffuse" src="img/examity_exams.jpg">
+				    	<img class="full-width-image shadow-diffuse" src="img/examity_exams.webp">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7  mobile-order-first">
@@ -153,24 +154,25 @@
 				</div>
 				
 
-				<div class="separator"></div>
+				<div class="separator d-none d-md-block"></div>
 
 
 
 				<div class="examity-gallery-container shadow-diffuse gray-bg breakout z-1">
 					<div class="examity-gallery">
-						<img class="e-g-item" src="img/examity_404.jpg">
-						<img class="e-g-item" src="img/examity_enable.jpg">
-						<img class="e-g-item" src="img/examity_id.jpg">
-						<img class="e-g-item" src="img/examity_schedule.jpg">
-						<img class="e-g-item" src="img/examity_upload.jpg">
-						<img class="e-g-item" src="img/examity_sidebar.jpg">
-						<img class="e-g-item" src="img/examity_photoID.jpg">
-						<img class="e-g-item" src="img/examity_expired.jpg">
+						<img class="e-g-item" src="img/examity_404.webp">
+						<img class="e-g-item" src="img/examity_enable.webp">
+						<img class="e-g-item" src="img/examity_id.webp">
+						<img class="e-g-item" src="img/examity_schedule.webp">
+						<img class="e-g-item" src="img/examity_upload.webp">
+						<img class="e-g-item" src="img/examity_sidebar.webp">
+						<img class="e-g-item" src="img/examity_photoID.webp">
+						<img class="e-g-item" src="img/examity_expired.webp">
 					</div>
 				</div>
 				
 
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
@@ -200,8 +202,8 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex col-4 col-lg- justify-content-sm-end justify-content-center align-items-center">
-				    	<img class="full-width-image mobile-mock shadow-diffuse d-none d-sm-inline-block" src="img/map_mockup_cell.jpg">
-				    	<img class="full-width-image tab-mock shadow-diffuse d-none d-xl-inline-block" src="img/map_mockup_tab.jpg">
+				    	<img class="full-width-image mobile-mock shadow-diffuse d-none d-sm-inline-block" src="img/map_mockup_cell.webp">
+				    	<img class="full-width-image tab-mock shadow-diffuse d-none d-xl-inline-block" src="img/map_mockup_tab.webp">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-5">
@@ -216,14 +218,14 @@
 				</div>
 
 				<div class="supertheme-gallery-container shadow-diffuse red-bg breakout z-1">
-			    	<img class="supertheme-gallery gallery-top d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_4.jpg');">
-			    	<img class="supertheme-gallery" style="background-image: url('img/supertheme_gallery_2.jpg');">
-			    	<img class="supertheme-gallery d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_3.jpg');">
+			    	<img class="supertheme-gallery gallery-top d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_4.webp');">
+			    	<img class="supertheme-gallery" style="background-image: url('img/supertheme_gallery_2.webp');">
+			    	<img class="supertheme-gallery d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_3.webp');">
 				</div>
 
 
-				<div class="separator .d-block .d-sm-none"></div>
 				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
 
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -236,7 +238,7 @@
 					    	<br><br>
 							First was brand identity. I chose a combination of strong, basic additive colors that would be instantly familiar but still impactful to anyone. It was similar to, but more constrained than, the palette used in my last portfolio. I followed up with numerous tests for font combinations as well as some blocking to see how the colors contrasted with imagery and type. I settled on a combination of the tried and true Open Sans and the playful Bebas Neue, which provides a comic-like blocking to my headlines that suits the primary colors.</p>
 							<div></div>
-							<div class="separator .d-block .d-sm-none"></div>
+							<div class="separator d-none d-md-block"></div>
 							<div class="proto-colors-container">
 								<div class="proto-colors red"></div>
 								<div class="proto-colors yellow"></div>
@@ -249,7 +251,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center proto-image-anim">
-				    	<img class="full-width-image shadow-diffuse" src="img/block_proto.jpg">
+				    	<img class="full-width-image shadow-diffuse" src="img/block_proto.webp">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -275,11 +277,11 @@
 
 				<div class="breakout z-1">
 					<div class="portfolio-gallery-container">
-				    	<img class="portfolio-gallery shadow-diffuse" src="img/portfolio_gallery_1.jpg">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_2.jpg">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_3.jpg">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_4.jpg">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_5.jpg">
+				    	<img class="portfolio-gallery shadow-diffuse" src="img/portfolio_gallery_1.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_2.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_3.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_4.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_5.webp">
 					</div>
 				</div>
 

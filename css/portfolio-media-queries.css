@@ -401,6 +401,19 @@
         width: 100%;
     }
     
+    /* Copy-to-image spacing: 40px instead of a 100px separator */
+    .learning-gallery-container,
+    .meazure-gallery-container,
+    .examity-gallery-container,
+    .supertheme-gallery-container,
+    .mindmap-gallery-container,
+    .pendo-gallery-container,
+    .forecaster-scroller-container,
+    .yellow-bg.breakout,
+    .proto-colors-container {
+        margin-top: 40px;
+    }
+
     /* Forecaster */
     .forecaster-scroller-container {
         height: 60vh;
@@ -522,7 +535,6 @@
         grid-template-columns: 1fr;
         row-gap: 40px;
         column-gap: 0px;
-        padding: 0 20px;
         
         .preparedness-gallery {
             gap: 40px;
@@ -534,7 +546,7 @@
     }
     
     .email-gallery-container {
-        row-gap: 20px;
+        row-gap: 40px;
         
         .email-gallery {
             gap: 20px;
