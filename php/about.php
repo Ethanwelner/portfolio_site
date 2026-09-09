@@ -16,12 +16,12 @@
 
 		<div class="d-inline-flex container align-items-center flex-wrap flex-sm-nowrap">
 			<div class="flex-7 ">
-				<img class="headshot d-none d-sm-inline-block" src="img/headshot_crop.jpg">
+				<img class="headshot d-none d-sm-inline-block" src="img/headshot_crop.webp">
 			</div>
 
 			<div class="section-title d-inline-flex z-2 flex-11 align-items-center">
 				<div class="hero-statement title">
-					<h3 class="section-title">Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>. <img class="headshot d-inline-block d-sm-none" src="img/headshot_crop.jpg"></h3>
+					<h3 class="section-title">Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>. <img class="headshot d-inline-block d-sm-none" src="img/headshot_crop.webp"></h3>
 					<h3 class="section-title">I've been <span class="yellow-text non-title">designing</span> for 20 years</h3>
 					<h3 class="section-title">And <span class="blue-text">{ coding }</span> for 14.</h3>
 					<h3 class="sub-title non-title">I'm currently doing it in Philly.</h3>

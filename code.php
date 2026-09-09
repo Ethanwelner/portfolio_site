@@ -97,7 +97,7 @@
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<div class="force-size">
 							<div class="surface-proto">
-					    		<img src="img/sublime_screen.jpg">
+					    		<img src="img/sublime_screen.webp">
 						    	<div class="sublime-blink"></div>
 					    	</div>
 						    <img class="surface-splash" src="img/surface_frame.png">
@@ -108,6 +108,7 @@
 
 
 				
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
@@ -217,6 +218,7 @@
 
 
 
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 

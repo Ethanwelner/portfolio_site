@@ -92,11 +92,12 @@
 
 
 				<div class="mindmap-gallery-container shadow-diffuse breakout z-1">
-			    	<img class="mindmap-gallery gallery-top d-sm-inline-block" style="background-image: url('img/tt_pathways.jpg');">
+			    	<img class="mindmap-gallery gallery-top d-sm-inline-block" style="background-image: url('img/tt_pathways.webp');">
 				</div>
 
 
 				
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
@@ -122,6 +123,7 @@
 				</div>
 
 
+				<div class="separator d-none d-sm-block"></div>
 				<div class="separator"></div>
 
 
@@ -143,15 +145,15 @@
 
 				<div class="pendo-gallery-container shadow-diffuse green-bg breakout z-1">
 					<div class="pendo-gallery">
-						<img class="pendo-gallery-item" src="img/pendo_guide_1.jpg" alt="Pendo onboarding guide">
-						<img class="pendo-gallery-item" src="img/pendo_guide_2.jpg" alt="Pendo in-product tutorial">
-						<img class="pendo-gallery-item" src="img/pendo_guide_3.jpg" alt="Pendo in-app survey">
+						<img class="pendo-gallery-item" src="img/pendo_guide_1.webp" alt="Pendo onboarding guide">
+						<img class="pendo-gallery-item" src="img/pendo_guide_2.webp" alt="Pendo in-product tutorial">
+						<img class="pendo-gallery-item" src="img/pendo_guide_3.webp" alt="Pendo in-app survey">
 					</div>
 				</div>
 
 
-				<div class="separator .d-block .d-sm-none"></div>
 				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
 
 
 
@@ -159,7 +161,7 @@
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/image_guide.jpg">
+				    	<img class="full-width-image" src="img/image_guide.webp">
 				    </div>
 				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">

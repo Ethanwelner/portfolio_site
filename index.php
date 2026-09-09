@@ -120,7 +120,7 @@
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
 					    	<div class="splash-proto">
-					    		<img src="img/mobile_proto.jpg">
+					    		<img src="img/mobile_proto.webp">
 					    		<div class="thumb-scroll"></div>
 					    	</div>
 					    	<div class="shadow-splash shadow-heavy">
@@ -145,7 +145,7 @@
 				    </div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center splash-proto-container">
 				    	<div class="splash-proto">
-				    		<img src="img/mobile_proto.jpg">
+				    		<img src="img/mobile_proto.webp">
 				    		<div class="thumb-scroll"></div>
 				    	</div>
 				    	<div class="shadow-splash shadow-heavy">

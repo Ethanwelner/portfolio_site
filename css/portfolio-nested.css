@@ -206,7 +206,7 @@ dl, ol, ul {
 
 /* Hero Section */
 .hero {
-    background-image: url("../img/hero.jpg");
+    background-image: url("../img/hero.webp");
     background-size: cover;
 }
 
@@ -1637,11 +1637,13 @@ img.warning-gif {
     overflow: hidden;
 }
 
-.learning-copy ul {
+.learning-copy ul,
+.teacher-copy ul {
     margin: 0.75rem 0 1rem;
 }
 
-.learning-copy li {
+.learning-copy li,
+.teacher-copy li {
     margin-bottom: 0.5rem;
 }
 
@@ -1663,6 +1665,7 @@ img.warning-gif {
 
 .teacher-demo {
     --teacher-demo: 12.9s;
+    --teacher-pointer: 3.25%;
     width: 100%;
 }
 
@@ -1710,9 +1713,10 @@ img.warning-gif {
     top: 0;
     left: 0;
     z-index: 4;
-    width: 34px;
-    height: 42px;
-    transform-origin: 2px 2px;
+    width: var(--teacher-pointer);
+    height: auto;
+    aspect-ratio: 65 / 82;
+    transform-origin: 6% 5%;
     animation: teacher-pointer-move var(--teacher-demo) linear infinite;
     pointer-events: none;
 }
@@ -1722,7 +1726,7 @@ img.warning-gif {
     position: absolute;
     top: 0;
     left: 0;
-    width: 34px;
+    width: 100%;
     height: auto;
     display: block;
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35));
@@ -1733,8 +1737,8 @@ img.warning-gif {
 }
 
 .teacher-demo-hand {
-    top: -2px;
-    left: -8px;
+    top: -6%;
+    left: -24%;
     opacity: 0;
     animation: teacher-hand-vis var(--teacher-demo) linear infinite;
 }
@@ -1753,212 +1757,212 @@ img.warning-gif {
 
 @keyframes teacher-pointer-move {
     0%, 3.6% {
-        left: 51%;
-        top: 49%;
+        left: 51.5%;
+        top: 50.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     3.9% {
-        left: 50.5%;
-        top: 48.6%;
+        left: 51%;
+        top: 50.1%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     4.5% {
-        left: 48.3%;
-        top: 47.1%;
+        left: 48.6%;
+        top: 48.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     5.1% {
-        left: 43.3%;
-        top: 43.2%;
+        left: 43.4%;
+        top: 44.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     5.8% {
-        left: 36.5%;
-        top: 37.6%;
+        left: 36.2%;
+        top: 38.6%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     6.4% {
-        left: 29.3%;
-        top: 31.2%;
+        left: 28.5%;
+        top: 31.9%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     7% {
-        left: 21.7%;
-        top: 23.8%;
+        left: 20.5%;
+        top: 24.2%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     7.8% {
-        left: 14.2%;
-        top: 16.4%;
+        left: 12.5%;
+        top: 16.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     8.4% {
-        left: 10.2%;
-        top: 12.2%;
+        left: 8.3%;
+        top: 12.1%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     8.9% {
-        left: 8.8%;
-        top: 10.7%;
+        left: 6.8%;
+        top: 10.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     9%, 13.6% {
-        left: 8.5%;
-        top: 10.4%;
+        left: 6.5%;
+        top: 10.2%;
         transform: scale(1);
         animation-timing-function: ease-out;
     }
-    14.7% {
-        left: 8.5%;
-        top: 10.8%;
+    14.4% {
+        left: 6.5%;
+        top: 10.6%;
         transform: scale(0.9);
         animation-timing-function: ease-out;
     }
-    16.3%, 21% {
-        left: 8.5%;
-        top: 10.4%;
+    15.6%, 21% {
+        left: 6.5%;
+        top: 10.2%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     21.7% {
-        left: 9.5%;
-        top: 11%;
+        left: 7.6%;
+        top: 10.8%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     22.6% {
-        left: 13.8%;
-        top: 13.3%;
+        left: 12.2%;
+        top: 13%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     23.7% {
-        left: 23.6%;
-        top: 19.1%;
+        left: 22.7%;
+        top: 18.7%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     24.6% {
         left: 36.5%;
-        top: 27.1%;
+        top: 26.5%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     25.8% {
-        left: 50%;
-        top: 36.2%;
+        left: 51.1%;
+        top: 35.4%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     26.8% {
-        left: 64.3%;
-        top: 46.3%;
+        left: 66.5%;
+        top: 45.4%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     28% {
-        left: 77.8%;
-        top: 56.3%;
+        left: 81.1%;
+        top: 55.3%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     28.7% {
-        left: 85.1%;
-        top: 61.9%;
+        left: 88.9%;
+        top: 60.8%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     29.6% {
-        left: 87.7%;
-        top: 63.9%;
+        left: 91.8%;
+        top: 62.8%;
         transform: scale(1);
         animation-timing-function: linear;
     }
     29.9%, 34.6% {
-        left: 88.2%;
-        top: 64.3%;
+        left: 92.3%;
+        top: 63.2%;
         transform: scale(1);
         animation-timing-function: ease-out;
     }
-    36% {
-        left: 88.2%;
-        top: 64.7%;
+    35.7% {
+        left: 92.3%;
+        top: 63.6%;
         transform: scale(0.9);
         animation-timing-function: ease-out;
     }
-    37.3%, 45.6% {
-        left: 88.2%;
-        top: 64.3%;
-        transform: scale(1);
-        animation-timing-function: linear;
-    }
-    46% {
-        left: 87.8%;
-        top: 64.1%;
-        transform: scale(1);
-        animation-timing-function: linear;
-    }
-    46.2% {
-        left: 86.3%;
+    36.6%, 45.6% {
+        left: 92.3%;
         top: 63.2%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    46.8% {
-        left: 82.5%;
-        top: 61.3%;
+    46.1% {
+        left: 91.9%;
+        top: 63%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    47.2% {
-        left: 77%;
-        top: 58.8%;
+    46.4% {
+        left: 90.2%;
+        top: 62.2%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    47.5% {
-        left: 70.8%;
-        top: 56.2%;
+    47.1% {
+        left: 86%;
+        top: 60.6%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    48.1% {
-        left: 63.7%;
-        top: 53.5%;
+    47.6% {
+        left: 79.9%;
+        top: 58.4%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    48.5% {
-        left: 56.6%;
-        top: 50.9%;
+    48% {
+        left: 73.1%;
+        top: 56.3%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    49% {
-        left: 52.7%;
-        top: 49.6%;
+    48.7% {
+        left: 65.4%;
+        top: 54.1%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    49.1% {
-        left: 51.3%;
-        top: 49.1%;
+    49.2% {
+        left: 57.6%;
+        top: 52%;
         transform: scale(1);
         animation-timing-function: linear;
     }
-    49.3%, 100% {
-        left: 51%;
-        top: 49%;
+    49.9% {
+        left: 53.4%;
+        top: 51%;
+        transform: scale(1);
+        animation-timing-function: linear;
+    }
+    50% {
+        left: 51.8%;
+        top: 50.6%;
+        transform: scale(1);
+        animation-timing-function: linear;
+    }
+    50.2%, 100% {
+        left: 51.5%;
+        top: 50.5%;
         transform: scale(1);
     }
 }
@@ -1968,7 +1972,7 @@ img.warning-gif {
     9%, 21% { opacity: 0; }
     21.6%, 29.6% { opacity: 1; }
     29.9%, 45.6% { opacity: 0; }
-    46.2%, 100% { opacity: 1; }
+    46.4%, 100% { opacity: 1; }
 }
 
 @keyframes teacher-hand-vis {
@@ -1976,7 +1980,7 @@ img.warning-gif {
     9%, 21% { opacity: 1; }
     21.6%, 29.6% { opacity: 0; }
     29.9%, 45.6% { opacity: 1; }
-    46.2%, 100% { opacity: 0; }
+    46.4%, 100% { opacity: 0; }
 }
 
 .design-splash {
