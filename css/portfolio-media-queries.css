@@ -405,6 +405,7 @@
     .learning-gallery-container,
     .meazure-gallery-container,
     .examity-gallery-container,
+    .reflow-gallery-container,
     .supertheme-gallery-container,
     .mindmap-gallery-container,
     .pendo-gallery-container,
@@ -487,6 +488,15 @@
         .examity-gallery {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 1fr);
+            gap: 20px;
+        }
+    }
+
+    .reflow-gallery-container {
+        padding: 20px 20px;
+
+        .reflow-gallery {
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
     }
@@ -590,7 +600,11 @@
    ======================================== */
 
 @media only screen and (max-width: 480px) {
-    /* Add specific mobile styles here */
+    .reflow-gallery-container {
+        .reflow-gallery {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 /* ========================================
