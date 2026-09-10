@@ -107,24 +107,26 @@
 				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
 				    	<div class="lti-demo" aria-hidden="true">
 				    		<div class="lti-demo-stage">
-				    			<img class="lti-demo-sizer" src="img/lti_anim/LTI_background.png" alt="">
-				    			<img class="lti-demo-screen lti-demo-bg" src="img/lti_anim/LTI_background.png" alt="">
-				    			<div class="lti-demo-scrim"></div>
-				    			<img class="lti-demo-modal lti-demo-account" src="img/lti_anim/LTI_account.png" alt="">
-				    			<img class="lti-demo-modal lti-demo-roster" src="img/lti_anim/LTI_roster_choice.png" alt="">
-				    			<div class="lti-demo-modal lti-demo-create">
-				    				<img class="lti-demo-create-frame" src="img/lti_anim/LTI_create_class_modal_container.png" alt="">
-				    				<div class="lti-demo-create-viewport">
-				    					<img class="lti-demo-create-content" src="img/lti_anim/LTI_create_class_modal_content.png" alt="">
-				    				</div>
-				    				<img class="lti-demo-handle" src="img/lti_anim/scroll_handle.png" alt="">
-				    			</div>
-				    			<div class="lti-demo-modal lti-demo-activities">
-				    				<img class="lti-demo-activities-frame" src="img/lti_anim/activities_top-section_and_container.png" alt="">
-				    				<div class="lti-demo-activities-viewport">
-				    					<img class="lti-demo-activities-content" src="img/lti_anim/activities_scrolling_content.png" alt="">
-				    				</div>
-				    				<img class="lti-demo-activities-handle" src="img/lti_anim/scroll_handle.png" alt="">
+				    			<img class="lti-demo-sizer" src="img/lti_anim/ipad_frame.png" alt="">
+				    			<div class="lti-demo-screen">
+					    			<img class="lti-demo-bg" src="img/lti_anim/LTI_background.png" alt="">
+					    			<div class="lti-demo-scrim"></div>
+					    			<img class="lti-demo-modal lti-demo-account" src="img/lti_anim/LTI_account.png" alt="">
+					    			<img class="lti-demo-modal lti-demo-roster" src="img/lti_anim/LTI_roster_choice.png" alt="">
+					    			<div class="lti-demo-modal lti-demo-create">
+					    				<img class="lti-demo-create-frame" src="img/lti_anim/LTI_create_class_modal_container.png" alt="">
+					    				<div class="lti-demo-create-viewport">
+					    					<img class="lti-demo-create-content" src="img/lti_anim/LTI_create_class_modal_content.png" alt="">
+					    				</div>
+					    				<img class="lti-demo-handle" src="img/lti_anim/scroll_handle.png" alt="">
+					    			</div>
+					    			<div class="lti-demo-modal lti-demo-activities">
+					    				<img class="lti-demo-activities-frame" src="img/lti_anim/activities_top-section_and_container.png" alt="">
+					    				<div class="lti-demo-activities-viewport">
+					    					<img class="lti-demo-activities-content" src="img/lti_anim/activities_scrolling_content.png" alt="">
+					    				</div>
+					    				<img class="lti-demo-activities-handle" src="img/lti_anim/scroll_handle.png" alt="">
+					    			</div>
 				    			</div>
 				    		</div>
 				    	</div>
