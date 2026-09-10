@@ -66,6 +66,42 @@
 			<div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
 
 
+				<div class="d-flex flex-column align-items-center text-center mobile-text-left flex-18">
+		    		<div class="feature">
+				    	<div><h3 class="sub-title mb-3">QuantHub Learner Experience</h3></div>
+				    	<div class="copy stinger red mb-3">Designing For All Age Ranges</div>
+				    	<p class="copy">
+							QuantHub is a B to C and B-B-C provider of online learning materials, activities, tests, and accreditations with a specialty in teaching AI and technology tools to K-12, Higher Education and Corporate training audiences.
+							<br><br>
+							I wholly redesigned the navigation UI and component styling for their learning application, working intensively with our product team and the team making the learning materials to make sure the content was presented as best it could be. That was a big ask. The new designs had to accommodate a wide variety of learning materials featuring all different kinds of media, and they had to scale from a lower-education audience all the way to industry professionals without feeling like two different products.
+							<br><br>
+							The new design also needed to look good and promote the application from a sales and demo perspective. It needed compatibility with all major LMS systems, mobile devices, and the wide variety of hardware and managed devices you see in education and industry. And it needed to be instrumented for analytics and to gather user sentiment, so we could keep a finger on how learners were actually experiencing the product. That sentiment put the interface at 70-80% favorability, which is very high, (especially for K-12)!
+						</p>
+					</div>
+					<div class="separator d-none d-md-block"></div>
+					<img class="full-width-image feature" src="img/intro_laptop_screenshot.png" alt="QuantHub learner experience shown on a laptop">
+				</div>
+
+
+				<div class="separator d-none d-md-block"></div>
+
+
+				<div class="reflow-gallery-container gray-bg breakout z-1">
+					<div class="reflow-gallery">
+						<img class="shadow-diffuse" src="img/activity_intro.jpg" alt="QuantHub activity introduction screen">
+						<img class="shadow-diffuse" src="img/activity_narrative.jpg" alt="QuantHub activity narrative screen">
+						<img class="shadow-diffuse" src="img/activity_question.jpg" alt="QuantHub activity question screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/activity_resource.jpg" alt="QuantHub activity resource screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/activity_final.jpg" alt="QuantHub activity completion screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/survey.jpg" alt="QuantHub activity survey screen">
+					</div>
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
