@@ -104,6 +104,62 @@
 
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
+				    	<div class="lti-demo" aria-hidden="true">
+				    		<div class="lti-demo-stage">
+				    			<img class="lti-demo-sizer" src="img/lti_anim/LTI_background.png" alt="">
+				    			<img class="lti-demo-screen lti-demo-bg" src="img/lti_anim/LTI_background.png" alt="">
+				    			<div class="lti-demo-scrim"></div>
+				    			<img class="lti-demo-modal lti-demo-account" src="img/lti_anim/LTI_account.png" alt="">
+				    			<img class="lti-demo-modal lti-demo-roster" src="img/lti_anim/LTI_roster_choice.png" alt="">
+				    			<div class="lti-demo-modal lti-demo-create">
+				    				<img class="lti-demo-create-frame" src="img/lti_anim/LTI_create_class_modal_container.png" alt="">
+				    				<div class="lti-demo-create-viewport">
+				    					<img class="lti-demo-create-content" src="img/lti_anim/LTI_create_class_modal_content.png" alt="">
+				    				</div>
+				    				<img class="lti-demo-handle" src="img/lti_anim/scroll_handle.png" alt="">
+				    			</div>
+				    			<div class="lti-demo-modal lti-demo-activities">
+				    				<img class="lti-demo-activities-frame" src="img/lti_anim/activities_top-section_and_container.png" alt="">
+				    				<div class="lti-demo-activities-viewport">
+				    					<img class="lti-demo-activities-content" src="img/lti_anim/activities_scrolling_content.png" alt="">
+				    				</div>
+				    				<img class="lti-demo-activities-handle" src="img/lti_anim/scroll_handle.png" alt="">
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
+				    	<div class="lti-copy">
+					    	<h3 class="sub-title mb-3">Simplifying LTI</h3>
+					    	<div class="copy stinger red mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do</div>
+					    	<p class="copy">
+					    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+					    	</p>
+							<ul class="copy">
+								<li>Excepteur sint occaecat cupidatat non proident sunt in culpa</li>
+								<li>Curabitur pretium tincidunt lacus nulla gravida orci a odio luctus varius turpis</li>
+								<li>Praesent fermentum lacinia diam sit amet fermentum enim hendrerit eu vestibulum ante</li>
+							</ul>
+					    	<p class="copy">
+					    		Nullam varius turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida donec laoreet tempor augue.
+					    	</p>
+					    	<p class="copy">
+					    		Suspendisse vel feugiat nisi praesent fermentum lacinia diam, sit amet fermentum enim hendrerit eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae fusce id purus.
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
 					    	<h3 class="sub-title mb-3">Meazure Learning's Responsivity and Accessibility Redesign</h3>

@@ -1518,6 +1518,28 @@ img.warning-gif {
     .teacher-demo-pointer {
         display: none;
     }
+
+    .lti-demo-account,
+    .lti-demo-roster,
+    .lti-demo-create,
+    .lti-demo-activities,
+    .lti-demo-create-content,
+    .lti-demo-handle,
+    .lti-demo-activities-content,
+    .lti-demo-activities-handle {
+        animation: none;
+    }
+
+    .lti-demo-account,
+    .lti-demo-create,
+    .lti-demo-activities {
+        display: none;
+    }
+
+    .lti-demo-roster {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .learning-icon-brain {
@@ -1662,12 +1684,14 @@ img.warning-gif {
 }
 
 .learning-copy ul,
-.teacher-copy ul {
+.teacher-copy ul,
+.lti-copy ul {
     margin: 0.75rem 0 1rem;
 }
 
 .learning-copy li,
-.teacher-copy li {
+.teacher-copy li,
+.lti-copy li {
     margin-bottom: 0.5rem;
 }
 
@@ -2005,6 +2029,222 @@ img.warning-gif {
     21.6%, 29.6% { opacity: 0; }
     29.9%, 45.6% { opacity: 1; }
     46.4%, 100% { opacity: 0; }
+}
+
+.lti-demo {
+    --lti-demo: 22s;
+    width: 100%;
+}
+
+.lti-demo-stage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.lti-demo-sizer {
+    width: 100%;
+    height: auto;
+    display: block;
+    visibility: hidden;
+}
+
+.lti-demo-screen {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lti-demo-modal {
+    position: absolute;
+}
+
+.lti-demo-bg {
+    z-index: 1;
+    object-fit: fill;
+    object-position: top left;
+    filter: blur(8px);
+    transform: scale(1.06);
+}
+
+.lti-demo-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lti-demo-account,
+.lti-demo-roster,
+.lti-demo-create,
+.lti-demo-activities {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.lti-demo-account {
+    left: 30%;
+    top: 39.112%;
+    width: 40%;
+    height: 29.979%;
+    object-fit: fill;
+    animation: lti-account-in var(--lti-demo) linear infinite;
+}
+
+.lti-demo-roster {
+    left: 18.438%;
+    top: 16.702%;
+    width: 63.125%;
+    height: 70.771%;
+    object-fit: fill;
+    animation: lti-roster-in var(--lti-demo) linear infinite;
+}
+
+.lti-demo-create {
+    left: 19.375%;
+    top: 7.281%;
+    width: 61.25%;
+    height: 86.296%;
+    overflow: hidden;
+    animation: lti-create-in var(--lti-demo) linear infinite;
+}
+
+.lti-demo-create-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.lti-demo-create-viewport {
+    position: absolute;
+    left: 4.21%;
+    top: 11.66%;
+    width: 85.46%;
+    height: 84.86%;
+    overflow: hidden;
+}
+
+.lti-demo-create-content {
+    width: 105.97%;
+    height: auto;
+    display: block;
+    animation: lti-create-scroll var(--lti-demo) ease-in-out infinite;
+}
+
+.lti-demo-handle {
+    position: absolute;
+    left: calc(100% * 763.5 / 784);
+    top: 14.52%;
+    z-index: 3;
+    width: calc(100% * 8 / 784);
+    height: auto;
+    display: block;
+    animation: lti-handle-move var(--lti-demo) ease-in-out infinite;
+}
+
+.lti-demo-activities {
+    left: 18.125%;
+    top: 7.709%;
+    width: 63.75%;
+    height: 84.582%;
+    overflow: hidden;
+    animation: lti-activities-in var(--lti-demo) linear infinite;
+}
+
+.lti-demo-activities-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: top left;
+}
+
+.lti-demo-activities-viewport {
+    position: absolute;
+    left: 0;
+    top: 24.937%;
+    width: 100%;
+    height: 73.418%;
+    overflow: hidden;
+    z-index: 2;
+    background: #f5f5f5;
+}
+
+.lti-demo-activities-content {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: lti-activities-scroll var(--lti-demo) ease-in-out infinite;
+}
+
+.lti-demo-activities-handle {
+    position: absolute;
+    right: 1.35%;
+    top: 25.95%;
+    z-index: 4;
+    width: 0.98%;
+    height: auto;
+    display: block;
+    animation: lti-activities-handle var(--lti-demo) ease-in-out infinite;
+}
+
+@keyframes lti-account-in {
+    0%, 2% { opacity: 0; visibility: hidden; }
+    3% { opacity: 0; visibility: visible; }
+    6%, 13% { opacity: 1; visibility: visible; }
+    15% { opacity: 0; visibility: visible; }
+    15.1%, 100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes lti-roster-in {
+    0%, 15.1% { opacity: 0; visibility: hidden; }
+    16% { opacity: 0; visibility: visible; }
+    18%, 27% { opacity: 1; visibility: visible; }
+    29% { opacity: 0; visibility: visible; }
+    29.1%, 100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes lti-create-in {
+    0%, 29.1% { opacity: 0; visibility: hidden; }
+    30% { opacity: 0; visibility: visible; }
+    32%, 52% { opacity: 1; visibility: visible; }
+    54% { opacity: 0; visibility: visible; }
+    54.1%, 100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes lti-create-scroll {
+    0%, 36% { transform: translateY(0); }
+    48%, 100% { transform: translateY(-33.2%); }
+}
+
+@keyframes lti-handle-move {
+    0%, 36% { top: 14.52%; }
+    48%, 100% { top: 86.5%; }
+}
+
+@keyframes lti-activities-in {
+    0%, 54.1% { opacity: 0; visibility: hidden; }
+    55% { opacity: 0; visibility: visible; }
+    57%, 94% { opacity: 1; visibility: visible; }
+    97% { opacity: 0; visibility: visible; }
+    97.1%, 100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes lti-activities-scroll {
+    0%, 60% { transform: translateY(0); }
+    86%, 100% { transform: translateY(calc((580 - 2567) / 2581 * 100%)); }
+}
+
+@keyframes lti-activities-handle {
+    0%, 60% { top: 25.95%; }
+    86%, 100% { top: 86.5%; }
 }
 
 .design-splash {
