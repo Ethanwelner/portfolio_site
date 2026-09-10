@@ -71,11 +71,11 @@
 				    	<div><h3 class="sub-title mb-3">QuantHub Learner Experience</h3></div>
 				    	<div class="copy stinger red mb-3">Designing For All Age Ranges</div>
 				    	<p class="copy">
-							QuantHub is a B to C and B-B-C provider of online learning materials, activities, tests, and accreditations with a specialty in teaching AI and technology tools to K-12, Higher Education and Corporate training audiences.
+							QuantHub is a B2C and B2B2C provider of online learning materials, activities, tests, and accreditations, specializing in teaching AI and technology tools to K-12, higher education, and corporate training audiences.
 							<br><br>
-							I wholly redesigned the navigation UI and component styling for their learning application, working intensively with our product team and the team making the learning materials to make sure the content was presented as best it could be. That was a big ask. The new designs had to accommodate a wide variety of learning materials featuring all different kinds of media, and they had to scale from a lower-education audience all the way to industry professionals without feeling like two different products.
+							I wholly redesigned the navigation UI and component styling for their learning application, working intensively with our product team and the team making the learning materials to make sure the content was presented as well as it could be. That was a big ask. The new designs had to accommodate a wide variety of learning materials featuring all different kinds of media, and they had to scale from a lower-education audience all the way to industry professionals without feeling like two different products. The new design also needed to look good and promote the application from a sales and demo perspective.
 							<br><br>
-							The new design also needed to look good and promote the application from a sales and demo perspective. It needed compatibility with all major LMS systems, mobile devices, and the wide variety of hardware and managed devices you see in education and industry. And it needed to be instrumented for analytics and to gather user sentiment, so we could keep a finger on how learners were actually experiencing the product. That sentiment put the interface at 70-80% favorability, which is very high, (especially for K-12)!
+							The new design needed compatibility with all major LMS systems, mobile devices, and the wide variety of hardware and managed devices you see in education and industry. It also needed to be instrumented for analytics and to gather user sentiment, so we could keep a finger on how learners were actually experiencing the product. That sentiment put the interface at 70–80% favorability, which is very high, especially for K-12.
 						</p>
 					</div>
 					<div class="separator d-none d-md-block"></div>
