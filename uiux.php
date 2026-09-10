@@ -79,7 +79,7 @@
 						</p>
 					</div>
 					<div class="separator d-none d-md-block"></div>
-					<img class="full-width-image feature" src="img/intro_laptop_screenshot.png" alt="QuantHub learner experience shown on a laptop">
+					<img class="full-width-image feature" src="img/intro_laptop_screenshot.webp" alt="QuantHub learner experience shown on a laptop">
 				</div>
 
 
@@ -88,12 +88,12 @@
 
 				<div class="reflow-gallery-container gray-bg breakout z-1">
 					<div class="reflow-gallery">
-						<img class="shadow-diffuse" src="img/activity_intro.jpg" alt="QuantHub activity introduction screen">
-						<img class="shadow-diffuse" src="img/activity_narrative.jpg" alt="QuantHub activity narrative screen">
-						<img class="shadow-diffuse" src="img/activity_question.jpg" alt="QuantHub activity question screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/activity_resource.jpg" alt="QuantHub activity resource screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/activity_final.jpg" alt="QuantHub activity completion screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/survey.jpg" alt="QuantHub activity survey screen">
+						<img class="shadow-diffuse" src="img/activity_intro.webp" alt="QuantHub activity introduction screen">
+						<img class="shadow-diffuse" src="img/activity_narrative.webp" alt="QuantHub activity narrative screen">
+						<img class="shadow-diffuse" src="img/activity_question.webp" alt="QuantHub activity question screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/activity_resource.webp" alt="QuantHub activity resource screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/activity_final.webp" alt="QuantHub activity completion screen">
+						<img class="shadow-diffuse d-none d-md-block" src="img/survey.webp" alt="QuantHub activity survey screen">
 					</div>
 				</div>
 
