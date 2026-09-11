@@ -105,7 +105,7 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/pendo_dash.png" alt="Pendo analytics dashboard">
+				    	<img class="full-width-image" src="img/pendo_dash.webp" alt="Pendo analytics dashboard">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">

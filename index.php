@@ -124,7 +124,7 @@
 					    		<div class="thumb-scroll"></div>
 					    	</div>
 					    	<div class="shadow-splash shadow-heavy">
-						    	<img class="ux-splash" src="img/iphone_outline.png">
+						    	<img class="ux-splash" src="img/iphone_outline.webp">
 						    </div>
 					    </div>
 
@@ -149,7 +149,7 @@
 				    		<div class="thumb-scroll"></div>
 				    	</div>
 				    	<div class="shadow-splash shadow-heavy">
-					    	<img class="ux-splash" src="img/iphone_outline.png">
+					    	<img class="ux-splash" src="img/iphone_outline.webp">
 					    </div>
 				    </div>
 				</div>

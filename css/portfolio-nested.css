@@ -818,7 +818,7 @@ hr {
     height: auto;
     position: relative;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /* Headshot */
@@ -901,7 +901,7 @@ img.warning-gif {
         aspect-ratio: 8 / 6;
         width: 100%;
         object-fit: cover;
-        border-radius: 4px;
+        border-radius: 8px;
     }
 }
 
@@ -925,7 +925,7 @@ img.warning-gif {
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 4px;
+        border-radius: 8px;
     }
 }
 
@@ -1044,7 +1044,7 @@ img.warning-gif {
         
         img {
             width: 100%;
-            border-radius: 4px;
+            border-radius: 8px;
         }
     }
 }
@@ -1140,7 +1140,7 @@ img.warning-gif {
     height: auto;
     width: 100%;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .browser-mock-sizer {
@@ -1707,7 +1707,7 @@ img.warning-gif {
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 4px;
+        border-radius: 8px;
     }
 }
 
@@ -1720,7 +1720,7 @@ img.warning-gif {
 .teacher-demo-stage {
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
