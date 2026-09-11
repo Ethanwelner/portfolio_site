@@ -30,7 +30,7 @@
 	</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="d-inline-flex flex-6 justify-content-end align-items-center">
-		<img src="img/stat_ring.png" alt="Stat ring" class="column-image">
+		<img src="img/stat_ring.webp" alt="Stat ring" class="column-image">
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>

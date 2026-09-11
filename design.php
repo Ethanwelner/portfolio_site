@@ -143,8 +143,8 @@
 				    			<img class="teacher-demo-screen teacher-demo-roster" src="img/roster.webp" alt="">
 				    			<img class="teacher-demo-screen teacher-demo-modal" src="img/student_info.webp" alt="">
 				    			<div class="teacher-demo-pointer">
-				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.png" alt="">
-				    				<img class="teacher-demo-hand" src="img/pointer-hand.png" alt="">
+				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.webp" alt="">
+				    				<img class="teacher-demo-hand" src="img/pointer-hand.webp" alt="">
 				    			</div>
 				    		</div>
 				    	</div>
@@ -215,7 +215,7 @@
 					</div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 					<div class="separator d-none d-md-block"></div>
-					<img class="full-width-image feature" src="img/preparedness_laptop.png">
+					<img class="full-width-image feature" src="img/preparedness_laptop.webp">
 				</div>
 				
 
