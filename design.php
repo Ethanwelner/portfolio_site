@@ -312,6 +312,101 @@
 				<div class="separator"></div>
 
 
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-7">
+				    	<div class="proto-content-anim">
+					    	<h3 class="sub-title mb-3">Rapid Prototyping My Own Portfolio</h3>
+					    	<div class="copy stinger yellow mb-3">A Speed Test to Put my Professional Skills To The Test</div>
+					    	<p class="copy">The design process is an exercise in research and understanding as well as design. A design portfolio is meant to be a piece itself, and the experience that it delivers comes across just as strongly as any of the projects or stories it tells. In rebuilding this site, I wanted to make sure it came across as human, striking, and unique. Being personal but also professional is a tough needle to thread, but I decided to try to do it in a weekend.
+					    	<br><br>
+							First was brand identity. I chose a combination of strong, basic additive colors that would be instantly familiar but still impactful to anyone. It was similar to, but more constrained than, the palette used in my last portfolio. I followed up with numerous tests for font combinations as well as some blocking to see how the colors contrasted with imagery and type. I settled on a combination of the tried and true Open Sans and the playful Bebas Neue, which provides a comic-like blocking to my headlines that suits the primary colors.</p>
+							<div></div>
+							<div class="separator d-none d-md-block"></div>
+							<div class="proto-colors-container">
+								<div class="proto-colors red"></div>
+								<div class="proto-colors yellow"></div>
+								<div class="proto-colors blue"></div>
+								<div class="proto-colors green"></div>
+								<div class="proto-colors black"></div>
+								<div class="proto-colors white"></div>
+							</div>
+					    </div>
+				    </div>
+				    <div class="d-inline-flex align-items-center flex-1"></div>
+				    <div class="d-inline-flex flex-6 justify-content-end align-items-center proto-image-anim">
+				    	<img class="full-width-image shadow-diffuse" src="img/block_proto.webp">
+				    </div>
+				    <div class="flex-2 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
+				<div class="d-flex mb-5 flex-wrap flex-xs-nowrap">
+				    <div class="flex-3 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-12">
+				    	<div class="text-center">
+					    	<div class="copy stinger yellow mb-3">Competitive Analysis, Goals, and Paper</div>
+					    	<p class="copy">While researching color and type, I was looking at my "competition." In many ways a portfolio is a statement of fashion, with different professional careers opting to express themselves in different ways. I browsed many award-winning sites from the past few years and mocked up treatments by hand on a trusty dotted mini-sketchbook. This not only helped me determine content flow and layout but also started the process of winnowing down what content I would want to display and how. It also gave me a window into the whys of other professionals, as well as what was working and what wasn't.
+					    	<br><br>
+					    	There are limits to what can be blocked out by hand; animation and complex navigation styles that don't map 1:1 to a piece of paper exist, but they are fast and can really narrow down scope and provide a basis for further work. In the end I had mocked up 10 sites as well as my own, while notating what worked, what didn't, and what kinds of technologies and features I believed I could work into the process.</p>
+					    </div>
+				    </div>
+				    <div class="flex-3 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="breakout z-1">
+					<div class="portfolio-gallery-container">
+				    	<img class="portfolio-gallery shadow-diffuse" src="img/portfolio_gallery_1.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_2.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_3.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_4.webp">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_5.webp">
+					</div>
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
+				<div class="d-flex mb-5 flex-wrap flex-xs-nowrap">
+				    <div class="flex-3 d-none d-xl-inline-flex"></div>
+				    <div class="d-inline-flex align-items-center flex-12">
+				    	<div class="text-center">
+					    	<div class="copy stinger yellow mb-3">Full prototyping</div>
+					    	<p class="copy">Rapid prototyping of designs is a big benefit of modern design software. For this project, I used Adobe XD to do the early blocking. From there I was able to create clickable prototypes that helped me determine scale and flow, as well as figure out a bit of my navigation. There are limits to this kind of prototyping, whether it's technical or structural. For instance, XD is incapable of the kind of within-page links that I use on this site. But, much like the sketch mockups, it helps to further clarify the final design as well as present weaknesses and strengths. With the prototype built, I moved on to a semi-final treatment of the design itself, still using XD but featuring functional placeholder content and text.
+					    	<br><br>
+					    	The box below is a version of my early clickable prototype. Go ahead and try it out (It's interactive)!
+					    	</p>
+					    </div>
+				    </div>
+				    <div class="flex-3 d-none d-xl-inline-flex"></div>
+				</div>
+
+
+				<div class="col-2 d-none d-sm-flex">
+				</div>
+				<div class="col-12 col-sm-8 p-0">
+				    <div class="embed-responsive embed-responsive-16by9 shadow-diffuse">
+				    	<iframe id="ifr" frameborder="0" allowfullscreen ></iframe>
+				    	<div class="load-proto yellow-bg" onClick='document.getElementById("ifr").src="https://xd.adobe.com/embed/258f7a49-3c3a-43f5-7e30-29541037c5f1-53be/";'>
+				    		<div class="sub-title black-text text-center">Click or tap to load the prototype</div>
+				    	</div>
+				    </div>
+				</div>
+				<div class="col-2 d-none d-sm-flex">
+				</div>
+
+
+				<div class="separator d-none d-sm-block"></div>
+				<div class="separator"></div>
+
+
 			</div>
 
 
@@ -330,6 +425,14 @@
 
 		<!-- this loads the javascript plugins for each page -->
 		<?php include 'php/javascript-loads.php'; ?>
+
+
+		<script type="text/javascript">
+			// figure out the embed click activation
+			$( ".load-proto" ).click(function() {
+				$( ".load-proto" ).fadeOut( 700 );
+			});
+		</script>
 
 	</body>
 
