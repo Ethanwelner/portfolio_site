@@ -7,6 +7,38 @@
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
 
+<div class="d-flex flex-wrap flex-xs-nowrap mb-4">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
+		<div class="line-container">
+			<h5><strong>Planes</strong></h5>
+			<div class="line"></div>
+		</div>
+		<p class="copy">
+			Planes are separate self-contained universes, accessible through a swap gate.
+		</p>
+		<p class="copy">
+			Planes exist in an infinite stack-order from high to low.
+		</p>
+		<p class="copy">
+			The higher the plane the MORE physical laws it possesses, the lower a plane the FEWER.
+		</p>
+		<p class="copy">
+			Matter or energy transported downward in the planes maintains its physical properties and can enforce its physical laws upon nearby reality. These are called “exotic” materials, and are often used to create technologies that would otherwise be impossible with mundane physical laws.
+		</p>
+		<p class="copy">
+			Exotic matter is the underlying reason why the setting can have FTL and interdimensional travel. Exotic matter is extremely rare and difficult to acquire owing to the extreme danger of accessing higher planes.
+		</p>
+		<p class="copy">
+			Matter or energy transported upward along the planes has the physical laws of the planes it is transported to immediately applied to it.
+		</p>
+		<p class="copy">
+			The further a reality is up or down from the one with the gate the harder it is to discover, lock on to, and the more power required to perform a swap.
+		</p>
+	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+</div>
+
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-7">
