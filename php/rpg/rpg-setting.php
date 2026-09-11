@@ -13,11 +13,11 @@
 			<h4 class="mt-4">Major Events in the Timeline</h4>
 
 			<div class="line-container">
-				<h5><strong>2023</strong></h5>
+				<h5><strong>2026</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				The current year in reality. The setting mimics real world history up until this point.
+				The current year in reality. The setting mimics real-world history up until this point.
 			</p>
 
 			<div class="line-container">
@@ -29,7 +29,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2050</strong></h5>
+				<h5><strong>2038</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -69,7 +69,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2055</strong></h5>
+				<h5><strong>2050</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -77,11 +77,11 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2060 – Present day</strong></h5>
+				<h5><strong>2055 – Present day</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Significant nuclear disarmament. The risk of additional catastrophic nuclear exchanges due to AI-operated early warning and first strike systems, as well as an increasing global consensus over the need for broad cooperation between states to deal with climate change, leads to a slow but steady drawdown of nuclear stockpiles.
+				Significant nuclear disarmament.
 			</p>
 
 			<div class="line-container">
@@ -89,7 +89,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				<strong>“The end of science.”</strong> The limit of achievable materials science is slowly realized. AI and advanced computing systems quickly reach the end of practical new discoveries that could be made without unrealistically large expenditures of resources for uncertain and minimal gain. Gains in computing power, energy storage, novel building materials, and many other fields slow to a trickle. Theoretical physics has long since ceased to have testable theories, resulting in the field becoming stagnant and full of quackery. Biological science is the one bright spot, with genetic and biological engineering continuing to advance alongside the ethical hazards involved.
+				“The end of science.”
 			</p>
 
 			<div class="line-container">
@@ -97,7 +97,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Acceleration of space colonization enabled by advanced robotics, highly efficient reusable hydrogen rocket based shuttles, and the advent of heavy industry on the moon.
+				Interplanetary colonization.
 			</p>
 
 			<div class="line-container">
@@ -105,7 +105,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Despite international geoengineering effort, Earth’s biosphere has been significantly damaged by over-industrialization and unregulated resource exploitation. The population of Earth at this time exceeds 25 billion. Space colonization slowly transitions from being an industrial priority to a luxury and then to a necessity as communities flee from regions rendered uninhabitable by sea level rise or desertification.
+				Exodus.
 			</p>
 
 			<div class="line-container">
@@ -113,7 +113,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				“The Gift” is matter-swapped by an unknown alien civilization onto the surface of the moon.
+				“The Gift” is matter-swapped by an unknown intraplanar civilization onto the surface of the moon.
 			</p>
 
 			<div class="line-container">
@@ -137,7 +137,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First tests of a “Swap gate” are made targeting the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
+				First tests of a “swap gate” are made targeting the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
 			</p>
 
 			<div class="line-container">
@@ -145,7 +145,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First exotic materials are harvested, leading to the creation of more “Swap-gates” as well as the first tests of Weakforce Field Generators and Subspace Gates.
+				First exotic materials are harvested, leading to the creation of more “swap gates” as well as the first tests of Weakforce Field Generators and Aether Sails.
 			</p>
 
 			<div class="line-container">
@@ -153,7 +153,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				<strong>The rebirth of science.</strong> Using harvested exotic materials, science is kickstarted again as advancements enabled through the use of exotic materials begin to revolutionize society.
+				The rebirth of science.
 			</p>
 
 			<div class="line-container">
@@ -161,7 +161,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				<strong>First interstellar expansion.</strong> Using exotic technologies it has become possible to travel interstellar distances. Interstellar colonies are quickly established.
+				First interstellar expansion.
 			</p>
 
 			<div class="line-container">
@@ -169,7 +169,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				<strong>The first swap-gate catastrophe.</strong> A lower plane composed entirely of ultra dense neutrons is swapped. Though the amount of matter transferred was smaller than a grain of sand, the explosion killed millions.
+				The first swap-gate catastrophe.
 			</p>
 
 			<div class="line-container">
@@ -191,48 +191,57 @@
 	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<h3 class="mb-3">Major Events</h3>
-			<h4 class="mt-4">Lorem Ipsum Dolor</h4>
+			<h4 class="mt-4">The End of Science</h4>
 			<p class="copy">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-			</p>
-			<p class="copy">
-				Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				The limit of achievable materials science is slowly realized. AI and advanced computing systems quickly reach the end of practical new discoveries that could be made without unrealistically large expenditures of resources for uncertain and minimal gain. Gains in computing power, energy storage, novel building materials, and many other fields slow to a trickle. Theoretical physics has long since ceased to have testable theories, resulting in the field becoming stagnant and full of quackery. Biological science is the one bright spot, with genetic and biological engineering continuing to advance alongside the ethical hazards involved.
 			</p>
 
 			<div class="bumper"></div>
-			<h4 class="">Sit Amet Consectetur</h4>
+			<h4 class="">Nuclear Disarmament</h4>
 			<p class="copy">
-				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-			</p>
-			<p class="copy">
-				Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.
+				The risk of additional catastrophic nuclear exchanges due to AI-operated early warning and first-strike systems, as well as an increasing global consensus over the need for broad cooperation between states to deal with climate change, leads to a slow but steady drawdown of nuclear stockpiles.
 			</p>
 
 			<div class="bumper"></div>
-			<h4 class="">Adipiscing Elit Sed</h4>
+			<h4 class="">Interplanetary Colonization</h4>
 			<p class="copy">
-				Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-			</p>
-			<p class="copy">
-				Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.
+				Acceleration of space colonization enabled by advanced robotics, highly efficient reusable hydrogen rocket-based shuttles, and the advent of heavy industry on the moon.
 			</p>
 
 			<div class="bumper"></div>
-			<h4 class="">Eiusmod Tempor Incididunt</h4>
+			<h4 class="">Exodus</h4>
 			<p class="copy">
-				Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum.
-			</p>
-			<p class="copy">
-				Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.
+				Despite international geoengineering efforts, Earth’s biosphere has been significantly damaged by over-industrialization and unregulated resource exploitation. The population of Earth at this time exceeds 25 billion. Space colonization slowly transitions from being an industrial priority to a luxury and then to a necessity as communities flee from regions rendered uninhabitable by sea level rise or desertification.
 			</p>
 
 			<div class="bumper"></div>
-			<h4 class="">Ut Labore Et Dolore</h4>
+			<h4 class="">The Gift</h4>
 			<p class="copy">
-				Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus.
+				It very well could have been the end times. With the widening collapse of Earth’s biosphere, a fourth GoS-3 pandemic shredding the social fabric, and a nascent AI separatist movement pressuring governments all over the globe, mankind was close to the brink. Its off-world settlements were still wholly reliant on the supplies of raw material inputs that only Earth could provide, and the carrying capacity of the world was dwindling. Without a miracle, it looked like the human race was due for a slow, choking death.
 			</p>
 			<p class="copy">
-				Tortor neque egestas augue, in pulvinar nunc sapien ornare nisl. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+				Then, in a flash of strange light, everything changed.
+			</p>
+			<p class="copy">
+				At the center of the Aitken Basin on the far side of the moon, a structure had appeared where there was nothing before. A simple structure of 15 columns below a broad, domed roof, with a base of the same material. At its center, perfectly placed between the 15 columns, was a lone pillar the height and breadth of a man. The structure was basaltic in appearance, with a dull black surface, almost ordinary except for the headaches that would inevitably strike anyone who looked at it for too long.
+			</p>
+
+			<div class="bumper"></div>
+			<h4 class="">The Rebirth of Science</h4>
+			<p class="copy">
+				Using harvested exotic materials, science is kickstarted again as advancements enabled through the use of exotic materials begin to revolutionize society.
+			</p>
+
+			<div class="bumper"></div>
+			<h4 class="">First Interstellar Expansion</h4>
+			<p class="copy">
+				Using exotic technologies, it has become possible to travel interstellar distances. Interstellar colonies are quickly established.
+			</p>
+
+			<div class="bumper"></div>
+			<h4 class="">The First Swap-Gate Catastrophe</h4>
+			<p class="copy">
+				A lower plane composed entirely of ultra-dense neutrons is swapped. Though the amount of matter transferred was smaller than a grain of sand, the explosion killed millions.
 			</p>
 		</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
