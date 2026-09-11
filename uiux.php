@@ -135,20 +135,11 @@
 				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
 				    	<div class="lti-copy">
 					    	<h3 class="sub-title mb-3">Simplifying LTI</h3>
-					    	<div class="copy stinger red mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do</div>
+					    	<div class="copy stinger red mb-3">Making the Most Important Part Easier</div>
 					    	<p class="copy">
-					    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
-					    	</p>
-							<ul class="copy">
-								<li>Excepteur sint occaecat cupidatat non proident sunt in culpa</li>
-								<li>Curabitur pretium tincidunt lacus nulla gravida orci a odio luctus varius turpis</li>
-								<li>Praesent fermentum lacinia diam sit amet fermentum enim hendrerit eu vestibulum ante</li>
-							</ul>
-					    	<p class="copy">
-					    		Nullam varius turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida donec laoreet tempor augue.
-					    	</p>
-					    	<p class="copy">
-					    		Suspendisse vel feugiat nisi praesent fermentum lacinia diam, sit amet fermentum enim hendrerit eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae fusce id purus.
+								I redesigned and completely reflowed the LTI integration workflow that teachers use to set up their classes and connect QuantHub to Blackboard and other LMS platforms. The existing process brought together several different systems and required teachers to navigate a fairly complicated series of steps just to get their classes set up and start using our learning materials. I worked to bring those systems together into a single, much clearer experience, while greatly improving the interface and reducing the number of clicks required to complete mandatory actions.
+								<br><br>
+								This was an especially important part of the QuantHub experience because it was often the first real interaction teachers had with the platform. If setting up a class, rostering students, or adding QuantHub activities was difficult, there was a very real chance teachers simply wouldn't use the platform. That could ultimately affect whether a school continued to purchase our offerings. The redesign was therefore about more than making the workflow look better; it was about removing one of the biggest barriers to getting teachers and schools successfully onto the platform.
 					    	</p>
 					    </div>
 				    </div>
