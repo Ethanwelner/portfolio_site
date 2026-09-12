@@ -107,10 +107,10 @@
 
 		function rpgTabFromHash() {
 			var hash = ( window.location.hash || "" ).replace( /^#/, "" ).toLowerCase();
-			if ( hash === "setting" || hash === "rpg-setting" || hash === "timeline" || hash === "technologies" || hash === "hierarchy" ) {
-				return $( "#tab-setting" );
+			if ( hash === "mechanics" || hash === "rpg-mechanics" || hash === "stats" || hash === "traits" || hash === "skills" || hash === "items" || hash === "character" ) {
+				return $( "#tab-mechanics" );
 			}
-			return $( "#tab-mechanics" );
+			return $( "#tab-setting" );
 		}
 
 		if ( $( ".rpg-tab" ).length ) {
