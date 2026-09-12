@@ -10,7 +10,6 @@
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-7">
 			<h3 class="mb-3" id="timeline">Timeline</h3>
-			<h4 class="mt-4">Major Events in the Timeline</h4>
 
 			<div class="line-container">
 				<h5><strong>2026</strong></h5>
@@ -190,8 +189,7 @@
 		</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
-			<h3 class="mb-3">Major Events</h3>
-			<h4 class="mt-4">The End of Science</h4>
+			<h4 class="">The End of Science</h4>
 			<p class="copy">
 				The limit of achievable materials science is slowly realized. AI and advanced computing systems quickly reach the end of practical new discoveries that could be made without unrealistically large expenditures of resources for uncertain and minimal gain. Gains in computing power, energy storage, novel building materials, and many other fields slow to a trickle. Theoretical physics has long since ceased to have testable theories, resulting in the field becoming stagnant and full of quackery. Biological science is the one bright spot, with genetic and biological engineering continuing to advance alongside the ethical hazards involved.
 			</p>

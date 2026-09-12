@@ -35,8 +35,8 @@
                     <div class="flex-2 d-none d-xl-inline-flex"></div>
                     <div class="flex-14">
                         <div class="rpg-tab-list" role="tablist" aria-label="Starrage sections">
-                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="true">Mechanics</button>
-                            <button type="button" class="rpg-tab" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="false">Setting</button>
+                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
+                            <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
                         </div>
                     </div>
                     <div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -65,7 +65,7 @@
                 <div class="section-about-me black-text repaint about-me-link">About Me</div>
         </div>
 
-        <div class="section unlimited white-bg rpg-panel is-active" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
+        <div class="section unlimited white-bg rpg-panel" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
             <div class="rpg-links-rail">
                 <div class="rpg-links black">
                     <span class="rpg-links-dot" aria-hidden="true"></span>
@@ -109,7 +109,7 @@
             </div>
         </div>
 
-        <div class="section unlimited white-bg rpg-panel" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
+        <div class="section unlimited white-bg rpg-panel is-active" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
             <div class="rpg-links-rail">
                 <div class="rpg-links black">
                     <span class="rpg-links-dot" aria-hidden="true"></span>

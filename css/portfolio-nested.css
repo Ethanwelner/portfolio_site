@@ -27,6 +27,20 @@
 html {
     scroll-behavior: smooth;
     background-color: var(--portfolio-gray);
+    scrollbar-color: var(--portfolio-medium-gray) var(--portfolio-gray);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--portfolio-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--portfolio-medium-gray);
 }
 
 body {
