@@ -2,6 +2,13 @@
    MEDIA QUERIES - NESTED VERSION
    ======================================== */
 
+/* Homepage Research / Personal titles stay hyphenated until the title column is wide enough */
+@media (min-width: 1440px) {
+    .hero-title-break {
+        display: none;
+    }
+}
+
 /* ========================================
    LARGE SCREENS (2200px+)
    ======================================== */

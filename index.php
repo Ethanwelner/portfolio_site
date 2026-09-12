@@ -267,7 +267,7 @@
 
 				<div class="container d-flex z-2">
 					<div class="d-inline-flex align-items-center flex-4 flex-md-nowrap flex-wrap align-content-center">
-				    	<h1 class="title hero-title index-title-anim">Res<span class=".d-{inline-block} d-xl-none">-<br></span>earch</h1>
+				    	<h1 class="title hero-title index-title-anim">Res<span class="hero-title-break">-<br></span>earch</h1>
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
 							<svg width="281" height="262" viewBox="0 0 281 262" fill="none" xmlns="http://www.w3.org/2000/svg" class="mindmap-anim">
@@ -447,7 +447,7 @@
 
 				<div class="container d-flex z-2">
 					<div class="d-inline-flex align-items-center flex-4 flex-md-nowrap flex-wrap align-content-center">
-				    	<h1 class="title hero-title white-text index-title-anim">Pers<span class=".d-{inline-block} d-xl-none">-<br></span>onal</h1>
+				    	<h1 class="title hero-title white-text index-title-anim">Pers<span class="hero-title-break">-<br></span>onal</h1>
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
 							<?php include 'php/brain-svg.php'; ?>
