@@ -20,8 +20,15 @@
 						<div class="line"></div>
 					</div>
 					<p class="copy">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						The defining technological advancement of the twenty-second century, the swap gate was the culmination of a decade of painstaking research and industrial effort. Even with a wholly assembled blueprint and volumes of deciphered physics and philosophical texts on the subject, the first swap gates were little more than experiments in physics: proofs of concept that sought to prove The Gift wasn't some form of elaborate hoax.
 					</p>
+					<p class="copy">
+						The program was bankrolled entirely by the provisional Lunar Government across nearly three administrations. The vast research and development expenditure poured into deciphering and instrumentalizing The Gift, together with the unusual secrecy of the program, invited industrial and national espionage at every level.
+					</p>
+					<p class="copy">
+						Unstable at the best of times, the Lunar Government was ultimately unable to keep the reality of The Gift a secret. In a series of data breaches, nearly a decade's worth of research and industrial effort was made public.
+					</p>
+					<p class="copy">cont...</p>
 
 					<div class="line-container">
 						<h5><strong>Weakforce Field Generator</strong></h5>
