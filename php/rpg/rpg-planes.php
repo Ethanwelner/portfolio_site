@@ -15,7 +15,7 @@
 			<div class="line"></div>
 		</div>
 		<p class="copy">
-			Planes are separate self-contained universes, accessible through a swap gate.
+			Planes are separate self-contained universes, accessible through a switch gate.
 		</p>
 		<p class="copy">
 			Planes exist in an infinite stack-order from high to low.
