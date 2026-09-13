@@ -136,7 +136,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First tests of a “swap gate” are made targeting the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
+				First tests of a “switch gate” are made targeting the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
 			</p>
 
 			<div class="line-container">
@@ -144,7 +144,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First exotic materials are harvested, leading to the creation of more “swap gates” as well as the first tests of Weakforce Field Generators and Aether Sails.
+				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Weakforce Field Generators and Aether Sails.
 			</p>
 
 			<div class="line-container">
@@ -164,11 +164,19 @@
 			</p>
 
 			<div class="line-container">
+				<h5><strong>2190 – Present day</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Interdimensional colonization begins.
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2195</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				The first swap-gate catastrophe.
+				The first switch-gate catastrophe.
 			</p>
 
 			<div class="line-container">
@@ -176,15 +184,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				All exploratory swap gates are required to be off-world. All exploratory swap gates on Earth are rapidly shut down.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2190 – Present day</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Interdimensional colonization begins.
+				All exploratory switch gates are required to be off-world. All exploratory switch gates on Earth are rapidly shut down.
 			</p>
 		</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
@@ -237,7 +237,7 @@
 			</p>
 
 			<div class="bumper"></div>
-			<h4 class="">The First Swap-Gate Catastrophe</h4>
+			<h4 class="">The First Switch-Gate Catastrophe</h4>
 			<p class="copy">
 				A lower plane composed entirely of ultra-dense neutrons is swapped. Though the amount of matter transferred was smaller than a grain of sand, the explosion killed millions.
 			</p>
