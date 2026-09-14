@@ -1,4 +1,4 @@
-<div class="breakout shadow-diffuse gray-bg white-text">
+<div class="breakout shadow-diffuse black-bg white-text">
   <div class="rpg-night-window">
     <?php include 'php/rpg/rpg-night.php'; ?>
   </div>
