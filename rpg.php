@@ -17,7 +17,7 @@
                 <?php include 'php/header.php'; ?>
                 <div class="title section-title d-inline-flex z-2">
                     <div class="hero-statement pre-slide-in">
-                        <h1 class="title hero-title white-text ">Starrage</h1>
+                        <h1 class="title hero-title white-text ">Strange Frontiers</h1>
 						<h2 class="title section-title">A Custom RPG System</h2>
 					    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
                     </div>
@@ -34,7 +34,7 @@
                 <div class="container d-flex">
                     <div class="flex-2 d-none d-xl-inline-flex"></div>
                     <div class="flex-14">
-                        <div class="rpg-tab-list" role="tablist" aria-label="Starrage sections">
+                        <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
                             <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
                             <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
                         </div>
