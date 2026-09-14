@@ -4,6 +4,7 @@
     <head>
         <!-- this loads the head code -->
         <?php include 'php/head-loads.php'; ?>
+        <link rel="stylesheet" type="text/css" HREF="css/rpg-night.css"/>
         <title>Ethan Welner Portfolio</title>
     </head>
 
@@ -136,6 +137,8 @@
                 <?php include 'php/rpg/rpg-planes.php'; ?>
             </div>
         </div>
+
+        <?php include 'php/rpg/rpg-night.php'; ?>
 
 		<!-- this loads the page footer for both mobile and desktop -->
 		<?php include 'php/footer.php'; ?>
