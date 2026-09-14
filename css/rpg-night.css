@@ -2,14 +2,61 @@
    RPG NIGHT SKY / SHOOTING STARS
    ======================================== */
 
+/* Clip a viewport-fixed sky to each gray/black band so it behaves like
+   background-attachment: fixed, without painting over logos, cards, or type. */
+.rpg-night-window {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    clip-path: inset(0);
+    overflow: hidden;
+    /* Match the band so the sky's white box-shadows don't flash as a white sheet on load. */
+    background-color: var(--portfolio-black);
+}
+
+.black-section > .rpg-night-window {
+    position: absolute;
+    background-color: var(--portfolio-black);
+}
+
+.gray-bg > .rpg-night-window {
+    background-color: var(--portfolio-gray);
+}
+
+.breakout:has(> .rpg-night-window) {
+    position: relative;
+}
+
+.breakout > .rpg-night-window ~ * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer is a shared dark band: clip the sky to the footer without covering the copy. */
+.rpg-night-window-footer {
+    position: relative;
+    clip-path: inset(0);
+    background-color: var(--portfolio-gray);
+}
+
+.rpg-night-window-footer > .rpg-night-window {
+    position: absolute;
+    inset: 0;
+}
+
+.rpg-night-window-footer > .dark-bg {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
 .rpg-night {
-    /* Viewport overlay: screen-blend so stars show on gray/charcoal and vanish on white. */
     position: fixed;
     inset: 0;
-    z-index: 4;
+    z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    mix-blend-mode: screen;
 }
 
 .rpg-sky {

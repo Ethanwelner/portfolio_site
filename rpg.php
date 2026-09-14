@@ -13,6 +13,9 @@
         <!-- Main Content -->
         <!------------ side projects black section ------------>
         <div class="section short-section black-bg d-flex black-section z-4">
+            <div class="rpg-night-window">
+                <?php include 'php/rpg/rpg-night.php'; ?>
+            </div>
             <div class="section-clip d-flex align-items-center justify-content-center ">
                 <!-- This loads the header -->
                 <?php include 'php/header.php'; ?>
@@ -138,10 +141,12 @@
             </div>
         </div>
 
-        <?php include 'php/rpg/rpg-night.php'; ?>
-
-		<!-- this loads the page footer for both mobile and desktop -->
-		<?php include 'php/footer.php'; ?>
+        <div class="rpg-night-window-footer">
+            <div class="rpg-night-window">
+                <?php include 'php/rpg/rpg-night.php'; ?>
+            </div>
+            <?php include 'php/footer.php'; ?>
+        </div>
 
 		<!-- this loads the page footer for both mobile and desktop -->
 		<?php include 'php/about.php'; ?>

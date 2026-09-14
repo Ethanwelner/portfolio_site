@@ -410,12 +410,20 @@ hr {
 
 /* Logo Bug */
 .logo-bug {
-    min-height: 70px;
+    width: 70px;
+    height: 70px;
     min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    flex: 0 0 70px;
     aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    overflow: hidden;
     padding: 0 13px;
     font-family: 'bebas_neueregular';
     font-size: 3rem;
+    line-height: 70px;
     background-color: var(--portfolio-red);
     color: white;
     text-align: center;
@@ -555,10 +563,18 @@ hr {
 
 /* Section Navigation Variants */
 .section-logo-bug {
-    min-height: 70px;
+    width: 70px;
+    height: 70px;
     min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    flex: 0 0 70px;
+    box-sizing: border-box;
+    overflow: hidden;
     font-family: 'bebas_neueregular';
     font-size: 3rem;
+    line-height: 70px;
     color: white !important;
     text-align: center;
     position: fixed;
@@ -596,6 +612,9 @@ hr {
     position: fixed;
     top: 32px;
     right: 60px;
+    display: flex;
+    width: max-content;
+    flex: none;
     justify-content: center;
     transition: margin-top 750ms;
     z-index: 2;
@@ -705,8 +724,8 @@ hr {
 }
 
 @keyframes repaint {
-    from { width: 99.9%; }
-    to { width: 100%; }
+    from { opacity: 0.999; }
+    to { opacity: 1; }
 }
 
 /* Blur Effect */
