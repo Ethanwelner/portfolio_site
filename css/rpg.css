@@ -58,7 +58,7 @@
         font-weight: 600;
         margin-left: -1rem;
         margin-right: -1rem;
-        background-color: var(--portfolio-black);
+        background-color: var(--portfolio-gray);
         padding: .5rem 1rem;
         color: var(--portfolio-white);
         .mechanic-text {
@@ -214,9 +214,9 @@ body:has(.rpg-links-rail) {
 
     }
 
-    .gray-bg & {
+    .black-bg & {
         h4, h5, h6 {
-            background-color: #424242;
+            background-color: var(--portfolio-black);
         }
     }
 }
@@ -231,7 +231,7 @@ body:has(.rpg-links-rail) {
     transform: translateY(-50%); 
     z-index: 1; 
 
-    .gray-bg & {
+    .black-bg & {
         background-color: rgb(255 255 255 / 25%);
     }
 }

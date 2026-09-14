@@ -20,10 +20,6 @@
     background-color: var(--portfolio-black);
 }
 
-.gray-bg > .rpg-night-window {
-    background-color: var(--portfolio-gray);
-}
-
 .breakout:has(> .rpg-night-window) {
     position: relative;
 }
