@@ -144,7 +144,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Weakforce Field Generators and Aether Sails.
+				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Lorentz Field Generators and Aether Sails.
 			</p>
 
 			<div class="line-container">
