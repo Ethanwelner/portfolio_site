@@ -24,7 +24,7 @@
 					All switch gates share a few intrinsic properties:
 				</p>
 				<ul class="copy">
-					<li>They require a “Spine” of Stabilium, a nearly indestructible exotic material first mined directly from The Gift's floor structure.</li>
+					<li>They require a “Spine” of St-245/E6, an ultra-dense and nearly indestructible exotic material first mined directly from The Gift's floor structure.</li>
 					<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged.</li>
 					<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 					<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
@@ -63,7 +63,7 @@
 					LFGs network together to generate an exotic field effect that substantially reduces the relative Lorentz transformations and Lorentz effects experienced by matter within the field. In simpler terms, it “reduces” the relationship of the space-time bubble within the field and the rest of the universe, allowing the ship to travel at speeds otherwise impossible.
 				</p>
 				<p class="copy">
-					Using an externally facing spherical array of “Antennae” made of the same exotic and ultra dense St-245/E6 material that allows switch gates to manipulate space-time, a single LFG can cover a spherical area of up to a 200 meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
+					Using an externally facing spherical array of “Antennae” made of the same exotic and ultra-dense St-245/E6 material that allows switch gates to manipulate space-time, a single LFG can cover a spherical area of up to a 200 meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
 				</p>
 				<p class="copy">
 					Modern LFGs are reliable but bulky, with units typically taking up the volume of what would otherwise be a fairly sizeable crew cabin. Given that the largest of interstellar arks may have hundreds of such generators, significant research is ongoing into further miniaturization of a full LFG package.
