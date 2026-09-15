@@ -55,12 +55,18 @@
 		<div class="d-flex flex-wrap flex-xs-nowrap mb-4">
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 			<div class="flex-14">
-				<h3 class="mb-3">Weakforce Field Generator</h3>
+				<h3 class="mb-3">Lorentz Field Generator</h3>
 				<p class="copy">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.
+					Discovered as a by-product of switch gate research, Lorentz field generators could be considered a cousin to that epochal technology. Typically spherical, and positioned equidistantly within or on the skin of a vessel, the LFG enables a starship to reach faster-than-light speeds.
 				</p>
 				<p class="copy">
-					Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.
+					LFGs network together to generate an exotic field effect that substantially reduces the relative Lorentz transformations and Lorentz effects experienced by matter within the field. In simpler terms, it “reduces” the relationship of the space-time bubble within the field and the rest of the universe, allowing the ship to travel at speeds otherwise impossible.
+				</p>
+				<p class="copy">
+					Using an externally facing spherical array of “Antennae” made of the same exotic and ultra dense St-245/E6 material that allows switch gates to manipulate space-time, a single LFG can cover a spherical area of up to a 200 meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
+				</p>
+				<p class="copy">
+					Modern LFGs are reliable but bulky, with units typically taking up the volume of what would otherwise be a fairly sizeable crew cabin. Given that the largest of interstellar arks may have hundreds of such generators, significant research is ongoing into further miniaturization of a full LFG package.
 				</p>
 				<div class="line-container">
 					<h5><strong>History</strong></h5>
