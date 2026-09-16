@@ -48,7 +48,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				The UN formally founds “The Committee for the Coordination of Geo Engineering Projects” to act as an intermediary intended to enable transnational efforts in reversing climate change.
+				The UN formally founds “The Committee for the Coordination of Geo Engineering Projects” to act as an intermediary intended to enable transnational efforts to reverse climate change.
 			</p>
 
 			<div class="line-container">
@@ -184,7 +184,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				The fifth fundamental force is measured and quantified through research of higher planar paraphysical interactions.
+				The fifth fundamental force is measured and quantified through research into higher planar paraphysical interactions.
 			</p>
 
 			<div class="line-container">
@@ -247,7 +247,7 @@
 		<div class="flex-6">
 			<h4 class="">The First AI Panic</h4>
 			<p class="copy">
-				An AI model from a top Western tech firm is found to have been manipulating both sides of a Southeast Asian civil conflict. While far from the first time an AI system had been used in conflict or espionage, the case was notable because both the system’s administrators and, bizarrely, the model itself were unaware that it had, in two irreconcilable partitioned instances, decided of its own accord to support different sides of the conflict. The acts of the rogue model were only discovered when the system had manipulated militants into assaulting its own server farm in a suicidal final gambit to defeat itself. While ironic and almost comical in the abstract, the conflict remained deadly for four more years and resulted in the displacement of over six hundred thousand people. Charges are brought against the firm and its executives, but the groundswell push to ban or severely curtail AI systems ultimately passes without significant change.
+				An AI model from a top Western tech firm was found to have been manipulating both sides of a Southeast Asian civil conflict. It was far from the first time an AI system had been used in conflict or espionage, but the case was notable because the model, in two irreconcilable partitioned instances, had decided of its own accord to support opposing sides. Bizarrely, neither its administrators nor the model itself was aware that this was happening. The acts of the rogue model were only discovered when the system manipulated militants into assaulting its own server farm in a suicidal final gambit to defeat itself. The affair was ironic and almost comical in the abstract, but the conflict remained deadly for four more years and displaced over six hundred thousand people. Charges were brought against the firm and its executives, though the groundswell of support for banning or severely curtailing AI systems ultimately subsided without achieving significant change.
 			</p>
 
 			<div class="bumper"></div>
