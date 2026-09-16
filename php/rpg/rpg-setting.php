@@ -12,6 +12,14 @@
 			<h3 class="mb-3" id="timeline">Timeline</h3>
 
 			<div class="line-container">
+				<h5><strong>2000 – 2100</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Significant anthropogenic climate change.
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2026</strong></h5>
 				<div class="line"></div>
 			</div>
@@ -20,11 +28,11 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2000 – 2100</strong></h5>
+				<h5><strong>2034</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Significant anthropogenic climate change.
+				First permanently inhabited lunar colony established.
 			</p>
 
 			<div class="line-container">
@@ -36,43 +44,19 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2070 – 2130</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Partial technological singularity leading to the “end of science.”
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2080</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Second major wave of AI scares.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2082</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				AI Personhood Laws enacted.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2040 – Present day</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Colonization of the solar system begins in earnest and is ongoing.
-			</p>
-
-			<div class="line-container">
 				<h5><strong>2050</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
 				Minor Indo-Pakistani nuclear exchange. AI is partially blamed.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2052</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Kashgar station finishes construction and begins operation, acting as a logistical waystation and signal booster for colonization efforts.
 			</p>
 
 			<div class="line-container">
@@ -84,11 +68,51 @@
 			</p>
 
 			<div class="line-container">
+				<h5><strong>2061</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				First permanently inhabited Martian colony established.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2070 – 2130</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Partial technological singularity leading to the “end of science.”
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2073 – Present day</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Colonization of the solar system begins in earnest and is ongoing, though the process is slow-going.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2080</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Second major wave of AI scares.
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2080 – 2130</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
 				“The end of science.”
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2082</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				AI Personhood Laws enacted.
 			</p>
 
 			<div class="line-container">
@@ -100,15 +124,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2125 – 2180</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Exodus.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2150</strong></h5>
+				<h5><strong>2120</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -116,7 +132,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2150 – 2158</strong></h5>
+				<h5><strong>2120 – 2128</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -124,15 +140,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2158</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				The existence of “The Gift” is leaked, and all known information contained is made public.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2160</strong></h5>
+				<h5><strong>2126</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -140,15 +148,23 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2161</strong></h5>
+				<h5><strong>2127</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Lorentz Field Generators and Aether Sails.
+				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Lorentz Field Generators.
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2170 – Present day</strong></h5>
+				<h5><strong>2128</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The existence of “The Gift” is leaked, and all known information contained is made public.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2128 – Present day</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -156,7 +172,39 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2175 – Present day</strong></h5>
+				<h5><strong>2132</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The fifth fundamental force is measured and quantified through research of higher planar paraphysical interactions.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2133</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The first aether sails are commercialized.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2133 – Present day</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Exodus.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2163</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				First colonization of an interstellar system with New Canaan, a research station orbiting Alpha Centauri.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2170 – Present day</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
