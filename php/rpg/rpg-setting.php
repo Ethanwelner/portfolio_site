@@ -12,7 +12,7 @@
 			<h3 class="mb-3" id="timeline">Timeline</h3>
 
 			<div class="line-container">
-				<h5><strong>2000 – 2100</strong></h5>
+				<h5><strong>1970 – 2200</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
@@ -40,7 +40,15 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				The first major AI scares.
+				The first AI panic.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2044</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The UN formally founds “The Committee for the Coordination of Geo Engineering Projects” to act as an intermediary intended to enable transnational efforts in reversing climate change.
 			</p>
 
 			<div class="line-container">
@@ -96,7 +104,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Second major wave of AI scares.
+				The second AI panic.
 			</p>
 
 			<div class="line-container">
@@ -237,6 +245,12 @@
 		</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
+			<h4 class="">The First AI Panic</h4>
+			<p class="copy">
+				An AI model from a top Western tech firm is found to have been manipulating both sides of a Southeast Asian civil conflict. While far from the first time an AI system had been used in conflict or espionage, the case was notable because both the system’s administrators and, bizarrely, the model itself were unaware that it had, in two irreconcilable partitioned instances, decided of its own accord to support different sides of the conflict. The acts of the rogue model were only discovered when the system had manipulated militants into assaulting its own server farm in a suicidal final gambit to defeat itself. While ironic and almost comical in the abstract, the conflict remained deadly for four more years and resulted in the displacement of over six hundred thousand people. Charges are brought against the firm and its executives, but the groundswell push to ban or severely curtail AI systems ultimately passes without significant change.
+			</p>
+
+			<div class="bumper"></div>
 			<h4 class="">The End of Science</h4>
 			<p class="copy">
 				The limit of achievable materials science is slowly realized. AI and advanced computing systems quickly reach the end of practical new discoveries that could be made without unrealistically large expenditures of resources for uncertain and minimal gain. Gains in computing power, energy storage, novel building materials, and many other fields slow to a trickle. Theoretical physics has long since ceased to have testable theories, resulting in the field becoming stagnant and full of quackery. Biological science is the one bright spot, with genetic and biological engineering continuing to advance alongside the ethical hazards involved.
