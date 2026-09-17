@@ -91,10 +91,13 @@
 			<div class="flex-14">
 				<h3 class="mb-3">Aether Sails</h3>
 				<p class="copy">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.
+					A product of both mundane and paraphysical science, aether sails use exotic materials to interact with the fifth fundamental force to produce motion. They function much like their historic seafaring equivalent, catching the gusts of the “aetheric winds” as they roil around gravity fields.
 				</p>
 				<p class="copy">
-					Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus.
+					Aether sails come in a vast variety of shapes and sizes, but the most common configuration is a flat, planar container of structurally hardy metal surrounding any one of several exotic materials that interact with the aetheric field when exposed to ultra-high-frequency electromagnetic radiation. This component is then securely attached to an armature that allows the sail to be rotated freely about any axis, letting it “catch the wind” and drag the ship along. Aether sails are typically overbuilt and are secured firmly to the most rigid portions of the ship in question. The aetheric field moves unpredictably and experiences a form of “weather” as the field’s currents change in direction and force. A poorly secured aether sail, or one engaged at the wrong time, is fully capable of ripping itself out of its housing, and indeed out of the entire ship.
+				</p>
+				<p class="copy">
+					By replacing heavy-lift rockets in the task of escaping Earth orbit, aether sails were the sea change that enabled the Exodus. The aetheric field is at its strongest near a deep gravity well, and the field’s direction of “motion” is consistently against gravity’s pull. This allows any suitably equipped vessel to simply engage a few sails in the right orientation and be lifted up and into interplanetary space. As the vessel moves farther towards the neutral gravity of space, “cross winds” and other directional currents grow to replace the unidirectional outward flow, typically necessitating favorable winds or a takeover by rockets to stay on course.
 				</p>
 				<div class="line-container">
 					<h5><strong>History</strong></h5>
