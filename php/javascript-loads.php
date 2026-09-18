@@ -59,8 +59,12 @@
 				return;
 			}
 
-			var $nav = $panel.find( ".rpg-links" );
-			var $links = $nav.find( "a[href^='#']" );
+			var $navs = $panel.find( ".rpg-links" );
+			if ( ! $navs.length ) {
+				return;
+			}
+
+			var $links = $navs.first().find( "a[href^='#']" );
 			if ( ! $links.length ) {
 				return;
 			}
@@ -79,9 +83,13 @@
 				}
 			});
 
-			$links.removeClass( "is-active" );
-			var $active = $links.filter( "[href='#" + currentId + "']" ).addClass( "is-active" );
-			moveRpgLinksDot( $nav, $active );
+			$navs.each(function() {
+				var $nav = $( this );
+				var $navLinks = $nav.find( "a[href^='#']" );
+				$navLinks.removeClass( "is-active" );
+				var $active = $navLinks.filter( "[href='#" + currentId + "']" ).addClass( "is-active" );
+				moveRpgLinksDot( $nav, $active );
+			});
 		}
 
 		function personalHash() {
@@ -105,24 +113,6 @@
 			shell.style.height = pane.scrollHeight + "px";
 		}
 
-		function updateFixedPageNav(page) {
-			var $nav = $( ".personal-page-nav-fixed" );
-			if ( ! $nav.length ) {
-				return;
-			}
-
-			$nav.find( ".js-personal-page" ).each(function() {
-				var linkPage = $( this ).attr( "data-page" );
-				var label = linkPage === "frontiers" ? "STRANGE FRONTIERS" : "Projects & Blog";
-				var bulletClass = linkPage === "frontiers" ? "frontiers-accent" : "black-text";
-				if ( linkPage === page ) {
-					$( this ).html( '<span class="' + bulletClass + ' nav-bullet">&#8226;</span> ' + label );
-				} else {
-					$( this ).text( label );
-				}
-			});
-		}
-
 		function showPersonalPage(page, animate) {
 			var $shell = $( ".personal-shell" );
 			if ( ! $shell.length ) {
@@ -132,7 +122,6 @@
 			var already = $shell.hasClass( "is-" + page );
 			$( ".personal-pane" ).removeClass( "is-visible" );
 			$( ".pane-" + page ).addClass( "is-visible" );
-			updateFixedPageNav( page );
 
 			if ( already ) {
 				syncPersonalShellHeight();
