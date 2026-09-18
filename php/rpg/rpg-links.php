@@ -1,0 +1,31 @@
+<?php
+$rpgLinksTone = $rpgLinksTone ?? 'black';
+$rpgLinksKind = $rpgLinksKind ?? 'mechanics';
+$rpgLinksInvert = $rpgLinksTone === 'white';
+$rpgLinksClass = $rpgLinksTone === 'white' ? 'white' : 'black';
+$rpgLinks = $rpgLinksKind === 'setting'
+	? [
+		'#setting' => 'Timeline',
+		'#technologies' => 'Technologies',
+		'#hierarchy' => 'The Planes',
+	]
+	: [
+		'#stats' => 'Stats',
+		'#traits' => 'Traits',
+		'#skills' => 'Skills',
+		'#items' => 'Items',
+		'#character' => 'Character',
+	];
+?>
+<?php if ($rpgLinksInvert): ?>
+<div class="section-clip rpg-links-clip" data-links="<?php echo $rpgLinksKind; ?>" aria-hidden="true">
+<?php endif; ?>
+	<div class="rpg-links <?php echo $rpgLinksClass; ?>">
+		<span class="rpg-links-dot" aria-hidden="true"></span>
+		<?php foreach ($rpgLinks as $href => $label): ?>
+			<a href="<?php echo $href; ?>"><badge class="badge"><?php echo $label; ?></badge></a>
+		<?php endforeach; ?>
+	</div>
+<?php if ($rpgLinksInvert): ?>
+</div>
+<?php endif; ?>

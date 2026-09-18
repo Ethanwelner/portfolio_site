@@ -84,8 +84,9 @@ strong .mechanic-text {
     font-weight: 600;
 }
 
-/* Full-height rail inside the unlimited section so the links can stick
-   while scrolling, then release at the section bottom. */
+/* Sticky side nav in a full-height rail so it travels with the panel,
+   then pins at top: 134px. Invert copies stay viewport-fixed and clipped
+   to black breakouts. */
 .rpg-links-rail {
     position: absolute;
     top: 100px;
@@ -94,6 +95,16 @@ strong .mechanic-text {
     z-index: 3;
     width: max-content;
     pointer-events: none;
+}
+
+.rpg-links-clip {
+    z-index: 4;
+    pointer-events: none;
+    clip-path: inset(0);
+}
+
+.breakout:has(> .rpg-links-clip) {
+    z-index: 4;
 }
 
 .rpg-links {
@@ -120,12 +131,18 @@ strong .mechanic-text {
         background-color: var(--portfolio-black);
         color: var(--portfolio-white);
         padding: .25rem .5rem;
-
-        .white & {
-            background-color: var(--portfolio-white);
-            color: var(--portfolio-black);
-        }
     }
+
+    &.white .badge {
+        background-color: var(--portfolio-white);
+        color: var(--portfolio-black);
+    }
+}
+
+.rpg-links-clip .rpg-links {
+    position: fixed;
+    top: 134px;
+    left: 60px;
 }
 
 .rpg-links-dot {
@@ -156,7 +173,7 @@ body:has(.personal-shell) {
 
 .personal-shell {
     width: 100%;
-    overflow: hidden;
+    overflow: clip;
 }
 
 .personal-track {
@@ -204,10 +221,8 @@ body:has(.personal-shell) {
 }
 
 .rpg-tabs {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
+    flex: 0 0 auto;
     z-index: 5;
 
     .container {
@@ -246,11 +261,22 @@ body:has(.personal-shell) {
 
 .rpg-panel.is-active {
     display: flex;
+    flex-direction: column;
 }
 
-.black-section .section-clip,
-.gray-bg.short-section .section-clip {
-    padding-bottom: 56px;
+/* Hero chrome lives in a box above the tabs so clip-path matches the
+   visible dark/gray edge instead of running through the tab row. */
+.short-section:has(> .rpg-tabs) {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.rpg-hero-body {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
 }
 
 .personal-pane .gray-bg {
@@ -274,6 +300,7 @@ body:has(.personal-shell) {
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 8px;
+        overflow: hidden;
         display: block;
     }
 
@@ -423,6 +450,10 @@ body:has(.personal-shell) {
         left: 5vw;
     }
 
+    .rpg-links-clip .rpg-links {
+        left: 5vw;
+    }
+
     .c-sheet {
         padding: .5rem;
         border-radius: 4px;
@@ -447,11 +478,19 @@ body:has(.personal-shell) {
         z-index: 4;
     }
 
-    .rpg-links {
+    .rpg-links-rail .rpg-links {
         position: static;
         align-items: end;
         padding-right: 14px;
         padding-left: 0;
+    }
+
+    .rpg-links-clip .rpg-links {
+        top: auto;
+        bottom: 24px;
+        left: auto;
+        right: 24px;
+        align-items: end;
     }
 
     .rpg-tab {
