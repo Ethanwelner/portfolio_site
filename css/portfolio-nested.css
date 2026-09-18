@@ -434,7 +434,7 @@ hr {
     transition: background-color .5s, margin-top 750ms !important;
     
     /* Background-specific styling */
-    .red-bg &, .blue-bg &, .black-bg & {
+    .red-bg &, .blue-bg &, .black-bg &, .gray-bg & {
         background-color: var(--portfolio-white);
     }
     
@@ -458,7 +458,7 @@ hr {
         color: var(--portfolio-blue);
     }
 
-    .black-bg & {
+    .black-bg &, .gray-bg & {
         color: var(--portfolio-black);
     }
 }
@@ -510,7 +510,8 @@ hr {
         fill: var(--portfolio-green);
     }
 
-    .black-bg & svg {
+    .black-bg & svg,
+    .gray-bg & svg {
         fill: var(--portfolio-black);
     }
 }

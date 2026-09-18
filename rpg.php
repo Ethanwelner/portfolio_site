@@ -7,48 +7,15 @@
         <link rel="stylesheet" type="text/css" HREF="css/rpg-night.css"/>
         <title>Ethan Welner Portfolio</title>
     </head>
-
     <body>
 
-        <!-- Main Content -->
-        <!------------ side projects black section ------------>
-        <div class="section short-section black-bg d-flex black-section z-4">
-            <div class="rpg-night-window">
-                <?php include 'php/rpg/rpg-night.php'; ?>
-            </div>
-            <div class="section-clip d-flex align-items-center justify-content-center ">
-                <!-- This loads the header -->
-                <?php include 'php/header.php'; ?>
-                <div class="title section-title d-inline-flex z-2">
-                    <div class="hero-statement pre-slide-in">
-                        <h1 class="title hero-title white-text ">Strange Frontiers</h1>
-						<h2 class="title section-title">A Custom RPG System</h2>
-					    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
-                    </div>
-                </div>
-                <!-- <div class="rpg-links white">
-                    <a href="#stats"><badge class="badge">Stats</badge></a>
-                    <a href="#traits"><badge class="badge">Traits</badge></a>
-                    <a href="#skills"><badge class="badge">Skills</badge></a>
-                    <a href="#items"><badge class="badge">Items</badge></a>
-                    <a href="#character"><badge class="badge">Character</badge></a>
-                </div> -->
-            </div>
-            <div class="rpg-tabs">
-                <div class="container d-flex">
-                    <div class="flex-2 d-none d-xl-inline-flex"></div>
-                    <div class="flex-14">
-                        <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
-                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
-                            <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
-                        </div>
-                    </div>
-                    <div class="flex-2 d-none d-xl-inline-flex"></div>
-                </div>
-            </div>
-        </div>
-
         <a href="index.php" class="section-logo-bug black-bg repaint z-3">EW</a>
+        <?php
+            $personalNavActive = 'blog';
+            $personalNavTone = 'black';
+            $personalNavExtraClass = 'personal-page-nav-fixed z-3';
+            include 'php/personal/page-nav.php';
+        ?>
         <div class="section-about-social-container z-3">
                 <!-- social links -->
                 <a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
@@ -76,83 +43,154 @@
                 <div class="section-about-me black-text repaint about-me-link">About Me</div>
         </div>
 
-        <div class="section unlimited white-bg rpg-panel" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
-            <div class="rpg-links-rail">
-                <div class="rpg-links black">
-                    <span class="rpg-links-dot" aria-hidden="true"></span>
-                    <a href="#stats"><badge class="badge">Stats</badge></a>
-                    <a href="#traits"><badge class="badge">Traits</badge></a>
-                    <a href="#skills"><badge class="badge">Skills</badge></a>
-                    <a href="#items"><badge class="badge">Items</badge></a>
-                    <a href="#character"><badge class="badge">Character</badge></a>
+        <div class="personal-shell is-personal">
+            <div class="personal-track">
+
+                <div class="personal-pane pane-personal is-visible" data-page="personal">
+                    <div class="section short-section gray-bg d-flex z-4">
+                        <div class="section-clip d-flex align-items-center justify-content-center">
+                            <?php include 'php/header.php'; ?>
+                            <?php
+                                $personalNavActive = 'blog';
+                                $personalNavTone = 'white';
+                                $personalNavExtraClass = '';
+                                include 'php/personal/page-nav.php';
+                            ?>
+                            <div class="title section-title d-inline-flex z-2">
+                                <div class="hero-statement pre-slide-in">
+                                    <h1 class="title hero-title white-text">Personal</h1>
+                                    <h2 class="title section-title">Blog, Photos, Models, Fun</h2>
+                                    <h3 class="sub-title non-title">Just Stuff</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rpg-tabs">
+                            <div class="container d-flex">
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                <div class="flex-14">
+                                    <div class="rpg-tab-list" role="tablist" aria-label="Personal sections">
+                                        <button type="button" class="rpg-tab is-active" role="tab" id="tab-blog" aria-controls="personal-blog" aria-selected="true">Project &amp; Blog</button>
+                                        <button type="button" class="rpg-tab" role="tab" id="tab-photos" aria-controls="personal-photos" aria-selected="false">Model Photos</button>
+                                    </div>
+                                </div>
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section unlimited white-bg rpg-panel is-active" id="personal-blog" role="tabpanel" aria-labelledby="tab-blog">
+                        <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/personal/blog.php'; ?>
+                        </div>
+                    </div>
+
+                    <div class="section unlimited white-bg rpg-panel" id="personal-photos" role="tabpanel" aria-labelledby="tab-photos">
+                        <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/personal/photos.php'; ?>
+                        </div>
+                    </div>
+
+                    <?php include 'php/footer.php'; ?>
                 </div>
-            </div>
 
+                <div class="personal-pane pane-frontiers" data-page="frontiers">
+                    <div class="section short-section black-bg d-flex black-section z-4">
+                        <div class="rpg-night-window">
+                            <?php include 'php/rpg/rpg-night.php'; ?>
+                        </div>
+                        <div class="section-clip d-flex align-items-center justify-content-center ">
+                            <?php include 'php/header.php'; ?>
+                            <?php
+                                $personalNavActive = 'frontiers';
+                                $personalNavTone = 'white';
+                                $personalNavExtraClass = '';
+                                include 'php/personal/page-nav.php';
+                            ?>
+                            <div class="title section-title d-inline-flex z-2">
+                                <div class="hero-statement pre-slide-in">
+                                    <h1 class="title hero-title white-text ">Strange Frontiers</h1>
+                                    <h2 class="title section-title">A Custom RPG System</h2>
+                                    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rpg-tabs">
+                            <div class="container d-flex">
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                <div class="flex-14">
+                                    <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
+                                        <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
+                                        <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
+                                    </div>
+                                </div>
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                    <div class="section unlimited white-bg rpg-panel" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
+                        <div class="rpg-links-rail">
+                            <div class="rpg-links black">
+                                <span class="rpg-links-dot" aria-hidden="true"></span>
+                                <a href="#stats"><badge class="badge">Stats</badge></a>
+                                <a href="#traits"><badge class="badge">Traits</badge></a>
+                                <a href="#skills"><badge class="badge">Skills</badge></a>
+                                <a href="#items"><badge class="badge">Items</badge></a>
+                                <a href="#character"><badge class="badge">Character</badge></a>
+                            </div>
+                        </div>
 
+                        <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/rpg/rpg-stats.php'; ?>
+                            <div class="separator"></div>
 
-                <!------------  STATS ------------->
-                <?php include 'php/rpg/rpg-stats.php'; ?>
-                <div class="separator"></div>
+                            <?php include 'php/rpg/rpg-traits.php'; ?>
+                            <div class="separator"></div>
 
+                            <?php include 'php/rpg/rpg-skills.php'; ?>
+                            <div class="separator"></div>
 
+                            <?php include 'php/rpg/rpg-items.php'; ?>
+                            <div class="separator"></div>
 
-                <!------------ TRAITS ------------->
-                <?php include 'php/rpg/rpg-traits.php'; ?>
-                <div class="separator"></div>
+                            <?php include 'php/rpg/rpg-character.php'; ?>
+                        </div>
+                    </div>
 
+                    <div class="section unlimited white-bg rpg-panel is-active" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
+                        <div class="rpg-links-rail">
+                            <div class="rpg-links black">
+                                <span class="rpg-links-dot" aria-hidden="true"></span>
+                                <a href="#setting"><badge class="badge">Timeline</badge></a>
+                                <a href="#technologies"><badge class="badge">Technologies</badge></a>
+                                <a href="#hierarchy"><badge class="badge">The Planes</badge></a>
+                            </div>
+                        </div>
 
-                <!--------------- SKILL  CHECKS ------------->
-                <?php include 'php/rpg/rpg-skills.php'; ?>
-                <div class="separator"></div>
+                        <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/rpg/rpg-setting.php'; ?>
+                            <div class="separator"></div>
 
+                            <?php include 'php/rpg/rpg-technologies.php'; ?>
+                            <div class="separator"></div>
 
+                            <?php include 'php/rpg/rpg-planes.php'; ?>
+                        </div>
+                    </div>
 
-                <!------------ ITEMS, ARMOR, AND EFFECTS ------------->
-                <?php include 'php/rpg/rpg-items.php'; ?>
-                <div class="separator"></div>
-
-
-                <!------------  SAMPLE CHARACTER SHEET ------------->
-                <?php include 'php/rpg/rpg-character.php'; ?>
-
-            </div>
-        </div>
-
-        <div class="section unlimited white-bg rpg-panel is-active" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
-            <div class="rpg-links-rail">
-                <div class="rpg-links black">
-                    <span class="rpg-links-dot" aria-hidden="true"></span>
-                    <a href="#setting"><badge class="badge">Timeline</badge></a>
-                    <a href="#technologies"><badge class="badge">Technologies</badge></a>
-                    <a href="#hierarchy"><badge class="badge">The Planes</badge></a>
+                    <div class="rpg-night-window-footer">
+                        <div class="rpg-night-window">
+                            <?php include 'php/rpg/rpg-night.php'; ?>
+                        </div>
+                        <?php include 'php/footer.php'; ?>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
-                <?php include 'php/rpg/rpg-setting.php'; ?>
-                <div class="separator"></div>
-
-                <?php include 'php/rpg/rpg-technologies.php'; ?>
-                <div class="separator"></div>
-
-                <?php include 'php/rpg/rpg-planes.php'; ?>
             </div>
         </div>
 
-        <div class="rpg-night-window-footer">
-            <div class="rpg-night-window">
-                <?php include 'php/rpg/rpg-night.php'; ?>
-            </div>
-            <?php include 'php/footer.php'; ?>
-        </div>
-
-		<!-- this loads the page footer for both mobile and desktop -->
 		<?php include 'php/about.php'; ?>
-
-		<!-- this loads the javascript plugins for each page -->
 		<?php include 'php/javascript-loads.php'; ?>
         
     </body>
-</html> 
+</html>
