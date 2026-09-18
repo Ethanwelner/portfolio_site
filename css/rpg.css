@@ -149,8 +149,52 @@ strong .mechanic-text {
 
 /* overflow-x: hidden on body creates a scroll container that traps sticky.
    clip keeps horizontal overflow hidden without breaking the side nav. */
-body:has(.rpg-links-rail) {
+body:has(.rpg-links-rail),
+body:has(.personal-shell) {
     overflow-x: clip;
+}
+
+.personal-shell {
+    width: 100%;
+    overflow: hidden;
+}
+
+.personal-track {
+    display: flex;
+    width: 200vw;
+    align-items: flex-start;
+    position: relative;
+    left: 0;
+}
+
+.personal-shell.transitions-on .personal-track {
+    transition: left 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.personal-shell.is-frontiers .personal-track {
+    left: -100vw;
+}
+
+.personal-pane {
+    width: 100vw;
+    flex: 0 0 100vw;
+    min-height: 100vh;
+}
+
+.personal-shell.is-personal:not(.is-sliding) .pane-frontiers,
+.personal-shell.is-frontiers:not(.is-sliding) .pane-personal {
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.personal-page-nav a {
+    display: inline-block;
+}
+
+.gray-bg .rpg-tab {
+    background: var(--portfolio-black);
 }
 
 .rpg-tabs {
@@ -198,8 +242,39 @@ body:has(.rpg-links-rail) {
     display: flex;
 }
 
-.black-section .section-clip {
+.black-section .section-clip,
+.gray-bg.short-section .section-clip {
     padding-bottom: 56px;
+}
+
+.personal-pane .gray-bg {
+    color: var(--portfolio-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .personal-shell.transitions-on .personal-track {
+        transition: none;
+    }
+}
+
+.model-photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        display: block;
+    }
+
+    .is-featured {
+        grid-column: 1 / -1;
+        aspect-ratio: 16 / 9;
+    }
 }
 
 .line-container {
@@ -376,6 +451,20 @@ body:has(.rpg-links-rail) {
     .rpg-tab {
         font-size: 1.25rem;
         padding: .6rem 1rem;
+    }
+
+    .model-photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        .is-featured {
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+    .section-scroll-links.personal-page-nav {
+        display: block;
+        font-size: 1.25rem;
     }
 
     .c-variables {

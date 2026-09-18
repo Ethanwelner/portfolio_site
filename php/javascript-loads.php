@@ -54,7 +54,7 @@
 		}
 
 		function updateRpgLinkHighlight() {
-			var $panel = $( ".rpg-panel.is-active" );
+			var $panel = $( ".pane-frontiers .rpg-panel.is-active" );
 			if ( ! $panel.length ) {
 				return;
 			}
@@ -84,37 +84,152 @@
 			moveRpgLinksDot( $nav, $active );
 		}
 
-		function activateRpgTab($tab, updateHash) {
+		function personalHash() {
+			return ( window.location.hash || "" ).replace( /^#/, "" ).toLowerCase();
+		}
+
+		function isFrontiersHash(hash) {
+			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "technologies", "hierarchy", "timeline" ].indexOf( hash ) !== -1;
+		}
+
+		function isPhotosHash(hash) {
+			return [ "photos", "models", "photography", "model-photos" ].indexOf( hash ) !== -1;
+		}
+
+		function syncPersonalShellHeight() {
+			var shell = document.querySelector( ".personal-shell" );
+			var pane = document.querySelector( ".personal-pane.is-visible" );
+			if ( ! shell || ! pane ) {
+				return;
+			}
+			shell.style.height = pane.scrollHeight + "px";
+		}
+
+		function updateFixedPageNav(page) {
+			var $nav = $( ".personal-page-nav-fixed" );
+			if ( ! $nav.length ) {
+				return;
+			}
+
+			$nav.find( ".js-personal-page" ).each(function() {
+				var linkPage = $( this ).attr( "data-page" );
+				var label = linkPage === "frontiers" ? "STRANGE FRONTIERS" : "BLOG";
+				if ( linkPage === page ) {
+					$( this ).html( '<span class="black-text nav-bullet">&#8226;</span> ' + label );
+				} else {
+					$( this ).text( label );
+				}
+			});
+		}
+
+		function showPersonalPage(page, animate) {
+			var $shell = $( ".personal-shell" );
+			if ( ! $shell.length ) {
+				return;
+			}
+
+			var already = $shell.hasClass( "is-" + page );
+			$( ".personal-pane" ).removeClass( "is-visible" );
+			$( ".pane-" + page ).addClass( "is-visible" );
+			updateFixedPageNav( page );
+
+			if ( already ) {
+				syncPersonalShellHeight();
+				return;
+			}
+
+			window.scrollTo( { top: 0 } );
+			$shell.addClass( "is-sliding" );
+			$shell.removeClass( "is-personal is-frontiers" ).addClass( "is-" + page );
+
+			function finishSlide() {
+				if ( finishSlide.done ) {
+					return;
+				}
+				finishSlide.done = true;
+				$shell.removeClass( "is-sliding" );
+				syncPersonalShellHeight();
+				if ( page === "frontiers" ) {
+					updateRpgLinkHighlight();
+				}
+			}
+			finishSlide.done = false;
+
+			if ( $shell.hasClass( "transitions-on" ) && animate !== false ) {
+				$shell.find( ".personal-track" ).off( "transitionend.personalSlide" ).on( "transitionend.personalSlide", function( event ) {
+					if ( event.target !== this || ( event.originalEvent && event.originalEvent.propertyName && event.originalEvent.propertyName !== "left" ) ) {
+						return;
+					}
+					$( this ).off( "transitionend.personalSlide" );
+					finishSlide();
+				} );
+				window.setTimeout( finishSlide, 850 );
+			} else {
+				finishSlide();
+			}
+		}
+
+		function activatePaneTab($tab, updateHash) {
 			if ( ! $tab.length ) {
 				return;
 			}
 
-			$( ".rpg-tab" ).removeClass( "is-active" ).attr( "aria-selected", "false" );
+			var $list = $tab.closest( "[role='tablist']" );
+			$list.find( ".rpg-tab" ).removeClass( "is-active" ).attr( "aria-selected", "false" );
 			$tab.addClass( "is-active" ).attr( "aria-selected", "true" );
 
-			$( ".rpg-panel" ).removeClass( "is-active" );
+			var $pane = $tab.closest( ".personal-pane" );
+			var $panels = $pane.length ? $pane.find( ".rpg-panel" ) : $( ".rpg-panel" );
+			$panels.removeClass( "is-active" );
 			$( "#" + $tab.attr( "aria-controls" ) ).addClass( "is-active" );
 
 			if ( updateHash ) {
-				var nextHash = $tab.attr( "id" ) === "tab-setting" ? "setting" : "mechanics";
+				var tabId = $tab.attr( "id" );
+				var nextHash = "blog";
+				if ( tabId === "tab-photos" ) {
+					nextHash = "photos";
+				} else if ( tabId === "tab-setting" ) {
+					nextHash = "setting";
+				} else if ( tabId === "tab-mechanics" ) {
+					nextHash = "mechanics";
+				}
 				if ( window.location.hash.replace( /^#/, "" ) !== nextHash ) {
 					history.replaceState( null, "", "#" + nextHash );
 				}
 			}
 
+			syncPersonalShellHeight();
 			window.requestAnimationFrame( updateRpgLinkHighlight );
 		}
 
 		function rpgTabFromHash() {
-			var hash = ( window.location.hash || "" ).replace( /^#/, "" ).toLowerCase();
+			var hash = personalHash();
 			if ( hash === "mechanics" || hash === "rpg-mechanics" || hash === "stats" || hash === "traits" || hash === "skills" || hash === "items" || hash === "character" ) {
 				return $( "#tab-mechanics" );
 			}
 			return $( "#tab-setting" );
 		}
 
-		if ( $( ".rpg-tab" ).length ) {
-			activateRpgTab( rpgTabFromHash(), false );
+		function applyPersonalHash(animate) {
+			var hash = personalHash();
+			if ( isFrontiersHash( hash ) ) {
+				showPersonalPage( "frontiers", animate );
+				activatePaneTab( rpgTabFromHash(), false );
+				return;
+			}
+
+			showPersonalPage( "personal", animate );
+			activatePaneTab( isPhotosHash( hash ) ? $( "#tab-photos" ) : $( "#tab-blog" ), false );
+		}
+
+		if ( $( ".personal-shell" ).length ) {
+			applyPersonalHash( false );
+			window.requestAnimationFrame( function() {
+				$( ".personal-shell" ).addClass( "transitions-on" );
+			} );
+			$( window ).on( "resize load", syncPersonalShellHeight );
+		} else if ( $( ".rpg-tab" ).length ) {
+			activatePaneTab( rpgTabFromHash(), false );
 		}
 
 		$( ".rpg-tab" ).click(function() {
@@ -123,9 +238,9 @@
 				return;
 			}
 
-			activateRpgTab( $tab, true );
+			activatePaneTab( $tab, true );
 
-			var tabs = document.querySelector( ".rpg-tabs" );
+			var tabs = $tab.closest( ".rpg-tabs" )[0];
 			if ( tabs ) {
 				var tabsRect = tabs.getBoundingClientRect();
 				if ( tabsRect.top < 0 || tabsRect.bottom > window.innerHeight ) {
@@ -134,9 +249,31 @@
 			}
 		});
 
+		$( ".js-personal-page" ).click(function( event ) {
+			event.preventDefault();
+			var page = $( this ).attr( "data-page" );
+			if ( page === "frontiers" ) {
+				var frontiersTab = $( ".pane-frontiers .rpg-tab.is-active" );
+				if ( ! frontiersTab.length ) {
+					frontiersTab = $( "#tab-setting" );
+				}
+				showPersonalPage( "frontiers", true );
+				activatePaneTab( frontiersTab, true );
+			} else {
+				var personalTab = $( ".pane-personal .rpg-tab.is-active" );
+				if ( ! personalTab.length ) {
+					personalTab = $( "#tab-blog" );
+				}
+				showPersonalPage( "personal", true );
+				activatePaneTab( personalTab, true );
+			}
+		});
+
 		$( window ).on( "hashchange", function() {
-			if ( $( ".rpg-tab" ).length ) {
-				activateRpgTab( rpgTabFromHash(), false );
+			if ( $( ".personal-shell" ).length ) {
+				applyPersonalHash( true );
+			} else if ( $( ".rpg-tab" ).length ) {
+				activatePaneTab( rpgTabFromHash(), false );
 			}
 		});
 
@@ -148,7 +285,9 @@
 				}
 				rpgSpyFrame = window.requestAnimationFrame(function() {
 					rpgSpyFrame = 0;
-					updateRpgLinkHighlight();
+					if ( $( ".personal-shell.is-frontiers" ).length || ! $( ".personal-shell" ).length ) {
+						updateRpgLinkHighlight();
+					}
 				});
 			});
 			updateRpgLinkHighlight();
