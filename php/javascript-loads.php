@@ -113,9 +113,10 @@
 
 			$nav.find( ".js-personal-page" ).each(function() {
 				var linkPage = $( this ).attr( "data-page" );
-				var label = linkPage === "frontiers" ? "STRANGE FRONTIERS" : "BLOG";
+				var label = linkPage === "frontiers" ? "STRANGE FRONTIERS" : "Projects & Blog";
+				var bulletClass = linkPage === "frontiers" ? "frontiers-accent" : "black-text";
 				if ( linkPage === page ) {
-					$( this ).html( '<span class="black-text nav-bullet">&#8226;</span> ' + label );
+					$( this ).html( '<span class="' + bulletClass + ' nav-bullet">&#8226;</span> ' + label );
 				} else {
 					$( this ).text( label );
 				}
