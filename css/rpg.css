@@ -193,6 +193,12 @@ body:has(.personal-shell) {
     display: inline-block;
 }
 
+.frontiers-accent,
+.personal-page-nav a.frontiers-accent,
+.personal-page-nav a.frontiers-accent .nav-bullet {
+    color: #2dfc64;
+}
+
 .gray-bg .rpg-tab {
     background: var(--portfolio-black);
 }

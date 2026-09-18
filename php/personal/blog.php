@@ -5,10 +5,10 @@
 		<div class="copy stinger black mb-3">Off the clock</div>
 		<p class="copy mb-3">6/14/2026</p>
 		<p class="copy">
-			This is where I keep the projects that don't belong in a case study. Painting, writing, rules tinkering, and the rest of the work I do because I want to see it exist.
+			This is where I keep the projects that don't belong on the professional side of the portfolio. Painting, writing, rules tinkering, and the rest of the work I do because I want to see it exist.
 		</p>
 		<p class="copy">
-			Expect miniature photos, notes on Strange Frontiers, and the occasional post about how a hobby project actually got made. Nothing here is a client deliverable. It's just the stuff I work on when I'm off the clock.
+			Expect miniature photos, notes on Strange Frontiers, and the occasional post about how a hobby project actually got made. It's just the stuff I work on when I'm off the clock.
 		</p>
 		<p class="copy">
 			More posts will land here as I finish them. For now, the model gallery next door is the most complete snapshot of what I've been painting.
