@@ -221,9 +221,11 @@ body:has(.personal-shell) {
 }
 
 .rpg-tabs {
-    position: relative;
-    flex: 0 0 auto;
-    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
 
     .container {
         height: auto;
@@ -253,6 +255,13 @@ body:has(.personal-shell) {
 .rpg-tab.is-active {
     background: var(--portfolio-white);
     color: var(--portfolio-black) !important;
+    /* Cover the subpixel gap so the white tab meets the white panel */
+    box-shadow: 0 1px 0 var(--portfolio-white);
+}
+
+.personal-pane .section-clip {
+    /* Let that 1px seam cover paint; keep the rest of the hero clip */
+    clip-path: inset(0 0 -1px 0);
 }
 
 .rpg-panel {
@@ -262,21 +271,6 @@ body:has(.personal-shell) {
 .rpg-panel.is-active {
     display: flex;
     flex-direction: column;
-}
-
-/* Hero chrome lives in a box above the tabs so clip-path matches the
-   visible dark/gray edge instead of running through the tab row. */
-.short-section:has(> .rpg-tabs) {
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-}
-
-.rpg-hero-body {
-    position: relative;
-    flex: 1 1 auto;
-    min-height: 0;
-    width: 100%;
 }
 
 .personal-pane .gray-bg {

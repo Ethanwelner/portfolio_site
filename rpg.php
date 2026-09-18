@@ -42,34 +42,32 @@
 
                 <div class="personal-pane pane-personal is-visible" data-page="personal">
                     <div class="section short-section gray-bg d-flex z-4">
-                        <div class="rpg-hero-body">
-                            <div class="section-clip d-flex align-items-center justify-content-center">
-                                <?php include 'php/header.php'; ?>
-                                <?php
-                                    $personalNavActive = 'blog';
-                                    $personalNavTone = 'white';
-                                    $personalNavExtraClass = '';
-                                    include 'php/personal/page-nav.php';
-                                ?>
-                                <div class="title section-title d-inline-flex z-2">
-                                    <div class="hero-statement pre-slide-in">
-                                        <h1 class="title hero-title white-text">Personal</h1>
-                                        <h2 class="title section-title">Blog, Photos, Models, Fun</h2>
-                                        <h3 class="sub-title non-title">Just Stuff</h3>
-                                    </div>
+                        <div class="section-clip d-flex align-items-center justify-content-center">
+                            <?php include 'php/header.php'; ?>
+                            <?php
+                                $personalNavActive = 'blog';
+                                $personalNavTone = 'white';
+                                $personalNavExtraClass = '';
+                                include 'php/personal/page-nav.php';
+                            ?>
+                            <div class="title section-title d-inline-flex z-2">
+                                <div class="hero-statement pre-slide-in">
+                                    <h1 class="title hero-title white-text">Personal</h1>
+                                    <h2 class="title section-title">Blog, Photos, Models, Fun</h2>
+                                    <h3 class="sub-title non-title">Just Stuff</h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rpg-tabs">
-                            <div class="container d-flex">
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                <div class="flex-14">
-                                    <div class="rpg-tab-list" role="tablist" aria-label="Personal sections">
-                                        <button type="button" class="rpg-tab is-active" role="tab" id="tab-blog" aria-controls="personal-blog" aria-selected="true">Project &amp; Blog</button>
-                                        <button type="button" class="rpg-tab" role="tab" id="tab-photos" aria-controls="personal-photos" aria-selected="false">Model Photos</button>
+                            <div class="rpg-tabs">
+                                <div class="container d-flex">
+                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                    <div class="flex-14">
+                                        <div class="rpg-tab-list" role="tablist" aria-label="Personal sections">
+                                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-blog" aria-controls="personal-blog" aria-selected="true">Project &amp; Blog</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-photos" aria-controls="personal-photos" aria-selected="false">Model Photos</button>
+                                        </div>
                                     </div>
+                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
                                 </div>
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>
                         </div>
                     </div>
@@ -94,34 +92,32 @@
                         <div class="rpg-night-window">
                             <?php include 'php/rpg/rpg-night.php'; ?>
                         </div>
-                        <div class="rpg-hero-body">
-                            <div class="section-clip d-flex align-items-center justify-content-center ">
-                                <?php include 'php/header.php'; ?>
-                                <?php
-                                    $personalNavActive = 'frontiers';
-                                    $personalNavTone = 'white';
-                                    $personalNavExtraClass = '';
-                                    include 'php/personal/page-nav.php';
-                                ?>
-                                <div class="title section-title d-inline-flex z-2">
-                                    <div class="hero-statement pre-slide-in">
-                                        <h1 class="title hero-title frontiers-accent">Strange Frontiers</h1>
-                                        <h2 class="title section-title">A Custom RPG System</h2>
-                                        <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
-                                    </div>
+                        <div class="section-clip d-flex align-items-center justify-content-center ">
+                            <?php include 'php/header.php'; ?>
+                            <?php
+                                $personalNavActive = 'frontiers';
+                                $personalNavTone = 'white';
+                                $personalNavExtraClass = '';
+                                include 'php/personal/page-nav.php';
+                            ?>
+                            <div class="title section-title d-inline-flex z-2">
+                                <div class="hero-statement pre-slide-in">
+                                    <h1 class="title hero-title frontiers-accent">Strange Frontiers</h1>
+                                    <h2 class="title section-title">A Custom RPG System</h2>
+                                    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
                                 </div>
                             </div>
-                        </div>
-                        <div class="rpg-tabs">
-                            <div class="container d-flex">
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                <div class="flex-14">
-                                    <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
-                                        <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
-                                        <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
+                            <div class="rpg-tabs">
+                                <div class="container d-flex">
+                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                    <div class="flex-14">
+                                        <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
+                                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
+                                        </div>
                                     </div>
+                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
                                 </div>
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>
                         </div>
                     </div>
