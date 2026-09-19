@@ -129,25 +129,68 @@
 			}
 
 			window.scrollTo( { top: 0 } );
-			$shell.addClass( "is-sliding" );
-			$shell.removeClass( "is-personal is-frontiers" ).addClass( "is-" + page );
+
+			var shell = $shell[0];
+			var track = $shell.find( ".personal-track" )[0];
+			var fromFrontiers = $shell.hasClass( "is-frontiers" );
+			var useMotion = $shell.hasClass( "transitions-on" ) && animate !== false && track;
+
+			if ( showPersonalPage.revealTimer ) {
+				window.clearTimeout( showPersonalPage.revealTimer );
+				showPersonalPage.revealTimer = 0;
+			}
+			$shell.removeClass( "is-revealing is-revealed" );
 
 			function finishSlide() {
 				if ( finishSlide.done ) {
 					return;
 				}
 				finishSlide.done = true;
+				if ( track ) {
+					track.style.transition = "none";
+					track.style.transform = "";
+					track.style.willChange = "";
+					track.style.left = page === "frontiers" ? "-100vw" : "0px";
+				}
+				if ( useMotion ) {
+					$shell.addClass( "is-revealing" );
+				}
 				$shell.removeClass( "is-sliding" );
+				if ( track ) {
+					track.offsetWidth;
+					track.style.left = "";
+					track.style.transition = "";
+				}
 				syncPersonalShellHeight();
+				if ( useMotion ) {
+					window.requestAnimationFrame( function() {
+						$shell.addClass( "is-revealed" );
+					} );
+					showPersonalPage.revealTimer = window.setTimeout( function() {
+						$shell.removeClass( "is-revealing is-revealed" );
+						showPersonalPage.revealTimer = 0;
+					}, 450 );
+				}
 				if ( page === "frontiers" ) {
 					updateRpgLinkHighlight();
 				}
 			}
 			finishSlide.done = false;
 
-			if ( $shell.hasClass( "transitions-on" ) && animate !== false ) {
-				$shell.find( ".personal-track" ).off( "transitionend.personalSlide" ).on( "transitionend.personalSlide", function( event ) {
-					if ( event.target !== this || ( event.originalEvent && event.originalEvent.propertyName && event.originalEvent.propertyName !== "left" ) ) {
+			if ( useMotion ) {
+				track.style.left = fromFrontiers ? "-100vw" : "0px";
+				track.style.transform = "translate3d(0,0,0)";
+				track.style.willChange = "transform";
+				$shell.addClass( "is-sliding" );
+				shell.style.height = window.innerHeight + "px";
+				shell.offsetWidth;
+				$shell.removeClass( "is-personal is-frontiers" ).addClass( "is-" + page );
+				track.style.transform = fromFrontiers
+					? "translate3d(100vw,0,0)"
+					: "translate3d(-100vw,0,0)";
+
+				$( track ).off( "transitionend.personalSlide" ).on( "transitionend.personalSlide", function( event ) {
+					if ( event.target !== this || ( event.originalEvent && event.originalEvent.propertyName && event.originalEvent.propertyName !== "transform" ) ) {
 						return;
 					}
 					$( this ).off( "transitionend.personalSlide" );
@@ -155,6 +198,7 @@
 				} );
 				window.setTimeout( finishSlide, 850 );
 			} else {
+				$shell.removeClass( "is-personal is-frontiers" ).addClass( "is-" + page );
 				finishSlide();
 			}
 		}
