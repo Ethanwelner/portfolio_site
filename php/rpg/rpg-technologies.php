@@ -135,10 +135,11 @@
 		<div class="d-flex flex-wrap flex-xs-nowrap mb-4">
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 			<div class="flex-14">
-				<h3 class="mb-3">Biological Enhancements</h3>
+				<h3 class="mb-3">Biology</h3>
 				<p class="copy">
-					Content coming soon
+					In one of the few areas of scientific development that were not noticeably slowed during the era that came to be called the End of Science, research into all fields of biology proceeded with slow but steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
 				</p>
+				<p class="copy">Cont...</p>
 				<div class="line-container">
 					<h5><strong>History</strong></h5>
 					<div class="line"></div>
