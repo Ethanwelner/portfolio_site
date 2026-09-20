@@ -97,7 +97,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "technologies", "hierarchy", "timeline" ].indexOf( hash ) !== -1;
+			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "technologies", "hierarchy", "timeline", "introduction" ].indexOf( hash ) !== -1;
 		}
 
 		function isPhotosHash(hash) {
@@ -223,7 +223,7 @@
 				if ( tabId === "tab-photos" ) {
 					nextHash = "photos";
 				} else if ( tabId === "tab-setting" ) {
-					nextHash = "setting";
+					nextHash = "introduction";
 				} else if ( tabId === "tab-mechanics" ) {
 					nextHash = "mechanics";
 				}

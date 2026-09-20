@@ -10,6 +10,6 @@ $navExtraClass = $personalNavExtraClass ?? '';
 		<a href="#blog" class="js-personal-page" data-page="personal"><?php if ($personalNavActive === 'blog'): ?><span class="<?php echo $navBulletClass; ?> nav-bullet">&#8226;</span> <?php endif; ?>Projects &amp; Blog</a>
 	</div>
 	<div class="force-dark">
-		<a href="#setting" class="js-personal-page frontiers-accent" data-page="frontiers"><?php if ($personalNavActive === 'frontiers'): ?><span class="frontiers-accent nav-bullet">&#8226;</span> <?php endif; ?>STRANGE FRONTIERS</a>
+		<a href="#introduction" class="js-personal-page frontiers-accent" data-page="frontiers"><?php if ($personalNavActive === 'frontiers'): ?><span class="frontiers-accent nav-bullet">&#8226;</span> <?php endif; ?>STRANGE FRONTIERS</a>
 	</div>
 </div>

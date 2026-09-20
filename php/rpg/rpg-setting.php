@@ -1,6 +1,23 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
+		<h3 class="sub-title mb-3" id="introduction">Introduction</h3>
+		<p class="copy">
+			The year is 2200 AD, and the dawn of the 23rd century comes amid tumultuous changes for mankind. The last two centuries have seen humanity navigate a slow-rolling environmental collapse on the home world and an AI apocalypse that almost was, but they’ve also seen us reach for the stars... and places even further beyond.
+		</p>
+		<p class="copy">
+			Strange Frontiers is a pen-and-paper role-playing game system and setting with a near-future hard science-fiction aesthetic mixed with the exotic and the arcane.
+		</p>
+		<p class="copy">
+			In this document I’ll be outlining the world of Strange Frontiers and building out the systems that allow someone to play a game in this setting. This is a work in progress, so expect unfinished and under-construction content to be the norm.
+		</p>
+		<div class="bumper"></div>
+	</div>
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+</div>
+<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+	<div class="flex-2 d-none d-xl-inline-flex"></div>
+	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="setting">Setting</h3>
 		<div class="copy stinger black mb-3">The world of Strange Frontiers</div>
 	</div>
