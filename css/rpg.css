@@ -311,6 +311,49 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     box-shadow: 0 1px 0 var(--portfolio-white);
 }
 
+.tech-fields {
+    padding: 24px;
+    padding-top: 0;
+    border: 1px solid var(--portfolio-white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tech-field-tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: .5rem;
+    margin-bottom: 24px;
+}
+
+.tech-field-tab {
+    appearance: none;
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: .6rem 1.1rem;
+    background: var(--portfolio-gray);
+    color: var(--portfolio-white);
+    border: 0;
+    border-radius: 0 0 4px 4px;
+    cursor: pointer;
+}
+
+.tech-field-tab.is-active {
+    background: var(--portfolio-white);
+    color: var(--portfolio-black);
+}
+
+.tech-field-panel {
+    display: none;
+}
+
+.tech-field-panel.is-active {
+    display: block;
+}
+
 .personal-pane .section-clip {
     /* Let that 1px seam cover paint; keep the rest of the hero clip */
     clip-path: inset(0 0 -1px 0);
@@ -549,6 +592,11 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     .rpg-tab {
         font-size: 1.25rem;
         padding: .6rem 1rem;
+    }
+
+    .tech-field-tab {
+        font-size: 1.1rem;
+        padding: .5rem .85rem;
     }
 
     .model-photo-gallery {

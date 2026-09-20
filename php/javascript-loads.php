@@ -97,7 +97,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "technologies", "hierarchy", "timeline", "introduction" ].indexOf( hash ) !== -1;
+			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction" ].indexOf( hash ) !== -1;
 		}
 
 		function isPhotosHash(hash) {
@@ -245,6 +245,10 @@
 		}
 
 		function applyPersonalHash(animate) {
+			if ( personalHash() === "technologies" ) {
+				history.replaceState( null, "", "#thesciences" );
+			}
+
 			var hash = personalHash();
 			if ( isFrontiersHash( hash ) ) {
 				showPersonalPage( "frontiers", animate );
@@ -266,7 +270,7 @@
 			activatePaneTab( rpgTabFromHash(), false );
 		}
 
-		$( ".rpg-tab" ).click(function() {
+		$( ".rpg-tabs .rpg-tab" ).click(function() {
 			var $tab = $( this );
 			if ( $tab.hasClass( "is-active" ) ) {
 				return;
@@ -281,6 +285,25 @@
 					window.scrollTo( { top: Math.max( 0, window.scrollY + tabsRect.top ) } );
 				}
 			}
+		});
+
+		function activateTechFieldTab($tab) {
+			var $fields = $tab.closest( ".tech-fields" );
+			var $list = $tab.closest( "[role='tablist']" );
+			$list.find( ".tech-field-tab" ).removeClass( "is-active" ).attr( "aria-selected", "false" );
+			$tab.addClass( "is-active" ).attr( "aria-selected", "true" );
+			$fields.find( ".tech-field-panel" ).removeClass( "is-active" );
+			$( "#" + $tab.attr( "aria-controls" ) ).addClass( "is-active" );
+			syncPersonalShellHeight();
+			window.requestAnimationFrame( updateRpgLinkHighlight );
+		}
+
+		$( ".tech-field-tab" ).click(function() {
+			var $tab = $( this );
+			if ( $tab.hasClass( "is-active" ) ) {
+				return;
+			}
+			activateTechFieldTab( $tab );
 		});
 
 		$( ".js-personal-page" ).click(function( event ) {
