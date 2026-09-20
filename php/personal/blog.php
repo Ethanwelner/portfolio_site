@@ -6,10 +6,10 @@
 
 		<p class="copy mb-3"><i>9/20/2026</i></p>
 		<p class="copy">
-			I've been hitting up coffee shops lately, and it's interesting how much more productive I am with personal creative work in a public setting. Home has too many distractions and too many temptations.
+			I've been hitting up coffee shops lately, and it's interesting how productive I can be with personal creative work in a public setting. Maybe it's something about the hustle and bustle and the constant stimulation of people coming and going. Who knows. I just reformatted Strange Frontiers and added a large content block into the sciences. I actually feel motivated to keep going. I'll probably push to add the bones of the planes list as well.
 		</p>
 		<p class="copy">
-			I just reformatted Strange Frontiers and added a large content block, and I actually feel motivated to keep going. I'm home now though, so the temptation to keep ranking Tyr is strong.
+			I'm home now though, so the temptation to keep ranking Tyr is strong. The old World of Tanks gameplay loop is so much less frustrating when it's not actively hazing you and trying to open your wallet at every conceivable opportunity.
 		</p>
 
 		<p class="copy mb-3 mt-5"><i>6/14/2026</i></p>
