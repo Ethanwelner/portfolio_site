@@ -139,6 +139,9 @@
 				<p class="copy">
 					In one of the few areas of scientific development that were not noticeably slowed during the era that came to be called the End of Science, research into all fields of biology proceeded with slow but steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
 				</p>
+				<p class="copy">
+					In the year 2200 a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. With enough time and investment a person could have eyes that see into the ultraviolet spectrum, bones with four times their traditional strength, or a liver that can filter out radiation. A person could even have new and novel organs implanted into them or limbs grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the system, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue.
+				</p>
 				<p class="copy">Cont...</p>
 				<div class="line-container">
 					<h5><strong>History</strong></h5>
