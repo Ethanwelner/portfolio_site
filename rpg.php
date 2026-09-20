@@ -152,9 +152,6 @@
                             <div class="separator"></div>
 
                             <?php include 'php/rpg/rpg-technologies.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-planes.php'; ?>
                         </div>
                     </div>
 

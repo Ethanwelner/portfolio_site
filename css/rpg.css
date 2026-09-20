@@ -368,6 +368,10 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     flex-direction: column;
 }
 
+#rpg-setting.section.unlimited {
+    padding-bottom: 0;
+}
+
 .personal-pane .gray-bg {
     color: var(--portfolio-white);
 }
