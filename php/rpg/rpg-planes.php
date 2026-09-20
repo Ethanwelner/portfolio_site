@@ -33,7 +33,7 @@
 		<div class="bumper"></div>
 		<div class="tech-fields">
 			<div class="tech-field-tab-list" role="tablist" aria-label="Planar hierarchy">
-				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-plane-paraastral" aria-controls="plane-paraastral" aria-selected="true">Paraastral Physics</button>
+				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-plane-paraastral" aria-controls="plane-paraastral" aria-selected="true">Planar Properties</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-plane-known" aria-controls="plane-known" aria-selected="false">Known Planes</button>
 			</div>
 

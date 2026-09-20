@@ -122,7 +122,21 @@
 						</div>
 						<div class="bumper"></div>
 						<div>
-							<h3 class="mb-3">Paraastral Physics</h3>
+							<h3 class="mb-3">Paraphysics</h3>
+							<p class="copy">
+								Content coming soon
+							</p>
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Content coming soon
+							</p>
+						</div>
+						<div class="bumper"></div>
+						<div>
+							<h3 class="mb-3">Exotic Materials</h3>
 							<p class="copy">
 								Content coming soon
 							</p>
