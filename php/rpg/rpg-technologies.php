@@ -192,6 +192,9 @@
 			</div>
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
+		<div class="separator d-none d-sm-block"></div>
+		<div class="separator"></div>
+		<?php include 'php/rpg/rpg-planes.php'; ?>
 	</div>
 	<div class="separator"></div>
 </div>
