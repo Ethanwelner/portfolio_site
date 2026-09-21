@@ -354,6 +354,19 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     display: block;
 }
 
+.plane-attr-cols {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.plane-attr-cols > * {
+    flex: 0 0 auto;
+    width: max-content;
+    max-width: 100%;
+}
+
 .personal-pane .section-clip {
     /* Let that 1px seam cover paint; keep the rest of the hero clip */
     clip-path: inset(0 0 -1px 0);
