@@ -392,21 +392,37 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 .model-photo-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 30px;
     width: 100%;
 
-    img {
-        width: 100%;
+    > * {
+        position: relative;
+        min-width: 0;
+        min-height: 0;
         aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 8px;
         overflow: hidden;
+        border-radius: 8px;
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
         display: block;
     }
 
     .is-featured {
         grid-column: 1 / -1;
         aspect-ratio: 16 / 9;
+    }
+
+    .is-hero {
+        grid-column: span 2;
+        grid-row: span 2;
+        aspect-ratio: auto;
     }
 }
 
@@ -605,9 +621,12 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 
     .model-photo-gallery {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 30px;
 
-        .is-featured {
+        .is-featured,
+        .is-hero {
+            grid-column: auto;
+            grid-row: auto;
             aspect-ratio: 1 / 1;
         }
     }
