@@ -1,3 +1,16 @@
+<?php
+if (!function_exists('asset_url')) {
+	function asset_url($path) {
+		$file = dirname(__DIR__) . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $path);
+		$version = is_file($file) ? filemtime($file) : time();
+		return htmlspecialchars($path, ENT_QUOTES, 'UTF-8') . '?v=' . $version;
+	}
+}
+
+if (!headers_sent()) {
+	header('Cache-Control: no-cache, must-revalidate');
+}
+?>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,11 +26,11 @@
 <link rel="manifest" href="site.webmanifest">
 
 <!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" HREF="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/bootstrap.min.css'); ?>"/>
 
 <!-- site css -->
-<link rel="stylesheet" type="text/css" HREF="css/tokens.css"/>
-<!-- <link rel="stylesheet" type="text/css" HREF="css/portfolio.css"/> -->
-<link rel="stylesheet" type="text/css" HREF="css/portfolio-nested.css"/>
-<link rel="stylesheet" type="text/css" HREF="css/portfolio-media-queries.css"/>
-<link rel="stylesheet" type="text/css" HREF="css/rpg.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/tokens.css'); ?>"/>
+<!-- <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/portfolio.css'); ?>"/> -->
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/portfolio-nested.css'); ?>"/>
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/portfolio-media-queries.css'); ?>"/>
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg.css'); ?>"/>

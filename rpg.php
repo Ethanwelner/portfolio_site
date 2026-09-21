@@ -4,7 +4,7 @@
     <head>
         <!-- this loads the head code -->
         <?php include 'php/head-loads.php'; ?>
-        <link rel="stylesheet" type="text/css" HREF="css/rpg-night.css"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg-night.css'); ?>"/>
         <title>Ethan Welner Portfolio</title>
     </head>
     <body>
