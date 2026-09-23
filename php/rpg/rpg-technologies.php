@@ -65,6 +65,7 @@
 										<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 										<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
 										<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Corrupted Physics.”</li>
+										<li>The process is one-sided. A switch gate exchanges an area with a planar location; the subject plane does not require its own switch gate.</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
@@ -295,7 +296,10 @@
 									In contrast to the explosive growth of industrial and personal robotics in the mid 21st century, the field of cybernetics and human augmentation grew slowly. While the engineering of cybernetic prosthetics could borrow heavily from the daily advances in its sister field, the medical aspects of the craft developed slowly and with constant setbacks. In the end, it was an interface problem: wiring a limb into the human nervous system was, even in the 2050s, a monumental and failure-prone task. The difficulty was made all the worse by the insular and legalistic nature of the industry, with every advancement published under a mountain of patents and legal obscuration. Despite it all, however, the inertia was there, and advancements were published at a regular cadence.
 								</p>
 								<p class="copy">
-									In the 2070s, through a series of quiet buyouts and rushed antitrust approvals, much of the industry found itself under the ownership of Plum, a design and manufacturing powerhouse in the robotics and AI spaces. For the next three decades, Plum would take personal cybernetics from a niche industry of medical prosthetics and military equipment into the mainstream. In the 2090s, for the first time, over half of the population had some form of advanced cybernetic implant.
+									In the 2070s, through a series of quiet buyouts and rushed antitrust approvals, much of the industry found itself under the ownership of Plum Technologies, a design and manufacturing powerhouse in the robotics and AI spaces. For the next three decades, Plum Technologies would take personal cybernetics from a niche industry of medical prosthetics and military equipment into the mainstream. In the 2090s, for the first time, over half of the population had some form of advanced cybernetic implant.
+								</p>
+								<p class="copy">
+									With its reliance on advanced materials science and energy storage breakthroughs, the field of cybernetics was one of the hardest hit by the End of Science. Early advances made by the Plum monopoly brought rapid improvement, but by the 2090s those advancements had slowed to a crawl, with new product releases focusing more on cosmetic changes or service updates than any true innovation or improvement. The industry would remain stagnant over the next three decades. It wouldn’t be until exotic materials started to make their way into consumer products in the late 2130s that cybernetics would see their second major renaissance.
 								</p>
 								<p class="copy">Cont...</p>
 							</div>
