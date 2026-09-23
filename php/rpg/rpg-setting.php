@@ -100,11 +100,19 @@
 			</p>
 
 			<div class="line-container">
+				<h5><strong>2060 – 2128</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				“The End of Science.”
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2070 – 2128</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Partial technological singularity leading to the “end of science.”
+				Partial technological singularity leading to the “End of Science.”
 			</p>
 
 			<div class="line-container">
@@ -129,14 +137,6 @@
 			</div>
 			<p class="copy">
 				The second AI panic.
-			</p>
-
-			<div class="line-container">
-				<h5><strong>2080 – 2128</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				“The end of science.”
 			</p>
 
 			<div class="line-container">

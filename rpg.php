@@ -153,6 +153,16 @@
                             <div class="separator"></div>
 
                             <?php include 'php/rpg/rpg-technologies.php'; ?>
+                            <div class="separator"></div>
+
+                            <?php include 'php/rpg/rpg-spacecraft.php'; ?>
+                            <div class="separator"></div>
+
+                            <?php include 'php/rpg/rpg-parabiology.php'; ?>
+                            <div class="separator"></div>
+
+                            <?php include 'php/rpg/rpg-locations.php'; ?>
+                            <div class="separator"></div>
                         </div>
                     </div>
 

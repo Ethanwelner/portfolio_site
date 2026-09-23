@@ -387,6 +387,19 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     padding-bottom: 0;
 }
 
+/* Keep setting/mechanics section rows full-width inside the flex container
+   so short placeholder blocks cannot sit side-by-side. */
+#rpg-setting > .container > .d-flex,
+#rpg-setting > .container > .w-100,
+#rpg-mechanics > .container > .d-flex,
+#rpg-mechanics > .container > .w-100,
+#rpg-mechanics > .container > .separator,
+#rpg-setting > .container > .separator {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
 .personal-pane .black-section {
     color: var(--portfolio-white);
 }
