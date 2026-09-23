@@ -40,7 +40,8 @@
 						<button type="button" class="tech-field-tab is-active" role="tab" id="tab-tech-exotic" aria-controls="tech-exotic" aria-selected="true">Exotic Sciences</button>
 						<button type="button" class="tech-field-tab" role="tab" id="tab-tech-biology" aria-controls="tech-biology" aria-selected="false">Biology</button>
 						<button type="button" class="tech-field-tab" role="tab" id="tab-tech-ai" aria-controls="tech-ai" aria-selected="false">Artificial Intelligence</button>
-						<button type="button" class="tech-field-tab" role="tab" id="tab-tech-cybernetics" aria-controls="tech-cybernetics" aria-selected="false">Cybernetics &amp; Robotics</button>
+						<button type="button" class="tech-field-tab" role="tab" id="tab-tech-cybernetics" aria-controls="tech-cybernetics" aria-selected="false">Cybernetics</button>
+						<button type="button" class="tech-field-tab" role="tab" id="tab-tech-robotics" aria-controls="tech-robotics" aria-selected="false">Robotics</button>
 					</div>
 
 					<div class="tech-field-panel is-active" id="tech-exotic" role="tabpanel" aria-labelledby="tab-tech-exotic">
@@ -267,56 +268,62 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-cybernetics" role="tabpanel" aria-labelledby="tab-tech-cybernetics">
-						<div>
-							<h3 class="mb-3">Cybernetics</h3>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										In the year 2200 cybernetics are commonplace.
-									</p>
-									<p class="copy">Cont...</p>
+						<h3 class="mb-3">Cybernetics</h3>
+						<div class="d-flex flex-wrap flex-xs-nowrap">
+							<div class="flex-7">
+								<div class="line-container">
+									<h5><strong>Overview</strong></h5>
+									<div class="line"></div>
 								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>History</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										In contrast to the explosive growth of industrial and personal robotics in the mid 21st century, the field of cybernetics and human augmentation grew slowly. While the engineering of cybernetic prosthetics could borrow heavily from the daily advances in its sister field, the medical aspects of the craft developed slowly and with constant setbacks. In the end, it was an interface problem: wiring a limb into the human nervous system was, even in the 2050s, a monumental and failure-prone task. The difficulty was made all the worse by the insular and legalistic nature of the industry, with every advancement published under a mountain of patents and legal obscuration.
-									</p>
-									<p class="copy">Cont...</p>
+								<p class="copy">
+									In the year 2200 cybernetics are cheap and commonplace. Standardized physio-mechanical interfaces allow for the rapid replacement and repair of cybernetic prosthetics without repeated dangerous surgery. Secure Neuro-baffle implants act as firewalls, preventing intrusion or unwanted feedback into a user’s brain. Advanced power systems even allow for power-intensive applications like full limb replacement to last for months without recharge. Cybernetics can make a person stronger, faster, more durable, able to operate in extreme environments safely and without the need for bulky equipment.
+								</p>
+								<p class="copy">
+									All that said, there’s still a stigma attached to heavy and visible cybernetic augmentation. Cybernetics are seen as a tool of the laboring classes. A sacrifice made to be better at one’s job because there’s no other choice, or even something contractually foisted upon someone. Indeed, many physically demanding or dangerous jobs both require and pay for augmentative prosthesis surgeries, but the limbs and implants remain the property of the company and must be returned upon dismissal.
+								</p>
+								<p class="copy">
+									The introduction of exotic materials has brought a storm of new products and upgrades to the cybernetics industry. Though still expensive, exotically enhanced bionics and endobionics can offer dramatically improved, if relatively untested and sometimes short-lived, performance boosts. Many a team of planar explorers have been bankrolled by even a single discovery of materials with significant paraphysical properties useful for cybernetics.
+								</p>
+							</div>
+							<div class="d-inline-flex align-items-center flex-1"></div>
+							<div class="flex-6">
+								<div class="line-container">
+									<h5><strong>History</strong></h5>
+									<div class="line"></div>
 								</div>
+								<p class="copy">
+									In contrast to the explosive growth of industrial and personal robotics in the mid 21st century, the field of cybernetics and human augmentation grew slowly. While the engineering of cybernetic prosthetics could borrow heavily from the daily advances in its sister field, the medical aspects of the craft developed slowly and with constant setbacks. In the end, it was an interface problem: wiring a limb into the human nervous system was, even in the 2050s, a monumental and failure-prone task. The difficulty was made all the worse by the insular and legalistic nature of the industry, with every advancement published under a mountain of patents and legal obscuration. Despite it all, however, the inertia was there, and advancements were published at a regular cadence.
+								</p>
+								<p class="copy">
+									In the 2070s, through a series of quiet buyouts and rushed antitrust approvals, much of the industry found itself under the ownership of Plum, a design and manufacturing powerhouse in the robotics and AI spaces. For the next three decades, Plum would take personal cybernetics from a niche industry of medical prosthetics and military equipment into the mainstream. In the 2090s, for the first time, over half of the population had some form of advanced cybernetic implant.
+								</p>
+								<p class="copy">Cont...</p>
 							</div>
 						</div>
-						<div class="bumper"></div>
-						<div>
-							<h3 class="mb-3">Robotics</h3>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										Content coming soon
-									</p>
+					</div>
+
+					<div class="tech-field-panel" id="tech-robotics" role="tabpanel" aria-labelledby="tab-tech-robotics">
+						<h3 class="mb-3">Robotics</h3>
+						<div class="d-flex flex-wrap flex-xs-nowrap">
+							<div class="flex-7">
+								<div class="line-container">
+									<h5><strong>Overview</strong></h5>
+									<div class="line"></div>
 								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>History</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										The explosive adoption of autonomous robotics in the early to mid 21st century brought multiple fundamental shifts in society.
-									</p>
-									<p class="copy">Cont...</p>
+								<p class="copy">
+									Content coming soon
+								</p>
+							</div>
+							<div class="d-inline-flex align-items-center flex-1"></div>
+							<div class="flex-6">
+								<div class="line-container">
+									<h5><strong>History</strong></h5>
+									<div class="line"></div>
 								</div>
+								<p class="copy">
+									The explosive adoption of autonomous robotics in the early to mid 21st century brought multiple fundamental shifts in society.
+								</p>
+								<p class="copy">Cont...</p>
 							</div>
 						</div>
 					</div>

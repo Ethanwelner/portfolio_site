@@ -410,7 +410,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 .blog-posts {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 24px;
 }
 
 .changelog-entries {

@@ -100,11 +100,19 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2070 – 2130</strong></h5>
+				<h5><strong>2070 – 2128</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
 				Partial technological singularity leading to the “end of science.”
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2070 – 2080</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				Plum Technologies quietly acquires a majority marketshare in the cybernetics and prosthetics industries.
 			</p>
 
 			<div class="line-container">
@@ -124,7 +132,7 @@
 			</p>
 
 			<div class="line-container">
-				<h5><strong>2080 – 2130</strong></h5>
+				<h5><strong>2080 – 2128</strong></h5>
 				<div class="line"></div>
 			</div>
 			<p class="copy">
