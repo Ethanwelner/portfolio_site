@@ -134,11 +134,11 @@
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
 					    	<div class="splash-proto">
-					    		<img src="img/mobile_proto.webp">
+					    		<img src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
 					    		<div class="thumb-scroll"></div>
 					    	</div>
 					    	<div class="shadow-splash shadow-heavy">
-						    	<img class="ux-splash" src="img/iphone_outline.webp">
+						    	<img class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
 						    </div>
 					    </div>
 
@@ -159,11 +159,11 @@
 				    </div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center splash-proto-container">
 				    	<div class="splash-proto">
-				    		<img src="img/mobile_proto.webp">
+				    		<img src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
 				    		<div class="thumb-scroll"></div>
 				    	</div>
 				    	<div class="shadow-splash shadow-heavy">
-					    	<img class="ux-splash" src="img/iphone_outline.webp">
+					    	<img class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
 					    </div>
 				    </div>
 				</div>

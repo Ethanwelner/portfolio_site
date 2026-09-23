@@ -145,13 +145,13 @@
 				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
 				    	<div class="teacher-demo" aria-hidden="true">
 				    		<div class="teacher-demo-stage">
-				    			<img class="teacher-demo-sizer" src="img/teacher_guide.webp" alt="">
-				    			<img class="teacher-demo-screen teacher-demo-guide" src="img/teacher_guide.webp" alt="">
-				    			<img class="teacher-demo-screen teacher-demo-roster" src="img/roster.webp" alt="">
-				    			<img class="teacher-demo-screen teacher-demo-modal" src="img/student_info.webp" alt="">
+				    			<img class="teacher-demo-sizer" src="img/teacher_guide.webp" alt="" aria-hidden="true">
+				    			<img class="teacher-demo-screen teacher-demo-guide" src="img/teacher_guide.webp" alt="" aria-hidden="true">
+				    			<img class="teacher-demo-screen teacher-demo-roster" src="img/roster.webp" alt="" aria-hidden="true">
+				    			<img class="teacher-demo-screen teacher-demo-modal" src="img/student_info.webp" alt="" aria-hidden="true">
 				    			<div class="teacher-demo-pointer">
-				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.webp" alt="">
-				    				<img class="teacher-demo-hand" src="img/pointer-hand.webp" alt="">
+				    				<img class="teacher-demo-arrow" src="img/pointer-arrow.webp" alt="" aria-hidden="true">
+				    				<img class="teacher-demo-hand" src="img/pointer-hand.webp" alt="" aria-hidden="true">
 				    			</div>
 				    		</div>
 				    	</div>
@@ -201,12 +201,12 @@
 										The new product would also need to represent a substantial upgrade in fit and finish over the previous solution, incorporating new brand standards and accessibility requirements.
 							    	</p>
 							    </div>
-						    	<img class="full-width-image shadow-diffuse" src="img/prep_3.webp">
-						    	<img class="full-width-image shadow-diffuse" src="img/prep_4.webp">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_3.webp" alt="Guardian Preparedness Check compatibility results screen">
+						    	<img class="full-width-image shadow-diffuse" src="img/prep_4.webp" alt="Guardian Preparedness Check support guidance screen">
 						    </div>
 					    	<div class="preparedness-gallery">
-					    		<img class="full-width-image shadow-diffuse" src="img/prep_1.webp">
-					    		<img class="full-width-image shadow-diffuse" src="img/prep_2.webp">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_1.webp" alt="Guardian Preparedness Check hardware selection screen">
+					    		<img class="full-width-image shadow-diffuse" src="img/prep_2.webp" alt="Guardian Preparedness Check benchmarking tips screen">
 						    	<div>
 							    	<div class="copy stinger yellow mb-3">A multi-step process with pomp and circumstance</div>
 							    	<p class="copy">
@@ -222,7 +222,7 @@
 					</div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 					<div class="separator d-none d-md-block"></div>
-					<img class="full-width-image feature" src="img/preparedness_laptop.webp">
+					<img class="full-width-image feature" src="img/preparedness_laptop.webp" alt="Guardian Preparedness Check shown on a laptop">
 				</div>
 				
 
@@ -241,10 +241,10 @@
 						</p>
 					</div>
 					<div class="email-gallery">
-						<img class="shadow-diffuse" src="img/email_1.webp">
-						<img class="shadow-diffuse" src="img/email_2.webp">
-						<img class="shadow-diffuse" src="img/email_3.webp">
-						<img class="shadow-diffuse" src="img/email_4.webp">
+						<img class="shadow-diffuse" src="img/email_1.webp" alt="Examity redesigned email template example">
+						<img class="shadow-diffuse" src="img/email_2.webp" alt="Examity redesigned email template example">
+						<img class="shadow-diffuse" src="img/email_3.webp" alt="Examity redesigned email template example">
+						<img class="shadow-diffuse" src="img/email_4.webp" alt="Examity redesigned email template example">
 					</div>
 			    </div>
 				
@@ -268,7 +268,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="design-splash shadow-diffuse" src="img/forecaster_interior.webp">
+				    	<img class="design-splash shadow-diffuse" src="img/forecaster_interior.webp" alt="Forecaster 121 luxury condo interior marketing image">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -281,7 +281,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-8 justify-content-start align-items-top">
 				    	<div class="forecaster-scroller-container shadow-diffuse">
-					    	<img class="forecaster-scroller" src="img/forecaster_scroller.webp">
+					    	<img class="forecaster-scroller" src="img/forecaster_scroller.webp" alt="Forecaster 121 long-form marketing page scroll mockup">
 				    	</div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
@@ -303,14 +303,14 @@
 
 				<div class="shadow-diffuse yellow-bg breakout z-1">
 					<div class="forcaster-gallery-container">
-				    	<img class="forecaster-squares"  src="img/design_gal_1.webp">
-				    	<img class="forecaster-squares"  src="img/design_gal_2.webp">
-				    	<img class="forecaster-squares"  src="img/design_gal_3.webp">
-				    	<img class="forecaster-gallery d-none d-lg-inline-block"  src="img/courtyard_board.webp">
-				    	<img class="forecaster-gallery d-none d-sm-inline-block"  src="img/window_covers_mockup.webp">
-				    	<img class="forecaster-squares"  src="img/design_gal_4.webp">
-				    	<img class="forecaster-squares"  src="img/design_gal_5.webp">
-				    	<img class="forecaster-squares"  src="img/design_gal_6.webp">
+				    	<img class="forecaster-squares"  src="img/design_gal_1.webp" alt="Forecaster 121 design gallery image">
+				    	<img class="forecaster-squares"  src="img/design_gal_2.webp" alt="Forecaster 121 design gallery image">
+				    	<img class="forecaster-squares"  src="img/design_gal_3.webp" alt="Forecaster 121 design gallery image">
+				    	<img class="forecaster-gallery d-none d-lg-inline-block"  src="img/courtyard_board.webp" alt="Forecaster 121 courtyard presentation board">
+				    	<img class="forecaster-gallery d-none d-sm-inline-block"  src="img/window_covers_mockup.webp" alt="Forecaster 121 window cover mockup">
+				    	<img class="forecaster-squares"  src="img/design_gal_4.webp" alt="Forecaster 121 design gallery image">
+				    	<img class="forecaster-squares"  src="img/design_gal_5.webp" alt="Forecaster 121 design gallery image">
+				    	<img class="forecaster-squares"  src="img/design_gal_6.webp" alt="Forecaster 121 design gallery image">
 				    </div>
 				</div>
 
@@ -342,7 +342,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center proto-image-anim">
-				    	<img class="full-width-image shadow-diffuse" src="img/block_proto.webp">
+				    	<img class="full-width-image shadow-diffuse" src="img/block_proto.webp" alt="Portfolio site early color and layout prototype">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -368,11 +368,11 @@
 
 				<div class="breakout z-1">
 					<div class="portfolio-gallery-container">
-				    	<img class="portfolio-gallery shadow-diffuse" src="img/portfolio_gallery_1.webp">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_2.webp">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_3.webp">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_4.webp">
-				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_5.webp">
+				    	<img class="portfolio-gallery shadow-diffuse" src="img/portfolio_gallery_1.webp" alt="Portfolio prototype gallery frame">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_2.webp" alt="Portfolio prototype gallery frame">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-sm-block" src="img/portfolio_gallery_3.webp" alt="Portfolio prototype gallery frame">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_4.webp" alt="Portfolio prototype gallery frame">
+				    	<img class="portfolio-gallery shadow-diffuse d-none d-lg-block" src="img/portfolio_gallery_5.webp" alt="Portfolio prototype gallery frame">
 					</div>
 				</div>
 
