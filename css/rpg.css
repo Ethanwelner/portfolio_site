@@ -402,6 +402,42 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     }
 }
 
+.blog-content {
+    max-width: 640px;
+    width: 100%;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.changelog-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.changelog-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.changelog-list li + li {
+    margin-top: 0.5rem;
+}
+
+.blog-post {
+    border: 1px solid var(--portfolio-light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.blog-post .copy:last-child {
+    margin-bottom: 0;
+}
+
 .model-photo-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
