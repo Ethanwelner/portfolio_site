@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="d-inline-flex container align-items-center flex-wrap flex-sm-nowrap">
-			<div class="flex-7 ">
+			<div class="flex-7 text-center">
 				<img class="headshot d-none d-sm-inline-block" src="img/headshot_crop.webp">
 			</div>
 
