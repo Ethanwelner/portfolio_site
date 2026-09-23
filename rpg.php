@@ -41,7 +41,7 @@
             <div class="personal-track">
 
                 <div class="personal-pane pane-personal is-visible" data-page="personal">
-                    <div class="section short-section gray-bg d-flex z-4">
+                    <div class="section short-section black-bg d-flex black-section z-4">
                         <div class="section-clip d-flex align-items-center justify-content-center">
                             <?php include 'php/header.php'; ?>
                             <?php

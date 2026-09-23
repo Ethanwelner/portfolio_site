@@ -9,6 +9,14 @@
     }
 }
 
+/* Short viewports: pull side nav up so it overlaps titles less */
+@media (max-height: 959px) {
+    .scroll-links,
+    .section-scroll-links {
+        top: 124px;
+    }
+}
+
 /* ========================================
    LARGE SCREENS (2200px+)
    ======================================== */
