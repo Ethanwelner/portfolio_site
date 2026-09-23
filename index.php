@@ -20,7 +20,7 @@
 				<!-- recolor header -->
 				<div class="nav-fade-container">
 					<!-- logo bug -->
-					<a href="index.php" class="logo-bug highlight-bg pre-slide-in">EW</a>
+					<a href="index.php" class="logo-bug highlight-bg pre-slide-in" aria-label="Ethan Welner home">EW</a>
 
 					<!-- side nav -->
 					<div class="scroll-links pre-slide-in">
@@ -36,29 +36,29 @@
 				<div class="about-social-container pre-slide-in">
 
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link highlight-bg">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link highlight-bg">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link highlight-bg">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 					<!-- about me link -->
-					<div class="about-me highlight-text about-me-link">About Me</div>
+					<button type="button" class="about-me highlight-text about-me-link">About Me</button>
 
 				</div>
 
@@ -70,8 +70,8 @@
 			  			Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>.<br/>
 						I'm a Designer <span class="red-text highlight-text">+</span> Front-End Developer.
 
-						<a href="#ui-section">
-							<svg  width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve" class="down-arrow">
+						<a href="#ui-section" aria-label="Scroll to UI / UX section">
+							<svg width="75px" height="75px" viewBox="0 0 75 75" enable-background="new 0 0 75 75" xml:space="preserve" class="down-arrow" aria-hidden="true">
 								<circle fill="none" stroke-width="3" cx="37.5" cy="37.5" r="36" class="circle highlight-stroke"/>
 								<path fill="none" stroke-width="3" d="M22.5,32.5l14.524,14.523L51.549,32.5" class="arrow-point highlight-stroke"/>
 							</svg>
@@ -90,7 +90,7 @@
 		<div id="ui-section" class="section red-bg d-flex">
 
 			<div class="section-clip">
-				<a href="index.php" class="section-logo-bug yellow-bg repaint">EW</a>
+				<a href="index.php" class="section-logo-bug yellow-bg repaint" aria-label="Ethan Welner home">EW</a>
 				<div class="section-scroll-links repaint yellow-text">
 					<div id="" class="force-dark"><a href="#ui-section"><span class="white-text nav-bullet">&#8226;</span> UI / UX</a></div>
 					<div id="" class="force-dark"><a href="#design-section">DESIGN</a></div>
@@ -101,30 +101,30 @@
 				<div class="section-about-social-container">
 
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link yellow-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link yellow-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link yellow-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 
 					<!-- about me link -->
-					<div class="section-about-me yellow-text repaint about-me-link">About Me</div>
+					<button type="button" class="section-about-me yellow-text repaint about-me-link">About Me</button>
 
 				</div>
 
@@ -178,7 +178,7 @@
 		<div id="design-section" class="section yellow-bg d-flex">
 
 			<div class="section-clip">
-				<a href="index.php" class="section-logo-bug green-bg repaint">EW</a>
+				<a href="index.php" class="section-logo-bug green-bg repaint" aria-label="Ethan Welner home">EW</a>
 				<div class="section-scroll-links repaint green-text">
 					<div id="" class="force-dark"><a href="#ui-section">UI / UX</a></div>
 					<div id="" class="force-dark"><a href="#design-section"><span class="white-text nav-bullet">&#8226;</span> DESIGN</a></div>
@@ -188,29 +188,29 @@
 				</div>
 				<div class="section-about-social-container">
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link green-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link green-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link green-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 					<!-- about me link -->
-					<div class="section-about-me green-text repaint about-me-link">About Me</div>
+					<button type="button" class="section-about-me green-text repaint about-me-link">About Me</button>
 				</div>
 
 				<div class="container d-flex z-2 dark-text">
@@ -255,7 +255,7 @@
 		<div id="research-section" class="section green-bg d-flex">
 
 			<div class="section-clip">
-				<a href="index.php" class="section-logo-bug blue-bg repaint">EW</a>
+				<a href="index.php" class="section-logo-bug blue-bg repaint" aria-label="Ethan Welner home">EW</a>
 				<div class="section-scroll-links repaint blue-text">
 					<div id="" class="force-dark"><a href="#ui-section">UI / UX</a></div>
 					<div id="" class="force-dark"><a href="#design-section">DESIGN</a></div>
@@ -266,30 +266,30 @@
 				<div class="section-about-social-container">
 
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link blue-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link blue-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link blue-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 
 					<!-- about me link -->
-					<div class="section-about-me blue-text repaint about-me-link">About Me</div>
+					<button type="button" class="section-about-me blue-text repaint about-me-link">About Me</button>
 
 				</div>
 
@@ -364,7 +364,7 @@
 		<div id="code-section" class="section blue-bg d-flex">
 
 			<div class="section-clip">
-				<a href="index.php" class="section-logo-bug red-bg repaint">EW</a>
+				<a href="index.php" class="section-logo-bug red-bg repaint" aria-label="Ethan Welner home">EW</a>
 				<div class="section-scroll-links repaint red-text">
 					<div id="" class="force-dark"><a href="#ui-section">UI / UX</a></div>
 					<div id="" class="force-dark"><a href="#design-section">DESIGN</a></div>
@@ -375,29 +375,29 @@
 				<div class="section-about-social-container">
 
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 					<!-- about me link -->
-					<div class="section-about-me red-text repaint about-me-link">About Me</div>
+					<button type="button" class="section-about-me red-text repaint about-me-link">About Me</button>
 
 				</div>
 
@@ -450,7 +450,7 @@
 		<div id="personal-section" class="section black-bg d-flex">
 
 			<div class="section-clip">
-				<a href="index.php" class="section-logo-bug white-bg repaint">EW</a>
+				<a href="index.php" class="section-logo-bug white-bg repaint" aria-label="Ethan Welner home">EW</a>
 				<div class="section-scroll-links repaint white-text">
 					<div id="" class="force-dark"><a href="#ui-section">UI / UX</a></div>
 					<div id="" class="force-dark"><a href="#design-section">DESIGN</a></div>
@@ -461,29 +461,29 @@
 				<div class="section-about-social-container">
 
 					<!-- social links -->
-					<a target="_blank" href="https://www.linkedin.com/in/ethan-welner-555b4055/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ethan-welner-555b4055/" aria-label="LinkedIn">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.1 512" aria-hidden="true">
 								<path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://www.instagram.com/shumagram/">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/shumagram/" aria-label="Instagram">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
 								<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1 147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
 							</svg>
 						</div>
 					</a>
-					<a target="_blank" href="https://github.com/Ethanwelner">
+					<a target="_blank" rel="noopener noreferrer" href="https://github.com/Ethanwelner" aria-label="GitHub">
 						<div class="social-link red-bg repaint">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 64 512 496" aria-hidden="true">
 								<path d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
 							</svg>
 						</div>
 					</a>
 					<!-- about me link -->
-					<div class="section-about-me red-text repaint about-me-link">About Me</div>
+					<button type="button" class="section-about-me red-text repaint about-me-link">About Me</button>
 
 				</div>
 
