@@ -267,26 +267,56 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-cybernetics" role="tabpanel" aria-labelledby="tab-tech-cybernetics">
-						<h3 class="mb-3">Cybernetics &amp; Robotics</h3>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Overview</strong></h5>
-									<div class="line"></div>
+						<div>
+							<h3 class="mb-3">Cybernetics</h3>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Overview</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy">
+										In the year 2200 cybernetics are commonplace.
+									</p>
+									<p class="copy">Cont...</p>
 								</div>
-								<p class="copy">
-									Content coming soon
-								</p>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy">
+										In contrast to the explosive growth of industrial and personal robotics in the mid 21st century, the field of cybernetics and human augmentation grew slowly. While the engineering of cybernetic prosthetics could borrow heavily from the daily advances in its sister field, the medical aspects of the craft developed slowly and with constant setbacks. In the end, it was an interface problem: wiring a limb into the human nervous system was, even in the 2050s, a monumental and failure-prone task. The difficulty was made all the worse by the insular and legalistic nature of the industry, with every advancement published under a mountain of patents and legal obscuration.
+									</p>
+									<p class="copy">Cont...</p>
+								</div>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
+						</div>
+						<div class="bumper"></div>
+						<div>
+							<h3 class="mb-3">Robotics</h3>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Overview</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy">
+										Content coming soon
+									</p>
 								</div>
-								<p class="copy">
-									Content coming soon
-								</p>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy">
+										The explosive adoption of autonomous robotics in the early to mid 21st century brought multiple fundamental shifts in society.
+									</p>
+									<p class="copy">Cont...</p>
+								</div>
 							</div>
 						</div>
 					</div>
