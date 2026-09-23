@@ -104,10 +104,10 @@
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<div class="force-size">
 							<div class="surface-proto">
-					    		<img src="img/sublime_screen.webp">
+					    		<img src="img/sublime_screen.webp" alt="Code editor screen on a tablet mockup">
 						    	<div class="sublime-blink"></div>
 					    	</div>
-						    <img class="surface-splash" src="img/surface_frame.webp">
+						    <img class="surface-splash" src="img/surface_frame.webp" alt="" aria-hidden="true">
 						</div>
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -269,7 +269,7 @@
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-top">
 				    	<div class="browser-mock-container">
 				    		<img class="full-width-image browser-mock browser-mock-sizer" src="img/browser_1.webp" alt="" aria-hidden="true">
-				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_1.webp" alt="">
+				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_1.webp" alt="Browser interface mockup, first frame">
 				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_2.webp" alt="" aria-hidden="true">
 				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_3.webp" alt="" aria-hidden="true">
 				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_4.webp" alt="" aria-hidden="true">

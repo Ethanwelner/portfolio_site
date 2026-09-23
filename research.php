@@ -99,7 +99,7 @@
 
 
 				<div class="mindmap-gallery-container shadow-diffuse breakout z-1">
-			    	<img class="mindmap-gallery gallery-top d-sm-inline-block" style="background-image: url('img/tt_pathways.webp');">
+			    	<img class="mindmap-gallery gallery-top d-sm-inline-block" style="background-image: url('img/tt_pathways.webp');" alt="Teacher task pathways mind map">
 				</div>
 
 
@@ -168,7 +168,7 @@
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/image_guide.webp">
+				    	<img class="full-width-image" src="img/image_guide.webp" alt="Research documentation and image guide example">
 				    </div>
 				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
