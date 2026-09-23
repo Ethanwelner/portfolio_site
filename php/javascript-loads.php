@@ -97,7 +97,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction" ].indexOf( hash ) !== -1;
+			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction" ].indexOf( hash ) !== -1;
 		}
 
 		function isPhotosHash(hash) {
@@ -226,6 +226,8 @@
 					nextHash = "introduction";
 				} else if ( tabId === "tab-mechanics" ) {
 					nextHash = "mechanics";
+				} else if ( tabId === "tab-changelog" ) {
+					nextHash = "changelog";
 				}
 				if ( window.location.hash.replace( /^#/, "" ) !== nextHash ) {
 					history.replaceState( null, "", "#" + nextHash );
@@ -240,6 +242,9 @@
 			var hash = personalHash();
 			if ( hash === "mechanics" || hash === "rpg-mechanics" || hash === "stats" || hash === "traits" || hash === "skills" || hash === "items" || hash === "character" ) {
 				return $( "#tab-mechanics" );
+			}
+			if ( hash === "changelog" || hash === "change-log" || hash === "rpg-changelog" ) {
+				return $( "#tab-changelog" );
 			}
 			return $( "#tab-setting" );
 		}

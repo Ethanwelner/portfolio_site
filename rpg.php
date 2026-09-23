@@ -114,6 +114,7 @@
                                         <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
                                             <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-changelog" aria-controls="rpg-changelog" aria-selected="false">Change Log</button>
                                         </div>
                                     </div>
                                     <div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -152,6 +153,12 @@
                             <div class="separator"></div>
 
                             <?php include 'php/rpg/rpg-technologies.php'; ?>
+                        </div>
+                    </div>
+
+                    <div class="section unlimited white-bg rpg-panel" id="rpg-changelog" role="tabpanel" aria-labelledby="tab-changelog">
+                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/rpg/rpg-changelog.php'; ?>
                         </div>
                     </div>
 
