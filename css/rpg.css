@@ -260,16 +260,18 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 
 .personal-page-nav a {
     display: inline-block;
+    position: relative;
+}
+
+.personal-page-nav .nav-bullet {
+    left: auto;
+    right: -18px;
 }
 
 .frontiers-accent,
 .personal-page-nav a.frontiers-accent,
 .personal-page-nav a.frontiers-accent .nav-bullet {
     color: #2dfc64;
-}
-
-.gray-bg .rpg-tab {
-    background: var(--portfolio-black);
 }
 
 .rpg-tabs {
@@ -385,7 +387,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     padding-bottom: 0;
 }
 
-.personal-pane .gray-bg {
+.personal-pane .black-section {
     color: var(--portfolio-white);
 }
 
