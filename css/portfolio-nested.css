@@ -695,6 +695,29 @@ hr {
     transition: margin-top .5s;
 }
 
+/* Keep About Me / close as <button> without changing their look.
+   Only strip UA button chrome — do not override class typography/color. */
+button.about-me,
+button.section-about-me,
+button.close-x {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+button.close-x {
+    display: block;
+}
+
+button.close-x svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
