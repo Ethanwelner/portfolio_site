@@ -67,6 +67,7 @@ if (is_file($requested)) {
         'svg'   => 'image/svg+xml',
         'ico'   => 'image/x-icon',
         'webp'  => 'image/webp',
+        'pdf'   => 'application/pdf',
         'webmanifest' => 'application/manifest+json',
         'html'  => 'text/html; charset=UTF-8',
         'json'  => 'application/json; charset=UTF-8',
