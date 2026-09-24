@@ -10,9 +10,31 @@
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 		<div class="flex-14">
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
+			<div class="tech-fields tech-fields-light">
+				<div class="tech-field-tab-list" role="tablist" aria-label="Spacecraft">
+					<button type="button" class="tech-field-tab is-active" role="tab" id="tab-craft-spacecraft" aria-controls="craft-spacecraft" aria-selected="true">Spacecraft</button>
+					<button type="button" class="tech-field-tab" role="tab" id="tab-craft-arks" aria-controls="craft-arks" aria-selected="false">Arks</button>
+					<button type="button" class="tech-field-tab" role="tab" id="tab-craft-stations" aria-controls="craft-stations" aria-selected="false">Stations</button>
+				</div>
+
+				<div class="tech-field-panel is-active" id="craft-spacecraft" role="tabpanel" aria-labelledby="tab-craft-spacecraft">
+					<p class="copy mb-0">
+						Content coming soon
+					</p>
+				</div>
+
+				<div class="tech-field-panel" id="craft-arks" role="tabpanel" aria-labelledby="tab-craft-arks">
+					<p class="copy mb-0">
+						Content coming soon
+					</p>
+				</div>
+
+				<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
+					<p class="copy mb-0">
+						Content coming soon
+					</p>
+				</div>
+			</div>
 		</div>
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 	</div>

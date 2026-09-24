@@ -16,9 +16,31 @@
 		<div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 			<div class="flex-14">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
+				<div class="tech-fields">
+					<div class="tech-field-tab-list" role="tablist" aria-label="Parabiology">
+						<button type="button" class="tech-field-tab is-active" role="tab" id="tab-para-parazoology" aria-controls="para-parazoology" aria-selected="true">Parazoology</button>
+						<button type="button" class="tech-field-tab" role="tab" id="tab-para-parasapients" aria-controls="para-parasapients" aria-selected="false">Parasapients</button>
+						<button type="button" class="tech-field-tab" role="tab" id="tab-para-paraflora" aria-controls="para-paraflora" aria-selected="false">Paraflora</button>
+					</div>
+
+					<div class="tech-field-panel is-active" id="para-parazoology" role="tabpanel" aria-labelledby="tab-para-parazoology">
+						<p class="copy mb-0">
+							Content coming soon
+						</p>
+					</div>
+
+					<div class="tech-field-panel" id="para-parasapients" role="tabpanel" aria-labelledby="tab-para-parasapients">
+						<p class="copy mb-0">
+							Content coming soon
+						</p>
+					</div>
+
+					<div class="tech-field-panel" id="para-paraflora" role="tabpanel" aria-labelledby="tab-para-paraflora">
+						<p class="copy mb-0">
+							Content coming soon
+						</p>
+					</div>
+				</div>
 			</div>
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
