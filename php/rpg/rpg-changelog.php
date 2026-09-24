@@ -7,6 +7,27 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>9/24/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Added tabbed panels under Spacecraft (Starships / Arks / Stations), Parabiology (Parazoology / Parasapients / Paraflora), and Locations (Earth / System / Interstellar).</li>
+						<li>Wrote Lorentz Field Generator History, expanded its Overview, and moved first LFG tests to 2146 on the timeline.</li>
+						<li>Named 1/a/384 - “Paraloka” on the 2126 and 2127 timeline entries.</li>
+						<li>Wrote Aether Sails History.</li>
+						<li>Expanded Switch Gates History through the Lunar Hostage Crisis.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
+					<p class="copy mb-3"><i>9/23/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Added Spacecraft, Parabiology, and Locations setting sections with side-nav links.</li>
+						<li>Expanded Switch Gates properties and Cybernetics History (Plum Technologies, End of Science stagnation).</li>
+						<li>Finished Cybernetics Overview with the top five suppliers by market share.</li>
+						<li>Capitalized End of Science and moved its timeline range to 2060–2128.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Added Leviathan as a known plane and filled in claim fields across the Known Planes attributes.</li>
