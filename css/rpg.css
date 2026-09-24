@@ -348,6 +348,15 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     color: var(--portfolio-black);
 }
 
+.tech-fields-light {
+    border-color: var(--portfolio-black);
+}
+
+.tech-fields-light .tech-field-tab.is-active {
+    background: var(--portfolio-black);
+    color: var(--portfolio-white);
+}
+
 .tech-field-panel {
     display: none;
 }
