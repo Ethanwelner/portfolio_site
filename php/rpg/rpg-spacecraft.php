@@ -12,12 +12,12 @@
 		<div class="flex-14">
 			<div class="tech-fields tech-fields-light">
 				<div class="tech-field-tab-list" role="tablist" aria-label="Spacecraft">
-					<button type="button" class="tech-field-tab is-active" role="tab" id="tab-craft-spacecraft" aria-controls="craft-spacecraft" aria-selected="true">Spacecraft</button>
+					<button type="button" class="tech-field-tab is-active" role="tab" id="tab-craft-starships" aria-controls="craft-starships" aria-selected="true">Starships</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-craft-arks" aria-controls="craft-arks" aria-selected="false">Arks</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-craft-stations" aria-controls="craft-stations" aria-selected="false">Stations</button>
 				</div>
 
-				<div class="tech-field-panel is-active" id="craft-spacecraft" role="tabpanel" aria-labelledby="tab-craft-spacecraft">
+				<div class="tech-field-panel is-active" id="craft-starships" role="tabpanel" aria-labelledby="tab-craft-starships">
 					<p class="copy mb-0">
 						Content coming soon
 					</p>

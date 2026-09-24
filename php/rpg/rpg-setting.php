@@ -176,7 +176,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First tests of a “switch gate” are made targeting the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
+				First tests of a “switch gate” are made targeting 1/a/384 - “Paraloka,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
 			</p>
 
 			<div class="line-container">
@@ -184,7 +184,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				First exotic materials are harvested, leading to the creation of more “switch gates” as well as the first tests of Lorentz Field Generators.
+				First exotic materials are harvested from 1/a/384 - “Paraloka,” leading to the creation of more “switch gates.”
 			</p>
 
 			<div class="line-container">
@@ -225,6 +225,14 @@
 			</div>
 			<p class="copy">
 				Exodus.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2146</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				First tests of Lorentz Field Generators.
 			</p>
 
 			<div class="line-container">
