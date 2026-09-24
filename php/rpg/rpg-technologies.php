@@ -283,8 +283,18 @@
 									All that said, there’s still a stigma attached to heavy and visible cybernetic augmentation. Cybernetics are seen as a tool of the laboring classes. A sacrifice made to be better at one’s job because there’s no other choice, or even something contractually foisted upon someone. Indeed, many physically demanding or dangerous jobs both require and pay for augmentative prosthesis surgeries, but the limbs and implants remain the property of the company and must be returned upon dismissal.
 								</p>
 								<p class="copy">
-									The introduction of exotic materials has brought a storm of new products and upgrades to the cybernetics industry. Though still expensive, exotically enhanced bionics and endobionics can offer dramatically improved, if relatively untested and sometimes short-lived, performance boosts. Many a team of planar explorers have been bankrolled by even a single discovery of materials with significant paraphysical properties useful for cybernetics.
+									The introduction of exotic materials has brought a storm of new products and upgrades to the cybernetics industry. Often sold at a substantial premium, exotically enhanced bionics and endobionics can offer dramatically improved, if relatively untested and sometimes short-lived, performance boosts. Many a team of planar explorers have been bankrolled by even a single discovery of materials with significant paraphysical properties useful for cybernetics.
 								</p>
+								<p class="copy">
+									In 2200 there are dozens of major suppliers for cybernetics, with specialties ranging from optics to military equipment to specialized industrial equipment. The following are the top five cybernetics suppliers by market share:
+								</p>
+								<ol class="copy">
+									<li>Plum Technologies (38%)</li>
+									<li>Měishǒu Jítuán (Beautiful Hand Group) (16%)</li>
+									<li>Luxoptica (15%)</li>
+									<li>Shine! (12%)</li>
+									<li>Lagos-Core Defense (6%)</li>
+								</ol>
 							</div>
 							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6">
@@ -301,7 +311,6 @@
 								<p class="copy">
 									With its reliance on advanced materials science and energy storage breakthroughs, the field of cybernetics was one of the hardest hit by the End of Science. Early advances made by the Plum monopoly brought rapid improvement, but by the 2090s those advancements had slowed to a crawl, with new product releases focusing more on cosmetic changes or service updates than any true innovation or improvement. The industry would remain stagnant over the next three decades. It wouldn’t be until exotic materials started to make their way into consumer products in the late 2130s that cybernetics would see their second major renaissance.
 								</p>
-								<p class="copy">Cont...</p>
 							</div>
 						</div>
 					</div>
