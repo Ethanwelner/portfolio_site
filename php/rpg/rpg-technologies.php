@@ -57,14 +57,18 @@
 										A switch gate is, at its simplest, a machine that exchanges an area of contiguous, contained space-time for an identically sized area located on another plane of reality. The form and scale of a switch gate are highly variable. Nearly half a century of development and innovation by dozens of manufacturers has led to several distinct evolutionary lines of the technology.
 									</p>
 									<p class="copy">
+										Switch gates have one primary utility: they break the first law of thermodynamics. By exchanging one amount of space for another, they, in a roundabout way, both create and destroy energy. Aside from the headline aspects of exploration and access to parallel planes, they provide a bit of a hack around many otherwise inviolable limitations. Miniaturized switch gates attuned to specific planes and installed aboard spacecraft are capable of “harvesting” materials like hydrogen or water. Switch gates attuned to empty or secure planes can be used for the disposal of dangerous materials, or the safe storage of valuable ones. Switch gates attuned to particularly hostile or compressed planes can even be used as a form of makeshift weapon.
+									</p>
+									<p class="copy">
 										All switch gates share a few intrinsic properties:
 									</p>
 									<ul class="copy">
 										<li>They require a “Spine” of St-245/E6, an ultra-dense and nearly indestructible exotic material first mined directly from The Gift's floor structure.</li>
-										<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged.</li>
+										<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. There is, as of yet, no known way to move this lock without retuning, and re-establishing a lock in the same location is exceptionally difficult, if possible at all.</li>
 										<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 										<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
 										<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Corrupted Physics.”</li>
+										<li>Switch gates, and indeed any of the paraphysical effects of St-245/E6, do not work in any as-of-yet discovered plane other than Earth baseline.</li>
 										<li>The process is one-sided. A switch gate exchanges an area with a planar location; the subject plane does not require its own switch gate.</li>
 									</ul>
 								</div>
