@@ -44,6 +44,14 @@
 			</p>
 
 			<div class="line-container">
+				<h5><strong>2029</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The AI market crash plunges the world into the second great depression.
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2034</strong></h5>
 				<div class="line"></div>
 			</div>
