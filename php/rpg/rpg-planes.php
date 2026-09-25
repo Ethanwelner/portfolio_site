@@ -9,14 +9,16 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<ul class="copy mb-0">
-			<li>Planes are separate self-contained universes, accessible through a switch gate.</li>
-			<li>Planes exist in an infinite stack-order from high to low.</li>
-			<li>Matter or energy transported downward in the planes maintains its physical properties and can enforce its physical laws upon nearby reality. These are called “exotic” materials, and are often used to create technologies that would otherwise be impossible with mundane physical laws.</li>
-			<li>Exotic matter is the underlying reason why the setting can have FTL and interdimensional travel. Exotic matter is extremely rare and difficult to acquire owing to the extreme danger of accessing higher planes.</li>
-			<li>Matter or energy transported upward along the planes has the physical laws of the planes it is transported to immediately applied to it.</li>
-			<li>The further a reality is up or down from the one with the gate the harder it is to discover, lock on to, and the more power required to perform a swap.</li>
-		</ul>
+		<div class="single-column-content">
+			<ul class="copy mb-0">
+				<li>Planes are separate self-contained universes, accessible through a switch gate.</li>
+				<li>Planes exist in an infinite stack-order from high to low.</li>
+				<li>Matter or energy transported downward in the planes maintains its physical properties and can enforce its physical laws upon nearby reality. These are called “exotic” materials, and are often used to create technologies that would otherwise be impossible with mundane physical laws.</li>
+				<li>Exotic matter is the underlying reason why the setting can have FTL and interdimensional travel. Exotic matter is extremely rare and difficult to acquire owing to the extreme danger of accessing higher planes.</li>
+				<li>Matter or energy transported upward along the planes has the physical laws of the planes it is transported to immediately applied to it.</li>
+				<li>The further a reality is up or down from the one with the gate the harder it is to discover, lock on to, and the more power required to perform a swap.</li>
+			</ul>
+		</div>
 		<div class="bumper"></div>
 		<div class="tech-fields">
 			<div class="tech-field-tab-list" role="tablist" aria-label="Planar hierarchy">
@@ -307,6 +309,56 @@
 						Average Temperature: 8–15°C<br>
 						Biome: Ocean Aquatic<br>
 						Natural Resources: Water, Hydrogen, Exotic Fauna<br>
+						Indigenous life: Yes
+					</p>
+					<p class="copy">
+						Discovered:<br>
+						Claim:<br>
+						Nations of Interest:
+					</p>
+				</div>
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+					<div class="flex-7">
+						<div class="line-container">
+							<h5><strong>Overview</strong></h5>
+							<div class="line"></div>
+						</div>
+						<p class="copy">
+							Content coming soon
+						</p>
+					</div>
+					<div class="d-inline-flex align-items-center flex-1"></div>
+					<div class="flex-6">
+						<div class="line-container">
+							<h5><strong>Geography</strong></h5>
+							<div class="line"></div>
+						</div>
+						<p class="copy">
+							Content coming soon
+						</p>
+					</div>
+				</div>
+
+				<div class="separator"></div>
+
+				<h3 class="mb-3">65/T/137 - “<i>Saturday’s Furnace</i>”</h3>
+				<div class="line-container">
+					<h5><strong>Planar Attributes</strong></h5>
+					<div class="line"></div>
+				</div>
+				<div class="plane-attr-cols">
+					<p class="copy">
+						Compatibility: Low<br>
+						Elevation: 5<br>
+						Divergence: 6<br>
+						Distance: 3<br>
+						Aperture: 4
+					</p>
+					<p class="copy">
+						Population: Industrial crews est<br>
+						Average Temperature: 230°C<br>
+						Biome: Radiant High-Pressure<br>
+						Natural Resources: Hydrogen, Water, Exotic Flora<br>
 						Indigenous life: Yes
 					</p>
 					<p class="copy">
