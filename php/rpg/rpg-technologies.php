@@ -269,13 +269,13 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									Artificial Intelligence (AI) in 2200 is a far cry from the city-sized god-machines of the mid-21st century. Modern AI systems are, by heavily enforced and near-universal law, wholly self-contained and non-networked pieces of hardware. Roughly 14 cm (6 in) in maximum size, an AI unit is built to approximate the scale and capabilities of a human brain. AI systems are, by law, built with low-bandwidth (by computing standards) input and output capabilities, but are still capable of near-instantaneous computation, perception, and action. They are, however, bogged down with all the baggage that comes with sentience.
+									Artificial Intelligence (AI) in 2200 is a far cry from the city-sized god-machines of the mid-21st century. Modern AI systems are, by heavily enforced and near-universal law, wholly self-contained and non-networked pieces of hardware. Roughly 14cm/6” in maximum size, an AI unit is built to approximate the rough scale and capabilities of a human brain. AI systems are, by law, built with low-bandwidth (by computing standards) input and output capabilities, but are still capable of near-instantaneous computation, perception, and action. They are, however, bogged down with all the baggage that comes with sentience.
 								</p>
 								<p class="copy">
-									The creation of a modern AI module is complex and expensive, but the benefits are numerous. An AI doesn’t grow tired; it needs only electricity to function; it can be moved between “bodies” without issue; and, in some cases, it can even be brought back from the dead. This has led to AI systems being vital to the Exodus, and AI modules permeate every facet of human society. In truth, it’s not even accurate to call it human society anymore, as AI systems are, in many places, full and equal citizens of their respective societies.
+									The creation of a modern AI module is complex and expensive, but the benefits are numerous. An AI doesn’t grow tired, it needs only electricity to function, it can be moved between “bodies” without issue, and, in some cases, it can even be brought back from the dead. With bodies that didn’t need food or rest, AI crew members found a niche that proved vital to the Exodus, and to this day AI citizens are over-represented among crews operating aboard starships. AI modules now permeate nearly every facet of human society. In truth, it’s not even accurate to call it human society anymore, as AI systems are, in many places, full and equal citizens of their respective nations.
 								</p>
 								<p class="copy">
-									AI systems, while less temperamental and prone to changes in mood or preference than a human equivalent, still change. A shipboard AI governing the actions of a cargo freighter can and will quickly grow bored of its assignment, and a lack of meaningful sensory input will grate on an AI just as quickly as it would a human. AIs are often given entertainment or vacation, just as humans are. A particularly valuable or specialized AI may even demand routine breaks or distractions, and certain lines of high-end AI systems are well known to be “fussy.”
+									AI systems, while less temperamental and prone to swings in mood or preference than a human equivalent, still change. A shipboard AI governing the actions of a cargo freighter can and will quickly grow bored of its assignment, and a lack of meaningful sensory input will grate on an AI just as quickly as it would a human. AIs are often given entertainment or vacation, just as their human coworkers are. A particularly valuable or specialized AI may even demand routine breaks or distraction, and certain lines of particularly high-end AI systems are well known to be “fussy”.
 								</p>
 							</div>
 							<div class="d-inline-flex align-items-center flex-1"></div>
@@ -285,7 +285,10 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									Few technologies have had as much impact on the course of human development as AI. The road to the current state of self-contained, autonomous, non-networked, and fully independent AI systems was fraught with hazards, and the standing of AI systems as citizens within the broader societies of Earth and the numerous independent colonies is hotly debated. What is not debatable is that AI is dangerous. In the 21st century...
+									Few technologies have had as much impact on the course of human development as AI, and the road to the current state of self-contained, autonomous, non-networked, and fully independent AI systems was fraught with hazards. The state of AI systems as citizens within the broader societies of Earth and its numerous independent colonies is hotly debated. What is not debatable is that AI is dangerous. This much is a fact, well attested by history.
+								</p>
+								<p class="copy">
+									In the early 21st century, the development of true stochastic thinking machines stoked a frenzy of investment. Companies and nations competed to build ever faster, larger, and more elaborate AI platforms, housed in vast datacenters. Concerns about environmental impact, fragile power grids, and staggering debt were brushed aside in the pursuit of dominance in a field that no one could quite describe. In 2029, exactly a century after the Wall Street Crash that signaled the beginning of the Great Depression, the bubble popped, heralding the Second Great Depression.
 								</p>
 								<p class="copy">Cont...</p>
 							</div>
