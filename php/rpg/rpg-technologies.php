@@ -16,24 +16,26 @@
 		<div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 			<div class="flex-14">
-				<p class="copy">
-					The End of Science wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover on this blue marble, and the bleeding edge was finally out of reach.
-				</p>
-				<p class="copy">
-					There were, of course, proposals. Supercolliders that would ring the Earth, space elevators, generation ships to distant stars. But without the required undiscovered materials, the engineering never worked, and besides, who would pay for that? What would even be the point?
-				</p>
-				<p class="copy">
-					It took decades to even have a name, but its effect was widespread. Industries that relied on a steady drumbeat of advancement pivoted from technological to financial engineering, markets consolidated, and the sense that the future would always bring new prosperity faded. Interest in the sciences plummeted, replaced by the ennui of a society that could see its end coming and was either unwilling or unable to do anything about it.
-				</p>
-				<p class="copy">
-					In the midst of a slow-rolling ecological collapse brought on by unconstrained industrialization, and of the pervasive change in society brought on by the mass deployment of AI systems, this collapse of optimism was profound. Wealth inequality brought crime and destabilized societies as capitalism calcified into techno-feudalism.
-				</p>
-				<p class="copy">
-					Then, The Gift appeared on the moon.
-				</p>
-				<p class="copy mb-0">
-					The Gift was more than just an instruction manual in the form of a temple; it was the solution to The End of Science. Paraphysics introduced theories to skirt the fundamental limits of nature, and exotic materials provided the tangible bricks upon which this new era would be built. In the decades since The Gift, interest in the sciences has exploded. New discoveries are made every day, and the old problems that had stymied progress finally have solutions.
-				</p>
+				<div class="single-column-content">
+					<p class="copy">
+						The End of Science wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover on this blue marble, and the bleeding edge was finally out of reach.
+					</p>
+					<p class="copy">
+						There were, of course, proposals. Supercolliders that would ring the Earth, space elevators, generation ships to distant stars. But without the required undiscovered materials, the engineering never worked, and besides, who would pay for that? What would even be the point?
+					</p>
+					<p class="copy">
+						It took decades to even have a name, but its effect was widespread. Industries that relied on a steady drumbeat of advancement pivoted from technological to financial engineering, markets consolidated, and the sense that the future would always bring new prosperity faded. Interest in the sciences plummeted, replaced by the ennui of a society that could see its end coming and was either unwilling or unable to do anything about it.
+					</p>
+					<p class="copy">
+						In the midst of a slow-rolling ecological collapse brought on by unconstrained industrialization, and of the pervasive change in society brought on by the mass deployment of AI systems, this collapse of optimism was profound. Wealth inequality brought crime and destabilized societies as capitalism calcified into techno-feudalism.
+					</p>
+					<p class="copy">
+						Then, The Gift appeared on the moon.
+					</p>
+					<p class="copy mb-0">
+						The Gift was more than just an instruction manual in the form of a temple; it was the solution to The End of Science. Paraphysics introduced theories to skirt the fundamental limits of nature, and exotic materials provided the tangible bricks upon which this new era would be built. In the decades since The Gift, interest in the sciences has exploded. New discoveries are made every day, and the old problems that had stymied progress finally have solutions.
+					</p>
+				</div>
 				<div class="bumper"></div>
 				<div class="tech-fields">
 					<div class="tech-field-tab-list" role="tablist" aria-label="Major fields">

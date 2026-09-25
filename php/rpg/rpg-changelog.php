@@ -1,7 +1,7 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<div class="blog-content">
+		<div class="single-column-content">
 			<h3 class="sub-title mb-3" id="changelog">Change Log</h3>
 			<div class="copy stinger black mb-3">Content Updates</div>
 

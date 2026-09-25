@@ -431,6 +431,11 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     width: 100%;
 }
 
+.single-column-content {
+    max-width: 768px;
+    width: 100%;
+}
+
 .blog-posts {
     display: flex;
     flex-direction: column;
@@ -460,6 +465,10 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 
 .blog-post .copy:last-child {
     margin-bottom: 0;
+}
+
+.intro-vignette .copy {
+    font-style: italic;
 }
 
 .model-photo-gallery {
