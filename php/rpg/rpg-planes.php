@@ -358,7 +358,7 @@
 						Population: 0<br>
 						Average Temperature: 230°C<br>
 						Biome: Furnace<br>
-						Natural Resources: Exotic Helium Isotopes<br>
+						Natural Resources: Exotic Helium Isotopes, Extremophile Microbes<br>
 						Indigenous life: Yes
 					</p>
 					<p class="copy">
