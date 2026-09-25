@@ -5,7 +5,7 @@ $rpgLinksInvert = $rpgLinksTone === 'white';
 $rpgLinksClass = $rpgLinksTone === 'white' ? 'white' : 'black';
 $rpgLinks = $rpgLinksKind === 'setting'
 	? [
-		'#timeline' => 'Timeline',
+		'#introduction' => 'Introduction',
 		'#thesciences' => 'The Sciences',
 		'#hierarchy' => 'The Planes',
 		'#spacecraft' => 'Spacecraft',

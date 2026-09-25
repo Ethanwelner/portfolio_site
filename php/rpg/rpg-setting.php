@@ -2,7 +2,7 @@
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="introduction">Introduction</h3>
-		<div class="copy stinger black mb-3">The world of Strange Frontiers</div>
+		<div class="copy stinger black mb-3">The Worlds Of Strange Frontiers</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
@@ -34,9 +34,22 @@
 <div class="separator"></div>
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
-	<div class="flex-7">
-			<h3 class="mb-3" id="timeline">Timeline</h3>
+	<div class="flex-14">
+		<div class="tech-fields tech-fields-light" id="timeline">
+			<div class="tech-field-tab-list" role="tablist" aria-label="Timeline">
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-world" aria-controls="timeline-world" aria-selected="false">The Setting</button>
+				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="true">Timeline</button>
+			</div>
 
+			<div class="tech-field-panel" id="timeline-world" role="tabpanel" aria-labelledby="tab-timeline-world">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
+
+			<div class="tech-field-panel is-active" id="timeline-events" role="tabpanel" aria-labelledby="tab-timeline-events">
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+					<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>1970 – 2200</strong></h5>
 				<div class="line"></div>
@@ -353,6 +366,10 @@
 			<p class="copy">
 				A lower plane composed entirely of ultra-dense neutrons is swapped. Though the amount of matter transferred was smaller than a grain of sand, the explosion killed millions.
 			</p>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
