@@ -348,17 +348,17 @@
 				</div>
 				<div class="plane-attr-cols">
 					<p class="copy">
-						Compatibility: Low<br>
-						Elevation: 5<br>
+						Compatibility: Medium<br>
+						Elevation: 3<br>
 						Divergence: 6<br>
-						Distance: 3<br>
-						Aperture: 4
+						Distance: 6<br>
+						Aperture: 6
 					</p>
 					<p class="copy">
-						Population: Industrial crews est<br>
+						Population: 0<br>
 						Average Temperature: 230°C<br>
-						Biome: Radiant High-Pressure<br>
-						Natural Resources: Hydrogen, Water, Exotic Flora<br>
+						Biome: Furnace<br>
+						Natural Resources: Exotic Helium Isotopes<br>
 						Indigenous life: Yes
 					</p>
 					<p class="copy">
