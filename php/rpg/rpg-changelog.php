@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>9/25/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Moved the timeline into Setting / Timeline tabs and pointed the side nav at Introduction.</li>
+						<li>Retitled the introduction stinger to The Worlds Of Strange Frontiers.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/24/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Added tabbed panels under Spacecraft (Starships / Arks / Stations), Parabiology (Parazoology / Parasapients / Paraflora), and Locations (Earth / System / Interstellar).</li>
