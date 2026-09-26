@@ -62,7 +62,8 @@
                                     <div class="flex-2 d-none d-xl-inline-flex"></div>
                                     <div class="flex-14">
                                         <div class="rpg-tab-list" role="tablist" aria-label="Personal sections">
-                                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-blog" aria-controls="personal-blog" aria-selected="true">Project &amp; Blog</button>
+                                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-blog" aria-controls="personal-blog" aria-selected="true">Blog</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-projects" aria-controls="personal-projects" aria-selected="false">Projects</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-photos" aria-controls="personal-photos" aria-selected="false">Model Photos</button>
                                         </div>
                                     </div>
@@ -75,6 +76,12 @@
                     <div class="section unlimited white-bg rpg-panel is-active" id="personal-blog" role="tabpanel" aria-labelledby="tab-blog">
                         <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
                             <?php include 'php/personal/blog.php'; ?>
+                        </div>
+                    </div>
+
+                    <div class="section unlimited white-bg rpg-panel" id="personal-projects" role="tabpanel" aria-labelledby="tab-projects">
+                        <div class="container d-flex z-2 flex-wrap mt-5 mt-lg-0">
+                            <?php include 'php/personal/projects.php'; ?>
                         </div>
                     </div>
 

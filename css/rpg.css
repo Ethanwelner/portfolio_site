@@ -467,6 +467,31 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     margin-bottom: 0;
 }
 
+.project-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project-title {
+    padding-bottom: .75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--portfolio-light-gray);
+}
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
 .intro-vignette .copy {
     font-style: italic;
 }

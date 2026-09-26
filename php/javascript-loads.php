@@ -104,6 +104,10 @@
 			return [ "photos", "models", "photography", "model-photos" ].indexOf( hash ) !== -1;
 		}
 
+		function isProjectsHash(hash) {
+			return hash === "projects";
+		}
+
 		function syncPersonalShellHeight() {
 			var shell = document.querySelector( ".personal-shell" );
 			var pane = document.querySelector( ".personal-pane.is-visible" );
@@ -222,6 +226,8 @@
 				var nextHash = "blog";
 				if ( tabId === "tab-photos" ) {
 					nextHash = "photos";
+				} else if ( tabId === "tab-projects" ) {
+					nextHash = "projects";
 				} else if ( tabId === "tab-setting" ) {
 					nextHash = "introduction";
 				} else if ( tabId === "tab-mechanics" ) {
@@ -262,7 +268,13 @@
 			}
 
 			showPersonalPage( "personal", animate );
-			activatePaneTab( isPhotosHash( hash ) ? $( "#tab-photos" ) : $( "#tab-blog" ), false );
+			if ( isPhotosHash( hash ) ) {
+				activatePaneTab( $( "#tab-photos" ), false );
+			} else if ( isProjectsHash( hash ) ) {
+				activatePaneTab( $( "#tab-projects" ), false );
+			} else {
+				activatePaneTab( $( "#tab-blog" ), false );
+			}
 		}
 
 		if ( $( ".personal-shell" ).length ) {
