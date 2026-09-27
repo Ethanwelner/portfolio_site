@@ -467,6 +467,19 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     margin-bottom: 0;
 }
 
+.blog-post-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
 .project-entries {
     display: flex;
     flex-direction: column;

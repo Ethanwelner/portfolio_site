@@ -32,8 +32,8 @@
 				</div>
 				<div class="d-inline-flex align-items-center flex-1"></div>
 				<div class="flex-6 project-images">
-					<img src="img/blog page stuff/basement_nook_1.webp" alt="Basement corner with a neon cat sign, a stepladder, and daybed slats leaning against a stone wall">
-					<img src="img/blog page stuff/basement_nook_2.webp" alt="Cleared basement corner with stone walls, string lights, and a dark floor mat">
+					<img src="img/blog page stuff/basement_nook_1.webp" width="800" height="603" alt="Basement corner with a neon cat sign, a stepladder, and daybed slats leaning against a stone wall">
+					<img src="img/blog page stuff/basement_nook_2.webp" width="800" height="603" alt="Cleared basement corner with stone walls, string lights, and a dark floor mat">
 				</div>
 			</div>
 		</div>
