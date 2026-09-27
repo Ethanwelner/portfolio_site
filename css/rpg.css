@@ -505,6 +505,12 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     }
 }
 
+.project-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: start;
+}
+
 .intro-vignette .copy {
     font-style: italic;
 }
