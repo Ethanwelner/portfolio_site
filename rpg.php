@@ -9,6 +9,8 @@
     </head>
     <body>
 
+        <?php include 'php/rpg/rpg-night.php'; ?>
+
         <a href="index.php" class="section-logo-bug black-bg repaint z-3" aria-label="Ethan Welner home">EW</a>
         <div class="section-about-social-container z-3">
                 <!-- social links -->
@@ -96,9 +98,6 @@
 
                 <div class="personal-pane pane-frontiers" data-page="frontiers">
                     <div class="section short-section black-bg d-flex black-section z-4">
-                        <div class="rpg-night-window">
-                            <?php include 'php/rpg/rpg-night.php'; ?>
-                        </div>
                         <div class="section-clip d-flex align-items-center justify-content-center ">
                             <?php include 'php/header.php'; ?>
                             <?php
@@ -179,10 +178,7 @@
                         </div>
                     </div>
 
-                    <div class="rpg-night-window-footer">
-                        <div class="rpg-night-window">
-                            <?php include 'php/rpg/rpg-night.php'; ?>
-                        </div>
+                    <div class="rpg-night-footer">
                         <?php include 'php/footer.php'; ?>
                     </div>
                 </div>

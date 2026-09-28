@@ -334,6 +334,7 @@
 
 		<!-- this loads the page footer for both mobile and desktop -->
 		<?php include 'php/about.php'; ?>
+		<?php include 'php/image-modal.php'; ?>
 
 
 		<!-- this loads the javascript plugins for each page -->

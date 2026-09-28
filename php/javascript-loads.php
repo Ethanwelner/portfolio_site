@@ -315,10 +315,49 @@
 			window.requestAnimationFrame( updateRpgLinkHighlight );
 		}
 
+		function updateSkyHoles(panel) {
+			var box = panel.getBoundingClientRect();
+			if ( ! box.width || ! box.height ) {
+				return;
+			}
+			var path = "M0 0H" + box.width + "V" + box.height + "H0Z";
+			$( panel ).find( ".breakout" ).each(function() {
+				var rect = this.getBoundingClientRect();
+				var left = Math.floor( rect.left - box.left );
+				var top = Math.floor( rect.top - box.top );
+				var right = Math.ceil( rect.right - box.left );
+				var bottom = Math.ceil( rect.bottom - box.top );
+				path += "M" + left + " " + top + "H" + right + "V" + bottom + "H" + left + "Z";
+			});
+			panel.style.setProperty( "--rpg-sky-holes", "path(evenodd, '" + path + "')" );
+			panel.classList.add( "has-sky-holes" );
+		}
+
+		var skyPanels = $( ".pane-frontiers .rpg-panel" ).filter(function() {
+			return $( this ).find( ".breakout" ).length > 0;
+		}).get();
+
+		if ( skyPanels.length && window.ResizeObserver && window.CSS && CSS.supports( "clip-path", "path(evenodd, 'M0 0H1V1H0Z')" ) ) {
+			var skyHoleObserver = new ResizeObserver(function( entries ) {
+				entries.forEach(function( entry ) {
+					updateSkyHoles( entry.target );
+				});
+			});
+			skyPanels.forEach(function( panel ) {
+				skyHoleObserver.observe( panel );
+			});
+		}
+
 		var $imageModal = $( ".image-modal" );
 		var $imageModalImg = $imageModal.find( ".image-modal-img" );
 		var $imageModalClose = $imageModal.find( ".image-modal-close" );
-		var $zoomableImages = $( ".model-photo-gallery img, .project-images img" );
+		var $zoomableImages = $( "img[src]" )
+			.not( ".image-modal-img, [aria-hidden='true'], a img" )
+			.not( ".splash-proto img, .surface-proto img, .browser-mock, .forecaster-scroller" )
+			.filter(function() {
+				return ! /\.(svg|gif)(\?|$)/i.test( $( this ).attr( "src" ) );
+			})
+			.addClass( "is-zoomable" );
 		var imageModalReturnFocus = null;
 
 		function openImageModal($img) {
