@@ -110,6 +110,7 @@ strong .mechanic-text {
 }
 
 .breakout:has(> .rpg-links-clip) {
+    position: relative;
     z-index: 4;
 }
 
@@ -224,9 +225,9 @@ body:has(.personal-shell) {
     visibility: visible;
 }
 
-.personal-shell.is-sliding .personal-pane > :not(.short-section),
-.personal-shell.is-sliding .short-section .rpg-night-window {
-    display: none;
+.personal-shell.is-sliding .personal-pane > :not(.short-section) > * {
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* Transform on the track creates a stacking context, so the page-level black
@@ -243,14 +244,14 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     position: absolute;
 }
 
-.personal-shell.transitions-on.is-revealing .personal-pane.is-visible > :not(.short-section),
-.personal-shell.transitions-on.is-revealing .personal-pane.is-visible > .short-section .rpg-night-window {
+/* Fade what's inside each section, not the sections, so panel whites and the
+   footer tint land immediately instead of fading up from the night sky. */
+.personal-shell.transitions-on.is-revealing .personal-pane.is-visible > :not(.short-section) > * {
     opacity: 0;
     transition: opacity 350ms ease;
 }
 
-.personal-shell.transitions-on.is-revealing.is-revealed .personal-pane.is-visible > :not(.short-section),
-.personal-shell.transitions-on.is-revealing.is-revealed .personal-pane.is-visible > .short-section .rpg-night-window {
+.personal-shell.transitions-on.is-revealing.is-revealed .personal-pane.is-visible > :not(.short-section) > * {
     opacity: 1;
 }
 
@@ -419,8 +420,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
         will-change: auto;
     }
 
-    .personal-shell.transitions-on.is-revealing .personal-pane.is-visible > :not(.short-section),
-    .personal-shell.transitions-on.is-revealing .personal-pane.is-visible > .short-section .rpg-night-window {
+    .personal-shell.transitions-on.is-revealing .personal-pane.is-visible > :not(.short-section) > * {
         transition: none;
         opacity: 1;
     }
@@ -509,66 +509,6 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-content: start;
-}
-
-.model-photo-gallery img,
-.project-images img {
-    cursor: zoom-in;
-}
-
-html.image-modal-open {
-    overflow: hidden;
-}
-
-.image-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 64px 24px;
-    background: rgba(0, 0, 0, .33);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .2s ease, visibility .2s ease;
-
-    &.is-open {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity .2s ease, visibility 0s;
-    }
-}
-
-.image-modal-img {
-    display: block;
-    max-width: min(1200px, 100%);
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
-}
-
-.image-modal-close {
-    appearance: none;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background: var(--portfolio-white);
-    color: var(--portfolio-black);
-    cursor: pointer;
 }
 
 .intro-vignette .copy {

@@ -1,8 +1,5 @@
 <div class="breakout shadow-diffuse black-bg white-text">
 	<?php $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
-	<div class="rpg-night-window">
-		<?php include 'php/rpg/rpg-night.php'; ?>
-	</div>
 	<div class="separator"></div>
 	<div class="container">
 		<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">

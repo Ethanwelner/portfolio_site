@@ -2,57 +2,62 @@
    RPG NIGHT SKY / SHOOTING STARS
    ======================================== */
 
-/* Clip a viewport-fixed sky to each gray/black band so it behaves like
-   background-attachment: fixed, without painting over logos, cards, or type. */
-.rpg-night-window {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    clip-path: inset(0);
-    overflow: hidden;
-    /* Match the band so the sky's white box-shadows don't flash as a white sheet on load. */
+/* One viewport-fixed sky sits behind the whole page. Dark bands are transparent
+   windows onto it; white areas paint over it. The base color has to live on
+   <html>: a body background (Bootstrap sets white) paints above the negative
+   z-index sky. */
+html:has(> body > .rpg-night) {
     background-color: var(--portfolio-black);
 }
 
-.black-section > .rpg-night-window {
-    position: absolute;
-    background-color: var(--portfolio-black);
-}
-
-.breakout:has(> .rpg-night-window) {
-    position: relative;
-}
-
-.breakout > .rpg-night-window ~ * {
-    position: relative;
-    z-index: 1;
-}
-
-/* Footer is a shared dark band: clip the sky to the footer without covering the copy. */
-.rpg-night-window-footer {
-    position: relative;
-    clip-path: inset(0);
-    background-color: var(--portfolio-gray);
-}
-
-.rpg-night-window-footer > .rpg-night-window {
-    position: absolute;
-    inset: 0;
-}
-
-.rpg-night-window-footer > .dark-bg {
-    position: relative;
-    z-index: 1;
+body:has(> .rpg-night) {
     background-color: transparent;
 }
 
 .rpg-night {
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
     overflow: hidden;
+}
+
+body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
+    display: none;
+}
+
+.pane-personal {
+    background-color: var(--portfolio-black);
+}
+
+.pane-frontiers > .black-section,
+.rpg-panel.has-sky-holes .breakout.black-bg {
+    background-color: transparent;
+}
+
+/* The panel's white moves onto a pseudo-element with holes cut where the
+   breakouts sit (see updateSkyHoles in javascript-loads.php). */
+.rpg-panel.has-sky-holes {
+    background-color: transparent;
+}
+
+.rpg-panel.has-sky-holes::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: white;
+    clip-path: var(--rpg-sky-holes);
+    pointer-events: none;
+}
+
+/* A white tint over the #212121 sky lands on --portfolio-gray (#525252). */
+.rpg-night-footer {
+    background-color: rgb(255 255 255 / 22%);
+}
+
+.rpg-night-footer > .dark-bg {
+    background-color: transparent;
 }
 
 .rpg-sky {
