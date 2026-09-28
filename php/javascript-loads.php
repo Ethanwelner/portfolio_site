@@ -315,6 +315,74 @@
 			window.requestAnimationFrame( updateRpgLinkHighlight );
 		}
 
+		var $imageModal = $( ".image-modal" );
+		var $imageModalImg = $imageModal.find( ".image-modal-img" );
+		var $imageModalClose = $imageModal.find( ".image-modal-close" );
+		var $zoomableImages = $( ".model-photo-gallery img, .project-images img" );
+		var imageModalReturnFocus = null;
+
+		function openImageModal($img) {
+			imageModalReturnFocus = $img[0];
+			$imageModalImg.attr({
+				src: $img.attr( "data-full" ) || $img.attr( "src" ),
+				alt: $img.attr( "alt" ) || ""
+			});
+			$imageModal.addClass( "is-open" );
+			$( "html" ).addClass( "image-modal-open" );
+			$imageModalClose.trigger( "focus" );
+		}
+
+		function closeImageModal() {
+			if ( ! $imageModal.hasClass( "is-open" ) ) {
+				return;
+			}
+			$imageModal.removeClass( "is-open" );
+			$( "html" ).removeClass( "image-modal-open" );
+			if ( imageModalReturnFocus ) {
+				imageModalReturnFocus.focus();
+			}
+		}
+
+		$zoomableImages.each(function() {
+			var alt = $( this ).attr( "alt" );
+			$( this ).attr({
+				tabindex: "0",
+				role: "button",
+				"aria-label": alt ? "View larger: " + alt : "View larger image"
+			});
+		});
+
+		$zoomableImages.on( "click", function() {
+			openImageModal( $( this ) );
+		});
+
+		$zoomableImages.on( "keydown", function( event ) {
+			if ( event.key === "Enter" || event.key === " " ) {
+				event.preventDefault();
+				openImageModal( $( this ) );
+			}
+		});
+
+		$imageModalClose.on( "click", closeImageModal );
+
+		$imageModal.on( "click", function( event ) {
+			if ( event.target === this ) {
+				closeImageModal();
+			}
+		});
+
+		$( document ).on( "keydown", function( event ) {
+			if ( ! $imageModal.hasClass( "is-open" ) ) {
+				return;
+			}
+			if ( event.key === "Escape" ) {
+				closeImageModal();
+			} else if ( event.key === "Tab" ) {
+				event.preventDefault();
+				$imageModalClose.trigger( "focus" );
+			}
+		});
+
 		$( ".tech-field-tab" ).click(function() {
 			var $tab = $( this );
 			if ( $tab.hasClass( "is-active" ) ) {

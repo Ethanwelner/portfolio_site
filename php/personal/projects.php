@@ -10,10 +10,10 @@
 						<h4 class="project-title">Basement Nook pt.2</h4>
 						<p class="copy mb-3"><i>9/27/2026</i></p>
 						<p class="copy">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							It came together relatively well. Hand sawing 2x4s with millimeter accuracy is <i>not</i> easy. I still need to sand the entire construction and I haven’t started decorating yet, but I’m writing this from the bench and it’s doing its job pretty well so far. I think this will be a pretty cozy place to work and hang out. I do need to set the outer back leg further out, though. I thought I could get away with insetting both, but the seat doesn’t like edge-sitters too much right now.
 						</p>
 						<p class="copy">
-							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Next, decoration and leg fixing!
 						</p>
 					</article>
 				</div>
@@ -46,7 +46,7 @@
 					</article>
 				</div>
 				<div class="d-inline-flex align-items-center flex-1"></div>
-				<div class="flex-6 project-images">
+				<div class="flex-6 project-images project-images-grid">
 					<img src="img/blog page stuff/basement_nook_1.webp" width="800" height="603" alt="Basement corner with a neon cat sign, a stepladder, and daybed slats leaning against a stone wall">
 					<img src="img/blog page stuff/basement_nook_2.webp" width="800" height="603" alt="Cleared basement corner with stone walls, string lights, and a dark floor mat">
 				</div>
