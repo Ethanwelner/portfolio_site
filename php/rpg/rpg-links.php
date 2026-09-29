@@ -8,7 +8,7 @@ $rpgLinks = $rpgLinksKind === 'setting'
 		'#introduction' => 'Introduction',
 		'#thesciences' => 'The Sciences',
 		'#hierarchy' => 'The Planes',
-		'#spacecraft' => 'Spacecraft',
+		'#thestars' => 'The Stars',
 		'#parabiology' => 'Parabiology',
 	]
 	: [
