@@ -27,7 +27,7 @@
 
 		  		<div class="title section-title d-inline-flex z-2">
 		  			<div class="hero-statement pre-slide-in">
-		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
+		  				<!-- <h3 class="copy-title non-title"><img loading="lazy" class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			<h1 class="title hero-title white-text">CODE</h1>
 						<h2 class="title section-title white-text">Build and Analytics</h2>
 					    <h3 class="sub-title white-text non-title">Covering My Bases</h3>
@@ -104,10 +104,10 @@
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-center position-relative mt-4 mt-sm-0">
 				    	<div class="force-size">
 							<div class="surface-proto">
-					    		<img src="img/sublime_screen.webp" alt="Code editor screen on a tablet mockup">
+					    		<img loading="lazy" src="img/sublime_screen.webp" alt="Code editor screen on a tablet mockup">
 						    	<div class="sublime-blink"></div>
 					    	</div>
-						    <img class="surface-splash" src="img/surface_frame.webp" alt="" aria-hidden="true">
+						    <img loading="lazy" class="surface-splash" src="img/surface_frame.webp" alt="" aria-hidden="true">
 						</div>
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -268,11 +268,11 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-center align-items-top">
 				    	<div class="browser-mock-container">
-				    		<img class="full-width-image browser-mock browser-mock-sizer" src="img/browser_1.webp" alt="" aria-hidden="true">
-				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_1.webp" alt="Browser interface mockup, first frame">
-				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_2.webp" alt="" aria-hidden="true">
-				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_3.webp" alt="" aria-hidden="true">
-				    		<img class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_4.webp" alt="" aria-hidden="true">
+				    		<img loading="lazy" class="full-width-image browser-mock browser-mock-sizer" src="img/browser_1.webp" alt="" aria-hidden="true">
+				    		<img loading="lazy" class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_1.webp" alt="Browser interface mockup, first frame">
+				    		<img loading="lazy" class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_2.webp" alt="" aria-hidden="true">
+				    		<img loading="lazy" class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_3.webp" alt="" aria-hidden="true">
+				    		<img loading="lazy" class="full-width-image browser-mock browser-mock-card shadow-diffuse" src="img/browser_4.webp" alt="" aria-hidden="true">
 				    	</div>
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1 "></div>

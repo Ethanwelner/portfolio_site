@@ -12,8 +12,8 @@
 						Look at these quality Philly street cats. Also, I split off the projects tab.
 					</p>
 					<div class="blog-post-images">
-						<img src="img/blog page stuff/philly_cat_1.webp" width="600" height="600" alt="Black cat sitting on gravel beside a white Dodge pickup, seen through a chain-link fence">
-						<img src="img/blog page stuff/philly_cat_2.webp" width="600" height="600" alt="Gray and white cat walking past a blue trash can on a sidewalk">
+						<img loading="lazy" data-src="img/blog page stuff/philly_cat_1.webp" width="600" height="600" alt="Black cat sitting on gravel beside a white Dodge pickup, seen through a chain-link fence">
+						<img loading="lazy" data-src="img/blog page stuff/philly_cat_2.webp" width="600" height="600" alt="Gray and white cat walking past a blue trash can on a sidewalk">
 					</div>
 				</article>
 

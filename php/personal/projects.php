@@ -19,10 +19,10 @@
 				</div>
 				<div class="d-inline-flex align-items-center flex-1"></div>
 				<div class="flex-6 project-images project-images-grid">
-					<img src="img/blog page stuff/bench_1.webp" width="800" height="603" alt="Daybed slats and lumber laid out on a basement floor mat beside a side table covered in tools">
-					<img src="img/blog page stuff/bench_2.webp" width="800" height="603" alt="Partially assembled wooden daybed frame on its side under a neon cat sign">
-					<img src="img/blog page stuff/bench_3.webp" width="800" height="603" alt="Finished daybed with a green tufted cushion and gray pillows against a stone wall">
-					<img src="img/blog page stuff/bench_4.webp" width="800" height="603" alt="Wide view of the basement nook with the daybed, a laptop on a side table, a rug, and a weight bench">
+					<img loading="lazy" data-src="img/blog page stuff/bench_1.webp" width="800" height="603" alt="Daybed slats and lumber laid out on a basement floor mat beside a side table covered in tools">
+					<img loading="lazy" data-src="img/blog page stuff/bench_2.webp" width="800" height="603" alt="Partially assembled wooden daybed frame on its side under a neon cat sign">
+					<img loading="lazy" data-src="img/blog page stuff/bench_3.webp" width="800" height="603" alt="Finished daybed with a green tufted cushion and gray pillows against a stone wall">
+					<img loading="lazy" data-src="img/blog page stuff/bench_4.webp" width="800" height="603" alt="Wide view of the basement nook with the daybed, a laptop on a side table, a rug, and a weight bench">
 				</div>
 			</div>
 			<div class="project-entry d-flex flex-wrap flex-xs-nowrap">
@@ -47,8 +47,8 @@
 				</div>
 				<div class="d-inline-flex align-items-center flex-1"></div>
 				<div class="flex-6 project-images project-images-grid">
-					<img src="img/blog page stuff/basement_nook_1.webp" width="800" height="603" alt="Basement corner with a neon cat sign, a stepladder, and daybed slats leaning against a stone wall">
-					<img src="img/blog page stuff/basement_nook_2.webp" width="800" height="603" alt="Cleared basement corner with stone walls, string lights, and a dark floor mat">
+					<img loading="lazy" data-src="img/blog page stuff/basement_nook_1.webp" width="800" height="603" alt="Basement corner with a neon cat sign, a stepladder, and daybed slats leaning against a stone wall">
+					<img loading="lazy" data-src="img/blog page stuff/basement_nook_2.webp" width="800" height="603" alt="Cleared basement corner with stone walls, string lights, and a dark floor mat">
 				</div>
 			</div>
 		</div>
