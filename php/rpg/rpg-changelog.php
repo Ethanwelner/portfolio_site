@@ -7,6 +7,16 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>9/29/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Split each nation's Territories into Earth Territories and Stellar Territories.</li>
+						<li>Added the off-world holdings: New Columbia (Luna) for The American Empire, Yùtù “Jade Rabbit” (Luna) for The Chinese Empire, Amaravati (High Earth Orbit) for The Kingdom of India, and Antiluna Colony (High Earth Orbit) alongside The Martian Association for The Stellar Democratic Union.</li>
+						<li>Added Core Europe to The Stellar Democratic Union, renamed Florida to Floridia, and split Nueva Mexico, Mexica, and Yucatán into separate American Empire territories.</li>
+						<li>Spaced the nations out with separators.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Added Locations, Nations, and Corporations tabs to the Introduction tab box and removed the standalone Locations section.</li>
