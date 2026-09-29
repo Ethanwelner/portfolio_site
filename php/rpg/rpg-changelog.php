@@ -12,6 +12,7 @@
 						<li>Added Locations, Nations, and Corporations tabs to the Introduction tab box and removed the standalone Locations section.</li>
 						<li>Gave The Planar Hierarchy its own section and re-alternated the section backgrounds for Spacecraft and Parabiology.</li>
 						<li>Added a Planar Exploration tab to The Planar Hierarchy.</li>
+						<li>Retitled Spacecraft to The Stars.</li>
 						<li>Moved the side-nav marker to the left of the links on mobile.</li>
 					</ul>
 				</article>
