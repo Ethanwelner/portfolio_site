@@ -403,7 +403,8 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>Northern California</li>
 								<li>Southern California</li>
 								<li>Colorado</li>
@@ -421,8 +422,13 @@
 								<li>Nevada</li>
 								<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
 								<li>Greater Maine (former Maine and New Hampshire)</li>
-								<li>Former Mexico</li>
-								<li>Nueva Mexico / Mexica / Yucatán</li>
+								<li>Nueva Mexico (former Mexico)</li>
+								<li>Mexica (former Mexico)</li>
+								<li>Yucatán (former Mexico)</li>
+							</ul>
+							<h6>Stellar Territories</h6>
+							<ul class="copy mb-0">
+								<li>New Columbia (Luna)</li>
 							</ul>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
@@ -437,7 +443,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">Texas</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -446,7 +452,8 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>Former Texas</li>
 								<li>Former Kansas</li>
 								<li>Former Oklahoma</li>
@@ -459,6 +466,10 @@
 								<li>Former Tennessee</li>
 								<li>Former Kentucky</li>
 							</ul>
+							<h6>Stellar Territories</h6>
+							<p class="copy mb-0">
+								None
+							</p>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6">
@@ -472,7 +483,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">Non-Aligned Free American States</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -481,7 +492,8 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>Utah</li>
 								<li>Arizona</li>
 								<li>Montana</li>
@@ -494,11 +506,15 @@
 								<li>Georgia</li>
 								<li>The Carolinas (former North and South)</li>
 								<li>The Virginias (former West and non)</li>
-								<li>Florida (former Florida, Cuba, The Bahamas)</li>
+								<li>Floridia (former Florida, Cuba, The Bahamas)</li>
 								<li>Alaska</li>
 								<li>Hawaii</li>
 								<li>Idaho</li>
 							</ul>
+							<h6>Stellar Territories</h6>
+							<p class="copy mb-0">
+								None
+							</p>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6">
@@ -512,7 +528,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">The Chinese Empire</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -521,7 +537,8 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>Former Laos</li>
 								<li>Former Thailand</li>
 								<li>Former Burma</li>
@@ -532,6 +549,10 @@
 								<li>Former Indonesia</li>
 								<li>Former Singapore</li>
 							</ul>
+							<h6>Stellar Territories</h6>
+							<ul class="copy mb-0">
+								<li>Yùtù “Jade Rabbit” (Luna)</li>
+							</ul>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6">
@@ -545,7 +566,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">The Stellar Democratic Union</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -554,7 +575,9 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
+								<li>Core Europe</li>
 								<li>Japan</li>
 								<li>Australia</li>
 								<li>Existing EU member and associate members</li>
@@ -562,7 +585,11 @@
 								<li>Corea</li>
 								<li>Russia/Belarus</li>
 								<li>Brazil</li>
+							</ul>
+							<h6>Stellar Territories</h6>
+							<ul class="copy mb-0">
 								<li>The Martian Association</li>
+								<li>Antiluna Colony (High Earth Orbit)</li>
 							</ul>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
@@ -577,7 +604,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">The Kingdom of India</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -586,12 +613,17 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>India</li>
 								<li>Former Nepal</li>
 								<li>Former Sri Lanka</li>
 								<li>Former Bangladesh</li>
 								<li>Former Bhutan</li>
+							</ul>
+							<h6>Stellar Territories</h6>
+							<ul class="copy mb-0">
+								<li>Amaravati (High Earth Orbit)</li>
 							</ul>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
@@ -606,7 +638,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bumper"></div>
+				<div class="separator"></div>
 				<div>
 					<h3 class="mb-3">The Ural Federation</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
@@ -615,13 +647,18 @@
 								<h5><strong>Territories</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
+							<h6>Earth Territories</h6>
+							<ul class="copy">
 								<li>Former Mongolia/Inner Mongolia</li>
 								<li>Former Eastern Russia</li>
 								<li>Former Kazakhstan</li>
 								<li>Former Kyrgyzstan</li>
 								<li>Former Xinjiang</li>
 							</ul>
+							<h6>Stellar Territories</h6>
+							<p class="copy mb-0">
+								None
+							</p>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6">
