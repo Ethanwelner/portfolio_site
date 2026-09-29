@@ -40,18 +40,20 @@
         </div>
 
         <div class="personal-shell is-personal">
+            <div class="section-clip personal-hero-clip">
+                <?php include 'php/header.php'; ?>
+                <?php
+                    $personalNavActive = 'auto';
+                    $personalNavTone = 'white';
+                    $personalNavExtraClass = '';
+                    include 'php/personal/page-nav.php';
+                ?>
+            </div>
             <div class="personal-track">
 
                 <div class="personal-pane pane-personal is-visible" data-page="personal">
                     <div class="section short-section black-bg d-flex black-section z-4">
                         <div class="section-clip d-flex align-items-center justify-content-center">
-                            <?php include 'php/header.php'; ?>
-                            <?php
-                                $personalNavActive = 'blog';
-                                $personalNavTone = 'white';
-                                $personalNavExtraClass = '';
-                                include 'php/personal/page-nav.php';
-                            ?>
                             <div class="title section-title d-inline-flex z-2">
                                 <div class="hero-statement pre-slide-in">
                                     <h1 class="title hero-title white-text">Personal</h1>
@@ -98,14 +100,7 @@
 
                 <div class="personal-pane pane-frontiers" data-page="frontiers">
                     <div class="section short-section black-bg d-flex black-section z-4">
-                        <div class="section-clip d-flex align-items-center justify-content-center ">
-                            <?php include 'php/header.php'; ?>
-                            <?php
-                                $personalNavActive = 'frontiers';
-                                $personalNavTone = 'white';
-                                $personalNavExtraClass = '';
-                                include 'php/personal/page-nav.php';
-                            ?>
+                        <div class="section-clip d-flex align-items-center justify-content-center">
                             <div class="title section-title d-inline-flex z-2">
                                 <div class="hero-statement pre-slide-in">
                                     <h1 class="title hero-title frontiers-accent">Strange Frontiers</h1>
