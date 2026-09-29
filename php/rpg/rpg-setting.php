@@ -39,6 +39,9 @@
 			<div class="tech-field-tab-list" role="tablist" aria-label="Timeline">
 				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-world" aria-controls="timeline-world" aria-selected="true">The Setting</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="false">Timeline</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-locations" aria-controls="timeline-locations" aria-selected="false">Locations</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="timeline-world" role="tabpanel" aria-labelledby="tab-timeline-world">
@@ -383,6 +386,24 @@
 			</p>
 					</div>
 				</div>
+			</div>
+
+			<div class="tech-field-panel" id="timeline-locations" role="tabpanel" aria-labelledby="tab-timeline-locations">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
+
+			<div class="tech-field-panel" id="timeline-nations" role="tabpanel" aria-labelledby="tab-timeline-nations">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
+
+			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
 			</div>
 		</div>
 	</div>

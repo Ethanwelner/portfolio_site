@@ -48,7 +48,9 @@
 
 			var link = $active[0];
 			var top = link.offsetTop + ( link.offsetHeight / 2 ) - ( $dot.outerHeight() / 2 );
-			var left = link.offsetLeft + link.offsetWidth + 8;
+			var left = window.matchMedia( "(max-width: 767px)" ).matches
+				? link.offsetLeft - $dot.outerWidth() - 6
+				: link.offsetLeft + link.offsetWidth + 8;
 			$dot.css( { top: top + "px", left: left + "px" } );
 			$dot.addClass( "is-ready" );
 		}
@@ -309,7 +311,7 @@
 			var $list = $tab.closest( "[role='tablist']" );
 			$list.find( ".tech-field-tab" ).removeClass( "is-active" ).attr( "aria-selected", "false" );
 			$tab.addClass( "is-active" ).attr( "aria-selected", "true" );
-			$fields.find( ".tech-field-panel" ).removeClass( "is-active" );
+			$fields.children( ".tech-field-panel" ).removeClass( "is-active" );
 			$( "#" + $tab.attr( "aria-controls" ) ).addClass( "is-active" );
 			syncPersonalShellHeight();
 			window.requestAnimationFrame( updateRpgLinkHighlight );

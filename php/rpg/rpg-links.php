@@ -10,7 +10,6 @@ $rpgLinks = $rpgLinksKind === 'setting'
 		'#hierarchy' => 'The Planes',
 		'#spacecraft' => 'Spacecraft',
 		'#parabiology' => 'Parabiology',
-		'#locations' => 'Locations',
 	]
 	: [
 		'#stats' => 'Stats',
