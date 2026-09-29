@@ -184,9 +184,45 @@ body:has(.personal-shell) {
     overflow-x: clip;
 }
 
+/* The slide shrinks the page to one viewport, which drops the scrollbar and
+   nudges the right-aligned chrome sideways. */
+html:has(.personal-shell) {
+    scrollbar-gutter: stable;
+}
+
 .personal-shell {
+    position: relative;
     width: 100%;
     overflow: clip;
+}
+
+/* One hero chrome for both panes. It lives outside the track so the slide
+   transform can't carry it, and it's clipped to the hero height like the
+   per-section copies elsewhere. */
+.personal-hero-clip {
+    bottom: auto;
+    height: 75vh;
+    z-index: 5;
+    pointer-events: none;
+    clip-path: inset(0 0 -1px 0);
+}
+
+.personal-hero-clip > * {
+    pointer-events: auto;
+}
+
+.personal-hero-clip .logo-bug {
+    background-color: var(--portfolio-white);
+    color: var(--portfolio-black);
+}
+
+.personal-hero-clip .social-link svg {
+    fill: var(--portfolio-black);
+}
+
+.personal-shell.is-personal .nav-bullet-frontiers,
+.personal-shell.is-frontiers .nav-bullet-personal {
+    display: none;
 }
 
 .personal-track {
@@ -237,17 +273,10 @@ body:has(.personal-shell) {
 }
 
 /* Transform on the track creates a stacking context, so the page-level black
-   EW would paint over the clipped white ones. Hide it during the slide, and
-   pin in-hero fixed chrome to the clip box so it cannot escape. */
+   EW would paint over the heroes. Hide it during the slide. */
 body:has(.personal-shell.is-sliding) > .section-logo-bug,
 body:has(.personal-shell.is-sliding) > .section-about-social-container {
     visibility: hidden;
-}
-
-.personal-shell.is-sliding .logo-bug,
-.personal-shell.is-sliding .personal-page-nav,
-.personal-shell.is-sliding .section-clip > .section-about-social-container {
-    position: absolute;
 }
 
 /* Fade what's inside each section, not the sections, so panel whites and the
