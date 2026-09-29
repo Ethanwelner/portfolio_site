@@ -7,6 +7,23 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>9/28/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Added Locations, Nations, and Corporations tabs to the Introduction tab box and removed the standalone Locations section.</li>
+						<li>Gave The Planar Hierarchy its own section and re-alternated the section backgrounds for Spacecraft and Parabiology.</li>
+						<li>Added a Planar Exploration tab to The Planar Hierarchy.</li>
+						<li>Moved the side-nav marker to the left of the links on mobile.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
+					<p class="copy mb-3"><i>9/26/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Wrote The Setting overview and made it the default Setting tab.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Moved the timeline into Setting / Timeline tabs and pointed the side nav at Introduction.</li>
