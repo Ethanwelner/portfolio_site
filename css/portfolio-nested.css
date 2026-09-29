@@ -228,9 +228,16 @@ dl, ol, ul {
 .footer {
     height: auto;
     min-height: 5vh;
-    padding: 0 60px 0 60px;
+    padding: 20px 60px 0 60px;
     background-color: var(--portfolio-gray);
     position: relative;
+}
+
+.footer-legal {
+    align-self: center;
+    padding: 12px 0 20px;
+    font-size: .6rem;
+    opacity: .7;
 }
 
 /* Separator & Breakout */
