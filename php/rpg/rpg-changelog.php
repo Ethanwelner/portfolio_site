@@ -14,6 +14,8 @@
 						<li>Added a Planar Exploration tab to The Planar Hierarchy.</li>
 						<li>Retitled Spacecraft to The Stars.</li>
 						<li>Moved the side-nav marker to the left of the links on mobile.</li>
+						<li>Added seven nations to the Nations tab (The American Empire, Texas, Non-Aligned Free American States, The Chinese Empire, The Stellar Democratic Union, The Kingdom of India, and The Ural Federation), each with its Territories.</li>
+						<li>Added keyboard focus outlines and hover states to the tabs and side nav.</li>
 					</ul>
 				</article>
 

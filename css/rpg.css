@@ -139,11 +139,11 @@ strong .mechanic-text {
     /* Opaque blend instead of opacity: the black and white navs are stacked,
        so a translucent link would show the other nav through it. */
     a:hover .badge {
-        background-color: color-mix(in srgb, var(--portfolio-black) 75%, var(--portfolio-white));
+        background-color: color-mix(in srgb, var(--portfolio-black) 66%, var(--portfolio-white));
     }
 
     &.white a:hover .badge {
-        background-color: color-mix(in srgb, var(--portfolio-white) 75%, var(--portfolio-black));
+        background-color: color-mix(in srgb, var(--portfolio-white) 66%, var(--portfolio-black));
     }
 
     &.white .badge {
@@ -311,7 +311,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     border: 0;
     border-radius: 4px 4px 0 0;
     cursor: pointer;
-    transition: opacity 200ms;
+    transition: background-color 200ms;
 }
 
 .rpg-tab.is-active {
@@ -349,13 +349,13 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     border: 0;
     border-radius: 0 0 4px 4px;
     cursor: pointer;
-    transition: opacity 200ms;
+    transition: background-color 200ms;
 }
 
 @media (hover: hover) {
     .rpg-tab:not(.is-active):hover,
     .tech-field-tab:not(.is-active):hover {
-        opacity: 0.75;
+        background-color: color-mix(in srgb, var(--portfolio-gray) 66%, transparent);
     }
 }
 

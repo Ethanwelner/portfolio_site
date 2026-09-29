@@ -395,9 +395,246 @@
 			</div>
 
 			<div class="tech-field-panel" id="timeline-nations" role="tabpanel" aria-labelledby="tab-timeline-nations">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
+				<div>
+					<h3 class="mb-3">The American Empire</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Northern California</li>
+								<li>Southern California</li>
+								<li>Colorado</li>
+								<li>Washington</li>
+								<li>Oregon</li>
+								<li>Minnesota</li>
+								<li>Wisconsin</li>
+								<li>Illinois</li>
+								<li>Michigan</li>
+								<li>Ohio</li>
+								<li>Pennsylvania</li>
+								<li>New York (formerly New York and New Jersey)</li>
+								<li>Delaware</li>
+								<li>Maryland</li>
+								<li>Nevada</li>
+								<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
+								<li>Greater Maine (former Maine and New Hampshire)</li>
+								<li>Former Mexico</li>
+								<li>Nueva Mexico / Mexica / Yucatán</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">Texas</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Former Texas</li>
+								<li>Former Kansas</li>
+								<li>Former Oklahoma</li>
+								<li>Former New Mexico</li>
+								<li>Former Wyoming</li>
+								<li>Former Arkansas</li>
+								<li>Former Mississippi</li>
+								<li>Former Louisiana</li>
+								<li>Former Alabama</li>
+								<li>Former Tennessee</li>
+								<li>Former Kentucky</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">Non-Aligned Free American States</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Utah</li>
+								<li>Arizona</li>
+								<li>Montana</li>
+								<li>North Dakota</li>
+								<li>South Dakota</li>
+								<li>Nebraska</li>
+								<li>Missouri</li>
+								<li>Iowa</li>
+								<li>Indiana</li>
+								<li>Georgia</li>
+								<li>The Carolinas (former North and South)</li>
+								<li>The Virginias (former West and non)</li>
+								<li>Florida (former Florida, Cuba, The Bahamas)</li>
+								<li>Alaska</li>
+								<li>Hawaii</li>
+								<li>Idaho</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">The Chinese Empire</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Former Laos</li>
+								<li>Former Thailand</li>
+								<li>Former Burma</li>
+								<li>Former Vietnam</li>
+								<li>Former Cambodia</li>
+								<li>Former Malaysia</li>
+								<li>Former Philippines</li>
+								<li>Former Indonesia</li>
+								<li>Former Singapore</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">The Stellar Democratic Union</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Japan</li>
+								<li>Australia</li>
+								<li>Existing EU member and associate members</li>
+								<li>Canada</li>
+								<li>Corea</li>
+								<li>Russia/Belarus</li>
+								<li>Brazil</li>
+								<li>The Martian Association</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">The Kingdom of India</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>India</li>
+								<li>Former Nepal</li>
+								<li>Former Sri Lanka</li>
+								<li>Former Bangladesh</li>
+								<li>Former Bhutan</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="bumper"></div>
+				<div>
+					<h3 class="mb-3">The Ural Federation</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Former Mongolia/Inner Mongolia</li>
+								<li>Former Eastern Russia</li>
+								<li>Former Kazakhstan</li>
+								<li>Former Kyrgyzstan</li>
+								<li>Former Xinjiang</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy mb-0">
+								Content coming soon
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
