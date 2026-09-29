@@ -66,7 +66,7 @@
 
 		  		<div class="title section-title d-inline-flex z-2">
 		  			<div class="hero-statement pre-slide-in">
-		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
+		  				<!-- <h3 class="copy-title non-title"><img loading="lazy" class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>.<br/>
 						I'm a Designer <span class="red-text highlight-text">+</span> Front-End Developer.
 
@@ -134,11 +134,11 @@
 
 					    <div class="d-flex justify-content-start align-items-center mobile-proto-container">
 					    	<div class="splash-proto">
-					    		<img src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
+					    		<img loading="lazy" src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
 					    		<div class="thumb-scroll"></div>
 					    	</div>
 					    	<div class="shadow-splash shadow-heavy">
-						    	<img class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
+						    	<img loading="lazy" class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
 						    </div>
 					    </div>
 
@@ -159,11 +159,11 @@
 				    </div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center splash-proto-container">
 				    	<div class="splash-proto">
-				    		<img src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
+				    		<img loading="lazy" src="img/mobile_proto.webp" alt="Mobile UI prototype scrolling on a phone screen">
 				    		<div class="thumb-scroll"></div>
 				    	</div>
 				    	<div class="shadow-splash shadow-heavy">
-					    	<img class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
+					    	<img loading="lazy" class="ux-splash" src="img/iphone_outline.webp" alt="" aria-hidden="true">
 					    </div>
 				    </div>
 				</div>

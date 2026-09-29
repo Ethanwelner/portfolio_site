@@ -26,7 +26,7 @@
 
 		  		<div class="title section-title d-inline-flex z-2">
 		  			<div class="hero-statement pre-slide-in">
-		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
+		  				<!-- <h3 class="copy-title non-title"><img loading="lazy" class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			<h1 class="title hero-title">RESEARCH</h1>
 						<h2 class="title section-title">Building Knowledge Before Action</h2>
 					    <h3 class="sub-title non-title">Learning and Implementation</h3>
@@ -99,7 +99,7 @@
 
 
 				<div class="mindmap-gallery-container shadow-diffuse breakout z-1">
-			    	<img class="mindmap-gallery gallery-top d-sm-inline-block" style="background-image: url('img/tt_pathways.webp');" alt="Teacher task pathways mind map">
+			    	<div class="mindmap-gallery gallery-top d-sm-inline-block" data-bg="img/tt_pathways.webp" role="img" aria-label="Teacher task pathways mind map"></div>
 				</div>
 
 
@@ -112,7 +112,7 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/pendo_dash.webp" alt="Pendo analytics dashboard">
+				    	<img loading="lazy" class="full-width-image" src="img/pendo_dash.webp" alt="Pendo analytics dashboard">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
@@ -152,9 +152,9 @@
 
 				<div class="pendo-gallery-container shadow-diffuse green-bg breakout z-1">
 					<div class="pendo-gallery">
-						<img class="pendo-gallery-item" src="img/pendo_guide_1.webp" alt="Pendo onboarding guide">
-						<img class="pendo-gallery-item" src="img/pendo_guide_2.webp" alt="Pendo in-product tutorial">
-						<img class="pendo-gallery-item" src="img/pendo_guide_3.webp" alt="Pendo in-app survey">
+						<img loading="lazy" class="pendo-gallery-item" src="img/pendo_guide_1.webp" alt="Pendo onboarding guide">
+						<img loading="lazy" class="pendo-gallery-item" src="img/pendo_guide_2.webp" alt="Pendo in-product tutorial">
+						<img loading="lazy" class="pendo-gallery-item" src="img/pendo_guide_3.webp" alt="Pendo in-app survey">
 					</div>
 				</div>
 
@@ -168,7 +168,7 @@
 
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/image_guide.webp" alt="Research documentation and image guide example">
+				    	<img loading="lazy" class="full-width-image" src="img/image_guide.webp" alt="Research documentation and image guide example">
 				    </div>
 				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">

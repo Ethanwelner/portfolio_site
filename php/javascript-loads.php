@@ -18,6 +18,10 @@
 
 		// about me fade in out
 		$( ".about-me-link" ).click(function() {
+			$( ".about-modal img[data-src]" ).each(function() {
+				this.src = this.getAttribute( "data-src" );
+				this.removeAttribute( "data-src" );
+			});
 			$( ".about-modal" ).fadeIn( 500 );
 			$( ".section" ).not('.about-clip').addClass("add-blur");
 			$( ".close-x" ).removeClass("pre-slide-in").addClass("post-slide-in");
@@ -34,6 +38,28 @@
 		// 	$( ".section" ).addClass( "snap-section" );
 		// },500);
 
+
+		function applyDeferredBackground(el) {
+			el.style.backgroundImage = "url('" + el.getAttribute( "data-bg" ) + "')";
+			el.removeAttribute( "data-bg" );
+		}
+
+		var deferredBackgrounds = document.querySelectorAll( "[data-bg]" );
+		if ( deferredBackgrounds.length && window.IntersectionObserver ) {
+			var backgroundObserver = new IntersectionObserver(function( entries ) {
+				entries.forEach(function( entry ) {
+					if ( entry.isIntersecting ) {
+						applyDeferredBackground( entry.target );
+						backgroundObserver.unobserve( entry.target );
+					}
+				});
+			}, { rootMargin: "600px 0px" });
+			deferredBackgrounds.forEach(function( el ) {
+				backgroundObserver.observe( el );
+			});
+		} else {
+			Array.prototype.forEach.call( deferredBackgrounds, applyDeferredBackground );
+		}
 
 		setTimeout(function(){
 			$( ".hero-statement" ).fadeIn( 750,"swing"  );
@@ -108,6 +134,13 @@
 
 		function isProjectsHash(hash) {
 			return hash === "projects";
+		}
+
+		function loadOpenPanelImages() {
+			$( ".personal-pane.is-visible .rpg-panel.is-active img[data-src]" ).each(function() {
+				this.src = this.getAttribute( "data-src" );
+				this.removeAttribute( "data-src" );
+			});
 		}
 
 		function syncPersonalShellHeight() {
@@ -222,6 +255,7 @@
 			var $panels = $pane.length ? $pane.find( ".rpg-panel" ) : $( ".rpg-panel" );
 			$panels.removeClass( "is-active" );
 			$( "#" + $tab.attr( "aria-controls" ) ).addClass( "is-active" );
+			loadOpenPanelImages();
 
 			if ( updateHash ) {
 				var tabId = $tab.attr( "id" );
@@ -353,11 +387,11 @@
 		var $imageModal = $( ".image-modal" );
 		var $imageModalImg = $imageModal.find( ".image-modal-img" );
 		var $imageModalClose = $imageModal.find( ".image-modal-close" );
-		var $zoomableImages = $( "img[src]" )
+		var $zoomableImages = $( "img[src], img[data-src]" )
 			.not( ".image-modal-img, [aria-hidden='true'], a img" )
 			.not( ".splash-proto img, .surface-proto img, .browser-mock, .forecaster-scroller" )
 			.filter(function() {
-				return ! /\.(svg|gif)(\?|$)/i.test( $( this ).attr( "src" ) );
+				return ! /\.(svg|gif)(\?|$)/i.test( $( this ).attr( "src" ) || $( this ).attr( "data-src" ) );
 			})
 			.addClass( "is-zoomable" );
 		var imageModalReturnFocus = null;

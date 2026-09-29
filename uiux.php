@@ -20,7 +20,7 @@
 
 		  		<div class="title section-title d-inline-flex z-2">
 		  			<div class="hero-statement pre-slide-in">
-		  				<!-- <h3 class="copy-title non-title"><img class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
+		  				<!-- <h3 class="copy-title non-title"><img loading="lazy" class="warning-gif" src="img/warning.gif"/>Site Under Construction</h3> -->
 			  			<h1 class="title hero-title white-text">UI/UX</h1>
 						<h2 class="title section-title white-text">User Interface and Experience</h2>
 					    <h3 class="sub-title white-text non-title">The Mathematics of Design</h3>
@@ -86,7 +86,7 @@
 						</p>
 					</div>
 					<div class="separator d-none d-md-block"></div>
-					<img class="full-width-image feature" src="img/intro_laptop_screenshot.webp" alt="QuantHub learner experience shown on a laptop">
+					<img loading="lazy" class="full-width-image feature" src="img/intro_laptop_screenshot.webp" alt="QuantHub learner experience shown on a laptop">
 				</div>
 
 
@@ -95,12 +95,12 @@
 
 				<div class="reflow-gallery-container gray-bg breakout z-1">
 					<div class="reflow-gallery">
-						<img class="shadow-diffuse" src="img/activity_intro.webp" alt="QuantHub activity introduction screen">
-						<img class="shadow-diffuse" src="img/activity_narrative.webp" alt="QuantHub activity narrative screen">
-						<img class="shadow-diffuse" src="img/activity_question.webp" alt="QuantHub activity question screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/activity_resource.webp" alt="QuantHub activity resource screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/activity_final.webp" alt="QuantHub activity completion screen">
-						<img class="shadow-diffuse d-none d-md-block" src="img/survey.webp" alt="QuantHub activity survey screen">
+						<img loading="lazy" class="shadow-diffuse" src="img/activity_intro.webp" alt="QuantHub activity introduction screen">
+						<img loading="lazy" class="shadow-diffuse" src="img/activity_narrative.webp" alt="QuantHub activity narrative screen">
+						<img loading="lazy" class="shadow-diffuse" src="img/activity_question.webp" alt="QuantHub activity question screen">
+						<img loading="lazy" class="shadow-diffuse d-none d-md-block" src="img/activity_resource.webp" alt="QuantHub activity resource screen">
+						<img loading="lazy" class="shadow-diffuse d-none d-md-block" src="img/activity_final.webp" alt="QuantHub activity completion screen">
+						<img loading="lazy" class="shadow-diffuse d-none d-md-block" src="img/survey.webp" alt="QuantHub activity survey screen">
 					</div>
 				</div>
 
@@ -114,25 +114,25 @@
 				    <div class="d-inline-flex flex-8 justify-content-start align-items-center mt-4 mt-sm-0">
 				    	<div class="lti-demo" aria-hidden="true">
 				    		<div class="lti-demo-stage">
-				    			<img class="lti-demo-sizer" src="img/lti_anim/ipad_frame.webp" alt="" aria-hidden="true">
+				    			<img loading="lazy" class="lti-demo-sizer" src="img/lti_anim/ipad_frame.webp" alt="" aria-hidden="true">
 				    			<div class="lti-demo-screen">
-					    			<img class="lti-demo-bg" src="img/lti_anim/LTI_background.webp" alt="" aria-hidden="true">
+					    			<img loading="lazy" class="lti-demo-bg" src="img/lti_anim/LTI_background.webp" alt="" aria-hidden="true">
 					    			<div class="lti-demo-scrim"></div>
-					    			<img class="lti-demo-modal lti-demo-account" src="img/lti_anim/LTI_account.webp" alt="" aria-hidden="true">
-					    			<img class="lti-demo-modal lti-demo-roster" src="img/lti_anim/LTI_roster_choice.webp" alt="" aria-hidden="true">
+					    			<img loading="lazy" class="lti-demo-modal lti-demo-account" src="img/lti_anim/LTI_account.webp" alt="" aria-hidden="true">
+					    			<img loading="lazy" class="lti-demo-modal lti-demo-roster" src="img/lti_anim/LTI_roster_choice.webp" alt="" aria-hidden="true">
 					    			<div class="lti-demo-modal lti-demo-create">
-					    				<img class="lti-demo-create-frame" src="img/lti_anim/LTI_create_class_modal_container.webp" alt="" aria-hidden="true">
+					    				<img loading="lazy" class="lti-demo-create-frame" src="img/lti_anim/LTI_create_class_modal_container.webp" alt="" aria-hidden="true">
 					    				<div class="lti-demo-create-viewport">
-					    					<img class="lti-demo-create-content" src="img/lti_anim/LTI_create_class_modal_content.webp" alt="" aria-hidden="true">
+					    					<img loading="lazy" class="lti-demo-create-content" src="img/lti_anim/LTI_create_class_modal_content.webp" alt="" aria-hidden="true">
 					    				</div>
-					    				<img class="lti-demo-handle" src="img/lti_anim/scroll_handle.webp" alt="" aria-hidden="true">
+					    				<img loading="lazy" class="lti-demo-handle" src="img/lti_anim/scroll_handle.webp" alt="" aria-hidden="true">
 					    			</div>
 					    			<div class="lti-demo-modal lti-demo-activities">
-					    				<img class="lti-demo-activities-frame" src="img/lti_anim/activities_top-section_and_container.webp" alt="" aria-hidden="true">
+					    				<img loading="lazy" class="lti-demo-activities-frame" src="img/lti_anim/activities_top-section_and_container.webp" alt="" aria-hidden="true">
 					    				<div class="lti-demo-activities-viewport">
-					    					<img class="lti-demo-activities-content" src="img/lti_anim/activities_scrolling_content.webp" alt="" aria-hidden="true">
+					    					<img loading="lazy" class="lti-demo-activities-content" src="img/lti_anim/activities_scrolling_content.webp" alt="" aria-hidden="true">
 					    				</div>
-					    				<img class="lti-demo-activities-handle" src="img/lti_anim/scroll_handle.webp" alt="" aria-hidden="true">
+					    				<img loading="lazy" class="lti-demo-activities-handle" src="img/lti_anim/scroll_handle.webp" alt="" aria-hidden="true">
 					    			</div>
 				    			</div>
 				    		</div>
@@ -175,7 +175,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image shadow-diffuse" src="img/respon_1.webp" alt="Meazure Learning responsive interface redesign">
+				    	<img loading="lazy" class="full-width-image shadow-diffuse" src="img/respon_1.webp" alt="Meazure Learning responsive interface redesign">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -187,10 +187,10 @@
 
 				<div class="meazure-gallery-container shadow-diffuse gray-bg breakout z-1">
 					<div class="meazure-gallery">
-						<img class="m-g-laptop" src="img/respon_laptop.webp" alt="Meazure Learning responsive layout on a laptop">
+						<img loading="lazy" class="m-g-laptop" src="img/respon_laptop.webp" alt="Meazure Learning responsive layout on a laptop">
 						<div class="m-g-mobile-container">	
-							<img class="m-g-mobile" src="img/respon_mobile_1.webp" alt="Meazure Learning responsive layout on a phone">
-							<img class="m-g-mobile" src="img/respon_mobile_2.webp" alt="Meazure Learning responsive layout on a phone">
+							<img loading="lazy" class="m-g-mobile" src="img/respon_mobile_1.webp" alt="Meazure Learning responsive layout on a phone">
+							<img loading="lazy" class="m-g-mobile" src="img/respon_mobile_2.webp" alt="Meazure Learning responsive layout on a phone">
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image shadow-diffuse" src="img/examity_exams.webp" alt="Examity test taker exams interface">
+				    	<img loading="lazy" class="full-width-image shadow-diffuse" src="img/examity_exams.webp" alt="Examity test taker exams interface">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7  mobile-order-first">
@@ -240,7 +240,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/examity_laptop.webp" alt="Examity redesigned experience on a laptop">
+				    	<img loading="lazy" class="full-width-image" src="img/examity_laptop.webp" alt="Examity redesigned experience on a laptop">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -252,14 +252,14 @@
 
 				<div class="examity-gallery-container shadow-diffuse gray-bg breakout z-1">
 					<div class="examity-gallery">
-						<img class="e-g-item" src="img/examity_404.webp" alt="Examity 404 error screen">
-						<img class="e-g-item" src="img/examity_enable.webp" alt="Examity enable camera and microphone screen">
-						<img class="e-g-item" src="img/examity_id.webp" alt="Examity identity verification screen">
-						<img class="e-g-item" src="img/examity_schedule.webp" alt="Examity exam scheduling screen">
-						<img class="e-g-item" src="img/examity_upload.webp" alt="Examity upload screen">
-						<img class="e-g-item" src="img/examity_sidebar.webp" alt="Examity sidebar navigation">
-						<img class="e-g-item" src="img/examity_photoID.webp" alt="Examity photo ID capture screen">
-						<img class="e-g-item" src="img/examity_expired.webp" alt="Examity expired session screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_404.webp" alt="Examity 404 error screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_enable.webp" alt="Examity enable camera and microphone screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_id.webp" alt="Examity identity verification screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_schedule.webp" alt="Examity exam scheduling screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_upload.webp" alt="Examity upload screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_sidebar.webp" alt="Examity sidebar navigation">
+						<img loading="lazy" class="e-g-item" src="img/examity_photoID.webp" alt="Examity photo ID capture screen">
+						<img loading="lazy" class="e-g-item" src="img/examity_expired.webp" alt="Examity expired session screen">
 					</div>
 				</div>
 				
@@ -282,7 +282,7 @@
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				    	<img class="full-width-image" src="img/iso_supertheme.webp" alt="Sequoia isometric website theme overview">
+				    	<img loading="lazy" class="full-width-image" src="img/iso_supertheme.webp" alt="Sequoia isometric website theme overview">
 				    </div>
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				</div>
@@ -294,8 +294,8 @@
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex col-4 col-lg- justify-content-sm-end justify-content-center align-items-center">
-				    	<img class="full-width-image mobile-mock shadow-diffuse d-none d-sm-inline-block" src="img/map_mockup_cell.webp" alt="Sequoia map search on a phone mockup">
-				    	<img class="full-width-image tab-mock shadow-diffuse d-none d-xl-inline-block" src="img/map_mockup_tab.webp" alt="Sequoia map search on a tablet mockup">
+				    	<img loading="lazy" class="full-width-image mobile-mock shadow-diffuse d-none d-sm-inline-block" src="img/map_mockup_cell.webp" alt="Sequoia map search on a phone mockup">
+				    	<img loading="lazy" class="full-width-image tab-mock shadow-diffuse d-none d-xl-inline-block" src="img/map_mockup_tab.webp" alt="Sequoia map search on a tablet mockup">
 				    </div>
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-5">
@@ -310,9 +310,9 @@
 				</div>
 
 				<div class="supertheme-gallery-container shadow-diffuse red-bg breakout z-1">
-			    	<img class="supertheme-gallery gallery-top d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_4.webp');" alt="Sequoia theme gallery example">
-			    	<img class="supertheme-gallery" style="background-image: url('img/supertheme_gallery_2.webp');" alt="Sequoia theme gallery example">
-			    	<img class="supertheme-gallery d-none d-sm-inline-block" style="background-image: url('img/supertheme_gallery_3.webp');" alt="Sequoia theme gallery example">
+			    	<div class="supertheme-gallery gallery-top d-none d-sm-inline-block" data-bg="img/supertheme_gallery_4.webp" role="img" aria-label="Sequoia theme gallery example"></div>
+			    	<div class="supertheme-gallery" data-bg="img/supertheme_gallery_2.webp" role="img" aria-label="Sequoia theme gallery example"></div>
+			    	<div class="supertheme-gallery d-none d-sm-inline-block" data-bg="img/supertheme_gallery_3.webp" role="img" aria-label="Sequoia theme gallery example"></div>
 				</div>
 
 
