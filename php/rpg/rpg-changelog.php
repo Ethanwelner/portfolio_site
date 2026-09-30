@@ -7,8 +7,17 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>9/30/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Wrote the Robotics Overview, including the top five robotics manufacturers by market cap.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/29/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Added Centafrica to the Nations tab, with Aksum (Inner Solar System Elliptical Station) as its stellar territory.</li>
+						<li>Started The Chinese Empire and The Kingdom of India histories with their cold war and annexations.</li>
 						<li>Split each nation's Territories into Earth Territories and Stellar Territories.</li>
 						<li>Added the off-world holdings: New Columbia (Luna) for The American Empire, Yùtù “Jade Rabbit” (Luna) for The Chinese Empire, Amaravati (High Earth Orbit) for The Kingdom of India, and Antiluna Colony (High Earth Orbit) alongside The Martian Association for The Stellar Democratic Union.</li>
 						<li>Added Core Europe to The Stellar Democratic Union, renamed Florida to Floridia, and split Nueva Mexico, Mexica, and Yucatán into separate American Empire territories.</li>
