@@ -503,7 +503,7 @@
 					    	<h3 class="sub-title white-text">I just like to work on stuff</h3>
 					    	<p class="copy white-text">This section's mostly a quarantine zone for my personal projects. Come on in if you want to see the kinds of stuff I work on when I’m off the clock.</p>
 					    	<p class="copy white-text">Game Design &#8226; Writing &#8226; Hobby projects</p>
-							<a href="rpg.php">
+							<a href="personal.php">
 						    	<button class="content-btn transparent-bg mt-4">
 						    		<span class="title sub-title white-text">Behold My Stuff</span>
 						    	</button>
