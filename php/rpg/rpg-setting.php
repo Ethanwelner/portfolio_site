@@ -437,9 +437,16 @@
 								<h5><strong>History</strong></h5>
 								<div class="line"></div>
 							</div>
-							<p class="copy mb-0">
-								Content coming soon
-							</p>
+							<ul class="copy mb-0">
+								<li>In the tumultuous 2040’s a state of martial law was declared and elections in the United States were suspended.</li>
+								<li>The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
+								<li>Under the pretext of preventing drug trafficking the US invades Mexico and splits it into 3 new states.</li>
+								<li>By executive decree multiple states are reorganized.</li>
+								<li>Texas, New Mexico, Kansas, and Oklahoma secede, confiscating substantial military hardware and forming an alliance of states.</li>
+								<li>A tense nuclear and economic standoff occurs over the next two decades.</li>
+								<li>The secession of Florida breaks the stalemate with 22 additional states seceding from the empire to become independent countries.</li>
+								<li>Over the following 3 decades Texas comes to dominate the economic and political periphery of its alliance and annexes 7 additional bordering states, consolidating the Union of Texas by 2100.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
