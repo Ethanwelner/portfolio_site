@@ -354,8 +354,21 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									Content coming soon
+									Robotics are everywhere, from automated ship systems to self-driving ground transportation, to vacuums that still can’t figure out corners. It’s hard not to point to robotics as the single most impactful technology to have debuted in the last few centuries. Almost every aspect of society has a robot somewhere, and automated systems make up the backbone of most routine service and manufacturing labor.
 								</p>
+								<p class="copy">
+									Not to be confused with AI systems, though an AI may “wear” one or more robotic systems as a body. Robotics is the technology of freely moving and sensing machines. Any device that has some range of free motion and sensors to take in its environment can be called a robot, and indeed the line between a simple machine and a robot is a blurry one. Philosophy aside, in 2200 a robot can be acquired to suit just about any task.
+								</p>
+								<p class="copy">
+									In 2200 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the system. The following are the top five robotics manufacturers by market cap:
+								</p>
+								<ol class="copy mb-0">
+									<li>Plum Technologies (Personal Robotics)</li>
+									<li>General Robotics (Industrial Robotics/Construction)</li>
+									<li>Sistemas de Controle Amazônia (Transportation and Logistics)</li>
+									<li>Luna-HI (Shipping/Asteroid Mining/Starship Systems)</li>
+									<li>Lagos-Core Defense (Combat Systems, Drones)</li>
+								</ol>
 							</div>
 							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6">
