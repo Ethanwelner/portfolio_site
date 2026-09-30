@@ -560,9 +560,9 @@
 								<h5><strong>History</strong></h5>
 								<div class="line"></div>
 							</div>
-							<p class="copy mb-0">
-								Content coming soon
-							</p>
+							<ul class="copy mb-0">
+								<li>A cold war between China and India saw both nations annex neighboring territories.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -632,9 +632,9 @@
 								<h5><strong>History</strong></h5>
 								<div class="line"></div>
 							</div>
-							<p class="copy mb-0">
-								Content coming soon
-							</p>
+							<ul class="copy mb-0">
+								<li>A cold war between China and India saw both nations annex neighboring territories.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -669,6 +669,48 @@
 							<p class="copy mb-0">
 								Content coming soon
 							</p>
+						</div>
+					</div>
+				</div>
+				<div class="separator"></div>
+				<div>
+					<h3 class="mb-3">Centafrica</h3>
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Territories</strong></h5>
+								<div class="line"></div>
+							</div>
+							<h6>Earth Territories</h6>
+							<ul class="copy">
+								<li>Democratic Republic of the Congo</li>
+								<li>Kenya</li>
+								<li>Angola</li>
+								<li>Burundi</li>
+								<li>Central African Republic</li>
+								<li>Republic of the Congo</li>
+								<li>Rwanda</li>
+								<li>South Sudan</li>
+								<li>Tanzania</li>
+								<li>Uganda</li>
+								<li>Zambia</li>
+								<li>Ethiopia</li>
+								<li>Somalia</li>
+							</ul>
+							<h6>Stellar Territories</h6>
+							<ul class="copy mb-0">
+								<li>Aksum (Inner Solar System Elliptical Station)</li>
+							</ul>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>History</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Heavy desertification pushed Africa’s population toward the lush equatorial zones.</li>
+							</ul>
 						</div>
 					</div>
 				</div>
