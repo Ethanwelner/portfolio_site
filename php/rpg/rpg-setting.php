@@ -452,7 +452,7 @@
 				</div>
 				<div class="separator"></div>
 				<div>
-					<h3 class="mb-3">Texas</h3>
+					<h3 class="mb-3">The Union of Texas</h3>
 					<div class="d-flex flex-wrap flex-xs-nowrap">
 						<div class="flex-7">
 							<div class="line-container">
