@@ -117,6 +117,22 @@
 			</p>
 
 			<div class="line-container">
+				<h5><strong>2048</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				The United States of America begins its invasion of Mexico, initiating a series of global conflicts that would come to be called the Wars of Expansion.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2049</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				China initiates a large-scale invasion of the nations to its southeast, beginning its New Imperial Era.
+			</p>
+
+			<div class="line-container">
 				<h5><strong>2050</strong></h5>
 				<div class="line"></div>
 			</div>
@@ -130,6 +146,14 @@
 			</div>
 			<p class="copy">
 				Kashgar station finishes construction and begins operation, acting as a logistical waystation and signal booster for colonization efforts.
+			</p>
+
+			<div class="line-container">
+				<h5><strong>2053</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy">
+				India moves to expand its Himalayan borderline and either invades or forcefully absorbs bordering nations.
 			</p>
 
 			<div class="line-container">
