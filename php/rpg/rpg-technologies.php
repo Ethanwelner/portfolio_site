@@ -380,7 +380,16 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									The explosive adoption of autonomous robotics in the early to mid 21st century brought multiple fundamental shifts in society.
+									The explosive adoption of autonomous robotic systems in the early to mid 21st century brought multiple fundamental shifts in society. The too-quick implementation of wholly automated robotics in the manufacturing and services industries in the 2020s and 2030s was profoundly destabilizing to the economic models of many nations. Paired with the sudden reliance on large-scale networked AI systems for knowledge-work, it seemed like capitalism had reached a crisis point. The decline in populations and the rapid onset of warming and desertification put further pressure on a global population already close to the breaking point. With hundreds of millions displaced, something had to break.
+								</p>
+								<p class="copy">
+									Faced with growing discontent at home and political destabilization on their borders, and equipped with a new class of autonomous weaponry, the governments of the three largest military powers on Earth (China, India, and the United States of America) sought to project their power and reassure their populations that they were in control. Starting in the late 2040s and continuing until the mid-2060s, the Wars of Expansion, as they have come to be called, redefined the global order.
+								</p>
+								<p class="copy">
+									The US used its supremacy at sea and in the air to rapidly dominate its Latin American neighbors, ceasing its relentless push only once it had claimed Panama, and going so far as to wholly annex Mexico, while installing puppet governments in the remaining states. While its primary geostrategic opponent was occupied, China pushed to consolidate control over the nations of Southeast Asia, resulting in two decades of bitter and draining conflict in the jungles and mountains of the region. The drain on China’s military power encouraged a series of lightning strikes by India to take and consolidate large stretches of Himalayan territory, while pushing to topple the regimes of bordering nations.
+								</p>
+								<p class="copy">
+									Decades of imperial conquest and conflict spurred the further development of autonomous combat systems, with each new paradigm shift quickly making its way to other conflict zones. The wars were characterized by a toxic mix of bloodlessness and a kind of unfeeling and unceasing carnage only possible under automated warfare.
 								</p>
 								<p class="copy">Cont...</p>
 							</div>
