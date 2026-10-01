@@ -360,7 +360,10 @@
 									Not to be confused with AI systems, though an AI may “wear” one or more robotic systems as a body. Robotics is the technology of freely moving and sensing machines. Any device that has some range of free motion and sensors to take in its environment can be called a robot, and indeed the line between a simple machine and a robot is a blurry one. Philosophy aside, in 2200 a robot can be acquired to suit just about any task.
 								</p>
 								<p class="copy">
-									In 2200 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the system. The following are the top five robotics manufacturers by market cap:
+									Robots, of course, fulfill far more roles in 2200 than they did in the 21st century. Mechanized construction suits can act as a second skin for AIs hired for construction duties, roboticized drone ships plumb the deepest depths of the galaxy, and roboticized garbage disposal and cleanup systems are the keystone of sanitation in every city on Earth and beyond. One place where robotics is relatively rare, now, thanks to cultural mores and a deep understanding of the risks involved, is in warfare. The technology to make hulking or minuscule robotic menaces for the battlefield is, of course, there. But the experiences in the wars of the late 20th century have taught humanity an important lesson. War must NEVER be impersonal.
+								</p>
+								<p class="copy">
+									In 2200 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the systems. The following are the top 5 robotics suppliers by market cap:
 								</p>
 								<ol class="copy mb-0">
 									<li>Plum Technologies (Personal Robotics)</li>
