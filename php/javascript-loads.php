@@ -125,7 +125,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations" ].indexOf( hash ) !== -1;
+			return [ "frontiers", "strange-frontiers", "setting", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
 		}
 
 		function isPhotosHash(hash) {
@@ -455,6 +455,75 @@
 			} else if ( event.key === "Tab" ) {
 				event.preventDefault();
 				$imageModalClose.trigger( "focus" );
+			}
+		});
+
+		var $loreModal = $( ".lore-modal" );
+		var $loreModalPanel = $loreModal.find( ".lore-modal-panel" );
+		var $loreModalTitle = $loreModal.find( ".lore-modal-title" );
+		var $loreModalBody = $loreModal.find( ".lore-modal-body" );
+		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
+		var loreModalReturnFocus = null;
+
+		function openLoreModal(slug, trigger) {
+			var $entry = $( "#lore-" + slug );
+			if ( ! $entry.length ) {
+				return false;
+			}
+			if ( ! $loreModal.hasClass( "is-open" ) ) {
+				loreModalReturnFocus = trigger;
+			}
+			$loreModalTitle.text( $entry.children( ".lore-title" ).text() );
+			$loreModalBody.html( $entry.children( ".lore-body" ).html() );
+			$loreModalPanel.scrollTop( 0 );
+			$loreModal.addClass( "is-open" );
+			$( "html" ).addClass( "lore-modal-open" );
+			$loreModalClose.trigger( "focus" );
+			return true;
+		}
+
+		function closeLoreModal() {
+			if ( ! $loreModal.hasClass( "is-open" ) ) {
+				return;
+			}
+			$loreModal.removeClass( "is-open" );
+			$( "html" ).removeClass( "lore-modal-open" );
+			if ( loreModalReturnFocus ) {
+				loreModalReturnFocus.focus();
+			}
+		}
+
+		$( document ).on( "click", "[data-lore-open]", function( event ) {
+			if ( openLoreModal( $( this ).attr( "data-lore-open" ), this ) ) {
+				event.preventDefault();
+			}
+		});
+
+		$loreModalClose.on( "click", closeLoreModal );
+
+		$loreModal.on( "click", function( event ) {
+			if ( event.target === this ) {
+				closeLoreModal();
+			}
+		});
+
+		$( document ).on( "keydown", function( event ) {
+			if ( ! $loreModal.hasClass( "is-open" ) ) {
+				return;
+			}
+			if ( event.key === "Escape" ) {
+				closeLoreModal();
+			} else if ( event.key === "Tab" ) {
+				var $focusable = $loreModal.find( "a[href], button" ).filter( ":visible" );
+				var first = $focusable.first()[0];
+				var last = $focusable.last()[0];
+				if ( event.shiftKey && document.activeElement === first ) {
+					event.preventDefault();
+					last.focus();
+				} else if ( ! event.shiftKey && document.activeElement === last ) {
+					event.preventDefault();
+					first.focus();
+				}
 			}
 		});
 

@@ -41,7 +41,7 @@
 
 					<div class="tech-field-panel" id="craft-technology" role="tabpanel" aria-labelledby="tab-craft-technology">
 						<div>
-							<h3 class="mb-3">Lorentz Field Generator</h3>
+							<h4 class="mb-3">Lorentz Field Generator</h4>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
 								<div class="flex-7">
 									<div class="line-container">
@@ -84,7 +84,7 @@
 						</div>
 						<div class="bumper"></div>
 						<div>
-							<h3 class="mb-3">Aether Sails</h3>
+							<h4 class="mb-3">Aether Sails</h4>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
 								<div class="flex-7">
 									<div class="line-container">

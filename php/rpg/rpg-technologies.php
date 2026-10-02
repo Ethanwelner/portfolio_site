@@ -45,7 +45,6 @@
 
 					<div class="tech-field-panel is-active" id="tech-paraphysics" role="tabpanel" aria-labelledby="tab-tech-paraphysics">
 						<div>
-							<h3 class="mb-3">Paraphysics</h3>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
 								<div class="flex-7">
 									<div class="line-container">
@@ -71,7 +70,6 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-biology" role="tabpanel" aria-labelledby="tab-tech-biology">
-						<h3 class="mb-3">Biology</h3>
 						<div class="d-flex flex-wrap flex-xs-nowrap">
 							<div class="flex-7">
 								<div class="line-container">
@@ -100,7 +98,6 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-ai" role="tabpanel" aria-labelledby="tab-tech-ai">
-						<h3 class="mb-3">AI</h3>
 						<div class="d-flex flex-wrap flex-xs-nowrap">
 							<div class="flex-7">
 								<div class="line-container">
@@ -135,7 +132,6 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-cybernetics" role="tabpanel" aria-labelledby="tab-tech-cybernetics">
-						<h3 class="mb-3">Cybernetics</h3>
 						<div class="d-flex flex-wrap flex-xs-nowrap">
 							<div class="flex-7">
 								<div class="line-container">
@@ -182,7 +178,6 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-robotics" role="tabpanel" aria-labelledby="tab-tech-robotics">
-						<h3 class="mb-3">Robotics</h3>
 						<div class="d-flex flex-wrap flex-xs-nowrap">
 							<div class="flex-7">
 								<div class="line-container">
