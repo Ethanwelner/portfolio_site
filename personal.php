@@ -183,6 +183,7 @@
 
 		<?php include 'php/about.php'; ?>
 		<?php include 'php/image-modal.php'; ?>
+		<?php include 'php/rpg/lore-modal.php'; ?>
 		<?php include 'php/javascript-loads.php'; ?>
         
     </body>
