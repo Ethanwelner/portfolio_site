@@ -473,7 +473,7 @@
 			if ( ! $loreModal.hasClass( "is-open" ) ) {
 				loreModalReturnFocus = trigger;
 			}
-			$loreModalTitle.text( $entry.children( ".lore-title" ).text() );
+			$loreModalTitle.html( $entry.find( ".lore-title" ).first().html() );
 			$loreModalBody.html( $entry.children( ".lore-body" ).html() );
 			$loreModalPanel.scrollTop( 0 );
 			$loreModal.addClass( "is-open" );

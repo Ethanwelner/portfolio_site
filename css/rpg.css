@@ -465,7 +465,7 @@ html.lore-modal-open {
 .lore-modal-panel {
     position: relative;
     width: 100%;
-    max-width: 640px;
+    max-width: 720px;
     max-height: 100%;
     overflow-y: auto;
     padding: 32px;
@@ -482,6 +482,15 @@ html.lore-modal-open {
 
 .lore-modal-body > :last-child {
     margin-bottom: 0;
+}
+
+.lore-modal-body .d-flex.flex-wrap {
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lore-modal-body .d-flex.flex-wrap > .flex-1 {
+    display: none !important;
 }
 
 .lore-modal-close {

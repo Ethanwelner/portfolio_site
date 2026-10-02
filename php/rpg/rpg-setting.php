@@ -13,7 +13,7 @@
 		<div class="single-column-content">
 			<div class="blog-post intro-vignette mb-4">
 				<p class="copy">
-					The sky above you is a radiant white. And the sky below you. All around you, really. And it’s hot. The bathysphere is reading north of 3,200 bar and 230 degrees. A few moments outside its thick parametal alloy skin and you’d resemble a very well-cooked marble of hot carbon. Typical weather in 65/T/137 “Saturday’s Furnace.”
+					The sky above you is a radiant white. And the sky below you. All around you, really. And it’s hot. The bathysphere is reading north of 3,200 bar and 230 degrees. A few moments outside its thick parametal alloy skin and you’d resemble a very well-cooked marble of hot carbon. Typical weather in 65/T/137 “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>.”
 				</p>
 				<p class="copy mb-0">
 					One of the harvesters is reporting an infestation of “Sunflowers.” The shift crew calls it “Light work,” for the pun as much as they do for the accuracy of the name. A few hours of scraping luminous higher-dimensional “vines” off of the ship-sized packaging and compression machine and you’ll be back at the Switch Point with time to spare.
@@ -60,7 +60,7 @@
 				Then, a mysterious benefactor placed a temple of bizarre make and proportion on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the near-century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
 			</p>
 			<p class="copy">
-				Life in Earth’s megacities is still hard, and for 50 years the great migration away from Earth, coined the Exodus, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
+				Life in Earth’s megacities is still hard, and for 50 years the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
 			</p>
 			<p class="copy mb-0">
 				In the end, it’s still humanity, and it’s a big strange universe out there.
@@ -272,7 +272,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					First tests of a “switch gate” are made targeting 1/a/384 - “Paraloka,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
+					First tests of a “switch gate” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
 				</p>
 			</div>
 			<div>

@@ -11,6 +11,13 @@ function sf_lore_titles() {
 		'rebirth-of-science' => 'The Rebirth of Science',
 		'first-interstellar-expansion' => 'First Interstellar Expansion',
 		'first-switch-gate-catastrophe' => 'The First Switch-Gate Catastrophe',
+		'paraloka' => '1/a/384 - “<i>Paraloka</i>”',
+		'gastown' => '96/f/55 - “<i>Gastown</i>”',
+		'the-lost-world' => '380/c/12 - “<i>The Lost World</i>”',
+		'flatland' => '419/f/05 - “<i>Flatland</i>”',
+		'leviathan' => '513/y/11 - “<i>Leviathan</i>”',
+		'saturdays-furnace' => '65/T/137 - “<i>Saturday’s Furnace</i>”',
+		'st-245-e6' => 'St-245/E6 - “<i>Solum Inane</i>”',
 	];
 	return $titles;
 }
@@ -24,9 +31,25 @@ function sf_lore_body($slug) {
 	include __DIR__ . '/lore/' . $slug . '.php';
 }
 
-function sf_lore_entry($slug, $heading = 'h4') {
+// Slugs already rendered on the page, so the modal store can skip them.
+function sf_lore_rendered($slug = null) {
+	static $rendered = [];
+	if ($slug !== null) {
+		$rendered[$slug] = true;
+	}
+	return $rendered;
+}
+
+// $heading is an h-tag name, or 'line' for the ruled h5 heading style.
+function sf_lore_entry($slug, $heading = 'h4', $headingClass = '') {
+	sf_lore_rendered($slug);
+	$title = sf_lore_title($slug);
 	echo '<div class="lore-entry" id="lore-' . $slug . '">';
-	echo '<' . $heading . ' class="lore-title">' . sf_lore_title($slug) . '</' . $heading . '>';
+	if ($heading === 'line') {
+		echo '<div class="line-container"><h5><strong class="lore-title">' . $title . '</strong></h5><div class="line"></div></div>';
+	} else {
+		echo '<' . $heading . ' class="lore-title ' . $headingClass . '">' . $title . '</' . $heading . '>';
+	}
 	echo '<div class="lore-body">';
 	sf_lore_body($slug);
 	echo '</div></div>';

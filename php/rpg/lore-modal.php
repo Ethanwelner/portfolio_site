@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/lore.php'; ?>
 <div class="lore-store" hidden>
-	<?php foreach (array_keys(sf_lore_titles()) as $slug) { sf_lore_entry($slug); } ?>
+	<?php foreach (array_keys(sf_lore_titles()) as $slug) { if (! isset(sf_lore_rendered()[$slug])) { sf_lore_entry($slug); } } ?>
 </div>
 <div class="lore-modal" role="dialog" aria-modal="true" aria-labelledby="lore-modal-title">
 	<div class="lore-modal-panel">
