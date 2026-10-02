@@ -51,7 +51,7 @@
 				Mankind has colonized the stars, it’s created life, it’s mapped the fundamental building blocks of nature, but in the year 2200 it’s still just humanity. Inequality persists, war remains, and we’re still striving to uncover the next horizon. The nations of Earth have established colonies in distant stars and even more distant planes of reality, corporations use parascience to develop new technologies, and humanity grapples with how to treat the truly alien.
 			</p>
 			<p class="copy">
-				Life in 2200 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a freighter out to the frontier and kickstart your own society. Better yet, hop in a switch gate and try your luck in a whole other plane of reality. It wasn’t always this good, though.
+				Life in 2200 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a freighter out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
 			</p>
 			<p class="copy">
 				In humanity’s darkest hour, 80 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
@@ -272,7 +272,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					First tests of a “switch gate” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
+					First tests of a “<?php echo sf_lore_link('switch-gates', 'switch gate'); ?>” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
 				</p>
 			</div>
 			<div>
@@ -317,7 +317,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					The first aether sails are commercialized.
+					The first <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> are commercialized.
 				</p>
 			</div>
 			<div>
@@ -335,7 +335,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					First tests of Lorentz Field Generators.
+					First tests of <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?>.
 				</p>
 			</div>
 			<div>

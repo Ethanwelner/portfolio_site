@@ -18,6 +18,9 @@ function sf_lore_titles() {
 		'leviathan' => '513/y/11 - “<i>Leviathan</i>”',
 		'saturdays-furnace' => '65/T/137 - “<i>Saturday’s Furnace</i>”',
 		'st-245-e6' => 'St-245/E6 - “<i>Solum Inane</i>”',
+		'switch-gates' => 'Switch Gates',
+		'lorentz-field-generator' => 'Lorentz Field Generator',
+		'aether-sails' => 'Aether Sails',
 	];
 	return $titles;
 }
