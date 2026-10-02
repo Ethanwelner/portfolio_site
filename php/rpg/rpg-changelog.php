@@ -7,6 +7,17 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/1/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Added the paraphysics paragraph to the Robotics Overview.</li>
+						<li>Renamed the Exotic Sciences tab to Paraphysics.</li>
+						<li>Moved Switch Gates into the Planar Exploration tab.</li>
+						<li>Added an Exotic Materials tab to The Planar Hierarchy, starting with St-245/E6 - “<i>Solum Inane</i>.”</li>
+						<li>Added a Technology tab to The Stars and moved the Lorentz Field Generator and Aether Sails into it.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote the Robotics Overview, including the top five robotics manufacturers by market cap.</li>
