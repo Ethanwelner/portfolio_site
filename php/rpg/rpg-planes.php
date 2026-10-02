@@ -26,6 +26,7 @@
 					<button type="button" class="tech-field-tab is-active" role="tab" id="tab-plane-paraastral" aria-controls="plane-paraastral" aria-selected="true">Planar Properties</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-plane-known" aria-controls="plane-known" aria-selected="false">Known Planes</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-plane-exploration" aria-controls="plane-exploration" aria-selected="false">Planar Exploration</button>
+					<button type="button" class="tech-field-tab" role="tab" id="tab-plane-exotic" aria-controls="plane-exotic" aria-selected="false">Exotic Materials</button>
 				</div>
 
 				<div class="tech-field-panel is-active" id="plane-paraastral" role="tabpanel" aria-labelledby="tab-plane-paraastral">
@@ -393,9 +394,86 @@
 				</div>
 
 				<div class="tech-field-panel" id="plane-exploration" role="tabpanel" aria-labelledby="tab-plane-exploration">
-					<p class="copy mb-0">
-						Content coming soon
-					</p>
+					<div>
+						<h3 class="mb-3">Switch Gates</h3>
+						<div class="d-flex flex-wrap flex-xs-nowrap">
+							<div class="flex-7">
+								<div class="line-container">
+									<h5><strong>Overview</strong></h5>
+									<div class="line"></div>
+								</div>
+								<p class="copy">
+									A switch gate is, at its simplest, a machine that exchanges an area of contiguous, contained space-time for an identically sized area located on another plane of reality. The form and scale of a switch gate are highly variable. Nearly half a century of development and innovation by dozens of manufacturers has led to several distinct evolutionary lines of the technology.
+								</p>
+								<p class="copy">
+									Switch gates have one primary utility: they break the first law of thermodynamics. By exchanging one amount of space for another, they, in a roundabout way, both create and destroy energy. Aside from the headline aspects of exploration and access to parallel planes, they provide a bit of a hack around many otherwise inviolable limitations. Miniaturized switch gates attuned to specific planes and installed aboard spacecraft are capable of “harvesting” materials like hydrogen or water. Switch gates attuned to empty or secure planes can be used for the disposal of dangerous materials, or the safe storage of valuable ones. Switch gates attuned to particularly hostile or compressed planes can even be used as a form of makeshift weapon.
+								</p>
+								<p class="copy">
+									All switch gates share a few intrinsic properties:
+								</p>
+								<ul class="copy">
+									<li>They require a “Spine” of St-245/E6, an ultra-dense and nearly indestructible exotic material first mined directly from The Gift's floor structure.</li>
+									<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. There is, as of yet, no known way to move this lock without retuning, and re-establishing a lock in the same location is exceptionally difficult, if possible at all.</li>
+									<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
+									<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
+									<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Corrupted Physics.”</li>
+									<li>Switch gates, and indeed any of the paraphysical effects of St-245/E6, do not work in any as-of-yet discovered plane other than Earth baseline.</li>
+									<li>The process is one-sided. A switch gate exchanges an area with a planar location; the subject plane does not require its own switch gate.</li>
+								</ul>
+							</div>
+							<div class="d-inline-flex align-items-center flex-1"></div>
+							<div class="flex-6">
+								<div class="line-container">
+									<h5><strong>History</strong></h5>
+									<div class="line"></div>
+								</div>
+								<p class="copy">
+									The defining technological advancement of the twenty-second century, the switch gate was the culmination of a decade of painstaking research and industrial effort. Its introduction launched the Rebirth of Science and is the keystone to nearly every advancement that came after.
+								</p>
+								<p class="copy">
+									As mankind's first foray into paraphysics and the engineering of the exotic, the task was daunting. Even with a wholly assembled blueprint and volumes of deciphered paraphysics, engineering, and philosophical texts recorded from The Gift, the construction of the initial line of switch gates was little more than guesswork. An entirely new field of physics was being discovered in secrecy under the Lunar regolith.
+								</p>
+								<p class="copy">
+									The program was bankrolled first by the Lunar Industrial Syndicate of 2150 and spanned three different dissolutions and reformations of Lunar governance. The vast research and development expenditure poured into deciphering and instrumentalizing The Gift, together with the unusual secrecy of the program, invited industrial and national espionage at every level.
+								</p>
+								<p class="copy">
+									Unstable at the best of times, the Lunar Government was ultimately unable to keep the reality of The Gift a secret. In a series of data breaches, nearly a decade's worth of research and industrial effort was made public. Every significant government, military, academic, and business interest in the system was suddenly aware of the technology's potential.
+								</p>
+								<p class="copy">
+									Few times in history has a gold rush had such urgency. What do you do when you find that your neighbor has the keys to infinite prosperity? Like any civilized government, you point a gun at them, of course. The weeks and months of negotiation following the reveal of The Gift have come to be known as the Lunar Hostage Crisis. Not because anyone took hostages, of course, but because the entire Lunar nation had the guns and fury of every nation on Earth pointed at it.
+								</p>
+								<p class="copy">
+									What followed was a period of intense negotiation. While the Earth had, now, full knowledge of the Gift and everything that came with it, what they lacked was the St-245/E6 required to build Switch Gates of their own. Luna still had a monopoly on the distribution of the element critical to Switch Gate construction.
+								</p>
+								<p class="copy">Cont...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tech-field-panel" id="plane-exotic" role="tabpanel" aria-labelledby="tab-plane-exotic">
+					<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>St-245/E6 - “<i>Solum Inane</i>”</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								St-245/E6 is both the first and by far most important exotic material ever discovered. With an atomic weight of 245, it’s also the heaviest stable element yet known. Given the name <i>Solum Inane</i>, Latin for “Empty Land,” after the barren expanse of 1/a/384 - “Paraloka,” this dull, satin-black crystal brought mankind to the stars and beyond.
+							</p>
+							<p class="copy">
+								This ultra-dense and hyper-stable material’s space-time-altering paraphysical properties form the core of numerous technologies. When under the influence of a strong electric current, the material will alter nearby space-time in predictable and manipulable ways. The paraphysical field it generates can be manipulated to achieve a broad range of effects, with perhaps the most famous being the planar space-time exchanges of Switch Gates.
+							</p>
+							<p class="copy">
+								The material in its natural state is nearly indestructible, with a hardness of approximately 250 GPa, making it several times harder than industrial diamond. That, alongside a density six times that of steel and a melting point exceeding 5000°C, makes mining the material extraordinarily difficult. Atomic blast mining is typically the most expedient modern method used to break the material into manageable chunks; these are then laser-cut for transport and refining.
+							</p>
+							<p class="copy mb-0">
+								As a metastable exotic material with a paraphysical half-life of six years, St-245/E6 must be continuously mined and exported, but especially overbuilt devices reliant on its effects can last upwards of two decades. Depleted St-245/E0 still retains its extreme durability, and there is a highly lucrative aftermarket for the material.
+							</p>
+						</div>
+						<div class="d-inline-flex align-items-center flex-1"></div>
+						<div class="flex-6"></div>
+					</div>
 				</div>
 			</div>
 		</div>
