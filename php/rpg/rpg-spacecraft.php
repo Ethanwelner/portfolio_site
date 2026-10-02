@@ -41,9 +41,145 @@
 					</div>
 
 					<div class="tech-field-panel is-active" id="craft-starships" role="tabpanel" aria-labelledby="tab-craft-starships">
-						<p class="copy mb-0">
-							Content coming soon
-						</p>
+						<div class="d-flex flex-wrap flex-xs-nowrap">
+							<div class="flex-7 content-stack">
+								<div>
+									<div class="line-container">
+										<h5><strong>Skiff</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Skiffs</i></h6>
+									<p class="copy">
+										Extremely small local craft; station/vessel internal transport.
+									</p>
+									<h6><i>Drone Craft</i></h6>
+									<p class="copy mb-0">
+										Extremely small local craft; station/vessel internal transport.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Shuttle</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Shuttles</i></h6>
+									<p class="copy">
+										Short-range transport between ships, stations, and surface facilities.
+									</p>
+									<h6><i>Light Trucks</i></h6>
+									<p class="copy mb-0">
+										Short-range transport between ships, stations, and surface facilities.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Cutter</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Fighters</i></h6>
+									<p class="copy">
+										Small independent craft; combat, security, utility, cargo.
+									</p>
+									<h6><i>Patrol Craft</i></h6>
+									<p class="copy">
+										Small independent craft; combat, security, utility, cargo.
+									</p>
+									<h6><i>Cutters</i></h6>
+									<p class="copy">
+										Small independent craft; combat, security, utility, cargo.
+									</p>
+									<h6><i>Trucks</i></h6>
+									<p class="copy mb-0">
+										Small independent craft; combat, security, utility, cargo.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Corvette</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Corvettes</i></h6>
+									<p class="copy">
+										Small independent starships; personal, corporate, light military.
+									</p>
+									<h6><i>Yachts</i></h6>
+									<p class="copy mb-0">
+										Small independent starships; personal, corporate, light military.
+									</p>
+								</div>
+							</div>
+							<div class="d-inline-flex align-items-center flex-1"></div>
+							<div class="flex-6 content-stack">
+								<div>
+									<div class="line-container">
+										<h5><strong>Cruiser</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Frigates</i></h6>
+									<p class="copy">
+										Serious ships with substantial endurance and crew; military, governmental, corporate.
+									</p>
+									<h6><i>Cruisers</i></h6>
+									<p class="copy">
+										Serious ships with substantial endurance and crew; military, governmental, corporate.
+									</p>
+									<h6><i>Administration Craft</i></h6>
+									<p class="copy mb-0">
+										Serious ships with substantial endurance and crew; military, governmental, corporate.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Carrier</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Carriers</i></h6>
+									<p class="copy">
+										Large specialized vessels; major industrial or military operations.
+									</p>
+									<h6><i>Miners</i></h6>
+									<p class="copy">
+										Large specialized vessels; major industrial or military operations.
+									</p>
+									<h6><i>Foremen</i></h6>
+									<p class="copy">
+										Large specialized vessels; major industrial or military operations.
+									</p>
+									<h6><i>Freighters</i></h6>
+									<p class="copy mb-0">
+										Large specialized vessels; major industrial or military operations.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Capital</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Battlecruisers</i></h6>
+									<p class="copy">
+										Massive strategic vessels capable of supporting large populations or fleets.
+									</p>
+									<h6><i>Stellar Carriers</i></h6>
+									<p class="copy">
+										Massive strategic vessels capable of supporting large populations or fleets.
+									</p>
+									<h6><i>Colony Ships</i></h6>
+									<p class="copy mb-0">
+										Massive strategic vessels capable of supporting large populations or fleets.
+									</p>
+								</div>
+								<div>
+									<div class="line-container">
+										<h5><strong>Arc</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6><i>Arcs</i></h6>
+									<p class="copy mb-0">
+										The largest ships; essentially mobile cities/nations.
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="tech-field-panel" id="craft-arks" role="tabpanel" aria-labelledby="tab-craft-arks">
