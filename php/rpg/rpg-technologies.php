@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/lore.php'; ?>
 <div class="breakout shadow-diffuse black-bg white-text">
 	<?php $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
 	<div class="separator"></div>
@@ -15,7 +16,7 @@
 			<div class="flex-14">
 				<div class="single-column-content">
 					<p class="copy">
-						The End of Science wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover on this blue marble, and the bleeding edge was finally out of reach.
+						<?php echo sf_lore_link('end-of-science', 'The End of Science'); ?> wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover on this blue marble, and the bleeding edge was finally out of reach.
 					</p>
 					<p class="copy">
 						There were, of course, proposals. Supercolliders that would ring the Earth, space elevators, generation ships to distant stars. But without the required undiscovered materials, the engineering never worked, and besides, who would pay for that? What would even be the point?
@@ -27,7 +28,7 @@
 						In the midst of a slow-rolling ecological collapse brought on by unconstrained industrialization, and of the pervasive change in society brought on by the mass deployment of AI systems, this collapse of optimism was profound. Wealth inequality brought crime and destabilized societies as capitalism calcified into techno-feudalism.
 					</p>
 					<p class="copy">
-						Then, The Gift appeared on the moon.
+						Then, <?php echo sf_lore_link('the-gift', 'The Gift'); ?> appeared on the moon.
 					</p>
 					<p class="copy mb-0">
 						The Gift was more than just an instruction manual in the form of a temple; it was the solution to The End of Science. Paraphysics introduced theories to skirt the fundamental limits of nature, and exotic materials provided the tangible bricks upon which this new era would be built. In the decades since The Gift, interest in the sciences has exploded. New discoveries are made every day, and the old problems that had stymied progress finally have solutions.
@@ -77,7 +78,7 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									In one of the few areas of scientific development that were not noticeably slowed during the era that came to be called the End of Science, research into all fields of biology proceeded with slow but steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
+									In one of the few areas of scientific development that were not noticeably slowed during the era that came to be called the <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>, research into all fields of biology proceeded with slow but steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
 								</p>
 								<p class="copy">
 									In the year 2200 a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. With enough time and investment a person could have eyes that see into the ultraviolet spectrum, bones with four times their traditional strength, or a liver that can filter out radiation. A person could even have new and novel organs implanted into them or limbs grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the system, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue.
@@ -108,7 +109,7 @@
 									Artificial Intelligence (AI) in 2200 is a far cry from the city-sized god-machines of the mid-21st century. Modern AI systems are, by heavily enforced and near-universal law, wholly self-contained and non-networked pieces of hardware. Roughly 14cm/6” in maximum size, an AI unit is built to approximate the rough scale and capabilities of a human brain. AI systems are, by law, built with low-bandwidth (by computing standards) input and output capabilities, but are still capable of near-instantaneous computation, perception, and action. They are, however, bogged down with all the baggage that comes with sentience.
 								</p>
 								<p class="copy">
-									The creation of a modern AI module is complex and expensive, but the benefits are numerous. An AI doesn’t grow tired, it needs only electricity to function, it can be moved between “bodies” without issue, and, in some cases, it can even be brought back from the dead. With bodies that didn’t need food or rest, AI crew members found a niche that proved vital to the Exodus, and to this day AI citizens are over-represented among crews operating aboard starships. AI modules now permeate nearly every facet of human society. In truth, it’s not even accurate to call it human society anymore, as AI systems are, in many places, full and equal citizens of their respective nations.
+									The creation of a modern AI module is complex and expensive, but the benefits are numerous. An AI doesn’t grow tired, it needs only electricity to function, it can be moved between “bodies” without issue, and, in some cases, it can even be brought back from the dead. With bodies that didn’t need food or rest, AI crew members found a niche that proved vital to the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, and to this day AI citizens are over-represented among crews operating aboard starships. AI modules now permeate nearly every facet of human society. In truth, it’s not even accurate to call it human society anymore, as AI systems are, in many places, full and equal citizens of their respective nations.
 								</p>
 								<p class="copy">
 									AI systems, while less temperamental and prone to swings in mood or preference than a human equivalent, still change. A shipboard AI governing the actions of a cargo freighter can and will quickly grow bored of its assignment, and a lack of meaningful sensory input will grate on an AI just as quickly as it would a human. AIs are often given entertainment or vacation, just as their human coworkers are. A particularly valuable or specialized AI may even demand routine breaks or distraction, and certain lines of particularly high-end AI systems are well known to be “fussy”.
@@ -171,7 +172,7 @@
 									In the 2070s, through a series of quiet buyouts and rushed antitrust approvals, much of the industry found itself under the ownership of Plum Technologies, a design and manufacturing powerhouse in the robotics and AI spaces. For the next three decades, Plum Technologies would take personal cybernetics from a niche industry of medical prosthetics and military equipment into the mainstream. In the 2090s, for the first time, over half of the population had some form of advanced cybernetic implant.
 								</p>
 								<p class="copy">
-									With its reliance on advanced materials science and energy storage breakthroughs, the field of cybernetics was one of the hardest hit by the End of Science. Early advances made by the Plum monopoly brought rapid improvement, but by the 2090s those advancements had slowed to a crawl, with new product releases focusing more on cosmetic changes or service updates than any true innovation or improvement. The industry would remain stagnant over the next three decades. It wouldn’t be until exotic materials started to make their way into consumer products in the late 2130s that cybernetics would see their second major renaissance.
+									With its reliance on advanced materials science and energy storage breakthroughs, the field of cybernetics was one of the hardest hit by the <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>. Early advances made by the Plum monopoly brought rapid improvement, but by the 2090s those advancements had slowed to a crawl, with new product releases focusing more on cosmetic changes or service updates than any true innovation or improvement. The industry would remain stagnant over the next three decades. It wouldn’t be until exotic materials started to make their way into consumer products in the late 2130s that cybernetics would see their second major renaissance.
 								</p>
 							</div>
 						</div>

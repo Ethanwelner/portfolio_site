@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/lore.php'; ?>
 <div class="breakout shadow-diffuse black-bg white-text">
 	<?php $rpgLinksKind = 'setting'; $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
 	<div class="separator"></div>
@@ -55,7 +56,7 @@
 										LFGs network together to generate an exotic field effect that substantially reduces the relative Lorentz transformations and Lorentz effects experienced by matter within the field. In simpler terms, they “reduce” the relationship between the space-time bubble within the field and the rest of the universe, allowing the ship to travel at speeds otherwise impossible.
 									</p>
 									<p class="copy">
-										Using a radial array of “Antennae” made of the same exotic and ultra-dense St-245/E6 material that allows switch gates to manipulate space-time, a single LFG can cover a spherical volume of up to a 200-meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
+										Using a radial array of “Antennae” made of the same exotic and ultra-dense <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?> material that allows switch gates to manipulate space-time, a single LFG can cover a spherical volume of up to a 200-meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
 									</p>
 									<p class="copy">
 										Modern LFGs are reliable but bulky, with units typically taking up the volume of what would otherwise be a fairly sizable crew cabin. Given that the largest of interstellar arks may have hundreds of such generators, significant research is ongoing into further miniaturization of a full LFG package.
@@ -98,7 +99,7 @@
 										Aether sails come in a vast variety of shapes and sizes, but the most common configuration is a flat, planar container of structurally hardy metal surrounding any one of several exotic materials that interact with the aetheric field when exposed to ultra-high-frequency electromagnetic radiation. This component is then securely attached to an armature that allows the sail to be rotated freely about any axis, letting it “catch the wind” and drag the ship along. Aether sails are typically overbuilt and are secured firmly to the most rigid portions of the ship in question. The aetheric field moves unpredictably and experiences a form of “weather” as the field’s currents change in direction and force. A poorly secured aether sail, or one engaged at the wrong time, is fully capable of ripping itself out of its housing, and indeed out of the entire ship.
 									</p>
 									<p class="copy">
-										By replacing heavy-lift rockets in the task of escaping Earth orbit, aether sails were the sea change that enabled the Exodus. The aetheric field is at its strongest near a deep gravity well, and the field’s direction of “motion” is consistently against gravity’s pull. This allows any suitably equipped vessel to simply engage a few sails in the right orientation and be lifted up and into interplanetary space. As the vessel moves farther towards the neutral gravity of space, “cross winds” and other directional currents grow to replace the unidirectional outward flow, typically necessitating favorable winds or a takeover by rockets to stay on course.
+										By replacing heavy-lift rockets in the task of escaping Earth orbit, aether sails were the sea change that enabled the <?php echo sf_lore_link('exodus', 'Exodus'); ?>. The aetheric field is at its strongest near a deep gravity well, and the field’s direction of “motion” is consistently against gravity’s pull. This allows any suitably equipped vessel to simply engage a few sails in the right orientation and be lifted up and into interplanetary space. As the vessel moves farther towards the neutral gravity of space, “cross winds” and other directional currents grow to replace the unidirectional outward flow, typically necessitating favorable winds or a takeover by rockets to stay on course.
 									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>

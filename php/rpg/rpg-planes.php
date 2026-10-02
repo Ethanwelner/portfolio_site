@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/lore.php'; ?>
 <div class="w-100">
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -88,313 +89,7 @@
 
 				<div class="tech-field-panel" id="plane-known" role="tabpanel" aria-labelledby="tab-plane-known">
 					<div class="content-stack">
-						<div>
-							<h4 class="mb-3">1/a/384 - “<i>Paraloka</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: High<br>
-									Elevation: 2<br>
-									Divergence: 8<br>
-									Distance: 4<br>
-									Aperture: 6
-								</p>
-								<p class="copy">
-									Population: 20 thousand est<br>
-									Average Temperature: -80.352°C<br>
-									Biome: Void<br>
-									Natural Resources: St-245/E6<br>
-									Indigenous life: No
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										Officially designated 1/a/384, Paraloka would receive its name by popular fiat when the records of its existence were leaked online. It was coined as such, in a bit of dramatic flair, by the then site director overseeing research and translation of The Gift, Dr. Charat Pravhadi. The text covering every surface of the lunar artifact had initially proven difficult to translate. Its vernacular was closer to prose and rhyme than straightforward communication, and the eventual translations were flowery, to say the least. 1/a/384 was given several designations by the artifact, but the most evocative was “The Next World/Afterlife.” Hardly a religious man, but definitely a sentimental one, Charat gave the described place the most fitting title he could think of, naming it after the realm where souls are said to go upon death, Paraloka.
-									</p>
-									<p class="copy">
-										Paraloka is a plane of extreme simplicity in every sense. It contains precisely two things: a starless void and a flat ground. That ground, though, was everything to humanity’s future. The exotic material St-245/E6 was an irreplaceable element in the construction of switch gates, and indeed was the only component of that technology that could not be found elsewhere in the solar system. In Paraloka, it was all there was. Before The Gift was even known to the public, the Third Lunar Syndicate had established mining operations in another plane of existence.
-									</p>
-									<p class="copy mb-0">
-										To this day Paralokas fortunes have remained unchanged, it’s a cold, barren, lifeless void with a single useful extractable resource, and the difficulty inherent in extracting that resource has limited investment to only a few specialized mining firms. That said, mining St-245/E6 is big business. The element is irreplaceable in numerous technologies that the societies of 2200 rely on. To date, no planar lock has placed any such mining venture within visible distance of another, implying a distance of over 100 light years between outposts at a minimum, with the true distance likely being far higher. This makes a census of the total mining activity on Paraloka functionally impossible, but published statistics of the four major switch harbors and their surrounding development at roughly twenty thousand operating personnell.
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy">
-										For humanity’s first glimpse of another plane, Paraloka wasn’t much to look at. All attempts at surveying it have shown little more than an endless and perfectly flat plane of St-245/E6, resting under an airless, lightless void. Paraloka’s gravity sits at 0.33g, while its surface possesses an ambient temperature of exactly -80.352°C.
-									</p>
-									<p class="copy">
-										Looking out onto Paraloka is often described as a frightening experience. The plane is dark in a way far deeper than any night on Earth could hope to be, and the lack of curvature on the plane’s “surface,” together with the lack of oxygen scattering, means that objects impossibly distant would still be visible, were they to exist at all. To date, the only objects capable of appearing on Paraloka’s horizon are those brought by humanity: the surface is geometrically perfect down to the atomic level, and no other structures have ever been observed. Given the present gravity and the monocultural nature of the plane’s contents, it’s theorized that the ground of Paraloka is in truth a slab of St-245/E6 roughly 163.8 km in depth.
-									</p>
-									<p class="copy mb-0">
-										The area around most switch gate harbors tends to be dotted with active or abandoned mining equipment, alongside the pits and stacked cut-blocks of St-245/E6 waiting to be transited back to Earth.
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h4 class="mb-3">96/f/55 - “<i>Gastown</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: Low<br>
-									Elevation: -5<br>
-									Divergence: 10<br>
-									Distance: 1<br>
-									Aperture: 3
-								</p>
-								<p class="copy">
-									Population: 0<br>
-									Average Temperature: 680.556°C<br>
-									Biome: Hydrogen Gas<br>
-									Natural Resources: Hydrogen<br>
-									Indigenous life: No
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h4 class="mb-3">380/c/12 - “<i>The Lost World</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: High<br>
-									Elevation: 1<br>
-									Divergence: 2<br>
-									Distance: 5<br>
-									Aperture: 5
-								</p>
-								<p class="copy">
-									Population: 6,500<br>
-									Average Temperature: 22–30°C<br>
-									Biome: Arborial Jungle<br>
-									Natural Resources: Logging, Mineral Extraction, Exotic Fauna, Low Grade Exotic Materials<br>
-									Indigenous life: Yes
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h4 class="mb-3">419/f/05 - “<i>Flatland</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: Incompatible<br>
-									Elevation: -8<br>
-									Divergence: N/A<br>
-									Distance: 4<br>
-									Aperture: 2
-								</p>
-								<p class="copy">
-									Population: N/A<br>
-									Average Temperature: 13,852°C<br>
-									Biome: N/A<br>
-									Natural Resources: Linear Radiation<br>
-									Indigenous life: N/A
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h4 class="mb-3">513/y/11 - “<i>Leviathan</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: High<br>
-									Elevation: 1<br>
-									Divergence: 3<br>
-									Distance: 2<br>
-									Aperture: 2
-								</p>
-								<p class="copy">
-									Population: 35,000<br>
-									Average Temperature: 8–15°C<br>
-									Biome: Ocean Aquatic<br>
-									Natural Resources: Water, Hydrogen, Exotic Fauna<br>
-									Indigenous life: Yes
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-							</div>
-						</div>
-						<div>
-							<h4 class="mb-3">65/T/137 - “<i>Saturday’s Furnace</i>”</h4>
-							<div class="line-container">
-								<h5><strong>Planar Attributes</strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="plane-attr-cols">
-								<p class="copy">
-									Compatibility: Medium<br>
-									Elevation: 3<br>
-									Divergence: 6<br>
-									Distance: 6<br>
-									Aperture: 6
-								</p>
-								<p class="copy">
-									Population: 0<br>
-									Average Temperature: 230°C<br>
-									Biome: Furnace<br>
-									Natural Resources: Exotic Helium Isotopes, Extremophile Microbes<br>
-									Indigenous life: Yes
-								</p>
-								<p class="copy">
-									Discovered:<br>
-									Claim:<br>
-									Nations of Interest:
-								</p>
-							</div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
-									<div class="line-container">
-										<h5><strong>Geography</strong></h5>
-										<div class="line"></div>
-									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
-								</div>
-							</div>
-						</div>
+						<?php foreach (['paraloka', 'gastown', 'the-lost-world', 'flatland', 'leviathan', 'saturdays-furnace'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 					</div>
 				</div>
 
@@ -417,7 +112,7 @@
 									All switch gates share a few intrinsic properties:
 								</p>
 								<ul class="copy">
-									<li>They require a “Spine” of St-245/E6, an ultra-dense and nearly indestructible exotic material first mined directly from The Gift's floor structure.</li>
+									<li>They require a “Spine” of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, an ultra-dense and nearly indestructible exotic material first mined directly from <?php echo sf_lore_link('the-gift', 'The Gift'); ?>'s floor structure.</li>
 									<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. There is, as of yet, no known way to move this lock without retuning, and re-establishing a lock in the same location is exceptionally difficult, if possible at all.</li>
 									<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 									<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
@@ -433,7 +128,7 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									The defining technological advancement of the twenty-second century, the switch gate was the culmination of a decade of painstaking research and industrial effort. Its introduction launched the Rebirth of Science and is the keystone to nearly every advancement that came after.
+									The defining technological advancement of the twenty-second century, the switch gate was the culmination of a decade of painstaking research and industrial effort. Its introduction launched the <?php echo sf_lore_link('rebirth-of-science', 'Rebirth of Science'); ?> and is the keystone to nearly every advancement that came after.
 								</p>
 								<p class="copy">
 									As mankind's first foray into paraphysics and the engineering of the exotic, the task was daunting. Even with a wholly assembled blueprint and volumes of deciphered paraphysics, engineering, and philosophical texts recorded from The Gift, the construction of the initial line of switch gates was little more than guesswork. An entirely new field of physics was being discovered in secrecy under the Lunar regolith.
@@ -459,22 +154,7 @@
 				<div class="tech-field-panel" id="plane-exotic" role="tabpanel" aria-labelledby="tab-plane-exotic">
 					<div class="d-flex flex-wrap flex-xs-nowrap">
 						<div class="flex-7">
-							<div class="line-container">
-								<h5><strong>St-245/E6 - “<i>Solum Inane</i>”</strong></h5>
-								<div class="line"></div>
-							</div>
-							<p class="copy">
-								St-245/E6 is both the first and by far most important exotic material ever discovered. With an atomic weight of 245, it’s also the heaviest stable element yet known. Given the name <i>Solum Inane</i>, Latin for “Empty Land,” after the barren expanse of 1/a/384 - “Paraloka,” this dull, satin-black crystal brought mankind to the stars and beyond.
-							</p>
-							<p class="copy">
-								This ultra-dense and hyper-stable material’s space-time-altering paraphysical properties form the core of numerous technologies. When under the influence of a strong electric current, the material will alter nearby space-time in predictable and manipulable ways. The paraphysical field it generates can be manipulated to achieve a broad range of effects, with perhaps the most famous being the planar space-time exchanges of Switch Gates.
-							</p>
-							<p class="copy">
-								The material in its natural state is nearly indestructible, with a hardness of approximately 250 GPa, making it several times harder than industrial diamond. That, alongside a density six times that of steel and a melting point exceeding 5000°C, makes mining the material extraordinarily difficult. Atomic blast mining is typically the most expedient modern method used to break the material into manageable chunks; these are then laser-cut for transport and refining.
-							</p>
-							<p class="copy mb-0">
-								As a metastable exotic material with a paraphysical half-life of six years, St-245/E6 must be continuously mined and exported, but especially overbuilt devices reliant on its effects can last upwards of two decades. Depleted St-245/E0 still retains its extreme durability, and there is a highly lucrative aftermarket for the material.
-							</p>
+							<?php sf_lore_entry('st-245-e6', 'line'); ?>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6"></div>
