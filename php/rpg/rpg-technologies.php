@@ -363,6 +363,9 @@
 									Robots, of course, fulfill far more roles in 2200 than they did in the 21st century. Mechanized construction suits can act as a second skin for AIs hired for construction duties, roboticized drone ships plumb the deepest depths of the galaxy, and roboticized garbage disposal and cleanup systems are the keystone of sanitation in every city on Earth and beyond. One place where robotics is relatively rare, now, thanks to cultural mores and a deep understanding of the risks involved, is in warfare. The technology to make hulking or minuscule robotic menaces for the battlefield is, of course, there. But the experiences in the wars of the late 20th century have taught humanity an important lesson. War must NEVER be impersonal.
 								</p>
 								<p class="copy">
+									Perhaps owing to the technology’s mundanity, paraphysics have had less of an impact on robotics than they have had in other fields. Exotic materials and paraphysical concepts have revolutionized space travel and broadened the horizons of medicine, but in robotics they’ve mostly served to create a better robot. Faster, longer lasting, hardier, but not new. That suits the robotics industry just fine though, and often the only way to interact with sufficiently hostile planes is to send a robot.
+								</p>
+								<p class="copy">
 									In 2200 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the systems. The following are the top 5 robotics suppliers by market cap:
 								</p>
 								<ol class="copy mb-0">
