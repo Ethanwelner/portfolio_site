@@ -78,19 +78,22 @@
 									</div>
 									<h6><i>Fighters</i></h6>
 									<p class="copy">
-										Small independent craft; combat, security, utility, cargo.
+										Little used in true naval warfare, the fighters of 2200 act most often as escorts or scout craft. Featuring a crew of one to three and systems for remote drone deployment, fighters provide mission utility and a relatively inexpensive presence on the solar periphery or in far-flung systems. Too small to mount <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> or the <?php echo sf_lore_link('switch-gates', 'Switch Gates'); ?> used for refueling their rockets, these craft are often locked to the hull of a larger ship until needed. Indeed, many a freighter has seen off a pirate attack with the quick launch of a few fighters hidden in its berth. The ubiquity of point-defense lasers in naval warfare forces fighters to pick their engagements carefully, and the presence of a larger vessel often forces fighters to take cover.
 									</p>
 									<h6><i>Patrol Craft</i></h6>
 									<p class="copy">
-										Small independent craft; combat, security, utility, cargo.
+										Similar to fighters, but built for endurance, patrol craft are a common sight in the inner solar system and on particularly busy cargo lanes. Patrol craft are typically built around a set of aether sails and a single fuel Switch Gate. With a crew of two to five and built for law enforcement and private security rather than warfare, these vessels rarely carry more than a few missiles and a point-defense autocannon, but that’s more than enough to provide peacekeeping services or chase down the occasional smuggler.
 									</p>
 									<h6><i>Cutters</i></h6>
 									<p class="copy">
-										Small independent craft; combat, security, utility, cargo.
+										Cutters are a broad category of small, utilitarian civilian starship. Built with the minimum necessary aether sails and a fuel Switch Gate, these catchall vessels are the economic backbone of the systems, providing everything from personal transport and delivery to inspection and catering services. There is no standard shape to a cutter, with its form almost always matching its function. A cutter operated as a mobile repair vessel may feature external manipulator arms and heavy cutting equipment, while a luxury taxi service may feature overbuilt engines for speed while giving over most of its internal volume to a luxurious cabin and sleeping space.
+									</p>
+									<p class="copy">
+										If a cutter is armed at all, it’s often little more than a weak point-defense laser or light autocannon. Enough to deal with debris or an aggressive skiff, but little more. Cutters make up, by far, the most common hull type for pirate vessels. Indeed, many pirate vessels are little more than civilian cutters with the registration removed.
 									</p>
 									<h6><i>Trucks</i></h6>
 									<p class="copy mb-0">
-										Small independent craft; combat, security, utility, cargo.
+										Distinct from cutters, trucks come in almost as wide a variety of forms. With their heavy engines, minimal crew space, and the heavy structure required to tow heavy loads, trucks are a common sight. Often seen in their twos or threes, teams of trucks pull hundreds of thousands of tons of material. Mining trucks may work in tandem to pull asteroids towards processing facilities, while a pair of dockyard cargo trucks may clamp themselves to the sides of a rack of cargo containers and guide them into port. Pirate cutters are often accompanied by trucks, which are more than happy to throw cable netting around a captive cutter and pull it back to whatever criminal harbor they came from.
 									</p>
 								</div>
 								<div>
