@@ -50,11 +50,11 @@
 									</div>
 									<h6><i>Skiffs</i></h6>
 									<p class="copy">
-										Extremely small local craft; station/vessel internal transport.
+										Skiff, tender, dinghy, lighter—these small craft have many names but a single purpose: to ferry goods and people from one part of a station to another. Most common in older stations without sufficient internal transportation networks, or in particularly diffuse station environments with many smaller substations, a skiff is often the simplest way to get from one point to another without donning a voidsuit. Typically capable of accommodating only a few passengers and their pilot, a skiff will most often use small liquid rocket boosters or even robotic limbs to navigate the often cramped confines of a complex station’s voidspace.
 									</p>
 									<h6><i>Drone Craft</i></h6>
 									<p class="copy mb-0">
-										Extremely small local craft; station/vessel internal transport.
+										Most often used for goods transportation, simple security, or routine maintenance and inspection, drone craft are ubiquitous across the surfaces of ships and stations alike. Ranging from the size of a small ball to a few meters across, drone craft are the basic robotic infrastructure that keeps ships running. Typically formed specifically to suit their task, drone craft can be seen crawling across the surfaces of vessels, floating lazily around them, or darting quickly along wires laid for their use.
 									</p>
 								</div>
 								<div>
@@ -64,11 +64,11 @@
 									</div>
 									<h6><i>Shuttles</i></h6>
 									<p class="copy">
-										Short-range transport between ships, stations, and surface facilities.
+										Shuttles are perhaps the single most common form of space transport in the systems. Ranging from small atmospheric craft capable of holding a few passengers to ferries moving hundreds between ships, shuttles are the backbone of transportation within a fleet or planetary setting. Most feature robust life support systems and simple onboard rocket thrusters. Planetary shuttles will typically be equipped with the most basic of <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> to aid them in escaping a planet’s gravity well.
 									</p>
 									<h6><i>Light Trucks</i></h6>
 									<p class="copy mb-0">
-										Short-range transport between ships, stations, and surface facilities.
+										Similar to shuttles, light trucks are small voidcraft most often used within busy station or planetary settings, or embedded in larger vessels as a means of goods transport. A light truck is often little more than a pilot’s section and a set of thrusters bolted to an empty cargo hold. Rarely is the hold even secured against the vacuum of space, trusting that if the cargo cares about atmospheric pressure, it’ll already be contained in a sealed vessel.
 									</p>
 								</div>
 								<div>
