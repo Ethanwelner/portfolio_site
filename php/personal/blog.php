@@ -7,6 +7,20 @@
 
 			<div class="blog-posts">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/3/2026</i></p>
+					<p class="copy">
+						There’s an interesting set of consequences to power-using Cursor, and that’s that you get to know the quirks of different models pretty quickly as your tokens run out for each in succession. I find Claude to be a demonstrably better writer than Grok, which still feels like its voice is purely that of an LLM, no matter how much coaching it’s given. I also find it interesting that the default for Cursor is to fall back to an anonymous model, probably whichever one has the lowest token bid costs at any given moment. When the month turned over and the newer models came back, the quality of interactions instantly jumped back up a notch.
+					</p>
+					<p class="copy">
+						Also, this cat just lives at the Ace Hardware two blocks away. He was a great helper as I was finding stuff at the store.
+					</p>
+					<div class="blog-post-images">
+						<img loading="lazy" data-src="img/blog page stuff/acecat_1.webp" width="800" height="603" alt="Calico cat walking down a hardware store aisle between shelves of spray paint and stacked Ace buckets">
+						<img loading="lazy" data-src="img/blog page stuff/acecat_2.webp" width="800" height="603" alt="Calico cat with its tail up standing beside a paint swatch display in a hardware store">
+					</div>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>9/26/2026</i></p>
 					<p class="copy">
 						Look at these quality Philly street cats. Also, I split off the projects tab.
