@@ -1,15 +1,20 @@
 /* ========================================
    RPG / CHARACTER SHEET
+   personal.php: the Projects & Blog pane (php/personal/) and the
+   Strange Frontiers pane (php/rpg/). Loaded from php/head-loads.php.
    ======================================== */
 
+/* Keyword spans injected by the bold-keywords script in php/javascript-loads.php */
 .mechanic-text {
     font-weight: 500;
 }
 
+/* php/rpg/rpg-stats.php, php/rpg/rpg-character.php */
 .tiny-text {
     font-size: .75rem;
 }
 
+/* Level circle on the character sheet, php/rpg/rpg-character.php */
 .level-badge {
     position: absolute;
     top: -35px;
@@ -29,17 +34,21 @@
     line-height: 0;
 }
 
+/* Spacer between blocks in the Mechanics and Setting partials (php/rpg/rpg-*.php)
+   and between lore entries in php/rpg/lore.php */
 .bumper {
     height: 48px;
     width: 100%;
 }
 
+/* php/rpg/rpg-stats.php */
 .column-image {
     width: 100%;
     padding: 0 48px;
     object-fit: contain;
 }
 
+/* Trait cards, php/rpg/rpg-traits.php */
 .trait-box {
     padding: 0 1rem 1rem 1rem;
     color: var(--portfolio-black);
@@ -83,6 +92,11 @@
 strong .mechanic-text {
     font-weight: 600;
 }
+
+/* Strange Frontiers side nav, rendered by php/rpg/rpg-links.php. The rail
+   sits in personal.php's Setting and Mechanics panels; white invert copies are
+   included in the black sections of rpg-traits, rpg-items, rpg-technologies
+   and rpg-spacecraft. The dot is positioned by php/javascript-loads.php. */
 
 /* Sticky side nav in a full-height rail so it travels with the panel,
    then pins at top: 134px. Invert copies stay viewport-fixed and clipped
@@ -190,6 +204,9 @@ html:has(.personal-shell) {
     scrollbar-gutter: stable;
 }
 
+/* Two-pane slider in personal.php (Projects & Blog and Strange Frontiers).
+   is-personal, is-frontiers, is-sliding and is-revealing are toggled by
+   showPersonalPage in php/javascript-loads.php. */
 .personal-shell {
     position: relative;
     width: 100%;
@@ -294,6 +311,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     pointer-events: none;
 }
 
+/* Hero nav (Projects & Blog / Strange Frontiers), php/personal/page-nav.php */
 .personal-page-nav a {
     display: inline-block;
     position: relative;
@@ -304,12 +322,15 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     right: -18px;
 }
 
+/* Green Strange Frontiers accent: hero title in personal.php and its nav link */
 .frontiers-accent,
 .personal-page-nav a.frontiers-accent,
 .personal-page-nav a.frontiers-accent .nav-bullet {
     color: #2dfc64;
 }
 
+/* Pane tab bars along the bottom of each hero in personal.php
+   (Blog / Projects / Photos and Setting / Mechanics / Change Log) */
 .rpg-tabs {
     position: absolute;
     left: 0;
@@ -350,6 +371,10 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     box-shadow: 0 1px 0 var(--portfolio-white);
 }
 
+/* Boxed sub-tabs inside Setting: php/rpg/rpg-setting.php (Timeline),
+   rpg-technologies, rpg-planes, rpg-spacecraft and rpg-parabiology.
+   tech-fields-light is the black-on-white version used in rpg-setting,
+   rpg-planes and rpg-parabiology. */
 .tech-fields {
     padding: 0 24px 36px;
     border: 1px solid var(--portfolio-white);
@@ -412,6 +437,8 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     outline-offset: -2px;
 }
 
+/* Inline lore links built by sf_lore_link() in php/rpg/lore.php, used
+   throughout the Strange Frontiers copy */
 .lore-link {
     color: #884ddc;
     font-weight: 600;
@@ -425,6 +452,12 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     text-decoration-style: solid;
 }
 
+/* #884ddc is 3.18:1 on #212121; this lighter purple clears 4.5:1. */
+.black-bg .lore-link,
+.black-bg .lore-link:hover {
+    color: #a67bf0;
+}
+
 .lore-link:focus {
     outline: none;
 }
@@ -436,6 +469,8 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     border-radius: 2px;
 }
 
+/* Lore popup, php/rpg/lore-modal.php (included by personal.php). Opened and
+   filled from the hidden lore store by php/javascript-loads.php. */
 html.lore-modal-open {
     overflow: hidden;
 }
@@ -509,6 +544,11 @@ html.lore-modal-open {
     background: var(--portfolio-black);
     color: var(--portfolio-white);
     cursor: pointer;
+    transition: background-color 200ms;
+}
+
+.lore-modal-close:hover {
+    background-color: color-mix(in srgb, var(--portfolio-black) 66%, var(--portfolio-white));
 }
 
 @media (max-width: 767px) {
@@ -526,6 +566,7 @@ html.lore-modal-open {
     }
 }
 
+/* Panels switched by the .tech-field-tab buttons above */
 .tech-field-panel {
     display: none;
 }
@@ -534,6 +575,8 @@ html.lore-modal-open {
     display: block;
 }
 
+/* Plane attribute columns in the plane lore entries, php/rpg/lore/
+   (flatland, gastown, leviathan, paraloka, saturdays-furnace, the-lost-world) */
 .plane-attr-cols {
     display: flex;
     flex-wrap: wrap;
@@ -552,6 +595,7 @@ html.lore-modal-open {
     clip-path: inset(0 0 -1px 0);
 }
 
+/* Tab panels for both panes in personal.php, switched by .rpg-tab */
 .rpg-panel {
     display: none;
 }
@@ -561,6 +605,7 @@ html.lore-modal-open {
     flex-direction: column;
 }
 
+/* Setting and Mechanics sections in personal.php */
 #rpg-setting.section.unlimited {
     padding-bottom: 0;
 }
@@ -594,22 +639,26 @@ html.lore-modal-open {
     }
 }
 
+/* php/personal/blog.php, php/personal/projects.php */
 .blog-content {
     max-width: 640px;
     width: 100%;
 }
 
+/* php/rpg/rpg-changelog.php, rpg-setting, rpg-technologies, rpg-planes, rpg-spacecraft */
 .single-column-content {
     max-width: 768px;
     width: 100%;
 }
 
+/* php/personal/blog.php */
 .blog-posts {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
+/* php/rpg/rpg-changelog.php */
 .changelog-entries {
     display: flex;
     flex-direction: column;
@@ -625,6 +674,8 @@ html.lore-modal-open {
     margin-top: 0.5rem;
 }
 
+/* Bordered cards: php/personal/blog.php, php/personal/projects.php,
+   php/rpg/rpg-changelog.php, and the intro vignette in php/rpg/rpg-setting.php */
 .blog-post {
     border: 1px solid var(--portfolio-light-gray);
     border-radius: 8px;
@@ -635,6 +686,7 @@ html.lore-modal-open {
     margin-bottom: 0;
 }
 
+/* php/personal/blog.php */
 .blog-post-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -648,6 +700,7 @@ html.lore-modal-open {
     }
 }
 
+/* php/personal/projects.php */
 .project-entries {
     display: flex;
     flex-direction: column;
@@ -679,10 +732,12 @@ html.lore-modal-open {
     align-content: start;
 }
 
+/* Opening story card in the Introduction, php/rpg/rpg-setting.php */
 .intro-vignette .copy {
     font-style: italic;
 }
 
+/* Model photos tab, php/personal/photos.php */
 .model-photo-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -720,6 +775,8 @@ html.lore-modal-open {
     }
 }
 
+/* Heading with a rule running off to the right (.line-container + .line).
+   Used across php/rpg/ partials and the lore entries in php/rpg/lore/. */
 .line-container {
     position: relative;
     margin-bottom: 20px;
@@ -744,6 +801,7 @@ html.lore-modal-open {
     }
 }
 
+/* php/rpg/rpg-setting.php, rpg-planes, rpg-spacecraft */
 .content-stack {
     display: flex;
     flex-direction: column;
@@ -754,6 +812,7 @@ html.lore-modal-open {
     }
 }
 
+/* Timeline tab, php/rpg/rpg-setting.php */
 .timeline-entries {
     gap: 20px;
 }
@@ -773,6 +832,9 @@ html.lore-modal-open {
     }
 }
 
+/* Character sheet, php/rpg/rpg-character.php (through .c-variables below).
+   .stat-line, .stat and .stat-badge are also used in rpg-stats, rpg-skills
+   and rpg-traits. */
 .empty-list {
     list-style-type: none;
     padding-left: 0;
@@ -872,6 +934,8 @@ html.lore-modal-open {
 
 /* ========================================
    RPG MEDIA QUERIES
+   992px: side nav and character sheet tighten.
+   767px: side nav moves to the bottom-right corner, tabs and gallery shrink.
    ======================================== */
 
 @media only screen and (max-width: 992px) {
