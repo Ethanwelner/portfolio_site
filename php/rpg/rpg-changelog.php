@@ -7,6 +7,17 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/4/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Wrote content for every starship class, from Skiffs and Drone Craft up through Dreadnoughts, Stellar Carriers, Colony Ships, and Arks.</li>
+						<li>Starship classes are now lore entries, and references to them across the setting link to pop-up entries.</li>
+						<li>Replaced Battlecruisers with Dreadnoughts; Starcruisers are now described as LFG-equipped cruisers.</li>
+						<li>Added Lifters and Administration Craft as starship classes and standardized the spelling of Arks.</li>
+						<li>Renamed The Planar Hierarchy to The Planes and gave The Stars the subtitle “Life in the Stellar Sea.”</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Added ship class sections to the Starships tab: Skiff, Shuttle, Cutter, Corvette, Cruiser, Carrier, Capital, and Ark.</li>
