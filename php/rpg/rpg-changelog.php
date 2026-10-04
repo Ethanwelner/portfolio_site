@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Added ship class sections to the Starships tab: Skiff, Shuttle, Cutter, Corvette, Cruiser, Carrier, Capital, and Arc.</li>
+						<li>Added ship class sections to the Starships tab: Skiff, Shuttle, Cutter, Corvette, Cruiser, Carrier, Capital, and Ark.</li>
 						<li>Wrote The Stars introduction.</li>
 						<li>Lore terms like The Gift, Paraloka, St-245/E6, and Switch Gates now link to pop-up entries across the setting.</li>
 						<li>Combined The Setting and Timeline tabs into a single Setting tab and condensed the timeline.</li>

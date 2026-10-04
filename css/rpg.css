@@ -812,9 +812,17 @@ html.lore-modal-open {
     }
 }
 
-/* Timeline tab, php/rpg/rpg-setting.php */
-.timeline-entries {
+/* Timeline (rpg-setting.php), starship classes (rpg-spacecraft.php) */
+.content-stack-sm {
     gap: 20px;
+}
+
+.lore-body > :last-child {
+    margin-bottom: 0;
+}
+
+.fst-italic {
+    font-style: italic;
 }
 
 .line {

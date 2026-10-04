@@ -51,7 +51,7 @@
 				Mankind has colonized the stars, it’s created life, it’s mapped the fundamental building blocks of nature, but in the year 2200 it’s still just humanity. Inequality persists, war remains, and we’re still striving to uncover the next horizon. The nations of Earth have established colonies in distant stars and even more distant planes of reality, corporations use parascience to develop new technologies, and humanity grapples with how to treat the truly alien.
 			</p>
 			<p class="copy">
-				Life in 2200 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a freighter out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
+				Life in 2200 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a <?php echo sf_lore_link('freighters', 'freighter'); ?> out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
 			</p>
 			<p class="copy">
 				In humanity’s darkest hour, 80 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
@@ -67,7 +67,7 @@
 			</p>
 		</div>
 		<div class="d-inline-flex align-items-center flex-1"></div>
-					<div class="flex-7 content-stack timeline-entries">
+					<div class="flex-7 content-stack content-stack-sm">
 			<div>
 				<div class="line-container">
 					<h6><strong>1970 – 2200</strong></h6>

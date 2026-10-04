@@ -1,0 +1,3 @@
+<p class="copy">
+	This broad class encompasses most heavy civilian spacecraft. Corporate headquarters, hospital ships, pleasure craft, research ships, and countless other specialized vessels fall into this category. In many ways, these vessels are simply larger, more capable <?php echo sf_lore_link('cutters', 'cutters'); ?>, serving their dedicated functions at a much greater scale. Often purpose-built, there are few common characteristics beyond docking space for numerous <?php echo sf_lore_link('shuttles', 'shuttles'); ?>, <?php echo sf_lore_link('trucks', 'trucks'); ?>, and <?php echo sf_lore_link('fighters', 'fighters'); ?>, along with sufficient weaponry and point-defense systems to ward off all but the most concerted pirate raids.
+</p>

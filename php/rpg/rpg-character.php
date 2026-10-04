@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/lore.php'; ?>
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
@@ -151,7 +152,7 @@
 				</ul>
 			</div>
 			<div class="d-inline-flex flex-4">
-				<p class="copy">Edwin Humble is a Void-Truck driver and part-time smuggler in the orbit of the Terran Demarchy’s capital of Earth. Raised rough at a young age, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father's cargo shuttle during one of the man's rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the ‘family business’ and runs a small-time cargo transportation operation out of his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin's two goals in life are to get rich and to find out who was responsible for his father's murder.</p>
+				<p class="copy">Edwin Humble is a Void-Truck driver and part-time smuggler in the orbit of the Terran Demarchy’s capital of Earth. Raised rough at a young age, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father's cargo <?php echo sf_lore_link('shuttles', 'shuttle'); ?> during one of the man's rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the ‘family business’ and runs a small-time cargo transportation operation out of his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin's two goals in life are to get rich and to find out who was responsible for his father's murder.</p>
 			</div>
 			<div class="d-inline-flex flex-4">
 				<div>
