@@ -1,3 +1,6 @@
 <p class="copy">
-	Large specialized vessels; major industrial or military operations.
+	Resembling vast floating boxes more than ships, freighters provide long-distance transportation of goods and materials along heavily trafficked routes. In its most basic form, a freighter is six armored bulkheads surrounding a lattice of supporting ribs and tensioning cables. When at port, one of the bulkhead walls detaches and the contents are gently ejected from the vessel, to be gathered by <?php echo sf_lore_link('light-trucks', 'light trucks'); ?>.
+</p>
+<p class="copy">
+	Despite their bulk, empty freighters are actually quite light and are typically crewed by a complement of only 10–15 sailors, all bunking in a dedicated bridge and crew cabin module at the fore of the vessel. The freighter's thrusters and <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> are installed far from the bridge at equidistant points in the vessel's corners, meaning the crew must use <?php echo sf_lore_link('skiffs', 'skiffs'); ?> or even don EVA suits to perform their duties. Given their value, a heavily laden freighter is rarely seen without a complement of <?php echo sf_lore_link('fighters', 'fighters'); ?> locked to its hull, or even a <?php echo sf_lore_link('corvettes', 'corvette'); ?> providing escort.
 </p>

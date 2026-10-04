@@ -118,7 +118,7 @@
 										<div class="line"></div>
 									</div>
 									<div class="content-stack content-stack-sm">
-										<?php sf_lore_entry('starcruisers', 'h6', 'fst-italic'); ?>
+										<?php sf_lore_entry('dreadnoughts', 'h6', 'fst-italic'); ?>
 										<?php sf_lore_entry('stellar-carriers', 'h6', 'fst-italic'); ?>
 										<?php sf_lore_entry('colony-ships', 'h6', 'fst-italic'); ?>
 									</div>
