@@ -1,3 +1,3 @@
 <p class="copy">
-	Large specialized vessels; major industrial or military operations.
+	Foremen are dedicated repair and assembly <?php echo sf_lore_link('carriers', 'carriers'); ?> for stations, tasked with assembling the prefabricated components of a station. While the actual station modules are most often brought by <?php echo sf_lore_link('trucks', 'truck'); ?>, the Foreman carries the construction <?php echo sf_lore_link('cutters', 'cutters'); ?> and assembly drones needed to piece them together. More importantly, it brings crews specialized in void construction while providing the accommodations and recreation facilities needed for what are sometimes months-long contracts.
 </p>

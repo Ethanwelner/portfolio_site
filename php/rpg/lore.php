@@ -39,7 +39,7 @@ function sf_lore_titles() {
 		'miners' => 'Miners',
 		'foremen' => 'Foremen',
 		'freighters' => 'Freighters',
-		'starcruisers' => 'Starcruisers',
+		'dreadnoughts' => 'Dreadnoughts',
 		'stellar-carriers' => 'Stellar Carriers',
 		'colony-ships' => 'Colony Ships',
 		'arks' => 'Arks',
