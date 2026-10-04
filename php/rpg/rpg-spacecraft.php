@@ -103,11 +103,18 @@
 									</div>
 									<h6><i>Corvettes</i></h6>
 									<p class="copy">
-										Small independent starships; personal, corporate, light military.
+										The mainstay of corporate and PMC navies, and deployed en masse by national militaries, the humble corvette is a common sight on the periphery. Built to operate amidst a fleet or alone, these sleek ships boast impressive firepower for their tonnage. With crews ranging between 20 and 70, this class features a broad range of designs, from stealthy infiltration ships to overloaded missile boats, or vessels that are little more than a few habitation pods and some engines attached to a naval railgun.
 									</p>
 									<h6><i>Yachts</i></h6>
+									<p class="copy">
+										Yachts are purpose-built personal transport vessels used by those who are too rich or important to travel by cutter. Typically sleek and slightly ostentatious, yachts are often some of the most advanced vessels in a system, with top-of-the-line engines, state-of-the-art sensors, and layers of redundant defense and life-support systems. Most frequently operated by politicians, the corporate elite, or business moguls, they’re rarely seen without at least a fighter escort.
+									</p>
+									<h6><i>Lifters</i></h6>
+									<p class="copy">
+										Lifters are dedicated heavy-lift vehicles used to routinely haul cargo from a planetary surface into orbit. Almost universally drone-controlled, a typical lifter resembles a wide metal platform surrounded by a forest of gantry cranes. Cargo is loaded and secured to the platform before the lifter activates the numerous aether sails lining its exterior and begins its slow ascent.
+									</p>
 									<p class="copy mb-0">
-										Small independent starships; personal, corporate, light military.
+										Upon reaching orbital altitude, the cargo is released and allowed to drift free of the lifter. With its load gone, the lifter deactivates its aether sails and fires its small deorbiting thrusters and begins its descent. The lifter's sails are gradually reactivated throughout the descent, allowing it to settle gently back onto the surface, where it can be loaded for another trip.
 									</p>
 								</div>
 							</div>
