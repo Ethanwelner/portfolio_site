@@ -86,9 +86,6 @@
 										<?php sf_lore_entry('lifters', 'h6', 'fst-italic'); ?>
 									</div>
 								</div>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6 content-stack">
 								<div>
 									<div class="line-container">
 										<h5><strong>Cruisers</strong></h5>
@@ -100,6 +97,9 @@
 										<?php sf_lore_entry('cruisers', 'h6', 'fst-italic'); ?>
 									</div>
 								</div>
+							</div>
+							<div class="d-inline-flex align-items-center flex-1"></div>
+							<div class="flex-6 content-stack">
 								<div>
 									<div class="line-container">
 										<h5><strong>Carriers</strong></h5>

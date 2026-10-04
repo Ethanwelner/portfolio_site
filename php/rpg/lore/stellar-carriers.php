@@ -1,3 +1,6 @@
 <p class="copy">
-	Massive strategic vessels capable of supporting large populations or fleets.
+	While most civilian travel between the stars occurs aboard <?php echo sf_lore_link('arks', 'Arks'); ?>, militaries and corporate entities with interests in far-flung systems often need a more responsive method of deploying their assets. Stellar Carriers are expensive, purpose-built vessels designed to carry specific ship classes, or even specific ships. They range from squid-like armatures meant to wrap a ship in <?php echo sf_lore_link('lorentz-field-generator', 'LFGs'); ?>, to colossal vessels with internal docking bays large enough to berth fleets.
+</p>
+<p class="copy">
+	More than just a means of travel, these ships provide the supplies, <?php echo sf_lore_link('switch-gates', 'Switch Gates'); ?>, repair facilities, housing, and recreation facilities needed to support thousands of guests during the long interstellar voyage. With trips between distant systems sometimes lasting months, accommodation is as important to a Stellar Carrier as its docking and repair facilities, and the largest vessels can resemble moving hotels, complete with restaurants, lounges, and other amenities for their guests. Every nation with interests abroad has at least one Stellar Carrier built around ferrying two or three <?php echo sf_lore_link('frigates', 'frigates'); ?> to distant ports. The most powerful have dozens, giving them the reach to deploy entire fleets, though to do so remains a lengthy and expensive undertaking.
 </p>
