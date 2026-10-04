@@ -30,7 +30,7 @@
 			Aether sails have been commercialized for everything from backyard power generators to starship propulsion. It’s in the latter that it found its most profitable niche. Without aether sails, it’s likely the Exodus would have been impossible. The technology not only allowed for reactionless propulsion across the solar system, it dropped the cost of lifting tonnage into orbit to practically nothing.
 		</p>
 		<p class="copy mb-0">
-			In 2200, every vessel short of local point-to-point shuttlecraft features one or more aether sails. All vessels operating within the solar system are required to, in real time, report the ebbs and flows of aetheric weather, and thousands of satellites are spread across the vast distances to report on the aetheric tides.
+			In 2200, every vessel short of local point-to-point <?php echo sf_lore_link('shuttles', 'shuttlecraft'); ?> features one or more aether sails. All vessels operating within the solar system are required to, in real time, report the ebbs and flows of aetheric weather, and thousands of satellites are spread across the vast distances to report on the aetheric tides.
 		</p>
 	</div>
 </div>

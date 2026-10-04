@@ -1,0 +1,3 @@
+<p class="copy">
+	Skiff, tender, dinghy, lighter—these small craft have many names but a single purpose: to ferry goods and people from one part of a station to another. Most common in older stations without sufficient internal transportation networks, or in particularly diffuse station environments with many smaller substations, a skiff is often the simplest way to get from one point to another without donning a voidsuit. Typically capable of accommodating only a few passengers and their pilot, a skiff will most often use small liquid rocket boosters or even robotic limbs to navigate the often cramped confines of a complex station’s voidspace.
+</p>
