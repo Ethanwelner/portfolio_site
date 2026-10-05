@@ -1,0 +1,3 @@
+<p class="copy">
+	Distinct from <?php echo sf_lore_link('cutters', 'cutters'); ?>, tugs come in almost as wide a variety of forms. With their heavy engines, minimal crew space, and the heavy structure required to tow heavy loads, tugs are a common sight. Often seen in their twos or threes, teams of tugs pull hundreds of thousands of tons of material. Mining tugs may work in tandem to pull asteroids towards processing facilities, while a pair of dockyard cargo tugs may clamp themselves to the sides of a rack of cargo containers and guide them into port. Pirate cutters are often accompanied by tugs, which are more than happy to throw cable netting around a captive cutter and pull it back to whatever criminal harbor they came from.
+</p>

@@ -60,7 +60,7 @@
 									</div>
 									<div class="content-stack content-stack-sm">
 										<?php sf_lore_entry('shuttles', 'h6', 'fst-italic'); ?>
-										<?php sf_lore_entry('light-trucks', 'h6', 'fst-italic'); ?>
+										<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
 									</div>
 								</div>
 								<div>
@@ -72,7 +72,7 @@
 										<?php sf_lore_entry('fighters', 'h6', 'fst-italic'); ?>
 										<?php sf_lore_entry('patrol-craft', 'h6', 'fst-italic'); ?>
 										<?php sf_lore_entry('cutters', 'h6', 'fst-italic'); ?>
-										<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
+										<?php sf_lore_entry('tugs', 'h6', 'fst-italic'); ?>
 									</div>
 								</div>
 								<div>
