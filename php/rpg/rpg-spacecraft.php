@@ -27,8 +27,11 @@
 					<p class="copy">
 						Such safe ports are needed. Space travel may be commonplace, but it’s far from the mundane, mathematically exact rocket science of the 21st century. The aetheric tides ships use to move between worlds are unpredictable. Experience can count for more than any computer model, and every crew worth its salt has a pilot capable of reading these invisible seas. A change in the winds can force unexpected course corrections, while an unexpected aether storm can leave fleets of ships adrift for weeks with dwindling supplies.
 					</p>
-					<p class="copy mb-0">
+					<p class="copy">
 						That’s to say nothing of the dangers of interstellar travel. <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?> are temperamental devices on the best of days, prone to failure and on-the-spot recalibration. A total loss of propulsion or an irreparable failure in an LFG means a slow and certain death as supplies dwindle to nothing. In the vast gulfs between stars, an SoS is utterly meaningless. A signal could take centuries or millennia to reach a friendly ear, and by then it’s probably far too late to help. Only the largest and most over-built of starships can safely traverse these great distances, with the rest opting to pay for passage in the immense ship holds of an Ark. That’s not to say particularly daring or unscrupulous captains aren’t willing to risk it; there’s a tidy profit to be made smuggling goods or people between systems.
+					</p>
+					<p class="copy mb-0">
+						For all its risks, the stellar sea is also what allows humanity to live as it does. The resources of one world feed the factories of another, while distant colonies exchange goods and information. Small settlements arise around mining operations, research stations, and trade routes, turning into towns and then cities, far eclipsing the industries that brought them there. Dynasties have grown rich plying profitable trade lanes and fortunes have been made with claims staked in far-flung places. The nations of Earth, too, have much to gain, and the race to claim and exploit newly surveyed systems is never-ending. For the brave and the foolhardy, there’s adventure to be had among the stars.
 					</p>
 				</div>
 				<div class="bumper"></div>
