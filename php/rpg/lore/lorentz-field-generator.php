@@ -5,19 +5,19 @@
 			<div class="line"></div>
 		</div>
 		<p class="copy">
-			Typically spherical and positioned equidistantly within or on the skin of a vessel, the LFG enables a starship to reach faster-than-light speeds.
+			Typically spherical and positioned equidistantly within or on the skin, a network of Lorentz Field Generators enables a starship to reach faster-than-light speeds.
 		</p>
 		<p class="copy">
-			LFGs network together to generate an exotic field effect that substantially reduces the relative Lorentz transformations and Lorentz effects experienced by matter within the field. In simpler terms, they “reduce” the relationship between the space-time bubble within the field and the rest of the universe, allowing the ship to travel at speeds otherwise impossible.
+			LFGs network together to generate an exotic field effect that substantially reduces the Lorentz effects experienced by matter within the field. In simpler terms, it weakens the relationship of the space-time bubble within the field and the universe outside, allowing the ship to travel at speeds otherwise impossible.
 		</p>
 		<p class="copy">
-			Using a radial array of “Antennae” made of the same exotic and ultra-dense <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?> material that allows <?php echo sf_lore_link('switch-gates', 'switch gates'); ?> to manipulate space-time, a single LFG can cover a spherical volume of up to a 200-meter radius. This requires a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters.
+			Using a radial array of “Antennae” made of the same exotic and ultra-dense <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?> material that allows <?php echo sf_lore_link('switch-gates', 'Switch Gates'); ?> to manipulate spacetime, a typical LFG module will cover a spherical area of up to a 200-meter radius, though an LFG running hot can exceed these limits for a short period of time. These devices require a continuous input of electrical energy that scales exponentially with the size of the desired field, so typical ship layouts will place LFGs roughly every 80–100 meters, ensuring redundancy in case any one unit fails.
 		</p>
 		<p class="copy">
-			Modern LFGs are reliable but bulky, with units typically taking up the volume of what would otherwise be a fairly sizable crew cabin. Given that the largest of interstellar <?php echo sf_lore_link('arks', 'arks'); ?> may have hundreds of such generators, significant research is ongoing into further miniaturization of a full LFG package.
+			Modern LFGs are reliable but bulky, with units typically taking up the volume of what would otherwise be a fairly sizeable crew cabin. Given that the largest of interstellar <?php echo sf_lore_link('arks', 'arks'); ?> may have thousands of such generators, significant research is ongoing into further miniaturization of a full LFG package.
 		</p>
 		<p class="copy mb-0">
-			The field effect produced by LFGs is delicate and prone to interference from sources of gravity. A Lorentz field will fail to cohere entirely within even a weak gravity well, typically only stabilizing around Lagrange lanes in the outer solar system. The failure of a single unit isn’t catastrophic, and having an entire array experience a cascade failure merely results in the ship returning to the inertial velocities it would have had naturally. Having a ship caught halfway within a field, however, can be disastrous. At a minimum, this causes serious damage to electrical and plumbing systems and irradiates a ship’s hull; at worst, it instantly rips a ship apart.
+			The field effect produced by LFGs is delicate and prone to interference from sources of gravity. A Lorentz field will fail to cohere entirely within even a weak gravity well, typically only stabilizing around Lagrange lanes in the outer solar system. The failure of a single unit isn’t catastrophic, and having an entire array experience a cascade failure merely results in the ship returning to the inertial velocities it would have had were the field never present at all. Having a ship caught halfway within a field, however, can be disastrous. At a minimum, this causes serious damage to electrical and plumbing systems and irradiates a ship’s hull; at worst, it instantly rips a ship apart.
 		</p>
 	</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
