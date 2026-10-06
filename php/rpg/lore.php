@@ -3,6 +3,7 @@
 function sf_lore_titles() {
 	static $titles = [
 		'first-ai-panic' => 'The First AI Panic',
+		'drone-wars' => 'The Drone Wars',
 		'end-of-science' => 'The End of Science',
 		'nuclear-disarmament' => 'Nuclear Disarmament',
 		'interplanetary-colonization' => 'Interplanetary Colonization',

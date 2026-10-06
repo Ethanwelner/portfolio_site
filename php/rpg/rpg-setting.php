@@ -97,6 +97,15 @@
 			</div>
 			<div>
 				<div class="line-container">
+					<h6><strong>2030 – 2060</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					A collapse in the undersea currents of hot and cold water marks the beginning of a megadrought that historians have labeled “The 0.2 Kiloyear Event.” The arid regions of Earth expand and desertification runs rampant, resulting in a three-decade-long refugee crisis.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
 					<h6><strong>2034</strong></h6>
 					<div class="line"></div>
 				</div>
@@ -128,7 +137,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					The United States of America begins its invasion of Mexico, initiating a series of global conflicts that would come to be called the Wars of Expansion.
+					The United States of America begins its invasion of Mexico, initiating a series of global conflicts that would come to be called <?php echo sf_lore_link('drone-wars', 'the Drone Wars'); ?>.
 				</p>
 			</div>
 			<div>
