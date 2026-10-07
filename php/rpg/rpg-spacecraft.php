@@ -140,9 +140,9 @@
 					</div>
 
 					<div class="tech-field-panel" id="craft-arks" role="tabpanel" aria-labelledby="tab-craft-arks">
-						<p class="copy mb-0">
-							Content coming soon
-						</p>
+						<div class="content-stack">
+							<?php foreach (['kashgar-ark', '4544-xanthus', 'boneyard', 'tetra', 'new-york', 'zhulong'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						</div>
 					</div>
 
 					<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
