@@ -245,7 +245,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					AI Personhood Laws enacted.
+					AI Personhood Act enacted.
 				</p>
 			</div>
 			<div>
