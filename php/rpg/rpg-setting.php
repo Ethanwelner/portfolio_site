@@ -200,16 +200,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					“<?php echo sf_lore_link('end-of-science', 'The End of Science'); ?>.”
-				</p>
-			</div>
-			<div>
-				<div class="line-container">
-					<h6><strong>2070 – 2128</strong></h6>
-					<div class="line"></div>
-				</div>
-				<p class="copy">
-					Partial technological singularity leading to the “End of Science.”
+					Partial technological singularity leading to the “<?php echo sf_lore_link('end-of-science', 'End of Science'); ?>.”
 				</p>
 			</div>
 			<div>
