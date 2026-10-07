@@ -7,6 +7,35 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/7/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Added the first six Arks to the Arks tab: Kashgar Ark, 4544 Xanthus, Boneyard, Tetra, New York, and Zhulong.</li>
+						<li>Moved the present day from 2200 to 2230 and added a 2230 entry to the timeline.</li>
+						<li>Rewrote the Artificial Intelligence overview and history, and added the three AI Core manufacturers.</li>
+						<li>AI modules are now called AI Cores.</li>
+						<li>Merged the duplicate End of Science timeline entries into a single 2060 – 2128 entry.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
+					<p class="copy mb-3"><i>10/6/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Renamed the Wars of Expansion to the Drone Wars and gave it its own lore entry.</li>
+						<li>Rewrote the Robotics history.</li>
+						<li>Added The 0.2 Kiloyear Event to the timeline.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
+					<p class="copy mb-3"><i>10/5/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Copy edited Skiffs, Drone Craft, Shuttles, Fighters, and Patrol Craft.</li>
+						<li>Renamed Trucks to Tugs and Light Trucks to Trucks.</li>
+						<li>Added a closing paragraph to The Stars introduction and rewrote the Lorentz Field Generator overview.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote content for every starship class, from Skiffs and Drone Craft up through Dreadnoughts, Stellar Carriers, Colony Ships, and Arks.</li>
