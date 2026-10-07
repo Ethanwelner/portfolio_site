@@ -81,7 +81,7 @@
 									In one of the few areas of scientific development that were not noticeably slowed during the era that came to be called the <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>, research into all fields of biology proceeded with slow but steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
 								</p>
 								<p class="copy">
-									In the year 2200 a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. With enough time and investment a person could have eyes that see into the ultraviolet spectrum, bones with four times their traditional strength, or a liver that can filter out radiation. A person could even have new and novel organs implanted into them or limbs grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the system, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue.
+									In the year 2230 a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. With enough time and investment a person could have eyes that see into the ultraviolet spectrum, bones with four times their traditional strength, or a liver that can filter out radiation. A person could even have new and novel organs implanted into them or limbs grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the system, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue.
 								</p>
 								<p class="copy">Cont...</p>
 							</div>
@@ -100,16 +100,16 @@
 
 					<div class="tech-field-panel" id="tech-ai" role="tabpanel" aria-labelledby="tab-tech-ai">
 						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
+							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									Artificial Intelligence (AI) in 2200 is a far cry from the city-sized god-machines of the mid-21st century. Modern AI systems are, by heavily enforced and near-universal law, wholly self-contained and non-networked pieces of hardware. Built to approximate the rough scale and capabilities of a human brain, a typical AI Core is a 14cm/6” ball of dense wafer stacks and microscopic wiring. Sealed in solid resin for impact resistance and heat dissipation, then nestled into an armored shell, AI Cores are durable synthetic minds.
+									Artificial Intelligence (AI) in 2230 is a far cry from the city-sized god-machines of the mid-21st century. Modern AI systems are, by heavily enforced and near-universal law, wholly self-contained and non-networked pieces of hardware. Built to approximate the rough scale and capabilities of a human brain, a typical AI Core is a 14cm/6” ball of dense wafer stacks and microscopic wiring. Sealed in solid resin for impact resistance and heat dissipation, then nestled into an armored shell, AI Cores are durable synthetic minds.
 								</p>
 								<p class="copy">
-									By law, AI Cores are built with wired input and output ports that are relatively low bandwidth by the standards of 2200. A practical consideration that also provides safety to the AI Core itself, this limits its ability to cause harm while insulating it from hacking and radio intrusion. While these safeguards may limit an AI’s ability to perform certain tasks, AI Cores are still capable of near-instantaneous computation, perception, and action. Much of that computing power, however, is bogged down with all the baggage that comes with sentience.
+									By law, AI Cores are built with wired input and output ports that are relatively low bandwidth by the standards of 2230. A practical consideration that also provides safety to the AI Core itself, this limits its ability to cause harm while insulating it from hacking and radio intrusion. While these safeguards may limit an AI’s ability to perform certain tasks, AI Cores are still capable of near-instantaneous computation, perception, and action. Much of that computing power, however, is bogged down with all the baggage that comes with sentience.
 								</p>
 								<p class="copy">
 									The creation of a modern AI Core is complex and expensive, but the benefits are considerable. An AI doesn’t grow tired. It needs only electricity to function, can be moved between chassis without issue, and, in some cases, can even be brought back from the dead. With bodies that didn’t need food or rest, AI crew members found a niche that proved vital to the <?php echo sf_lore_link('exodus', 'Exodus'); ?>. To this day, AIs are over-represented among crews operating aboard starships. AI Cores now permeate nearly every facet of human society. In truth, it’s not even accurate to call it human society anymore, as AI systems are, in many places, full and equal citizens of their respective nations.
@@ -117,9 +117,20 @@
 								<p class="copy">
 									AI systems are less temperamental and prone to swings in mood or preference than their human counterparts, but they still change. A shipboard AI governing the actions of a cargo <?php echo sf_lore_link('freighters', 'freighter'); ?> can and will quickly grow bored of its assignment. A lack of meaningful sensory input will grate on an AI just as it would a human. AIs are often given entertainment and time off, just as their human coworkers are. A particularly valuable or specialized AI may even demand routine breaks or distraction. Certain lines of particularly high-end AI systems are well known to be “fussy.”
 								</p>
+								<p class="copy">
+									There are three extant, known manufacturers of AI Cores in the systems, the largest of which has been in continuous operation for well over a century. The AI Core production facility aboard the <?php echo sf_lore_link('arks', 'Kashgar Ark'); ?> stretches all the way back to its humble beginnings as humanity’s first deep-space station. By quirk of history, all three manufacturers are owned by AI Cores, and were once a single corporate conglomerate until it was broken up by the Stellar Antitrust Act of 2160.
+								</p>
+								<p class="copy">
+									The techniques and technologies used in the construction of an AI Core are a closely guarded, enormously profitable secret. Despite decades of attempted corporate espionage and sporadic efforts to develop competing technologies, no one has yet come close to challenging these three for dominance.
+								</p>
+								<ul class="copy mb-0">
+									<li>Kashgar Mindworks (Kashgar Ark)</li>
+									<li>Mars Creative Autonomy (Suriloo Mars)</li>
+									<li>Stellar Omnium (Europa Planitia)</li>
+								</ul>
 							</div>
 							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
+							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>
 									<div class="line"></div>
@@ -166,7 +177,7 @@
 									<div class="line"></div>
 								</div>
 								<p class="copy">
-									In the year 2200 cybernetics are cheap and commonplace. Standardized physio-mechanical interfaces allow for the rapid replacement and repair of cybernetic prosthetics without repeated dangerous surgery. Secure Neuro-baffle implants act as firewalls, preventing intrusion or unwanted feedback into a user’s brain. Advanced power systems even allow for power-intensive applications like full limb replacement to last for months without recharge. Cybernetics can make a person stronger, faster, more durable, able to operate in extreme environments safely and without the need for bulky equipment.
+									In the year 2230 cybernetics are cheap and commonplace. Standardized physio-mechanical interfaces allow for the rapid replacement and repair of cybernetic prosthetics without repeated dangerous surgery. Secure Neuro-baffle implants act as firewalls, preventing intrusion or unwanted feedback into a user’s brain. Advanced power systems even allow for power-intensive applications like full limb replacement to last for months without recharge. Cybernetics can make a person stronger, faster, more durable, able to operate in extreme environments safely and without the need for bulky equipment.
 								</p>
 								<p class="copy">
 									All that said, there’s still a stigma attached to heavy and visible cybernetic augmentation. Cybernetics are seen as a tool of the laboring classes. A sacrifice made to be better at one’s job because there’s no other choice, or even something contractually foisted upon someone. Indeed, many physically demanding or dangerous jobs both require and pay for augmentative prosthesis surgeries, but the limbs and implants remain the property of the company and must be returned upon dismissal.
@@ -175,7 +186,7 @@
 									The introduction of exotic materials has brought a storm of new products and upgrades to the cybernetics industry. Often sold at a substantial premium, exotically enhanced bionics and endobionics can offer dramatically improved, if relatively untested and sometimes short-lived, performance boosts. Many a team of planar explorers have been bankrolled by even a single discovery of materials with significant paraphysical properties useful for cybernetics.
 								</p>
 								<p class="copy">
-									In 2200 there are dozens of major suppliers for cybernetics, with specialties ranging from optics to military equipment to specialized industrial equipment. The following are the top five cybernetics suppliers by market share:
+									In 2230 there are dozens of major suppliers for cybernetics, with specialties ranging from optics to military equipment to specialized industrial equipment. The following are the top five cybernetics suppliers by market share:
 								</p>
 								<ol class="copy">
 									<li>Plum Technologies (38%)</li>
@@ -206,7 +217,7 @@
 
 					<div class="tech-field-panel" id="tech-robotics" role="tabpanel" aria-labelledby="tab-tech-robotics">
 						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
+							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
 									<div class="line"></div>
@@ -215,16 +226,16 @@
 									Robotics are everywhere, from automated ship systems to self-driving ground transportation, to vacuums that still can’t figure out corners. It’s hard not to point to robotics as the single most impactful technology to have debuted in the last few centuries. Almost every aspect of society has a robot somewhere, and automated systems make up the backbone of most routine service and manufacturing labor.
 								</p>
 								<p class="copy">
-									Not to be confused with AI systems, though an AI may “wear” one or more robotic systems as a body. Robotics is the technology of freely moving and sensing machines. Any device that has some range of free motion and sensors to take in its environment can be called a robot, and indeed the line between a simple machine and a robot is a blurry one. Philosophy aside, in 2200 a robot can be acquired to suit just about any task.
+									Not to be confused with AI systems, though an AI may “wear” one or more robotic systems as a body. Robotics is the technology of freely moving and sensing machines. Any device that has some range of free motion and sensors to take in its environment can be called a robot, and indeed the line between a simple machine and a robot is a blurry one. Philosophy aside, in 2230 a robot can be acquired to suit just about any task.
 								</p>
 								<p class="copy">
-									Robots, of course, fulfill far more roles in 2200 than they did in the 21st century. Mechanized construction suits can act as a second skin for AIs hired for construction duties, roboticized drone ships plumb the deepest depths of the galaxy, and roboticized garbage disposal and cleanup systems are the keystone of sanitation in every city on Earth and beyond. One place where robotics is relatively rare, now, thanks to cultural mores and a deep understanding of the risks involved, is in warfare. The technology to make hulking or minuscule robotic menaces for the battlefield is, of course, there. But the experiences in the wars of the late 20th century have taught humanity an important lesson. War must NEVER be impersonal.
+									Robots, of course, fulfill far more roles in 2230 than they did in the 21st century. Mechanized construction suits can act as a second skin for AIs hired for construction duties, roboticized drone ships plumb the deepest depths of the galaxy, and roboticized garbage disposal and cleanup systems are the keystone of sanitation in every city on Earth and beyond. One place where robotics is relatively rare, now, thanks to cultural mores and a deep understanding of the risks involved, is in warfare. The technology to make hulking or minuscule robotic menaces for the battlefield is, of course, there. But the experiences in the wars of the late 20th century have taught humanity an important lesson. War must NEVER be impersonal.
 								</p>
 								<p class="copy">
 									Perhaps owing to the technology’s mundanity, paraphysics have had less of an impact on robotics than they have had in other fields. Exotic materials and paraphysical concepts have revolutionized space travel and broadened the horizons of medicine, but in robotics they’ve mostly served to create a better robot. Faster, longer lasting, hardier, but not new. That suits the robotics industry just fine though, and often the only way to interact with sufficiently hostile planes is to send a robot.
 								</p>
 								<p class="copy">
-									In 2200 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the systems. The following are the top 5 robotics suppliers by market cap:
+									In 2230 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the systems. The following are the top 5 robotics suppliers by market cap:
 								</p>
 								<ol class="copy mb-0">
 									<li>Plum Technologies (Personal Robotics)</li>
@@ -235,7 +246,7 @@
 								</ol>
 							</div>
 							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
+							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>
 									<div class="line"></div>
@@ -253,7 +264,7 @@
 									This state of affairs came to a sudden and violent end with the Second Major AI Panic of 2080. In under a year, most AI datacenters on Earth were destroyed, and six decades of built-up robotic infrastructure was either destroyed or rendered inert. A humanity that had grown used to being useless suddenly found itself very much needed. The AI Personhood Act of 2082 was enacted with unanimous consent, and the era of mass automation came to an end. This was far from the end for robotics.
 								</p>
 								<p class="copy">
-									Though heavily regulated, self-contained and non-networked AI Cores continued to be produced, and humanity still needed robotics for basic process automation and dangerous tasks. The human race had spent generations wholly reliant on robotic labor, and even diminished and simplified, there was still so much a robot could do that a human couldn't. This is the state humanity finds itself in in 2200. AIs are now more often than not citizens with full rights, and citizen labor of all kinds is at a premium. Robots are still ever-present, but always under some form of citizen supervision. With humanity's expansion to the stars and the planes, the need for robotic systems isn't going anywhere.
+									Though heavily regulated, self-contained and non-networked AI Cores continued to be produced, and humanity still needed robotics for basic process automation and dangerous tasks. The human race had spent generations wholly reliant on robotic labor, and even diminished and simplified, there was still so much a robot could do that a human couldn't. This is the state humanity finds itself in in 2230. AIs are now more often than not citizens with full rights, and citizen labor of all kinds is at a premium. Robots are still ever-present, but always under some form of citizen supervision. With humanity's expansion to the stars and the planes, the need for robotic systems isn't going anywhere.
 								</p>
 							</div>
 						</div>
