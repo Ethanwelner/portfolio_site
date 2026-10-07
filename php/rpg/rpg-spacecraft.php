@@ -40,6 +40,7 @@
 						<button type="button" class="tech-field-tab is-active" role="tab" id="tab-craft-starships" aria-controls="craft-starships" aria-selected="true">Starships</button>
 						<button type="button" class="tech-field-tab" role="tab" id="tab-craft-arks" aria-controls="craft-arks" aria-selected="false">Arks</button>
 						<button type="button" class="tech-field-tab" role="tab" id="tab-craft-stations" aria-controls="craft-stations" aria-selected="false">Stations</button>
+						<button type="button" class="tech-field-tab" role="tab" id="tab-craft-systems" aria-controls="craft-systems" aria-selected="false">Systems</button>
 						<button type="button" class="tech-field-tab" role="tab" id="tab-craft-technology" aria-controls="craft-technology" aria-selected="false">Technology</button>
 					</div>
 
@@ -140,12 +141,18 @@
 					</div>
 
 					<div class="tech-field-panel" id="craft-arks" role="tabpanel" aria-labelledby="tab-craft-arks">
+						<div class="content-stack">
+							<?php foreach (['kashgar-ark', '4544-xanthus', 'boneyard', 'tetra', 'new-york', 'zhulong'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						</div>
+					</div>
+
+					<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
 						<p class="copy mb-0">
 							Content coming soon
 						</p>
 					</div>
 
-					<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
+					<div class="tech-field-panel" id="craft-systems" role="tabpanel" aria-labelledby="tab-craft-systems">
 						<p class="copy mb-0">
 							Content coming soon
 						</p>

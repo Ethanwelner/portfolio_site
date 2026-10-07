@@ -44,6 +44,12 @@ function sf_lore_titles() {
 		'stellar-carriers' => 'Stellar Carriers',
 		'colony-ships' => 'Colony Ships',
 		'arks' => 'Arks',
+		'kashgar-ark' => 'Kashgar Ark',
+		'4544-xanthus' => '4544 Xanthus',
+		'boneyard' => 'Boneyard',
+		'tetra' => 'Tetra',
+		'new-york' => 'New York',
+		'zhulong' => 'Zhulong (The Torch Dragon)',
 	];
 	return $titles;
 }
