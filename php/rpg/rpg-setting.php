@@ -727,9 +727,15 @@
 			</div>
 
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
+				<div class="d-flex flex-wrap flex-xs-nowrap">
+					<div class="flex-7 content-stack">
+						<?php foreach (['general-robotics', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+					</div>
+					<div class="d-inline-flex align-items-center flex-1"></div>
+					<div class="flex-6 content-stack">
+						<?php foreach (['meishou-jituan', 'plum-technologies', 'shine', 'sistemas-de-controle-amazonia', 'stellar-omnium'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -9,6 +9,10 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Added an Adventure tab (coming soon).</li>
+						<li>Filled in the Corporations tab with every corporation mentioned so far: General Robotics, Kashgar Mindworks, Lagos-Core Defense, Luna-HI, Luxoptica, Mars Creative Autonomy, Měishǒu Jítuán, Plum Technologies, Shine!, Sistemas de Controle Amazônia, and Stellar Omnium.</li>
+						<li>Added 45/a/198 - “Isekai” to Known Planes and ordered the planes by number.</li>
+						<li>Copy edits to the Paraloka overview.</li>
 						<li>Added the first six Arks to the Arks tab: Kashgar Ark, 4544 Xanthus, Boneyard, Tetra, New York, and Zhulong.</li>
 						<li>Moved the present day from 2200 to 2230 and added a 2230 entry to the timeline.</li>
 						<li>Rewrote the Artificial Intelligence overview and history, and added the three AI Core manufacturers.</li>
