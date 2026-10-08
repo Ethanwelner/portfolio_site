@@ -268,6 +268,15 @@
 			</div>
 			<div>
 				<div class="line-container">
+					<h6><strong>2114</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>” is discovered by the Third Lunar Industrial Syndicate.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
 					<h6><strong>2116</strong></h6>
 					<div class="line"></div>
 				</div>
@@ -331,11 +340,47 @@
 			</div>
 			<div>
 				<div class="line-container">
+					<h6><strong>2129</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					65/T/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2135</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>” is discovered by the Kingdom of India.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
 					<h6><strong>2146</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
 					First tests of <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?>.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2154</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					380/c/12 - “<?php echo sf_lore_link('the-lost-world', 'The Lost World'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2160</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					419/f/05 - “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.
 				</p>
 			</div>
 			<div>
@@ -363,6 +408,24 @@
 				</div>
 				<p class="copy">
 					<?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2184</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2185</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is discovered by <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?>
 				</p>
 			</div>
 			<div>
@@ -406,322 +469,490 @@
 				<div class="content-stack">
 					<div>
 						<h4 class="mb-3">The American Empire</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Northern California</li>
-									<li>Southern California</li>
-									<li>Colorado</li>
-									<li>Washington</li>
-									<li>Oregon</li>
-									<li>Minnesota</li>
-									<li>Wisconsin</li>
-									<li>Illinois</li>
-									<li>Michigan</li>
-									<li>Ohio</li>
-									<li>Pennsylvania</li>
-									<li>New York (formerly New York and New Jersey)</li>
-									<li>Delaware</li>
-									<li>Maryland</li>
-									<li>Nevada</li>
-									<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
-									<li>Greater Maine (former Maine and New Hampshire)</li>
-									<li>Nueva Mexico (former Mexico)</li>
-									<li>Mexica (former Mexico)</li>
-									<li>Yucatán (former Mexico)</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<ul class="copy mb-0">
-									<li>New Columbia (Luna)</li>
-								</ul>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<ul class="copy mb-0">
-									<li>In the tumultuous 2040’s a state of martial law was declared and elections in the United States were suspended.</li>
-									<li>The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
-									<li>Under the pretext of preventing drug trafficking the US invades Mexico and splits it into 3 new states.</li>
-									<li>By executive decree multiple states are reorganized.</li>
-									<li>Texas, New Mexico, Kansas, and Oklahoma secede, confiscating substantial military hardware and forming an alliance of states.</li>
-									<li>A tense nuclear and economic standoff occurs over the next two decades.</li>
-									<li>The secession of Florida breaks the stalemate with 22 additional states seceding from the empire to become independent countries.</li>
-									<li>Over the following 3 decades Texas comes to dominate the economic and political periphery of its alliance and annexes 7 additional bordering states, consolidating the Union of Texas by 2100.</li>
-								</ul>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Northern California</li>
+										<li>Southern California</li>
+										<li>Colorado</li>
+										<li>Washington</li>
+										<li>Oregon</li>
+										<li>Minnesota</li>
+										<li>Wisconsin</li>
+										<li>Illinois</li>
+										<li>Michigan</li>
+										<li>Ohio</li>
+										<li>Pennsylvania</li>
+										<li>New York (formerly New York and New Jersey)</li>
+										<li>Delaware</li>
+										<li>Maryland</li>
+										<li>Nevada</li>
+										<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
+										<li>Greater Maine (former Maine and New Hampshire)</li>
+										<li>Nueva Mexico (former Mexico)</li>
+										<li>Mexica (former Mexico)</li>
+										<li>Yucatán (former Mexico)</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>New Columbia (Luna)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<ul class="copy mb-0">
+										<li>In the tumultuous 2040’s a state of martial law was declared and elections in the United States were suspended.</li>
+										<li>The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
+										<li>Under the pretext of preventing drug trafficking the US invades Mexico and splits it into 3 new states.</li>
+										<li>By executive decree multiple states are reorganized.</li>
+										<li>Texas, New Mexico, Kansas, and Oklahoma secede, confiscating substantial military hardware and forming an alliance of states.</li>
+										<li>A tense nuclear and economic standoff occurs over the next two decades.</li>
+										<li>The secession of Florida breaks the stalemate with 22 additional states seceding from the empire to become independent countries.</li>
+										<li>Over the following 3 decades Texas comes to dominate the economic and political periphery of its alliance and annexes 7 additional bordering states, consolidating the Union of Texas by 2100.</li>
+									</ul>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">The Union of Texas</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Former Texas</li>
-									<li>Former Kansas</li>
-									<li>Former Oklahoma</li>
-									<li>Former New Mexico</li>
-									<li>Former Wyoming</li>
-									<li>Former Arkansas</li>
-									<li>Former Mississippi</li>
-									<li>Former Louisiana</li>
-									<li>Former Alabama</li>
-									<li>Former Tennessee</li>
-									<li>Former Kentucky</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<p class="copy mb-0">
-									None
-								</p>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<p class="copy mb-0">
-									Content coming soon
-								</p>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Former Texas</li>
+										<li>Former Kansas</li>
+										<li>Former Oklahoma</li>
+										<li>Former New Mexico</li>
+										<li>Former Wyoming</li>
+										<li>Former Arkansas</li>
+										<li>Former Mississippi</li>
+										<li>Former Louisiana</li>
+										<li>Former Alabama</li>
+										<li>Former Tennessee</li>
+										<li>Former Kentucky</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<p class="copy mb-0">
+										None
+									</p>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">Non-Aligned Free American States</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Utah</li>
-									<li>Arizona</li>
-									<li>Montana</li>
-									<li>North Dakota</li>
-									<li>South Dakota</li>
-									<li>Nebraska</li>
-									<li>Missouri</li>
-									<li>Iowa</li>
-									<li>Indiana</li>
-									<li>Georgia</li>
-									<li>The Carolinas (former North and South)</li>
-									<li>The Virginias (former West and non)</li>
-									<li>Floridia (former Florida, Cuba, The Bahamas)</li>
-									<li>Alaska</li>
-									<li>Hawaii</li>
-									<li>Idaho</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<p class="copy mb-0">
-									None
-								</p>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<p class="copy mb-0">
-									Content coming soon
-								</p>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Utah</li>
+										<li>Arizona</li>
+										<li>Montana</li>
+										<li>North Dakota</li>
+										<li>South Dakota</li>
+										<li>Nebraska</li>
+										<li>Missouri</li>
+										<li>Iowa</li>
+										<li>Indiana</li>
+										<li>Georgia</li>
+										<li>The Carolinas (former North and South)</li>
+										<li>The Virginias (former West and non)</li>
+										<li>Floridia (former Florida, Cuba, The Bahamas)</li>
+										<li>Alaska</li>
+										<li>Hawaii</li>
+										<li>Idaho</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<p class="copy mb-0">
+										None
+									</p>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">The Chinese Empire</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Former Laos</li>
-									<li>Former Thailand</li>
-									<li>Former Burma</li>
-									<li>Former Vietnam</li>
-									<li>Former Cambodia</li>
-									<li>Former Malaysia</li>
-									<li>Former Philippines</li>
-									<li>Former Indonesia</li>
-									<li>Former Singapore</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<ul class="copy mb-0">
-									<li>Yùtù “Jade Rabbit” (Luna)</li>
-								</ul>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<ul class="copy mb-0">
-									<li>A cold war between China and India saw both nations annex neighboring territories.</li>
-								</ul>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Former Laos</li>
+										<li>Former Thailand</li>
+										<li>Former Burma</li>
+										<li>Former Vietnam</li>
+										<li>Former Cambodia</li>
+										<li>Former Malaysia</li>
+										<li>Former Philippines</li>
+										<li>Former Indonesia</li>
+										<li>Former Singapore</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>Yùtù “Jade Rabbit” (Luna)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<ul class="copy mb-0">
+										<li>A cold war between China and India saw both nations annex neighboring territories.</li>
+									</ul>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">The Stellar Democratic Union</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Core Europe</li>
-									<li>Japan</li>
-									<li>Australia</li>
-									<li>Existing EU member and associate members</li>
-									<li>Canada</li>
-									<li>Corea</li>
-									<li>Russia/Belarus</li>
-									<li>Brazil</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<ul class="copy mb-0">
-									<li>The Martian Association</li>
-									<li>Antiluna Colony (High Earth Orbit)</li>
-								</ul>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<p class="copy mb-0">
-									Content coming soon
-								</p>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Core Europe</li>
+										<li>Japan</li>
+										<li>Australia</li>
+										<li>Existing EU member and associate members</li>
+										<li>Canada</li>
+										<li>Corea</li>
+										<li>Russia/Belarus</li>
+										<li>Brazil</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>The Martian Association</li>
+										<li>Antiluna Colony (High Earth Orbit)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">The Kingdom of India</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>India</li>
-									<li>Former Nepal</li>
-									<li>Former Sri Lanka</li>
-									<li>Former Bangladesh</li>
-									<li>Former Bhutan</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<ul class="copy mb-0">
-									<li>Amaravati (High Earth Orbit)</li>
-								</ul>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<ul class="copy mb-0">
-									<li>A cold war between China and India saw both nations annex neighboring territories.</li>
-								</ul>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>India</li>
+										<li>Former Nepal</li>
+										<li>Former Sri Lanka</li>
+										<li>Former Bangladesh</li>
+										<li>Former Bhutan</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>Amaravati (High Earth Orbit)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<ul class="copy mb-0">
+										<li>A cold war between China and India saw both nations annex neighboring territories.</li>
+									</ul>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">The Ural Federation</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Former Mongolia/Inner Mongolia</li>
-									<li>Former Eastern Russia</li>
-									<li>Former Kazakhstan</li>
-									<li>Former Kyrgyzstan</li>
-									<li>Former Xinjiang</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<p class="copy mb-0">
-									None
-								</p>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<p class="copy mb-0">
-									Content coming soon
-								</p>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Former Mongolia/Inner Mongolia</li>
+										<li>Former Eastern Russia</li>
+										<li>Former Kazakhstan</li>
+										<li>Former Kyrgyzstan</li>
+										<li>Former Xinjiang</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<p class="copy mb-0">
+										None
+									</p>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
 					</div>
 					<div>
 						<h4 class="mb-3">Centafrica</h4>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7">
-								<div class="line-container">
-									<h5><strong>Territories</strong></h5>
-									<div class="line"></div>
-								</div>
-								<h6>Earth Territories</h6>
-								<ul class="copy">
-									<li>Democratic Republic of the Congo</li>
-									<li>Kenya</li>
-									<li>Angola</li>
-									<li>Burundi</li>
-									<li>Central African Republic</li>
-									<li>Republic of the Congo</li>
-									<li>Rwanda</li>
-									<li>South Sudan</li>
-									<li>Tanzania</li>
-									<li>Uganda</li>
-									<li>Zambia</li>
-									<li>Ethiopia</li>
-									<li>Somalia</li>
-								</ul>
-								<h6>Stellar Territories</h6>
-								<ul class="copy mb-0">
-									<li>Aksum (Inner Solar System Elliptical Station)</li>
-								</ul>
-							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
-							<div class="flex-6">
-								<div class="line-container">
-									<h5><strong>History</strong></h5>
-									<div class="line"></div>
-								</div>
-								<ul class="copy mb-0">
-									<li>Heavy desertification pushed Africa’s population toward the lush equatorial zones.</li>
-								</ul>
-							</div>
+						<div class="plane-attr-cols">
+							<p class="copy">
+								Population:<br>
+								Government:<br>
+								Leaders:
+							</p>
+							<p class="copy">
+								Notable Figures:<br>
+								GDP:
+							</p>
+							<p class="copy">
+								Languages:<br>
+								Currency:
+							</p>
 						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Democratic Republic of the Congo</li>
+										<li>Kenya</li>
+										<li>Angola</li>
+										<li>Burundi</li>
+										<li>Central African Republic</li>
+										<li>Republic of the Congo</li>
+										<li>Rwanda</li>
+										<li>South Sudan</li>
+										<li>Tanzania</li>
+										<li>Uganda</li>
+										<li>Zambia</li>
+										<li>Ethiopia</li>
+										<li>Somalia</li>
+									</ul>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>Aksum (Inner Solar System Elliptical Station)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<ul class="copy mb-0">
+										<li>Heavy desertification pushed Africa’s population toward the lush equatorial zones.</li>
+									</ul>
+								</div>
+							</div>
+						</details>
 					</div>
 				</div>
 			</div>
