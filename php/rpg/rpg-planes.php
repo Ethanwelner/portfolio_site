@@ -89,7 +89,7 @@
 
 				<div class="tech-field-panel" id="plane-known" role="tabpanel" aria-labelledby="tab-plane-known">
 					<div class="content-stack">
-						<?php foreach (['paraloka', 'isekai', 'saturdays-furnace', 'gastown', 'the-lost-world', 'flatland', 'leviathan'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						<?php foreach (['paraloka', 'saturdays-furnace', 'gastown', 'the-lost-world', 'flatland', 'leviathan', 'isekai'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 					</div>
 				</div>
 
@@ -103,7 +103,9 @@
 							<?php sf_lore_entry('st-245-e6', 'line'); ?>
 						</div>
 						<div class="d-inline-flex align-items-center flex-1"></div>
-						<div class="flex-6"></div>
+						<div class="flex-6 content-stack">
+							<?php foreach (['st-1-e1', 'co-h2o-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+						</div>
 					</div>
 				</div>
 			</div>

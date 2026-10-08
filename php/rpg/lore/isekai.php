@@ -18,9 +18,9 @@
 		Indigenous life: Yes, Parasapient
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered: 2185 / Tetra Frontiers Co.<br>
+		Claim: Tetra Frontiers Co.<br>
+		Nations of Interest: The Stellar Democratic Union
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">

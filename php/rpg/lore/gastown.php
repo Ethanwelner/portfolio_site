@@ -14,13 +14,13 @@
 		Population: 0<br>
 		Average Temperature: 680.556°C<br>
 		Biome: Hydrogen Gas<br>
-		Natural Resources: Hydrogen<br>
+		Natural Resources: <?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?><br>
 		Indigenous life: No
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered By: 2135/The Kingdom of India<br>
+		Claim: Public<br>
+		Nations of Interest: As the source of <?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the systems.
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">

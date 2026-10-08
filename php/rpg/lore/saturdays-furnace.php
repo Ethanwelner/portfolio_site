@@ -18,9 +18,9 @@
 		Indigenous life: Yes
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered: 2129 / New York University<br>
+		Claim: Saltwater Energetics<br>
+		Nations of Interest: The American Empire
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">

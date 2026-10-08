@@ -18,9 +18,9 @@
 		Indigenous life: N/A
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered: 2160 / Huánghé Yánjiūyuàn (Yellow River Research Institute)<br>
+		Claim: Huánghé Yánjiūyuàn (Yellow River Research Institute)<br>
+		Nations of Interest: The Chinese Empire
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">
