@@ -54,13 +54,13 @@
 				Life in 2230 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a <?php echo sf_lore_link('freighters', 'freighter'); ?> out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
 			</p>
 			<p class="copy">
-				In humanity’s darkest hour, 110 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
+				In humanity’s darkest hour, 120 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
 			</p>
 			<p class="copy">
-				Then, a mysterious benefactor placed a temple of bizarre make and proportion on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the near-century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
+				Then, a mysterious benefactor placed a temple of bizarre make and proportion on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
 			</p>
 			<p class="copy">
-				Life in Earth’s megacities is still hard, and for 80 years the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
+				Life in Earth’s megacities is still hard, and for over a century the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
 			</p>
 			<p class="copy mb-0">
 				In the end, it’s still humanity, and it’s a big strange universe out there.
@@ -196,7 +196,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2060 – 2128</strong></h6>
+					<h6><strong>2060 – 2118</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -250,7 +250,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2120</strong></h6>
+					<h6><strong>2110</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -259,7 +259,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2120 – 2128</strong></h6>
+					<h6><strong>2110 – 2118</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -268,7 +268,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2126</strong></h6>
+					<h6><strong>2116</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -277,7 +277,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2127</strong></h6>
+					<h6><strong>2117</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -286,7 +286,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2128</strong></h6>
+					<h6><strong>2118</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -295,7 +295,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2128 – Present day</strong></h6>
+					<h6><strong>2118 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -304,7 +304,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2132</strong></h6>
+					<h6><strong>2122</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -313,7 +313,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2133</strong></h6>
+					<h6><strong>2123</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -322,7 +322,7 @@
 			</div>
 			<div>
 				<div class="line-container">
-					<h6><strong>2133 – Present day</strong></h6>
+					<h6><strong>2123 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -358,20 +358,20 @@
 			</div>
 			<div>
 				<div class="line-container">
+					<h6><strong>2175</strong></h6>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					<?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.
+				</p>
+			</div>
+			<div>
+				<div class="line-container">
 					<h6><strong>2190 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
 					Interdimensional colonization begins.
-				</p>
-			</div>
-			<div>
-				<div class="line-container">
-					<h6><strong>2195</strong></h6>
-					<div class="line"></div>
-				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.
 				</p>
 			</div>
 			<div>
@@ -729,11 +729,11 @@
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 					<div class="flex-7 content-stack">
-						<?php foreach (['general-robotics', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+						<?php foreach (['general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
 					<div class="d-inline-flex align-items-center flex-1"></div>
 					<div class="flex-6 content-stack">
-						<?php foreach (['meishou-jituan', 'plum-technologies', 'shine', 'sistemas-de-controle-amazonia', 'stellar-omnium'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+						<?php foreach (['meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
 				</div>
 			</div>

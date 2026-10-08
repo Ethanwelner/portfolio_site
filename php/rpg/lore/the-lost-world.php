@@ -18,9 +18,9 @@
 		Indigenous life: Yes
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered: 2154 / Holy Oak Discovery Services, LLC<br>
+		Claim: Holy Oak Discovery Services, LLC<br>
+		Nations of Interest: The American Empire
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">

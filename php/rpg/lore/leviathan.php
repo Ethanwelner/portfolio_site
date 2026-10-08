@@ -14,13 +14,13 @@
 		Population: 35,000<br>
 		Average Temperature: 8–15°C<br>
 		Biome: Ocean Aquatic<br>
-		Natural Resources: Water, Hydrogen, Exotic Fauna<br>
+		Natural Resources: <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?>, Hydrogen, Exotic Fauna<br>
 		Indigenous life: Yes
 	</p>
 	<p class="copy">
-		Discovered:<br>
-		Claim:<br>
-		Nations of Interest:
+		Discovered: 2184 / Holy Oak Discovery Services, LLC<br>
+		Claim: Public<br>
+		Nations of Interest: As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?>, 513/y/11 Leviathan is of interest to all nations in the systems.
 	</p>
 </div>
 <div class="d-flex flex-wrap flex-xs-nowrap">
