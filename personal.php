@@ -114,6 +114,7 @@
                                     <div class="flex-14">
                                         <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
                                             <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-adventure" aria-controls="rpg-adventure" aria-selected="false">Adventure</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-changelog" aria-controls="rpg-changelog" aria-selected="false">Change Log</button>
                                         </div>
@@ -164,6 +165,18 @@
 
                             <?php include 'php/rpg/rpg-parabiology.php'; ?>
                             <div class="separator"></div>
+                        </div>
+                    </div>
+
+                    <div class="section unlimited white-bg rpg-panel" id="rpg-adventure" role="tabpanel" aria-labelledby="tab-adventure">
+                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
+                            <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                <div class="flex-14">
+                                    <h3 class="sub-title mb-0" id="adventure">Content Coming Soon</h3>
+                                </div>
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                            </div>
                         </div>
                     </div>
 

@@ -13,6 +13,7 @@ function sf_lore_titles() {
 		'first-interstellar-expansion' => 'First Interstellar Expansion',
 		'first-switch-gate-catastrophe' => 'The First Switch-Gate Catastrophe',
 		'paraloka' => '1/a/384 - “<i>Paraloka</i>”',
+		'isekai' => '45/a/198 - “<i>Isekai</i>”',
 		'gastown' => '96/f/55 - “<i>Gastown</i>”',
 		'the-lost-world' => '380/c/12 - “<i>The Lost World</i>”',
 		'flatland' => '419/f/05 - “<i>Flatland</i>”',
@@ -50,6 +51,17 @@ function sf_lore_titles() {
 		'tetra' => 'Tetra',
 		'new-york' => 'New York',
 		'zhulong' => 'Zhulong (The Torch Dragon)',
+		'general-robotics' => 'General Robotics',
+		'kashgar-mindworks' => 'Kashgar Mindworks',
+		'lagos-core-defense' => 'Lagos-Core Defense',
+		'luna-hi' => 'Luna-HI',
+		'luxoptica' => 'Luxoptica',
+		'mars-creative-autonomy' => 'Mars Creative Autonomy',
+		'meishou-jituan' => 'Měishǒu Jítuán (Beautiful Hand Group)',
+		'plum-technologies' => 'Plum Technologies',
+		'shine' => 'Shine!',
+		'sistemas-de-controle-amazonia' => 'Sistemas de Controle Amazônia',
+		'stellar-omnium' => 'Stellar Omnium',
 	];
 	return $titles;
 }
