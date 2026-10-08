@@ -590,6 +590,100 @@ html.lore-modal-open {
     max-width: 100%;
 }
 
+/* Collapsible "Details" section under an attribute block: plane, Ark, and
+   corporation lore entries in php/rpg/lore/, and the Nations tab in rpg-setting.php */
+.lore-details {
+    > summary {
+        display: block;
+        list-style: none;
+        cursor: pointer;
+        margin-bottom: 0;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        .line {
+            display: none;
+        }
+
+        /* Fade the text, not the h5: its background is what covers the .line */
+        h5 > strong,
+        h5::after {
+            transition: opacity 0.2s ease;
+        }
+
+        h5::after {
+            content: "+";
+            display: inline-block;
+            width: 1em;
+            margin-left: 6px;
+            font-size: 1.6em;
+            line-height: 0;
+            vertical-align: -0.12em;
+            text-align: center;
+        }
+
+        &:hover h5 > strong,
+        &:hover h5::after {
+            opacity: 0.6;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #2dfc64;
+            outline-offset: 2px;
+        }
+    }
+
+    &[open] > summary {
+        margin-bottom: 20px;
+
+        h5::after {
+            content: "\2212";
+        }
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    /* Overview / History / Geography / Territories columns: boxed, with
+       plain bold titles instead of the ruled heading. Border matches .line. */
+    > .d-flex {
+        gap: 20px;
+
+        > .flex-1 {
+            display: none !important;
+        }
+
+        > :is(.flex-6, .flex-7) {
+            border: 1px solid rgb(0 0 0 / 15%);
+            border-radius: var(--portfolio-radius);
+            padding: 20px;
+
+            .black-bg & {
+                border-color: rgb(255 255 255 / 25%);
+            }
+
+            > :last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .line-container {
+            margin-bottom: 12px;
+
+            h5 {
+                padding: 0;
+            }
+
+            .line {
+                display: none;
+            }
+        }
+    }
+}
+
 .personal-pane .section-clip {
     /* Let that 1px seam cover paint; keep the rest of the hero clip */
     clip-path: inset(0 0 -1px 0);

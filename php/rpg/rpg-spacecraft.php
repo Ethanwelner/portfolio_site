@@ -162,6 +162,7 @@
 						<div class="content-stack">
 							<?php sf_lore_entry('lorentz-field-generator', 'h4', 'mb-3'); ?>
 							<?php sf_lore_entry('aether-sails', 'h4', 'mb-3'); ?>
+							<?php sf_lore_entry('fuel-gates', 'h4', 'mb-3'); ?>
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,3 @@
-<div class="line-container">
-	<h5><strong>Planar Attributes</strong></h5>
-	<div class="line"></div>
-</div>
 <div class="plane-attr-cols">
 	<p class="copy">
 		Compatibility: Low<br>
@@ -23,24 +19,30 @@
 		Nations of Interest: As the source of <?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the systems.
 	</p>
 </div>
-<div class="d-flex flex-wrap flex-xs-nowrap">
-	<div class="flex-7">
-		<div class="line-container">
-			<h5><strong>Overview</strong></h5>
-			<div class="line"></div>
+<details class="lore-details">
+	<summary class="line-container">
+		<h5><strong>Details</strong></h5>
+		<div class="line"></div>
+	</summary>
+	<div class="d-flex flex-wrap flex-xs-nowrap">
+		<div class="flex-7">
+			<div class="line-container">
+				<h5><strong>Overview</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy mb-0">
+				Content coming soon
+			</p>
 		</div>
-		<p class="copy mb-0">
-			Content coming soon
-		</p>
-	</div>
-	<div class="d-inline-flex align-items-center flex-1"></div>
-	<div class="flex-6">
-		<div class="line-container">
-			<h5><strong>Geography</strong></h5>
-			<div class="line"></div>
+		<div class="d-inline-flex align-items-center flex-1"></div>
+		<div class="flex-6">
+			<div class="line-container">
+				<h5><strong>Geography</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy mb-0">
+				Content coming soon
+			</p>
 		</div>
-		<p class="copy mb-0">
-			Content coming soon
-		</p>
 	</div>
-</div>
+</details>
