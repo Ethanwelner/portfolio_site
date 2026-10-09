@@ -470,18 +470,19 @@
 					<div>
 						<h4 class="mb-3">The American Empire</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 818 million<br>
+								Languages: English, Spanish<br>
+								Currency: Imperial Dollar (ID)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Constitutional imperial monarchy with democratic self-government<br>
+								Capitol:<br>
+								Leadership: Emperor Augustus Bartholomew Hayes
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -521,6 +522,7 @@
 									<h6>Stellar Territories</h6>
 									<ul class="copy mb-0">
 										<li>New Columbia (Luna)</li>
+										<li><?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
@@ -546,18 +548,19 @@
 					<div>
 						<h4 class="mb-3">The Union of Texas</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 120 million<br>
+								Languages: English, Spanish<br>
+								Currency: Imperial Dollar (ID)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Military Republic<br>
+								Capitol:<br>
+								Leadership: General Mortimer Cross
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -606,18 +609,19 @@
 					<div>
 						<h4 class="mb-3">Non-Aligned Free American States</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 180 million<br>
+								Languages: English, Spanish<br>
+								Currency: Imperial Dollar (ID)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Various<br>
+								Capitol:<br>
+								Leadership: Various
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -671,18 +675,19 @@
 					<div>
 						<h4 class="mb-3">The Chinese Empire</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 1.35 billion<br>
+								Languages: Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao<br>
+								Currency: rénmínbì (RMB)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Corporatist imperial monarchy<br>
+								Capitol:<br>
+								Leadership: Emperor Zhang of the Wuhan Dynasty
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -711,6 +716,7 @@
 									<h6>Stellar Territories</h6>
 									<ul class="copy mb-0">
 										<li>Yùtù “Jade Rabbit” (Luna)</li>
+										<li><?php echo sf_lore_link('zhulong', 'Zhulong'); ?> (Ark)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
@@ -729,18 +735,19 @@
 					<div>
 						<h4 class="mb-3">The Stellar Democratic Union</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 2.5 billion<br>
+								Languages: English, Russian, Portuguese, Japanese, German, French, Spanish, Korean, Italian, Polish, Dutch, Romanian<br>
+								Currency: Earth Reserve Credits (ERC)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Federal democratic republic<br>
+								Capitol:<br>
+								Leadership: President 10/Chrysanthemum
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -769,6 +776,8 @@
 									<ul class="copy mb-0">
 										<li>The Martian Association</li>
 										<li>Antiluna Colony (High Earth Orbit)</li>
+										<li><?php echo sf_lore_link('boneyard', 'Boneyard'); ?> (Ark)</li>
+										<li><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
@@ -787,18 +796,19 @@
 					<div>
 						<h4 class="mb-3">The Kingdom of India</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 1.7 billion<br>
+								Languages: Hindi, Bengali, English, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Nepali, Sinhala<br>
+								Currency: Earth Reserve Credits (ERC)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Technocratic monarchy<br>
+								Capitol:<br>
+								Leadership: Prince Raja Jagadeeshwara Raya
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -841,18 +851,19 @@
 					<div>
 						<h4 class="mb-3">The Ural Federation</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 120 million<br>
+								Languages: Russian, Kazakh, Mandarin, Uyghur, Mongolian, Kyrgyz<br>
+								Currency: Earth Reserve Credits (ERC)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Tribal federalism<br>
+								Capitol:<br>
+								Leadership: Various
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -895,18 +906,19 @@
 					<div>
 						<h4 class="mb-3">Centafrica</h4>
 						<div class="plane-attr-cols">
-							<p class="copy">
-								Population:<br>
-								Government:<br>
-								Leaders:
+							<p class="copy flex-1">
+								Population: 1.6 billion<br>
+								Languages: Swahili, French, English, Amharic, Oromo, Lingala, Portuguese, Somali, Kinyarwanda<br>
+								Currency: Earth Reserve Credits (ERC)
 							</p>
-							<p class="copy">
+							<p class="copy flex-1">
+								Government: Federal democratic republic<br>
+								Capitol:<br>
+								Leadership: Prime Minister Kitoko Mayélé
+							</p>
+							<p class="copy flex-1">
 								Notable Figures:<br>
 								GDP:
-							</p>
-							<p class="copy">
-								Languages:<br>
-								Currency:
 							</p>
 						</div>
 						<details class="lore-details">
@@ -950,6 +962,147 @@
 									<ul class="copy mb-0">
 										<li>Heavy desertification pushed Africa’s population toward the lush equatorial zones.</li>
 									</ul>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div>
+						<h4 class="mb-3">Kashgar</h4>
+						<div class="plane-attr-cols">
+							<p class="copy flex-1">
+								Population: 35 million<br>
+								Languages: Hindi, English, Spanish, Mandarin, Various Others<br>
+								Currency:
+							</p>
+							<p class="copy flex-1">
+								Government: Anarcho-Syndicalism<br>
+								Capitol: <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?><br>
+								Leadership: Comrade 14/Scirocco
+							</p>
+							<p class="copy flex-1">
+								Notable Figures:<br>
+								GDP:
+							</p>
+						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>Kashgar Ark</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div>
+						<h4 class="mb-3">Xanthus</h4>
+						<div class="plane-attr-cols">
+							<p class="copy flex-1">
+								Population: 19 million<br>
+								Languages: Swahili, Lingala, English, Mandarin, Various Others<br>
+								Currency:
+							</p>
+							<p class="copy flex-1">
+								Government: Parliamentary Democracy<br>
+								Capitol: <?php echo sf_lore_link('4544-xanthus', '4544 Xanthus'); ?><br>
+								Leadership: President Mwaki Karanja Waweru
+							</p>
+							<p class="copy flex-1">
+								Notable Figures:<br>
+								GDP:
+							</p>
+						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>4544 Xanthus (Ark)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div>
+						<h4 class="mb-3">The Eighth Lunar Industrial Syndicate</h4>
+						<div class="plane-attr-cols">
+							<p class="copy flex-1">
+								Population:<br>
+								Languages: English, Mandarin, Various Others<br>
+								Currency:
+							</p>
+							<p class="copy flex-1">
+								Government:<br>
+								Capitol:<br>
+								Leadership:
+							</p>
+							<p class="copy flex-1">
+								Notable Figures:<br>
+								GDP:
+							</p>
+						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-7">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Stellar Territories</h6>
+									<ul class="copy mb-0">
+										<li>Luna</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-6">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<p class="copy mb-0">
+										Content coming soon
+									</p>
 								</div>
 							</div>
 						</details>

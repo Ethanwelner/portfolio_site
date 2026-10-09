@@ -7,6 +7,17 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/8/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Filled in national attributes for every nation, including population, languages, currency, government, and leadership.</li>
+						<li>Added Kashgar, Xanthus, and The Eighth Lunar Industrial Syndicate to the Nations tab, and listed each Ark under its nation’s stellar territories.</li>
+						<li>Moved the Gift timeline back a decade and filled in Known Planes information, including discovery dates.</li>
+						<li>Added exotic materials, corporations, and Fuel Gates.</li>
+						<li>Lore entries now tuck extra information into boxed Details accordions, and Planar Properties is a single column.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Added an Adventure tab (coming soon).</li>
