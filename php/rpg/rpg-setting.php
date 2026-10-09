@@ -477,7 +477,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Constitutional imperial monarchy with democratic self-government<br>
-								Capitol:<br>
+								Capitol: <?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)<br>
 								Leadership: Emperor Augustus Bartholomew Hayes
 							</p>
 							<p class="copy flex-1">
@@ -491,7 +491,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -522,24 +522,24 @@
 									<h6>Stellar Territories</h6>
 									<ul class="copy mb-0">
 										<li>New Columbia (Luna)</li>
-										<li><?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)</li>
+										<li>New York (Ark)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
 									</div>
 									<ul class="copy mb-0">
-										<li>In the tumultuous 2040’s a state of martial law was declared and elections in the United States were suspended.</li>
+										<li>In the tumultuous 2040s, a state of martial law was declared and elections in the United States were suspended.</li>
 										<li>The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
-										<li>Under the pretext of preventing drug trafficking the US invades Mexico and splits it into 3 new states.</li>
-										<li>By executive decree multiple states are reorganized.</li>
-										<li>Texas, New Mexico, Kansas, and Oklahoma secede, confiscating substantial military hardware and forming an alliance of states.</li>
-										<li>A tense nuclear and economic standoff occurs over the next two decades.</li>
-										<li>The secession of Florida breaks the stalemate with 22 additional states seceding from the empire to become independent countries.</li>
-										<li>Over the following 3 decades Texas comes to dominate the economic and political periphery of its alliance and annexes 7 additional bordering states, consolidating the Union of Texas by 2100.</li>
+										<li>Under the pretext of preventing drug trafficking, the US invaded Mexico and split it into three new states.</li>
+										<li>By executive decree, multiple states were reorganized.</li>
+										<li>Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
+										<li>A tense nuclear and economic standoff persisted over the next two decades.</li>
+										<li>The secession of Florida broke the stalemate, with 22 additional states seceding from the empire to become independent countries.</li>
+										<li>Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed seven additional bordering states, consolidating the Union of Texas by 2100.</li>
 									</ul>
 								</div>
 							</div>
@@ -555,7 +555,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Military Republic<br>
-								Capitol:<br>
+								Capitol: Austin<br>
 								Leadership: General Mortimer Cross
 							</p>
 							<p class="copy flex-1">
@@ -569,7 +569,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -594,7 +594,7 @@
 									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -616,7 +616,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Various<br>
-								Capitol:<br>
+								Capitol: Various<br>
 								Leadership: Various
 							</p>
 							<p class="copy flex-1">
@@ -630,7 +630,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -660,7 +660,7 @@
 									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -682,7 +682,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Corporatist imperial monarchy<br>
-								Capitol:<br>
+								Capitol: Wuhan<br>
 								Leadership: Emperor Zhang of the Wuhan Dynasty
 							</p>
 							<p class="copy flex-1">
@@ -696,7 +696,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -720,13 +720,23 @@
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
 									</div>
 									<ul class="copy mb-0">
 										<li>A cold war between China and India saw both nations annex neighboring territories.</li>
+										<li>After the Second Great Depression, the CCP’s succession of power, already on a knife’s edge, broke, with Xi Jinping’s successor proclaiming himself the second Great Chairman.</li>
+										<li>The absolute authority of the Great Chairman continued through three lengthy successive reigns that oversaw the People’s Republic for decades and instigated the expansionist Chinese actions of <?php echo sf_lore_link('drone-wars', 'the Drone Wars'); ?>.</li>
+										<li>The lengthy and bloody conflict of the Drone Wars, combined with environmental pressures, the continued underperformance of the Chinese economy, and increasing poverty among regular citizens, undermined any and all pretense that the CCP ruled in the interests of the people.</li>
+										<li>In 2070, in a palace coup initiated by a cabal of oligarchic CCP members and their cadres, the Great Chairman was overthrown and replaced by a voting committee of oligarchs, headed in secret by an AI model explicitly trained to be the new head of state of a rechristened Chinese Empire.</li>
+										<li>It was only revealed to the public after the Second Major AI Panic that Emperor Liu of the Shenzhen Dynasty was, in fact, a figurehead actor in service to an AI.</li>
+										<li>Following the wholesale destruction of automated systems and AI infrastructure in 2080, the Chinese Emperor as an AI ceased to exist, but his human figurehead was very much alive.</li>
+										<li>Over the prior decade, the AI Emperor’s figurehead had proven extremely popular. His government enacted hundreds of reforms, and the actor in place genuinely acted as a skilled and shrewd diplomat and persona.</li>
+										<li>Despite the revelation of his false status, Liu continued to act as emperor of a nation in transition, and the dynasty was rechristened, moving away from the epicenter of Chinese AI industries in Shenzhen toward the Emperor’s home city of Wuhan.</li>
+										<li>The Wuhan Dynasty has existed continuously ever since, operating into 2230 under Emperor Zhang.</li>
+										<li>The structure of the Chinese state has remained relatively consistent since Liu’s reforms of 2080, and even those changed little from the ad hoc formation of the AI Emperor’s regime. The Emperor acts as an absolute monarch, but his laws and commands are enacted through a corporate syndicate that acts as the lawmaking and enforcement body of the state. The Emperor has little formal authority beyond the ability to appoint and remove heads of industry, in a way acting as the chief board member of a single massive conglomerate. In this way, the Emperor oversees the will of the people by acting as their ultimate surrogate, overseeing the corporations that rule their lives.</li>
 									</ul>
 								</div>
 							</div>
@@ -742,7 +752,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Federal democratic republic<br>
-								Capitol:<br>
+								Capitol: <?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)<br>
 								Leadership: President 10/Chrysanthemum
 							</p>
 							<p class="copy flex-1">
@@ -756,7 +766,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -777,11 +787,11 @@
 										<li>The Martian Association</li>
 										<li>Antiluna Colony (High Earth Orbit)</li>
 										<li><?php echo sf_lore_link('boneyard', 'Boneyard'); ?> (Ark)</li>
-										<li><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</li>
+										<li>Tetra (Ark)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -803,7 +813,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Technocratic monarchy<br>
-								Capitol:<br>
+								Capitol: New Delhi<br>
 								Leadership: Prince Raja Jagadeeshwara Raya
 							</p>
 							<p class="copy flex-1">
@@ -817,7 +827,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -836,7 +846,7 @@
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -858,7 +868,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Tribal federalism<br>
-								Capitol:<br>
+								Capitol: None<br>
 								Leadership: Various
 							</p>
 							<p class="copy flex-1">
@@ -872,7 +882,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -891,7 +901,7 @@
 									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -913,7 +923,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Federal democratic republic<br>
-								Capitol:<br>
+								Capitol: Kinshasa<br>
 								Leadership: Prime Minister Kitoko Mayélé
 							</p>
 							<p class="copy flex-1">
@@ -927,7 +937,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -954,7 +964,7 @@
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -976,7 +986,7 @@
 							</p>
 							<p class="copy flex-1">
 								Government: Anarcho-Syndicalism<br>
-								Capitol: <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?><br>
+								Capitol: The 23rd Great þing<br>
 								Leadership: Comrade 14/Scirocco
 							</p>
 							<p class="copy flex-1">
@@ -990,18 +1000,18 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
 									</div>
 									<h6>Stellar Territories</h6>
 									<ul class="copy mb-0">
-										<li>Kashgar Ark</li>
+										<li><?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?></li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -1037,7 +1047,7 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
@@ -1048,7 +1058,7 @@
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
@@ -1064,14 +1074,14 @@
 						<h4 class="mb-3">The Eighth Lunar Industrial Syndicate</h4>
 						<div class="plane-attr-cols">
 							<p class="copy flex-1">
-								Population:<br>
-								Languages: English, Mandarin, Various Others<br>
-								Currency:
+								Population: 430 million<br>
+								Languages: English, Mandarin, Portuguese, Spanish, Various Others<br>
+								Currency: Earth Reserve Credits (ERC)
 							</p>
 							<p class="copy flex-1">
-								Government:<br>
-								Capitol:<br>
-								Leadership:
+								Government: Plutocratic Board of Directors<br>
+								Capitol: Port Luna<br>
+								Leadership: CEO 6/Gold
 							</p>
 							<p class="copy flex-1">
 								Notable Figures:<br>
@@ -1084,25 +1094,44 @@
 								<div class="line"></div>
 							</summary>
 							<div class="d-flex flex-wrap flex-xs-nowrap">
-								<div class="flex-7">
+								<div class="flex-5">
 									<div class="line-container">
 										<h5><strong>Territories</strong></h5>
 										<div class="line"></div>
 									</div>
+									<h6>Earth Territories</h6>
+									<ul class="copy">
+										<li>Former Brazil</li>
+										<li>Former Bolivia</li>
+										<li>Former Paraguay</li>
+									</ul>
 									<h6>Stellar Territories</h6>
 									<ul class="copy mb-0">
-										<li>Luna</li>
+										<li>Port Luna (Luna)</li>
+										<li>Campo Clavius (Luna)</li>
+										<li>Tycho Mine Complex (Luna)</li>
+										<li>Luna Orbita (Lunar Orbit)</li>
+										<li><?php echo sf_lore_link('stellar-metals', 'Stellar Metals'); ?> Station (Deep Space)</li>
+										<li><?php echo sf_lore_link('ten-twenty-holding-corporation', '10/20 Holding Corporation'); ?> Headquarters (Deep Space)</li>
 									</ul>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
-								<div class="flex-6">
+								<div class="flex-11">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
 										<div class="line"></div>
 									</div>
-									<p class="copy mb-0">
-										Content coming soon
-									</p>
+									<ul class="copy mb-0">
+										<li>Founded as a series of disparate research and mining concerns, much of the economic and civilian infrastructure of Luna was, over time, bought out by its most dominant local player, Port Luna.</li>
+										<li>Uninterested in politics, the industrial conglomerates operated as a de facto corporate state, with no citizens, only temporary residents on work visas.</li>
+										<li>As a fractious coalition of corporate boards, the industrial syndicate was unable to govern effectively, repeatedly collapsing due to infighting.</li>
+										<li>Despite this, its nature as a high-paying set of work camps for the extremely cash-flush space industry ensured a steadily rising population and an ever-expanding territorial footprint.</li>
+										<li>After the discovery of <?php echo sf_lore_link('the-gift', 'The Gift'); ?> and the Lunar Hostage Crisis, the Third Lunar Syndicate’s fortunes were buttressed by the immense wealth suddenly afforded by the mining of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, as well as the licensing and production of <?php echo sf_lore_link('switch-gates', 'switch gates'); ?>.</li>
+										<li>This boost in wealth, as well as the immense pressure exerted on the stateless corporate entities that comprised the Syndicate, resulted in the purchase of the former territory of Bolivia and the Syndicate’s formal admission into the UN.</li>
+										<li>Over the next decade, Brazil and Paraguay, both in significant economic decline, would collectively blackmail the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
+										<li>Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
+										<li>To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
+									</ul>
 								</div>
 							</div>
 						</details>
@@ -1113,11 +1142,11 @@
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
 				<div class="d-flex flex-wrap flex-xs-nowrap">
 					<div class="flex-7 content-stack">
-						<?php foreach (['general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+						<?php foreach (['ten-twenty-holding-corporation', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
 					<div class="d-inline-flex align-items-center flex-1"></div>
 					<div class="flex-6 content-stack">
-						<?php foreach (['meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+						<?php foreach (['meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
 				</div>
 			</div>
