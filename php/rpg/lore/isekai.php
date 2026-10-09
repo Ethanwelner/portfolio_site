@@ -16,7 +16,7 @@
 	<p class="copy">
 		Discovered: 2185 / Tetra Frontiers Co.<br>
 		Claim: Tetra Frontiers Co.<br>
-		Nations of Interest: The Stellar Democratic Union
+		Nations of Interest: <?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?>
 	</p>
 </div>
 <details class="lore-details">

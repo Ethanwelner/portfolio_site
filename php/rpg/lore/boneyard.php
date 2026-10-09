@@ -4,7 +4,7 @@
 		Route:
 	</p>
 	<p class="copy">
-		Nationality: The Stellar Democratic Union<br>
+		Nationality: <?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?><br>
 		Government: Direct Democracy
 	</p>
 </div>

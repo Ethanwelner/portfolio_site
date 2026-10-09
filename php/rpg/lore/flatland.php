@@ -16,7 +16,7 @@
 	<p class="copy">
 		Discovered: 2160 / Huánghé Yánjiūyuàn (Yellow River Research Institute)<br>
 		Claim: Huánghé Yánjiūyuàn (Yellow River Research Institute)<br>
-		Nations of Interest: The Chinese Empire
+		Nations of Interest: <?php echo sf_lore_link('chinese-empire', 'The Chinese Empire'); ?>
 	</p>
 </div>
 <details class="lore-details">

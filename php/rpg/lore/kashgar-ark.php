@@ -4,7 +4,7 @@
 		Route:
 	</p>
 	<p class="copy">
-		Nationality: Kashgar/Kashgari<br>
+		Nationality: <?php echo sf_lore_link('kashgar', 'Kashgar'); ?>/Kashgari<br>
 		Government: Anarcho-Syndicalism
 	</p>
 </div>

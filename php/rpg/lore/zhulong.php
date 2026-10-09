@@ -4,7 +4,7 @@
 		Route:
 	</p>
 	<p class="copy">
-		Nationality: The Chinese Empire<br>
+		Nationality: <?php echo sf_lore_link('chinese-empire', 'The Chinese Empire'); ?><br>
 		Government: Provincial Governorship
 	</p>
 </div>

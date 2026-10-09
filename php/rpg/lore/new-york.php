@@ -4,7 +4,7 @@
 		Route:
 	</p>
 	<p class="copy">
-		Nationality: The American Empire<br>
+		Nationality: <?php echo sf_lore_link('american-empire', 'The American Empire'); ?><br>
 		Government: Military Administration
 	</p>
 </div>

@@ -16,7 +16,7 @@
 	<p class="copy">
 		Discovered: 2154 / Holy Oak Discovery Services, LLC<br>
 		Claim: Holy Oak Discovery Services, LLC<br>
-		Nations of Interest: The American Empire
+		Nations of Interest: <?php echo sf_lore_link('american-empire', 'The American Empire'); ?>
 	</p>
 </div>
 <details class="lore-details">

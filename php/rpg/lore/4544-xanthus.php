@@ -5,7 +5,7 @@
 		Route:
 	</p>
 	<p class="copy">
-		Nationality: Xanthus/Xanthian<br>
+		Nationality: <?php echo sf_lore_link('xanthus', 'Xanthus'); ?>/Xanthian<br>
 		Government: Parliamentary Democracy
 	</p>
 </div>
