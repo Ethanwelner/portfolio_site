@@ -114,7 +114,7 @@
                                     <div class="flex-14">
                                         <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
                                             <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
-                                            <button type="button" class="rpg-tab" role="tab" id="tab-adventure" aria-controls="rpg-adventure" aria-selected="false">Adventure</button>
+                                            <button type="button" class="rpg-tab" role="tab" id="tab-adventure" aria-controls="rpg-adventure" aria-selected="false">Adventures</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
                                             <button type="button" class="rpg-tab" role="tab" id="tab-changelog" aria-controls="rpg-changelog" aria-selected="false">Change Log</button>
                                         </div>
@@ -173,7 +173,53 @@
                             <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                                 <div class="flex-14">
-                                    <h3 class="sub-title mb-0" id="adventure">Content Coming Soon</h3>
+                                    <h3 class="sub-title mb-3" id="adventure">Another World</h3>
+                                    <p class="copy">
+                                        This is a placeholder stub of content intended to present the vision for this adventure module. I will be using it as the first module I write for the game and as a platform for fleshing out the setting’s deeper narratives. This signifies that I will soon be returning to the game’s mechanics in an effort to begin formalizing them into a playable thing.
+                                    </p>
+                                    <ul class="copy mb-0">
+                                        <li>Takes place on <?php echo sf_lore_link('isekai', 'Isekai'); ?> and <?php echo sf_lore_link('tetra', 'Tetra'); ?>.</li>
+                                        <li><?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?> is hiring planar explorers and Isekai subject-matter experts to stabilize a tense political situation in the Kingdom of Dreft.
+                                            <ul>
+                                                <li>Dreft is the monarchical, multi-species, early medieval kingdom where the only known <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> lock to Isekai is located.</li>
+                                                <li>The Queen of Dreft has recently been assassinated, and a succession crisis is underway.</li>
+                                                <li>Some political factions in Dreft would seek to see the interplanar foreigners expelled.
+                                                    <ul>
+                                                        <li>Interactions between Dreft and humanity have not always been stable or peaceful, and the impact of continued trade with humanity has deeply transformed the religion and culture of Dreft.</li>
+                                                        <li>Dreft has been made a pariah state and a target for much larger nearby kingdoms, including the powerful Drovus Empire.</li>
+                                                        <li>Many citizens would like to see these strange foreigners leave forever and allow the kingdom to return to its cultural roots and heritage.</li>
+                                                        <li>Other citizens see the kingdom’s advancement and its increase in status and power as the only things that will protect them from nearby powers that would seek to conquer them.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Tetra Frontiers Co. has rights to all economic activity occurring through the Isekai gate.
+                                            <ul>
+                                                <li>A closing of the gate or an attack on security personnel could ignite an interplanar conflict.</li>
+                                                <li>A closing of the gate would significantly harm the income of Tetra Frontiers Co., which has profited heavily from the trade of “magical” exotic items and materials, as well as a form of high-class “tourism.”
+                                                    <ul>
+                                                        <li>In secret, a second gate on Isekai is being attuned, but it’s located on another continent in a wilderness region full of high-fantasy monsters, so it would take substantial investment to become profitable.</li>
+                                                        <li>Isekai is among the most well-known and famous planar locations in the systems due to its nature as what is practically a high-fantasy parody; the loss of the plane would deeply harm Tetra Frontiers Co.’s corporate image.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Competitors and opposition to TFC are engaging in corporate espionage.
+                                            <ul>
+                                                <li>There is significant money to be made smuggling banned exotic materials out of Isekai.</li>
+                                                <li>Competing planar investment companies would pay top dollar for the coordinates to Isekai.</li>
+                                                <li>Human supremacist groups would like to see Isekai closed permanently, and having Dreft collapse would be a strong argument for banning switch gate access to planes with sentient inhabitants.</li>
+                                                <li>Other human supremacist groups would like to see Dreft conquered and integrated into a conceptual human empire.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Players can opt to be from either Earth baseline or Isekai.
+                                            <ul>
+                                                <li>If the players opt to be from Earth baseline, they can be planar explorers, researchers, diplomats, security services, or any other relevant role that TFC may have hired them for.</li>
+                                                <li>If they are from Isekai, they can be royal guards, gate locals, foreign mercenaries, or any number of other fantastical professions or peoples.</li>
+                                                <li>Player parties can be both, with tens of thousands of expatriates out of Isekai already inhabiting Tetra and the rest of the systems, and TFC having a local base of operations in Isekai and thousands of permanent residents.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>

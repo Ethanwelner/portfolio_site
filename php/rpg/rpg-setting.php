@@ -685,7 +685,7 @@
 										<div class="line"></div>
 									</div>
 									<h6>Earth Territories</h6>
-									<ul class="copy">
+									<ul class="copy mb-0">
 										<li>Former Texas</li>
 										<li>Former Kansas</li>
 										<li>Former Oklahoma</li>
@@ -698,10 +698,6 @@
 										<li>Former Tennessee</li>
 										<li>Former Kentucky</li>
 									</ul>
-									<h6>Stellar Territories</h6>
-									<p class="copy mb-0">
-										None
-									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
 								<div class="flex-11">
@@ -746,7 +742,7 @@
 										<div class="line"></div>
 									</div>
 									<h6>Earth Territories</h6>
-									<ul class="copy">
+									<ul class="copy mb-0">
 										<li>Utah</li>
 										<li>Arizona</li>
 										<li>Montana</li>
@@ -764,10 +760,6 @@
 										<li>Hawaii</li>
 										<li>Idaho</li>
 									</ul>
-									<h6>Stellar Territories</h6>
-									<p class="copy mb-0">
-										None
-									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
 								<div class="flex-11">
@@ -998,17 +990,13 @@
 										<div class="line"></div>
 									</div>
 									<h6>Earth Territories</h6>
-									<ul class="copy">
+									<ul class="copy mb-0">
 										<li>Former Mongolia/Inner Mongolia</li>
 										<li>Former Eastern Russia</li>
 										<li>Former Kazakhstan</li>
 										<li>Former Kyrgyzstan</li>
 										<li>Former Xinjiang</li>
 									</ul>
-									<h6>Stellar Territories</h6>
-									<p class="copy mb-0">
-										None
-									</p>
 								</div>
 								<div class="d-inline-flex align-items-center flex-1"></div>
 								<div class="flex-11">
@@ -1241,6 +1229,53 @@
 										<li>Over the next decade, Brazil and Paraguay, both in significant economic decline, would collectively blackmail the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
 										<li>Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
 										<li>To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
+									</ul>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div>
+						<h4 class="mb-3">Dreft</h4>
+						<div class="plane-attr-cols">
+							<p class="copy flex-1">
+								Population: 20 million native est. + 12 thousand Earth baseline<br>
+								Languages: Various<br>
+								Currency: Luras
+							</p>
+							<p class="copy flex-1">
+								Government: Hereditary Monarchy<br>
+								Capitol: Castle Herminst<br>
+								Leadership: Queen Walpurgis the Third (Deceased)
+							</p>
+							<p class="copy flex-1">
+								Notable Figures:<br>
+								GDP:
+							</p>
+						</div>
+						<details class="lore-details">
+							<summary class="line-container">
+								<h5><strong>Details</strong></h5>
+								<div class="line"></div>
+							</summary>
+							<div class="d-flex flex-wrap flex-xs-nowrap">
+								<div class="flex-5">
+									<div class="line-container">
+										<h5><strong>Territories</strong></h5>
+										<div class="line"></div>
+									</div>
+									<h6>Planar Territories</h6>
+									<ul class="copy mb-0">
+										<li>The Kingdom of Dreft (<?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>”'); ?>)</li>
+									</ul>
+								</div>
+								<div class="d-inline-flex align-items-center flex-1"></div>
+								<div class="flex-11">
+									<div class="line-container">
+										<h5><strong>History</strong></h5>
+										<div class="line"></div>
+									</div>
+									<ul class="copy mb-0">
+										<li>Discovered in 2185.</li>
 									</ul>
 								</div>
 							</div>

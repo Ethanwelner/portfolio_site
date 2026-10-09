@@ -7,7 +7,7 @@
 		Aperture: 4
 	</p>
 	<p class="copy">
-		Population: 550 + 240m parasapients est.<br>
+		Population: 220 million native est. + 12 thousand Earth baseline<br>
 		Average Temperature: -1°C – 24°C<br>
 		Biome: Temperate Forest<br>
 		Natural Resources: Exotic Materials, Paraphysical Artifacts<br>
