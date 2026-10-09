@@ -49,7 +49,7 @@
 							<div class="flex-7 content-stack">
 								<div>
 									<div class="line-container">
-										<h5><strong>Skiffs</strong></h5>
+										<h5><strong>Utility Craft</strong></h5>
 										<div class="line"></div>
 									</div>
 									<details class="lore-details">
@@ -57,15 +57,27 @@
 											<h5><strong>Details</strong></h5>
 											<div class="line"></div>
 										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('skiffs', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('drone-craft', 'h6', 'fst-italic'); ?>
+										<div class="content-stack">
+											<div>
+												<h5 class="mb-3"><strong>Skiffs</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('skiffs', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('drone-craft', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
+											<div>
+												<h5 class="mb-3"><strong>Shuttles</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('shuttles', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
 										</div>
 									</details>
 								</div>
 								<div>
 									<div class="line-container">
-										<h5><strong>Shuttles</strong></h5>
+										<h5><strong>Small Ships</strong></h5>
 										<div class="line"></div>
 									</div>
 									<details class="lore-details">
@@ -73,44 +85,24 @@
 											<h5><strong>Details</strong></h5>
 											<div class="line"></div>
 										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('shuttles', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
-										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Cutters</strong></h5>
-										<div class="line"></div>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('fighters', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('patrol-craft', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('cutters', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('tugs', 'h6', 'fst-italic'); ?>
-										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Corvettes</strong></h5>
-										<div class="line"></div>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('corvettes', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('yachts', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('lifters', 'h6', 'fst-italic'); ?>
+										<div class="content-stack">
+											<div>
+												<h5 class="mb-3"><strong>Cutters</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('fighters', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('patrol-craft', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('cutters', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('tugs', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
+											<div>
+												<h5 class="mb-3"><strong>Corvettes</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('corvettes', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('yachts', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('lifters', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
 										</div>
 									</details>
 								</div>
@@ -119,7 +111,7 @@
 							<div class="flex-6 content-stack">
 								<div>
 									<div class="line-container">
-										<h5><strong>Cruisers</strong></h5>
+										<h5><strong>Large Ships</strong></h5>
 										<div class="line"></div>
 									</div>
 									<details class="lore-details">
@@ -127,28 +119,24 @@
 											<h5><strong>Details</strong></h5>
 											<div class="line"></div>
 										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('frigates', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('administration-craft', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('cruisers', 'h6', 'fst-italic'); ?>
-										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Carriers</strong></h5>
-										<div class="line"></div>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('carriers', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('miners', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('foremen', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('freighters', 'h6', 'fst-italic'); ?>
+										<div class="content-stack">
+											<div>
+												<h5 class="mb-3"><strong>Cruisers</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('frigates', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('administration-craft', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('cruisers', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
+											<div>
+												<h5 class="mb-3"><strong>Carriers</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('carriers', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('miners', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('foremen', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('freighters', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
 										</div>
 									</details>
 								</div>
@@ -162,25 +150,21 @@
 											<h5><strong>Details</strong></h5>
 											<div class="line"></div>
 										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('dreadnoughts', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('stellar-carriers', 'h6', 'fst-italic'); ?>
-											<?php sf_lore_entry('colony-ships', 'h6', 'fst-italic'); ?>
-										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Arks</strong></h5>
-										<div class="line"></div>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack content-stack-sm">
-											<?php sf_lore_entry('arks', 'h6', 'fst-italic'); ?>
+										<div class="content-stack">
+											<div>
+												<h5 class="mb-3"><strong>Capital Ships</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('dreadnoughts', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('stellar-carriers', 'h6', 'fst-italic'); ?>
+													<?php sf_lore_entry('colony-ships', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
+											<div>
+												<h5 class="mb-3"><strong>Arks</strong></h5>
+												<div class="content-stack content-stack-sm">
+													<?php sf_lore_entry('arks', 'h6', 'fst-italic'); ?>
+												</div>
+											</div>
 										</div>
 									</details>
 								</div>

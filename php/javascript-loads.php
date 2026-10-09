@@ -324,6 +324,12 @@
 				$( ".personal-shell" ).addClass( "transitions-on" );
 			} );
 			$( window ).on( "resize load", syncPersonalShellHeight );
+			// toggle doesn't bubble, so listen in the capture phase.
+			document.addEventListener( "toggle", function( event ) {
+				if ( event.target.tagName === "DETAILS" ) {
+					syncPersonalShellHeight();
+				}
+			}, true );
 		} else if ( $( ".rpg-tab" ).length ) {
 			activatePaneTab( rpgTabFromHash(), false );
 		}
