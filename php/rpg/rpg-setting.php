@@ -2,7 +2,7 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<h3 class="sub-title mb-3" id="introduction">Introduction</h3>
+		<h3 class="sub-title mb-3" id="thesetting">Introduction</h3>
 		<div class="copy stinger black mb-3">The Worlds Of Strange Frontiers</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -73,387 +73,497 @@
 					<h6><strong>1970 – 2230</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Significant anthropogenic climate change.
-				</p>
+				<ul class="copy">
+					<li>Significant anthropogenic climate change.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2026</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The current year in reality. The setting mimics real-world history up until this point.
-				</p>
+				<ul class="copy">
+					<li>The current year in reality. The setting mimics real-world history up until this point.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2029</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The AI market crash plunges the world into the second great depression.
-				</p>
+				<ul class="copy">
+					<li>The AI market crash plunges the world into the second great depression.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2030 – 2060</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					A collapse in the undersea currents of hot and cold water marks the beginning of a megadrought that historians have labeled “The 0.2 Kiloyear Event.” The arid regions of Earth expand and desertification runs rampant, resulting in a three-decade-long refugee crisis.
-				</p>
+				<ul class="copy">
+					<li>A collapse in the undersea currents of hot and cold water marks the beginning of a megadrought that historians have labeled “The 0.2 Kiloyear Event.” The arid regions of Earth expand and desertification runs rampant, resulting in a three-decade-long refugee crisis.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2033</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The successor to the CCP’s General Secretary breaks the party’s fragile line of succession, proclaiming himself the second Great Chairman.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2034</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					First permanently inhabited lunar colony established.
-				</p>
+				<ul class="copy">
+					<li>First permanently inhabited lunar colony established.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2038</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('first-ai-panic', 'The first AI panic'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('first-ai-panic', 'The first AI panic'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2044</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The UN formally founds “The Committee for the Coordination of Geo Engineering Projects” to act as an intermediary intended to enable transnational efforts to reverse climate change.
-				</p>
+				<ul class="copy">
+					<li>The UN formally founds “The Committee for the Coordination of Geo Engineering Projects” to act as an intermediary intended to enable transnational efforts to reverse climate change.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2046</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>Martial law is declared in the United States, and federal elections are suspended.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2048</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The United States of America begins its invasion of Mexico, initiating a series of global conflicts that would come to be called <?php echo sf_lore_link('drone-wars', 'the Drone Wars'); ?>.
-				</p>
+				<ul class="copy">
+					<li>The United States of America begins its invasion of Mexico, initiating a series of global conflicts that would come to be called <?php echo sf_lore_link('drone-wars', 'the Drone Wars'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2049</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					China initiates a large-scale invasion of the nations to its southeast, beginning its New Imperial Era.
-				</p>
+				<ul class="copy">
+					<li>China initiates a large-scale invasion of the nations to its southeast, beginning its New Imperial Era.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2050</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Minor Indo-Pakistani nuclear exchange. AI is partially blamed.
-				</p>
+				<ul class="copy">
+					<li>Minor Indo-Pakistani nuclear exchange. AI is partially blamed.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2051</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The US partitions Mexico into three new states: Nueva Mexico, Mexica, and Yucatán.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2052</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Kashgar station finishes construction and begins operation, acting as a logistical waystation and signal booster for colonization efforts.
-				</p>
+				<ul class="copy">
+					<li>Kashgar station finishes construction and begins operation, acting as a logistical waystation and signal booster for colonization efforts.</li>
+					<li>By executive decree, multiple US states are reorganized, forming New York, the Commonwealth, and Greater Maine.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2053</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					India moves to expand its Himalayan borderline and either invades or forcefully absorbs bordering nations.
-				</p>
+				<ul class="copy">
+					<li>India moves to expand its Himalayan borderline and either invades or forcefully absorbs bordering nations.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2054</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>Texas, New Mexico, Kansas, and Oklahoma secede from the United States, seizing substantial military hardware and beginning a two-decade nuclear and economic standoff.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2055 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('nuclear-disarmament', 'Significant nuclear disarmament'); ?>.
-				</p>
-			</div>
-			<div>
-				<div class="line-container">
-					<h6><strong>2061</strong></h6>
-					<div class="line"></div>
-				</div>
-				<p class="copy">
-					First permanently inhabited Martian colony established.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('nuclear-disarmament', 'Significant nuclear disarmament'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2060 – 2118</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Partial technological singularity leading to the “<?php echo sf_lore_link('end-of-science', 'End of Science'); ?>.”
-				</p>
+				<ul class="copy">
+					<li>Partial technological singularity leading to the “<?php echo sf_lore_link('end-of-science', 'End of Science'); ?>.”</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2061</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>First permanently inhabited Martian colony established.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2070 – 2080</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Plum Technologies quietly acquires a majority marketshare in the cybernetics and prosthetics industries.
-				</p>
+				<ul class="copy">
+					<li>Plum Technologies quietly acquires a majority marketshare in the cybernetics and prosthetics industries.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2070</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>A palace coup overthrows the Great Chairman. A voting committee of oligarchs, secretly headed by an AI, takes control of the rechristened Chinese Empire, with Emperor Liu of the Shenzhen Dynasty installed as its figurehead.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2072 – 2074</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The secession of Florida breaks the stalemate, and 22 additional states secede from the American Empire to form the Non-Aligned Free American States.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2073 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Colonization of the solar system begins in earnest and is ongoing, though the process is slow-going.
-				</p>
+				<ul class="copy">
+					<li>Colonization of the solar system begins in earnest and is ongoing, though the process is slow-going.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2080</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The second AI panic.
-				</p>
+				<ul class="copy">
+					<li>The second AI panic.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2081</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>Emperor Liu is revealed to have been a figurehead for an AI. He remains on the throne, and the Shenzhen Dynasty is rechristened the Wuhan Dynasty.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2082</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					AI Personhood Act enacted.
-				</p>
+				<ul class="copy">
+					<li>AI Personhood Act enacted.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2085</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The First Lunar Industrial Syndicate forms as Port Luna buys out much of Luna’s economic and civilian infrastructure.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2100 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('interplanetary-colonization', 'Interplanetary colonization'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('interplanetary-colonization', 'Interplanetary colonization'); ?>.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2100</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>Having annexed seven bordering states, Texas consolidates its alliance into the Union of Texas.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2110</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					“<?php echo sf_lore_link('the-gift', 'The Gift'); ?>” is matter-swapped by an unknown intraplanar civilization onto the surface of the moon.
-				</p>
+				<ul class="copy">
+					<li>“<?php echo sf_lore_link('the-gift', 'The Gift'); ?>” is matter-swapped by an unknown intraplanar civilization onto the surface of the moon.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2110 – 2118</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					“The Gift” is deciphered, translated, and its instructions are followed in secret by the Lunar colonial government.
-				</p>
+				<ul class="copy">
+					<li>“The Gift” is deciphered, translated, and its instructions are followed in secret by the Lunar colonial government.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2114</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>” is discovered by the Third Lunar Industrial Syndicate.
-				</p>
+				<ul class="copy">
+					<li>1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>” is discovered by the Third Lunar Industrial Syndicate.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2116</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					First tests of a “<?php echo sf_lore_link('switch-gates', 'switch gate'); ?>” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”
-				</p>
+				<ul class="copy">
+					<li>First tests of a “<?php echo sf_lore_link('switch-gates', 'switch gate'); ?>” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2117</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					First exotic materials are harvested from 1/a/384 - “Paraloka,” leading to the creation of more “switch gates.”
-				</p>
+				<ul class="copy">
+					<li>First exotic materials are harvested from 1/a/384 - “Paraloka,” leading to the creation of more “switch gates.”</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2118</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The existence of “The Gift” is leaked, and all known information contained is made public.
-				</p>
+				<ul class="copy">
+					<li>The existence of “The Gift” is leaked, and all known information contained is made public.</li>
+					<li>The weeks and months of negotiation that follow, with every nation on Earth pointing its guns at Luna, become known as the Lunar Hostage Crisis.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2118 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('rebirth-of-science', 'The rebirth of science'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('rebirth-of-science', 'The rebirth of science'); ?>.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2120</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The Third Lunar Industrial Syndicate purchases the former territory of Bolivia and is formally admitted into the UN.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2122</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The fifth fundamental force is measured and quantified through research into higher planar paraphysical interactions.
-				</p>
+				<ul class="copy">
+					<li>The fifth fundamental force is measured and quantified through research into higher planar paraphysical interactions.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2122 – 2130</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>Brazil and Paraguay, both in significant economic decline, blackmail the Lunar Syndicate into favorable purchase agreements, becoming Earth territories of the Lunar state.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2123</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					The first <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> are commercialized.
-				</p>
+				<ul class="copy">
+					<li>The first <?php echo sf_lore_link('aether-sails', 'aether sails'); ?> are commercialized.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2123 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('exodus', 'Exodus'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('exodus', 'Exodus'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2129</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					65/T/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.
-				</p>
+				<ul class="copy">
+					<li>65/T/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.</li>
+				</ul>
+			</div>
+			<div>
+				<div class="line-container">
+					<h6><strong>2132</strong></h6>
+					<div class="line"></div>
+				</div>
+				<ul class="copy">
+					<li>The Lunar Syndicate adopts a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2135</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>” is discovered by the Kingdom of India.
-				</p>
+				<ul class="copy">
+					<li>76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>” is discovered by the Kingdom of India.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2146</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					First tests of <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?>.
-				</p>
+				<ul class="copy">
+					<li>First tests of <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2154</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					380/c/12 - “<?php echo sf_lore_link('the-lost-world', 'The Lost World'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.
-				</p>
+				<ul class="copy">
+					<li>380/c/12 - “<?php echo sf_lore_link('the-lost-world', 'The Lost World'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2160</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					419/f/05 - “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.
-				</p>
+				<ul class="copy">
+					<li>419/f/05 - “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2163</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					First colonization of an interstellar system with New Canaan, a research station orbiting Alpha Centauri.
-				</p>
+				<ul class="copy">
+					<li>First colonization of an interstellar system with New Canaan, a research station orbiting Alpha Centauri.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2170 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('first-interstellar-expansion', 'First interstellar expansion'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('first-interstellar-expansion', 'First interstellar expansion'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2175</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					<?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.
-				</p>
+				<ul class="copy">
+					<li><?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2184</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.
-				</p>
+				<ul class="copy">
+					<li>513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2185</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is discovered by <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?>
-				</p>
+				<ul class="copy">
+					<li>516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is discovered by <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?></li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2190 – Present day</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Interdimensional colonization begins.
-				</p>
+				<ul class="copy">
+					<li>Interdimensional colonization begins.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2196</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					All exploratory switch gates are required to be off-world. All exploratory switch gates on Earth are rapidly shut down.
-				</p>
+				<ul class="copy">
+					<li>All exploratory switch gates are required to be off-world. All exploratory switch gates on Earth are rapidly shut down.</li>
+				</ul>
 			</div>
 			<div>
 				<div class="line-container">
 					<h6><strong>2230</strong></h6>
 					<div class="line"></div>
 				</div>
-				<p class="copy">
-					Present day.
-				</p>
+				<ul class="copy">
+					<li>Present day.</li>
+				</ul>
 			</div>
 		</div>
 				</div>
@@ -727,7 +837,7 @@
 									</div>
 									<ul class="copy mb-0">
 										<li>A cold war between China and India saw both nations annex neighboring territories.</li>
-										<li>After the Second Great Depression, the CCP’s succession of power, already on a knife’s edge, broke, with Xi Jinping’s successor proclaiming himself the second Great Chairman.</li>
+										<li>After the Second Great Depression, the CCP’s succession of power, already on a knife’s edge, broke, with the General Secretary’s successor proclaiming himself the second Great Chairman.</li>
 										<li>The absolute authority of the Great Chairman continued through three lengthy successive reigns that oversaw the People’s Republic for decades and instigated the expansionist Chinese actions of <?php echo sf_lore_link('drone-wars', 'the Drone Wars'); ?>.</li>
 										<li>The lengthy and bloody conflict of the Drone Wars, combined with environmental pressures, the continued underperformance of the Chinese economy, and increasing poverty among regular citizens, undermined any and all pretense that the CCP ruled in the interests of the people.</li>
 										<li>In 2070, in a palace coup initiated by a cabal of oligarchic CCP members and their cadres, the Great Chairman was overthrown and replaced by a voting committee of oligarchs, headed in secret by an AI model explicitly trained to be the new head of state of a rechristened Chinese Empire.</li>

@@ -125,7 +125,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
+			return [ "frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
 		}
 
 		function isPhotosHash(hash) {
@@ -265,7 +265,7 @@
 				} else if ( tabId === "tab-projects" ) {
 					nextHash = "projects";
 				} else if ( tabId === "tab-setting" ) {
-					nextHash = "introduction";
+					nextHash = "strangefrontiers";
 				} else if ( tabId === "tab-adventure" ) {
 					nextHash = "adventure";
 				} else if ( tabId === "tab-mechanics" ) {

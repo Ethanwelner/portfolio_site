@@ -602,7 +602,8 @@ html.lore-modal-open {
 }
 
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
-   corporation lore entries in php/rpg/lore/, and the Nations tab in rpg-setting.php.
+   corporation lore entries in php/rpg/lore/, the Nations tab in rpg-setting.php, and
+   the Starships tab in rpg-spacecraft.php.
    Boxed whether open or closed; border matches .line. */
 .lore-details {
     border: 1px solid rgb(0 0 0 / 15%);
