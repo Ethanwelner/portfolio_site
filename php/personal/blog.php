@@ -7,6 +7,17 @@
 
 			<div class="blog-posts">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/8/2026</i></p>
+					<p class="copy">
+						This blog’s slowly turning into a cats of Philadelphia type thing. I’m mostly spending my free time working on Strange Frontiers, so the projects in this new personal section are a little underdeveloped. Anyway, look at this creature I captured from my car while parking on my way back from the airport.
+					</p>
+					<div class="blog-post-images">
+						<img loading="lazy" data-src="img/blog page stuff/airport_cat_1.webp" width="600" height="797" alt="Black cat sitting on a mossy brick path in an overgrown backyard garden, beneath hydrangeas and beside a low brick wall">
+						<img loading="lazy" data-src="img/blog page stuff/airport_cat_2.webp" width="600" height="797" alt="Close-up of a black cat with yellow eyes sitting among fallen leaves, staring at the camera">
+					</div>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/3/2026</i></p>
 					<p class="copy">
 						There’s an interesting set of consequences to power-using Cursor, and that’s that you get to know the quirks of different models pretty quickly as your tokens run out for each in succession. I find Claude to be a demonstrably better writer than Grok, which still feels like its voice is purely that of an LLM, no matter how much coaching it’s given. I also find it interesting that the default for Cursor is to fall back to an anonymous model, probably whichever one has the lowest token bid costs at any given moment. When the month turned over and the newer models came back, the quality of interactions instantly jumped back up a notch.
