@@ -7,6 +7,19 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/9/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Renamed the Adventure tab to Adventures and outlined the first adventure module, Another World, set on Isekai and Tetra.</li>
+						<li>Added Dreft to the Nations tab and set Isekai’s population.</li>
+						<li>Wrote the Chinese Empire and Eighth Lunar Industrial Syndicate histories and filled in every nation’s capitol.</li>
+						<li>Added Stellar Metals and 10/20 Holding Corporation to the Corporations tab.</li>
+						<li>Timeline entries are now bulleted, with new events drawn from the nation histories.</li>
+						<li>Starship classes now sit in Details accordions, and nation histories get a wider column.</li>
+						<li>The first Setting nav link is now The Setting.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Filled in national attributes for every nation, including population, languages, currency, government, and leadership.</li>
