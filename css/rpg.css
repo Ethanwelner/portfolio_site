@@ -590,9 +590,29 @@ html.lore-modal-open {
     max-width: 100%;
 }
 
+/* Nation attribute columns (rpg-setting.php) share the row equally */
+.plane-attr-cols:has(> .flex-1) {
+    gap: 24px;
+}
+
+.plane-attr-cols > .flex-1 {
+    flex: 1;
+    width: auto;
+    min-width: 160px;
+}
+
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
-   corporation lore entries in php/rpg/lore/, and the Nations tab in rpg-setting.php */
+   corporation lore entries in php/rpg/lore/, and the Nations tab in rpg-setting.php.
+   Boxed whether open or closed; border matches .line. */
 .lore-details {
+    border: 1px solid rgb(0 0 0 / 15%);
+    border-radius: var(--portfolio-radius);
+    padding: 20px;
+
+    .black-bg & {
+        border-color: rgb(255 255 255 / 25%);
+    }
+
     > summary {
         display: block;
         list-style: none;
@@ -605,6 +625,11 @@ html.lore-modal-open {
 
         .line {
             display: none;
+        }
+
+        h5 > strong,
+        h5::after {
+            font-weight: 300;
         }
 
         /* Fade the text, not the h5: its background is what covers the .line */
@@ -647,24 +672,16 @@ html.lore-modal-open {
         margin-bottom: 0;
     }
 
-    /* Overview / History / Geography / Territories columns: boxed, with
-       plain bold titles instead of the ruled heading. Border matches .line. */
+    /* Overview / History / Geography / Territories columns: plain bold
+       titles instead of the ruled heading. */
     > .d-flex {
-        gap: 20px;
+        gap: 20px 48px;
 
         > .flex-1 {
             display: none !important;
         }
 
         > :is(.flex-6, .flex-7) {
-            border: 1px solid rgb(0 0 0 / 15%);
-            border-radius: var(--portfolio-radius);
-            padding: 20px;
-
-            .black-bg & {
-                border-color: rgb(255 255 255 / 25%);
-            }
-
             > :last-child {
                 margin-bottom: 0;
             }
