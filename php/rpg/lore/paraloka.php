@@ -14,7 +14,7 @@
 		Indigenous life: No
 	</p>
 	<p class="copy">
-		Discovered: 2114/The Third Lunar Industrial Syndicate<br>
+		Discovered: 2114/<?php echo sf_lore_link('lunar-industrial-syndicate', 'The Third Lunar Industrial Syndicate'); ?><br>
 		Claim: Public<br>
 		Nations of Interest: As the source of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, 1/a/384 Paraloka is of interest to all nations in the systems.
 	</p>
@@ -34,7 +34,7 @@
 				Officially designated 1/a/384, Paraloka would receive its name by popular fiat when the records of its existence were leaked online. It was coined as such, in a bit of dramatic flair, by the then site director overseeing research and translation of <?php echo sf_lore_link('the-gift', 'The Gift'); ?>, Dr. Charat Pravhadi. The text covering every surface of the lunar artifact had initially proven difficult to translate. Its vernacular was closer to prose and rhyme than straightforward communication, and the eventual translations were flowery, to say the least. 1/a/384 was given several designations by the artifact, but the most evocative was “The Next World/Afterlife.” Hardly a religious man, but definitely a sentimental one, Charat gave the described place the most fitting title he could think of, naming it after the realm where souls are said to go upon death, Paraloka.
 			</p>
 			<p class="copy">
-				Paraloka is a plane of extreme simplicity in every sense. It contains precisely two things: a starless void and a flat ground. That ground, though, was everything to humanity’s future. The exotic material St-245/E6 was an irreplaceable element in the construction of <?php echo sf_lore_link('switch-gates', 'switch gates'); ?>, and indeed was the only component of that technology that could not be found elsewhere in the solar system. In Paraloka, it was all there was. Before The Gift was even known to the public, the Third Lunar Industrial Syndicate had established mining operations in another plane of existence.
+				Paraloka is a plane of extreme simplicity in every sense. It contains precisely two things: a starless void and a flat ground. That ground, though, was everything to humanity’s future. The exotic material St-245/E6 was an irreplaceable element in the construction of <?php echo sf_lore_link('switch-gates', 'switch gates'); ?>, and indeed was the only component of that technology that could not be found elsewhere in the solar system. In Paraloka, it was all there was. Before The Gift was even known to the public, <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Third Lunar Industrial Syndicate'); ?> had established mining operations in another plane of existence.
 			</p>
 			<p class="copy mb-0">
 				To this day, Paraloka’s fortunes have remained unchanged. It’s a cold, barren, lifeless void with a single useful extractable resource, and the difficulty inherent in extracting that resource has limited investment to only a few specialized mining firms. That said, mining St-245/E6 is big business. The element is irreplaceable in numerous technologies that the societies of 2230 rely on. To date, no planar lock has placed any such mining venture within visible distance of another, implying a distance of over 100 light years between outposts at a minimum, with the true distance likely being far higher. This makes a census of the total mining activity on Paraloka functionally impossible, but published statistics from the four major switch harbors and their surrounding development put the known population at roughly twenty thousand operating personnel.

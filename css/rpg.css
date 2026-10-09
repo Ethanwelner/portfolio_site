@@ -907,9 +907,97 @@ html.lore-modal-open {
             background-color: var(--portfolio-black);
         }
     }
+}
 
-    #timeline-events & {
+/* Alternating timeline: Setting > Timeline tab, php/rpg/rpg-setting.php.
+   Each direct child is one entry (.line-container year + ul.copy). */
+.sf-timeline {
+    --sf-timeline-marker: 11px;
+    --sf-timeline-gutter: 32px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background-color: rgb(0 0 0 / 15%);
+        transform: translateX(-50%);
+    }
+
+    > div {
+        position: relative;
+        width: 50%;
+        padding-right: var(--sf-timeline-gutter);
+        text-align: right;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: calc(var(--sf-timeline-marker) / -2);
+            width: var(--sf-timeline-marker);
+            height: var(--sf-timeline-marker);
+            border-radius: 50%;
+            background-color: var(--portfolio-black);
+            z-index: 1;
+        }
+    }
+
+    > div:nth-child(even) {
+        align-self: flex-end;
+        padding-right: 0;
+        padding-left: var(--sf-timeline-gutter);
+        text-align: left;
+
+        &::before {
+            right: auto;
+            left: calc(var(--sf-timeline-marker) / -2);
+        }
+    }
+
+    .line-container {
+        margin-bottom: 4px;
+
+        h6 {
+            padding: 0;
+        }
+
+        .line {
+            display: none;
+        }
+    }
+
+    ul.copy {
+        list-style: none;
+        padding-left: 0;
         margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        &::before {
+            left: calc(var(--sf-timeline-marker) / 2);
+        }
+
+        > div,
+        > div:nth-child(even) {
+            align-self: stretch;
+            width: 100%;
+            padding-right: 0;
+            padding-left: var(--sf-timeline-gutter);
+            text-align: left;
+
+            &::before {
+                right: auto;
+                left: 0;
+            }
+        }
     }
 }
 

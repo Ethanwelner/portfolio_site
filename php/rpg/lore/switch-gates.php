@@ -36,7 +36,7 @@
 			As mankind's first foray into paraphysics and the engineering of the exotic, the task was daunting. Even with a wholly assembled blueprint and volumes of deciphered paraphysics, engineering, and philosophical texts recorded from The Gift, the construction of the initial line of switch gates was little more than guesswork. An entirely new field of physics was being discovered in secrecy under the Lunar regolith.
 		</p>
 		<p class="copy">
-			The program was bankrolled first by the Lunar Industrial Syndicate of 2110 and spanned three different dissolutions and reformations of Lunar governance. The vast research and development expenditure poured into deciphering and instrumentalizing The Gift, together with the unusual secrecy of the program, invited industrial and national espionage at every level.
+			The program was bankrolled first by the <?php echo sf_lore_link('lunar-industrial-syndicate', 'Lunar Industrial Syndicate'); ?> of 2110 and spanned three different dissolutions and reformations of Lunar governance. The vast research and development expenditure poured into deciphering and instrumentalizing The Gift, together with the unusual secrecy of the program, invited industrial and national espionage at every level.
 		</p>
 		<p class="copy">
 			Unstable at the best of times, the Lunar Government was ultimately unable to keep the reality of The Gift a secret. In a series of data breaches, nearly a decade's worth of research and industrial effort was made public. Every significant government, military, academic, and business interest in the system was suddenly aware of the technology's potential.

@@ -14,7 +14,7 @@
 		Indigenous life: No
 	</p>
 	<p class="copy">
-		Discovered By: 2135/The Kingdom of India<br>
+		Discovered By: 2135/<?php echo sf_lore_link('kingdom-of-india', 'The Kingdom of India'); ?><br>
 		Claim: Public<br>
 		Nations of Interest: As the source of <?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the systems.
 	</p>
