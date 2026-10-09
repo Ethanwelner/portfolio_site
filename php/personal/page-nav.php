@@ -11,6 +11,6 @@ $navAuto = $personalNavActive === 'auto';
 		<a href="#blog" class="js-personal-page" data-page="personal">Projects &amp; Blog<?php if ($navAuto || $personalNavActive === 'blog'): ?> <span class="<?php echo $navBulletClass; ?> nav-bullet nav-bullet-personal">&#8226;</span><?php endif; ?></a>
 	</div>
 	<div class="force-dark">
-		<a href="#introduction" class="js-personal-page frontiers-accent" data-page="frontiers">STRANGE FRONTIERS<?php if ($navAuto || $personalNavActive === 'frontiers'): ?> <span class="frontiers-accent nav-bullet nav-bullet-frontiers">&#8226;</span><?php endif; ?></a>
+		<a href="#strangefrontiers" class="js-personal-page frontiers-accent" data-page="frontiers">STRANGE FRONTIERS<?php if ($navAuto || $personalNavActive === 'frontiers'): ?> <span class="frontiers-accent nav-bullet nav-bullet-frontiers">&#8226;</span><?php endif; ?></a>
 	</div>
 </div>
