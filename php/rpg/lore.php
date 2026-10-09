@@ -54,6 +54,7 @@ function sf_lore_titles() {
 		'tetra' => 'Tetra',
 		'new-york' => 'New York',
 		'zhulong' => 'Zhulong (The Torch Dragon)',
+		'ten-twenty-holding-corporation' => '10/20 Holding Corporation',
 		'general-robotics' => 'General Robotics',
 		'holy-oak-discovery-services' => 'Holy Oak Discovery Services, LLC',
 		'huanghe-yanjiuyuan' => 'Huánghé Yánjiūyuàn (Yellow River Research Institute)',
@@ -67,6 +68,7 @@ function sf_lore_titles() {
 		'saltwater-energetics' => 'Saltwater Energetics',
 		'shine' => 'Shine!',
 		'sistemas-de-controle-amazonia' => 'Sistemas de Controle Amazônia',
+		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
 	];
