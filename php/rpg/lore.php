@@ -15,6 +15,7 @@ function sf_lore_titles() {
 		'paraloka' => '1/a/384 - “<i>Paraloka</i>”',
 		'isekai' => '516/a/198 - “<i>Isekai</i>”',
 		'gastown' => '76/f/55 - “<i>Gastown</i>”',
+		'pairidaeza' => '210/c/18 - “<i>Pairidaeza</i>”',
 		'the-lost-world' => '380/c/12 - “<i>The Lost World</i>”',
 		'flatland' => '419/f/05 - “<i>Flatland</i>”',
 		'leviathan' => '513/y/11 - “<i>Leviathan</i>”',

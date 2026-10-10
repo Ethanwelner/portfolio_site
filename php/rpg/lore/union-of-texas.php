@@ -1,3 +1,6 @@
+<p class="copy">
+	The Union of Texas finds itself in a precarious position. Encircled by the Empire it fled, it has spent the last 130 years preparing for a war with its neighboring hegemon, a war that never came. In truth, the Union may have been doomed from the outset. Its territories suffered significant erosion and desertification in the 21st century, alongside the total devastation of an economy reliant on AI server towns and automated manufacturing. Repeated failed wars of conquest against <?php echo sf_lore_link('free-american-states', 'the Free American States'); ?> further bled its coffers dry, while five coups since 2100 have left the nation unstable, impoverished, and embittered. General Mortimer Cross, head of the latest junta to seize control of Austin, styles himself a reformer and is pursuing an uneasy reconciliation with <?php echo sf_lore_link('american-empire', 'the American Empire'); ?>. Meanwhile, the bordering Free States watch eagerly for an opportunity to sabotage this fragile peace and see the Union collapse once and for all.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 120 million<br>
@@ -32,6 +35,7 @@
 				<li>Former Oklahoma</li>
 				<li>Former New Mexico</li>
 				<li>Former Wyoming</li>
+				<li>Former Nebraska</li>
 				<li>Former Arkansas</li>
 				<li>Former Mississippi</li>
 				<li>Former Louisiana</li>
