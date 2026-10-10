@@ -1,6 +1,6 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
-		Population: 1.6 billion<br>
+		Population: 2.1 billion<br>
 		Languages: Swahili, French, English, Amharic, Oromo, Lingala, Portuguese, Somali, Kinyarwanda<br>
 		Currency: Earth Reserve Credits (ERC)
 	</p>

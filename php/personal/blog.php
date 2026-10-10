@@ -7,6 +7,13 @@
 
 			<div class="blog-posts">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/10/2026</i></p>
+					<p class="copy">
+						Man, for an app that forces a disruptive relaunch Cursor updates a loooooot.
+					</p>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/8/2026</i></p>
 					<p class="copy">
 						This blog’s slowly turning into a cats of Philadelphia type thing. I’m mostly spending my free time working on Strange Frontiers, so the projects in this new personal section are a little underdeveloped. Anyway, look at this creature I captured from my car while parking on my way back from the airport.

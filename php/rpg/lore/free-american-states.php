@@ -1,3 +1,6 @@
+<p class="copy">
+	Originally serving as buffer states between <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> and <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>, the Free States are now much more than that. Each is a country in its own right, and together they form a fractious economic free-trade zone. Each state pursues its own economic and governmental styles, but they remain unified by a shared fear of their two bellicose neighbors. While several Free States have petitioned for membership in <?php echo sf_lore_link('stellar-democratic-union', 'the Stellar Democratic Union'); ?>, longstanding border disputes, alongside pressure from the American Empire, continue to bar their entry.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 180 million<br>
@@ -29,10 +32,9 @@
 			<ul class="copy mb-0">
 				<li>Utah</li>
 				<li>Arizona</li>
-				<li>Montana</li>
+				<li>Colorado</li>
 				<li>North Dakota</li>
 				<li>South Dakota</li>
-				<li>Nebraska</li>
 				<li>Missouri</li>
 				<li>Iowa</li>
 				<li>Indiana</li>
@@ -42,7 +44,6 @@
 				<li>Floridia (former Florida, Cuba, The Bahamas)</li>
 				<li>Alaska</li>
 				<li>Hawaii</li>
-				<li>Idaho</li>
 			</ul>
 		</div>
 		<div class="d-inline-flex align-items-center flex-1"></div>

@@ -1,13 +1,16 @@
+<p class="copy">
+	The militant American Empire, styling itself as the revived Rome, is engaged in a one-sided cold war with its rival of the past two centuries, the expansive <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?>, competing for territory and resources. Aboard its capital, the drifting interstellar Ark “<?php echo sf_lore_link('new-york', 'New York'); ?>,” the absentee Emperor Augustus Bartholomew Hayes oversees imperial expansion while a fractious Senate at home bickers. Prince Traius Bartholomew Hayes, regent of the Sol territories, struggles to hold together the tenuous détente between the Empire and its former territory, <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
-		Population: 818 million<br>
+		Population: 1.1 billion<br>
 		Languages: English, Spanish<br>
 		Currency: Imperial Dollar (ID)
 	</p>
 	<p class="copy flex-1">
 		Government: Constitutional imperial monarchy with democratic self-government<br>
 		Capitol: <?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)<br>
-		Leadership: Emperor Augustus Bartholomew Hayes
+		Leadership: Emperor Augustus Bartholomew Hayes, Prince Regent Traius Bartholomew Hayes
 	</p>
 	<p class="copy flex-1">
 		Notable Figures:<br>
@@ -29,9 +32,10 @@
 			<ul class="copy">
 				<li>Northern California</li>
 				<li>Southern California</li>
-				<li>Colorado</li>
 				<li>Washington</li>
 				<li>Oregon</li>
+				<li>Idaho</li>
+				<li>Montana</li>
 				<li>Minnesota</li>
 				<li>Wisconsin</li>
 				<li>Illinois</li>
@@ -67,8 +71,8 @@
 				<li>By executive decree, multiple states were reorganized.</li>
 				<li>Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
 				<li>A tense nuclear and economic standoff persisted over the next two decades.</li>
-				<li>The secession of Florida broke the stalemate, with 22 additional states seceding from the empire to become independent countries.</li>
-				<li>Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed seven additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
+				<li>The secession of Florida broke the stalemate, with 23 additional states seceding from the empire to become independent countries.</li>
+				<li>Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed eight additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
 			</ul>
 		</div>
 	</div>

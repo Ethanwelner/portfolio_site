@@ -62,7 +62,7 @@
 				In humanity’s darkest hour, 120 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
 			</p>
 			<p class="copy">
-				Then, a mysterious benefactor placed a temple of bizarre make and proportion on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
+				Then, in a mysterious flash of impossible color, an eldritch temple of bizarre make and proportion appeared on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
 			</p>
 			<p class="copy">
 				Life in Earth’s megacities is still hard, and for over a century the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
@@ -282,7 +282,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>The secession of Florida breaks the stalemate, and 22 additional states secede from <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> to form <?php echo sf_lore_link('free-american-states', 'the Non-Aligned Free American States'); ?>.</li>
+							<li>The secession of Florida breaks the stalemate, and 23 additional states secede from <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> to form <?php echo sf_lore_link('free-american-states', 'the Non-Aligned Free American States'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -345,7 +345,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>Having annexed seven bordering states, Texas consolidates its alliance into <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.</li>
+							<li>Having annexed eight bordering states, Texas consolidates its alliance into <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -594,6 +594,9 @@
 
 			<div class="tech-field-panel" id="timeline-nations" role="tabpanel" aria-labelledby="tab-timeline-nations">
 				<div class="content-stack">
+					<p class="copy mb-0">
+						The Earth sits at the center of a fractious human civilization. Six major powers compete for technology, territory, and resources while dozens of smaller powers carve out their own destinies.
+					</p>
 					<?php foreach (['american-empire', 'union-of-texas', 'free-american-states', 'chinese-empire', 'stellar-democratic-union', 'kingdom-of-india', 'ural-federation', 'centafrica', 'kashgar', 'xanthus', 'lunar-industrial-syndicate', 'dreft'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 				</div>
 			</div>

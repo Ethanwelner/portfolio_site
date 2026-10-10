@@ -1,6 +1,12 @@
+<p class="copy">
+	Through the deft hand of Emperor Zhang, the nation of China has reached its apex. Business is flourishing, territories are expanding, and the borders are quiet. For the last 50 years, he has led the Empire into a golden age.
+</p>
+<p class="copy">
+	Unfortunately, still unknown to the public, the Emperor vanished without a trace on the solar new year of 2228. The imperial household has striven to keep his disappearance a secret, but a quiet succession crisis is brewing between the Lady-in-Waiting and Zhang’s many heirs. The corporate syndicates that compose the Empire’s government have begun to sense weakness in the imperial household, and with weakness comes opportunity.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
-		Population: 1.35 billion<br>
+		Population: 1.7 billion<br>
 		Languages: Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao<br>
 		Currency: rénmínbì (RMB)
 	</p>
