@@ -601,6 +601,39 @@ html.lore-modal-open {
     min-width: 160px;
 }
 
+#plane-known .plane-attr-cols > :nth-child(1) {
+    width: 128px;
+}
+
+#plane-known .plane-attr-cols > :nth-child(2) {
+    flex: 0 1 360px;
+    width: auto;
+}
+
+#craft-arks .plane-attr-cols > :nth-child(1) {
+    width: 128px;
+}
+
+#craft-arks .plane-attr-cols > :nth-child(2) {
+    flex: 0 1 256px;
+    width: auto;
+}
+
+#plane-known .plane-attr-cols > :nth-child(3),
+#craft-arks .plane-attr-cols > :nth-child(3) {
+    flex: 1;
+    width: auto;
+    min-width: 200px;
+}
+
+.plane-attr-cols > .flex-1:first-child {
+    max-width: 360px;
+}
+
+.plane-attr-cols > .flex-1 + .flex-1 {
+    flex: 1 0 auto;
+}
+
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
    corporation lore entries in php/rpg/lore/, the Nations tab in rpg-setting.php, and
    the Starships tab in rpg-spacecraft.php.

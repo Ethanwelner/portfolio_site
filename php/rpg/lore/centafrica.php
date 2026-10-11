@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 2.1 billion<br>
-		Languages: Swahili, French, English, Amharic, Oromo, Lingala, Portuguese, Somali, Kinyarwanda<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 62 trillion ERC<br>
+		Languages: Swahili, French, English, Amharic, Oromo, Lingala, Portuguese, Somali, Kinyarwanda
 	</p>
 	<p class="copy flex-1">
 		Government: Federal democratic republic<br>
 		Capitol: Kinshasa<br>
-		Leadership: Prime Minister Kitoko Mayélé
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Prime Minister Kitoko Mayélé<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

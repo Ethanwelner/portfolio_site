@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 19 million<br>
-		Languages: Swahili, Lingala, English, Spanish, Portuguese, Various Others<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 450 billion ERC<br>
+		Languages: Swahili, Lingala, English, Spanish, Portuguese, Various Others
 	</p>
 	<p class="copy flex-1">
 		Government: Parliamentary Democracy<br>
 		Capitol: 4544 Xanthus<br>
-		Leadership: President Mwaki Karanja Waweru
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: President Mwaki Karanja Waweru<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

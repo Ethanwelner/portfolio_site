@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 35 million<br>
-		Languages: Hindi, English, Spanish, Mandarin, Various Others<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 3 trillion ERC<br>
+		Languages: Hindi, English, Spanish, Mandarin, Various Others
 	</p>
 	<p class="copy flex-1">
 		Government: Anarcho-Syndicalism<br>
 		Capitol: The 23rd Great þing<br>
-		Leadership: Comrade 14/Scirocco
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Comrade 14/Scirocco<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

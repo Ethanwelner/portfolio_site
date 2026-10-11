@@ -8,10 +8,10 @@
 		Nationality: <?php echo sf_lore_link('xanthus', 'Xanthus'); ?>/Xanthian<br>
 		Government: Parliamentary Democracy
 	</p>
+	<p class="copy">
+		Major Industries: Mining, Agriculture, Colony and station establishment, Transportation, Chemicals
+	</p>
 </div>
-<p class="copy">
-	Major Industries: Mining, Agriculture, Colony and station establishment, Transportation, Chemicals
-</p>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>

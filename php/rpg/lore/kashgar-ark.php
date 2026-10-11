@@ -7,10 +7,10 @@
 		Nationality: <?php echo sf_lore_link('kashgar', 'Kashgar'); ?>/Kashgari<br>
 		Government: Anarcho-Syndicalism
 	</p>
+	<p class="copy">
+		Major Industries: AI, Hospitality, Transportation, Leisure, R&amp;D, Cybernetics, Robotics
+	</p>
 </div>
-<p class="copy">
-	Major Industries: AI, Hospitality, Transportation, Leisure, R&amp;D, Cybernetics, Robotics
-</p>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>

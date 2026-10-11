@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 180 million<br>
-		Languages: English, Spanish<br>
-		Currency: Imperial Dollar (ID)
+		Currency: Imperial Dollar (ID)<br>
+		GDP: 7.4 trillion ERC<br>
+		Languages: English, Spanish
 	</p>
 	<p class="copy flex-1">
 		Government: Various<br>
 		Capitol: Various<br>
-		Leadership: Various
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Various<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

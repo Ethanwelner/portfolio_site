@@ -7,10 +7,10 @@
 		Nationality: <?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?><br>
 		Government: Direct Democracy
 	</p>
+	<p class="copy">
+		Major Industries: Ship construction, Station establishment, Arms manufacture, Ship and station breaking, Security
+	</p>
 </div>
-<p class="copy">
-	Major Industries: Ship construction, Station establishment, Arms manufacture, Ship and station breaking, Security
-</p>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
