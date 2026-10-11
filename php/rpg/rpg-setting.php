@@ -40,8 +40,8 @@
 			<div class="tech-field-tab-list" role="tablist" aria-label="Timeline">
 				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="true">Setting</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-history" aria-controls="timeline-history" aria-selected="false">Timeline</button>
-				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-locations" aria-controls="timeline-locations" aria-selected="false">Locations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-locations" aria-controls="timeline-locations" aria-selected="false">Locations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
 			</div>
 
@@ -597,7 +597,7 @@
 					<p class="copy mb-0">
 						The Earth sits at the center of a fractious human civilization. Six major powers compete for technology, territory, and resources while dozens of smaller powers carve out their own destinies.
 					</p>
-					<?php foreach (['american-empire', 'union-of-texas', 'free-american-states', 'chinese-empire', 'stellar-democratic-union', 'kingdom-of-india', 'ural-federation', 'centafrica', 'kashgar', 'xanthus', 'lunar-industrial-syndicate', 'dreft'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+					<?php foreach (['american-empire', 'union-of-texas', 'free-american-states', 'chinese-empire', 'stellar-democratic-union', 'kingdom-of-india', 'centafrica', 'ural-federation', 'lunar-industrial-syndicate', 'kashgar', 'xanthus', 'dreft'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 				</div>
 			</div>
 
