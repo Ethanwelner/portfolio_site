@@ -1,3 +1,6 @@
+<p class="copy">
+	A proud democratic republic, the Centafrica of today is a forward-looking and vibrant nation. Home to some of humanity’s top universities and a significant exporter of music, entertainment, and the arts, Centafrica is a soft-power juggernaut in stellar politics. Look beneath the thriving techno-utopia of cities like Lagos and Kinshasa, however, and tensions still simmer over the unreconciled and brutal history of the nation’s founding. The wealth of Centafrica isn’t always spread equally, and separatist groups often find at least local success through the nation’s democratic politics. The scars of the past sometimes run deep, and people have long memories.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 2.1 billion<br>
@@ -40,6 +43,7 @@
 				<li>Zambia</li>
 				<li>Ethiopia</li>
 				<li>Somalia</li>
+				<li>Nigeria</li>
 			</ul>
 			<h6>Stellar Territories</h6>
 			<ul class="copy mb-0">
