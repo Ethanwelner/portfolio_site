@@ -1,5 +1,5 @@
 <p class="copy">
-	Comprising holdings on Earth, Luna, and Mars, as well as dozens of other colonies, stations, and outposts, the Eighth Lunar Industrial Syndicate is an economic behemoth. Having grown far beyond its origins as a simple business cartel, the Syndicate now finds itself saddled with a constitution, a national military, and board members elected by the former South American nations it was forced to annex at the point of a gun. It struggles with its duties to its shareholders and responsibility to its “Citizens.”
+	Comprising holdings on Earth, Luna, and Mars, as well as dozens of other colonies, stations, and outposts, the Eighth Lunar Industrial Syndicate is an economic behemoth punching well above its weight. Having grown far beyond its origins as a simple business cartel, the Syndicate now finds itself saddled with a constitution, a national military, and board members elected by the former South American nations it was forced to annex at the point of a gun. It struggles with its duties to its shareholders and responsibility to its “Citizens,” enriching the former and forgetting the latter more often than not.
 </p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">

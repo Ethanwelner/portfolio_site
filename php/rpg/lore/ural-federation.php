@@ -3,7 +3,7 @@
 </p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
-		Population: 120 million<br>
+		Population: 290 million<br>
 		Languages: Russian, Kazakh, Mandarin, Uyghur, Mongolian, Kyrgyz<br>
 		Currency: Earth Reserve Credits (ERC)
 	</p>
