@@ -1,3 +1,6 @@
+<p class="copy">
+	The Ural Federation is a loose collection of hundreds of smaller tribal statelets dotting the steppe lands and Siberia. The shifting climate of Earth was not equally harmful to all, with Siberia in particular thawing into the breadbasket of Asia that it is today. A true melting pot, the Ural Federation is home to native peoples, climate refugees, and the remnants of the Russian diaspora. Though not wealthy, it is prosperous, and with a fast-growing population and plentiful land, it is a sleeping giant in the future politics of Earth.
+</p>
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 120 million<br>

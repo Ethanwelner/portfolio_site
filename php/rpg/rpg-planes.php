@@ -142,7 +142,7 @@
 
 				<div class="tech-field-panel" id="plane-known" role="tabpanel" aria-labelledby="tab-plane-known">
 					<div class="content-stack">
-						<?php foreach (['paraloka', 'saturdays-furnace', 'gastown', 'pairidaeza', 'the-lost-world', 'flatland', 'leviathan', 'isekai'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						<?php foreach (['paraloka', 'saturdays-furnace', 'gastown', 'pairidaeza', 'pataliputra', 'the-lost-world', 'flatland', 'leviathan', 'isekai'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 					</div>
 				</div>
 
