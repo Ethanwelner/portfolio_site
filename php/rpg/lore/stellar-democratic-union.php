@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 2.9 billion<br>
-		Languages: English, Russian, Portuguese, Japanese, German, French, Spanish, Korean, Italian, Polish, Dutch, Romanian<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 160 trillion ERC<br>
+		Languages: English, Russian, Portuguese, Japanese, German, French, Spanish, Korean, Italian, Polish, Dutch, Romanian
 	</p>
 	<p class="copy flex-1">
 		Government: Federal democratic republic<br>
 		Capitol: <?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)<br>
-		Leadership: President 10/Chrysanthemum
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: President 10/Chrysanthemum<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

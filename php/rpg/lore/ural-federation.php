@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 290 million<br>
-		Languages: Russian, Kazakh, Mandarin, Uyghur, Mongolian, Kyrgyz<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 7.6 trillion ERC<br>
+		Languages: Russian, Kazakh, Mandarin, Uyghur, Mongolian, Kyrgyz
 	</p>
 	<p class="copy flex-1">
 		Government: Tribal federalism<br>
 		Capitol: None<br>
-		Leadership: Various
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Various<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

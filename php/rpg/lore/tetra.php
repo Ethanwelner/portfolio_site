@@ -7,10 +7,10 @@
 		Nationality: <?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?><br>
 		Government: Liquid Democracy
 	</p>
+	<p class="copy">
+		Major Industries: <?php echo sf_lore_link('switch-gates', 'Switch Gate'); ?> exploration, Planar exploitation, Biology, Pharmaceuticals, Parascientific research, United Nations Headquarters
+	</p>
 </div>
-<p class="copy">
-	Major Industries: <?php echo sf_lore_link('switch-gates', 'Switch Gate'); ?> exploration, Planar exploitation, Biology, Pharmaceuticals, Parascientific research, United Nations Headquarters
-</p>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>

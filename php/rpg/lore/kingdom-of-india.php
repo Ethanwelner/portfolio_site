@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 1.7 billion<br>
-		Languages: Hindi, Bengali, English, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Nepali, Sinhala<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 57 trillion ERC<br>
+		Languages: Hindi, Bengali, English, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Nepali, Sinhala
 	</p>
 	<p class="copy flex-1">
 		Government: Technocratic monarchy<br>
 		Capitol: Pataliputra (New Delhi on Earth)<br>
-		Leadership: Prince Raja Jagadeeshwara Raya
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Prince Raja Jagadeeshwara Raya<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

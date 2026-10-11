@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 20 million native est. + 12 thousand Earth baseline<br>
-		Languages: Various<br>
-		Currency: Luras
+		Currency: Luras<br>
+		GDP: 26 billion ERC (est.)<br>
+		Languages: Various
 	</p>
 	<p class="copy flex-1">
 		Government: Hereditary Monarchy<br>
 		Capitol: Castle Herminst<br>
-		Leadership: Queen Walpurgis the Third (Deceased)
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Queen Walpurgis the Third (Deceased)<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

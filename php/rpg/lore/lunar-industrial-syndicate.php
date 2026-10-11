@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 430 million<br>
-		Languages: English, Mandarin, Portuguese, Spanish, Various Others<br>
-		Currency: Earth Reserve Credits (ERC)
+		Currency: Earth Reserve Credits (ERC)<br>
+		GDP: 34 trillion ERC<br>
+		Languages: English, Mandarin, Portuguese, Spanish, Various Others
 	</p>
 	<p class="copy flex-1">
 		Government: Plutocratic Board of Directors<br>
 		Capitol: Port Luna<br>
-		Leadership: CEO 6/Gold
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: CEO 6/Gold<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

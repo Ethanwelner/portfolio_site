@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 1.1 billion<br>
-		Languages: English, Spanish<br>
-		Currency: Imperial Dollar (ID)
+		Currency: Imperial Dollar (ID)<br>
+		GDP: 52 trillion ERC<br>
+		Languages: English, Spanish
 	</p>
 	<p class="copy flex-1">
 		Government: Constitutional imperial monarchy with democratic self-government<br>
 		Capitol: <?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)<br>
-		Leadership: Emperor Augustus Bartholomew Hayes, Prince Regent Traius Bartholomew Hayes
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Emperor Augustus Bartholomew Hayes, Prince Regent Traius Bartholomew Hayes<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

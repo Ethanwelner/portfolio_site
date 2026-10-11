@@ -7,17 +7,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 1.7 billion<br>
-		Languages: Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao<br>
-		Currency: rénmínbì (RMB)
+		Currency: rénmínbì (RMB)<br>
+		GDP: 71 trillion ERC<br>
+		Languages: Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao
 	</p>
 	<p class="copy flex-1">
 		Government: Corporatist imperial monarchy<br>
 		Capitol: Wuhan<br>
-		Leadership: Emperor Zhang of the Wuhan Dynasty
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: Emperor Zhang of the Wuhan Dynasty<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">

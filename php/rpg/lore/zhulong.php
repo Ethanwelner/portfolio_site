@@ -7,10 +7,10 @@
 		Nationality: <?php echo sf_lore_link('chinese-empire', 'The Chinese Empire'); ?><br>
 		Government: Provincial Governorship
 	</p>
+	<p class="copy">
+		Major Industries: Government administration, Colony and station establishment, Fleet maintenance, Transportation, Agriculture
+	</p>
 </div>
-<p class="copy">
-	Major Industries: Government administration, Colony and station establishment, Fleet maintenance, Transportation, Agriculture
-</p>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>

@@ -4,17 +4,15 @@
 <div class="plane-attr-cols">
 	<p class="copy flex-1">
 		Population: 120 million<br>
-		Languages: English, Spanish<br>
-		Currency: Imperial Dollar (ID)
+		Currency: Imperial Dollar (ID)<br>
+		GDP: 2.2 trillion ERC<br>
+		Languages: English, Spanish
 	</p>
 	<p class="copy flex-1">
 		Government: Military Republic<br>
 		Capitol: Austin<br>
-		Leadership: General Mortimer Cross
-	</p>
-	<p class="copy flex-1">
-		Notable Figures:<br>
-		GDP:
+		Leadership: General Mortimer Cross<br>
+		Notable Figures:
 	</p>
 </div>
 <details class="lore-details">
