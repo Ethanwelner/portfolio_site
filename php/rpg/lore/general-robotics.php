@@ -1,10 +1,22 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Headquartered:<br>
-		Employees:<br>
-		Market Cap:<br>
-		Industry: Industrial Robotics, Construction
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Headquartered</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Employees</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Market Cap</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Industry</dt>
+			<dd>Industrial Robotics, Construction</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">

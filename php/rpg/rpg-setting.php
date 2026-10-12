@@ -46,7 +46,7 @@
 			</div>
 
 			<div class="tech-field-panel is-active" id="timeline-events" role="tabpanel" aria-labelledby="tab-timeline-events">
-				<div class="d-flex flex-wrap flex-xs-nowrap">
+				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>Strange Frontiers</strong></h5>
@@ -71,7 +71,6 @@
 				In the end, it’s still humanity, and it’s a big strange universe out there.
 			</p>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 					<div class="flex-6">
 						<div class="line-container">
 							<h5><strong>2230, The Systems, and Beyond</strong></h5>
@@ -602,11 +601,10 @@
 			</div>
 
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
-				<div class="d-flex flex-wrap flex-xs-nowrap">
+				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 					<div class="flex-7 content-stack">
 						<?php foreach (['ten-twenty-holding-corporation', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
-					<div class="d-inline-flex align-items-center flex-1"></div>
 					<div class="flex-6 content-stack">
 						<?php foreach (['meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>

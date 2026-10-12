@@ -1,22 +1,37 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Population: 35 million<br>
-		Route:
-	</p>
-	<p class="copy">
-		Nationality: <?php echo sf_lore_link('kashgar', 'Kashgar'); ?>/Kashgari<br>
-		Government: Anarcho-Syndicalism
-	</p>
-	<p class="copy">
-		Major Industries: AI, Hospitality, Transportation, Leisure, R&amp;D, Cybernetics, Robotics
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>35 million</dd>
+		</div>
+		<div>
+			<dt>Route</dt>
+			<dd></dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Nationality</dt>
+			<dd><?php echo sf_lore_link('kashgar', 'Kashgar'); ?>/Kashgari</dd>
+		</div>
+		<div>
+			<dt>Government</dt>
+			<dd>Anarcho-Syndicalism</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Major Industries</dt>
+			<dd>AI, Hospitality, Transportation, Leisure, R&amp;D, Cybernetics, Robotics</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>Overview</strong></h5>
@@ -26,7 +41,6 @@
 				Content coming soon
 			</p>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

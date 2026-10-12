@@ -4,26 +4,50 @@
 <p class="copy">
 	Fully self-sufficient, Xanthus spends little time in the Sol system, instead preferring to act as an oasis and crossroads for those escaping poverty or persecution. Its core, an iron asteroid nearly a kilometer wide, provides the perfect material for its never-ending project of colony and station construction. Wherever Xanthus goes, micro-nations appear in its wake. As a model democracy, Xanthus has repeatedly been invited to join the <?php echo sf_lore_link('stellar-democratic-union', 'Stellar Democratic Union'); ?>, at least as an associate member, but the memories aboard Xanthus are long, and it won’t sacrifice its independence for a little comfort.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 19 million<br>
-		Currency: Earth Reserve Credits (ERC)<br>
-		GDP: 450 billion ERC<br>
-		Languages: Swahili, Lingala, English, Spanish, Portuguese, Various Others
-	</p>
-	<p class="copy flex-1">
-		Government: Parliamentary Democracy<br>
-		Capitol: 4544 Xanthus<br>
-		Leadership: President Mwaki Karanja Waweru<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>19 million</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Earth Reserve Credits (ERC)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>450 billion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>Swahili, Lingala, English, Spanish, Portuguese, Various Others</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Parliamentary Democracy</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>4544 Xanthus</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>President Mwaki Karanja Waweru</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -34,7 +58,6 @@
 				<li>4544 Xanthus (Ark)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

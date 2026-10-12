@@ -45,8 +45,8 @@
 					</div>
 
 					<div class="tech-field-panel is-active" id="craft-starships" role="tabpanel" aria-labelledby="tab-craft-starships">
-						<div class="d-flex flex-wrap flex-xs-nowrap">
-							<div class="flex-7 content-stack">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+							<div class="flex-6 content-stack">
 								<div>
 									<div class="line-container">
 										<h5><strong>Utility Craft</strong></h5>
@@ -107,7 +107,6 @@
 									</details>
 								</div>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6 content-stack">
 								<div>
 									<div class="line-container">

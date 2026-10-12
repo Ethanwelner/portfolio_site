@@ -1,26 +1,50 @@
 <p class="copy">
 	The militant American Empire, styling itself as the revived Rome, is engaged in a one-sided cold war with its rival of the past two centuries, the expansive <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?>, competing for territory and resources. Aboard its capital, the drifting interstellar Ark “<?php echo sf_lore_link('new-york', 'New York'); ?>,” the absentee Emperor Augustus Bartholomew Hayes oversees imperial expansion while a fractious Senate at home bickers. Prince Traius Bartholomew Hayes, regent of the Sol territories, struggles to hold together the tenuous détente between the Empire and its former territory, <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 1.1 billion<br>
-		Currency: Imperial Dollar (ID)<br>
-		GDP: 52 trillion ERC<br>
-		Languages: English, Spanish
-	</p>
-	<p class="copy flex-1">
-		Government: Constitutional imperial monarchy with democratic self-government<br>
-		Capitol: <?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)<br>
-		Leadership: Emperor Augustus Bartholomew Hayes, Prince Regent Traius Bartholomew Hayes<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>1.1 billion</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Imperial Dollar (ID)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>52 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>English, Spanish</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Constitutional imperial monarchy with democratic self-government</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd><?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>Emperor Augustus Bartholomew Hayes, Prince Regent Traius Bartholomew Hayes</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -56,7 +80,6 @@
 				<li>New York (Ark)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

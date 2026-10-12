@@ -74,7 +74,7 @@
 
 			var link = $active[0];
 			var top = link.offsetTop + ( link.offsetHeight / 2 ) - ( $dot.outerHeight() / 2 );
-			var left = window.matchMedia( "(max-width: 767px)" ).matches
+			var left = window.matchMedia( "(max-width: 1199px)" ).matches
 				? link.offsetLeft - $dot.outerWidth() - 6
 				: link.offsetLeft + link.offsetWidth + 8;
 			$dot.css( { top: top + "px", left: left + "px" } );

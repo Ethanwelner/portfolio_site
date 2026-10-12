@@ -1,30 +1,69 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Compatibility: Medium<br>
-		Elevation: 3<br>
-		Divergence: 6<br>
-		Distance: 6<br>
-		Aperture: 6
-	</p>
-	<p class="copy">
-		Population: 0<br>
-		Average Temperature: 230°C<br>
-		Biome: Furnace<br>
-		Natural Resources: Exotic Helium Isotopes, Extremophile Microbes<br>
-		Indigenous life: Yes
-	</p>
-	<p class="copy">
-		Discovered: 2129 / New York University<br>
-		Claim: Saltwater Energetics<br>
-		Nations of Interest: <?php echo sf_lore_link('american-empire', 'The American Empire'); ?>
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Compatibility</dt>
+			<dd>Medium</dd>
+		</div>
+		<div>
+			<dt>Elevation</dt>
+			<dd>3</dd>
+		</div>
+		<div>
+			<dt>Divergence</dt>
+			<dd>6</dd>
+		</div>
+		<div>
+			<dt>Distance</dt>
+			<dd>6</dd>
+		</div>
+		<div>
+			<dt>Aperture</dt>
+			<dd>6</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>0</dd>
+		</div>
+		<div>
+			<dt>Average Temperature</dt>
+			<dd>230°C</dd>
+		</div>
+		<div>
+			<dt>Biome</dt>
+			<dd>Furnace</dd>
+		</div>
+		<div>
+			<dt>Natural Resources</dt>
+			<dd>Exotic Helium Isotopes, Extremophile Microbes</dd>
+		</div>
+		<div>
+			<dt>Indigenous life</dt>
+			<dd>Yes</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Discovered</dt>
+			<dd>2129 / New York University</dd>
+		</div>
+		<div>
+			<dt>Claim</dt>
+			<dd>Saltwater Energetics</dd>
+		</div>
+		<div>
+			<dt>Nations of Interest</dt>
+			<dd><?php echo sf_lore_link('american-empire', 'The American Empire'); ?></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>Overview</strong></h5>
@@ -34,7 +73,6 @@
 				Content coming soon
 			</p>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>Geography</strong></h5>

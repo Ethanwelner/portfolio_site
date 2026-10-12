@@ -1,10 +1,22 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Headquartered: 10/20 Holding Corporation Headquarters (Deep Space)<br>
-		Employees:<br>
-		Market Cap:<br>
-		Industry: Financial Services, Asset Management, Investment Management
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Headquartered</dt>
+			<dd>10/20 Holding Corporation Headquarters (Deep Space)</dd>
+		</div>
+		<div>
+			<dt>Employees</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Market Cap</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Industry</dt>
+			<dd>Financial Services, Asset Management, Investment Management</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">

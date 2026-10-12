@@ -40,7 +40,7 @@
 							<h5><strong>Details</strong></h5>
 							<div class="line"></div>
 						</summary>
-						<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 							<div class="flex-7 content-stack">
 								<div>
 									<h5 class="mb-3"><strong>Higher Plane</strong></h5>
@@ -60,7 +60,6 @@
 									</ul>
 								</div>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6">
 								<h5 class="mb-3"><strong>Lower Plane</strong></h5>
 								<ul class="copy mb-0">
@@ -151,11 +150,10 @@
 				</div>
 
 				<div class="tech-field-panel" id="plane-exotic" role="tabpanel" aria-labelledby="tab-plane-exotic">
-					<div class="d-flex flex-wrap flex-xs-nowrap">
+					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 						<div class="flex-7">
 							<?php sf_lore_entry('st-245-e6', 'line'); ?>
 						</div>
-						<div class="d-inline-flex align-items-center flex-1"></div>
 						<div class="flex-6 content-stack">
 							<?php foreach (['st-1-e1', 'co-h2o-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 						</div>

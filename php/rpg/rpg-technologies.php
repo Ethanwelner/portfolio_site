@@ -46,7 +46,7 @@
 
 					<div class="tech-field-panel is-active" id="tech-paraphysics" role="tabpanel" aria-labelledby="tab-tech-paraphysics">
 						<div>
-							<div class="d-flex flex-wrap flex-xs-nowrap">
+							<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 								<div class="flex-7">
 									<div class="line-container">
 										<h5><strong>Overview</strong></h5>
@@ -56,7 +56,6 @@
 										Content coming soon
 									</p>
 								</div>
-								<div class="d-inline-flex align-items-center flex-1"></div>
 								<div class="flex-6">
 									<div class="line-container">
 										<h5><strong>History</strong></h5>
@@ -71,7 +70,7 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-biology" role="tabpanel" aria-labelledby="tab-tech-biology">
-						<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
@@ -85,7 +84,6 @@
 								</p>
 								<p class="copy">Cont...</p>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>
@@ -99,7 +97,7 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-ai" role="tabpanel" aria-labelledby="tab-tech-ai">
-						<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
@@ -129,7 +127,6 @@
 									<li>Stellar Omnium (Europa Planitia)</li>
 								</ul>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>
@@ -170,7 +167,7 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-cybernetics" role="tabpanel" aria-labelledby="tab-tech-cybernetics">
-						<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
@@ -196,7 +193,6 @@
 									<li>Lagos-Core Defense (6%)</li>
 								</ol>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>
@@ -216,7 +212,7 @@
 					</div>
 
 					<div class="tech-field-panel" id="tech-robotics" role="tabpanel" aria-labelledby="tab-tech-robotics">
-						<div class="d-flex flex-wrap flex-xs-nowrap">
+						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 							<div class="flex-6">
 								<div class="line-container">
 									<h5><strong>Overview</strong></h5>
@@ -245,7 +241,6 @@
 									<li>Lagos-Core Defense (Combat Systems, Drones)</li>
 								</ol>
 							</div>
-							<div class="d-inline-flex align-items-center flex-1"></div>
 							<div class="flex-7">
 								<div class="line-container">
 									<h5><strong>History</strong></h5>

@@ -1,26 +1,50 @@
 <p class="copy">
 	Originally serving as buffer states between <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> and <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>, the Free States are now much more than that. Each is a country in its own right, and together they form a fractious economic free-trade zone. Each state pursues its own economic and governmental styles, but they remain unified by a shared fear of their two bellicose neighbors. While several Free States have petitioned for membership in <?php echo sf_lore_link('stellar-democratic-union', 'the Stellar Democratic Union'); ?>, longstanding border disputes, alongside pressure from the American Empire, continue to bar their entry.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 180 million<br>
-		Currency: Imperial Dollar (ID)<br>
-		GDP: 7.4 trillion ERC<br>
-		Languages: English, Spanish
-	</p>
-	<p class="copy flex-1">
-		Government: Various<br>
-		Capitol: Various<br>
-		Leadership: Various<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>180 million</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Imperial Dollar (ID)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>7.4 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>English, Spanish</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Various</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>Various</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>Various</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -44,7 +68,6 @@
 				<li>Hawaii</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
