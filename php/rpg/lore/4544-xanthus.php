@@ -1,16 +1,10 @@
 <?php // Overview reference: https://en.wikipedia.org/wiki/4544_Xanthus ?>
 <div class="info-cols">
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Population</dt>
 			<dd>19 million</dd>
 		</div>
-		<div>
-			<dt>Route</dt>
-			<dd></dd>
-		</div>
-	</dl>
-	<dl class="copy attr-list">
 		<div>
 			<dt>Nationality</dt>
 			<dd><?php echo sf_lore_link('xanthus', 'Xanthus'); ?>/Xanthian</dd>
@@ -19,11 +13,19 @@
 			<dt>Government</dt>
 			<dd>Parliamentary Democracy</dd>
 		</div>
+		<div>
+			<dt>Route</dt>
+			<dd></dd>
+		</div>
 	</dl>
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Major Industries</dt>
 			<dd>Mining, Agriculture, Colony and station establishment, Transportation, Chemicals</dd>
+		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd></dd>
 		</div>
 	</dl>
 </div>

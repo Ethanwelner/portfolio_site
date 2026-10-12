@@ -38,7 +38,7 @@
 		</div>
 		<div>
 			<dt>Notable Figures</dt>
-			<dd></dd>
+			<dd>Duchess Bereznia, Lady Grisht Walpurgis, Askellyn</dd>
 		</div>
 	</dl>
 </div>

@@ -1,15 +1,9 @@
 <div class="info-cols">
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Population</dt>
 			<dd>6 million</dd>
 		</div>
-		<div>
-			<dt>Route</dt>
-			<dd></dd>
-		</div>
-	</dl>
-	<dl class="copy attr-list">
 		<div>
 			<dt>Nationality</dt>
 			<dd><?php echo sf_lore_link('american-empire', 'The American Empire'); ?></dd>
@@ -18,11 +12,19 @@
 			<dt>Government</dt>
 			<dd>Military Administration</dd>
 		</div>
+		<div>
+			<dt>Route</dt>
+			<dd></dd>
+		</div>
 	</dl>
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Major Industries</dt>
 			<dd>Government administration, Colony and station establishment, Fleet maintenance, Transportation, Agriculture</dd>
+		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd></dd>
 		</div>
 	</dl>
 </div>
