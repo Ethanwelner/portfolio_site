@@ -594,13 +594,11 @@ html.lore-modal-open {
 }
 
 @media (min-width: 768px) {
-    #plane-known .info-cols > :nth-child(1),
-    #craft-arks .info-cols > :nth-child(1) {
+    #plane-known .info-cols > :nth-child(1) {
         width: 128px;
     }
 
-    #plane-known .info-cols > :nth-child(2),
-    #craft-arks .info-cols > :nth-child(2) {
+    #plane-known .info-cols > :nth-child(2) {
         flex: 0 1 256px;
         width: auto;
     }
@@ -671,11 +669,7 @@ html.lore-modal-open {
 .lore-details {
     border: 1px solid rgb(0 0 0 / 15%);
     border-radius: var(--portfolio-radius);
-    padding: 20px;
-
-    @media (max-width: 959px) {
-        padding: 16px;
-    }
+    padding: 16px;
 
     .black-bg & {
         border-color: rgb(255 255 255 / 25%);
@@ -743,7 +737,7 @@ html.lore-modal-open {
     /* Overview / History / Geography / Territories columns: plain bold
        titles instead of the ruled heading. */
     > .d-flex {
-        gap: 20px 48px;
+        gap: 20px 40px;
 
         @media (max-width: 959px) {
             column-gap: 24px;
@@ -1081,7 +1075,7 @@ html.lore-modal-open {
 
 /* Two-column content rows in Strange Frontiers, php/rpg/ and php/rpg/lore/ */
 .split-cols {
-    gap: 48px;
+    gap: 48px 40px;
 
     @media (max-width: 959px) {
         column-gap: 24px;

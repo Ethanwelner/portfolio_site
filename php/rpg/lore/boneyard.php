@@ -1,15 +1,9 @@
 <div class="info-cols">
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Population</dt>
 			<dd>8 million</dd>
 		</div>
-		<div>
-			<dt>Route</dt>
-			<dd></dd>
-		</div>
-	</dl>
-	<dl class="copy attr-list">
 		<div>
 			<dt>Nationality</dt>
 			<dd><?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?></dd>
@@ -18,11 +12,19 @@
 			<dt>Government</dt>
 			<dd>Direct Democracy</dd>
 		</div>
+		<div>
+			<dt>Route</dt>
+			<dd></dd>
+		</div>
 	</dl>
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Major Industries</dt>
 			<dd>Ship construction, Station establishment, Arms manufacture, Ship and station breaking, Security</dd>
+		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd></dd>
 		</div>
 	</dl>
 </div>

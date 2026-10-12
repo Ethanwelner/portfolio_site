@@ -52,6 +52,18 @@
 										<h5><strong>Utility Craft</strong></h5>
 										<div class="line"></div>
 									</div>
+									<div class="info-cols">
+										<dl class="copy attr-list">
+											<div>
+												<dt>Tonnage</dt>
+												<dd>Up to 100 tons</dd>
+											</div>
+											<div>
+												<dt>Notable Ships</dt>
+												<dd></dd>
+											</div>
+										</dl>
+									</div>
 									<details class="lore-details">
 										<summary class="line-container">
 											<h5><strong>Details</strong></h5>
@@ -79,6 +91,18 @@
 									<div class="line-container">
 										<h5><strong>Small Ships</strong></h5>
 										<div class="line"></div>
+									</div>
+									<div class="info-cols">
+										<dl class="copy attr-list">
+											<div>
+												<dt>Tonnage</dt>
+												<dd>20 to 10,000 tons</dd>
+											</div>
+											<div>
+												<dt>Notable Ships</dt>
+												<dd></dd>
+											</div>
+										</dl>
 									</div>
 									<details class="lore-details">
 										<summary class="line-container">
@@ -113,6 +137,18 @@
 										<h5><strong>Large Ships</strong></h5>
 										<div class="line"></div>
 									</div>
+									<div class="info-cols">
+										<dl class="copy attr-list">
+											<div>
+												<dt>Tonnage</dt>
+												<dd>25,000 to 500,000 tons</dd>
+											</div>
+											<div>
+												<dt>Notable Ships</dt>
+												<dd><i>Babylon’s Arrow</i></dd>
+											</div>
+										</dl>
+									</div>
 									<details class="lore-details">
 										<summary class="line-container">
 											<h5><strong>Details</strong></h5>
@@ -143,6 +179,18 @@
 									<div class="line-container">
 										<h5><strong>Capital Ships</strong></h5>
 										<div class="line"></div>
+									</div>
+									<div class="info-cols">
+										<dl class="copy attr-list">
+											<div>
+												<dt>Tonnage</dt>
+												<dd>500,000 to 20 million tons, with Arks reaching hundreds of millions to billions</dd>
+											</div>
+											<div>
+												<dt>Notable Ships</dt>
+												<dd><i>xù rì</i>, <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?>, <?php echo sf_lore_link('4544-xanthus', '4544 Xanthus'); ?>, <?php echo sf_lore_link('boneyard', 'Boneyard'); ?>, <?php echo sf_lore_link('tetra', 'Tetra'); ?>, <?php echo sf_lore_link('new-york', 'New York'); ?>, <?php echo sf_lore_link('zhulong', 'Zhulong'); ?></dd>
+											</div>
+										</dl>
 									</div>
 									<details class="lore-details">
 										<summary class="line-container">

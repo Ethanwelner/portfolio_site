@@ -1,15 +1,9 @@
 <div class="info-cols">
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Population</dt>
 			<dd>14 million</dd>
 		</div>
-		<div>
-			<dt>Route</dt>
-			<dd></dd>
-		</div>
-	</dl>
-	<dl class="copy attr-list">
 		<div>
 			<dt>Nationality</dt>
 			<dd><?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?></dd>
@@ -18,11 +12,19 @@
 			<dt>Government</dt>
 			<dd>Liquid Democracy</dd>
 		</div>
+		<div>
+			<dt>Route</dt>
+			<dd>Traces an elliptical orbit in the Sol system between the orbits of Earth and Mars, charted and maintained to routinely bring it into relative proximity to both planets.</dd>
+		</div>
 	</dl>
-	<dl class="copy attr-list">
+	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Major Industries</dt>
 			<dd><?php echo sf_lore_link('switch-gates', 'Switch Gate'); ?> exploration, Planar exploitation, Biology, Pharmaceuticals, Parascientific research, United Nations Headquarters</dd>
+		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd>The Diplomatic Wing, <?php echo sf_lore_link('stellar-democratic-union', 'Stellar Democratic Union'); ?> Capitol, <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?> Headquarters</dd>
 		</div>
 	</dl>
 </div>
