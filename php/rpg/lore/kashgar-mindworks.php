@@ -1,10 +1,22 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Headquartered: <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?><br>
-		Employees:<br>
-		Market Cap:<br>
-		Industry: AI Cores
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Headquartered</dt>
+			<dd><?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?></dd>
+		</div>
+		<div>
+			<dt>Employees</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Market Cap</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Industry</dt>
+			<dd>AI Cores</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">

@@ -4,26 +4,50 @@
 <p class="copy">
 	Not all is as peaceful as it seems. Prince Raja Jagadeeshwara Raya, born in Pataliputra, rarely sees fit to administer the Indian nation in person, preferring to rule through his vizier, Uthradom Thirunal Aditya Varma. The connection between India and its far-distant capital is tenuous, and many disapprove of their absentee prince and his lack of ambition on Earth.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 1.7 billion<br>
-		Currency: Earth Reserve Credits (ERC)<br>
-		GDP: 57 trillion ERC<br>
-		Languages: Hindi, Bengali, English, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Nepali, Sinhala
-	</p>
-	<p class="copy flex-1">
-		Government: Technocratic monarchy<br>
-		Capitol: Pataliputra (New Delhi on Earth)<br>
-		Leadership: Prince Raja Jagadeeshwara Raya<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>1.7 billion</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Earth Reserve Credits (ERC)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>57 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>Hindi, Bengali, English, Marathi, Telugu, Tamil, Gujarati, Urdu, Kannada, Odia, Malayalam, Punjabi, Nepali, Sinhala</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Technocratic monarchy</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>Pataliputra (New Delhi on Earth)</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>Prince Raja Jagadeeshwara Raya</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -42,7 +66,6 @@
 				<li>Amaravati (High Earth Orbit)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

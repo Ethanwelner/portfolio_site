@@ -524,10 +524,6 @@ html.lore-modal-open {
     gap: 24px;
 }
 
-.lore-modal-body .d-flex.flex-wrap > .flex-1 {
-    display: none !important;
-}
-
 .lore-modal-close {
     appearance: none;
     position: absolute;
@@ -575,63 +571,97 @@ html.lore-modal-open {
     display: block;
 }
 
-/* Plane attribute columns in the plane lore entries, php/rpg/lore/
-   (flatland, gastown, leviathan, paraloka, saturdays-furnace, the-lost-world) */
-.plane-attr-cols {
+/* Info box columns in the plane, Ark, nation, and corporation lore entries, php/rpg/lore/ */
+.info-cols {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 48px;
+    gap: 24px;
+    margin: 2rem 0 0;
 }
 
-.plane-attr-cols > * {
+.info-cols > * {
     flex: 0 0 auto;
     width: max-content;
     max-width: 100%;
 }
 
 /* Nation attribute columns (rpg-setting.php) share the row equally */
-.plane-attr-cols:has(> .flex-1) {
-    gap: 24px;
-}
-
-.plane-attr-cols > .flex-1 {
+.info-cols > .flex-1 {
     flex: 1;
     width: auto;
     min-width: 160px;
 }
 
-#plane-known .plane-attr-cols > :nth-child(1) {
-    width: 128px;
+@media (min-width: 768px) {
+    #plane-known .info-cols > :nth-child(1),
+    #craft-arks .info-cols > :nth-child(1) {
+        width: 128px;
+    }
+
+    #plane-known .info-cols > :nth-child(2),
+    #craft-arks .info-cols > :nth-child(2) {
+        flex: 0 1 256px;
+        width: auto;
+    }
 }
 
-#plane-known .plane-attr-cols > :nth-child(2) {
-    flex: 0 1 360px;
-    width: auto;
-}
-
-#craft-arks .plane-attr-cols > :nth-child(1) {
-    width: 128px;
-}
-
-#craft-arks .plane-attr-cols > :nth-child(2) {
-    flex: 0 1 256px;
-    width: auto;
-}
-
-#plane-known .plane-attr-cols > :nth-child(3),
-#craft-arks .plane-attr-cols > :nth-child(3) {
-    flex: 1;
-    width: auto;
-    min-width: 200px;
-}
-
-.plane-attr-cols > .flex-1:first-child {
+.info-cols > .flex-1:first-child {
     max-width: 360px;
 }
 
-.plane-attr-cols > .flex-1 + .flex-1 {
-    flex: 1 0 auto;
+.info-cols > :last-child {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+}
+
+@media (max-width: 767px) {
+    .info-cols {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .info-cols > *,
+    .info-cols > :last-child {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+    }
+
+    .info-cols > .attr-list {
+        margin-bottom: 0;
+    }
+
+    .info-cols > :last-child {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Info box entries: small label stacked above its value */
+.attr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 1rem;
+    padding-inline-start: 0;
+
+    dt {
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1.2;
+        opacity: 0.6;
+    }
+
+    dd {
+        margin: 0;
+    }
+
+    dd:empty::before {
+        content: "\2014";
+        opacity: 0.4;
+    }
 }
 
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
@@ -642,6 +672,10 @@ html.lore-modal-open {
     border: 1px solid rgb(0 0 0 / 15%);
     border-radius: var(--portfolio-radius);
     padding: 20px;
+
+    @media (max-width: 959px) {
+        padding: 16px;
+    }
 
     .black-bg & {
         border-color: rgb(255 255 255 / 25%);
@@ -711,8 +745,8 @@ html.lore-modal-open {
     > .d-flex {
         gap: 20px 48px;
 
-        > .flex-1 {
-            display: none !important;
+        @media (max-width: 959px) {
+            column-gap: 24px;
         }
 
         > :is(.flex-6, .flex-7) {
@@ -1045,6 +1079,15 @@ html.lore-modal-open {
     }
 }
 
+/* Two-column content rows in Strange Frontiers, php/rpg/ and php/rpg/lore/ */
+.split-cols {
+    gap: 48px;
+
+    @media (max-width: 959px) {
+        column-gap: 24px;
+    }
+}
+
 /* Timeline (rpg-setting.php), starship classes (rpg-spacecraft.php) */
 .content-stack-sm {
     gap: 20px;
@@ -1175,17 +1218,38 @@ html.lore-modal-open {
 
 /* ========================================
    RPG MEDIA QUERIES
+   1199px: the side gutters collapse, so the side nav moves to the right edge
+           with its dot on the left to keep clear of headings and opening copy.
    992px: side nav and character sheet tighten.
    767px: side nav moves to the bottom-right corner, tabs and gallery shrink.
    ======================================== */
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1199px) {
     .rpg-links-rail {
-        left: 5vw;
+        left: auto;
+        right: 60px;
     }
 
     .rpg-links-clip .rpg-links {
-        left: 5vw;
+        left: auto;
+        right: 60px;
+    }
+
+    .rpg-links-rail .rpg-links,
+    .rpg-links-clip .rpg-links {
+        align-items: end;
+        padding-right: 0;
+        padding-left: 14px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .rpg-links-rail {
+        right: 5vw;
+    }
+
+    .rpg-links-clip .rpg-links {
+        right: 5vw;
     }
 
     .c-sheet {
@@ -1207,26 +1271,18 @@ html.lore-modal-open {
         position: fixed;
         top: auto;
         bottom: 24px;
-        left: auto;
         right: 24px;
         z-index: 4;
     }
 
     .rpg-links-rail .rpg-links {
         position: static;
-        align-items: end;
-        padding-right: 0;
-        padding-left: 14px;
     }
 
     .rpg-links-clip .rpg-links {
         top: auto;
         bottom: 24px;
-        left: auto;
         right: 24px;
-        align-items: end;
-        padding-right: 0;
-        padding-left: 14px;
     }
 
     .rpg-tab {

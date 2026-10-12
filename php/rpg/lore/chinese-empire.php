@@ -4,26 +4,50 @@
 <p class="copy">
 	Unfortunately, still unknown to the public, the Emperor vanished without a trace on the solar new year of 2228. The imperial household has striven to keep his disappearance a secret, but a quiet succession crisis is brewing between the Lady-in-Waiting and Zhang’s many heirs. The corporate syndicates that compose the Empire’s government have begun to sense weakness in the imperial household, and with weakness comes opportunity.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 1.7 billion<br>
-		Currency: rénmínbì (RMB)<br>
-		GDP: 71 trillion ERC<br>
-		Languages: Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao
-	</p>
-	<p class="copy flex-1">
-		Government: Corporatist imperial monarchy<br>
-		Capitol: Wuhan<br>
-		Leadership: Emperor Zhang of the Wuhan Dynasty<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>1.7 billion</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>rénmínbì (RMB)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>71 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>Mandarin, Indonesian, Vietnamese, Thai, Javanese, Filipino, Burmese, Malay, Khmer, Lao</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Corporatist imperial monarchy</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>Wuhan</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>Emperor Zhang of the Wuhan Dynasty</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -47,7 +71,6 @@
 				<li><?php echo sf_lore_link('zhulong', 'Zhulong'); ?> (Ark)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

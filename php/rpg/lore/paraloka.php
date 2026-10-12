@@ -1,30 +1,69 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Compatibility: High<br>
-		Elevation: 2<br>
-		Divergence: 8<br>
-		Distance: 4<br>
-		Aperture: 6
-	</p>
-	<p class="copy">
-		Population: 20 thousand est<br>
-		Average Temperature: -80.352°C<br>
-		Biome: Void<br>
-		Natural Resources: <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?><br>
-		Indigenous life: No
-	</p>
-	<p class="copy">
-		Discovered: 2114/<?php echo sf_lore_link('lunar-industrial-syndicate', 'The Third Lunar Industrial Syndicate'); ?><br>
-		Claim: Public<br>
-		Nations of Interest: As the source of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, 1/a/384 Paraloka is of interest to all nations in the systems.
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Compatibility</dt>
+			<dd>High</dd>
+		</div>
+		<div>
+			<dt>Elevation</dt>
+			<dd>2</dd>
+		</div>
+		<div>
+			<dt>Divergence</dt>
+			<dd>8</dd>
+		</div>
+		<div>
+			<dt>Distance</dt>
+			<dd>4</dd>
+		</div>
+		<div>
+			<dt>Aperture</dt>
+			<dd>6</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>20 thousand est</dd>
+		</div>
+		<div>
+			<dt>Average Temperature</dt>
+			<dd>-80.352°C</dd>
+		</div>
+		<div>
+			<dt>Biome</dt>
+			<dd>Void</dd>
+		</div>
+		<div>
+			<dt>Natural Resources</dt>
+			<dd><?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?></dd>
+		</div>
+		<div>
+			<dt>Indigenous life</dt>
+			<dd>No</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Discovered</dt>
+			<dd>2114/<?php echo sf_lore_link('lunar-industrial-syndicate', 'The Third Lunar Industrial Syndicate'); ?></dd>
+		</div>
+		<div>
+			<dt>Claim</dt>
+			<dd>Public</dd>
+		</div>
+		<div>
+			<dt>Nations of Interest</dt>
+			<dd>As the source of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, 1/a/384 Paraloka is of interest to all nations in the systems.</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>Overview</strong></h5>
@@ -40,7 +79,6 @@
 				To this day, Paraloka’s fortunes have remained unchanged. It’s a cold, barren, lifeless void with a single useful extractable resource, and the difficulty inherent in extracting that resource has limited investment to only a few specialized mining firms. That said, mining St-245/E6 is big business. The element is irreplaceable in numerous technologies that the societies of 2230 rely on. To date, no planar lock has placed any such mining venture within visible distance of another, implying a distance of over 100 light years between outposts at a minimum, with the true distance likely being far higher. This makes a census of the total mining activity on Paraloka functionally impossible, but published statistics from the four major switch harbors and their surrounding development put the known population at roughly twenty thousand operating personnel.
 			</p>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>Geography</strong></h5>

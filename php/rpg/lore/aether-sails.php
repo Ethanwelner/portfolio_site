@@ -1,4 +1,4 @@
-<div class="d-flex flex-wrap flex-xs-nowrap">
+<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">
 		<div class="line-container">
 			<h5><strong>Overview</strong></h5>
@@ -14,7 +14,6 @@
 			By replacing heavy-lift rockets in the task of escaping Earth orbit, aether sails were the sea change that enabled the <?php echo sf_lore_link('exodus', 'Exodus'); ?>. The aetheric field is at its strongest near a deep gravity well, and the field’s direction of “motion” is consistently against gravity’s pull. This allows any suitably equipped vessel to simply engage a few sails in the right orientation and be lifted up and into interplanetary space. As the vessel moves farther towards the neutral gravity of space, “cross winds” and other directional currents grow to replace the unidirectional outward flow, typically necessitating favorable winds or a takeover by rockets to stay on course.
 		</p>
 	</div>
-	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="flex-6">
 		<div class="line-container">
 			<h5><strong>History</strong></h5>

@@ -4,26 +4,50 @@
 <p class="copy">
 	It’s a testament to the success of the SDU’s model that it is, by far, the largest and most economically powerful nation in the systems. Maintaining unity and protecting territory across such a disparate collection of locations is challenging. The SDU’s territory and member states stretch as far afield as the <?php echo sf_lore_link('boneyard', 'Boneyard'); ?> and <?php echo sf_lore_link('tetra', 'Tetra'); ?> Arks, and New Persia in <?php echo sf_lore_link('pairidaeza', '210/c/18 “Pairidaeza”'); ?>.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 2.9 billion<br>
-		Currency: Earth Reserve Credits (ERC)<br>
-		GDP: 160 trillion ERC<br>
-		Languages: English, Russian, Portuguese, Japanese, German, French, Spanish, Korean, Italian, Polish, Dutch, Romanian
-	</p>
-	<p class="copy flex-1">
-		Government: Federal democratic republic<br>
-		Capitol: <?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)<br>
-		Leadership: President 10/Chrysanthemum<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>2.9 billion</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Earth Reserve Credits (ERC)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>160 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>English, Russian, Portuguese, Japanese, German, French, Spanish, Korean, Italian, Polish, Dutch, Romanian</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Federal democratic republic</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>President 10/Chrysanthemum</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -52,7 +76,6 @@
 				<li>New Persia (<?php echo sf_lore_link('pairidaeza', '210/c/18 - “<i>Pairidaeza</i>”'); ?>)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

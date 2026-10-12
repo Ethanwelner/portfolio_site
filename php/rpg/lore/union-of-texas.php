@@ -1,26 +1,50 @@
 <p class="copy">
 	The Union of Texas finds itself in a precarious position. Encircled by the Empire it fled, it has spent the last 130 years preparing for a war with its neighboring hegemon, a war that never came. In truth, the Union may have been doomed from the outset. Its territories suffered significant erosion and desertification in the 21st century, alongside the total devastation of an economy reliant on AI server towns and automated manufacturing. Repeated failed wars of conquest against <?php echo sf_lore_link('free-american-states', 'the Free American States'); ?> further bled its coffers dry, while five coups since 2100 have left the nation unstable, impoverished, and embittered. General Mortimer Cross, head of the latest junta to seize control of Austin, styles himself a reformer and is pursuing an uneasy reconciliation with <?php echo sf_lore_link('american-empire', 'the American Empire'); ?>. Meanwhile, the bordering Free States watch eagerly for an opportunity to sabotage this fragile peace and see the Union collapse once and for all.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 120 million<br>
-		Currency: Imperial Dollar (ID)<br>
-		GDP: 2.2 trillion ERC<br>
-		Languages: English, Spanish
-	</p>
-	<p class="copy flex-1">
-		Government: Military Republic<br>
-		Capitol: Austin<br>
-		Leadership: General Mortimer Cross<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>120 million</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Imperial Dollar (ID)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>2.2 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>English, Spanish</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Military Republic</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>Austin</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>General Mortimer Cross</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -42,7 +66,6 @@
 				<li>Former Kentucky</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

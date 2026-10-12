@@ -1,26 +1,50 @@
 <p class="copy">
 	Comprising holdings on Earth, Luna, and Mars, as well as dozens of other colonies, stations, and outposts, the Eighth Lunar Industrial Syndicate is an economic behemoth punching well above its weight. Having grown far beyond its origins as a simple business cartel, the Syndicate now finds itself saddled with a constitution, a national military, and board members elected by the former South American nations it was forced to annex at the point of a gun. It struggles with its duties to its shareholders and responsibility to its “Citizens,” enriching the former and forgetting the latter more often than not.
 </p>
-<div class="plane-attr-cols">
-	<p class="copy flex-1">
-		Population: 430 million<br>
-		Currency: Earth Reserve Credits (ERC)<br>
-		GDP: 34 trillion ERC<br>
-		Languages: English, Mandarin, Portuguese, Spanish, Various Others
-	</p>
-	<p class="copy flex-1">
-		Government: Plutocratic Board of Directors<br>
-		Capitol: Port Luna<br>
-		Leadership: CEO 6/Gold<br>
-		Notable Figures:
-	</p>
+<div class="info-cols">
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>430 million</dd>
+		</div>
+		<div>
+			<dt>Currency</dt>
+			<dd>Earth Reserve Credits (ERC)</dd>
+		</div>
+		<div>
+			<dt>GDP</dt>
+			<dd>34 trillion ERC</dd>
+		</div>
+		<div>
+			<dt>Languages</dt>
+			<dd>English, Mandarin, Portuguese, Spanish, Various Others</dd>
+		</div>
+	</dl>
+	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Government</dt>
+			<dd>Plutocratic Board of Directors</dd>
+		</div>
+		<div>
+			<dt>Capitol</dt>
+			<dd>Port Luna</dd>
+		</div>
+		<div>
+			<dt>Leadership</dt>
+			<dd>CEO 6/Gold</dd>
+		</div>
+		<div>
+			<dt>Notable Figures</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-5">
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
@@ -42,7 +66,6 @@
 				<li><?php echo sf_lore_link('ten-twenty-holding-corporation', '10/20 Holding Corporation'); ?> Headquarters (Deep Space)</li>
 			</ul>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-11">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

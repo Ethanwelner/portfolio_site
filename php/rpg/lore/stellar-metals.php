@@ -1,10 +1,22 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Headquartered: Stellar Metals Station (Deep Space)<br>
-		Employees:<br>
-		Market Cap:<br>
-		Industry:
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Headquartered</dt>
+			<dd>Stellar Metals Station (Deep Space)</dd>
+		</div>
+		<div>
+			<dt>Employees</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Market Cap</dt>
+			<dd></dd>
+		</div>
+		<div>
+			<dt>Industry</dt>
+			<dd></dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">

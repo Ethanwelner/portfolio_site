@@ -1,22 +1,37 @@
-<div class="plane-attr-cols">
-	<p class="copy">
-		Population: 8 million<br>
-		Route:
-	</p>
-	<p class="copy">
-		Nationality: <?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?><br>
-		Government: Direct Democracy
-	</p>
-	<p class="copy">
-		Major Industries: Ship construction, Station establishment, Arms manufacture, Ship and station breaking, Security
-	</p>
+<div class="info-cols">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Population</dt>
+			<dd>8 million</dd>
+		</div>
+		<div>
+			<dt>Route</dt>
+			<dd></dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Nationality</dt>
+			<dd><?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?></dd>
+		</div>
+		<div>
+			<dt>Government</dt>
+			<dd>Direct Democracy</dd>
+		</div>
+	</dl>
+	<dl class="copy attr-list">
+		<div>
+			<dt>Major Industries</dt>
+			<dd>Ship construction, Station establishment, Arms manufacture, Ship and station breaking, Security</dd>
+		</div>
+	</dl>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap">
+	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-7">
 			<div class="line-container">
 				<h5><strong>Overview</strong></h5>
@@ -26,7 +41,6 @@
 				Content coming soon
 			</p>
 		</div>
-		<div class="d-inline-flex align-items-center flex-1"></div>
 		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>

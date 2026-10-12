@@ -1,4 +1,4 @@
-<div class="d-flex flex-wrap flex-xs-nowrap">
+<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">
 		<div class="line-container">
 			<h5><strong>Overview</strong></h5>
@@ -20,7 +20,6 @@
 			The field effect produced by LFGs is delicate and prone to interference from sources of gravity. A Lorentz field will fail to cohere entirely within even a weak gravity well, typically only stabilizing around Lagrange lanes in the outer solar system. The failure of a single unit isn’t catastrophic, and having an entire array experience a cascade failure merely results in the ship returning to the inertial velocities it would have had were the field never present at all. Having a ship caught halfway within a field, however, can be disastrous. At a minimum, this causes serious damage to electrical and plumbing systems and irradiates a ship’s hull; at worst, it instantly rips a ship apart.
 		</p>
 	</div>
-	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="flex-6">
 		<div class="line-container">
 			<h5><strong>History</strong></h5>
