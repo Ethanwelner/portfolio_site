@@ -562,6 +562,128 @@ html.lore-modal-open {
     }
 }
 
+/* Strange Frontiers search, personal.php. Indexed and filled by
+   php/javascript-loads.php; results open in the lore popup. */
+.rpg-search {
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    z-index: 5;
+    display: none;
+    width: 320px;
+    transform: translateX(-50%);
+}
+
+body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
+    display: block;
+}
+
+.rpg-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    width: 15px;
+    height: 15px;
+    color: #9a9a9a;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.rpg-search-input {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 0 16px 0 38px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 18px;
+    background: var(--portfolio-black);
+    color: var(--portfolio-white);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    transition: border-color 200ms;
+}
+
+.rpg-search-input::placeholder {
+    color: #9a9a9a;
+    opacity: 1;
+}
+
+.rpg-search-input:focus {
+    outline: none;
+    border-color: #2dfc64;
+}
+
+.rpg-search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    width: 440px;
+    max-width: calc(100vw - 40px);
+    max-height: min(60vh, 520px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    border-radius: 8px;
+    background: var(--portfolio-white);
+    color: var(--portfolio-black);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
+    transform: translateX(-50%);
+}
+
+.rpg-search-result {
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.rpg-search-result:hover,
+.rpg-search-result.is-active {
+    background: #ececec;
+}
+
+.rpg-search-result-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.rpg-search-result-context {
+    display: block;
+    margin-top: 2px;
+    color: #6b6b6b;
+    font-size: 11px;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.rpg-search-result-snippet {
+    display: block;
+    margin-top: 4px;
+    color: #444;
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.rpg-search-result mark {
+    padding: 0;
+    background: color-mix(in srgb, #2dfc64 45%, transparent);
+    color: inherit;
+}
+
+.rpg-search-empty {
+    padding: 8px 12px;
+    color: #6b6b6b;
+    font-size: 13px;
+}
+
+@media (max-width: 991px) {
+    body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
+        display: none;
+    }
+}
+
 /* Panels switched by the .tech-field-tab buttons above */
 .tech-field-panel {
     display: none;
