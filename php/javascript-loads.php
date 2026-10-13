@@ -476,20 +476,24 @@
 		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
 		var loreModalReturnFocus = null;
 
+		function showLoreModal(titleHtml, bodyHtml, trigger) {
+			if ( ! $loreModal.hasClass( "is-open" ) ) {
+				loreModalReturnFocus = trigger;
+			}
+			$loreModalTitle.html( titleHtml );
+			$loreModalBody.html( bodyHtml );
+			$loreModalPanel.scrollTop( 0 );
+			$loreModal.addClass( "is-open" );
+			$( "html" ).addClass( "lore-modal-open" );
+			$loreModalClose.trigger( "focus" );
+		}
+
 		function openLoreModal(slug, trigger) {
 			var $entry = $( "#lore-" + slug );
 			if ( ! $entry.length ) {
 				return false;
 			}
-			if ( ! $loreModal.hasClass( "is-open" ) ) {
-				loreModalReturnFocus = trigger;
-			}
-			$loreModalTitle.html( $entry.find( ".lore-title" ).first().html() );
-			$loreModalBody.html( $entry.children( ".lore-body" ).html() );
-			$loreModalPanel.scrollTop( 0 );
-			$loreModal.addClass( "is-open" );
-			$( "html" ).addClass( "lore-modal-open" );
-			$loreModalClose.trigger( "focus" );
+			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.children( ".lore-body" ).html(), trigger );
 			return true;
 		}
 
@@ -535,6 +539,322 @@
 					event.preventDefault();
 					first.focus();
 				}
+			}
+		});
+
+		var $rpgSearch = $( ".rpg-search" );
+		var $rpgSearchInput = $rpgSearch.find( ".rpg-search-input" );
+		var $rpgSearchResults = $rpgSearch.find( ".rpg-search-results" );
+		var rpgSearchIndex = null;
+		var rpgSearchActive = -1;
+
+		function escapeSearchHtml(text) {
+			return text.replace( /[&<>"]/g, function( c ) {
+				return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ c ];
+			});
+		}
+
+		function collapseSearchText(text) {
+			return text.replace( /\s+/g, " " ).trim();
+		}
+
+		// Must keep the same length as the input so match positions line up for highlighting.
+		function foldSearchText(text) {
+			return text.replace( /[^\x00-\x7f]/g, function( c ) {
+				if ( c === "\u2018" || c === "\u2019" ) {
+					return "'";
+				}
+				if ( c === "\u201c" || c === "\u201d" ) {
+					return "\"";
+				}
+				var folded = c.normalize( "NFD" ).replace( /[\u0300-\u036f]/g, "" );
+				return folded.length === 1 ? folded : c;
+			}).toLowerCase();
+		}
+
+		function addRpgSearchEntry(entries, title, context, text, open) {
+			title = collapseSearchText( title );
+			text = collapseSearchText( text );
+			if ( ! title ) {
+				return;
+			}
+			entries.push({
+				title: title,
+				context: context.filter( Boolean ).join( " \u203a " ),
+				text: text,
+				foldedTitle: foldSearchText( title ),
+				foldedText: foldSearchText( text ),
+				open: open
+			});
+		}
+
+		function mechanicsSearchLevel(el) {
+			if ( el.tagName === "H3" ) {
+				return 1;
+			}
+			if ( el.tagName === "H4" ) {
+				return 2;
+			}
+			return el.classList.contains( "line-container" ) ? 3 : 0;
+		}
+
+		function openMechanicsSection(title, nodes) {
+			var $body = $( "<div>" ).append( $( nodes ).clone() );
+			$body.find( "[id]" ).removeAttr( "id" );
+			$body.find( "img[data-src]" ).each(function() {
+				this.src = this.getAttribute( "data-src" );
+				this.removeAttribute( "data-src" );
+			});
+			showLoreModal( escapeSearchHtml( title ), $body.html(), $rpgSearchInput[0] );
+		}
+
+		function buildRpgSearchIndex() {
+			var entries = [];
+			var loreContext = {};
+			var subTitle = "";
+
+			$( ".pane-frontiers" ).find( "h3.sub-title, .lore-entry" ).each(function() {
+				if ( this.tagName === "H3" ) {
+					subTitle = collapseSearchText( $( this ).text() );
+				} else {
+					var $panel = $( this ).closest( ".tech-field-panel" );
+					var panelTab = $panel.length ? collapseSearchText( $( "#" + $panel.attr( "aria-labelledby" ) ).text() ) : "";
+					loreContext[ this.id ] = [ subTitle, panelTab ];
+				}
+			});
+
+			$( ".lore-entry[id^='lore-']" ).each(function() {
+				var $entry = $( this );
+				var slug = this.id.slice( 5 );
+				addRpgSearchEntry( entries, $entry.find( ".lore-title" ).first().text(), loreContext[ this.id ] || [ "Lore" ], $entry.children( ".lore-body" ).text(), function() {
+					openLoreModal( slug, $rpgSearchInput[0] );
+				});
+			});
+
+			var h3 = "";
+			var h4 = "";
+			var line = "";
+			subTitle = "";
+			$( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box" ).each(function() {
+				var $el = $( this );
+				var title = collapseSearchText( $el.text() );
+
+				if ( $el.hasClass( "sub-title" ) ) {
+					subTitle = title;
+					h3 = h4 = line = "";
+					return;
+				}
+
+				if ( $el.hasClass( "trait-box" ) ) {
+					var traitName = collapseSearchText( $el.find( ".trait-name" ).text() );
+					var box = this;
+					addRpgSearchEntry( entries, traitName, [ subTitle, h3, line ], title.replace( traitName, "" ), function() {
+						openMechanicsSection( traitName, [ box ] );
+					});
+					return;
+				}
+
+				var level = mechanicsSearchLevel( this );
+				var context;
+				if ( level === 1 ) {
+					h3 = title;
+					h4 = line = "";
+					context = [ subTitle ];
+				} else if ( level === 2 ) {
+					h4 = title;
+					line = "";
+					context = [ subTitle, h3 ];
+				} else {
+					line = title;
+					context = [ subTitle, h3, h4 ];
+				}
+
+				var nodes = [];
+				for ( var node = this.nextElementSibling; node; node = node.nextElementSibling ) {
+					var nodeLevel = mechanicsSearchLevel( node );
+					if ( nodeLevel && nodeLevel <= level ) {
+						break;
+					}
+					if ( ! node.classList.contains( "bumper" ) ) {
+						nodes.push( node );
+					}
+				}
+				if ( ! nodes.length ) {
+					return;
+				}
+
+				addRpgSearchEntry( entries, title, context, $( nodes ).text(), function() {
+					openMechanicsSection( title, nodes );
+				});
+			});
+
+			return entries;
+		}
+
+		function highlightSearchText(text, terms) {
+			var folded = foldSearchText( text );
+			if ( folded.length !== text.length ) {
+				return escapeSearchHtml( text );
+			}
+			var ranges = [];
+			terms.forEach(function( term ) {
+				for ( var i = folded.indexOf( term ); i !== -1; i = folded.indexOf( term, i + term.length ) ) {
+					ranges.push( [ i, i + term.length ] );
+				}
+			});
+			ranges.sort(function( a, b ) {
+				return a[0] - b[0];
+			});
+			var html = "";
+			var cursor = 0;
+			ranges.forEach(function( range ) {
+				if ( range[1] <= cursor ) {
+					return;
+				}
+				var start = Math.max( range[0], cursor );
+				html += escapeSearchHtml( text.slice( cursor, start ) ) + "<mark>" + escapeSearchHtml( text.slice( start, range[1] ) ) + "</mark>";
+				cursor = range[1];
+			});
+			return html + escapeSearchHtml( text.slice( cursor ) );
+		}
+
+		function searchSnippet(entry, query, terms) {
+			var at = entry.foldedText.indexOf( query );
+			if ( at === -1 ) {
+				for ( var i = 0; i < terms.length && at === -1; i++ ) {
+					at = entry.foldedText.indexOf( terms[ i ] );
+				}
+			}
+			var start = at > 50 ? at - 50 : 0;
+			var end = Math.min( entry.text.length, start + 160 );
+			return ( start > 0 ? "\u2026" : "" ) + highlightSearchText( entry.text.slice( start, end ), terms ) + ( end < entry.text.length ? "\u2026" : "" );
+		}
+
+		function setRpgSearchActive(index) {
+			var $items = $rpgSearchResults.children( ".rpg-search-result" );
+			$items.removeClass( "is-active" ).attr( "aria-selected", "false" );
+			rpgSearchActive = index;
+			if ( index < 0 || index >= $items.length ) {
+				rpgSearchActive = -1;
+				$rpgSearchInput.removeAttr( "aria-activedescendant" );
+				return;
+			}
+			var item = $items.eq( index ).addClass( "is-active" ).attr( "aria-selected", "true" )[0];
+			$rpgSearchInput.attr( "aria-activedescendant", item.id );
+			item.scrollIntoView( { block: "nearest" } );
+		}
+
+		function closeRpgSearchResults() {
+			$rpgSearchResults.prop( "hidden", true ).empty();
+			$rpgSearchInput.attr( "aria-expanded", "false" ).removeAttr( "aria-activedescendant" );
+			rpgSearchActive = -1;
+		}
+
+		function runRpgSearch() {
+			var query = collapseSearchText( foldSearchText( $rpgSearchInput.val() ) );
+			if ( ! query ) {
+				closeRpgSearchResults();
+				return;
+			}
+			if ( ! rpgSearchIndex ) {
+				rpgSearchIndex = buildRpgSearchIndex();
+			}
+
+			var terms = query.split( " " );
+			var matches = [];
+			rpgSearchIndex.forEach(function( entry, order ) {
+				var score = 0;
+				var found = terms.every(function( term ) {
+					if ( entry.foldedTitle.indexOf( term ) !== -1 ) {
+						score += 10;
+						return true;
+					}
+					return entry.foldedText.indexOf( term ) !== -1;
+				});
+				if ( ! found ) {
+					return;
+				}
+				if ( entry.foldedTitle === query ) {
+					score += 100;
+				} else if ( entry.foldedTitle.indexOf( query ) === 0 ) {
+					score += 60;
+				} else if ( entry.foldedTitle.indexOf( query ) !== -1 ) {
+					score += 40;
+				} else if ( entry.foldedText.indexOf( query ) !== -1 ) {
+					score += 5;
+				}
+				matches.push( { entry: entry, score: score, order: order } );
+			});
+			matches.sort(function( a, b ) {
+				return b.score - a.score || a.order - b.order;
+			});
+
+			$rpgSearchResults.empty();
+			if ( ! matches.length ) {
+				$rpgSearchResults.append( $( "<li>", { "class": "rpg-search-empty", role: "presentation", text: "No results" } ) );
+			}
+			matches.slice( 0, 12 ).forEach(function( match, i ) {
+				var entry = match.entry;
+				var $item = $( "<li>", { "class": "rpg-search-result", id: "rpg-search-result-" + i, role: "option", "aria-selected": "false" } );
+				$item.append( $( "<span>", { "class": "rpg-search-result-title" } ).html( highlightSearchText( entry.title, terms ) ) );
+				if ( entry.context ) {
+					$item.append( $( "<span>", { "class": "rpg-search-result-context", text: entry.context } ) );
+				}
+				if ( entry.text ) {
+					$item.append( $( "<span>", { "class": "rpg-search-result-snippet" } ).html( searchSnippet( entry, query, terms ) ) );
+				}
+				$item.data( "entry", entry );
+				$rpgSearchResults.append( $item );
+			});
+			$rpgSearchResults.prop( "hidden", false ).scrollTop( 0 );
+			$rpgSearchInput.attr( "aria-expanded", "true" );
+			setRpgSearchActive( -1 );
+		}
+
+		function openRpgSearchResult($item) {
+			var entry = $item.data( "entry" );
+			if ( ! entry ) {
+				return;
+			}
+			closeRpgSearchResults();
+			entry.open();
+		}
+
+		$rpgSearchInput.on( "input focus", runRpgSearch );
+
+		$rpgSearchInput.on( "keydown", function( event ) {
+			var count = $rpgSearchResults.children( ".rpg-search-result" ).length;
+			if ( event.key === "ArrowDown" || event.key === "ArrowUp" ) {
+				if ( ! count ) {
+					return;
+				}
+				event.preventDefault();
+				var step = event.key === "ArrowDown" ? 1 : -1;
+				setRpgSearchActive( ( rpgSearchActive + step + count + ( rpgSearchActive === -1 && step < 0 ? 1 : 0 ) ) % count );
+			} else if ( event.key === "Enter" ) {
+				if ( count ) {
+					event.preventDefault();
+					openRpgSearchResult( $rpgSearchResults.children( ".rpg-search-result" ).eq( Math.max( rpgSearchActive, 0 ) ) );
+				}
+			} else if ( event.key === "Escape" ) {
+				if ( ! $rpgSearchResults.prop( "hidden" ) ) {
+					event.preventDefault();
+					closeRpgSearchResults();
+				}
+			}
+		});
+
+		$rpgSearchResults.on( "mousedown", ".rpg-search-result", function( event ) {
+			event.preventDefault();
+		});
+
+		$rpgSearchResults.on( "click", ".rpg-search-result", function() {
+			openRpgSearchResult( $( this ) );
+		});
+
+		$( document ).on( "mousedown", function( event ) {
+			if ( ! $( event.target ).closest( ".rpg-search" ).length ) {
+				closeRpgSearchResults();
 			}
 		});
 
