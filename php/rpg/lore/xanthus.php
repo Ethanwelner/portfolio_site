@@ -29,7 +29,7 @@
 			<dd>Parliamentary Democracy</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>4544 Xanthus</dd>
 		</div>
 		<div>

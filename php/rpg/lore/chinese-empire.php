@@ -29,7 +29,7 @@
 			<dd>Corporatist imperial monarchy</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Wuhan</dd>
 		</div>
 		<div>

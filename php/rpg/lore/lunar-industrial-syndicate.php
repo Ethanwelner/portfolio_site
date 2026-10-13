@@ -26,7 +26,7 @@
 			<dd>Plutocratic Board of Directors</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Port Luna</dd>
 		</div>
 		<div>

@@ -29,7 +29,7 @@
 			<dd>Technocratic monarchy</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Pataliputra (New Delhi on Earth)</dd>
 		</div>
 		<div>

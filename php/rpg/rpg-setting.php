@@ -529,6 +529,15 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2165</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Construction of <?php echo sf_lore_link('tetra', 'Tetra'); ?> begins.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2170 – Present day</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -538,11 +547,29 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2172</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li><?php echo sf_lore_link('tetra', 'Tetra'); ?> officially opens.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2175</strong></h6>
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
 							<li><?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2176</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>The <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?> are expanded, and <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> is founded to enforce them.</li>
 						</ul>
 					</div>
 					<div>

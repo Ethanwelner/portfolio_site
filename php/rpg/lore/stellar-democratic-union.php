@@ -29,7 +29,7 @@
 			<dd>Federal democratic republic</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</dd>
 		</div>
 		<div>

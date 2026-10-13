@@ -26,7 +26,7 @@
 			<dd>Military Republic</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Austin</dd>
 		</div>
 		<div>

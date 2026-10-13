@@ -26,7 +26,7 @@
 			<dd>Various</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Various</dd>
 		</div>
 		<div>
