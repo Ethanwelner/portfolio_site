@@ -7,6 +7,19 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/12/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Filled in Tetra Frontiers Co.’s headquarters, employees, and industry, and added its 2177 founding to the timeline.</li>
+						<li>Added the ratification of the Protocols of Planar Exploration and Exploitation to the timeline in 2161.</li>
+						<li>Filled in Tetra’s route and locations, Dreft’s notable figures, and Dreft’s territories.</li>
+						<li>Starship classes now list their tonnage and notable ships.</li>
+						<li>Ark info boxes are now two columns, with a new Locations field.</li>
+						<li>Removed the empty Locations tab from the Setting section. Locations will live inside their related entries instead.</li>
+						<li>Info box labels now sit above their values, and the page nav moves to the right on narrower screens.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Renamed the Adventure tab to Adventures and outlined the first adventure module, Another World, set on Isekai and Tetra.</li>

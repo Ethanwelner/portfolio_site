@@ -53,9 +53,12 @@
 				<h5><strong>Territories</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Planar Territories</h6>
+			<h6>Planar Territories (<?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>”'); ?>)</h6>
 			<ul class="copy mb-0">
-				<li>The Kingdom of Dreft (516/a/198 - “<i>Isekai</i>”)</li>
+				<li>Herminst (Capitol)</li>
+				<li>Glintl</li>
+				<li>The King’s Woods</li>
+				<li>Tetra (Switch Port town)</li>
 			</ul>
 		</div>
 		<div class="flex-11">

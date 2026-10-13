@@ -85,6 +85,23 @@ function sf_lore_titles() {
 		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
+		'herminst' => 'Herminst',
+		'glintl' => 'Glintl',
+		'tetra-switch-port' => 'Tetra (Switch Port Town)',
+		'kings-woods' => 'The King’s Woods',
+		'mende-river' => 'The Mende River',
+		'moffit-river' => 'The Moffit River',
+		'corsine-mountains' => 'The Corsine Mountains',
+		'diplomatic-wing' => 'The Diplomatic Wing',
+		'sdu-capitol-campus' => 'The Stellar Democratic Union Capitol Campus',
+		'drovus-empire' => 'The Drovus Empire',
+		'kingdom-of-sorellion' => 'The Kingdom of Sorellion',
+		'kingdom-of-karsef' => 'The Kingdom of Karsef',
+		'planar-protocols' => 'The Protocols of Planar Exploration and Exploitation',
+		'isekai-magic' => 'Magic on Isekai',
+		'isekai-monsters' => 'Monsters of Isekai',
+		'exploration-lodges' => 'Exploration Lodges',
+		'sunsickness' => 'Sunsickness',
 	];
 	return $titles;
 }
