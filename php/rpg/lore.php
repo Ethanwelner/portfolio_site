@@ -93,14 +93,14 @@ function sf_lore_titles() {
 		'moffit-river' => 'The Moffit River',
 		'corsine-mountains' => 'The Corsine Mountains',
 		'diplomatic-wing' => 'The Diplomatic Wing',
-		'sdu-capitol-campus' => 'The Stellar Democratic Union Capitol Campus',
+		'sdu-presidential-campus' => 'The Stellar Democratic Union Presidential Campus',
 		'drovus-empire' => 'The Drovus Empire',
 		'kingdom-of-sorellion' => 'The Kingdom of Sorellion',
 		'kingdom-of-karsef' => 'The Kingdom of Karsef',
 		'planar-protocols' => 'The Protocols of Planar Exploration and Exploitation',
 		'isekai-magic' => 'Magic on Isekai',
 		'isekai-monsters' => 'Monsters of Isekai',
-		'exploration-lodges' => 'Exploration Lodges',
+		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
 	];
 	return $titles;
