@@ -41,7 +41,6 @@
 				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="true">Setting</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-history" aria-controls="timeline-history" aria-selected="false">Timeline</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
-				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-locations" aria-controls="timeline-locations" aria-selected="false">Locations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
 			</div>
 
@@ -548,6 +547,15 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2177</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li><?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?> is founded on <?php echo sf_lore_link('tetra', 'Tetra'); ?>.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2184</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -592,12 +600,6 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-
-			<div class="tech-field-panel" id="timeline-locations" role="tabpanel" aria-labelledby="tab-timeline-locations">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
 			</div>
 
 			<div class="tech-field-panel" id="timeline-nations" role="tabpanel" aria-labelledby="tab-timeline-nations">

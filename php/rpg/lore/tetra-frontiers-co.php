@@ -2,11 +2,11 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Headquartered</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</dd>
 		</div>
 		<div>
 			<dt>Employees</dt>
-			<dd></dd>
+			<dd>1,650 plus contractors</dd>
 		</div>
 		<div>
 			<dt>Market Cap</dt>
@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<dt>Industry</dt>
-			<dd></dd>
+			<dd>Switch gate exploration and exploitation, Plane leasing, Inspection and certification</dd>
 		</div>
 	</dl>
 </div>
