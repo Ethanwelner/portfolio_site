@@ -26,7 +26,7 @@
 			<dd>Federal democratic republic</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>Kinshasa</dd>
 		</div>
 		<div>

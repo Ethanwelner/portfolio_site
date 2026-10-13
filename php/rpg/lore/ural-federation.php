@@ -26,7 +26,7 @@
 			<dd>Tribal federalism</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>None</dd>
 		</div>
 		<div>

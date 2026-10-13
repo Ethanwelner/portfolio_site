@@ -98,6 +98,8 @@ function sf_lore_titles() {
 		'kingdom-of-sorellion' => 'The Kingdom of Sorellion',
 		'kingdom-of-karsef' => 'The Kingdom of Karsef',
 		'planar-protocols' => 'The Protocols of Planar Exploration and Exploitation',
+		'bureau-of-planar-management' => 'The Bureau of Planar Management and Enforcement',
+		'ichiha-ushida' => 'Ichiha Ushida',
 		'isekai-magic' => 'Magic on Isekai',
 		'isekai-monsters' => 'Monsters of Isekai',
 		'explorers-lodge' => 'The Explorers’ Lodge',

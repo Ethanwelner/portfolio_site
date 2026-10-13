@@ -7,6 +7,15 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/13/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Wrote Tetra’s overview and history.</li>
+						<li>Added Tetra’s construction in 2165, its opening in 2172, and the 2176 expansion of the Protocols of Planar Exploration and Exploitation alongside the founding of the Bureau of Planar Management and Enforcement to the timeline.</li>
+						<li>Nation info boxes now list a Capital instead of a Capitol.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/12/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Filled in Tetra Frontiers Co.’s headquarters, employees, and industry, and added its 2177 founding to the timeline.</li>
@@ -24,7 +33,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Renamed the Adventure tab to Adventures and outlined the first adventure module, Another World, set on Isekai and Tetra.</li>
 						<li>Added Dreft to the Nations tab and set Isekai’s population.</li>
-						<li>Wrote the Chinese Empire and Eighth Lunar Industrial Syndicate histories and filled in every nation’s capitol.</li>
+						<li>Wrote the Chinese Empire and Eighth Lunar Industrial Syndicate histories and filled in every nation’s capital.</li>
 						<li>Added Stellar Metals and 10/20 Holding Corporation to the Corporations tab.</li>
 						<li>Timeline entries are now bulleted, with new events drawn from the nation histories.</li>
 						<li>Starship classes now sit in Details accordions, and nation histories get a wider column.</li>

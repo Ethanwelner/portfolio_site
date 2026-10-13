@@ -29,7 +29,7 @@
 			<dd>Anarcho-Syndicalism</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd>The 23rd Great þing</dd>
 		</div>
 		<div>

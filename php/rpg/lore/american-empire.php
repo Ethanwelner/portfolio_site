@@ -26,7 +26,7 @@
 			<dd>Constitutional imperial monarchy with democratic self-government</dd>
 		</div>
 		<div>
-			<dt>Capitol</dt>
+			<dt>Capital</dt>
 			<dd><?php echo sf_lore_link('new-york', 'New York'); ?> (Ark)</dd>
 		</div>
 		<div>
