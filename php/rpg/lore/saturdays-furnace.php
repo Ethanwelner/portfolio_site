@@ -69,6 +69,13 @@
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
+			<p class="copy mb-5">
+				Content coming soon
+			</p>
+			<div class="line-container">
+				<h5><strong>History</strong></h5>
+				<div class="line"></div>
+			</div>
 			<p class="copy mb-0">
 				Content coming soon
 			</p>
