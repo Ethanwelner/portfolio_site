@@ -7,6 +7,20 @@
 
 			<div class="blog-posts">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/14/2026</i></p>
+					<p class="copy">
+						Cursor just made a massive change to their billing system that instantly rate-limited my use of it unless I tripled how much I was paying them per month. Is there anything Elon touches that doesn’t turn to ash? Time to finally jump ship for Claude Code and actually get this DeepSeek harness fully capable. Grok was noticeably worse than other models in Cursor anyway, and given their close collaboration, they were constantly shoving you onto random Grok models.
+					</p>
+					<p class="copy">
+						Oh, also, look at this roof cat I found the other day!
+					</p>
+					<div class="blog-post-images">
+						<img loading="lazy" data-src="img/blog page stuff/roof_cat_1.webp" width="600" height="798" alt="Tabby cat sitting on a rooftop ledge against an ivy-covered brick building, above old paneled garage doors">
+						<img loading="lazy" data-src="img/blog page stuff/roof_cat_2.webp" width="600" height="798" alt="Close-up of a tabby cat with half-closed eyes resting on a roof ledge in front of a wall of ivy">
+					</div>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/10/2026</i></p>
 					<p class="copy">
 						Man, for an app that forces a disruptive relaunch Cursor updates a loooooot.
