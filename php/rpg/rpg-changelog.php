@@ -11,6 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Every known plane now has a History section under its Overview (coming soon).</li>
 						<li>Paraloka’s naming story moved from its Overview to its new History section.</li>
+						<li>Planar exploration companies are now Planar Exploration and Holding Companies, including Holy Oak Discovery Services and Tetra Frontiers Co.</li>
 					</ul>
 				</article>
 
