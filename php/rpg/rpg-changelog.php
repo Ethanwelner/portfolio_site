@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/14/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Wrote Isekai’s overview, paraphysics, geography, and the start of its history, and updated its compatibility, divergence, distance, and aperture.</li>
 						<li>Every known plane now has a History section under its Overview (coming soon).</li>
 						<li>Paraloka’s naming story moved from its Overview to its new History section.</li>
 					</ul>
