@@ -90,8 +90,15 @@
 			<p class="copy">
 				Looking out onto Paraloka is often described as a frightening experience. The plane is dark in a way far deeper than any night on Earth could hope to be, and the lack of curvature on the plane’s “surface,” together with the lack of oxygen scattering, means that objects impossibly distant would still be visible, were they to exist at all. To date, the only objects capable of appearing on Paraloka’s horizon are those brought by humanity: the surface is geometrically perfect down to the atomic level, and no other structures have ever been observed. Given the present gravity and the monocultural nature of the plane’s contents, it’s theorized that the ground of Paraloka is in truth a slab of St-245/E6 roughly 163.8 km in depth.
 			</p>
-			<p class="copy mb-0">
+			<p class="copy mb-5">
 				The area around most switch gate harbors tends to be dotted with active or abandoned mining equipment, alongside the pits and stacked cut-blocks of St-245/E6 waiting to be transited back to Earth.
+			</p>
+			<div class="line-container">
+				<h5><strong>History</strong></h5>
+				<div class="line"></div>
+			</div>
+			<p class="copy mb-0">
+				Content coming soon
 			</p>
 		</div>
 	</div>

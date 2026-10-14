@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/14/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Every known plane now has a History section under its Geography (coming soon).</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/13/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote Tetra’s overview and history.</li>
