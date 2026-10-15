@@ -91,11 +91,9 @@
 			<p class="copy">
 				“Schools” of magic in the local <?php echo sf_lore_link('dreft', 'kingdom’s'); ?> capital, <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, teach officially sanctioned and “safe” forms of magic and appear to be at least loosely affiliated with other transnational colleges. Practitioners outside of that licensed system are referred to as witches, hedge wizards, archons, and a wide variety of other titles, depending on context. To date, no individual emigrating to 516/a/198 from Earth baseline has been able to trigger any paraphysical effect, even under the direct tutelage and supervision of master “mages.” An individual’s ability to use magic after immigrating to Earth baseline appears to have a half-life of six days, with the duration seemingly related to the inherent “mana” of the given mage.
 			</p>
-			<p class="copy mb-0">
+			<p class="copy mb-5">
 				Intentional manipulation of magic is not the only way the plane’s paraphysical effects can be observed. Natural expressions of this field effect manifest in the spontaneous generation of new life forms, often referred to as “monsters.” Inanimate objects or ongoing effects can also attain a form of sentience, with stone “golems” or wandering “elementals” animating for short periods of time, often wreaking havoc, before dissipating or being rendered inert.
 			</p>
-		</div>
-		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>Geography</strong></h5>
 				<div class="line"></div>
@@ -106,9 +104,11 @@
 			<p class="copy">
 				The planet, called Erdef by the inhabitants around the switch port, has gravity 2% lighter than Earth baseline’s, and surveys indicate a near match in its proportions of water, atmospheric oxygen, and mineral content. Orbiting its main-sequence yellow star, the planet traces an orbit identical to Earth’s. This, combined with its single large moon, gives the planet seasons and tides nearly identical to those of Earth circa 1000 AD.
 			</p>
-			<p class="copy mb-5">
+			<p class="copy mb-0">
 				These environmental similarities mean that traveling its five large continents, handful of large demi-continental islands, and two ice-capped polar regions is strikingly similar to traveling the wilds of Earth baseline. The region immediately surrounding the switch port is a pleasant temperate forest with a small mountain range nearby, large stretches of heavy woodland, and low valleys. It has an ocean coast to the magnetic east and a large arterial river emptying into a heavily populated bay.
 			</p>
+		</div>
+		<div class="flex-6">
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
