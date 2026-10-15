@@ -11,6 +11,8 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote Isekai’s overview, paraphysics, geography, and the start of its history, and updated its compatibility, divergence, distance, and aperture.</li>
 						<li>Dreft’s capital is now Port Herminst.</li>
+						<li>Isekai’s history now covers the first survey team’s ambush by a Murk Legs, and humans first reach Dreft in 2186 instead of 2185.</li>
+						<li>Added Murk Legs to Parazoology (coming soon).</li>
 						<li>Every known plane now has a History section under its Overview (coming soon).</li>
 						<li>Paraloka’s naming story moved from its Overview to its new History section.</li>
 					</ul>
