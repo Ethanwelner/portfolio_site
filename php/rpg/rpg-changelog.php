@@ -11,6 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Finished Isekai’s history, from the Southtown Surveyors’ rescue and Castle Tetra’s caravan town to Dreft’s succession crisis.</li>
 						<li>Moved the survey team’s ambush into its own story, The Account of the Team’s Trouble, linked from Isekai’s history.</li>
+						<li>Known plane info boxes now have a Locations field, filled in for Isekai.</li>
 					</ul>
 				</article>
 

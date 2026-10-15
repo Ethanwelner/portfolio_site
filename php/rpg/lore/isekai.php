@@ -56,6 +56,10 @@
 			<dt>Nations of Interest</dt>
 			<dd><?php echo sf_lore_link('stellar-democratic-union', 'The Stellar Democratic Union'); ?></dd>
 		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd><?php echo sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)'); ?>, <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, <?php echo sf_lore_link('glintl', 'Glintl'); ?>, Illinsdott, <?php echo sf_lore_link('kings-woods', 'The King’s Woods'); ?>, <?php echo sf_lore_link('mende-river', 'The Mende River'); ?>, <?php echo sf_lore_link('moffit-river', 'The Moffit River'); ?>, <?php echo sf_lore_link('corsine-mountains', 'The Corsine Mountains'); ?></dd>
+		</div>
 	</dl>
 </div>
 <details class="lore-details">
