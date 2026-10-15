@@ -1,5 +1,5 @@
 <p class="copy">
-	Dreft is a small, multi-species kingdom surrounding the only extant <?php echo sf_lore_link('switch-gates', 'switch harbor'); ?> in <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> with a technological and social baseline similar to that found in pre-industrial medieval cultures. A small, cosmopolitan regional power amidst larger neighbors, Dreft’s history is that of a relatively sleepy countryside surrounding the major trading ports of Herminst and Glintl. Life would likely have continued that way, were it not for the appearance of human planar explorers in 2185.
+	Dreft is a small, multi-species kingdom surrounding the only extant <?php echo sf_lore_link('switch-gates', 'switch harbor'); ?> in <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> with a technological and social baseline similar to that found in pre-industrial medieval cultures. A small, cosmopolitan regional power amidst larger neighbors, Dreft’s history is that of a relatively sleepy countryside surrounding the major trading ports of Port Herminst and Glintl. Life would likely have continued that way, were it not for the appearance of human planar explorers in 2186.
 </p>
 <p class="copy">
 	Exposure to the technologies and ideas of humanity has brought opportunity and peril to the kingdom, disrupting its institutions and fundamentally altering its cultural and religious underpinnings. For decades, the subjects of Dreft have left for the systems, many never to return; those who do are always changed by the marvels they’ve seen. Though Dreft has grown rich through trade with these strange foreigners from beyond, it has also become a target for jealous and avaricious rivals, especially the powerful Drovus Empire. There are those in Dreft who would like nothing more than to see the switch harbor burned to the ground, along with its malign influence over their once-peaceful home.
@@ -30,7 +30,7 @@
 		</div>
 		<div>
 			<dt>Capital</dt>
-			<dd>Castle Herminst</dd>
+			<dd>Port Herminst</dd>
 		</div>
 		<div>
 			<dt>Leadership</dt>
@@ -55,7 +55,7 @@
 			</div>
 			<h6>Planar Territories (<?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>”'); ?>)</h6>
 			<ul class="copy mb-0">
-				<li>Herminst (Capital)</li>
+				<li>Port Herminst (Capital)</li>
 				<li>Glintl</li>
 				<li>The King’s Woods</li>
 				<li>Tetra (Switch Port town)</li>
@@ -67,7 +67,7 @@
 				<div class="line"></div>
 			</div>
 			<ul class="copy mb-0">
-				<li>Discovered in 2185.</li>
+				<li>Discovered in 2186.</li>
 			</ul>
 		</div>
 	</div>

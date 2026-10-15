@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/lore.php'; ?>
 <div class="w-100">
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -18,9 +19,7 @@
 				</div>
 
 				<div class="tech-field-panel is-active" id="para-parazoology" role="tabpanel" aria-labelledby="tab-para-parazoology">
-					<p class="copy mb-0">
-						Content coming soon
-					</p>
+					<?php sf_lore_entry('murk-legs', 'h4', 'mb-3'); ?>
 				</div>
 
 				<div class="tech-field-panel" id="para-parasapients" role="tabpanel" aria-labelledby="tab-para-parasapients">

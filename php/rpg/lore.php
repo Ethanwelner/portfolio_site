@@ -85,7 +85,7 @@ function sf_lore_titles() {
 		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
-		'herminst' => 'Herminst',
+		'herminst' => 'Port Herminst',
 		'glintl' => 'Glintl',
 		'tetra-switch-port' => 'Tetra (Switch Port Town)',
 		'kings-woods' => 'The King’s Woods',
@@ -104,6 +104,7 @@ function sf_lore_titles() {
 		'isekai-monsters' => 'Monsters of Isekai',
 		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
+		'murk-legs' => 'Murk Legs',
 	];
 	return $titles;
 }
