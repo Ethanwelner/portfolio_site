@@ -87,6 +87,7 @@ function sf_lore_titles() {
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
 		'herminst' => 'Port Herminst',
 		'glintl' => 'Glintl',
+		'illinsdott' => 'Illinsdott',
 		'tetra-switch-port' => 'Tetra (Switch Port Town)',
 		'kings-woods' => 'The King’s Woods',
 		'mende-river' => 'The Mende River',
