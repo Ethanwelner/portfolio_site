@@ -107,7 +107,7 @@
 				The planet, called Erdef by the inhabitants around the switch port, has gravity 2% lighter than Earth baseline’s, and surveys indicate a near match in its proportions of water, atmospheric oxygen, and mineral content. Orbiting its main-sequence yellow star, the planet traces an orbit identical to Earth’s. This, combined with its single large moon, gives the planet seasons and tides nearly identical to those of Earth circa 1000 AD.
 			</p>
 			<p class="copy mb-5">
-				These environmental similarities mean that traveling its five large continents, handful of large demi-continental islands, and two ice-capped polar regions is strikingly similar to traveling the wilds of Earth baseline. The region immediately surrounding the switch port is a pleasant temperate forest with a small mountain range nearby, large stretches of heavy woodland, and low valleys. It has an ocean coast to the magnetic east of the switch port and a large arterial river emptying into a heavily populated bay.
+				These environmental similarities mean that traveling its five large continents, handful of large demi-continental islands, and two ice-capped polar regions is strikingly similar to traveling the wilds of Earth baseline. The region immediately surrounding the switch port is a pleasant temperate forest with a small mountain range nearby, large stretches of heavy woodland, and low valleys. It has an ocean coast to the magnetic east and a large arterial river emptying into a heavily populated bay.
 			</p>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
