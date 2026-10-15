@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/15/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Finished Isekai’s history, from the Southtown Surveyors’ rescue and Castle Tetra’s caravan town to Dreft’s succession crisis.</li>
+						<li>Moved the survey team’s ambush into its own story, The Account of the Team’s Trouble, linked from Isekai’s history.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/14/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote Isekai’s overview, paraphysics, geography, and the start of its history, and updated its compatibility, divergence, distance, and aperture.</li>

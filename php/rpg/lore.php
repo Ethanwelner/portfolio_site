@@ -105,6 +105,7 @@ function sf_lore_titles() {
 		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
 		'murk-legs' => 'Murk Legs',
+		'isekai-teams-trouble' => 'The Account of the Team’s Trouble',
 	];
 	return $titles;
 }
