@@ -307,6 +307,13 @@
                                         </div>
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                     </div>
+                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                        <div class="flex-14">
+                                            <?php include 'php/rpg/dreftian-starters.php'; ?>
+                                        </div>
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                    </div>
                                 </div>
                                 <div class="separator"></div>
                             </div>
