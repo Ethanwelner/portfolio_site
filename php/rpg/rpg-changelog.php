@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/16/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The Kingdom of Dreft map is now 2560 pixels wide, so it loads faster.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/15/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Finished Isekai’s history, from the Southtown Surveyors’ rescue and Castle Tetra’s caravan town to Dreft’s succession crisis.</li>
