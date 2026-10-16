@@ -330,6 +330,12 @@
 					syncPersonalShellHeight();
 				}
 			}, true );
+			// Lazy panel images load after window load, so resize the shell when they arrive.
+			document.addEventListener( "load", function( event ) {
+				if ( event.target.tagName === "IMG" ) {
+					syncPersonalShellHeight();
+				}
+			}, true );
 		} else if ( $( ".rpg-tab" ).length ) {
 			activatePaneTab( rpgTabFromHash(), false );
 		}
