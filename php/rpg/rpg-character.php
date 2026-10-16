@@ -44,18 +44,18 @@
 			<p class="copy">Humans can take genetic engineering feats.</p>
 
 			<div class="line-container">
-				<h5><strong>Origin: Terran Demarchy</strong></h5>
+				<h5><strong>Origin: The American Empire</strong></h5>
 				<div class="line"></div>
 			</div>
 			<h6>
 				Public Education<br>
-				Terrans start with the following knowledge feats
+				Imperial citizens start with the following knowledge feats
 			</h6>
 			<p class="copy">
-				Homeworld Interlag (language)<br>
-				Terran History (1)<br>
-				Terran Geography (1)<br>
-				Terran Law (1)
+				English (language)<br>
+				American History (1)<br>
+				American Geography (1)<br>
+				Imperial Law (1)
 			</p>
 
 			<div class="line-container">
@@ -122,7 +122,7 @@
 			<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5>|
 			<h5 class="d-inline-block"><i>0</i> <strong>Piercing</strong></h5>|
 			<h5 class="d-inline-block"><i>1</i> <strong>Slashing</strong></h5>|
-			<h5 class="d-inline-block"><i>0</i> <strong>Energy</strong></h5>
+			<h5 class="d-inline-block"><i>0</i> <strong>Heat</strong></h5>
 		</div>
 	</div>
 	<div class="d-flex flex-column c-sheet-box">
@@ -138,21 +138,21 @@
 					<li>Kind</li>
 					<li>Human</li>
 					<li>Origin</li>
-					<li>Terran Demarchy</li>
+					<li>The American Empire</li>
 					<li>Profession</li>
 					<li>Smuggler</li>
 					<li>Past</li>
 					<li>Raised By The Streets</li>
 					<li>Cash</li>
-					<li>2,000</li>
+					<li>2,000 ID</li>
 					<li>Wealth</li>
-					<li>15,000</li>
+					<li>15,000 ID</li>
 					<li>Languages</li>
-					<li>Terran Standard, Spanish, Orcoid</li>
+					<li>English, Spanish, Orcoid</li>
 				</ul>
 			</div>
 			<div class="d-inline-flex flex-4">
-				<p class="copy">Edwin Humble is a Void-Truck driver and part-time smuggler in the orbit of the Terran Demarchy’s capital of Earth. Raised rough at a young age, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father's cargo <?php echo sf_lore_link('shuttles', 'shuttle'); ?> during one of the man's rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the ‘family business’ and runs a small-time cargo transportation operation out of his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin's two goals in life are to get rich and to find out who was responsible for his father's murder.</p>
+				<p class="copy">Edwin Humble is a Void-Truck driver and part-time smuggler in Earth orbit, working the American Empire’s Sol territories. Raised rough at a young age, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father's cargo <?php echo sf_lore_link('shuttles', 'shuttle'); ?> during one of the man's rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the ‘family business’ and runs a small-time cargo transportation operation out of his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin's two goals in life are to get rich and to find out who was responsible for his father's murder.</p>
 			</div>
 			<div class="d-inline-flex flex-4">
 				<div>
@@ -428,14 +428,14 @@
 					<h5>Knowledges</h5>
 					<div class="line"></div>
 				</div>
-				<li><span class="tiny-text">Knowledge:</span> Terran History (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> Terran Geography (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> Terran Law (1)</li>
+				<li><span class="tiny-text">Knowledge:</span> American History (1)</li>
+				<li><span class="tiny-text">Knowledge:</span> American Geography (1)</li>
+				<li><span class="tiny-text">Knowledge:</span> Imperial Law (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Contraband (2)</li>
 				<li><span class="tiny-text">Knowledge:</span> Security (2)</li>
 				<li><span class="tiny-text">Knowledge:</span> Streetwise (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Criminality (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> Terran Standard</li>
+				<li><span class="tiny-text">Knowledge:</span> English</li>
 				<li><span class="tiny-text">Knowledge:</span> Spanish</li>
 				<li><span class="tiny-text">Knowledge:</span> Orcoid</li>
 			</ul>

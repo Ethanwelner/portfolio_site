@@ -96,7 +96,7 @@
               <div class="line"></div>
             </div>
             <p>Knowledges are Traits that are gained exclusively either by in-game RP effort or are conferred by background packages. Multiple backgrounds can confer the same knowledge Trait, but unless otherwise specified, this does not increase the knowledge's rank. Knowledge can be learned multiple times, but each rank increase involves a commensurate level of increased time, difficulty, or financial investment. Knowledges and additional knowledge ranks can also be conferred by items, magic, or cybernetics or can be gained temporarily via research, but there are limitations to how these forms of knowledge can be utilized.<br><br>
-            When creating a new character, a player can choose to use universal or background traits that they would gain due to their level to gain knowledge Traits instead. This is to represent additional areas of knowledge the character would have accrued up to that point in their lives but that may not be specifically written out in the character's background packages (such as the character getting a bachelor's in history, allowing them to gain History (2) as a starting character from the Terran Demarchy). It is up to the GM to decide how high a knowledge rank can be gained in this way.<br><br>
+            When creating a new character, a player can choose to use universal or background traits that they would gain due to their level to gain knowledge Traits instead. This is to represent additional areas of knowledge the character would have accrued up to that point in their lives but that may not be specifically written out in the character's background packages (such as the character getting a bachelor's in history, allowing them to gain History (2) as a starting character from the American Empire). It is up to the GM to decide how high a knowledge rank can be gained in this way.<br><br>
             Outside of character creation, knowledge can only be gained via in-game RP occurrences, such as a character spending a semester learning fencing or a character having the layout of a forest magically conveyed to them. It is at the GM's discretion to determine how easy or difficult knowledges are to attain and where their limitations are.</p>
 
             <div class="line-container">
@@ -121,7 +121,7 @@
               <h5><strong>Circumstance</strong></h5>
               <div class="line"></div>
             </div>
-            <p class="copy">Circumstance Traits describe a character's relationship with the world around them and will typically list noteworthy or exceptional characteristics. While virtually any description of a character's place in society could be listed as a Trait, this should be reserved for important or unique aspects of a character. As an example, membership in a thieves guild would be listed as a Circumstance Trait, but membership at Costco would not.</p>
+            <p class="copy">Circumstance Traits describe a character's relationship with the world around them and will typically list noteworthy or exceptional characteristics. While virtually any description of a character's place in society could be listed as a Trait, this should be reserved for important or unique aspects of a character. As an example, membership in a thieves guild would be listed as a Circumstance Trait, but a Luna-HI frequent shipper account would not.</p>
 
             <div class="line-container">
               <h5><strong>Conditions</strong></h5>
@@ -154,9 +154,9 @@
             </div>
 
             <div class="trait-box">
-              <div class="trait-name">Knowledge: Terran Law - Ranked - Knowledge</div>
+              <div class="trait-name">Knowledge: Imperial Law - Ranked - Knowledge</div>
               <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-              <div class="copy">- This character has knowledge of the Terran legal code and can be assumed to be familiar with the laws and legal codes of Terran societies.</div>
+              <div class="copy">- This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories.</div>
             </div>
 
             <div class="trait-box">
@@ -201,12 +201,12 @@
             </div>
 
             <div class="trait-box">
-              <div class="trait-name">Homeworld Interlag (Spoken) (Written) - Language</div>
+              <div class="trait-name">Mandarin (Spoken) (Written) - Language</div>
               <div class="d-inline-flex flex-gap-4">
                 <div class="badge bg-dark white-text d-inline-flex">(Memory 2)</div>
                 <div class="badge bg-dark white-text d-inline-flex">(Intuition 2)</div>
               </div>
-              <div class="copy">- This character is conversational with the Homeworld Interlag language and can converse in it.</div>
+              <div class="copy">- This character is conversational with the Mandarin language and can converse in it.</div>
             </div>
 
             <div class="trait-box">
@@ -394,12 +394,12 @@
             </div>
 
             <div class="trait-box">
-              <div class="trait-name">Wanted on Terra - Conveyed - Circumstance</div>
+              <div class="trait-name">Wanted in Sol - Conveyed - Circumstance</div>
               <div class="copy">Temporary (Lost when the character's innocence is proclaimed or they are caught)</div>
               <div class="d-inline-flex flex-gap-4">
                 <div class="badge bg-dark white-text d-inline-flex">(None)</div>
               </div>
-              <div class="copy">- This character is wanted on all Terran planets for past crimes.</div>
+              <div class="copy">- This character is wanted by the nations of the Sol system for past crimes.</div>
               <div class="copy">- This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</div>
             </div>
 
@@ -418,7 +418,7 @@
               <div class="d-inline-flex flex-gap-4">
                 <div class="badge bg-dark white-text d-inline-flex">(None)</div>
               </div>
-              <div class="copy">- This character has access to an Inheritance of 2 million Terran Credits currently safely contained in a bank.</div>
+              <div class="copy">- This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank.</div>
             </div>
 
           </div>
@@ -457,10 +457,10 @@
             </div>
 
             <div class="trait-box">
-              <div class="trait-name">Ghost Sight - Conveyed - Condition - Injury</div>
-              <div class="copy">Temporary (A character gains this trait if they are at 0 or less HP)</div>
-              <div class="copy">- This character is dead and cannot perform voluntary actions.</div>
-              <div class="copy">- This character cannot be healed by any means unless otherwise stated.</div>
+              <div class="trait-name">Ghost Sight - Conveyed - Condition</div>
+              <div class="copy">Temporary (Lost when the effect that granted this Trait ends)</div>
+              <div class="copy">- This character perceives beyond the veil.</div>
+              <div class="copy">- This character can see and hear the supernatural.</div>
             </div>
 
           </div>
