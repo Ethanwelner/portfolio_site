@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster.</li>
+						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster. Politics, Religion, Military, Cultural Institutions, and Magic sections sit under the map (coming soon).</li>
 						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
 					</ul>
 				</article>
