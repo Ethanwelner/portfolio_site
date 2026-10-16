@@ -1446,3 +1446,18 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         padding: .75rem;
     }
 }
+
+/* Hero image pulled 24px past both sides of its column (Isekai map, personal.php) */
+.breakout-img {
+    width: calc(100% + 48px);
+    max-width: none;
+    margin-left: -24px;
+    margin-right: -24px;
+
+    /* Below 768px the page gutter is only 20px: go edge to edge instead of past it */
+    @media (max-width: 767px) {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
