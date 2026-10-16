@@ -120,13 +120,17 @@ function sf_lore_body($slug) {
 	include __DIR__ . '/lore/' . $slug . '.php';
 }
 
-// Renders a lore body with its Details accordion unwrapped, so everything shows inline.
-function sf_lore_body_flat($slug) {
+// Renders a lore body without its Details accordion. $extraInfoCol is optional
+// markup (e.g. a <dl class="copy flex-1 attr-list">) appended to the info box.
+function sf_lore_body_summary($slug, $extraInfoCol = '') {
 	ob_start();
 	sf_lore_body($slug);
 	$html = ob_get_clean();
-	$html = preg_replace('#<details class="lore-details">\s*<summary.*?</summary>#s', '<div class="lore-flat">', $html);
-	echo str_replace('</details>', '</div>', $html);
+	$html = preg_replace('#\s*<details class="lore-details">.*?</details>#s', '', $html);
+	if ($extraInfoCol !== '') {
+		$html = preg_replace('#(<div class="info-cols">.*?</dl>)(\s*</div>)#s', '$1' . "\n" . $extraInfoCol . '$2', $html, 1);
+	}
+	echo $html;
 }
 
 // Slugs already rendered on the page, so the modal store can skip them.

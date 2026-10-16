@@ -248,7 +248,10 @@
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                         <div class="flex-14">
                                             <div class="mb-5">
-                                                <?php sf_lore_body_flat('dreft'); ?>
+                                                <?php
+                                                $dreftLocations = '<dl class="copy flex-1 attr-list"><div><dt>Locations</dt><dd>' . sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)') . ', ' . sf_lore_link('herminst', 'Port Herminst') . ', ' . sf_lore_link('glintl', 'Glintl') . ', ' . sf_lore_link('illinsdott', 'Illinsdott') . ', ' . sf_lore_link('kings-woods', 'The King’s Woods') . ', ' . sf_lore_link('mende-river', 'The Mende River') . ', ' . sf_lore_link('moffit-river', 'The Moffit River') . ', ' . sf_lore_link('corsine-mountains', 'The Corsine Mountains') . '</dd></div></dl>';
+                                                sf_lore_body_summary('dreft', $dreftLocations);
+                                                ?>
                                             </div>
                                             <img loading="lazy" data-src="img/kingdom_of_dreft17.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="breakout-img">
                                         </div>
