@@ -1447,14 +1447,21 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* Hero image pulled 24px past both sides of its column (Isekai map, personal.php) */
+/* Hero image pulled 48px past both sides of its column (Isekai map, personal.php) */
 .breakout-img {
-    width: calc(100% + 48px);
+    width: calc(100% + 96px);
     max-width: none;
-    margin-left: -24px;
-    margin-right: -24px;
+    margin-left: -48px;
+    margin-right: -48px;
 
-    /* Below 768px the page gutter is only 20px: go edge to edge instead of past it */
+    /* Up to 992px the container is 90vw, so the gutter is 5vw: never pull past it */
+    @media (max-width: 992px) {
+        width: calc(100% + min(96px, 10vw));
+        margin-left: max(-48px, -5vw);
+        margin-right: max(-48px, -5vw);
+    }
+
+    /* Below 768px the page gutter is only 20px: go edge to edge */
     @media (max-width: 767px) {
         width: calc(100% + 40px);
         margin-left: -20px;
