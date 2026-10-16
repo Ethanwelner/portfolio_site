@@ -11,7 +11,8 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Updated the Kingdom of Dreft map: Port Herminst sits on the point north of its old spot, a walled town guards a road through the Corsine Pass into Karsef, a small mountain range in Sorellion feeds rivers to the east and west, and there’s new swamp in southern Dreft and grassland north of the inland sea.</li>
 						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster. Politics, Religion, Military, Cultural Institutions, and Magic sections sit under the map (coming soon).</li>
-						<li>Added an Ark Tetra and Planar Exploration section to the Another World adventure (coming soon).</li>
+						<li>Added a Building a Dreftian heading to the Isekai section and an Ark Tetra and Planar Exploration section to the Another World adventure (both coming soon).</li>
+						<li>The Species background category is now Kind, so it covers AI cores and other non-biological characters.</li>
 						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
 						<li>The American Empire, Chinese Empire, and Lunar Industrial Syndicate histories are now timelines, with dates matching the setting’s timeline.</li>
 					</ul>

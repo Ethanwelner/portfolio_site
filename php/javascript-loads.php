@@ -956,7 +956,7 @@
                 'roll', 'rolls', 'Roll', 'Rolls',
                 'ability', 'abilities', 'Ability', 'Abilities',
                 'stat', 'stats', 'Stat', 'Stats',
-				'species', 'species', 'Species', 'Species',
+				'kind', 'kinds', 'Kind', 'Kinds',
 				'origin', 'origins', 'Origin', 'Origins',
 				'profession', 'professions', 'Profession', 'Professions',
 				'past', 'Past', 'pasts', 'Pasts',
