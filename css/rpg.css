@@ -1468,3 +1468,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         margin-right: -20px;
     }
 }
+
+/* Starter Kinds, Origins, Professions, Pasts (php/rpg/dreftian-starters.php) */
+.starter-entry + .starter-entry {
+    margin-top: 1.5rem;
+}
+
+.starter-entry h6 {
+    margin-bottom: .5rem;
+}

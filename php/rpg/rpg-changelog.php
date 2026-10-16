@@ -12,6 +12,7 @@
 						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster. Politics, Religion, Military, Cultural Institutions, and Magic sections sit under the map (coming soon).</li>
 						<li>Added a Building a Dreftian heading to the Isekai section and an Ark Tetra and Planar Exploration section to the Another World adventure (both coming soon).</li>
 						<li>The Species background category is now Kind, so it covers AI cores and other non-biological characters.</li>
+						<li>Building a Dreftian now has placeholder starter packages: the Isek, Tatot, and Guwain Kinds, plus Dreftian Origins, Professions, and Pasts.</li>
 						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
 					</ul>
 				</article>
