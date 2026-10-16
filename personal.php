@@ -229,7 +229,84 @@
                                             </ul>
                                         </li>
                                     </ul>
-                                    <img loading="lazy" data-src="img/kingdom_of_dreft17.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="w-100 mt-4">
+                                </div>
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="breakout shadow-diffuse black-bg white-text">
+                                <div class="separator"></div>
+                                <div class="container">
+                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                        <div class="flex-14">
+                                            <h3 class="sub-title mb-3" id="dreft-map">516/a/198 - “<i>Isekai</i>” and the Kingdom of Dreft</h3>
+                                            <div class="copy stinger white mb-3">The Plane, Land, Ecology, and People</div>
+                                        </div>
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                    </div>
+                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                        <div class="flex-14">
+                                            <div class="mb-5">
+                                                <?php
+                                                $dreftLocations = '<dl class="copy flex-1 attr-list"><div><dt>Locations</dt><dd>' . sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)') . ', ' . sf_lore_link('herminst', 'Port Herminst') . ', ' . sf_lore_link('glintl', 'Glintl') . ', ' . sf_lore_link('illinsdott', 'Illinsdott') . ', ' . sf_lore_link('kings-woods', 'The King’s Woods') . ', ' . sf_lore_link('mende-river', 'The Mende River') . ', ' . sf_lore_link('moffit-river', 'The Moffit River') . ', ' . sf_lore_link('corsine-mountains', 'The Corsine Mountains') . '</dd></div></dl>';
+                                                sf_lore_body_summary('dreft', $dreftLocations);
+                                                ?>
+                                            </div>
+                                            <img loading="lazy" data-src="img/kingdom_of_dreft17.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="breakout-img">
+                                            <div class="d-flex flex-wrap flex-xs-nowrap split-cols mt-5">
+                                                <div class="flex-7">
+                                                    <div class="line-container">
+                                                        <h5><strong>Politics</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <p class="copy mb-5">
+                                                        Content coming soon
+                                                    </p>
+                                                    <div class="line-container">
+                                                        <h5><strong>Religion</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <p class="copy mb-5">
+                                                        Content coming soon
+                                                    </p>
+                                                    <div class="line-container">
+                                                        <h5><strong>Military</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <p class="copy mb-0">
+                                                        Content coming soon
+                                                    </p>
+                                                </div>
+                                                <div class="flex-6">
+                                                    <div class="line-container">
+                                                        <h5><strong>Cultural Institutions</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <p class="copy mb-5">
+                                                        Content coming soon
+                                                    </p>
+                                                    <div class="line-container">
+                                                        <h5><strong>Magic</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <p class="copy mb-0">
+                                                        Content coming soon
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="separator"></div>
+                            <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
+                                <div class="flex-2 d-none d-xl-inline-flex"></div>
+                                <div class="flex-14">
+                                    <h3 class="sub-title mb-3" id="tetra-exploration">Ark Tetra and Planar Exploration</h3>
+                                    <div class="copy stinger black mb-3">Coming soon</div>
                                 </div>
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>
