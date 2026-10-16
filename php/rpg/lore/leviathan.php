@@ -56,6 +56,10 @@
 			<dt>Nations of Interest</dt>
 			<dd>As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?>, 513/y/11 Leviathan is of interest to all nations in the systems.</dd>
 		</div>
+		<div>
+			<dt>Locations</dt>
+			<dd></dd>
+		</div>
 	</dl>
 </div>
 <details class="lore-details">
