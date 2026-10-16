@@ -13,6 +13,7 @@
 						<li>Moved the survey team’s ambush into its own story, The Account of the Team’s Trouble, linked from Isekai’s history.</li>
 						<li>Known plane info boxes now have a Locations field, filled in for Isekai.</li>
 						<li>Added Illinsdott (coming soon).</li>
+						<li>Added a map of the Kingdom of Dreft and its neighbors to the Another World adventure.</li>
 					</ul>
 				</article>
 
