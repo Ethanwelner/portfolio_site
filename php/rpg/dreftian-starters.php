@@ -82,7 +82,7 @@
 	<div class="starter-entry">
 		<h6><strong><?php echo sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)'); ?></strong></h6>
 		<p class="copy mb-2">The caravan town that grew up around Castle Tetra, where Dreft meets the systems.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> Homeworld Interlag (language), Earth Baseline Customs (1), The Switch Port (1)</p>
+		<p class="copy mb-0"><strong>Knowledge feats:</strong> English (language), Earth Baseline Customs (1), The Switch Port (1)</p>
 	</div>
 	<div class="starter-entry">
 		<h6><strong><?php echo sf_lore_link('illinsdott', 'Illinsdott'); ?></strong></h6>
