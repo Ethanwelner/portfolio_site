@@ -13,6 +13,7 @@
 						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster. Politics, Religion, Military, Cultural Institutions, and Magic sections sit under the map (coming soon).</li>
 						<li>Added an Ark Tetra and Planar Exploration section to the Another World adventure (coming soon).</li>
 						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
+						<li>The American Empire, Chinese Empire, and Lunar Industrial Syndicate histories are now timelines, with dates matching the setting’s timeline.</li>
 					</ul>
 				</article>
 

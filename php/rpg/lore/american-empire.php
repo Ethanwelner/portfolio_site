@@ -86,14 +86,14 @@
 				<div class="line"></div>
 			</div>
 			<ul class="copy mb-0">
-				<li>In the tumultuous 2040s, a state of martial law was declared and elections in the United States were suspended.</li>
-				<li>The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
-				<li>Under the pretext of preventing drug trafficking, the US invaded Mexico and split it into three new states.</li>
-				<li>By executive decree, multiple states were reorganized.</li>
-				<li>Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
-				<li>A tense nuclear and economic standoff persisted over the next two decades.</li>
-				<li>The secession of Florida broke the stalemate, with 23 additional states seceding from the empire to become independent countries.</li>
-				<li>Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed eight additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
+				<li>2046 – In the tumultuous 2040s, a state of martial law was declared and elections in the United States were suspended.</li>
+				<li>2046–2048 – The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
+				<li>2048–2051 – Under the pretext of preventing drug trafficking, the US invaded Mexico and split it into three new states.</li>
+				<li>2052 – By executive decree, multiple states were reorganized.</li>
+				<li>2054 – Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
+				<li>2054–2072 – A tense nuclear and economic standoff persisted over the next two decades.</li>
+				<li>2072–2074 – The secession of Florida broke the stalemate, with 23 additional states seceding from the empire to become independent countries.</li>
+				<li>2074–2100 – Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed eight additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
 			</ul>
 		</div>
 	</div>
