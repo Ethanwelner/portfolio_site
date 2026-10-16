@@ -240,7 +240,7 @@
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                         <div class="flex-14">
                                             <h3 class="sub-title mb-3" id="dreft-map">516/a/198 - “<i>Isekai</i>” and the Kingdom of Dreft</h3>
-                                            <div class="copy stinger white mb-3">The land and its people</div>
+                                            <div class="copy stinger white mb-3">The Plane, Land, Ecology, and People</div>
                                         </div>
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                     </div>
