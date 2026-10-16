@@ -247,6 +247,9 @@
                                     <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                         <div class="flex-14">
+                                            <div class="mb-5">
+                                                <?php sf_lore_body_flat('dreft'); ?>
+                                            </div>
                                             <img loading="lazy" data-src="img/kingdom_of_dreft17.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="breakout-img">
                                         </div>
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>

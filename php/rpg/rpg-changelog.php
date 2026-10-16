@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, and it’s 2560 pixels wide so it loads faster.</li>
+						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s full nation entry, and it’s 2560 pixels wide so it loads faster.</li>
 					</ul>
 				</article>
 

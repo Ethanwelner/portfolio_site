@@ -120,6 +120,15 @@ function sf_lore_body($slug) {
 	include __DIR__ . '/lore/' . $slug . '.php';
 }
 
+// Renders a lore body with its Details accordion unwrapped, so everything shows inline.
+function sf_lore_body_flat($slug) {
+	ob_start();
+	sf_lore_body($slug);
+	$html = ob_get_clean();
+	$html = preg_replace('#<details class="lore-details">\s*<summary.*?</summary>#s', '<div class="lore-flat">', $html);
+	echo str_replace('</details>', '</div>', $html);
+}
+
 // Slugs already rendered on the page, so the modal store can skip them.
 function sf_lore_rendered($slug = null) {
 	static $rendered = [];
