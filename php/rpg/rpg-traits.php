@@ -20,7 +20,7 @@
             <br><br>
             Traits are almost always additive, conveying some additional capability or capacity that a character has, though a rare few can convey negative attributes or restrictions. Trait effects are wide-ranging, from bonuses to certain skill checks to combat buffs to new abilities. They can describe a character's relationships to a society, such as memberships in exclusive organizations or even a wanted status for a criminal on the run. Traits can be temporary conditions, such as describing the ramifications of a character's broken leg. Because Traits are so varied, they will typically be organized on a character’s sheet by their theme or by how they are used.
             <br><br>
-            Characters start with a series of Traits based on their background packages. A character’s Species, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there a character gains additional feats through accruing experience and leveling up or through in-game circumstances.
+            Characters start with a series of Traits based on their background packages. A character’s Kind, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there a character gains additional feats through accruing experience and leveling up or through in-game circumstances.
             <br><br>
             There are three primary ways permanent Traits are gained:
           </p>
@@ -82,7 +82,7 @@
 
           <h3>Conveyed Traits</h3>
           <p class="copy mb-3">
-            These are Traits that cannot be taken when a character levels up unless the GM allows it. These will often represent tangible improvements to a character that would be difficult to justify without a relevant roleplaying rationale. As an example, the Eagle Eye Trait implies a tangible and significant improvement to a character's long-distance vision. This could come about as a result of mystical training, mutation, a latent ability of a Species or Origin, or some other rationale. Conveyed Traits will often not have a minimum stat requirement.
+            These are Traits that cannot be taken when a character levels up unless the GM allows it. These will often represent tangible improvements to a character that would be difficult to justify without a relevant roleplaying rationale. As an example, the Eagle Eye Trait implies a tangible and significant improvement to a character's long-distance vision. This could come about as a result of mystical training, mutation, a latent ability of a Kind or Origin, or some other rationale. Conveyed Traits will often not have a minimum stat requirement.
           </p>
 
           <div class="bumper"></div>
@@ -115,7 +115,7 @@
               <h5><strong>Abilities</strong></h5>
               <div class="line"></div>
             </div>
-            <p class="copy">Abilities are Traits that confer some sort of ability to a character. This can come in a wide variety of forms, from a character's ability to fly being granted by Natural Flight to a character's ability to Hide in Plain Sight conferring their ability to sneak and go undetected even while being observed. Abilities are the most common kind of trait to be conferred by items or equipment, as they represent some sort of specific physical or mental feat that a character can perform. Not all abilities are physical, but most manifest as something other than modifying a skill check. Often abilities are Innate to a Species or culture and will be automatically conferred to them by their Species or Origin packages. An ability Trait will always describe what it does and when it can be used, though it will be at the GM's discretion to determine the boundaries of when an ability can be applicable to a situation.</p>
+            <p class="copy">Abilities are Traits that confer some sort of ability to a character. This can come in a wide variety of forms, from a character's ability to fly being granted by Natural Flight to a character's ability to Hide in Plain Sight conferring their ability to sneak and go undetected even while being observed. Abilities are the most common type of trait to be conferred by items or equipment, as they represent some sort of specific physical or mental feat that a character can perform. Not all abilities are physical, but most manifest as something other than modifying a skill check. Often abilities are Innate to a Kind or culture and will be automatically conferred to them by their Kind or Origin packages. An ability Trait will always describe what it does and when it can be used, though it will be at the GM's discretion to determine the boundaries of when an ability can be applicable to a situation.</p>
 
             <div class="line-container">
               <h5><strong>Circumstance</strong></h5>

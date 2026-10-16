@@ -181,7 +181,7 @@
 							Disarming a bomb while underwater. (Memory)(Grace)(Demeanor)
 						</div>
 						<div>
-							Being in communication with someone reading the defusal manual for the bomb could give significant advantage to this kind of check.
+							Being in communication with someone reading the defusal manual for the bomb could give significant advantage to this type of check.
 						</div>
 					</div>
 				</div>
@@ -195,7 +195,7 @@
 							Deciphering an alien language (Logic)(Empathy)(Intuition)
 						</div>
 						<div>
-							Having a team of research assistants could give significant Advantage when attempting this kind of check, and getting the most out of them may even require several Empathy or Persuasion checks of their own.
+							Having a team of research assistants could give significant Advantage when attempting this type of check, and getting the most out of them may even require several Empathy or Persuasion checks of their own.
 						</div>
 					</div>
 				</div>

@@ -13,7 +13,7 @@
 			
 			<!-- OVERVIEW -->
 			<p class="copy my-3">
-				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two kinds of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A character's Species will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
+				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's Inner Ring stats determine baseline statistics like Hit Points, Vibe Points, or Savvy Points. A character's Outer Ring stats determine Skill Checks and access to feats. A character's Kind will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
 			</p>
 			<ul class="copy">
 				<li>When your character gains a level you get a point to spend in any Inner Ring stat.</li>
@@ -44,13 +44,13 @@
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
 			<ul class="copy">
-				<li>Some Species will have lowered maximums; the below example is a human and cannot exceed 15 in any Inner or Outer Ring stat due to the Unexceptional Trait in the Species section of its Background.</li>
-				<li>The below character started with 1 in each stat due to the human Generalist Trait in the Species section of its Background.</li>
+				<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any Inner or Outer Ring stat due to the Unexceptional Trait in the Kind section of its Background.</li>
+				<li>The below character started with 1 in each stat due to the human Generalist Trait in the Kind section of its Background.</li>
 				<li>Humans are intended to be the average baseline in this system.</li>
 				<li>This example character has 9 points spent in Physical so 27 to spend in the Outer Ring stats.</li>
 				<li>This character has spent only 2 points in Social and 1 in Mental, so its access to Traits that go beyond simple feats of brute strength will be very limited.</li>
 				<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
-				<li>Universal Traits are available to any character, Background feats have requirements based on Species, Origin, or Profession.</li>
+				<li>Universal Traits are available to any character, Background feats have requirements based on Kind, Origin, or Profession.</li>
 				<li>This character has oriented their stats to be a strong, but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
 				<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (8 Grace) (4 Intuition) with any effectiveness, even if they got their hands on one.</li>
 				<li>They're definitely not becoming a Master Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>

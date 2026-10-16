@@ -14,7 +14,7 @@
 		<ul class="copy">
 			<li>Character Level is tracked separately from Outer Ring stats.</li>
 			<li>Inner Ring stats are listed as a single number docked to their Outer Ring lines.</li>
-			<li>The Outer Ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what kind of feat they gain.</li>
+			<li>The Outer Ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of feat they gain.</li>
 			<li>Characters select a race, origin, profession, and past.</li>
 			<li>The character's race determines their starting stats, max stats, grants any unique ability the race may possess, and grants access to various feat categories.</li>
 			<li>The character's origin grants access to a starting set of origin feats, typically a mix of regular and knowledge feats. It also grants access to selectable feats related to the origin as well as other RP specific things (wealth, identification, etc).</li>
@@ -31,7 +31,7 @@
 		<h3 class="mb-3">Backgrounds being used in the sample character sheet</h3>
 		<div class="copy">
 			<div class="line-container">
-				<h5><strong>Species: Human</strong></h5>
+				<h5><strong>Kind: Human</strong></h5>
 				<div class="line"></div>
 			</div>
 			<h6>Generalists</h6>
