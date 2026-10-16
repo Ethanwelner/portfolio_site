@@ -85,8 +85,9 @@ function sf_lore_titles() {
 		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
-		'herminst' => 'Herminst',
+		'herminst' => 'Port Herminst',
 		'glintl' => 'Glintl',
+		'illinsdott' => 'Illinsdott',
 		'tetra-switch-port' => 'Tetra (Switch Port Town)',
 		'kings-woods' => 'The King’s Woods',
 		'mende-river' => 'The Mende River',
@@ -104,6 +105,8 @@ function sf_lore_titles() {
 		'isekai-monsters' => 'Monsters of Isekai',
 		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
+		'murk-legs' => 'Murk Legs',
+		'isekai-teams-trouble' => 'The Account of the Team’s Trouble',
 	];
 	return $titles;
 }
@@ -115,6 +118,19 @@ function sf_lore_title($slug) {
 
 function sf_lore_body($slug) {
 	include __DIR__ . '/lore/' . $slug . '.php';
+}
+
+// Renders a lore body without its Details accordion. $extraInfoCol is optional
+// markup (e.g. a <dl class="copy flex-1 attr-list">) appended to the info box.
+function sf_lore_body_summary($slug, $extraInfoCol = '') {
+	ob_start();
+	sf_lore_body($slug);
+	$html = ob_get_clean();
+	$html = preg_replace('#\s*<details class="lore-details">.*?</details>#s', '', $html);
+	if ($extraInfoCol !== '') {
+		$html = preg_replace('#(<div class="info-cols">.*?</dl>)(\s*</div>)#s', '$1' . "\n" . $extraInfoCol . '$2', $html, 1);
+	}
+	echo $html;
 }
 
 // Slugs already rendered on the page, so the modal store can skip them.

@@ -7,8 +7,37 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/16/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Updated the Kingdom of Dreft map: Port Herminst sits on the point north of its old spot, a walled town guards a road through the Corsine Pass into Karsef, a small mountain range in Sorellion feeds rivers to the east and west, and there’s new swamp in southern Dreft and grassland north of the inland sea.</li>
+						<li>The Kingdom of Dreft map now has its own section on the Another World adventure, alongside Dreft’s overview and the locations of Dreft and Isekai, and it’s 2560 pixels wide so it loads faster. Politics, Religion, Military, Cultural Institutions, and Magic sections sit under the map (coming soon).</li>
+						<li>Added a Building a Dreftian heading to the Isekai section and an Ark Tetra and Planar Exploration section to the Another World adventure (both coming soon).</li>
+						<li>The Species background category is now Kind, so it covers AI cores and other non-biological characters.</li>
+						<li>Building a Dreftian now has placeholder starter packages: the Isek, Tatot, and Guwain Kinds, plus Dreftian Origins, Professions, and Pasts.</li>
+						<li>The mechanics examples now use the setting’s Earth: the sample character is from the American Empire, and examples use Imperial Law, Mandarin, Earth Reserve Credits, and Luna-HI instead of the old Terran placeholders. Fixed the sample sheet’s Heat resistance and the Ghost Sight Trait.</li>
+						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
+						<li>The American Empire, Chinese Empire, and Lunar Industrial Syndicate histories are now timelines, with dates matching the setting’s timeline.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
+					<p class="copy mb-3"><i>10/15/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Finished Isekai’s history, from the Southtown Surveyors’ rescue and Castle Tetra’s caravan town to Dreft’s succession crisis.</li>
+						<li>Moved the survey team’s ambush into its own story, The Account of the Team’s Trouble, linked from Isekai’s history.</li>
+						<li>Known plane info boxes now have a Locations field, filled in for Isekai.</li>
+						<li>Added Illinsdott (coming soon).</li>
+						<li>Added a map of the Kingdom of Dreft and its neighbors to the Another World adventure.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/14/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Wrote Isekai’s overview, paraphysics, geography, and the start of its history, and updated its compatibility, divergence, distance, and aperture.</li>
+						<li>Dreft’s capital is now Port Herminst.</li>
+						<li>Isekai’s history now covers its first manned survey and the team’s ambush by a Murk Legs, as told in the explorer 18/Dialectic’s <i>Field Notes from Another World</i>, and humans first reach Dreft in 2186 instead of 2185.</li>
+						<li>Added Murk Legs to Parazoology (coming soon).</li>
 						<li>Every known plane now has a History section under its Overview (coming soon).</li>
 						<li>Paraloka’s naming story moved from its Overview to its new History section.</li>
 						<li>Planar exploration companies are now Planar Exploration and Holding Companies, including Holy Oak Discovery Services and Tetra Frontiers Co.</li>
