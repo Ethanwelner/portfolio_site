@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<dt>Industry</dt>
-			<dd>Planar Exploration</dd>
+			<dd>Planar Exploration and Holding</dd>
 		</div>
 	</dl>
 </div>

@@ -17,6 +17,7 @@
 						<li>The mechanics examples now use the setting’s Earth: the sample character is from the American Empire, and examples use Imperial Law, Mandarin, Earth Reserve Credits, and Luna-HI instead of the old Terran placeholders. Fixed the sample sheet’s Heat resistance and the Ghost Sight Trait.</li>
 						<li>Wrote Dreft’s history, from its founding in 630 KE to Queen Walpurgis the Third’s death in 990 KE.</li>
 						<li>The American Empire, Chinese Empire, and Lunar Industrial Syndicate histories are now timelines, with dates matching the setting’s timeline.</li>
+						<li>Planar exploration companies are now Planar Exploration and Holding Companies, including Holy Oak Discovery Services, Tetra Frontiers Co., and the companies competing for Isekai’s coordinates.</li>
 					</ul>
 				</article>
 

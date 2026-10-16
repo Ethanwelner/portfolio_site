@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<dt>Industry</dt>
-			<dd>Switch gate exploration and exploitation, Plane leasing, Inspection and certification</dd>
+			<dd>Planar exploration and holding, Plane leasing, Inspection and certification</dd>
 		</div>
 	</dl>
 </div>

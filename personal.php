@@ -216,7 +216,7 @@
                                         <li>Competitors and opposition to TFC are engaging in corporate espionage.
                                             <ul>
                                                 <li>There is significant money to be made smuggling banned exotic materials out of Isekai.</li>
-                                                <li>Competing planar investment companies would pay top dollar for the coordinates to Isekai.</li>
+                                                <li>Competing planar exploration and holding companies would pay top dollar for the coordinates to Isekai.</li>
                                                 <li>Human supremacist groups would like to see Isekai closed permanently, and having Dreft collapse would be a strong argument for banning switch gate access to planes with sentient inhabitants.</li>
                                                 <li>Other human supremacist groups would like to see Dreft conquered and integrated into a conceptual human empire.</li>
                                             </ul>
