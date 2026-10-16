@@ -239,7 +239,7 @@
                                     <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
                                         <div class="flex-14">
-                                            <h3 class="sub-title mb-3" id="dreft-map">The Kingdom of Dreft</h3>
+                                            <h3 class="sub-title mb-3" id="dreft-map">516/a/198 - “<i>Isekai</i>” and the Kingdom of Dreft</h3>
                                             <div class="copy stinger white mb-3">Coming soon</div>
                                         </div>
                                         <div class="flex-2 d-none d-xl-inline-flex"></div>
