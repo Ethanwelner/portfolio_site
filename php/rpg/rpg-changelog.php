@@ -10,6 +10,8 @@
 					<p class="copy mb-3"><i>10/17/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Known plane info boxes now have a Stability field (coming soon).</li>
+						<li>Switch gates: a lock’s stability now decides how far a gate can be moved without retuning.</li>
+						<li>The matter swapped in the first switch-gate catastrophe was no larger than a red blood cell.</li>
 					</ul>
 				</article>
 
