@@ -20,6 +20,10 @@
 			<dt>Aperture</dt>
 			<dd></dd>
 		</div>
+		<div>
+			<dt>Stability</dt>
+			<dd></dd>
+		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>

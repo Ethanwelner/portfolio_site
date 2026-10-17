@@ -15,7 +15,7 @@
 		</p>
 		<ul class="copy">
 			<li>They require a “Spine” of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, an ultra-dense and nearly indestructible exotic material first mined directly from <?php echo sf_lore_link('the-gift', 'The Gift'); ?>'s floor structure.</li>
-			<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. There is, as of yet, no known way to move this lock without retuning, and re-establishing a lock in the same location is exceptionally difficult, if possible at all.</li>
+			<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. How far a gate can be moved without retuning depends on its lock’s stability: a stable lock tolerates moving the gate and changing its surroundings with little loss of attunement, while an unstable one de-attunes with even small changes. Re-establishing a lost lock in the same location is exceptionally difficult, if possible at all.</li>
 			<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 			<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
 			<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Corrupted Physics.”</li>

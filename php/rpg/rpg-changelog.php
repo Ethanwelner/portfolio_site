@@ -7,6 +7,16 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/17/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Known plane info boxes now have a Stability field (coming soon).</li>
+						<li>Switch gates: a lock’s stability now decides how far a gate can be moved without retuning.</li>
+						<li>The matter swapped in the first switch-gate catastrophe was no larger than a red blood cell.</li>
+						<li>The Planar Exploration tab now walks through attaining a gate lock and passive exploration, from triangulation and gate addresses to stability testing and the hand-off to the Explorers’ Lodge, under a new Opening a New Plane heading with an Active Exploration section (coming soon).</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Updated the Kingdom of Dreft map: Port Herminst sits on the point north of its old spot, a walled town guards a road through the Corsine Pass into Karsef, a small mountain range in Sorellion feeds rivers to the east and west, and there’s new swamp in southern Dreft and grassland north of the inland sea.</li>
