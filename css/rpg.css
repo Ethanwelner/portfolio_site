@@ -1335,6 +1335,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     line-height: 0;
 }
 
+/* Sample character sheet: a ruled stat heading sits beside its badge, so drop
+   .line-container's bottom margin to keep the rule on the badge's center line */
+.stat-badge + .line-container {
+    margin-bottom: 0;
+}
+
 .c-variables {
     column-gap: 12px;
 }

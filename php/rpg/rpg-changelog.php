@@ -13,6 +13,7 @@
 						<li>Switch gates: a lock’s stability now decides how far a gate can be moved without retuning.</li>
 						<li>The matter swapped in the first switch-gate catastrophe was no larger than a red blood cell.</li>
 						<li>The Planar Exploration tab now walks through attaining a gate lock and passive exploration, from triangulation and gate addresses to stability testing and the hand-off to the Explorers’ Lodge, under a new Opening a New Plane heading with an Active Exploration section (coming soon).</li>
+						<li>The sample character sheet’s Physical, Social, and Mental headings line up with their stat numbers again.</li>
 					</ul>
 				</article>
 
