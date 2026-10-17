@@ -146,83 +146,97 @@
 				</div>
 
 				<div class="tech-field-panel" id="plane-exploration" role="tabpanel" aria-labelledby="tab-plane-exploration">
-					<div class="line-container">
-						<h5><strong>Attaining a Gate Lock and Passive Exploration</strong></h5>
-						<div class="line"></div>
-					</div>
-					<div class="exploration-process">
-						<ul class="copy mb-0">
-							<li>First, a new lock is triangulated through a series of attempted planar connections made by an exploratory <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>.
-								<ul>
-									<li>Exploratory switch gates are partially constructed, semi-disposable gates, built to be replaceable in the event of gate loss. Given the tiny amount of space exchanged in an untuned lock (a first lock exchange can transfer a few molecules at most), the damage from a gate loss rarely extends past the gate platform itself.
+					<h4 class="lore-title mb-3">Opening a New Plane</h4>
+					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+						<div class="flex-7">
+							<div class="line-container">
+								<h5><strong>Attaining a Gate Lock and Passive Exploration</strong></h5>
+								<div class="line"></div>
+							</div>
+							<div class="exploration-process">
+								<ul class="copy mb-0">
+									<li>First, a new lock is triangulated through a series of attempted planar connections made by an exploratory <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>.
 										<ul>
-											<li>The most common cause of gate loss is an exchange with an extremely high-energy plane composed of some form of post-degenerate matter, a gravitational singularity, or a pre-inflation field effect.
+											<li>Exploratory switch gates are partially constructed, semi-disposable gates, built to be replaceable in the event of gate loss. Given the tiny amount of space exchanged in an untuned lock (a first lock exchange can transfer a few molecules at most), the damage from a gate loss rarely extends past the gate platform itself.
 												<ul>
-													<li>Physicists use information from exchanges with such planes to gain insight into conditions before the Big Bang and to model extremely high-energy states of matter.</li>
-												</ul>
-											</li>
-											<li>Less common but more dangerous, gate loss can occur through an exchange with a plane that possesses fundamentally incompatible axiomatic or physical laws, most often resulting in a burst of exotic radiation with unpredictable macroscopic effects.
-												<ul>
-													<li>Self-replicating or predatory paraphysical effects can irradiate and destroy entire gate facilities before paraphysical decay renders them inert.</li>
+													<li>The most common cause of gate loss is an exchange with an extremely high-energy plane composed of some form of post-degenerate matter, a gravitational singularity, or a pre-inflation field effect.
+														<ul>
+															<li>Physicists use information from exchanges with such planes to gain insight into conditions before the Big Bang and to model extremely high-energy states of matter.</li>
+														</ul>
+													</li>
+													<li>Less common but more dangerous, gate loss can occur through an exchange with a plane that possesses fundamentally incompatible axiomatic or physical laws, most often resulting in a burst of exotic radiation with unpredictable macroscopic effects.
+														<ul>
+															<li>Self-replicating or predatory paraphysical effects can irradiate and destroy entire gate facilities before paraphysical decay renders them inert.</li>
+														</ul>
+													</li>
 												</ul>
 											</li>
 										</ul>
 									</li>
-								</ul>
-							</li>
-							<li>Triangulation is a process of attempting locks and measuring how long the switch gate stays energized before its safety shutoff.
-								<ul>
-									<li>With repeated, measured attempts and continuous small adjustments to the coordinates, a lock may be established.</li>
-									<li>Exploratory gates engage in an unmanned, continuous, automated process of energizing and shutoff, with their measurements transmitted to whatever planar exploration and holding company or lab is managing them.</li>
-									<li>A gate address is thousands of characters long and made up of a “language” of waveforms with, effectively, infinite variation.
+									<li>Triangulation is a process of attempting locks and measuring how long the switch gate stays energized before its safety shutoff.
 										<ul>
-											<li>The overwhelming majority of addresses fail to generate a lock, with failures outnumbering successes by many orders of magnitude.</li>
-											<li>Given the infinite number of possible gate addresses and the rarity of a lock, random searching is an ineffective means of finding other planes.</li>
-											<li>Planar exploration and holding companies thus staff professionals in paraphysics who specialize in the language of gate addresses.</li>
-											<li>Current theory holds that the gate address is a description, rather than any form of machine code or coordinate system, and that it’s composed of some sort of fundamental language-form.</li>
-											<li>Deciphering this language is an active field of theoretical paraphysics.
+											<li>With repeated, measured attempts and continuous small adjustments to the coordinates, a lock may be established.</li>
+											<li>Exploratory gates engage in an unmanned, continuous, automated process of energizing and shutoff, with their measurements transmitted to whatever planar exploration and holding company or lab is managing them.</li>
+											<li>A gate address is thousands of characters long and made up of a “language” of waveforms with, effectively, infinite variation.
 												<ul>
-													<li>The existence of this language, alongside other revelations from paraphysics, has had a profound effect on Earth’s religion and philosophy.</li>
+													<li>The overwhelming majority of addresses fail to generate a lock, with failures outnumbering successes by many orders of magnitude.</li>
+													<li>Given the infinite number of possible gate addresses and the rarity of a lock, random searching is an ineffective means of finding other planes.</li>
+													<li>Planar exploration and holding companies thus staff professionals in paraphysics who specialize in the language of gate addresses.</li>
+													<li>Current theory holds that the gate address is a description, rather than any form of machine code or coordinate system, and that it’s composed of some sort of fundamental language-form.</li>
+													<li>Deciphering this language is an active field of theoretical paraphysics.
+														<ul>
+															<li>The existence of this language, alongside other revelations from paraphysics, has had a profound effect on Earth’s religion and philosophy.</li>
+														</ul>
+													</li>
 												</ul>
 											</li>
 										</ul>
 									</li>
-								</ul>
-							</li>
-							<li>When an exploration gate attains a successful and safe “Lock,” it begins a survey attunement phase.
-								<ul>
-									<li>The gate makes repeated high-energy exchanges in a hard vacuum to determine the plane’s divergence, distance, and aperture.</li>
-									<li>After the survey, the gate undergoes testing to determine the lock’s axiomatic stability.
+									<li>When an exploration gate attains a successful and safe “Lock,” it begins a survey attunement phase.
 										<ul>
-											<li>In this phase, gates will have their surrounding circumstances repeatedly changed and, if possible, the gate itself will be moved relative to other axiomatically important objects.
+											<li>The gate makes repeated high-energy exchanges in a hard vacuum to determine the plane’s divergence, distance, and aperture.</li>
+											<li>After the survey, the gate undergoes testing to determine the lock’s axiomatic stability.
 												<ul>
-													<li>If the lock’s stability is low, the gate will de-attune as changes are made; the extent of the loss of attunement correlates with the magnitude and type of change.</li>
+													<li>In this phase, gates will have their surrounding circumstances repeatedly changed and, if possible, the gate itself will be moved relative to other axiomatically important objects.
+														<ul>
+															<li>If the lock’s stability is low, the gate will de-attune as changes are made; the extent of the loss of attunement correlates with the magnitude and type of change.</li>
+														</ul>
+													</li>
 												</ul>
 											</li>
+											<li>If the lock is stable enough, the gate is moved and installed in a purpose-built research facility to undergo true planar exploration, at which point the local <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodge'); ?> is contacted.</li>
 										</ul>
 									</li>
-									<li>If the lock is stable enough, the gate is moved and installed in a purpose-built research facility to undergo true planar exploration, at which point the local <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodge'); ?> is contacted.</li>
+									<li>Once a switch gate is attuned and surveyed, an Explorers’ Lodge representative is hired to “manage” the early process of attuning the gate’s aperture to a useful scale and to oversee initial exploration efforts.
+										<ul>
+											<li>This individual ensures compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> and is licensed to provide inspection and certification services. Inspections and certifications made while a Lodge member is employed by a holding company belong to that company.</li>
+										</ul>
+									</li>
+									<li>“Passive exploration” and attunement are a process of “null” exchanges, in which the gate “sends” an area of empty vacuum to the plane and examines the matter and radiation “received.”
+										<ul>
+											<li>Each exchange is recorded by spectrographic instruments to measure the energies radiating from the exchange volume. This is followed by a rapid phase of measurement and experimentation to determine the elemental and chemical composition of the received matter.</li>
+											<li>Paraphysical effects are theorized and tested over repeated exchanges, while the attunement continuously expands the volume of space available for switching.</li>
+											<li>Compatibility can often be determined passively, but not always; it remains a rolling measurement throughout exploration.</li>
+										</ul>
+									</li>
+									<li>Once the exchange volume exceeds a radius of 30 centimeters, the process moves from passive to active exploration.
+										<ul>
+											<li>Oversight of the exploration is handed off to a Lodge-certified survey and exploration team.</li>
+											<li>For potentially sensitive or risky planar explorations, a representative from <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> may be stationed for the duration of active exploration.</li>
+										</ul>
+									</li>
 								</ul>
-							</li>
-							<li>Once a switch gate is attuned and surveyed, an Explorers’ Lodge representative is hired to “manage” the early process of attuning the gate’s aperture to a useful scale and to oversee initial exploration efforts.
-								<ul>
-									<li>This individual ensures compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> and is licensed to provide inspection and certification services. Inspections and certifications made while a Lodge member is employed by a holding company belong to that company.</li>
-								</ul>
-							</li>
-							<li>“Passive exploration” and attunement are a process of “null” exchanges, in which the gate “sends” an area of empty vacuum to the plane and examines the matter and radiation “received.”
-								<ul>
-									<li>Each exchange is recorded by spectrographic instruments to measure the energies radiating from the exchange volume. This is followed by a rapid phase of measurement and experimentation to determine the elemental and chemical composition of the received matter.</li>
-									<li>Paraphysical effects are theorized and tested over repeated exchanges, while the attunement continuously expands the volume of space available for switching.</li>
-									<li>Compatibility can often be determined passively, but not always; it remains a rolling measurement throughout exploration.</li>
-								</ul>
-							</li>
-							<li>Once the exchange volume exceeds a radius of 30 centimeters, the process moves from passive to active exploration.
-								<ul>
-									<li>Oversight of the exploration is handed off to a Lodge-certified survey and exploration team.</li>
-									<li>For potentially sensitive or risky planar explorations, a representative from <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> may be stationed for the duration of active exploration.</li>
-								</ul>
-							</li>
-						</ul>
+							</div>
+						</div>
+						<div class="flex-6">
+							<div class="line-container">
+								<h5><strong>Active Exploration</strong></h5>
+								<div class="line"></div>
+							</div>
+							<ul class="copy mb-0">
+								<li>Content coming soon</li>
+							</ul>
+						</div>
 					</div>
 					<div class="bumper"></div>
 					<?php sf_lore_entry('switch-gates', 'h4', 'mb-3'); ?>
