@@ -371,6 +371,13 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     box-shadow: 0 1px 0 var(--portfolio-white);
 }
 
+/* Phones: the Change Log tab doesn't fit beside the other three */
+@media (max-width: 575px) {
+    #tab-changelog {
+        display: none;
+    }
+}
+
 /* Boxed sub-tabs inside Setting: php/rpg/rpg-setting.php (Timeline),
    rpg-technologies, rpg-planes, rpg-spacecraft and rpg-parabiology.
    tech-fields-light is the black-on-white version used in rpg-setting,
