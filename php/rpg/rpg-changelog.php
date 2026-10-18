@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/18/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The sample character sheet’s Inner Ring stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/17/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Known plane info boxes now have a Stability field (coming soon).</li>
