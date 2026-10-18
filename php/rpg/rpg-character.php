@@ -168,7 +168,7 @@
 				<!-- physical stats -->
 				<div class="d-flex flex-column flex-gap-12">
 					<div class="d-flex flex-row flex-gap-12 align-items-center">
-						<div class="stat-badge">9</div>
+						<div class="stat-badge">1</div>
 						<div class="line-container d-flex flex-fill">
 							<h5>Physical</h5>
 							<div class="line"></div>
@@ -310,13 +310,13 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Demeanor - 4</strong>
+						<strong>Demeanor - 3</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
 						<div class="stat square filled"></div>
 						<div class="stat dot filled"></div>
-						<div class="stat square filled"></div>
+						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
