@@ -13,9 +13,9 @@ $rpgLinksByKind = [
 	],
 	'adventure' => [
 		'#adventure' => 'Another World',
-		'#dreft-map' => 'Isekai and Dreft',
-		'#building-a-dreftian' => 'Building a Dreftian',
-		'#tetra-exploration' => 'Tetra and Planar Exploration',
+		'#dreft-map' => 'Isekai',
+		'#building-a-dreftian' => 'Traits',
+		'#tetra-exploration' => 'Tetra',
 	],
 	'mechanics' => [
 		'#stats' => 'Stats',

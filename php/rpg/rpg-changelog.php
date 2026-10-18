@@ -10,7 +10,7 @@
 					<p class="copy mb-3"><i>10/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The sample character sheet’s Inner Ring stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
-						<li>The Adventures tab has its own page nav: Another World, Isekai and Dreft, Building a Dreftian, and Tetra and Planar Exploration.</li>
+						<li>The Adventures tab has its own page nav: Another World, Isekai, Traits, and Tetra.</li>
 					</ul>
 				</article>
 
