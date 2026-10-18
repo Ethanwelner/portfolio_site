@@ -3,21 +3,29 @@ $rpgLinksTone = $rpgLinksTone ?? 'black';
 $rpgLinksKind = $rpgLinksKind ?? 'mechanics';
 $rpgLinksInvert = $rpgLinksTone === 'white';
 $rpgLinksClass = $rpgLinksTone === 'white' ? 'white' : 'black';
-$rpgLinks = $rpgLinksKind === 'setting'
-	? [
+$rpgLinksByKind = [
+	'setting' => [
 		'#thesetting' => 'The Setting',
 		'#thesciences' => 'The Sciences',
 		'#hierarchy' => 'The Planes',
 		'#thestars' => 'The Stars',
 		'#parabiology' => 'Parabiology',
-	]
-	: [
+	],
+	'adventure' => [
+		'#adventure' => 'Another World',
+		'#dreft-map' => 'Isekai and Dreft',
+		'#building-a-dreftian' => 'Building a Dreftian',
+		'#tetra-exploration' => 'Tetra and Planar Exploration',
+	],
+	'mechanics' => [
 		'#stats' => 'Stats',
 		'#traits' => 'Traits',
 		'#skills' => 'Skills',
 		'#items' => 'Items',
 		'#character' => 'Character',
-	];
+	],
+];
+$rpgLinks = $rpgLinksByKind[$rpgLinksKind] ?? $rpgLinksByKind['mechanics'];
 ?>
 <?php if ($rpgLinksInvert): ?>
 <div class="section-clip rpg-links-clip" data-links="<?php echo $rpgLinksKind; ?>" aria-hidden="true">

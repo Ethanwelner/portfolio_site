@@ -111,6 +111,17 @@
 				}
 			});
 
+			// A short last section never reaches the activation line, so light up the
+			// last link once the page is scrolled to the bottom.
+			var scrolledToBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+			if ( scrolledToBottom ) {
+				var lastId = ( $links.last().attr( "href" ) || "" ).replace( /^#/, "" );
+				var lastSection = lastId ? document.getElementById( lastId ) : null;
+				if ( lastSection && lastSection.getBoundingClientRect().top < window.innerHeight ) {
+					currentId = lastId;
+				}
+			}
+
 			$navs.each(function() {
 				var $nav = $( this );
 				var $navLinks = $nav.find( "a[href^='#']" );
@@ -125,7 +136,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
+			return [ "frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations", "dreft-map", "building-a-dreftian", "tetra-exploration" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
 		}
 
 		function isPhotosHash(hash) {
@@ -290,7 +301,7 @@
 			if ( hash === "changelog" || hash === "change-log" || hash === "rpg-changelog" ) {
 				return $( "#tab-changelog" );
 			}
-			if ( hash === "adventure" || hash === "rpg-adventure" ) {
+			if ( hash === "adventure" || hash === "rpg-adventure" || hash === "dreft-map" || hash === "building-a-dreftian" || hash === "tetra-exploration" ) {
 				return $( "#tab-adventure" );
 			}
 			return $( "#tab-setting" );
