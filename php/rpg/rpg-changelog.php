@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Dreftian characters now share a single Dreft Origin: Dreft (1), Dreftian Law (1), and Dreftan. Hometowns like Port Herminst, Glintl, and the Corsine Pass are now background feats instead of separate Origins.</li>
 						<li>Opening a New Plane now covers automated early planar exploration: turtle boxes, screamers, drone, crawler, and rocket surveys, and the black box. Trimmed a redundant line about inspection and certification.</li>
 					</ul>
 				</article>
