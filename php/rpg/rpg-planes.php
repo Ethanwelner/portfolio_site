@@ -269,7 +269,7 @@
 										<ul>
 											<li>Aerial quadcopter drone surveys will occur in planes with a suitable atmosphere and “ground.”</li>
 											<li>Crawler surveys are performed in planes lacking an atmosphere, or planes enclosed in matter.</li>
-											<li>Rocket surveys gather far-field data, and are the main survey method in planes that are some form of empty space.</li>
+											<li>Rocket surveys will occur in planes that are in some form of empty space.</li>
 										</ul>
 									</li>
 									<li>Most automated craft are planned to be lost while surveying, and transmit their findings to an armored “black box” that sits static in the exchange volume.</li>
