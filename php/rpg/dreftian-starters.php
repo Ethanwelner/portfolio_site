@@ -70,29 +70,10 @@
 </div>
 <div class="starter-list">
 	<div class="starter-entry">
-		<h6><strong><?php echo sf_lore_link('herminst', 'Port Herminst'); ?></strong></h6>
-		<p class="copy mb-2">Dreft’s capital and biggest port: the royal court, the merchant dynasties, and the licensed schools of magic.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> Dreftian Law (1), Port Herminst (1), 1 Dreftian language</p>
-	</div>
-	<div class="starter-entry">
-		<h6><strong><?php echo sf_lore_link('glintl', 'Glintl'); ?></strong></h6>
-		<p class="copy mb-2">The other great trading port on the western coast, with a large Guwain population.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> Seafaring (1), Glintl (1), Coastal Trade (1)</p>
-	</div>
-	<div class="starter-entry">
-		<h6><strong><?php echo sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)'); ?></strong></h6>
-		<p class="copy mb-2">The caravan town that grew up around Castle Tetra, where Dreft meets the systems.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> English (language), Earth Baseline Customs (1), The Switch Port (1)</p>
-	</div>
-	<div class="starter-entry">
-		<h6><strong><?php echo sf_lore_link('illinsdott', 'Illinsdott'); ?></strong></h6>
-		<p class="copy mb-2">A farming village on the edge of the King’s Woods, two days east of the switch port.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> Farming (1), <?php echo sf_lore_link('kings-woods', 'The King’s Woods'); ?> (1), Local Folklore (1)</p>
-	</div>
-	<div class="starter-entry">
-		<h6><strong><?php echo sf_lore_link('corsine-mountains', 'The Corsine Mountains'); ?></strong></h6>
-		<p class="copy mb-2">Mountain villages along the Karsef border, home to many Tatot and the hardiest Guwain.</p>
-		<p class="copy mb-0"><strong>Knowledge feats:</strong> Mountaineering (1), The Corsine Pass (1), Karsef (1)</p>
+		<h6><strong><?php echo sf_lore_link('dreft', 'Dreft'); ?></strong></h6>
+		<p class="copy mb-2">Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village, or the mountains.</p>
+		<p class="copy mb-2"><strong>Knowledge feats:</strong> Dreft (1), Dreftian Law (1), Dreftan (language)</p>
+		<p class="copy mb-0"><strong>Background feats:</strong> Where in Dreft a character grew up is bought with background feats: <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, <?php echo sf_lore_link('glintl', 'Glintl'); ?>, <?php echo sf_lore_link('tetra-switch-port', 'The Switch Port'); ?>, <?php echo sf_lore_link('kings-woods', 'The King’s Woods'); ?>, <?php echo sf_lore_link('corsine-mountains', 'The Corsine Pass'); ?>, Seafaring, Coastal Trade, Farming, Mountaineering, Local Folklore, and Karsef.</p>
 	</div>
 </div>
 	</div>
