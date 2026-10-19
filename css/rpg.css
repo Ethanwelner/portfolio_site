@@ -977,6 +977,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     font-family: 'bebas_neueregular', sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
+
+    /* Inverted over dark sections (Rebirth of Science, The Stars). */
+    .black-bg & {
+        background-color: var(--portfolio-gray);
+        color: var(--portfolio-white);
+    }
 }
 
 @media (min-width: 1500px) {
