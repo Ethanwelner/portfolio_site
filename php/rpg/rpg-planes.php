@@ -293,10 +293,10 @@
 						</div>
 						<div class="exploration-process">
 							<ul class="copy mb-0">
-								<li>Following the official commencement of manned exploration, authority over the exploration effort is handed over, yet again, to a specialist expedition “field team” trained and equipped for the unique circumstances expected in the plane.
+								<li>Following the official commencement of manned exploration, authority over the exploration effort is handed over, yet again, to a specialist “expedition team” trained and equipped for the unique circumstances expected in the plane.
 									<ul>
-										<li>The field team will work in tandem with the automated surveying team to perform explorations of the area surrounding the exchange volume.</li>
-										<li>At this stage the gate’s location is renamed the switch port, and is traditionally given a name by the field team “for good luck.”</li>
+										<li>The expedition team will work in tandem with the automated surveying team to perform explorations of the area surrounding the exchange volume.</li>
+										<li>At this stage the gate’s location is renamed the switch port, and is traditionally given a name by the expedition team “for good luck.”</li>
 									</ul>
 								</li>
 								<li>For terrestrial exploration in a safe environment:
@@ -314,12 +314,12 @@
 														<li>Fitted to the plane, these supplies typically consist of food stores, water, building materials, generators, batteries, and other prerequisites for establishing a usable switch port.</li>
 													</ul>
 												</li>
-												<li>During the first exchange, the field team will prepare the switch port, securing equipment, building temporary pop-up shelters, and conducting a quick search of the immediate area. The team will then return for a debriefing and medical examination.</li>
+												<li>During the first exchange, the expedition team will prepare the switch port, securing equipment, building temporary pop-up shelters, and conducting a quick search of the immediate area. The team will then return for a debriefing and medical examination.</li>
 												<li>The following field missions will typically see the team launching larger exploration drones while manned expeditions map the area and collect samples and specimens.</li>
 												<li>Every exchange brings with it more cargo, and the switch port gradually grows to encompass several buildings as well as a walled defensive perimeter.</li>
-												<li>In a typical exploration contract, the field team will continuously inhabit the plane for up to three months, building out the nascent switch port facility and conducting field research.</li>
-												<li>The field team is authorized to make first contact with native species of the plane in strict compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?>.</li>
-												<li>At the end of their contract, the field team returns to Earth baseline and undergoes a long-term medical evaluation for lasting effects of exposure to the plane and any biological or paraphysical hazards it may have contained.</li>
+												<li>In a typical exploration contract, the expedition team will continuously inhabit the plane for up to three months, building out the nascent switch port facility and conducting field research.</li>
+												<li>The expedition team is authorized to make first contact with native species of the plane in strict compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?>.</li>
+												<li>At the end of their contract, the expedition team returns to Earth baseline and undergoes a long-term medical evaluation for lasting effects of exposure to the plane and any biological or paraphysical hazards it may have contained.</li>
 											</ul>
 										</li>
 									</ul>
