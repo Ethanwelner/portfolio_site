@@ -209,7 +209,7 @@
 									</li>
 									<li>Once a switch gate is attuned and surveyed, an Explorers’ Lodge representative is hired to “manage” the early process of attuning the gate’s aperture to a useful scale and to oversee initial exploration efforts.
 										<ul>
-											<li>This individual ensures compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> and is licensed to provide inspection and certification services. Inspections and certifications made while a Lodge member is employed by a holding company belong to that company.</li>
+											<li>This individual ensures compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> and is licensed to provide inspection and certification services.</li>
 										</ul>
 									</li>
 									<li>“Passive exploration” and attunement are a process of “null” exchanges, in which the gate “sends” an area of empty vacuum to the plane and examines the matter and radiation “received.”
