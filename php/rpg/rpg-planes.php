@@ -11,15 +11,18 @@
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 		<div class="flex-14">
-			<div class="single-column-content">
-				<ul class="copy mb-0">
-					<li>Planes are separate self-contained universes, accessible through a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>.</li>
-					<li>Planes exist in an infinite stack-order from high to low.</li>
-					<li>Matter or energy transported downward in the planes maintains its physical properties and can enforce its physical laws upon nearby reality. These are called “exotic” materials, and are often used to create technologies that would otherwise be impossible with mundane physical laws.</li>
-					<li>Exotic matter is the underlying reason why the setting can have FTL and interdimensional travel. Exotic matter is extremely rare and difficult to acquire owing to the extreme danger of accessing higher planes.</li>
-					<li>Matter or energy transported upward along the planes has the physical laws of the planes it is transported to immediately applied to it.</li>
-					<li>The further a reality is up or down from the one with the gate the harder it is to discover, lock on to, and the more power required to perform a swap.</li>
-				</ul>
+			<div class="intro-with-image">
+				<div class="single-column-content">
+					<ul class="copy mb-0">
+						<li>Planes are separate self-contained universes, accessible through a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>.</li>
+						<li>Planes exist in an infinite stack-order from high to low.</li>
+						<li>Matter or energy transported downward in the planes maintains its physical properties and can enforce its physical laws upon nearby reality. These are called “exotic” materials, and are often used to create technologies that would otherwise be impossible with mundane physical laws.</li>
+						<li>Exotic matter is the underlying reason why the setting can have FTL and interdimensional travel. Exotic matter is extremely rare and difficult to acquire owing to the extreme danger of accessing higher planes.</li>
+						<li>Matter or energy transported upward along the planes has the physical laws of the planes it is transported to immediately applied to it.</li>
+						<li>The further a reality is up or down from the one with the gate the harder it is to discover, lock on to, and the more power required to perform a swap.</li>
+					</ul>
+				</div>
+				<div class="image-placeholder" aria-hidden="true">Image</div>
 			</div>
 			<div class="bumper"></div>
 			<div class="tech-fields tech-fields-light">

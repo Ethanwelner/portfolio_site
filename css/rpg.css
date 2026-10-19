@@ -953,8 +953,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     width: 100%;
 }
 
-/* Setting intro (php/rpg/rpg-setting.php): copy column with a placeholder
-   image beside it. The copy column is 768px, so the placeholder only shows
+/* Intro copy columns (Setting, Rebirth of Science, The Planes, The Stars)
+   with a placeholder image beside it. The copy column is 768px, so the placeholder only shows
    from 1500px up, where it gets at least ~260px. */
 .intro-with-image {
     display: flex;
