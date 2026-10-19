@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/19/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Opening a New Plane now covers automated early planar exploration: turtle boxes, screamers, drone, crawler, and rocket surveys, and the black box. Trimmed a redundant line about inspection and certification.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The sample character sheet’s Inner Ring stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
