@@ -230,12 +230,56 @@
 						</div>
 						<div class="flex-6">
 							<div class="line-container">
-								<h5><strong>Active Exploration</strong></h5>
+								<h5><strong>Automated Early Planar Exploration</strong></h5>
 								<div class="line"></div>
 							</div>
-							<ul class="copy mb-0">
-								<li>Content coming soon</li>
-							</ul>
+							<div class="exploration-process">
+								<ul class="copy mb-0">
+									<li>Following the official commencement of active exploration, authority over the exploration effort is handed over to one or more contracted Lodge-certified survey and exploration teams.
+										<ul>
+											<li>Initial unmanned planar measurement and early information gathering are typically subcontracted to an individual or company skilled in automated surveying.</li>
+										</ul>
+									</li>
+									<li>Repeated planar exchanges are overseen to widen the aperture while progressively larger and more capable automated measurement devices and survey drones are sent and received.
+										<ul>
+											<li>Dangerous, incompatible, or empty planes may never progress past the stage of automated surveying.</li>
+											<li>The first exchanges are made with “turtle” boxes: small, hardy recording devices.
+												<ul>
+													<li>Turtle boxes are often purpose-built for the expected conditions in a plane and measure radiological signatures, astronomical telemetry, climate conditions, soil samples, and much more.</li>
+												</ul>
+											</li>
+											<li>If the turtle box is not received in the next exchange, a “screamer” is sent next.
+												<ul>
+													<li>The most common recoverable turtle box losses result from an exchange over a body of liquid or a steep incline.</li>
+													<li>A screamer is a high-powered radio transmitter in an armored shell. If the screamer is still functioning at the time of the following exchange, its radio signal will be received in a burst as the exchange occurs.
+														<ul>
+															<li>This radio burst is analyzed for spectra, distance, interference patterns, and other useful information.</li>
+														</ul>
+													</li>
+													<li>If the screamer is not detected, the address will be periodically “tested” with cheap, inert blocks of stone, iron, or other resilient materials. This testing period will continue for as long as the claimant is willing to pay for it.
+														<ul>
+															<li>This is typically the end of exploration, unless passive exploration has indicated the plane should be safe or high-value.</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>With the return and analysis of a turtle box, further automated efforts will commence, their nature depending on the plane’s unique attributes.
+										<ul>
+											<li>Aerial quadcopter drone surveys will occur in planes with a suitable atmosphere and “ground.”</li>
+											<li>Crawler surveys are performed in planes lacking an atmosphere, or planes enclosed in matter.</li>
+											<li>Rocket surveys gather far-field data, and are the main survey method in planes that are some form of empty space.</li>
+										</ul>
+									</li>
+									<li>Most automated craft are planned to be lost while surveying, and transmit their findings to an armored “black box” that sits static in the exchange volume.</li>
+									<li>With enough automated surveying and testing performed, a plane will then be considered for manned exploration and scientific research.
+										<ul>
+											<li>Overtly dangerous or incompatible planes will rarely progress to this stage unless there is a significant profit incentive for development and exploitation.</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="bumper"></div>

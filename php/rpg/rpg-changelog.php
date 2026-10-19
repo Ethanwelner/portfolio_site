@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Trimmed a redundant line about inspection and certification ownership from Opening a New Plane.</li>
+						<li>Opening a New Plane now covers automated early planar exploration: turtle boxes, screamers, drone, crawler, and rocket surveys, and the black box. Trimmed a redundant line about inspection and certification.</li>
 					</ul>
 				</article>
 
