@@ -35,7 +35,10 @@
 							For all its risks, the stellar sea is also what allows humanity to live as it does. The resources of one world feed the factories of another, while distant colonies exchange goods and information. Small settlements arise around mining operations, research stations, and trade routes, turning into towns and then cities, far eclipsing the industries that brought them there. Dynasties have grown rich plying profitable trade lanes and fortunes have been made with claims staked in far-flung places. The nations of Earth, too, have much to gain, and the race to claim and exploit newly surveyed systems is never-ending. For the brave and the foolhardy, there’s adventure to be had among the stars.
 						</p>
 					</div>
-					<div class="image-placeholder" aria-hidden="true">Image</div>
+					<?php $starsPlanet = ['dreft', 'mars', 'mun'][random_int(0, 2)]; ?>
+					<div class="intro-image">
+						<img loading="lazy" data-src="img/<?php echo $starsPlanet; ?>.gif" alt="" width="100" height="100">
+					</div>
 				</div>
 				<div class="bumper"></div>
 				<div class="tech-fields">
