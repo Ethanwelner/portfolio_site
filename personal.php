@@ -340,7 +340,7 @@
                     </div>
 
                     <div class="rpg-night-footer">
-                        <?php include 'php/footer.php'; ?>
+                        <?php $footerAttribution = true; include 'php/footer.php'; $footerAttribution = false; ?>
                     </div>
                 </div>
 

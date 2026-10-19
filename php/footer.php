@@ -8,6 +8,9 @@
 		</div>
 		<div class="footer-legal small-copy white-text text-center">
 			<p class="mb-0">&copy; <?php echo date('Y'); ?> Ethan Welner. All rights reserved. Strange Frontiers and all original work on this site are the property of Ethan Welner. Company names, product names, and logos are trademarks of their respective owners and are used for identification only.</p>
+			<?php if (! empty($footerAttribution)) { ?>
+				<p class="mb-0 mt-1"><a href="#lore-attribution" data-lore-open="attribution" aria-haspopup="dialog">Attributions</a></p>
+			<?php } ?>
 		</div>
 	</div>
 </div>

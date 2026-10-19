@@ -15,6 +15,7 @@
 						<li>Added image placeholders beside the Setting, Rebirth of Science, Planes, Stars, and Parabiology introductions on wide screens.</li>
 						<li>The Stars introduction now shows a turning planet, picked at random from Erdef, Mars, and the Moon each time the page loads.</li>
 						<li>Edwin Humble’s sample character sheet has a new portrait.</li>
+						<li>Added an Attributions link to the footer, crediting the portrait, map, and planet creators.</li>
 					</ul>
 				</article>
 
