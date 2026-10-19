@@ -20,7 +20,7 @@
             <br><br>
             Traits are almost always additive, conveying some additional capability or capacity that a character has, though a rare few can convey negative attributes or restrictions. Trait effects are wide-ranging, from bonuses to certain skill checks to combat buffs to new abilities. They can describe a character's relationships to a society, such as memberships in exclusive organizations or even a wanted status for a criminal on the run. Traits can be temporary conditions, such as describing the ramifications of a character's broken leg. Because Traits are so varied, they will typically be organized on a character’s sheet by their theme or by how they are used.
             <br><br>
-            Characters start with a series of Traits based on their background packages. A character’s Kind, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there a character gains additional feats through accruing experience and leveling up or through in-game circumstances.
+            Characters start with a series of Traits based on their background packages. A character’s Kind, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there a character gains additional Traits through accruing experience and leveling up or through in-game circumstances.
             <br><br>
             There are three primary ways permanent Traits are gained:
           </p>
@@ -306,7 +306,7 @@
                 <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
                 <div class="badge bg-dark white-text d-inline-flex">(Logic 3)</div>
               </div>
-              <div class="copy">- This character can learn a new (knowledge) feat in half the specified time.</div>
+              <div class="copy">- This character can learn a new (knowledge) Trait in half the specified time.</div>
             </div>
 
             <div class="trait-box">
@@ -317,7 +317,7 @@
                 <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
                 <div class="badge bg-dark white-text d-inline-flex">(Capable Student)</div>
               </div>
-              <div class="copy">- This character can learn a new (knowledge) feat in a quarter the specified time.</div>
+              <div class="copy">- This character can learn a new (knowledge) Trait in a quarter the specified time.</div>
             </div>
 
             <div class="trait-box">
