@@ -16,7 +16,7 @@
 						<li>The Stars introduction now shows a turning planet, picked at random from Erdef, Mars, and the Moon each time the page loads.</li>
 						<li>Edwin Humble’s sample character sheet has a new portrait.</li>
 						<li>Added an Attributions link to the footer, crediting the portrait, map, and planet creators.</li>
-						<li>The character creation notes and starter packages now say Traits instead of feats. Every character has 9 stat points at level 0, and characters always start at level 1 at least.</li>
+						<li>The Mechanics pages and the Dreftian starter packages now say Traits instead of feats wherever they mean the game’s Traits. Every character has 9 stat points at level 0, and characters always start at level 1 at least.</li>
 					</ul>
 				</article>
 

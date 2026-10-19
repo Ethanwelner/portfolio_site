@@ -46,7 +46,7 @@
 				<h3 class="mb-3">Requesting Advantage</h3>
 				<ul class="copy">
 					<li>A character can request advantage in a situation where they believe they are uniquely advantaged in the effort of performing some sort of task or skill or in a role-playing scenario.</li>
-					<li>Some feats will specify a situation where a character can request advantage that is tied to a specific skill set or physical attribute</li>
+					<li>Some Traits will specify a situation where a character can request advantage that is tied to a specific skill set or physical attribute</li>
 					<li>Requesting advantage is an expression of both the stats written on a character sheet and the character's backstory and role-playing attributes.</li>
 					<li>Some Kinds, backgrounds, or professions will infer the right to request advantage in a broad set of circumstances, such as a character with a small stature being able to request advantage when hiding or a professional soldier's ability to request advantage when learning to wield a new weapon.</li>
 					<li>The GM can allow or deny requested advantage and will determine the appropriate expression of the advantage.</li>
@@ -59,10 +59,10 @@
 				<h3 class="mb-3">Requesting Competence</h3>
 				<ul class="copy">
 					<li>A character can request competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn't be penalized as harshly or at all for lacking a specific skill.</li>
-					<li>A character with expertise in wielding a sword can request competence when wielding a dagger, even if they don't have a feat giving them that skill.</li>
-					<li>Requested competence can result in a wide range of results, from the user being wholly proficient in the task at hand to even being granted a relevant feat that gives them that skill permanently.</li>
+					<li>A character with expertise in wielding a sword can request competence when wielding a dagger, even if they don't have a Trait giving them that skill.</li>
+					<li>Requested competence can result in a wide range of results, from the user being wholly proficient in the task at hand to even being granted a relevant Trait that gives them that skill permanently.</li>
 					<li>A bard skilled with a guitar and a bass can likely request competence with a lute, but the GM may consider the violin to be a step too far.</li>
-					<li>Many feats that grant expertise in a skill also grant inferred competence in related skills.</li>
+					<li>Many Traits that grant expertise in a skill also grant inferred competence in related skills.</li>
 				</ul>
 			</div>
 		</div>
@@ -105,7 +105,7 @@
 				</div>
 
 				<p>
-					Checks between 1 and 20 are accomplishable by any character as long as there are no difficulty modifiers. There is a 20x gap between a check of a 1 and 20 though, and while having relevant stats, equipment, or feats may make these checks easy or even automatic, a character not fit for the task may find them almost impossible.
+					Checks between 1 and 20 are accomplishable by any character as long as there are no difficulty modifiers. There is a 20x gap between a check of a 1 and 20 though, and while having relevant stats, equipment, or Traits may make these checks easy or even automatic, a character not fit for the task may find them almost impossible.
 				</p>
 
 				<div class="d-flex nowrap my-4 align-items-center">
@@ -137,7 +137,7 @@
 				</div>
 
 				<p>
-					The difference between a requirement of 20 and 40 is often the difference between requiring novice or expert training, or requiring simple or advanced equipment. Accomplishable by characters with high stats, relevant feats, or equipment. Many professions have their day-to-day actions in this range. Skill checks in this range are often still heavily impacted by raw stat values.
+					The difference between a requirement of 20 and 40 is often the difference between requiring novice or expert training, or requiring simple or advanced equipment. Accomplishable by characters with high stats, relevant Traits, or equipment. Many professions have their day-to-day actions in this range. Skill checks in this range are often still heavily impacted by raw stat values.
 				</p>
 
 				<div class="d-flex nowrap my-4 align-items-center">
@@ -149,7 +149,7 @@
 							Brewing a simple potion (Memory)(Grace)
 						</div>
 						<div class="copy">
-							A potion-brewing feat could give a +20 Roll modifier to this Skill, turning the impossible into the easy.
+							A potion-brewing Trait could give a +20 Roll modifier to this Skill, turning the impossible into the easy.
 						</div>
 					</div>
 				</div>
@@ -163,13 +163,13 @@
 							Writing a complex computer program (Logic)(Intuition)
 						</div>
 						<div class="copy">
-							A computer use feat and a computer programming feat could combine to give +20 to this action. Repeated attempts could also allow the character to gain advantage by slowly fixing the flaws in their program.
+							A computer use Trait and a computer programming Trait could combine to give +20 to this action. Repeated attempts could also allow the character to gain advantage by slowly fixing the flaws in their program.
 						</div>
 					</div>
 				</div>
 
 				<p>
-					The difference between a requirement of 40 and 60 is often the difference between the daily acts of a master in a profession and something that requires days or weeks of prep time, perfectly attuned equipment, and external forces acting to make the check succeed. Accomplishable by characters with advanced feats and high-end equipment. Often both. While stats may have an impact on the roll, skill checks at this level rely more on training and preparation than on talent. Most extreme skills are in this range.
+					The difference between a requirement of 40 and 60 is often the difference between the daily acts of a master in a profession and something that requires days or weeks of prep time, perfectly attuned equipment, and external forces acting to make the check succeed. Accomplishable by characters with advanced Traits and high-end equipment. Often both. While stats may have an impact on the roll, skill checks at this level rely more on training and preparation than on talent. Most extreme skills are in this range.
 				</p>
 
 				<div class="d-flex nowrap my-4 align-items-center">
