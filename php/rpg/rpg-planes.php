@@ -275,7 +275,7 @@
 											<li>Rocket surveys will occur in planes that are in some form of empty space.</li>
 										</ul>
 									</li>
-									<li>Most automated craft are planned to be lost while surveying, and transmit their findings to an armored “black box” that sits static in the exchange volume.</li>
+									<li>Most automated craft are planned to be lost while surveying, and transmit their findings to an armored “receiver box” that sits static in the exchange volume.</li>
 									<li>With enough automated surveying and testing performed, a plane will then be considered for manned exploration and scientific research.
 										<ul>
 											<li>Overtly dangerous or incompatible planes will rarely progress to this stage unless there is a significant profit incentive for development and exploitation.</li>
