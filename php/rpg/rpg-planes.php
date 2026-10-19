@@ -306,7 +306,7 @@
 												<li>A “platform” is installed at the center of the exchange volume. The gate’s “black box” is installed into this platform, along with static equipment protecting and securing the exchange volume and marking its borders.
 													<ul>
 														<li>Because the platform is now always exchanged, there are actually two platforms that switch places, each expanded slightly to match the exchange volume with every exchange.</li>
-														<li>A black box is a small, armored recording device buried at the center of its platform. “Black box” names a role rather than a single object: the static black box used during automated surveying is succeeded by the one installed in the platform. In the event of the destruction of a switch port or the loss of a field team, the black box will remain and contain a record of what transpired.</li>
+														<li>A black box is a small, armored recording device buried at the center of its platform. In the event of the destruction of a switch port or the loss of a field team, the black box will remain and contain a record of what transpired.</li>
 													</ul>
 												</li>
 												<li>During this phase of expansion, equipment is sent that “rolls out” from the gate platform and gathers around the switch port.
