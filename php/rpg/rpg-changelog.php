@@ -10,6 +10,8 @@
 					<p class="copy mb-3"><i>10/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Opening a New Plane now covers automated early planar exploration: turtle boxes, screamers, drone, crawler, and rocket surveys, and the black box. Trimmed a redundant line about inspection and certification.</li>
+						<li>Opening a New Plane now continues into manned planar exploration: the field team, naming the switch port, the twin gate platforms and black box, and the field team’s three-month contract.</li>
+						<li>Added image placeholders beside the Setting, Rebirth of Science, Planes, Stars, and Parabiology introductions on wide screens.</li>
 					</ul>
 				</article>
 
