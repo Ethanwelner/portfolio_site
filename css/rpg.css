@@ -1329,10 +1329,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     border-radius: 4px;
 }
 
+/* The whole pixel-art portrait fits in the square, unsmoothed. */
 .c-sheet-image {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 1/1;
+    image-rendering: pixelated;
 }
 
 .stat-line {
