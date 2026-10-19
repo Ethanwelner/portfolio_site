@@ -303,10 +303,10 @@
 									<ul>
 										<li>The gate aperture is expanded to accommodate a team of at least three explorers and their equipment.
 											<ul>
-												<li>A “platform” is installed at the center of the exchange volume. This platform contains the gate’s “black box,” as well as static equipment protecting and securing the exchange volume and marking its borders.
+												<li>A “platform” is installed at the center of the exchange volume. The gate’s “black box” is installed into this platform, along with static equipment protecting and securing the exchange volume and marking its borders.
 													<ul>
-														<li>Because the platform is now always exchanged, there are actually two platforms that switch places, each expanded slightly to match the exchange volume with every exchange.</li>
-														<li>The black box is a small, buried, armored recording device embedded at the center of the switch platform. In the event of the destruction of a switch port or the loss of a field team, the black box will remain and contain a record of what transpired.</li>
+														<li>Because the platform is now always exchanged, there are actually two platforms that switch places, each with its own black box and each expanded slightly to match the exchange volume with every exchange.</li>
+														<li>A black box is a small, armored recording device buried at the center of its platform. “Black box” names a role rather than a single object: the static black box used during automated surveying is succeeded by the ones installed in the platforms. In the event of the destruction of a switch port or the loss of a field team, the black box will remain and contain a record of what transpired.</li>
 													</ul>
 												</li>
 												<li>During this phase of expansion, equipment is sent that “rolls out” from the gate platform and gathers around the switch port.
