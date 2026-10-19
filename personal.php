@@ -178,6 +178,9 @@
                     </div>
 
                     <div class="section unlimited white-bg rpg-panel" id="rpg-adventure" role="tabpanel" aria-labelledby="tab-adventure">
+                        <div class="rpg-links-rail">
+                            <?php $rpgLinksKind = 'adventure'; $rpgLinksTone = 'black'; include 'php/rpg/rpg-links.php'; ?>
+                        </div>
                         <div class="container d-flex flex-wrap mt-5 mt-lg-0">
                             <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -234,6 +237,7 @@
                             </div>
                             <div class="separator"></div>
                             <div class="breakout shadow-diffuse black-bg white-text">
+                                <?php $rpgLinksKind = 'adventure'; $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
                                 <div class="separator"></div>
                                 <div class="container">
                                     <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">

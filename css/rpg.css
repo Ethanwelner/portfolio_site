@@ -1359,9 +1359,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         right: 60px;
     }
 
+    /* The rail is measured from the panel, which spans the full 100vw, but the
+       fixed copy is measured from the viewport inside the scrollbar. Pull it
+       back by the scrollbar's width (100vw - 100%) so the two navs line up. */
     .rpg-links-clip .rpg-links {
         left: auto;
-        right: 60px;
+        right: calc(60px - (100vw - 100%));
     }
 
     .rpg-links-rail .rpg-links,
@@ -1378,7 +1381,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     .rpg-links-clip .rpg-links {
-        right: 5vw;
+        right: calc(5vw - (100vw - 100%));
     }
 
     .c-sheet {
