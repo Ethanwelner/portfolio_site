@@ -985,8 +985,26 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* A real image in the placeholder's spot. The planet GIFs are 100px pixel art,
+   so they scale up in whole steps without smoothing. */
+.intro-image {
+    display: none;
+    flex: 1 1 0;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        image-rendering: pixelated;
+    }
+}
+
 @media (min-width: 1500px) {
-    .image-placeholder {
+    .image-placeholder,
+    .intro-image {
         display: flex;
     }
 }
