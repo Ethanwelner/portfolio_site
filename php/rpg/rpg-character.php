@@ -14,15 +14,17 @@
 		<ul class="copy">
 			<li>Character Level is tracked separately from Outer Ring stats.</li>
 			<li>Inner Ring stats are listed as a single number docked to their Outer Ring lines.</li>
-			<li>The Outer Ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of feat they gain.</li>
+			<li>The Outer Ring lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of Trait they gain.</li>
 			<li>Characters select a Kind, origin, profession, and past.</li>
-			<li>The character's Kind determines their starting stats, max stats, grants any unique ability the Kind may possess, and grants access to various feat categories.</li>
-			<li>The character's origin grants access to a starting set of origin feats, typically a mix of regular and knowledge feats. It also grants access to selectable feats related to the origin as well as other RP specific things (wealth, identification, etc).</li>
-			<li>The character's profession grants access to a starting set of profession feats, typically a mix of regular and knowledge feats. It also grants access to selectable feats related to the profession as well as other RP specific things (equipment, licenses, etc).</li>
-			<li>Since characters start with Outer Ring stats related to their Kind they will typically start with a set of player-selectable feats. A human starts with 1 point in each Outer Ring stat, so they start with 9 universal feats in addition to the feats automatically granted to them by their Kind, origin, profession, and past. Since they also only have a single point in each stat (plus three points for level 1) their selection will be relatively limited to less powerful and more common feats.
+			<li>The character's Kind determines their starting stats, max stats, grants any unique ability the Kind may possess, and grants access to various Trait categories.</li>
+			<li>The character's origin grants access to a starting set of origin Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the origin as well as other RP specific things (wealth, identification, etc).</li>
+			<li>The character's profession grants access to a starting set of profession Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the profession as well as other RP specific things (equipment, licenses, etc).</li>
+			<li>Every character has 9 Outer Ring stat points at level 0, spread out by their Kind. A human has 1 point in each Outer Ring stat.</li>
+			<li>Characters always start at level 1 at least, so every new character also gets their level 1 points: 1 Inner Ring point and 3 Outer Ring points to spend in that category.</li>
+			<li>Since every Outer Ring point grants a Trait, characters will typically start with a set of player-selectable Traits. A human's 9 level 0 points give them 9 universal Traits, plus the Traits from their level 1 points, in addition to the Traits automatically granted to them by their Kind, origin, profession, and past. Since they only have a point or two in each stat, their selection will be relatively limited to less powerful and more common Traits.
 			</li>
-			<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized feats their character would possess and to help them differentiate from each other.</li>
-			<li>This character has selected to use two of its universal feats gained at level 1 to increase its knowledge in contraband and security; it can do this due to being a freshly created character. Future stat gains cannot be used to gain knowledge feats, though this is at the GM's discretion.
+			<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
+			<li>This character has selected to use two of its universal Traits gained at creation to increase its knowledge in contraband and security; it can do this due to being a freshly created character. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
 			</li>
 		</ul>
 	</div>
@@ -39,9 +41,9 @@
 			<h6>Unexceptional</h6>
 			<p class="copy">Humans cannot exceed 15 in any Outer Ring stat unless otherwise modified.</p>
 			<h6>Versatile</h6>
-			<p class="copy">Humans can take cybernetics feats.</p>
+			<p class="copy">Humans can take cybernetics Traits.</p>
 			<h6>Biological</h6>
-			<p class="copy">Humans can take genetic engineering feats.</p>
+			<p class="copy">Humans can take genetic engineering Traits.</p>
 
 			<div class="line-container">
 				<h5><strong>Origin: The American Empire</strong></h5>
@@ -49,7 +51,7 @@
 			</div>
 			<h6>
 				Public Education<br>
-				Imperial citizens start with the following knowledge feats
+				Imperial citizens start with the following knowledge Traits
 			</h6>
 			<p class="copy">
 				English (language)<br>
@@ -62,11 +64,11 @@
 				<h5><strong>Profession: Smuggler</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Skill Feats</h6>
+			<h6>Skill Traits</h6>
 			<p class="copy">Smooth Talker<br>
 			Concealment<br>
 			1 additional Contact</p>
-			<h6>Knowledge Feats</h6>
+			<h6>Knowledge Traits</h6>
 			<p class="copy">Contraband<br>
 			Security<br>
 			1 additional Language</p>
@@ -75,11 +77,11 @@
 				<h5><strong>Past: Raised By The Streets</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Skill Feats</h6>
+			<h6>Skill Traits</h6>
 			<p class="copy">Schemer<br>
 			Sleight of Hand<br>
 			1 additional contact</p>
-			<h6>Knowledge Feats</h6>
+			<h6>Knowledge Traits</h6>
 			<p class="copy">Streetwise<br>
 			Criminal Activity<br>
 			1 additional Language</p>
@@ -458,7 +460,7 @@
 			</ul>
 			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
-					<h5>Other Feats and Abilities</h5>
+					<h5>Other Traits and Abilities</h5>
 					<div class="line"></div>
 				</div>
 				<li>Inheritance (Rickety Cargo Shuttle)</li>
