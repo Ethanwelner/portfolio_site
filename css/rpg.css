@@ -953,6 +953,44 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     width: 100%;
 }
 
+/* Intro copy columns (Setting, Rebirth of Science, The Planes, The Stars, Parabiology)
+   with a placeholder image beside it. The copy column is 768px, so the placeholder only shows
+   from 1500px up, where it gets at least ~260px. */
+.intro-with-image {
+    display: flex;
+    gap: 40px;
+
+    > .single-column-content {
+        flex: 0 1 768px;
+    }
+}
+
+.image-placeholder {
+    display: none;
+    flex: 1 1 0;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--portfolio-light-gray);
+    border-radius: var(--portfolio-radius);
+    color: var(--portfolio-medium-gray);
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+
+    /* Inverted over dark sections (Rebirth of Science, The Stars). */
+    .black-bg & {
+        background-color: var(--portfolio-gray);
+        color: var(--portfolio-white);
+    }
+}
+
+@media (min-width: 1500px) {
+    .image-placeholder {
+        display: flex;
+    }
+}
+
 /* php/personal/blog.php */
 .blog-posts {
     display: flex;
