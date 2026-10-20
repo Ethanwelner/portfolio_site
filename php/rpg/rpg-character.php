@@ -116,7 +116,7 @@
 			</div>
 		</div>
 		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-center c-variables">
-			<h5 class="d-inline-block"><i>10</i>&nbsp;<strong>HP</strong></h5>|
+			<h5 class="d-inline-block"><i>13</i>&nbsp;<strong>HP</strong></h5>|
 			<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>|		
 			<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
 		</div>
