@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/20/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Edwin Humble’s sample character sheet now has 13 HP: 10, plus his 3 points in Physical stats.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Dreftian characters now share a single Dreft Origin: Dreft (1), Dreftian Law (1), and Dreftan. Hometowns like Port Herminst, Glintl, and the Corsine Pass are now background Traits instead of separate Origins.</li>
