@@ -25,7 +25,7 @@
 		</ul>
 	</div>
 	<div class="starter-entry">
-		<h6><strong>Tatot (“High Orks”)</strong></h6>
+		<h6><strong>Tatot (“High Orcs”)</strong></h6>
 		<p class="copy mb-2">A polyphenic Kind: every Tatot is born either orcoid or goblinoid, and a player picks one at character creation. Neither decides a Tatot’s place in Dreft, though it does decide which jobs they’re built for.</p>
 		<ul class="copy mb-0">
 			<li><strong>Orcoid</strong> – Larger and stronger. Higher Power and Endurance maximums. No mana, and largely immune to <?php echo sf_lore_link('sunsickness', 'sunsickness'); ?>.</li>

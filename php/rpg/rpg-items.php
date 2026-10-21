@@ -36,10 +36,10 @@
 				<p class="copy mb-3">Blunt attacks are those that impact evenly across a wide area, such as a strike from a club or the wide blast front of an explosion. Any sudden change in pressure, such as being thrown out an airlock, would also be tracked as blunt damage. Blunt attacks can often cause the Concussed Temporary Condition Trait.</p>
 				
 				<h6 class=""><strong>Slashing</strong></h6>
-				<p class="copy mb-3">Slashing attacks are those that cut across a wide area, such as a swing from a sword or a slash from animal claws. Slashing attacks can often cause the Bleeding Temporary Condition Trait.</p>
+				<p class="copy mb-3">Slashing attacks are those that cut across a wide area, such as a swing from a sword or a slash from animal claws. Slashing attacks can often cause the Severe Bleeding Temporary Condition Trait.</p>
 				
 				<h6 class=""><strong>Piercing</strong></h6>
-				<p class="copy mb-3">Piercing attacks are those that impact sharply in a small area and pierce deep, such as a thrust from a spear or the impact of a bullet. Piercing attacks can often cause the Bleeding Temporary Condition Trait.</p>
+				<p class="copy mb-3">Piercing attacks are those that impact sharply in a small area and pierce deep, such as a thrust from a spear or the impact of a bullet. Piercing attacks can often cause the Severe Bleeding Temporary Condition Trait.</p>
 				
 				<div class="line-container">
 					<h5><strong>Elemental</strong></h5>
@@ -121,7 +121,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy">
-					Most items can be damaged or destroyed. When an item has various stages of degradation that can occur, it may be in its description, though often it will be at the GM's discretion, and additional descriptions may be added to an item relating to its condition. Larger or more complex and important items may have their own hit points or armor values. If no such values are present, then the GM can assign such values, or an item can simply be assumed to either be pristine or broken with no in-between. A destroyed item does not vanish except when circumstances say otherwise. A destroyed glass could still exist as glass shards waiting to be stepped on. The tracking or importance of a destroyed item is up to the player or GM.
+					Most items can be damaged or destroyed. When an item has various stages of degradation that can occur, it may be in its description, though often it will be at the GM's discretion, and additional descriptions may be added to an item relating to its condition. Larger or more complex and important items may have their own hit points or resistances. If no such values are present, then the GM can assign such values, or an item can simply be assumed to either be pristine or broken with no in-between. A destroyed item does not vanish except when circumstances say otherwise. A destroyed glass could still exist as glass shards waiting to be stepped on. The tracking or importance of a destroyed item is up to the player or GM.
 					<br><br>
 					Most items should not have their condition tracked unless it is important or relevant to the game (ex. A shield needn’t have its hit points tracked unless another character is explicitly trying to chip or destroy it with a weapon capable of doing so).
 				</p>
@@ -169,7 +169,7 @@
 				<p class="copy">
 					"Structures" is a catchall term for any item that exists, is unmoving, and can be occupied. Structures will typically be large and solid constructs built to be occupied or to accomplish some sort of task, but just like buildings in real life, they can have innumerable forms and purposes. Structures are not equipped; instead, characters will occupy a structure. The maximum total occupancy of a structure will always be defined in its description and will often feature not just total characters but other values such as the weight or size of what it can accommodate. In situations where these numbers are unset or so large that tracking them isn’t useful, a “-” will be listed, and these values are at the GM's discretion.
 					<br><br>
-					Structures are large and complex items and will often have hit points, armor values, and levels of destruction. When a character is occupying a structure, they are typically considered to be inside of and protected by it (presuming the threat isn’t inside the structure with them or they aren’t exposed in some other way).
+					Structures are large and complex items and will often have hit points, resistances, and levels of destruction. When a character is occupying a structure, they are typically considered to be inside of and protected by it (presuming the threat isn’t inside the structure with them or they aren’t exposed in some other way).
 				</p>
 				
 				<div class="line-container">
@@ -185,7 +185,7 @@
 				</p>
 				
 				<div class="line-container">
-					<h5><strong>Animals robots & animal-like NPCs</strong></h5>
+					<h5><strong>Animals, Robots, and Animal-like NPCs</strong></h5>
 					<div class="line"></div>
 				</div>
 				<p class="copy">
@@ -195,7 +195,7 @@
 					<br><br>
 					Animals and animal-like NPCs can equip and use items, though the items they can use will typically be listed or at the GM's discretion.
 					<ul>
-						<li>Animals and animal-like NPCs will always have hit points and armor values.</li>
+						<li>Animals and animal-like NPCs will always have hit points and resistances.</li>
 						<li>Animals and animal-like NPCs will have their characteristics defined by a template and are then modified via traits.</li>
 					</ul>
 				</p>
