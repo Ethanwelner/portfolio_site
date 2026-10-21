@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/21/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Parabiology now opens with an introduction: how rare life is, the life found in other planes, the field of parabiology, the discovery of parasapience, and extraplanar life arriving in the systems.</li>
+						<li>Parabiology’s tabs now list every species named so far, as placeholder entries (coming soon). Parazoology: Monsters of Isekai, Murk Legs, Dandelion Eaters, Golems, and Elementals. Parasapients: the Isek, Tatot, and Guwain, plus Avians, Lizardfolk, and Trolls. Paraflora: Sunflowers, now linked from the setting introduction.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/20/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Edwin Humble’s sample character sheet now has 13 HP: 10, plus his 3 points in Physical stats.</li>
