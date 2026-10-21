@@ -113,9 +113,6 @@ function sf_lore_titles() {
 		'isek' => 'Isek (“Free Elves”)',
 		'tatot' => 'Tatot (“High Orks”)',
 		'guwain' => 'Guwain (“Brine Dwarves”)',
-		'avians' => 'Avians',
-		'lizardfolk' => 'Lizardfolk',
-		'trolls' => 'Trolls',
 		'isekai-teams-trouble' => 'The Account of the Team’s Trouble',
 	];
 	return $titles;
