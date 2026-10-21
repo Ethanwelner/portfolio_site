@@ -47,7 +47,7 @@
 
 				<div class="tech-field-panel" id="para-parasapients" role="tabpanel" aria-labelledby="tab-para-parasapients">
 					<div class="content-stack">
-						<?php foreach (['isek', 'tatot', 'guwain', 'avians', 'lizardfolk', 'trolls'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						<?php foreach (['isek', 'tatot', 'guwain'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 					</div>
 				</div>
 
