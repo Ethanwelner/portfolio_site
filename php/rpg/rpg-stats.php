@@ -44,7 +44,7 @@
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
 			<ul class="copy">
-				<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any Inner or Outer Ring stat due to the Unexceptional Trait in the Kind section of its Background.</li>
+				<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any Outer Ring stat due to the Unexceptional Trait in the Kind section of its Background.</li>
 				<li>The below character started with 1 in each stat due to the human Generalist Trait in the Kind section of its Background.</li>
 				<li>Humans are intended to be the average baseline in this system.</li>
 				<li>This example character has 9 points spent in Physical so 27 to spend in the Outer Ring stats.</li>
