@@ -11,7 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>The Rebirth of Science’s Paraphysics field now has an overview: the study of the planes’ rules, why expression matters as much as math, what paraphysics has made possible, and the scientists working at the frontiers.</li>
 						<li>Parabiology now opens with an introduction: how rare life is, the life found in other planes, the field of parabiology, the discovery of parasapience, and extraplanar life arriving in the systems.</li>
-						<li>Parabiology’s tabs now list every species named so far, as placeholder entries (coming soon). Parazoology: Monsters of Isekai, Murk Legs, Dandelion Eaters, Golems, and Elementals. Parasapients: the Isek, Tatot, and Guwain, plus Avians, Lizardfolk, and Trolls. Paraflora: Sunflowers, now linked from the setting introduction.</li>
+						<li>Parabiology’s tabs now list every species named so far, as placeholder entries (coming soon). Parazoology: Murk Legs, Dandelion Eaters, Golems, and Elementals. Parasapients: the Isek, Tatot, and Guwain, plus Avians, Lizardfolk, and Trolls. Paraflora: Sunflowers, now linked from the setting introduction.</li>
 					</ul>
 				</article>
 
