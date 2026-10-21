@@ -17,7 +17,7 @@
 						The sky above you is a radiant white. And the sky below you. All around you, really. And it’s hot. The bathysphere is reading north of 3,200 bar and 230 degrees. A few moments outside its thick parametal alloy skin and you’d resemble a very well-cooked marble of hot carbon. Typical weather in 65/T/137 “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>.”
 					</p>
 					<p class="copy mb-0">
-						One of the harvesters is reporting an infestation of “Sunflowers.” The shift crew calls it “Light work,” for the pun as much as they do for the accuracy of the name. A few hours of scraping luminous higher-dimensional “vines” off of the ship-sized packaging and compression machine and you’ll be back at the Switch Point with time to spare.
+						One of the harvesters is reporting an infestation of “<?php echo sf_lore_link('sunflowers', 'Sunflowers'); ?>.” The shift crew calls it “Light work,” for the pun as much as they do for the accuracy of the name. A few hours of scraping luminous higher-dimensional “vines” off of the ship-sized packaging and compression machine and you’ll be back at the Switch Point with time to spare.
 					</p>
 				</div>
 				<p class="copy">

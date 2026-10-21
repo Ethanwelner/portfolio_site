@@ -106,6 +106,18 @@ function sf_lore_titles() {
 		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
 		'murk-legs' => 'Murk Legs',
+		'sunflowers' => 'Sunflowers',
+		'dandelion-eaters' => 'Dandelion Eaters',
+		'isekai-dragons' => 'Dragons of Isekai',
+		'giant-spiders' => 'Giant Spiders',
+		'golems' => 'Golems',
+		'elementals' => 'Elementals',
+		'isek' => 'Isek (“Free Elves”)',
+		'tatot' => 'Tatot (“High Orks”)',
+		'guwain' => 'Guwain (“Brine Dwarves”)',
+		'avians' => 'Avians',
+		'lizardfolk' => 'Lizardfolk',
+		'trolls' => 'Trolls',
 		'isekai-teams-trouble' => 'The Account of the Team’s Trouble',
 	];
 	return $titles;

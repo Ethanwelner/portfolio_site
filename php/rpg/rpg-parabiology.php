@@ -40,19 +40,21 @@
 				</div>
 
 				<div class="tech-field-panel is-active" id="para-parazoology" role="tabpanel" aria-labelledby="tab-para-parazoology">
-					<?php sf_lore_entry('murk-legs', 'h4', 'mb-3'); ?>
+					<div class="content-stack">
+						<?php foreach (['isekai-monsters', 'murk-legs', 'dandelion-eaters', 'isekai-dragons', 'giant-spiders', 'golems', 'elementals'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+					</div>
 				</div>
 
 				<div class="tech-field-panel" id="para-parasapients" role="tabpanel" aria-labelledby="tab-para-parasapients">
-					<p class="copy mb-0">
-						Content coming soon
-					</p>
+					<div class="content-stack">
+						<?php foreach (['isek', 'tatot', 'guwain', 'avians', 'lizardfolk', 'trolls'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+					</div>
 				</div>
 
 				<div class="tech-field-panel" id="para-paraflora" role="tabpanel" aria-labelledby="tab-para-paraflora">
-					<p class="copy mb-0">
-						Content coming soon
-					</p>
+					<div class="content-stack">
+						<?php foreach (['sunflowers'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+					</div>
 				</div>
 			</div>
 		</div>
