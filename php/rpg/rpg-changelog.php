@@ -9,6 +9,9 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics cleanup: Hit Points, Vibe Points, and Savvy Points now all come from Outer Ring stats; every Outer Ring point grants a Trait (circles Universal, squares Background); Traits can have Inner or Outer Ring requirements, and a character must meet them; armor values are now resistances; new Mechanical Trait; Possessed lists all its Mental and Social stats.</li>
+						<li>The sample character sheet’s math now adds up: Edwin Humble is level 5 with 16 HP, 9 VP, and 9 SP, Rank 2 knowledges backed by Memory 6, eight banked Traits, ERC for currency, and Mandarin in place of Orcoid. The stats example’s Social and Mental stats now match its Inner Ring.</li>
+						<li>Naming fixes: Expert Pilot, Long Toothed, Severe Bleeding, Criminal Activity, Inherited Pirate Vessel for the Pirate Scion, and High Orcs (with a c).</li>
 						<li>The Rebirth of Science’s Paraphysics field now has an overview: the study of the planes’ rules, why expression matters as much as math, what paraphysics has made possible, and the scientists working at the frontiers.</li>
 						<li>Parabiology now opens with an introduction: how rare life is, the life found in other planes, the field of parabiology, the discovery of parasapience, and extraplanar life arriving in the systems.</li>
 						<li>Parabiology’s tabs now list every species named so far, as placeholder entries (coming soon). Parazoology: Murk Legs, Dandelion Eaters, Golems, and Elementals. Parasapients: the Isek, Tatot, and Guwain. Paraflora: Sunflowers, now linked from the setting introduction.</li>

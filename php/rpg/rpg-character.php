@@ -24,7 +24,7 @@
 			<li>Since every Outer Ring point grants a Trait, characters will typically start with a set of player-selectable Traits. A human's 9 level 0 points give them 9 universal Traits, plus the Traits from their level 1 points, in addition to the Traits automatically granted to them by their Kind, origin, profession, and past. Since they only have a point or two in each stat, their selection will be relatively limited to less powerful and more common Traits.
 			</li>
 			<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
-			<li>This character has selected to use two of its universal Traits gained at creation to increase its knowledge in contraband and security; it can do this due to being a freshly created character. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
+			<li>This sample character is level 5: 9 level 0 points plus 15 from five levels, so 24 Outer Ring points and 24 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked eight more for in-game opportunities. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
 			</li>
 		</ul>
 	</div>
@@ -102,7 +102,7 @@
 	<div class="flex-14">
 <div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
 	<div class="position-absolute">
-		<div class="level-badge">2</div>
+		<div class="level-badge">5</div>
 	</div>
 	<div class="d-flex flex-18 flex-gap-48 row-gap-12 flex-fill c-sheet-box flex-wrap flex-md-nowrap">
 		<div class="flex-grow-1 d-flex flex-row flex-gap-24 flex-fill">
@@ -116,9 +116,9 @@
 			</div>
 		</div>
 		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-center c-variables">
-			<h5 class="d-inline-block"><i>13</i>&nbsp;<strong>HP</strong></h5>|
-			<h5 class="d-inline-block"><i>2</i>&nbsp;<strong>VP</strong></h5>|		
-			<h5 class="d-inline-block"><i>1</i>&nbsp;<strong>SP</strong></h5>
+			<h5 class="d-inline-block"><i>16</i>&nbsp;<strong>HP</strong></h5>|
+			<h5 class="d-inline-block"><i>9</i>&nbsp;<strong>VP</strong></h5>|		
+			<h5 class="d-inline-block"><i>9</i>&nbsp;<strong>SP</strong></h5>
 		</div>
 		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-end c-variables">
 			<h5 class="d-inline-block"><i>1</i> <strong>Blunt</strong></h5>|
@@ -146,11 +146,11 @@
 					<li>Past</li>
 					<li>Raised By The Streets</li>
 					<li>Cash</li>
-					<li>2,000 ID</li>
+					<li>2,000 ERC</li>
 					<li>Wealth</li>
-					<li>15,000 ID</li>
+					<li>15,000 ERC</li>
 					<li>Languages</li>
-					<li>English, Spanish, Orcoid</li>
+					<li>English, Spanish, Mandarin</li>
 				</ul>
 			</div>
 			<div class="d-inline-flex flex-4">
@@ -177,11 +177,11 @@
 						</div>
 					</div>
 					<div class="tiny-text">
-						<strong>Endurance - 1</strong>
+						<strong>Endurance - 2</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
-						<div class="stat square empty"></div>
+						<div class="stat square filled"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
@@ -202,11 +202,11 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Power - 1</strong>
+						<strong>Power - 2</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
-						<div class="stat square empty"></div>
+						<div class="stat square filled"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
@@ -227,11 +227,11 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Grace - 1</strong>
+						<strong>Grace - 2</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
-						<div class="stat square empty"></div>
+						<div class="stat square filled"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
@@ -262,32 +262,7 @@
 						</div>
 					</div>
 					<div class="tiny-text">
-						<strong>Empathy - 1</strong>
-					</div>
-					<div class="stat-line">
-						<div class="stat dot default"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square unavailable"></div>
-						<div class="stat dot unavailable"></div>
-						<div class="stat square unavailable"></div>
-						<div class="stat dot unavailable"></div>
-						<div class="stat square unavailable"></div>
-					</div>
-					<div class="tiny-text">
-						<strong>Persuasion - 2</strong>
+						<strong>Empathy - 2</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
@@ -312,7 +287,7 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Demeanor - 3</strong>
+						<strong>Persuasion - 3</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
@@ -336,11 +311,36 @@
 						<div class="stat dot unavailable"></div>
 						<div class="stat square unavailable"></div>
 					</div>
+					<div class="tiny-text">
+						<strong>Demeanor - 4</strong>
+					</div>
+					<div class="stat-line">
+						<div class="stat dot default"></div>
+						<div class="stat square filled"></div>
+						<div class="stat dot filled"></div>
+						<div class="stat square filled"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square empty"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square empty"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square empty"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square empty"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square empty"></div>
+						<div class="stat dot empty"></div>
+						<div class="stat square unavailable"></div>
+						<div class="stat dot unavailable"></div>
+						<div class="stat square unavailable"></div>
+						<div class="stat dot unavailable"></div>
+						<div class="stat square unavailable"></div>
+					</div>
 				</div>
 				<!-- mental stats -->
 				<div class="d-flex flex-column flex-gap-12">
 					<div class="d-flex flex-row flex-gap-12 align-items-center">
-						<div class="stat-badge">1</div>
+						<div class="stat-badge">2</div>
 						<div class="line-container d-flex flex-fill">
 							<h5>Mental</h5>
 							<div class="line"></div>
@@ -397,15 +397,15 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Memory - 2</strong>
+						<strong>Memory - 6</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
 						<div class="stat square filled"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
-						<div class="stat dot empty"></div>
-						<div class="stat square empty"></div>
+						<div class="stat dot filled"></div>
+						<div class="stat square filled"></div>
+						<div class="stat dot filled"></div>
+						<div class="stat square filled"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
@@ -431,15 +431,15 @@
 					<div class="line"></div>
 				</div>
 				<li><span class="tiny-text">Knowledge:</span> American History (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> American Geography (1)</li>
+				<li><span class="tiny-text">Knowledge:</span> American Geography (2)</li>
 				<li><span class="tiny-text">Knowledge:</span> Imperial Law (1)</li>
 				<li><span class="tiny-text">Knowledge:</span> Contraband (2)</li>
 				<li><span class="tiny-text">Knowledge:</span> Security (2)</li>
-				<li><span class="tiny-text">Knowledge:</span> Streetwise (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> Criminality (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> English</li>
-				<li><span class="tiny-text">Knowledge:</span> Spanish</li>
-				<li><span class="tiny-text">Knowledge:</span> Orcoid</li>
+				<li><span class="tiny-text">Knowledge:</span> Streetwise (2)</li>
+				<li><span class="tiny-text">Knowledge:</span> Criminal Activity (2)</li>
+				<li><span class="tiny-text">Language:</span> English</li>
+				<li><span class="tiny-text">Language:</span> Spanish</li>
+				<li><span class="tiny-text">Language:</span> Mandarin</li>
 			</ul>
 			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
@@ -452,8 +452,8 @@
 				<li>Sleight of Hand (1)</li>
 				<li>Act Natural (2)</li>
 				<li>Wheelman (1)</li>
-				<li>Pilot (basic automotive) (1)</li>
-				<li>Pilot (basic voidcraft) (1)</li>
+				<li>Pilot: Basic Automotive (1)</li>
+				<li>Pilot: Basic Voidcraft (1)</li>
 				<li>Backroads Traveler</li>
 				<li>Rapid Appraisal</li>
 				<li>Scrounger (1)</li>
@@ -466,7 +466,8 @@
 				<li>Inheritance (Rickety Cargo Shuttle)</li>
 				<li>More Lucky Than Good</li>
 				<li>Forgettable Face</li>
-				<li>Contacts (1)</li>
+				<li>Contacts (2)</li>
+				<li>Banked Traits (8)</li>
 			</ul>
 		</div>
 		<div class="flex-4 flex-gap-24">

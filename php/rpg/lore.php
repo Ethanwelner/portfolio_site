@@ -111,7 +111,7 @@ function sf_lore_titles() {
 		'golems' => 'Golems',
 		'elementals' => 'Elementals',
 		'isek' => 'Isek (“Free Elves”)',
-		'tatot' => 'Tatot (“High Orks”)',
+		'tatot' => 'Tatot (“High Orcs”)',
 		'guwain' => 'Guwain (“Brine Dwarves”)',
 		'isekai-teams-trouble' => 'The Account of the Team’s Trouble',
 	];
