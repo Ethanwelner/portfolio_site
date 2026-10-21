@@ -7,6 +7,23 @@
 
 			<div class="blog-posts">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/21/2026</i></p>
+					<p class="copy">
+						I’ve been adapting my automator for finding job listings. The system’s grown fairly complex, with Claude Code managing a mix of Qwen and DeepSeek for finding and vetting listings that I’d be interested in and qualified for. Refining the parameters and behaviors to make the system accurate has been a challenge, but it’s worked out well. I imagine the paid tiers of LinkedIn or similar job search platforms offer something similar, but local models are more than advanced enough to handle that kind of light work.
+					</p>
+					<p class="copy">
+						I’ve adopted a somewhat similar workflow into the character builder I’ve been constructing for my game project, Strange Frontiers. Initial test runs were taking upwards of 20 minutes, but I’ve got it down to 30 seconds per build. I think there’s really something here at this point. I’ve yet to see anyone really try to use these tools to bridge the simulated environment of a video game with the diegetic reality of a pen-and-paper RPG.
+					</p>
+					<p class="copy">
+						Also, look at this lil guy I saw yesterday. His little spot is just glowing in the night.
+					</p>
+					<div class="blog-post-images">
+						<img loading="lazy" data-src="img/blog page stuff/window_dog_1.webp" width="600" height="797" alt="Small white fluffy dog sitting in a lit ground-floor window of a dark-paneled house at night, above a sidewalk planter and a utility meter">
+						<img loading="lazy" data-src="img/blog page stuff/window_dog_2.webp" width="600" height="797" alt="Close-up of a small white fluffy dog lying on a blue cushion in a window at night, with string lights glowing behind it">
+					</div>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/14/2026</i></p>
 					<p class="copy">
 						Cursor just made a massive change to their billing system that instantly rate-limited my use of it unless I tripled how much I was paying them per month. Is there anything Elon touches that doesn’t turn to ash? Time to finally jump ship for Claude Code and actually get this DeepSeek harness fully capable. Grok was noticeably worse than other models in Cursor anyway, and given their close collaboration, they were constantly shoving you onto random Grok models.
