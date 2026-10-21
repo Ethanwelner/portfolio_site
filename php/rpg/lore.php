@@ -108,8 +108,6 @@ function sf_lore_titles() {
 		'murk-legs' => 'Murk Legs',
 		'sunflowers' => 'Sunflowers',
 		'dandelion-eaters' => 'Dandelion Eaters',
-		'isekai-dragons' => 'Dragons of Isekai',
-		'giant-spiders' => 'Giant Spiders',
 		'golems' => 'Golems',
 		'elementals' => 'Elementals',
 		'isek' => 'Isek (“Free Elves”)',
