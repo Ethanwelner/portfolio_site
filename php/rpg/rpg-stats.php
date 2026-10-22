@@ -30,7 +30,78 @@
 	</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="d-inline-flex flex-6 justify-content-end align-items-center">
-		<img loading="lazy" data-src="img/stat_ring.webp" alt="Stat diagram: character level at the center, the three core stats around it, and their focus stats outside" class="column-image">
+		<svg class="column-image stat-ring" viewBox="-8 -4 484 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
+			<title id="stat-ring-title">Stat diagram: character level at the center, the three core stats around it, and their focus stats outside</title>
+			<g fill="#979797" font-size="12" font-weight="700" text-anchor="middle">
+				<!-- Rings: focus stats outside, core stats inside -->
+				<ellipse class="stat-ring-focus-ring" cx="223.7" cy="207.268" rx="176.076" ry="173.268" fill="none" stroke="#979797" stroke-width="2"/>
+				<ellipse class="stat-ring-core-ring" cx="223.7" cy="202.408" rx="108.864" ry="107.128" fill="none" stroke="#979797" stroke-width="4"/>
+				<text class="stat-ring-ring-name" x="407.49" y="108.47">Focus<tspan x="407.49" y="122.12">Stats</tspan></text>
+				<text class="stat-ring-ring-name" x="347.34" y="140.35">Core<tspan x="347.34" y="154.12">Stats</tspan></text>
+				<!-- Physical -->
+				<g class="stat-ring-group" data-group="physical">
+					<g class="stat-ring-core" data-stat="physical">
+						<ellipse cx="223.7" cy="95.2798" rx="20.3241" ry="20"/>
+						<text fill="#212121" class="stat-ring-label" x="223.71" y="134.93">Physical</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="endurance">
+						<ellipse cx="163.572" cy="44.8658" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="163.80" y="21.87">Endurance</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="power">
+						<ellipse cx="223.7" cy="34" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="224.00" y="11.47">Power</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="grace">
+						<ellipse cx="283.828" cy="44" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="283.95" y="21.35">Grace</text>
+					</g>
+				</g>
+				<!-- Social -->
+				<g class="stat-ring-group" data-group="social">
+					<g class="stat-ring-core" data-stat="social">
+						<ellipse cx="317.979" cy="255.972" rx="20.3241" ry="20"/>
+						<text fill="#212121" class="stat-ring-label" x="271.04" y="259.97">Social</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="empathy">
+						<ellipse cx="396.833" cy="237.474" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="418.73" y="241.47" text-anchor="start">Empathy</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="persuasion">
+						<ellipse cx="376.186" cy="293.902" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="397.93" y="298.06" text-anchor="start">Persuasion</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="demeanor">
+						<ellipse cx="336.704" cy="339.958" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="358.51" y="344.43" text-anchor="start">Demeanor</text>
+					</g>
+				</g>
+				<!-- Mental -->
+				<g class="stat-ring-group" data-group="mental">
+					<g class="stat-ring-core" data-stat="mental">
+						<ellipse cx="129.421" cy="255.972" rx="20.3241" ry="20"/>
+						<text fill="#212121" class="stat-ring-label" x="176.96" y="259.97">Mental</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="logic">
+						<ellipse cx="50.5672" cy="237.474" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="29.45" y="241.63" text-anchor="end">Logic</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="intuition">
+						<ellipse cx="71.2138" cy="293.902" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="49.88" y="298.06" text-anchor="end">Intuition</text>
+					</g>
+					<g class="stat-ring-focus" data-stat="memory">
+						<ellipse cx="110.696" cy="339.958" rx="10.1621" ry="10"/>
+						<text fill="#212121" class="stat-ring-label" x="89.85" y="344.43" text-anchor="end">Memory</text>
+					</g>
+				</g>
+				<!-- Character level at the center -->
+				<g class="stat-ring-level">
+					<ellipse cx="223.7" cy="203.708" rx="37.5997" ry="37"/>
+					<text class="stat-ring-label" x="223.89" y="200.71" fill="#ffffff">Character<tspan x="223.89" y="214.83">Level</tspan></text>
+				</g>
+			</g>
+		</svg>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>

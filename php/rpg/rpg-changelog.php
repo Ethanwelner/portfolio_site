@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The stat diagram on the Stats page is now drawn in the page with real text, labeled core stats and focus stats.</li>
 						<li>Inner Ring and Outer Ring are retired: Physical, Social, and Mental are now core stats, and Endurance through Memory are their focus stats. Each level gives a core point, which unlocks 3 focus points. The Stats, Traits, Skill Checks, and sample character sheet pages say so.</li>
 						<li>Mechanics cleanup: Hit Points, Vibe Points, and Savvy Points now all come from Outer Ring stats; every Outer Ring point grants a Trait (circles Universal, squares Background); Traits can have Inner or Outer Ring requirements, and a character must meet them; armor values are now resistances; new Mechanical Trait; Possessed lists all its Mental and Social stats.</li>
 						<li>The sample character sheet’s math now adds up: Edwin Humble is level 5 with 16 HP, 9 VP, and 9 SP, Rank 2 knowledges backed by Memory 6, eight banked Traits, ERC for currency, and Mandarin in place of Orcoid. The stats example’s Social and Mental stats now match its Inner Ring.</li>
