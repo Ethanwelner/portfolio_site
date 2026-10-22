@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/22/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Switch Gates: the border of an exchange now briefly experiences “Null Physics” (was “Corrupted Physics”).</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The stat diagram on the Stats page is now drawn in the page with real text, labeled core stats and focus stats.</li>
