@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Elevation</dt>
-			<dd>-5</dd>
+			<dd>-4</dd>
 		</div>
 		<div>
 			<dt>Divergence</dt>
@@ -22,7 +22,7 @@
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Hyper-Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
@@ -36,7 +36,7 @@
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd>Hydrogen Gas</dd>
+			<dd>Exotic Hydrogen Gas</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
@@ -49,8 +49,8 @@
 	</dl>
 	<dl class="copy attr-list">
 		<div>
-			<dt>Discovered By</dt>
-			<dd>2135/<?php echo sf_lore_link('kingdom-of-india', 'The Kingdom of India'); ?></dd>
+			<dt>Discovered</dt>
+			<dd>2135 / <?php echo sf_lore_link('kingdom-of-india', 'The Kingdom of India'); ?></dd>
 		</div>
 		<div>
 			<dt>Claim</dt>
@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd></dd>
+			<dd>N/A</dd>
 		</div>
 	</dl>
 </div>
@@ -72,21 +72,25 @@
 		<div class="line"></div>
 	</summary>
 	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-7">
-			<div class="line-container">
-				<h5><strong>Overview</strong></h5>
-				<div class="line"></div>
+		<div class="flex-7 content-stack">
+			<div>
+				<div class="line-container">
+					<h5><strong>Overview</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					Content coming soon
+				</p>
 			</div>
-			<p class="copy mb-5">
-				Content coming soon
-			</p>
-			<div class="line-container">
-				<h5><strong>History</strong></h5>
-				<div class="line"></div>
+			<div>
+				<div class="line-container">
+					<h5><strong>History</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
 		</div>
 		<div class="flex-6">
 			<div class="line-container">
