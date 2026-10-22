@@ -6,11 +6,11 @@
 		</div>
 		<div>
 			<dt>Elevation</dt>
-			<dd>1</dd>
+			<dd>3</dd>
 		</div>
 		<div>
 			<dt>Divergence</dt>
-			<dd>2</dd>
+			<dd>3</dd>
 		</div>
 		<div>
 			<dt>Distance</dt>
@@ -18,11 +18,11 @@
 		</div>
 		<div>
 			<dt>Aperture</dt>
-			<dd>5</dd>
+			<dd>6</dd>
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
@@ -36,7 +36,7 @@
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd>Arborial Jungle</dd>
+			<dd>Earth-like, Arboreal Jungle (gate local)</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd></dd>
+			<dd>Holy Oak Port Terminal Facility</dd>
 		</div>
 	</dl>
 </div>

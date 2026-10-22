@@ -22,7 +22,7 @@
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Hyper-Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
