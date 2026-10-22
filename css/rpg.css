@@ -1247,7 +1247,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* php/rpg/rpg-setting.php, rpg-planes, rpg-spacecraft */
+/* php/rpg/rpg-setting.php, rpg-planes, rpg-spacecraft, rpg-technologies, plane lore entries */
 .content-stack {
     display: flex;
     flex-direction: column;
