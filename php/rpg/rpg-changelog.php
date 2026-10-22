@@ -11,6 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Sections stacked under their own headings in the Paraphysics tab and in every Known Planes entry now use the same 48px gap as Nations, instead of paragraph margins.</li>
 						<li>Known Planes: every plane now has a Stability rating (Stable, Hyper-Stable, or Meta-Stable), and Pairidaeza, Pataliputra, and Qliphoth have full fact boxes (Pairidaeza’s gate sits on its Iranian Plateau, with New Persepolis as the capital of New Persia). Gastown’s elevation is now -4, The Lost World’s elevation, divergence, and aperture are 3, 3, and 6, and Isekai’s distance and aperture are grades 8 and 4.</li>
+						<li>Planar Properties now explains Distance, Compatibility (Incompatible to High), and Aperture (with its size scale, 0 to 10), and adds Stability with its scale from Hyper-Stable to Hyper-Unstable. The three scales are tables.</li>
 						<li>Switch Gates: the border of an exchange now briefly experiences “Null Physics” (was “Corrupted Physics”).</li>
 						<li>The Paraphysics field’s empty History is replaced by three sections: Axiomatic Truth (descriptive truth as a law of nature, and the lock’s axiomatic stability), Paraphysical Decay (exotic effects fading by half-life), and Null Physics (the edges of reality, and the burst at a switch gate’s exchange border).</li>
 						<li>Known Planes: added 314/X/50 - “Qliphoth,” the limited plane whose edge expeditions measured null physics (details coming soon).</li>
