@@ -36,7 +36,7 @@
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd>Earth-like</dd>
+			<dd>Earth-like, Iranian Plateau (gate local)</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd>New Persepolis (city)</dd>
+			<dd>New Persepolis (capital of New Persia)</dd>
 		</div>
 	</dl>
 </div>
