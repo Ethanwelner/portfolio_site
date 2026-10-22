@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>10/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Switch Gates: the border of an exchange now briefly experiences “Null Physics” (was “Corrupted Physics”).</li>
+						<li>The Paraphysics field’s empty History is replaced by three sections: Axiomatic Truth (descriptive truth as a law of nature, and the lock’s axiomatic stability), Paraphysical Decay (exotic effects fading by half-life), and Null Physics (the edges of reality, and the burst at a switch gate’s exchange border).</li>
 					</ul>
 				</article>
 
