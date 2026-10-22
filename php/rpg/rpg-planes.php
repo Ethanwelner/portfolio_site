@@ -105,7 +105,10 @@
 									<div class="line"></div>
 								</summary>
 								<ul class="copy mb-0">
-									<li>Content coming soon</li>
+									<li>The difficulty and time involved in attaining a successful “Lock” on a given plane.</li>
+									<li>Measurements of planar parallax indicate a form of conceptual and mathematical, if not physical, distance.</li>
+									<li>Distance is a numeric value reported by the entity responsible for first attaining the lock, and is a soft value representing “effort.”</li>
+									<li>It also approximates the energy expenditure and time required for gate attunement.</li>
 								</ul>
 							</details>
 						</div>
@@ -120,7 +123,40 @@
 									<div class="line"></div>
 								</summary>
 								<ul class="copy mb-0">
-									<li>Content coming soon</li>
+									<li>A plane’s compatibility represents how hostile the plane is to the presence of human life or the infrastructure required for its exploitation.
+										<ul>
+											<li><strong>Incompatible:</strong> The plane is fundamentally incompatible with the existence of human life. This is most often the result of paraphysical laws that fundamentally contradict the ability of physical biology, or even matter, to exist.</li>
+											<li><strong>Low:</strong> The plane is extremely hostile to human habitation or exploitation. This is most often the result of a highly energetic plane or one possessing toxic paraphysical effects.</li>
+											<li><strong>Medium:</strong> The plane can accommodate human habitation and exploitation with a modicum of preparation and effort. This is most often the result of highly aggressive local fauna and flora, or a hostile environment with extremes of heat, cold, radiation, or other conditions.</li>
+											<li><strong>High:</strong> The plane is an Earth-like environment or a simple void that can be inhabited and exploited with basic precautions and adequate preparation.</li>
+										</ul>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div>
+							<div class="line-container">
+								<h5><strong>Stability</strong></h5>
+								<div class="line"></div>
+							</div>
+							<details class="lore-details">
+								<summary class="line-container">
+									<h5><strong>Details</strong></h5>
+									<div class="line"></div>
+								</summary>
+								<ul class="copy mb-0">
+									<li>The rate of increasing instability when tuning a gate, and/or the gate’s axiomatic instability.</li>
+									<li>Stability is determined using the “Khamvongsa” equation and is measured on the following scale:
+										<ul>
+											<li>Hyper-Stable</li>
+											<li>Stable</li>
+											<li>Low Stable</li>
+											<li>Meta-Stable</li>
+											<li>High Unstable</li>
+											<li>Unstable</li>
+											<li>Hyper-Unstable</li>
+										</ul>
+									</li>
 								</ul>
 							</details>
 						</div>
@@ -135,7 +171,21 @@
 									<div class="line"></div>
 								</summary>
 								<ul class="copy mb-0">
-									<li>Content coming soon</li>
+									<li>A gate’s current exchange volume and/or the largest volume it can achieve before becoming unstable, measured on a logarithmic scale with no maximum, though no gate aperture above 10 has ever been achieved.
+										<ul>
+											<li><strong>0:</strong> ~0 m</li>
+											<li><strong>1:</strong> ~0.1 m</li>
+											<li><strong>2:</strong> ~0.5 m</li>
+											<li><strong>3:</strong> ~1 m</li>
+											<li><strong>4:</strong> ~2.5 m</li>
+											<li><strong>5:</strong> ~5 m</li>
+											<li><strong>6:</strong> ~10 m</li>
+											<li><strong>7:</strong> ~25 m</li>
+											<li><strong>8:</strong> ~50 m</li>
+											<li><strong>9:</strong> ~110 m</li>
+											<li><strong>10:</strong> ~240 m</li>
+										</ul>
+									</li>
 								</ul>
 							</details>
 						</div>
