@@ -1288,6 +1288,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     flex-direction: column;
     gap: 48px;
 
+    /* The gap does the spacing, not the children's own margins. */
+    > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     > * > :last-child {
         margin-bottom: 0;
     }
@@ -1305,6 +1311,15 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 /* Timeline (rpg-setting.php), starship classes (rpg-spacecraft.php) */
 .content-stack-sm {
     gap: 20px;
+}
+
+/* Mechanics pages: a ruled title and its paragraphs (xs), a small heading and its text (xxs). */
+.content-stack-xs {
+    gap: 16px;
+}
+
+.content-stack-xxs {
+    gap: 8px;
 }
 
 .lore-body > :last-child {

@@ -11,6 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Every damage type now has an icon beside its heading under Damage Types. Edwin Humble’s sheet now lists only the resistances he has, as icons.</li>
 						<li>Credited the damage type icons from game-icons.net in the Attributions popup.</li>
+						<li>The Mechanics pages (Stats, Traits, Skills, Items, and the sample character) now use the same two-column layout and section spacing as the tab boxes. No text changes.</li>
 						<li>Planar Properties: every Stability level now has a description (axiomatic instability, attunement energy, and lock decay for the unstable levels), and Unstable now comes before High Unstable.</li>
 						<li>Sections stacked under their own headings in the Paraphysics tab and in every Known Planes entry now use the same 48px gap as Nations, instead of paragraph margins.</li>
 						<li>Known Planes: every plane now has a Stability rating (Stable, Hyper-Stable, or Meta-Stable), and Pairidaeza, Pataliputra, and Qliphoth have full fact boxes (Pairidaeza’s gate sits on its Iranian Plateau, with New Persepolis as the capital of New Persia). Gastown’s elevation is now -4, The Lost World’s elevation, divergence, and aperture are 3, 3, and 6, and Isekai’s distance and aperture are grades 8 and 4.</li>
