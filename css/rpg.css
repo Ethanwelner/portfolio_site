@@ -1288,6 +1288,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     flex-direction: column;
     gap: 48px;
 
+    /* The gap does the spacing, not the children's own margins. */
+    > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     > * > :last-child {
         margin-bottom: 0;
     }
@@ -1305,6 +1311,15 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 /* Timeline (rpg-setting.php), starship classes (rpg-spacecraft.php) */
 .content-stack-sm {
     gap: 20px;
+}
+
+/* Mechanics pages: a ruled title and its paragraphs (xs), a small heading and its text (xxs). */
+.content-stack-xs {
+    gap: 16px;
+}
+
+.content-stack-xxs {
+    gap: 8px;
 }
 
 .lore-body > :last-child {
@@ -1362,6 +1377,36 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     background-color: var(--portfolio-white);
     border: 1px solid var(--portfolio-light-gray);
     border-radius: 4px;
+}
+
+/* Inline damage type icons beside their labels (rpg-items, rpg-character).
+   They take the text color, so they work on light, dark and night backgrounds. */
+.damage-icon {
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    margin-right: .35em;
+    vertical-align: -.2em;
+    fill: currentColor;
+
+    /* On the sheet the icon stands in for the label, with nothing after it. */
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Damage Types headings in the write-up (rpg-items): a larger icon centered on its label. */
+.damage-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .damage-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 0;
+        flex-shrink: 0;
+    }
 }
 
 /* The whole pixel-art portrait fits in the square, unsmoothed. */
