@@ -1364,6 +1364,17 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     border-radius: 4px;
 }
 
+/* Inline damage type icons beside their labels (rpg-items, rpg-character).
+   They take the text color, so they work on light, dark and night backgrounds. */
+.damage-icon {
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    margin-right: .35em;
+    vertical-align: -.2em;
+    fill: currentColor;
+}
+
 /* The whole pixel-art portrait fits in the square, unsmoothed. */
 .c-sheet-image {
     width: 100%;
