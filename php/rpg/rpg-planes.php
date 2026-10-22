@@ -157,13 +157,13 @@
 										<tr><th>Level</th><th>Description</th></tr>
 									</thead>
 									<tbody>
-										<tr><td>Hyper-Stable</td><td></td></tr>
-										<tr><td>Stable</td><td></td></tr>
-										<tr><td>Low Stable</td><td></td></tr>
-										<tr><td>Meta-Stable</td><td></td></tr>
-										<tr><td>High Unstable</td><td></td></tr>
-										<tr><td>Unstable</td><td></td></tr>
-										<tr><td>Hyper-Unstable</td><td></td></tr>
+										<tr><td>Hyper-Stable</td><td>The gate lock does not suffer from axiomatic instability, and the energy required to attune the gate and perform exchanges is minimal.</td></tr>
+										<tr><td>Stable</td><td>The gate lock suffers from only minor axiomatic instability, and the energy required to attune the gate and perform exchanges is moderate.</td></tr>
+										<tr><td>Low Stable</td><td>The gate lock suffers from moderate axiomatic instability, and the energy required to attune the gate and perform exchanges is moderate.</td></tr>
+										<tr><td>Meta-Stable</td><td>The gate lock suffers from moderate axiomatic instability, and the energy required to attune the gate and perform exchanges is moderate.</td></tr>
+										<tr><td>Unstable</td><td>The gate lock suffers from significant axiomatic instability, and the energy required to attune the gate and perform exchanges is high. The gate may suffer from lock decay, whereby the aperture shrinks linearly over time without frequent exchanges.</td></tr>
+										<tr><td>High Unstable</td><td>The gate lock suffers from severe axiomatic instability, and the energy required to attune the gate and perform exchanges is extreme. The gate may suffer from lock decay, whereby the aperture shrinks linearly over time without frequent exchanges.</td></tr>
+										<tr><td>Hyper-Unstable</td><td>The gate lock suffers from severe axiomatic instability, and the energy required to attune the gate and perform exchanges is extreme. The gate may suffer from lock decay, whereby the aperture shrinks linearly over time without frequent exchanges.</td></tr>
 									</tbody>
 								</table>
 							</details>
