@@ -14,15 +14,15 @@
 		</div>
 		<div>
 			<dt>Distance</dt>
-			<dd>5</dd>
+			<dd>8</dd>
 		</div>
 		<div>
 			<dt>Aperture</dt>
-			<dd>2</dd>
+			<dd>4</dd>
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Meta-Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
@@ -128,7 +128,7 @@
 				<div class="line"></div>
 			</div>
 			<p class="copy">
-				Discovered in 2185 by the now-storied <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?>, 516/a/198 - “Isekai” presented a significant investment burden to the then-struggling surveyor. Only through the dogged insistence of its freewheeling founder and chief officer, Samuel “Sly” Cooperidge, did the effort finally bear fruit. With a high planar distance of grade 5 and an aperture of grade 2, the plane was both expensive and time-consuming to fully attune, but early indications of an Earth-approximate gate location and the presence of oxygen alongside many of the typical chemical markers for life convinced Cooperidge that this was the “Big One.” Six months of attunement were followed by a careful phase of port preparation, with a legal-standard 0.1 sq km port camp becoming operational in 2186.
+				Discovered in 2185 by the now-storied <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?>, 516/a/198 - “Isekai” presented a significant investment burden to the then-struggling surveyor. Only through the dogged insistence of its freewheeling founder and chief officer, Samuel “Sly” Cooperidge, did the effort finally bear fruit. With a high planar distance of grade 8 and an aperture of grade 4, the plane was both expensive and time-consuming to fully attune, but early indications of an Earth-approximate gate location and the presence of oxygen alongside many of the typical chemical markers for life convinced Cooperidge that this was the “Big One.” Six months of attunement were followed by a careful phase of port preparation, with a legal-standard 0.1 sq km port camp becoming operational in 2186.
 			</p>
 			<p class="copy">
 				The initial manned survey of the two-kilometer radius surrounding the switch port, made by the registered <?php echo sf_lore_link('explorers-lodge', 'lodge'); ?> exploration outfit “Southtown Surveyors,” revealed an Earth-like, green, leafy deciduous forest interlaced with small streams running toward magnetic east. Drone overflights showed forest coverage over the surrounding 15 kilometers, and a rocket surveyor was launched to gather far-field data on the surrounding countryside. Whatever was out there, they were in a dark, deep, old-growth landscape, but as yet there were no signs of dangerous fauna or environmental risks. With the six-hour switch window nearing its end, the team stored their equipment at the nascent build site and prepared for their return. Little did they know, they wouldn’t be going home for some time.

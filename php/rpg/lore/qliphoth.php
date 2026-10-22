@@ -2,67 +2,67 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Compatibility</dt>
-			<dd></dd>
+			<dd>Low</dd>
 		</div>
 		<div>
 			<dt>Elevation</dt>
-			<dd></dd>
+			<dd>-2</dd>
 		</div>
 		<div>
 			<dt>Divergence</dt>
-			<dd></dd>
+			<dd>10</dd>
 		</div>
 		<div>
 			<dt>Distance</dt>
-			<dd></dd>
+			<dd>5</dd>
 		</div>
 		<div>
 			<dt>Aperture</dt>
-			<dd></dd>
+			<dd>4</dd>
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Meta-Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>0</dd>
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
-			<dd></dd>
+			<dd>N/A</dd>
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd></dd>
+			<dd>Void</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
-			<dd></dd>
+			<dd>N/A</dd>
 		</div>
 		<div>
 			<dt>Indigenous life</dt>
-			<dd></dd>
+			<dd>No</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Discovered</dt>
-			<dd></dd>
+			<dd>2150 / New York University</dd>
 		</div>
 		<div>
 			<dt>Claim</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('american-empire', 'The American Empire'); ?></dd>
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('american-empire', 'The American Empire'); ?></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd></dd>
+			<dd>N/A</dd>
 		</div>
 	</dl>
 </div>

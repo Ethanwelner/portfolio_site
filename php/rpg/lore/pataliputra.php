@@ -2,33 +2,33 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Compatibility</dt>
-			<dd></dd>
+			<dd>High</dd>
 		</div>
 		<div>
 			<dt>Elevation</dt>
-			<dd></dd>
+			<dd>6</dd>
 		</div>
 		<div>
 			<dt>Divergence</dt>
-			<dd></dd>
+			<dd>3</dd>
 		</div>
 		<div>
 			<dt>Distance</dt>
-			<dd></dd>
+			<dd>4</dd>
 		</div>
 		<div>
 			<dt>Aperture</dt>
-			<dd></dd>
+			<dd>7</dd>
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>230 million</dd>
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
@@ -36,21 +36,21 @@
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd></dd>
+			<dd>Earth-like</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
-			<dd></dd>
+			<dd>Earth-approximate</dd>
 		</div>
 		<div>
 			<dt>Indigenous life</dt>
-			<dd></dd>
+			<dd>Yes, Parasapient</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Discovered</dt>
-			<dd></dd>
+			<dd>2141 / The Indian Institute of Science, Bengaluru</dd>
 		</div>
 		<div>
 			<dt>Claim</dt>
@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd></dd>
+			<dd>Pataliputra (city)</dd>
 		</div>
 	</dl>
 </div>

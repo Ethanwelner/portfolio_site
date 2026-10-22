@@ -22,7 +22,7 @@
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
@@ -50,7 +50,7 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Discovered</dt>
-			<dd>2114/<?php echo sf_lore_link('lunar-industrial-syndicate', 'The Third Lunar Industrial Syndicate'); ?></dd>
+			<dd>2114 / <?php echo sf_lore_link('lunar-industrial-syndicate', 'The Third Lunar Industrial Syndicate'); ?></dd>
 		</div>
 		<div>
 			<dt>Claim</dt>
