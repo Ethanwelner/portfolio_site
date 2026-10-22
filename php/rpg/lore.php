@@ -107,6 +107,11 @@ function sf_lore_titles() {
 		'explorers-lodge' => 'The Explorers’ Lodge',
 		'sunsickness' => 'Sunsickness',
 		'murk-legs' => 'Murk Legs',
+		'switch-port' => 'Switch Port',
+		'black-box' => 'Black Box',
+		'turtle-box' => 'Turtle Box',
+		'screamer' => 'Screamer',
+		'expedition-drone' => 'Expedition Drone',
 		'sunflowers' => 'Sunflowers',
 		'dandelion-eaters' => 'Dandelion Eaters',
 		'golems' => 'Golems',
@@ -163,6 +168,19 @@ function sf_lore_entry($slug, $heading = 'h4', $headingClass = '') {
 	echo '<div class="lore-body">';
 	sf_lore_body($slug);
 	echo '</div></div>';
+}
+
+// A lore entry as a ruled h5 title with its body in a collapsible Details box
+// (Planar Exploration tab, rpg-planes.php).
+function sf_lore_entry_details($slug) {
+	sf_lore_rendered($slug);
+	$title = sf_lore_title($slug);
+	echo '<div class="lore-entry" id="lore-' . $slug . '">';
+	echo '<div class="line-container"><h5><strong class="lore-title">' . $title . '</strong></h5><div class="line"></div></div>';
+	echo '<details class="lore-details"><summary class="line-container"><h5><strong>Details</strong></h5><div class="line"></div></summary>';
+	echo '<div class="lore-body">';
+	sf_lore_body($slug);
+	echo '</div></details></div>';
 }
 
 function sf_lore_entries($slugs, $heading = 'h4') {

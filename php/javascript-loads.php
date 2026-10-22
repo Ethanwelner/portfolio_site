@@ -510,7 +510,7 @@
 			if ( ! $entry.length ) {
 				return false;
 			}
-			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.children( ".lore-body" ).html(), trigger );
+			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.find( ".lore-body" ).first().html(), trigger );
 			return true;
 		}
 
@@ -643,7 +643,7 @@
 			$( ".lore-entry[id^='lore-']" ).each(function() {
 				var $entry = $( this );
 				var slug = this.id.slice( 5 );
-				addRpgSearchEntry( entries, $entry.find( ".lore-title" ).first().text(), loreContext[ this.id ] || [ "Lore" ], $entry.children( ".lore-body" ).text(), function() {
+				addRpgSearchEntry( entries, $entry.find( ".lore-title" ).first().text(), loreContext[ this.id ] || [ "Lore" ], $entry.find( ".lore-body" ).first().text(), function() {
 					openLoreModal( slug, $rpgSearchInput[0] );
 				});
 			});
