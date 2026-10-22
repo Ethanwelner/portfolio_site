@@ -1373,6 +1373,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     margin-right: .35em;
     vertical-align: -.2em;
     fill: currentColor;
+
+    /* On the sheet the icon stands in for the label, with nothing after it. */
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 /* The whole pixel-art portrait fits in the square, unsmoothed. */

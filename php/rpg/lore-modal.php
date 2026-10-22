@@ -12,6 +12,7 @@
 				<li><a href="https://fropl.itch.io/sci-fi-portrait-pack" target="_blank" rel="noopener">Sci-fi Portrait Pack</a> by bobbobfred, with the Vireo 4 palette by Snowy Owl. Character portraits.</li>
 				<li><a href="https://watabou.github.io/index.html" target="_blank" rel="noopener">Watabou’s Procgen Arcana</a> by Oleg Dolya (Watabou). Map generators.</li>
 				<li><a href="https://deep-fold.itch.io/pixel-planet-generator" target="_blank" rel="noopener">Pixel Planet Generator</a> by Deep-Fold. Planets.</li>
+				<li>Icons from <a href="https://game-icons.net" target="_blank" rel="noopener">game-icons.net</a> by Lorc, sbed, and Skoll, under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>. Damage type icons.</li>
 			</ul>
 		</div>
 	</div>
