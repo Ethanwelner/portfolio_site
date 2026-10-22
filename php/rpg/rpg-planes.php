@@ -123,15 +123,19 @@
 									<div class="line"></div>
 								</summary>
 								<ul class="copy mb-0">
-									<li>A plane’s compatibility represents how hostile the plane is to the presence of human life or the infrastructure required for its exploitation.
-										<ul>
-											<li><strong>Incompatible:</strong> The plane is fundamentally incompatible with the existence of human life. This is most often the result of paraphysical laws that fundamentally contradict the ability of physical biology, or even matter, to exist.</li>
-											<li><strong>Low:</strong> The plane is extremely hostile to human habitation or exploitation. This is most often the result of a highly energetic plane or one possessing toxic paraphysical effects.</li>
-											<li><strong>Medium:</strong> The plane can accommodate human habitation and exploitation with a modicum of preparation and effort. This is most often the result of highly aggressive local fauna and flora, or a hostile environment with extremes of heat, cold, radiation, or other conditions.</li>
-											<li><strong>High:</strong> The plane is an Earth-like environment or a simple void that can be inhabited and exploited with basic precautions and adequate preparation.</li>
-										</ul>
-									</li>
+									<li>A plane’s compatibility represents how hostile the plane is to the presence of human life or the infrastructure required for its exploitation.</li>
 								</ul>
+								<table class="copy sf-table">
+									<thead>
+										<tr><th>Level</th><th>Description</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Incompatible</td><td>The plane is fundamentally incompatible with the existence of human life. This is most often the result of paraphysical laws that fundamentally contradict the ability of physical biology, or even matter, to exist.</td></tr>
+										<tr><td>Low</td><td>The plane is extremely hostile to human habitation or exploitation. This is most often the result of a highly energetic plane or one possessing toxic paraphysical effects.</td></tr>
+										<tr><td>Medium</td><td>The plane can accommodate human habitation and exploitation with a modicum of preparation and effort. This is most often the result of highly aggressive local fauna and flora, or a hostile environment with extremes of heat, cold, radiation, or other conditions.</td></tr>
+										<tr><td>High</td><td>The plane is an Earth-like environment or a simple void that can be inhabited and exploited with basic precautions and adequate preparation.</td></tr>
+									</tbody>
+								</table>
 							</details>
 						</div>
 						<div>
@@ -146,18 +150,22 @@
 								</summary>
 								<ul class="copy mb-0">
 									<li>The rate of increasing instability when tuning a gate, and/or the gate’s axiomatic instability.</li>
-									<li>Stability is determined using the “Khamvongsa” equation and is measured on the following scale:
-										<ul>
-											<li>Hyper-Stable</li>
-											<li>Stable</li>
-											<li>Low Stable</li>
-											<li>Meta-Stable</li>
-											<li>High Unstable</li>
-											<li>Unstable</li>
-											<li>Hyper-Unstable</li>
-										</ul>
-									</li>
+									<li>Stability is determined using the “Khamvongsa” equation and is measured on the following scale:</li>
 								</ul>
+								<table class="copy sf-table">
+									<thead>
+										<tr><th>Level</th><th>Description</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Hyper-Stable</td><td></td></tr>
+										<tr><td>Stable</td><td></td></tr>
+										<tr><td>Low Stable</td><td></td></tr>
+										<tr><td>Meta-Stable</td><td></td></tr>
+										<tr><td>High Unstable</td><td></td></tr>
+										<tr><td>Unstable</td><td></td></tr>
+										<tr><td>Hyper-Unstable</td><td></td></tr>
+									</tbody>
+								</table>
 							</details>
 						</div>
 						<div>
@@ -171,22 +179,26 @@
 									<div class="line"></div>
 								</summary>
 								<ul class="copy mb-0">
-									<li>A gate’s current exchange volume and/or the largest volume it can achieve before becoming unstable, measured on a logarithmic scale with no maximum, though no gate aperture above 10 has ever been achieved.
-										<ul>
-											<li><strong>0:</strong> ~0 m</li>
-											<li><strong>1:</strong> ~0.1 m</li>
-											<li><strong>2:</strong> ~0.5 m</li>
-											<li><strong>3:</strong> ~1 m</li>
-											<li><strong>4:</strong> ~2.5 m</li>
-											<li><strong>5:</strong> ~5 m</li>
-											<li><strong>6:</strong> ~10 m</li>
-											<li><strong>7:</strong> ~25 m</li>
-											<li><strong>8:</strong> ~50 m</li>
-											<li><strong>9:</strong> ~110 m</li>
-											<li><strong>10:</strong> ~240 m</li>
-										</ul>
-									</li>
+									<li>A gate’s current exchange volume and/or the largest volume it can achieve before becoming unstable, measured on a logarithmic scale with no maximum, though no gate aperture above 10 has ever been achieved.</li>
 								</ul>
+								<table class="copy sf-table">
+									<thead>
+										<tr><th>Aperture</th><th>Approximate size</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>0</td><td>~0 m</td></tr>
+										<tr><td>1</td><td>~0.1 m</td></tr>
+										<tr><td>2</td><td>~0.5 m</td></tr>
+										<tr><td>3</td><td>~1 m</td></tr>
+										<tr><td>4</td><td>~2.5 m</td></tr>
+										<tr><td>5</td><td>~5 m</td></tr>
+										<tr><td>6</td><td>~10 m</td></tr>
+										<tr><td>7</td><td>~25 m</td></tr>
+										<tr><td>8</td><td>~50 m</td></tr>
+										<tr><td>9</td><td>~110 m</td></tr>
+										<tr><td>10</td><td>~240 m</td></tr>
+									</tbody>
+								</table>
 							</details>
 						</div>
 					</div>
