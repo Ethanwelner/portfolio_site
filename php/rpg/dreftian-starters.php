@@ -1,5 +1,5 @@
 <p class="copy mb-5">
-	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as starting value / maximum. For comparison, a Human starts with 1 in every Outer Ring stat and can’t raise any above 15. Each Kind here starts with the same 9 level 0 points and the same total of maximums, spread to fit the Kind.
+	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as starting value / maximum. For comparison, a Human starts with 1 in every focus stat and can’t raise any above 15. Each Kind here starts with the same 9 level 0 points and the same total of maximums, spread to fit the Kind.
 </p>
 <div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">

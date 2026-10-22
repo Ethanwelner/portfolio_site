@@ -13,15 +13,15 @@
 			
 			<!-- OVERVIEW -->
 			<p class="copy my-3">
-				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's Inner Ring stats record where each level was invested and set how many Outer Ring points a character has in each category. A character's Outer Ring stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. A character's Kind will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
+				A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. A character's Kind will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
 			</p>
 			<ul class="copy">
-				<li>When your character gains a level you get a point to spend in any Inner Ring stat.</li>
-				<li>Adding a point to an Inner Ring stat gives you 3 to spend in the Outer Ring of that category.</li>
-				<li>The maximum that can be spent on any Inner or Outer Ring stat is 20.</li>
+				<li>When your character gains a level you get a point to spend in any core stat.</li>
+				<li>Adding a point to a core stat gives you 3 to spend in the focus stats of that category.</li>
+				<li>The maximum that can be spent on any core or focus stat is 20.</li>
 				<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
-				<li>Hit Points & other resource mechanics are dependent on scores from the Outer Ring.</li>
-				<li>Skill Check bonuses and access to certain Traits are dependent on scores from the Outer Ring.</li>
+				<li>Hit Points & other resource mechanics are dependent on scores from the focus stats.</li>
+				<li>Skill Check bonuses and access to certain Traits are dependent on scores from the focus stats.</li>
 				<li>Each point put into a stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's stats at a glance. Neither is strictly required, as the stats they describe can be more compactly described in other ways.</li>
 				<li>An ogre can be all physicality but may only be smart enough to use a club.</li>
 				<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
@@ -30,7 +30,7 @@
 	</div>
 	<div class="d-inline-flex align-items-center flex-1"></div>
 	<div class="d-inline-flex flex-6 justify-content-end align-items-center">
-		<img loading="lazy" data-src="img/stat_ring.webp" alt="Stat ring" class="column-image">
+		<img loading="lazy" data-src="img/stat_ring.webp" alt="Stat diagram: character level at the center, the three core stats around it, and their focus stats outside" class="column-image">
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
@@ -44,10 +44,10 @@
 			<!-- example stats -->
 			<h3 class="mb-3">Example stats</h3>
 			<ul class="copy">
-				<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any Outer Ring stat due to the Unexceptional Trait in the Kind section of its Background.</li>
+				<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any focus stat due to the Unexceptional Trait in the Kind section of its Background.</li>
 				<li>The below character started with 1 in each stat due to the human Generalist Trait in the Kind section of its Background.</li>
 				<li>Humans are intended to be the average baseline in this system.</li>
-				<li>This example character has 9 points spent in Physical so 27 to spend in the Outer Ring stats.</li>
+				<li>This example character has 9 points spent in Physical so 27 to spend in the focus stats.</li>
 				<li>This character has spent only 2 points in Social and 1 in Mental, so its access to Traits that go beyond simple feats of brute strength will be very limited.</li>
 				<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
 				<li>Universal Traits are available to any character, Background Traits have requirements based on Kind, Origin, or Profession.</li>
@@ -406,7 +406,7 @@
 				Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 			</p>
 			<p class="copy my-3">
-				HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical Outer Ring stat. A max-level Human who has spent every level increasing their Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
+				HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical focus stat. A max-level Human who has spent every level increasing their Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
 			</p>
 			<p class="copy my-3">
 				As HP's are lost a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related traits are listed following this section. Several of these traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred, but these are not directly tied to the character's hit point total, though Condition Traits such as Severe Bleeding may result in a character continuing to lose HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
@@ -442,7 +442,7 @@
 
 			<h4 class="mt-4">Vibe Points (VP)</h4>
 			<p class="copy my-3">
-				VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total of their Social Outer Ring stats. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
+				VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total of their Social focus stats. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
 			</p>
 			<p class="copy my-3">VP's can be spent on:</p>
 			<ul class="copy">
@@ -453,7 +453,7 @@
 
 			<h4 class="mt-4">Savvy Points (SP)</h4>
 			<p class="copy my-3">
-				SP are a spendable resource that can be used to boost a character's skill checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum number of SP's equal to the total of their Mental Outer Ring stats. Certain Traits and equipment can increase the recovery rate of SP's. SP's can be spent on:
+				SP are a spendable resource that can be used to boost a character's skill checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum number of SP's equal to the total of their Mental focus stats. Certain Traits and equipment can increase the recovery rate of SP's. SP's can be spent on:
 			</p>
 			<ul class="copy">
 				<li>Rerolling a single die in a mentally related skill check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
