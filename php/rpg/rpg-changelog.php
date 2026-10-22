@@ -7,6 +7,15 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/22/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Switch Gates: the border of an exchange now briefly experiences “Null Physics” (was “Corrupted Physics”).</li>
+						<li>The Paraphysics field’s empty History is replaced by three sections: Axiomatic Truth (descriptive truth as a law of nature, and the lock’s axiomatic stability), Paraphysical Decay (exotic effects fading by half-life), and Null Physics (the edges of reality, and the burst at a switch gate’s exchange border).</li>
+						<li>Known Planes: added 314/X/50 - “Qliphoth,” the limited plane whose edge expeditions measured null physics (details coming soon).</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The stat diagram on the Stats page is now drawn in the page with real text, labeled core stats and focus stats.</li>

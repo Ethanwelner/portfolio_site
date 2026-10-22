@@ -18,7 +18,7 @@
 			<li>They require a “Lock” on the axiomatic coordinates of the location to be exchanged. How far a gate can be moved without retuning depends on its lock’s stability: a stable lock tolerates moving the gate and changing its surroundings with little loss of attunement, while an unstable one de-attunes with even small changes. Re-establishing a lost lock in the same location is exceptionally difficult, if possible at all.</li>
 			<li>They require a “Tuning” period, during which exchanges are repeated and the coordinates are refined, allowing the exchanged volume to grow.</li>
 			<li>They require input power in the form of an electric charge that scales exponentially with the volume of the area being exchanged.</li>
-			<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Corrupted Physics.”</li>
+			<li>The inside borders of the (typically) spherical area undergoing an exchange briefly experience “Null Physics.”</li>
 			<li>Switch gates, and indeed any of the paraphysical effects of St-245/E6, do not work in any as-of-yet discovered plane other than Earth baseline.</li>
 			<li>The process is one-sided. A switch gate exchanges an area with a planar location; the subject plane does not require its own switch gate.</li>
 		</ul>
