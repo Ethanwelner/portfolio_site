@@ -791,6 +791,41 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Two-column reference tables in Planar Properties (php/rpg/rpg-planes.php):
+   Compatibility, Stability, and Aperture scales. */
+.sf-table {
+    width: 100%;
+    margin: 1rem 0 0;
+    border-collapse: collapse;
+
+    th,
+    td {
+        padding: 8px 12px;
+        border-bottom: 1px solid rgb(0 0 0 / 15%);
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    td:first-child {
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    td:empty::before {
+        content: "\2014";
+        opacity: 0.4;
+    }
+}
+
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
    corporation lore entries in php/rpg/lore/, the Nations tab in rpg-setting.php, and
    the Starships tab in rpg-spacecraft.php.
@@ -1247,7 +1282,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* php/rpg/rpg-setting.php, rpg-planes, rpg-spacecraft */
+/* php/rpg/rpg-setting.php, rpg-planes, rpg-spacecraft, rpg-technologies, plane lore entries */
 .content-stack {
     display: flex;
     flex-direction: column;

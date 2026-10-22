@@ -2,55 +2,55 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Compatibility</dt>
-			<dd></dd>
+			<dd>High</dd>
 		</div>
 		<div>
 			<dt>Elevation</dt>
-			<dd></dd>
+			<dd>2</dd>
 		</div>
 		<div>
 			<dt>Divergence</dt>
-			<dd></dd>
+			<dd>2</dd>
 		</div>
 		<div>
 			<dt>Distance</dt>
-			<dd></dd>
+			<dd>4</dd>
 		</div>
 		<div>
 			<dt>Aperture</dt>
-			<dd></dd>
+			<dd>6</dd>
 		</div>
 		<div>
 			<dt>Stability</dt>
-			<dd></dd>
+			<dd>Stable</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>84 million</dd>
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
-			<dd></dd>
+			<dd>50–60°C (gate local)</dd>
 		</div>
 		<div>
 			<dt>Biome</dt>
-			<dd></dd>
+			<dd>Earth-like, Iranian Plateau (gate local)</dd>
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
-			<dd></dd>
+			<dd>Earth-approximate</dd>
 		</div>
 		<div>
 			<dt>Indigenous life</dt>
-			<dd></dd>
+			<dd>Yes</dd>
 		</div>
 	</dl>
 	<dl class="copy attr-list">
 		<div>
 			<dt>Discovered</dt>
-			<dd></dd>
+			<dd>2139 / The Institute for Cultural and Linguistic Studies, Persepolis</dd>
 		</div>
 		<div>
 			<dt>Claim</dt>
@@ -62,7 +62,7 @@
 		</div>
 		<div>
 			<dt>Locations</dt>
-			<dd></dd>
+			<dd>New Persepolis (capital of New Persia)</dd>
 		</div>
 	</dl>
 </div>
@@ -72,21 +72,25 @@
 		<div class="line"></div>
 	</summary>
 	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-7">
-			<div class="line-container">
-				<h5><strong>Overview</strong></h5>
-				<div class="line"></div>
+		<div class="flex-7 content-stack">
+			<div>
+				<div class="line-container">
+					<h5><strong>Overview</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy">
+					Content coming soon
+				</p>
 			</div>
-			<p class="copy mb-5">
-				Content coming soon
-			</p>
-			<div class="line-container">
-				<h5><strong>History</strong></h5>
-				<div class="line"></div>
+			<div>
+				<div class="line-container">
+					<h5><strong>History</strong></h5>
+					<div class="line"></div>
+				</div>
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
 		</div>
 		<div class="flex-6">
 			<div class="line-container">
