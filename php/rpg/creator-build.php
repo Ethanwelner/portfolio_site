@@ -1,22 +1,21 @@
 <?php
-// The built Character Creator in creator/ (from the
-// strange-frontiers-character-creator repo's `npm run build`). Vite writes
-// creator/index.html with hashed asset names, so the page reads its script
-// and stylesheet tags from there. Returns null until the build is in place.
+// The built Character Creator in creator/, from `npm run build:site` in the
+// strange-frontiers-character-creator repo. Its script and stylesheet have
+// hashed names, so the page reads them from Vite's manifest. Returns null
+// until the build is in place.
 function creator_build() {
-	$index = __DIR__ . '/../../creator/index.html';
-	if (! is_file($index)) {
+	$manifest = __DIR__ . '/../../creator/.vite/manifest.json';
+	if (! is_file($manifest)) {
 		return null;
 	}
-	$html = file_get_contents($index);
-	$assets = array('css' => array(), 'js' => array());
-	preg_match_all('/<link[^>]+rel="stylesheet"[^>]+href="\.\/([^"]+)"/', $html, $css);
-	preg_match_all('/<script[^>]+type="module"[^>]+src="\.\/([^"]+)"/', $html, $js);
-	foreach ($css[1] as $path) {
-		$assets['css'][] = 'creator/' . $path;
+	foreach (json_decode(file_get_contents($manifest), true) ?: array() as $chunk) {
+		if (! empty($chunk['isEntry']) && ! empty($chunk['file'])) {
+			$css = array();
+			foreach ($chunk['css'] ?? array() as $path) {
+				$css[] = 'creator/' . $path;
+			}
+			return array('css' => $css, 'js' => array('creator/' . $chunk['file']));
+		}
 	}
-	foreach ($js[1] as $path) {
-		$assets['js'][] = 'creator/' . $path;
-	}
-	return $assets['js'] ? $assets : null;
+	return null;
 }
