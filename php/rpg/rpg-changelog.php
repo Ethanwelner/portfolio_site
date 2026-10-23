@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>A character’s Origin now always grants its Knowledges, even when the character doesn’t meet those Knowledges’ minimum stats.</li>
+						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum stats.</li>
 					</ul>
 				</article>
 
