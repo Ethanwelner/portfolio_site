@@ -1,1 +1,6 @@
 .DS_Store
+
+# The Character Creator proxy's settings and limits belong outside the site
+# folder; this keeps a misplaced copy out of git.
+sf-creator-config.php
+sf-creator-data/
