@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/23/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum stats.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Every damage type now has an icon beside its heading under Damage Types. Edwin Humble’s sheet now lists only the resistances he has, as icons.</li>
