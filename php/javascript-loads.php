@@ -509,6 +509,9 @@
 
 		function openLoreModal(slug, trigger) {
 			var $entry = $( "#lore-" + slug );
+			if ( ! $entry.length && rpgSearchSource ) {
+				$entry = $( rpgSearchSource ).find( "#lore-" + slug );
+			}
 			if ( ! $entry.length ) {
 				return false;
 			}
@@ -566,6 +569,8 @@
 		var $rpgSearchResults = $rpgSearch.find( ".rpg-search-results" );
 		var rpgSearchIndex = null;
 		var rpgSearchActive = -1;
+		// personal.php, fetched on pages that don't have its Strange Frontiers pane (creator.php)
+		var rpgSearchSource = null;
 
 		function escapeSearchHtml(text) {
 			return text.replace( /[&<>"]/g, function( c ) {
@@ -627,22 +632,23 @@
 			showLoreModal( escapeSearchHtml( title ), $body.html(), $rpgSearchInput[0] );
 		}
 
-		function buildRpgSearchIndex() {
+		// $root is this page, or personal.php fetched (rpgSearchSource).
+		function buildRpgSearchIndex($root) {
 			var entries = [];
 			var loreContext = {};
 			var subTitle = "";
 
-			$( ".pane-frontiers" ).find( "h3.sub-title, .lore-entry" ).each(function() {
+			$root.find( ".pane-frontiers" ).find( "h3.sub-title, .lore-entry" ).each(function() {
 				if ( this.tagName === "H3" ) {
 					subTitle = collapseSearchText( $( this ).text() );
 				} else {
 					var $panel = $( this ).closest( ".tech-field-panel" );
-					var panelTab = $panel.length ? collapseSearchText( $( "#" + $panel.attr( "aria-labelledby" ) ).text() ) : "";
+					var panelTab = $panel.length ? collapseSearchText( $root.find( "#" + $panel.attr( "aria-labelledby" ) ).text() ) : "";
 					loreContext[ this.id ] = [ subTitle, panelTab ];
 				}
 			});
 
-			$( ".lore-entry[id^='lore-']" ).each(function() {
+			$root.find( ".lore-entry[id^='lore-']" ).each(function() {
 				var $entry = $( this );
 				var slug = this.id.slice( 5 );
 				addRpgSearchEntry( entries, $entry.find( ".lore-title" ).first().text(), loreContext[ this.id ] || [ "Lore" ], $entry.find( ".lore-body" ).first().text(), function() {
@@ -654,7 +660,7 @@
 			var h4 = "";
 			var line = "";
 			subTitle = "";
-			$( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box" ).each(function() {
+			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box" ).each(function() {
 				var $el = $( this );
 				var title = collapseSearchText( $el.text() );
 
@@ -769,6 +775,31 @@
 			rpgSearchActive = -1;
 		}
 
+		function showRpgSearchMessage(text) {
+			$rpgSearchResults.empty().append( $( "<li>", { "class": "rpg-search-empty", role: "presentation", text: text } ) );
+			$rpgSearchResults.prop( "hidden", false );
+			$rpgSearchInput.attr( "aria-expanded", "true" );
+		}
+
+		// Pages without the Strange Frontiers pane search personal.php's, fetched the
+		// first time someone searches.
+		function loadRpgSearchSource() {
+			if ( loadRpgSearchSource.started ) {
+				return;
+			}
+			loadRpgSearchSource.started = true;
+			fetch( "personal.php" ).then(function( response ) {
+				return response.ok ? response.text() : Promise.reject();
+			}).then(function( html ) {
+				rpgSearchSource = new DOMParser().parseFromString( html, "text/html" );
+				rpgSearchIndex = buildRpgSearchIndex( $( rpgSearchSource ) );
+				runRpgSearch();
+			}).catch(function() {
+				loadRpgSearchSource.started = false;
+				showRpgSearchMessage( "Search isn’t available right now." );
+			});
+		}
+
 		function runRpgSearch() {
 			var query = collapseSearchText( foldSearchText( $rpgSearchInput.val() ) );
 			if ( ! query ) {
@@ -776,7 +807,12 @@
 				return;
 			}
 			if ( ! rpgSearchIndex ) {
-				rpgSearchIndex = buildRpgSearchIndex();
+				if ( ! $( ".pane-frontiers" ).length ) {
+					loadRpgSearchSource();
+					showRpgSearchMessage( "Loading…" );
+					return;
+				}
+				rpgSearchIndex = buildRpgSearchIndex( $( document ) );
 			}
 
 			var terms = query.split( " " );

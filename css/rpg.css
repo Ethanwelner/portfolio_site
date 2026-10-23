@@ -1641,8 +1641,15 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     position: relative;
 }
 
-.creator-shell :is(.logo-bug, .section-about-social-container, .section-scroll-links) {
+.creator-shell :is(.logo-bug, .section-about-social-container, .section-scroll-links, .rpg-search) {
     position: absolute;
+}
+
+/* The Strange Frontiers search, as on its pane (hidden below 992px like there) */
+@media (min-width: 992px) {
+    .creator-shell .rpg-search {
+        display: block;
+    }
 }
 
 /* The same white logo and black social icons as personal.php's hero */
@@ -1655,21 +1662,23 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     fill: var(--portfolio-black);
 }
 
-/* The creator starts below the logo and page nav. Short viewports pull the
-   nav up (portfolio-media-queries.css); phones shrink it (see .personal-page-nav above). */
-.creator-shell #root {
-    padding-top: 264px;
+/* The creator's hero starts below the logo and page nav, inside its 75vh
+   (--sf-creator-top, read by the creator's .builder-hero). Short viewports pull
+   the nav up (portfolio-media-queries.css); phones shrink it (see
+   .personal-page-nav above). */
+.creator-shell {
+    --sf-creator-top: 296px;
 }
 
 @media (max-height: 959px) {
-    .creator-shell #root {
-        padding-top: 224px;
+    .creator-shell {
+        --sf-creator-top: 256px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .creator-shell #root {
-        padding-top: 190px;
+    .creator-shell {
+        --sf-creator-top: 222px;
     }
 }
 
