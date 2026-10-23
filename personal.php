@@ -5,6 +5,7 @@
         <!-- this loads the head code -->
         <?php include 'php/head-loads.php'; ?>
         <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg-night.css'); ?>"/>
+        <?php include 'php/rpg/page-slide.php'; ?>
         <title>Ethan Welner Portfolio</title>
     </head>
     <body>

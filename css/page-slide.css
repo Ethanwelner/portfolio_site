@@ -1,0 +1,98 @@
+/* ========================================
+   PAGE SLIDE
+   personal.php and creator.php slide into each other like personal.php's
+   panes: the page moves sideways while the sky, logo, social links and page
+   nav stay put. The Character Creator is the rightmost page, so going to it
+   slides left and leaving it slides right. php/rpg/page-slide.php loads this
+   and sets the direction. Browsers without cross-page view transitions just
+   load the next page.
+   ======================================== */
+
+@view-transition {
+    navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    @view-transition {
+        navigation: none;
+    }
+}
+
+/* What stays put */
+.rpg-night {
+    view-transition-name: sf-sky;
+}
+
+.personal-hero-clip .logo-bug,
+.creator-shell .logo-bug {
+    view-transition-name: sf-logo;
+}
+
+.personal-hero-clip .section-about-social-container,
+.creator-shell .section-about-social-container {
+    view-transition-name: sf-social;
+}
+
+.personal-hero-clip .personal-page-nav,
+.creator-shell .personal-page-nav {
+    view-transition-name: sf-nav;
+}
+
+/* personal.php has more copies of the logo and social links (under the hero,
+   and clipped to each black section and the About panel); they'd show as the
+   page slides out from under the ones that stay put */
+html.sf-page-sliding :is(.logo-bug, .section-logo-bug, .section-about-social-container):not(.personal-hero-clip *, .creator-shell > *) {
+    visibility: hidden;
+}
+
+/* The page itself, at the pane slide's speed (css/rpg.css .personal-track) */
+html:active-view-transition-type(slide-left)::view-transition-old(root) {
+    animation: 700ms cubic-bezier(0.4, 0, 0.2, 1) both sf-slide-to-left;
+}
+
+html:active-view-transition-type(slide-left)::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0.4, 0, 0.2, 1) both sf-slide-from-right;
+}
+
+html:active-view-transition-type(slide-right)::view-transition-old(root) {
+    animation: 700ms cubic-bezier(0.4, 0, 0.2, 1) both sf-slide-to-right;
+}
+
+html:active-view-transition-type(slide-right)::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0.4, 0, 0.2, 1) both sf-slide-from-left;
+}
+
+@keyframes sf-slide-to-left {
+    to { transform: translateX(-100vw); }
+}
+
+@keyframes sf-slide-from-right {
+    from { transform: translateX(100vw); }
+}
+
+@keyframes sf-slide-to-right {
+    to { transform: translateX(100vw); }
+}
+
+@keyframes sf-slide-from-left {
+    from { transform: translateX(-100vw); }
+}
+
+/* Arriving on personal.php#strangefrontiers, the page starts on that pane, so
+   the slide shows it instead of Projects & Blog. php/javascript-loads.php
+   takes over once it has applied the hash. */
+html.sf-start-frontiers .personal-track {
+    left: -100vw;
+}
+
+html.sf-start-frontiers body > .rpg-night {
+    display: block;
+}
+
+html.sf-start-frontiers .personal-shell.is-personal .nav-bullet-personal {
+    display: none;
+}
+
+html.sf-start-frontiers .personal-shell.is-personal .nav-bullet-frontiers {
+    display: inline;
+}
