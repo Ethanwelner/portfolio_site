@@ -15,4 +15,11 @@
     --portfolio-light-gray: #eaeaea;
 
     --portfolio-radius: 8px;
+
+    /* Strange Frontiers (css/rpg.css and the Character Creator) */
+    --frontiers-green: #2dfc64;
+    --frontiers-lore: #884ddc;
+    /* #884ddc is 3.18:1 on #212121; this lighter purple clears 4.5:1. */
+    --frontiers-lore-on-black: #a67bf0;
+    --frontiers-dreft: #1c372b;
 }
