@@ -212,15 +212,16 @@
 						<ul class="copy">
 							<li>Kashgar station finishes construction and begins operation, acting as a logistical waystation and signal booster for colonization efforts.</li>
 							<li>By executive decree, multiple US states are reorganized, forming New York, the Commonwealth, and Greater Maine.</li>
+							<li><?php echo sf_lore_link('kingdom-of-india', 'India'); ?>’s ruling party suspends elections, citing internal instability and foreign election interference.</li>
 						</ul>
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2053</strong></h6>
+							<h6><strong>2053 – 2064</strong></h6>
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>India moves to expand its Himalayan borderline and either invades or forcefully absorbs bordering nations.</li>
+							<li>India moves to expand its Himalayan borderline and either invades or forcibly absorbs bordering nations.</li>
 						</ul>
 					</div>
 					<div>
@@ -230,6 +231,15 @@
 						</div>
 						<ul class="copy">
 							<li>Texas, New Mexico, Kansas, and Oklahoma secede from the United States, seizing substantial military hardware and beginning a two-decade nuclear and economic standoff.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2055 – 2060</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>As Pakistan collapses under economic ruin and drought, <?php echo sf_lore_link('kingdom-of-india', 'India'); ?> invades to secure its nuclear weapons and material, driving the remaining Pakistani population into the refugee zones.</li>
 						</ul>
 					</div>
 					<div>
@@ -257,6 +267,16 @@
 						</div>
 						<ul class="copy">
 							<li>First permanently inhabited Martian colony established.</li>
+							<li><?php echo sf_lore_link('kingdom-of-india', 'India'); ?> resettles Kashmir and the annexed territories of Pakistan as the new states of Jammu and Sindh.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2066</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Lieutenant General Zorawar Singh Rathore overthrows <?php echo sf_lore_link('kingdom-of-india', 'India'); ?>’s ruling party in a military coup and names himself president.</li>
 						</ul>
 					</div>
 					<div>
@@ -302,6 +322,7 @@
 						</div>
 						<ul class="copy">
 							<li>The second AI panic.</li>
+							<li>Rathore is killed and his automated regime collapses. A young religious demagogue occupies the Parliament House in New Delhi.</li>
 						</ul>
 					</div>
 					<div>
@@ -311,6 +332,7 @@
 						</div>
 						<ul class="copy">
 							<li>Emperor Liu is revealed to have been a figurehead for an AI. He remains on the throne, and the Shenzhen Dynasty is rechristened the Wuhan Dynasty.</li>
+							<li>Samrat Veera Pratapa Jagadeeshwara Raya I is crowned the first Maharaja of the Kingdom of <?php echo sf_lore_link('kingdom-of-india', 'India'); ?>, beginning the restoration of India.</li>
 						</ul>
 					</div>
 					<div>
@@ -487,6 +509,15 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2141</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>295/c/29 - “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>” is discovered by the Indian Institute of Science, Bengaluru.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2146</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -546,6 +577,24 @@
 						</div>
 						<ul class="copy">
 							<li><?php echo sf_lore_link('first-interstellar-expansion', 'First interstellar expansion'); ?>.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2170</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>The Kingdom of <?php echo sf_lore_link('kingdom-of-india', 'India'); ?> moves its capital to Pataliputra.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2171 – Present day</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Mass migration from India to Pataliputra, the largest planar colonial project ever attempted.</li>
 						</ul>
 					</div>
 					<div>
