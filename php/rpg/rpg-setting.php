@@ -192,7 +192,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>Minor Indo-Pakistani nuclear exchange. AI is partially blamed.</li>
+							<li>Pakistani nuclear strike on the Kashmir region. AI is partially blamed.</li>
 						</ul>
 					</div>
 					<div>

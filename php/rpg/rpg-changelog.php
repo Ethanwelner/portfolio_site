@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/23/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The Kingdom of India now has a full history, from the drought of the 2000s and the annexation of Pakistan to the move of its capital to Pataliputra; Former Pakistan joins its territories, and its prince is Raja Jagadeeshwara Raya IV.</li>
+						<li>Timeline, 2050: a Pakistani nuclear strike on the Kashmir region (was a minor Indo-Pakistani nuclear exchange), matching India’s history.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Every damage type now has an icon beside its heading under Damage Types. Edwin Humble’s sheet now lists only the resistances he has, as icons.</li>
