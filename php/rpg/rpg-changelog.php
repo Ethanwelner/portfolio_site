@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: the Strange Frontiers search is now at the top of the page, and opens results right there. The page’s header is now as tall as the other pages’ headers, with its content centered.</li>
 						<li>Switching between the Character Creator and Projects &amp; Blog or Strange Frontiers now slides the page sideways, like switching between those two.</li>
 						<li>Character Creator: characters built from a description spread their stats a little more as their level rises, so a high-level specialist still has some points outside their specialty.</li>
 						<li>Added the Character Creator, a new page beside Strange Frontiers in the nav. Describe a character and the AI builds it from the game’s Kinds, packages, and Traits, or build one step by step; the rules engine checks every choice.</li>

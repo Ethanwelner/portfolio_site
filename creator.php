@@ -33,6 +33,7 @@ if (! $creator) {
 
         <div class="creator-shell">
             <?php include 'php/header.php'; ?>
+            <?php include 'php/rpg/rpg-search.php'; ?>
             <?php
                 $personalNavActive = 'creator';
                 $personalNavTone = 'white';
@@ -47,6 +48,8 @@ if (! $creator) {
         </div>
 
         <?php include 'php/about.php'; ?>
+        <?php // Search results open here; the lore itself comes from personal.php. ?>
+        <?php include 'php/rpg/lore-modal-shell.php'; ?>
         <?php include 'php/javascript-loads.php'; ?>
 
     </body>
