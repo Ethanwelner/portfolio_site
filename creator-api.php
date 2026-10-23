@@ -200,7 +200,13 @@ if ($status === 200) {
 	echo $reply;
 	exit;
 }
-$detail = json_decode($reply, true)['error']['message'] ?? 'no details';
+$error = json_decode($reply, true)['error'] ?? array();
+$detail = $error['message'] ?? 'no details';
+// Out of prepaid credits: the API answers with a billing error, or a 400
+// that says the credit balance is too low.
+if ($status === 402 || ($error['type'] ?? '') === 'billing_error' || stripos($detail, 'credit balance') !== false) {
+	sf_fail(503, 'unavailable', 'The Character Creator is taking a break. Try again later.');
+}
 if ($status === 401 || $status === 403) {
 	sf_fail(502, 'auth', 'The Character Creator\'s Claude API key was rejected.');
 }
