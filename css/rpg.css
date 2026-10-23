@@ -326,7 +326,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 .frontiers-accent,
 .personal-page-nav a.frontiers-accent,
 .personal-page-nav a.frontiers-accent .nav-bullet {
-    color: #2dfc64;
+    color: var(--frontiers-green);
 }
 
 /* Pane tab bars along the bottom of each hero in personal.php
@@ -440,14 +440,14 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 
 .rpg-tab:focus-visible,
 .tech-field-tab:focus-visible {
-    outline: 2px solid #2dfc64;
+    outline: 2px solid var(--frontiers-green);
     outline-offset: -2px;
 }
 
 /* Inline lore links built by sf_lore_link() in php/rpg/lore.php, used
    throughout the Strange Frontiers copy */
 .lore-link {
-    color: #884ddc;
+    color: var(--frontiers-lore);
     font-weight: 600;
     text-decoration: underline dotted;
     text-underline-offset: 3px;
@@ -455,14 +455,14 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 }
 
 .lore-link:hover {
-    color: #884ddc;
+    color: var(--frontiers-lore);
     text-decoration-style: solid;
 }
 
-/* #884ddc is 3.18:1 on #212121; this lighter purple clears 4.5:1. */
+/* The lighter purple on black (see css/tokens.css) */
 .black-bg .lore-link,
 .black-bg .lore-link:hover {
-    color: #a67bf0;
+    color: var(--frontiers-lore-on-black);
 }
 
 .lore-link:focus {
@@ -471,7 +471,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 
 .lore-link:focus-visible,
 .lore-modal-close:focus-visible {
-    outline: 2px solid #2dfc64;
+    outline: 2px solid var(--frontiers-green);
     outline-offset: 2px;
     border-radius: 2px;
 }
@@ -617,7 +617,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 .rpg-search-input:focus {
     outline: none;
-    border-color: #2dfc64;
+    border-color: var(--frontiers-green);
 }
 
 .rpg-search-results {
@@ -675,7 +675,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 .rpg-search-result mark {
     padding: 0;
-    background: color-mix(in srgb, #2dfc64 45%, transparent);
+    background: color-mix(in srgb, var(--frontiers-green) 45%, transparent);
     color: inherit;
 }
 
@@ -881,7 +881,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         &:focus-visible {
-            outline: 2px solid #2dfc64;
+            outline: 2px solid var(--frontiers-green);
             outline-offset: 2px;
         }
     }
@@ -1630,4 +1630,53 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 .starter-entry h6 {
     margin-bottom: .5rem;
+}
+
+/* Character Creator page, creator.php. The creator brings only its own styles
+   (creator/assets/, scoped to .sf-creator) and wears the rest of this site's
+   CSS. personal.php clips its fixed chrome to the hero; the creator has no
+   fixed-height hero, so here the logo, social links and page nav scroll away
+   with the top of the page. */
+.creator-shell {
+    position: relative;
+}
+
+.creator-shell :is(.logo-bug, .section-about-social-container, .section-scroll-links) {
+    position: absolute;
+}
+
+/* The same white logo and black social icons as personal.php's hero */
+.creator-shell .logo-bug {
+    background-color: var(--portfolio-white);
+    color: var(--portfolio-black);
+}
+
+.creator-shell .social-link svg {
+    fill: var(--portfolio-black);
+}
+
+/* The creator starts below the logo and page nav. Short viewports pull the
+   nav up (portfolio-media-queries.css); phones shrink it (see .personal-page-nav above). */
+.creator-shell #root {
+    padding-top: 264px;
+}
+
+@media (max-height: 959px) {
+    .creator-shell #root {
+        padding-top: 224px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .creator-shell #root {
+        padding-top: 190px;
+    }
+}
+
+/* A printed character sheet without the site around it */
+@media print {
+    body:has(.sf-creator) .rpg-night,
+    .creator-shell > :not(#root) {
+        display: none !important;
+    }
 }
