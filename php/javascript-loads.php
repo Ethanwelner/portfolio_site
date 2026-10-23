@@ -331,6 +331,8 @@
 
 		if ( $( ".personal-shell" ).length ) {
 			applyPersonalHash( false );
+			// The pane is set, so the page-slide head start can go (php/rpg/page-slide.php).
+			document.documentElement.classList.remove( "sf-start-frontiers" );
 			window.requestAnimationFrame( function() {
 				$( ".personal-shell" ).addClass( "transitions-on" );
 			} );

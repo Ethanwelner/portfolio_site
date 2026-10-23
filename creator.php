@@ -19,6 +19,12 @@ if (! $creator) {
         <?php foreach ($creator['css'] as $href): ?>
         <link rel="stylesheet" href="<?php echo htmlspecialchars($href); ?>"/>
         <?php endforeach; ?>
+        <?php include 'php/rpg/page-slide.php'; ?>
+        <!-- The page waits to paint until the creator has rendered, so a slide
+             in from personal.php shows it instead of an empty page. -->
+        <?php foreach ($creator['js'] as $src): ?>
+        <script type="module" blocking="render" src="<?php echo htmlspecialchars($src); ?>"></script>
+        <?php endforeach; ?>
         <title>Character Creator - Strange Frontiers</title>
     </head>
     <body>
@@ -42,9 +48,6 @@ if (! $creator) {
 
         <?php include 'php/about.php'; ?>
         <?php include 'php/javascript-loads.php'; ?>
-        <?php foreach ($creator['js'] as $src): ?>
-        <script type="module" src="<?php echo htmlspecialchars($src); ?>"></script>
-        <?php endforeach; ?>
 
     </body>
 </html>

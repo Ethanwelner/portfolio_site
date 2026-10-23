@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Switching between the Character Creator and Projects &amp; Blog or Strange Frontiers now slides the page sideways, like switching between those two.</li>
+						<li>Character Creator: characters built from a description spread their stats a little more as their level rises, so a high-level specialist still has some points outside their specialty.</li>
 						<li>Added the Character Creator, a new page beside Strange Frontiers in the nav. Describe a character and the AI builds it from the game’s Kinds, packages, and Traits, or build one step by step; the rules engine checks every choice.</li>
 						<li>Timeline: India’s history now appears on the main timeline, from the 2052 suspension of elections and the 2055–2060 invasion of Pakistan to the 2081 crowning of the first Maharaja, Pataliputra’s discovery in 2141, and the 2170 move of the capital; the 2053 expansion now spans 2053–2064.</li>
 						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum stats.</li>
