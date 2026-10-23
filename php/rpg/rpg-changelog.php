@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum stats.</li>
 						<li>The Kingdom of India now has a full history, from the drought of the 2000s and the annexation of Pakistan to the move of its capital to Pataliputra; Former Pakistan joins its territories, and its prince is Raja Jagadeeshwara Raya IV.</li>
 						<li>Timeline, 2050: a Pakistani nuclear strike on the Kashmir region (was a minor Indo-Pakistani nuclear exchange), matching India’s history.</li>
 					</ul>
