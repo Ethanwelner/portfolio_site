@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/24/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: the character sheet lists Knowledges and Languages one per line, like the sample character’s sheet. Each opens its Trait card in a popup.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the Strange Frontiers search is now at the top of the page, and opens results right there. The page’s header is now as tall as the other pages’ headers, with its content centered.</li>
