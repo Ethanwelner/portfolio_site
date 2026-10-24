@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>10/24/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the character sheet lists Knowledges and Languages one per line, like the sample character’s sheet. Each opens its Trait card in a popup.</li>
+						<li>Character Creator: the character sheet shows the Kind’s features at the top, under HP, VP, and SP.</li>
 					</ul>
 				</article>
 
