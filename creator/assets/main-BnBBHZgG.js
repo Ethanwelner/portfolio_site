@@ -126,8 +126,6 @@ features:\r
     description: Isek don’t age past their prime, though with their inveterate adventure-seeking and simple lack of self-care, few live to see old age.\r
   - name: Reckless\r
     description: Higher Power and Grace maximums, lower Demeanor maximum.\r
-  - name: Rebel’s Doctrine\r
-    description: Raised in the Isek doctrine of rebellion and seeking.\r
   - name: Restless\r
     description: Ill-suited to sedentary life. Isek have easier access to military, guild, and caravan Traits.\r
 traitAccess: [military, guild, caravan]\r
