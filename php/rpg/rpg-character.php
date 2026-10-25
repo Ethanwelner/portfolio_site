@@ -19,15 +19,15 @@
 						<li>Core stats are listed as a single number docked to their focus stat lines.</li>
 						<li>The focus stat lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of Trait they gain.</li>
 						<li>Characters select a Kind, origin, profession, and past.</li>
-						<li>The character's Kind determines their starting stats, max stats, grants any unique ability the Kind may possess, and grants access to various Trait categories.</li>
+						<li>The character's Kind adds a bonus to their stats, sets their max stats, grants any unique ability the Kind may possess, and grants access to various Trait categories.</li>
 						<li>The character's origin grants access to a starting set of origin Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the origin as well as other RP specific things (wealth, identification, etc).</li>
 						<li>The character's profession grants access to a starting set of profession Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the profession as well as other RP specific things (equipment, licenses, etc).</li>
-						<li>Every character has 9 focus stat points at level 0, spread out by their Kind. A human has 1 point in each focus stat.</li>
+						<li>Every character's stats start at 0, and their Kind adds 9 bonus points to their focus stats, spread out to fit the Kind. A human gets +1 in each focus stat.</li>
 						<li>Characters always start at level 1 at least, so every new character also gets their level 1 points: 1 core point and 3 focus points to spend in that category.</li>
-						<li>Since every focus point grants a Trait, characters will typically start with a set of player-selectable Traits. A human's 9 level 0 points give them 9 universal Traits, plus the Traits from their level 1 points, in addition to the Traits automatically granted to them by their Kind, origin, profession, and past. Since they only have a point or two in each stat, their selection will be relatively limited to less powerful and more common Traits.
+						<li>Since every focus point grants a Trait, characters will typically start with a set of player-selectable Traits. A human's 9 bonus points give them 9 universal Traits, plus the Traits from their level 1 points, in addition to the Traits automatically granted to them by their Kind, origin, profession, and past. Since they only have a point or two in each stat, their selection will be relatively limited to less powerful and more common Traits.
 						</li>
 						<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
-						<li>This sample character is level 5: 9 level 0 points plus 15 from five levels, so 24 focus points and 24 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked eight more for in-game opportunities. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
+						<li>This sample character is level 5: 9 bonus points from its Kind plus 15 from five levels, so 24 focus points and 24 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked eight more for in-game opportunities. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
 						</li>
 					</ul>
 				</div>
@@ -42,7 +42,7 @@
 						</div>
 						<div class="content-stack content-stack-xxs">
 							<h6>Generalists</h6>
-							<p class="copy">Humans start with 1 point in every focus stat.</p>
+							<p class="copy">Humans get a +1 bonus to every focus stat.</p>
 						</div>
 						<div class="content-stack content-stack-xxs">
 							<h6>Unexceptional</h6>
