@@ -13,6 +13,7 @@
 						<li>Character Creator: the step tabs show a green check next to each step you’ve finished, instead of a red count of what’s left to fix, and the button to the next step turns green once the step is finished.</li>
 						<li>Character Creator: on the Background step, the Origin, Profession and Past each fold away once picked and can be opened again, and the Stats step lists Physical, Social and Mental one under the next.</li>
 						<li>The plus and minus on the Details accordions, here and in the Character Creator, and on the creator’s + and − buttons are now icons instead of text.</li>
+						<li>Mechanics: stats no longer start at a Kind’s minimum. Every character’s stats start at 0, and their Kind adds what used to be its starting stats as a bonus. The numbers come out the same; the Dreftian starters now list stats as bonus / maximum, and the Character Creator says “free bonus points” where it said “level 0 points.”</li>
 					</ul>
 				</article>
 

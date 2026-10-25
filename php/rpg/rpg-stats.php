@@ -15,7 +15,7 @@
 					<h3>Stats</h3>
 					<!-- OVERVIEW -->
 					<p class="copy">
-						A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. A character's Kind will govern a character's Level 0 stats and will contain maximum values a character's stats cannot exceed.
+						A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's stats start at 0. A character's Kind adds a bonus to each stat and will contain maximum values a character's stats cannot exceed.
 					</p>
 					<ul class="copy">
 						<li>When your character gains a level you get a point to spend in any core stat.</li>

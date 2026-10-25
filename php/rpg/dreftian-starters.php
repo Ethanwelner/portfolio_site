@@ -1,5 +1,5 @@
 <p class="copy mb-5">
-	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as starting value / maximum. For comparison, a Human starts with 1 in every focus stat and can’t raise any above 15. Each Kind here starts with the same 9 level 0 points and the same total of maximums, spread to fit the Kind.
+	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as Kind bonus / maximum. For comparison, a Human gets +1 to every focus stat and can’t raise any above 15. Each Kind here gives the same 9 bonus points and the same total of maximums, spread to fit the Kind.
 </p>
 <div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">
@@ -17,11 +17,11 @@
 			<li><strong>Rebel’s Doctrine</strong> – Starts with the Isek doctrine of rebellion and seeking as a knowledge Trait.</li>
 			<li><strong>Restless</strong> – Ill-suited to farm life. Isek have easier access to military, guild, and caravan Traits.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Starting / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Bonus / maximum stats</strong></p>
 		<ul class="copy mb-0">
-			<li><strong>Physical:</strong> Endurance 1/15, Power 2/18, Grace 2/18</li>
-			<li><strong>Social:</strong> Empathy 1/14, Persuasion 1/15, Demeanor 0/10</li>
-			<li><strong>Mental:</strong> Logic 0/14, Intuition 1/16, Memory 1/15</li>
+			<li><strong>Physical:</strong> Endurance +1/15, Power +2/18, Grace +2/18</li>
+			<li><strong>Social:</strong> Empathy +1/14, Persuasion +1/15, Demeanor +0/10</li>
+			<li><strong>Mental:</strong> Logic +0/14, Intuition +1/16, Memory +1/15</li>
 		</ul>
 	</div>
 	<div class="starter-entry">
@@ -32,17 +32,17 @@
 			<li><strong>Goblinoid</strong> – Small, with plentiful mana. Higher Memory and Logic maximums, and access to <?php echo sf_lore_link('isekai-magic', 'magic'); ?> Traits.</li>
 			<li><strong>Merchant Clans</strong> – Easier access to trading guild and merchant clan Traits.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Orcoid starting / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Orcoid bonus / maximum stats</strong></p>
 		<ul class="copy mb-0">
-			<li><strong>Physical:</strong> Endurance 2/18, Power 2/18, Grace 1/13</li>
-			<li><strong>Social:</strong> Empathy 1/14, Persuasion 1/15, Demeanor 1/15</li>
-			<li><strong>Mental:</strong> Logic 0/13, Intuition 1/15, Memory 0/14</li>
+			<li><strong>Physical:</strong> Endurance +2/18, Power +2/18, Grace +1/13</li>
+			<li><strong>Social:</strong> Empathy +1/14, Persuasion +1/15, Demeanor +1/15</li>
+			<li><strong>Mental:</strong> Logic +0/13, Intuition +1/15, Memory +0/14</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Goblinoid starting / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Goblinoid bonus / maximum stats</strong></p>
 		<ul class="copy mb-0">
-			<li><strong>Physical:</strong> Endurance 1/13, Power 0/10, Grace 1/16</li>
-			<li><strong>Social:</strong> Empathy 1/15, Persuasion 1/15, Demeanor 1/14</li>
-			<li><strong>Mental:</strong> Logic 2/18, Intuition 1/16, Memory 1/18</li>
+			<li><strong>Physical:</strong> Endurance +1/13, Power +0/10, Grace +1/16</li>
+			<li><strong>Social:</strong> Empathy +1/15, Persuasion +1/15, Demeanor +1/14</li>
+			<li><strong>Mental:</strong> Logic +2/18, Intuition +1/16, Memory +1/18</li>
 		</ul>
 	</div>
 	<div class="starter-entry">
@@ -54,11 +54,11 @@
 			<li><strong>Thin Air</strong> – Unbothered by altitude and cold that would slow other Kinds.</li>
 			<li><strong>Beard Nets</strong> – A long enough beard doubles as a net. It’s more useful than it sounds.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Starting / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Bonus / maximum stats</strong></p>
 		<ul class="copy mb-0">
-			<li><strong>Physical:</strong> Endurance 2/20, Power 2/17, Grace 0/10</li>
-			<li><strong>Social:</strong> Empathy 1/15, Persuasion 1/14, Demeanor 1/16</li>
-			<li><strong>Mental:</strong> Logic 1/15, Intuition 0/14, Memory 1/14</li>
+			<li><strong>Physical:</strong> Endurance +2/20, Power +2/17, Grace +0/10</li>
+			<li><strong>Social:</strong> Empathy +1/15, Persuasion +1/14, Demeanor +1/16</li>
+			<li><strong>Mental:</strong> Logic +1/15, Intuition +0/14, Memory +1/14</li>
 		</ul>
 	</div>
 </div>
