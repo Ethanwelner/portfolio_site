@@ -20,7 +20,7 @@
 					<ul class="copy">
 						<li>When your character gains a level you get a point to spend in any core stat.</li>
 						<li>Adding a point to a core stat gives you 3 to spend in the focus stats of that category.</li>
-						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like the Magical Heritage every Kind of Dreft is born with, can put levels into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
+						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like the Magical Heritage most Kinds of Dreft are born with, can put levels into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
 						<li>The maximum that can be spent on any core or focus stat is 20.</li>
 						<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
 						<li>Hit Points & other resource mechanics are dependent on scores from the focus stats, except Mana Points, which come from Magic.</li>
@@ -561,7 +561,7 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Mana Points (MP)</h4>
 						<p class="copy">
-							MP are a spendable resource like VP and SP, but they come from the Magic core stat instead of focus stats. A character has a maximum number of MP's equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a level into Magic. Only characters who can level Magic, like the Kinds of Dreft, have MP to begin with.
+							MP are a spendable resource like VP and SP, but they come from the Magic core stat instead of focus stats. A character has a maximum number of MP's equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a level into Magic. Only characters who can level Magic, like most Kinds of Dreft, have MP to begin with.
 						</p>
 					</div>
 				</div>
