@@ -1,5 +1,5 @@
 <p class="copy mb-5">
-	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as Kind bonus / maximum. For comparison, a Human gets +1 to every focus stat and can’t raise any above 15. Each Kind here gives the same 9 bonus points and the same total of maximums, spread to fit the Kind.
+	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as Kind bonus / maximum. For comparison, a Human gets +1 to every focus stat and can’t raise any above 15. Each Kind here gives the same 9 bonus points and the same total of maximums, spread to fit the Kind. Every Kind here but the Orcoid Tatot is born with Magical Heritage, which lets them put levels into the Magic core stat.
 </p>
 <div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">
@@ -29,7 +29,7 @@
 		<p class="copy mb-2">A polyphenic Kind: every Tatot is born either orcoid or goblinoid, and a player picks one at character creation. Neither decides a Tatot’s place in Dreft, though it does decide which jobs they’re built for.</p>
 		<ul class="copy mb-0">
 			<li><strong>Orcoid</strong> – Larger and stronger. Higher Power and Endurance maximums. No mana, and largely immune to <?php echo sf_lore_link('sunsickness', 'sunsickness'); ?>.</li>
-			<li><strong>Goblinoid</strong> – Small, with plentiful mana. Higher Memory and Logic maximums, and access to <?php echo sf_lore_link('isekai-magic', 'magic'); ?> Traits.</li>
+			<li><strong>Goblinoid</strong> – Small, with plentiful mana. Higher Memory and Logic maximums, access to <?php echo sf_lore_link('isekai-magic', 'magic'); ?> Traits, and +6 MP.</li>
 			<li><strong>Merchant Clans</strong> – Easier access to trading guild and merchant clan Traits.</li>
 		</ul>
 		<p class="copy mt-3 mb-1"><strong>Orcoid bonus / maximum stats</strong></p>
