@@ -425,6 +425,9 @@ summary: "You grew up on Ark Tetra, the home of the UN and of planar exploration
 tags: [ark, tetra, space, sdu, un, urban, planar-exploration]\r
 lore: tetra\r
 type: origin\r
+# A free bonus point the player places in a Social stat, like the SDU's.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
 grants:\r
   - { trait: tetra, rank: 1 }\r
   - { trait: sdu-law, rank: 1 }\r
