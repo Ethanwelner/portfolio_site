@@ -16,6 +16,7 @@
 						<li>Mechanics: stats no longer start at a Kind’s minimum. Every character’s stats start at 0, and their Kind adds what used to be its starting stats as a bonus. The numbers come out the same, and the Dreftian starters now list stats as bonus / maximum. The AI Core now gets a flat +3 to every Mental stat instead of 3 points to place itself.</li>
 						<li>Character Creator: what’s left to fix on a step now shows beside the button to the next step instead of beside the step’s stinger.</li>
 						<li>Mechanics: added Magic, a fourth core stat with no focus stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, which lets them level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
+						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union, and +1 Mental for the Chinese Empire and Kashgar.</li>
 					</ul>
 				</article>
 

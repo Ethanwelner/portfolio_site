@@ -20,7 +20,7 @@
 						<li>The focus stat lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of Trait they gain.</li>
 						<li>Characters select a Kind, origin, profession, and past.</li>
 						<li>The character's Kind adds a bonus to their stats, sets their max stats, grants any unique ability the Kind may possess, and grants access to various Trait categories.</li>
-						<li>The character's origin grants access to a starting set of origin Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the origin as well as other RP specific things (wealth, identification, etc).</li>
+						<li>The character's origin grants access to a starting set of origin Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the origin as well as other RP specific things (wealth, identification, etc). Some origins also give a bonus point to place in one category's focus stats, like the American Empire's +1 Physical.</li>
 						<li>The character's profession grants access to a starting set of profession Traits, typically a mix of regular and knowledge Traits. It also grants access to selectable Traits related to the profession as well as other RP specific things (equipment, licenses, etc).</li>
 						<li>Every character's stats start at 0, and their Kind adds 9 bonus points to their focus stats, spread out to fit the Kind. A human gets +1 in each focus stat.</li>
 						<li>Characters always start at level 1 at least, so every new character also gets their level 1 points: 1 core point and 3 focus points to spend in that category.</li>
