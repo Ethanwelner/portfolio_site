@@ -554,6 +554,25 @@ html.lore-modal-open {
     background-color: color-mix(in srgb, var(--portfolio-black) 66%, var(--portfolio-white));
 }
 
+/* The dark popup, on creator.php: light text on the panel (black-bg), and a
+   light close button */
+.lore-modal-dark {
+    .lore-modal-panel {
+        /* The creator's panel gray (--panel in its styles) */
+        background-color: #2b2b2b;
+        color: var(--portfolio-near-white);
+    }
+
+    .lore-modal-close {
+        background: var(--portfolio-near-white);
+        color: var(--portfolio-black);
+    }
+
+    .lore-modal-close:hover {
+        background-color: color-mix(in srgb, var(--portfolio-near-white) 75%, var(--portfolio-black));
+    }
+}
+
 @media (max-width: 767px) {
     .lore-modal {
         padding: 24px 16px;

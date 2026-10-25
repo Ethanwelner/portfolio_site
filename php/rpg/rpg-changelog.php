@@ -18,6 +18,7 @@
 						<li>Mechanics: added Magic, a fourth core stat with no focus stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, which lets them level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
 						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
 						<li>Mechanics: the Licensed Mage and Hedge Witch professions give +1 Magic without a level, for characters who can level Magic. Magic now shows as a line of diamonds in the Character Creator.</li>
+						<li>Character Creator: popups, from a Trait on the sheet or a search result, now have a dark background instead of white.</li>
 					</ul>
 				</article>
 
