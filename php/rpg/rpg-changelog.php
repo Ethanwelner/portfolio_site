@@ -19,6 +19,7 @@
 						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
 						<li>Mechanics: the Licensed Mage and Hedge Witch professions give +1 Magic without a level, for characters who can level Magic. Magic now shows as a line of diamonds in the Character Creator.</li>
 						<li>Character Creator: popups, from a Trait on the sheet or a search result, now have a dark background instead of white.</li>
+						<li>Character Creator: characters can now be built up to level 25.</li>
 					</ul>
 				</article>
 
