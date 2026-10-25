@@ -10,6 +10,8 @@
 					<p class="copy mb-3"><i>10/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the character box now sits in a column beside each step instead of in the header, and the header is shorter at the top, with the title beside the page nav.</li>
+						<li>Character Creator: the step tabs show a green check next to each step you’ve finished, instead of a red count of what’s left to fix, and the button to the next step turns green once the step is finished.</li>
+						<li>Character Creator: on the Background step, the Origin, Profession and Past each fold away once picked and can be opened again, and the Stats step lists Physical, Social and Mental one under the next.</li>
 					</ul>
 				</article>
 
