@@ -72,7 +72,7 @@
 	<div class="starter-entry">
 		<h6><strong><?php echo sf_lore_link('dreft', 'Dreft'); ?></strong></h6>
 		<p class="copy mb-2">Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village, or the mountains.</p>
-		<p class="copy mb-2"><strong>Knowledge Traits:</strong> Dreft (1), Dreftian Law (1), Dreftan (language)</p>
+		<p class="copy mb-2"><strong>Bonus:</strong> +1 Physical point<br><strong>Knowledge Traits:</strong> Dreft (1), Dreftian Law (1), Dreftan (language)</p>
 		<p class="copy mb-0"><strong>Background Traits:</strong> Where in Dreft a character grew up is bought with background Traits: <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, <?php echo sf_lore_link('glintl', 'Glintl'); ?>, <?php echo sf_lore_link('tetra-switch-port', 'The Switch Port'); ?>, <?php echo sf_lore_link('kings-woods', 'The King’s Woods'); ?>, <?php echo sf_lore_link('corsine-mountains', 'The Corsine Pass'); ?>, Seafaring, Coastal Trade, Farming, Mountaineering, Local Folklore, and Karsef.</p>
 	</div>
 </div>
