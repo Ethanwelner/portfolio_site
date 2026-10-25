@@ -27,7 +27,7 @@
 						<li>Since every focus point grants a Trait, characters will typically start with a set of player-selectable Traits. A human's 9 bonus points give them 9 universal Traits, plus the Traits from their level 1 points, in addition to the Traits automatically granted to them by their Kind, origin, profession, and past. Since they only have a point or two in each stat, their selection will be relatively limited to less powerful and more common Traits.
 						</li>
 						<li>It may be preferable to start a campaign with characters at level 2 or 3, so that they can pick out the low level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
-						<li>This sample character is level 5: 9 bonus points from its Kind plus 15 from five levels, so 24 focus points and 24 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked eight more for in-game opportunities. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
+						<li>This sample character is level 5: 9 bonus points from its Kind, 1 from its Origin, and 15 from five levels, so 25 focus points and 25 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked nine more for in-game opportunities. Future stat gains cannot be used to gain knowledge Traits, though this is at the GM's discretion.
 						</li>
 					</ul>
 				</div>
@@ -61,6 +61,10 @@
 						<div class="line-container">
 							<h5><strong>Origin: The American Empire</strong></h5>
 							<div class="line"></div>
+						</div>
+						<div class="content-stack content-stack-xxs">
+							<h6>Bonus</h6>
+							<p class="copy">+1 Physical point, placed in Grace</p>
 						</div>
 						<div class="content-stack content-stack-xxs">
 							<h6>
@@ -144,7 +148,7 @@
 			</div>
 		</div>
 		<div class="flex-grow-1 d-flex justify-content-start justify-content-md-center c-variables">
-			<h5 class="d-inline-block"><i>16</i>&nbsp;<strong>HP</strong></h5>|
+			<h5 class="d-inline-block"><i>17</i>&nbsp;<strong>HP</strong></h5>|
 			<h5 class="d-inline-block"><i>9</i>&nbsp;<strong>VP</strong></h5>|		
 			<h5 class="d-inline-block"><i>9</i>&nbsp;<strong>SP</strong></h5>
 		</div>
@@ -253,12 +257,12 @@
 						<div class="stat square unavailable"></div>
 					</div>
 					<div class="tiny-text">
-						<strong>Grace - 2</strong>
+						<strong>Grace - 3</strong>
 					</div>
 					<div class="stat-line">
 						<div class="stat dot default"></div>
-						<div class="stat square filled"></div>
-						<div class="stat dot empty"></div>
+						<div class="stat square default"></div>
+						<div class="stat dot filled"></div>
 						<div class="stat square empty"></div>
 						<div class="stat dot empty"></div>
 						<div class="stat square empty"></div>
@@ -493,7 +497,7 @@
 				<li>More Lucky Than Good</li>
 				<li>Forgettable Face</li>
 				<li>Contacts (2)</li>
-				<li>Banked Traits (8)</li>
+				<li>Banked Traits (9)</li>
 			</ul>
 		</div>
 		<div class="flex-4 flex-gap-24">
