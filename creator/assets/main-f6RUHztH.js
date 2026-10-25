@@ -119,7 +119,7 @@ name: Isek\r
 status: placeholder\r
 plane: isekai\r
 region: dreft\r
-summary: "The so-called “Free Elves.” Brash and adventure-seeking by nature, this nigh-immortal Kind rarely sees old age. Young Isek chase rebellion and are possessed of an irresistible wanderlust; the few who grow old tend to grow bitter and live apart from their kind."\r
+summary: "The so-called “Free Elves.” Brash and adventure-seeking by nature, this nigh-immortal Kind rarely sees old age. Young Isek chase rebellion and are possessed of an irresistible wanderlust."\r
 tags: [elf, immortal, restless, rebel, adventurer]\r
 features:\r
   - name: Nigh Immortal\r
