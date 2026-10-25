@@ -93,12 +93,12 @@
 	<div class="starter-entry">
 		<h6><strong>Licensed Mage</strong></h6>
 		<p class="copy mb-2">Trained in Port Herminst’s schools in officially sanctioned, and supposedly safe, magic.</p>
-		<p class="copy mb-0"><strong>Skill Traits:</strong> Incantation, Relic Handling<br><strong>Knowledge Traits:</strong> Magic on Isekai, Dreftian Law</p>
+		<p class="copy mb-0"><strong>Bonus:</strong> +1 Magic<br><strong>Skill Traits:</strong> Incantation, Relic Handling<br><strong>Knowledge Traits:</strong> Magic on Isekai, Dreftian Law</p>
 	</div>
 	<div class="starter-entry">
 		<h6><strong>Hedge Witch</strong></h6>
 		<p class="copy mb-2">Practices magic outside the licensed system. Usually cheaper, and usually less safe.</p>
-		<p class="copy mb-0"><strong>Skill Traits:</strong> Folk Remedies, Concealment<br><strong>Knowledge Traits:</strong> Magic on Isekai, Herbalism</p>
+		<p class="copy mb-0"><strong>Bonus:</strong> +1 Magic<br><strong>Skill Traits:</strong> Folk Remedies, Concealment<br><strong>Knowledge Traits:</strong> Magic on Isekai, Herbalism</p>
 	</div>
 	<div class="starter-entry">
 		<h6><strong>Caravaneer</strong></h6>
