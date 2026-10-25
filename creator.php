@@ -48,8 +48,8 @@ if (! $creator) {
         </div>
 
         <?php include 'php/about.php'; ?>
-        <?php // Search results open here; the lore itself comes from personal.php. ?>
-        <?php include 'php/rpg/lore-modal-shell.php'; ?>
+        <?php // Search results open here, on a dark panel like the creator's; the lore itself comes from personal.php. ?>
+        <?php $loreModalDark = true; include 'php/rpg/lore-modal-shell.php'; ?>
         <?php include 'php/javascript-loads.php'; ?>
 
     </body>
