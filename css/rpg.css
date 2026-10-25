@@ -1662,23 +1662,20 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     fill: var(--portfolio-black);
 }
 
-/* The creator's hero starts below the logo and page nav, inside its 75vh
-   (--sf-creator-top, read by the creator's .builder-hero). Short viewports pull
-   the nav up (portfolio-media-queries.css); phones shrink it (see
-   .personal-page-nav above). */
+/* The creator's hero clears the logo, search and social links along the top
+   (--sf-creator-top), and its title and describe box sit to the right of the
+   page nav (--sf-creator-left); both are read by the creator's .builder-hero.
+   Phones show the nav above the content (see .personal-page-nav above), so
+   there the hero starts below it instead. */
 .creator-shell {
-    --sf-creator-top: 296px;
-}
-
-@media (max-height: 959px) {
-    .creator-shell {
-        --sf-creator-top: 256px;
-    }
+    --sf-creator-top: 112px;
+    --sf-creator-left: 200px;
 }
 
 @media only screen and (max-width: 767px) {
     .creator-shell {
         --sf-creator-top: 222px;
+        --sf-creator-left: 0px;
     }
 }
 
