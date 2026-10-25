@@ -976,17 +976,17 @@ mastery: true\r
 minStats: { memory: 5, logic: 5, intuition: 5 }\r
 prerequisites: [capable-student]\r
 effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."\r
-`,Su=`id: magical-heritage
-name: "Magical Heritage"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Born on a plane where magic is part of the world, this character can level the Magic core stat."
-tags: [magic, dreft, heritage]
-category: ability
-conveyed: true
-coreAccess: [magic]
-effect: "This character can put levels into Magic, a core stat with no focus stats. Each point of Magic adds 3 MP (Mana Points)."
+`,Su=`id: magical-heritage\r
+name: "Magical Heritage"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Born on a plane where magic is part of the world, this character can level the Magic core stat."\r
+tags: [magic, dreft, heritage]\r
+category: ability\r
+conveyed: true\r
+coreAccess: [magic]\r
+effect: "This character can put levels into Magic, a core stat with no focus stats. Each point of Magic adds 3 MP (Mana Points)."\r
 `,Cu=`id: mental-fortitude\r
 name: "Mental Fortitude"\r
 status: draft\r
