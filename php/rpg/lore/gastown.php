@@ -65,6 +65,7 @@
 			<dd>N/A</dd>
 		</div>
 	</dl>
+	<div class="image-placeholder plane-image" aria-hidden="true">Image</div>
 </div>
 <details class="lore-details">
 	<summary class="line-container">

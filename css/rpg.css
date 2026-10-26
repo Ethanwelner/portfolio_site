@@ -742,13 +742,32 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 @media (min-width: 768px) {
+    /* One row: the third column shrinks rather than the image or itself wrapping. */
+    #plane-known .info-cols {
+        flex-wrap: nowrap;
+    }
+
     #plane-known .info-cols > :nth-child(1) {
         width: 128px;
     }
 
     #plane-known .info-cols > :nth-child(2) {
-        flex: 0 1 256px;
+        flex: 0 0 256px;
         width: auto;
+    }
+
+    /* The third column fills the row; the square image placeholder after it
+       (shown from 1500px, like the other placeholders) keeps its size. */
+    #plane-known .info-cols > :nth-child(3) {
+        flex: 0 1 480px;
+        width: auto;
+        min-width: 0;
+    }
+
+    #plane-known .info-cols > .plane-image {
+        flex: 0 0 360px;
+        aspect-ratio: 4 / 3;
+        margin: 0 0 1rem;
     }
 }
 
@@ -779,7 +798,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         margin-bottom: 0;
     }
 
-    .info-cols > :last-child {
+    .info-cols > :last-child,
+    #plane-known .info-cols > :nth-child(3) {
         margin-bottom: 1rem;
     }
 }
