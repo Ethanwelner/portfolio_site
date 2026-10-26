@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/26/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>The night sky behind Strange Frontiers and the Character Creator has about a third more stars.</li>
+						<li>The night sky behind Strange Frontiers and the Character Creator now spreads its stars over the part of the sky the screen actually sees as it turns, so there are several times more stars on screen at once.</li>
 					</ul>
 				</article>
 
