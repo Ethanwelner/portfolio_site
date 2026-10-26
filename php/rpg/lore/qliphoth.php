@@ -88,7 +88,7 @@
 					<div class="line"></div>
 				</div>
 				<p class="copy mb-0">
-					Discovered in 2150 by the New York University planar research laboratory, Qliphoth was the first plane discovered with a finite border. In the decades since, the plane has been used as a subject of scientific research and, for a time, as a dumping ground for toxic or unstable materials. Given the incredibly limited space within the plane, <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> takes great care to manage and schedule access, and years often pass between notices of planned exchanges.
+					Discovered in 2150 by the New York University planar research laboratory, Qliphoth was the first plane discovered with a finite border. In the decades since, the plane has been used as a subject of scientific research and, for a time, as a dumping ground for toxic or unstable materials. Given the incredibly limited space within the plane, <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> attempts to manage and schedule access, but with years often passing between notices of planned exchanges, and with <?php echo sf_lore_link('american-empire', 'the American Empire'); ?>’s contempt for the organization, its efforts are likely wasted.
 				</p>
 			</div>
 		</div>
