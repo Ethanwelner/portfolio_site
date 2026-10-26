@@ -752,7 +752,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     #plane-known .info-cols > :nth-child(2) {
-        flex: 0 1 256px;
+        flex: 0 0 256px;
         width: auto;
     }
 
