@@ -15,12 +15,12 @@
 						<li>The plus and minus on the Details accordions, here and in the Character Creator, and on the creator’s + and − buttons are now icons instead of text.</li>
 						<li>Mechanics: stats no longer start at a Kind’s minimum. Every character’s stats start at 0, and their Kind adds what used to be its starting stats as a bonus. The numbers come out the same, and the Dreftian starters now list stats as bonus / maximum. The AI Core now gets a flat +3 to every Mental stat instead of 3 points to place itself.</li>
 						<li>Character Creator: what’s left to fix on a step now shows beside the button to the next step instead of beside the step’s stinger.</li>
-						<li>Mechanics: added Magic, a fourth core stat with no focus stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, which lets them level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
+						<li>Mechanics: added Magic, a fourth core stat with no focus stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, whose Magic Access lets them level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
 						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
 						<li>Mechanics: the Licensed Mage and Hedge Witch professions give +1 Magic without a level, for characters who can level Magic. Magic now shows as a line of diamonds in the Character Creator.</li>
 						<li>Character Creator: popups, from a Trait on the sheet or a search result, now have a dark background instead of white.</li>
 						<li>Character Creator: characters can now be built up to level 25.</li>
-						<li>Mechanics: Trait lists. Magic Traits like Incantation and Sorcerous are on the Magic list, which only characters with Magical Heritage can take from; in the Character Creator they get their own Magic tab on the Traits step.</li>
+						<li>Mechanics: Trait lists. Magic Traits like Incantation and Sorcerous are on the Magic list, which only characters with Magic Access (from Magical Heritage) can take from; in the Character Creator they get their own Magic tab on the Traits step.</li>
 					</ul>
 				</article>
 

@@ -20,7 +20,7 @@
 					<ul class="copy">
 						<li>When your character gains a level you get a point to spend in any core stat.</li>
 						<li>Adding a point to a core stat gives you 3 to spend in the focus stats of that category.</li>
-						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like the Magical Heritage most Kinds of Dreft are born with, can put levels into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
+						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put levels into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
 						<li>The maximum that can be spent on any core or focus stat is 20.</li>
 						<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
 						<li>Hit Points & other resource mechanics are dependent on scores from the focus stats, except Mana Points, which come from Magic.</li>
