@@ -118,11 +118,8 @@
 			<p class="copy">
 				Despite the ongoing mysteries and damaged equipment, Holy Oak knew what it had. The plane’s stability, combined with its consistent production of water in every exchange, could very well solve the one remaining roadblock to true interstellar expansion: the “Water Problem.” Without a reliable source of liquid water on the fringes, an industry of “water delivery” had taken hold in the Solar System, but such an industry would be untenable at interstellar distances and costs. Worse, the need for constant reuse through filtration and eventual resupply prevented any colony from ever being truly independent from Earth. A blockade, or even simple piracy, could bring even the most secure starbase to its knees.
 			</p>
-			<p class="copy">
-				Holy Oak initially licensed the plane to <?php echo sf_lore_link('saltwater-energetics', 'Saltwater Energetics'); ?>, which exploited it through a modified version of its proven fuel gate technology. A prototype “water gate” was installed aboard New Canaan, providing vital water to humanity’s first interstellar station. Initially large and substantially overbuilt, water gates have since become standard aboard ships and stations throughout the settled systems.
-			</p>
 			<p class="copy mb-0">
-				Sadly, the windfall Holy Oak expected was short-lived. The monopoly the company enjoyed over humanity’s access to Co-H2O/E2 was broken in 2176 by the expanded <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?>. To this day, the plane is considered a public space, free from any claim of nationality or control.
+				Holy Oak initially licensed the plane to <?php echo sf_lore_link('saltwater-energetics', 'Saltwater Energetics'); ?>, which exploited it through a modified version of its proven fuel gate technology. A prototype “water gate” was installed aboard New Canaan, providing vital water to humanity’s first interstellar station. Initially large and substantially overbuilt, water gates have since become standard aboard ships and stations throughout the settled systems. Sadly, the windfall Holy Oak expected was short-lived. The monopoly the company enjoyed over humanity’s access to Co-H2O/E2 was broken in 2176 by the expanded <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?>. To this day, the plane is considered a public space, free from any claim of nationality or control.
 			</p>
 		</div>
 	</div>
