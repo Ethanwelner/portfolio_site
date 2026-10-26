@@ -742,6 +742,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 @media (min-width: 768px) {
+    /* One row: the third column shrinks rather than the image or itself wrapping. */
+    #plane-known .info-cols {
+        flex-wrap: nowrap;
+    }
+
     #plane-known .info-cols > :nth-child(1) {
         width: 128px;
     }
