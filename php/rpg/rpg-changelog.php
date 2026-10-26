@@ -20,6 +20,7 @@
 						<li>Mechanics: the Licensed Mage and Hedge Witch professions give +1 Magic without a level, for characters who can level Magic. Magic now shows as a line of diamonds in the Character Creator.</li>
 						<li>Character Creator: popups, from a Trait on the sheet or a search result, now have a dark background instead of white.</li>
 						<li>Character Creator: characters can now be built up to level 25.</li>
+						<li>Mechanics: Trait lists. Magic Traits like Incantation and Sorcerous are on the Magic list, which only characters with Magical Heritage can take from; in the Character Creator they get their own Magic tab on the Traits step.</li>
 					</ul>
 				</article>
 

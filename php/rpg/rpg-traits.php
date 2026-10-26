@@ -46,6 +46,7 @@
                 <li>If, when a character levels, they do not wish to gain a new Trait they can "bank" that Trait, until an in-game RP circumstance presents them with the opportunity to gain a Trait that they want. This is a good way for a player to gain Conveyed Traits without it feeling forced.</li>
                 <li>Backgrounds can give additional Traits, and typically provide several when adopted that provide a baseline of Traits that inform a character's background and circumstances.</li>
                 <li>Traits can have core or focus stat requirements. A character must meet a Trait’s minimum stats to gain it, except for Traits granted by their background packages (Kind, Origin, Profession, and Past), which they always receive.</li>
+                <li>Some Traits are on a list that only certain characters can take from. Magic Traits like Incantation are on the Magic list, which Magical Heritage opens. A character without a Trait that opens a list can’t take its Traits, though a background package can still grant them.</li>
                 <li>Traits can be gained outside of leveling and can be lost.</li>
                 <li>Traits can be temporary.</li>
                 <li>Traits always have a category, like Knowledge or Condition, that determines how the Trait is used in the game.</li>
