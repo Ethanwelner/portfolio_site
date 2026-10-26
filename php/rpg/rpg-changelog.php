@@ -9,8 +9,11 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/26/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Every Known Planes entry has an image placeholder as a fourth column in its info box on wide screens.</li>
+						<li>513/y/11 - “Leviathan” in Known Planes now has its Overview, Paraphysics, Geography, and History. It was discovered in 2156 rather than 2184, so the Setting timeline and Known Planes list move it ahead of Flatland, and Co-H2O/E2 is now called “Slim Water.”</li>
 						<li>The night sky behind Strange Frontiers and the Character Creator now spreads its stars over the part of the sky the screen actually sees as it turns, so there are several times more stars on screen at once.</li>
 						<li>Isekai’s overview now opens “516/a/198 - “Isekai,” and the planet Erdef, are in many ways startlingly similar…”</li>
+						<li>314/X/50 - “Qliphoth” in Known Planes now has its full Overview, History, and Geography: a “shell universe” just under 25 meters across, once used as a dumping ground for toxic materials.</li>
 					</ul>
 				</article>
 

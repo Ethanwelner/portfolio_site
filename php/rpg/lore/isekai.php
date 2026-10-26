@@ -65,6 +65,7 @@
 			<dd><?php echo sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)'); ?>, <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, <?php echo sf_lore_link('glintl', 'Glintl'); ?>, <?php echo sf_lore_link('illinsdott', 'Illinsdott'); ?>, <?php echo sf_lore_link('kings-woods', 'The King’s Woods'); ?>, <?php echo sf_lore_link('mende-river', 'The Mende River'); ?>, <?php echo sf_lore_link('moffit-river', 'The Moffit River'); ?>, <?php echo sf_lore_link('corsine-mountains', 'The Corsine Mountains'); ?></dd>
 		</div>
 	</dl>
+	<div class="image-placeholder plane-image" aria-hidden="true">Image</div>
 </div>
 <details class="lore-details">
 	<summary class="line-container">
