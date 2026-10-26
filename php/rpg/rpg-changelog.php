@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>10/26/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The night sky behind Strange Frontiers and the Character Creator now spreads its stars over the part of the sky the screen actually sees as it turns, so there are several times more stars on screen at once.</li>
+						<li>314/X/50 - “Qliphoth” in Known Planes now has its full Overview, History, and Geography: a “shell universe” just under 25 meters across, once used as a dumping ground for toxic materials.</li>
 					</ul>
 				</article>
 
