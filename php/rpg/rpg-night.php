@@ -244,6 +244,85 @@
                         <span class="rpg-sky-twinkle" style="top:96.65%;left:86.01%;animation-delay:10.86s;opacity:0.99"></span>
                         <span class="rpg-sky-twinkle" style="top:96.73%;left:80.46%;animation-delay:5.49s;opacity:0.94"></span>
                         <span class="rpg-sky-twinkle" style="top:1.39%;left:53.66%;animation-delay:6.82s;opacity:0.9"></span>
+                        <span class="rpg-sky-twinkle" style="top:68.84%;left:85.56%;animation-delay:11.61s;opacity:0.94"></span>
+                        <span class="rpg-sky-twinkle" style="top:87.46%;left:73.58%;animation-delay:13.56s;opacity:0.94"></span>
+                        <span class="rpg-sky-twinkle" style="top:97.28%;left:90.51%;animation-delay:6.97s;opacity:0.73"></span>
+                        <span class="rpg-sky-twinkle" style="top:26.12%;left:11.87%;animation-delay:11.15s;opacity:0.79"></span>
+                        <span class="rpg-sky-twinkle" style="top:10.42%;left:90.19%;animation-delay:12.14s;opacity:0.98"></span>
+                        <span class="rpg-sky-twinkle" style="top:10.04%;left:0.37%;animation-delay:6.62s;opacity:0.76"></span>
+                        <span class="rpg-sky-twinkle" style="top:50.28%;left:7.42%;animation-delay:0.17s;opacity:0.84"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:88.95%;left:72.13%;animation-delay:9.45s;opacity:0.81"></span>
+                        <span class="rpg-sky-twinkle" style="top:64.77%;left:86.45%;animation-delay:1.71s;opacity:0.92"></span>
+                        <span class="rpg-sky-twinkle" style="top:83.77%;left:4.12%;animation-delay:13.18s;opacity:0.86"></span>
+                        <span class="rpg-sky-twinkle" style="top:85.2%;left:84.44%;animation-delay:9.98s;opacity:0.89"></span>
+                        <span class="rpg-sky-twinkle" style="top:17.83%;left:98.95%;animation-delay:2.05s;opacity:0.78"></span>
+                        <span class="rpg-sky-twinkle" style="top:44.81%;left:6.39%;animation-delay:12.02s;opacity:0.71"></span>
+                        <span class="rpg-sky-twinkle" style="top:96.04%;left:17.33%;animation-delay:0.05s;opacity:0.93"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:5.87%;left:71.44%;animation-delay:9.48s;opacity:0.78"></span>
+                        <span class="rpg-sky-twinkle" style="top:81.38%;left:69.96%;animation-delay:0.95s;opacity:0.82"></span>
+                        <span class="rpg-sky-twinkle" style="top:47.04%;left:43.85%;animation-delay:2.56s;opacity:0.72"></span>
+                        <span class="rpg-sky-twinkle" style="top:33.84%;left:49.49%;animation-delay:5.65s;opacity:0.74"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:28.13%;left:78.25%;animation-delay:12.97s;opacity:0.81"></span>
+                        <span class="rpg-sky-twinkle" style="top:94.77%;left:57.24%;animation-delay:1.4s;opacity:0.83"></span>
+                        <span class="rpg-sky-twinkle" style="top:33.63%;left:11.94%;animation-delay:0.46s;opacity:0.73"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:38.13%;left:59.57%;animation-delay:10.94s;opacity:0.94"></span>
+                        <span class="rpg-sky-twinkle" style="top:30.21%;left:89.55%;animation-delay:2.48s;opacity:0.97"></span>
+                        <span class="rpg-sky-twinkle" style="top:28.98%;left:58.22%;animation-delay:14.09s;opacity:0.78"></span>
+                        <span class="rpg-sky-twinkle" style="top:72.91%;left:22.51%;animation-delay:4.16s;opacity:0.72"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:64.43%;left:21.77%;animation-delay:2.96s;opacity:0.93"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:96.27%;left:39.68%;animation-delay:1.4s;opacity:0.74"></span>
+                        <span class="rpg-sky-twinkle" style="top:7.76%;left:60.38%;animation-delay:7.96s;opacity:0.81"></span>
+                        <span class="rpg-sky-twinkle" style="top:52.91%;left:1.56%;animation-delay:2.37s;opacity:0.91"></span>
+                        <span class="rpg-sky-twinkle" style="top:76.27%;left:23.49%;animation-delay:3.68s;opacity:0.8"></span>
+                        <span class="rpg-sky-twinkle" style="top:99.72%;left:90.24%;animation-delay:4.29s;opacity:0.91"></span>
+                        <span class="rpg-sky-twinkle" style="top:42.56%;left:66.79%;animation-delay:12.9s;opacity:0.75"></span>
+                        <span class="rpg-sky-twinkle" style="top:40.48%;left:97.07%;animation-delay:13.89s;opacity:0.97"></span>
+                        <span class="rpg-sky-twinkle" style="top:97.16%;left:72.77%;animation-delay:9.24s;opacity:0.74"></span>
+                        <span class="rpg-sky-twinkle" style="top:46.67%;left:46.57%;animation-delay:11.01s;opacity:0.76"></span>
+                        <span class="rpg-sky-twinkle" style="top:21.94%;left:36.33%;animation-delay:9.73s;opacity:0.93"></span>
+                        <span class="rpg-sky-twinkle" style="top:28.69%;left:63.62%;animation-delay:13.53s;opacity:0.8"></span>
+                        <span class="rpg-sky-twinkle" style="top:36.27%;left:1.06%;animation-delay:10.76s;opacity:0.97"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:88.14%;left:61.83%;animation-delay:4.16s;opacity:0.96"></span>
+                        <span class="rpg-sky-twinkle" style="top:74%;left:22.99%;animation-delay:14.2s;opacity:0.9"></span>
+                        <span class="rpg-sky-twinkle" style="top:34.42%;left:5.37%;animation-delay:3.01s;opacity:0.9"></span>
+                        <span class="rpg-sky-twinkle" style="top:98.2%;left:97.24%;animation-delay:7.09s;opacity:0.74"></span>
+                        <span class="rpg-sky-twinkle" style="top:89.63%;left:76.23%;animation-delay:13.73s;opacity:0.71"></span>
+                        <span class="rpg-sky-twinkle" style="top:40.43%;left:67.71%;animation-delay:7.78s;opacity:0.74"></span>
+                        <span class="rpg-sky-twinkle" style="top:9.5%;left:48.49%;animation-delay:7.01s;opacity:0.81"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:6.68%;left:21.32%;animation-delay:5.88s;opacity:0.82"></span>
+                        <span class="rpg-sky-twinkle" style="top:69.4%;left:16.95%;animation-delay:11.81s;opacity:0.87"></span>
+                        <span class="rpg-sky-twinkle" style="top:61.88%;left:66.89%;animation-delay:8.36s;opacity:0.86"></span>
+                        <span class="rpg-sky-twinkle" style="top:8.36%;left:64.8%;animation-delay:7.26s;opacity:0.73"></span>
+                        <span class="rpg-sky-twinkle" style="top:83.93%;left:18.46%;animation-delay:4.3s;opacity:0.78"></span>
+                        <span class="rpg-sky-twinkle" style="top:58.63%;left:54.66%;animation-delay:10.97s;opacity:0.8"></span>
+                        <span class="rpg-sky-twinkle" style="top:57.72%;left:8.86%;animation-delay:14.44s;opacity:0.75"></span>
+                        <span class="rpg-sky-twinkle" style="top:52.57%;left:72.42%;animation-delay:14.88s;opacity:0.92"></span>
+                        <span class="rpg-sky-twinkle" style="top:97.45%;left:26.7%;animation-delay:8.12s;opacity:0.95"></span>
+                        <span class="rpg-sky-twinkle" style="top:34.53%;left:25.49%;animation-delay:6.55s;opacity:0.8"></span>
+                        <span class="rpg-sky-twinkle" style="top:66.54%;left:8.4%;animation-delay:9.9s;opacity:0.93"></span>
+                        <span class="rpg-sky-twinkle" style="top:63.06%;left:62.73%;animation-delay:0.98s;opacity:0.83"></span>
+                        <span class="rpg-sky-twinkle" style="top:38.63%;left:51.35%;animation-delay:7.33s;opacity:0.85"></span>
+                        <span class="rpg-sky-twinkle" style="top:49.82%;left:43.11%;animation-delay:4.24s;opacity:0.73"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:92.35%;left:92.74%;animation-delay:7.44s;opacity:0.9"></span>
+                        <span class="rpg-sky-twinkle" style="top:20.39%;left:37.12%;animation-delay:3.02s;opacity:0.89"></span>
+                        <span class="rpg-sky-twinkle" style="top:15.1%;left:76.06%;animation-delay:2.84s;opacity:0.97"></span>
+                        <span class="rpg-sky-twinkle" style="top:45.68%;left:14.69%;animation-delay:8.79s;opacity:0.89"></span>
+                        <span class="rpg-sky-twinkle" style="top:28.85%;left:1.17%;animation-delay:11.58s;opacity:0.7"></span>
+                        <span class="rpg-sky-twinkle is-red" style="top:19.11%;left:58.02%;animation-delay:14.53s;opacity:0.76"></span>
+                        <span class="rpg-sky-twinkle" style="top:0.02%;left:29.73%;animation-delay:0.9s;opacity:0.82"></span>
+                        <span class="rpg-sky-twinkle" style="top:69.38%;left:84.96%;animation-delay:2.98s;opacity:0.91"></span>
+                        <span class="rpg-sky-twinkle" style="top:10.44%;left:98.28%;animation-delay:13.07s;opacity:0.86"></span>
+                        <span class="rpg-sky-twinkle" style="top:41.76%;left:24.58%;animation-delay:1.07s;opacity:0.77"></span>
+                        <span class="rpg-sky-twinkle" style="top:36.94%;left:68.29%;animation-delay:11.63s;opacity:0.95"></span>
+                        <span class="rpg-sky-twinkle" style="top:1.81%;left:61.09%;animation-delay:7.83s;opacity:0.85"></span>
+                        <span class="rpg-sky-twinkle" style="top:33.85%;left:46.48%;animation-delay:5.06s;opacity:0.84"></span>
+                        <span class="rpg-sky-twinkle" style="top:81.3%;left:81.17%;animation-delay:4.48s;opacity:0.9"></span>
+                        <span class="rpg-sky-twinkle" style="top:90.46%;left:73.22%;animation-delay:8.22s;opacity:0.84"></span>
+                        <span class="rpg-sky-twinkle" style="top:95.73%;left:34.44%;animation-delay:7.63s;opacity:0.95"></span>
+                        <span class="rpg-sky-twinkle" style="top:77.22%;left:6.87%;animation-delay:2.5s;opacity:0.72"></span>
+                        <span class="rpg-sky-twinkle" style="top:45.07%;left:37.92%;animation-delay:0.91s;opacity:0.92"></span>
+                        <span class="rpg-sky-twinkle" style="top:85.85%;left:40.87%;animation-delay:5.49s;opacity:0.81"></span>
+                        <span class="rpg-sky-twinkle" style="top:15.08%;left:29.58%;animation-delay:7.55s;opacity:0.77"></span>
                     </div>
                 </div>
             </div>
