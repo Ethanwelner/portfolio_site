@@ -754,7 +754,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     /* The third column fills the row; the square image placeholder after it
        (shown from 1500px, like the other placeholders) keeps its size. */
     #plane-known .info-cols > :nth-child(3) {
-        flex: 1 1 0;
+        flex: 0 1 480px;
         width: auto;
         min-width: 0;
     }
