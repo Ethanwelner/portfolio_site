@@ -536,6 +536,15 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2156</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2160</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -631,15 +640,6 @@
 						</div>
 						<ul class="copy">
 							<li><?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?> is founded on <?php echo sf_lore_link('tetra', 'Tetra'); ?>.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
-							<h6><strong>2184</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li>513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
 						</ul>
 					</div>
 					<div>

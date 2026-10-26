@@ -24,7 +24,7 @@ function sf_lore_titles() {
 		'saturdays-furnace' => '65/T/137 - “<i>Saturday’s Furnace</i>”',
 		'st-245-e6' => 'St-245/E6 - “<i>Solum Inane</i>”',
 		'st-1-e1' => 'St-1/E1 - “<i>Fast Hydrogen</i>”',
-		'co-h2o-e2' => 'Co-H2O/E2 - “<i>Light Water</i>”',
+		'co-h2o-e2' => 'Co-H2O/E2 - “<i>Slim Water</i>”',
 		'switch-gates' => 'Switch Gates',
 		'lorentz-field-generator' => 'Lorentz Field Generators',
 		'aether-sails' => 'Aether Sails',
