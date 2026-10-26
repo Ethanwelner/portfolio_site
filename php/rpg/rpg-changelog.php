@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/26/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The night sky behind Strange Frontiers and the Character Creator now spreads its stars over the part of the sky the screen actually sees as it turns, so there are several times more stars on screen at once.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the character box now sits in a column beside each step instead of in the header, and the header is shorter at the top, with the title beside the page nav.</li>
