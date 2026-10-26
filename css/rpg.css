@@ -760,9 +760,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     #plane-known .info-cols > .plane-image {
-        flex: 0 0 200px;
-        width: 200px;
-        aspect-ratio: 1 / 1;
+        flex: 0 0 360px;
+        aspect-ratio: 4 / 3;
+        margin: 0 0 1rem;
     }
 }
 
