@@ -50,25 +50,25 @@
 					<div class="tech-field-panel is-active" id="tech-paraphysics" role="tabpanel" aria-labelledby="tab-tech-paraphysics">
 						<div>
 							<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
+								<div class="flex-7 content-stack">
+									<div>
+										<div class="line-container">
+											<h5><strong>Overview</strong></h5>
+											<div class="line"></div>
+										</div>
+										<p class="copy">
+											Paraphysics is, at its most basic, the study of the rules that define planes of existence beyond our own. Subdivided into innumerable fields of study, paraphysics bridges the gap between the well-understood laws of traditional physics and the exotic additions seen in higher planes, or the dramatic simplifications in lower ones. Through theory, experimentation, and analysis, this new field of science brings dramatic breakthroughs and discoveries at a pace not seen since the discovery of the atom.
+										</p>
+										<p class="copy">
+											Paraphysical breakthroughs have brought us innovations as vital to the burgeoning human stellar empire as the <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and <?php echo sf_lore_link('aether-sails', 'aether sail'); ?>, but just as importantly, they’ve shattered the ceiling that sat close overhead during the <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>. Access to exotic materials has allowed the construction of ever stronger or more elaborate structures, while elements previously only theorized are synthesized in far-off planes and brought back for industrial use. Concepts once believed to be in the realm of science fiction—magnetic monopoles, negative mass, the aether—exist now, if not in direct service to human technology, then at least as observable, quantifiable, and measurable curiosities.
+										</p>
+										<p class="copy">
+											While the scientific method thrives amidst the bizarre and sometimes incomprehensible realities on the other side of a switch gate, it’s no longer alone. The deeper mysteries of the multiverse have brought concepts that traditional physics would have scoffed at. Axiomatic, descriptive information seems to have a deep and still little-understood reciprocal effect on reality, and the thing that seems to bind the planes most heavily isn’t math but <i>expression</i>. The realms of philosophy and language are now deeply interwoven with the scientific and physical in ways as profound as they are mysterious.
+										</p>
+										<p class="copy">
+											Professionals in this new science exist everywhere; indeed, it’s safe to say that the industries of physics and engineering have been wholly subsumed into their paraphysical counterparts. Lab workers obsess over measuring the minutiae of exotic radiation. New products are released every day, enhanced by materials only made possible through manipulation of the exotic. The spirit of the gentleman explorer and scientific pioneer has made a return, with expeditionary scientists bringing their labs to the frontiers of other realities, risking their lives for fortune, fame, or simple curiosity.
+										</p>
 									</div>
-									<p class="copy">
-										Paraphysics is, at its most basic, the study of the rules that define planes of existence beyond our own. Subdivided into innumerable fields of study, paraphysics bridges the gap between the well-understood laws of traditional physics and the exotic additions seen in higher planes, or the dramatic simplifications in lower ones. Through theory, experimentation, and analysis, this new field of science brings dramatic breakthroughs and discoveries at a pace not seen since the discovery of the atom.
-									</p>
-									<p class="copy">
-										Paraphysical breakthroughs have brought us innovations as vital to the burgeoning human stellar empire as the <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and <?php echo sf_lore_link('aether-sails', 'aether sail'); ?>, but just as importantly, they’ve shattered the ceiling that sat close overhead during the <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>. Access to exotic materials has allowed the construction of ever stronger or more elaborate structures, while elements previously only theorized are synthesized in far-off planes and brought back for industrial use. Concepts once believed to be in the realm of science fiction—magnetic monopoles, negative mass, the aether—exist now, if not in direct service to human technology, then at least as observable, quantifiable, and measurable curiosities.
-									</p>
-									<p class="copy">
-										While the scientific method thrives amidst the bizarre and sometimes incomprehensible realities on the other side of a switch gate, it’s no longer alone. The deeper mysteries of the multiverse have brought concepts that traditional physics would have scoffed at. Axiomatic, descriptive information seems to have a deep and still little-understood reciprocal effect on reality, and the thing that seems to bind the planes most heavily isn’t math but <i>expression</i>. The realms of philosophy and language are now deeply interwoven with the scientific and physical in ways as profound as they are mysterious.
-									</p>
-									<p class="copy">
-										Professionals in this new science exist everywhere; indeed, it’s safe to say that the industries of physics and engineering have been wholly subsumed into their paraphysical counterparts. Lab workers obsess over measuring the minutiae of exotic radiation. New products are released every day, enhanced by materials only made possible through manipulation of the exotic. The spirit of the gentleman explorer and scientific pioneer has made a return, with expeditionary scientists bringing their labs to the frontiers of other realities, risking their lives for fortune, fame, or simple curiosity.
-									</p>
-								</div>
-								<div class="flex-6 content-stack">
 									<div>
 										<div class="line-container">
 											<h5><strong>Axiomatic Truth</strong></h5>
@@ -81,6 +81,8 @@
 											The effects of axiomatic truth are most visible in higher planes, where concepts underpin reality as much as laws do. The “magic” of 516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is theorized to manipulate underlying axiomatic truths to attain its complex effects.
 										</p>
 									</div>
+								</div>
+								<div class="flex-6 content-stack">
 									<div>
 										<div class="line-container">
 											<h5><strong>Paraphysical Decay</strong></h5>

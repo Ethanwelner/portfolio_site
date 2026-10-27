@@ -11,6 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Exotic Materials: St-1/E1 - “Fast Hydrogen” and Co-H2O/E2 - “Slim Water” now have full writeups, covering what each does, how dangerous Fast Hydrogen is to handle, and why ships “water cycle” their Slim Water.</li>
 						<li>Exotic Materials: the tab now opens with Decoding Exotic Materials, the Bureau’s naming guidelines for exotic material codes, and has a placeholder for Ob-Med/E2 - “Sanguis Cruor.”</li>
+						<li>The Paraphysics and Exotic Materials tabs have more even columns: Axiomatic Truth now sits under the Paraphysics Overview, and Fast Hydrogen under Solum Inane.</li>
 					</ul>
 				</article>
 
