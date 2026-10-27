@@ -47,45 +47,49 @@
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-5">
+	<div class="content-stack">
+		<div>
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Planar Territories (<?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>”'); ?>)</h6>
-			<ul class="copy mb-0">
-				<li>Port Herminst (Capital)</li>
-				<li>Glintl</li>
-				<li>The King’s Woods</li>
-				<li>Tetra (Switch Port town)</li>
-			</ul>
+			<div class="text-cols">
+				<h6>Planar Territories (<?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>”'); ?>)</h6>
+				<ul class="copy mb-0">
+					<li>Port Herminst (Capital)</li>
+					<li>Glintl</li>
+					<li>The King’s Woods</li>
+					<li>Tetra (Switch Port town)</li>
+				</ul>
+			</div>
 		</div>
-		<div class="flex-11">
+		<div>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
 			</div>
-			<p class="copy mb-3">Dates are given in the Kindred Era (KE), the calendar of Dreft.</p>
-			<ul class="copy mb-0">
-				<li>630 KE – Dreft is founded through the political union of the Kingdom of the Dreftians, named for the Dreft lowlands on the southeastern coast of modern-day Dreft, and the Merchant Republic of Herminst.</li>
-				<li>690 KE – Mongoth rampages out of the northern deserts and lays waste to the former capital at Castle Mintl before disappearing into <?php echo sf_lore_link('kings-woods', 'the King’s Woods'); ?>.</li>
-				<li>694 KE – The capital is moved to <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, and construction begins on a new castle.</li>
-				<li>750 KE – The Year of the Bloodshot Eye. The central crater on Erdef’s moon is said to have turned red for the entire calendar year, and monster populations surge, growing unusually restless and aggressive.</li>
-				<li>790 KE – Princess Alabenta of Dreft leaves Prince Rouis of <?php echo sf_lore_link('kingdom-of-karsef', 'Karsef'); ?> at the altar, abandoning a decade-long unification project organized by then-Queen Sentl Gjirokastër.</li>
-				<li>791 KE – The spurned Prince Rouis the Third leads a border raid into Dreft through the Corsine Pass but is slain in a skirmish with Dreftian knights.</li>
-				<li>792 KE – An enraged King Rouis the Second declares war on Dreft, beginning a conflict that lasts 32 years.</li>
-				<li>824 KE – The end of the “War of the Spurned.”</li>
-				<li>840 KE – A succession crisis sparks the “War of the Nobles.”</li>
-				<li>845 KE – The Walpurgis noble line is elevated to the crown.</li>
-				<li>910 KE – Border skirmishes break out with the neighboring Kingdom of Karsef over the Corsine Pass in <?php echo sf_lore_link('corsine-mountains', 'the Corsine Mountains'); ?>.</li>
-				<li>915 KE – A three-year drought brings food riots to Port Herminst and instability to the northern Duchy of Salarno.</li>
-				<li>919 KE – After four years of rebellion, the Duchy of Salarno fractures into the “Sunrise Princedoms.”</li>
-				<li>946 KE – First contact with humanity (2186 CE).</li>
-				<li>980 KE – Princess Abenzia Walpurgis dies of <?php echo sf_lore_link('sunsickness', 'sunsickness'); ?>.</li>
-				<li>989 KE – The Emperor of <?php echo sf_lore_link('drovus-empire', 'Drovus'); ?> returns from a 12-year campaign of conquest in the Sunrise Princedoms, having absorbed them into his growing empire.</li>
-				<li>990 KE – Queen Walpurgis the Third dies under unusual circumstances.</li>
-			</ul>
+			<div class="text-cols">
+				<p class="copy mb-3">Dates are given in the Kindred Era (KE), the calendar of Dreft.</p>
+				<ul class="copy mb-0">
+					<li>630 KE – Dreft is founded through the political union of the Kingdom of the Dreftians, named for the Dreft lowlands on the southeastern coast of modern-day Dreft, and the Merchant Republic of Herminst.</li>
+					<li>690 KE – Mongoth rampages out of the northern deserts and lays waste to the former capital at Castle Mintl before disappearing into <?php echo sf_lore_link('kings-woods', 'the King’s Woods'); ?>.</li>
+					<li>694 KE – The capital is moved to <?php echo sf_lore_link('herminst', 'Port Herminst'); ?>, and construction begins on a new castle.</li>
+					<li>750 KE – The Year of the Bloodshot Eye. The central crater on Erdef’s moon is said to have turned red for the entire calendar year, and monster populations surge, growing unusually restless and aggressive.</li>
+					<li>790 KE – Princess Alabenta of Dreft leaves Prince Rouis of <?php echo sf_lore_link('kingdom-of-karsef', 'Karsef'); ?> at the altar, abandoning a decade-long unification project organized by then-Queen Sentl Gjirokastër.</li>
+					<li>791 KE – The spurned Prince Rouis the Third leads a border raid into Dreft through the Corsine Pass but is slain in a skirmish with Dreftian knights.</li>
+					<li>792 KE – An enraged King Rouis the Second declares war on Dreft, beginning a conflict that lasts 32 years.</li>
+					<li>824 KE – The end of the “War of the Spurned.”</li>
+					<li>840 KE – A succession crisis sparks the “War of the Nobles.”</li>
+					<li>845 KE – The Walpurgis noble line is elevated to the crown.</li>
+					<li>910 KE – Border skirmishes break out with the neighboring Kingdom of Karsef over the Corsine Pass in <?php echo sf_lore_link('corsine-mountains', 'the Corsine Mountains'); ?>.</li>
+					<li>915 KE – A three-year drought brings food riots to Port Herminst and instability to the northern Duchy of Salarno.</li>
+					<li>919 KE – After four years of rebellion, the Duchy of Salarno fractures into the “Sunrise Princedoms.”</li>
+					<li>946 KE – First contact with humanity (2186 CE).</li>
+					<li>980 KE – Princess Abenzia Walpurgis dies of <?php echo sf_lore_link('sunsickness', 'sunsickness'); ?>.</li>
+					<li>989 KE – The Emperor of <?php echo sf_lore_link('drovus-empire', 'Drovus'); ?> returns from a 12-year campaign of conquest in the Sunrise Princedoms, having absorbed them into his growing empire.</li>
+					<li>990 KE – Queen Walpurgis the Third dies under unusual circumstances.</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </details>

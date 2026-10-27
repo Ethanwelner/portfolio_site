@@ -43,10 +43,10 @@
 							<h5><strong>Details</strong></h5>
 							<div class="line"></div>
 						</summary>
-						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-							<div class="flex-7 content-stack">
-								<div>
-									<h5 class="mb-3"><strong>Higher Plane</strong></h5>
+						<div class="content-stack">
+							<div>
+								<h5 class="mb-3"><strong>Higher Plane</strong></h5>
+								<div class="text-cols">
 									<ul class="copy">
 										<li>The “higher” a plane is, the more new and novel laws of reality are added and the further existing ones are altered. Higher planes contain “additional physics”: additional fundamental forces, extra quantum fields, extra spatial dimensions, additional or different axiomatic qualities, and similar expansions of the rules that govern matter and energy.</li>
 										<li>Physical laws can be indistinguishable from the norm with the exception of previously impossible forms of light, novel interactions with gravity, or significantly different or additional universal constants. Higher planes represent a gradient starting from virtually identical parallel planes with extremely minor additions to the laws of reality all the way to manifold realities with billions of spatial dimensions populated by entities composed of crystallized emotion.</li>
@@ -54,8 +54,10 @@
 										<li>Material or energy from higher planes maintain their exotic properties for a period of time or even indefinitely, depending on the height of the plane and how foreign the property is. Significantly higher planes tend to be extremely dangerous to matter-swap with. Higher level matter can often radiate deadly forms of physics, such as novel and highly destructive new wavelengths of light (radiation) or other inconceivable dangers.</li>
 									</ul>
 								</div>
-								<div>
-									<h5 class="mb-3"><strong>Parallel Plane</strong></h5>
+							</div>
+							<div>
+								<h5 class="mb-3"><strong>Parallel Plane</strong></h5>
+								<div class="text-cols">
 									<ul class="copy mb-0">
 										<li>Earth is here. The “Goldilocks zone” of physical laws for supporting life. The “closest” planar category, it requires the least effort to lock onto and is the least likely to be dangerous.</li>
 										<li>Physical laws are almost indistinguishable from the norm. A parallel plane contains all or nearly all typical laws of physics, and physical constants and axioms are near enough to the norm that they do not intrude on the functioning of transported matter. They could have different spatial curvatures.</li>
@@ -63,14 +65,16 @@
 									</ul>
 								</div>
 							</div>
-							<div class="flex-6">
+							<div>
 								<h5 class="mb-3"><strong>Lower Plane</strong></h5>
-								<ul class="copy mb-0">
-									<li>The “lower” a plane is, the fewer laws of reality are applied and the more universal constants are aligned to “baseline” values. Lower planes contain “fewer” physics: weaker or nonexistent gravity, fewer possible elemental interactions, fewer or different quantum interactions, and similar reductions of the rules that govern matter and energy.</li>
-									<li>The lower a plane, the more likely it is to resemble other lower planes. There is no discovered “lowest” plane, but it is theorized that there is a baseline set of physical axioms that are the starting point that all planes are derived from. Lower planes do not contain significant variety and tend to be very homogenous, such as a plane formed entirely of perfectly distributed hydrogen gas.</li>
-									<li>Lower planes are almost universally deadly to travel to. There are many physical laws which, if removed or simplified, result in a reality that cannot support matter as we know it. While transported matter sent to a lower plane will maintain its own physical laws, that doesn't help you if the universe you have traveled to is composed entirely of degenerate neutron matter or doesn't contain a concept of time.</li>
-									<li>The lower a plane, the less it is capable of supporting life. Safe lower planes are prized for raw materials extraction.</li>
-								</ul>
+								<div class="text-cols">
+									<ul class="copy mb-0">
+										<li>The “lower” a plane is, the fewer laws of reality are applied and the more universal constants are aligned to “baseline” values. Lower planes contain “fewer” physics: weaker or nonexistent gravity, fewer possible elemental interactions, fewer or different quantum interactions, and similar reductions of the rules that govern matter and energy.</li>
+										<li>The lower a plane, the more likely it is to resemble other lower planes. There is no discovered “lowest” plane, but it is theorized that there is a baseline set of physical axioms that are the starting point that all planes are derived from. Lower planes do not contain significant variety and tend to be very homogenous, such as a plane formed entirely of perfectly distributed hydrogen gas.</li>
+										<li>Lower planes are almost universally deadly to travel to. There are many physical laws which, if removed or simplified, result in a reality that cannot support matter as we know it. While transported matter sent to a lower plane will maintain its own physical laws, that doesn't help you if the universe you have traveled to is composed entirely of degenerate neutron matter or doesn't contain a concept of time.</li>
+										<li>The lower a plane, the less it is capable of supporting life. Safe lower planes are prized for raw materials extraction.</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</details>
@@ -429,13 +433,8 @@
 						<li>The final two characters describe the material’s estimated paraphysical decay half-life in years.</li>
 					</ul>
 					<div class="bumper"></div>
-					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-						<div class="flex-7">
-							<?php sf_lore_entry('st-245-e6', 'line'); ?>
-						</div>
-						<div class="flex-6 content-stack">
-							<?php foreach (['st-1-e1', 'co-h2o-e2', 'ob-med-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
-						</div>
+					<div class="content-stack lore-text-cols">
+						<?php foreach (['st-245-e6', 'st-1-e1', 'co-h2o-e2', 'ob-med-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 					</div>
 				</div>
 			</div>

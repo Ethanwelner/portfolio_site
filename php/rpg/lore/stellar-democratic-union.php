@@ -47,43 +47,47 @@
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-5">
+	<div class="content-stack">
+		<div>
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Earth Territories</h6>
-			<ul class="copy">
-				<li>Core Europe</li>
-				<li>Japan</li>
-				<li>Australia</li>
-				<li>Existing EU member and associate members</li>
-				<li>Canada</li>
-				<li>Corea</li>
-				<li>Russia/Belarus</li>
-				<li>Brazil</li>
-			</ul>
-			<h6>Stellar Territories</h6>
-			<ul class="copy">
-				<li>The Martian Association</li>
-				<li>Antiluna Colony (High Earth Orbit)</li>
-				<li><?php echo sf_lore_link('boneyard', 'Boneyard'); ?> (Ark)</li>
-				<li><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</li>
-			</ul>
-			<h6>Planar Territories</h6>
-			<ul class="copy mb-0">
-				<li>New Persia (<?php echo sf_lore_link('pairidaeza', '210/c/18 - “<i>Pairidaeza</i>”'); ?>)</li>
-			</ul>
+			<div class="text-cols">
+				<h6>Earth Territories</h6>
+				<ul class="copy">
+					<li>Core Europe</li>
+					<li>Japan</li>
+					<li>Australia</li>
+					<li>Existing EU member and associate members</li>
+					<li>Canada</li>
+					<li>Corea</li>
+					<li>Russia/Belarus</li>
+					<li>Brazil</li>
+				</ul>
+				<h6>Stellar Territories</h6>
+				<ul class="copy">
+					<li>The Martian Association</li>
+					<li>Antiluna Colony (High Earth Orbit)</li>
+					<li><?php echo sf_lore_link('boneyard', 'Boneyard'); ?> (Ark)</li>
+					<li><?php echo sf_lore_link('tetra', 'Tetra'); ?> (Ark)</li>
+				</ul>
+				<h6>Planar Territories</h6>
+				<ul class="copy mb-0">
+					<li>New Persia (<?php echo sf_lore_link('pairidaeza', '210/c/18 - “<i>Pairidaeza</i>”'); ?>)</li>
+				</ul>
+			</div>
 		</div>
-		<div class="flex-11">
+		<div>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
+			<div class="text-cols">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
 		</div>
 	</div>
 </details>

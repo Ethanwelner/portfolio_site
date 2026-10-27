@@ -44,29 +44,33 @@
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-5">
+	<div class="content-stack">
+		<div>
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Earth Territories</h6>
-			<ul class="copy mb-0">
-				<li>Former Mongolia/Inner Mongolia</li>
-				<li>Former Eastern Russia</li>
-				<li>Former Kazakhstan</li>
-				<li>Former Kyrgyzstan</li>
-				<li>Former Xinjiang</li>
-			</ul>
+			<div class="text-cols">
+				<h6>Earth Territories</h6>
+				<ul class="copy mb-0">
+					<li>Former Mongolia/Inner Mongolia</li>
+					<li>Former Eastern Russia</li>
+					<li>Former Kazakhstan</li>
+					<li>Former Kyrgyzstan</li>
+					<li>Former Xinjiang</li>
+				</ul>
+			</div>
 		</div>
-		<div class="flex-11">
+		<div>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
+			<div class="text-cols">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
 		</div>
 	</div>
 </details>

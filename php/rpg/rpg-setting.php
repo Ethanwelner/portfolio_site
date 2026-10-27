@@ -48,39 +48,43 @@
 			</div>
 
 			<div class="tech-field-panel is-active" id="timeline-events" role="tabpanel" aria-labelledby="tab-timeline-events">
-				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-6">
-			<div class="line-container">
-				<h5><strong>Strange Frontiers</strong></h5>
-				<div class="line"></div>
-			</div>
-			<p class="copy">
-				Mankind has colonized the stars, it’s created life, it’s mapped the fundamental building blocks of nature, but in the year 2230 it’s still just humanity. Inequality persists, war remains, and we’re still striving to uncover the next horizon. The nations of Earth have established colonies in distant stars and even more distant planes of reality, corporations use parascience to develop new technologies, and humanity grapples with how to treat the truly alien.
-			</p>
-			<p class="copy">
-				Life in 2230 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a <?php echo sf_lore_link('freighters', 'freighter'); ?> out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
-			</p>
-			<p class="copy">
-				In humanity’s darkest hour, 120 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
-			</p>
-			<p class="copy">
-				Then, in a mysterious flash of impossible color, an eldritch temple of bizarre make and proportion appeared on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
-			</p>
-			<p class="copy">
-				Life in Earth’s megacities is still hard, and for over a century the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
-			</p>
-			<p class="copy mb-0">
-				In the end, it’s still humanity, and it’s a big strange universe out there.
-			</p>
-		</div>
-					<div class="flex-6">
+				<div class="content-stack">
+					<div>
+						<div class="line-container">
+							<h5><strong>Strange Frontiers</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
+							<p class="copy">
+								Mankind has colonized the stars, it’s created life, it’s mapped the fundamental building blocks of nature, but in the year 2230 it’s still just humanity. Inequality persists, war remains, and we’re still striving to uncover the next horizon. The nations of Earth have established colonies in distant stars and even more distant planes of reality, corporations use parascience to develop new technologies, and humanity grapples with how to treat the truly alien.
+							</p>
+							<p class="copy">
+								Life in 2230 is hard, but it has its upsides. Genetic science and advanced cybernetics are pushing the boundaries of what a human is capable of. Sentient AI citizens and paranatural alien life have quashed the old prejudices that divided humanity. And if you don’t like it? Hop a <?php echo sf_lore_link('freighters', 'freighter'); ?> out to the frontier and kickstart your own society. Better yet, hop in a <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> and try your luck in a whole other plane of reality. It wasn’t always this good, though.
+							</p>
+							<p class="copy">
+								In humanity’s darkest hour, 120 years ago, it was dying. The Earth had suffered a near-total ecological collapse, brought on by over-industrialization and risky geo-engineering. A near miss with an AI apocalypse had only deepened divisions and mistrust. The march of science had slowed to a trickle, every new endeavor too expensive or too useless to make an impact. The rich and well-connected were fleeing for space, but that only left them in little bubbles of metal and air, alone and orbiting a dying world.
+							</p>
+							<p class="copy">
+								Then, in a mysterious flash of impossible color, an eldritch temple of bizarre make and proportion appeared on the dark side of the Moon. On it, in alien glyphs, was written song, poetry, philosophy, and the secrets of parascience. In the century since, mankind has used this gift to harvest impossible materials from other planes of existence and develop strange new technologies to expand far beyond its birth world.
+							</p>
+							<p class="copy">
+								Life in Earth’s megacities is still hard, and for over a century the great migration away from Earth, coined the <?php echo sf_lore_link('exodus', 'Exodus'); ?>, has created new nations on the Moon, Mars, and locales much farther still. Competition is fierce, corporations and nations alike strive for any edge. Brave pilots ply the stars aboard ramshackle starships, hardened gangs vie for power in the dark depths between arcologies, and elite mercenaries explore other planes of existence hoping to find exotic materials.
+							</p>
+							<p class="copy mb-0">
+								In the end, it’s still humanity, and it’s a big strange universe out there.
+							</p>
+						</div>
+					</div>
+					<div>
 						<div class="line-container">
 							<h5><strong>2230, The Systems, and Beyond</strong></h5>
 							<div class="line"></div>
 						</div>
-						<p class="copy mb-0">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
+						<div class="text-cols">
+							<p class="copy mb-0">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -691,13 +695,8 @@
 			</div>
 
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
-				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-					<div class="flex-7 content-stack">
-						<?php foreach (['ten-twenty-holding-corporation', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
-					</div>
-					<div class="flex-6 content-stack">
-						<?php foreach (['meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
-					</div>
+				<div class="content-stack">
+					<?php foreach (['ten-twenty-holding-corporation', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy', 'meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 				</div>
 			</div>
 		</div>

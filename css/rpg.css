@@ -531,6 +531,11 @@ html.lore-modal-open {
     gap: 24px;
 }
 
+/* The popup is too narrow for two text columns. */
+.lore-modal-body .text-cols {
+    column-count: 1;
+}
+
 .lore-modal-close {
     appearance: none;
     position: absolute;
@@ -1345,6 +1350,42 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
     @media (max-width: 959px) {
         column-gap: 24px;
+    }
+}
+
+/* A section's text flowing across two text columns: tab panels in php/rpg/, the Details of
+   plane, nation, ark and technology entries in php/rpg/lore/, and each Exotic Materials entry
+   (.lore-text-cols, rpg-planes.php). */
+.text-cols,
+.lore-text-cols > .lore-entry > .lore-body {
+    column-count: 2;
+    column-gap: 40px;
+
+    @media (max-width: 960px) {
+        column-count: 1;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    h5,
+    h6 {
+        break-after: avoid;
+    }
+
+    /* Spacecraft classes (rpg-spacecraft.php): keep each short ship entry whole. */
+    > .lore-entry {
+        break-inside: avoid;
+    }
+
+    > .lore-entry + .lore-entry {
+        margin-top: 20px;
+    }
+
+    /* History timelines and other lists: keep each item in one column. */
+    li {
+        break-inside: avoid;
     }
 }
 

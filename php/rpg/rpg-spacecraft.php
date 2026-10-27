@@ -51,176 +51,172 @@
 					</div>
 
 					<div class="tech-field-panel is-active" id="craft-starships" role="tabpanel" aria-labelledby="tab-craft-starships">
-						<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-							<div class="flex-6 content-stack">
-								<div>
-									<div class="line-container">
-										<h5><strong>Utility Craft</strong></h5>
+						<div class="content-stack">
+							<div>
+								<div class="line-container">
+									<h5><strong>Utility Craft</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="info-cols">
+									<dl class="copy attr-list">
+										<div>
+											<dt>Tonnage</dt>
+											<dd>Up to 100 tons</dd>
+										</div>
+										<div>
+											<dt>Notable Ships</dt>
+											<dd></dd>
+										</div>
+									</dl>
+								</div>
+								<details class="lore-details">
+									<summary class="line-container">
+										<h5><strong>Details</strong></h5>
 										<div class="line"></div>
-									</div>
-									<div class="info-cols">
-										<dl class="copy attr-list">
-											<div>
-												<dt>Tonnage</dt>
-												<dd>Up to 100 tons</dd>
-											</div>
-											<div>
-												<dt>Notable Ships</dt>
-												<dd></dd>
-											</div>
-										</dl>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack">
-											<div>
-												<h5 class="mb-3"><strong>Skiffs</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('skiffs', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('drone-craft', 'h6', 'fst-italic'); ?>
-												</div>
-											</div>
-											<div>
-												<h5 class="mb-3"><strong>Shuttles</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('shuttles', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
-												</div>
+									</summary>
+									<div class="content-stack">
+										<div>
+											<h5 class="mb-3"><strong>Skiffs</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('skiffs', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('drone-craft', 'h6', 'fst-italic'); ?>
 											</div>
 										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Small Ships</strong></h5>
-										<div class="line"></div>
-									</div>
-									<div class="info-cols">
-										<dl class="copy attr-list">
-											<div>
-												<dt>Tonnage</dt>
-												<dd>20 to 10,000 tons</dd>
-											</div>
-											<div>
-												<dt>Notable Ships</dt>
-												<dd></dd>
-											</div>
-										</dl>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack">
-											<div>
-												<h5 class="mb-3"><strong>Cutters</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('fighters', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('patrol-craft', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('cutters', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('tugs', 'h6', 'fst-italic'); ?>
-												</div>
-											</div>
-											<div>
-												<h5 class="mb-3"><strong>Corvettes</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('corvettes', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('yachts', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('lifters', 'h6', 'fst-italic'); ?>
-												</div>
+										<div>
+											<h5 class="mb-3"><strong>Shuttles</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('shuttles', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('trucks', 'h6', 'fst-italic'); ?>
 											</div>
 										</div>
-									</details>
-								</div>
+									</div>
+								</details>
 							</div>
-							<div class="flex-6 content-stack">
-								<div>
-									<div class="line-container">
-										<h5><strong>Large Ships</strong></h5>
+							<div>
+								<div class="line-container">
+									<h5><strong>Small Ships</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="info-cols">
+									<dl class="copy attr-list">
+										<div>
+											<dt>Tonnage</dt>
+											<dd>20 to 10,000 tons</dd>
+										</div>
+										<div>
+											<dt>Notable Ships</dt>
+											<dd></dd>
+										</div>
+									</dl>
+								</div>
+								<details class="lore-details">
+									<summary class="line-container">
+										<h5><strong>Details</strong></h5>
 										<div class="line"></div>
-									</div>
-									<div class="info-cols">
-										<dl class="copy attr-list">
-											<div>
-												<dt>Tonnage</dt>
-												<dd>25,000 to 500,000 tons</dd>
-											</div>
-											<div>
-												<dt>Notable Ships</dt>
-												<dd><i>Babylon’s Arrow</i></dd>
-											</div>
-										</dl>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack">
-											<div>
-												<h5 class="mb-3"><strong>Cruisers</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('frigates', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('administration-craft', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('cruisers', 'h6', 'fst-italic'); ?>
-												</div>
-											</div>
-											<div>
-												<h5 class="mb-3"><strong>Carriers</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('carriers', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('miners', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('foremen', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('freighters', 'h6', 'fst-italic'); ?>
-												</div>
+									</summary>
+									<div class="content-stack">
+										<div>
+											<h5 class="mb-3"><strong>Cutters</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('fighters', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('patrol-craft', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('cutters', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('tugs', 'h6', 'fst-italic'); ?>
 											</div>
 										</div>
-									</details>
-								</div>
-								<div>
-									<div class="line-container">
-										<h5><strong>Capital Ships</strong></h5>
-										<div class="line"></div>
-									</div>
-									<div class="info-cols">
-										<dl class="copy attr-list">
-											<div>
-												<dt>Tonnage</dt>
-												<dd>500,000 to 20 million tons, with Arks reaching hundreds of millions to billions</dd>
-											</div>
-											<div>
-												<dt>Notable Ships</dt>
-												<dd><i>xù rì</i>, <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?>, <?php echo sf_lore_link('4544-xanthus', '4544 Xanthus'); ?>, <?php echo sf_lore_link('boneyard', 'Boneyard'); ?>, <?php echo sf_lore_link('tetra', 'Tetra'); ?>, <?php echo sf_lore_link('new-york', 'New York'); ?>, <?php echo sf_lore_link('zhulong', 'Zhulong'); ?></dd>
-											</div>
-										</dl>
-									</div>
-									<details class="lore-details">
-										<summary class="line-container">
-											<h5><strong>Details</strong></h5>
-											<div class="line"></div>
-										</summary>
-										<div class="content-stack">
-											<div>
-												<h5 class="mb-3"><strong>Capital Ships</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('dreadnoughts', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('stellar-carriers', 'h6', 'fst-italic'); ?>
-													<?php sf_lore_entry('colony-ships', 'h6', 'fst-italic'); ?>
-												</div>
-											</div>
-											<div>
-												<h5 class="mb-3"><strong>Arks</strong></h5>
-												<div class="content-stack content-stack-sm">
-													<?php sf_lore_entry('arks', 'h6', 'fst-italic'); ?>
-												</div>
+										<div>
+											<h5 class="mb-3"><strong>Corvettes</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('corvettes', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('yachts', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('lifters', 'h6', 'fst-italic'); ?>
 											</div>
 										</div>
-									</details>
+									</div>
+								</details>
+							</div>
+							<div>
+								<div class="line-container">
+									<h5><strong>Large Ships</strong></h5>
+									<div class="line"></div>
 								</div>
+								<div class="info-cols">
+									<dl class="copy attr-list">
+										<div>
+											<dt>Tonnage</dt>
+											<dd>25,000 to 500,000 tons</dd>
+										</div>
+										<div>
+											<dt>Notable Ships</dt>
+											<dd><i>Babylon’s Arrow</i></dd>
+										</div>
+									</dl>
+								</div>
+								<details class="lore-details">
+									<summary class="line-container">
+										<h5><strong>Details</strong></h5>
+										<div class="line"></div>
+									</summary>
+									<div class="content-stack">
+										<div>
+											<h5 class="mb-3"><strong>Cruisers</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('frigates', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('administration-craft', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('cruisers', 'h6', 'fst-italic'); ?>
+											</div>
+										</div>
+										<div>
+											<h5 class="mb-3"><strong>Carriers</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('carriers', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('miners', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('foremen', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('freighters', 'h6', 'fst-italic'); ?>
+											</div>
+										</div>
+									</div>
+								</details>
+							</div>
+							<div>
+								<div class="line-container">
+									<h5><strong>Capital Ships</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="info-cols">
+									<dl class="copy attr-list">
+										<div>
+											<dt>Tonnage</dt>
+											<dd>500,000 to 20 million tons, with Arks reaching hundreds of millions to billions</dd>
+										</div>
+										<div>
+											<dt>Notable Ships</dt>
+											<dd><i>xù rì</i>, <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?>, <?php echo sf_lore_link('4544-xanthus', '4544 Xanthus'); ?>, <?php echo sf_lore_link('boneyard', 'Boneyard'); ?>, <?php echo sf_lore_link('tetra', 'Tetra'); ?>, <?php echo sf_lore_link('new-york', 'New York'); ?>, <?php echo sf_lore_link('zhulong', 'Zhulong'); ?></dd>
+										</div>
+									</dl>
+								</div>
+								<details class="lore-details">
+									<summary class="line-container">
+										<h5><strong>Details</strong></h5>
+										<div class="line"></div>
+									</summary>
+									<div class="content-stack">
+										<div>
+											<h5 class="mb-3"><strong>Capital Ships</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('dreadnoughts', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('stellar-carriers', 'h6', 'fst-italic'); ?>
+												<?php sf_lore_entry('colony-ships', 'h6', 'fst-italic'); ?>
+											</div>
+										</div>
+										<div>
+											<h5 class="mb-3"><strong>Arks</strong></h5>
+											<div class="text-cols">
+												<?php sf_lore_entry('arks', 'h6', 'fst-italic'); ?>
+											</div>
+										</div>
+									</div>
+								</details>
 							</div>
 						</div>
 					</div>
