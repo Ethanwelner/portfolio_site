@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/27/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Exotic Materials: St-1/E1 - “Fast Hydrogen” and Co-H2O/E2 - “Slim Water” now have full writeups, covering what each does, how dangerous Fast Hydrogen is to handle, and why ships “water cycle” their Slim Water.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/26/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Every Known Planes entry has an image placeholder as a fourth column in its info box on wide screens.</li>
