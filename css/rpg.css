@@ -1348,6 +1348,20 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* A section's paragraphs flowing across two text columns (Paraphysics tab, rpg-technologies.php) */
+.text-cols {
+    column-count: 2;
+    column-gap: 40px;
+
+    @media (max-width: 959px) {
+        column-gap: 24px;
+    }
+
+    @media (max-width: 767px) {
+        column-count: 1;
+    }
+}
+
 /* Timeline (rpg-setting.php), starship classes (rpg-spacecraft.php) */
 .content-stack-sm {
     gap: 20px;

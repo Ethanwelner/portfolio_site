@@ -48,13 +48,13 @@
 					</div>
 
 					<div class="tech-field-panel is-active" id="tech-paraphysics" role="tabpanel" aria-labelledby="tab-tech-paraphysics">
-						<div>
-							<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-								<div class="flex-7">
-									<div class="line-container">
-										<h5><strong>Overview</strong></h5>
-										<div class="line"></div>
-									</div>
+						<div class="content-stack">
+							<div>
+								<div class="line-container">
+									<h5><strong>Overview</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="text-cols">
 									<p class="copy">
 										Paraphysics is, at its most basic, the study of the rules that define planes of existence beyond our own. Subdivided into innumerable fields of study, paraphysics bridges the gap between the well-understood laws of traditional physics and the exotic additions seen in higher planes, or the dramatic simplifications in lower ones. Through theory, experimentation, and analysis, this new field of science brings dramatic breakthroughs and discoveries at a pace not seen since the discovery of the atom.
 									</p>
@@ -64,50 +64,54 @@
 									<p class="copy">
 										While the scientific method thrives amidst the bizarre and sometimes incomprehensible realities on the other side of a switch gate, it’s no longer alone. The deeper mysteries of the multiverse have brought concepts that traditional physics would have scoffed at. Axiomatic, descriptive information seems to have a deep and still little-understood reciprocal effect on reality, and the thing that seems to bind the planes most heavily isn’t math but <i>expression</i>. The realms of philosophy and language are now deeply interwoven with the scientific and physical in ways as profound as they are mysterious.
 									</p>
-									<p class="copy">
+									<p class="copy mb-0">
 										Professionals in this new science exist everywhere; indeed, it’s safe to say that the industries of physics and engineering have been wholly subsumed into their paraphysical counterparts. Lab workers obsess over measuring the minutiae of exotic radiation. New products are released every day, enhanced by materials only made possible through manipulation of the exotic. The spirit of the gentleman explorer and scientific pioneer has made a return, with expeditionary scientists bringing their labs to the frontiers of other realities, risking their lives for fortune, fame, or simple curiosity.
 									</p>
 								</div>
-								<div class="flex-6 content-stack">
-									<div>
-										<div class="line-container">
-											<h5><strong>Axiomatic Truth</strong></h5>
-											<div class="line"></div>
-										</div>
-										<p class="copy">
-											Perhaps the most startling addition to the model of traditional physics brought on by planar exploration was the realization that descriptive narrative truth is, itself, a law of nature. More than that, it appears to be the only such law that, so far, has held inviolable across all discovered planes. The clearest example of this comes in the humble <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>. Switch gate addresses appear to be written in language, not math, with a grammar and structure that “describe” the two locations they connect. Moving a gate can destabilize its “lock.” More bizarrely, a change in the gate’s circumstances can have a similar effect, with as little as a change in the surrounding furniture or a new corporate owner causing the gate to need retuning. In switch gates, this effect is referred to as the lock’s axiomatic stability.
-										</p>
-										<p class="copy">
-											The effects of axiomatic truth are most visible in higher planes, where concepts underpin reality as much as laws do. The “magic” of 516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is theorized to manipulate underlying axiomatic truths to attain its complex effects.
-										</p>
-									</div>
-									<div>
-										<div class="line-container">
-											<h5><strong>Paraphysical Decay</strong></h5>
-											<div class="line"></div>
-										</div>
-										<p class="copy">
-											Paraphysical effects are defined as any physical principle or fundamental dynamic inherent to the laws of one plane’s reality that is not present in another’s. When these effects find themselves in another plane, they are by their very nature violations of the laws that govern that reality, and reality will, eventually, assert itself. Over time these effects will suffer paraphysical decay, wherein whatever exotic nature they possess fades until they’re rendered wholly inert and “normal.”
-										</p>
-										<p class="copy">
-											Paraphysical decay is measured by the half-life of a given paraphysical effect. The half-life of a paraphysical effect is highly variable and appears to have some relation to the elevation and distance of its plane of origin relative to the plane it’s in. The further afield a plane is, the more short-lived its effects often are, though there are notable exceptions.
-										</p>
-										<p class="copy">
-											Paraphysical decay is a driving factor behind the need to continuously resupply economically important exotic materials, but it also acts as a natural shield against invasive or predatory physical laws.
-										</p>
-									</div>
-									<div>
-										<div class="line-container">
-											<h5><strong>Null Physics</strong></h5>
-											<div class="line"></div>
-										</div>
-										<p class="copy">
-											Null physics describes the antiphysical effects that manifest at the edges of limited spatial topographies. Null physical “zones” are theorized to represent the end of a given reality, with space quickly decaying into a chaotic haze of broken physical laws and, eventually, utter nothingness. Measured extensively in a series of expeditions to the edge of 314/X/50 - “<?php echo sf_lore_link('qliphoth', 'Qliphoth'); ?>,” these zones are less a physical border than a conceptual one, wherein on one side reality exists and on the other it does not. The border can be crossed; there is no effective boundary beyond the observable corruption, disintegration, and oblivion experienced as the laws holding matter together and giving energy meaning fade.
-										</p>
-										<p class="copy">
-											Null physics is most commonly seen along the “border” separating the inside and outside of a switch gate’s exchange volume. While the border only experiences null physics for a fraction of a moment, it nevertheless releases a powerful burst of electromagnetic radiation as the laws of reality are momentarily assaulted. While safe at a macro scale, this burst makes exchanging delicate electronics or nanoscale machinery close to the border impossible, necessitating a period of aperture widening before machinery or life of any kind can be exchanged.
-										</p>
-									</div>
+							</div>
+							<div>
+								<div class="line-container">
+									<h5><strong>Axiomatic Truth</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="text-cols">
+									<p class="copy">
+										Perhaps the most startling addition to the model of traditional physics brought on by planar exploration was the realization that descriptive narrative truth is, itself, a law of nature. More than that, it appears to be the only such law that, so far, has held inviolable across all discovered planes. The clearest example of this comes in the humble <?php echo sf_lore_link('switch-gates', 'switch gate'); ?>. Switch gate addresses appear to be written in language, not math, with a grammar and structure that “describe” the two locations they connect. Moving a gate can destabilize its “lock.” More bizarrely, a change in the gate’s circumstances can have a similar effect, with as little as a change in the surrounding furniture or a new corporate owner causing the gate to need retuning. In switch gates, this effect is referred to as the lock’s axiomatic stability.
+									</p>
+									<p class="copy mb-0">
+										The effects of axiomatic truth are most visible in higher planes, where concepts underpin reality as much as laws do. The “magic” of 516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is theorized to manipulate underlying axiomatic truths to attain its complex effects.
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="line-container">
+									<h5><strong>Paraphysical Decay</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="text-cols">
+									<p class="copy">
+										Paraphysical effects are defined as any physical principle or fundamental dynamic inherent to the laws of one plane’s reality that is not present in another’s. When these effects find themselves in another plane, they are by their very nature violations of the laws that govern that reality, and reality will, eventually, assert itself. Over time these effects will suffer paraphysical decay, wherein whatever exotic nature they possess fades until they’re rendered wholly inert and “normal.”
+									</p>
+									<p class="copy">
+										Paraphysical decay is measured by the half-life of a given paraphysical effect. The half-life of a paraphysical effect is highly variable and appears to have some relation to the elevation and distance of its plane of origin relative to the plane it’s in. The further afield a plane is, the more short-lived its effects often are, though there are notable exceptions.
+									</p>
+									<p class="copy mb-0">
+										Paraphysical decay is a driving factor behind the need to continuously resupply economically important exotic materials, but it also acts as a natural shield against invasive or predatory physical laws.
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="line-container">
+									<h5><strong>Null Physics</strong></h5>
+									<div class="line"></div>
+								</div>
+								<div class="text-cols">
+									<p class="copy">
+										Null physics describes the antiphysical effects that manifest at the edges of limited spatial topographies. Null physical “zones” are theorized to represent the end of a given reality, with space quickly decaying into a chaotic haze of broken physical laws and, eventually, utter nothingness. Measured extensively in a series of expeditions to the edge of 314/X/50 - “<?php echo sf_lore_link('qliphoth', 'Qliphoth'); ?>,” these zones are less a physical border than a conceptual one, wherein on one side reality exists and on the other it does not. The border can be crossed; there is no effective boundary beyond the observable corruption, disintegration, and oblivion experienced as the laws holding matter together and giving energy meaning fade.
+									</p>
+									<p class="copy mb-0">
+										Null physics is most commonly seen along the “border” separating the inside and outside of a switch gate’s exchange volume. While the border only experiences null physics for a fraction of a moment, it nevertheless releases a powerful burst of electromagnetic radiation as the laws of reality are momentarily assaulted. While safe at a macro scale, this burst makes exchanging delicate electronics or nanoscale machinery close to the border impossible, necessitating a period of aperture widening before machinery or life of any kind can be exchanged.
+									</p>
 								</div>
 							</div>
 						</div>
