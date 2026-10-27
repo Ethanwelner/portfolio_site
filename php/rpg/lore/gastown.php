@@ -111,7 +111,7 @@
 				It took less than six months for the first fuel gate designs to be lashed to the sides of existing voidcraft. In the century since, the fuel gate has become an indispensable and irreplaceable part of every long-range ship, satellite, and station in the settled systems.
 			</p>
 			<p class="copy mb-0">
-				In 2176, under the expanded <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?>, Gastown joined a select few other planes in being classified as a public space, free for all to access, with no nation or private enterprise holding a claim over it.
+				In 2230, Gastown finds itself among a select few other planes with the classification of a public space, free for all to access, and with no nation or private enterprise holding a claim over it.
 			</p>
 		</div>
 	</div>
