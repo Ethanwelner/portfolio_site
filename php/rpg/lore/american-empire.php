@@ -44,57 +44,61 @@
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-5">
+	<div class="content-stack">
+		<div>
 			<div class="line-container">
 				<h5><strong>Territories</strong></h5>
 				<div class="line"></div>
 			</div>
-			<h6>Earth Territories</h6>
-			<ul class="copy">
-				<li>Northern California</li>
-				<li>Southern California</li>
-				<li>Washington</li>
-				<li>Oregon</li>
-				<li>Idaho</li>
-				<li>Montana</li>
-				<li>Minnesota</li>
-				<li>Wisconsin</li>
-				<li>Illinois</li>
-				<li>Michigan</li>
-				<li>Ohio</li>
-				<li>Pennsylvania</li>
-				<li>New York (formerly New York and New Jersey)</li>
-				<li>Delaware</li>
-				<li>Maryland</li>
-				<li>Nevada</li>
-				<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
-				<li>Greater Maine (former Maine and New Hampshire)</li>
-				<li>Nueva Mexico (former Mexico)</li>
-				<li>Mexica (former Mexico)</li>
-				<li>Yucatán (former Mexico)</li>
-			</ul>
-			<h6>Stellar Territories</h6>
-			<ul class="copy mb-0">
-				<li>New Columbia (Luna)</li>
-				<li>New York (Ark)</li>
-			</ul>
+			<div class="text-cols">
+				<h6>Earth Territories</h6>
+				<ul class="copy">
+					<li>Northern California</li>
+					<li>Southern California</li>
+					<li>Washington</li>
+					<li>Oregon</li>
+					<li>Idaho</li>
+					<li>Montana</li>
+					<li>Minnesota</li>
+					<li>Wisconsin</li>
+					<li>Illinois</li>
+					<li>Michigan</li>
+					<li>Ohio</li>
+					<li>Pennsylvania</li>
+					<li>New York (formerly New York and New Jersey)</li>
+					<li>Delaware</li>
+					<li>Maryland</li>
+					<li>Nevada</li>
+					<li>Commonwealth (former Vermont, Massachusetts, Connecticut, Rhode Island)</li>
+					<li>Greater Maine (former Maine and New Hampshire)</li>
+					<li>Nueva Mexico (former Mexico)</li>
+					<li>Mexica (former Mexico)</li>
+					<li>Yucatán (former Mexico)</li>
+				</ul>
+				<h6>Stellar Territories</h6>
+				<ul class="copy mb-0">
+					<li>New Columbia (Luna)</li>
+					<li>New York (Ark)</li>
+				</ul>
+			</div>
 		</div>
-		<div class="flex-11">
+		<div>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
 			</div>
-			<ul class="copy mb-0">
-				<li>2046 – In the tumultuous 2040s, a state of martial law was declared and elections in the United States were suspended.</li>
-				<li>2046–2048 – The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
-				<li>2048–2051 – Under the pretext of preventing drug trafficking, the US invaded Mexico and split it into three new states.</li>
-				<li>2052 – By executive decree, multiple states were reorganized.</li>
-				<li>2054 – Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
-				<li>2054–2072 – A tense nuclear and economic standoff persisted over the next two decades.</li>
-				<li>2072–2074 – The secession of Florida broke the stalemate, with 23 additional states seceding from the empire to become independent countries.</li>
-				<li>2074–2100 – Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed eight additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
-			</ul>
+			<div class="text-cols">
+				<ul class="copy mb-0">
+					<li>2046 – In the tumultuous 2040s, a state of martial law was declared and elections in the United States were suspended.</li>
+					<li>2046–2048 – The rampant militarization and deficit spending of the country bred an expansionist mindset.</li>
+					<li>2048–2051 – Under the pretext of preventing drug trafficking, the US invaded Mexico and split it into three new states.</li>
+					<li>2052 – By executive decree, multiple states were reorganized.</li>
+					<li>2054 – Texas, New Mexico, Kansas, and Oklahoma seceded, confiscating substantial military hardware and forming an alliance of states.</li>
+					<li>2054–2072 – A tense nuclear and economic standoff persisted over the next two decades.</li>
+					<li>2072–2074 – The secession of Florida broke the stalemate, with 23 additional states seceding from the empire to become independent countries.</li>
+					<li>2074–2100 – Over the following three decades, Texas came to dominate the economic and political periphery of its alliance and annexed eight additional bordering states, consolidating <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?> by 2100.</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </details>

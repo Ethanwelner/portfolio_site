@@ -33,24 +33,28 @@
 		<h5><strong>Details</strong></h5>
 		<div class="line"></div>
 	</summary>
-	<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-7">
+	<div class="content-stack">
+		<div>
 			<div class="line-container">
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
+			<div class="text-cols">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
 		</div>
-		<div class="flex-6">
+		<div>
 			<div class="line-container">
 				<h5><strong>History</strong></h5>
 				<div class="line"></div>
 			</div>
-			<p class="copy mb-0">
-				Content coming soon
-			</p>
+			<div class="text-cols">
+				<p class="copy mb-0">
+					Content coming soon
+				</p>
+			</div>
 		</div>
 	</div>
 </details>
