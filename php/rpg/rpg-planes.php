@@ -419,7 +419,7 @@
 							<?php sf_lore_entry('st-245-e6', 'line'); ?>
 						</div>
 						<div class="flex-6 content-stack">
-							<?php foreach (['st-1-e1', 'co-h2o-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+							<?php foreach (['st-1-e1', 'co-h2o-e2', 'ob-md-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 						</div>
 					</div>
 				</div>
