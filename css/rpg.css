@@ -1034,14 +1034,15 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 /* Intro copy columns (Setting, Rebirth of Science, The Planes, The Stars, Parabiology)
-   with a placeholder image beside it. The copy column is 768px, so the placeholder only shows
-   from 1500px up, where it gets at least ~260px. */
+   with a placeholder image beside it. The copy column is 640px, so the image shows
+   from 1372px up, where it gets at least ~260px. */
 .intro-with-image {
     display: flex;
     gap: 40px;
 
     > .single-column-content {
-        flex: 0 1 768px;
+        flex: 0 1 640px;
+        max-width: 640px;
     }
 }
 
@@ -1085,6 +1086,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 @media (min-width: 1500px) {
     .image-placeholder,
     .intro-image {
+        display: flex;
+    }
+}
+
+@media (min-width: 1372px) {
+    .intro-with-image > .image-placeholder,
+    .intro-with-image > .intro-image {
         display: flex;
     }
 }
