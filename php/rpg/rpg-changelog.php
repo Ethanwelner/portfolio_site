@@ -14,6 +14,7 @@
 						<li>The night sky behind Strange Frontiers and the Character Creator now spreads its stars over the part of the sky the screen actually sees as it turns, so there are several times more stars on screen at once.</li>
 						<li>Isekai’s overview now opens “516/a/198 - “Isekai,” and the planet Erdef, are in many ways startlingly similar…”</li>
 						<li>314/X/50 - “Qliphoth” in Known Planes now has its full Overview, History, and Geography: a “shell universe” just under 25 meters across, once used as a dumping ground for toxic materials.</li>
+						<li>76/f/55 - “Gastown” in Known Planes now has its Overview, Geography, and History: an endless, uniform sea of 680.556°C hydrogen, released freely to the world in 2136 at the urging of India’s crown prince, Yuvaraja Harihara Krishnadeva Raya III.</li>
 					</ul>
 				</article>
 
