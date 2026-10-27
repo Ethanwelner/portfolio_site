@@ -414,12 +414,27 @@
 				</div>
 
 				<div class="tech-field-panel" id="plane-exotic" role="tabpanel" aria-labelledby="tab-plane-exotic">
+					<h4 class="lore-title mb-3">Decoding Exotic Materials</h4>
+					<p class="copy">
+						Exotic materials present a challenge for classification, coming in functionally infinite varieties and forms. <?php echo sf_lore_link('bureau-of-planar-management', 'The Bureau of Planar Management and Enforcement'); ?> has issued these guidelines for naming paraphysical discoveries and maintains a public catalog of published paraphysical materials. Not all discovered paraphysical materials are published, and synthesized paraphysical materials fall under the same patent laws as mundane materials.
+					</p>
+					<ul class="copy mb-0">
+						<li>Within an exotic material code, the first two characters describe the material’s innate classification:
+							<ul>
+								<li><strong>St</strong> = Stable element, typically an element of the expanded exotic periodic table with paraphysical properties, or which is only possible through a plane’s paraphysical laws. The element’s atomic weight is listed after the letter designation, following a dash.</li>
+								<li><strong>Co</strong> = Complex material, typically still measured at a microscale, a molecule or simple chemical with paraphysical properties, or which is only possible through a plane’s paraphysical laws. The material’s chemical composition is listed after the letter designation, following a dash.</li>
+								<li><strong>Ob</strong> = Object, a complex macro-scale construction that is either composed of exotic materials or which is, through some contrivance of paraphysics, exotic in its own right. The object’s classification code is presented as a set of three letters following a dash.</li>
+							</ul>
+						</li>
+						<li>The final two characters describe the material’s estimated paraphysical decay half-life in years.</li>
+					</ul>
+					<div class="bumper"></div>
 					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 						<div class="flex-7">
 							<?php sf_lore_entry('st-245-e6', 'line'); ?>
 						</div>
 						<div class="flex-6 content-stack">
-							<?php foreach (['st-1-e1', 'co-h2o-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+							<?php foreach (['st-1-e1', 'co-h2o-e2', 'ob-med-e2'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 						</div>
 					</div>
 				</div>
