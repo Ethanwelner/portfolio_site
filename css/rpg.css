@@ -1353,11 +1353,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     column-count: 2;
     column-gap: 40px;
 
-    @media (max-width: 959px) {
-        column-gap: 24px;
-    }
-
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
         column-count: 1;
     }
 }
