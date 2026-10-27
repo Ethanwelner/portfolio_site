@@ -77,14 +77,47 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h5><strong>2230, The Systems, and Beyond</strong></h5>
+							<h5><strong>The Settled Systems</strong></h5>
 							<div class="line"></div>
 						</div>
 						<div class="text-cols">
+							<p class="copy">
+								Earth still holds over 12 billion people, most of them packed into colossal, water-starved megacities. As its deserts spread and reservoirs dried, humanity huddled into ever-denser urban centers. Citizens were left struggling to afford the basic necessities of survival. Even before <?php echo sf_lore_link('the-gift', 'the Gift'); ?>, humanity was reaching to space to escape its dying world.
+							</p>
+							<p class="copy">
+								The century of the <?php echo sf_lore_link('exodus', 'Exodus'); ?> has seen over a billion people take to the stars, and that trend is only accelerating. Colonies dot the surfaces of Luna, Mars, and almost every other moon and oversized hunk of dirt or ice within reach. Hundreds of disparate stations hang between the planets, cities in their own right. Vagrant flotillas drift along the Aether, going where the winds take them. All the while, close to a million ships dart between ports.
+							</p>
+							<p class="copy">
+								Humanity wasn’t content with just the Sol system. Over three dozen star systems have populations of at least 1 million, with countless others featuring nascent human development, if not yet full colonial settlement. The race to plant a flag on every unclaimed rock in the galaxy pushes frontier explorers to burn their engines and risk it all to survey new systems and stake their claim.
+							</p>
+							<p class="copy">
+								Lumbering between the floating sparks of human life, fleets of dark, windowless warships patrol nebulously defined territories. The largest displace millions of tons and travel amid swarms of support craft. These powerful vessels enforce the territories of stellar nations. Though war has been rare this past century, and war between great powers rarer still, these ships bear the scars of many a disputed claim.
+							</p>
 							<p class="copy mb-0">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Commerce in the systems is thriving, with corporate <?php echo sf_lore_link('freighters', 'freighters'); ?> hauling ice, ore, and manufactured goods along well-worn lanes between the homeworlds and the frontier. In the vast gulfs between stars, colossal <?php echo sf_lore_link('arks', 'arks'); ?>, nations unto themselves, make their way, bringing goods and lives to distant shores. The richest cargoes come from planes of reality far beyond the stars, where a single hold of exotic material can be worth more than the ship carrying it.
 							</p>
 						</div>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>The Players of 2230</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
+							<p class="copy">
+								The Earth sits at the center of a restless human civilization. Six major powers compete for technology, territory, and resources while dozens of smaller powers carve out their own destinies.
+							</p>
+							<p class="copy">
+								The militant <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, styling itself as the revived Rome, is engaged in a one-sided cold war with its rival of the past two centuries, the expansive <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?>. Aboard its capital, the drifting interstellar Ark “<?php echo sf_lore_link('new-york', 'New York'); ?>,” the absentee Emperor Augustus Bartholomew Hayes oversees imperial expansion abroad while a divided Senate squabbles at home. Prince Traius Bartholomew Hayes, regent of the Sol territories, struggles to hold together the tenuous détente between the Empire and its former territory, <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.
+							</p>
+							<p class="copy">
+								The <?php echo sf_lore_link('lunar-industrial-syndicate', 'Eighth Lunar Syndicate'); ?>, once a simple business empire, now finds itself saddled with millions of citizens and a constitution at odds with its profit-at-all-costs structure. Behind the walls of the private estates and penthouses of Luna, board members and insiders hoard wealth, knowing a storm is coming. Between worker strikes, corporate espionage, and the nascent call for democracy from the shareholders, the cracks are spreading.
+							</p>
+							<p class="copy mb-0">
+								The Imperious <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?> has every right to be proud. A 50-year golden age has brought prosperity, territory, and power, but the long-serving emperor has disappeared in secret, and while the imperial household keeps up appearances, rumors are slipping past the palace walls. The emperor’s many heirs are already maneuvering for the throne. Across the empire’s palaces, courts, and alleys, factions vie for supremacy, and when words fail, a knife in the dark often succeeds. Meanwhile, the corporate oligopolies that form the Chinese bureaucracy sense something is amiss, and without the emperor’s veto, their instinct for profit and control is beginning to outweigh their judgment.
+							</p>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>
