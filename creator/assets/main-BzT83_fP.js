@@ -264,7 +264,72 @@ backgroundTraits:
   - earth-baseline-technology
   - spanish
   - spanish-written
-`,Pl=`id: chinese-empire-colonies
+`,Pl=`id: centafrica-colonies
+name: "Centafrica: Colonies"
+status: placeholder
+plane: earth
+region: centafrica
+summary: "You grew up aboard Aksum, Centafrica’s station on its long elliptical orbit through the inner solar system."
+tags: [centafrica, colonies, station, space]
+lore: centafrica
+type: origin
+# A free bonus point the player places in a Mental stat.
+bonusPoints:
+  - { count: 1, group: mental }
+grants:
+  - { trait: centafrica, rank: 1 }
+  - { trait: centafrican-law, rank: 1 }
+  - { trait: swahili }
+  - { trait: swahili-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - aksum
+  - ports-and-stations
+  - spacefaring
+  - starships
+  - shipping-lanes
+  - music
+  - earth-baseline-technology
+  - french
+  - english
+`,Fl=`id: centafrica-earth
+name: "Centafrica: Earth"
+status: placeholder
+plane: earth
+region: centafrica
+summary: "You were born in Centafrica, anywhere from Lagos to Kinshasa to Addis Ababa, in a vibrant democracy whose wealth is rarely spread evenly and whose people have long memories."
+tags: [centafrica, earth, democracy, culture]
+lore: centafrica
+type: origin
+# A free bonus point the player places in a Social stat.
+bonusPoints:
+  - { count: 1, group: social }
+grants:
+  - { trait: centafrica, rank: 1 }
+  - { trait: centafrican-law, rank: 1 }
+  - { trait: swahili }
+  - { trait: swahili-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - music
+  - art-history
+  - theater
+  - politics
+  - commerce
+  - earth-baseline-technology
+  - french
+  - french-written
+  - english
+  - lingala
+  - yoruba
+  - hausa
+`,Il=`id: chinese-empire-colonies
 name: "The Empire of China: Colonies"
 status: placeholder
 plane: earth
@@ -287,7 +352,7 @@ backgroundTraits:
   - ark-life
   - the-corporate-syndicates
   - earth-baseline-technology
-`,Fl=`id: chinese-empire-earth
+`,Ll=`id: chinese-empire-earth
 name: "The Empire of China: Earth"
 status: placeholder
 plane: earth
@@ -308,7 +373,7 @@ backgroundTraits:
   - the-corporate-syndicates
   - southeast-asia
   - earth-baseline-technology
-`,Il=`id: dreft
+`,Rl=`id: dreft
 name: Dreft
 status: placeholder
 plane: isekai
@@ -338,7 +403,7 @@ backgroundTraits:
   - mountaineering
   - local-folklore
   - karsef
-`,Ll=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.
+`,zl=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.
 id: the-drovus-empire
 name: "The Drovus Empire"
 status: placeholder
@@ -361,7 +426,7 @@ backgroundTraits:
   - military-tactics
   - military-drill
   - heraldry
-`,Rl=`id: the-free-american-states
+`,Bl=`id: the-free-american-states
 name: "The Free American States"
 status: placeholder
 plane: earth
@@ -387,7 +452,7 @@ backgroundTraits:
   - haggler
   - trade-law
   - smooth-talker
-`,zl=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.
+`,Vl=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.
 id: kingdom-of-karsef
 name: "Kingdom of Karsef"
 status: placeholder
@@ -411,7 +476,7 @@ backgroundTraits:
   - dreft
   - shield-wall
   - military-tactics
-`,Bl=`id: kashgar
+`,Hl=`id: kashgar
 name: "Kashgar"
 status: placeholder
 plane: earth
@@ -437,7 +502,70 @@ backgroundTraits:
   - cybernetics
   - robotics
   - earth-baseline-technology
-`,Vl=`id: the-lunar-industrial-syndicate
+`,Ul=`id: the-kingdom-of-india-colonies
+name: "The Kingdom of India: Colonies"
+status: placeholder
+plane: earth
+region: kingdom-of-india
+summary: "You grew up in the Kingdom’s new homes beyond Earth: in Pataliputra, the planar capital where millions arrive every year, or aboard Amaravati, its station in high Earth orbit."
+tags: [india, colonies, planar, pataliputra, station]
+lore: kingdom-of-india
+type: origin
+# A free bonus point the player places in a Social stat.
+bonusPoints:
+  - { count: 1, group: social }
+grants:
+  - { trait: the-kingdom-of-india, rank: 1 }
+  - { trait: indian-law, rank: 1 }
+  - { trait: hindi }
+  - { trait: hindi-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - pataliputra
+  - amaravati
+  - indian-theology
+  - planar-exploration
+  - interplanar-relations
+  - ecology
+  - earth-baseline-technology
+  - english
+  - english-written
+`,Wl=`id: the-kingdom-of-india-earth
+name: "The Kingdom of India: Earth"
+status: placeholder
+plane: earth
+region: kingdom-of-india
+summary: "You were born in the Kingdom of India’s Earth territories, a regreened paradise whose crown, and millions of its people, have left for Pataliputra."
+tags: [india, earth, kingdom, theocracy]
+lore: kingdom-of-india
+type: origin
+# A free bonus point the player places in a Physical stat.
+bonusPoints:
+  - { count: 1, group: physical }
+grants:
+  - { trait: the-kingdom-of-india, rank: 1 }
+  - { trait: indian-law, rank: 1 }
+  - { trait: hindi }
+  - { trait: hindi-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - indian-theology
+  - ecology
+  - farming
+  - herbalism
+  - pataliputra
+  - earth-baseline-technology
+  - english
+  - english-written
+  - bengali
+  - tamil
+`,Gl=`id: the-lunar-industrial-syndicate
 name: "The Lunar Industrial Syndicate"
 status: placeholder
 plane: earth
@@ -463,7 +591,7 @@ backgroundTraits:
   - ark-life
   - starship-engineering
   - cargo-handling
-`,Hl=`id: sdu-colonies
+`,Kl=`id: sdu-colonies
 name: "The Stellar Democratic Union: Colonies"
 status: placeholder
 plane: earth
@@ -490,7 +618,7 @@ backgroundTraits:
   - ark-life
   - union-politics
   - earth-baseline-technology
-`,Ul=`id: sdu-earth
+`,ql=`id: sdu-earth
 name: "The Stellar Democratic Union: Earth"
 status: placeholder
 plane: earth
@@ -515,7 +643,7 @@ backgroundTraits:
   - the-diplomatic-wing
   - the-united-nations
   - earth-baseline-technology
-`,Wl=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.
+`,Jl=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.
 id: kingdom-of-sorellion
 name: "Kingdom of Sorellion"
 status: placeholder
@@ -538,7 +666,7 @@ backgroundTraits:
   - heraldry
   - courtly-manners
   - haggler
-`,Gl=`id: tetra
+`,Yl=`id: tetra
 name: Tetra
 status: placeholder
 plane: earth
@@ -568,7 +696,7 @@ backgroundTraits:
   - ark-life
   - earth-baseline-technology
   - the-switch-port
-`,Kl=`id: the-union-of-texas
+`,Xl=`id: the-union-of-texas
 name: "The Union of Texas"
 status: placeholder
 plane: earth
@@ -594,7 +722,72 @@ backgroundTraits:
   - the-free-american-states
   - wielder-rifle
   - survivalist
-`,ql=`id: craft-apprenticeship
+`,Zl=`id: the-ural-federation
+name: "The Ural Federation"
+status: placeholder
+plane: earth
+region: ural-federation
+summary: "You grew up in the Ural Federation, among the tribal statelets of the steppe and the thawed Siberian breadbasket, in a melting pot of native peoples, climate refugees and the last of the Russian diaspora."
+tags: [ural-federation, earth, tribal, steppe]
+lore: ural-federation
+type: origin
+# A free bonus point the player places in a Physical stat.
+bonusPoints:
+  - { count: 1, group: physical }
+grants:
+  - { trait: the-ural-federation, rank: 1 }
+  - { trait: ural-tribal-law, rank: 1 }
+  - { trait: russian }
+  - { trait: russian-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - farming
+  - countryside-lore
+  - wilderness-lore
+  - survivalist
+  - rider-basic-animals
+  - animal-husbandry
+  - the-chinese-empire
+  - earth-baseline-technology
+  - kazakh
+  - mongolian
+  - uyghur
+`,Ql=`id: xanthus
+name: "Xanthus"
+status: placeholder
+plane: earth
+region: xanthus
+summary: "You grew up aboard Xanthus, the free Ark built around an iron asteroid: a pariah state, a model democracy and a haven for anyone escaping poverty or persecution."
+tags: [xanthus, ark, space, democracy, refugee]
+lore: xanthus
+type: origin
+# A free bonus point the player places in a Social stat.
+bonusPoints:
+  - { count: 1, group: social }
+grants:
+  - { trait: xanthus, rank: 1 }
+  - { trait: swahili }
+  - { trait: swahili-written }
+choices:
+  - choose: 1
+    from: spoken-and-written-language
+    note: "+1 Language (Spoken & Written)"
+backgroundTraits:
+  - ark-life
+  - asteroid-mining
+  - ports-and-stations
+  - spacefaring
+  - centafrica
+  - criminal-underworld
+  - starship-engineering
+  - lingala
+  - english
+  - spanish
+  - portuguese
+`,$l=`id: craft-apprenticeship
 name: "Craft Apprenticeship"
 status: placeholder
 plane: any
@@ -612,7 +805,7 @@ backgroundTraits:
   - trade-guilds
   - commerce
   - engineering
-`,Jl=`id: criminal-family
+`,eu=`id: criminal-family
 name: "Criminal Family"
 status: placeholder
 plane: any
@@ -630,7 +823,7 @@ backgroundTraits:
   - gambling
   - law-enforcement
   - security-systems
-`,Yl=`id: gutter-trash
+`,tu=`id: gutter-trash
 name: "Gutter Trash"
 status: placeholder
 plane: any
@@ -644,7 +837,7 @@ grants:
 backgroundTraits:
   - gambling
   - law-enforcement
-`,Xl=`id: military-service
+`,nu=`id: military-service
 name: "Military Service"
 status: placeholder
 plane: any
@@ -659,7 +852,7 @@ backgroundTraits:
   - weapons
   - wilderness-lore
   - navigation
-`,Zl=`id: privileged-upbringing
+`,ru=`id: privileged-upbringing
 name: "Privileged Upbringing"
 status: placeholder
 plane: any
@@ -681,7 +874,7 @@ backgroundTraits:
   - literature
   - history
   - politics
-`,Ql=`id: raised-at-court
+`,iu=`id: raised-at-court
 name: "Raised at Court"
 status: placeholder
 plane: any
@@ -696,7 +889,7 @@ backgroundTraits:
   - high-society
   - politics
   - history
-`,$l=`id: shipborn
+`,au=`id: shipborn
 name: "Shipborn"
 status: placeholder
 plane: any
@@ -712,7 +905,7 @@ backgroundTraits:
   - starships
   - spacefaring
   - geography
-`,eu=`id: simple-farmer
+`,ou=`id: simple-farmer
 name: "Simple Farmer"
 status: placeholder
 plane: any
@@ -726,7 +919,7 @@ grants:
 backgroundTraits:
   - animal-lore
   - wilderness-lore
-`,tu=`id: traveling-troupe
+`,su=`id: traveling-troupe
 name: "Traveling Troupe"
 status: placeholder
 plane: any
@@ -741,7 +934,7 @@ backgroundTraits:
   - theater
   - literature
   - geography
-`,nu=`id: countryside-upbringing
+`,H=`id: countryside-upbringing
 name: "Countryside Upbringing"
 status: placeholder
 plane: isekai
@@ -757,7 +950,7 @@ grants:
 backgroundTraits:
   - animal-lore
   - wilderness-lore
-`,ru=`id: expelled-from-the-mage-schools
+`,cu=`id: expelled-from-the-mage-schools
 name: "Expelled from the Mage Schools"
 status: placeholder
 plane: isekai
@@ -773,7 +966,7 @@ grants:
 backgroundTraits:
   - literature
   - history
-`,iu=`id: glintl-docks
+`,lu=`id: glintl-docks
 name: "Glintl Docks"
 status: placeholder
 plane: isekai
@@ -791,7 +984,7 @@ backgroundTraits:
   - commerce
   - navigation
   - gambling
-`,au=`id: karsef-border-veteran
+`,uu=`id: karsef-border-veteran
 name: "Karsef Border Veteran"
 status: placeholder
 plane: isekai
@@ -809,7 +1002,7 @@ backgroundTraits:
   - weapons
   - wilderness-lore
   - geography
-`,ou=`id: merchant-dynasty
+`,du=`id: merchant-dynasty
 name: Merchant Dynasty
 status: placeholder
 plane: isekai
@@ -828,7 +1021,7 @@ choices:
 backgroundTraits:
   - commerce
   - high-society
-`,su=`id: monster-raided-village
+`,fu=`id: monster-raided-village
 name: "Monster-Raided Village"
 status: placeholder
 plane: isekai
@@ -846,7 +1039,7 @@ backgroundTraits:
   - animal-lore
   - wilderness-lore
   - weapons
-`,H=`id: noble-household
+`,pu=`id: noble-household
 name: Noble Household
 status: placeholder
 plane: isekai
@@ -863,7 +1056,7 @@ backgroundTraits:
   - high-society
   - history
   - politics
-`,cu=`id: palace-servant
+`,mu=`id: palace-servant
 name: "Palace Servant"
 status: placeholder
 plane: isekai
@@ -880,7 +1073,7 @@ grants:
 backgroundTraits:
   - high-society
   - politics
-`,lu=`id: raised-in-the-caravan-town
+`,hu=`id: raised-in-the-caravan-town
 name: Raised in the Caravan Town
 status: placeholder
 plane: isekai
@@ -897,7 +1090,7 @@ backgroundTraits:
   - commerce
   - geography
   - animal-lore
-`,uu=`id: returned-from-the-systems
+`,gu=`id: returned-from-the-systems
 name: Returned from the Settled Systems
 status: placeholder
 plane: isekai
@@ -918,7 +1111,7 @@ choices:
 backgroundTraits:
   - starships
   - spacefaring
-`,du=`id: sunrise-refugee
+`,_u=`id: sunrise-refugee
 name: Sunrise Refugee
 status: placeholder
 plane: isekai
@@ -934,7 +1127,7 @@ grants:
 backgroundTraits:
   - bureaucracy
   - geography
-`,fu=`id: station-rat
+`,vu=`id: station-rat
 name: "Station Rat"
 status: placeholder
 plane: earth
@@ -948,7 +1141,7 @@ grants:
 backgroundTraits:
   - spacefaring
   - engineering
-`,pu=`id: university-educated
+`,yu=`id: university-educated
 name: "University Educated"
 status: placeholder
 plane: earth
@@ -971,7 +1164,7 @@ backgroundTraits:
   - biology
   - history
   - literature
-`,mu=`id: delegation-child
+`,bu=`id: delegation-child
 name: "Delegation Child"
 status: placeholder
 plane: earth
@@ -992,7 +1185,7 @@ backgroundTraits:
   - diplomatic-protocol
   - politics
   - high-society
-`,hu=`id: gate-lab-kid
+`,xu=`id: gate-lab-kid
 name: "Gate Lab Kid"
 status: placeholder
 plane: earth
@@ -1008,7 +1201,7 @@ grants:
 backgroundTraits:
   - physics
   - engineering
-`,gu=`id: holding-company-kid
+`,Su=`id: holding-company-kid
 name: "Holding Company Kid"
 status: placeholder
 plane: earth
@@ -1024,7 +1217,7 @@ grants:
 backgroundTraits:
   - commerce
   - bureaucracy
-`,_u=`id: parasapient-quarter
+`,Cu=`id: parasapient-quarter
 name: "Parasapient Quarter"
 status: placeholder
 plane: earth
@@ -1043,7 +1236,7 @@ choices:
 backgroundTraits:
   - bureaucracy
   - legal-systems
-`,vu=`id: raised-in-the-infill
+`,wu=`id: raised-in-the-infill
 name: "Raised in the Infill"
 status: placeholder
 plane: earth
@@ -1059,7 +1252,7 @@ grants:
 backgroundTraits:
   - spacefaring
   - engineering
-`,yu=`id: raised-on-ward-politics
+`,Tu=`id: raised-on-ward-politics
 name: "Raised on Ward Politics"
 status: placeholder
 plane: earth
@@ -1075,7 +1268,7 @@ grants:
 backgroundTraits:
   - politics
   - bureaucracy
-`,bu=`id: apothecary
+`,Eu=`id: apothecary
 name: "Apothecary"
 status: placeholder
 plane: any
@@ -1097,7 +1290,7 @@ backgroundTraits:
   - chemistry
   - biology
   - commerce
-`,xu=`id: bard
+`,Du=`id: bard
 name: "Bard"
 status: placeholder
 plane: any
@@ -1120,7 +1313,7 @@ backgroundTraits:
   - history
   - literature
   - theater
-`,Su=`id: blacksmith
+`,Ou=`id: blacksmith
 name: "Blacksmith"
 status: placeholder
 plane: any
@@ -1140,7 +1333,7 @@ backgroundTraits:
   - engineering
   - trade-guilds
   - commerce
-`,Cu=`id: courier
+`,ku=`id: courier
 name: "Courier"
 status: placeholder
 plane: any
@@ -1160,7 +1353,7 @@ backgroundTraits:
   - navigation
   - animal-lore
   - bureaucracy
-`,wu=`id: criminal-enforcer
+`,Au=`id: criminal-enforcer
 name: "Criminal Enforcer"
 status: placeholder
 plane: any
@@ -1184,7 +1377,7 @@ backgroundTraits:
   - weapons
   - gambling
   - law-enforcement
-`,Tu=`id: doctor
+`,ju=`id: doctor
 name: "Doctor"
 status: placeholder
 plane: any
@@ -1210,7 +1403,7 @@ backgroundTraits:
   - parasapient-medicine
   - biology
   - chemistry
-`,Eu=`id: farmer
+`,Mu=`id: farmer
 name: "Farmer"
 status: placeholder
 plane: any
@@ -1231,7 +1424,7 @@ backgroundTraits:
   - biology
   - commerce
   - wilderness-lore
-`,Du=`id: jester
+`,Nu=`id: jester
 name: "Jester"
 status: placeholder
 plane: any
@@ -1251,7 +1444,7 @@ backgroundTraits:
   - literature
   - high-society
   - politics
-`,Ou=`id: knight
+`,Pu=`id: knight
 name: "Knight"
 status: placeholder
 plane: any
@@ -1272,7 +1465,7 @@ backgroundTraits:
   - history
   - high-society
   - animal-lore
-`,ku=`id: local-police
+`,Fu=`id: local-police
 name: "Local Police"
 status: placeholder
 plane: any
@@ -1297,7 +1490,7 @@ backgroundTraits:
   - legal-systems
   - weapons
   - security-systems
-`,Au=`id: musical-artist
+`,Iu=`id: musical-artist
 name: "Musical Artist"
 status: placeholder
 plane: any
@@ -1319,7 +1512,7 @@ backgroundTraits:
   - theater
   - literature
   - high-society
-`,ju=`id: ranger
+`,Lu=`id: ranger
 name: "Ranger"
 status: placeholder
 plane: any
@@ -1340,7 +1533,7 @@ backgroundTraits:
   - animal-lore
   - geography
   - navigation
-`,Mu=`id: smuggler
+`,Ru=`id: smuggler
 name: "Smuggler"
 status: placeholder
 plane: any
@@ -1367,7 +1560,7 @@ backgroundTraits:
   - security-systems
   - gambling
   - commerce
-`,Nu=`id: spy
+`,zu=`id: spy
 name: "Spy"
 status: placeholder
 plane: any
@@ -1394,7 +1587,7 @@ backgroundTraits:
   - security-systems
   - high-society
   - theater
-`,Pu=`id: squire
+`,Bu=`id: squire
 name: "Squire"
 status: placeholder
 plane: any
@@ -1413,7 +1606,7 @@ backgroundTraits:
   - weapons
   - animal-lore
   - history
-`,Fu=`id: stonemason
+`,Vu=`id: stonemason
 name: "Stonemason"
 status: placeholder
 plane: any
@@ -1431,7 +1624,7 @@ backgroundTraits:
   - engineering
   - trade-guilds
   - commerce
-`,Iu=`id: surgeon
+`,Hu=`id: surgeon
 name: "Surgeon"
 status: placeholder
 plane: any
@@ -1450,7 +1643,7 @@ backgroundTraits:
   - parasapient-medicine
   - biology
   - chemistry
-`,Lu=`id: tanner
+`,Uu=`id: tanner
 name: "Tanner"
 status: placeholder
 plane: any
@@ -1469,7 +1662,7 @@ backgroundTraits:
   - chemistry
   - trade-guilds
   - commerce
-`,Ru=`id: visual-artist
+`,Wu=`id: visual-artist
 name: "Visual Artist"
 status: placeholder
 plane: any
@@ -1492,7 +1685,7 @@ backgroundTraits:
   - literature
   - high-society
   - commerce
-`,zu=`id: alchemist
+`,Gu=`id: alchemist
 name: "Alchemist"
 status: placeholder
 plane: isekai
@@ -1511,7 +1704,7 @@ backgroundTraits:
   - exotic-materials
   - chemistry
   - trade-guilds
-`,Bu=`id: caravaneer
+`,Ku=`id: caravaneer
 name: Caravaneer
 status: placeholder
 plane: isekai
@@ -1533,7 +1726,7 @@ backgroundTraits:
   - geography
   - navigation
   - animal-lore
-`,Vu=`id: dreft-local-militia
+`,qu=`id: dreft-local-militia
 name: "Dreft Local Militia"
 status: placeholder
 plane: isekai
@@ -1554,7 +1747,7 @@ backgroundTraits:
   - weapons
   - wilderness-lore
   - geography
-`,Hu=`id: dreft-mercenary
+`,Ju=`id: dreft-mercenary
 name: "Dreft Mercenary"
 status: placeholder
 plane: isekai
@@ -1581,7 +1774,7 @@ backgroundTraits:
   - gambling
   - geography
   - commerce
-`,Uu=`id: gate-hand
+`,Yu=`id: gate-hand
 name: Gate Hand
 status: placeholder
 plane: isekai
@@ -1597,7 +1790,7 @@ grants:
 backgroundTraits:
   - commerce
   - bureaucracy
-`,Wu=`id: guild-hunter
+`,Xu=`id: guild-hunter
 name: Guild Hunter
 status: placeholder
 plane: isekai
@@ -1619,7 +1812,7 @@ backgroundTraits:
   - wilderness-lore
   - weapons
   - trade-guilds
-`,Gu=`id: hedge-witch
+`,Zu=`id: hedge-witch
 name: Hedge Witch
 status: placeholder
 plane: isekai
@@ -1638,7 +1831,7 @@ backgroundTraits:
   - animal-lore
   - wilderness-lore
   - biology
-`,Ku=`id: licensed-mage
+`,Qu=`id: licensed-mage
 name: Licensed Mage
 status: placeholder
 plane: isekai
@@ -1658,7 +1851,7 @@ backgroundTraits:
   - literature
   - bureaucracy
   - chemistry
-`,qu=`id: royal-guard
+`,$u=`id: royal-guard
 name: Royal Guard
 status: placeholder
 plane: isekai
@@ -1676,7 +1869,7 @@ backgroundTraits:
   - law-enforcement
   - politics
   - high-society
-`,Ju=`id: american-empire-soldier
+`,ed=`id: american-empire-soldier
 name: "American Empire Soldier"
 status: placeholder
 plane: earth
@@ -1695,7 +1888,7 @@ backgroundTraits:
   - weapons
   - military-tactics
   - wilderness-lore
-`,Yu=`id: combat-medic
+`,td=`id: combat-medic
 name: "Combat Medic"
 status: placeholder
 plane: earth
@@ -1717,7 +1910,7 @@ backgroundTraits:
   - biology
   - weapons
   - military-tactics
-`,Xu=`id: computer-engineer
+`,nd=`id: computer-engineer
 name: "Computer Engineer"
 status: placeholder
 plane: earth
@@ -1737,7 +1930,7 @@ backgroundTraits:
   - security-systems
   - engineering
   - physics
-`,Zu=`id: emergency-medical-technician
+`,U=`id: emergency-medical-technician
 name: "Emergency Medical Technician"
 status: placeholder
 plane: earth
@@ -1757,7 +1950,7 @@ backgroundTraits:
   - psychology
   - biology
   - law-enforcement
-`,Qu=`id: exotic-specimen-dealer
+`,W=`id: exotic-specimen-dealer
 name: "Exotic Specimen Dealer"
 status: placeholder
 plane: earth
@@ -1779,7 +1972,7 @@ backgroundTraits:
   - bureaucracy
   - biology
   - starships
-`,$u=`id: fighter-pilot
+`,G=`id: fighter-pilot
 name: "Fighter Pilot"
 status: placeholder
 plane: earth
@@ -1800,7 +1993,7 @@ backgroundTraits:
   - physics
   - spacefaring
   - weapons
-`,ed=`id: interplanar-diplomat
+`,K=`id: interplanar-diplomat
 name: "Interplanar Diplomat"
 status: placeholder
 plane: earth
@@ -1824,7 +2017,7 @@ backgroundTraits:
   - history
   - bureaucracy
   - high-society
-`,td=`id: interplanar-rights-lawyer
+`,q=`id: interplanar-rights-lawyer
 name: "Interplanar Rights Lawyer"
 status: placeholder
 plane: earth
@@ -1843,7 +2036,7 @@ backgroundTraits:
   - legal-systems
   - bureaucracy
   - politics
-`,nd=`id: officer-of-the-bureau-of-planar-management-and-enforcement
+`,rd=`id: officer-of-the-bureau-of-planar-management-and-enforcement
 name: "Officer of the Bureau of Planar Management and Enforcement"
 status: placeholder
 plane: earth
@@ -1869,7 +2062,7 @@ backgroundTraits:
   - legal-systems
   - bureaucracy
   - security-systems
-`,U=`id: paraarcheologist
+`,id=`id: paraarcheologist
 name: "Paraarcheologist"
 status: placeholder
 plane: earth
@@ -1885,7 +2078,7 @@ backgroundTraits:
   - history
   - geography
   - chemistry
-`,W=`id: paraecologist
+`,ad=`id: paraecologist
 name: "Paraecologist"
 status: placeholder
 plane: earth
@@ -1903,7 +2096,7 @@ backgroundTraits:
   - wilderness-lore
   - animal-lore
   - geography
-`,G=`id: paraethnologist
+`,od=`id: paraethnologist
 name: "Paraethnologist"
 status: placeholder
 plane: earth
@@ -1922,7 +2115,7 @@ backgroundTraits:
   - history
   - politics
   - literature
-`,K=`id: paraevolutionary-scientist
+`,sd=`id: paraevolutionary-scientist
 name: "Paraevolutionary Scientist"
 status: placeholder
 plane: earth
@@ -1938,7 +2131,7 @@ backgroundTraits:
   - biology
   - chemistry
   - history
-`,q=`id: paraphysiologist
+`,cd=`id: paraphysiologist
 name: "Paraphysiologist"
 status: placeholder
 plane: earth
@@ -1954,7 +2147,7 @@ backgroundTraits:
   - biology
   - chemistry
   - medicine
-`,rd=`id: parazoological-keeper
+`,ld=`id: parazoological-keeper
 name: "Parazoological Keeper"
 status: placeholder
 plane: earth
@@ -1969,7 +2162,7 @@ backgroundTraits:
   - animal-lore
   - biology
   - security-systems
-`,id=`id: planar-expeditionary-professional
+`,ud=`id: planar-expeditionary-professional
 name: "Planar Expeditionary Professional"
 status: placeholder
 plane: earth
@@ -1988,7 +2181,7 @@ backgroundTraits:
   - geography
   - navigation
   - biology
-`,ad=`id: starship-engineer
+`,dd=`id: starship-engineer
 name: "Starship Engineer"
 status: placeholder
 plane: earth
@@ -2008,7 +2201,7 @@ backgroundTraits:
   - physics
   - starships
   - spacefaring
-`,od=`id: station-maintenance
+`,fd=`id: station-maintenance
 name: "Station Maintenance"
 status: placeholder
 plane: earth
@@ -2027,7 +2220,7 @@ backgroundTraits:
   - engineering
   - spacefaring
   - security-systems
-`,sd=`id: theoretical-paraphysicist
+`,pd=`id: theoretical-paraphysicist
 name: "Theoretical Paraphysicist"
 status: placeholder
 plane: earth
@@ -2043,7 +2236,7 @@ backgroundTraits:
   - physics
   - chemistry
   - engineering
-`,cd=`id: truck-pilot
+`,md=`id: truck-pilot
 name: "Truck Pilot"
 status: placeholder
 plane: earth
@@ -2065,7 +2258,7 @@ backgroundTraits:
   - navigation
   - spacefaring
   - commerce
-`,ld=`id: capable-student
+`,hd=`id: capable-student
 name: "Capable Student"
 status: draft
 plane: any
@@ -2074,7 +2267,7 @@ tags: [learning, study, site-example]
 category: ability
 minStats: { memory: 3, logic: 3 }
 effect: "This character can learn a new (knowledge) Trait in half the specified time."
-`,ud=`id: con-man
+`,gd=`id: con-man
 name: "Con Man"
 status: draft
 plane: any
@@ -2083,7 +2276,7 @@ tags: [lying, deception, social, site-example]
 category: ability
 minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }
 effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."
-`,dd=`id: eagle-eye
+`,_d=`id: eagle-eye
 name: "Eagle Eye"
 status: draft
 plane: any
@@ -2092,7 +2285,7 @@ tags: [sight, perception, site-example]
 category: ability
 conveyed: true
 effect: "This character can request advantage in situations that involve seeing at distance."
-`,fd=`id: gladiator
+`,vd=`id: gladiator
 name: "Gladiator"
 status: draft
 plane: any
@@ -2101,7 +2294,7 @@ tags: [combat, melee, site-example]
 category: ability
 minStats: { physical: 5, grace: 5, demeanor: 5 }
 effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."
-`,pd=`id: knowledge-sponge
+`,yd=`id: knowledge-sponge
 name: "Knowledge Sponge"
 status: draft
 plane: any
@@ -2112,7 +2305,7 @@ mastery: true
 minStats: { memory: 5, logic: 5, intuition: 5 }
 prerequisites: [capable-student]
 effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."
-`,md=`id: magic-access
+`,bd=`id: magic-access
 name: "Magic Access"
 status: placeholder
 plane: any
@@ -2123,7 +2316,7 @@ conveyed: true
 coreAccess: [magic]
 opensLists: [magic]
 effect: "This character can put levels into Magic, a core stat with no focus stats; each point of Magic adds 3 MP (Mana Points). They can also take Traits on the Magic list, like Incantation."
-`,hd=`id: magical-heritage
+`,xd=`id: magical-heritage
 name: "Magical Heritage"
 status: placeholder
 plane: isekai
@@ -2136,7 +2329,7 @@ conveyed: true
 grants:
   - trait: magic-access
 effect: "This character was born to magic, and has Magic Access."
-`,gd=`id: mental-fortitude
+`,Sd=`id: mental-fortitude
 name: "Mental Fortitude"
 status: draft
 plane: any
@@ -2145,7 +2338,7 @@ tags: [will, resistance, site-example]
 category: ability
 minStats: { endurance: 8, logic: 5, demeanor: 5 }
 effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."
-`,_d=`id: natural-breath-weapon
+`,Cd=`id: natural-breath-weapon
 name: "Natural Breath Weapon"
 status: draft
 plane: any
@@ -2156,7 +2349,7 @@ ranked: true
 background: true
 minStats: { endurance: 3 }
 effect: "This character's biology allows them to use their breath as a tool or weapon. For each rank of this ability add another d4 to the damage the breath weapon deals."
-`,vd=`id: sculpted
+`,wd=`id: sculpted
 name: "Sculpted"
 status: draft
 plane: any
@@ -2165,7 +2358,7 @@ tags: [appearance, athletics, social, site-example]
 category: ability
 minStats: { power: 5, endurance: 5, demeanor: 3 }
 effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."
-`,yd=`id: trail-runner
+`,Td=`id: trail-runner
 name: "Trail Runner"
 status: draft
 plane: any
@@ -2174,7 +2367,7 @@ tags: [endurance, travel, site-example]
 category: ability
 minStats: { power: 3, endurance: 2, grace: 2 }
 effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."
-`,bd=`id: explorers-lodge-membership
+`,Ed=`id: explorers-lodge-membership
 name: "Explorers’ Lodge Membership"
 status: placeholder
 plane: earth
@@ -2184,7 +2377,7 @@ lore: explorers-lodge
 category: circumstance
 conveyed: true
 effect: Placeholder. Effect not yet written.
-`,xd=`id: imperial-service-record
+`,Dd=`id: imperial-service-record
 name: "Imperial Service Record"
 status: placeholder
 plane: earth
@@ -2194,7 +2387,7 @@ tags: [military, american-empire, service]
 category: circumstance
 conveyed: true
 effect: Placeholder. Effect not yet written.
-`,Sd=`id: short-term-fame
+`,Od=`id: short-term-fame
 name: "Short Term Fame"
 status: draft
 plane: any
@@ -2204,7 +2397,7 @@ category: circumstance
 conveyed: true
 temporary: "30 days"
 effect: "Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them."
-`,Cd=`id: significant-inheritance
+`,kd=`id: significant-inheritance
 name: "Significant Inheritance"
 status: draft
 plane: earth
@@ -2214,7 +2407,7 @@ category: circumstance
 conveyed: true
 temporary: "Lost when the money is all spent"
 effect: "This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank."
-`,wd=`id: thieves-guild-membership
+`,Ad=`id: thieves-guild-membership
 name: "Thieves Guild Membership"
 status: draft
 plane: any
@@ -2223,7 +2416,7 @@ tags: [thieves-guild, membership, crime, site-example]
 category: circumstance
 conveyed: true
 effect: "This character is an official member of a Local Thieves Guild."
-`,Td=`id: tugboat-captain
+`,jd=`id: tugboat-captain
 name: "Tugboat Captain"
 status: draft
 plane: any
@@ -2232,7 +2425,7 @@ tags: [tugboat, license, pilot, site-example]
 category: circumstance
 conveyed: true
 effect: "This character has all required legal training and licenses required to command a Tugboat."
-`,Ed=`id: wanted-in-sol
+`,Md=`id: wanted-in-sol
 name: "Wanted in Sol"
 status: draft
 plane: earth
@@ -2242,7 +2435,7 @@ category: circumstance
 conveyed: true
 temporary: "Lost when the character's innocence is proclaimed or they are caught"
 effect: "This character is wanted by the nations of the Sol system for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."
-`,Dd=`id: cybernetic-intelligence
+`,Nd=`id: cybernetic-intelligence
 name: "Cybernetic Intelligence"
 status: draft
 plane: earth
@@ -2251,7 +2444,7 @@ tags: [cybernetic, mathematics, ai, site-example]
 category: condition
 background: true
 effect: "This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics. This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited."
-`,Od=`id: damaged
+`,Pd=`id: damaged
 name: "Damaged"
 status: draft
 plane: any
@@ -2261,7 +2454,7 @@ category: condition
 conveyed: true
 temporary: "An object gains this trait if it is below its maximum HP total"
 effect: "This Trait has no effect on its own."
-`,kd=`id: dead
+`,Fd=`id: dead
 name: "Dead"
 status: draft
 plane: any
@@ -2272,7 +2465,7 @@ types: [injury]
 conveyed: true
 temporary: "A character gains this trait if they are at 0 or less HP"
 effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."
-`,Ad=`id: destroyed
+`,Id=`id: destroyed
 name: "Destroyed"
 status: draft
 plane: any
@@ -2282,7 +2475,7 @@ category: condition
 conveyed: true
 temporary: "An object gains this trait if it is at 0 or less HP"
 effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."
-`,jd=`id: ghost-sight
+`,Ld=`id: ghost-sight
 name: "Ghost Sight"
 status: draft
 plane: any
@@ -2292,7 +2485,7 @@ category: condition
 conveyed: true
 temporary: "Lost when the effect that granted this Trait ends"
 effect: "This character perceives beyond the veil. This character can see and hear the supernatural."
-`,Md=`id: hard-shell
+`,Rd=`id: hard-shell
 name: "Hard Shell"
 status: draft
 plane: any
@@ -2303,7 +2496,7 @@ ranked: true
 background: true
 minStats: { endurance: 5 }
 effect: "This character possesses a hard natural shell that protects them from harm. Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso."
-`,Nd=`id: healthy
+`,zd=`id: healthy
 name: "Healthy"
 status: draft
 plane: any
@@ -2313,7 +2506,7 @@ category: condition
 conveyed: true
 temporary: "A character or object gains this trait while they are at their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Pd=`id: incapacitated
+`,Bd=`id: incapacitated
 name: "Incapacitated"
 status: draft
 plane: any
@@ -2323,7 +2516,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are at less than a quarter of their HP total"
 effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."
-`,Fd=`id: injured
+`,Vd=`id: injured
 name: "Injured"
 status: draft
 plane: any
@@ -2333,7 +2526,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Id=`id: long-toothed
+`,Hd=`id: long-toothed
 name: "Long Toothed"
 status: draft
 plane: isekai
@@ -2344,7 +2537,7 @@ background: true
 minStats: { power: 10, endurance: 5, demeanor: 5 }
 rpRequirement: "Middle Aged or Older"
 effect: "An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs."
-`,Ld=`id: mechanical
+`,Ud=`id: mechanical
 name: "Mechanical"
 status: draft
 plane: any
@@ -2353,7 +2546,7 @@ tags: [machine, emp, site-example]
 category: condition
 background: true
 effect: "This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage."
-`,Rd=`id: severe-bleeding
+`,Wd=`id: severe-bleeding
 name: "Severe Bleeding"
 status: draft
 plane: any
@@ -2364,7 +2557,7 @@ types: [injury]
 conveyed: true
 temporary: "This trait is lost when this Condition is Treated"
 effect: "This character loses 1 HP every combat round while in combat. This character loses 1 HP every minute while outside of combat."
-`,zd=`id: severely-injured
+`,Gd=`id: severely-injured
 name: "Severely Injured"
 status: draft
 plane: any
@@ -2374,7 +2567,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below half their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Bd=`id: sorcerous
+`,Kd=`id: sorcerous
 name: "Sorcerous"
 status: draft
 plane: isekai
@@ -2385,7 +2578,7 @@ category: condition
 list: magic
 background: true
 effect: "This character may take magic-related traits and may spend stat points on the Magic core stat."
-`,Vd=`id: stimm-rush
+`,qd=`id: stimm-rush
 name: "Stimm Rush"
 status: draft
 plane: earth
@@ -2395,7 +2588,7 @@ category: condition
 conveyed: true
 temporary: "This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration"
 effect: "This character gains 5 to all physical focus stats."
-`,Hd=`id: stone-skin
+`,Jd=`id: stone-skin
 name: "Stone Skin"
 status: draft
 plane: any
@@ -2406,7 +2599,7 @@ types: [enchantment]
 conveyed: true
 temporary: "This trait lasts a number of minutes equal to the caster's Rank in this ability"
 effect: "This character gains Rank *3 resistance to all Physical damage types."
-`,Ud=`id: supernatural
+`,Yd=`id: supernatural
 name: "Supernatural"
 status: draft
 plane: any
@@ -2415,7 +2608,7 @@ tags: [supernatural, site-example]
 category: condition
 background: true
 effect: "This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat."
-`,Wd=`id: additional-contact
+`,Xd=`id: additional-contact
 name: Additional Contact
 status: placeholder
 plane: any
@@ -2428,7 +2621,7 @@ choices:
   - choose: 1
     from: contact
     note: "+1 Contact per rank"
-`,Gd=`id: additional-language
+`,Zd=`id: additional-language
 name: Additional Language
 status: placeholder
 plane: any
@@ -2441,7 +2634,7 @@ choices:
   - choose: 1
     from: language
     note: "+1 Language per rank"
-`,Kd=`id: ai-culture
+`,Qd=`id: ai-culture
 name: "AI Culture"
 status: placeholder
 plane: earth
@@ -2451,7 +2644,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 2 }
 effect: "This character has knowledge of AI society and culture and can be assumed to be familiar with the peoples, places, and customs relevant to AI Cores and the communities around them."
-`,qd=`id: alchemy
+`,$d=`# Aksum has no lore entry on the site yet.
+id: aksum
+name: "Aksum"
+status: draft
+plane: earth
+region: centafrica
+summary: "Aksum, Centafrica’s station on its elliptical orbit through the inner solar system."
+tags: [centafrica, station, space]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Aksum and can be assumed to be familiar with the peoples, places, and customs of Centafrica’s inner-system station."
+`,ef=`id: alchemy
 name: "Alchemy"
 status: draft
 plane: isekai
@@ -2461,7 +2666,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, intuition: 2 }
 effect: "This character has knowledge of alchemy and can be assumed to be familiar with the properties of common reagents and how they combine in potions."
-`,Jd=`id: american-geography
+`,tf=`# Amaravati has no lore entry on the site yet.
+id: amaravati
+name: "Amaravati"
+status: draft
+plane: earth
+region: kingdom-of-india
+summary: "Amaravati, the Kingdom of India’s station in high Earth orbit."
+tags: [india, station, orbit]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Amaravati and can be assumed to be familiar with the peoples, places, and customs of India’s station in high Earth orbit."
+`,nf=`id: american-geography
 name: "American Geography"
 status: placeholder
 plane: earth
@@ -2472,7 +2689,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies."
-`,Yd=`id: american-history
+`,rf=`id: american-history
 name: "American History"
 status: placeholder
 plane: earth
@@ -2483,7 +2700,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it."
-`,Xd=`id: amharic-written
+`,af=`id: amharic-written
 name: "Amharic (Written)"
 status: draft
 plane: earth
@@ -2493,7 +2710,7 @@ category: knowledge
 types: [language]
 language: amharic
 effect: "This character can read and write the Amharic language."
-`,Zd=`id: amharic
+`,of=`id: amharic
 name: "Amharic (Spoken)"
 status: draft
 plane: earth
@@ -2503,7 +2720,7 @@ category: knowledge
 types: [language]
 language: amharic
 effect: "This character is conversational in the Amharic language and can speak it."
-`,Qd=`id: animal-lore
+`,sf=`id: animal-lore
 name: "Animal Lore"
 status: draft
 plane: any
@@ -2513,7 +2730,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of animals and can be assumed to be familiar with the habits, needs, dangers and uses of common domestic and wild animals."
-`,$d=`id: antiluna
+`,cf=`id: antiluna
 name: "Antiluna"
 status: placeholder
 plane: earth
@@ -2524,7 +2741,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Antiluna space station and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,ef=`id: arabic-written
+`,lf=`id: arabic-written
 name: "Arabic (Written)"
 status: draft
 plane: earth
@@ -2534,7 +2751,7 @@ category: knowledge
 types: [language]
 language: arabic
 effect: "This character can read and write the Arabic language."
-`,tf=`id: arabic
+`,uf=`id: arabic
 name: "Arabic (Spoken)"
 status: draft
 plane: earth
@@ -2544,7 +2761,7 @@ category: knowledge
 types: [language]
 language: arabic
 effect: "This character is conversational in the Arabic language and can speak it."
-`,nf=`id: architecture
+`,df=`id: architecture
 name: "Architecture"
 status: draft
 plane: any
@@ -2554,7 +2771,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of architecture and can be assumed to be familiar with building styles, structural design and construction methods."
-`,rf=`id: aristocracy
+`,ff=`id: aristocracy
 name: Aristocracy
 status: placeholder
 plane: isekai
@@ -2563,7 +2780,7 @@ tags: [nobility, court]
 category: knowledge
 minStats: { memory: 3, demeanor: 3 }
 effect: "This character has knowledge of the aristocracy and can be assumed to be familiar with the nobles, titles, and ranks of the kingdoms surrounding the switch port on Isekai."
-`,af=`id: ark-life
+`,pf=`id: ark-life
 name: "Ark Life"
 status: placeholder
 plane: earth
@@ -2574,7 +2791,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 1, intuition: 2 }
 effect: "This character has knowledge of life aboard Arks and can be assumed to be familiar with navigating their corridors and cultures."
-`,of=`id: ark-new-york
+`,mf=`id: ark-new-york
 name: "Ark New York"
 status: placeholder
 plane: earth
@@ -2586,7 +2803,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark New York and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,sf=`id: art-history
+`,hf=`id: art-history
 name: "Art History"
 status: draft
 plane: any
@@ -2596,7 +2813,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of art history and can be assumed to be familiar with notable artists, movements and works and their value."
-`,cf=`id: artificial-intelligence
+`,gf=`id: artificial-intelligence
 name: "Artificial Intelligence"
 status: placeholder
 plane: earth
@@ -2606,7 +2823,17 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of artificial intelligence and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,lf=`id: bandits-and-brigands
+`,J=`id: asteroid-mining
+name: "Asteroid Mining"
+status: draft
+plane: earth
+summary: "Finding, claiming and working asteroids for ore and ice."
+tags: [mining, space, asteroid]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of asteroid mining and can be assumed to be familiar with how asteroids are surveyed, claimed, and worked."
+`,_f=`id: bandits-and-brigands
 name: "Bandits & Brigands"
 status: placeholder
 plane: isekai
@@ -2616,7 +2843,7 @@ tags: [bandits, crime, roads]
 category: knowledge
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places."
-`,uf=`id: bengali-written
+`,vf=`id: bengali-written
 name: "Bengali (Written)"
 status: draft
 plane: earth
@@ -2626,7 +2853,7 @@ category: knowledge
 types: [language]
 language: bengali
 effect: "This character can read and write the Bengali language."
-`,df=`id: bengali
+`,yf=`id: bengali
 name: "Bengali (Spoken)"
 status: draft
 plane: earth
@@ -2636,7 +2863,7 @@ category: knowledge
 types: [language]
 language: bengali
 effect: "This character is conversational in the Bengali language and can speak it."
-`,ff=`id: biology
+`,bf=`id: biology
 name: "Biology"
 status: draft
 plane: any
@@ -2646,7 +2873,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of biology and can be assumed to be familiar with how living things grow, function, reproduce and interact."
-`,pf=`id: boneyard
+`,xf=`id: boneyard
 name: "Boneyard"
 status: placeholder
 plane: earth
@@ -2658,7 +2885,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Boneyard and can be assumed to be familiar with the people, places, and customs aboard it."
-`,mf=`id: bureaucracy
+`,Sf=`id: bureaucracy
 name: "Bureaucracy"
 status: draft
 plane: any
@@ -2668,7 +2895,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of bureaucracy and can be assumed to be familiar with how officials and departments work, which forms and permits are needed, and who to ask."
-`,hf=`id: burmese-written
+`,Cf=`id: burmese-written
 name: "Burmese (Written)"
 status: draft
 plane: earth
@@ -2678,7 +2905,7 @@ category: knowledge
 types: [language]
 language: burmese
 effect: "This character can read and write the Burmese language."
-`,gf=`id: burmese
+`,wf=`id: burmese
 name: "Burmese (Spoken)"
 status: draft
 plane: earth
@@ -2688,7 +2915,7 @@ category: knowledge
 types: [language]
 language: burmese
 effect: "This character is conversational in the Burmese language and can speak it."
-`,J=`id: cantonese-written
+`,Tf=`id: cantonese-written
 name: "Cantonese (Written)"
 status: draft
 plane: earth
@@ -2698,7 +2925,7 @@ category: knowledge
 types: [language]
 language: cantonese
 effect: "This character can read and write the Cantonese language."
-`,_f=`id: cantonese
+`,Ef=`id: cantonese
 name: "Cantonese (Spoken)"
 status: draft
 plane: earth
@@ -2708,7 +2935,7 @@ category: knowledge
 types: [language]
 language: cantonese
 effect: "This character is conversational in the Cantonese language and can speak it."
-`,vf=`id: caravan-routes
+`,Df=`id: caravan-routes
 name: Caravan Routes
 status: placeholder
 plane: any
@@ -2722,7 +2949,30 @@ choices:
     from: place
     note: "Where the caravan routes run"
     perRank: false
-`,yf=`id: chemistry
+`,Of=`id: centafrica
+name: "Centafrica"
+status: draft
+plane: earth
+region: centafrica
+summary: "Centafrica: its federal democracy, its storied universities and the unreconciled history of its founding."
+tags: [centafrica, politics]
+lore: centafrica
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Centafrica and can be assumed to be familiar with its customs, politics, and territories."
+`,kf=`id: centafrican-law
+name: "Centafrican Law"
+status: draft
+plane: earth
+region: centafrica
+summary: "The laws of Centafrica’s federal democratic republic and how they’re enforced."
+tags: [law, centafrica]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Centafrican law and can be assumed to be familiar with the laws and courts of Centafrica."
+`,Af=`id: chemistry
 name: "Chemistry"
 status: draft
 plane: any
@@ -2732,7 +2982,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of chemistry and can be assumed to be familiar with common substances, how they react, and how to handle them safely."
-`,bf=`id: chinese-imperial-law
+`,jf=`id: chinese-imperial-law
 name: "Chinese Imperial Law"
 status: placeholder
 plane: earth
@@ -2743,7 +2993,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."
-`,xf=`id: coastal-trade
+`,Mf=`id: coastal-trade
 name: Coastal Trade
 status: placeholder
 plane: isekai
@@ -2754,7 +3004,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of coastal trade on Isekai and can be assumed to be familiar with its ports, products, and dangers."
-`,Sf=`id: commerce
+`,Nf=`id: commerce
 name: "Commerce"
 status: draft
 plane: any
@@ -2764,7 +3014,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of commerce and can be assumed to be familiar with how markets and businesses work, fair prices, contracts and the movement of money."
-`,Cf=`id: computer-systems
+`,Pf=`id: computer-systems
 name: "Computer Systems"
 status: draft
 plane: earth
@@ -2774,7 +3024,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of computer systems and can be assumed to be familiar with common networks, software and hardware and how they are secured."
-`,wf=`id: countryside-lore
+`,Ff=`id: countryside-lore
 name: Countryside Lore
 status: placeholder
 plane: any
@@ -2788,7 +3038,7 @@ choices:
     from: place
     note: "Which countryside"
     perRank: false
-`,Tf=`id: court-etiquette
+`,If=`id: court-etiquette
 name: Court Etiquette
 status: placeholder
 plane: isekai
@@ -2798,7 +3048,7 @@ tags: [court, nobility, etiquette]
 category: knowledge
 minStats: { memory: 2, demeanor: 3 }
 effect: "This character has knowledge of courtly etiquette and can be assumed to be familiar with the rules and manners expected in the royal halls of Isekai."
-`,Ef=`id: criminal-underworld
+`,Lf=`id: criminal-underworld
 name: "Criminal Underworld"
 status: draft
 plane: any
@@ -2808,7 +3058,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them."
-`,Df=`id: cryptography
+`,Rf=`id: cryptography
 name: "Cryptography"
 status: draft
 plane: any
@@ -2818,7 +3068,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of cryptography and can be assumed to be familiar with common codes and ciphers and the methods used to make and break them."
-`,Of=`id: cybernetics
+`,zf=`id: cybernetics
 name: "Cybernetics"
 status: placeholder
 plane: earth
@@ -2828,7 +3078,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of cybernetics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,kf=`id: diplomatic-protocol
+`,Bf=`id: diplomatic-protocol
 name: "Diplomatic Protocol"
 status: draft
 plane: any
@@ -2838,7 +3088,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of diplomatic protocol and can be assumed to be familiar with the ceremonies, forms of address and unwritten rules of formal diplomacy."
-`,Af=`id: dreft
+`,Vf=`id: dreft
 name: Dreft
 status: placeholder
 plane: isekai
@@ -2850,7 +3100,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Dreft and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,jf=`id: dreftan-written
+`,Hf=`id: dreftan-written
 name: "Dreftan (Written)"
 status: placeholder
 plane: isekai
@@ -2861,7 +3111,7 @@ category: knowledge
 types: [language]
 language: dreftan
 effect: This character can read and write the Dreftan language.
-`,Mf=`id: dreftan
+`,Uf=`id: dreftan
 name: "Dreftan (Spoken)"
 status: placeholder
 plane: isekai
@@ -2872,7 +3122,7 @@ category: knowledge
 types: [language]
 language: dreftan
 effect: This character is conversational in the Dreftan language and can speak it.
-`,Nf=`id: dreftian-law
+`,Wf=`id: dreftian-law
 name: Dreftian Law
 status: placeholder
 plane: isekai
@@ -2883,7 +3133,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Dreftian law and can be assumed to be familiar with the laws of the Kingdom of Dreft and how they’re enforced."
-`,Pf=`id: dutch-written
+`,Y=`id: dutch-written
 name: "Dutch (Written)"
 status: draft
 plane: earth
@@ -2893,7 +3143,7 @@ category: knowledge
 types: [language]
 language: dutch
 effect: "This character can read and write the Dutch language."
-`,Ff=`id: dutch
+`,Gf=`id: dutch
 name: "Dutch (Spoken)"
 status: draft
 plane: earth
@@ -2903,7 +3153,7 @@ category: knowledge
 types: [language]
 language: dutch
 effect: "This character is conversational in the Dutch language and can speak it."
-`,If=`id: dwarvish-runes-written
+`,Kf=`id: dwarvish-runes-written
 name: "Dwarvish Runes (Written)"
 status: draft
 plane: isekai
@@ -2914,7 +3164,7 @@ types: [language]
 language: dwarvish-runes
 minStats: { memory: 3, intuition: 5 }
 effect: "This character can read and write Dwarvish Runes."
-`,Lf=`# Pairs with Dwarvish Runes (Written).
+`,qf=`# Pairs with Dwarvish Runes (Written).
 id: dwarvish
 name: "Dwarvish (Spoken)"
 status: draft
@@ -2925,7 +3175,7 @@ category: knowledge
 types: [language]
 language: dwarvish-runes
 effect: "This character is conversational in the Dwarvish language and can speak it."
-`,Rf=`id: earth-baseline-customs
+`,Jf=`id: earth-baseline-customs
 name: Earth Baseline Customs
 status: placeholder
 plane: earth
@@ -2935,7 +3185,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 1 }
 effect: "This character has knowledge of Earth baseline customs and can be assumed to be familiar with how people across the settled systems expect things to be done."
-`,zf=`id: earth-baseline-technology
+`,Yf=`id: earth-baseline-technology
 name: Earth Baseline Technology
 status: placeholder
 plane: earth
@@ -2944,7 +3194,17 @@ tags: [earth, technology]
 category: knowledge
 minStats: { memory: 1 }
 effect: "This character has knowledge of Earth baseline technology and can be assumed to be familiar with the machines and devices common across the settled systems."
-`,Bf=`id: elemental-magics
+`,Xf=`id: ecology
+name: "Ecology"
+status: draft
+plane: any
+summary: "Ecosystems, climate and how damaged land is restored."
+tags: [ecology, science, nature]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of ecology and can be assumed to be familiar with how ecosystems work and how damaged land is restored."
+`,Zf=`id: elemental-magics
 name: "Elemental Magics"
 status: draft
 plane: isekai
@@ -2956,7 +3216,7 @@ list: magic
 ranked: true
 minStats: { memory: 3, intuition: 5 }
 effect: "This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history."
-`,Vf=`id: engineering
+`,Qf=`id: engineering
 name: "Engineering"
 status: draft
 plane: any
@@ -2966,7 +3226,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of engineering and can be assumed to be familiar with how machines, structures and systems are designed, built, maintained and broken."
-`,Hf=`id: english-written
+`,$f=`id: english-written
 name: "English (Written)"
 status: placeholder
 plane: earth
@@ -2976,7 +3236,7 @@ category: knowledge
 types: [language]
 language: english
 effect: This character can read and write the English language.
-`,Uf=`id: english
+`,ep=`id: english
 name: "English (Spoken)"
 status: placeholder
 plane: earth
@@ -2986,7 +3246,7 @@ category: knowledge
 types: [language]
 language: english
 effect: This character is conversational in the English language and can speak it.
-`,Wf=`id: exotic-materials
+`,tp=`id: exotic-materials
 name: "Exotic Materials"
 status: placeholder
 plane: earth
@@ -2996,7 +3256,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of exotic materials and can be assumed to be familiar with their uses, prices, and the rough paraphysical concepts by which they operate."
-`,Y=`id: farming
+`,np=`id: farming
 name: Farming
 status: placeholder
 plane: any
@@ -3006,7 +3266,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, endurance: 2 }
 effect: "This character has knowledge of farming and can be assumed to be familiar with the technologies, techniques, and lifestyles associated with the practice."
-`,Gf=`id: filipino-written
+`,rp=`id: filipino-written
 name: "Filipino (Written)"
 status: draft
 plane: earth
@@ -3016,7 +3276,7 @@ category: knowledge
 types: [language]
 language: filipino
 effect: "This character can read and write the Filipino language."
-`,Kf=`id: filipino
+`,X=`id: filipino
 name: "Filipino (Spoken)"
 status: draft
 plane: earth
@@ -3026,7 +3286,7 @@ category: knowledge
 types: [language]
 language: filipino
 effect: "This character is conversational in the Filipino language and can speak it."
-`,qf=`id: french-written
+`,ip=`id: french-written
 name: "French (Written)"
 status: draft
 plane: earth
@@ -3036,7 +3296,7 @@ category: knowledge
 types: [language]
 language: french
 effect: "This character can read and write the French language."
-`,Jf=`id: french
+`,ap=`id: french
 name: "French (Spoken)"
 status: draft
 plane: earth
@@ -3046,7 +3306,7 @@ category: knowledge
 types: [language]
 language: french
 effect: "This character is conversational in the French language and can speak it."
-`,Yf=`id: gambling
+`,op=`id: gambling
 name: "Gambling"
 status: draft
 plane: any
@@ -3056,7 +3316,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 3 }
 effect: "This character has knowledge of gambling and can be assumed to be familiar with common games of chance, their odds, and the tricks cheats use."
-`,Xf=`id: geography
+`,sp=`id: geography
 name: "Geography"
 status: draft
 plane: any
@@ -3066,7 +3326,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of geography and can be assumed to be familiar with the regions, cities, terrain and routes of the places they have lived and traveled."
-`,Zf=`id: german-written
+`,cp=`id: german-written
 name: "German (Written)"
 status: draft
 plane: earth
@@ -3076,7 +3336,7 @@ category: knowledge
 types: [language]
 language: german
 effect: "This character can read and write the German language."
-`,Qf=`id: german
+`,lp=`id: german
 name: "German (Spoken)"
 status: draft
 plane: earth
@@ -3086,7 +3346,7 @@ category: knowledge
 types: [language]
 language: german
 effect: "This character is conversational in the German language and can speak it."
-`,$f=`id: glintl
+`,up=`id: glintl
 name: Glintl
 status: placeholder
 plane: isekai
@@ -3098,7 +3358,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the trading port of Glintl and can be assumed to be familiar with the peoples, places, and customs of the city."
-`,ep=`id: gujarati-written
+`,dp=`id: gujarati-written
 name: "Gujarati (Written)"
 status: draft
 plane: earth
@@ -3108,7 +3368,7 @@ category: knowledge
 types: [language]
 language: gujarati
 effect: "This character can read and write the Gujarati language."
-`,tp=`id: gujarati
+`,fp=`id: gujarati
 name: "Gujarati (Spoken)"
 status: draft
 plane: earth
@@ -3118,7 +3378,7 @@ category: knowledge
 types: [language]
 language: gujarati
 effect: "This character is conversational in the Gujarati language and can speak it."
-`,np=`id: hausa-written
+`,pp=`id: hausa-written
 name: "Hausa (Written)"
 status: draft
 plane: earth
@@ -3128,7 +3388,7 @@ category: knowledge
 types: [language]
 language: hausa
 effect: "This character can read and write the Hausa language."
-`,rp=`id: hausa
+`,mp=`id: hausa
 name: "Hausa (Spoken)"
 status: draft
 plane: earth
@@ -3138,7 +3398,7 @@ category: knowledge
 types: [language]
 language: hausa
 effect: "This character is conversational in the Hausa language and can speak it."
-`,X=`id: heraldry
+`,hp=`id: heraldry
 name: "Heraldry"
 status: draft
 plane: any
@@ -3148,7 +3408,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of heraldry and can be assumed to be familiar with the arms, colors and lineages of noble houses and orders."
-`,ip=`id: herbalism
+`,gp=`id: herbalism
 name: Herbalism
 status: placeholder
 plane: any
@@ -3157,7 +3417,7 @@ tags: [herbs, healing, plants]
 category: knowledge
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of herbalism and can be assumed to be familiar with the plants, techniques, and precautions involved with the practice."
-`,ap=`id: high-society
+`,_p=`id: high-society
 name: "High Society"
 status: draft
 plane: any
@@ -3167,7 +3427,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, empathy: 3 }
 effect: "This character has knowledge of high society and can be assumed to be familiar with the manners, fashions, families and scandals of the wealthy and powerful."
-`,op=`id: hindi-written
+`,vp=`id: hindi-written
 name: "Hindi (Written)"
 status: draft
 plane: earth
@@ -3177,7 +3437,7 @@ category: knowledge
 types: [language]
 language: hindi
 effect: "This character can read and write the Hindi language."
-`,sp=`id: hindi
+`,yp=`id: hindi
 name: "Hindi (Spoken)"
 status: draft
 plane: earth
@@ -3187,7 +3447,7 @@ category: knowledge
 types: [language]
 language: hindi
 effect: "This character is conversational in the Hindi language and can speak it."
-`,cp=`id: history
+`,bp=`id: history
 name: "History"
 status: draft
 plane: any
@@ -3197,7 +3457,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4 }
 effect: "This character has knowledge of history and can be assumed to be familiar with the major events, people and turning points of their world’s past."
-`,lp=`id: imperial-law
+`,xp=`id: imperial-law
 name: "Imperial Law"
 status: placeholder
 plane: earth
@@ -3208,7 +3468,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories."
-`,up=`id: imperial-politics
+`,Sp=`id: imperial-politics
 name: "Imperial Politics"
 status: placeholder
 plane: earth
@@ -3220,7 +3480,29 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Imperial politics and can be assumed to be familiar with the Emperor, the Prince Regent, the Senate, and their feuds."
-`,dp=`id: indonesian-written
+`,Cp=`id: indian-law
+name: "Indian Law"
+status: draft
+plane: earth
+region: kingdom-of-india
+summary: "The laws of the Kingdom of India, set by its crown and its temples, and how they’re enforced."
+tags: [law, india]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Indian law and can be assumed to be familiar with the laws and courts of the Kingdom of India."
+`,wp=`id: indian-theology
+name: "Indian Theology"
+status: draft
+plane: earth
+region: kingdom-of-india
+summary: "The land of 10,000 gods: the faiths of India and the theocracy that rules in their name."
+tags: [religion, india]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Indian theology and can be assumed to be familiar with the gods, temples, and rites of the Kingdom of India."
+`,Tp=`id: indonesian-written
 name: "Indonesian (Written)"
 status: draft
 plane: earth
@@ -3230,7 +3512,7 @@ category: knowledge
 types: [language]
 language: indonesian
 effect: "This character can read and write the Indonesian language."
-`,fp=`id: indonesian
+`,Ep=`id: indonesian
 name: "Indonesian (Spoken)"
 status: draft
 plane: earth
@@ -3240,7 +3522,7 @@ category: knowledge
 types: [language]
 language: indonesian
 effect: "This character is conversational in the Indonesian language and can speak it."
-`,pp=`id: interplanar-law
+`,Dp=`id: interplanar-law
 name: "Interplanar Law"
 status: placeholder
 plane: earth
@@ -3250,7 +3532,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of interplanar law and can be assumed to be familiar with the laws governing extraplanar beings, including the treatment of specimens and the legal status of parasapients."
-`,mp=`id: interplanar-relations
+`,Op=`id: interplanar-relations
 name: "Interplanar Relations"
 status: placeholder
 plane: earth
@@ -3260,7 +3542,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, persuasion: 3 }
 effect: "This character has knowledge of interplanar relations and can be assumed to be familiar with the planes, societies, and laws involved with contact between parasapients and representatives of Earth baseline."
-`,hp=`id: italian-written
+`,kp=`id: italian-written
 name: "Italian (Written)"
 status: draft
 plane: earth
@@ -3270,7 +3552,7 @@ category: knowledge
 types: [language]
 language: italian
 effect: "This character can read and write the Italian language."
-`,gp=`id: italian
+`,Ap=`id: italian
 name: "Italian (Spoken)"
 status: draft
 plane: earth
@@ -3280,7 +3562,7 @@ category: knowledge
 types: [language]
 language: italian
 effect: "This character is conversational in the Italian language and can speak it."
-`,_p=`id: japanese-written
+`,jp=`id: japanese-written
 name: "Japanese (Written)"
 status: draft
 plane: earth
@@ -3290,7 +3572,7 @@ category: knowledge
 types: [language]
 language: japanese
 effect: "This character can read and write the Japanese language."
-`,vp=`id: japanese
+`,Mp=`id: japanese
 name: "Japanese (Spoken)"
 status: draft
 plane: earth
@@ -3300,7 +3582,7 @@ category: knowledge
 types: [language]
 language: japanese
 effect: "This character is conversational in the Japanese language and can speak it."
-`,yp=`id: javanese-written
+`,Np=`id: javanese-written
 name: "Javanese (Written)"
 status: draft
 plane: earth
@@ -3310,7 +3592,7 @@ category: knowledge
 types: [language]
 language: javanese
 effect: "This character can read and write the Javanese language."
-`,bp=`id: javanese
+`,Pp=`id: javanese
 name: "Javanese (Spoken)"
 status: draft
 plane: earth
@@ -3320,7 +3602,7 @@ category: knowledge
 types: [language]
 language: javanese
 effect: "This character is conversational in the Javanese language and can speak it."
-`,xp=`id: kannada-written
+`,Fp=`id: kannada-written
 name: "Kannada (Written)"
 status: draft
 plane: earth
@@ -3330,7 +3612,7 @@ category: knowledge
 types: [language]
 language: kannada
 effect: "This character can read and write the Kannada language."
-`,Sp=`id: kannada
+`,Ip=`id: kannada
 name: "Kannada (Spoken)"
 status: draft
 plane: earth
@@ -3340,7 +3622,7 @@ category: knowledge
 types: [language]
 language: kannada
 effect: "This character is conversational in the Kannada language and can speak it."
-`,Cp=`id: karsef
+`,Lp=`id: karsef
 name: Karsef
 status: placeholder
 plane: isekai
@@ -3350,7 +3632,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Karsef and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,wp=`id: kashgar-mindworks
+`,Rp=`id: kashgar-mindworks
 name: "Kashgar Mindworks"
 status: placeholder
 plane: earth
@@ -3361,7 +3643,7 @@ lore: kashgar-mindworks
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of Kashgar Mindworks and can be assumed to be familiar with its businesses, locations, employees, culture, and leadership."
-`,Tp=`id: kashgar
+`,zp=`id: kashgar
 name: "Kashgar"
 status: placeholder
 plane: earth
@@ -3373,7 +3655,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Kashgar and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,Ep=`id: kazakh-written
+`,Bp=`id: kazakh-written
 name: "Kazakh (Written)"
 status: draft
 plane: earth
@@ -3383,7 +3665,7 @@ category: knowledge
 types: [language]
 language: kazakh
 effect: "This character can read and write the Kazakh language."
-`,Dp=`id: kazakh
+`,Vp=`id: kazakh
 name: "Kazakh (Spoken)"
 status: draft
 plane: earth
@@ -3393,7 +3675,7 @@ category: knowledge
 types: [language]
 language: kazakh
 effect: "This character is conversational in the Kazakh language and can speak it."
-`,Op=`id: khmer-written
+`,Hp=`id: khmer-written
 name: "Khmer (Written)"
 status: draft
 plane: earth
@@ -3403,7 +3685,7 @@ category: knowledge
 types: [language]
 language: khmer
 effect: "This character can read and write the Khmer language."
-`,kp=`id: khmer
+`,Up=`id: khmer
 name: "Khmer (Spoken)"
 status: draft
 plane: earth
@@ -3413,7 +3695,7 @@ category: knowledge
 types: [language]
 language: khmer
 effect: "This character is conversational in the Khmer language and can speak it."
-`,Ap=`id: kinyarwanda-written
+`,Wp=`id: kinyarwanda-written
 name: "Kinyarwanda (Written)"
 status: draft
 plane: earth
@@ -3423,7 +3705,7 @@ category: knowledge
 types: [language]
 language: kinyarwanda
 effect: "This character can read and write the Kinyarwanda language."
-`,jp=`id: kinyarwanda
+`,Gp=`id: kinyarwanda
 name: "Kinyarwanda (Spoken)"
 status: draft
 plane: earth
@@ -3433,7 +3715,7 @@ category: knowledge
 types: [language]
 language: kinyarwanda
 effect: "This character is conversational in the Kinyarwanda language and can speak it."
-`,Mp=`id: korean-written
+`,Kp=`id: korean-written
 name: "Korean (Written)"
 status: draft
 plane: earth
@@ -3443,7 +3725,7 @@ category: knowledge
 types: [language]
 language: korean
 effect: "This character can read and write the Korean language."
-`,Np=`id: korean
+`,qp=`id: korean
 name: "Korean (Spoken)"
 status: draft
 plane: earth
@@ -3453,7 +3735,7 @@ category: knowledge
 types: [language]
 language: korean
 effect: "This character is conversational in the Korean language and can speak it."
-`,Pp=`id: kyrgyz-written
+`,Jp=`id: kyrgyz-written
 name: "Kyrgyz (Written)"
 status: draft
 plane: earth
@@ -3463,7 +3745,7 @@ category: knowledge
 types: [language]
 language: kyrgyz
 effect: "This character can read and write the Kyrgyz language."
-`,Fp=`id: kyrgyz
+`,Yp=`id: kyrgyz
 name: "Kyrgyz (Spoken)"
 status: draft
 plane: earth
@@ -3473,7 +3755,7 @@ category: knowledge
 types: [language]
 language: kyrgyz
 effect: "This character is conversational in the Kyrgyz language and can speak it."
-`,Ip=`id: lao-written
+`,Xp=`id: lao-written
 name: "Lao (Written)"
 status: draft
 plane: earth
@@ -3483,7 +3765,7 @@ category: knowledge
 types: [language]
 language: lao
 effect: "This character can read and write the Lao language."
-`,Lp=`id: lao
+`,Zp=`id: lao
 name: "Lao (Spoken)"
 status: draft
 plane: earth
@@ -3493,7 +3775,7 @@ category: knowledge
 types: [language]
 language: lao
 effect: "This character is conversational in the Lao language and can speak it."
-`,Rp=`id: law-enforcement
+`,Qp=`id: law-enforcement
 name: "Law Enforcement"
 status: draft
 plane: any
@@ -3503,7 +3785,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of law enforcement and can be assumed to be familiar with police and guard procedures, how evidence is handled, and how arrests and investigations proceed."
-`,zp=`id: legal-systems
+`,$p=`id: legal-systems
 name: "Legal Systems"
 status: draft
 plane: any
@@ -3513,7 +3795,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of legal systems and can be assumed to be familiar with how laws are written and enforced, how courts work, and common legal procedures."
-`,Bp=`id: lingala-written
+`,em=`id: lingala-written
 name: "Lingala (Written)"
 status: draft
 plane: earth
@@ -3523,7 +3805,7 @@ category: knowledge
 types: [language]
 language: lingala
 effect: "This character can read and write the Lingala language."
-`,Vp=`id: lingala
+`,tm=`id: lingala
 name: "Lingala (Spoken)"
 status: draft
 plane: earth
@@ -3533,7 +3815,7 @@ category: knowledge
 types: [language]
 language: lingala
 effect: "This character is conversational in the Lingala language and can speak it."
-`,Hp=`id: liquid-democracy
+`,nm=`id: liquid-democracy
 name: "Liquid Democracy"
 status: placeholder
 plane: earth
@@ -3545,7 +3827,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra’s Liquid Democracy and can be assumed to be familiar with its delegated votes, ward representatives, and the Council of 11."
-`,Up=`id: literature
+`,rm=`id: literature
 name: "Literature"
 status: draft
 plane: any
@@ -3555,7 +3837,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of literature and can be assumed to be familiar with famous works, authors, forms and the ideas they made popular."
-`,Wp=`id: local-folklore
+`,im=`id: local-folklore
 name: Local Folklore
 status: placeholder
 plane: any
@@ -3570,7 +3852,7 @@ choices:
     from: place
     note: "Which region's folklore"
     perRank: false
-`,Gp=`id: local-history
+`,am=`id: local-history
 name: "Local History"
 status: draft
 plane: any
@@ -3580,7 +3862,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."
-`,Kp=`id: magic-on-isekai
+`,om=`id: magic-on-isekai
 name: Magic on Isekai
 status: placeholder
 plane: isekai
@@ -3592,7 +3874,7 @@ category: knowledge
 list: magic
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of the magic on Isekai and can be assumed to be familiar with the philosophies, cultures, methods, and laws related to its practice."
-`,qp=`id: malay-written
+`,sm=`id: malay-written
 name: "Malay (Written)"
 status: draft
 plane: earth
@@ -3602,7 +3884,7 @@ category: knowledge
 types: [language]
 language: malay
 effect: "This character can read and write the Malay language."
-`,Jp=`id: malay
+`,cm=`id: malay
 name: "Malay (Spoken)"
 status: draft
 plane: earth
@@ -3612,7 +3894,7 @@ category: knowledge
 types: [language]
 language: malay
 effect: "This character is conversational in the Malay language and can speak it."
-`,Yp=`id: malayalam-written
+`,lm=`id: malayalam-written
 name: "Malayalam (Written)"
 status: draft
 plane: earth
@@ -3622,7 +3904,7 @@ category: knowledge
 types: [language]
 language: malayalam
 effect: "This character can read and write the Malayalam language."
-`,Xp=`id: malayalam
+`,um=`id: malayalam
 name: "Malayalam (Spoken)"
 status: draft
 plane: earth
@@ -3632,7 +3914,7 @@ category: knowledge
 types: [language]
 language: malayalam
 effect: "This character is conversational in the Malayalam language and can speak it."
-`,Zp=`id: mandarin-written
+`,dm=`id: mandarin-written
 name: "Mandarin (Written)"
 status: placeholder
 plane: earth
@@ -3642,7 +3924,7 @@ category: knowledge
 types: [language]
 language: mandarin
 effect: This character can read and write the Mandarin language.
-`,Qp=`id: mandarin
+`,fm=`id: mandarin
 name: "Mandarin (Spoken)"
 status: placeholder
 plane: earth
@@ -3652,7 +3934,7 @@ category: knowledge
 types: [language]
 language: mandarin
 effect: This character is conversational in the Mandarin language and can speak it.
-`,$p=`id: marathi-written
+`,pm=`id: marathi-written
 name: "Marathi (Written)"
 status: draft
 plane: earth
@@ -3662,7 +3944,7 @@ category: knowledge
 types: [language]
 language: marathi
 effect: "This character can read and write the Marathi language."
-`,em=`id: marathi
+`,mm=`id: marathi
 name: "Marathi (Spoken)"
 status: draft
 plane: earth
@@ -3672,7 +3954,7 @@ category: knowledge
 types: [language]
 language: marathi
 effect: "This character is conversational in the Marathi language and can speak it."
-`,tm=`id: mathematics
+`,hm=`id: mathematics
 name: "Mathematics"
 status: placeholder
 plane: any
@@ -3682,7 +3964,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of mathematics and can be assumed to be familiar with mathematical fields of study."
-`,nm=`id: medicine
+`,gm=`id: medicine
 name: "Medicine"
 status: draft
 plane: any
@@ -3692,7 +3974,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of medicine and can be assumed to be familiar with anatomy, common illnesses and injuries, and how they are treated."
-`,rm=`id: metallurgy
+`,_m=`id: metallurgy
 name: "Metallurgy"
 status: draft
 plane: any
@@ -3702,7 +3984,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of metallurgy and can be assumed to be familiar with common metals and alloys and how they are smelted, worked and tempered."
-`,im=`id: military-tactics
+`,vm=`id: military-tactics
 name: "Military Tactics"
 status: draft
 plane: any
@@ -3712,7 +3994,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of military tactics and can be assumed to be familiar with formations, maneuvers, chains of command and how battles are fought."
-`,am=`id: mongolian-written
+`,ym=`id: mongolian-written
 name: "Mongolian (Written)"
 status: draft
 plane: earth
@@ -3722,7 +4004,7 @@ category: knowledge
 types: [language]
 language: mongolian
 effect: "This character can read and write the Mongolian language."
-`,om=`id: mongolian
+`,bm=`id: mongolian
 name: "Mongolian (Spoken)"
 status: draft
 plane: earth
@@ -3732,7 +4014,7 @@ category: knowledge
 types: [language]
 language: mongolian
 effect: "This character is conversational in the Mongolian language and can speak it."
-`,sm=`id: monsters-of-isekai
+`,xm=`id: monsters-of-isekai
 name: Monsters of Isekai
 status: placeholder
 plane: isekai
@@ -3742,7 +4024,7 @@ lore: isekai-monsters
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the monsters of Isekai and can be assumed to be familiar with their names, territories, the goods that they can provide, and their strengths and weaknesses."
-`,cm=`id: mountaineering
+`,Sm=`id: mountaineering
 name: Mountaineering
 status: placeholder
 plane: any
@@ -3752,7 +4034,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, endurance: 2 }
 effect: "This character has knowledge of mountaineering and can be assumed to be familiar with the preparation, dangers, and survival craft involved in trekking mountains."
-`,lm=`id: music
+`,Cm=`id: music
 name: "Music"
 status: draft
 plane: any
@@ -3762,7 +4044,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of music and can be assumed to be familiar with musical theory, well-known pieces and the traditions they come from."
-`,um=`id: navigation
+`,wm=`id: navigation
 name: "Navigation"
 status: draft
 plane: any
@@ -3772,7 +4054,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of navigation and can be assumed to be familiar with reading maps, charts, stars and instruments, and plotting a course."
-`,dm=`id: nepali-written
+`,Tm=`id: nepali-written
 name: "Nepali (Written)"
 status: draft
 plane: earth
@@ -3782,7 +4064,7 @@ category: knowledge
 types: [language]
 language: nepali
 effect: "This character can read and write the Nepali language."
-`,fm=`id: nepali
+`,Em=`id: nepali
 name: "Nepali (Spoken)"
 status: draft
 plane: earth
@@ -3792,7 +4074,7 @@ category: knowledge
 types: [language]
 language: nepali
 effect: "This character is conversational in the Nepali language and can speak it."
-`,pm=`id: new-columbia
+`,Dm=`id: new-columbia
 name: "New Columbia"
 status: placeholder
 plane: earth
@@ -3803,7 +4085,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of New Columbia and can be assumed to be familiar with the peoples, places, and customs of the American Empire’s colony on Luna."
-`,mm=`id: new-persia
+`,Om=`id: new-persia
 name: "New Persia"
 status: placeholder
 plane: earth
@@ -3815,7 +4097,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of New Persia and can be assumed to be familiar with the peoples, places, and customs of the SDU’s planar territory on Pairidaeza."
-`,hm=`id: noble-houses-of-dreft
+`,km=`id: noble-houses-of-dreft
 name: Noble Houses of Dreft
 status: placeholder
 plane: isekai
@@ -3825,7 +4107,7 @@ tags: [nobility, politics, houses]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the noble houses of Dreft and can be assumed to be familiar with their histories and feuds."
-`,gm=`id: odia-written
+`,Am=`id: odia-written
 name: "Odia (Written)"
 status: draft
 plane: earth
@@ -3835,7 +4117,7 @@ category: knowledge
 types: [language]
 language: odia
 effect: "This character can read and write the Odia language."
-`,_m=`id: odia
+`,jm=`id: odia
 name: "Odia (Spoken)"
 status: draft
 plane: earth
@@ -3845,7 +4127,7 @@ category: knowledge
 types: [language]
 language: odia
 effect: "This character is conversational in the Odia language and can speak it."
-`,vm=`id: orc-society
+`,Mm=`id: orc-society
 name: "Orc Society"
 status: draft
 plane: isekai
@@ -3855,7 +4137,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."
-`,ym=`id: oromo-written
+`,Nm=`id: oromo-written
 name: "Oromo (Written)"
 status: draft
 plane: earth
@@ -3865,7 +4147,7 @@ category: knowledge
 types: [language]
 language: oromo
 effect: "This character can read and write the Oromo language."
-`,bm=`id: oromo
+`,Pm=`id: oromo
 name: "Oromo (Spoken)"
 status: draft
 plane: earth
@@ -3875,7 +4157,7 @@ category: knowledge
 types: [language]
 language: oromo
 effect: "This character is conversational in the Oromo language and can speak it."
-`,xm=`id: paraarcheology
+`,Fm=`id: paraarcheology
 name: "Paraarcheology"
 status: placeholder
 plane: earth
@@ -3885,7 +4167,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of paraarcheology and can be assumed to be familiar with the skills, places, histories, and planar details associated with the study of archeology on other planes."
-`,Sm=`id: parabiology
+`,Im=`id: parabiology
 name: "Parabiology"
 status: placeholder
 plane: earth
@@ -3895,7 +4177,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, empathy: 2 }
 effect: "This character has knowledge of parabiology and can be assumed to be familiar with the living organisms of other planes, and their vital processes, structures, functions, and growth."
-`,Cm=`id: paraflora
+`,Lm=`id: paraflora
 name: "Paraflora"
 status: placeholder
 plane: earth
@@ -3905,7 +4187,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, empathy: 2 }
 effect: "This character has knowledge of paraflora and can be assumed to be familiar with extraplanar plants, including their ecologies, growth patterns, and the rough paraphysical concepts by which they may operate."
-`,wm=`id: paraphysics
+`,Rm=`id: paraphysics
 name: "Paraphysics"
 status: placeholder
 plane: earth
@@ -3915,7 +4197,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of paraphysics and can be assumed to be familiar with paraphysical concepts, paraphysical effects, and axiomatic sciences."
-`,Tm=`id: parasapient-medicine
+`,zm=`id: parasapient-medicine
 name: "Parasapient Medicine"
 status: draft
 plane: earth
@@ -3925,7 +4207,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, empathy: 2 }
 effect: "This character has knowledge of parasapient medicine and can be assumed to be familiar with the anatomy and common ailments of the parasapient peoples known to the settled systems, and how to treat them."
-`,Em=`id: parasapients
+`,Bm=`id: parasapients
 name: "Parasapients"
 status: placeholder
 plane: earth
@@ -3935,7 +4217,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of parasapients and can be assumed to be familiar with extraplanar sapients, including their cultures, diplomatic relations, and the rough paraphysical concepts by which they may operate."
-`,Dm=`id: parazoology
+`,Vm=`id: parazoology
 name: "Parazoology"
 status: placeholder
 plane: earth
@@ -3945,7 +4227,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of parazoology and can be assumed to be familiar with extraplanar creatures, including their habitats, needs, and the rough paraphysical concepts by which they may operate."
-`,Om=`id: pathology
+`,Hm=`id: pataliputra
+name: "Pataliputra"
+status: draft
+plane: earth
+region: kingdom-of-india
+summary: "295/c/29 - “Pataliputra,” India’s planar capital and the largest planar colony ever attempted."
+tags: [india, planar, colony]
+lore: pataliputra
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Pataliputra and can be assumed to be familiar with the peoples, places, and customs of India’s planar capital."
+`,Um=`id: pathology
 name: "Pathology"
 status: draft
 plane: any
@@ -3955,7 +4249,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, intuition: 2 }
 effect: "This character has knowledge of pathology and can be assumed to be familiar with common diseases, how they spread and present, and how outbreaks are contained."
-`,km=`id: persian-written
+`,Wm=`id: persian-written
 name: "Persian (Written)"
 status: draft
 plane: earth
@@ -3965,7 +4259,7 @@ category: knowledge
 types: [language]
 language: persian
 effect: "This character can read and write the Persian language."
-`,Am=`id: persian
+`,Gm=`id: persian
 name: "Persian (Spoken)"
 status: draft
 plane: earth
@@ -3975,7 +4269,7 @@ category: knowledge
 types: [language]
 language: persian
 effect: "This character is conversational in the Persian language and can speak it."
-`,jm=`id: pharmacology
+`,Km=`id: pharmacology
 name: "Pharmacology"
 status: draft
 plane: any
@@ -3985,7 +4279,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of pharmacology and can be assumed to be familiar with common drugs and remedies, their doses, side effects and interactions."
-`,Mm=`id: physics
+`,qm=`id: physics
 name: "Physics"
 status: draft
 plane: any
@@ -3995,7 +4289,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of physics and can be assumed to be familiar with motion, energy, forces, light and matter, and the math that describes them."
-`,Nm=`id: planar-exploration
+`,Jm=`id: planar-exploration
 name: "Planar Exploration"
 status: placeholder
 plane: earth
@@ -4006,7 +4300,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of planar exploration and can be assumed to be familiar with the regulations, laws, dangers, and methods involved."
-`,Pm=`id: polish-written
+`,Ym=`id: polish-written
 name: "Polish (Written)"
 status: draft
 plane: earth
@@ -4016,7 +4310,7 @@ category: knowledge
 types: [language]
 language: polish
 effect: "This character can read and write the Polish language."
-`,Fm=`id: polish
+`,Xm=`id: polish
 name: "Polish (Spoken)"
 status: draft
 plane: earth
@@ -4026,7 +4320,7 @@ category: knowledge
 types: [language]
 language: polish
 effect: "This character is conversational in the Polish language and can speak it."
-`,Im=`id: politics
+`,Zm=`id: politics
 name: "Politics"
 status: draft
 plane: any
@@ -4036,7 +4330,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of politics and can be assumed to be familiar with how power is won, held and traded, and the factions and figures that matter."
-`,Lm=`id: port-herminst
+`,Qm=`id: port-herminst
 name: Port Herminst
 status: placeholder
 plane: isekai
@@ -4048,7 +4342,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Port Herminst and can be assumed to be familiar with the peoples, places, and customs of Dreft’s capital."
-`,Rm=`id: ports-and-stations
+`,$m=`id: ports-and-stations
 name: "Ports and Stations"
 status: placeholder
 plane: earth
@@ -4058,7 +4352,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the ports and stations of the settled systems and can be assumed to be familiar with the customs, regulations, industries, ships, and docks involved in trade."
-`,zm=`id: portuguese-written
+`,eh=`id: portuguese-written
 name: "Portuguese (Written)"
 status: draft
 plane: earth
@@ -4068,7 +4362,7 @@ category: knowledge
 types: [language]
 language: portuguese
 effect: "This character can read and write the Portuguese language."
-`,Bm=`id: portuguese
+`,th=`id: portuguese
 name: "Portuguese (Spoken)"
 status: draft
 plane: earth
@@ -4078,7 +4372,7 @@ category: knowledge
 types: [language]
 language: portuguese
 effect: "This character is conversational in the Portuguese language and can speak it."
-`,Vm=`id: psychology
+`,nh=`id: psychology
 name: "Psychology"
 status: draft
 plane: any
@@ -4088,7 +4382,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 4 }
 effect: "This character has knowledge of psychology and can be assumed to be familiar with how minds work, common mental illnesses, and the treatment of trauma and stress."
-`,Hm=`id: punjabi-written
+`,rh=`id: punjabi-written
 name: "Punjabi (Written)"
 status: draft
 plane: earth
@@ -4098,7 +4392,7 @@ category: knowledge
 types: [language]
 language: punjabi
 effect: "This character can read and write the Punjabi language."
-`,Um=`id: punjabi
+`,ih=`id: punjabi
 name: "Punjabi (Spoken)"
 status: draft
 plane: earth
@@ -4108,7 +4402,7 @@ category: knowledge
 types: [language]
 language: punjabi
 effect: "This character is conversational in the Punjabi language and can speak it."
-`,Wm=`id: robotics
+`,ah=`id: robotics
 name: "Robotics"
 status: placeholder
 plane: earth
@@ -4118,7 +4412,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of robotics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,Gm=`id: romanian-written
+`,oh=`id: romanian-written
 name: "Romanian (Written)"
 status: draft
 plane: earth
@@ -4128,7 +4422,7 @@ category: knowledge
 types: [language]
 language: romanian
 effect: "This character can read and write the Romanian language."
-`,Km=`id: romanian
+`,sh=`id: romanian
 name: "Romanian (Spoken)"
 status: draft
 plane: earth
@@ -4138,7 +4432,7 @@ category: knowledge
 types: [language]
 language: romanian
 effect: "This character is conversational in the Romanian language and can speak it."
-`,qm=`id: russian-written
+`,ch=`id: russian-written
 name: "Russian (Written)"
 status: draft
 plane: earth
@@ -4148,7 +4442,7 @@ category: knowledge
 types: [language]
 language: russian
 effect: "This character can read and write the Russian language."
-`,Jm=`id: russian
+`,lh=`id: russian
 name: "Russian (Spoken)"
 status: draft
 plane: earth
@@ -4158,7 +4452,7 @@ category: knowledge
 types: [language]
 language: russian
 effect: "This character is conversational in the Russian language and can speak it."
-`,Ym=`id: sdu-law
+`,uh=`id: sdu-law
 name: "Stellar Democratic Union Law"
 status: placeholder
 plane: earth
@@ -4170,7 +4464,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Stellar Democratic Union law and can be assumed to be familiar with the laws and courts of the Stellar Democratic Union."
-`,Xm=`id: seafaring
+`,dh=`id: seafaring
 name: Seafaring
 status: placeholder
 plane: any
@@ -4185,7 +4479,7 @@ choices:
     from: place
     note: "Which seas"
     perRank: false
-`,Zm=`id: security-systems
+`,fh=`id: security-systems
 name: "Security Systems"
 status: draft
 plane: earth
@@ -4195,7 +4489,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of security systems and can be assumed to be familiar with common locks, alarms, surveillance and access controls, and their weaknesses."
-`,Qm=`id: shipping-lanes
+`,ph=`id: shipping-lanes
 name: "Shipping Lanes"
 status: placeholder
 plane: earth
@@ -4205,7 +4499,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the shipping lanes between stations, ships, and surfaces and can be assumed to be familiar with their routes, schedules, and checkpoints."
-`,$m=`id: sinhala-written
+`,mh=`id: sinhala-written
 name: "Sinhala (Written)"
 status: draft
 plane: earth
@@ -4215,7 +4509,7 @@ category: knowledge
 types: [language]
 language: sinhala
 effect: "This character can read and write the Sinhala language."
-`,eh=`id: sinhala
+`,hh=`id: sinhala
 name: "Sinhala (Spoken)"
 status: draft
 plane: earth
@@ -4225,7 +4519,7 @@ category: knowledge
 types: [language]
 language: sinhala
 effect: "This character is conversational in the Sinhala language and can speak it."
-`,th=`id: somali-written
+`,gh=`id: somali-written
 name: "Somali (Written)"
 status: draft
 plane: earth
@@ -4235,7 +4529,7 @@ category: knowledge
 types: [language]
 language: somali
 effect: "This character can read and write the Somali language."
-`,nh=`id: somali
+`,_h=`id: somali
 name: "Somali (Spoken)"
 status: draft
 plane: earth
@@ -4245,7 +4539,7 @@ category: knowledge
 types: [language]
 language: somali
 effect: "This character is conversational in the Somali language and can speak it."
-`,rh=`# Lore for Sorellion is still coming soon on the site.
+`,vh=`# Lore for Sorellion is still coming soon on the site.
 id: sorellion
 name: "Sorellion"
 status: draft
@@ -4256,7 +4550,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Sorellion and can be assumed to be familiar with its people, places and customs."
-`,ih=`id: southeast-asia
+`,yh=`id: southeast-asia
 name: "Southeast Asia"
 status: placeholder
 plane: earth
@@ -4267,7 +4561,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Empire of China’s Southeast Asian territories, their peoples, and their old borders."
-`,ah=`id: spacefaring
+`,bh=`id: spacefaring
 name: "Spacefaring"
 status: draft
 plane: earth
@@ -4277,7 +4571,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of spacefaring and can be assumed to be familiar with life in vacuum and zero gravity, airlocks, suits, life support, and what to do when they fail."
-`,oh=`id: spanish-written
+`,xh=`id: spanish-written
 name: "Spanish (Written)"
 status: placeholder
 plane: earth
@@ -4287,7 +4581,7 @@ category: knowledge
 types: [language]
 language: spanish
 effect: This character can read and write the Spanish language.
-`,sh=`id: spanish
+`,Sh=`id: spanish
 name: "Spanish (Spoken)"
 status: placeholder
 plane: earth
@@ -4297,7 +4591,7 @@ category: knowledge
 types: [language]
 language: spanish
 effect: This character is conversational in the Spanish language and can speak it.
-`,ch=`id: starships
+`,Ch=`id: starships
 name: "Starships"
 status: draft
 plane: earth
@@ -4307,7 +4601,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of starships and can be assumed to be familiar with the classes, makers, capabilities and common faults of the starships of the settled systems."
-`,lh=`id: succession-law
+`,wh=`id: succession-law
 name: Succession Law
 status: placeholder
 plane: isekai
@@ -4317,7 +4611,7 @@ tags: [law, succession, nobility]
 category: knowledge
 minStats: { memory: 6, persuasion: 2 }
 effect: "This character has knowledge of succession law and can be assumed to be familiar with who inherits what in Dreft and who has a claim to the crown."
-`,uh=`id: swahili-written
+`,Th=`id: swahili-written
 name: "Swahili (Written)"
 status: draft
 plane: earth
@@ -4327,7 +4621,7 @@ category: knowledge
 types: [language]
 language: swahili
 effect: "This character can read and write the Swahili language."
-`,dh=`id: swahili
+`,Eh=`id: swahili
 name: "Swahili (Spoken)"
 status: draft
 plane: earth
@@ -4337,7 +4631,7 @@ category: knowledge
 types: [language]
 language: swahili
 effect: "This character is conversational in the Swahili language and can speak it."
-`,fh=`id: tamil-written
+`,Dh=`id: tamil-written
 name: "Tamil (Written)"
 status: draft
 plane: earth
@@ -4347,7 +4641,7 @@ category: knowledge
 types: [language]
 language: tamil
 effect: "This character can read and write the Tamil language."
-`,ph=`id: tamil
+`,Oh=`id: tamil
 name: "Tamil (Spoken)"
 status: draft
 plane: earth
@@ -4357,7 +4651,7 @@ category: knowledge
 types: [language]
 language: tamil
 effect: "This character is conversational in the Tamil language and can speak it."
-`,mh=`id: telugu-written
+`,kh=`id: telugu-written
 name: "Telugu (Written)"
 status: draft
 plane: earth
@@ -4367,7 +4661,7 @@ category: knowledge
 types: [language]
 language: telugu
 effect: "This character can read and write the Telugu language."
-`,hh=`id: telugu
+`,Ah=`id: telugu
 name: "Telugu (Spoken)"
 status: draft
 plane: earth
@@ -4377,7 +4671,7 @@ category: knowledge
 types: [language]
 language: telugu
 effect: "This character is conversational in the Telugu language and can speak it."
-`,gh=`id: tetra-frontiers-co
+`,jh=`id: tetra-frontiers-co
 name: Tetra Frontiers Co.
 status: placeholder
 plane: isekai
@@ -4388,7 +4682,7 @@ lore: tetra-frontiers-co
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra Frontiers Co. and can be assumed to be familiar with its holdings, locations, employees, culture, and leadership."
-`,_h=`id: tetra
+`,Mh=`id: tetra
 name: "Tetra"
 status: placeholder
 plane: earth
@@ -4400,7 +4694,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Tetra and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,vh=`id: thai-written
+`,Nh=`id: thai-written
 name: "Thai (Written)"
 status: draft
 plane: earth
@@ -4410,7 +4704,7 @@ category: knowledge
 types: [language]
 language: thai
 effect: "This character can read and write the Thai language."
-`,yh=`id: thai
+`,Ph=`id: thai
 name: "Thai (Spoken)"
 status: draft
 plane: earth
@@ -4420,7 +4714,7 @@ category: knowledge
 types: [language]
 language: thai
 effect: "This character is conversational in the Thai language and can speak it."
-`,bh=`id: the-bureau-of-planar-management
+`,Fh=`id: the-bureau-of-planar-management
 name: "The Bureau of Planar Management"
 status: draft
 plane: earth
@@ -4430,7 +4724,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."
-`,xh=`id: the-chinese-empire
+`,Ih=`id: the-chinese-empire
 name: "The Empire of China"
 status: placeholder
 plane: earth
@@ -4442,7 +4736,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."
-`,Sh=`id: the-corporate-syndicates
+`,Lh=`id: the-corporate-syndicates
 name: "The Corporate Syndicates"
 status: placeholder
 plane: earth
@@ -4453,7 +4747,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Chinese corporate syndicates and can be assumed to be familiar with their people, ties, and industries."
-`,Ch=`id: the-corsine-pass
+`,Rh=`id: the-corsine-pass
 name: The Corsine Pass
 status: placeholder
 plane: isekai
@@ -4464,7 +4758,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, endurance: 2 }
 effect: "This character has knowledge of the Corsine Pass on Isekai and can be assumed to be familiar with its passes, peoples, and dangers."
-`,wh=`id: the-diplomatic-wing
+`,zh=`id: the-diplomatic-wing
 name: "The Diplomatic Wing"
 status: placeholder
 plane: earth
@@ -4476,7 +4770,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra’s Diplomatic Wing and can be assumed to be familiar with its diplomats, embassies, businesses, and security."
-`,Th=`id: the-drovus-empire
+`,Bh=`id: the-drovus-empire
 name: The Drovus Empire
 status: placeholder
 plane: isekai
@@ -4486,7 +4780,7 @@ lore: drovus-empire
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Drovus Empire and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,Eh=`id: the-explorers-lodge
+`,Vh=`id: the-explorers-lodge
 name: "The Explorers’ Lodge"
 status: placeholder
 plane: earth
@@ -4498,7 +4792,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Explorers’ Lodge and can be assumed to be familiar with its members, its rules, and how expeditions are handed out."
-`,Dh=`id: the-free-american-states
+`,Hh=`id: the-free-american-states
 name: "The Free American States"
 status: draft
 plane: earth
@@ -4508,7 +4802,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Free American States and can be assumed to be familiar with its member states, its trade and its border disputes."
-`,Oh=`id: the-imperial-military
+`,Uh=`id: the-imperial-military
 name: "The Imperial Military"
 status: placeholder
 plane: earth
@@ -4519,7 +4813,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Imperial Military and can be assumed to be familiar with its branches, ranks, bases, and habits."
-`,kh=`id: the-kings-woods
+`,Wh=`id: the-kingdom-of-india
+name: "The Kingdom of India"
+status: draft
+plane: earth
+region: kingdom-of-india
+summary: "The Kingdom of India: its royal house, its temples and the regreening of the subcontinent."
+tags: [india, politics]
+lore: kingdom-of-india
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of the Kingdom of India and can be assumed to be familiar with its customs, politics, and territories."
+`,Gh=`id: the-kings-woods
 name: The King’s Woods
 status: placeholder
 plane: isekai
@@ -4531,7 +4837,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the King’s Woods and can be assumed to be familiar with its geography, ecology, and locations."
-`,Ah=`id: the-lunar-industrial-syndicate
+`,Kh=`id: the-lunar-industrial-syndicate
 name: "The Lunar Industrial Syndicate"
 status: draft
 plane: earth
@@ -4541,7 +4847,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Lunar Industrial Syndicate and can be assumed to be familiar with its board, holdings, territories and corporate politics."
-`,jh=`id: the-martian-association
+`,qh=`id: the-martian-association
 name: "The Martian Association"
 status: placeholder
 plane: earth
@@ -4552,7 +4858,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Martian Association and can be assumed to be familiar with the peoples, places, and customs of the SDU’s territory on Mars."
-`,Mh=`id: the-stellar-democratic-union
+`,Jh=`id: the-stellar-democratic-union
 name: "The Stellar Democratic Union"
 status: placeholder
 plane: earth
@@ -4564,7 +4870,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Stellar Democratic Union and can be assumed to be familiar with its customs, politics, and territories."
-`,Nh=`id: the-sunrise-princedoms
+`,Yh=`id: the-sunrise-princedoms
 name: The Sunrise Princedoms
 status: placeholder
 plane: isekai
@@ -4573,7 +4879,7 @@ tags: [sunrise, princedoms, refugee]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Sunrise Princedoms and can be assumed to be familiar with their politics, regions, wildlife, and cultures as they were before Drovus absorbed them."
-`,Ph=`id: the-switch-port
+`,Xh=`id: the-switch-port
 name: The Switch Port
 status: placeholder
 plane: isekai
@@ -4585,7 +4891,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the switch port at Castle Tetra and can be assumed to be familiar with its peoples, places, and customs."
-`,Fh=`id: the-union-of-texas
+`,Zh=`id: the-union-of-texas
 name: "The Union of Texas"
 status: placeholder
 plane: earth
@@ -4595,7 +4901,7 @@ lore: union-of-texas
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Union of Texas and can be assumed to be familiar with its customs, politics, and territories."
-`,Ih=`id: the-united-nations
+`,Qh=`id: the-united-nations
 name: "The United Nations"
 status: placeholder
 plane: earth
@@ -4606,7 +4912,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the United Nations and can be assumed to be familiar with its institutions aboard Tetra."
-`,Lh=`id: theater
+`,$h=`id: the-ural-federation
+name: "The Ural Federation"
+status: draft
+plane: earth
+region: ural-federation
+summary: "The Ural Federation: hundreds of tribal statelets across the steppe and the thawed Siberian breadbasket."
+tags: [ural-federation, politics]
+lore: ural-federation
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of the Ural Federation and can be assumed to be familiar with its customs, politics, and territories."
+`,eg=`id: theater
 name: "Theater"
 status: draft
 plane: any
@@ -4616,7 +4934,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, persuasion: 2 }
 effect: "This character has knowledge of theater and can be assumed to be familiar with famous plays and performers, stagecraft, and how a performance is put together."
-`,Rh=`id: thieves-cant
+`,tg=`id: thieves-cant
 name: "Thieves' Cant (Spoken)"
 status: draft
 plane: any
@@ -4626,7 +4944,7 @@ category: knowledge
 types: [language]
 language: thieves-cant
 effect: "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation."
-`,zh=`id: toxicology
+`,ng=`id: toxicology
 name: "Toxicology"
 status: draft
 plane: any
@@ -4636,7 +4954,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of toxicology and can be assumed to be familiar with common poisons and venoms, their symptoms and their antidotes."
-`,Bh=`id: trade-guilds
+`,rg=`id: trade-guilds
 name: "Trade Guilds"
 status: draft
 plane: any
@@ -4646,7 +4964,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of trade guilds and can be assumed to be familiar with how craft and trade guilds are organized, their ranks, rules and the masters who run them."
-`,Vh=`id: trade-law
+`,ig=`id: trade-law
 name: Trade Law
 status: placeholder
 plane: isekai
@@ -4656,7 +4974,7 @@ tags: [law, trade, merchant]
 category: knowledge
 minStats: { memory: 3, persuasion: 2 }
 effect: "This character has knowledge of Dreftian trade law and can be assumed to be familiar with the rules of trade in Dreft and their loopholes."
-`,Hh=`id: trade-roads
+`,ag=`id: trade-roads
 name: Trade Roads
 status: placeholder
 plane: isekai
@@ -4666,7 +4984,7 @@ tags: [trade, roads, caravan]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the trade roads of Dreft and can be assumed to be familiar with their routes, products, and dangers."
-`,Uh=`id: turkish-written
+`,og=`id: turkish-written
 name: "Turkish (Written)"
 status: draft
 plane: earth
@@ -4676,7 +4994,7 @@ category: knowledge
 types: [language]
 language: turkish
 effect: "This character can read and write the Turkish language."
-`,Wh=`id: turkish
+`,sg=`id: turkish
 name: "Turkish (Spoken)"
 status: draft
 plane: earth
@@ -4686,7 +5004,7 @@ category: knowledge
 types: [language]
 language: turkish
 effect: "This character is conversational in the Turkish language and can speak it."
-`,Gh=`id: ukrainian-written
+`,cg=`id: ukrainian-written
 name: "Ukrainian (Written)"
 status: draft
 plane: earth
@@ -4696,7 +5014,7 @@ category: knowledge
 types: [language]
 language: ukrainian
 effect: "This character can read and write the Ukrainian language."
-`,Kh=`id: ukrainian
+`,lg=`id: ukrainian
 name: "Ukrainian (Spoken)"
 status: draft
 plane: earth
@@ -4706,7 +5024,7 @@ category: knowledge
 types: [language]
 language: ukrainian
 effect: "This character is conversational in the Ukrainian language and can speak it."
-`,qh=`id: union-politics
+`,ug=`id: union-politics
 name: "Union Politics"
 status: placeholder
 plane: earth
@@ -4717,7 +5035,18 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Union politics and can be assumed to be familiar with the parties, presidents, and member-state rivalries of the SDU."
-`,Jh=`id: urdu-written
+`,dg=`id: ural-tribal-law
+name: "Ural Tribal Law"
+status: draft
+plane: earth
+region: ural-federation
+summary: "The customs and tribal laws of the Ural Federation’s statelets."
+tags: [law, ural-federation]
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Ural tribal law and can be assumed to be familiar with the customs and laws of the Ural Federation’s statelets."
+`,fg=`id: urdu-written
 name: "Urdu (Written)"
 status: draft
 plane: earth
@@ -4727,7 +5056,7 @@ category: knowledge
 types: [language]
 language: urdu
 effect: "This character can read and write the Urdu language."
-`,Yh=`id: urdu
+`,pg=`id: urdu
 name: "Urdu (Spoken)"
 status: draft
 plane: earth
@@ -4737,7 +5066,7 @@ category: knowledge
 types: [language]
 language: urdu
 effect: "This character is conversational in the Urdu language and can speak it."
-`,Xh=`id: uyghur-written
+`,mg=`id: uyghur-written
 name: "Uyghur (Written)"
 status: draft
 plane: earth
@@ -4747,7 +5076,7 @@ category: knowledge
 types: [language]
 language: uyghur
 effect: "This character can read and write the Uyghur language."
-`,Zh=`id: uyghur
+`,hg=`id: uyghur
 name: "Uyghur (Spoken)"
 status: draft
 plane: earth
@@ -4757,7 +5086,7 @@ category: knowledge
 types: [language]
 language: uyghur
 effect: "This character is conversational in the Uyghur language and can speak it."
-`,Qh=`id: vietnamese-written
+`,gg=`id: vietnamese-written
 name: "Vietnamese (Written)"
 status: draft
 plane: earth
@@ -4767,7 +5096,7 @@ category: knowledge
 types: [language]
 language: vietnamese
 effect: "This character can read and write the Vietnamese language."
-`,$h=`id: vietnamese
+`,_g=`id: vietnamese
 name: "Vietnamese (Spoken)"
 status: draft
 plane: earth
@@ -4777,7 +5106,7 @@ category: knowledge
 types: [language]
 language: vietnamese
 effect: "This character is conversational in the Vietnamese language and can speak it."
-`,eg=`id: weapons
+`,vg=`id: weapons
 name: "Weapons"
 status: draft
 plane: any
@@ -4787,7 +5116,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of weapons and can be assumed to be familiar with common weapons, how they work and are maintained, and what they can do."
-`,tg=`id: wilderness-lore
+`,yg=`id: wilderness-lore
 name: "Wilderness Lore"
 status: draft
 plane: any
@@ -4797,7 +5126,19 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 3 }
 effect: "This character has knowledge of the wilderness and can be assumed to be familiar with terrain, weather, edible and dangerous plants, and the signs that keep travelers alive."
-`,ng=`id: yoruba-written
+`,bg=`id: xanthus
+name: "Xanthus"
+status: draft
+plane: earth
+region: xanthus
+summary: "Xanthus, the free Ark built around an iron asteroid, and the micro-nations that appear in its wake."
+tags: [xanthus, ark]
+lore: xanthus
+category: knowledge
+ranked: true
+minStats: { memory: 3 }
+effect: "This character has knowledge of Ark Xanthus and can be assumed to be familiar with the peoples, places, and customs aboard it."
+`,xg=`id: yoruba-written
 name: "Yoruba (Written)"
 status: draft
 plane: earth
@@ -4807,7 +5148,7 @@ category: knowledge
 types: [language]
 language: yoruba
 effect: "This character can read and write the Yoruba language."
-`,rg=`id: yoruba
+`,Sg=`id: yoruba
 name: "Yoruba (Spoken)"
 status: draft
 plane: earth
@@ -4817,7 +5158,7 @@ category: knowledge
 types: [language]
 language: yoruba
 effect: "This character is conversational in the Yoruba language and can speak it."
-`,ig=`id: yutu
+`,Cg=`id: yutu
 name: "Yùtù"
 status: placeholder
 plane: earth
@@ -4828,7 +5169,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."
-`,ag=`id: zhulong
+`,wg=`id: zhulong
 name: "Zhulong"
 status: placeholder
 plane: earth
@@ -4840,7 +5181,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Zhulong and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,og=`id: possessed-by-a-spirit
+`,Tg=`id: possessed-by-a-spirit
 name: "Possessed By A Spirit"
 status: draft
 plane: any
@@ -4850,7 +5191,7 @@ category: other
 conveyed: true
 temporary: "lost when the character is no longer possessed"
 effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."
-`,sg=`id: advanced-cooking
+`,Eg=`id: advanced-cooking
 name: "Advanced Cooking"
 status: draft
 plane: any
@@ -4861,7 +5202,7 @@ mastery: true
 minStats: { intuition: 5, memory: 4, empathy: 3 }
 prerequisites: [simple-cooking]
 effect: "This character cooks at a professional level and can feed a large group. This character can request advantage on skill checks involving cooking, and a fine meal can earn them favor in social situations at the GM’s discretion."
-`,cg=`id: advanced-potion-mixing
+`,Dg=`id: advanced-potion-mixing
 name: "Advanced Potion Mixing"
 status: draft
 plane: isekai
@@ -4872,7 +5213,7 @@ mastery: true
 minStats: { memory: 6, intuition: 6, logic: 4 }
 prerequisites: [simple-potion-mixing]
 effect: "This character can brew complex and potent potions, and can work out a new recipe from its ingredients’ properties. This character can request advantage on skill checks involving brewing potions."
-`,lg=`id: ambusher
+`,Og=`id: ambusher
 name: Ambusher
 status: placeholder
 plane: any
@@ -4880,7 +5221,7 @@ summary: Setting and springing ambushes.
 tags: [ambush, hunting, combat]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,ug=`id: animal-husbandry
+`,kg=`id: animal-husbandry
 name: "Animal Husbandry"
 status: draft
 plane: any
@@ -4890,7 +5231,7 @@ category: skill
 ranked: true
 minStats: { empathy: 3, endurance: 2, intuition: 2 }
 effect: "This character is capable of raising, feeding and caring for livestock and working animals without a skill check. Rank *10 added to skill check rolls involving handling and caring for animals."
-`,dg=`id: appraisal
+`,Ag=`id: appraisal
 name: Appraisal
 status: placeholder
 plane: any
@@ -4898,7 +5239,7 @@ summary: Judging what something is worth.
 tags: [trade, valuation, merchant]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,fg=`id: artist-painting
+`,jg=`id: artist-painting
 name: "Artist: Painting"
 status: draft
 plane: any
@@ -4908,7 +5249,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, memory: 2 }
 effect: "This character is capable of painting a competent likeness or scene without a skill check. Rank *10 added to skill check rolls involving painting."
-`,pg=`id: artist-sculpture
+`,Mg=`id: artist-sculpture
 name: "Artist: Sculpture"
 status: draft
 plane: any
@@ -4918,7 +5259,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
 effect: "This character is capable of sculpting a competent figure in stone, clay or wood without a skill check. Rank *10 added to skill check rolls involving sculpture."
-`,mg=`id: cargo-handling
+`,Ng=`id: cargo-handling
 name: "Cargo Handling"
 status: placeholder
 plane: any
@@ -4926,7 +5267,7 @@ summary: "Loading, securing and moving freight, in gravity or out of it."
 tags: [cargo, shipping, labor]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,hg=`id: concealment
+`,Pg=`id: concealment
 name: Concealment
 status: placeholder
 plane: any
@@ -4934,7 +5275,7 @@ summary: "Hiding things, and yourself."
 tags: [stealth, hiding]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,gg=`id: courtly-manners
+`,Fg=`id: courtly-manners
 name: Courtly Manners
 status: placeholder
 plane: any
@@ -4942,7 +5283,7 @@ summary: Moving gracefully through noble society.
 tags: [court, nobility, social]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,_g=`id: craft-leatherworking
+`,Ig=`id: craft-leatherworking
 name: "Craft: Leatherworking"
 status: draft
 plane: any
@@ -4952,7 +5293,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, endurance: 2, intuition: 2 }
 effect: "This character is capable of tanning hides and making leather goods and simple leather armor without a skill check. Rank *10 added to skill check rolls involving leatherworking."
-`,vg=`id: craft-masonry
+`,Lg=`id: craft-masonry
 name: "Craft: Masonry"
 status: draft
 plane: any
@@ -4962,7 +5303,7 @@ category: skill
 ranked: true
 minStats: { power: 4, endurance: 3, logic: 2 }
 effect: "This character is capable of cutting and laying stone for walls, foundations and simple structures without a skill check. Rank *10 added to skill check rolls involving masonry."
-`,yg=`id: craft-smithing
+`,Rg=`id: craft-smithing
 name: "Craft: Smithing"
 status: draft
 plane: any
@@ -4972,7 +5313,7 @@ category: skill
 ranked: true
 minStats: { power: 4, endurance: 3, grace: 2 }
 effect: "This character is capable of forging and repairing simple metal tools, fittings and weapons without a skill check. Rank *10 added to skill check rolls involving smithing."
-`,bg=`id: disguise
+`,zg=`id: disguise
 name: "Disguise"
 status: draft
 plane: any
@@ -4982,7 +5323,7 @@ category: skill
 ranked: true
 minStats: { demeanor: 4, grace: 2, intuition: 2 }
 effect: "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation."
-`,xg=`id: excavation
+`,Bg=`id: excavation
 name: "Excavation"
 status: placeholder
 plane: any
@@ -4990,7 +5331,7 @@ summary: "Digging up the past carefully enough that there’s something left to 
 tags: [archeology, fieldwork, ruins]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Sg=`id: expert-pilot
+`,Vg=`id: expert-pilot
 name: "Expert Pilot"
 status: draft
 plane: any
@@ -5001,7 +5342,7 @@ mastery: true
 minStats: { memory: 5, intuition: 10, grace: 5 }
 prerequisiteTags: [pilot]
 effect: "This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in."
-`,Cg=`id: field-sampling
+`,Hg=`id: field-sampling
 name: "Field Sampling"
 status: placeholder
 plane: any
@@ -5009,7 +5350,7 @@ summary: "Collecting, labelling and preserving samples in the field, wherever th
 tags: [parabiology, science, fieldwork, survey]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,wg=`id: folk-remedies
+`,Ug=`id: folk-remedies
 name: Folk Remedies
 status: placeholder
 plane: any
@@ -5017,7 +5358,7 @@ summary: Treating ailments with folk cures.
 tags: [healing, folk, herbs]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Tg=`id: haggler
+`,Wg=`id: haggler
 name: Haggler
 status: placeholder
 plane: any
@@ -5025,7 +5366,7 @@ summary: Getting a better price.
 tags: [trade, bargaining, merchant]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Eg=`id: incantation
+`,Gg=`id: incantation
 name: Incantation
 status: placeholder
 plane: isekai
@@ -5035,7 +5376,7 @@ category: skill
 # On the Magic list: only a character with Magical Heritage can pick it.
 list: magic
 effect: Placeholder. Effect not yet written.
-`,Dg=`id: intimidation
+`,Kg=`id: intimidation
 name: "Intimidation"
 status: draft
 plane: any
@@ -5045,7 +5386,7 @@ category: skill
 ranked: true
 minStats: { demeanor: 3, power: 3 }
 effect: "This character is capable of making a credible threat without a skill check. Rank *10 added to skill check rolls involving intimidation."
-`,Og=`id: investigation
+`,qg=`id: investigation
 name: "Investigation"
 status: draft
 plane: any
@@ -5055,7 +5396,7 @@ category: skill
 ranked: true
 minStats: { intuition: 4, logic: 3, memory: 2 }
 effect: "This character is capable of searching a scene and following obvious leads without a skill check. Rank *10 added to skill check rolls involving investigating crimes and mysteries."
-`,kg=`id: legal-advocacy
+`,Jg=`id: legal-advocacy
 name: "Legal Advocacy"
 status: placeholder
 plane: any
@@ -5063,7 +5404,7 @@ summary: "Arguing a case in court, at a hearing or across a desk, and knowing wh
 tags: [law, persuasion, courts]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Ag=`id: lockpicking
+`,Yg=`id: lockpicking
 name: "Lockpicking"
 status: draft
 plane: any
@@ -5073,7 +5414,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, intuition: 2 }
 effect: "This character is capable of opening simple mechanical locks with the right tools without a skill check. Rank *10 added to skill check rolls involving picking locks and bypassing security."
-`,jg=`id: medical-aid
+`,Xg=`id: medical-aid
 name: "Medical Aid"
 status: draft
 plane: any
@@ -5083,7 +5424,7 @@ category: skill
 ranked: true
 minStats: { empathy: 3, memory: 3, grace: 2 }
 effect: "This character is capable of performing basic first aid, such as stopping bleeding, dressing wounds and setting bones, without a skill check. Rank *10 added to skill check rolls involving treating injuries."
-`,Mg=`id: military-drill
+`,Zg=`id: military-drill
 name: "Military Drill"
 status: placeholder
 plane: any
@@ -5091,7 +5432,7 @@ summary: "Moving, fighting and following orders as part of a unit."
 tags: [military, discipline]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Ng=`id: performer-acrobatics
+`,Qg=`id: performer-acrobatics
 name: "Performer: Acrobatics"
 status: draft
 plane: any
@@ -5101,7 +5442,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, endurance: 3, persuasion: 2 }
 effect: "This character is capable of tumbling, juggling and keeping their balance in a performance without a skill check. Rank *10 added to skill check rolls involving acrobatics and balance."
-`,Pg=`id: performer-music
+`,$g=`id: performer-music
 name: "Performer: Music"
 status: draft
 plane: any
@@ -5111,7 +5452,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, persuasion: 3, intuition: 2 }
 effect: "This character is capable of playing an instrument or singing well enough to hold an audience without a skill check. Rank *10 added to skill check rolls involving musical performance."
-`,Fg=`id: pilot-fighter
+`,e_=`id: pilot-fighter
 name: "Pilot: Fighter"
 status: draft
 plane: earth
@@ -5121,7 +5462,7 @@ category: skill
 ranked: true
 minStats: { grace: 5, intuition: 4, memory: 4 }
 effect: "This character is capable of piloting a fighter in simple scenarios and describing its basic functions and controls without a skill check. Rank *10 added to skill check rolls involving fighter piloting."
-`,Ig=`id: pilot-helicopter
+`,t_=`id: pilot-helicopter
 name: "Pilot: Helicopter"
 status: draft
 plane: earth
@@ -5131,7 +5472,7 @@ category: skill
 ranked: true
 minStats: { memory: 5, intuition: 3, grace: 3 }
 effect: "This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter. Rank *10 added to skill check rolls involving helicopter piloting."
-`,Lg=`id: pilot-truck
+`,n_=`id: pilot-truck
 name: "Pilot: Truck"
 status: placeholder
 plane: earth
@@ -5141,7 +5482,7 @@ lore: trucks
 category: skill
 ranked: true
 effect: Placeholder. Effect not yet written.
-`,Rg=`id: planar-surveying
+`,r_=`id: planar-surveying
 name: "Planar Surveying"
 status: placeholder
 plane: earth
@@ -5150,7 +5491,7 @@ tags: [planes, exploration, survey]
 category: skill
 ranked: true
 effect: Placeholder. Effect not yet written.
-`,zg=`id: programming
+`,i_=`id: programming
 name: "Programming"
 status: draft
 plane: earth
@@ -5160,7 +5501,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 3, intuition: 2 }
 effect: "This character is capable of writing and debugging simple software and reading other people’s code without a skill check. Rank *10 added to skill check rolls involving programming and hacking."
-`,Bg=`id: relic-handling
+`,a_=`id: relic-handling
 name: Relic Handling
 status: placeholder
 plane: isekai
@@ -5170,7 +5511,7 @@ category: skill
 # On the Magic list: only a character with Magical Heritage can pick it.
 list: magic
 effect: Placeholder. Effect not yet written.
-`,Vg=`id: research
+`,o_=`id: research
 name: "Research"
 status: placeholder
 plane: any
@@ -5179,7 +5520,7 @@ tags: [science, research]
 category: skill
 ranked: true
 effect: Placeholder. Effect not yet written.
-`,Hg=`id: rider-basic-animals
+`,s_=`id: rider-basic-animals
 name: "Rider: Basic Animals"
 status: draft
 plane: any
@@ -5189,7 +5530,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, empathy: 4, persuasion: 3 }
 effect: "This character is capable of riding a basic animal as a mount in simple scenarios without a skill check. Rank *10 added to skill check rolls involving riding a simple animal."
-`,Ug=`id: schemer
+`,c_=`id: schemer
 name: Schemer
 status: placeholder
 plane: any
@@ -5197,7 +5538,7 @@ summary: Plotting and seeing through plots.
 tags: [intrigue, politics]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Wg=`id: shield-wall
+`,l_=`id: shield-wall
 name: Shield Wall
 status: placeholder
 plane: any
@@ -5205,7 +5546,7 @@ summary: Fighting in formation behind a shield.
 tags: [combat, shield, military]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Gg=`id: simple-cooking
+`,u_=`id: simple-cooking
 name: "Simple Cooking"
 status: draft
 plane: any
@@ -5215,7 +5556,7 @@ category: skill
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character can cook simple, filling meals for themselves and a small group without a skill check, even over a campfire. Rank *10 added to skill check rolls involving cooking."
-`,Kg=`id: simple-potion-mixing
+`,d_=`id: simple-potion-mixing
 name: "Simple Potion Mixing"
 status: draft
 plane: isekai
@@ -5225,7 +5566,7 @@ category: skill
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character can brew simple potions, such as healing draughts and sleeping tonics, from a known recipe and the right ingredients without a skill check. Rank *10 added to skill check rolls involving brewing potions."
-`,qg=`id: sleight-of-hand
+`,f_=`id: sleight-of-hand
 name: Sleight of Hand
 status: placeholder
 plane: any
@@ -5233,7 +5574,7 @@ summary: "Quick, unnoticed work with the hands."
 tags: [theft, trickery]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Jg=`id: smooth-talker
+`,p_=`id: smooth-talker
 name: Smooth Talker
 status: placeholder
 plane: any
@@ -5241,7 +5582,7 @@ summary: "Talking people into things, or out of them."
 tags: [social, persuasion]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Yg=`id: specimen-handling
+`,m_=`id: specimen-handling
 name: "Specimen Handling"
 status: placeholder
 plane: any
@@ -5249,7 +5590,7 @@ summary: "Catching, keeping, feeding and moving living specimens without losing 
 tags: [parabiology, animals, care, handling]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Xg=`id: starship-engineering
+`,h_=`id: starship-engineering
 name: "Starship Engineering"
 status: draft
 plane: earth
@@ -5259,7 +5600,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 3, grace: 2 }
 effect: "This character is capable of maintaining and making routine repairs to a starship’s reactors, drives and life support without a skill check. Rank *10 added to skill check rolls involving starship repair."
-`,Zg=`id: streetwise
+`,g_=`id: streetwise
 name: Streetwise
 status: placeholder
 plane: any
@@ -5267,7 +5608,7 @@ summary: "Getting by, and getting answers, on the street."
 tags: [urban, crime, social]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,Qg=`id: surgery
+`,__=`id: surgery
 name: "Surgery"
 status: draft
 plane: any
@@ -5278,7 +5619,7 @@ ranked: true
 minStats: { memory: 6, grace: 5, logic: 4 }
 prerequisites: [medical-aid]
 effect: "This character is capable of performing surgery to treat severe injuries, such as removing shrapnel or closing internal wounds, given the proper tools. Rank *10 added to skill check rolls involving surgery."
-`,$g=`id: survivalist
+`,v_=`id: survivalist
 name: Survivalist
 status: placeholder
 plane: any
@@ -5286,7 +5627,7 @@ summary: Staying alive with little in the wild.
 tags: [survival, wilderness]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,e_=`id: teamster
+`,y_=`id: teamster
 name: Teamster
 status: placeholder
 plane: any
@@ -5294,7 +5635,7 @@ summary: Driving and caring for draft animals and wagons.
 tags: [caravan, animals, driving]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,t_=`id: tinkerer
+`,b_=`id: tinkerer
 name: Tinkerer
 status: placeholder
 plane: any
@@ -5302,7 +5643,7 @@ summary: Fixing and improvising with machines.
 tags: [technology, repair, crafting]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,n_=`id: tracker
+`,x_=`id: tracker
 name: Tracker
 status: placeholder
 plane: any
@@ -5310,7 +5651,7 @@ summary: Following trails and reading signs.
 tags: [tracking, hunting, wilderness]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,r_=`id: vigilance
+`,S_=`id: vigilance
 name: Vigilance
 status: placeholder
 plane: any
@@ -5318,7 +5659,7 @@ summary: Staying alert on watch.
 tags: [guard, awareness]
 category: skill
 effect: Placeholder. Effect not yet written.
-`,i_=`id: wielder-longsword
+`,C_=`id: wielder-longsword
 name: "Wielder: Longsword"
 status: draft
 plane: any
@@ -5328,7 +5669,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, power: 4, endurance: 4 }
 effect: "This character is capable of performing the basic tasks of maintaining a Longsword without a skill check. Rank *5 added to skill check rolls involving a Longsword."
-`,a_=`id: wielder-musket
+`,w_=`id: wielder-musket
 name: "Wielder: Musket"
 status: draft
 plane: any
@@ -5338,7 +5679,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, power: 2, intuition: 3 }
 effect: "This character is capable of performing the basic tasks of maintaining a Musket without a skill check. Rank *5 added to skill check rolls involving a Musket."
-`,o_=`id: wielder-pistol
+`,T_=`id: wielder-pistol
 name: "Wielder: Pistol"
 status: draft
 plane: any
@@ -5348,7 +5689,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 2 }
 effect: "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol."
-`,s_=`id: wielder-rifle
+`,E_=`id: wielder-rifle
 name: "Wielder: Rifle"
 status: draft
 plane: earth
@@ -5358,7 +5699,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
 effect: "This character is capable of performing the basic tasks of maintaining a Rifle without a skill check. Rank *5 added to skill check rolls involving a Rifle."
-`,c_=`id: wielder-war-axe
+`,D_=`id: wielder-war-axe
 name: "Wielder: War Axe"
 status: draft
 plane: any
@@ -5368,55 +5709,55 @@ category: skill
 ranked: true
 minStats: { power: 5, endurance: 4, grace: 3 }
 effect: "This character is capable of performing the basic tasks of maintaining a War Axe without a skill check. Rank *5 added to skill check rolls involving a War Axe."
-`,l_=Symbol.for(`yaml.alias`),u_=Symbol.for(`yaml.document`),d_=Symbol.for(`yaml.map`),f_=Symbol.for(`yaml.pair`),p_=Symbol.for(`yaml.scalar`),m_=Symbol.for(`yaml.seq`),h_=Symbol.for(`yaml.node.type`),g_=e=>!!e&&typeof e==`object`&&e[h_]===l_,__=e=>!!e&&typeof e==`object`&&e[h_]===u_,v_=e=>!!e&&typeof e==`object`&&e[h_]===d_,y_=e=>!!e&&typeof e==`object`&&e[h_]===f_,b_=e=>!!e&&typeof e==`object`&&e[h_]===p_,x_=e=>!!e&&typeof e==`object`&&e[h_]===m_;function S_(e){if(e&&typeof e==`object`)switch(e[h_]){case d_:case m_:return!0}return!1}function C_(e){if(e&&typeof e==`object`)switch(e[h_]){case l_:case d_:case p_:case m_:return!0}return!1}var w_=e=>(b_(e)||S_(e))&&!!e.anchor,T_=Symbol(`break visit`),E_=Symbol(`skip children`),D_=Symbol(`remove node`);function O_(e,t){let n=A_(t);__(e)?k_(null,e.contents,n,Object.freeze([e]))===D_&&(e.contents=null):k_(null,e,n,Object.freeze([]))}O_.BREAK=T_,O_.SKIP=E_,O_.REMOVE=D_;function k_(e,t,n,r){let i=j_(e,t,n,r);if(C_(i)||y_(i))return M_(e,r,i),k_(e,i,n,r);if(typeof i!=`symbol`){if(S_(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=k_(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===T_)return T_;else i===D_&&(t.items.splice(e,1),--e)}}else if(y_(t)){r=Object.freeze(r.concat(t));let e=k_(`key`,t.key,n,r);if(e===T_)return T_;e===D_&&(t.key=null);let i=k_(`value`,t.value,n,r);if(i===T_)return T_;i===D_&&(t.value=null)}}return i}function A_(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function j_(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(v_(t))return n.Map?.(e,t,r);if(x_(t))return n.Seq?.(e,t,r);if(y_(t))return n.Pair?.(e,t,r);if(b_(t))return n.Scalar?.(e,t,r);if(g_(t))return n.Alias?.(e,t,r)}function M_(e,t,n){let r=t[t.length-1];if(S_(r))r.items[e]=n;else if(y_(r))e===`key`?r.key=n:r.value=n;else if(__(r))r.contents=n;else{let e=g_(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var N_={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},P_=e=>e.replace(/[!,[\]{}]/g,e=>N_[e]),F_=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+P_(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&C_(e.contents)){let t={};O_(e.contents,(e,n)=>{C_(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
-`)}};F_.defaultYaml={explicit:!1,version:`1.2`},F_.defaultTags={"!!":`tag:yaml.org,2002:`};function I_(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function L_(e){let t=new Set;return O_(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function R_(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function z_(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=L_(e);let a=R_(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(b_(t.node)||S_(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function B_(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=B_(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=B_(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=B_(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=B_(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function V_(e,t,n){if(Array.isArray(e))return e.map((e,t)=>V_(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!w_(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var H_=class{constructor(e){Object.defineProperty(this,h_,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!__(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=V_(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?B_(i,{"":o},``,o):o}},U_=class extends H_{constructor(e){super(l_),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],O_(e,{Node:(e,t)=>{(g_(t)||w_(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(V_(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=W_(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(I_(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function W_(e,t,n){if(g_(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(S_(t)){let r=0;for(let i of t.items){let t=W_(e,i,n);t>r&&(r=t)}return r}if(y_(t)){let r=W_(e,t.key,n),i=W_(e,t.value,n);return Math.max(r,i)}return 1}var G_=e=>!e||typeof e!=`function`&&typeof e!=`object`,Z=class extends H_{constructor(e){super(p_),this.value=e}toJSON(e,t){return t?.keep?this.value:V_(this.value,e,t)}toString(){return String(this.value)}};Z.BLOCK_FOLDED=`BLOCK_FOLDED`,Z.BLOCK_LITERAL=`BLOCK_LITERAL`,Z.PLAIN=`PLAIN`,Z.QUOTE_DOUBLE=`QUOTE_DOUBLE`,Z.QUOTE_SINGLE=`QUOTE_SINGLE`;var K_=`tag:yaml.org,2002:`;function q_(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function J_(e,t,n){if(__(e)&&(e=e.contents),C_(e))return e;if(y_(e)){let t=n.schema[d_].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new U_(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=K_+t.slice(2));let l=q_(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new Z(e);return c&&(c.node=t),t}l=e instanceof Map?o[d_]:Symbol.iterator in Object(e)?o[m_]:o[d_]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new Z(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function Y_(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return J_(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var X_=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,Z_=class extends H_{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>C_(t)||y_(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(X_(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(S_(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,Y_(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(S_(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&b_(i)?i.value:i:S_(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!y_(t))return!1;let n=t.value;return n==null||e&&b_(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return S_(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(S_(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,Y_(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},Q_=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function $_(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var ev=(e,t,n)=>e.endsWith(`
-`)?$_(n,t):n.includes(`
+`,O_=Symbol.for(`yaml.alias`),k_=Symbol.for(`yaml.document`),A_=Symbol.for(`yaml.map`),j_=Symbol.for(`yaml.pair`),M_=Symbol.for(`yaml.scalar`),N_=Symbol.for(`yaml.seq`),P_=Symbol.for(`yaml.node.type`),F_=e=>!!e&&typeof e==`object`&&e[P_]===O_,I_=e=>!!e&&typeof e==`object`&&e[P_]===k_,L_=e=>!!e&&typeof e==`object`&&e[P_]===A_,R_=e=>!!e&&typeof e==`object`&&e[P_]===j_,z_=e=>!!e&&typeof e==`object`&&e[P_]===M_,B_=e=>!!e&&typeof e==`object`&&e[P_]===N_;function V_(e){if(e&&typeof e==`object`)switch(e[P_]){case A_:case N_:return!0}return!1}function H_(e){if(e&&typeof e==`object`)switch(e[P_]){case O_:case A_:case M_:case N_:return!0}return!1}var U_=e=>(z_(e)||V_(e))&&!!e.anchor,W_=Symbol(`break visit`),G_=Symbol(`skip children`),K_=Symbol(`remove node`);function q_(e,t){let n=Y_(t);I_(e)?J_(null,e.contents,n,Object.freeze([e]))===K_&&(e.contents=null):J_(null,e,n,Object.freeze([]))}q_.BREAK=W_,q_.SKIP=G_,q_.REMOVE=K_;function J_(e,t,n,r){let i=X_(e,t,n,r);if(H_(i)||R_(i))return Z_(e,r,i),J_(e,i,n,r);if(typeof i!=`symbol`){if(V_(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=J_(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===W_)return W_;else i===K_&&(t.items.splice(e,1),--e)}}else if(R_(t)){r=Object.freeze(r.concat(t));let e=J_(`key`,t.key,n,r);if(e===W_)return W_;e===K_&&(t.key=null);let i=J_(`value`,t.value,n,r);if(i===W_)return W_;i===K_&&(t.value=null)}}return i}function Y_(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function X_(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(L_(t))return n.Map?.(e,t,r);if(B_(t))return n.Seq?.(e,t,r);if(R_(t))return n.Pair?.(e,t,r);if(z_(t))return n.Scalar?.(e,t,r);if(F_(t))return n.Alias?.(e,t,r)}function Z_(e,t,n){let r=t[t.length-1];if(V_(r))r.items[e]=n;else if(R_(r))e===`key`?r.key=n:r.value=n;else if(I_(r))r.contents=n;else{let e=F_(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var Q_={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},$_=e=>e.replace(/[!,[\]{}]/g,e=>Q_[e]),ev=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+$_(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&H_(e.contents)){let t={};q_(e.contents,(e,n)=>{H_(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
+`)}};ev.defaultYaml={explicit:!1,version:`1.2`},ev.defaultTags={"!!":`tag:yaml.org,2002:`};function tv(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function nv(e){let t=new Set;return q_(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function rv(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function iv(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=nv(e);let a=rv(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(z_(t.node)||V_(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function av(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=av(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=av(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=av(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=av(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function ov(e,t,n){if(Array.isArray(e))return e.map((e,t)=>ov(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!U_(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var sv=class{constructor(e){Object.defineProperty(this,P_,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!I_(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=ov(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?av(i,{"":o},``,o):o}},cv=class extends sv{constructor(e){super(O_),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],q_(e,{Node:(e,t)=>{(F_(t)||U_(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(ov(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=lv(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(tv(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function lv(e,t,n){if(F_(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(V_(t)){let r=0;for(let i of t.items){let t=lv(e,i,n);t>r&&(r=t)}return r}if(R_(t)){let r=lv(e,t.key,n),i=lv(e,t.value,n);return Math.max(r,i)}return 1}var uv=e=>!e||typeof e!=`function`&&typeof e!=`object`,Z=class extends sv{constructor(e){super(M_),this.value=e}toJSON(e,t){return t?.keep?this.value:ov(this.value,e,t)}toString(){return String(this.value)}};Z.BLOCK_FOLDED=`BLOCK_FOLDED`,Z.BLOCK_LITERAL=`BLOCK_LITERAL`,Z.PLAIN=`PLAIN`,Z.QUOTE_DOUBLE=`QUOTE_DOUBLE`,Z.QUOTE_SINGLE=`QUOTE_SINGLE`;var dv=`tag:yaml.org,2002:`;function fv(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function pv(e,t,n){if(I_(e)&&(e=e.contents),H_(e))return e;if(R_(e)){let t=n.schema[A_].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new cv(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=dv+t.slice(2));let l=fv(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new Z(e);return c&&(c.node=t),t}l=e instanceof Map?o[A_]:Symbol.iterator in Object(e)?o[N_]:o[A_]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new Z(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function mv(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return pv(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var hv=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,gv=class extends sv{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>H_(t)||R_(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(hv(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(V_(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,mv(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(V_(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&z_(i)?i.value:i:V_(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!R_(t))return!1;let n=t.value;return n==null||e&&z_(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return V_(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(V_(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,mv(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},_v=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function vv(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var yv=(e,t,n)=>e.endsWith(`
+`)?vv(n,t):n.includes(`
 `)?`
-`+$_(n,t):(e.endsWith(` `)?``:` `)+n,tv=`flow`,nv=`block`,rv=`quoted`;function iv(e,t,n=`flow`,{indentAtStart:r,lineWidth:i=80,minContentWidth:a=20,onFold:o,onOverflow:s}={}){if(!i||i<0)return e;i<a&&(a=0);let c=Math.max(1+a,1+i-t.length);if(e.length<=c)return e;let l=[],u={},d=i-t.length;typeof r==`number`&&(r>i-Math.max(2,a)?l.push(0):d=i-r);let f,p,m=!1,h=-1,g=-1,_=-1;n===`block`&&(h=av(e,h,t.length),h!==-1&&(d=h+c));for(let r;r=e[h+=1];){if(n===`quoted`&&r===`\\`){switch(g=h,e[h+1]){case`x`:h+=3;break;case`u`:h+=5;break;case`U`:h+=9;break;default:h+=1}_=h}if(r===`
-`)n===`block`&&(h=av(e,h,t.length)),d=h+t.length+c,f=void 0;else{if(r===` `&&p&&p!==` `&&p!==`
+`+vv(n,t):(e.endsWith(` `)?``:` `)+n,bv=`flow`,xv=`block`,Sv=`quoted`;function Cv(e,t,n=`flow`,{indentAtStart:r,lineWidth:i=80,minContentWidth:a=20,onFold:o,onOverflow:s}={}){if(!i||i<0)return e;i<a&&(a=0);let c=Math.max(1+a,1+i-t.length);if(e.length<=c)return e;let l=[],u={},d=i-t.length;typeof r==`number`&&(r>i-Math.max(2,a)?l.push(0):d=i-r);let f,p,m=!1,h=-1,g=-1,_=-1;n===`block`&&(h=wv(e,h,t.length),h!==-1&&(d=h+c));for(let r;r=e[h+=1];){if(n===`quoted`&&r===`\\`){switch(g=h,e[h+1]){case`x`:h+=3;break;case`u`:h+=5;break;case`U`:h+=9;break;default:h+=1}_=h}if(r===`
+`)n===`block`&&(h=wv(e,h,t.length)),d=h+t.length+c,f=void 0;else{if(r===` `&&p&&p!==` `&&p!==`
 `&&p!==`	`){let t=e[h+1];t&&t!==` `&&t!==`
-`&&t!==`	`&&(f=h)}if(h>=d){if(f)l.push(f),d=f+c,f=void 0;else if(n===`quoted`){for(;p===` `||p===`	`;)p=r,r=e[h+=1],m=!0;let t=h>_+1?h-2:g-1;if(u[t])return e;l.push(t),u[t]=!0,d=t+c,f=void 0}else m=!0}}p=r}if(m&&s&&s(),l.length===0)return e;o&&o();let v=e.slice(0,l[0]);for(let r=0;r<l.length;++r){let i=l[r],a=l[r+1]||e.length;i===0?v=`\n${t}${e.slice(0,a)}`:(n===`quoted`&&u[i]&&(v+=`${e[i]}\\`),v+=`\n${t}${e.slice(i+1,a)}`)}return v}function av(e,t,n){let r=t,i=t+1,a=e[i];for(;a===` `||a===`	`;)if(t<i+n)a=e[++t];else{do a=e[++t];while(a&&a!==`
-`);r=t,i=t+1,a=e[i]}return r}var ov=(e,t)=>({indentAtStart:t?e.indent.length:e.indentAtStart,lineWidth:e.options.lineWidth,minContentWidth:e.options.minContentWidth}),sv=e=>/^(%|---|\.\.\.)/m.test(e);function cv(e,t,n){if(!t||t<0)return!1;let r=t-n,i=e.length;if(i<=r)return!1;for(let t=0,n=0;t<i;++t)if(e[t]===`
-`){if(t-n>r)return!0;if(n=t+1,i-n<=r)return!1}return!0}function lv(e,t){let n=JSON.stringify(e);if(t.options.doubleQuotedAsJSON)return n;let{implicitKey:r}=t,i=t.options.doubleQuotedMinMultiLineLength,a=t.indent||(sv(e)?`  `:``),o=``,s=0;for(let e=0,t=n[e];t;t=n[++e])if(t===` `&&n[e+1]===`\\`&&n[e+2]===`n`&&(o+=n.slice(s,e)+`\\ `,e+=1,s=e,t=`\\`),t===`\\`)switch(n[e+1]){case`u`:{o+=n.slice(s,e);let t=n.substr(e+2,4);switch(t){case`0000`:o+=`\\0`;break;case`0007`:o+=`\\a`;break;case`000b`:o+=`\\v`;break;case`001b`:o+=`\\e`;break;case`0085`:o+=`\\N`;break;case`00a0`:o+=`\\_`;break;case`2028`:o+=`\\L`;break;case`2029`:o+=`\\P`;break;default:t.substr(0,2)===`00`?o+=`\\x`+t.substr(2):o+=n.substr(e,6)}e+=5,s=e+1}break;case`n`:if(r||n[e+2]===`"`||n.length<i)e+=1;else{for(o+=n.slice(s,e)+`
+`&&t!==`	`&&(f=h)}if(h>=d){if(f)l.push(f),d=f+c,f=void 0;else if(n===`quoted`){for(;p===` `||p===`	`;)p=r,r=e[h+=1],m=!0;let t=h>_+1?h-2:g-1;if(u[t])return e;l.push(t),u[t]=!0,d=t+c,f=void 0}else m=!0}}p=r}if(m&&s&&s(),l.length===0)return e;o&&o();let v=e.slice(0,l[0]);for(let r=0;r<l.length;++r){let i=l[r],a=l[r+1]||e.length;i===0?v=`\n${t}${e.slice(0,a)}`:(n===`quoted`&&u[i]&&(v+=`${e[i]}\\`),v+=`\n${t}${e.slice(i+1,a)}`)}return v}function wv(e,t,n){let r=t,i=t+1,a=e[i];for(;a===` `||a===`	`;)if(t<i+n)a=e[++t];else{do a=e[++t];while(a&&a!==`
+`);r=t,i=t+1,a=e[i]}return r}var Tv=(e,t)=>({indentAtStart:t?e.indent.length:e.indentAtStart,lineWidth:e.options.lineWidth,minContentWidth:e.options.minContentWidth}),Ev=e=>/^(%|---|\.\.\.)/m.test(e);function Dv(e,t,n){if(!t||t<0)return!1;let r=t-n,i=e.length;if(i<=r)return!1;for(let t=0,n=0;t<i;++t)if(e[t]===`
+`){if(t-n>r)return!0;if(n=t+1,i-n<=r)return!1}return!0}function Ov(e,t){let n=JSON.stringify(e);if(t.options.doubleQuotedAsJSON)return n;let{implicitKey:r}=t,i=t.options.doubleQuotedMinMultiLineLength,a=t.indent||(Ev(e)?`  `:``),o=``,s=0;for(let e=0,t=n[e];t;t=n[++e])if(t===` `&&n[e+1]===`\\`&&n[e+2]===`n`&&(o+=n.slice(s,e)+`\\ `,e+=1,s=e,t=`\\`),t===`\\`)switch(n[e+1]){case`u`:{o+=n.slice(s,e);let t=n.substr(e+2,4);switch(t){case`0000`:o+=`\\0`;break;case`0007`:o+=`\\a`;break;case`000b`:o+=`\\v`;break;case`001b`:o+=`\\e`;break;case`0085`:o+=`\\N`;break;case`00a0`:o+=`\\_`;break;case`2028`:o+=`\\L`;break;case`2029`:o+=`\\P`;break;default:t.substr(0,2)===`00`?o+=`\\x`+t.substr(2):o+=n.substr(e,6)}e+=5,s=e+1}break;case`n`:if(r||n[e+2]===`"`||n.length<i)e+=1;else{for(o+=n.slice(s,e)+`
 
 `;n[e+2]===`\\`&&n[e+3]===`n`&&n[e+4]!==`"`;)o+=`
-`,e+=2;o+=a,n[e+2]===` `&&(o+=`\\`),e+=1,s=e+1}break;default:e+=1}return o=s?o+n.slice(s):n,r?o:iv(o,a,rv,ov(t,!1))}function uv(e,t){if(t.options.singleQuote===!1||t.implicitKey&&e.includes(`
-`)||/[ \t]\n|\n[ \t]/.test(e))return lv(e,t);let n=t.indent||(sv(e)?`  `:``),r=`'`+e.replace(/'/g,`''`).replace(/\n+/g,`$&\n${n}`)+`'`;return t.implicitKey?r:iv(r,n,tv,ov(t,!1))}function dv(e,t){let{singleQuote:n}=t.options,r;if(n===!1)r=lv;else{let t=e.includes(`"`),i=e.includes(`'`);r=t&&!i?uv:i&&!t?lv:n?uv:lv}return r(e,t)}var fv;try{fv=RegExp(`(^|(?<!
+`,e+=2;o+=a,n[e+2]===` `&&(o+=`\\`),e+=1,s=e+1}break;default:e+=1}return o=s?o+n.slice(s):n,r?o:Cv(o,a,Sv,Tv(t,!1))}function kv(e,t){if(t.options.singleQuote===!1||t.implicitKey&&e.includes(`
+`)||/[ \t]\n|\n[ \t]/.test(e))return Ov(e,t);let n=t.indent||(Ev(e)?`  `:``),r=`'`+e.replace(/'/g,`''`).replace(/\n+/g,`$&\n${n}`)+`'`;return t.implicitKey?r:Cv(r,n,bv,Tv(t,!1))}function Av(e,t){let{singleQuote:n}=t.options,r;if(n===!1)r=Ov;else{let t=e.includes(`"`),i=e.includes(`'`);r=t&&!i?kv:i&&!t?Ov:n?kv:Ov}return r(e,t)}var jv;try{jv=RegExp(`(^|(?<!
 ))
 +(?!
-|$)`,`g`)}catch{fv=/\n+(?!\n|$)/g}function pv({comment:e,type:t,value:n},r,i,a){let{blockQuote:o,commentString:s,lineWidth:c}=r.options;if(!o||/\n[\t ]+$/.test(n))return dv(n,r);let l=r.indent||(r.forceBlockIndent||sv(n)?`  `:``),u=o===`literal`?!0:o===`folded`||t===Z.BLOCK_FOLDED?!1:t===Z.BLOCK_LITERAL||!cv(n,c,l.length);if(!n)return u?`|
+|$)`,`g`)}catch{jv=/\n+(?!\n|$)/g}function Mv({comment:e,type:t,value:n},r,i,a){let{blockQuote:o,commentString:s,lineWidth:c}=r.options;if(!o||/\n[\t ]+$/.test(n))return Av(n,r);let l=r.indent||(r.forceBlockIndent||Ev(n)?`  `:``),u=o===`literal`?!0:o===`folded`||t===Z.BLOCK_FOLDED?!1:t===Z.BLOCK_LITERAL||!Dv(n,c,l.length);if(!n)return u?`|
 `:`>
 `;let d,f;for(f=n.length;f>0;--f){let e=n[f-1];if(e!==`
 `&&e!==`	`&&e!==` `)break}let p=n.substring(f),m=p.indexOf(`
 `);m===-1?d=`-`:n===p||m!==p.length-1?(d=`+`,a&&a()):d=``,p&&=(n=n.slice(0,-p.length),p[p.length-1]===`
-`&&(p=p.slice(0,-1)),p.replace(fv,`$&${l}`));let h=!1,g,_=-1;for(g=0;g<n.length;++g){let e=n[g];if(e===` `)h=!0;else if(e===`
+`&&(p=p.slice(0,-1)),p.replace(jv,`$&${l}`));let h=!1,g,_=-1;for(g=0;g<n.length;++g){let e=n[g];if(e===` `)h=!0;else if(e===`
 `)_=g;else break}let v=n.substring(0,_<g?_+1:g);v&&=(n=n.substring(v.length),v.replace(/\n+/g,`$&${l}`));let y=(h?l?`2`:`1`:``)+d;if(e&&(y+=` `+s(e.replace(/ ?[\r\n]+/g,` `)),i&&i()),!u){let e=n.replace(/\n+/g,`
-$&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\n+/g,`$&${l}`),i=!1,a=ov(r,!0);o!==`folded`&&t!==Z.BLOCK_FOLDED&&(a.onOverflow=()=>{i=!0});let s=iv(`${v}${e}${p}`,l,nv,a);if(!i)return`>${y}\n${l}${s}`}return n=n.replace(/\n+/g,`$&${l}`),`|${y}\n${l}${v}${n}${p}`}function mv(e,t,n,r){let{type:i,value:a}=e,{actualString:o,implicitKey:s,indent:c,indentStep:l,inFlow:u}=t;if(s&&a.includes(`
-`)||u&&/[[\]{},]/.test(a))return dv(a,t);if(/^[\n\t ,[\]{}#&*!|>'"%@`]|^[?-]$|^[?-][ \t]|[\n:][ \t]|[ \t]\n|[\n\t ]#|[\n\t :]$/.test(a))return s||u||!a.includes(`
-`)?dv(a,t):pv(e,t,n,r);if(!s&&!u&&i!==Z.PLAIN&&a.includes(`
-`))return pv(e,t,n,r);if(sv(a)){if(c===``)return t.forceBlockIndent=!0,pv(e,t,n,r);if(s&&c===l)return dv(a,t)}let d=a.replace(/\n+/g,`$&\n${c}`);if(o){let e=e=>e.default&&e.tag!==`tag:yaml.org,2002:str`&&e.test?.test(d),{compat:n,tags:r}=t.doc.schema;if(r.some(e)||n?.some(e))return dv(a,t)}return s?d:iv(d,c,tv,ov(t,!1))}function hv(e,t,n,r){let{implicitKey:i,inFlow:a}=t,o=typeof e.value==`string`?e:Object.assign({},e,{value:String(e.value)}),{type:s}=e;s!==Z.QUOTE_DOUBLE&&/[\x00-\x08\x0b-\x1f\x7f-\x9f\u{D800}-\u{DFFF}]/u.test(o.value)&&(s=Z.QUOTE_DOUBLE);let c=e=>{switch(e){case Z.BLOCK_FOLDED:case Z.BLOCK_LITERAL:return i||a?dv(o.value,t):pv(o,t,n,r);case Z.QUOTE_DOUBLE:return lv(o.value,t);case Z.QUOTE_SINGLE:return uv(o.value,t);case Z.PLAIN:return mv(o,t,n,r);default:return null}},l=c(s);if(l===null){let{defaultKeyType:e,defaultStringType:n}=t.options,r=i&&e||n;if(l=c(r),l===null)throw Error(`Unsupported default string type ${r}`)}return l}function gv(e,t){let n=Object.assign({blockQuote:!0,commentString:Q_,defaultKeyType:null,defaultStringType:`PLAIN`,directives:null,doubleQuotedAsJSON:!1,doubleQuotedMinMultiLineLength:40,falseStr:`false`,flowCollectionPadding:!0,indentSeq:!0,lineWidth:80,minContentWidth:20,nullStr:`null`,simpleKeys:!1,singleQuote:null,trailingComma:!1,trueStr:`true`,verifyAliasOrder:!0},e.schema.toStringOptions,t),r;switch(n.collectionStyle){case`block`:r=!1;break;case`flow`:r=!0;break;default:r=null}return{anchors:new Set,doc:e,flowCollectionPadding:n.flowCollectionPadding?` `:``,indent:``,indentStep:typeof n.indent==`number`?` `.repeat(n.indent):`  `,inFlow:r,options:n}}function _v(e,t){if(t.tag){let n=e.filter(e=>e.tag===t.tag);if(n.length>0)return n.find(e=>e.format===t.format)??n[0]}let n,r;if(b_(t)){r=t.value;let i=e.filter(e=>e.identify?.(r));if(i.length>1){let e=i.filter(e=>e.test);e.length>0&&(i=e)}n=i.find(e=>e.format===t.format)??i.find(e=>!e.format)}else r=t,n=e.find(e=>e.nodeClass&&r instanceof e.nodeClass);if(!n){let e=r?.constructor?.name??(r===null?`null`:typeof r);throw Error(`Tag not resolved for ${e} value`)}return n}function vv(e,t,{anchors:n,doc:r}){if(!r.directives)return``;let i=[],a=(b_(e)||S_(e))&&e.anchor;a&&I_(a)&&(n.add(a),i.push(`&${a}`));let o=e.tag??(t.default?null:t.tag);return o&&i.push(r.directives.tagString(o)),i.join(` `)}function yv(e,t,n,r){if(y_(e))return e.toString(t,n,r);if(g_(e)){if(t.doc.directives)return e.toString(t);if(t.resolvedAliases?.has(e))throw TypeError(`Cannot stringify circular structure without alias nodes`);t.resolvedAliases?t.resolvedAliases.add(e):t.resolvedAliases=new Set([e]),e=e.resolve(t.doc)}let i,a=C_(e)?e:t.doc.createNode(e,{onTagObj:e=>i=e});i??=_v(t.doc.schema.tags,a);let o=vv(a,i,t);o.length>0&&(t.indentAtStart=(t.indentAtStart??0)+o.length+1);let s=typeof i.stringify==`function`?i.stringify(a,t,n,r):b_(a)?hv(a,t,n,r):a.toString(t,n,r);return o?b_(a)||s[0]===`{`||s[0]===`[`?`${o} ${s}`:`${o}\n${t.indent}${s}`:s}function bv({key:e,value:t},n,r,i){let{allNullValues:a,doc:o,indent:s,indentStep:c,options:{commentString:l,indentSeq:u,simpleKeys:d}}=n,f=C_(e)&&e.comment||null;if(d){if(f)throw Error(`With simple keys, key nodes cannot have comments`);if(S_(e)||!C_(e)&&typeof e==`object`)throw Error(`With simple keys, collection cannot be used as a key value`)}let p=!d&&(!e||f&&t==null&&!n.inFlow||S_(e)||(b_(e)?e.type===Z.BLOCK_FOLDED||e.type===Z.BLOCK_LITERAL:typeof e==`object`));n=Object.assign({},n,{allNullValues:!1,implicitKey:!p&&(d||!a),indent:s+c});let m=!1,h=!1,g=yv(e,n,()=>m=!0,()=>h=!0);if(!p&&!n.inFlow&&g.length>1024){if(d)throw Error(`With simple keys, single line scalar must not span more than 1024 characters`);p=!0}if(n.inFlow){if(a||t==null)return m&&r&&r(),g===``?`?`:p?`? ${g}`:g}else if(a&&!d||t==null&&p)return g=`? ${g}`,f&&!m?g+=ev(g,n.indent,l(f)):h&&i&&i(),g;m&&(f=null),p?(f&&(g+=ev(g,n.indent,l(f))),g=`? ${g}\n${s}:`):(g=`${g}:`,f&&(g+=ev(g,n.indent,l(f))));let _,v,y;C_(t)?(_=!!t.spaceBefore,v=t.commentBefore,y=t.comment):(_=!1,v=null,y=null,t&&typeof t==`object`&&(t=o.createNode(t))),n.implicitKey=!1,!p&&!f&&b_(t)&&(n.indentAtStart=g.length+1),h=!1,!u&&c.length>=2&&!n.inFlow&&!p&&x_(t)&&!t.flow&&!t.tag&&!t.anchor&&(n.indent=n.indent.substring(2));let b=!1,x=yv(t,n,()=>b=!0,()=>h=!0),S=` `;if(f||_||v){if(S=_?`
-`:``,v){let e=l(v);S+=`\n${$_(e,n.indent)}`}x===``&&!n.inFlow?S===`
+$&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\n+/g,`$&${l}`),i=!1,a=Tv(r,!0);o!==`folded`&&t!==Z.BLOCK_FOLDED&&(a.onOverflow=()=>{i=!0});let s=Cv(`${v}${e}${p}`,l,xv,a);if(!i)return`>${y}\n${l}${s}`}return n=n.replace(/\n+/g,`$&${l}`),`|${y}\n${l}${v}${n}${p}`}function Nv(e,t,n,r){let{type:i,value:a}=e,{actualString:o,implicitKey:s,indent:c,indentStep:l,inFlow:u}=t;if(s&&a.includes(`
+`)||u&&/[[\]{},]/.test(a))return Av(a,t);if(/^[\n\t ,[\]{}#&*!|>'"%@`]|^[?-]$|^[?-][ \t]|[\n:][ \t]|[ \t]\n|[\n\t ]#|[\n\t :]$/.test(a))return s||u||!a.includes(`
+`)?Av(a,t):Mv(e,t,n,r);if(!s&&!u&&i!==Z.PLAIN&&a.includes(`
+`))return Mv(e,t,n,r);if(Ev(a)){if(c===``)return t.forceBlockIndent=!0,Mv(e,t,n,r);if(s&&c===l)return Av(a,t)}let d=a.replace(/\n+/g,`$&\n${c}`);if(o){let e=e=>e.default&&e.tag!==`tag:yaml.org,2002:str`&&e.test?.test(d),{compat:n,tags:r}=t.doc.schema;if(r.some(e)||n?.some(e))return Av(a,t)}return s?d:Cv(d,c,bv,Tv(t,!1))}function Pv(e,t,n,r){let{implicitKey:i,inFlow:a}=t,o=typeof e.value==`string`?e:Object.assign({},e,{value:String(e.value)}),{type:s}=e;s!==Z.QUOTE_DOUBLE&&/[\x00-\x08\x0b-\x1f\x7f-\x9f\u{D800}-\u{DFFF}]/u.test(o.value)&&(s=Z.QUOTE_DOUBLE);let c=e=>{switch(e){case Z.BLOCK_FOLDED:case Z.BLOCK_LITERAL:return i||a?Av(o.value,t):Mv(o,t,n,r);case Z.QUOTE_DOUBLE:return Ov(o.value,t);case Z.QUOTE_SINGLE:return kv(o.value,t);case Z.PLAIN:return Nv(o,t,n,r);default:return null}},l=c(s);if(l===null){let{defaultKeyType:e,defaultStringType:n}=t.options,r=i&&e||n;if(l=c(r),l===null)throw Error(`Unsupported default string type ${r}`)}return l}function Fv(e,t){let n=Object.assign({blockQuote:!0,commentString:_v,defaultKeyType:null,defaultStringType:`PLAIN`,directives:null,doubleQuotedAsJSON:!1,doubleQuotedMinMultiLineLength:40,falseStr:`false`,flowCollectionPadding:!0,indentSeq:!0,lineWidth:80,minContentWidth:20,nullStr:`null`,simpleKeys:!1,singleQuote:null,trailingComma:!1,trueStr:`true`,verifyAliasOrder:!0},e.schema.toStringOptions,t),r;switch(n.collectionStyle){case`block`:r=!1;break;case`flow`:r=!0;break;default:r=null}return{anchors:new Set,doc:e,flowCollectionPadding:n.flowCollectionPadding?` `:``,indent:``,indentStep:typeof n.indent==`number`?` `.repeat(n.indent):`  `,inFlow:r,options:n}}function Iv(e,t){if(t.tag){let n=e.filter(e=>e.tag===t.tag);if(n.length>0)return n.find(e=>e.format===t.format)??n[0]}let n,r;if(z_(t)){r=t.value;let i=e.filter(e=>e.identify?.(r));if(i.length>1){let e=i.filter(e=>e.test);e.length>0&&(i=e)}n=i.find(e=>e.format===t.format)??i.find(e=>!e.format)}else r=t,n=e.find(e=>e.nodeClass&&r instanceof e.nodeClass);if(!n){let e=r?.constructor?.name??(r===null?`null`:typeof r);throw Error(`Tag not resolved for ${e} value`)}return n}function Lv(e,t,{anchors:n,doc:r}){if(!r.directives)return``;let i=[],a=(z_(e)||V_(e))&&e.anchor;a&&tv(a)&&(n.add(a),i.push(`&${a}`));let o=e.tag??(t.default?null:t.tag);return o&&i.push(r.directives.tagString(o)),i.join(` `)}function Rv(e,t,n,r){if(R_(e))return e.toString(t,n,r);if(F_(e)){if(t.doc.directives)return e.toString(t);if(t.resolvedAliases?.has(e))throw TypeError(`Cannot stringify circular structure without alias nodes`);t.resolvedAliases?t.resolvedAliases.add(e):t.resolvedAliases=new Set([e]),e=e.resolve(t.doc)}let i,a=H_(e)?e:t.doc.createNode(e,{onTagObj:e=>i=e});i??=Iv(t.doc.schema.tags,a);let o=Lv(a,i,t);o.length>0&&(t.indentAtStart=(t.indentAtStart??0)+o.length+1);let s=typeof i.stringify==`function`?i.stringify(a,t,n,r):z_(a)?Pv(a,t,n,r):a.toString(t,n,r);return o?z_(a)||s[0]===`{`||s[0]===`[`?`${o} ${s}`:`${o}\n${t.indent}${s}`:s}function zv({key:e,value:t},n,r,i){let{allNullValues:a,doc:o,indent:s,indentStep:c,options:{commentString:l,indentSeq:u,simpleKeys:d}}=n,f=H_(e)&&e.comment||null;if(d){if(f)throw Error(`With simple keys, key nodes cannot have comments`);if(V_(e)||!H_(e)&&typeof e==`object`)throw Error(`With simple keys, collection cannot be used as a key value`)}let p=!d&&(!e||f&&t==null&&!n.inFlow||V_(e)||(z_(e)?e.type===Z.BLOCK_FOLDED||e.type===Z.BLOCK_LITERAL:typeof e==`object`));n=Object.assign({},n,{allNullValues:!1,implicitKey:!p&&(d||!a),indent:s+c});let m=!1,h=!1,g=Rv(e,n,()=>m=!0,()=>h=!0);if(!p&&!n.inFlow&&g.length>1024){if(d)throw Error(`With simple keys, single line scalar must not span more than 1024 characters`);p=!0}if(n.inFlow){if(a||t==null)return m&&r&&r(),g===``?`?`:p?`? ${g}`:g}else if(a&&!d||t==null&&p)return g=`? ${g}`,f&&!m?g+=yv(g,n.indent,l(f)):h&&i&&i(),g;m&&(f=null),p?(f&&(g+=yv(g,n.indent,l(f))),g=`? ${g}\n${s}:`):(g=`${g}:`,f&&(g+=yv(g,n.indent,l(f))));let _,v,y;H_(t)?(_=!!t.spaceBefore,v=t.commentBefore,y=t.comment):(_=!1,v=null,y=null,t&&typeof t==`object`&&(t=o.createNode(t))),n.implicitKey=!1,!p&&!f&&z_(t)&&(n.indentAtStart=g.length+1),h=!1,!u&&c.length>=2&&!n.inFlow&&!p&&B_(t)&&!t.flow&&!t.tag&&!t.anchor&&(n.indent=n.indent.substring(2));let b=!1,x=Rv(t,n,()=>b=!0,()=>h=!0),S=` `;if(f||_||v){if(S=_?`
+`:``,v){let e=l(v);S+=`\n${vv(e,n.indent)}`}x===``&&!n.inFlow?S===`
 `&&y&&(S=`
 
-`):S+=`\n${n.indent}`}else if(!p&&S_(t)){let e=x[0],r=x.indexOf(`
+`):S+=`\n${n.indent}`}else if(!p&&V_(t)){let e=x[0],r=x.indexOf(`
 `),i=r!==-1,a=n.inFlow??t.flow??t.items.length===0;if(i||!a){let t=!1;if(i&&(e===`&`||e===`!`)){let n=x.indexOf(` `);e===`&`&&n!==-1&&n<r&&x[n+1]===`!`&&(n=x.indexOf(` `,n+1)),(n===-1||r<n)&&(t=!0)}t||(S=`\n${n.indent}`)}}else(x===``||x[0]===`
-`)&&(S=``);return g+=S+x,n.inFlow?b&&r&&r():y&&!b?g+=ev(g,n.indent,l(y)):h&&i&&i(),g}function xv(e,t){(e===`debug`||e===`warn`)&&console.warn(t)}var Sv=`<<`,Cv={identify:e=>e===Sv||typeof e==`symbol`&&e.description===Sv,default:`key`,tag:`tag:yaml.org,2002:merge`,test:/^<<$/,resolve:()=>Object.assign(new Z(Symbol(Sv)),{addToJSMap:Tv}),stringify:()=>Sv},wv=(e,t)=>(Cv.identify(t)||b_(t)&&(!t.type||t.type===Z.PLAIN)&&Cv.identify(t.value))&&e?.doc.schema.tags.some(e=>e.tag===Cv.tag&&e.default);function Tv(e,t,n){let r=Dv(e,n);if(x_(r))for(let n of r.items)Ev(e,t,n);else if(Array.isArray(r))for(let n of r)Ev(e,t,n);else Ev(e,t,r)}function Ev(e,t,n){let r=Dv(e,n);if(!v_(r))throw Error(`Merge sources must be maps or map aliases`);let i=r.toJSON(null,e,Map);for(let[e,n]of i)t instanceof Map?t.has(e)||t.set(e,n):t instanceof Set?t.add(e):Object.prototype.hasOwnProperty.call(t,e)||Object.defineProperty(t,e,{value:n,writable:!0,enumerable:!0,configurable:!0});return t}function Dv(e,t){return e&&g_(t)?t.resolve(e.doc,e):t}function Ov(e,t,{key:n,value:r}){if(C_(n)&&n.addToJSMap)n.addToJSMap(e,t,r);else if(wv(e,n))Tv(e,t,r);else{let i=V_(n,``,e);if(t instanceof Map)t.set(i,V_(r,i,e));else if(t instanceof Set)t.add(i);else{let a=kv(n,i,e),o=V_(r,a,e);a in t?Object.defineProperty(t,a,{value:o,writable:!0,enumerable:!0,configurable:!0}):t[a]=o}}return t}function kv(e,t,n){if(t===null)return``;if(typeof t!=`object`)return String(t);if(C_(e)&&n?.doc){let t=gv(n.doc,{});t.anchors=new Set;for(let e of n.anchors.keys())t.anchors.add(e.anchor);t.inFlow=!0,t.inStringifyKey=!0;let r=e.toString(t);if(!n.mapKeyWarned){let e=JSON.stringify(r);e.length>40&&(e=e.substring(0,36)+`..."`),xv(n.doc.options.logLevel,`Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`),n.mapKeyWarned=!0}return r}return JSON.stringify(t)}function Av(e,t,n){return new jv(J_(e,void 0,n),J_(t,void 0,n))}var jv=class e{constructor(e,t=null){Object.defineProperty(this,h_,{value:f_}),this.key=e,this.value=t}clone(t){let{key:n,value:r}=this;return C_(n)&&(n=n.clone(t)),C_(r)&&(r=r.clone(t)),new e(n,r)}toJSON(e,t){return Ov(t,t?.mapAsMap?new Map:{},this)}toString(e,t,n){return e?.doc?bv(this,e,t,n):JSON.stringify(this)}};function Mv(e,t,n){return(t.inFlow??e.flow?Pv:Nv)(e,t,n)}function Nv({comment:e,items:t},n,{blockItemPrefix:r,flowChars:i,itemIndent:a,onChompKeep:o,onComment:s}){let{indent:c,options:{commentString:l}}=n,u=Object.assign({},n,{indent:a,type:null}),d=!1,f=[];for(let e=0;e<t.length;++e){let i=t[e],o=null;if(C_(i))!d&&i.spaceBefore&&f.push(``),Fv(n,f,i.commentBefore,d),i.comment&&(o=i.comment);else if(y_(i)){let e=C_(i.key)?i.key:null;e&&(!d&&e.spaceBefore&&f.push(``),Fv(n,f,e.commentBefore,d))}d=!1;let s=yv(i,u,()=>o=null,()=>d=!0);o&&(s+=ev(s,a,l(o))),d&&o&&(d=!1),f.push(r+s)}let p;if(f.length===0)p=i.start+i.end;else{p=f[0];for(let e=1;e<f.length;++e){let t=f[e];p+=t?`\n${c}${t}`:`
+`)&&(S=``);return g+=S+x,n.inFlow?b&&r&&r():y&&!b?g+=yv(g,n.indent,l(y)):h&&i&&i(),g}function Bv(e,t){(e===`debug`||e===`warn`)&&console.warn(t)}var Vv=`<<`,Hv={identify:e=>e===Vv||typeof e==`symbol`&&e.description===Vv,default:`key`,tag:`tag:yaml.org,2002:merge`,test:/^<<$/,resolve:()=>Object.assign(new Z(Symbol(Vv)),{addToJSMap:Wv}),stringify:()=>Vv},Uv=(e,t)=>(Hv.identify(t)||z_(t)&&(!t.type||t.type===Z.PLAIN)&&Hv.identify(t.value))&&e?.doc.schema.tags.some(e=>e.tag===Hv.tag&&e.default);function Wv(e,t,n){let r=Kv(e,n);if(B_(r))for(let n of r.items)Gv(e,t,n);else if(Array.isArray(r))for(let n of r)Gv(e,t,n);else Gv(e,t,r)}function Gv(e,t,n){let r=Kv(e,n);if(!L_(r))throw Error(`Merge sources must be maps or map aliases`);let i=r.toJSON(null,e,Map);for(let[e,n]of i)t instanceof Map?t.has(e)||t.set(e,n):t instanceof Set?t.add(e):Object.prototype.hasOwnProperty.call(t,e)||Object.defineProperty(t,e,{value:n,writable:!0,enumerable:!0,configurable:!0});return t}function Kv(e,t){return e&&F_(t)?t.resolve(e.doc,e):t}function qv(e,t,{key:n,value:r}){if(H_(n)&&n.addToJSMap)n.addToJSMap(e,t,r);else if(Uv(e,n))Wv(e,t,r);else{let i=ov(n,``,e);if(t instanceof Map)t.set(i,ov(r,i,e));else if(t instanceof Set)t.add(i);else{let a=Jv(n,i,e),o=ov(r,a,e);a in t?Object.defineProperty(t,a,{value:o,writable:!0,enumerable:!0,configurable:!0}):t[a]=o}}return t}function Jv(e,t,n){if(t===null)return``;if(typeof t!=`object`)return String(t);if(H_(e)&&n?.doc){let t=Fv(n.doc,{});t.anchors=new Set;for(let e of n.anchors.keys())t.anchors.add(e.anchor);t.inFlow=!0,t.inStringifyKey=!0;let r=e.toString(t);if(!n.mapKeyWarned){let e=JSON.stringify(r);e.length>40&&(e=e.substring(0,36)+`..."`),Bv(n.doc.options.logLevel,`Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`),n.mapKeyWarned=!0}return r}return JSON.stringify(t)}function Yv(e,t,n){return new Xv(pv(e,void 0,n),pv(t,void 0,n))}var Xv=class e{constructor(e,t=null){Object.defineProperty(this,P_,{value:j_}),this.key=e,this.value=t}clone(t){let{key:n,value:r}=this;return H_(n)&&(n=n.clone(t)),H_(r)&&(r=r.clone(t)),new e(n,r)}toJSON(e,t){return qv(t,t?.mapAsMap?new Map:{},this)}toString(e,t,n){return e?.doc?zv(this,e,t,n):JSON.stringify(this)}};function Zv(e,t,n){return(t.inFlow??e.flow?$v:Qv)(e,t,n)}function Qv({comment:e,items:t},n,{blockItemPrefix:r,flowChars:i,itemIndent:a,onChompKeep:o,onComment:s}){let{indent:c,options:{commentString:l}}=n,u=Object.assign({},n,{indent:a,type:null}),d=!1,f=[];for(let e=0;e<t.length;++e){let i=t[e],o=null;if(H_(i))!d&&i.spaceBefore&&f.push(``),ey(n,f,i.commentBefore,d),i.comment&&(o=i.comment);else if(R_(i)){let e=H_(i.key)?i.key:null;e&&(!d&&e.spaceBefore&&f.push(``),ey(n,f,e.commentBefore,d))}d=!1;let s=Rv(i,u,()=>o=null,()=>d=!0);o&&(s+=yv(s,a,l(o))),d&&o&&(d=!1),f.push(r+s)}let p;if(f.length===0)p=i.start+i.end;else{p=f[0];for(let e=1;e<f.length;++e){let t=f[e];p+=t?`\n${c}${t}`:`
 `}}return e?(p+=`
-`+$_(l(e),c),s&&s()):d&&o&&o(),p}function Pv({items:e},t,{flowChars:n,itemIndent:r}){let{indent:i,indentStep:a,flowCollectionPadding:o,options:{commentString:s}}=t;r+=a;let c=Object.assign({},t,{indent:r,inFlow:!0,type:null}),l=!1,u=0,d=[];for(let n=0;n<e.length;++n){let i=e[n],a=null;if(C_(i))i.spaceBefore&&d.push(``),Fv(t,d,i.commentBefore,!1),i.comment&&(a=i.comment);else if(y_(i)){let e=C_(i.key)?i.key:null;e&&(e.spaceBefore&&d.push(``),Fv(t,d,e.commentBefore,!1),e.comment&&(l=!0));let n=C_(i.value)?i.value:null;n?(n.comment&&(a=n.comment),n.commentBefore&&(l=!0)):i.value==null&&e?.comment&&(a=e.comment)}a&&(l=!0);let o=yv(i,c,()=>a=null);l||=d.length>u||o.includes(`
-`),n<e.length-1?o+=`,`:t.options.trailingComma&&(t.options.lineWidth>0&&(l||=d.reduce((e,t)=>e+t.length+2,2)+(o.length+2)>t.options.lineWidth),l&&(o+=`,`)),a&&(o+=ev(o,r,s(a))),d.push(o),u=d.length}let{start:f,end:p}=n;if(d.length===0)return f+p;if(!l){let e=d.reduce((e,t)=>e+t.length+2,2);l=t.options.lineWidth>0&&e>t.options.lineWidth}if(l){let e=f;for(let t of d)e+=t?`\n${a}${i}${t}`:`
-`;return`${e}\n${i}${p}`}return`${f}${o}${d.join(` `)}${o}${p}`}function Fv({indent:e,options:{commentString:t}},n,r,i){if(r&&i&&(r=r.replace(/^\n+/,``)),r){let i=$_(t(r),e);n.push(i.trimStart())}}function Iv(e,t){let n=b_(t)?t.value:t;for(let r of e)if(y_(r)&&(r.key===t||r.key===n||b_(r.key)&&r.key.value===n))return r}var Lv=class extends Z_{static get tagName(){return`tag:yaml.org,2002:map`}constructor(e){super(d_,e),this.items=[]}static from(e,t,n){let{keepUndefined:r,replacer:i}=n,a=new this(e),o=(e,o)=>{if(typeof i==`function`)o=i.call(t,e,o);else if(Array.isArray(i)&&!i.includes(e))return;(o!==void 0||r)&&a.items.push(Av(e,o,n))};if(t instanceof Map)for(let[e,n]of t)o(e,n);else if(t&&typeof t==`object`)for(let e of Object.keys(t))o(e,t[e]);return typeof e.sortMapEntries==`function`&&a.items.sort(e.sortMapEntries),a}add(e,t){let n;n=y_(e)?e:!e||typeof e!=`object`||!(`key`in e)?new jv(e,e?.value):new jv(e.key,e.value);let r=Iv(this.items,n.key),i=this.schema?.sortMapEntries;if(r){if(!t)throw Error(`Key ${n.key} already set`);b_(r.value)&&G_(n.value)?r.value.value=n.value:r.value=n.value}else if(i){let e=this.items.findIndex(e=>i(n,e)<0);e===-1?this.items.push(n):this.items.splice(e,0,n)}else this.items.push(n)}delete(e){let t=Iv(this.items,e);return t?this.items.splice(this.items.indexOf(t),1).length>0:!1}get(e,t){let n=Iv(this.items,e)?.value;return(!t&&b_(n)?n.value:n)??void 0}has(e){return!!Iv(this.items,e)}set(e,t){this.add(new jv(e,t),!0)}toJSON(e,t,n){let r=n?new n:t?.mapAsMap?new Map:{};t?.onCreate&&t.onCreate(r);for(let e of this.items)Ov(t,r,e);return r}toString(e,t,n){if(!e)return JSON.stringify(this);for(let e of this.items)if(!y_(e))throw Error(`Map items must all be pairs; found ${JSON.stringify(e)} instead`);return!e.allNullValues&&this.hasAllNullValues(!1)&&(e=Object.assign({},e,{allNullValues:!0})),Mv(this,e,{blockItemPrefix:``,flowChars:{start:`{`,end:`}`},itemIndent:e.indent||``,onChompKeep:n,onComment:t})}},Rv={collection:`map`,default:!0,nodeClass:Lv,tag:`tag:yaml.org,2002:map`,resolve(e,t){return v_(e)||t(`Expected a mapping for this tag`),e},createNode:(e,t,n)=>Lv.from(e,t,n)},zv=class extends Z_{static get tagName(){return`tag:yaml.org,2002:seq`}constructor(e){super(m_,e),this.items=[]}add(e){this.items.push(e)}delete(e){let t=Bv(e);return typeof t==`number`&&this.items.splice(t,1).length>0}get(e,t){let n=Bv(e);if(typeof n!=`number`)return;let r=this.items[n];return!t&&b_(r)?r.value:r}has(e){let t=Bv(e);return typeof t==`number`&&t<this.items.length}set(e,t){let n=Bv(e);if(typeof n!=`number`)throw Error(`Expected a valid index, not ${e}.`);let r=this.items[n];b_(r)&&G_(t)?r.value=t:this.items[n]=t}toJSON(e,t){let n=[];t?.onCreate&&t.onCreate(n);let r=0;for(let e of this.items)n.push(V_(e,String(r++),t));return n}toString(e,t,n){return e?Mv(this,e,{blockItemPrefix:`- `,flowChars:{start:`[`,end:`]`},itemIndent:(e.indent||``)+`  `,onChompKeep:n,onComment:t}):JSON.stringify(this)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t)){let e=0;for(let a of t){if(typeof r==`function`){let n=t instanceof Set?a:String(e++);a=r.call(t,n,a)}i.items.push(J_(a,void 0,n))}}return i}};function Bv(e){let t=b_(e)?e.value:e;return t&&typeof t==`string`&&(t=Number(t)),typeof t==`number`&&Number.isInteger(t)&&t>=0?t:null}var Vv={collection:`seq`,default:!0,nodeClass:zv,tag:`tag:yaml.org,2002:seq`,resolve(e,t){return x_(e)||t(`Expected a sequence for this tag`),e},createNode:(e,t,n)=>zv.from(e,t,n)},Hv={identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify(e,t,n,r){return t=Object.assign({actualString:!0},t),hv(e,t,n,r)}},Uv={identify:e=>e==null,createNode:()=>new Z(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^(?:~|[Nn]ull|NULL)?$/,resolve:()=>new Z(null),stringify:({source:e},t)=>typeof e==`string`&&Uv.test.test(e)?e:t.options.nullStr},Wv={identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:[Tt]rue|TRUE|[Ff]alse|FALSE)$/,resolve:e=>new Z(e[0]===`t`||e[0]===`T`),stringify({source:e,value:t},n){return e&&Wv.test.test(e)&&t===(e[0]===`t`||e[0]===`T`)?e:t?n.options.trueStr:n.options.falseStr}};function Gv({format:e,minFractionDigits:t,tag:n,value:r}){if(typeof r==`bigint`)return String(r);let i=typeof r==`number`?r:Number(r);if(!isFinite(i))return isNaN(i)?`.nan`:i<0?`-.inf`:`.inf`;let a=Object.is(r,-0)?`-0`:JSON.stringify(r);if(!e&&t&&(!n||n===`tag:yaml.org,2002:float`)&&/^-?\d/.test(a)&&!a.includes(`e`)){let e=a.indexOf(`.`);e<0&&(e=a.length,a+=`.`);let n=t-(a.length-e-1);for(;n-->0;)a+=`0`}return a}var Kv={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:Gv},qv={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:\.[0-9]+|[0-9]+(?:\.[0-9]*)?)[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():Gv(e)}},Jv={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:\.[0-9]+|[0-9]+\.[0-9]*)$/,resolve(e){let t=new Z(parseFloat(e)),n=e.indexOf(`.`);return n!==-1&&e[e.length-1]===`0`&&(t.minFractionDigits=e.length-n-1),t},stringify:Gv},Yv=e=>typeof e==`bigint`||Number.isInteger(e),Xv=(e,t,n,{intAsBigInt:r})=>r?BigInt(e):parseInt(e.substring(t),n);function Zv(e,t,n){let{value:r}=e;return Yv(r)&&r>=0?n+r.toString(t):Gv(e)}var Qv={identify:e=>Yv(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^0o[0-7]+$/,resolve:(e,t,n)=>Xv(e,2,8,n),stringify:e=>Zv(e,8,`0o`)},$v={identify:Yv,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9]+$/,resolve:(e,t,n)=>Xv(e,0,10,n),stringify:Gv},ey={identify:e=>Yv(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^0x[0-9a-fA-F]+$/,resolve:(e,t,n)=>Xv(e,2,16,n),stringify:e=>Zv(e,16,`0x`)},ty=[Rv,Vv,Hv,Uv,Wv,Qv,$v,ey,Kv,qv,Jv];function ny(e){return typeof e==`bigint`||Number.isInteger(e)}var ry=({value:e})=>JSON.stringify(e),iy=[{identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify:ry},{identify:e=>e==null,createNode:()=>new Z(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^null$/,resolve:()=>null,stringify:ry},{identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^true$|^false$/,resolve:e=>e===`true`,stringify:ry},{identify:ny,default:!0,tag:`tag:yaml.org,2002:int`,test:/^-?(?:0|[1-9][0-9]*)$/,resolve:(e,t,{intAsBigInt:n})=>n?BigInt(e):parseInt(e,10),stringify:({value:e})=>ny(e)?e.toString():JSON.stringify(e)},{identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?$/,resolve:e=>parseFloat(e),stringify:ry}],ay=[Rv,Vv].concat(iy,{default:!0,tag:``,test:/^/,resolve(e,t){return t(`Unresolved plain scalar ${JSON.stringify(e)}`),e}}),oy={identify:e=>e instanceof Uint8Array,default:!1,tag:`tag:yaml.org,2002:binary`,resolve(e,t){if(typeof atob==`function`){let t=atob(e.replace(/[\n\r]/g,``)),n=new Uint8Array(t.length);for(let e=0;e<t.length;++e)n[e]=t.charCodeAt(e);return n}return t(`This environment does not support reading binary tags; either Buffer or atob is required`),e},stringify({comment:e,type:t,value:n},r,i,a){if(!n)return``;let o=n,s;if(typeof btoa==`function`){let e=``;for(let t=0;t<o.length;++t)e+=String.fromCharCode(o[t]);s=btoa(e)}else throw Error(`This environment does not support writing binary tags; either Buffer or btoa is required`);if(t??=Z.BLOCK_LITERAL,t!==Z.QUOTE_DOUBLE){let e=Math.max(r.options.lineWidth-r.indent.length,r.options.minContentWidth),n=Math.ceil(s.length/e),i=Array(n);for(let t=0,r=0;t<n;++t,r+=e)i[t]=s.substr(r,e);s=i.join(t===Z.BLOCK_LITERAL?`
-`:` `)}return hv({comment:e,type:t,value:s},r,i,a)}};function sy(e,t){if(x_(e))for(let n=0;n<e.items.length;++n){let r=e.items[n];if(!y_(r)){if(v_(r)){r.items.length>1&&t(`Each pair must have its own sequence indicator`);let e=r.items[0]||new jv(new Z(null));if(r.commentBefore&&(e.key.commentBefore=e.key.commentBefore?`${r.commentBefore}\n${e.key.commentBefore}`:r.commentBefore),r.comment){let t=e.value??e.key;t.comment=t.comment?`${r.comment}\n${t.comment}`:r.comment}r=e}e.items[n]=y_(r)?r:new jv(r)}}else t(`Expected a sequence for this tag`);return e}function cy(e,t,n){let{replacer:r}=n,i=new zv(e);i.tag=`tag:yaml.org,2002:pairs`;let a=0;if(t&&Symbol.iterator in Object(t))for(let e of t){typeof r==`function`&&(e=r.call(t,String(a++),e));let o,s;if(Array.isArray(e)){if(e.length===2)o=e[0],s=e[1];else throw TypeError(`Expected [key, value] tuple: ${e}`)}else if(e&&e instanceof Object){let t=Object.keys(e);if(t.length===1)o=t[0],s=e[o];else throw TypeError(`Expected tuple with one key, not ${t.length} keys`)}else o=e;i.items.push(Av(o,s,n))}return i}var ly={collection:`seq`,default:!1,tag:`tag:yaml.org,2002:pairs`,resolve:sy,createNode:cy},uy=class e extends zv{constructor(){super(),this.add=Lv.prototype.add.bind(this),this.delete=Lv.prototype.delete.bind(this),this.get=Lv.prototype.get.bind(this),this.has=Lv.prototype.has.bind(this),this.set=Lv.prototype.set.bind(this),this.tag=e.tag}toJSON(e,t){if(!t)return super.toJSON(e);let n=new Map;t?.onCreate&&t.onCreate(n);for(let e of this.items){let r,i;if(y_(e)?(r=V_(e.key,``,t),i=V_(e.value,r,t)):r=V_(e,``,t),n.has(r))throw Error(`Ordered maps must not include duplicate keys`);n.set(r,i)}return n}static from(e,t,n){let r=cy(e,t,n),i=new this;return i.items=r.items,i}};uy.tag=`tag:yaml.org,2002:omap`;var dy={collection:`seq`,identify:e=>e instanceof Map,nodeClass:uy,default:!1,tag:`tag:yaml.org,2002:omap`,resolve(e,t){let n=sy(e,t),r=[];for(let{key:e}of n.items)b_(e)&&(r.includes(e.value)?t(`Ordered maps must not include duplicate keys: ${e.value}`):r.push(e.value));return Object.assign(new uy,n)},createNode:(e,t,n)=>uy.from(e,t,n)};function fy({value:e,source:t},n){return t&&(e?py:my).test.test(t)?t:e?n.options.trueStr:n.options.falseStr}var py={identify:e=>e===!0,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:Y|y|[Yy]es|YES|[Tt]rue|TRUE|[Oo]n|ON)$/,resolve:()=>new Z(!0),stringify:fy},my={identify:e=>e===!1,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:N|n|[Nn]o|NO|[Ff]alse|FALSE|[Oo]ff|OFF)$/,resolve:()=>new Z(!1),stringify:fy},hy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:Gv},gy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:[0-9][0-9_]*)?(?:\.[0-9_]*)?[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e.replace(/_/g,``)),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():Gv(e)}},_y={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:[0-9][0-9_]*)?\.[0-9_]*$/,resolve(e){let t=new Z(parseFloat(e.replace(/_/g,``))),n=e.indexOf(`.`);if(n!==-1){let r=e.substring(n+1).replace(/_/g,``);r[r.length-1]===`0`&&(t.minFractionDigits=r.length)}return t},stringify:Gv},vy=e=>typeof e==`bigint`||Number.isInteger(e);function yy(e,t,n,{intAsBigInt:r}){let i=e[0];if((i===`-`||i===`+`)&&(t+=1),e=e.substring(t).replace(/_/g,``),r){switch(n){case 2:e=`0b${e}`;break;case 8:e=`0o${e}`;break;case 16:e=`0x${e}`}let t=BigInt(e);return i===`-`?BigInt(-1)*t:t}let a=parseInt(e,n);return i===`-`?-1*a:a}function by(e,t,n){let{value:r}=e;if(vy(r)){let e=r.toString(t);return r<0?`-`+n+e.substr(1):n+e}return Gv(e)}var xy={identify:vy,default:!0,tag:`tag:yaml.org,2002:int`,format:`BIN`,test:/^[-+]?0b[0-1_]+$/,resolve:(e,t,n)=>yy(e,2,2,n),stringify:e=>by(e,2,`0b`)},Sy={identify:vy,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^[-+]?0[0-7_]+$/,resolve:(e,t,n)=>yy(e,1,8,n),stringify:e=>by(e,8,`0`)},Cy={identify:vy,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9][0-9_]*$/,resolve:(e,t,n)=>yy(e,0,10,n),stringify:Gv},wy={identify:vy,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^[-+]?0x[0-9a-fA-F_]+$/,resolve:(e,t,n)=>yy(e,2,16,n),stringify:e=>by(e,16,`0x`)},Ty=class e extends Lv{constructor(t){super(t),this.tag=e.tag}add(e){let t;t=y_(e)?e:e&&typeof e==`object`&&`key`in e&&`value`in e&&e.value===null?new jv(e.key,null):new jv(e,null),Iv(this.items,t.key)||this.items.push(t)}get(e,t){let n=Iv(this.items,e);return!t&&y_(n)?b_(n.key)?n.key.value:n.key:n}set(e,t){if(typeof t!=`boolean`)throw Error(`Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`);let n=Iv(this.items,e);n&&!t?this.items.splice(this.items.indexOf(n),1):!n&&t&&this.items.push(new jv(e))}toJSON(e,t){return super.toJSON(e,t,Set)}toString(e,t,n){if(!e)return JSON.stringify(this);if(this.hasAllNullValues(!0))return super.toString(Object.assign({},e,{allNullValues:!0}),t,n);throw Error(`Set items must all have null values`)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t))for(let e of t)typeof r==`function`&&(e=r.call(t,e,e)),i.items.push(Av(e,null,n));return i}};Ty.tag=`tag:yaml.org,2002:set`;var Ey={collection:`map`,identify:e=>e instanceof Set,nodeClass:Ty,default:!1,tag:`tag:yaml.org,2002:set`,createNode:(e,t,n)=>Ty.from(e,t,n),resolve(e,t){if(v_(e)){if(e.hasAllNullValues(!0))return Object.assign(new Ty,e);t(`Set items must all have null values`)}else t(`Expected a mapping for this tag`);return e}};function Dy(e,t){let n=e[0],r=n===`-`||n===`+`?e.substring(1):e,i=e=>t?BigInt(e):Number(e),a=r.replace(/_/g,``).split(`:`).reduce((e,t)=>e*i(60)+i(t),i(0));return n===`-`?i(-1)*a:a}function Oy(e){let{value:t}=e,n=e=>e;if(typeof t==`bigint`)n=e=>BigInt(e);else if(isNaN(t)||!isFinite(t))return Gv(e);let r=``;t<0&&(r=`-`,t*=n(-1));let i=n(60),a=[t%i];return t<60?a.unshift(0):(t=(t-a[0])/i,a.unshift(t%i),t>=60&&(t=(t-a[0])/i,a.unshift(t))),r+a.map(e=>String(e).padStart(2,`0`)).join(`:`).replace(/000000\d*$/,``)}var ky={identify:e=>typeof e==`bigint`||Number.isInteger(e),default:!0,tag:`tag:yaml.org,2002:int`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+$/,resolve:(e,t,{intAsBigInt:n})=>Dy(e,n),stringify:Oy},Ay={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+\.[0-9_]*$/,resolve:e=>Dy(e,!1),stringify:Oy},jy={identify:e=>e instanceof Date,default:!0,tag:`tag:yaml.org,2002:timestamp`,test:RegExp(`^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$`),resolve(e){let t=e.match(jy.test);if(!t)throw Error(`!!timestamp expects a date, starting with yyyy-mm-dd`);let[,n,r,i,a,o,s]=t.map(Number),c=t[7]?Number((t[7]+`00`).substr(1,3)):0,l=Date.UTC(n,r-1,i,a||0,o||0,s||0,c),u=t[8];if(u&&u!==`Z`){let e=Dy(u,!1);Math.abs(e)<30&&(e*=60),l-=6e4*e}return new Date(l)},stringify:({value:e})=>e?.toISOString().replace(/(T00:00:00)?\.000Z$/,``)??``},My=[Rv,Vv,Hv,Uv,py,my,xy,Sy,Cy,wy,hy,gy,_y,oy,Cv,dy,ly,Ey,ky,Ay,jy],Ny=new Map([[`core`,ty],[`failsafe`,[Rv,Vv,Hv]],[`json`,ay],[`yaml11`,My],[`yaml-1.1`,My]]),Py={binary:oy,bool:Wv,float:Jv,floatExp:qv,floatNaN:Kv,floatTime:Ay,int:$v,intHex:ey,intOct:Qv,intTime:ky,map:Rv,merge:Cv,null:Uv,omap:dy,pairs:ly,seq:Vv,set:Ey,timestamp:jy},Fy={"tag:yaml.org,2002:binary":oy,"tag:yaml.org,2002:merge":Cv,"tag:yaml.org,2002:omap":dy,"tag:yaml.org,2002:pairs":ly,"tag:yaml.org,2002:set":Ey,"tag:yaml.org,2002:timestamp":jy};function Iy(e,t,n){let r=Ny.get(t);if(r&&!e)return n&&!r.includes(Cv)?r.concat(Cv):r.slice();let i=r;if(!i){if(Array.isArray(e))i=[];else{let e=Array.from(Ny.keys()).filter(e=>e!==`yaml11`).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown schema "${t}"; use one of ${e} or define customTags array`)}}if(Array.isArray(e))for(let t of e)i=i.concat(t);else typeof e==`function`&&(i=e(i.slice()));return n&&(i=i.concat(Cv)),i.reduce((e,t)=>{let n=typeof t==`string`?Py[t]:t;if(!n){let e=JSON.stringify(t),n=Object.keys(Py).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown custom tag ${e}; use one of ${n}`)}return e.includes(n)||e.push(n),e},[])}var Ly=(e,t)=>e.key<t.key?-1:+(e.key>t.key),Ry=class e{constructor({compat:e,customTags:t,merge:n,resolveKnownTags:r,schema:i,sortMapEntries:a,toStringDefaults:o}){this.compat=Array.isArray(e)?Iy(e,`compat`):e?Iy(null,e):null,this.name=typeof i==`string`&&i||`core`,this.knownTags=r?Fy:{},this.tags=Iy(t,this.name,n),this.toStringOptions=o??null,Object.defineProperty(this,d_,{value:Rv}),Object.defineProperty(this,p_,{value:Hv}),Object.defineProperty(this,m_,{value:Vv}),this.sortMapEntries=typeof a==`function`?a:a===!0?Ly:null}clone(){let t=Object.create(e.prototype,Object.getOwnPropertyDescriptors(this));return t.tags=this.tags.slice(),t}};function zy(e,t){let n=[],r=t.directives===!0;if(t.directives!==!1&&e.directives){let t=e.directives.toString(e);t?(n.push(t),r=!0):e.directives.docStart&&(r=!0)}r&&n.push(`---`);let i=gv(e,t),{commentString:a}=i.options;if(e.commentBefore){n.length!==1&&n.unshift(``);let t=a(e.commentBefore);n.unshift($_(t,``))}let o=!1,s=null;if(e.contents){if(C_(e.contents)){if(e.contents.spaceBefore&&r&&n.push(``),e.contents.commentBefore){let t=a(e.contents.commentBefore);n.push($_(t,``))}i.forceBlockIndent=!!e.comment,s=e.contents.comment}let t=s?void 0:()=>o=!0,c=yv(e.contents,i,()=>s=null,t);s&&(c+=ev(c,``,a(s))),(c[0]===`|`||c[0]===`>`)&&n[n.length-1]===`---`?n[n.length-1]=`--- ${c}`:n.push(c)}else n.push(yv(e.contents,i));if(e.directives?.docEnd){if(e.comment){let t=a(e.comment);t.includes(`
-`)?(n.push(`...`),n.push($_(t,``))):n.push(`... ${t}`)}else n.push(`...`)}else{let t=e.comment;t&&o&&(t=t.replace(/^\n+/,``)),t&&((!o||s)&&n[n.length-1]!==``&&n.push(``),n.push($_(a(t),``)))}return n.join(`
+`+vv(l(e),c),s&&s()):d&&o&&o(),p}function $v({items:e},t,{flowChars:n,itemIndent:r}){let{indent:i,indentStep:a,flowCollectionPadding:o,options:{commentString:s}}=t;r+=a;let c=Object.assign({},t,{indent:r,inFlow:!0,type:null}),l=!1,u=0,d=[];for(let n=0;n<e.length;++n){let i=e[n],a=null;if(H_(i))i.spaceBefore&&d.push(``),ey(t,d,i.commentBefore,!1),i.comment&&(a=i.comment);else if(R_(i)){let e=H_(i.key)?i.key:null;e&&(e.spaceBefore&&d.push(``),ey(t,d,e.commentBefore,!1),e.comment&&(l=!0));let n=H_(i.value)?i.value:null;n?(n.comment&&(a=n.comment),n.commentBefore&&(l=!0)):i.value==null&&e?.comment&&(a=e.comment)}a&&(l=!0);let o=Rv(i,c,()=>a=null);l||=d.length>u||o.includes(`
+`),n<e.length-1?o+=`,`:t.options.trailingComma&&(t.options.lineWidth>0&&(l||=d.reduce((e,t)=>e+t.length+2,2)+(o.length+2)>t.options.lineWidth),l&&(o+=`,`)),a&&(o+=yv(o,r,s(a))),d.push(o),u=d.length}let{start:f,end:p}=n;if(d.length===0)return f+p;if(!l){let e=d.reduce((e,t)=>e+t.length+2,2);l=t.options.lineWidth>0&&e>t.options.lineWidth}if(l){let e=f;for(let t of d)e+=t?`\n${a}${i}${t}`:`
+`;return`${e}\n${i}${p}`}return`${f}${o}${d.join(` `)}${o}${p}`}function ey({indent:e,options:{commentString:t}},n,r,i){if(r&&i&&(r=r.replace(/^\n+/,``)),r){let i=vv(t(r),e);n.push(i.trimStart())}}function ty(e,t){let n=z_(t)?t.value:t;for(let r of e)if(R_(r)&&(r.key===t||r.key===n||z_(r.key)&&r.key.value===n))return r}var ny=class extends gv{static get tagName(){return`tag:yaml.org,2002:map`}constructor(e){super(A_,e),this.items=[]}static from(e,t,n){let{keepUndefined:r,replacer:i}=n,a=new this(e),o=(e,o)=>{if(typeof i==`function`)o=i.call(t,e,o);else if(Array.isArray(i)&&!i.includes(e))return;(o!==void 0||r)&&a.items.push(Yv(e,o,n))};if(t instanceof Map)for(let[e,n]of t)o(e,n);else if(t&&typeof t==`object`)for(let e of Object.keys(t))o(e,t[e]);return typeof e.sortMapEntries==`function`&&a.items.sort(e.sortMapEntries),a}add(e,t){let n;n=R_(e)?e:!e||typeof e!=`object`||!(`key`in e)?new Xv(e,e?.value):new Xv(e.key,e.value);let r=ty(this.items,n.key),i=this.schema?.sortMapEntries;if(r){if(!t)throw Error(`Key ${n.key} already set`);z_(r.value)&&uv(n.value)?r.value.value=n.value:r.value=n.value}else if(i){let e=this.items.findIndex(e=>i(n,e)<0);e===-1?this.items.push(n):this.items.splice(e,0,n)}else this.items.push(n)}delete(e){let t=ty(this.items,e);return t?this.items.splice(this.items.indexOf(t),1).length>0:!1}get(e,t){let n=ty(this.items,e)?.value;return(!t&&z_(n)?n.value:n)??void 0}has(e){return!!ty(this.items,e)}set(e,t){this.add(new Xv(e,t),!0)}toJSON(e,t,n){let r=n?new n:t?.mapAsMap?new Map:{};t?.onCreate&&t.onCreate(r);for(let e of this.items)qv(t,r,e);return r}toString(e,t,n){if(!e)return JSON.stringify(this);for(let e of this.items)if(!R_(e))throw Error(`Map items must all be pairs; found ${JSON.stringify(e)} instead`);return!e.allNullValues&&this.hasAllNullValues(!1)&&(e=Object.assign({},e,{allNullValues:!0})),Zv(this,e,{blockItemPrefix:``,flowChars:{start:`{`,end:`}`},itemIndent:e.indent||``,onChompKeep:n,onComment:t})}},ry={collection:`map`,default:!0,nodeClass:ny,tag:`tag:yaml.org,2002:map`,resolve(e,t){return L_(e)||t(`Expected a mapping for this tag`),e},createNode:(e,t,n)=>ny.from(e,t,n)},iy=class extends gv{static get tagName(){return`tag:yaml.org,2002:seq`}constructor(e){super(N_,e),this.items=[]}add(e){this.items.push(e)}delete(e){let t=ay(e);return typeof t==`number`&&this.items.splice(t,1).length>0}get(e,t){let n=ay(e);if(typeof n!=`number`)return;let r=this.items[n];return!t&&z_(r)?r.value:r}has(e){let t=ay(e);return typeof t==`number`&&t<this.items.length}set(e,t){let n=ay(e);if(typeof n!=`number`)throw Error(`Expected a valid index, not ${e}.`);let r=this.items[n];z_(r)&&uv(t)?r.value=t:this.items[n]=t}toJSON(e,t){let n=[];t?.onCreate&&t.onCreate(n);let r=0;for(let e of this.items)n.push(ov(e,String(r++),t));return n}toString(e,t,n){return e?Zv(this,e,{blockItemPrefix:`- `,flowChars:{start:`[`,end:`]`},itemIndent:(e.indent||``)+`  `,onChompKeep:n,onComment:t}):JSON.stringify(this)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t)){let e=0;for(let a of t){if(typeof r==`function`){let n=t instanceof Set?a:String(e++);a=r.call(t,n,a)}i.items.push(pv(a,void 0,n))}}return i}};function ay(e){let t=z_(e)?e.value:e;return t&&typeof t==`string`&&(t=Number(t)),typeof t==`number`&&Number.isInteger(t)&&t>=0?t:null}var oy={collection:`seq`,default:!0,nodeClass:iy,tag:`tag:yaml.org,2002:seq`,resolve(e,t){return B_(e)||t(`Expected a sequence for this tag`),e},createNode:(e,t,n)=>iy.from(e,t,n)},sy={identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify(e,t,n,r){return t=Object.assign({actualString:!0},t),Pv(e,t,n,r)}},cy={identify:e=>e==null,createNode:()=>new Z(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^(?:~|[Nn]ull|NULL)?$/,resolve:()=>new Z(null),stringify:({source:e},t)=>typeof e==`string`&&cy.test.test(e)?e:t.options.nullStr},ly={identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:[Tt]rue|TRUE|[Ff]alse|FALSE)$/,resolve:e=>new Z(e[0]===`t`||e[0]===`T`),stringify({source:e,value:t},n){return e&&ly.test.test(e)&&t===(e[0]===`t`||e[0]===`T`)?e:t?n.options.trueStr:n.options.falseStr}};function uy({format:e,minFractionDigits:t,tag:n,value:r}){if(typeof r==`bigint`)return String(r);let i=typeof r==`number`?r:Number(r);if(!isFinite(i))return isNaN(i)?`.nan`:i<0?`-.inf`:`.inf`;let a=Object.is(r,-0)?`-0`:JSON.stringify(r);if(!e&&t&&(!n||n===`tag:yaml.org,2002:float`)&&/^-?\d/.test(a)&&!a.includes(`e`)){let e=a.indexOf(`.`);e<0&&(e=a.length,a+=`.`);let n=t-(a.length-e-1);for(;n-->0;)a+=`0`}return a}var dy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:uy},fy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:\.[0-9]+|[0-9]+(?:\.[0-9]*)?)[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():uy(e)}},py={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:\.[0-9]+|[0-9]+\.[0-9]*)$/,resolve(e){let t=new Z(parseFloat(e)),n=e.indexOf(`.`);return n!==-1&&e[e.length-1]===`0`&&(t.minFractionDigits=e.length-n-1),t},stringify:uy},my=e=>typeof e==`bigint`||Number.isInteger(e),hy=(e,t,n,{intAsBigInt:r})=>r?BigInt(e):parseInt(e.substring(t),n);function gy(e,t,n){let{value:r}=e;return my(r)&&r>=0?n+r.toString(t):uy(e)}var _y={identify:e=>my(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^0o[0-7]+$/,resolve:(e,t,n)=>hy(e,2,8,n),stringify:e=>gy(e,8,`0o`)},vy={identify:my,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9]+$/,resolve:(e,t,n)=>hy(e,0,10,n),stringify:uy},yy={identify:e=>my(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^0x[0-9a-fA-F]+$/,resolve:(e,t,n)=>hy(e,2,16,n),stringify:e=>gy(e,16,`0x`)},by=[ry,oy,sy,cy,ly,_y,vy,yy,dy,fy,py];function xy(e){return typeof e==`bigint`||Number.isInteger(e)}var Sy=({value:e})=>JSON.stringify(e),Cy=[{identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify:Sy},{identify:e=>e==null,createNode:()=>new Z(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^null$/,resolve:()=>null,stringify:Sy},{identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^true$|^false$/,resolve:e=>e===`true`,stringify:Sy},{identify:xy,default:!0,tag:`tag:yaml.org,2002:int`,test:/^-?(?:0|[1-9][0-9]*)$/,resolve:(e,t,{intAsBigInt:n})=>n?BigInt(e):parseInt(e,10),stringify:({value:e})=>xy(e)?e.toString():JSON.stringify(e)},{identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?$/,resolve:e=>parseFloat(e),stringify:Sy}],wy=[ry,oy].concat(Cy,{default:!0,tag:``,test:/^/,resolve(e,t){return t(`Unresolved plain scalar ${JSON.stringify(e)}`),e}}),Ty={identify:e=>e instanceof Uint8Array,default:!1,tag:`tag:yaml.org,2002:binary`,resolve(e,t){if(typeof atob==`function`){let t=atob(e.replace(/[\n\r]/g,``)),n=new Uint8Array(t.length);for(let e=0;e<t.length;++e)n[e]=t.charCodeAt(e);return n}return t(`This environment does not support reading binary tags; either Buffer or atob is required`),e},stringify({comment:e,type:t,value:n},r,i,a){if(!n)return``;let o=n,s;if(typeof btoa==`function`){let e=``;for(let t=0;t<o.length;++t)e+=String.fromCharCode(o[t]);s=btoa(e)}else throw Error(`This environment does not support writing binary tags; either Buffer or btoa is required`);if(t??=Z.BLOCK_LITERAL,t!==Z.QUOTE_DOUBLE){let e=Math.max(r.options.lineWidth-r.indent.length,r.options.minContentWidth),n=Math.ceil(s.length/e),i=Array(n);for(let t=0,r=0;t<n;++t,r+=e)i[t]=s.substr(r,e);s=i.join(t===Z.BLOCK_LITERAL?`
+`:` `)}return Pv({comment:e,type:t,value:s},r,i,a)}};function Ey(e,t){if(B_(e))for(let n=0;n<e.items.length;++n){let r=e.items[n];if(!R_(r)){if(L_(r)){r.items.length>1&&t(`Each pair must have its own sequence indicator`);let e=r.items[0]||new Xv(new Z(null));if(r.commentBefore&&(e.key.commentBefore=e.key.commentBefore?`${r.commentBefore}\n${e.key.commentBefore}`:r.commentBefore),r.comment){let t=e.value??e.key;t.comment=t.comment?`${r.comment}\n${t.comment}`:r.comment}r=e}e.items[n]=R_(r)?r:new Xv(r)}}else t(`Expected a sequence for this tag`);return e}function Dy(e,t,n){let{replacer:r}=n,i=new iy(e);i.tag=`tag:yaml.org,2002:pairs`;let a=0;if(t&&Symbol.iterator in Object(t))for(let e of t){typeof r==`function`&&(e=r.call(t,String(a++),e));let o,s;if(Array.isArray(e)){if(e.length===2)o=e[0],s=e[1];else throw TypeError(`Expected [key, value] tuple: ${e}`)}else if(e&&e instanceof Object){let t=Object.keys(e);if(t.length===1)o=t[0],s=e[o];else throw TypeError(`Expected tuple with one key, not ${t.length} keys`)}else o=e;i.items.push(Yv(o,s,n))}return i}var Oy={collection:`seq`,default:!1,tag:`tag:yaml.org,2002:pairs`,resolve:Ey,createNode:Dy},ky=class e extends iy{constructor(){super(),this.add=ny.prototype.add.bind(this),this.delete=ny.prototype.delete.bind(this),this.get=ny.prototype.get.bind(this),this.has=ny.prototype.has.bind(this),this.set=ny.prototype.set.bind(this),this.tag=e.tag}toJSON(e,t){if(!t)return super.toJSON(e);let n=new Map;t?.onCreate&&t.onCreate(n);for(let e of this.items){let r,i;if(R_(e)?(r=ov(e.key,``,t),i=ov(e.value,r,t)):r=ov(e,``,t),n.has(r))throw Error(`Ordered maps must not include duplicate keys`);n.set(r,i)}return n}static from(e,t,n){let r=Dy(e,t,n),i=new this;return i.items=r.items,i}};ky.tag=`tag:yaml.org,2002:omap`;var Ay={collection:`seq`,identify:e=>e instanceof Map,nodeClass:ky,default:!1,tag:`tag:yaml.org,2002:omap`,resolve(e,t){let n=Ey(e,t),r=[];for(let{key:e}of n.items)z_(e)&&(r.includes(e.value)?t(`Ordered maps must not include duplicate keys: ${e.value}`):r.push(e.value));return Object.assign(new ky,n)},createNode:(e,t,n)=>ky.from(e,t,n)};function jy({value:e,source:t},n){return t&&(e?My:Ny).test.test(t)?t:e?n.options.trueStr:n.options.falseStr}var My={identify:e=>e===!0,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:Y|y|[Yy]es|YES|[Tt]rue|TRUE|[Oo]n|ON)$/,resolve:()=>new Z(!0),stringify:jy},Ny={identify:e=>e===!1,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:N|n|[Nn]o|NO|[Ff]alse|FALSE|[Oo]ff|OFF)$/,resolve:()=>new Z(!1),stringify:jy},Py={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:uy},Fy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:[0-9][0-9_]*)?(?:\.[0-9_]*)?[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e.replace(/_/g,``)),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():uy(e)}},Iy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:[0-9][0-9_]*)?\.[0-9_]*$/,resolve(e){let t=new Z(parseFloat(e.replace(/_/g,``))),n=e.indexOf(`.`);if(n!==-1){let r=e.substring(n+1).replace(/_/g,``);r[r.length-1]===`0`&&(t.minFractionDigits=r.length)}return t},stringify:uy},Ly=e=>typeof e==`bigint`||Number.isInteger(e);function Ry(e,t,n,{intAsBigInt:r}){let i=e[0];if((i===`-`||i===`+`)&&(t+=1),e=e.substring(t).replace(/_/g,``),r){switch(n){case 2:e=`0b${e}`;break;case 8:e=`0o${e}`;break;case 16:e=`0x${e}`}let t=BigInt(e);return i===`-`?BigInt(-1)*t:t}let a=parseInt(e,n);return i===`-`?-1*a:a}function zy(e,t,n){let{value:r}=e;if(Ly(r)){let e=r.toString(t);return r<0?`-`+n+e.substr(1):n+e}return uy(e)}var By={identify:Ly,default:!0,tag:`tag:yaml.org,2002:int`,format:`BIN`,test:/^[-+]?0b[0-1_]+$/,resolve:(e,t,n)=>Ry(e,2,2,n),stringify:e=>zy(e,2,`0b`)},Vy={identify:Ly,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^[-+]?0[0-7_]+$/,resolve:(e,t,n)=>Ry(e,1,8,n),stringify:e=>zy(e,8,`0`)},Hy={identify:Ly,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9][0-9_]*$/,resolve:(e,t,n)=>Ry(e,0,10,n),stringify:uy},Uy={identify:Ly,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^[-+]?0x[0-9a-fA-F_]+$/,resolve:(e,t,n)=>Ry(e,2,16,n),stringify:e=>zy(e,16,`0x`)},Wy=class e extends ny{constructor(t){super(t),this.tag=e.tag}add(e){let t;t=R_(e)?e:e&&typeof e==`object`&&`key`in e&&`value`in e&&e.value===null?new Xv(e.key,null):new Xv(e,null),ty(this.items,t.key)||this.items.push(t)}get(e,t){let n=ty(this.items,e);return!t&&R_(n)?z_(n.key)?n.key.value:n.key:n}set(e,t){if(typeof t!=`boolean`)throw Error(`Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`);let n=ty(this.items,e);n&&!t?this.items.splice(this.items.indexOf(n),1):!n&&t&&this.items.push(new Xv(e))}toJSON(e,t){return super.toJSON(e,t,Set)}toString(e,t,n){if(!e)return JSON.stringify(this);if(this.hasAllNullValues(!0))return super.toString(Object.assign({},e,{allNullValues:!0}),t,n);throw Error(`Set items must all have null values`)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t))for(let e of t)typeof r==`function`&&(e=r.call(t,e,e)),i.items.push(Yv(e,null,n));return i}};Wy.tag=`tag:yaml.org,2002:set`;var Gy={collection:`map`,identify:e=>e instanceof Set,nodeClass:Wy,default:!1,tag:`tag:yaml.org,2002:set`,createNode:(e,t,n)=>Wy.from(e,t,n),resolve(e,t){if(L_(e)){if(e.hasAllNullValues(!0))return Object.assign(new Wy,e);t(`Set items must all have null values`)}else t(`Expected a mapping for this tag`);return e}};function Ky(e,t){let n=e[0],r=n===`-`||n===`+`?e.substring(1):e,i=e=>t?BigInt(e):Number(e),a=r.replace(/_/g,``).split(`:`).reduce((e,t)=>e*i(60)+i(t),i(0));return n===`-`?i(-1)*a:a}function qy(e){let{value:t}=e,n=e=>e;if(typeof t==`bigint`)n=e=>BigInt(e);else if(isNaN(t)||!isFinite(t))return uy(e);let r=``;t<0&&(r=`-`,t*=n(-1));let i=n(60),a=[t%i];return t<60?a.unshift(0):(t=(t-a[0])/i,a.unshift(t%i),t>=60&&(t=(t-a[0])/i,a.unshift(t))),r+a.map(e=>String(e).padStart(2,`0`)).join(`:`).replace(/000000\d*$/,``)}var Jy={identify:e=>typeof e==`bigint`||Number.isInteger(e),default:!0,tag:`tag:yaml.org,2002:int`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+$/,resolve:(e,t,{intAsBigInt:n})=>Ky(e,n),stringify:qy},Yy={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+\.[0-9_]*$/,resolve:e=>Ky(e,!1),stringify:qy},Xy={identify:e=>e instanceof Date,default:!0,tag:`tag:yaml.org,2002:timestamp`,test:RegExp(`^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$`),resolve(e){let t=e.match(Xy.test);if(!t)throw Error(`!!timestamp expects a date, starting with yyyy-mm-dd`);let[,n,r,i,a,o,s]=t.map(Number),c=t[7]?Number((t[7]+`00`).substr(1,3)):0,l=Date.UTC(n,r-1,i,a||0,o||0,s||0,c),u=t[8];if(u&&u!==`Z`){let e=Ky(u,!1);Math.abs(e)<30&&(e*=60),l-=6e4*e}return new Date(l)},stringify:({value:e})=>e?.toISOString().replace(/(T00:00:00)?\.000Z$/,``)??``},Zy=[ry,oy,sy,cy,My,Ny,By,Vy,Hy,Uy,Py,Fy,Iy,Ty,Hv,Ay,Oy,Gy,Jy,Yy,Xy],Qy=new Map([[`core`,by],[`failsafe`,[ry,oy,sy]],[`json`,wy],[`yaml11`,Zy],[`yaml-1.1`,Zy]]),$y={binary:Ty,bool:ly,float:py,floatExp:fy,floatNaN:dy,floatTime:Yy,int:vy,intHex:yy,intOct:_y,intTime:Jy,map:ry,merge:Hv,null:cy,omap:Ay,pairs:Oy,seq:oy,set:Gy,timestamp:Xy},eb={"tag:yaml.org,2002:binary":Ty,"tag:yaml.org,2002:merge":Hv,"tag:yaml.org,2002:omap":Ay,"tag:yaml.org,2002:pairs":Oy,"tag:yaml.org,2002:set":Gy,"tag:yaml.org,2002:timestamp":Xy};function tb(e,t,n){let r=Qy.get(t);if(r&&!e)return n&&!r.includes(Hv)?r.concat(Hv):r.slice();let i=r;if(!i){if(Array.isArray(e))i=[];else{let e=Array.from(Qy.keys()).filter(e=>e!==`yaml11`).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown schema "${t}"; use one of ${e} or define customTags array`)}}if(Array.isArray(e))for(let t of e)i=i.concat(t);else typeof e==`function`&&(i=e(i.slice()));return n&&(i=i.concat(Hv)),i.reduce((e,t)=>{let n=typeof t==`string`?$y[t]:t;if(!n){let e=JSON.stringify(t),n=Object.keys($y).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown custom tag ${e}; use one of ${n}`)}return e.includes(n)||e.push(n),e},[])}var nb=(e,t)=>e.key<t.key?-1:+(e.key>t.key),rb=class e{constructor({compat:e,customTags:t,merge:n,resolveKnownTags:r,schema:i,sortMapEntries:a,toStringDefaults:o}){this.compat=Array.isArray(e)?tb(e,`compat`):e?tb(null,e):null,this.name=typeof i==`string`&&i||`core`,this.knownTags=r?eb:{},this.tags=tb(t,this.name,n),this.toStringOptions=o??null,Object.defineProperty(this,A_,{value:ry}),Object.defineProperty(this,M_,{value:sy}),Object.defineProperty(this,N_,{value:oy}),this.sortMapEntries=typeof a==`function`?a:a===!0?nb:null}clone(){let t=Object.create(e.prototype,Object.getOwnPropertyDescriptors(this));return t.tags=this.tags.slice(),t}};function ib(e,t){let n=[],r=t.directives===!0;if(t.directives!==!1&&e.directives){let t=e.directives.toString(e);t?(n.push(t),r=!0):e.directives.docStart&&(r=!0)}r&&n.push(`---`);let i=Fv(e,t),{commentString:a}=i.options;if(e.commentBefore){n.length!==1&&n.unshift(``);let t=a(e.commentBefore);n.unshift(vv(t,``))}let o=!1,s=null;if(e.contents){if(H_(e.contents)){if(e.contents.spaceBefore&&r&&n.push(``),e.contents.commentBefore){let t=a(e.contents.commentBefore);n.push(vv(t,``))}i.forceBlockIndent=!!e.comment,s=e.contents.comment}let t=s?void 0:()=>o=!0,c=Rv(e.contents,i,()=>s=null,t);s&&(c+=yv(c,``,a(s))),(c[0]===`|`||c[0]===`>`)&&n[n.length-1]===`---`?n[n.length-1]=`--- ${c}`:n.push(c)}else n.push(Rv(e.contents,i));if(e.directives?.docEnd){if(e.comment){let t=a(e.comment);t.includes(`
+`)?(n.push(`...`),n.push(vv(t,``))):n.push(`... ${t}`)}else n.push(`...`)}else{let t=e.comment;t&&o&&(t=t.replace(/^\n+/,``)),t&&((!o||s)&&n[n.length-1]!==``&&n.push(``),n.push(vv(a(t),``)))}return n.join(`
 `)+`
-`}var By=class e{constructor(e,t,n){this.commentBefore=null,this.comment=null,this.errors=[],this.warnings=[],Object.defineProperty(this,h_,{value:u_});let r=null;typeof t==`function`||Array.isArray(t)?r=t:n===void 0&&t&&(n=t,t=void 0);let i=Object.assign({intAsBigInt:!1,keepSourceTokens:!1,logLevel:`warn`,prettyErrors:!0,strict:!0,stringKeys:!1,uniqueKeys:!0,version:`1.2`},n);this.options=i;let{version:a}=i;n?._directives?(this.directives=n._directives.atDocument(),this.directives.yaml.explicit&&(a=this.directives.yaml.version)):this.directives=new F_({version:a}),this.setSchema(a,n),this.contents=e===void 0?null:this.createNode(e,r,n)}clone(){let t=Object.create(e.prototype,{[h_]:{value:u_}});return t.commentBefore=this.commentBefore,t.comment=this.comment,t.errors=this.errors.slice(),t.warnings=this.warnings.slice(),t.options=Object.assign({},this.options),this.directives&&(t.directives=this.directives.clone()),t.schema=this.schema.clone(),t.contents=C_(this.contents)?this.contents.clone(t.schema):this.contents,this.range&&(t.range=this.range.slice()),t}add(e){Vy(this.contents)&&this.contents.add(e)}addIn(e,t){Vy(this.contents)&&this.contents.addIn(e,t)}createAlias(e,t){if(!e.anchor){let n=L_(this);e.anchor=!t||n.has(t)?R_(t||`a`,n):t}return new U_(e.anchor)}createNode(e,t,n){let r;if(typeof t==`function`)e=t.call({"":e},``,e),r=t;else if(Array.isArray(t)){let e=t.filter(e=>typeof e==`number`||e instanceof String||e instanceof Number).map(String);e.length>0&&(t=t.concat(e)),r=t}else n===void 0&&t&&(n=t,t=void 0);let{aliasDuplicateObjects:i,anchorPrefix:a,flow:o,keepUndefined:s,onTagObj:c,tag:l}=n??{},{onAnchor:u,setAnchors:d,sourceObjects:f}=z_(this,a||`a`),p={aliasDuplicateObjects:i??!0,keepUndefined:s??!1,onAnchor:u,onTagObj:c,replacer:r,schema:this.schema,sourceObjects:f},m=J_(e,l,p);return o&&S_(m)&&(m.flow=!0),d(),m}createPair(e,t,n={}){return new jv(this.createNode(e,null,n),this.createNode(t,null,n))}delete(e){return Vy(this.contents)?this.contents.delete(e):!1}deleteIn(e){return X_(e)?this.contents!=null&&(this.contents=null,!0):Vy(this.contents)?this.contents.deleteIn(e):!1}get(e,t){return S_(this.contents)?this.contents.get(e,t):void 0}getIn(e,t){return X_(e)?!t&&b_(this.contents)?this.contents.value:this.contents:S_(this.contents)?this.contents.getIn(e,t):void 0}has(e){return S_(this.contents)?this.contents.has(e):!1}hasIn(e){return X_(e)?this.contents!==void 0:S_(this.contents)?this.contents.hasIn(e):!1}set(e,t){this.contents==null?this.contents=Y_(this.schema,[e],t):Vy(this.contents)&&this.contents.set(e,t)}setIn(e,t){X_(e)?this.contents=t:this.contents==null?this.contents=Y_(this.schema,Array.from(e),t):Vy(this.contents)&&this.contents.setIn(e,t)}setSchema(e,t={}){typeof e==`number`&&(e=String(e));let n;switch(e){case`1.1`:this.directives?this.directives.yaml.version=`1.1`:this.directives=new F_({version:`1.1`}),n={resolveKnownTags:!1,schema:`yaml-1.1`};break;case`1.2`:case`next`:this.directives?this.directives.yaml.version=e:this.directives=new F_({version:e}),n={resolveKnownTags:!0,schema:`core`};break;case null:this.directives&&delete this.directives,n=null;break;default:{let t=JSON.stringify(e);throw Error(`Expected '1.1', '1.2' or null as first argument, but found: ${t}`)}}if(t.schema instanceof Object)this.schema=t.schema;else if(n)this.schema=new Ry(Object.assign(n,t));else throw Error(`With a null YAML version, the { schema: Schema } option is required`)}toJS({json:e,jsonArg:t,mapAsMap:n,maxAliasCount:r,onAnchor:i,reviver:a}={}){let o={anchors:new Map,doc:this,keep:!e,mapAsMap:n===!0,mapKeyWarned:!1,maxAliasCount:typeof r==`number`?r:100},s=V_(this.contents,t??``,o);if(typeof i==`function`)for(let{count:e,res:t}of o.anchors.values())i(t,e);return typeof a==`function`?B_(a,{"":s},``,s):s}toJSON(e,t){return this.toJS({json:!0,jsonArg:e,mapAsMap:!1,onAnchor:t})}toString(e={}){if(this.errors.length>0)throw Error(`Document with errors cannot be stringified`);if(`indent`in e&&(!Number.isInteger(e.indent)||Number(e.indent)<=0)){let t=JSON.stringify(e.indent);throw Error(`"indent" option must be a positive integer, not ${t}`)}return zy(this,e)}};function Vy(e){if(S_(e))return!0;throw Error(`Expected a YAML collection as document contents`)}var Hy=class extends Error{constructor(e,t,n,r){super(),this.name=e,this.code=n,this.message=r,this.pos=t}},Uy=class extends Hy{constructor(e,t,n){super(`YAMLParseError`,e,t,n)}},Wy=class extends Hy{constructor(e,t,n){super(`YAMLWarning`,e,t,n)}},Gy=(e,t)=>n=>{if(n.pos[0]===-1)return;n.linePos=n.pos.map(e=>t.linePos(e));let{line:r,col:i}=n.linePos[0];n.message+=` at line ${r}, column ${i}`;let a=i-1,o=e.substring(t.lineStarts[r-1],t.lineStarts[r]).replace(/[\n\r]+$/,``);if(a>=60&&o.length>80){let e=Math.min(a-39,o.length-79);o=`…`+o.substring(e),a-=e-1}if(o.length>80&&(o=o.substring(0,79)+`…`),r>1&&/^ *$/.test(o.substring(0,a))){let n=e.substring(t.lineStarts[r-2],t.lineStarts[r-1]);n.length>80&&(n=n.substring(0,79)+`…
-`),o=n+o}if(/[^ ]/.test(o)){let e=1,t=n.linePos[1];t?.line===r&&t.col>i&&(e=Math.max(1,Math.min(t.col-i,80-a)));let s=` `.repeat(a)+`^`.repeat(e);n.message+=`:\n\n${o}\n${s}\n`}};function Ky(e,{flow:t,indicator:n,next:r,offset:i,onError:a,parentIndent:o,startOnNewline:s}){let c=!1,l=s,u=s,d=``,f=``,p=!1,m=!1,h=null,g=null,_=null,v=null,y=null,b=null,x=null;for(let i of e)switch(m&&=(i.type!==`space`&&i.type!==`newline`&&i.type!==`comma`&&a(i.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),!1),h&&=(l&&i.type!==`comment`&&i.type!==`newline`&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),null),i.type){case`space`:!t&&(n!==`doc-start`||r?.type!==`flow-collection`)&&i.source.includes(`	`)&&(h=i),u=!0;break;case`comment`:{u||a(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let e=i.source.substring(1)||` `;d?d+=f+e:d=e,f=``,l=!1;break}case`newline`:l?d?d+=i.source:(!b||n!==`seq-item-ind`)&&(c=!0):f+=i.source,l=!0,p=!0,(g||_)&&(v=i),u=!0;break;case`anchor`:g&&a(i,`MULTIPLE_ANCHORS`,`A node can have at most one anchor`),i.source.endsWith(`:`)&&a(i.offset+i.source.length-1,`BAD_ALIAS`,`Anchor ending in : is ambiguous`,!0),g=i,x??=i.offset,l=!1,u=!1,m=!0;break;case`tag`:_&&a(i,`MULTIPLE_TAGS`,`A node can have at most one tag`),_=i,x??=i.offset,l=!1,u=!1,m=!0;break;case n:(g||_)&&a(i,`BAD_PROP_ORDER`,`Anchors and tags must be after the ${i.source} indicator`),b&&a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.source} in ${t??`collection`}`),b=i,l=n===`seq-item-ind`||n===`explicit-key-ind`,u=!1;break;case`comma`:if(t){y&&a(i,`UNEXPECTED_TOKEN`,`Unexpected , in ${t}`),y=i,l=!1,u=!1;break}default:a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.type} token`),l=!1,u=!1}let S=e[e.length-1],ee=S?S.offset+S.source.length:i;return m&&r&&r.type!==`space`&&r.type!==`newline`&&r.type!==`comma`&&(r.type!==`scalar`||r.source!==``)&&a(r.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),h&&(l&&h.indent<=o||r?.type===`block-map`||r?.type===`block-seq`)&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),{comma:y,found:b,spaceBefore:c,comment:d,hasNewline:p,anchor:g,tag:_,newlineAfterProp:v,end:ee,start:x??ee}}function qy(e){if(!e)return null;switch(e.type){case`alias`:case`scalar`:case`double-quoted-scalar`:case`single-quoted-scalar`:if(e.source.includes(`
-`))return!0;if(e.end){for(let t of e.end)if(t.type===`newline`)return!0}return!1;case`flow-collection`:for(let t of e.items){for(let e of t.start)if(e.type===`newline`)return!0;if(t.sep){for(let e of t.sep)if(e.type===`newline`)return!0}if(qy(t.key)||qy(t.value))return!0}return!1;default:return!0}}function Jy(e,t,n){if(t?.type===`flow-collection`){let r=t.end[0];r.indent===e&&(r.source===`]`||r.source===`}`)&&qy(t)&&n(r,`BAD_INDENT`,`Flow end indicator should be more indented than parent`,!0)}}function Yy(e,t,n){let{uniqueKeys:r}=e.options;if(r===!1)return!1;let i=typeof r==`function`?r:(e,t)=>e===t||b_(e)&&b_(t)&&e.value===t.value;return t.some(e=>i(e.key,n))}var Xy=`All mapping items must start at the same column`;function Zy({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??Lv)(n.schema);n.atRoot&&=!1;let s=r.offset,c=null;for(let a of r.items){let{start:l,key:u,sep:d,value:f}=a,p=Ky(l,{indicator:`explicit-key-ind`,next:u??d?.[0],offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0}),m=!p.found;if(m){if(u&&(u.type===`block-seq`?i(s,`BLOCK_AS_IMPLICIT_KEY`,`A block sequence may not be used as an implicit map key`):`indent`in u&&u.indent!==r.indent&&i(s,`BAD_INDENT`,Xy)),!p.anchor&&!p.tag&&!d){c=p.end,p.comment&&(o.comment?o.comment+=`
-`+p.comment:o.comment=p.comment);continue}(p.newlineAfterProp||qy(u))&&i(u??l[l.length-1],`MULTILINE_IMPLICIT_KEY`,`Implicit keys need to be on a single line`)}else p.found?.indent!==r.indent&&i(s,`BAD_INDENT`,Xy);n.atKey=!0;let h=p.end,g=u?e(n,u,p,i):t(n,h,l,null,p,i);n.schema.compat&&Jy(r.indent,u,i),n.atKey=!1,Yy(n,o.items,g)&&i(h,`DUPLICATE_KEY`,`Map keys must be unique`);let _=Ky(d??[],{indicator:`map-value-ind`,next:f,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!u||u.type===`block-scalar`});if(s=_.end,_.found){m&&(f?.type===`block-map`&&!_.hasNewline&&i(s,`BLOCK_AS_IMPLICIT_KEY`,`Nested mappings are not allowed in compact mappings`),n.options.strict&&p.start<_.found.offset-1024&&i(g.range,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit block mapping key`));let c=f?e(n,f,_,i):t(n,s,d,null,_,i);n.schema.compat&&Jy(r.indent,f,i),s=c.range[2];let l=new jv(g,c);n.options.keepSourceTokens&&(l.srcToken=a),o.items.push(l)}else{m&&i(g.range,`MISSING_CHAR`,`Implicit map keys need to be followed by map values`),_.comment&&(g.comment?g.comment+=`
-`+_.comment:g.comment=_.comment);let e=new jv(g);n.options.keepSourceTokens&&(e.srcToken=a),o.items.push(e)}}return c&&c<s&&i(c,`IMPOSSIBLE`,`Map comment with trailing content`),o.range=[r.offset,s,c??s],o}function Qy({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??zv)(n.schema);n.atRoot&&=!1,n.atKey&&=!1;let s=r.offset,c=null;for(let{start:a,value:l}of r.items){let u=Ky(a,{indicator:`seq-item-ind`,next:l,offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0});if(!u.found){if(u.anchor||u.tag||l)l?.type===`block-seq`?i(u.end,`BAD_INDENT`,`All sequence items must start at the same column`):i(s,`MISSING_CHAR`,`Sequence item without - indicator`);else{c=u.end,u.comment&&(o.comment=u.comment);continue}}let d=l?e(n,l,u,i):t(n,u.end,a,null,u,i);n.schema.compat&&Jy(r.indent,l,i),s=d.range[2],o.items.push(d)}return o.range=[r.offset,s,c??s],o}function $y(e,t,n,r){let i=``;if(e){let a=!1,o=``;for(let s of e){let{source:e,type:c}=s;switch(c){case`space`:a=!0;break;case`comment`:{n&&!a&&r(s,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let t=e.substring(1)||` `;i?i+=o+t:i=t,o=``;break}case`newline`:i&&(o+=e),a=!0;break;default:r(s,`UNEXPECTED_TOKEN`,`Unexpected ${c} at node end`)}t+=e.length}}return{comment:i,offset:t}}var eb=`Block collections are not allowed within flow collections`,tb=e=>e&&(e.type===`block-map`||e.type===`block-seq`);function nb({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=r.start.source===`{`,s=o?`flow map`:`flow sequence`,c=new((a?.nodeClass)??(o?Lv:zv))(n.schema);c.flow=!0;let l=n.atRoot;l&&(n.atRoot=!1),n.atKey&&=!1;let u=r.offset+r.start.source.length;for(let a=0;a<r.items.length;++a){let l=r.items[a],{start:d,key:f,sep:p,value:m}=l,h=Ky(d,{flow:s,indicator:`explicit-key-ind`,next:f??p?.[0],offset:u,onError:i,parentIndent:r.indent,startOnNewline:!1});if(!h.found){if(!h.anchor&&!h.tag&&!p&&!m){a===0&&h.comma?i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`):a<r.items.length-1&&i(h.start,`UNEXPECTED_TOKEN`,`Unexpected empty item in ${s}`),h.comment&&(c.comment?c.comment+=`
-`+h.comment:c.comment=h.comment),u=h.end;continue}!o&&n.options.strict&&qy(f)&&i(f,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`)}if(a===0)h.comma&&i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`);else if(h.comma||i(h.start,`MISSING_CHAR`,`Missing , between ${s} items`),h.comment){let e=``;loop:for(let t of d)switch(t.type){case`comma`:case`space`:break;case`comment`:e=t.source.substring(1);break loop;default:break loop}if(e){let t=c.items[c.items.length-1];y_(t)&&(t=t.value??t.key),t.comment?t.comment+=`
-`+e:t.comment=e,h.comment=h.comment.substring(e.length+1)}}if(!o&&!p&&!h.found){let r=m?e(n,m,h,i):t(n,h.end,p,null,h,i);c.items.push(r),u=r.range[2],tb(m)&&i(r.range,`BLOCK_IN_FLOW`,eb)}else{n.atKey=!0;let a=h.end,g=f?e(n,f,h,i):t(n,a,d,null,h,i);tb(f)&&i(g.range,`BLOCK_IN_FLOW`,eb),n.atKey=!1;let _=Ky(p??[],{flow:s,indicator:`map-value-ind`,next:m,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!1});if(_.found){if(!o&&!h.found&&n.options.strict){if(p)for(let e of p){if(e===_.found)break;if(e.type===`newline`){i(e,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`);break}}h.start<_.found.offset-1024&&i(_.found,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit flow sequence key`)}}else m&&(`source`in m&&m.source?.[0]===`:`?i(m,`MISSING_CHAR`,`Missing space after : in ${s}`):i(_.start,`MISSING_CHAR`,`Missing , or : between ${s} items`));let v=m?e(n,m,_,i):_.found?t(n,_.end,p,null,_,i):null;v?tb(m)&&i(v.range,`BLOCK_IN_FLOW`,eb):_.comment&&(g.comment?g.comment+=`
-`+_.comment:g.comment=_.comment);let y=new jv(g,v);if(n.options.keepSourceTokens&&(y.srcToken=l),o){let e=c;Yy(n,e.items,g)&&i(a,`DUPLICATE_KEY`,`Map keys must be unique`),e.items.push(y)}else{let e=new Lv(n.schema);e.flow=!0,e.items.push(y);let t=(v??g).range;e.range=[g.range[0],t[1],t[2]],c.items.push(e)}u=v?v.range[2]:_.end}}let d=o?`}`:`]`,[f,...p]=r.end,m=u;if(f?.source===d)m=f.offset+f.source.length;else{let e=s[0].toUpperCase()+s.substring(1),t=l?`${e} must end with a ${d}`:`${e} in block collection must be sufficiently indented and end with a ${d}`;i(u,l?`MISSING_CHAR`:`BAD_INDENT`,t),f&&f.source.length!==1&&p.unshift(f)}if(p.length>0){let e=$y(p,m,n.options.strict,i);e.comment&&(c.comment?c.comment+=`
-`+e.comment:c.comment=e.comment),c.range=[r.offset,m,e.offset]}else c.range=[r.offset,m,m];return c}function rb(e,t,n,r,i,a){let o=n.type===`block-map`?Zy(e,t,n,r,a):n.type===`block-seq`?Qy(e,t,n,r,a):nb(e,t,n,r,a),s=o.constructor;return i===`!`||i===s.tagName?(o.tag=s.tagName,o):(i&&(o.tag=i),o)}function ib(e,t,n,r,i){let a=r.tag,o=a?t.directives.tagName(a.source,e=>i(a,`TAG_RESOLVE_FAILED`,e)):null;if(n.type===`block-seq`){let{anchor:e,newlineAfterProp:t}=r,n=e&&a?e.offset>a.offset?e:a:e??a;n&&(!t||t.offset<n.offset)&&i(n,`MISSING_CHAR`,`Missing newline after block sequence props`)}let s=n.type===`block-map`?`map`:n.type===`block-seq`?`seq`:n.start.source===`{`?`map`:`seq`;if(!a||!o||o===`!`||o===Lv.tagName&&s===`map`||o===zv.tagName&&s===`seq`)return rb(e,t,n,i,o);let c=t.schema.tags.find(e=>e.tag===o&&e.collection===s);if(!c){let r=t.schema.knownTags[o];if(r?.collection===s)t.schema.tags.push(Object.assign({},r,{default:!1})),c=r;else return r?i(a,`BAD_COLLECTION_TYPE`,`${r.tag} used for ${s} collection, but expects ${r.collection??`scalar`}`,!0):i(a,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${o}`,!0),rb(e,t,n,i,o)}let l=rb(e,t,n,i,o,c),u=c.resolve?.(l,e=>i(a,`TAG_RESOLVE_FAILED`,e),t.options)??l,d=C_(u)?u:new Z(u);return d.range=l.range,d.tag=o,c?.format&&(d.format=c.format),d}function ab(e,t,n){let r=t.offset,i=ob(t,e.options.strict,n);if(!i)return{value:``,type:null,comment:``,range:[r,r,r]};let a=i.mode===`>`?Z.BLOCK_FOLDED:Z.BLOCK_LITERAL,o=t.source?sb(t.source):[],s=o.length;for(let e=o.length-1;e>=0;--e){let t=o[e][1];if(t===``||t===`\r`)s=e;else break}if(s===0){let e=i.chomp===`+`&&o.length>0?`
+`}var ab=class e{constructor(e,t,n){this.commentBefore=null,this.comment=null,this.errors=[],this.warnings=[],Object.defineProperty(this,P_,{value:k_});let r=null;typeof t==`function`||Array.isArray(t)?r=t:n===void 0&&t&&(n=t,t=void 0);let i=Object.assign({intAsBigInt:!1,keepSourceTokens:!1,logLevel:`warn`,prettyErrors:!0,strict:!0,stringKeys:!1,uniqueKeys:!0,version:`1.2`},n);this.options=i;let{version:a}=i;n?._directives?(this.directives=n._directives.atDocument(),this.directives.yaml.explicit&&(a=this.directives.yaml.version)):this.directives=new ev({version:a}),this.setSchema(a,n),this.contents=e===void 0?null:this.createNode(e,r,n)}clone(){let t=Object.create(e.prototype,{[P_]:{value:k_}});return t.commentBefore=this.commentBefore,t.comment=this.comment,t.errors=this.errors.slice(),t.warnings=this.warnings.slice(),t.options=Object.assign({},this.options),this.directives&&(t.directives=this.directives.clone()),t.schema=this.schema.clone(),t.contents=H_(this.contents)?this.contents.clone(t.schema):this.contents,this.range&&(t.range=this.range.slice()),t}add(e){ob(this.contents)&&this.contents.add(e)}addIn(e,t){ob(this.contents)&&this.contents.addIn(e,t)}createAlias(e,t){if(!e.anchor){let n=nv(this);e.anchor=!t||n.has(t)?rv(t||`a`,n):t}return new cv(e.anchor)}createNode(e,t,n){let r;if(typeof t==`function`)e=t.call({"":e},``,e),r=t;else if(Array.isArray(t)){let e=t.filter(e=>typeof e==`number`||e instanceof String||e instanceof Number).map(String);e.length>0&&(t=t.concat(e)),r=t}else n===void 0&&t&&(n=t,t=void 0);let{aliasDuplicateObjects:i,anchorPrefix:a,flow:o,keepUndefined:s,onTagObj:c,tag:l}=n??{},{onAnchor:u,setAnchors:d,sourceObjects:f}=iv(this,a||`a`),p={aliasDuplicateObjects:i??!0,keepUndefined:s??!1,onAnchor:u,onTagObj:c,replacer:r,schema:this.schema,sourceObjects:f},m=pv(e,l,p);return o&&V_(m)&&(m.flow=!0),d(),m}createPair(e,t,n={}){return new Xv(this.createNode(e,null,n),this.createNode(t,null,n))}delete(e){return ob(this.contents)?this.contents.delete(e):!1}deleteIn(e){return hv(e)?this.contents!=null&&(this.contents=null,!0):ob(this.contents)?this.contents.deleteIn(e):!1}get(e,t){return V_(this.contents)?this.contents.get(e,t):void 0}getIn(e,t){return hv(e)?!t&&z_(this.contents)?this.contents.value:this.contents:V_(this.contents)?this.contents.getIn(e,t):void 0}has(e){return V_(this.contents)?this.contents.has(e):!1}hasIn(e){return hv(e)?this.contents!==void 0:V_(this.contents)?this.contents.hasIn(e):!1}set(e,t){this.contents==null?this.contents=mv(this.schema,[e],t):ob(this.contents)&&this.contents.set(e,t)}setIn(e,t){hv(e)?this.contents=t:this.contents==null?this.contents=mv(this.schema,Array.from(e),t):ob(this.contents)&&this.contents.setIn(e,t)}setSchema(e,t={}){typeof e==`number`&&(e=String(e));let n;switch(e){case`1.1`:this.directives?this.directives.yaml.version=`1.1`:this.directives=new ev({version:`1.1`}),n={resolveKnownTags:!1,schema:`yaml-1.1`};break;case`1.2`:case`next`:this.directives?this.directives.yaml.version=e:this.directives=new ev({version:e}),n={resolveKnownTags:!0,schema:`core`};break;case null:this.directives&&delete this.directives,n=null;break;default:{let t=JSON.stringify(e);throw Error(`Expected '1.1', '1.2' or null as first argument, but found: ${t}`)}}if(t.schema instanceof Object)this.schema=t.schema;else if(n)this.schema=new rb(Object.assign(n,t));else throw Error(`With a null YAML version, the { schema: Schema } option is required`)}toJS({json:e,jsonArg:t,mapAsMap:n,maxAliasCount:r,onAnchor:i,reviver:a}={}){let o={anchors:new Map,doc:this,keep:!e,mapAsMap:n===!0,mapKeyWarned:!1,maxAliasCount:typeof r==`number`?r:100},s=ov(this.contents,t??``,o);if(typeof i==`function`)for(let{count:e,res:t}of o.anchors.values())i(t,e);return typeof a==`function`?av(a,{"":s},``,s):s}toJSON(e,t){return this.toJS({json:!0,jsonArg:e,mapAsMap:!1,onAnchor:t})}toString(e={}){if(this.errors.length>0)throw Error(`Document with errors cannot be stringified`);if(`indent`in e&&(!Number.isInteger(e.indent)||Number(e.indent)<=0)){let t=JSON.stringify(e.indent);throw Error(`"indent" option must be a positive integer, not ${t}`)}return ib(this,e)}};function ob(e){if(V_(e))return!0;throw Error(`Expected a YAML collection as document contents`)}var sb=class extends Error{constructor(e,t,n,r){super(),this.name=e,this.code=n,this.message=r,this.pos=t}},cb=class extends sb{constructor(e,t,n){super(`YAMLParseError`,e,t,n)}},lb=class extends sb{constructor(e,t,n){super(`YAMLWarning`,e,t,n)}},ub=(e,t)=>n=>{if(n.pos[0]===-1)return;n.linePos=n.pos.map(e=>t.linePos(e));let{line:r,col:i}=n.linePos[0];n.message+=` at line ${r}, column ${i}`;let a=i-1,o=e.substring(t.lineStarts[r-1],t.lineStarts[r]).replace(/[\n\r]+$/,``);if(a>=60&&o.length>80){let e=Math.min(a-39,o.length-79);o=`…`+o.substring(e),a-=e-1}if(o.length>80&&(o=o.substring(0,79)+`…`),r>1&&/^ *$/.test(o.substring(0,a))){let n=e.substring(t.lineStarts[r-2],t.lineStarts[r-1]);n.length>80&&(n=n.substring(0,79)+`…
+`),o=n+o}if(/[^ ]/.test(o)){let e=1,t=n.linePos[1];t?.line===r&&t.col>i&&(e=Math.max(1,Math.min(t.col-i,80-a)));let s=` `.repeat(a)+`^`.repeat(e);n.message+=`:\n\n${o}\n${s}\n`}};function db(e,{flow:t,indicator:n,next:r,offset:i,onError:a,parentIndent:o,startOnNewline:s}){let c=!1,l=s,u=s,d=``,f=``,p=!1,m=!1,h=null,g=null,_=null,v=null,y=null,b=null,x=null;for(let i of e)switch(m&&=(i.type!==`space`&&i.type!==`newline`&&i.type!==`comma`&&a(i.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),!1),h&&=(l&&i.type!==`comment`&&i.type!==`newline`&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),null),i.type){case`space`:!t&&(n!==`doc-start`||r?.type!==`flow-collection`)&&i.source.includes(`	`)&&(h=i),u=!0;break;case`comment`:{u||a(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let e=i.source.substring(1)||` `;d?d+=f+e:d=e,f=``,l=!1;break}case`newline`:l?d?d+=i.source:(!b||n!==`seq-item-ind`)&&(c=!0):f+=i.source,l=!0,p=!0,(g||_)&&(v=i),u=!0;break;case`anchor`:g&&a(i,`MULTIPLE_ANCHORS`,`A node can have at most one anchor`),i.source.endsWith(`:`)&&a(i.offset+i.source.length-1,`BAD_ALIAS`,`Anchor ending in : is ambiguous`,!0),g=i,x??=i.offset,l=!1,u=!1,m=!0;break;case`tag`:_&&a(i,`MULTIPLE_TAGS`,`A node can have at most one tag`),_=i,x??=i.offset,l=!1,u=!1,m=!0;break;case n:(g||_)&&a(i,`BAD_PROP_ORDER`,`Anchors and tags must be after the ${i.source} indicator`),b&&a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.source} in ${t??`collection`}`),b=i,l=n===`seq-item-ind`||n===`explicit-key-ind`,u=!1;break;case`comma`:if(t){y&&a(i,`UNEXPECTED_TOKEN`,`Unexpected , in ${t}`),y=i,l=!1,u=!1;break}default:a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.type} token`),l=!1,u=!1}let S=e[e.length-1],ee=S?S.offset+S.source.length:i;return m&&r&&r.type!==`space`&&r.type!==`newline`&&r.type!==`comma`&&(r.type!==`scalar`||r.source!==``)&&a(r.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),h&&(l&&h.indent<=o||r?.type===`block-map`||r?.type===`block-seq`)&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),{comma:y,found:b,spaceBefore:c,comment:d,hasNewline:p,anchor:g,tag:_,newlineAfterProp:v,end:ee,start:x??ee}}function fb(e){if(!e)return null;switch(e.type){case`alias`:case`scalar`:case`double-quoted-scalar`:case`single-quoted-scalar`:if(e.source.includes(`
+`))return!0;if(e.end){for(let t of e.end)if(t.type===`newline`)return!0}return!1;case`flow-collection`:for(let t of e.items){for(let e of t.start)if(e.type===`newline`)return!0;if(t.sep){for(let e of t.sep)if(e.type===`newline`)return!0}if(fb(t.key)||fb(t.value))return!0}return!1;default:return!0}}function pb(e,t,n){if(t?.type===`flow-collection`){let r=t.end[0];r.indent===e&&(r.source===`]`||r.source===`}`)&&fb(t)&&n(r,`BAD_INDENT`,`Flow end indicator should be more indented than parent`,!0)}}function mb(e,t,n){let{uniqueKeys:r}=e.options;if(r===!1)return!1;let i=typeof r==`function`?r:(e,t)=>e===t||z_(e)&&z_(t)&&e.value===t.value;return t.some(e=>i(e.key,n))}var hb=`All mapping items must start at the same column`;function gb({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??ny)(n.schema);n.atRoot&&=!1;let s=r.offset,c=null;for(let a of r.items){let{start:l,key:u,sep:d,value:f}=a,p=db(l,{indicator:`explicit-key-ind`,next:u??d?.[0],offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0}),m=!p.found;if(m){if(u&&(u.type===`block-seq`?i(s,`BLOCK_AS_IMPLICIT_KEY`,`A block sequence may not be used as an implicit map key`):`indent`in u&&u.indent!==r.indent&&i(s,`BAD_INDENT`,hb)),!p.anchor&&!p.tag&&!d){c=p.end,p.comment&&(o.comment?o.comment+=`
+`+p.comment:o.comment=p.comment);continue}(p.newlineAfterProp||fb(u))&&i(u??l[l.length-1],`MULTILINE_IMPLICIT_KEY`,`Implicit keys need to be on a single line`)}else p.found?.indent!==r.indent&&i(s,`BAD_INDENT`,hb);n.atKey=!0;let h=p.end,g=u?e(n,u,p,i):t(n,h,l,null,p,i);n.schema.compat&&pb(r.indent,u,i),n.atKey=!1,mb(n,o.items,g)&&i(h,`DUPLICATE_KEY`,`Map keys must be unique`);let _=db(d??[],{indicator:`map-value-ind`,next:f,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!u||u.type===`block-scalar`});if(s=_.end,_.found){m&&(f?.type===`block-map`&&!_.hasNewline&&i(s,`BLOCK_AS_IMPLICIT_KEY`,`Nested mappings are not allowed in compact mappings`),n.options.strict&&p.start<_.found.offset-1024&&i(g.range,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit block mapping key`));let c=f?e(n,f,_,i):t(n,s,d,null,_,i);n.schema.compat&&pb(r.indent,f,i),s=c.range[2];let l=new Xv(g,c);n.options.keepSourceTokens&&(l.srcToken=a),o.items.push(l)}else{m&&i(g.range,`MISSING_CHAR`,`Implicit map keys need to be followed by map values`),_.comment&&(g.comment?g.comment+=`
+`+_.comment:g.comment=_.comment);let e=new Xv(g);n.options.keepSourceTokens&&(e.srcToken=a),o.items.push(e)}}return c&&c<s&&i(c,`IMPOSSIBLE`,`Map comment with trailing content`),o.range=[r.offset,s,c??s],o}function _b({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??iy)(n.schema);n.atRoot&&=!1,n.atKey&&=!1;let s=r.offset,c=null;for(let{start:a,value:l}of r.items){let u=db(a,{indicator:`seq-item-ind`,next:l,offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0});if(!u.found){if(u.anchor||u.tag||l)l?.type===`block-seq`?i(u.end,`BAD_INDENT`,`All sequence items must start at the same column`):i(s,`MISSING_CHAR`,`Sequence item without - indicator`);else{c=u.end,u.comment&&(o.comment=u.comment);continue}}let d=l?e(n,l,u,i):t(n,u.end,a,null,u,i);n.schema.compat&&pb(r.indent,l,i),s=d.range[2],o.items.push(d)}return o.range=[r.offset,s,c??s],o}function vb(e,t,n,r){let i=``;if(e){let a=!1,o=``;for(let s of e){let{source:e,type:c}=s;switch(c){case`space`:a=!0;break;case`comment`:{n&&!a&&r(s,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let t=e.substring(1)||` `;i?i+=o+t:i=t,o=``;break}case`newline`:i&&(o+=e),a=!0;break;default:r(s,`UNEXPECTED_TOKEN`,`Unexpected ${c} at node end`)}t+=e.length}}return{comment:i,offset:t}}var yb=`Block collections are not allowed within flow collections`,bb=e=>e&&(e.type===`block-map`||e.type===`block-seq`);function xb({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=r.start.source===`{`,s=o?`flow map`:`flow sequence`,c=new((a?.nodeClass)??(o?ny:iy))(n.schema);c.flow=!0;let l=n.atRoot;l&&(n.atRoot=!1),n.atKey&&=!1;let u=r.offset+r.start.source.length;for(let a=0;a<r.items.length;++a){let l=r.items[a],{start:d,key:f,sep:p,value:m}=l,h=db(d,{flow:s,indicator:`explicit-key-ind`,next:f??p?.[0],offset:u,onError:i,parentIndent:r.indent,startOnNewline:!1});if(!h.found){if(!h.anchor&&!h.tag&&!p&&!m){a===0&&h.comma?i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`):a<r.items.length-1&&i(h.start,`UNEXPECTED_TOKEN`,`Unexpected empty item in ${s}`),h.comment&&(c.comment?c.comment+=`
+`+h.comment:c.comment=h.comment),u=h.end;continue}!o&&n.options.strict&&fb(f)&&i(f,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`)}if(a===0)h.comma&&i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`);else if(h.comma||i(h.start,`MISSING_CHAR`,`Missing , between ${s} items`),h.comment){let e=``;loop:for(let t of d)switch(t.type){case`comma`:case`space`:break;case`comment`:e=t.source.substring(1);break loop;default:break loop}if(e){let t=c.items[c.items.length-1];R_(t)&&(t=t.value??t.key),t.comment?t.comment+=`
+`+e:t.comment=e,h.comment=h.comment.substring(e.length+1)}}if(!o&&!p&&!h.found){let r=m?e(n,m,h,i):t(n,h.end,p,null,h,i);c.items.push(r),u=r.range[2],bb(m)&&i(r.range,`BLOCK_IN_FLOW`,yb)}else{n.atKey=!0;let a=h.end,g=f?e(n,f,h,i):t(n,a,d,null,h,i);bb(f)&&i(g.range,`BLOCK_IN_FLOW`,yb),n.atKey=!1;let _=db(p??[],{flow:s,indicator:`map-value-ind`,next:m,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!1});if(_.found){if(!o&&!h.found&&n.options.strict){if(p)for(let e of p){if(e===_.found)break;if(e.type===`newline`){i(e,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`);break}}h.start<_.found.offset-1024&&i(_.found,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit flow sequence key`)}}else m&&(`source`in m&&m.source?.[0]===`:`?i(m,`MISSING_CHAR`,`Missing space after : in ${s}`):i(_.start,`MISSING_CHAR`,`Missing , or : between ${s} items`));let v=m?e(n,m,_,i):_.found?t(n,_.end,p,null,_,i):null;v?bb(m)&&i(v.range,`BLOCK_IN_FLOW`,yb):_.comment&&(g.comment?g.comment+=`
+`+_.comment:g.comment=_.comment);let y=new Xv(g,v);if(n.options.keepSourceTokens&&(y.srcToken=l),o){let e=c;mb(n,e.items,g)&&i(a,`DUPLICATE_KEY`,`Map keys must be unique`),e.items.push(y)}else{let e=new ny(n.schema);e.flow=!0,e.items.push(y);let t=(v??g).range;e.range=[g.range[0],t[1],t[2]],c.items.push(e)}u=v?v.range[2]:_.end}}let d=o?`}`:`]`,[f,...p]=r.end,m=u;if(f?.source===d)m=f.offset+f.source.length;else{let e=s[0].toUpperCase()+s.substring(1),t=l?`${e} must end with a ${d}`:`${e} in block collection must be sufficiently indented and end with a ${d}`;i(u,l?`MISSING_CHAR`:`BAD_INDENT`,t),f&&f.source.length!==1&&p.unshift(f)}if(p.length>0){let e=vb(p,m,n.options.strict,i);e.comment&&(c.comment?c.comment+=`
+`+e.comment:c.comment=e.comment),c.range=[r.offset,m,e.offset]}else c.range=[r.offset,m,m];return c}function Sb(e,t,n,r,i,a){let o=n.type===`block-map`?gb(e,t,n,r,a):n.type===`block-seq`?_b(e,t,n,r,a):xb(e,t,n,r,a),s=o.constructor;return i===`!`||i===s.tagName?(o.tag=s.tagName,o):(i&&(o.tag=i),o)}function Cb(e,t,n,r,i){let a=r.tag,o=a?t.directives.tagName(a.source,e=>i(a,`TAG_RESOLVE_FAILED`,e)):null;if(n.type===`block-seq`){let{anchor:e,newlineAfterProp:t}=r,n=e&&a?e.offset>a.offset?e:a:e??a;n&&(!t||t.offset<n.offset)&&i(n,`MISSING_CHAR`,`Missing newline after block sequence props`)}let s=n.type===`block-map`?`map`:n.type===`block-seq`?`seq`:n.start.source===`{`?`map`:`seq`;if(!a||!o||o===`!`||o===ny.tagName&&s===`map`||o===iy.tagName&&s===`seq`)return Sb(e,t,n,i,o);let c=t.schema.tags.find(e=>e.tag===o&&e.collection===s);if(!c){let r=t.schema.knownTags[o];if(r?.collection===s)t.schema.tags.push(Object.assign({},r,{default:!1})),c=r;else return r?i(a,`BAD_COLLECTION_TYPE`,`${r.tag} used for ${s} collection, but expects ${r.collection??`scalar`}`,!0):i(a,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${o}`,!0),Sb(e,t,n,i,o)}let l=Sb(e,t,n,i,o,c),u=c.resolve?.(l,e=>i(a,`TAG_RESOLVE_FAILED`,e),t.options)??l,d=H_(u)?u:new Z(u);return d.range=l.range,d.tag=o,c?.format&&(d.format=c.format),d}function wb(e,t,n){let r=t.offset,i=Tb(t,e.options.strict,n);if(!i)return{value:``,type:null,comment:``,range:[r,r,r]};let a=i.mode===`>`?Z.BLOCK_FOLDED:Z.BLOCK_LITERAL,o=t.source?Eb(t.source):[],s=o.length;for(let e=o.length-1;e>=0;--e){let t=o[e][1];if(t===``||t===`\r`)s=e;else break}if(s===0){let e=i.chomp===`+`&&o.length>0?`
 `.repeat(Math.max(1,o.length-1)):``,n=r+i.length;return t.source&&(n+=t.source.length),{value:e,type:a,comment:i.comment,range:[r,n,n]}}let c=t.indent+i.indent,l=t.offset+i.length,u=0;for(let t=0;t<s;++t){let[r,a]=o[t];if(a===``||a===`\r`)i.indent===0&&r.length>c&&(c=r.length);else{r.length<c&&n(l+r.length,`MISSING_CHAR`,`Block scalars with more-indented leading empty lines must use an explicit indentation indicator`),i.indent===0&&(c=r.length),u=t,c===0&&!e.atRoot&&n(l,`BAD_INDENT`,`Block scalar values in collections must be indented`);break}l+=r.length+a.length+1}for(let e=o.length-1;e>=s;--e)o[e][0].length>c&&(s=e+1);let d=``,f=``,p=!1;for(let e=0;e<u;++e)d+=o[e][0].slice(c)+`
 `;for(let e=u;e<s;++e){let[t,r]=o[e];l+=t.length+r.length+1;let s=r[r.length-1]===`\r`;if(s&&(r=r.slice(0,-1)),r&&t.length<c){let e=`Block scalar lines must not be less indented than their ${i.indent?`explicit indentation indicator`:`first line`}`;n(l-r.length-(s?2:1),`BAD_INDENT`,e),t=``}a===Z.BLOCK_LITERAL?(d+=f+t.slice(c)+r,f=`
 `):t.length>c||r[0]===`	`?(f===` `?f=`
@@ -5431,48 +5772,48 @@ $&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\
 `+o[e][0].slice(c);d[d.length-1]!==`
 `&&(d+=`
 `);break;default:d+=`
-`}let m=r+i.length+t.source.length;return{value:d,type:a,comment:i.comment,range:[r,m,m]}}function ob({offset:e,props:t},n,r){if(t[0].type!==`block-scalar-header`)return r(t[0],`IMPOSSIBLE`,`Block scalar header not found`),null;let{source:i}=t[0],a=i[0],o=0,s=``,c=-1;for(let t=1;t<i.length;++t){let n=i[t];if(!s&&(n===`-`||n===`+`))s=n;else{let r=Number(n);!o&&r?o=r:c===-1&&(c=e+t)}}c!==-1&&r(c,`UNEXPECTED_TOKEN`,`Block scalar header includes extra characters: ${i}`);let l=!1,u=``,d=i.length;for(let e=1;e<t.length;++e){let i=t[e];switch(i.type){case`space`:l=!0;case`newline`:d+=i.source.length;break;case`comment`:n&&!l&&r(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`),d+=i.source.length,u=i.source.substring(1);break;case`error`:r(i,`UNEXPECTED_TOKEN`,i.message),d+=i.source.length;break;default:{r(i,`UNEXPECTED_TOKEN`,`Unexpected token in block scalar header: ${i.type}`);let e=i.source;e&&typeof e==`string`&&(d+=e.length)}}}return{mode:a,indent:o,chomp:s,comment:u,length:d}}function sb(e){let t=e.split(/\n( *)/),n=t[0],r=n.match(/^( *)/),i=[r?.[1]?[r[1],n.slice(r[1].length)]:[``,n]];for(let e=1;e<t.length;e+=2)i.push([t[e],t[e+1]]);return i}function cb(e,t,n){let{offset:r,type:i,source:a,end:o}=e,s,c,l=(e,t,i)=>n(r+e,t,i);switch(i){case`scalar`:s=Z.PLAIN,c=lb(a,l);break;case`single-quoted-scalar`:s=Z.QUOTE_SINGLE,c=ub(a,l);break;case`double-quoted-scalar`:s=Z.QUOTE_DOUBLE,c=fb(a,l);break;default:return n(e,`UNEXPECTED_TOKEN`,`Expected a flow scalar value, but found: ${i}`),{value:``,type:null,comment:``,range:[r,r+a.length,r+a.length]}}let u=r+a.length,d=$y(o,u,t,n);return{value:c,type:s,comment:d.comment,range:[r,u,d.offset]}}function lb(e,t){let n=``;switch(e[0]){case`	`:n=`a tab character`;break;case`,`:n=`flow indicator character ,`;break;case`%`:n=`directive indicator character %`;break;case`|`:case`>`:n=`block scalar indicator ${e[0]}`;break;case`@`:case"`":n=`reserved character ${e[0]}`}return n&&t(0,`BAD_SCALAR_START`,`Plain value cannot start with ${n}`),db(e)}function ub(e,t){return(e[e.length-1]!==`'`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing 'quote`),db(e.slice(1,-1)).replace(/''/g,`'`)}function db(e){let t=/(.*?)\r?\n/sy,n=t.exec(e);if(!n)return e;let r,i;try{r=RegExp(`(?<![ 	])[ 	]+$`),i=RegExp(`^[ 	]+|(?<![ 	])[ 	]+$`,`g`)}catch{r=/[ \t]+$/,i=/^[ \t]+|[ \t]+$/g}let a=n[1].replace(r,``),o=` `,s=t.lastIndex;for(;n=t.exec(e);){let e=n[1].replace(i,``);e===``?o===`
+`}let m=r+i.length+t.source.length;return{value:d,type:a,comment:i.comment,range:[r,m,m]}}function Tb({offset:e,props:t},n,r){if(t[0].type!==`block-scalar-header`)return r(t[0],`IMPOSSIBLE`,`Block scalar header not found`),null;let{source:i}=t[0],a=i[0],o=0,s=``,c=-1;for(let t=1;t<i.length;++t){let n=i[t];if(!s&&(n===`-`||n===`+`))s=n;else{let r=Number(n);!o&&r?o=r:c===-1&&(c=e+t)}}c!==-1&&r(c,`UNEXPECTED_TOKEN`,`Block scalar header includes extra characters: ${i}`);let l=!1,u=``,d=i.length;for(let e=1;e<t.length;++e){let i=t[e];switch(i.type){case`space`:l=!0;case`newline`:d+=i.source.length;break;case`comment`:n&&!l&&r(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`),d+=i.source.length,u=i.source.substring(1);break;case`error`:r(i,`UNEXPECTED_TOKEN`,i.message),d+=i.source.length;break;default:{r(i,`UNEXPECTED_TOKEN`,`Unexpected token in block scalar header: ${i.type}`);let e=i.source;e&&typeof e==`string`&&(d+=e.length)}}}return{mode:a,indent:o,chomp:s,comment:u,length:d}}function Eb(e){let t=e.split(/\n( *)/),n=t[0],r=n.match(/^( *)/),i=[r?.[1]?[r[1],n.slice(r[1].length)]:[``,n]];for(let e=1;e<t.length;e+=2)i.push([t[e],t[e+1]]);return i}function Db(e,t,n){let{offset:r,type:i,source:a,end:o}=e,s,c,l=(e,t,i)=>n(r+e,t,i);switch(i){case`scalar`:s=Z.PLAIN,c=Ob(a,l);break;case`single-quoted-scalar`:s=Z.QUOTE_SINGLE,c=kb(a,l);break;case`double-quoted-scalar`:s=Z.QUOTE_DOUBLE,c=jb(a,l);break;default:return n(e,`UNEXPECTED_TOKEN`,`Expected a flow scalar value, but found: ${i}`),{value:``,type:null,comment:``,range:[r,r+a.length,r+a.length]}}let u=r+a.length,d=vb(o,u,t,n);return{value:c,type:s,comment:d.comment,range:[r,u,d.offset]}}function Ob(e,t){let n=``;switch(e[0]){case`	`:n=`a tab character`;break;case`,`:n=`flow indicator character ,`;break;case`%`:n=`directive indicator character %`;break;case`|`:case`>`:n=`block scalar indicator ${e[0]}`;break;case`@`:case"`":n=`reserved character ${e[0]}`}return n&&t(0,`BAD_SCALAR_START`,`Plain value cannot start with ${n}`),Ab(e)}function kb(e,t){return(e[e.length-1]!==`'`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing 'quote`),Ab(e.slice(1,-1)).replace(/''/g,`'`)}function Ab(e){let t=/(.*?)\r?\n/sy,n=t.exec(e);if(!n)return e;let r,i;try{r=RegExp(`(?<![ 	])[ 	]+$`),i=RegExp(`^[ 	]+|(?<![ 	])[ 	]+$`,`g`)}catch{r=/[ \t]+$/,i=/^[ \t]+|[ \t]+$/g}let a=n[1].replace(r,``),o=` `,s=t.lastIndex;for(;n=t.exec(e);){let e=n[1].replace(i,``);e===``?o===`
 `?a+=o:o=`
-`:(a+=o+e,o=` `),s=t.lastIndex}let c=/[ \t]*(.*)/sy;return c.lastIndex=s,n=c.exec(e),a+o+(n?.[1]??``)}function fb(e,t){let n=``;for(let r=1;r<e.length-1;++r){let i=e[r];if(i!==`\r`||e[r+1]!==`
+`:(a+=o+e,o=` `),s=t.lastIndex}let c=/[ \t]*(.*)/sy;return c.lastIndex=s,n=c.exec(e),a+o+(n?.[1]??``)}function jb(e,t){let n=``;for(let r=1;r<e.length-1;++r){let i=e[r];if(i!==`\r`||e[r+1]!==`
 `){if(i===`
-`){let{fold:t,offset:i}=pb(e,r);n+=t,r=i}else if(i===`\\`){let i=e[++r],a=mb[i];if(a)n+=a;else if(i===`
+`){let{fold:t,offset:i}=Mb(e,r);n+=t,r=i}else if(i===`\\`){let i=e[++r],a=Nb[i];if(a)n+=a;else if(i===`
 `)for(i=e[r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`\r`&&e[r+1]===`
-`)for(i=e[++r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`x`||i===`u`||i===`U`){let a=i===`x`?2:i===`u`?4:8;n+=hb(e,r+1,a,t),r+=a}else{let i=e.substr(r-1,2);t(r-1,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),n+=i}}else if(i===` `||i===`	`){let t=r,a=e[r+1];for(;a===` `||a===`	`;)a=e[++r+1];a!==`
+`)for(i=e[++r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`x`||i===`u`||i===`U`){let a=i===`x`?2:i===`u`?4:8;n+=Pb(e,r+1,a,t),r+=a}else{let i=e.substr(r-1,2);t(r-1,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),n+=i}}else if(i===` `||i===`	`){let t=r,a=e[r+1];for(;a===` `||a===`	`;)a=e[++r+1];a!==`
 `&&(a!==`\r`||e[r+2]!==`
-`)&&(n+=r>t?e.slice(t,r+1):i)}else n+=i}}return(e[e.length-1]!==`"`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing "quote`),n}function pb(e,t){let n=``,r=e[t+1];for(;(r===` `||r===`	`||r===`
+`)&&(n+=r>t?e.slice(t,r+1):i)}else n+=i}}return(e[e.length-1]!==`"`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing "quote`),n}function Mb(e,t){let n=``,r=e[t+1];for(;(r===` `||r===`	`||r===`
 `||r===`\r`)&&(r!==`\r`||e[t+2]===`
 `);)r===`
 `&&(n+=`
-`),t+=1,r=e[t+1];return n||=` `,{fold:n,offset:t}}var mb={0:`\0`,a:`\x07`,b:`\b`,e:`\x1B`,f:`\f`,n:`
-`,r:`\r`,t:`	`,v:`\v`,N:``,_:`\xA0`,L:`\u2028`,P:`\u2029`," ":` `,'"':`"`,"/":`/`,"\\":`\\`,"	":`	`};function hb(e,t,n,r){let i=e.substr(t,n),a=i.length===n&&/^[0-9a-fA-F]+$/.test(i)?parseInt(i,16):NaN;try{return String.fromCodePoint(a)}catch{let i=e.substr(t-2,n+2);return r(t-2,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),i}}function gb(e,t,n,r){let{value:i,type:a,comment:o,range:s}=t.type===`block-scalar`?ab(e,t,r):cb(t,e.options.strict,r),c=n?e.directives.tagName(n.source,e=>r(n,`TAG_RESOLVE_FAILED`,e)):null,l;l=e.options.stringKeys&&e.atKey?e.schema[p_]:c?_b(e.schema,i,c,n,r):t.type===`scalar`?vb(e,i,t,r):e.schema[p_];let u;try{let a=l.resolve(i,e=>r(n??t,`TAG_RESOLVE_FAILED`,e),e.options);u=b_(a)?a:new Z(a)}catch(e){let a=e instanceof Error?e.message:String(e);r(n??t,`TAG_RESOLVE_FAILED`,a),u=new Z(i)}return u.range=s,u.source=i,a&&(u.type=a),c&&(u.tag=c),l.format&&(u.format=l.format),o&&(u.comment=o),u}function _b(e,t,n,r,i){if(n===`!`)return e[p_];let a=[];for(let t of e.tags)if(!t.collection&&t.tag===n){if(t.default&&t.test)a.push(t);else return t}for(let e of a)if(e.test?.test(t))return e;let o=e.knownTags[n];return o&&!o.collection?(e.tags.push(Object.assign({},o,{default:!1,test:void 0})),o):(i(r,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${n}`,n!==`tag:yaml.org,2002:str`),e[p_])}function vb({atKey:e,directives:t,schema:n},r,i,a){let o=n.tags.find(t=>(t.default===!0||e&&t.default===`key`)&&t.test?.test(r))||n[p_];if(n.compat){let e=n.compat.find(e=>e.default&&e.test?.test(r))??n[p_];o.tag!==e.tag&&a(i,`TAG_RESOLVE_FAILED`,`Value may be parsed as either ${t.tagString(o.tag)} or ${t.tagString(e.tag)}`,!0)}return o}function yb(e,t,n){if(t){n??=t.length;for(let r=n-1;r>=0;--r){let n=t[r];switch(n.type){case`space`:case`comment`:case`newline`:e-=n.source.length;continue}for(n=t[++r];n?.type===`space`;)e+=n.source.length,n=t[++r];break}}return e}var bb={composeNode:xb,composeEmptyNode:Sb};function xb(e,t,n,r){let i=e.atKey,{spaceBefore:a,comment:o,anchor:s,tag:c}=n,l,u=!0;switch(t.type){case`alias`:l=Cb(e,t,r),(s||c)&&r(t,`ALIAS_PROPS`,`An alias node must not specify any properties`);break;case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`block-scalar`:l=gb(e,t,c,r),s&&(l.anchor=s.source.substring(1));break;case`block-map`:case`block-seq`:case`flow-collection`:try{l=ib(bb,e,t,n,r),s&&(l.anchor=s.source.substring(1))}catch(e){r(t,`RESOURCE_EXHAUSTION`,e instanceof Error?e.message:String(e))}break;default:r(t,`UNEXPECTED_TOKEN`,t.type===`error`?t.message:`Unsupported token (type: ${t.type})`),u=!1}return l??=Sb(e,t.offset,void 0,null,n,r),s&&l.anchor===``&&r(s,`BAD_ALIAS`,`Anchor cannot be an empty string`),i&&e.options.stringKeys&&(!b_(l)||typeof l.value!=`string`||l.tag&&l.tag!==`tag:yaml.org,2002:str`)&&r(c??t,`NON_STRING_KEY`,`With stringKeys, all keys must be strings`),a&&(l.spaceBefore=!0),o&&(t.type===`scalar`&&t.source===``?l.comment=o:l.commentBefore=o),e.options.keepSourceTokens&&u&&(l.srcToken=t),l}function Sb(e,t,n,r,{spaceBefore:i,comment:a,anchor:o,tag:s,end:c},l){let u=gb(e,{type:`scalar`,offset:yb(t,n,r),indent:-1,source:``},s,l);return o&&(u.anchor=o.source.substring(1),u.anchor===``&&l(o,`BAD_ALIAS`,`Anchor cannot be an empty string`)),i&&(u.spaceBefore=!0),a&&(u.comment=a,u.range[2]=c),u}function Cb({options:e},{offset:t,source:n,end:r},i){let a=new U_(n.substring(1));a.source===``&&i(t,`BAD_ALIAS`,`Alias cannot be an empty string`),a.source.endsWith(`:`)&&i(t+n.length-1,`BAD_ALIAS`,`Alias ending in : is ambiguous`,!0);let o=t+n.length,s=$y(r,o,e.strict,i);return a.range=[t,o,s.offset],s.comment&&(a.comment=s.comment),a}function wb(e,t,{offset:n,start:r,value:i,end:a},o){let s=new By(void 0,Object.assign({_directives:t},e)),c={atKey:!1,atRoot:!0,directives:s.directives,options:s.options,schema:s.schema},l=Ky(r,{indicator:`doc-start`,next:i??a?.[0],offset:n,onError:o,parentIndent:0,startOnNewline:!0});l.found&&(s.directives.docStart=!0,i&&(i.type===`block-map`||i.type===`block-seq`)&&!l.hasNewline&&o(l.end,`MISSING_CHAR`,`Block collection cannot start on same line with directives-end marker`)),s.contents=i?xb(c,i,l,o):Sb(c,l.end,r,null,l,o);let u=s.contents.range[2],d=$y(a,u,!1,o);return d.comment&&(s.comment=d.comment),s.range=[n,u,d.offset],s}function Tb(e){if(typeof e==`number`)return[e,e+1];if(Array.isArray(e))return e.length===2?e:[e[0],e[1]];let{offset:t,source:n}=e;return[t,t+(typeof n==`string`?n.length:1)]}function Eb(e){let t=``,n=!1,r=!1;for(let i=0;i<e.length;++i){let a=e[i];switch(a[0]){case`#`:t+=(t===``?``:r?`
+`),t+=1,r=e[t+1];return n||=` `,{fold:n,offset:t}}var Nb={0:`\0`,a:`\x07`,b:`\b`,e:`\x1B`,f:`\f`,n:`
+`,r:`\r`,t:`	`,v:`\v`,N:``,_:`\xA0`,L:`\u2028`,P:`\u2029`," ":` `,'"':`"`,"/":`/`,"\\":`\\`,"	":`	`};function Pb(e,t,n,r){let i=e.substr(t,n),a=i.length===n&&/^[0-9a-fA-F]+$/.test(i)?parseInt(i,16):NaN;try{return String.fromCodePoint(a)}catch{let i=e.substr(t-2,n+2);return r(t-2,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),i}}function Fb(e,t,n,r){let{value:i,type:a,comment:o,range:s}=t.type===`block-scalar`?wb(e,t,r):Db(t,e.options.strict,r),c=n?e.directives.tagName(n.source,e=>r(n,`TAG_RESOLVE_FAILED`,e)):null,l;l=e.options.stringKeys&&e.atKey?e.schema[M_]:c?Ib(e.schema,i,c,n,r):t.type===`scalar`?Lb(e,i,t,r):e.schema[M_];let u;try{let a=l.resolve(i,e=>r(n??t,`TAG_RESOLVE_FAILED`,e),e.options);u=z_(a)?a:new Z(a)}catch(e){let a=e instanceof Error?e.message:String(e);r(n??t,`TAG_RESOLVE_FAILED`,a),u=new Z(i)}return u.range=s,u.source=i,a&&(u.type=a),c&&(u.tag=c),l.format&&(u.format=l.format),o&&(u.comment=o),u}function Ib(e,t,n,r,i){if(n===`!`)return e[M_];let a=[];for(let t of e.tags)if(!t.collection&&t.tag===n){if(t.default&&t.test)a.push(t);else return t}for(let e of a)if(e.test?.test(t))return e;let o=e.knownTags[n];return o&&!o.collection?(e.tags.push(Object.assign({},o,{default:!1,test:void 0})),o):(i(r,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${n}`,n!==`tag:yaml.org,2002:str`),e[M_])}function Lb({atKey:e,directives:t,schema:n},r,i,a){let o=n.tags.find(t=>(t.default===!0||e&&t.default===`key`)&&t.test?.test(r))||n[M_];if(n.compat){let e=n.compat.find(e=>e.default&&e.test?.test(r))??n[M_];o.tag!==e.tag&&a(i,`TAG_RESOLVE_FAILED`,`Value may be parsed as either ${t.tagString(o.tag)} or ${t.tagString(e.tag)}`,!0)}return o}function Rb(e,t,n){if(t){n??=t.length;for(let r=n-1;r>=0;--r){let n=t[r];switch(n.type){case`space`:case`comment`:case`newline`:e-=n.source.length;continue}for(n=t[++r];n?.type===`space`;)e+=n.source.length,n=t[++r];break}}return e}var zb={composeNode:Bb,composeEmptyNode:Vb};function Bb(e,t,n,r){let i=e.atKey,{spaceBefore:a,comment:o,anchor:s,tag:c}=n,l,u=!0;switch(t.type){case`alias`:l=Hb(e,t,r),(s||c)&&r(t,`ALIAS_PROPS`,`An alias node must not specify any properties`);break;case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`block-scalar`:l=Fb(e,t,c,r),s&&(l.anchor=s.source.substring(1));break;case`block-map`:case`block-seq`:case`flow-collection`:try{l=Cb(zb,e,t,n,r),s&&(l.anchor=s.source.substring(1))}catch(e){r(t,`RESOURCE_EXHAUSTION`,e instanceof Error?e.message:String(e))}break;default:r(t,`UNEXPECTED_TOKEN`,t.type===`error`?t.message:`Unsupported token (type: ${t.type})`),u=!1}return l??=Vb(e,t.offset,void 0,null,n,r),s&&l.anchor===``&&r(s,`BAD_ALIAS`,`Anchor cannot be an empty string`),i&&e.options.stringKeys&&(!z_(l)||typeof l.value!=`string`||l.tag&&l.tag!==`tag:yaml.org,2002:str`)&&r(c??t,`NON_STRING_KEY`,`With stringKeys, all keys must be strings`),a&&(l.spaceBefore=!0),o&&(t.type===`scalar`&&t.source===``?l.comment=o:l.commentBefore=o),e.options.keepSourceTokens&&u&&(l.srcToken=t),l}function Vb(e,t,n,r,{spaceBefore:i,comment:a,anchor:o,tag:s,end:c},l){let u=Fb(e,{type:`scalar`,offset:Rb(t,n,r),indent:-1,source:``},s,l);return o&&(u.anchor=o.source.substring(1),u.anchor===``&&l(o,`BAD_ALIAS`,`Anchor cannot be an empty string`)),i&&(u.spaceBefore=!0),a&&(u.comment=a,u.range[2]=c),u}function Hb({options:e},{offset:t,source:n,end:r},i){let a=new cv(n.substring(1));a.source===``&&i(t,`BAD_ALIAS`,`Alias cannot be an empty string`),a.source.endsWith(`:`)&&i(t+n.length-1,`BAD_ALIAS`,`Alias ending in : is ambiguous`,!0);let o=t+n.length,s=vb(r,o,e.strict,i);return a.range=[t,o,s.offset],s.comment&&(a.comment=s.comment),a}function Ub(e,t,{offset:n,start:r,value:i,end:a},o){let s=new ab(void 0,Object.assign({_directives:t},e)),c={atKey:!1,atRoot:!0,directives:s.directives,options:s.options,schema:s.schema},l=db(r,{indicator:`doc-start`,next:i??a?.[0],offset:n,onError:o,parentIndent:0,startOnNewline:!0});l.found&&(s.directives.docStart=!0,i&&(i.type===`block-map`||i.type===`block-seq`)&&!l.hasNewline&&o(l.end,`MISSING_CHAR`,`Block collection cannot start on same line with directives-end marker`)),s.contents=i?Bb(c,i,l,o):Vb(c,l.end,r,null,l,o);let u=s.contents.range[2],d=vb(a,u,!1,o);return d.comment&&(s.comment=d.comment),s.range=[n,u,d.offset],s}function Wb(e){if(typeof e==`number`)return[e,e+1];if(Array.isArray(e))return e.length===2?e:[e[0],e[1]];let{offset:t,source:n}=e;return[t,t+(typeof n==`string`?n.length:1)]}function Gb(e){let t=``,n=!1,r=!1;for(let i=0;i<e.length;++i){let a=e[i];switch(a[0]){case`#`:t+=(t===``?``:r?`
 
 `:`
-`)+(a.substring(1)||` `),n=!0,r=!1;break;case`%`:e[i+1]?.[0]!==`#`&&(i+=1),n=!1;break;default:n||(r=!0),n=!1}}return{comment:t,afterEmptyLine:r}}var Db=class{constructor(e={}){this.doc=null,this.atDirectives=!1,this.prelude=[],this.errors=[],this.warnings=[],this.onError=(e,t,n,r)=>{let i=Tb(e);r?this.warnings.push(new Wy(i,t,n)):this.errors.push(new Uy(i,t,n))},this.directives=new F_({version:e.version||`1.2`}),this.options=e}decorate(e,t){let{comment:n,afterEmptyLine:r}=Eb(this.prelude);if(n){let i=e.contents;if(t)e.comment=e.comment?`${e.comment}\n${n}`:n;else if(r||e.directives.docStart||!i)e.commentBefore=n;else if(S_(i)&&!i.flow&&i.items.length>0){let e=i.items[0];y_(e)&&(e=e.key);let t=e.commentBefore;e.commentBefore=t?`${n}\n${t}`:n}else{let e=i.commentBefore;i.commentBefore=e?`${n}\n${e}`:n}}if(t){for(let t=0;t<this.errors.length;++t)e.errors.push(this.errors[t]);for(let t=0;t<this.warnings.length;++t)e.warnings.push(this.warnings[t])}else e.errors=this.errors,e.warnings=this.warnings;this.prelude=[],this.errors=[],this.warnings=[]}streamInfo(){return{comment:Eb(this.prelude).comment,directives:this.directives,errors:this.errors,warnings:this.warnings}}*compose(e,t=!1,n=-1){for(let t of e)yield*this.next(t);yield*this.end(t,n)}*next(e){switch(e.type){case`directive`:this.directives.add(e.source,(t,n,r)=>{let i=Tb(e);i[0]+=t,this.onError(i,`BAD_DIRECTIVE`,n,r)}),this.prelude.push(e.source),this.atDirectives=!0;break;case`document`:{let t=wb(this.options,this.directives,e,this.onError);this.atDirectives&&!t.directives.docStart&&this.onError(e,`MISSING_CHAR`,`Missing directives-end/doc-start indicator line`),this.decorate(t,!1),this.doc&&(yield this.doc),this.doc=t,this.atDirectives=!1;break}case`byte-order-mark`:case`space`:break;case`comment`:case`newline`:this.prelude.push(e.source);break;case`error`:{let t=e.source?`${e.message}: ${JSON.stringify(e.source)}`:e.message,n=new Uy(Tb(e),`UNEXPECTED_TOKEN`,t);this.atDirectives||!this.doc?this.errors.push(n):this.doc.errors.push(n);break}case`doc-end`:{if(!this.doc){this.errors.push(new Uy(Tb(e),`UNEXPECTED_TOKEN`,`Unexpected doc-end without preceding document`));break}this.doc.directives.docEnd=!0;let t=$y(e.end,e.offset+e.source.length,this.doc.options.strict,this.onError);if(this.decorate(this.doc,!0),t.comment){let e=this.doc.comment;this.doc.comment=e?`${e}\n${t.comment}`:t.comment}this.doc.range[2]=t.offset;break}default:this.errors.push(new Uy(Tb(e),`UNEXPECTED_TOKEN`,`Unsupported token ${e.type}`))}}*end(e=!1,t=-1){if(this.doc)this.decorate(this.doc,!0),yield this.doc,this.doc=null;else if(e){let e=new By(void 0,Object.assign({_directives:this.directives},this.options));this.atDirectives&&this.onError(t,`MISSING_CHAR`,`Missing directives-end indicator line`),e.range=[0,t,t],this.decorate(e,!1),yield e}}},Ob=Symbol(`break visit`),kb=Symbol(`skip children`),Ab=Symbol(`remove item`);function jb(e,t){`type`in e&&e.type===`document`&&(e={start:e.start,value:e.value}),Mb(Object.freeze([]),e,t)}jb.BREAK=Ob,jb.SKIP=kb,jb.REMOVE=Ab,jb.itemAtPath=(e,t)=>{let n=e;for(let[e,r]of t){let t=n?.[e];if(t&&`items`in t)n=t.items[r];else return}return n},jb.parentCollection=(e,t)=>{let n=jb.itemAtPath(e,t.slice(0,-1)),r=t[t.length-1][0],i=n?.[r];if(i&&`items`in i)return i;throw Error(`Parent collection not found`)};function Mb(e,t,n){let r=n(t,e);if(typeof r==`symbol`)return r;for(let i of[`key`,`value`]){let a=t[i];if(a&&`items`in a){for(let t=0;t<a.items.length;++t){let r=Mb(Object.freeze(e.concat([[i,t]])),a.items[t],n);if(typeof r==`number`)t=r-1;else if(r===Ob)return Ob;else r===Ab&&(a.items.splice(t,1),--t)}typeof r==`function`&&i===`key`&&(r=r(t,e))}}return typeof r==`function`?r(t,e):r}function Nb(e){switch(e){case`﻿`:return`byte-order-mark`;case``:return`doc-mode`;case``:return`flow-error-end`;case``:return`scalar`;case`---`:return`doc-start`;case`...`:return`doc-end`;case``:case`
+`)+(a.substring(1)||` `),n=!0,r=!1;break;case`%`:e[i+1]?.[0]!==`#`&&(i+=1),n=!1;break;default:n||(r=!0),n=!1}}return{comment:t,afterEmptyLine:r}}var Kb=class{constructor(e={}){this.doc=null,this.atDirectives=!1,this.prelude=[],this.errors=[],this.warnings=[],this.onError=(e,t,n,r)=>{let i=Wb(e);r?this.warnings.push(new lb(i,t,n)):this.errors.push(new cb(i,t,n))},this.directives=new ev({version:e.version||`1.2`}),this.options=e}decorate(e,t){let{comment:n,afterEmptyLine:r}=Gb(this.prelude);if(n){let i=e.contents;if(t)e.comment=e.comment?`${e.comment}\n${n}`:n;else if(r||e.directives.docStart||!i)e.commentBefore=n;else if(V_(i)&&!i.flow&&i.items.length>0){let e=i.items[0];R_(e)&&(e=e.key);let t=e.commentBefore;e.commentBefore=t?`${n}\n${t}`:n}else{let e=i.commentBefore;i.commentBefore=e?`${n}\n${e}`:n}}if(t){for(let t=0;t<this.errors.length;++t)e.errors.push(this.errors[t]);for(let t=0;t<this.warnings.length;++t)e.warnings.push(this.warnings[t])}else e.errors=this.errors,e.warnings=this.warnings;this.prelude=[],this.errors=[],this.warnings=[]}streamInfo(){return{comment:Gb(this.prelude).comment,directives:this.directives,errors:this.errors,warnings:this.warnings}}*compose(e,t=!1,n=-1){for(let t of e)yield*this.next(t);yield*this.end(t,n)}*next(e){switch(e.type){case`directive`:this.directives.add(e.source,(t,n,r)=>{let i=Wb(e);i[0]+=t,this.onError(i,`BAD_DIRECTIVE`,n,r)}),this.prelude.push(e.source),this.atDirectives=!0;break;case`document`:{let t=Ub(this.options,this.directives,e,this.onError);this.atDirectives&&!t.directives.docStart&&this.onError(e,`MISSING_CHAR`,`Missing directives-end/doc-start indicator line`),this.decorate(t,!1),this.doc&&(yield this.doc),this.doc=t,this.atDirectives=!1;break}case`byte-order-mark`:case`space`:break;case`comment`:case`newline`:this.prelude.push(e.source);break;case`error`:{let t=e.source?`${e.message}: ${JSON.stringify(e.source)}`:e.message,n=new cb(Wb(e),`UNEXPECTED_TOKEN`,t);this.atDirectives||!this.doc?this.errors.push(n):this.doc.errors.push(n);break}case`doc-end`:{if(!this.doc){this.errors.push(new cb(Wb(e),`UNEXPECTED_TOKEN`,`Unexpected doc-end without preceding document`));break}this.doc.directives.docEnd=!0;let t=vb(e.end,e.offset+e.source.length,this.doc.options.strict,this.onError);if(this.decorate(this.doc,!0),t.comment){let e=this.doc.comment;this.doc.comment=e?`${e}\n${t.comment}`:t.comment}this.doc.range[2]=t.offset;break}default:this.errors.push(new cb(Wb(e),`UNEXPECTED_TOKEN`,`Unsupported token ${e.type}`))}}*end(e=!1,t=-1){if(this.doc)this.decorate(this.doc,!0),yield this.doc,this.doc=null;else if(e){let e=new ab(void 0,Object.assign({_directives:this.directives},this.options));this.atDirectives&&this.onError(t,`MISSING_CHAR`,`Missing directives-end indicator line`),e.range=[0,t,t],this.decorate(e,!1),yield e}}},qb=Symbol(`break visit`),Jb=Symbol(`skip children`),Yb=Symbol(`remove item`);function Xb(e,t){`type`in e&&e.type===`document`&&(e={start:e.start,value:e.value}),Zb(Object.freeze([]),e,t)}Xb.BREAK=qb,Xb.SKIP=Jb,Xb.REMOVE=Yb,Xb.itemAtPath=(e,t)=>{let n=e;for(let[e,r]of t){let t=n?.[e];if(t&&`items`in t)n=t.items[r];else return}return n},Xb.parentCollection=(e,t)=>{let n=Xb.itemAtPath(e,t.slice(0,-1)),r=t[t.length-1][0],i=n?.[r];if(i&&`items`in i)return i;throw Error(`Parent collection not found`)};function Zb(e,t,n){let r=n(t,e);if(typeof r==`symbol`)return r;for(let i of[`key`,`value`]){let a=t[i];if(a&&`items`in a){for(let t=0;t<a.items.length;++t){let r=Zb(Object.freeze(e.concat([[i,t]])),a.items[t],n);if(typeof r==`number`)t=r-1;else if(r===qb)return qb;else r===Yb&&(a.items.splice(t,1),--t)}typeof r==`function`&&i===`key`&&(r=r(t,e))}}return typeof r==`function`?r(t,e):r}function Qb(e){switch(e){case`﻿`:return`byte-order-mark`;case``:return`doc-mode`;case``:return`flow-error-end`;case``:return`scalar`;case`---`:return`doc-start`;case`...`:return`doc-end`;case``:case`
 `:case`\r
-`:return`newline`;case`-`:return`seq-item-ind`;case`?`:return`explicit-key-ind`;case`:`:return`map-value-ind`;case`{`:return`flow-map-start`;case`}`:return`flow-map-end`;case`[`:return`flow-seq-start`;case`]`:return`flow-seq-end`;case`,`:return`comma`}switch(e[0]){case` `:case`	`:return`space`;case`#`:return`comment`;case`%`:return`directive-line`;case`*`:return`alias`;case`&`:return`anchor`;case`!`:return`tag`;case`'`:return`single-quoted-scalar`;case`"`:return`double-quoted-scalar`;case`|`:case`>`:return`block-scalar-header`}return null}function Pb(e){switch(e){case void 0:case` `:case`
-`:case`\r`:case`	`:return!0;default:return!1}}var Fb=new Set(`0123456789ABCDEFabcdef`),Ib=new Set(`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-#;/?:@&=+$_.!~*'()`),Lb=new Set(`,[]{}`),Rb=new Set(` ,[]{}
-\r	`),zb=e=>!e||Rb.has(e),Bb=class{constructor(){this.atEnd=!1,this.blockScalarIndent=-1,this.blockScalarKeep=!1,this.buffer=``,this.flowKey=!1,this.flowLevel=0,this.indentNext=0,this.indentValue=0,this.lineEndPos=null,this.next=null,this.pos=0}*lex(e,t=!1){if(e){if(typeof e!=`string`)throw TypeError(`source is not a string`);this.buffer=this.buffer?this.buffer+e:e,this.lineEndPos=null}this.atEnd=!t;let n=this.next??`stream`;for(;n&&(t||this.hasChars(1));)n=yield*this.parseNext(n)}atLineEnd(){let e=this.pos,t=this.buffer[e];for(;t===` `||t===`	`;)t=this.buffer[++e];return!t||t===`#`||t===`
+`:return`newline`;case`-`:return`seq-item-ind`;case`?`:return`explicit-key-ind`;case`:`:return`map-value-ind`;case`{`:return`flow-map-start`;case`}`:return`flow-map-end`;case`[`:return`flow-seq-start`;case`]`:return`flow-seq-end`;case`,`:return`comma`}switch(e[0]){case` `:case`	`:return`space`;case`#`:return`comment`;case`%`:return`directive-line`;case`*`:return`alias`;case`&`:return`anchor`;case`!`:return`tag`;case`'`:return`single-quoted-scalar`;case`"`:return`double-quoted-scalar`;case`|`:case`>`:return`block-scalar-header`}return null}function $b(e){switch(e){case void 0:case` `:case`
+`:case`\r`:case`	`:return!0;default:return!1}}var ex=new Set(`0123456789ABCDEFabcdef`),tx=new Set(`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-#;/?:@&=+$_.!~*'()`),nx=new Set(`,[]{}`),rx=new Set(` ,[]{}
+\r	`),ix=e=>!e||rx.has(e),ax=class{constructor(){this.atEnd=!1,this.blockScalarIndent=-1,this.blockScalarKeep=!1,this.buffer=``,this.flowKey=!1,this.flowLevel=0,this.indentNext=0,this.indentValue=0,this.lineEndPos=null,this.next=null,this.pos=0}*lex(e,t=!1){if(e){if(typeof e!=`string`)throw TypeError(`source is not a string`);this.buffer=this.buffer?this.buffer+e:e,this.lineEndPos=null}this.atEnd=!t;let n=this.next??`stream`;for(;n&&(t||this.hasChars(1));)n=yield*this.parseNext(n)}atLineEnd(){let e=this.pos,t=this.buffer[e];for(;t===` `||t===`	`;)t=this.buffer[++e];return!t||t===`#`||t===`
 `||t===`\r`&&this.buffer[e+1]===`
 `}charAt(e){return this.buffer[this.pos+e]}continueScalar(e){let t=this.buffer[e];if(this.indentNext>0){let n=0;for(;t===` `;)t=this.buffer[++n+e];if(t===`\r`){let t=this.buffer[n+e+1];if(t===`
 `||!t&&!this.atEnd)return e+n+1}return t===`
-`||n>=this.indentNext||!t&&!this.atEnd?e+n:-1}if(t===`-`||t===`.`){let t=this.buffer.substr(e,3);if((t===`---`||t===`...`)&&Pb(this.buffer[e+3]))return-1}return e}getLine(){let e=this.lineEndPos;return(typeof e!=`number`||e!==-1&&e<this.pos)&&(e=this.buffer.indexOf(`
-`,this.pos),this.lineEndPos=e),e===-1?this.atEnd?this.buffer.substring(this.pos):null:(this.buffer[e-1]===`\r`&&--e,this.buffer.substring(this.pos,e))}hasChars(e){return this.pos+e<=this.buffer.length}setNext(e){return this.buffer=this.buffer.substring(this.pos),this.pos=0,this.lineEndPos=null,this.next=e,null}peek(e){return this.buffer.substr(this.pos,e)}*parseNext(e){switch(e){case`stream`:return yield*this.parseStream();case`line-start`:return yield*this.parseLineStart();case`block-start`:return yield*this.parseBlockStart();case`doc`:return yield*this.parseDocument();case`flow`:return yield*this.parseFlowCollection();case`quoted-scalar`:return yield*this.parseQuotedScalar();case`block-scalar`:return yield*this.parseBlockScalar();case`plain-scalar`:return yield*this.parsePlainScalar()}}*parseStream(){let e=this.getLine();if(e===null)return this.setNext(`stream`);if(e[0]===`﻿`&&(yield*this.pushCount(1),e=e.substring(1)),e[0]===`%`){let t=e.length,n=e.indexOf(`#`);for(;n!==-1;){let r=e[n-1];if(r===` `||r===`	`){t=n-1;break}n=e.indexOf(`#`,n+1)}for(;;){let n=e[t-1];if(n===` `||n===`	`)--t;else break}let r=(yield*this.pushCount(t))+(yield*this.pushSpaces(!0));return yield*this.pushCount(e.length-r),this.pushNewline(),`stream`}if(this.atLineEnd()){let t=yield*this.pushSpaces(!0);return yield*this.pushCount(e.length-t),yield*this.pushNewline(),`stream`}return yield``,yield*this.parseLineStart()}*parseLineStart(){let e=this.charAt(0);if(!e&&!this.atEnd)return this.setNext(`line-start`);if(e===`-`||e===`.`){if(!this.atEnd&&!this.hasChars(4))return this.setNext(`line-start`);let e=this.peek(3);if((e===`---`||e===`...`)&&Pb(this.charAt(3)))return yield*this.pushCount(3),this.indentValue=0,this.indentNext=0,e===`---`?`doc`:`stream`}return this.indentValue=yield*this.pushSpaces(!1),this.indentNext>this.indentValue&&!Pb(this.charAt(1))&&(this.indentNext=this.indentValue),yield*this.parseBlockStart()}*parseBlockStart(){let[e,t]=this.peek(2);if(!t&&!this.atEnd)return this.setNext(`block-start`);if((e===`-`||e===`?`||e===`:`)&&Pb(t)){let e=(yield*this.pushCount(1))+(yield*this.pushSpaces(!0));return this.indentNext=this.indentValue+1,this.indentValue+=e,`block-start`}return`doc`}*parseDocument(){yield*this.pushSpaces(!0);let e=this.getLine();if(e===null)return this.setNext(`doc`);let t=yield*this.pushIndicators();switch(e[t]){case`#`:yield*this.pushCount(e.length-t);case void 0:return yield*this.pushNewline(),yield*this.parseLineStart();case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),`doc`;case`*`:return yield*this.pushUntil(zb),`doc`;case`"`:case`'`:return yield*this.parseQuotedScalar();case`|`:case`>`:return t+=yield*this.parseBlockScalarHeader(),t+=yield*this.pushSpaces(!0),yield*this.pushCount(e.length-t),yield*this.pushNewline(),yield*this.parseBlockScalar();default:return yield*this.parsePlainScalar()}}*parseFlowCollection(){let e,t,n=-1;do e=yield*this.pushNewline(),e>0?(t=yield*this.pushSpaces(!1),this.indentValue=n=t):t=0,t+=yield*this.pushSpaces(!0);while(e+t>0);let r=this.getLine();if(r===null)return this.setNext(`flow`);if((n!==-1&&n<this.indentNext&&r[0]!==`#`||n===0&&(r.startsWith(`---`)||r.startsWith(`...`))&&Pb(r[3]))&&(n!==this.indentNext-1||this.flowLevel!==1||r[0]!==`]`&&r[0]!==`}`))return this.flowLevel=0,yield``,yield*this.parseLineStart();let i=0;for(;r[i]===`,`;)i+=yield*this.pushCount(1),i+=yield*this.pushSpaces(!0),this.flowKey=!1;switch(i+=yield*this.pushIndicators(),r[i]){case void 0:return`flow`;case`#`:return yield*this.pushCount(r.length-i),`flow`;case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel+=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),this.flowKey=!0,--this.flowLevel,this.flowLevel?`flow`:`doc`;case`*`:return yield*this.pushUntil(zb),`flow`;case`"`:case`'`:return this.flowKey=!0,yield*this.parseQuotedScalar();case`:`:{let e=this.charAt(1);if(this.flowKey||Pb(e)||e===`,`)return this.flowKey=!1,yield*this.pushCount(1),yield*this.pushSpaces(!0),`flow`}default:return this.flowKey=!1,yield*this.parsePlainScalar()}}*parseQuotedScalar(){let e=this.charAt(0),t=this.buffer.indexOf(e,this.pos+1);if(e===`'`)for(;t!==-1&&this.buffer[t+1]===`'`;)t=this.buffer.indexOf(`'`,t+2);else for(;t!==-1;){let e=0;for(;this.buffer[t-1-e]===`\\`;)e+=1;if(e%2==0)break;t=this.buffer.indexOf(`"`,t+1)}let n=this.buffer.substring(0,t),r=n.indexOf(`
+`||n>=this.indentNext||!t&&!this.atEnd?e+n:-1}if(t===`-`||t===`.`){let t=this.buffer.substr(e,3);if((t===`---`||t===`...`)&&$b(this.buffer[e+3]))return-1}return e}getLine(){let e=this.lineEndPos;return(typeof e!=`number`||e!==-1&&e<this.pos)&&(e=this.buffer.indexOf(`
+`,this.pos),this.lineEndPos=e),e===-1?this.atEnd?this.buffer.substring(this.pos):null:(this.buffer[e-1]===`\r`&&--e,this.buffer.substring(this.pos,e))}hasChars(e){return this.pos+e<=this.buffer.length}setNext(e){return this.buffer=this.buffer.substring(this.pos),this.pos=0,this.lineEndPos=null,this.next=e,null}peek(e){return this.buffer.substr(this.pos,e)}*parseNext(e){switch(e){case`stream`:return yield*this.parseStream();case`line-start`:return yield*this.parseLineStart();case`block-start`:return yield*this.parseBlockStart();case`doc`:return yield*this.parseDocument();case`flow`:return yield*this.parseFlowCollection();case`quoted-scalar`:return yield*this.parseQuotedScalar();case`block-scalar`:return yield*this.parseBlockScalar();case`plain-scalar`:return yield*this.parsePlainScalar()}}*parseStream(){let e=this.getLine();if(e===null)return this.setNext(`stream`);if(e[0]===`﻿`&&(yield*this.pushCount(1),e=e.substring(1)),e[0]===`%`){let t=e.length,n=e.indexOf(`#`);for(;n!==-1;){let r=e[n-1];if(r===` `||r===`	`){t=n-1;break}n=e.indexOf(`#`,n+1)}for(;;){let n=e[t-1];if(n===` `||n===`	`)--t;else break}let r=(yield*this.pushCount(t))+(yield*this.pushSpaces(!0));return yield*this.pushCount(e.length-r),this.pushNewline(),`stream`}if(this.atLineEnd()){let t=yield*this.pushSpaces(!0);return yield*this.pushCount(e.length-t),yield*this.pushNewline(),`stream`}return yield``,yield*this.parseLineStart()}*parseLineStart(){let e=this.charAt(0);if(!e&&!this.atEnd)return this.setNext(`line-start`);if(e===`-`||e===`.`){if(!this.atEnd&&!this.hasChars(4))return this.setNext(`line-start`);let e=this.peek(3);if((e===`---`||e===`...`)&&$b(this.charAt(3)))return yield*this.pushCount(3),this.indentValue=0,this.indentNext=0,e===`---`?`doc`:`stream`}return this.indentValue=yield*this.pushSpaces(!1),this.indentNext>this.indentValue&&!$b(this.charAt(1))&&(this.indentNext=this.indentValue),yield*this.parseBlockStart()}*parseBlockStart(){let[e,t]=this.peek(2);if(!t&&!this.atEnd)return this.setNext(`block-start`);if((e===`-`||e===`?`||e===`:`)&&$b(t)){let e=(yield*this.pushCount(1))+(yield*this.pushSpaces(!0));return this.indentNext=this.indentValue+1,this.indentValue+=e,`block-start`}return`doc`}*parseDocument(){yield*this.pushSpaces(!0);let e=this.getLine();if(e===null)return this.setNext(`doc`);let t=yield*this.pushIndicators();switch(e[t]){case`#`:yield*this.pushCount(e.length-t);case void 0:return yield*this.pushNewline(),yield*this.parseLineStart();case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),`doc`;case`*`:return yield*this.pushUntil(ix),`doc`;case`"`:case`'`:return yield*this.parseQuotedScalar();case`|`:case`>`:return t+=yield*this.parseBlockScalarHeader(),t+=yield*this.pushSpaces(!0),yield*this.pushCount(e.length-t),yield*this.pushNewline(),yield*this.parseBlockScalar();default:return yield*this.parsePlainScalar()}}*parseFlowCollection(){let e,t,n=-1;do e=yield*this.pushNewline(),e>0?(t=yield*this.pushSpaces(!1),this.indentValue=n=t):t=0,t+=yield*this.pushSpaces(!0);while(e+t>0);let r=this.getLine();if(r===null)return this.setNext(`flow`);if((n!==-1&&n<this.indentNext&&r[0]!==`#`||n===0&&(r.startsWith(`---`)||r.startsWith(`...`))&&$b(r[3]))&&(n!==this.indentNext-1||this.flowLevel!==1||r[0]!==`]`&&r[0]!==`}`))return this.flowLevel=0,yield``,yield*this.parseLineStart();let i=0;for(;r[i]===`,`;)i+=yield*this.pushCount(1),i+=yield*this.pushSpaces(!0),this.flowKey=!1;switch(i+=yield*this.pushIndicators(),r[i]){case void 0:return`flow`;case`#`:return yield*this.pushCount(r.length-i),`flow`;case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel+=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),this.flowKey=!0,--this.flowLevel,this.flowLevel?`flow`:`doc`;case`*`:return yield*this.pushUntil(ix),`flow`;case`"`:case`'`:return this.flowKey=!0,yield*this.parseQuotedScalar();case`:`:{let e=this.charAt(1);if(this.flowKey||$b(e)||e===`,`)return this.flowKey=!1,yield*this.pushCount(1),yield*this.pushSpaces(!0),`flow`}default:return this.flowKey=!1,yield*this.parsePlainScalar()}}*parseQuotedScalar(){let e=this.charAt(0),t=this.buffer.indexOf(e,this.pos+1);if(e===`'`)for(;t!==-1&&this.buffer[t+1]===`'`;)t=this.buffer.indexOf(`'`,t+2);else for(;t!==-1;){let e=0;for(;this.buffer[t-1-e]===`\\`;)e+=1;if(e%2==0)break;t=this.buffer.indexOf(`"`,t+1)}let n=this.buffer.substring(0,t),r=n.indexOf(`
 `,this.pos);if(r!==-1){for(;r!==-1;){let e=this.continueScalar(r+1);if(e===-1)break;r=n.indexOf(`
-`,e)}r!==-1&&(t=r-(n[r-1]===`\r`?2:1))}if(t===-1){if(!this.atEnd)return this.setNext(`quoted-scalar`);t=this.buffer.length}return yield*this.pushToIndex(t+1,!1),this.flowLevel?`flow`:`doc`}*parseBlockScalarHeader(){this.blockScalarIndent=-1,this.blockScalarKeep=!1;let e=this.pos;for(;;){let t=this.buffer[++e];if(t===`+`)this.blockScalarKeep=!0;else if(t>`0`&&t<=`9`)this.blockScalarIndent=Number(t)-1;else if(t!==`-`)break}return yield*this.pushUntil(e=>Pb(e)||e===`#`)}*parseBlockScalar(){let e=this.pos-1,t=0,n;loop:for(let r=this.pos;n=this.buffer[r];++r)switch(n){case` `:t+=1;break;case`
+`,e)}r!==-1&&(t=r-(n[r-1]===`\r`?2:1))}if(t===-1){if(!this.atEnd)return this.setNext(`quoted-scalar`);t=this.buffer.length}return yield*this.pushToIndex(t+1,!1),this.flowLevel?`flow`:`doc`}*parseBlockScalarHeader(){this.blockScalarIndent=-1,this.blockScalarKeep=!1;let e=this.pos;for(;;){let t=this.buffer[++e];if(t===`+`)this.blockScalarKeep=!0;else if(t>`0`&&t<=`9`)this.blockScalarIndent=Number(t)-1;else if(t!==`-`)break}return yield*this.pushUntil(e=>$b(e)||e===`#`)}*parseBlockScalar(){let e=this.pos-1,t=0,n;loop:for(let r=this.pos;n=this.buffer[r];++r)switch(n){case` `:t+=1;break;case`
 `:e=r,t=0;break;case`\r`:{let e=this.buffer[r+1];if(!e&&!this.atEnd)return this.setNext(`block-scalar`);if(e===`
 `)break}default:break loop}if(!n&&!this.atEnd)return this.setNext(`block-scalar`);if(t>=this.indentNext){this.indentNext=this.blockScalarIndent===-1?t:this.blockScalarIndent+(this.indentNext===0?1:this.indentNext);do{let t=this.continueScalar(e+1);if(t===-1)break;e=this.buffer.indexOf(`
 `,t)}while(e!==-1);if(e===-1){if(!this.atEnd)return this.setNext(`block-scalar`);e=this.buffer.length}}let r=e+1;for(n=this.buffer[r];n===` `;)n=this.buffer[++r];if(n===`	`){for(;n===`	`||n===` `||n===`\r`||n===`
 `;)n=this.buffer[++r];e=r-1}else if(!this.blockScalarKeep)do{let n=e-1,r=this.buffer[n];r===`\r`&&(r=this.buffer[--n]);let i=n;for(;r===` `;)r=this.buffer[--n];if(r===`
-`&&n>=this.pos&&n+1+t>i)e=n;else break}while(1);return yield``,yield*this.pushToIndex(e+1,!0),yield*this.parseLineStart()}*parsePlainScalar(){let e=this.flowLevel>0,t=this.pos-1,n=this.pos-1,r;for(;r=this.buffer[++n];)if(r===`:`){let r=this.buffer[n+1];if(Pb(r)||e&&Lb.has(r))break;t=n}else if(Pb(r)){let i=this.buffer[n+1];if(r===`\r`&&(i===`
+`&&n>=this.pos&&n+1+t>i)e=n;else break}while(1);return yield``,yield*this.pushToIndex(e+1,!0),yield*this.parseLineStart()}*parsePlainScalar(){let e=this.flowLevel>0,t=this.pos-1,n=this.pos-1,r;for(;r=this.buffer[++n];)if(r===`:`){let r=this.buffer[n+1];if($b(r)||e&&nx.has(r))break;t=n}else if($b(r)){let i=this.buffer[n+1];if(r===`\r`&&(i===`
 `?(n+=1,r=`
-`,i=this.buffer[n+1]):t=n),i===`#`||e&&Lb.has(i))break;if(r===`
-`){let e=this.continueScalar(n+1);if(e===-1)break;n=Math.max(n,e-2)}}else{if(e&&Lb.has(r))break;t=n}return!r&&!this.atEnd?this.setNext(`plain-scalar`):(yield``,yield*this.pushToIndex(t+1,!0),e?`flow`:`doc`)}*pushCount(e){return e>0?(yield this.buffer.substr(this.pos,e),this.pos+=e,e):0}*pushToIndex(e,t){let n=this.buffer.slice(this.pos,e);return n?(yield n,this.pos+=n.length,n.length):(t&&(yield``),0)}*pushIndicators(){let e=0;loop:for(;;){switch(this.charAt(0)){case`!`:e+=yield*this.pushTag(),e+=yield*this.pushSpaces(!0);continue loop;case`&`:e+=yield*this.pushUntil(zb),e+=yield*this.pushSpaces(!0);continue loop;case`-`:case`?`:case`:`:{let t=this.flowLevel>0,n=this.charAt(1);if(Pb(n)||t&&Lb.has(n)){t?this.flowKey&&=!1:this.indentNext=this.indentValue+1,e+=yield*this.pushCount(1),e+=yield*this.pushSpaces(!0);continue loop}}}break loop}return e}*pushTag(){if(this.charAt(1)===`<`){let e=this.pos+2,t=this.buffer[e];for(;!Pb(t)&&t!==`>`;)t=this.buffer[++e];return yield*this.pushToIndex(t===`>`?e+1:e,!1)}{let e=this.pos+1,t=this.buffer[e];for(;t;)if(Ib.has(t))t=this.buffer[++e];else if(t===`%`&&Fb.has(this.buffer[e+1])&&Fb.has(this.buffer[e+2]))t=this.buffer[e+=3];else break;return yield*this.pushToIndex(e,!1)}}*pushNewline(){let e=this.buffer[this.pos];return e===`
+`,i=this.buffer[n+1]):t=n),i===`#`||e&&nx.has(i))break;if(r===`
+`){let e=this.continueScalar(n+1);if(e===-1)break;n=Math.max(n,e-2)}}else{if(e&&nx.has(r))break;t=n}return!r&&!this.atEnd?this.setNext(`plain-scalar`):(yield``,yield*this.pushToIndex(t+1,!0),e?`flow`:`doc`)}*pushCount(e){return e>0?(yield this.buffer.substr(this.pos,e),this.pos+=e,e):0}*pushToIndex(e,t){let n=this.buffer.slice(this.pos,e);return n?(yield n,this.pos+=n.length,n.length):(t&&(yield``),0)}*pushIndicators(){let e=0;loop:for(;;){switch(this.charAt(0)){case`!`:e+=yield*this.pushTag(),e+=yield*this.pushSpaces(!0);continue loop;case`&`:e+=yield*this.pushUntil(ix),e+=yield*this.pushSpaces(!0);continue loop;case`-`:case`?`:case`:`:{let t=this.flowLevel>0,n=this.charAt(1);if($b(n)||t&&nx.has(n)){t?this.flowKey&&=!1:this.indentNext=this.indentValue+1,e+=yield*this.pushCount(1),e+=yield*this.pushSpaces(!0);continue loop}}}break loop}return e}*pushTag(){if(this.charAt(1)===`<`){let e=this.pos+2,t=this.buffer[e];for(;!$b(t)&&t!==`>`;)t=this.buffer[++e];return yield*this.pushToIndex(t===`>`?e+1:e,!1)}{let e=this.pos+1,t=this.buffer[e];for(;t;)if(tx.has(t))t=this.buffer[++e];else if(t===`%`&&ex.has(this.buffer[e+1])&&ex.has(this.buffer[e+2]))t=this.buffer[e+=3];else break;return yield*this.pushToIndex(e,!1)}}*pushNewline(){let e=this.buffer[this.pos];return e===`
 `?yield*this.pushCount(1):e===`\r`&&this.charAt(1)===`
-`?yield*this.pushCount(2):0}*pushSpaces(e){let t=this.pos-1,n;do n=this.buffer[++t];while(n===` `||e&&n===`	`);let r=t-this.pos;return r>0&&(yield this.buffer.substr(this.pos,r),this.pos=t),r}*pushUntil(e){let t=this.pos,n=this.buffer[t];for(;!e(n);)n=this.buffer[++t];return yield*this.pushToIndex(t,!1)}},Vb=class{constructor(){this.lineStarts=[],this.addNewLine=e=>this.lineStarts.push(e),this.linePos=e=>{let t=0,n=this.lineStarts.length;for(;t<n;){let r=t+n>>1;this.lineStarts[r]<e?t=r+1:n=r}if(this.lineStarts[t]===e)return{line:t+1,col:1};if(t===0)return{line:0,col:e};let r=this.lineStarts[t-1];return{line:t,col:e-r+1}}}};function Hb(e,t){for(let n=0;n<e.length;++n)if(e[n].type===t)return!0;return!1}function Ub(e){for(let t=0;t<e.length;++t)switch(e[t].type){case`space`:case`comment`:case`newline`:break;default:return t}return-1}function Wb(e){switch(e?.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`flow-collection`:return!0;default:return!1}}function Gb(e){switch(e.type){case`document`:return e.start;case`block-map`:{let t=e.items[e.items.length-1];return t.sep??t.start}case`block-seq`:return e.items[e.items.length-1].start;default:return[]}}function Kb(e){if(e.length===0)return[];let t=e.length;loop:for(;--t>=0;)switch(e[t].type){case`doc-start`:case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:case`newline`:break loop}for(;e[++t]?.type===`space`;);return e.splice(t,e.length)}function qb(e,t){if(t.length<1e5)Array.prototype.push.apply(e,t);else for(let n=0;n<t.length;++n)e.push(t[n])}function Jb(e){if(e.start.type===`flow-seq-start`)for(let t of e.items)t.sep&&!t.value&&!Hb(t.start,`explicit-key-ind`)&&!Hb(t.sep,`map-value-ind`)&&(t.key&&(t.value=t.key),delete t.key,Wb(t.value)?t.value.end?qb(t.value.end,t.sep):t.value.end=t.sep:qb(t.start,t.sep),delete t.sep)}var Yb=class{constructor(e){this.atNewLine=!0,this.atScalar=!1,this.indent=0,this.offset=0,this.onKeyLine=!1,this.stack=[],this.source=``,this.type=``,this.lexer=new Bb,this.onNewLine=e}*parse(e,t=!1){this.onNewLine&&this.offset===0&&this.onNewLine(0);for(let n of this.lexer.lex(e,t))yield*this.next(n);t||(yield*this.end())}*next(e){if(this.source=e,this.atScalar){this.atScalar=!1,yield*this.step(),this.offset+=e.length;return}let t=Nb(e);if(!t){let t=`Not a YAML token: ${e}`;yield*this.pop({type:`error`,offset:this.offset,message:t,source:e}),this.offset+=e.length}else if(t===`scalar`)this.atNewLine=!1,this.atScalar=!0,this.type=`scalar`;else{switch(this.type=t,yield*this.step(),t){case`newline`:this.atNewLine=!0,this.indent=0,this.onNewLine&&this.onNewLine(this.offset+e.length);break;case`space`:this.atNewLine&&e[0]===` `&&(this.indent+=e.length);break;case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:this.atNewLine&&(this.indent+=e.length);break;case`doc-mode`:case`flow-error-end`:return;default:this.atNewLine=!1}this.offset+=e.length}}*end(){for(;this.stack.length>0;)yield*this.pop()}get sourceToken(){return{type:this.type,offset:this.offset,indent:this.indent,source:this.source}}*step(){let e=this.peek(1);if(this.type===`doc-end`&&e?.type!==`doc-end`){for(;this.stack.length>0;)yield*this.pop();this.stack.push({type:`doc-end`,offset:this.offset,source:this.source})}else{if(!e)return yield*this.stream();switch(e.type){case`document`:return yield*this.document(e);case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return yield*this.scalar(e);case`block-scalar`:return yield*this.blockScalar(e);case`block-map`:return yield*this.blockMap(e);case`block-seq`:return yield*this.blockSequence(e);case`flow-collection`:return yield*this.flowCollection(e);case`doc-end`:return yield*this.documentEnd(e)}yield*this.pop()}}peek(e){return this.stack[this.stack.length-e]}*pop(e){let t=e??this.stack.pop();if(!t)yield{type:`error`,offset:this.offset,source:``,message:`Tried to pop an empty stack`};else if(this.stack.length===0)yield t;else{let e=this.peek(1);switch(t.type===`block-scalar`?t.indent=`indent`in e?e.indent:0:t.type===`flow-collection`&&e.type===`document`&&(t.indent=0),t.type===`flow-collection`&&Jb(t),e.type){case`document`:e.value=t;break;case`block-scalar`:e.props.push(t);break;case`block-map`:{let n=e.items[e.items.length-1];if(n.value){e.items.push({start:[],key:t,sep:[]}),this.onKeyLine=!0;return}if(n.sep)n.value=t;else{Object.assign(n,{key:t,sep:[]}),this.onKeyLine=!n.explicitKey;return}break}case`block-seq`:{let n=e.items[e.items.length-1];n.value?e.items.push({start:[],value:t}):n.value=t;break}case`flow-collection`:{let n=e.items[e.items.length-1];!n||n.value?e.items.push({start:[],key:t,sep:[]}):n.sep?n.value=t:Object.assign(n,{key:t,sep:[]});return}default:yield*this.pop(),yield*this.pop(t)}if((e.type===`document`||e.type===`block-map`||e.type===`block-seq`)&&(t.type===`block-map`||t.type===`block-seq`)){let n=t.items[t.items.length-1];n&&!n.sep&&!n.value&&n.start.length>0&&Ub(n.start)===-1&&(t.indent===0||n.start.every(e=>e.type!==`comment`||e.indent<t.indent))&&(e.type===`document`?e.end=n.start:e.items.push({start:n.start}),t.items.splice(-1,1))}}}*stream(){switch(this.type){case`directive-line`:yield{type:`directive`,offset:this.offset,source:this.source};return;case`byte-order-mark`:case`space`:case`comment`:case`newline`:yield this.sourceToken;return;case`doc-mode`:case`doc-start`:{let e={type:`document`,offset:this.offset,start:[]};this.type===`doc-start`&&e.start.push(this.sourceToken),this.stack.push(e);return}}yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML stream`,source:this.source}}*document(e){if(e.value)return yield*this.lineEnd(e);switch(this.type){case`doc-start`:Ub(e.start)===-1?e.start.push(this.sourceToken):(yield*this.pop(),yield*this.step());return;case`anchor`:case`tag`:case`space`:case`comment`:case`newline`:e.start.push(this.sourceToken);return}let t=this.startBlockValue(e);t?this.stack.push(t):yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML document`,source:this.source}}*scalar(e){if(this.type===`map-value-ind`){let t=Kb(Gb(this.peek(2))),n;e.end?(n=e.end,n.push(this.sourceToken),delete e.end):n=[this.sourceToken];let r={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:t,key:e,sep:n}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=r}else yield*this.lineEnd(e)}*blockScalar(e){switch(this.type){case`space`:case`comment`:case`newline`:e.props.push(this.sourceToken);return;case`scalar`:if(e.source=this.source,this.atNewLine=!0,this.indent=0,this.onNewLine){let e=this.source.indexOf(`
+`?yield*this.pushCount(2):0}*pushSpaces(e){let t=this.pos-1,n;do n=this.buffer[++t];while(n===` `||e&&n===`	`);let r=t-this.pos;return r>0&&(yield this.buffer.substr(this.pos,r),this.pos=t),r}*pushUntil(e){let t=this.pos,n=this.buffer[t];for(;!e(n);)n=this.buffer[++t];return yield*this.pushToIndex(t,!1)}},ox=class{constructor(){this.lineStarts=[],this.addNewLine=e=>this.lineStarts.push(e),this.linePos=e=>{let t=0,n=this.lineStarts.length;for(;t<n;){let r=t+n>>1;this.lineStarts[r]<e?t=r+1:n=r}if(this.lineStarts[t]===e)return{line:t+1,col:1};if(t===0)return{line:0,col:e};let r=this.lineStarts[t-1];return{line:t,col:e-r+1}}}};function sx(e,t){for(let n=0;n<e.length;++n)if(e[n].type===t)return!0;return!1}function cx(e){for(let t=0;t<e.length;++t)switch(e[t].type){case`space`:case`comment`:case`newline`:break;default:return t}return-1}function lx(e){switch(e?.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`flow-collection`:return!0;default:return!1}}function ux(e){switch(e.type){case`document`:return e.start;case`block-map`:{let t=e.items[e.items.length-1];return t.sep??t.start}case`block-seq`:return e.items[e.items.length-1].start;default:return[]}}function dx(e){if(e.length===0)return[];let t=e.length;loop:for(;--t>=0;)switch(e[t].type){case`doc-start`:case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:case`newline`:break loop}for(;e[++t]?.type===`space`;);return e.splice(t,e.length)}function fx(e,t){if(t.length<1e5)Array.prototype.push.apply(e,t);else for(let n=0;n<t.length;++n)e.push(t[n])}function px(e){if(e.start.type===`flow-seq-start`)for(let t of e.items)t.sep&&!t.value&&!sx(t.start,`explicit-key-ind`)&&!sx(t.sep,`map-value-ind`)&&(t.key&&(t.value=t.key),delete t.key,lx(t.value)?t.value.end?fx(t.value.end,t.sep):t.value.end=t.sep:fx(t.start,t.sep),delete t.sep)}var mx=class{constructor(e){this.atNewLine=!0,this.atScalar=!1,this.indent=0,this.offset=0,this.onKeyLine=!1,this.stack=[],this.source=``,this.type=``,this.lexer=new ax,this.onNewLine=e}*parse(e,t=!1){this.onNewLine&&this.offset===0&&this.onNewLine(0);for(let n of this.lexer.lex(e,t))yield*this.next(n);t||(yield*this.end())}*next(e){if(this.source=e,this.atScalar){this.atScalar=!1,yield*this.step(),this.offset+=e.length;return}let t=Qb(e);if(!t){let t=`Not a YAML token: ${e}`;yield*this.pop({type:`error`,offset:this.offset,message:t,source:e}),this.offset+=e.length}else if(t===`scalar`)this.atNewLine=!1,this.atScalar=!0,this.type=`scalar`;else{switch(this.type=t,yield*this.step(),t){case`newline`:this.atNewLine=!0,this.indent=0,this.onNewLine&&this.onNewLine(this.offset+e.length);break;case`space`:this.atNewLine&&e[0]===` `&&(this.indent+=e.length);break;case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:this.atNewLine&&(this.indent+=e.length);break;case`doc-mode`:case`flow-error-end`:return;default:this.atNewLine=!1}this.offset+=e.length}}*end(){for(;this.stack.length>0;)yield*this.pop()}get sourceToken(){return{type:this.type,offset:this.offset,indent:this.indent,source:this.source}}*step(){let e=this.peek(1);if(this.type===`doc-end`&&e?.type!==`doc-end`){for(;this.stack.length>0;)yield*this.pop();this.stack.push({type:`doc-end`,offset:this.offset,source:this.source})}else{if(!e)return yield*this.stream();switch(e.type){case`document`:return yield*this.document(e);case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return yield*this.scalar(e);case`block-scalar`:return yield*this.blockScalar(e);case`block-map`:return yield*this.blockMap(e);case`block-seq`:return yield*this.blockSequence(e);case`flow-collection`:return yield*this.flowCollection(e);case`doc-end`:return yield*this.documentEnd(e)}yield*this.pop()}}peek(e){return this.stack[this.stack.length-e]}*pop(e){let t=e??this.stack.pop();if(!t)yield{type:`error`,offset:this.offset,source:``,message:`Tried to pop an empty stack`};else if(this.stack.length===0)yield t;else{let e=this.peek(1);switch(t.type===`block-scalar`?t.indent=`indent`in e?e.indent:0:t.type===`flow-collection`&&e.type===`document`&&(t.indent=0),t.type===`flow-collection`&&px(t),e.type){case`document`:e.value=t;break;case`block-scalar`:e.props.push(t);break;case`block-map`:{let n=e.items[e.items.length-1];if(n.value){e.items.push({start:[],key:t,sep:[]}),this.onKeyLine=!0;return}if(n.sep)n.value=t;else{Object.assign(n,{key:t,sep:[]}),this.onKeyLine=!n.explicitKey;return}break}case`block-seq`:{let n=e.items[e.items.length-1];n.value?e.items.push({start:[],value:t}):n.value=t;break}case`flow-collection`:{let n=e.items[e.items.length-1];!n||n.value?e.items.push({start:[],key:t,sep:[]}):n.sep?n.value=t:Object.assign(n,{key:t,sep:[]});return}default:yield*this.pop(),yield*this.pop(t)}if((e.type===`document`||e.type===`block-map`||e.type===`block-seq`)&&(t.type===`block-map`||t.type===`block-seq`)){let n=t.items[t.items.length-1];n&&!n.sep&&!n.value&&n.start.length>0&&cx(n.start)===-1&&(t.indent===0||n.start.every(e=>e.type!==`comment`||e.indent<t.indent))&&(e.type===`document`?e.end=n.start:e.items.push({start:n.start}),t.items.splice(-1,1))}}}*stream(){switch(this.type){case`directive-line`:yield{type:`directive`,offset:this.offset,source:this.source};return;case`byte-order-mark`:case`space`:case`comment`:case`newline`:yield this.sourceToken;return;case`doc-mode`:case`doc-start`:{let e={type:`document`,offset:this.offset,start:[]};this.type===`doc-start`&&e.start.push(this.sourceToken),this.stack.push(e);return}}yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML stream`,source:this.source}}*document(e){if(e.value)return yield*this.lineEnd(e);switch(this.type){case`doc-start`:cx(e.start)===-1?e.start.push(this.sourceToken):(yield*this.pop(),yield*this.step());return;case`anchor`:case`tag`:case`space`:case`comment`:case`newline`:e.start.push(this.sourceToken);return}let t=this.startBlockValue(e);t?this.stack.push(t):yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML document`,source:this.source}}*scalar(e){if(this.type===`map-value-ind`){let t=dx(ux(this.peek(2))),n;e.end?(n=e.end,n.push(this.sourceToken),delete e.end):n=[this.sourceToken];let r={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:t,key:e,sep:n}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=r}else yield*this.lineEnd(e)}*blockScalar(e){switch(this.type){case`space`:case`comment`:case`newline`:e.props.push(this.sourceToken);return;case`scalar`:if(e.source=this.source,this.atNewLine=!0,this.indent=0,this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){qb(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(Hb(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=Kb(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(Hb(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(Wb(t.key)&&!Hb(t.sep,`newline`)){let e=Kb(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):Hb(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!Hb(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){qb(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||Hb(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=Kb(Gb(t));Jb(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
+`,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){fx(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(sx(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=dx(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(sx(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(lx(t.key)&&!sx(t.sep,`newline`)){let e=dx(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):sx(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!sx(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){fx(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||sx(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=dx(ux(t));px(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=Kb(Gb(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=Kb(Gb(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function Xb(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new Vb||null,prettyErrors:t}}function Zb(e,t={}){let{lineCounter:n,prettyErrors:r}=Xb(t),i=new Yb(n?.addNewLine),a=new Db(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new Uy(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(Gy(e,n)),o.warnings.forEach(Gy(e,n))),o}function Qb(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=Zb(e,n);if(!i)return null;if(i.warnings.forEach(e=>xv(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function $b(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(Qb(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function ex(e){let t=[];return{content:{kinds:$b(e,`kinds`,wc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>$b(e,n,Dc,t)),traits:$b(e,`traits`,Ac,t)},errors:t}}var{content:tx,errors:nx}=ex(Object.entries(Object.assign({"../../content/kinds/ai-core.yaml":El,"../../content/kinds/dreft/guwain.yaml":Dl,"../../content/kinds/dreft/isek.yaml":Ol,"../../content/kinds/dreft/tatot-goblinoid.yaml":kl,"../../content/kinds/dreft/tatot-orcoid.yaml":Al,"../../content/kinds/human.yaml":jl,"../../content/origins/american-empire/american-empire-colonies.yaml":Ml,"../../content/origins/american-empire/american-empire-earth.yaml":Nl,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Pl,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Fl,"../../content/origins/dreft/dreft.yaml":Il,"../../content/origins/drovus/the-drovus-empire.yaml":Ll,"../../content/origins/free-american-states/the-free-american-states.yaml":Rl,"../../content/origins/karsef/kingdom-of-karsef.yaml":zl,"../../content/origins/kashgar/kashgar.yaml":Bl,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Vl,"../../content/origins/sdu/sdu-colonies.yaml":Hl,"../../content/origins/sdu/sdu-earth.yaml":Ul,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":Wl,"../../content/origins/tetra/tetra.yaml":Gl,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Kl,"../../content/pasts/any/craft-apprenticeship.yaml":ql,"../../content/pasts/any/criminal-family.yaml":Jl,"../../content/pasts/any/gutter-trash.yaml":Yl,"../../content/pasts/any/military-service.yaml":Xl,"../../content/pasts/any/privileged-upbringing.yaml":Zl,"../../content/pasts/any/raised-at-court.yaml":Ql,"../../content/pasts/any/shipborn.yaml":$l,"../../content/pasts/any/simple-farmer.yaml":eu,"../../content/pasts/any/traveling-troupe.yaml":tu,"../../content/pasts/dreft/countryside-upbringing.yaml":nu,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":ru,"../../content/pasts/dreft/glintl-docks.yaml":iu,"../../content/pasts/dreft/karsef-border-veteran.yaml":au,"../../content/pasts/dreft/merchant-dynasty.yaml":ou,"../../content/pasts/dreft/monster-raided-village.yaml":su,"../../content/pasts/dreft/noble-household.yaml":H,"../../content/pasts/dreft/palace-servant.yaml":cu,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":lu,"../../content/pasts/dreft/returned-from-the-systems.yaml":uu,"../../content/pasts/dreft/sunrise-refugee.yaml":du,"../../content/pasts/systems/station-rat.yaml":fu,"../../content/pasts/systems/university-educated.yaml":pu,"../../content/pasts/tetra/delegation-child.yaml":mu,"../../content/pasts/tetra/gate-lab-kid.yaml":hu,"../../content/pasts/tetra/holding-company-kid.yaml":gu,"../../content/pasts/tetra/parasapient-quarter.yaml":_u,"../../content/pasts/tetra/raised-in-the-infill.yaml":vu,"../../content/pasts/tetra/raised-on-ward-politics.yaml":yu,"../../content/professions/any/apothecary.yaml":bu,"../../content/professions/any/bard.yaml":xu,"../../content/professions/any/blacksmith.yaml":Su,"../../content/professions/any/courier.yaml":Cu,"../../content/professions/any/criminal-enforcer.yaml":wu,"../../content/professions/any/doctor.yaml":Tu,"../../content/professions/any/farmer.yaml":Eu,"../../content/professions/any/jester.yaml":Du,"../../content/professions/any/knight.yaml":Ou,"../../content/professions/any/local-police.yaml":ku,"../../content/professions/any/musical-artist.yaml":Au,"../../content/professions/any/ranger.yaml":ju,"../../content/professions/any/smuggler.yaml":Mu,"../../content/professions/any/spy.yaml":Nu,"../../content/professions/any/squire.yaml":Pu,"../../content/professions/any/stonemason.yaml":Fu,"../../content/professions/any/surgeon.yaml":Iu,"../../content/professions/any/tanner.yaml":Lu,"../../content/professions/any/visual-artist.yaml":Ru,"../../content/professions/dreft/alchemist.yaml":zu,"../../content/professions/dreft/caravaneer.yaml":Bu,"../../content/professions/dreft/dreft-local-militia.yaml":Vu,"../../content/professions/dreft/dreft-mercenary.yaml":Hu,"../../content/professions/dreft/gate-hand.yaml":Uu,"../../content/professions/dreft/guild-hunter.yaml":Wu,"../../content/professions/dreft/hedge-witch.yaml":Gu,"../../content/professions/dreft/licensed-mage.yaml":Ku,"../../content/professions/dreft/royal-guard.yaml":qu,"../../content/professions/systems/american-empire-soldier.yaml":Ju,"../../content/professions/systems/combat-medic.yaml":Yu,"../../content/professions/systems/computer-engineer.yaml":Xu,"../../content/professions/systems/emergency-medical-technician.yaml":Zu,"../../content/professions/systems/exotic-specimen-dealer.yaml":Qu,"../../content/professions/systems/fighter-pilot.yaml":$u,"../../content/professions/systems/interplanar-diplomat.yaml":ed,"../../content/professions/systems/interplanar-rights-lawyer.yaml":td,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":nd,"../../content/professions/systems/paraarcheologist.yaml":U,"../../content/professions/systems/paraecologist.yaml":W,"../../content/professions/systems/paraethnologist.yaml":G,"../../content/professions/systems/paraevolutionary-scientist.yaml":K,"../../content/professions/systems/paraphysiologist.yaml":q,"../../content/professions/systems/parazoological-keeper.yaml":rd,"../../content/professions/systems/planar-expeditionary-professional.yaml":id,"../../content/professions/systems/starship-engineer.yaml":ad,"../../content/professions/systems/station-maintenance.yaml":od,"../../content/professions/systems/theoretical-paraphysicist.yaml":sd,"../../content/professions/systems/truck-pilot.yaml":cd,"../../content/traits/ability/capable-student.yaml":ld,"../../content/traits/ability/con-man.yaml":ud,"../../content/traits/ability/eagle-eye.yaml":dd,"../../content/traits/ability/gladiator.yaml":fd,"../../content/traits/ability/knowledge-sponge.yaml":pd,"../../content/traits/ability/magic-access.yaml":md,"../../content/traits/ability/magical-heritage.yaml":hd,"../../content/traits/ability/mental-fortitude.yaml":gd,"../../content/traits/ability/natural-breath-weapon.yaml":_d,"../../content/traits/ability/sculpted.yaml":vd,"../../content/traits/ability/trail-runner.yaml":yd,"../../content/traits/circumstance/explorers-lodge-membership.yaml":bd,"../../content/traits/circumstance/imperial-service-record.yaml":xd,"../../content/traits/circumstance/short-term-fame.yaml":Sd,"../../content/traits/circumstance/significant-inheritance.yaml":Cd,"../../content/traits/circumstance/thieves-guild-membership.yaml":wd,"../../content/traits/circumstance/tugboat-captain.yaml":Td,"../../content/traits/circumstance/wanted-in-sol.yaml":Ed,"../../content/traits/condition/cybernetic-intelligence.yaml":Dd,"../../content/traits/condition/damaged.yaml":Od,"../../content/traits/condition/dead.yaml":kd,"../../content/traits/condition/destroyed.yaml":Ad,"../../content/traits/condition/ghost-sight.yaml":jd,"../../content/traits/condition/hard-shell.yaml":Md,"../../content/traits/condition/healthy.yaml":Nd,"../../content/traits/condition/incapacitated.yaml":Pd,"../../content/traits/condition/injured.yaml":Fd,"../../content/traits/condition/long-toothed.yaml":Id,"../../content/traits/condition/mechanical.yaml":Ld,"../../content/traits/condition/severe-bleeding.yaml":Rd,"../../content/traits/condition/severely-injured.yaml":zd,"../../content/traits/condition/sorcerous.yaml":Bd,"../../content/traits/condition/stimm-rush.yaml":Vd,"../../content/traits/condition/stone-skin.yaml":Hd,"../../content/traits/condition/supernatural.yaml":Ud,"../../content/traits/contact/additional-contact.yaml":Wd,"../../content/traits/knowledge/additional-language.yaml":Gd,"../../content/traits/knowledge/ai-culture.yaml":Kd,"../../content/traits/knowledge/alchemy.yaml":qd,"../../content/traits/knowledge/american-geography.yaml":Jd,"../../content/traits/knowledge/american-history.yaml":Yd,"../../content/traits/knowledge/amharic-written.yaml":Xd,"../../content/traits/knowledge/amharic.yaml":Zd,"../../content/traits/knowledge/animal-lore.yaml":Qd,"../../content/traits/knowledge/antiluna.yaml":$d,"../../content/traits/knowledge/arabic-written.yaml":ef,"../../content/traits/knowledge/arabic.yaml":tf,"../../content/traits/knowledge/architecture.yaml":nf,"../../content/traits/knowledge/aristocracy.yaml":rf,"../../content/traits/knowledge/ark-life.yaml":af,"../../content/traits/knowledge/ark-new-york.yaml":of,"../../content/traits/knowledge/art-history.yaml":sf,"../../content/traits/knowledge/artificial-intelligence.yaml":cf,"../../content/traits/knowledge/bandits-and-brigands.yaml":lf,"../../content/traits/knowledge/bengali-written.yaml":uf,"../../content/traits/knowledge/bengali.yaml":df,"../../content/traits/knowledge/biology.yaml":ff,"../../content/traits/knowledge/boneyard.yaml":pf,"../../content/traits/knowledge/bureaucracy.yaml":mf,"../../content/traits/knowledge/burmese-written.yaml":hf,"../../content/traits/knowledge/burmese.yaml":gf,"../../content/traits/knowledge/cantonese-written.yaml":J,"../../content/traits/knowledge/cantonese.yaml":_f,"../../content/traits/knowledge/caravan-routes.yaml":vf,"../../content/traits/knowledge/chemistry.yaml":yf,"../../content/traits/knowledge/chinese-imperial-law.yaml":bf,"../../content/traits/knowledge/coastal-trade.yaml":xf,"../../content/traits/knowledge/commerce.yaml":Sf,"../../content/traits/knowledge/computer-systems.yaml":Cf,"../../content/traits/knowledge/countryside-lore.yaml":wf,"../../content/traits/knowledge/court-etiquette.yaml":Tf,"../../content/traits/knowledge/criminal-underworld.yaml":Ef,"../../content/traits/knowledge/cryptography.yaml":Df,"../../content/traits/knowledge/cybernetics.yaml":Of,"../../content/traits/knowledge/diplomatic-protocol.yaml":kf,"../../content/traits/knowledge/dreft.yaml":Af,"../../content/traits/knowledge/dreftan-written.yaml":jf,"../../content/traits/knowledge/dreftan.yaml":Mf,"../../content/traits/knowledge/dreftian-law.yaml":Nf,"../../content/traits/knowledge/dutch-written.yaml":Pf,"../../content/traits/knowledge/dutch.yaml":Ff,"../../content/traits/knowledge/dwarvish-runes-written.yaml":If,"../../content/traits/knowledge/dwarvish.yaml":Lf,"../../content/traits/knowledge/earth-baseline-customs.yaml":Rf,"../../content/traits/knowledge/earth-baseline-technology.yaml":zf,"../../content/traits/knowledge/elemental-magics.yaml":Bf,"../../content/traits/knowledge/engineering.yaml":Vf,"../../content/traits/knowledge/english-written.yaml":Hf,"../../content/traits/knowledge/english.yaml":Uf,"../../content/traits/knowledge/exotic-materials.yaml":Wf,"../../content/traits/knowledge/farming.yaml":Y,"../../content/traits/knowledge/filipino-written.yaml":Gf,"../../content/traits/knowledge/filipino.yaml":Kf,"../../content/traits/knowledge/french-written.yaml":qf,"../../content/traits/knowledge/french.yaml":Jf,"../../content/traits/knowledge/gambling.yaml":Yf,"../../content/traits/knowledge/geography.yaml":Xf,"../../content/traits/knowledge/german-written.yaml":Zf,"../../content/traits/knowledge/german.yaml":Qf,"../../content/traits/knowledge/glintl.yaml":$f,"../../content/traits/knowledge/gujarati-written.yaml":ep,"../../content/traits/knowledge/gujarati.yaml":tp,"../../content/traits/knowledge/hausa-written.yaml":np,"../../content/traits/knowledge/hausa.yaml":rp,"../../content/traits/knowledge/heraldry.yaml":X,"../../content/traits/knowledge/herbalism.yaml":ip,"../../content/traits/knowledge/high-society.yaml":ap,"../../content/traits/knowledge/hindi-written.yaml":op,"../../content/traits/knowledge/hindi.yaml":sp,"../../content/traits/knowledge/history.yaml":cp,"../../content/traits/knowledge/imperial-law.yaml":lp,"../../content/traits/knowledge/imperial-politics.yaml":up,"../../content/traits/knowledge/indonesian-written.yaml":dp,"../../content/traits/knowledge/indonesian.yaml":fp,"../../content/traits/knowledge/interplanar-law.yaml":pp,"../../content/traits/knowledge/interplanar-relations.yaml":mp,"../../content/traits/knowledge/italian-written.yaml":hp,"../../content/traits/knowledge/italian.yaml":gp,"../../content/traits/knowledge/japanese-written.yaml":_p,"../../content/traits/knowledge/japanese.yaml":vp,"../../content/traits/knowledge/javanese-written.yaml":yp,"../../content/traits/knowledge/javanese.yaml":bp,"../../content/traits/knowledge/kannada-written.yaml":xp,"../../content/traits/knowledge/kannada.yaml":Sp,"../../content/traits/knowledge/karsef.yaml":Cp,"../../content/traits/knowledge/kashgar-mindworks.yaml":wp,"../../content/traits/knowledge/kashgar.yaml":Tp,"../../content/traits/knowledge/kazakh-written.yaml":Ep,"../../content/traits/knowledge/kazakh.yaml":Dp,"../../content/traits/knowledge/khmer-written.yaml":Op,"../../content/traits/knowledge/khmer.yaml":kp,"../../content/traits/knowledge/kinyarwanda-written.yaml":Ap,"../../content/traits/knowledge/kinyarwanda.yaml":jp,"../../content/traits/knowledge/korean-written.yaml":Mp,"../../content/traits/knowledge/korean.yaml":Np,"../../content/traits/knowledge/kyrgyz-written.yaml":Pp,"../../content/traits/knowledge/kyrgyz.yaml":Fp,"../../content/traits/knowledge/lao-written.yaml":Ip,"../../content/traits/knowledge/lao.yaml":Lp,"../../content/traits/knowledge/law-enforcement.yaml":Rp,"../../content/traits/knowledge/legal-systems.yaml":zp,"../../content/traits/knowledge/lingala-written.yaml":Bp,"../../content/traits/knowledge/lingala.yaml":Vp,"../../content/traits/knowledge/liquid-democracy.yaml":Hp,"../../content/traits/knowledge/literature.yaml":Up,"../../content/traits/knowledge/local-folklore.yaml":Wp,"../../content/traits/knowledge/local-history.yaml":Gp,"../../content/traits/knowledge/magic-on-isekai.yaml":Kp,"../../content/traits/knowledge/malay-written.yaml":qp,"../../content/traits/knowledge/malay.yaml":Jp,"../../content/traits/knowledge/malayalam-written.yaml":Yp,"../../content/traits/knowledge/malayalam.yaml":Xp,"../../content/traits/knowledge/mandarin-written.yaml":Zp,"../../content/traits/knowledge/mandarin.yaml":Qp,"../../content/traits/knowledge/marathi-written.yaml":$p,"../../content/traits/knowledge/marathi.yaml":em,"../../content/traits/knowledge/mathematics.yaml":tm,"../../content/traits/knowledge/medicine.yaml":nm,"../../content/traits/knowledge/metallurgy.yaml":rm,"../../content/traits/knowledge/military-tactics.yaml":im,"../../content/traits/knowledge/mongolian-written.yaml":am,"../../content/traits/knowledge/mongolian.yaml":om,"../../content/traits/knowledge/monsters-of-isekai.yaml":sm,"../../content/traits/knowledge/mountaineering.yaml":cm,"../../content/traits/knowledge/music.yaml":lm,"../../content/traits/knowledge/navigation.yaml":um,"../../content/traits/knowledge/nepali-written.yaml":dm,"../../content/traits/knowledge/nepali.yaml":fm,"../../content/traits/knowledge/new-columbia.yaml":pm,"../../content/traits/knowledge/new-persia.yaml":mm,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":hm,"../../content/traits/knowledge/odia-written.yaml":gm,"../../content/traits/knowledge/odia.yaml":_m,"../../content/traits/knowledge/orc-society.yaml":vm,"../../content/traits/knowledge/oromo-written.yaml":ym,"../../content/traits/knowledge/oromo.yaml":bm,"../../content/traits/knowledge/paraarcheology.yaml":xm,"../../content/traits/knowledge/parabiology.yaml":Sm,"../../content/traits/knowledge/paraflora.yaml":Cm,"../../content/traits/knowledge/paraphysics.yaml":wm,"../../content/traits/knowledge/parasapient-medicine.yaml":Tm,"../../content/traits/knowledge/parasapients.yaml":Em,"../../content/traits/knowledge/parazoology.yaml":Dm,"../../content/traits/knowledge/pathology.yaml":Om,"../../content/traits/knowledge/persian-written.yaml":km,"../../content/traits/knowledge/persian.yaml":Am,"../../content/traits/knowledge/pharmacology.yaml":jm,"../../content/traits/knowledge/physics.yaml":Mm,"../../content/traits/knowledge/planar-exploration.yaml":Nm,"../../content/traits/knowledge/polish-written.yaml":Pm,"../../content/traits/knowledge/polish.yaml":Fm,"../../content/traits/knowledge/politics.yaml":Im,"../../content/traits/knowledge/port-herminst.yaml":Lm,"../../content/traits/knowledge/ports-and-stations.yaml":Rm,"../../content/traits/knowledge/portuguese-written.yaml":zm,"../../content/traits/knowledge/portuguese.yaml":Bm,"../../content/traits/knowledge/psychology.yaml":Vm,"../../content/traits/knowledge/punjabi-written.yaml":Hm,"../../content/traits/knowledge/punjabi.yaml":Um,"../../content/traits/knowledge/robotics.yaml":Wm,"../../content/traits/knowledge/romanian-written.yaml":Gm,"../../content/traits/knowledge/romanian.yaml":Km,"../../content/traits/knowledge/russian-written.yaml":qm,"../../content/traits/knowledge/russian.yaml":Jm,"../../content/traits/knowledge/sdu-law.yaml":Ym,"../../content/traits/knowledge/seafaring.yaml":Xm,"../../content/traits/knowledge/security-systems.yaml":Zm,"../../content/traits/knowledge/shipping-lanes.yaml":Qm,"../../content/traits/knowledge/sinhala-written.yaml":$m,"../../content/traits/knowledge/sinhala.yaml":eh,"../../content/traits/knowledge/somali-written.yaml":th,"../../content/traits/knowledge/somali.yaml":nh,"../../content/traits/knowledge/sorellion.yaml":rh,"../../content/traits/knowledge/southeast-asia.yaml":ih,"../../content/traits/knowledge/spacefaring.yaml":ah,"../../content/traits/knowledge/spanish-written.yaml":oh,"../../content/traits/knowledge/spanish.yaml":sh,"../../content/traits/knowledge/starships.yaml":ch,"../../content/traits/knowledge/succession-law.yaml":lh,"../../content/traits/knowledge/swahili-written.yaml":uh,"../../content/traits/knowledge/swahili.yaml":dh,"../../content/traits/knowledge/tamil-written.yaml":fh,"../../content/traits/knowledge/tamil.yaml":ph,"../../content/traits/knowledge/telugu-written.yaml":mh,"../../content/traits/knowledge/telugu.yaml":hh,"../../content/traits/knowledge/tetra-frontiers-co.yaml":gh,"../../content/traits/knowledge/tetra.yaml":_h,"../../content/traits/knowledge/thai-written.yaml":vh,"../../content/traits/knowledge/thai.yaml":yh,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":bh,"../../content/traits/knowledge/the-chinese-empire.yaml":xh,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Sh,"../../content/traits/knowledge/the-corsine-pass.yaml":Ch,"../../content/traits/knowledge/the-diplomatic-wing.yaml":wh,"../../content/traits/knowledge/the-drovus-empire.yaml":Th,"../../content/traits/knowledge/the-explorers-lodge.yaml":Eh,"../../content/traits/knowledge/the-free-american-states.yaml":Dh,"../../content/traits/knowledge/the-imperial-military.yaml":Oh,"../../content/traits/knowledge/the-kings-woods.yaml":kh,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Ah,"../../content/traits/knowledge/the-martian-association.yaml":jh,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":Mh,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":Nh,"../../content/traits/knowledge/the-switch-port.yaml":Ph,"../../content/traits/knowledge/the-union-of-texas.yaml":Fh,"../../content/traits/knowledge/the-united-nations.yaml":Ih,"../../content/traits/knowledge/theater.yaml":Lh,"../../content/traits/knowledge/thieves-cant.yaml":Rh,"../../content/traits/knowledge/toxicology.yaml":zh,"../../content/traits/knowledge/trade-guilds.yaml":Bh,"../../content/traits/knowledge/trade-law.yaml":Vh,"../../content/traits/knowledge/trade-roads.yaml":Hh,"../../content/traits/knowledge/turkish-written.yaml":Uh,"../../content/traits/knowledge/turkish.yaml":Wh,"../../content/traits/knowledge/ukrainian-written.yaml":Gh,"../../content/traits/knowledge/ukrainian.yaml":Kh,"../../content/traits/knowledge/union-politics.yaml":qh,"../../content/traits/knowledge/urdu-written.yaml":Jh,"../../content/traits/knowledge/urdu.yaml":Yh,"../../content/traits/knowledge/uyghur-written.yaml":Xh,"../../content/traits/knowledge/uyghur.yaml":Zh,"../../content/traits/knowledge/vietnamese-written.yaml":Qh,"../../content/traits/knowledge/vietnamese.yaml":$h,"../../content/traits/knowledge/weapons.yaml":eg,"../../content/traits/knowledge/wilderness-lore.yaml":tg,"../../content/traits/knowledge/yoruba-written.yaml":ng,"../../content/traits/knowledge/yoruba.yaml":rg,"../../content/traits/knowledge/yutu.yaml":ig,"../../content/traits/knowledge/zhulong.yaml":ag,"../../content/traits/other/possessed-by-a-spirit.yaml":og,"../../content/traits/skill/advanced-cooking.yaml":sg,"../../content/traits/skill/advanced-potion-mixing.yaml":cg,"../../content/traits/skill/ambusher.yaml":lg,"../../content/traits/skill/animal-husbandry.yaml":ug,"../../content/traits/skill/appraisal.yaml":dg,"../../content/traits/skill/artist-painting.yaml":fg,"../../content/traits/skill/artist-sculpture.yaml":pg,"../../content/traits/skill/cargo-handling.yaml":mg,"../../content/traits/skill/concealment.yaml":hg,"../../content/traits/skill/courtly-manners.yaml":gg,"../../content/traits/skill/craft-leatherworking.yaml":_g,"../../content/traits/skill/craft-masonry.yaml":vg,"../../content/traits/skill/craft-smithing.yaml":yg,"../../content/traits/skill/disguise.yaml":bg,"../../content/traits/skill/excavation.yaml":xg,"../../content/traits/skill/expert-pilot.yaml":Sg,"../../content/traits/skill/field-sampling.yaml":Cg,"../../content/traits/skill/folk-remedies.yaml":wg,"../../content/traits/skill/haggler.yaml":Tg,"../../content/traits/skill/incantation.yaml":Eg,"../../content/traits/skill/intimidation.yaml":Dg,"../../content/traits/skill/investigation.yaml":Og,"../../content/traits/skill/legal-advocacy.yaml":kg,"../../content/traits/skill/lockpicking.yaml":Ag,"../../content/traits/skill/medical-aid.yaml":jg,"../../content/traits/skill/military-drill.yaml":Mg,"../../content/traits/skill/performer-acrobatics.yaml":Ng,"../../content/traits/skill/performer-music.yaml":Pg,"../../content/traits/skill/pilot-fighter.yaml":Fg,"../../content/traits/skill/pilot-helicopter.yaml":Ig,"../../content/traits/skill/pilot-truck.yaml":Lg,"../../content/traits/skill/planar-surveying.yaml":Rg,"../../content/traits/skill/programming.yaml":zg,"../../content/traits/skill/relic-handling.yaml":Bg,"../../content/traits/skill/research.yaml":Vg,"../../content/traits/skill/rider-basic-animals.yaml":Hg,"../../content/traits/skill/schemer.yaml":Ug,"../../content/traits/skill/shield-wall.yaml":Wg,"../../content/traits/skill/simple-cooking.yaml":Gg,"../../content/traits/skill/simple-potion-mixing.yaml":Kg,"../../content/traits/skill/sleight-of-hand.yaml":qg,"../../content/traits/skill/smooth-talker.yaml":Jg,"../../content/traits/skill/specimen-handling.yaml":Yg,"../../content/traits/skill/starship-engineering.yaml":Xg,"../../content/traits/skill/streetwise.yaml":Zg,"../../content/traits/skill/surgery.yaml":Qg,"../../content/traits/skill/survivalist.yaml":$g,"../../content/traits/skill/teamster.yaml":e_,"../../content/traits/skill/tinkerer.yaml":t_,"../../content/traits/skill/tracker.yaml":n_,"../../content/traits/skill/vigilance.yaml":r_,"../../content/traits/skill/wielder-longsword.yaml":i_,"../../content/traits/skill/wielder-musket.yaml":a_,"../../content/traits/skill/wielder-pistol.yaml":o_,"../../content/traits/skill/wielder-rifle.yaml":s_,"../../content/traits/skill/wielder-war-axe.yaml":c_})).map(([e,t])=>({path:e.slice(14),text:t}))),rx=new Map(tx.traits.map(e=>[e.id,e])),ix=new Map(tx.packages.map(e=>[e.id,e])),ax=new Map(tx.kinds.map(e=>[e.id,e])),ox=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],sx=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],cx=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),lx=`(\\d{1,2}|${cx(ox)})`,ux=`(\\d{1,2})(?:st|nd|rd|th)|(${cx(sx)})`,dx=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${lx}\\b`,`i`),fx=RegExp(`\\b(?:${ux})[\\s-]+(?:level|lvl)\\b`,`i`);function px(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function mx(e){let t=dx.exec(e);if(t)return px(t[1],ox);let n=fx.exec(e);if(n)return px(n[1],sx)??px(n[2],sx)}var hx=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Q=e(((e,t)=>{t.exports=hx()}))(),gx=Object.keys(B),_x=gx.filter(e=>B[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),vx=e=>rx.get(e)?.name??e,yx=e=>`region-${e===`isekai`?`dreft`:`systems`}`,bx=e=>yx(rx.get(e)?.plane),xx=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Sx={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Cx({plane:e}){let t=e?Sx[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var wx=e=>e.package===void 0?vx(e.trait??``):ix.get(e.package)?.name??e.package;function Tx(e){return e.kind?ax.get(e.kind)?.stats:void 0}function Ex({step:e,title:t,children:n}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:t}),(0,Q.jsx)(`div`,{className:`stinger-row`,children:(0,Q.jsxs)(`div`,{className:`copy stinger black`,children:[`Step `,$c.indexOf(e)+1,` of `,$c.length]})}),n&&(0,Q.jsx)(`p`,{className:`lede`,children:n})]})}function Dx(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}function Ox(e){return(0,Q.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}var kx=20;function Ax({bonus:e,value:t,max:n}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:kx},(r,i)=>{let a=i+1,o=a<=t?a>n?`over`:a<=e?`default`:`filled`:a<=n?`empty`:`unavailable`;return(0,Q.jsx)(`span`,{className:`stat ${a%2?`dot`:`square`} ${o}`},a)})})}function jx({bonus:e=0,value:t}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:kx},(n,r)=>(0,Q.jsx)(`span`,{className:`stat diamond ${r<e?`default`:r<t?`filled`:`empty`}`},r))})}function Mx({stats:e}){return(0,Q.jsx)(`div`,{className:`stat-ranges`,children:_x.map(t=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),B[t].map(t=>(0,Q.jsxs)(`div`,{className:`stat-range`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,Q.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function Nx({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,z.useState)(!1),[o,s]=(0,z.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,Q.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,Q.jsx)(n,{children:i?(0,Q.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,Q.jsx)(`button`,{type:`button`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var Px={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function Fx({to:e}){return(0,Q.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:Px[e]})})}var Ix={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function Lx({is:e}){return(0,Q.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:Ix[e]})})}function Rx({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,Q.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:e}),(0,Q.jsxs)(`div`,{className:`stepper`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower level`,children:(0,Q.jsx)(Lx,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise level`,children:(0,Q.jsx)(Lx,{is:`plus`})})]})]})}var zx=[`origin`,`profession`,`past`],Bx={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function Vx(e){let t=e.map(e=>vx(e.trait)+(e.rank?` ${e.rank}`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function Hx({pkg:e}){return(0,Q.jsxs)(`div`,{className:`grants`,children:[(e.bonusPoints.length>0||Object.keys(e.coreBonus).length>0)&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Bonus`}),e.bonusPoints.map(e=>(0,Q.jsxs)(Ox,{tone:`accent`,children:[`+`,e.count,` `,$(e.group),` `,e.count===1?`point`:`points`]},e.group)),Object.entries(e.coreBonus).map(([e,t])=>(0,Q.jsxs)(Ox,{tone:`accent`,children:[`+`,t,` `,$(e)]},e))]}),e.grants.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),Vx(e.grants).map(e=>(0,Q.jsx)(Ox,{tone:`accent`,children:e},e))]}),e.choices.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Choose`}),e.choices.map((e,t)=>(0,Q.jsx)(Ox,{children:e.note??xx(e.choose,e.from)},t))]}),e.backgroundTraits.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Background list`}),Vx(e.backgroundTraits.map(e=>({trait:e}))).map(e=>(0,Q.jsx)(Ox,{children:e},e))]}),e.features.map(e=>(0,Q.jsxs)(`p`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))]})}function Ux({draft:e,onChange:t}){let[n,r]=(0,z.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,z.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,z.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,z.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&ix.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`background`,title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:zx.map(t=>(0,Q.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,Q.jsx)(`summary`,{children:(0,Q.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,Q.jsx)(`span`,{className:`slot-pick`,children:ix.get(e[t])?.name??e[t]}):(0,Q.jsx)(`span`,{className:`muted`,children:Bx[t]}),(0,Q.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,Q.jsx)(Lx,{is:n[t]?`minus`:`plus`})})]})}),(0,Q.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(t),children:tx.packages.filter(e=>e.type===t).map(n=>(0,Q.jsxs)(Dx,{className:`headed ${yx(n.plane)}`,label:n.name,selected:e[t]===n.id,onSelect:()=>a(t,n.id),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Cx,{plane:n.plane}),n.name]}),(0,Q.jsx)(Ox,{tone:`muted`,children:n.plane})]}),(0,Q.jsx)(`p`,{children:n.summary}),(0,Q.jsx)(Hx,{pkg:n})]},n.id))})]},t))})]})}var Wx=[`systems`,`dreft`],Gx={systems:`The Settled Systems`,dreft:`Dreft`},Kx=e=>e.region??(e.plane===`earth`?`systems`:e.plane),qx=e=>Wx.includes(e)?Wx.indexOf(e):Wx.length,Jx=[...new Set(tx.kinds.map(Kx))].sort((e,t)=>qx(e)-qx(t));function Yx({draft:e,onChange:t}){return(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:(0,Q.jsx)(`div`,{role:`radiogroup`,"aria-label":`Kind`,children:Jx.map(n=>(0,Q.jsxs)(`div`,{className:`kind-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:Gx[n]??$(n)}),(0,Q.jsx)(`div`,{className:`cards`,children:tx.kinds.filter(e=>Kx(e)===n).map(n=>(0,Q.jsxs)(Dx,{className:`kind-card headed ${yx(n.plane)}`,label:n.name,selected:e.kind===n.id,onSelect:()=>t({...e,kind:e.kind===n.id?void 0:n.id,startPoints:void 0}),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Cx,{plane:n.plane}),n.name]}),(0,Q.jsx)(Ox,{tone:`muted`,children:n.plane})]}),(0,Q.jsx)(`p`,{children:n.summary}),(0,Q.jsx)(Mx,{stats:n.stats}),n.grants.length>0&&(0,Q.jsx)(`div`,{className:`grants`,children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),n.grants.map(e=>(0,Q.jsx)(Ox,{tone:`accent`,children:vx(e.trait)},e.trait))]})}),(0,Q.jsx)(`ul`,{className:`features`,children:n.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]},n.id))})]},n))})})}function Xx({draft:e,startingLevel:t,onChange:n,onStartingLevel:r}){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`character`,title:`Character`,children:`Name your character, set the level your campaign starts at, and choose a Kind. Your GM sets the level; most campaigns start at 3. A Kind adds a bonus to each stat and sets how far each can go; numbers show bonus/max.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box character-fields`,children:[(0,Q.jsxs)(`label`,{className:`field name-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Character Name`}),(0,Q.jsx)(`input`,{value:e.name??``,placeholder:`Unnamed character`,onChange:t=>n({...e,name:t.target.value||void 0})})]}),(0,Q.jsx)(Rx,{label:`Starting Level`,level:t,onChange:r})]}),(0,Q.jsx)(Yx,{draft:e,onChange:n})]})}function Zx(e){let t=[];for(let n of[e.origin,e.profession,e.past]){let e=n?ix.get(n):void 0;if(e)for(let n of e.choices){let r=t.find(t=>t.id===e.id&&t.from===n.from);r?(r.count+=n.choose,n.note&&r.notes.push(n.note)):t.push({by:`package`,id:e.id,name:e.name,from:n.from,count:n.choose,notes:n.note?[n.note]:[]})}}return t}var Qx=e=>e.by===`trait`?`Trait`:$(ix.get(e.id)?.type??`package`),$x=e=>e.by===`trait`?rx.get(e.id)?.plane:ix.get(e.id)?.plane;function eS({draft:e,result:t,onChange:n}){let r=t.summary?.questions??Zx(e),i=t=>e.choices.find(e=>Wc(e,t)),a=(t,r)=>{let i=e.choices.filter(e=>!Wc(e,t)),a={[t.by]:t.id,from:t.from,traits:r};n({...e,choices:[...i,a]})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`choices`,title:`Choices`,children:`Packages and some Traits ask you to choose, like who a Contact is, which language you speak, or which seas you've sailed.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[r.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:`This build's packages and Traits have no choices to answer.`}),(0,Q.jsx)(`div`,{className:`choice-grid`,children:r.map(e=>(0,Q.jsxs)(`div`,{className:`choice headed ${yx($x(e))}`,children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Cx,{plane:$x(e)}),e.name]}),(0,Q.jsx)(Ox,{tone:`muted`,children:Qx(e)})]}),(0,Q.jsx)(`p`,{children:e.notes.join(`; `)||xx(e.count,e.from)}),(0,Q.jsx)(tS,{q:e,answer:i(e)?.traits??[],onAnswer:t=>a(e,t)})]},`${e.by}/${e.id}/${e.from}`))})]})]})}function tS({q:e,answer:t,onAnswer:n}){let r=Uc(e.from,tx),i=Vc[e.from],a=Array.from({length:e.count},(e,n)=>t[n]??``),o=(e,t)=>{let r=a.slice();r[e]=t,n(r.filter(e=>e!==``))};if(i){let t=e.from===`contact`;return(0,Q.jsxs)(`div`,{className:`answer`,children:[(0,Q.jsx)(`p`,{className:`hint`,children:t?`Who is your ${i}? Write a name or a short note; it's yours to decide.`:`Write it in your own words; it's yours to decide.`}),a.map((n,r)=>(0,Q.jsx)(nS,{value:n,label:`${e.name} ${i} ${r+1}`,placeholder:t?void 0:`e.g. The Mende river and its delta`,onCommit:e=>o(r,e)},r))]})}return r.length>0?(0,Q.jsx)(`div`,{className:`answer`,children:a.map((t,n)=>(0,Q.jsxs)(`select`,{value:t,onChange:e=>o(n,e.target.value),"aria-label":`${e.name} ${e.from} choice ${n+1}`,children:[(0,Q.jsx)(`option`,{value:``,children:`Choose…`}),r.map(t=>(0,Q.jsx)(`option`,{value:t.id,children:e.from===`spoken-and-written-language`?t.name.replace(/ \(Spoken\)$/,``):t.name},t.id))]},n))}):(0,Q.jsxs)(`div`,{className:`answer`,children:[(0,Q.jsxs)(`p`,{className:`hint`,children:[`No Traits are in the “`,e.from,`” pool yet. Type a name: it's saved as an id, and the engine warns that it can't check it.`]}),a.map((t,n)=>(0,Q.jsx)(nS,{value:t,label:`${e.name} ${e.from} choice ${n+1}`,asId:!0,onCommit:e=>o(n,e)},n))]})}function nS({value:e,label:t,asId:n,placeholder:r,onCommit:i}){let[a,o]=(0,z.useState)(e&&n?vx(e):e),s=()=>i(n?_l(a):a.trim());return(0,Q.jsxs)(`div`,{className:`free-text`,children:[(0,Q.jsx)(`input`,{value:a,"aria-label":t,placeholder:r??(n?`e.g. Old Herminstan`:`e.g. Harbor Master Oyl, who owes me a favor`),onChange:e=>o(e.target.value),onBlur:s,onKeyDown:e=>e.key===`Enter`&&s()}),e&&n&&(0,Q.jsx)(`code`,{className:`muted`,children:e})]})}var rS=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},iS={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name, if the player gave one or one fits.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:mc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`kind`,`origin`,`profession`,`past`,`focus`,`traits`]},aS=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:Oc.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:Tc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:iS,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), and each listed Trait's id.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],oS=`player-choice`,sS=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,cS=e=>Array.isArray(e)?e:[],lS=(e,t)=>Hc(e)||Uc(e,t).length===0,uS=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function dS(e,t){let n=sS(e)??{},r=Qc(n,t).summary;if(r)return r.questions.filter(e=>lS(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!lS(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function fS(e,t){let n=sS(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});cS(n.traits).forEach((e,t)=>{let n=sS(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=dS(n,t);return cS(n.choices).forEach((e,t)=>{let n=sS(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),c.some(e=>uS(n,e))){let e=Vc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of cS(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function pS(e,t,n=Ic){let r=fS(e,t),i=Qc(e,t,n),a=dS(e,t),o=sS(e),s=i,c=new Set;if(o&&a.some(e=>!Hc(e.from))){let e=cS(o.choices),r=t=>e.some(e=>uS(sS(e),t)),i=a.filter(e=>!r(e)&&!Hc(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${oS}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=Qc({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var mS=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{},...e.opensLists.length?{opensLists:e.opensLists}:{}}),hS=class extends Error{},gS=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function _S(e,t,n){let r=t.traits,i=gS(e.category);i&&(r=r.filter(e=>e.category===i));let a=cS(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=gS(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=fS(i,t);if(a.length)throw new hS(a.map(e=>e.message).join(`; `));let o=Qc(i,t,n).summary?.backgroundList;if(!o)throw new hS(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(gS(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>mS(e.t))}}function vS(e,t){let n=gS(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new hS(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>lS(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:Uc(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function yS(e,t){let n=gS(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new hS(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function bS(e,t,n,r=Ic){let i=sS(t)??{};switch(e){case`search_traits`:return _S(i,n,r);case`list_packages`:{let e=Tc.safeParse(i.type);if(!e.success)throw new hS(`type must be one of ${Tc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return vS(i,n);case`get_kind`:return yS(i,n);default:throw new hS(`Unknown tool "${e}"`)}}var xS=`claude-opus-5-5`,SS=`server-side-fallback-2026-07-01`,CS=e=>!e.startsWith(`claude-haiku`),wS=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function TS(e,t=12,n=xS){return{model:n,maxTurns:t,review:!0,start:t=>new ES(e,t,n)}}var ES=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:aS,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:wS(this.model)},cache_control:{type:`ephemeral`},...CS(this.model)?{betas:[SS],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new rS(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new rS(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},DS=(e,t)=>L().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),OS=As({name:L().optional(),kind:DS(`Kind`,`isek`),origin:DS(`package`,`dreft`),profession:DS(`package`,`guild-hunter`),past:DS(`package`,`countryside-upbringing`),focus:Os(L()).default([]),magic:vs().int().min(0).default(0),traits:Os(L()).default([]),choices:Os(Pc).default([])}),kS=Object.fromEntries(Object.entries(B).flatMap(([e,t])=>t.map(t=>[t,e]))),AS=e=>mc.safeParse(e).success;function jS(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function MS(e,t,n,r=[]){let i=[...new Set(e.filter(AS))],a=Object.fromEntries(mc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,B[e.group]);return c(n,mc.options),s}var NS=3,PS=6,FS=5;function IS(e,t,n){let r=[...new Set(e.filter(AS))],i=Object.fromEntries(mc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(B).filter(e=>!r.some(t=>kS[t]===e)).sort((e,t)=>B[t].reduce((e,t)=>e+o(t),0)-B[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>kS[e]))],l=c.length?c:s,u=e=>B[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=PS&&(t-PS)%FS===0,a=Object.keys(B).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=NS&&f(m)%2==1,g=r.filter(e=>kS[e]===m),_=[...B[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...B[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function LS(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function RS(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=LS(Uc(i,t),e,t);if(Hc(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function zS(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)Hc(e)||Uc(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function BS(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}var VS=(e,t)=>e.summary?.picks[t].banked??0;function HS(e,t,n=Ic){let r=OS.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=BS(i,t),s=jS(i,t),c=Kc(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=MS(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=Yc([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=Fc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...IS(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:RS(i,t)}),p=zS(f,t),m=e=>Qc({...e,choices:[...e.choices,...p]},t,n),h=e=>{let n=m(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||Hc(e.from))continue;let n=LS(Uc(e.from,t),i,t);if(n.length===0){p=[...p.filter(t=>!Wc(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>Wc(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>Wc(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!Wc(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},g=m(f),_=[],v=[];if(!g.ok)return{build:f,taken:_,skipped:v,result:g};let y=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=VS(g,`universal`),r=VS(g,`background`);if(n+r===0)return`no picks left`;let i=g.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=g.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a background pick, and none fit`:`no universal picks left`;let s=p,c=h({...f,traits:[...f.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=m(c);if(!l.ok)return p=s,l.errors[0].message;f=c,g=l};for(let e of i.traits){let t=y(e);t?v.push({trait:e,reason:t}):_.push(e)}return{build:f,taken:_,skipped:v,result:g}}var US=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
+`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=dx(ux(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=dx(ux(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function hx(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new ox||null,prettyErrors:t}}function gx(e,t={}){let{lineCounter:n,prettyErrors:r}=hx(t),i=new mx(n?.addNewLine),a=new Kb(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new cb(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(ub(e,n)),o.warnings.forEach(ub(e,n))),o}function _x(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=gx(e,n);if(!i)return null;if(i.warnings.forEach(e=>Bv(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function vx(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(_x(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function yx(e){let t=[];return{content:{kinds:vx(e,`kinds`,wc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>vx(e,n,Dc,t)),traits:vx(e,`traits`,Ac,t)},errors:t}}var{content:bx,errors:xx}=yx(Object.entries(Object.assign({"../../content/kinds/ai-core.yaml":El,"../../content/kinds/dreft/guwain.yaml":Dl,"../../content/kinds/dreft/isek.yaml":Ol,"../../content/kinds/dreft/tatot-goblinoid.yaml":kl,"../../content/kinds/dreft/tatot-orcoid.yaml":Al,"../../content/kinds/human.yaml":jl,"../../content/origins/american-empire/american-empire-colonies.yaml":Ml,"../../content/origins/american-empire/american-empire-earth.yaml":Nl,"../../content/origins/centafrica/centafrica-colonies.yaml":Pl,"../../content/origins/centafrica/centafrica-earth.yaml":Fl,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Il,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Ll,"../../content/origins/dreft/dreft.yaml":Rl,"../../content/origins/drovus/the-drovus-empire.yaml":zl,"../../content/origins/free-american-states/the-free-american-states.yaml":Bl,"../../content/origins/karsef/kingdom-of-karsef.yaml":Vl,"../../content/origins/kashgar/kashgar.yaml":Hl,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":Ul,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Wl,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Gl,"../../content/origins/sdu/sdu-colonies.yaml":Kl,"../../content/origins/sdu/sdu-earth.yaml":ql,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":Jl,"../../content/origins/tetra/tetra.yaml":Yl,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Xl,"../../content/origins/ural-federation/the-ural-federation.yaml":Zl,"../../content/origins/xanthus/xanthus.yaml":Ql,"../../content/pasts/any/craft-apprenticeship.yaml":$l,"../../content/pasts/any/criminal-family.yaml":eu,"../../content/pasts/any/gutter-trash.yaml":tu,"../../content/pasts/any/military-service.yaml":nu,"../../content/pasts/any/privileged-upbringing.yaml":ru,"../../content/pasts/any/raised-at-court.yaml":iu,"../../content/pasts/any/shipborn.yaml":au,"../../content/pasts/any/simple-farmer.yaml":ou,"../../content/pasts/any/traveling-troupe.yaml":su,"../../content/pasts/dreft/countryside-upbringing.yaml":H,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":cu,"../../content/pasts/dreft/glintl-docks.yaml":lu,"../../content/pasts/dreft/karsef-border-veteran.yaml":uu,"../../content/pasts/dreft/merchant-dynasty.yaml":du,"../../content/pasts/dreft/monster-raided-village.yaml":fu,"../../content/pasts/dreft/noble-household.yaml":pu,"../../content/pasts/dreft/palace-servant.yaml":mu,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":hu,"../../content/pasts/dreft/returned-from-the-systems.yaml":gu,"../../content/pasts/dreft/sunrise-refugee.yaml":_u,"../../content/pasts/systems/station-rat.yaml":vu,"../../content/pasts/systems/university-educated.yaml":yu,"../../content/pasts/tetra/delegation-child.yaml":bu,"../../content/pasts/tetra/gate-lab-kid.yaml":xu,"../../content/pasts/tetra/holding-company-kid.yaml":Su,"../../content/pasts/tetra/parasapient-quarter.yaml":Cu,"../../content/pasts/tetra/raised-in-the-infill.yaml":wu,"../../content/pasts/tetra/raised-on-ward-politics.yaml":Tu,"../../content/professions/any/apothecary.yaml":Eu,"../../content/professions/any/bard.yaml":Du,"../../content/professions/any/blacksmith.yaml":Ou,"../../content/professions/any/courier.yaml":ku,"../../content/professions/any/criminal-enforcer.yaml":Au,"../../content/professions/any/doctor.yaml":ju,"../../content/professions/any/farmer.yaml":Mu,"../../content/professions/any/jester.yaml":Nu,"../../content/professions/any/knight.yaml":Pu,"../../content/professions/any/local-police.yaml":Fu,"../../content/professions/any/musical-artist.yaml":Iu,"../../content/professions/any/ranger.yaml":Lu,"../../content/professions/any/smuggler.yaml":Ru,"../../content/professions/any/spy.yaml":zu,"../../content/professions/any/squire.yaml":Bu,"../../content/professions/any/stonemason.yaml":Vu,"../../content/professions/any/surgeon.yaml":Hu,"../../content/professions/any/tanner.yaml":Uu,"../../content/professions/any/visual-artist.yaml":Wu,"../../content/professions/dreft/alchemist.yaml":Gu,"../../content/professions/dreft/caravaneer.yaml":Ku,"../../content/professions/dreft/dreft-local-militia.yaml":qu,"../../content/professions/dreft/dreft-mercenary.yaml":Ju,"../../content/professions/dreft/gate-hand.yaml":Yu,"../../content/professions/dreft/guild-hunter.yaml":Xu,"../../content/professions/dreft/hedge-witch.yaml":Zu,"../../content/professions/dreft/licensed-mage.yaml":Qu,"../../content/professions/dreft/royal-guard.yaml":$u,"../../content/professions/systems/american-empire-soldier.yaml":ed,"../../content/professions/systems/combat-medic.yaml":td,"../../content/professions/systems/computer-engineer.yaml":nd,"../../content/professions/systems/emergency-medical-technician.yaml":U,"../../content/professions/systems/exotic-specimen-dealer.yaml":W,"../../content/professions/systems/fighter-pilot.yaml":G,"../../content/professions/systems/interplanar-diplomat.yaml":K,"../../content/professions/systems/interplanar-rights-lawyer.yaml":q,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":rd,"../../content/professions/systems/paraarcheologist.yaml":id,"../../content/professions/systems/paraecologist.yaml":ad,"../../content/professions/systems/paraethnologist.yaml":od,"../../content/professions/systems/paraevolutionary-scientist.yaml":sd,"../../content/professions/systems/paraphysiologist.yaml":cd,"../../content/professions/systems/parazoological-keeper.yaml":ld,"../../content/professions/systems/planar-expeditionary-professional.yaml":ud,"../../content/professions/systems/starship-engineer.yaml":dd,"../../content/professions/systems/station-maintenance.yaml":fd,"../../content/professions/systems/theoretical-paraphysicist.yaml":pd,"../../content/professions/systems/truck-pilot.yaml":md,"../../content/traits/ability/capable-student.yaml":hd,"../../content/traits/ability/con-man.yaml":gd,"../../content/traits/ability/eagle-eye.yaml":_d,"../../content/traits/ability/gladiator.yaml":vd,"../../content/traits/ability/knowledge-sponge.yaml":yd,"../../content/traits/ability/magic-access.yaml":bd,"../../content/traits/ability/magical-heritage.yaml":xd,"../../content/traits/ability/mental-fortitude.yaml":Sd,"../../content/traits/ability/natural-breath-weapon.yaml":Cd,"../../content/traits/ability/sculpted.yaml":wd,"../../content/traits/ability/trail-runner.yaml":Td,"../../content/traits/circumstance/explorers-lodge-membership.yaml":Ed,"../../content/traits/circumstance/imperial-service-record.yaml":Dd,"../../content/traits/circumstance/short-term-fame.yaml":Od,"../../content/traits/circumstance/significant-inheritance.yaml":kd,"../../content/traits/circumstance/thieves-guild-membership.yaml":Ad,"../../content/traits/circumstance/tugboat-captain.yaml":jd,"../../content/traits/circumstance/wanted-in-sol.yaml":Md,"../../content/traits/condition/cybernetic-intelligence.yaml":Nd,"../../content/traits/condition/damaged.yaml":Pd,"../../content/traits/condition/dead.yaml":Fd,"../../content/traits/condition/destroyed.yaml":Id,"../../content/traits/condition/ghost-sight.yaml":Ld,"../../content/traits/condition/hard-shell.yaml":Rd,"../../content/traits/condition/healthy.yaml":zd,"../../content/traits/condition/incapacitated.yaml":Bd,"../../content/traits/condition/injured.yaml":Vd,"../../content/traits/condition/long-toothed.yaml":Hd,"../../content/traits/condition/mechanical.yaml":Ud,"../../content/traits/condition/severe-bleeding.yaml":Wd,"../../content/traits/condition/severely-injured.yaml":Gd,"../../content/traits/condition/sorcerous.yaml":Kd,"../../content/traits/condition/stimm-rush.yaml":qd,"../../content/traits/condition/stone-skin.yaml":Jd,"../../content/traits/condition/supernatural.yaml":Yd,"../../content/traits/contact/additional-contact.yaml":Xd,"../../content/traits/knowledge/additional-language.yaml":Zd,"../../content/traits/knowledge/ai-culture.yaml":Qd,"../../content/traits/knowledge/aksum.yaml":$d,"../../content/traits/knowledge/alchemy.yaml":ef,"../../content/traits/knowledge/amaravati.yaml":tf,"../../content/traits/knowledge/american-geography.yaml":nf,"../../content/traits/knowledge/american-history.yaml":rf,"../../content/traits/knowledge/amharic-written.yaml":af,"../../content/traits/knowledge/amharic.yaml":of,"../../content/traits/knowledge/animal-lore.yaml":sf,"../../content/traits/knowledge/antiluna.yaml":cf,"../../content/traits/knowledge/arabic-written.yaml":lf,"../../content/traits/knowledge/arabic.yaml":uf,"../../content/traits/knowledge/architecture.yaml":df,"../../content/traits/knowledge/aristocracy.yaml":ff,"../../content/traits/knowledge/ark-life.yaml":pf,"../../content/traits/knowledge/ark-new-york.yaml":mf,"../../content/traits/knowledge/art-history.yaml":hf,"../../content/traits/knowledge/artificial-intelligence.yaml":gf,"../../content/traits/knowledge/asteroid-mining.yaml":J,"../../content/traits/knowledge/bandits-and-brigands.yaml":_f,"../../content/traits/knowledge/bengali-written.yaml":vf,"../../content/traits/knowledge/bengali.yaml":yf,"../../content/traits/knowledge/biology.yaml":bf,"../../content/traits/knowledge/boneyard.yaml":xf,"../../content/traits/knowledge/bureaucracy.yaml":Sf,"../../content/traits/knowledge/burmese-written.yaml":Cf,"../../content/traits/knowledge/burmese.yaml":wf,"../../content/traits/knowledge/cantonese-written.yaml":Tf,"../../content/traits/knowledge/cantonese.yaml":Ef,"../../content/traits/knowledge/caravan-routes.yaml":Df,"../../content/traits/knowledge/centafrica.yaml":Of,"../../content/traits/knowledge/centafrican-law.yaml":kf,"../../content/traits/knowledge/chemistry.yaml":Af,"../../content/traits/knowledge/chinese-imperial-law.yaml":jf,"../../content/traits/knowledge/coastal-trade.yaml":Mf,"../../content/traits/knowledge/commerce.yaml":Nf,"../../content/traits/knowledge/computer-systems.yaml":Pf,"../../content/traits/knowledge/countryside-lore.yaml":Ff,"../../content/traits/knowledge/court-etiquette.yaml":If,"../../content/traits/knowledge/criminal-underworld.yaml":Lf,"../../content/traits/knowledge/cryptography.yaml":Rf,"../../content/traits/knowledge/cybernetics.yaml":zf,"../../content/traits/knowledge/diplomatic-protocol.yaml":Bf,"../../content/traits/knowledge/dreft.yaml":Vf,"../../content/traits/knowledge/dreftan-written.yaml":Hf,"../../content/traits/knowledge/dreftan.yaml":Uf,"../../content/traits/knowledge/dreftian-law.yaml":Wf,"../../content/traits/knowledge/dutch-written.yaml":Y,"../../content/traits/knowledge/dutch.yaml":Gf,"../../content/traits/knowledge/dwarvish-runes-written.yaml":Kf,"../../content/traits/knowledge/dwarvish.yaml":qf,"../../content/traits/knowledge/earth-baseline-customs.yaml":Jf,"../../content/traits/knowledge/earth-baseline-technology.yaml":Yf,"../../content/traits/knowledge/ecology.yaml":Xf,"../../content/traits/knowledge/elemental-magics.yaml":Zf,"../../content/traits/knowledge/engineering.yaml":Qf,"../../content/traits/knowledge/english-written.yaml":$f,"../../content/traits/knowledge/english.yaml":ep,"../../content/traits/knowledge/exotic-materials.yaml":tp,"../../content/traits/knowledge/farming.yaml":np,"../../content/traits/knowledge/filipino-written.yaml":rp,"../../content/traits/knowledge/filipino.yaml":X,"../../content/traits/knowledge/french-written.yaml":ip,"../../content/traits/knowledge/french.yaml":ap,"../../content/traits/knowledge/gambling.yaml":op,"../../content/traits/knowledge/geography.yaml":sp,"../../content/traits/knowledge/german-written.yaml":cp,"../../content/traits/knowledge/german.yaml":lp,"../../content/traits/knowledge/glintl.yaml":up,"../../content/traits/knowledge/gujarati-written.yaml":dp,"../../content/traits/knowledge/gujarati.yaml":fp,"../../content/traits/knowledge/hausa-written.yaml":pp,"../../content/traits/knowledge/hausa.yaml":mp,"../../content/traits/knowledge/heraldry.yaml":hp,"../../content/traits/knowledge/herbalism.yaml":gp,"../../content/traits/knowledge/high-society.yaml":_p,"../../content/traits/knowledge/hindi-written.yaml":vp,"../../content/traits/knowledge/hindi.yaml":yp,"../../content/traits/knowledge/history.yaml":bp,"../../content/traits/knowledge/imperial-law.yaml":xp,"../../content/traits/knowledge/imperial-politics.yaml":Sp,"../../content/traits/knowledge/indian-law.yaml":Cp,"../../content/traits/knowledge/indian-theology.yaml":wp,"../../content/traits/knowledge/indonesian-written.yaml":Tp,"../../content/traits/knowledge/indonesian.yaml":Ep,"../../content/traits/knowledge/interplanar-law.yaml":Dp,"../../content/traits/knowledge/interplanar-relations.yaml":Op,"../../content/traits/knowledge/italian-written.yaml":kp,"../../content/traits/knowledge/italian.yaml":Ap,"../../content/traits/knowledge/japanese-written.yaml":jp,"../../content/traits/knowledge/japanese.yaml":Mp,"../../content/traits/knowledge/javanese-written.yaml":Np,"../../content/traits/knowledge/javanese.yaml":Pp,"../../content/traits/knowledge/kannada-written.yaml":Fp,"../../content/traits/knowledge/kannada.yaml":Ip,"../../content/traits/knowledge/karsef.yaml":Lp,"../../content/traits/knowledge/kashgar-mindworks.yaml":Rp,"../../content/traits/knowledge/kashgar.yaml":zp,"../../content/traits/knowledge/kazakh-written.yaml":Bp,"../../content/traits/knowledge/kazakh.yaml":Vp,"../../content/traits/knowledge/khmer-written.yaml":Hp,"../../content/traits/knowledge/khmer.yaml":Up,"../../content/traits/knowledge/kinyarwanda-written.yaml":Wp,"../../content/traits/knowledge/kinyarwanda.yaml":Gp,"../../content/traits/knowledge/korean-written.yaml":Kp,"../../content/traits/knowledge/korean.yaml":qp,"../../content/traits/knowledge/kyrgyz-written.yaml":Jp,"../../content/traits/knowledge/kyrgyz.yaml":Yp,"../../content/traits/knowledge/lao-written.yaml":Xp,"../../content/traits/knowledge/lao.yaml":Zp,"../../content/traits/knowledge/law-enforcement.yaml":Qp,"../../content/traits/knowledge/legal-systems.yaml":$p,"../../content/traits/knowledge/lingala-written.yaml":em,"../../content/traits/knowledge/lingala.yaml":tm,"../../content/traits/knowledge/liquid-democracy.yaml":nm,"../../content/traits/knowledge/literature.yaml":rm,"../../content/traits/knowledge/local-folklore.yaml":im,"../../content/traits/knowledge/local-history.yaml":am,"../../content/traits/knowledge/magic-on-isekai.yaml":om,"../../content/traits/knowledge/malay-written.yaml":sm,"../../content/traits/knowledge/malay.yaml":cm,"../../content/traits/knowledge/malayalam-written.yaml":lm,"../../content/traits/knowledge/malayalam.yaml":um,"../../content/traits/knowledge/mandarin-written.yaml":dm,"../../content/traits/knowledge/mandarin.yaml":fm,"../../content/traits/knowledge/marathi-written.yaml":pm,"../../content/traits/knowledge/marathi.yaml":mm,"../../content/traits/knowledge/mathematics.yaml":hm,"../../content/traits/knowledge/medicine.yaml":gm,"../../content/traits/knowledge/metallurgy.yaml":_m,"../../content/traits/knowledge/military-tactics.yaml":vm,"../../content/traits/knowledge/mongolian-written.yaml":ym,"../../content/traits/knowledge/mongolian.yaml":bm,"../../content/traits/knowledge/monsters-of-isekai.yaml":xm,"../../content/traits/knowledge/mountaineering.yaml":Sm,"../../content/traits/knowledge/music.yaml":Cm,"../../content/traits/knowledge/navigation.yaml":wm,"../../content/traits/knowledge/nepali-written.yaml":Tm,"../../content/traits/knowledge/nepali.yaml":Em,"../../content/traits/knowledge/new-columbia.yaml":Dm,"../../content/traits/knowledge/new-persia.yaml":Om,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":km,"../../content/traits/knowledge/odia-written.yaml":Am,"../../content/traits/knowledge/odia.yaml":jm,"../../content/traits/knowledge/orc-society.yaml":Mm,"../../content/traits/knowledge/oromo-written.yaml":Nm,"../../content/traits/knowledge/oromo.yaml":Pm,"../../content/traits/knowledge/paraarcheology.yaml":Fm,"../../content/traits/knowledge/parabiology.yaml":Im,"../../content/traits/knowledge/paraflora.yaml":Lm,"../../content/traits/knowledge/paraphysics.yaml":Rm,"../../content/traits/knowledge/parasapient-medicine.yaml":zm,"../../content/traits/knowledge/parasapients.yaml":Bm,"../../content/traits/knowledge/parazoology.yaml":Vm,"../../content/traits/knowledge/pataliputra.yaml":Hm,"../../content/traits/knowledge/pathology.yaml":Um,"../../content/traits/knowledge/persian-written.yaml":Wm,"../../content/traits/knowledge/persian.yaml":Gm,"../../content/traits/knowledge/pharmacology.yaml":Km,"../../content/traits/knowledge/physics.yaml":qm,"../../content/traits/knowledge/planar-exploration.yaml":Jm,"../../content/traits/knowledge/polish-written.yaml":Ym,"../../content/traits/knowledge/polish.yaml":Xm,"../../content/traits/knowledge/politics.yaml":Zm,"../../content/traits/knowledge/port-herminst.yaml":Qm,"../../content/traits/knowledge/ports-and-stations.yaml":$m,"../../content/traits/knowledge/portuguese-written.yaml":eh,"../../content/traits/knowledge/portuguese.yaml":th,"../../content/traits/knowledge/psychology.yaml":nh,"../../content/traits/knowledge/punjabi-written.yaml":rh,"../../content/traits/knowledge/punjabi.yaml":ih,"../../content/traits/knowledge/robotics.yaml":ah,"../../content/traits/knowledge/romanian-written.yaml":oh,"../../content/traits/knowledge/romanian.yaml":sh,"../../content/traits/knowledge/russian-written.yaml":ch,"../../content/traits/knowledge/russian.yaml":lh,"../../content/traits/knowledge/sdu-law.yaml":uh,"../../content/traits/knowledge/seafaring.yaml":dh,"../../content/traits/knowledge/security-systems.yaml":fh,"../../content/traits/knowledge/shipping-lanes.yaml":ph,"../../content/traits/knowledge/sinhala-written.yaml":mh,"../../content/traits/knowledge/sinhala.yaml":hh,"../../content/traits/knowledge/somali-written.yaml":gh,"../../content/traits/knowledge/somali.yaml":_h,"../../content/traits/knowledge/sorellion.yaml":vh,"../../content/traits/knowledge/southeast-asia.yaml":yh,"../../content/traits/knowledge/spacefaring.yaml":bh,"../../content/traits/knowledge/spanish-written.yaml":xh,"../../content/traits/knowledge/spanish.yaml":Sh,"../../content/traits/knowledge/starships.yaml":Ch,"../../content/traits/knowledge/succession-law.yaml":wh,"../../content/traits/knowledge/swahili-written.yaml":Th,"../../content/traits/knowledge/swahili.yaml":Eh,"../../content/traits/knowledge/tamil-written.yaml":Dh,"../../content/traits/knowledge/tamil.yaml":Oh,"../../content/traits/knowledge/telugu-written.yaml":kh,"../../content/traits/knowledge/telugu.yaml":Ah,"../../content/traits/knowledge/tetra-frontiers-co.yaml":jh,"../../content/traits/knowledge/tetra.yaml":Mh,"../../content/traits/knowledge/thai-written.yaml":Nh,"../../content/traits/knowledge/thai.yaml":Ph,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":Fh,"../../content/traits/knowledge/the-chinese-empire.yaml":Ih,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Lh,"../../content/traits/knowledge/the-corsine-pass.yaml":Rh,"../../content/traits/knowledge/the-diplomatic-wing.yaml":zh,"../../content/traits/knowledge/the-drovus-empire.yaml":Bh,"../../content/traits/knowledge/the-explorers-lodge.yaml":Vh,"../../content/traits/knowledge/the-free-american-states.yaml":Hh,"../../content/traits/knowledge/the-imperial-military.yaml":Uh,"../../content/traits/knowledge/the-kingdom-of-india.yaml":Wh,"../../content/traits/knowledge/the-kings-woods.yaml":Gh,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Kh,"../../content/traits/knowledge/the-martian-association.yaml":qh,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":Jh,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":Yh,"../../content/traits/knowledge/the-switch-port.yaml":Xh,"../../content/traits/knowledge/the-union-of-texas.yaml":Zh,"../../content/traits/knowledge/the-united-nations.yaml":Qh,"../../content/traits/knowledge/the-ural-federation.yaml":$h,"../../content/traits/knowledge/theater.yaml":eg,"../../content/traits/knowledge/thieves-cant.yaml":tg,"../../content/traits/knowledge/toxicology.yaml":ng,"../../content/traits/knowledge/trade-guilds.yaml":rg,"../../content/traits/knowledge/trade-law.yaml":ig,"../../content/traits/knowledge/trade-roads.yaml":ag,"../../content/traits/knowledge/turkish-written.yaml":og,"../../content/traits/knowledge/turkish.yaml":sg,"../../content/traits/knowledge/ukrainian-written.yaml":cg,"../../content/traits/knowledge/ukrainian.yaml":lg,"../../content/traits/knowledge/union-politics.yaml":ug,"../../content/traits/knowledge/ural-tribal-law.yaml":dg,"../../content/traits/knowledge/urdu-written.yaml":fg,"../../content/traits/knowledge/urdu.yaml":pg,"../../content/traits/knowledge/uyghur-written.yaml":mg,"../../content/traits/knowledge/uyghur.yaml":hg,"../../content/traits/knowledge/vietnamese-written.yaml":gg,"../../content/traits/knowledge/vietnamese.yaml":_g,"../../content/traits/knowledge/weapons.yaml":vg,"../../content/traits/knowledge/wilderness-lore.yaml":yg,"../../content/traits/knowledge/xanthus.yaml":bg,"../../content/traits/knowledge/yoruba-written.yaml":xg,"../../content/traits/knowledge/yoruba.yaml":Sg,"../../content/traits/knowledge/yutu.yaml":Cg,"../../content/traits/knowledge/zhulong.yaml":wg,"../../content/traits/other/possessed-by-a-spirit.yaml":Tg,"../../content/traits/skill/advanced-cooking.yaml":Eg,"../../content/traits/skill/advanced-potion-mixing.yaml":Dg,"../../content/traits/skill/ambusher.yaml":Og,"../../content/traits/skill/animal-husbandry.yaml":kg,"../../content/traits/skill/appraisal.yaml":Ag,"../../content/traits/skill/artist-painting.yaml":jg,"../../content/traits/skill/artist-sculpture.yaml":Mg,"../../content/traits/skill/cargo-handling.yaml":Ng,"../../content/traits/skill/concealment.yaml":Pg,"../../content/traits/skill/courtly-manners.yaml":Fg,"../../content/traits/skill/craft-leatherworking.yaml":Ig,"../../content/traits/skill/craft-masonry.yaml":Lg,"../../content/traits/skill/craft-smithing.yaml":Rg,"../../content/traits/skill/disguise.yaml":zg,"../../content/traits/skill/excavation.yaml":Bg,"../../content/traits/skill/expert-pilot.yaml":Vg,"../../content/traits/skill/field-sampling.yaml":Hg,"../../content/traits/skill/folk-remedies.yaml":Ug,"../../content/traits/skill/haggler.yaml":Wg,"../../content/traits/skill/incantation.yaml":Gg,"../../content/traits/skill/intimidation.yaml":Kg,"../../content/traits/skill/investigation.yaml":qg,"../../content/traits/skill/legal-advocacy.yaml":Jg,"../../content/traits/skill/lockpicking.yaml":Yg,"../../content/traits/skill/medical-aid.yaml":Xg,"../../content/traits/skill/military-drill.yaml":Zg,"../../content/traits/skill/performer-acrobatics.yaml":Qg,"../../content/traits/skill/performer-music.yaml":$g,"../../content/traits/skill/pilot-fighter.yaml":e_,"../../content/traits/skill/pilot-helicopter.yaml":t_,"../../content/traits/skill/pilot-truck.yaml":n_,"../../content/traits/skill/planar-surveying.yaml":r_,"../../content/traits/skill/programming.yaml":i_,"../../content/traits/skill/relic-handling.yaml":a_,"../../content/traits/skill/research.yaml":o_,"../../content/traits/skill/rider-basic-animals.yaml":s_,"../../content/traits/skill/schemer.yaml":c_,"../../content/traits/skill/shield-wall.yaml":l_,"../../content/traits/skill/simple-cooking.yaml":u_,"../../content/traits/skill/simple-potion-mixing.yaml":d_,"../../content/traits/skill/sleight-of-hand.yaml":f_,"../../content/traits/skill/smooth-talker.yaml":p_,"../../content/traits/skill/specimen-handling.yaml":m_,"../../content/traits/skill/starship-engineering.yaml":h_,"../../content/traits/skill/streetwise.yaml":g_,"../../content/traits/skill/surgery.yaml":__,"../../content/traits/skill/survivalist.yaml":v_,"../../content/traits/skill/teamster.yaml":y_,"../../content/traits/skill/tinkerer.yaml":b_,"../../content/traits/skill/tracker.yaml":x_,"../../content/traits/skill/vigilance.yaml":S_,"../../content/traits/skill/wielder-longsword.yaml":C_,"../../content/traits/skill/wielder-musket.yaml":w_,"../../content/traits/skill/wielder-pistol.yaml":T_,"../../content/traits/skill/wielder-rifle.yaml":E_,"../../content/traits/skill/wielder-war-axe.yaml":D_})).map(([e,t])=>({path:e.slice(14),text:t}))),Sx=new Map(bx.traits.map(e=>[e.id,e])),Cx=new Map(bx.packages.map(e=>[e.id,e])),wx=new Map(bx.kinds.map(e=>[e.id,e])),Tx=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],Ex=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],Dx=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),Ox=`(\\d{1,2}|${Dx(Tx)})`,kx=`(\\d{1,2})(?:st|nd|rd|th)|(${Dx(Ex)})`,Ax=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${Ox}\\b`,`i`),jx=RegExp(`\\b(?:${kx})[\\s-]+(?:level|lvl)\\b`,`i`);function Mx(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function Nx(e){let t=Ax.exec(e);if(t)return Mx(t[1],Tx);let n=jx.exec(e);if(n)return Mx(n[1],Ex)??Mx(n[2],Ex)}var Px=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Q=e(((e,t)=>{t.exports=Px()}))(),Fx=Object.keys(B),Ix=Fx.filter(e=>B[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),Lx=e=>Sx.get(e)?.name??e,Rx=e=>`region-${e===`isekai`?`dreft`:`systems`}`,zx=e=>Rx(Sx.get(e)?.plane),Bx=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Vx={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Hx({plane:e}){let t=e?Vx[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var Ux=e=>e.package===void 0?Lx(e.trait??``):Cx.get(e.package)?.name??e.package;function Wx(e){return e.kind?wx.get(e.kind)?.stats:void 0}function Gx({step:e,title:t,children:n}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:t}),(0,Q.jsx)(`div`,{className:`stinger-row`,children:(0,Q.jsxs)(`div`,{className:`copy stinger black`,children:[`Step `,$c.indexOf(e)+1,` of `,$c.length]})}),n&&(0,Q.jsx)(`p`,{className:`lede`,children:n})]})}function Kx(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}function qx(e){return(0,Q.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}var Jx=20;function Yx({bonus:e,value:t,max:n}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Jx},(r,i)=>{let a=i+1,o=a<=t?a>n?`over`:a<=e?`default`:`filled`:a<=n?`empty`:`unavailable`;return(0,Q.jsx)(`span`,{className:`stat ${a%2?`dot`:`square`} ${o}`},a)})})}function Xx({bonus:e=0,value:t}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Jx},(n,r)=>(0,Q.jsx)(`span`,{className:`stat diamond ${r<e?`default`:r<t?`filled`:`empty`}`},r))})}function Zx({stats:e}){return(0,Q.jsx)(`div`,{className:`stat-ranges`,children:Ix.map(t=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),B[t].map(t=>(0,Q.jsxs)(`div`,{className:`stat-range`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,Q.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function Qx({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,z.useState)(!1),[o,s]=(0,z.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,Q.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,Q.jsx)(n,{children:i?(0,Q.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,Q.jsx)(`button`,{type:`button`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var $x={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function eS({to:e}){return(0,Q.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:$x[e]})})}var tS={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function nS({is:e}){return(0,Q.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:tS[e]})})}function rS({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,Q.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:e}),(0,Q.jsxs)(`div`,{className:`stepper`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower level`,children:(0,Q.jsx)(nS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise level`,children:(0,Q.jsx)(nS,{is:`plus`})})]})]})}var iS=[`origin`,`profession`,`past`],aS={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function oS(e){let t=e.map(e=>Lx(e.trait)+(e.rank?` ${e.rank}`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function sS({pkg:e}){return(0,Q.jsxs)(`div`,{className:`grants`,children:[(e.bonusPoints.length>0||Object.keys(e.coreBonus).length>0)&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Bonus`}),e.bonusPoints.map(e=>(0,Q.jsxs)(qx,{tone:`accent`,children:[`+`,e.count,` `,$(e.group),` focus `,e.count===1?`point`:`points`]},e.group)),Object.entries(e.coreBonus).map(([e,t])=>(0,Q.jsxs)(qx,{tone:`accent`,children:[`+`,t,` `,$(e)]},e))]}),e.grants.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),oS(e.grants).map(e=>(0,Q.jsx)(qx,{tone:`accent`,children:e},e))]}),e.choices.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Choose`}),e.choices.map((e,t)=>(0,Q.jsx)(qx,{children:e.note??Bx(e.choose,e.from)},t))]}),e.backgroundTraits.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Background list`}),oS(e.backgroundTraits.map(e=>({trait:e}))).map(e=>(0,Q.jsx)(qx,{children:e},e))]}),e.features.map(e=>(0,Q.jsxs)(`p`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))]})}function cS({draft:e,onChange:t}){let[n,r]=(0,z.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,z.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,z.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,z.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&Cx.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`background`,title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:iS.map(t=>(0,Q.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,Q.jsx)(`summary`,{children:(0,Q.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,Q.jsx)(`span`,{className:`slot-pick`,children:Cx.get(e[t])?.name??e[t]}):(0,Q.jsx)(`span`,{className:`muted`,children:aS[t]}),(0,Q.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,Q.jsx)(nS,{is:n[t]?`minus`:`plus`})})]})}),(0,Q.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(t),children:bx.packages.filter(e=>e.type===t).map(n=>(0,Q.jsxs)(Kx,{className:`headed ${Rx(n.plane)}`,label:n.name,selected:e[t]===n.id,onSelect:()=>a(t,n.id),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Hx,{plane:n.plane}),n.name]}),(0,Q.jsx)(qx,{tone:`muted`,children:n.plane})]}),(0,Q.jsx)(`p`,{children:n.summary}),(0,Q.jsx)(sS,{pkg:n})]},n.id))})]},t))})]})}var lS=[`systems`,`dreft`],uS={systems:`The Settled Systems`,dreft:`Dreft`},dS=e=>e.region??(e.plane===`earth`?`systems`:e.plane),fS=e=>lS.includes(e)?lS.indexOf(e):lS.length,pS=[...new Set(bx.kinds.map(dS))].sort((e,t)=>fS(e)-fS(t));function mS({draft:e,onChange:t}){return(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:(0,Q.jsx)(`div`,{role:`radiogroup`,"aria-label":`Kind`,children:pS.map(n=>(0,Q.jsxs)(`div`,{className:`kind-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:uS[n]??$(n)}),(0,Q.jsx)(`div`,{className:`cards`,children:bx.kinds.filter(e=>dS(e)===n).map(n=>(0,Q.jsxs)(Kx,{className:`kind-card headed ${Rx(n.plane)}`,label:n.name,selected:e.kind===n.id,onSelect:()=>t({...e,kind:e.kind===n.id?void 0:n.id,startPoints:void 0}),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Hx,{plane:n.plane}),n.name]}),(0,Q.jsx)(qx,{tone:`muted`,children:n.plane})]}),(0,Q.jsx)(`p`,{children:n.summary}),(0,Q.jsx)(Zx,{stats:n.stats}),n.grants.length>0&&(0,Q.jsx)(`div`,{className:`grants`,children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),n.grants.map(e=>(0,Q.jsx)(qx,{tone:`accent`,children:Lx(e.trait)},e.trait))]})}),(0,Q.jsx)(`ul`,{className:`features`,children:n.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]},n.id))})]},n))})})}function hS({draft:e,startingLevel:t,onChange:n,onStartingLevel:r}){return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`character`,title:`Character`,children:`Name your character, set the level your campaign starts at, and choose a Kind. Your GM sets the level; most campaigns start at 3. A Kind adds a bonus to each stat and sets how far each can go; numbers show bonus/max.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box character-fields`,children:[(0,Q.jsxs)(`label`,{className:`field name-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Character Name`}),(0,Q.jsx)(`input`,{value:e.name??``,placeholder:`Unnamed character`,onChange:t=>n({...e,name:t.target.value||void 0})})]}),(0,Q.jsx)(rS,{label:`Starting Level`,level:t,onChange:r})]}),(0,Q.jsx)(mS,{draft:e,onChange:n})]})}function gS(e){let t=[];for(let n of[e.origin,e.profession,e.past]){let e=n?Cx.get(n):void 0;if(e)for(let n of e.choices){let r=t.find(t=>t.id===e.id&&t.from===n.from);r?(r.count+=n.choose,n.note&&r.notes.push(n.note)):t.push({by:`package`,id:e.id,name:e.name,from:n.from,count:n.choose,notes:n.note?[n.note]:[]})}}return t}var _S=e=>e.by===`trait`?`Trait`:$(Cx.get(e.id)?.type??`package`),vS=e=>e.by===`trait`?Sx.get(e.id)?.plane:Cx.get(e.id)?.plane;function yS({draft:e,result:t,onChange:n}){let r=t.summary?.questions??gS(e),i=t=>e.choices.find(e=>Wc(e,t)),a=(t,r)=>{let i=e.choices.filter(e=>!Wc(e,t)),a={[t.by]:t.id,from:t.from,traits:r};n({...e,choices:[...i,a]})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`choices`,title:`Choices`,children:`Packages and some Traits ask you to choose, like who a Contact is, which language you speak, or which seas you've sailed.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[r.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:`This build's packages and Traits have no choices to answer.`}),(0,Q.jsx)(`div`,{className:`choice-grid`,children:r.map(e=>(0,Q.jsxs)(`div`,{className:`choice headed ${Rx(vS(e))}`,children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Hx,{plane:vS(e)}),e.name]}),(0,Q.jsx)(qx,{tone:`muted`,children:_S(e)})]}),(0,Q.jsx)(`p`,{children:e.notes.join(`; `)||Bx(e.count,e.from)}),(0,Q.jsx)(bS,{q:e,answer:i(e)?.traits??[],onAnswer:t=>a(e,t)})]},`${e.by}/${e.id}/${e.from}`))})]})]})}function bS({q:e,answer:t,onAnswer:n}){let r=Uc(e.from,bx),i=Vc[e.from],a=Array.from({length:e.count},(e,n)=>t[n]??``),o=(e,t)=>{let r=a.slice();r[e]=t,n(r.filter(e=>e!==``))};if(i){let t=e.from===`contact`;return(0,Q.jsxs)(`div`,{className:`answer`,children:[(0,Q.jsx)(`p`,{className:`hint`,children:t?`Who is your ${i}? Write a name or a short note; it's yours to decide.`:`Write it in your own words; it's yours to decide.`}),a.map((n,r)=>(0,Q.jsx)(xS,{value:n,label:`${e.name} ${i} ${r+1}`,placeholder:t?void 0:`e.g. The Mende river and its delta`,onCommit:e=>o(r,e)},r))]})}return r.length>0?(0,Q.jsx)(`div`,{className:`answer`,children:a.map((t,n)=>(0,Q.jsxs)(`select`,{value:t,onChange:e=>o(n,e.target.value),"aria-label":`${e.name} ${e.from} choice ${n+1}`,children:[(0,Q.jsx)(`option`,{value:``,children:`Choose…`}),r.map(t=>(0,Q.jsx)(`option`,{value:t.id,children:e.from===`spoken-and-written-language`?t.name.replace(/ \(Spoken\)$/,``):t.name},t.id))]},n))}):(0,Q.jsxs)(`div`,{className:`answer`,children:[(0,Q.jsxs)(`p`,{className:`hint`,children:[`No Traits are in the “`,e.from,`” pool yet. Type a name: it's saved as an id, and the engine warns that it can't check it.`]}),a.map((t,n)=>(0,Q.jsx)(xS,{value:t,label:`${e.name} ${e.from} choice ${n+1}`,asId:!0,onCommit:e=>o(n,e)},n))]})}function xS({value:e,label:t,asId:n,placeholder:r,onCommit:i}){let[a,o]=(0,z.useState)(e&&n?Lx(e):e),s=()=>i(n?_l(a):a.trim());return(0,Q.jsxs)(`div`,{className:`free-text`,children:[(0,Q.jsx)(`input`,{value:a,"aria-label":t,placeholder:r??(n?`e.g. Old Herminstan`:`e.g. Harbor Master Oyl, who owes me a favor`),onChange:e=>o(e.target.value),onBlur:s,onKeyDown:e=>e.key===`Enter`&&s()}),e&&n&&(0,Q.jsx)(`code`,{className:`muted`,children:e})]})}var SS=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},CS={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name, if the player gave one or one fits.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:mc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`kind`,`origin`,`profession`,`past`,`focus`,`traits`]},wS=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:Oc.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:Tc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:CS,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), and each listed Trait's id.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],TS=`player-choice`,ES=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,DS=e=>Array.isArray(e)?e:[],OS=(e,t)=>Hc(e)||Uc(e,t).length===0,kS=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function AS(e,t){let n=ES(e)??{},r=Qc(n,t).summary;if(r)return r.questions.filter(e=>OS(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!OS(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function jS(e,t){let n=ES(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});DS(n.traits).forEach((e,t)=>{let n=ES(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=AS(n,t);return DS(n.choices).forEach((e,t)=>{let n=ES(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),c.some(e=>kS(n,e))){let e=Vc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of DS(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function MS(e,t,n=Ic){let r=jS(e,t),i=Qc(e,t,n),a=AS(e,t),o=ES(e),s=i,c=new Set;if(o&&a.some(e=>!Hc(e.from))){let e=DS(o.choices),r=t=>e.some(e=>kS(ES(e),t)),i=a.filter(e=>!r(e)&&!Hc(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${TS}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=Qc({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var NS=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{},...e.opensLists.length?{opensLists:e.opensLists}:{}}),PS=class extends Error{},FS=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function IS(e,t,n){let r=t.traits,i=FS(e.category);i&&(r=r.filter(e=>e.category===i));let a=DS(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=FS(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=jS(i,t);if(a.length)throw new PS(a.map(e=>e.message).join(`; `));let o=Qc(i,t,n).summary?.backgroundList;if(!o)throw new PS(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(FS(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>NS(e.t))}}function LS(e,t){let n=FS(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new PS(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>OS(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:Uc(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function RS(e,t){let n=FS(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new PS(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function zS(e,t,n,r=Ic){let i=ES(t)??{};switch(e){case`search_traits`:return IS(i,n,r);case`list_packages`:{let e=Tc.safeParse(i.type);if(!e.success)throw new PS(`type must be one of ${Tc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return LS(i,n);case`get_kind`:return RS(i,n);default:throw new PS(`Unknown tool "${e}"`)}}var BS=`claude-opus-5-5`,VS=`server-side-fallback-2026-07-01`,HS=e=>!e.startsWith(`claude-haiku`),US=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function WS(e,t=12,n=BS){return{model:n,maxTurns:t,review:!0,start:t=>new GS(e,t,n)}}var GS=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:wS,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:US(this.model)},cache_control:{type:`ephemeral`},...HS(this.model)?{betas:[VS],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new SS(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new SS(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},KS=(e,t)=>L().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),qS=As({name:L().optional(),kind:KS(`Kind`,`isek`),origin:KS(`package`,`dreft`),profession:KS(`package`,`guild-hunter`),past:KS(`package`,`countryside-upbringing`),focus:Os(L()).default([]),magic:vs().int().min(0).default(0),traits:Os(L()).default([]),choices:Os(Pc).default([])}),JS=Object.fromEntries(Object.entries(B).flatMap(([e,t])=>t.map(t=>[t,e]))),YS=e=>mc.safeParse(e).success;function XS(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function ZS(e,t,n,r=[]){let i=[...new Set(e.filter(YS))],a=Object.fromEntries(mc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,B[e.group]);return c(n,mc.options),s}var QS=3,$S=6,eC=5;function tC(e,t,n){let r=[...new Set(e.filter(YS))],i=Object.fromEntries(mc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(B).filter(e=>!r.some(t=>JS[t]===e)).sort((e,t)=>B[t].reduce((e,t)=>e+o(t),0)-B[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>JS[e]))],l=c.length?c:s,u=e=>B[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=$S&&(t-$S)%eC===0,a=Object.keys(B).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=QS&&f(m)%2==1,g=r.filter(e=>JS[e]===m),_=[...B[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...B[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function nC(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function rC(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=nC(Uc(i,t),e,t);if(Hc(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function iC(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)Hc(e)||Uc(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function aC(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}var oC=(e,t)=>e.summary?.picks[t].banked??0;function sC(e,t,n=Ic){let r=qS.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=aC(i,t),s=XS(i,t),c=Kc(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=ZS(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=Yc([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=Fc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...tC(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:rC(i,t)}),p=iC(f,t),m=e=>Qc({...e,choices:[...e.choices,...p]},t,n),h=e=>{let n=m(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||Hc(e.from))continue;let n=nC(Uc(e.from,t),i,t);if(n.length===0){p=[...p.filter(t=>!Wc(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>Wc(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>Wc(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!Wc(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},g=m(f),_=[],v=[];if(!g.ok)return{build:f,taken:_,skipped:v,result:g};let y=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=oC(g,`universal`),r=oC(g,`background`);if(n+r===0)return`no picks left`;let i=g.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=g.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a background pick, and none fit`:`no universal picks left`;let s=p,c=h({...f,traits:[...f.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=m(c);if(!l.ok)return p=s,l.errors[0].message;f=c,g=l};for(let e of i.traits){let t=y(e);t?v.push({trait:e,reason:t}):_.push(e)}return{build:f,taken:_,skipped:v,result:g}}var cC=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
 
 How you work:
 1. Read the description for the concept: who this person is, what they're good at, where they come from. If the player names a Kind, use it. If they don't, choose the Kind that fits best.
@@ -5493,7 +5834,7 @@ Rules you must follow:
 
 Reasons: give one short line per choice, in plain words a player would use, tied to what they asked for. Targets are kind, origin, profession, past, levels (one line on why the priority stats), and each listed Trait's id.
 
-Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,WS=Object.values(B).flat(),GS=e=>WS.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function KS(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${GS(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}. Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.opensLists.length?`opens the ${n.opensLists.join(`, `)} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
-`)}function qS(e,t,n){let r=eC(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var JS=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function YS(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);return t}function XS(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var ZS=(e,t)=>{let n=YS(e);return t.filter(e=>n.has(e.target))};function QS(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var $S=e=>e.filter(e=>e.reason!==`no picks left`),eC=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function tC(e){let{content:t,provider:n}=e,r=e.campaign??Ic,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${JS(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:US,index:KS(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=new Map,g=!1,_=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:v}=await u.send(c,{think:!g});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>qS(e.name,e.input,t)).join(` · `)),l.inputTokens+=v.inputTokens??0,l.outputTokens+=v.outputTokens??0,l.cacheReadTokens+=v.cacheReadTokens??0,l.cacheWriteTokens+=v.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let y=[];for(let e of i)if(e.name===`submit_build`){let i=eC(e.input)??{},a=eC(i.concept),c=QS(i.reasons),l=typeof i.summary==`string`?i.summary.trim():void 0;if(!a){y.push({call:e,isError:!0,content:`submit_build needs a concept object.`});continue}g=!0;let u;try{u=HS(a,t,r)}catch(e){if(!(e instanceof Ao))throw e;u={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in u){y.push({call:e,isError:!0,content:`The concept doesn't match the format: ${u.error}`});continue}let v=pS(u.build,t,r);for(let e of c)h.set(e.target,e);d={build:u.build,check:v,summary:l??d?.summary,reasons:[...h.values()]};let b={taken:u.taken,skipped:$S(u.skipped)},x=v.accepted?XS(v):void 0;if(v.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...x?{banked:x}:{},...b})});continue}if(x&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let t=`The engine built a legal character, but ${x}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,picks:t,...b})});continue}let S=v.accepted?[...YS(u.build)].filter(e=>!e.startsWith(`choice:`)&&!h.has(e)):[];if(S.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let t=`The build is legal, but these choices have no reason yet: ${S.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:t})});continue}if(v.accepted)return d.reasons=ZS(u.build,d.reasons),o(`Done`),_(`accepted`,s);o(`The engine sent the concept back with ${v.errors.length+v.unknownIds.length} problems; fixing them`),y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:v.unknownIds,errors:v.errors,...b})})}else try{let n=bS(e.name,e.input,t,r);y.push({call:e,content:JSON.stringify(n)})}catch(t){if(!(t instanceof hS))throw t;y.push({call:e,isError:!0,content:t.message})}u.addResults(y)}return d?.check.accepted?(d.reasons=ZS(d.build,d.reasons),_(`accepted`,i)):_(`turn-limit`,i)}var nC=class extends Error{error;constructor(e,t){super(t),this.error=e}};function rC(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new nC(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new nC(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function iC(e){let t=TS(rC(e.endpoint,e.fetcher),void 0,e.model);try{return await tC({description:e.description,name:e.name,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:mx(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof nC)return{error:e.error,message:e.message};if(e instanceof rS)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}async function aC(e,t){if(!e.headers.get(`content-type`)?.includes(`ndjson`)||!e.body)return await e.json().catch(()=>void 0);let n=e.body.pipeThrough(new TextDecoderStream).getReader(),r=``,i,a=e=>{if(!e.trim())return;let n=JSON.parse(e);n.type===`progress`?t(n):i=n.type===`result`?n.result:n.error};for(;;){let{value:e,done:t}=await n.read();if(t)break;r+=e;let i=r.split(`
-`);r=i.pop()??``,i.forEach(a)}return a(r),i}function oC(e,t){if(e===`kind`)return`Kind: ${ax.get(t.kind??``)?.name??t.kind}`;if(e===`origin`||e===`profession`||e===`past`){let n=t[e];return`${$(e)}: ${ix.get(n??``)?.name??n}`}if(e===`levels`)return`Stats`;if(e.startsWith(`choice:`)){let[t,n]=e.slice(7).split(`/`);return`${ix.get(t??``)?.name??vx(t??``)} choice (${n})`}return vx(e)}async function sC({description:e,level:t,name:n},r){let i;try{i=await fetch(`api/describe`,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify({description:e,startingLevel:t,exactLevel:!0,name:n})})}catch{throw Error(`Couldn't reach the AI server. Start it with npm run dev.`)}let a=await aC(i,r);if(!a)throw Error(`The AI server answered ${i.status} with no details. Is npm run dev running?`);return a}var cC=(e,t)=>({route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}).route===`browser`?iC({description:e.description,startingLevel:e.level,levelFromText:!1,name:e.name,content:tx,endpoint:{route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}.endpoint,model:{route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}.model,onProgress:t}):sC(e,t),lC=e=>`${Math.floor(e/60)}:${String(Math.floor(e%60)).padStart(2,`0`)}`;function uC({notes:e,showNotes:t,startingLevel:n,hasBuild:r,onBuilt:i,draft:a,actions:o}){let[s,c]=(0,z.useState)(e?.description??``),[l,u]=(0,z.useState)(e?.name??``),[d,f]=(0,z.useState)(n);(0,z.useEffect)(()=>f(n),[n]);let p=e=>{c(e);let t=mx(e);t&&f(t)},[m,h]=(0,z.useState)(!1),[g,_]=(0,z.useState)(),[v,y]=(0,z.useState)(),[b,x]=(0,z.useState)(!1),S=(0,z.useRef)(0),[ee,te]=(0,z.useState)(0),C=()=>Math.round((Date.now()-S.current)/1e3);return(0,z.useEffect)(()=>{if(!m)return;let e=setInterval(()=>te(C()),1e3);return()=>clearInterval(e)},[m]),(0,Q.jsxs)(`section`,{className:`describe`,"aria-label":`Describe your character`,children:[(0,Q.jsxs)(`form`,{onSubmit:async e=>{if(e.preventDefault(),s.trim()&&!m){if(r&&!b)x(!0);else{x(!1),S.current=Date.now(),te(0),h(!0),y(void 0),_(void 0);try{let e=l.trim()||void 0,t=await cC({description:s,level:d,name:e},_);if(`error`in t)throw Error(t.message);if(!t.build)throw Error(`The model didn't propose a build. Try again, or describe the character differently.`);i(e?{...t,build:{...t.build,name:e}}:t,s,C(),e)}catch(e){let t=e instanceof Error?e.message:String(e);y(`${t} (after ${lC(C())})`)}finally{h(!1)}}}},children:[(0,Q.jsxs)(`div`,{className:`describe-intro`,children:[(0,Q.jsx)(`h3`,{className:`copy-title`,children:`Describe your character`}),(0,Q.jsx)(`p`,{className:`hint`,children:`Say who they are in your own words. The AI picks from the game's real Kinds, packages and Traits, the rules engine checks every choice, and you can change anything afterward.`})]}),(0,Q.jsxs)(`div`,{className:`describe-controls`,children:[(0,Q.jsxs)(`div`,{className:`describe-fields`,children:[(0,Q.jsxs)(`label`,{className:`describe-field describe-name`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Character Name`}),(0,Q.jsx)(`input`,{className:`rpg-search-input`,value:l,maxLength:80,placeholder:`Leave blank to let the builder name them`,onChange:e=>u(e.target.value),disabled:m})]}),(0,Q.jsx)(Rx,{className:`describe-level`,label:`Level`,level:d,onChange:f,disabled:m}),(0,Q.jsxs)(`label`,{className:`describe-field describe-text`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Description`}),(0,Q.jsx)(`textarea`,{className:`rpg-search-input`,value:s,rows:3,maxLength:4e3,placeholder:`e.g. A goblin who failed out of the mage schools and now patches up caravan guards with whatever grows by the road.`,onChange:e=>p(e.target.value),disabled:m})]})]}),(0,Q.jsxs)(`div`,{className:`describe-actions`,children:[(0,Q.jsx)(`button`,{type:`submit`,className:`primary build-button`,disabled:m||!s.trim(),"aria-busy":m,children:m?(0,Q.jsxs)(Q.Fragment,{children:[`Building`,(0,Q.jsx)(`span`,{className:`stopwatch-icon`,"aria-hidden":`true`}),(0,Q.jsx)(`span`,{className:`num`,"aria-label":`${ee} seconds`,children:lC(ee)})]}):b?`Replace it`:`Build it`}),o,b&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`span`,{className:`hint`,children:`This replaces the current build.`}),(0,Q.jsx)(`button`,{type:`button`,className:`link`,onClick:()=>x(!1),children:`Cancel`})]}),m&&(0,Q.jsx)(`span`,{className:`describe-progress muted`,title:g?.status,children:g?`Turn ${g.turn} of ${g.maxTurns} · ${g.status}`:`Starting…`})]})]})]}),v&&(0,Q.jsxs)(`div`,{className:`notice bad`,role:`alert`,children:[v,(0,Q.jsx)(`button`,{className:`link`,onClick:()=>y(void 0),"aria-label":`Dismiss error`,children:`✕`})]}),e&&t&&!m&&(0,Q.jsxs)(`div`,{className:`describe-result`,children:[(0,Q.jsxs)(`p`,{className:`describe-status ${e.status===`accepted`?`good`:`bad`}`,children:[e.seconds!==void 0&&(0,Q.jsxs)(`strong`,{children:[`Build finished in `,lC(e.seconds),`. `]}),e.status===`accepted`?`Built from your description. Edit anything below; the panel keeps checking.`:`The builder ran out of turns before the build was legal. The panel shows what's left to fix.`]}),e.summary&&(0,Q.jsx)(`p`,{children:e.summary}),(0,Q.jsxs)(`details`,{className:`lore-details`,children:[(0,Q.jsxs)(`summary`,{className:`line-container`,children:[(0,Q.jsx)(`h5`,{children:(0,Q.jsx)(`strong`,{children:`Details`})}),(0,Q.jsx)(`div`,{className:`line`})]}),e.openChoices.length>0&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`Left for you on the Choices step:`,` `,e.openChoices.map(e=>`${e.note??xx(e.count,e.from)} (${wx(e)})`).join(`; `),`.`]}),(0,Q.jsx)(`ul`,{className:`ai-reasons`,children:e.reasons.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:oC(e.target,a)}),` `,e.reason]},t))})]})]})]})}function dC({draft:e,onChange:t}){let n=Tx(e),r=[e.origin,e.profession,e.past].flatMap(e=>e&&ix.get(e)?[ix.get(e)]:[]),i=Kc(e.kind?ax.get(e.kind):void 0,r),a=e.startPoints??{},o=e=>B[e].reduce((e,t)=>e+(a[t]??0),0),s=e=>i.groups.find(t=>t.group===e)?.count??0,c=i.groups.reduce((e,t)=>e+Math.min(o(t.group),t.count),0),l=Object.values(a).reduce((e,t)=>e+(t??0),0),u=Math.max(0,i.any-(l-c)),d=e=>Math.max(0,s(e)-o(e))+u,f=e=>Object.keys(B).find(t=>B[t].includes(e)),p=gx.reduce((t,n)=>t+e.core[n],0),m=e.level-p,h=yl(e,tx),g=bl(e,tx),_=t=>B[t].reduce((t,n)=>t+(e.points[n]??0),0),v=e=>n?.[e]?.bonus??0,y=e=>v(e)+(a[e]??0),b=t=>y(t)+(e.points[t]??0),x=(n,r)=>{let i={...a},o={...e.points};r>0?d(f(n))>0?i[n]=(i[n]??0)+1:o[n]=(o[n]??0)+1:o[n]?--o[n]:i[n]&&--i[n],i[n]||delete i[n],o[n]||delete o[n],t({...e,startPoints:i,points:o})};return n?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(Ex,{step:`stats`,title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${m===0?` good`:m<0?` bad`:``}`,children:[p,`/`,e.level]}),` `,`core points placed`,m>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,m,` left`]}),i.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${o(e.group)>=e.count?` good`:``}`,children:[Math.min(o(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),i.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${u===0?` good`:``}`,children:[i.any-u,`/`,i.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:h.map(i=>{let a=e.core[i],o=a*3,s=_(i);if(!B[i].length){let n=m>0&&g.includes(i),o=g.includes(i)?r.reduce((e,t)=>e+(t.coreBonus[i]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group${a===0&&!n?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a+o}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${i}`,onClick:()=>t(dl(e,i,a-1)),disabled:a===0,children:(0,Q.jsx)(Lx,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${i}`,title:m>0&&!g.includes(i)?`This character can't level ${$(i)}`:void 0,onClick:()=>t(dl(e,i,a+1)),disabled:!n,children:(0,Q.jsx)(Lx,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(i)}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:``}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(i),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(jx,{bonus:o,value:a+o})]}),!g.includes(i)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't level `,$(i),`; take these points back.`]})]},i)}let c=d(i)+Math.max(0,o-s),l=c===0&&s===0,u=B[i].reduce((e,t)=>e+Math.max(0,(n[t]?.max??0)-b(t)),0)-Math.max(0,o-s),f=m>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${i}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>t(dl(e,i,a-1)),disabled:a===0,children:(0,Q.jsx)(Lx,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${i}`,title:m>0&&!f?`${$(i)}'s stats have no room for 3 more points`:void 0,onClick:()=>t(dl(e,i,a+1)),disabled:!f,children:(0,Q.jsx)(Lx,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(i)}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!f&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These stats have no room for points.`}),B[i].map(e=>{let t=b(e),r=n[e]?.max??0,i=Math.max(0,Math.min(c,r-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>x(e,-1),disabled:t<=v(e),children:(0,Q.jsx)(Lx,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Add a point to ${e}`,onClick:()=>x(e,1),disabled:c===0||t>=r,children:(0,Q.jsx)(Lx,{is:`plus`})})]}),(0,Q.jsx)(Ax,{bonus:y(e),value:t,max:r})]})]},e)})]},i)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`stats`,title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each stat and sets how far each can go.`})]})}var fC=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,pC=/^trait ([a-z0-9-]+) choice$/,mC=/^trait ([a-z0-9-]+)$/;function hC(e){let t=pC.exec(e);if(t)return`${vx(t[1])} (choice)`;let n=mC.exec(e);if(n)return vx(n[1]);let r=fC.exec(e);return r?`${(r[1]===`kind`?ax.get(r[2])?.name:ix.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function gC({held:e,places:t}){let n=rx.get(e.trait);return(0,Q.jsxs)(`div`,{className:`trait-box ${bx(e.trait)}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name`,children:[(0,Q.jsx)(Cx,{plane:n?.plane}),vx(e.trait),n?.ranked||e.rank>1?` (${e.rank})`:``]}),(0,Q.jsx)(`div`,{className:`chips`,children:n?(0,Q.jsx)(Ox,{children:$(n.category)}):(0,Q.jsx)(Ox,{tone:`bad`,children:`not in content yet`})}),n&&(0,Q.jsx)(`p`,{className:`effect`,children:n.effect}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[n?.choices.find(e=>e.from===`place`)?.note??`Place`,`:`]}),` `,t.join(`, `)]}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From `,e.sources.map(hC).join(`, `)]})]})}function _C({held:e,places:t,onClose:n}){let r=(0,z.useRef)(null);return(0,z.useEffect)(()=>{let e=document.activeElement;r.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&n()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[n]),(0,Q.jsx)(`div`,{className:`lore-modal is-open`,role:`dialog`,"aria-modal":`true`,"aria-label":vx(e.trait),onClick:e=>e.target===e.currentTarget&&n(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:r,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:n,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,Q.jsx)(gC,{held:e,places:t})]})})}function vC({draft:e,result:t,onExport:n,onImport:r,onName:i}){let a=e.kind?ax.get(e.kind):void 0,o=[e.origin,e.profession,e.past].map(e=>e?ix.get(e):void 0),s=Tx(e),c=t.summary,l=yl(e,tx,t),u=l.includes(`magic`)||(c?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],d=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Vc[e.from],from:wx(e)})):[]),f=t=>e.choices.filter(e=>e.trait===t&&e.from===`place`).flatMap(e=>e.traits),p=c?.traits??[],m=e=>rx.get(e.trait)?.category===`knowledge`,h=e=>!!rx.get(e.trait)?.types.includes(`language`),g=[...p.filter(e=>m(e)&&!h(e)),...p.filter(h)],_=p.filter(e=>!m(e)),[v,y]=(0,z.useState)(),b=(0,z.useCallback)(()=>y(void 0),[]),x=p.find(e=>e.trait===v),S=[...o.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))],ee=[[`Kind`,a?.name],[`Origin`,o[0]?.name],[`Profession`,o[1]?.name],[`Past`,o[2]?.name]];return(0,Q.jsxs)(`section`,{className:`sheet`,children:[(0,Q.jsx)(Ex,{step:`sheet`,title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsx)(`button`,{onClick:n,children:`Export`}),(0,Q.jsx)(`button`,{onClick:r,children:`Import`}),(0,Q.jsx)(`button`,{onClick:()=>window.print(),children:`Print`})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[(0,Q.jsx)(`div`,{className:`level-badge`,"aria-label":`Level ${e.level}`,children:e.level}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(Nx,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i}),(0,Q.jsxs)(`p`,{className:`lede`,children:[`Level `,e.level,` `,a?.name??`—`,` · `,o.map(e=>e?.name??`—`).join(` · `)]}),(0,Q.jsx)(`p`,{className:`sheet-resources`,children:u.map(e=>(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`i`,{children:c?.resources[e]??`–`}),` `,(0,Q.jsx)(`strong`,{children:e.toUpperCase()})]},e))}),a&&a.features.length>0&&(0,Q.jsx)(`ul`,{className:`features kind-features`,children:a.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),(0,Q.jsx)(`ul`,{className:`call-response sheet-background`,children:ee.map(([e,t])=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t??`—`})]},e))})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-body`,children:[(0,Q.jsx)(`div`,{className:`sheet-stats`,children:l.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:c?.coreStats[t]??`–`}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(t)})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(jx,{bonus:c?.coreBonus[t]??0,value:c?.coreStats[t]??e.core[t]})]}),B[t].map(t=>{let n=c?.stats[t],r=(s?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=s?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,s?.[t]?.max??`–`]})]}),(0,Q.jsx)(Ax,{bonus:r,value:n??r,max:i})]},t)})]},t))}),(0,Q.jsxs)(`div`,{className:`sheet-side`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Knowledges`}),g.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:g.map(e=>{let t=rx.get(e.trait);return(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`tiny-text`,children:h(e)?`Language:`:`Knowledge:`}),` `,(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>y(e.trait),children:[vx(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`}),c&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Banked picks`}),(0,Q.jsxs)(`p`,{children:[c.picks.universal.banked,` universal, `,c.picks.background.banked,` background`]})]})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),_.length>0?(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:_.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(gC,{held:e,places:f(e.trait)})},e.trait))}):(0,Q.jsx)(`p`,{className:`empty`,children:p.length?`No Traits besides Knowledges.`:`No Traits yet.`}),d.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:d.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),S.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:S.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]}),x&&(0,Q.jsx)(_C,{held:x,places:f(x.trait),onClose:b})]})}var yC=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(vx),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),bC={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},xC={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},SC=e=>tx.traits.filter(t=>t.opensLists.includes(e)).map(e=>e.name).join(` or `);function CC({draft:e,campaign:t,result:n,onChange:r}){let[i,a]=(0,z.useState)(`universal`),[o,s]=(0,z.useState)(``),[c,l]=(0,z.useState)(new Set),[u,d]=(0,z.useState)(!0),f=n.summary,p=f?.traitLists??[],m=typeof i==`string`||p.includes(i.list)?i:`universal`,h=typeof m==`string`?m:`list:${m.list}`,g=(0,z.useMemo)(()=>Sl(e,tx,t,m),[e,t,h]);if(!g||!f)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`traits`,title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let _=o.trim().toLowerCase(),v=new Set(e.traits.map(e=>e.trait)),y=g.filter(e=>!c.has(e.trait.category)&&(!u||e.reasons.length===0||v.has(e.trait.id))&&(!_||e.trait.name.toLowerCase().includes(_)||e.trait.tags.some(e=>e.toLowerCase().includes(_)))),b=Oc.options.map(e=>({category:e,options:y.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),x=e=>{let t=new Set(c);t.delete(e)||t.add(e),l(t)},S=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),ee=t=>e.traits.map(e=>e.trait).lastIndexOf(t),te=new Map(f.traits.map(e=>[e.trait,e.rank])),C=(t,n,i)=>{let a=ee(t);a>=0?S(a):r(fl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Ex,{step:`traits`,title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=f.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":m===e,className:`tech-field-tab${m===e?` is-active`:``}`,onClick:()=>a(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),p.map(t=>{let n=typeof m!=`string`&&m.list===t,r=new Set(e.traits.filter(e=>rx.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>a({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof m==`string`?xC[m]:`${$(m.list)} Traits, open to this character through ${SC(m.list)}. Background Traits here take background picks; the rest take universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:o,onChange:e=>s(e.target.value),"aria-label":`Search Traits`}),Oc.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!c.has(e),onChange:()=>x(e)}),` `,bC[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:u,onChange:e=>d(e.target.checked)}),` Hide unavailable`]})]}),g.length===0&&m===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package background Traits and the Kind's Trait access.`}),g.length>0&&y.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:u?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),b.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:bC[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=ee(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${bx(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&C(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||C(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(Cx,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(Ox,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(Ox,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(Ox,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(Ox,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(`p`,{className:`effect`,children:t.effect}),yC(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,yC(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>S(ee(t.id)),children:(0,Q.jsx)(Lx,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:te.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(fl(e,t.id,n,i)),children:(0,Q.jsx)(Lx,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:`Picks spent`}),e.traits.length===0?(0,Q.jsx)(`p`,{className:`empty`,children:`No picks spent yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:vx(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!rx.has(e.trait)&&(0,Q.jsx)(Ox,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>S(t),"aria-label":`Remove ${vx(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}function wC({draft:e,result:t,onName:n}){let[r,i]=(0,z.useState)(!1),{summary:a}=t,o=Tx(e),s=[`origin`,`profession`,`past`].map(t=>[$(t),e[t]?ix.get(e[t])?.name??e[t]:`–`]);return(0,Q.jsxs)(`aside`,{className:`panel${r?` open`:``}`,"aria-label":`Validation`,children:[(0,Q.jsxs)(`button`,{className:`panel-toggle`,onClick:()=>i(!r),"aria-expanded":r,children:[(0,Q.jsx)(`span`,{className:`panel-toggle-name${e.name?``:` muted`}`,children:e.name??`Unnamed character`}),a&&(0,Q.jsxs)(`span`,{className:`num`,children:[`U `,a.picks.universal.spent,`/`,a.picks.universal.available,` · B `,a.picks.background.spent,`/`,a.picks.background.available]}),(0,Q.jsx)(`span`,{className:`muted`,children:r?`Hide`:`Details`})]}),(0,Q.jsxs)(`div`,{className:`panel-body`,children:[(0,Q.jsx)(Nx,{className:`panel-name`,heading:`h3`,name:e.name,onChange:n}),(0,Q.jsxs)(`ul`,{className:`panel-background`,children:[(0,Q.jsxs)(`li`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:`Level`}),(0,Q.jsx)(`strong`,{children:e.level})]}),s.map(([e,t])=>(0,Q.jsxs)(`li`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t})]},e))]}),(0,Q.jsx)(`h4`,{children:`Stats`}),(0,Q.jsx)(`div`,{className:`panel-stats`,children:yl(e,tx,t).map(t=>(0,Q.jsxs)(`div`,{className:`panel-group`,children:[(0,Q.jsxs)(`div`,{className:`panel-group-head`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`Core `,a?a.coreStats[t]:`–`]})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:`MP`}),(0,Q.jsx)(`span`,{className:`num`,children:a?a.resources.mp:3*e.core[t]})]}),B[t].map(e=>{let t=a?.stats[e],n=o?.[e]?.max,r=t!==void 0&&n!==void 0&&t>n;return(0,Q.jsxs)(`div`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:$(e)}),(0,Q.jsxs)(`span`,{className:`num${r?` bad`:``}`,children:[t??`–`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` / `,n??`–`]})]})]},e)})]},t))}),(0,Q.jsx)(`h4`,{children:`Picks`}),(0,Q.jsxs)(`table`,{className:`picks-table`,children:[(0,Q.jsx)(`thead`,{children:(0,Q.jsxs)(`tr`,{children:[(0,Q.jsx)(`th`,{}),(0,Q.jsx)(`th`,{children:`Available`}),(0,Q.jsx)(`th`,{children:`Spent`}),(0,Q.jsx)(`th`,{children:`Banked`})]})}),(0,Q.jsx)(`tbody`,{children:[`universal`,`background`].map(e=>{let t=a?.picks[e];return(0,Q.jsxs)(`tr`,{children:[(0,Q.jsx)(`th`,{children:$(e)}),(0,Q.jsx)(`td`,{className:`num`,children:t?.available??`–`}),(0,Q.jsx)(`td`,{className:`num${t&&t.spent>t.available?` bad`:``}`,children:t?.spent??`–`}),(0,Q.jsx)(`td`,{className:`num`,children:t?.banked??`–`})]},e)})})]})]})]})}var TC={character:`Character`,background:`Background`,stats:`Stats`,traits:`Traits`,choices:`Choices`,sheet:`Sheet`};function EC(){let[e,t]=(0,z.useState)(ml),[n,r]=(0,z.useState)(!1),[i,a]=(0,z.useState)(),[o,s]=(0,z.useState)(!1),c=(0,z.useRef)(null),{draft:l,campaign:u,step:d}=e;(0,z.useEffect)(()=>hl(e),[e]);let f=(0,z.useMemo)(()=>V(l,tx,u),[l,u]),p=(0,z.useMemo)(()=>{let e=new Set(f.errors.map(Cl)),t=f.summary?.picks,n=!!t&&Object.values(t).every(e=>e.banked===0),r=!e.has(`character`)&&!e.has(`background`),i={character:!e.has(`character`),background:!e.has(`background`),stats:r&&!e.has(`stats`),traits:r&&!e.has(`traits`)&&n,choices:r&&!e.has(`choices`)};return i.sheet=!!f.summary&&f.errors.length===0,i},[f]),m=(0,z.useMemo)(()=>f.errors.filter(e=>Cl(e)===d).map(e=>Tl(e,l)),[f,d,l]),h=e=>t(t=>({...t,draft:e})),g=e=>t(t=>({...t,step:e})),_=e=>t(t=>({...t,campaign:{startingLevel:e},draft:ul(t.draft,e)})),v=()=>{let e=JSON.stringify(ol(l),null,2),t=URL.createObjectURL(new Blob([e+`
-`],{type:`application/json`})),n=document.createElement(`a`);n.href=t,n.download=`${_l(l.name??``)||`character`}.json`,n.click(),URL.revokeObjectURL(t)},y=async e=>{let n=e.target.files?.[0];if(e.target.value=``,n)try{let e=ll(JSON.parse(await n.text()));t(t=>({...t,draft:e,campaign:{startingLevel:e.level},ai:void 0})),r(!1),a(`Imported ${n.name}.`)}catch(e){a(`Couldn't import ${n.name}: ${e instanceof Error?e.message:String(e)}`)}},b=(e,n,i,o)=>{let s=ll(e.build);r(!0),t(t=>({...t,draft:s,campaign:{startingLevel:s.level},step:`sheet`,ai:{description:n,name:o,model:e.model,status:e.status,summary:e.summary,reasons:e.reasons,openChoices:e.check?.openChoices??[],seconds:i}})),a(void 0)},x=()=>{s(!1),r(!1),gl(),t(nl),a(void 0)},S=$c.indexOf(d);return(0,Q.jsxs)(`div`,{className:`sf-creator`,children:[(0,Q.jsx)(`header`,{className:`builder-hero`,children:(0,Q.jsx)(`div`,{className:`container d-flex builder-row`,children:(0,Q.jsxs)(`div`,{className:`builder-main hero-main`,children:[(0,Q.jsxs)(`div`,{className:`builder-statement`,children:[(0,Q.jsx)(`h1`,{className:`title hero-title frontiers-accent`,children:`Strange Frontiers`}),(0,Q.jsx)(`p`,{className:`title section-title`,children:`Character Builder`})]}),(0,Q.jsx)(uC,{draft:l,notes:e.ai,showNotes:n,startingLevel:u.startingLevel,hasBuild:!!(l.kind||l.origin||l.profession||l.past||l.traits.length),onBuilt:b,actions:(0,Q.jsxs)(`div`,{className:`hero-bar`,children:[o?(0,Q.jsxs)(`span`,{className:`hero-confirm`,children:[`Clear this build?`,(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:x,children:`Yes`}),(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:()=>s(!1),children:`Cancel`})]}):(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:()=>s(!0),children:`New`}),(0,Q.jsx)(`input`,{ref:c,type:`file`,accept:`application/json,.json`,hidden:!0,onChange:y})]})}),(0,Q.jsx)(`nav`,{className:`builder-tabs rpg-tab-list`,"aria-label":`Steps`,children:$c.map((e,t)=>(0,Q.jsxs)(`button`,{className:`rpg-tab${e===d?` is-active`:``}`,"aria-current":e===d?`step`:void 0,onClick:()=>g(e),children:[(0,Q.jsx)(`span`,{className:`step-n`,children:t+1}),` `,TC[e],p[e]&&(0,Q.jsx)(`span`,{className:`step-done`,role:`img`,"aria-label":`done`})]},e))})]})})}),(0,Q.jsx)(`div`,{className:`section unlimited white-bg builder-panel`,children:(0,Q.jsxs)(`div`,{className:`container builder-body${d===`sheet`?` no-side`:``}`,children:[d!==`sheet`&&(0,Q.jsx)(`aside`,{className:`builder-side`,children:(0,Q.jsx)(wC,{draft:l,result:f,onName:e=>h({...l,name:e})})}),(0,Q.jsx)(`main`,{children:(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`pager`,children:[S>0?(0,Q.jsxs)(`button`,{onClick:()=>g($c[S-1]),children:[(0,Q.jsx)(Fx,{to:`left`}),` `,TC[$c[S-1]]]}):(0,Q.jsx)(`span`,{}),(0,Q.jsxs)(`div`,{className:`pager-next`,children:[m.length>0&&(0,Q.jsx)(`ul`,{className:`issues bad step-issues`,children:m.map((e,t)=>(0,Q.jsx)(`li`,{children:e},t))}),S<$c.length-1&&(0,Q.jsxs)(`button`,{className:`step-next${p[d]?` is-done`:``}`,onClick:()=>g($c[S+1]),children:[TC[$c[S+1]],` `,(0,Q.jsx)(Fx,{to:`right`})]})]})]}),nx.length>0&&(0,Q.jsxs)(`div`,{className:`notice bad`,children:[`Content failed to load: `,nx.join(`; `)]}),i&&(0,Q.jsxs)(`div`,{className:`notice`,role:`status`,children:[i,(0,Q.jsx)(`button`,{className:`link`,onClick:()=>a(void 0),"aria-label":`Dismiss`,children:`✕`})]}),d===`character`&&(0,Q.jsx)(Xx,{draft:l,startingLevel:u.startingLevel,onChange:h,onStartingLevel:_}),d===`background`&&(0,Q.jsx)(Ux,{draft:l,onChange:h}),d===`stats`&&(0,Q.jsx)(dC,{draft:l,onChange:h}),d===`choices`&&(0,Q.jsx)(eS,{draft:l,result:f,onChange:h}),d===`traits`&&(0,Q.jsx)(CC,{draft:l,campaign:u,result:f,onChange:h}),d===`sheet`&&(0,Q.jsx)(vC,{draft:l,result:f,onExport:v,onImport:()=>c.current?.click(),onName:e=>h({...l,name:e})})]})})]})})]})}var DC=(0,uc.createRoot)(document.getElementById(`root`));(0,lc.flushSync)(()=>DC.render((0,Q.jsx)(z.StrictMode,{children:(0,Q.jsx)(EC,{})})));
+Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,lC=Object.values(B).flat(),uC=e=>lC.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function dC(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${uC(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}. Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.opensLists.length?`opens the ${n.opensLists.join(`, `)} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
+`)}function fC(e,t,n){let r=yC(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var pC=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function mC(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);return t}function hC(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var gC=(e,t)=>{let n=mC(e);return t.filter(e=>n.has(e.target))};function _C(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var vC=e=>e.filter(e=>e.reason!==`no picks left`),yC=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function bC(e){let{content:t,provider:n}=e,r=e.campaign??Ic,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${pC(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:cC,index:dC(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=new Map,g=!1,_=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:v}=await u.send(c,{think:!g});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>fC(e.name,e.input,t)).join(` · `)),l.inputTokens+=v.inputTokens??0,l.outputTokens+=v.outputTokens??0,l.cacheReadTokens+=v.cacheReadTokens??0,l.cacheWriteTokens+=v.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let y=[];for(let e of i)if(e.name===`submit_build`){let i=yC(e.input)??{},a=yC(i.concept),c=_C(i.reasons),l=typeof i.summary==`string`?i.summary.trim():void 0;if(!a){y.push({call:e,isError:!0,content:`submit_build needs a concept object.`});continue}g=!0;let u;try{u=sC(a,t,r)}catch(e){if(!(e instanceof Ao))throw e;u={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in u){y.push({call:e,isError:!0,content:`The concept doesn't match the format: ${u.error}`});continue}let v=MS(u.build,t,r);for(let e of c)h.set(e.target,e);d={build:u.build,check:v,summary:l??d?.summary,reasons:[...h.values()]};let b={taken:u.taken,skipped:vC(u.skipped)},x=v.accepted?hC(v):void 0;if(v.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...x?{banked:x}:{},...b})});continue}if(x&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let t=`The engine built a legal character, but ${x}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,picks:t,...b})});continue}let S=v.accepted?[...mC(u.build)].filter(e=>!e.startsWith(`choice:`)&&!h.has(e)):[];if(S.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let t=`The build is legal, but these choices have no reason yet: ${S.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:t})});continue}if(v.accepted)return d.reasons=gC(u.build,d.reasons),o(`Done`),_(`accepted`,s);o(`The engine sent the concept back with ${v.errors.length+v.unknownIds.length} problems; fixing them`),y.push({call:e,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:v.unknownIds,errors:v.errors,...b})})}else try{let n=zS(e.name,e.input,t,r);y.push({call:e,content:JSON.stringify(n)})}catch(t){if(!(t instanceof PS))throw t;y.push({call:e,isError:!0,content:t.message})}u.addResults(y)}return d?.check.accepted?(d.reasons=gC(d.build,d.reasons),_(`accepted`,i)):_(`turn-limit`,i)}var xC=class extends Error{error;constructor(e,t){super(t),this.error=e}};function SC(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new xC(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new xC(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function CC(e){let t=WS(SC(e.endpoint,e.fetcher),void 0,e.model);try{return await bC({description:e.description,name:e.name,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:Nx(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof xC)return{error:e.error,message:e.message};if(e instanceof SS)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}async function wC(e,t){if(!e.headers.get(`content-type`)?.includes(`ndjson`)||!e.body)return await e.json().catch(()=>void 0);let n=e.body.pipeThrough(new TextDecoderStream).getReader(),r=``,i,a=e=>{if(!e.trim())return;let n=JSON.parse(e);n.type===`progress`?t(n):i=n.type===`result`?n.result:n.error};for(;;){let{value:e,done:t}=await n.read();if(t)break;r+=e;let i=r.split(`
+`);r=i.pop()??``,i.forEach(a)}return a(r),i}function TC(e,t){if(e===`kind`)return`Kind: ${wx.get(t.kind??``)?.name??t.kind}`;if(e===`origin`||e===`profession`||e===`past`){let n=t[e];return`${$(e)}: ${Cx.get(n??``)?.name??n}`}if(e===`levels`)return`Stats`;if(e.startsWith(`choice:`)){let[t,n]=e.slice(7).split(`/`);return`${Cx.get(t??``)?.name??Lx(t??``)} choice (${n})`}return Lx(e)}async function EC({description:e,level:t,name:n},r){let i;try{i=await fetch(`api/describe`,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify({description:e,startingLevel:t,exactLevel:!0,name:n})})}catch{throw Error(`Couldn't reach the AI server. Start it with npm run dev.`)}let a=await wC(i,r);if(!a)throw Error(`The AI server answered ${i.status} with no details. Is npm run dev running?`);return a}var DC=(e,t)=>({route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}).route===`browser`?CC({description:e.description,startingLevel:e.level,levelFromText:!1,name:e.name,content:bx,endpoint:{route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}.endpoint,model:{route:`browser`,endpoint:`creator-api.php`,model:`claude-haiku-5-5`}.model,onProgress:t}):EC(e,t),OC=e=>`${Math.floor(e/60)}:${String(Math.floor(e%60)).padStart(2,`0`)}`;function kC({notes:e,showNotes:t,startingLevel:n,hasBuild:r,onBuilt:i,draft:a,actions:o}){let[s,c]=(0,z.useState)(e?.description??``),[l,u]=(0,z.useState)(e?.name??``),[d,f]=(0,z.useState)(n);(0,z.useEffect)(()=>f(n),[n]);let p=e=>{c(e);let t=Nx(e);t&&f(t)},[m,h]=(0,z.useState)(!1),[g,_]=(0,z.useState)(),[v,y]=(0,z.useState)(),[b,x]=(0,z.useState)(!1),S=(0,z.useRef)(0),[ee,te]=(0,z.useState)(0),C=()=>Math.round((Date.now()-S.current)/1e3);return(0,z.useEffect)(()=>{if(!m)return;let e=setInterval(()=>te(C()),1e3);return()=>clearInterval(e)},[m]),(0,Q.jsxs)(`section`,{className:`describe`,"aria-label":`Describe your character`,children:[(0,Q.jsxs)(`form`,{onSubmit:async e=>{if(e.preventDefault(),s.trim()&&!m){if(r&&!b)x(!0);else{x(!1),S.current=Date.now(),te(0),h(!0),y(void 0),_(void 0);try{let e=l.trim()||void 0,t=await DC({description:s,level:d,name:e},_);if(`error`in t)throw Error(t.message);if(!t.build)throw Error(`The model didn't propose a build. Try again, or describe the character differently.`);i(e?{...t,build:{...t.build,name:e}}:t,s,C(),e)}catch(e){let t=e instanceof Error?e.message:String(e);y(`${t} (after ${OC(C())})`)}finally{h(!1)}}}},children:[(0,Q.jsxs)(`div`,{className:`describe-intro`,children:[(0,Q.jsx)(`h3`,{className:`copy-title`,children:`Describe your character`}),(0,Q.jsx)(`p`,{className:`hint`,children:`Say who they are in your own words. The AI picks from the game's real Kinds, packages and Traits, the rules engine checks every choice, and you can change anything afterward.`})]}),(0,Q.jsxs)(`div`,{className:`describe-controls`,children:[(0,Q.jsxs)(`div`,{className:`describe-fields`,children:[(0,Q.jsxs)(`label`,{className:`describe-field describe-name`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Character Name`}),(0,Q.jsx)(`input`,{className:`rpg-search-input`,value:l,maxLength:80,placeholder:`Leave blank to let the builder name them`,onChange:e=>u(e.target.value),disabled:m})]}),(0,Q.jsx)(rS,{className:`describe-level`,label:`Level`,level:d,onChange:f,disabled:m}),(0,Q.jsxs)(`label`,{className:`describe-field describe-text`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Description`}),(0,Q.jsx)(`textarea`,{className:`rpg-search-input`,value:s,rows:3,maxLength:4e3,placeholder:`e.g. A goblin who failed out of the mage schools and now patches up caravan guards with whatever grows by the road.`,onChange:e=>p(e.target.value),disabled:m})]})]}),(0,Q.jsxs)(`div`,{className:`describe-actions`,children:[(0,Q.jsx)(`button`,{type:`submit`,className:`primary build-button`,disabled:m||!s.trim(),"aria-busy":m,children:m?(0,Q.jsxs)(Q.Fragment,{children:[`Building`,(0,Q.jsx)(`span`,{className:`stopwatch-icon`,"aria-hidden":`true`}),(0,Q.jsx)(`span`,{className:`num`,"aria-label":`${ee} seconds`,children:OC(ee)})]}):b?`Replace it`:`Build it`}),o,b&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`span`,{className:`hint`,children:`This replaces the current build.`}),(0,Q.jsx)(`button`,{type:`button`,className:`link`,onClick:()=>x(!1),children:`Cancel`})]}),m&&(0,Q.jsx)(`span`,{className:`describe-progress muted`,title:g?.status,children:g?`Turn ${g.turn} of ${g.maxTurns} · ${g.status}`:`Starting…`})]})]})]}),v&&(0,Q.jsxs)(`div`,{className:`notice bad`,role:`alert`,children:[v,(0,Q.jsx)(`button`,{className:`link`,onClick:()=>y(void 0),"aria-label":`Dismiss error`,children:`✕`})]}),e&&t&&!m&&(0,Q.jsxs)(`div`,{className:`describe-result`,children:[(0,Q.jsxs)(`p`,{className:`describe-status ${e.status===`accepted`?`good`:`bad`}`,children:[e.seconds!==void 0&&(0,Q.jsxs)(`strong`,{children:[`Build finished in `,OC(e.seconds),`. `]}),e.status===`accepted`?`Built from your description. Edit anything below; the panel keeps checking.`:`The builder ran out of turns before the build was legal. The panel shows what's left to fix.`]}),e.summary&&(0,Q.jsx)(`p`,{children:e.summary}),(0,Q.jsxs)(`details`,{className:`lore-details`,children:[(0,Q.jsxs)(`summary`,{className:`line-container`,children:[(0,Q.jsx)(`h5`,{children:(0,Q.jsx)(`strong`,{children:`Details`})}),(0,Q.jsx)(`div`,{className:`line`})]}),e.openChoices.length>0&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`Left for you on the Choices step:`,` `,e.openChoices.map(e=>`${e.note??Bx(e.count,e.from)} (${Ux(e)})`).join(`; `),`.`]}),(0,Q.jsx)(`ul`,{className:`ai-reasons`,children:e.reasons.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:TC(e.target,a)}),` `,e.reason]},t))})]})]})]})}function AC({draft:e,onChange:t}){let n=Wx(e),r=[e.origin,e.profession,e.past].flatMap(e=>e&&Cx.get(e)?[Cx.get(e)]:[]),i=Kc(e.kind?wx.get(e.kind):void 0,r),a=e.startPoints??{},o=e=>B[e].reduce((e,t)=>e+(a[t]??0),0),s=e=>i.groups.find(t=>t.group===e)?.count??0,c=i.groups.reduce((e,t)=>e+Math.min(o(t.group),t.count),0),l=Object.values(a).reduce((e,t)=>e+(t??0),0),u=Math.max(0,i.any-(l-c)),d=e=>Math.max(0,s(e)-o(e))+u,f=e=>Object.keys(B).find(t=>B[t].includes(e)),p=Fx.reduce((t,n)=>t+e.core[n],0),m=e.level-p,h=yl(e,bx),g=bl(e,bx),_=t=>B[t].reduce((t,n)=>t+(e.points[n]??0),0),v=e=>n?.[e]?.bonus??0,y=e=>v(e)+(a[e]??0),b=t=>y(t)+(e.points[t]??0),x=(n,r)=>{let i={...a},o={...e.points};r>0?d(f(n))>0?i[n]=(i[n]??0)+1:o[n]=(o[n]??0)+1:o[n]?--o[n]:i[n]&&--i[n],i[n]||delete i[n],o[n]||delete o[n],t({...e,startPoints:i,points:o})};return n?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(Gx,{step:`stats`,title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${m===0?` good`:m<0?` bad`:``}`,children:[p,`/`,e.level]}),` `,`core points placed`,m>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,m,` left`]}),i.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${o(e.group)>=e.count?` good`:``}`,children:[Math.min(o(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),i.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${u===0?` good`:``}`,children:[i.any-u,`/`,i.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:h.map(i=>{let a=e.core[i],o=a*3,s=_(i);if(!B[i].length){let n=m>0&&g.includes(i),o=g.includes(i)?r.reduce((e,t)=>e+(t.coreBonus[i]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group${a===0&&!n?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a+o}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${i}`,onClick:()=>t(dl(e,i,a-1)),disabled:a===0,children:(0,Q.jsx)(nS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${i}`,title:m>0&&!g.includes(i)?`This character can't level ${$(i)}`:void 0,onClick:()=>t(dl(e,i,a+1)),disabled:!n,children:(0,Q.jsx)(nS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(i)}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:``}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(i),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Xx,{bonus:o,value:a+o})]}),!g.includes(i)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't level `,$(i),`; take these points back.`]})]},i)}let c=d(i)+Math.max(0,o-s),l=c===0&&s===0,u=B[i].reduce((e,t)=>e+Math.max(0,(n[t]?.max??0)-b(t)),0)-Math.max(0,o-s),f=m>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${i}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>t(dl(e,i,a-1)),disabled:a===0,children:(0,Q.jsx)(nS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${i}`,title:m>0&&!f?`${$(i)}'s stats have no room for 3 more points`:void 0,onClick:()=>t(dl(e,i,a+1)),disabled:!f,children:(0,Q.jsx)(nS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(i)}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!f&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These stats have no room for points.`}),B[i].map(e=>{let t=b(e),r=n[e]?.max??0,i=Math.max(0,Math.min(c,r-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>x(e,-1),disabled:t<=v(e),children:(0,Q.jsx)(nS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Add a point to ${e}`,onClick:()=>x(e,1),disabled:c===0||t>=r,children:(0,Q.jsx)(nS,{is:`plus`})})]}),(0,Q.jsx)(Yx,{bonus:y(e),value:t,max:r})]})]},e)})]},i)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`stats`,title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each stat and sets how far each can go.`})]})}var jC=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,MC=/^trait ([a-z0-9-]+) choice$/,NC=/^trait ([a-z0-9-]+)$/;function PC(e){let t=MC.exec(e);if(t)return`${Lx(t[1])} (choice)`;let n=NC.exec(e);if(n)return Lx(n[1]);let r=jC.exec(e);return r?`${(r[1]===`kind`?wx.get(r[2])?.name:Cx.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function FC({held:e,places:t}){let n=Sx.get(e.trait);return(0,Q.jsxs)(`div`,{className:`trait-box ${zx(e.trait)}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:n?.plane}),Lx(e.trait),n?.ranked||e.rank>1?` (${e.rank})`:``]}),(0,Q.jsx)(`div`,{className:`chips`,children:n?(0,Q.jsx)(qx,{children:$(n.category)}):(0,Q.jsx)(qx,{tone:`bad`,children:`not in content yet`})}),n&&(0,Q.jsx)(`p`,{className:`effect`,children:n.effect}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[n?.choices.find(e=>e.from===`place`)?.note??`Place`,`:`]}),` `,t.join(`, `)]}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From `,e.sources.map(PC).join(`, `)]})]})}function IC({held:e,places:t,onClose:n}){let r=(0,z.useRef)(null);return(0,z.useEffect)(()=>{let e=document.activeElement;r.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&n()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[n]),(0,Q.jsx)(`div`,{className:`lore-modal is-open`,role:`dialog`,"aria-modal":`true`,"aria-label":Lx(e.trait),onClick:e=>e.target===e.currentTarget&&n(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:r,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:n,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,Q.jsx)(FC,{held:e,places:t})]})})}function LC({draft:e,result:t,onExport:n,onImport:r,onName:i}){let a=e.kind?wx.get(e.kind):void 0,o=[e.origin,e.profession,e.past].map(e=>e?Cx.get(e):void 0),s=Wx(e),c=t.summary,l=yl(e,bx,t),u=l.includes(`magic`)||(c?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],d=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Vc[e.from],from:Ux(e)})):[]),f=t=>e.choices.filter(e=>e.trait===t&&e.from===`place`).flatMap(e=>e.traits),p=c?.traits??[],m=e=>Sx.get(e.trait)?.category===`knowledge`,h=e=>!!Sx.get(e.trait)?.types.includes(`language`),g=[...p.filter(e=>m(e)&&!h(e)),...p.filter(h)],_=p.filter(e=>!m(e)),[v,y]=(0,z.useState)(),b=(0,z.useCallback)(()=>y(void 0),[]),x=p.find(e=>e.trait===v),S=[...o.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))],ee=[[`Kind`,a?.name],[`Origin`,o[0]?.name],[`Profession`,o[1]?.name],[`Past`,o[2]?.name]];return(0,Q.jsxs)(`section`,{className:`sheet`,children:[(0,Q.jsx)(Gx,{step:`sheet`,title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsx)(`button`,{onClick:n,children:`Export`}),(0,Q.jsx)(`button`,{onClick:r,children:`Import`}),(0,Q.jsx)(`button`,{onClick:()=>window.print(),children:`Print`})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[(0,Q.jsx)(`div`,{className:`level-badge`,"aria-label":`Level ${e.level}`,children:e.level}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(Qx,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i}),(0,Q.jsxs)(`p`,{className:`lede`,children:[`Level `,e.level,` `,a?.name??`—`,` · `,o.map(e=>e?.name??`—`).join(` · `)]}),(0,Q.jsx)(`p`,{className:`sheet-resources`,children:u.map(e=>(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`i`,{children:c?.resources[e]??`–`}),` `,(0,Q.jsx)(`strong`,{children:e.toUpperCase()})]},e))}),a&&a.features.length>0&&(0,Q.jsx)(`ul`,{className:`features kind-features`,children:a.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),(0,Q.jsx)(`ul`,{className:`call-response sheet-background`,children:ee.map(([e,t])=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t??`—`})]},e))})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-body`,children:[(0,Q.jsx)(`div`,{className:`sheet-stats`,children:l.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:c?.coreStats[t]??`–`}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(t)})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Xx,{bonus:c?.coreBonus[t]??0,value:c?.coreStats[t]??e.core[t]})]}),B[t].map(t=>{let n=c?.stats[t],r=(s?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=s?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,s?.[t]?.max??`–`]})]}),(0,Q.jsx)(Yx,{bonus:r,value:n??r,max:i})]},t)})]},t))}),(0,Q.jsxs)(`div`,{className:`sheet-side`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Knowledges`}),g.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:g.map(e=>{let t=Sx.get(e.trait);return(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`tiny-text`,children:h(e)?`Language:`:`Knowledge:`}),` `,(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>y(e.trait),children:[Lx(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`}),c&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Banked picks`}),(0,Q.jsxs)(`p`,{children:[c.picks.universal.banked,` universal, `,c.picks.background.banked,` background`]})]})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),_.length>0?(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:_.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(FC,{held:e,places:f(e.trait)})},e.trait))}):(0,Q.jsx)(`p`,{className:`empty`,children:p.length?`No Traits besides Knowledges.`:`No Traits yet.`}),d.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:d.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),S.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:S.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]}),x&&(0,Q.jsx)(IC,{held:x,places:f(x.trait),onClose:b})]})}var RC=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(Lx),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),zC={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},BC={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},VC=e=>bx.traits.filter(t=>t.opensLists.includes(e)).map(e=>e.name).join(` or `);function HC({draft:e,campaign:t,result:n,onChange:r}){let[i,a]=(0,z.useState)(`universal`),[o,s]=(0,z.useState)(``),[c,l]=(0,z.useState)(new Set),[u,d]=(0,z.useState)(!0),f=n.summary,p=f?.traitLists??[],m=typeof i==`string`||p.includes(i.list)?i:`universal`,h=typeof m==`string`?m:`list:${m.list}`,g=(0,z.useMemo)(()=>Sl(e,bx,t,m),[e,t,h]);if(!g||!f)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let _=o.trim().toLowerCase(),v=new Set(e.traits.map(e=>e.trait)),y=g.filter(e=>!c.has(e.trait.category)&&(!u||e.reasons.length===0||v.has(e.trait.id))&&(!_||e.trait.name.toLowerCase().includes(_)||e.trait.tags.some(e=>e.toLowerCase().includes(_)))),b=Oc.options.map(e=>({category:e,options:y.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),x=e=>{let t=new Set(c);t.delete(e)||t.add(e),l(t)},S=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),ee=t=>e.traits.map(e=>e.trait).lastIndexOf(t),te=new Map(f.traits.map(e=>[e.trait,e.rank])),C=(t,n,i)=>{let a=ee(t);a>=0?S(a):r(fl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=f.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":m===e,className:`tech-field-tab${m===e?` is-active`:``}`,onClick:()=>a(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),p.map(t=>{let n=typeof m!=`string`&&m.list===t,r=new Set(e.traits.filter(e=>Sx.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>a({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof m==`string`?BC[m]:`${$(m.list)} Traits, open to this character through ${VC(m.list)}. Background Traits here take background picks; the rest take universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:o,onChange:e=>s(e.target.value),"aria-label":`Search Traits`}),Oc.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!c.has(e),onChange:()=>x(e)}),` `,zC[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:u,onChange:e=>d(e.target.checked)}),` Hide unavailable`]})]}),g.length===0&&m===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package background Traits and the Kind's Trait access.`}),g.length>0&&y.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:u?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),b.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:zC[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=ee(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${zx(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&C(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||C(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(qx,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(qx,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(qx,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(qx,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(`p`,{className:`effect`,children:t.effect}),RC(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,RC(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>S(ee(t.id)),children:(0,Q.jsx)(nS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:te.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(fl(e,t.id,n,i)),children:(0,Q.jsx)(nS,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:`Picks spent`}),e.traits.length===0?(0,Q.jsx)(`p`,{className:`empty`,children:`No picks spent yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:Lx(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!Sx.has(e.trait)&&(0,Q.jsx)(qx,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>S(t),"aria-label":`Remove ${Lx(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}function UC({draft:e,result:t,onName:n}){let[r,i]=(0,z.useState)(!1),{summary:a}=t,o=Wx(e),s=[`origin`,`profession`,`past`].map(t=>[$(t),e[t]?Cx.get(e[t])?.name??e[t]:`–`]);return(0,Q.jsxs)(`aside`,{className:`panel${r?` open`:``}`,"aria-label":`Validation`,children:[(0,Q.jsxs)(`button`,{className:`panel-toggle`,onClick:()=>i(!r),"aria-expanded":r,children:[(0,Q.jsx)(`span`,{className:`panel-toggle-name${e.name?``:` muted`}`,children:e.name??`Unnamed character`}),a&&(0,Q.jsxs)(`span`,{className:`num`,children:[`U `,a.picks.universal.spent,`/`,a.picks.universal.available,` · B `,a.picks.background.spent,`/`,a.picks.background.available]}),(0,Q.jsx)(`span`,{className:`muted`,children:r?`Hide`:`Details`})]}),(0,Q.jsxs)(`div`,{className:`panel-body`,children:[(0,Q.jsx)(Qx,{className:`panel-name`,heading:`h3`,name:e.name,onChange:n}),(0,Q.jsxs)(`ul`,{className:`panel-background`,children:[(0,Q.jsxs)(`li`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:`Level`}),(0,Q.jsx)(`strong`,{children:e.level})]}),s.map(([e,t])=>(0,Q.jsxs)(`li`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t})]},e))]}),(0,Q.jsx)(`h4`,{children:`Stats`}),(0,Q.jsx)(`div`,{className:`panel-stats`,children:yl(e,bx,t).map(t=>(0,Q.jsxs)(`div`,{className:`panel-group`,children:[(0,Q.jsxs)(`div`,{className:`panel-group-head`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`Core `,a?a.coreStats[t]:`–`]})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:`MP`}),(0,Q.jsx)(`span`,{className:`num`,children:a?a.resources.mp:3*e.core[t]})]}),B[t].map(e=>{let t=a?.stats[e],n=o?.[e]?.max,r=t!==void 0&&n!==void 0&&t>n;return(0,Q.jsxs)(`div`,{className:`panel-stat`,children:[(0,Q.jsx)(`span`,{children:$(e)}),(0,Q.jsxs)(`span`,{className:`num${r?` bad`:``}`,children:[t??`–`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` / `,n??`–`]})]})]},e)})]},t))}),(0,Q.jsx)(`h4`,{children:`Picks`}),(0,Q.jsxs)(`table`,{className:`picks-table`,children:[(0,Q.jsx)(`thead`,{children:(0,Q.jsxs)(`tr`,{children:[(0,Q.jsx)(`th`,{}),(0,Q.jsx)(`th`,{children:`Available`}),(0,Q.jsx)(`th`,{children:`Spent`}),(0,Q.jsx)(`th`,{children:`Banked`})]})}),(0,Q.jsx)(`tbody`,{children:[`universal`,`background`].map(e=>{let t=a?.picks[e];return(0,Q.jsxs)(`tr`,{children:[(0,Q.jsx)(`th`,{children:$(e)}),(0,Q.jsx)(`td`,{className:`num`,children:t?.available??`–`}),(0,Q.jsx)(`td`,{className:`num${t&&t.spent>t.available?` bad`:``}`,children:t?.spent??`–`}),(0,Q.jsx)(`td`,{className:`num`,children:t?.banked??`–`})]},e)})})]})]})]})}var WC={character:`Character`,background:`Background`,stats:`Stats`,traits:`Traits`,choices:`Choices`,sheet:`Sheet`};function GC(){let[e,t]=(0,z.useState)(ml),[n,r]=(0,z.useState)(!1),[i,a]=(0,z.useState)(),[o,s]=(0,z.useState)(!1),c=(0,z.useRef)(null),{draft:l,campaign:u,step:d}=e;(0,z.useEffect)(()=>hl(e),[e]);let f=(0,z.useMemo)(()=>V(l,bx,u),[l,u]),p=(0,z.useMemo)(()=>{let e=new Set(f.errors.map(Cl)),t=f.summary?.picks,n=!!t&&Object.values(t).every(e=>e.banked===0),r=!e.has(`character`)&&!e.has(`background`),i={character:!e.has(`character`),background:!e.has(`background`),stats:r&&!e.has(`stats`),traits:r&&!e.has(`traits`)&&n,choices:r&&!e.has(`choices`)};return i.sheet=!!f.summary&&f.errors.length===0,i},[f]),m=(0,z.useMemo)(()=>f.errors.filter(e=>Cl(e)===d).map(e=>Tl(e,l)),[f,d,l]),h=e=>t(t=>({...t,draft:e})),g=e=>t(t=>({...t,step:e})),_=e=>t(t=>({...t,campaign:{startingLevel:e},draft:ul(t.draft,e)})),v=()=>{let e=JSON.stringify(ol(l),null,2),t=URL.createObjectURL(new Blob([e+`
+`],{type:`application/json`})),n=document.createElement(`a`);n.href=t,n.download=`${_l(l.name??``)||`character`}.json`,n.click(),URL.revokeObjectURL(t)},y=async e=>{let n=e.target.files?.[0];if(e.target.value=``,n)try{let e=ll(JSON.parse(await n.text()));t(t=>({...t,draft:e,campaign:{startingLevel:e.level},ai:void 0})),r(!1),a(`Imported ${n.name}.`)}catch(e){a(`Couldn't import ${n.name}: ${e instanceof Error?e.message:String(e)}`)}},b=(e,n,i,o)=>{let s=ll(e.build);r(!0),t(t=>({...t,draft:s,campaign:{startingLevel:s.level},step:`sheet`,ai:{description:n,name:o,model:e.model,status:e.status,summary:e.summary,reasons:e.reasons,openChoices:e.check?.openChoices??[],seconds:i}})),a(void 0)},x=()=>{s(!1),r(!1),gl(),t(nl),a(void 0)},S=$c.indexOf(d);return(0,Q.jsxs)(`div`,{className:`sf-creator`,children:[(0,Q.jsx)(`header`,{className:`builder-hero`,children:(0,Q.jsx)(`div`,{className:`container d-flex builder-row`,children:(0,Q.jsxs)(`div`,{className:`builder-main hero-main`,children:[(0,Q.jsxs)(`div`,{className:`builder-statement`,children:[(0,Q.jsx)(`h1`,{className:`title hero-title frontiers-accent`,children:`Strange Frontiers`}),(0,Q.jsx)(`p`,{className:`title section-title`,children:`Character Builder`})]}),(0,Q.jsx)(kC,{draft:l,notes:e.ai,showNotes:n,startingLevel:u.startingLevel,hasBuild:!!(l.kind||l.origin||l.profession||l.past||l.traits.length),onBuilt:b,actions:(0,Q.jsxs)(`div`,{className:`hero-bar`,children:[o?(0,Q.jsxs)(`span`,{className:`hero-confirm`,children:[`Clear this build?`,(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:x,children:`Yes`}),(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:()=>s(!1),children:`Cancel`})]}):(0,Q.jsx)(`button`,{type:`button`,className:`hero-link`,onClick:()=>s(!0),children:`New`}),(0,Q.jsx)(`input`,{ref:c,type:`file`,accept:`application/json,.json`,hidden:!0,onChange:y})]})}),(0,Q.jsx)(`nav`,{className:`builder-tabs rpg-tab-list`,"aria-label":`Steps`,children:$c.map((e,t)=>(0,Q.jsxs)(`button`,{className:`rpg-tab${e===d?` is-active`:``}`,"aria-current":e===d?`step`:void 0,onClick:()=>g(e),children:[(0,Q.jsx)(`span`,{className:`step-n`,children:t+1}),` `,WC[e],p[e]&&(0,Q.jsx)(`span`,{className:`step-done`,role:`img`,"aria-label":`done`})]},e))})]})})}),(0,Q.jsx)(`div`,{className:`section unlimited white-bg builder-panel`,children:(0,Q.jsxs)(`div`,{className:`container builder-body${d===`sheet`?` no-side`:``}`,children:[d!==`sheet`&&(0,Q.jsx)(`aside`,{className:`builder-side`,children:(0,Q.jsx)(UC,{draft:l,result:f,onName:e=>h({...l,name:e})})}),(0,Q.jsx)(`main`,{children:(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`pager`,children:[S>0?(0,Q.jsxs)(`button`,{onClick:()=>g($c[S-1]),children:[(0,Q.jsx)(eS,{to:`left`}),` `,WC[$c[S-1]]]}):(0,Q.jsx)(`span`,{}),(0,Q.jsxs)(`div`,{className:`pager-next`,children:[m.length>0&&(0,Q.jsx)(`ul`,{className:`issues bad step-issues`,children:m.map((e,t)=>(0,Q.jsx)(`li`,{children:e},t))}),S<$c.length-1&&(0,Q.jsxs)(`button`,{className:`step-next${p[d]?` is-done`:``}`,onClick:()=>g($c[S+1]),children:[WC[$c[S+1]],` `,(0,Q.jsx)(eS,{to:`right`})]})]})]}),xx.length>0&&(0,Q.jsxs)(`div`,{className:`notice bad`,children:[`Content failed to load: `,xx.join(`; `)]}),i&&(0,Q.jsxs)(`div`,{className:`notice`,role:`status`,children:[i,(0,Q.jsx)(`button`,{className:`link`,onClick:()=>a(void 0),"aria-label":`Dismiss`,children:`✕`})]}),d===`character`&&(0,Q.jsx)(hS,{draft:l,startingLevel:u.startingLevel,onChange:h,onStartingLevel:_}),d===`background`&&(0,Q.jsx)(cS,{draft:l,onChange:h}),d===`stats`&&(0,Q.jsx)(AC,{draft:l,onChange:h}),d===`choices`&&(0,Q.jsx)(yS,{draft:l,result:f,onChange:h}),d===`traits`&&(0,Q.jsx)(HC,{draft:l,campaign:u,result:f,onChange:h}),d===`sheet`&&(0,Q.jsx)(LC,{draft:l,result:f,onExport:v,onImport:()=>c.current?.click(),onName:e=>h({...l,name:e})})]})})]})})]})}var KC=(0,uc.createRoot)(document.getElementById(`root`));(0,lc.flushSync)(()=>KC.render((0,Q.jsx)(z.StrictMode,{children:(0,Q.jsx)(GC,{})})));
