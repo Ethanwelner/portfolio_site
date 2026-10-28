@@ -13,6 +13,7 @@
 						<li>Character Creator: six new Origins: The Union of Texas, The Free American States, The Lunar Industrial Syndicate, and, on Isekai, Karsef, Sorellion and the Drovus Empire.</li>
 						<li>Character Creator: 23 new skills (among them Medical Aid, Surgery, potion mixing, cooking, crafts, performing and Wielder: Pistol), 14 new Knowledges, and every language spoken in the Nations, each spoken and written.</li>
 						<li>Character Creator: a spare language the builder picks for you now comes from your Origin’s world first.</li>
+						<li>Character Creator: when Build it can’t finish, its error message is now readable instead of dark text on the dark header.</li>
 					</ul>
 				</article>
 
