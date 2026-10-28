@@ -111,13 +111,13 @@
 								The militant <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, styling itself as the revived Rome, is engaged in a one-sided cold war with its rival of the past two centuries, the expansive <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?>. Aboard its capital, the drifting interstellar Ark “<?php echo sf_lore_link('new-york', 'New York'); ?>,” the absentee Emperor Augustus Bartholomew Hayes oversees imperial expansion abroad while a divided Senate squabbles at home. Prince Traius Bartholomew Hayes, regent of the Sol territories, struggles to hold together the tenuous détente between the Empire and its former territory, <?php echo sf_lore_link('union-of-texas', 'the Union of Texas'); ?>.
 							</p>
 							<p class="copy">
-								The <?php echo sf_lore_link('lunar-industrial-syndicate', 'Eighth Lunar Industrial Syndicate'); ?>, once a simple business empire, now finds itself saddled with millions of citizens and a constitution at odds with its profit-at-all-costs past. Behind the walls of the private estates and penthouses of Luna, board members and insiders hoard wealth, knowing a storm is coming. Between worker strikes, corporate espionage, and the nascent call for democracy from the shareholders, the cracks are spreading.
+								The <?php echo sf_lore_link('lunar-industrial-syndicate', 'Eighth Lunar Industrial Syndicate'); ?>, once a simple business empire, now finds itself saddled with millions of citizens and a constitution at odds with its profit-at-all-costs past. Behind the walls of the private estates and penthouses of Luna, board members and insiders hoard wealth, knowing a storm is coming. Between worker strikes, corporate espionage, and the nascent call for democracy from the citizen shareholders, the cracks are spreading.
 							</p>
 							<p class="copy">
 								The Imperious <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?> has every right to be proud. A 50-year golden age has brought prosperity, territory, and power, but the long-serving Emperor Zhang has disappeared in secret, and while the imperial household keeps up appearances, the emperor’s many heirs are already maneuvering for the throne. Across the empire’s palaces, courts, and alleys, factions vie for supremacy, and when words fail, a knife in the dark often succeeds.
 							</p>
 							<p class="copy">
-								The <?php echo sf_lore_link('stellar-democratic-union', 'Stellar Democratic Union'); ?> has become the standard-bearer of an enlightened and free humanity. The largest nation in the settled systems, its member states are spread across the Earth, stars, and planes. But its legacy as the bureaucratic and rule-choked successor to the European Union has left it slow to adapt to the lightning pace of human expansion. As it finds itself overtaken by the rising powers of competing empires, calls for secession grow louder among its members.
+								The <?php echo sf_lore_link('stellar-democratic-union', 'Stellar Democratic Union'); ?> has become the standard-bearer of an enlightened and free humanity. The largest nation in the settled systems, it has member states spread across the Earth, stars, and planes. But its legacy as the bureaucratic and rule-choked successor to the European Union has left it slow to adapt to the lightning pace of human expansion. As it finds itself overtaken by the rising powers of competing empires, calls for secession grow louder among its members.
 							</p>
 							<p class="copy">
 								Where other nations herd their people into choking megacities, the hermit <?php echo sf_lore_link('kingdom-of-india', 'Kingdom of India'); ?> has become a paradise on earth, but the regreening of the subcontinent came at a high price. The land of 10,000 gods is a tightly bound theocracy, ruled from beyond the stars by Crown Prince Raja Jagadeeshwara Raya IV. The kingdom is embarking on a holy quest to join the gods in heaven, and while millions emigrate to 295/c/29 - “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>,” resentment is growing at home.
@@ -339,7 +339,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>A palace coup overthrows the Great Chairman. A voting committee of oligarchs, secretly headed by an AI, takes control of the rechristened <?php echo sf_lore_link('chinese-empire', 'Chinese Empire'); ?>, with Emperor Liu of the Shenzhen Dynasty installed as its figurehead.</li>
+							<li>A palace coup overthrows the Great Chairman. A voting committee of oligarchs, secretly headed by an AI, takes control of the rechristened <?php echo sf_lore_link('chinese-empire', 'Empire of China'); ?>, with Emperor Liu of the Shenzhen Dynasty installed as its figurehead.</li>
 						</ul>
 					</div>
 					<div>

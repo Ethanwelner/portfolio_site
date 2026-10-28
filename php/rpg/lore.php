@@ -61,7 +61,7 @@ function sf_lore_titles() {
 		'american-empire' => 'The American Empire',
 		'union-of-texas' => 'The Union of Texas',
 		'free-american-states' => 'Non-Aligned Free American States',
-		'chinese-empire' => 'The Chinese Empire',
+		'chinese-empire' => 'The Empire of China',
 		'stellar-democratic-union' => 'The Stellar Democratic Union',
 		'kingdom-of-india' => 'The Kingdom of India',
 		'ural-federation' => 'The Ural Federation',

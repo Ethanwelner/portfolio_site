@@ -2,7 +2,7 @@
 	In the 21st century, India found itself caught between the expanding deserts and storms of the world’s ecological collapse and the unconquerable Himalayan plateaus. Hit harder than most, the people of India endured a famine and thirst that would have broken other nations. The restive country, with its hundred languages and thousands of gods, finally found unity in the cause of environmental preservation and the return of natural beauty to the subcontinent. The India of today is a green utopia, unconcerned with expansion to the stars. Instead, it has focused its attention on the plane of 295/c/29, “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>,” where its capital of the same name is now located. Millions of Indian citizens emigrate to this paradisiacal plane every year, in what is by far the largest human planar colonial project ever attempted.
 </p>
 <p class="copy">
-	Not all is as peaceful as it seems. Prince Raja Jagadeeshwara Raya IV, born in Pataliputra, rarely sees fit to administer the Indian nation in person, preferring to rule through his vizier, Uthradom Thirunal Aditya Varma. The connection between India and its far-distant capital is tenuous, and many disapprove of their absentee prince and his lack of ambition on Earth.
+	Not all is as peaceful as it seems. Crown Prince Raja Jagadeeshwara Raya IV, born in Pataliputra, rarely sees fit to administer the Indian nation in person, preferring to rule through his vizier, Uthradom Thirunal Aditya Varma. The connection between India and its far-distant capital is tenuous, and many disapprove of their absentee prince and his lack of ambition on Earth.
 </p>
 <div class="info-cols">
 	<dl class="copy flex-1 attr-list">
@@ -26,7 +26,7 @@
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Government</dt>
-			<dd>Technocratic monarchy</dd>
+			<dd>Theocratic technocratic monarchy</dd>
 		</div>
 		<div>
 			<dt>Capital</dt>
@@ -34,7 +34,7 @@
 		</div>
 		<div>
 			<dt>Leadership</dt>
-			<dd>Prince Raja Jagadeeshwara Raya IV</dd>
+			<dd>Crown Prince Raja Jagadeeshwara Raya IV</dd>
 		</div>
 		<div>
 			<dt>Notable Figures</dt>

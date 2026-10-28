@@ -1,5 +1,5 @@
 <p class="copy">
-	Comprising holdings on Earth, Luna, and Mars, as well as dozens of other colonies, stations, and outposts, the Eighth Lunar Industrial Syndicate is an economic behemoth punching well above its weight. Having grown far beyond its origins as a simple business cartel, the Syndicate now finds itself saddled with a constitution, a national military, and board members elected by the former South American nations it was forced to annex at the point of a gun. It struggles with its duties to its shareholders and responsibility to its “Citizens,” enriching the former and forgetting the latter more often than not.
+	Comprising holdings on Earth, Luna, and Mars, as well as dozens of other colonies, stations, and outposts, the Eighth Lunar Industrial Syndicate is an economic behemoth punching well above its weight. Having grown far beyond its origins as a simple business cartel, the Syndicate now finds itself saddled with a constitution, a national military, and board members elected by the former South American nations it was forced to annex at the point of a gun. It struggles with its duties to its investors and responsibility to its “citizen shareholders,” enriching the former and forgetting the latter more often than not.
 </p>
 <div class="info-cols">
 	<dl class="copy flex-1 attr-list">
@@ -82,7 +82,7 @@
 					<li>2118 – After the discovery of <?php echo sf_lore_link('the-gift', 'The Gift'); ?> and the Lunar Hostage Crisis, the Third Lunar Syndicate’s fortunes were buttressed by the immense wealth suddenly afforded by the mining of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, as well as the licensing and production of <?php echo sf_lore_link('switch-gates', 'switch gates'); ?>.</li>
 					<li>2120 – This boost in wealth, as well as the immense pressure exerted on the stateless corporate entities that comprised the Syndicate, resulted in the purchase of the former territory of Bolivia and the Syndicate’s formal admission into the UN.</li>
 					<li>2122–2130 – Over the next decade, Brazil and Paraguay, both in significant economic decline, would collectively blackmail the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
-					<li>2132 – Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
+					<li>2132 – Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “citizen shareholders” and their rights.</li>
 					<li>Present day – To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
 				</ul>
 			</div>
