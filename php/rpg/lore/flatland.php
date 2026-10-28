@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd><?php echo sf_lore_link('chinese-empire', 'The Chinese Empire'); ?></dd>
+			<dd><?php echo sf_lore_link('chinese-empire', 'The Empire of China'); ?></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
