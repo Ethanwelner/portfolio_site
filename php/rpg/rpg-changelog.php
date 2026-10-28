@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Known Planes: revised Overview, History and Geography text for Paraloka, Gastown, Qliphoth and Leviathan. Saturday’s Furnace’s Compatibility is now Low, Leviathan’s population is now 0, Pairidaeza averages 36°C and Pataliputra 34°C at the gate, and The Lost World lists Timber, Minerals, Exotic Fauna and Low-Grade Exotic Materials.</li>
+						<li>“The Gift” is capitalized everywhere it names the lunar artifact, and the plane codes 65/t/137 and 314/x/50 are lowercase throughout the site.</li>
 						<li>Character Creator: the Origin, Profession and Past lists in the Background step each have a search box and checkbox filters for their settings, and Origins can also be filtered by bonus.</li>
 						<li>Character Creator: new Origins for the Kingdom of India (Earth and Colonies), Centafrica (Earth and Colonies), the Ural Federation and Xanthus, with Knowledges for each nation, its law, Indian Theology, Pataliputra, Amaravati, Aksum, Ecology and Asteroid Mining.</li>
 						<li>Character Creator: a background package’s bonus now reads “+1 Mental focus point” instead of “+1 Mental point.”</li>

@@ -32,7 +32,7 @@
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
-			<dd>50–60°C (gate local)</dd>
+			<dd>36°C (gate local)</dd>
 		</div>
 		<div>
 			<dt>Biome</dt>

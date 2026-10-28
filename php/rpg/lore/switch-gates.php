@@ -47,7 +47,7 @@
 				Few times in history has a gold rush had such urgency. What do you do when you find that your neighbor has the keys to infinite prosperity? Like any civilized government, you point a gun at them, of course. The weeks and months of negotiation following the reveal of The Gift have come to be known as the Lunar Hostage Crisis. Not because anyone took hostages, of course, but because the entire Lunar nation had the guns and fury of every nation on Earth pointed at it.
 			</p>
 			<p class="copy">
-				What followed was a period of intense negotiation. While the Earth had, now, full knowledge of the Gift and everything that came with it, what they lacked was the St-245/E6 required to build Switch Gates of their own. Luna still had a monopoly on the distribution of the element critical to Switch Gate construction.
+				What followed was a period of intense negotiation. While the Earth had, now, full knowledge of The Gift and everything that came with it, what they lacked was the St-245/E6 required to build Switch Gates of their own. Luna still had a monopoly on the distribution of the element critical to Switch Gate construction.
 			</p>
 			<p class="copy">Cont...</p>
 		</div>
