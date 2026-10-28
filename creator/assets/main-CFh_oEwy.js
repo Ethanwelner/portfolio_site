@@ -265,7 +265,7 @@ backgroundTraits:
   - spanish
   - spanish-written
 `,Pl=`id: chinese-empire-colonies
-name: "The Chinese Empire: Colonies"
+name: "The Empire of China: Colonies"
 status: placeholder
 plane: earth
 region: chinese-empire
@@ -288,7 +288,7 @@ backgroundTraits:
   - the-corporate-syndicates
   - earth-baseline-technology
 `,Fl=`id: chinese-empire-earth
-name: "The Chinese Empire: Earth"
+name: "The Empire of China: Earth"
 status: placeholder
 plane: earth
 region: chinese-empire
@@ -442,7 +442,7 @@ name: "The Lunar Industrial Syndicate"
 status: placeholder
 plane: earth
 region: lunar-industrial-syndicate
-summary: "You grew up a “Citizen” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its shareholders first."
+summary: "You grew up a “citizen shareholder” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its investors first."
 tags: [lunar-industrial-syndicate, earth, luna, corporate]
 lore: lunar-industrial-syndicate
 type: origin
@@ -2337,7 +2337,7 @@ effect: "This character has knowledge of Ark Boneyard and can be assumed to be f
 name: "Burmese (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, burmese, earth, writing]
 category: knowledge
 types: [language]
@@ -2347,7 +2347,7 @@ effect: "This character can read and write the Burmese language."
 name: "Burmese (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, burmese, earth]
 category: knowledge
 types: [language]
@@ -2392,12 +2392,12 @@ name: "Chinese Imperial Law"
 status: placeholder
 plane: earth
 region: chinese-empire
-summary: "The laws of the Chinese Empire, written and as the syndicates actually apply them."
+summary: "The laws of the Empire of China, written and as the syndicates actually apply them."
 tags: [law, chinese-empire]
 category: knowledge
 ranked: true
 minStats: { memory: 3 }
-effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Chinese Empire."
+effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."
 `,_f=`id: coastal-trade
 name: Coastal Trade
 status: placeholder
@@ -2625,7 +2625,7 @@ effect: "This character has knowledge of farming and can be assumed to be famili
 name: "Filipino (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, filipino, earth, writing]
 category: knowledge
 types: [language]
@@ -2635,7 +2635,7 @@ effect: "This character can read and write the Filipino language."
 name: "Filipino (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, filipino, earth]
 category: knowledge
 types: [language]
@@ -2799,7 +2799,7 @@ effect: "This character has knowledge of Imperial politics and can be assumed to
 name: "Indonesian (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, indonesian, earth, writing]
 category: knowledge
 types: [language]
@@ -2809,7 +2809,7 @@ effect: "This character can read and write the Indonesian language."
 name: "Indonesian (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, indonesian, earth]
 category: knowledge
 types: [language]
@@ -2879,7 +2879,7 @@ effect: "This character is conversational in the Japanese language and can speak
 name: "Javanese (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, javanese, earth, writing]
 category: knowledge
 types: [language]
@@ -2889,7 +2889,7 @@ effect: "This character can read and write the Javanese language."
 name: "Javanese (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, javanese, earth]
 category: knowledge
 types: [language]
@@ -2972,7 +2972,7 @@ effect: "This character is conversational in the Kazakh language and can speak i
 name: "Khmer (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, khmer, earth, writing]
 category: knowledge
 types: [language]
@@ -2982,7 +2982,7 @@ effect: "This character can read and write the Khmer language."
 name: "Khmer (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, khmer, earth]
 category: knowledge
 types: [language]
@@ -3052,7 +3052,7 @@ effect: "This character is conversational in the Kyrgyz language and can speak i
 name: "Lao (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, lao, earth, writing]
 category: knowledge
 types: [language]
@@ -3062,7 +3062,7 @@ effect: "This character can read and write the Lao language."
 name: "Lao (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, lao, earth]
 category: knowledge
 types: [language]
@@ -3141,7 +3141,7 @@ effect: "This character has knowledge of the magic on Isekai and can be assumed 
 name: "Malay (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, malay, earth, writing]
 category: knowledge
 types: [language]
@@ -3151,7 +3151,7 @@ effect: "This character can read and write the Malay language."
 name: "Malay (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, malay, earth]
 category: knowledge
 types: [language]
@@ -3181,7 +3181,7 @@ effect: "This character is conversational in the Malayalam language and can spea
 name: "Mandarin (Written)"
 status: placeholder
 plane: earth
-summary: "The language of the Chinese Empire."
+summary: "The language of the Empire of China."
 tags: [language, mandarin, earth, writing]
 category: knowledge
 types: [language]
@@ -3191,7 +3191,7 @@ effect: This character can read and write the Mandarin language.
 name: "Mandarin (Spoken)"
 status: placeholder
 plane: earth
-summary: "The language of the Chinese Empire."
+summary: "The language of the Empire of China."
 tags: [language, mandarin, earth]
 category: knowledge
 types: [language]
@@ -3731,7 +3731,7 @@ tags: [geography, chinese-empire, earth]
 category: knowledge
 ranked: true
 minStats: { memory: 3 }
-effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Chinese Empire’s Southeast Asian territories, their peoples, and their old borders."
+effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Empire of China’s Southeast Asian territories, their peoples, and their old borders."
 `,Im=`id: spanish-written
 name: "Spanish (Written)"
 status: placeholder
@@ -3849,7 +3849,7 @@ effect: "This character has knowledge of Ark Tetra and can be assumed to be fami
 name: "Thai (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, thai, earth, writing]
 category: knowledge
 types: [language]
@@ -3859,7 +3859,7 @@ effect: "This character can read and write the Thai language."
 name: "Thai (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, thai, earth]
 category: knowledge
 types: [language]
@@ -3876,7 +3876,7 @@ ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."
 `,Xm=`id: the-chinese-empire
-name: "The Chinese Empire"
+name: "The Empire of China"
 status: placeholder
 plane: earth
 region: chinese-empire
@@ -3886,13 +3886,13 @@ lore: chinese-empire
 category: knowledge
 ranked: true
 minStats: { memory: 3 }
-effect: "This character has knowledge of the Chinese Empire and can be assumed to be familiar with its customs, politics, and territories."
+effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."
 `,Zm=`id: the-corporate-syndicates
 name: "The Corporate Syndicates"
 status: placeholder
 plane: earth
 region: chinese-empire
-summary: "The corporate syndicates that make up the Chinese Empire’s government, and their rivalries."
+summary: "The corporate syndicates that make up the Empire of China’s government, and their rivalries."
 tags: [corporate, politics, chinese-empire]
 category: knowledge
 ranked: true
@@ -3980,7 +3980,7 @@ effect: "This character has knowledge of the King’s Woods and can be assumed t
 name: "The Lunar Industrial Syndicate"
 status: draft
 plane: earth
-summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with shareholders and Citizens."
+summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with investors and citizen shareholders."
 tags: [lunar-industrial-syndicate, luna, corporate]
 category: knowledge
 ranked: true
@@ -4176,7 +4176,7 @@ effect: "This character is conversational in the Uyghur language and can speak i
 name: "Vietnamese (Written)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, vietnamese, earth, writing]
 category: knowledge
 types: [language]
@@ -4186,7 +4186,7 @@ effect: "This character can read and write the Vietnamese language."
 name: "Vietnamese (Spoken)"
 status: draft
 plane: earth
-summary: "Spoken in the Chinese Empire."
+summary: "Spoken in the Empire of China."
 tags: [language, vietnamese, earth]
 category: knowledge
 types: [language]
@@ -4217,18 +4217,18 @@ name: "Yùtù"
 status: placeholder
 plane: earth
 region: chinese-empire
-summary: "The Jade Rabbit, the Chinese Empire’s colony on Luna."
+summary: "The Jade Rabbit, the Empire of China’s colony on Luna."
 tags: [luna, colony, chinese-empire]
 category: knowledge
 ranked: true
 minStats: { memory: 3 }
-effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Chinese Empire’s colony on Luna."
+effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."
 `,kh=`id: zhulong
 name: "Zhulong"
 status: placeholder
 plane: earth
 region: chinese-empire
-summary: "The Chinese Empire’s Ark."
+summary: "The Empire of China’s Ark."
 tags: [ark, chinese-empire]
 lore: zhulong
 category: knowledge
