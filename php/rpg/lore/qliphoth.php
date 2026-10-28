@@ -80,7 +80,7 @@
 			</div>
 			<div class="text-cols">
 				<p class="copy">
-					314/X/50 - “Qliphoth” is what has been termed a “shell universe.” Qliphoth’s reality is limited in size, and expeditions to its edge have produced the most extensive measurements yet of null physics. Outside of this scientifically curious property, the plane’s barren nature has relegated it to a footnote of history, with only the rare research drone to be found there, testing new theories about what lies outside of existence.
+					314/x/50 - “Qliphoth” is what has been termed a “shell universe.” Qliphoth’s reality is limited in size, and expeditions to its edge have produced the most extensive measurements yet of null physics. Beyond this scientifically curious property, the plane’s barren nature has relegated it to a footnote of history, with only the rare research drone to be found there, testing new theories about what lies outside of existence.
 				</p>
 			</div>
 		</div>
@@ -91,7 +91,7 @@
 			</div>
 			<div class="text-cols">
 				<p class="copy mb-0">
-					Discovered in 2150 by the New York University planar research laboratory, Qliphoth was the first plane discovered with a finite border. In the decades since, the plane has been used as a subject of scientific research and, for a time, as a dumping ground for toxic or unstable materials. Given the incredibly limited space within the plane, <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> attempts to manage and schedule access, but with years often passing between notices of planned exchanges, and with <?php echo sf_lore_link('american-empire', 'the American Empire'); ?>’s contempt for the organization, its efforts are likely wasted.
+					Discovered in 2150 by the New York University planar research laboratory, Qliphoth was the first plane discovered with a finite border. In the decades since, the plane has been used as a subject of scientific research and, for a time, as a dumping ground for toxic or unstable materials. Given the incredibly limited space within the plane, <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?> attempts to manage and schedule access, but with years often passing between notices of planned exchanges, and with <?php echo sf_lore_link('american-empire', 'the American Empire'); ?>’s contempt for the organization, its efforts are largely futile.
 				</p>
 			</div>
 		</div>
@@ -102,7 +102,7 @@
 			</div>
 			<div class="text-cols">
 				<p class="copy mb-0">
-					314/X/50 - “Qliphoth” was humanity’s first glimpse of the end of a universe. A sphere just under 25 meters in diameter, this finite plane is entirely encircled by a shell of null physics. Qliphoth is utterly empty: the plane contains none of the background radiation or occasional elemental traces found in even the emptiest voids of Earth baseline. In every sense, it is an empty bubble surrounded by absolute nothingness.
+					314/x/50 - “Qliphoth” was humanity’s first glimpse of the end of a universe. A sphere just under 25 meters in diameter, this finite plane is entirely enclosed by a shell of null physics. Qliphoth is utterly empty: the plane contains none of the background radiation or occasional elemental traces found in even the emptiest voids of Earth baseline. In every sense, it is a hollow bubble surrounded by absolute nothingness.
 				</p>
 			</div>
 		</div>

@@ -32,7 +32,7 @@
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
-			<dd></dd>
+			<dd>34°C (gate local)</dd>
 		</div>
 		<div>
 			<dt>Biome</dt>

@@ -2,7 +2,7 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Compatibility</dt>
-			<dd>Medium</dd>
+			<dd>Low</dd>
 		</div>
 		<div>
 			<dt>Elevation</dt>

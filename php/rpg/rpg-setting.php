@@ -14,7 +14,7 @@
 			<div class="single-column-content">
 				<div class="blog-post intro-vignette mb-4">
 					<p class="copy">
-						The sky above you is a radiant white. And the sky below you. All around you, really. And it’s hot. The bathysphere is reading north of 3,200 bar and 230 degrees. A few moments outside its thick parametal alloy skin and you’d resemble a very well-cooked marble of hot carbon. Typical weather in 65/T/137 “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>.”
+						The sky above you is a radiant white. And the sky below you. All around you, really. And it’s hot. The bathysphere is reading north of 3,200 bar and 230 degrees. A few moments outside its thick parametal alloy skin and you’d resemble a very well-cooked marble of hot carbon. Typical weather in 65/t/137 “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>.”
 					</p>
 					<p class="copy mb-0">
 						One of the harvesters is reporting an infestation of “<?php echo sf_lore_link('sunflowers', 'Sunflowers'); ?>.” The shift crew calls it “Light work,” for the pun as much as they do for the accuracy of the name. A few hours of scraping luminous higher-dimensional “vines” off of the ship-sized packaging and compression machine and you’ll be back at the Switch Point with time to spare.
@@ -82,7 +82,7 @@
 						</div>
 						<div class="text-cols">
 							<p class="copy">
-								Earth still holds over 12 billion people, most of them packed into colossal, water-starved megacities. As its deserts spread and reservoirs dried, humanity huddled into ever-denser urban centers. Citizens were left struggling to afford the basic necessities of survival. Even before <?php echo sf_lore_link('the-gift', 'the Gift'); ?>, humanity was reaching to space to escape its dying world.
+								Earth still holds over 12 billion people, most of them packed into colossal, water-starved megacities. As its deserts spread and reservoirs dried, humanity huddled into ever-denser urban centers. Citizens were left struggling to afford the basic necessities of survival. Even before <?php echo sf_lore_link('the-gift', 'The Gift'); ?>, humanity was reaching to space to escape its dying world.
 							</p>
 							<p class="copy">
 								The century of the <?php echo sf_lore_link('exodus', 'Exodus'); ?> has seen over a billion take to the stars, and that trend is only accelerating. Colonies dot the surfaces of Luna, Mars, and almost every other moon and oversized hunk of dirt or ice within reach. Hundreds of disparate stations hang between the planets, cities in their own right. Vagrant flotillas drift along the Aether, going where the winds take them. All the while, close to a million ships dart between ports.
@@ -531,7 +531,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>65/T/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.</li>
+							<li>65/t/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.</li>
 						</ul>
 					</div>
 					<div>

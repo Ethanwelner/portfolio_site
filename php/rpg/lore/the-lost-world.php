@@ -32,7 +32,7 @@
 		</div>
 		<div>
 			<dt>Average Temperature</dt>
-			<dd>22–30°C</dd>
+			<dd>22–30°C (gate local)</dd>
 		</div>
 		<div>
 			<dt>Biome</dt>
@@ -40,7 +40,7 @@
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
-			<dd>Logging, Mineral Extraction, Exotic Fauna, Low Grade Exotic Materials</dd>
+			<dd>Timber, Minerals, Exotic Fauna, Low-Grade Exotic Materials</dd>
 		</div>
 		<div>
 			<dt>Indigenous life</dt>
