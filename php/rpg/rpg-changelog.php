@@ -21,6 +21,7 @@
 						<li>Character Creator: when Build it can’t finish, its error message is now readable instead of dark text on the dark header.</li>
 						<li>Character Creator: five new medical Knowledges, Pharmacology, Pathology, Toxicology, Psychology and Parasapient Medicine, on the Background Trait lists of the Doctor, Surgeon, Combat Medic, Emergency Medical Technician and Apothecary.</li>
 						<li>Character Creator: 25 broad Knowledges, from Physics, History and Commerce to Wilderness Lore, Weapons and Starships, so every Profession and Past now has relevant Knowledges on its Background Trait list.</li>
+						<li>Character Creator: the Description box shows a different example character each time the page loads, from an orcoid Tatot mercenary of Karsef to an AI Core spy for the Empire of China.</li>
 						<li>Setting: The Players of 2230 now covers all six major powers, adding the Stellar Democratic Union, the Kingdom of India, and Centafrica. The Empire of China’s paragraph names Emperor Zhang, and the Syndicate’s constitution is now at odds with its profit-at-all-costs past.</li>
 						<li>The Chinese Empire is now called the Empire of China everywhere in the Setting and lore (its pop-up title, Zhulong and Flatland’s info boxes, and the 2070 timeline entries).</li>
 						<li>Character Creator: the Empire of China’s Origins, Knowledges and languages use its new name, and the Syndicate’s Origin and Knowledge speak of citizen shareholders and investors.</li>
