@@ -14,6 +14,7 @@
 						<li>Character Creator: 23 new skills (among them Medical Aid, Surgery, potion mixing, cooking, crafts, performing and Wielder: Pistol), 14 new Knowledges, and every language spoken in the Nations, each spoken and written.</li>
 						<li>Character Creator: a spare language the builder picks for you now comes from your Origin’s world first.</li>
 						<li>Character Creator: when Build it can’t finish, its error message is now readable instead of dark text on the dark header.</li>
+						<li>Setting: The Players of 2230 now covers all six major powers, adding the Stellar Democratic Union, the Kingdom of India, and Centafrica. The Empire of China’s paragraph names Emperor Zhang, and the Syndicate’s constitution is now at odds with its profit-at-all-costs past.</li>
 					</ul>
 				</article>
 
