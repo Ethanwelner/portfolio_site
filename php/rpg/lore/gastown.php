@@ -40,7 +40,7 @@
 		</div>
 		<div>
 			<dt>Natural Resources</dt>
-			<dd><?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?></dd>
+			<dd><?php echo sf_lore_link('st-1-e003', 'St-1/E.003'); ?></dd>
 		</div>
 		<div>
 			<dt>Indigenous life</dt>
@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd>As the source of <?php echo sf_lore_link('st-1-e1', 'St-1/E1'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the settled systems.</dd>
+			<dd>As the source of <?php echo sf_lore_link('st-1-e003', 'St-1/E.003'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the settled systems.</dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
