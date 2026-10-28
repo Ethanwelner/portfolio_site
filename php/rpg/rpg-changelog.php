@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: the Origin, Profession and Past lists in the Background step each have a search box and checkbox filters for their settings, and Origins can also be filtered by bonus.</li>
 						<li>Character Creator: new Origins for the Kingdom of India (Earth and Colonies), Centafrica (Earth and Colonies), the Ural Federation and Xanthus, with Knowledges for each nation, its law, Indian Theology, Pataliputra, Amaravati, Aksum, Ecology and Asteroid Mining.</li>
 						<li>Character Creator: a background package’s bonus now reads “+1 Mental focus point” instead of “+1 Mental point.”</li>
 						<li>“The systems” is now “the settled systems” throughout the Setting, Sciences, Planes, Stars, Parabiology and lore entries, and the Character Creator’s region heading and card mark read The Settled Systems.</li>
