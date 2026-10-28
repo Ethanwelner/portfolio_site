@@ -205,7 +205,7 @@
                                                 <li>A closing of the gate would significantly harm the income of Tetra Frontiers Co., which has profited heavily from the trade of “magical” exotic items and materials, as well as a form of high-class “tourism.”
                                                     <ul>
                                                         <li>In secret, a second gate on Isekai is being attuned, but it’s located on another continent in a wilderness region full of high-fantasy monsters, so it would take substantial investment to become profitable.</li>
-                                                        <li>Isekai is among the most well-known and famous planar locations in the systems due to its nature as what is practically a high-fantasy parody; the loss of the plane would deeply harm Tetra Frontiers Co.’s corporate image.</li>
+                                                        <li>Isekai is among the most well-known and famous planar locations in the settled systems due to its nature as what is practically a high-fantasy parody; the loss of the plane would deeply harm Tetra Frontiers Co.’s corporate image.</li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -222,7 +222,7 @@
                                             <ul>
                                                 <li>If the players opt to be from Earth baseline, they can be planar explorers, researchers, diplomats, security services, or any other relevant role that TFC may have hired them for.</li>
                                                 <li>If they are from Isekai, they can be royal guards, gate locals, foreign mercenaries, or any number of other fantastical professions or peoples.</li>
-                                                <li>Player parties can be both, with tens of thousands of expatriates out of Isekai already inhabiting Tetra and the rest of the systems, and TFC having a local base of operations in Isekai and thousands of permanent residents.</li>
+                                                <li>Player parties can be both, with tens of thousands of expatriates out of Isekai already inhabiting Tetra and the rest of the settled systems, and TFC having a local base of operations in Isekai and thousands of permanent residents.</li>
                                             </ul>
                                         </li>
                                     </ul>

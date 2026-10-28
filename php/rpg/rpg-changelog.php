@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>“The systems” is now “the settled systems” throughout the Setting, Sciences, Planes, Stars, Parabiology and lore entries, and the Character Creator’s region heading and card mark read The Settled Systems.</li>
 						<li>Exotic Materials: Fast Hydrogen is now St-1/E.003, with a half-life of roughly thirty hours, and Gastown’s info box uses the new code. Decoding Exotic Materials explains decimal half-lives and E0, and nests each code rule under its class. Solum Inane, Fast Hydrogen and Slim Water have revised writeups.</li>
 						<li>Character Creator: 29 new Professions, from Smuggler, Blacksmith and Knight to Doctor, Fighter Pilot and Officer of the Bureau of Planar Management and Enforcement, and 11 new Pasts, including Military Service, Station Rat and Raised at Court.</li>
 						<li>Character Creator: six new Origins: The Union of Texas, The Free American States, The Lunar Industrial Syndicate, and, on Isekai, Karsef, Sorellion and the Drovus Empire.</li>

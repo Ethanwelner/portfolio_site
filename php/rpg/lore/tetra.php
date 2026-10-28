@@ -50,7 +50,7 @@
 					Operated and largely funded by the SDU, Tetra, along with its local electorate, is technically one of its member states. Despite this, the Ark maintains a UN-funded and UN-staffed defense fleet composed, in rotating fashion, of ships and personnel provided by member states. Local law enforcement and governance fall to democratically elected ward representatives, while the Council of 11 holds overall authority. Its seats go to the 11 citizens with the highest share of delegated votes, who deliberate and present bills before the citizenry.
 				</p>
 				<p class="copy mb-0">
-					Aside from its primary role as a center of political intrigue, Tetra has, by accident rather than design, also become the largest single destination for planar research and exploration in the systems. At any given time, hundreds of gate exploration projects are ongoing within its armored bulk, while dozens of satellite micro-stations hold gates attempting to establish attunement to unknown planes. It is home to three large planar research colleges, over two dozen planar exploration and holding companies, and tens of thousands of members in its local chapter of the <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodge'); ?>, as well as the headquarters of <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?>. The Ark also hosts the largest resident population of parasapients in the systems, with significant diasporas from placeholder, placeholder, and <?php echo sf_lore_link('isekai', 'Isekai'); ?> making it their home.
+					Aside from its primary role as a center of political intrigue, Tetra has, by accident rather than design, also become the largest single destination for planar research and exploration in the settled systems. At any given time, hundreds of gate exploration projects are ongoing within its armored bulk, while dozens of satellite micro-stations hold gates attempting to establish attunement to unknown planes. It is home to three large planar research colleges, over two dozen planar exploration and holding companies, and tens of thousands of members in its local chapter of the <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodge'); ?>, as well as the headquarters of <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?>. The Ark also hosts the largest resident population of parasapients in the settled systems, with significant diasporas from placeholder, placeholder, and <?php echo sf_lore_link('isekai', 'Isekai'); ?> making it their home.
 				</p>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 					The Bureau’s presence on Tetra, as well as Tetra’s axiomatically stable nature as a slow-orbiting body, made it the natural home for planar investment. The majority of Earth-bound planar exploration and holding companies quickly relocated to the Ark, where licensure, inspection, and regulatory approval are made much cheaper and easier by proximity.
 				</p>
 				<p class="copy mb-0">
-					The oldest and most storied planar exploration and holding companies call Tetra home, and while unregulated planar exploitation is on the rise, the Bureau has eyes and ears everywhere in the systems.
+					The oldest and most storied planar exploration and holding companies call Tetra home, and while unregulated planar exploitation is on the rise, the Bureau has eyes and ears everywhere in the settled systems.
 				</p>
 			</div>
 		</div>

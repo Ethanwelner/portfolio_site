@@ -94,7 +94,7 @@
 								Lumbering between the floating sparks of human life, fleets of dark, windowless warships patrol nebulously defined territories. The largest displace millions of tons and travel amid swarms of support craft. These powerful vessels enforce the territories of stellar nations. Though war has been rare this past century, and war between great powers rarer still, these ships bear the scars of many a disputed claim.
 							</p>
 							<p class="copy mb-0">
-								Commerce in the systems is thriving, with corporate <?php echo sf_lore_link('freighters', 'freighters'); ?> hauling ice, ore, and manufactured goods along well-worn lanes between the homeworlds and the frontier. In the vast gulfs between stars, colossal <?php echo sf_lore_link('arks', 'arks'); ?>, nations unto themselves, make their way, bringing goods and lives to distant shores. The richest cargoes come from planes of reality far beyond the stars, where a single hold of exotic material can be worth more than the ship carrying it.
+								Commerce in the settled systems is thriving, with corporate <?php echo sf_lore_link('freighters', 'freighters'); ?> hauling ice, ore, and manufactured goods along well-worn lanes between the homeworlds and the frontier. In the vast gulfs between stars, colossal <?php echo sf_lore_link('arks', 'arks'); ?>, nations unto themselves, make their way, bringing goods and lives to distant shores. The richest cargoes come from planes of reality far beyond the stars, where a single hold of exotic material can be worth more than the ship carrying it.
 							</p>
 						</div>
 					</div>
