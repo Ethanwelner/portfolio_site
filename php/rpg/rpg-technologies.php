@@ -169,7 +169,7 @@
 										AI systems are less temperamental and prone to swings in mood or preference than their human counterparts, but they still change. A shipboard AI governing the actions of a cargo <?php echo sf_lore_link('freighters', 'freighter'); ?> can and will quickly grow bored of its assignment. A lack of meaningful sensory input will grate on an AI just as it would a human. AIs are often given entertainment and time off, just as their human coworkers are. A particularly valuable or specialized AI may even demand routine breaks or distraction. Certain lines of particularly high-end AI systems are well known to be “fussy.”
 									</p>
 									<p class="copy">
-										There are three extant, known manufacturers of AI Cores in the systems, the largest of which has been in continuous operation for well over a century. The AI Core production facility aboard the <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?> stretches all the way back to its humble beginnings as humanity’s first deep-space station. By quirk of history, all three manufacturers are owned by AI Cores, and were once a single corporate conglomerate until it was broken up by the Stellar Antitrust Act of 2160.
+										There are three extant, known manufacturers of AI Cores in the settled systems, the largest of which has been in continuous operation for well over a century. The AI Core production facility aboard the <?php echo sf_lore_link('kashgar-ark', 'Kashgar Ark'); ?> stretches all the way back to its humble beginnings as humanity’s first deep-space station. By quirk of history, all three manufacturers are owned by AI Cores, and were once a single corporate conglomerate until it was broken up by the Stellar Antitrust Act of 2160.
 									</p>
 									<p class="copy">
 										The techniques and technologies used in the construction of an AI Core are a closely guarded, enormously profitable secret. Despite decades of attempted corporate espionage and sporadic efforts to develop competing technologies, no one has yet come close to challenging these three for dominance.
@@ -292,7 +292,7 @@
 										Perhaps owing to the technology’s mundanity, paraphysics have had less of an impact on robotics than they have had in other fields. Exotic materials and paraphysical concepts have revolutionized space travel and broadened the horizons of medicine, but in robotics they’ve mostly served to create a better robot. Faster, longer lasting, hardier, but not new. That suits the robotics industry just fine though, and often the only way to interact with sufficiently hostile planes is to send a robot.
 									</p>
 									<p class="copy">
-										In 2230 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the systems. The following are the top 5 robotics suppliers by market cap:
+										In 2230 there are innumerable robotics manufacturers. Robotics is perhaps the single largest industry in the settled systems. The following are the top 5 robotics suppliers by market cap:
 									</p>
 									<ol class="copy mb-0">
 										<li>Plum Technologies (Personal Robotics)</li>

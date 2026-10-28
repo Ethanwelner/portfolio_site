@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd>As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?> - “Slim Water,” 513/y/11 - “Leviathan” is of interest to all nations in the systems.</dd>
+			<dd>As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?> - “Slim Water,” 513/y/11 - “Leviathan” is of interest to all nations in the settled systems.</dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

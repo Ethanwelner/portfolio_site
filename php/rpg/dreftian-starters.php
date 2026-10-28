@@ -124,8 +124,8 @@
 </div>
 <div class="starter-list">
 	<div class="starter-entry">
-		<h6><strong>Returned from the Systems</strong></h6>
-		<p class="copy mb-2">Left Dreft for the systems and came back changed, like everyone who comes back.</p>
+		<h6><strong>Returned from the Settled Systems</strong></h6>
+		<p class="copy mb-2">Left Dreft for the settled systems and came back changed, like everyone who comes back.</p>
 		<p class="copy mb-0"><strong>Skill Traits:</strong> Tinkerer, 1 additional Contact<br><strong>Knowledge Traits:</strong> Earth Baseline Technology, 1 additional Language</p>
 	</div>
 	<div class="starter-entry">
