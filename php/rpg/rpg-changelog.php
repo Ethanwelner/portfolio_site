@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/27/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The Setting section’s title now says Setting, and the first tab in its tab box (Setting, Timeline, Nations, Corporations) is now called Introduction.</li>
 						<li>Setting: the placeholder “2230, The Systems, and Beyond” is replaced by two new sections from the Doc, The Settled Systems (Earth, the Exodus, the star systems, warships, and commerce) and The Players of 2230 (the American Empire, the Eighth Lunar Industrial Syndicate, and the Empire of China).</li>
 						<li>Exotic Materials: St-1/E1 - “Fast Hydrogen” and Co-H2O/E2 - “Slim Water” now have full writeups, covering what each does, how dangerous Fast Hydrogen is to handle, and why ships “water cycle” their Slim Water.</li>
 						<li>Exotic Materials: the tab now opens with Decoding Exotic Materials, the Bureau’s naming guidelines for exotic material codes, and has a placeholder for Ob-Med/E2 - “Sanguis Cruor.”</li>

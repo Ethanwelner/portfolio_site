@@ -2,7 +2,7 @@
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<h3 class="sub-title mb-3" id="thesetting">Introduction</h3>
+		<h3 class="sub-title mb-3" id="thesetting">Setting</h3>
 		<div class="copy stinger black mb-3">The Worlds Of Strange Frontiers</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
@@ -41,7 +41,7 @@
 	<div class="flex-14">
 		<div class="tech-fields tech-fields-light" id="timeline">
 			<div class="tech-field-tab-list" role="tablist" aria-label="Timeline">
-				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="true">Setting</button>
+				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-timeline-events" aria-controls="timeline-events" aria-selected="true">Introduction</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-history" aria-controls="timeline-history" aria-selected="false">Timeline</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
