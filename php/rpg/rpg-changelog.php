@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/29/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The Strange Frontiers title at the top of the page now glitches: its green glow flares, cyan and red slices flicker across it, and every so often it skews hard for a moment.</li>
+						<li>The lines under the Strange Frontiers title now read “A Custom AI Native” and “PnP Role-Playing Game.”</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Known Planes: revised Overview, History and Geography text for Paraloka, Gastown, Qliphoth and Leviathan. Saturday’s Furnace’s Compatibility is now Low, Leviathan’s population is now 0, Pairidaeza averages 36°C and Pataliputra 34°C at the gate, and The Lost World lists Timber, Minerals, Exotic Fauna and Low-Grade Exotic Materials.</li>

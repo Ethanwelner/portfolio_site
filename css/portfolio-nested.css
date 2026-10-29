@@ -154,6 +154,42 @@ a {
     transition: margin-top 750ms;
 }
 
+/* Strange Frontiers advert, below and right of the hero's down arrow */
+.hero-statement {
+    position: relative;
+}
+
+.hero-advert {
+    position: absolute;
+    top: 100%;
+    left: calc(50% + 48px);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 22px;
+    background-color: var(--portfolio-black);
+    color: var(--portfolio-white);
+    text-decoration: none;
+    white-space: nowrap;
+    transform: rotate(-4deg);
+    transform-origin: left top;
+    transition: transform 200ms;
+
+    &:hover, &:focus-visible {
+        color: var(--portfolio-white);
+        text-decoration: none;
+        transform: rotate(-4deg) scale(1.05);
+    }
+}
+
+.hero-advert-lead {
+    font-size: 1.25rem;
+}
+
+.hero-advert-title {
+    font-size: 2.5rem;
+    color: var(--frontiers-green);
+}
+
 .higlight-text {
     font-weight: 500;
 }
