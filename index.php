@@ -77,6 +77,11 @@
 							</svg>
 						</a>
 
+						<a href="personal.php#strangefrontiers" class="hero-advert">
+							<span class="hero-advert-lead">Check my most recent project:</span>
+							<span class="hero-advert-title">Strange Frontiers</span>
+						</a>
+
 					</div>
 		  		</div>
 			</div>
