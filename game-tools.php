@@ -26,7 +26,7 @@ if (! $creator) {
         <?php foreach ($creator['js'] as $src): ?>
         <script type="module" blocking="render" src="<?php echo htmlspecialchars($src); ?>"></script>
         <?php endforeach; ?>
-        <title>Game Tools - Strange Frontiers</title>
+        <title>Player Tools - Strange Frontiers</title>
     </head>
     <body>
 
