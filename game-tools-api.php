@@ -82,4 +82,4 @@ sf_take_limits($config, gt_is_question(end($body['messages'])), array(
 	'day_message' => 'The Game Tools assistant has hit its daily limit. Try again tomorrow.',
 ), 'Game Tools');
 
-sf_forward($config, $body, GT_MAX_TOKENS, 'Game Tools');
+sf_forward($config, GT_MAX_TOKENS, 'Game Tools');

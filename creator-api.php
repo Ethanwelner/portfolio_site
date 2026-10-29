@@ -79,4 +79,4 @@ sf_take_limits($config, count($body['messages']) === 1, array(
 	'day_message' => 'The Character Creator has hit its daily limit. Try again tomorrow.',
 ), 'The Character Creator');
 
-sf_forward($config, $body, SF_MAX_TOKENS, 'The Character Creator');
+sf_forward($config, SF_MAX_TOKENS, 'The Character Creator');
