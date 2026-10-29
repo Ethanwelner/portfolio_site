@@ -1844,6 +1844,22 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    with the top of the page. */
 .creator-shell {
     position: relative;
+    /* The app fills the screen down to the footer, so a short page shows
+       the footer at the bottom of the screen instead of scrolling to it. */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    > #root {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sf-creator {
+        flex: 1;
+        min-height: 0;
+    }
 }
 
 .creator-shell :is(.logo-bug, .section-about-social-container, .section-scroll-links, .rpg-search) {
