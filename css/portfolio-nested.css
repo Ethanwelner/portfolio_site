@@ -191,7 +191,7 @@ a {
 }
 
 /* Slight chromatic aberration, after codepen.io/thorthor/pen/WxapMz: red, blue and green fringes, the green one drifting */
-.hero-advert-lead, .hero-advert-title {
+.hero-advert-title {
     text-shadow: 1.5px 1px 1px rgba(251, 12, 12, .8), 0 -.5px 1.5px rgba(12, 79, 251, .5), -1.5px 0 1px rgba(52, 251, 12, .8);
     animation: hero-advert-chromatic 4500ms ease infinite, hero-advert-flicker 200ms ease infinite;
 }
@@ -208,7 +208,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-advert-lead, .hero-advert-title { animation: none; }
+    .hero-advert-title { animation: none; }
 }
 
 .higlight-text {
