@@ -78,7 +78,7 @@
 						</a>
 
 						<a href="personal.php#strangefrontiers" class="hero-advert">
-							<span class="hero-advert-lead">Check my most recent project:</span>
+							<span class="hero-advert-lead">Check out my current project</span>
 							<span class="hero-advert-title frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</span>
 						</a>
 
