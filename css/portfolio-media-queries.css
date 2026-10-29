@@ -271,6 +271,20 @@
         height: 50px;
         width: 50px;
     }
+
+    /* Strange Frontiers advert */
+    .hero-advert {
+        left: calc(50% - 12px);
+        padding: 10px 15px;
+    }
+
+    .hero-advert-lead {
+        font-size: .875rem;
+    }
+
+    .hero-advert-title {
+        font-size: 1.5625rem;
+    }
     
     /* UX Splash */
     .ux-splash {
