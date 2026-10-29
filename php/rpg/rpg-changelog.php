@@ -7,6 +7,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/29/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>New: Game Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and items during play, level them up, and ask an assistant about the rules or tell it what just happened.</li>
+					</ul>
+				</article>
+
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/28/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Known Planes: revised Overview, History and Geography text for Paraloka, Gastown, Qliphoth and Leviathan. Saturday’s Furnace’s Compatibility is now Low, Leviathan’s population is now 0, Pairidaeza averages 36°C and Pataliputra 34°C at the gate, and The Lost World lists Timber, Minerals, Exotic Fauna and Low-Grade Exotic Materials.</li>

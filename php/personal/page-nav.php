@@ -5,7 +5,7 @@ $navTextClass = $personalNavTone === 'black' ? 'black-text' : 'white-text';
 $navBulletClass = $navTextClass;
 $navExtraClass = $personalNavExtraClass ?? '';
 $navAuto = $personalNavActive === 'auto';
-// Off personal.php (on creator.php), the pane links go to personal.php and
+// Off personal.php (on creator.php or game-tools.php), the pane links go to personal.php and
 // don't slide panes.
 $navPage = $personalNavPage ?? '';
 $navPaneClass = $navPage === '' ? 'js-personal-page' : '';
@@ -21,6 +21,11 @@ require_once __DIR__ . '/../rpg/creator-build.php';
 	<?php if (creator_build()): ?>
 	<div class="force-dark">
 		<a href="creator.php" class="frontiers-accent">CHARACTER CREATOR<?php if ($personalNavActive === 'creator'): ?> <span class="frontiers-accent nav-bullet">&#8226;</span><?php endif; ?></a>
+	</div>
+	<?php endif; ?>
+	<?php if (creator_build('src/tools/main.tsx')): ?>
+	<div class="force-dark">
+		<a href="game-tools.php" class="frontiers-accent">GAME TOOLS<?php if ($personalNavActive === 'tools'): ?> <span class="frontiers-accent nav-bullet">&#8226;</span><?php endif; ?></a>
 	</div>
 	<?php endif; ?>
 </div>

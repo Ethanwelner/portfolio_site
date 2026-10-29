@@ -1,10 +1,12 @@
-<!-- Slides between personal.php and the Character Creator (css/page-slide.css) -->
+<!-- Slides between personal.php, the Character Creator and Game Tools (css/page-slide.css) -->
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/page-slide.css'); ?>"/>
 <script>
 	(function () {
 		var root = document.documentElement;
-		var isCreator = function (url) {
-			return /\/creator\.php$/.test(new URL(url, location.href).pathname);
+		// The pages in nav order: personal.php, then the Character Creator, then Game Tools.
+		var place = function (url) {
+			var path = new URL(url, location.href).pathname;
+			return /\/creator\.php$/.test(path) ? 1 : /\/game-tools\.php$/.test(path) ? 2 : 0;
 		};
 
 		// Leaving: hide personal.php's second set of chrome before the page is captured.
@@ -20,7 +22,7 @@
 			}
 		});
 
-		// Arriving: slide only between the Character Creator and the rest, in its direction.
+		// Arriving: slide only between those pages, toward the later one in the nav.
 		window.addEventListener("pagereveal", function (event) {
 			var transition = event.viewTransition;
 			if (! transition) {
@@ -28,11 +30,11 @@
 			}
 			var activation = window.navigation && navigation.activation;
 			var from = (activation && activation.from && activation.from.url) || document.referrer;
-			if (! from || isCreator(from) === isCreator(location.href)) {
+			if (! from || place(from) === place(location.href)) {
 				transition.skipTransition();
 				return;
 			}
-			transition.types.add(isCreator(location.href) ? "slide-left" : "slide-right");
+			transition.types.add(place(location.href) > place(from) ? "slide-left" : "slide-right");
 			root.classList.add("sf-page-sliding");
 			transition.finished.finally(function () {
 				root.classList.remove("sf-page-sliding");

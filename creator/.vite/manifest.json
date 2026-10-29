@@ -1,11 +1,34 @@
 {
+  "_styles-1pv8D5v7.js": {
+    "file": "assets/styles-1pv8D5v7.js",
+    "name": "styles",
+    "css": [
+      "assets/styles-CfPCzWJL.css"
+    ]
+  },
+  "_styles-CfPCzWJL.css": {
+    "file": "assets/styles-CfPCzWJL.css",
+    "src": "_styles-CfPCzWJL.css"
+  },
   "src/app/main.tsx": {
-    "file": "assets/main-Dsrl1U0a.js",
+    "file": "assets/main-DO3SaJFn.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
+    "imports": [
+      "_styles-1pv8D5v7.js"
+    ]
+  },
+  "src/tools/main.tsx": {
+    "file": "assets/main-gGbKbl70.js",
+    "name": "main",
+    "src": "src/tools/main.tsx",
+    "isEntry": true,
+    "imports": [
+      "_styles-1pv8D5v7.js"
+    ],
     "css": [
-      "assets/main-CfPCzWJL.css"
+      "assets/main-DqeGvRMN.css"
     ]
   }
 }
