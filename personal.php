@@ -106,7 +106,7 @@
                         <div class="section-clip d-flex align-items-center justify-content-center">
                             <div class="title section-title d-inline-flex z-2">
                                 <div class="hero-statement pre-slide-in">
-                                    <h1 class="title hero-title frontiers-accent">Strange Frontiers</h1>
+                                    <h1 class="title hero-title frontiers-accent frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</h1>
                                     <h2 class="title section-title">A Custom RPG System</h2>
                                     <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
                                 </div>
