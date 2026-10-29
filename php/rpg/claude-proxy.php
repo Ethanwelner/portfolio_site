@@ -39,9 +39,28 @@ function sf_config() {
 	return array_merge($defaults, is_array($config) ? $config : array());
 }
 
-// The request body, once it's a POST from this site's own pages, the key is
-// set and the body is JSON under the size cap. $app names the app in errors,
-// like "The Character Creator".
+// The request as it came, kept for sf_forward: it goes on to Claude as JSON
+// objects, since decoded into PHP arrays an empty object ({}, like a tool
+// that takes no input) would go out as an empty list ([]) and be refused.
+function sf_raw_request($raw = null) {
+	static $kept = '';
+	if ($raw !== null) {
+		$kept = $raw;
+	}
+	return $kept;
+}
+
+// The body Claude gets: the request as sent, on Haiku within $maxTokens.
+function sf_outgoing_body($raw, $maxTokens) {
+	$body = json_decode($raw);
+	$body->model = SF_MODEL;
+	$body->max_tokens = min((int) ($body->max_tokens ?? $maxTokens), $maxTokens);
+	return json_encode($body, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// The request body, as arrays for the proxies' checks, once it's a POST from
+// this site's own pages, the key is set and the body is JSON under the size
+// cap. $app names the app in errors, like "The Character Creator".
 function sf_read_request($config, $app) {
 	if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 		sf_fail(405, 'bad-request', 'Use POST.');
@@ -57,6 +76,7 @@ function sf_read_request($config, $app) {
 	if ($raw === false || strlen($raw) > SF_MAX_BODY) {
 		sf_fail(413, 'bad-request', 'The request is too large.');
 	}
+	sf_raw_request($raw);
 	return json_decode($raw, true);
 }
 
@@ -119,18 +139,15 @@ function sf_take_limits($config, $isStart, $limits, $app) {
 	}
 }
 
-// Sends the turn to Claude on Haiku, within $maxTokens, and echoes the reply,
-// or fails with a message the visitor can read.
-function sf_forward($config, $body, $maxTokens, $app) {
-	// Whatever the browser asked for, the turn runs on Haiku within the token cap.
-	$body['model'] = SF_MODEL;
-	$body['max_tokens'] = min((int) ($body['max_tokens'] ?? $maxTokens), $maxTokens);
-
+// Sends the checked turn to Claude on Haiku, within $maxTokens, and echoes
+// the reply, or fails with a message the visitor can read.
+function sf_forward($config, $maxTokens, $app) {
 	set_time_limit(180);
 	$curl = curl_init(SF_API_URL);
 	curl_setopt_array($curl, array(
 		CURLOPT_POST => true,
-		CURLOPT_POSTFIELDS => json_encode($body),
+		// Whatever the browser asked for, the turn runs on Haiku within the token cap.
+		CURLOPT_POSTFIELDS => sf_outgoing_body(sf_raw_request(), $maxTokens),
 		CURLOPT_RETURNTRANSFER => true,
 		CURLOPT_CONNECTTIMEOUT => 10,
 		CURLOPT_TIMEOUT => 170,
