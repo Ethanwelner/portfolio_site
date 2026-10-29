@@ -14,7 +14,7 @@ const GT_MAX_TURNS = 6;
 // The earlier messages it sends along (20), plus one question's turns.
 const GT_MAX_MESSAGES = 60;
 const GT_INSTRUCTIONS_START = 'You help a player run their Strange Frontiers character at the table.';
-const GT_TOOLS = array('search_traits', 'get_trait', 'change_resource', 'add_item', 'remove_item', 'add_condition', 'remove_condition');
+const GT_TOOLS = array('search_traits', 'get_trait', 'get_state', 'change_resources', 'add_item', 'remove_item', 'add_condition', 'remove_condition');
 const GT_FIELDS = array('model', 'max_tokens', 'tools', 'system', 'messages');
 
 // A player's question is plain text; tool results come back as a list.
