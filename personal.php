@@ -107,8 +107,8 @@
                             <div class="title section-title d-inline-flex z-2">
                                 <div class="hero-statement pre-slide-in">
                                     <h1 class="title hero-title frontiers-accent frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</h1>
-                                    <h2 class="title section-title">A Custom RPG System</h2>
-                                    <h3 class="sub-title non-title">An AI Native PnP Role-Playing Game</h3>
+                                    <h2 class="title section-title">A Custom AI Native</h2>
+                                    <h3 class="sub-title non-title">PnP Role-Playing Game</h3>
                                 </div>
                             </div>
                             <div class="rpg-tabs">
