@@ -274,16 +274,16 @@
 
     /* Strange Frontiers advert */
     .hero-advert {
-        left: calc(50% + 4px);
-        padding: 8px 12px;
+        left: calc(50% - 12px);
+        padding: 10px 15px;
     }
 
     .hero-advert-lead {
-        font-size: .7rem;
+        font-size: .875rem;
     }
 
     .hero-advert-title {
-        font-size: 1.25rem;
+        font-size: 1.5625rem;
     }
     
     /* UX Splash */
