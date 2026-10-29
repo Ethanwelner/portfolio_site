@@ -167,6 +167,9 @@ a {
     flex-direction: column;
     padding: 12px 18px;
     background-color: var(--portfolio-black);
+    /* Faint scanlines, after codepen.io/thorthor/pen/WxapMz */
+    background-image: linear-gradient(transparent 50%, color-mix(in srgb, var(--portfolio-white) 6%, transparent) 50%);
+    background-size: 100% 4px;
     color: var(--portfolio-white);
     text-decoration: none;
     white-space: nowrap;
@@ -188,6 +191,27 @@ a {
 .hero-advert-title {
     font-size: 2rem;
     color: var(--frontiers-green);
+}
+
+/* Slight chromatic aberration: red, blue and green fringes, the green one drifting */
+.hero-advert-lead, .hero-advert-title {
+    text-shadow: 1.5px 1px 1px rgba(251, 12, 12, .8), 0 -.5px 1.5px rgba(12, 79, 251, .5), -1.5px 0 1px rgba(52, 251, 12, .8);
+    animation: hero-advert-chromatic 4500ms ease infinite, hero-advert-flicker 200ms ease infinite;
+}
+
+@keyframes hero-advert-chromatic {
+    0% { text-shadow: 1.5px 1px 1px rgba(251, 12, 12, .8), 0 -.5px 1.5px rgba(12, 79, 251, .5), 0 0 1px rgba(52, 251, 12, .8); }
+    50% { text-shadow: 1.5px 1px 1px rgba(251, 12, 12, .8), 0 -.5px 1.5px rgba(12, 79, 251, .5), -1.5px 1px 1.5px rgba(52, 251, 12, .8); }
+    100% { text-shadow: 1.5px 1px 1px rgba(251, 12, 12, .8), 0 -.5px 1.5px rgba(12, 79, 251, .5), 1px -.5px 1px rgba(52, 251, 12, .8); }
+}
+
+@keyframes hero-advert-flicker {
+    0%, 50%, 100% { opacity: .92; }
+    25%, 75% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-advert-lead, .hero-advert-title { animation: none; }
 }
 
 .higlight-text {
