@@ -329,7 +329,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     color: var(--frontiers-green);
 }
 
-/* Glitching hero title, after codepen.io/chasebank/pen/qZNLyx: a green glow that
+/* Glitching Strange Frontiers title (personal.php hero and the homepage advert), after codepen.io/chasebank/pen/qZNLyx: a green glow that
    flares, cyan and red slices that jump around, and the odd violent skew. */
 .frontiers-glitch {
     position: relative;
