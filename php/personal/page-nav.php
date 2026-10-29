@@ -25,7 +25,7 @@ require_once __DIR__ . '/../rpg/creator-build.php';
 	<?php endif; ?>
 	<?php if (creator_build('src/tools/main.tsx')): ?>
 	<div class="force-dark">
-		<a href="game-tools.php" class="frontiers-accent">GAME TOOLS<?php if ($personalNavActive === 'tools'): ?> <span class="frontiers-accent nav-bullet">&#8226;</span><?php endif; ?></a>
+		<a href="game-tools.php" class="frontiers-accent">PLAYER TOOLS<?php if ($personalNavActive === 'tools'): ?> <span class="frontiers-accent nav-bullet">&#8226;</span><?php endif; ?></a>
 	</div>
 	<?php endif; ?>
 </div>
