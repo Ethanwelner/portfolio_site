@@ -108,7 +108,7 @@
                                 <div class="hero-statement pre-slide-in">
                                     <h1 class="title hero-title frontiers-accent frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</h1>
                                     <h2 class="title section-title">A Custom RPG System</h2>
-                                    <h3 class="sub-title non-title">For PnP Role-Playing Games</h3>
+                                    <h3 class="sub-title non-title">An AI Native PnP Role-Playing Game</h3>
                                 </div>
                             </div>
                             <div class="rpg-tabs">
