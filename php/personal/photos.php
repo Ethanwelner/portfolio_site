@@ -4,16 +4,6 @@
 		<h3 class="sub-title mb-3" id="photos">Model Photos</h3>
 		<div class="copy stinger black mb-3">Painted miniatures</div>
 		<div class="model-photo-gallery">
-			<div class="is-hero">
-				<img loading="lazy" data-src="img/blog page stuff/guo_1.webp" alt="Great Unclean One">
-			</div>
-			<div>
-				<img loading="lazy" data-src="img/blog page stuff/guo_toesies_2.webp" alt="Great Unclean One feet">
-			</div>
-			<div>
-				<img loading="lazy" data-src="img/blog page stuff/guo_toesies_1.webp" alt="Great Unclean One feet">
-			</div>
-
 			<div>
 				<img loading="lazy" data-src="img/blog page stuff/banner_1.webp" alt="Ork with banner">
 			</div>
@@ -52,6 +42,16 @@
 			</div>
 			<div>
 				<img loading="lazy" data-src="img/blog page stuff/image_5.webp" alt="Yellow tank miniature">
+			</div>
+
+			<div class="is-hero">
+				<img loading="lazy" data-src="img/blog page stuff/guo_1.webp" alt="Great Unclean One">
+			</div>
+			<div>
+				<img loading="lazy" data-src="img/blog page stuff/guo_toesies_2.webp" alt="Great Unclean One feet">
+			</div>
+			<div>
+				<img loading="lazy" data-src="img/blog page stuff/guo_toesies_1.webp" alt="Great Unclean One feet">
 			</div>
 
 			<div>
