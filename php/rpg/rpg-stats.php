@@ -142,7 +142,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">9</div>
-							<h5>Physical</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Physical</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Endurance - 11</strong>
@@ -224,7 +227,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">2</div>
-							<h5>Social</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Social</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Empathy - 2</strong>
@@ -306,7 +312,10 @@
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
 							<div class="stat-badge">1</div>
-							<h5>Mental</h5>
+							<div class="line-container d-flex flex-fill">
+								<h5>Mental</h5>
+								<div class="line"></div>
+							</div>
 						</div>
 						<div class="tiny-text">
 							<strong>Logic - 1</strong>

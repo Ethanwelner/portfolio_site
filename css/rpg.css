@@ -1841,6 +1841,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         h5 {
             color: var(--panel-text);
         }
+
+        .line-container h5 {
+            background-color: var(--panel);
+        }
     }
 
     .c-sheet {
