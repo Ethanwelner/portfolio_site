@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/items.php'; ?>
 <div class="breakout shadow-diffuse black-bg white-text">
 <?php $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
 <div class="separator"></div>
@@ -182,7 +183,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Weapons are a special form of equipment meant to cause damage or harm. Not every item capable of doing damage is a weapon, but most weapons exist specifically for that purpose. Weapons will convey abilities related to their use but often have a related trait or skill requirement to be used effectively. Anyone can pull a trigger, but hitting a target is a different matter. Weapons are often relatively complex forms of equipment and will need care, maintenance, or correct setup to be used correctly. Sometimes a weapon will need to be paired with another form of equipment, such as a bow requiring an arrow, but just as often they will not. Most weapons will be considered exclusive, though traits or GM discretion may allow for multiple weapons to be used simultaneously.
+								Weapons are a special form of equipment meant to cause damage or harm. Not every item capable of doing damage is a weapon, but most weapons exist specifically for that purpose. Weapons will convey abilities related to their use. Anyone can use any weapon, but a character without a related Trait, such as a Wielder skill, takes a penalty for unfamiliarity. Anyone can pull a trigger, but hitting a target is a different matter. Weapons are often relatively complex forms of equipment and will need care, maintenance, or correct setup to be used correctly. Sometimes a weapon will need to be paired with another form of equipment, such as a bow requiring an arrow, but just as often they will not. Most weapons will be considered exclusive, though traits or GM discretion may allow for multiple weapons to be used simultaneously.
 							</p>
 						</div>
 						<div class="content-stack content-stack-xs">
@@ -202,7 +203,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Vehicles are a special form of item that is used to move or protect characters. Like weapons, vehicles will often have a related skill requirement for their use. Unlike weapons, vehicles are not equipped; rather, characters (or other things) will occupy a vehicle like they do structures. Vehicles will always list a maximum number or nature of occupants (though in some instances that value will be listed as a “-”, similar to structures). In these instances the maximum occupancy is at the GM's discretion.
+								Vehicles are a special form of item that is used to move or protect characters. Like weapons, vehicles can be used by anyone, but a character without a related Trait, such as a Pilot skill, takes a penalty for unfamiliarity. Unlike weapons, vehicles are not equipped; rather, characters (or other things) will occupy a vehicle like they do structures. Vehicles will always list a maximum number or nature of occupants (though in some instances that value will be listed as a “-”, similar to structures). In these instances the maximum occupancy is at the GM's discretion.
 								<br><br>
 								A vehicle is typically ridden/piloted/driven by one or more characters, though sometimes the vehicles will either control themselves or be at the mercy of other forces (ex. A boat adrift in the tide or a runaway train). Vehicles are a relatively wide category of item that can encompass animals or structures and will typically have a list of their properties in their description.
 								<br><br>
@@ -235,6 +236,20 @@
 								Misc. items are items that do not neatly fall into another category or which are unimportant or generic objects that could have a multitude of uses. A brick would be a misc item; it could be thrown as a weapon or used to build a structure, but by itself it's just a… brick. Most items in an environment can be considered miscellaneous.
 							</p>
 						</div>
+					</div>
+					<div class="content-stack content-stack-sm">
+						<h3>Example Items</h3>
+<?php foreach (sf_example_items() as $group => $items): ?>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong><?= $group ?></strong></h5>
+								<div class="line"></div>
+							</div>
+							<div class="d-flex flex-wrap flex-gap-12">
+<?php foreach ($items as $item) { sf_equipment_card(...$item); } ?>
+							</div>
+						</div>
+<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
