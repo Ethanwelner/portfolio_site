@@ -137,7 +137,7 @@
 				</div>
 			</div>
 				<!-- stat grid -->
-				<div class="d-inline-flex flex-6 flex-gap-48 flex-column">
+				<div class="d-inline-flex flex-6 flex-gap-48 flex-column stat-panel">
 					<!-- physical stats -->
 					<div class="d-flex flex-column flex-gap-12">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
