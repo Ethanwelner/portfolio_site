@@ -88,7 +88,7 @@
 								The century of the <?php echo sf_lore_link('exodus', 'Exodus'); ?> has seen over a billion take to the stars, and that trend is only accelerating. Colonies dot the surfaces of Luna, Mars, and almost every other moon and oversized hunk of dirt or ice within reach. Hundreds of disparate stations hang between the planets, cities in their own right. Vagrant flotillas drift along the Aether, going where the winds take them. All the while, close to a million ships dart between ports.
 							</p>
 							<p class="copy">
-								Humanity wasn’t content with just the Sol System. Over three dozen star systems have populations of at least 1 million, with countless others featuring nascent human development, if not yet full colonial settlement. The race to plant a flag on every unclaimed rock in the galaxy pushes frontier explorers to burn their engines and risk it all to survey new systems and stake their claim.
+								Humanity wasn’t content with just the Sol System. Nearly a dozen star systems have populations of at least 1 million, with countless others featuring nascent human development, if not yet full colonial settlement. The race to plant a flag on every unclaimed rock in the galaxy pushes frontier explorers to burn their engines and risk it all to survey new systems and stake their claim.
 							</p>
 							<p class="copy">
 								Lumbering between the floating sparks of human life, fleets of dark, windowless warships patrol nebulously defined territories. The largest displace millions of tons and travel amid swarms of support craft. These powerful vessels enforce the territories of stellar nations. Though war has been rare this past century, and war between great powers rarer still, these ships bear the scars of many a disputed claim.
@@ -298,15 +298,6 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2060 – 2118</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li>Partial technological singularity leading to the “<?php echo sf_lore_link('end-of-science', 'End of Science'); ?>.”</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
 							<h6><strong>2061</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -322,6 +313,15 @@
 						</div>
 						<ul class="copy">
 							<li>Lieutenant General Zorawar Singh Rathore overthrows <?php echo sf_lore_link('kingdom-of-india', 'India'); ?>’s ruling party in a military coup and names himself president.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2070 – 2120</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Partial technological singularity leading to the “<?php echo sf_lore_link('end-of-science', 'End of Science'); ?>.”</li>
 						</ul>
 					</div>
 					<div>
@@ -422,7 +422,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>“<?php echo sf_lore_link('the-gift', 'The Gift'); ?>” is matter-swapped by an unknown intraplanar civilization onto the surface of the moon.</li>
+							<li>“<?php echo sf_lore_link('the-gift', 'The Gift'); ?>” is matter-swapped by an unknown intraplanar civilization onto the surface of the Moon.</li>
 						</ul>
 					</div>
 					<div>
@@ -450,6 +450,15 @@
 						</div>
 						<ul class="copy">
 							<li>First tests of a “<?php echo sf_lore_link('switch-gates', 'switch gate'); ?>” are made targeting 1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>,” the plane described by “The Gift.” This first gate is constructed using exotic materials contained in “The Gift.”</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2116 – Present day</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Interdimensional colonization begins.</li>
 						</ul>
 					</div>
 					<div>
@@ -563,15 +572,6 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2146</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li>First tests of <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?>.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
 							<h6><strong>2154</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -595,6 +595,7 @@
 						</div>
 						<ul class="copy">
 							<li>419/f/05 - “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
+							<li>First experimental <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz field generators'); ?> are tested.</li>
 						</ul>
 					</div>
 					<div>
@@ -608,29 +609,11 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2163</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li>First colonization of an interstellar system with New Canaan, a research station orbiting Alpha Centauri.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
 							<h6><strong>2165</strong></h6>
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
 							<li>Construction of <?php echo sf_lore_link('tetra', 'Tetra'); ?> begins.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
-							<h6><strong>2170 – Present day</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li><?php echo sf_lore_link('first-interstellar-expansion', 'First interstellar expansion'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -666,7 +649,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li><?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch-gate catastrophe'); ?>.</li>
+							<li><?php echo sf_lore_link('first-switch-gate-catastrophe', 'The first switch gate catastrophe'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -698,11 +681,20 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2190</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>First colonization of an interstellar system with New Canaan, a research station orbiting Alpha Centauri.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2190 – Present day</strong></h6>
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>Interdimensional colonization begins.</li>
+							<li><?php echo sf_lore_link('first-interstellar-expansion', 'First interstellar expansion'); ?>.</li>
 						</ul>
 					</div>
 					<div>

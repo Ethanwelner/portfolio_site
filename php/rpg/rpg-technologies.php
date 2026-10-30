@@ -17,22 +17,22 @@
 				<div class="intro-with-image">
 					<div class="single-column-content">
 						<p class="copy">
-							<?php echo sf_lore_link('end-of-science', 'The End of Science'); ?> wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover on this blue marble, and the bleeding edge was finally out of reach.
+							<?php echo sf_lore_link('end-of-science', 'The End of Science'); ?> wasn’t a wall. Science didn’t splat on the windshield of what’s possible. It was a slow, grinding, depressing realization that investments weren’t paying off, and that new discoveries were coming slower and smaller. Humanity had discovered everything there was to discover within its grasp, and the bleeding edge was finally out of reach.
 						</p>
 						<p class="copy">
-							There were, of course, proposals. Supercolliders that would ring the Earth, space elevators, generation ships to distant stars. But without the required undiscovered materials, the engineering never worked, and besides, who would pay for that? What would even be the point?
+							There were, of course, proposals. Supercolliders that would ring the Earth, space elevators, generation ships to distant stars. But without the theoretical materials the designs demanded, which, as far as anyone could tell, simply didn’t exist, the engineering never worked, and besides, who would pay for that? What would even be the point?
 						</p>
 						<p class="copy">
-							It took decades to even have a name, but its effect was widespread. Industries that relied on a steady drumbeat of advancement pivoted from technological to financial engineering, markets consolidated, and the sense that the future would always bring new prosperity faded. Interest in the sciences plummeted, replaced by the ennui of a society that could see its end coming and was either unwilling or unable to do anything about it.
+							It took decades to even have a name, but its effects were everywhere. Industries that relied on a steady drumbeat of advancement pivoted from technological to financial engineering, markets consolidated, and the sense that the future would always bring new prosperity faded. Interest in the sciences plummeted, replaced by the ennui of a society that could see its end coming and was either unwilling or unable to do anything about it.
 						</p>
 						<p class="copy">
-							In the midst of a slow-rolling ecological collapse brought on by unconstrained industrialization, and of the pervasive change in society brought on by the mass deployment of AI systems, this collapse of optimism was profound. Wealth inequality brought crime and destabilized societies as capitalism calcified into techno-feudalism.
+							Coming atop a slow-rolling ecological collapse driven by unconstrained industrialization, and the upheaval wrought by the mass deployment of AI systems, this loss of optimism was profound. Wealth inequality brought crime and destabilized societies as capitalism calcified into techno-feudalism.
 						</p>
 						<p class="copy">
-							Then, <?php echo sf_lore_link('the-gift', 'The Gift'); ?> appeared on the moon.
+							Then <?php echo sf_lore_link('the-gift', 'The Gift'); ?> appeared on the Moon.
 						</p>
 						<p class="copy mb-0">
-							The Gift was more than just an instruction manual in the form of a temple; it was the solution to The End of Science. Paraphysics introduced theories to skirt the fundamental limits of nature, and exotic materials provided the tangible bricks upon which this new era would be built. In the decades since The Gift, interest in the sciences has exploded. New discoveries are made every day, and the old problems that had stymied progress finally have solutions.
+							The Gift was more than just an instruction manual in the form of a temple; it was the solution to The End of Science. Paraphysics introduced theories to skirt the fundamental limits of nature, and exotic materials provided the tangible bricks from which this new era would be built. In the century since The Gift, interest in the sciences has exploded. New discoveries are made every day, and the old problems that had stymied progress finally have solutions.
 						</p>
 					</div>
 					<div class="image-placeholder" aria-hidden="true">Image</div>
@@ -206,7 +206,7 @@
 										Thus began a five-decade cycle of investment, innovation, and further investment. Not at the suicidal pace of its first decade, but sustained. Like a cuckoo in a nest, AI, alongside advances in robotics, claimed entire industries. National GDP figures were always up, but the wealth of those nations’ citizens fell. <?php echo sf_lore_link('drone-wars', 'The Drone Wars'); ?>, the immigration crises spurred by the 0.2 Kiloyear Event, and simple greed created a world of poverty policed by faraway alien minds at the behest of an ever-shrinking cadre of aristocrat families and gilded estates—or increasingly, at the behest of no one at all.
 									</p>
 									<p class="copy">
-										This period, labeled by historians as the Long Malaise, saw humanity’s first real forays into the colonization of the Sol System. A permanent lunar colony was established in 2031, followed by Kashgar Station in 2052 and the first Martian colonial effort in 2061. These were places that AI, rooted as it was to the server-towns of Earth, couldn’t reach. A new, self-contained and autonomous AI was needed in these far-flung places. Already in existence on the frontlines of military deployment, the bottoms of mines, or laboring in the deep ocean, AI Cores were an old concept. An isolated digital mind capable of basic decision making and hardened against the elements and foreign intrusion, these would be the basis for humanity’s expansion into the stars.
+										This period, labeled by historians as the Long Malaise, saw humanity’s first real forays into the colonization of the Sol System. A permanent lunar colony was established in 2034, followed by Kashgar Station in 2052 and the first Martian colonial effort in 2061. These were places that AI, rooted as it was to the server-towns of Earth, couldn’t reach. A new, self-contained and autonomous AI was needed in these far-flung places. Already in existence on the frontlines of military deployment, the bottoms of mines, or laboring in the deep ocean, AI Cores were an old concept. An isolated digital mind capable of basic decision making and hardened against the elements and foreign intrusion, these would be the basis for humanity’s expansion into the stars.
 									</p>
 									<p class="copy">
 										Traditional AI systems aren’t minds, even in their much more advanced form of the Malaise era. They’re more akin to slices of brains, sculpted in steel. They can focus inputs into outputs at bewildering speeds, but they can’t change, rooted as they are in hard-coded models that took years to train and refine. What was needed in space were systems that could retrain their models on an ad-hoc basis, truly learning from experience in a way that the models on Earth could not. It took years of effort, but the AI Cores used on Kashgar Station—the direct ancestors of the AI Cores seen to this day—were debuted in 2047.

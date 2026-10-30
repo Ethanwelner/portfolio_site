@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Rebirth of Science: the introduction, Switch Gates, Lorentz Field Generators and Aether Sails text is revised. Interstellar travel is now a recent frontier: the first experimental Lorentz field generators are tested in 2160, and New Canaan, the first interstellar colony, is founded by the first Ark in 2190, beginning interstellar expansion. Interdimensional colonization begins in 2116, and the End of Science runs from 2070 to 2120. Nearly a dozen star systems now have populations of at least 1 million, and Leviathan’s prototype water gate was installed on a research station in the outer Sol System. The timeline is updated to match.</li>
 						<li>Parabiology: the subtitle is now “Life Among the Planes,” the introduction text is revised, and the Isek, Tatot and Guwain entries replace “coming soon” with notes on their lives and societies.</li>
 						<li>“Lodge” is capitalized wherever it means the Explorers’ Lodge.</li>
 						<li>Mechanics: the placeholder subtitles are replaced: Explaining Stats is “Core and Focus,” Explaining Traits “Who and What a Character Is,” Skill Checks “Rolls, Modifiers, and Outcomes,” Items, Armor, and Effects “Outfitting a Character,” and the Sample Character Sheet “Putting It All Together.”</li>
