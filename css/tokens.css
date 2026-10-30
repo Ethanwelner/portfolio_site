@@ -22,4 +22,10 @@
     /* #884ddc is 3.18:1 on #212121; this lighter purple clears 4.5:1. */
     --frontiers-lore-on-black: #a67bf0;
     --frontiers-dreft: #1c372b;
+    /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
+       SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
+    --frontiers-hp: #e2574c;
+    --frontiers-vp: #9b7bff;
+    --frontiers-sp: #f2c94c;
+    --frontiers-mp: #4aa8ff;
 }
