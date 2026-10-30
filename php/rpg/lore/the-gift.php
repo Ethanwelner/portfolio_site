@@ -5,5 +5,5 @@
 	Then, in a flash of strange light, everything changed.
 </p>
 <p class="copy">
-	At the center of the Aitken Basin on the far side of the moon, a structure had appeared where there was nothing before. A simple structure of 15 columns below a broad, domed roof, with a base of the same material. At its center, perfectly placed between the 15 columns, was a lone pillar the height and breadth of a man. The structure was basaltic in appearance, with a dull black surface, almost ordinary except for the headaches that would inevitably strike anyone who looked at it for too long.
+	At the center of the Aitken Basin on the far side of the Moon, a structure had appeared where there was nothing before. A simple structure of 15 columns below a broad, domed roof, with a base of the same material. At its center, perfectly placed between the 15 columns, was a lone pillar the height and breadth of a man. The structure was basaltic in appearance, with a dull black surface, almost ordinary except for the headaches that would inevitably strike anyone who looked at it for too long.
 </p>
