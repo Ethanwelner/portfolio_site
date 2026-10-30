@@ -94,7 +94,7 @@ strong .mechanic-text {
 }
 
 /* Equipment cards, php/rpg/items.php (Example Items on rpg-items.php): the item
-   counterpart to .trait-box, with the item's value in coins at the bottom right */
+   counterpart to .trait-box, with the item's value in a coin at the bottom right */
 .equipment-box {
     padding: 0 1rem 1rem 1rem;
     color: var(--portfolio-black);
@@ -123,14 +123,9 @@ strong .mechanic-text {
         color: var(--portfolio-gray);
     }
 
-    .equipment-values {
-        display: flex;
-        gap: 0.5rem;
-        justify-content: flex-end;
-        margin-top: auto;
-    }
-
     .equipment-value {
+        align-self: flex-end;
+        margin-top: auto;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
