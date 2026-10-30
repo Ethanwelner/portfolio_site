@@ -1657,6 +1657,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* HP, VP, SP and MP in their colors, as in Player Tools (tokens.css). */
+.resource-hp { color: var(--frontiers-hp); }
+.resource-vp { color: var(--frontiers-vp); }
+.resource-sp { color: var(--frontiers-sp); }
+.resource-mp { color: var(--frontiers-mp); }
+
 /* Knowledge and Language icons on the sample sheet (rpg-character), standing in
    for their labels: a graduation cap or speech bubbles, in the text color. */
 .sheet-type-icon {
