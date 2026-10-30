@@ -1793,8 +1793,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             background-color: var(--panel-rule);
         }
 
-        .stat-badge,
-        .level-badge {
+        .stat-badge {
             background-color: var(--portfolio-near-white);
             color: var(--portfolio-black);
         }
@@ -1859,6 +1858,96 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         a {
             color: var(--frontiers-lore-on-black);
         }
+
+        /* The level as the creator's sheet shows it: a tiny "Level" over
+           the number on a black blob that slowly morphs and turns while its
+           purple glow pulses (.level-blob in the creator's styles). It's a
+           pseudo-element so the number stays upright. */
+        .level-badge {
+            isolation: isolate;
+            z-index: 1;
+            flex-direction: column;
+            width: 72px;
+            height: 72px;
+            padding: 0;
+            border-radius: 0;
+            background: none;
+            color: var(--panel-text);
+            line-height: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                background-color: var(--portfolio-black);
+                box-shadow: 0 0 5px 0 var(--frontiers-lore-on-black);
+                animation:
+                    level-blob-morph 8s ease-in-out infinite,
+                    level-blob-spin 20s linear infinite,
+                    level-blob-glow 3s ease-in-out infinite alternate;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+
+        .level-badge-label {
+            font-size: .625rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .level-badge-number {
+            font-size: 2.25rem;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .level-badge {
+                /* Further out than the creator's -24px/-8px, clear of the name */
+                top: -28px;
+                left: -18px;
+                width: 56px;
+                height: 56px;
+            }
+
+            .level-badge-label {
+                font-size: .5rem;
+            }
+
+            .level-badge-number {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+@keyframes level-blob-morph {
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+@keyframes level-blob-spin {
+    to {
+        rotate: 1turn;
+    }
+}
+
+/* #a67bf0 (--frontiers-lore-on-black), from a faint 5px glow to a bright 16px */
+@keyframes level-blob-glow {
+    from {
+        box-shadow: 0 0 5px 0 rgb(166 123 240 / 45%);
+    }
+    to {
+        box-shadow: 0 0 16px 0 rgb(166 123 240 / 100%);
     }
 }
 

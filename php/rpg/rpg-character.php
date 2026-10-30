@@ -134,7 +134,7 @@
 	<div class="flex-14">
 <div class="d-flex flex-column c-sheet flex-gap-24 flex-fill">
 	<div class="position-absolute">
-		<div class="level-badge">5</div>
+		<div class="level-badge" aria-label="Level 5"><span class="level-badge-label">Level</span><span class="level-badge-number">5</span></div>
 	</div>
 	<div class="d-flex flex-18 flex-gap-48 row-gap-12 flex-fill c-sheet-box flex-wrap flex-md-nowrap">
 		<div class="flex-grow-1 d-flex flex-row flex-gap-24 flex-fill">
