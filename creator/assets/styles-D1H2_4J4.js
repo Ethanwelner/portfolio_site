@@ -60,3798 +60,3798 @@ Error generating stack: `+e.message+`
 
       `)}return o.write(`payload.value = newResult;`),o.write(`return payload;`),o.compile()},o,s=ne,c=!Ye.jitless,l=c&&re.value,u=t.catchall,d;e._zod.parse=(i,f)=>{d??=r.value;let p=i.value;return s(p)?c&&l&&f?.async===!1&&f.jitless!==!0?(o||=a(t.shape),i=o(i,f),u?Tr([],p,i,f,d,e,f?.abortEarly===!0):i):n(i,f):(i.issues.push({expected:`object`,code:`invalid_type`,input:p,inst:e}),i)}});function Or(e,t,n,r){for(let n of e)if(n.issues.length===0)return t.value=n.value,t;let i=e.filter(e=>!Se(e));return i.length===1?(t.value=i[0].value,i[0]):(t.issues.push({code:`invalid_union`,input:t.value,inst:n,errors:e.map(e=>e.issues.map(e=>Ee(e,r,Xe())))}),t)}var kr=j(`$ZodUnion`,(e,t)=>{wn.init(e,t),A(e,`optin`,e=>e.def.options.some(e=>e._zod.optin===`defaulted`)?`defaulted`:e.def.options.some(e=>e._zod.optin!==void 0)?`optional`:void 0),A(e,`optout`,e=>e.def.options.some(e=>e._zod.optout===`optional`)?`optional`:void 0),A(e,`values`,e=>{if(e.def.options.every(e=>e._zod.values))return new Set(e.def.options.flatMap(e=>Array.from(e._zod.values)))}),A(e,`pattern`,e=>{if(e.def.options.every(e=>e._zod.pattern)){let t=e.def.options.map(e=>e._zod.pattern);return RegExp(`^(${t.map(e=>h(e.source)).join(`|`)})$`)}});let n=t.options.length===1?t.options[0]._zod.run:null;e._zod.parse=(r,i)=>{if(n)return n(r,i);let a=!1,o=[];for(let e of t.options){let t=e._zod.run({value:r.value,issues:[]},i);if(t instanceof Promise)o.push(t),a=!0;else{if(t.issues.length===0)return t;o.push(t)}}return a?Promise.all(o).then(t=>Or(t,r,e,i)):Or(o,r,e,i)}}),Ar=j(`$ZodIntersection`,(e,t)=>{wn.init(e,t),e._zod.parse=(e,n)=>{let r=e.value,i=t.left._zod.run({value:r,issues:[]},n),a=t.right._zod.run({value:r,issues:[]},n);return i instanceof Promise||a instanceof Promise?Promise.all([i,a]).then(([t,n])=>Mr(e,t,n)):Mr(e,i,a)}});function jr(e,t){if(e===t||e instanceof Date&&t instanceof Date&&+e==+t)return{valid:!0,data:e};if(ie(e)&&ie(t)){let n=Object.keys(t),r=Object.keys(e).filter(e=>n.indexOf(e)!==-1),i={...e,...t};Object.prototype.hasOwnProperty.call(i,`__proto__`)&&delete i.__proto__;for(let n of r){if(n===`__proto__`)continue;let r=jr(e[n],t[n]);if(!r.valid)return{valid:!1,mergeErrorPath:[n,...r.mergeErrorPath]};i[n]=r.data}return{valid:!0,data:i}}if(Array.isArray(e)&&Array.isArray(t)){if(e.length!==t.length)return{valid:!1,mergeErrorPath:[]};let n=[];for(let r=0;r<e.length;r++){let i=e[r],a=t[r],o=jr(i,a);if(!o.valid)return{valid:!1,mergeErrorPath:[r,...o.mergeErrorPath]};n.push(o.data)}return{valid:!0,data:n}}return{valid:!1,mergeErrorPath:[]}}function Mr(e,t,n){let r=new Map,i,a=new Map,o=(e,t)=>{let n;if(e.code===`unrecognized_keys`&&!e.path?.length)i??=e,n=e.keys;else if(e.code===`invalid_key`&&e.origin===`record`&&e.path?.length===1){let t=String(e.path[0]);a.has(t)||a.set(t,e),n=[t]}else return!1;for(let e of n)r.has(e)||r.set(e,{}),r.get(e)[t]=!0;return!0};for(let n of t.issues)o(n,`l`)||e.issues.push(n);for(let t of n.issues)o(t,`r`)||e.issues.push(t);let s=[...r].filter(([,e])=>e.l&&e.r).map(([e])=>e);if(s.length){let t=i?s.filter(e=>i.keys.includes(e)):[];t.length&&e.issues.push({...i,keys:t});for(let n of s)!t.includes(n)&&a.has(n)&&e.issues.push(a.get(n))}let c=jr(t.value,n.value);if(!c.valid){if(Se(e))return e;throw Error(`Unmergable intersection. Error path: ${JSON.stringify(c.mergeErrorPath)}`)}return e.value=c.data,e}var Nr=j(`$ZodRecord`,(e,t)=>{wn.init(e,t);let n=Ye.memoizer;n?.attach(e),e._zod.parse=(r,i)=>{let a=r.value;if(!ie(a))return r.issues.push({expected:`record`,code:`invalid_type`,input:a,inst:e}),r;let o=[],s=t.keyType._zod.values;if(s&&!t.partial){r.value=n?n.alloc(e,r,{},i):{};let c=new Set;for(let n of s)if(typeof n==`string`||typeof n==`number`||typeof n==`symbol`){if(c.add(typeof n==`number`?n.toString():n),n===`__proto__`)continue;let s=t.keyType._zod.run({value:n,issues:[]},i);if(s instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);if(s.issues.length){r.issues.push({code:`invalid_key`,origin:`record`,issues:s.issues.map(e=>Ee(e,i,Xe())),input:n,path:[n],inst:e});continue}let l=s.value;if(l===`__proto__`)continue;let u=t.valueType._zod.run({value:a[n],issues:[]},i);u instanceof Promise?o.push(u.then(e=>{e.issues.length&&r.issues.push(...D(n,e.issues)),r.value[l]=e.value})):(u.issues.length&&r.issues.push(...D(n,u.issues)),r.value[l]=u.value)}let l;for(let e in a)if(!c.has(e)){if(t.mode===`loose`){if(e===`__proto__`)continue;r.value[e]=a[e]}else l??=[],l.push(e)}l&&l.length>0&&r.issues.push({code:`unrecognized_keys`,input:a,inst:e,keys:l,continue:!0})}else{r.value=n?n.alloc(e,r,{},i):{};let c;for(let n of Reflect.ownKeys(a)){if(n===`__proto__`||!Object.prototype.propertyIsEnumerable.call(a,n))continue;let l=t.keyType._zod.run({value:n,issues:[]},i);if(l instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);if(typeof n==`string`&&$t.test(n)&&l.issues.length){let e=t.keyType._zod.run({value:Number(n),issues:[]},i);if(e instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);e.issues.length===0&&(l=e)}if(l.issues.length){t.mode===`loose`?r.value[n]=a[n]:s?(c??=[],c.push(n)):r.issues.push({code:`invalid_key`,origin:`record`,issues:l.issues.map(e=>Ee(e,i,Xe())),input:n,path:[n],inst:e});continue}let u=l.value;if(u===`__proto__`)continue;let d=t.valueType._zod.run({value:a[n],issues:[]},i);d instanceof Promise?o.push(d.then(e=>{e.issues.length&&r.issues.push(...D(n,e.issues)),r.value[u]=e.value})):(d.issues.length&&r.issues.push(...D(n,d.issues)),r.value[u]=d.value)}c&&c.length>0&&r.issues.push({code:`unrecognized_keys`,input:a,inst:e,keys:c,continue:!0})}return o.length?Promise.all(o).then(()=>r):r}}),Pr=j(`$ZodEnum`,(e,t)=>{wn.init(e,t);let n=l(t.entries),r=new Set(n);e._zod.values=r,A(e,`pattern`,e=>{let t=l(e.def.entries).filter(e=>oe.has(typeof e));return RegExp(t.length?`^(${t.map(e=>se(e.toString())).join(`|`)})$`:`^[^\\s\\S]$`)}),e._zod.parse=(t,i)=>{let a=t.value;return r.has(a)||t.issues.push({code:`invalid_value`,values:n,input:a,inst:e}),t}}),Fr=j(`$ZodTransform`,(e,t)=>{wn.init(e,t),e._zod.optin=`optional`,Ye.memoizer?.guard(e),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new Je(e.constructor.name);let i=t.transform(n.value,n);if(r.async)return(i instanceof Promise?i:Promise.resolve(i)).then(e=>(n.value=e,n));if(i instanceof Promise)throw new qe;return n.value=i,n}});function Ir(e,t){return e.value=t.issues.length?void 0:t.value,e}var Lr=j(`$ZodOptional`,(e,t)=>{wn.init(e,t),A(e,`optin`,e=>e.def.innerType._zod.optin===`defaulted`?`defaulted`:`optional`),e._zod.optout=`optional`,A(e,`values`,e=>{let t=e.def.innerType._zod.values;return t?new Set([...t,void 0]):void 0}),A(e,`pattern`,e=>{let t=e.def.innerType._zod.pattern;return t?RegExp(`^(${h(t.source)})?$`):void 0}),e._zod.parse=(e,n)=>{if(e.value===void 0){if(t.innerType._zod.optin!==`defaulted`)return e;let r=t.innerType._zod.run({value:e.value,issues:[]},n);return r instanceof Promise?r.then(t=>Ir(e,t)):Ir(e,r)}return t.innerType._zod.run(e,n)}}),Rr=j(`$ZodExactOptional`,(e,t)=>{Lr.init(e,t),A(e,`values`,e=>e.def.innerType._zod.values),A(e,`pattern`,e=>e.def.innerType._zod.pattern),e._zod.parse=(e,n)=>t.innerType._zod.run(e,n)}),zr=j(`$ZodNullable`,(e,t)=>{wn.init(e,t),A(e,`optin`,e=>e.def.innerType._zod.optin),A(e,`optout`,e=>e.def.innerType._zod.optout),A(e,`pattern`,e=>{let t=e.def.innerType._zod.pattern;return t?RegExp(`^(${h(t.source)}|null)$`):void 0}),A(e,`values`,e=>e.def.innerType._zod.values?new Set([...e.def.innerType._zod.values,null]):void 0),e._zod.parse=(e,n)=>e.value===null?e:t.innerType._zod.run(e,n)}),Br=j(`$ZodDefault`,(e,t)=>{wn.init(e,t),e._zod.optin=`defaulted`,A(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);if(e.value===void 0)return e.value=t.defaultValue,e;let r=t.innerType._zod.run(e,n);return r instanceof Promise?r.then(e=>Vr(e,t)):Vr(r,t)}});function Vr(e,t){return e.value===void 0&&(e.value=t.defaultValue),e}var Hr=j(`$ZodPrefault`,(e,t)=>{wn.init(e,t),e._zod.optin=`defaulted`,A(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>(n.direction===`backward`||e.value===void 0&&(e.value=t.defaultValue),t.innerType._zod.run(e,n))}),Ur=j(`$ZodNonOptional`,(e,t)=>{wn.init(e,t),A(e,`values`,e=>{let t=e.def.innerType._zod.values;return t?new Set([...t].filter(e=>e!==void 0)):void 0}),e._zod.parse=(n,r)=>{let i=t.innerType._zod.run(n,r);return i instanceof Promise?i.then(t=>Wr(t,e)):Wr(i,e)}});function Wr(e,t){return!e.issues.length&&e.value===void 0&&e.issues.push({code:`invalid_type`,expected:`nonoptional`,input:e.value,inst:t}),e}function Gr(e,t,n,r){return t.issues.length?(e.value=n.catchValue({...t,value:e.value,error:{issues:t.issues.map(e=>Ee(e,r,Xe()))},input:e.value}),e):(e.value=t.value,t.memo&&(e.memo=!0),e)}var Kr=j(`$ZodCatch`,(e,t)=>{wn.init(e,t),A(e,`optin`,e=>e.def.innerType._zod.optin===`defaulted`?`defaulted`:`optional`),A(e,`optout`,e=>e.def.innerType._zod.optout),A(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);let r=t.innerType._zod.run({value:e.value,issues:[]},n);return r instanceof Promise?r.then(r=>Gr(e,r,t,n)):Gr(e,r,t,n)}}),qr=j(`$ZodPipe`,(e,t)=>{wn.init(e,t),A(e,`values`,e=>e.def.in._zod.values),A(e,`optin`,e=>e.def.in._zod.optin),A(e,`optout`,e=>e.def.out._zod.optout),A(e,`propValues`,e=>e.def.in._zod.propValues),e._zod.parse=(e,n)=>{if(n.direction===`backward`){let r=t.out._zod.run(e,n);return r instanceof Promise?r.then(e=>Jr(e,t.in,n)):Jr(r,t.in,n)}let r=t.in._zod.run(e,n);return r instanceof Promise?r.then(e=>Jr(e,t.out,n)):Jr(r,t.out,n)}});function Jr(e,t,n){return e.issues.some(e=>e.code!==`unrecognized_keys`)?(e.aborted=!0,e):t._zod.run({value:e.value,issues:e.issues},n)}var Yr=j(`$ZodReadonly`,(e,t)=>{wn.init(e,t),A(e,`propValues`,e=>e.def.innerType._zod.propValues),A(e,`values`,e=>e.def.innerType._zod.values),A(e,`optin`,e=>e.def.innerType?._zod?.optin),A(e,`optout`,e=>e.def.innerType?._zod?.optout),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);let r=t.innerType._zod.run(e,n);return r instanceof Promise?r.then(Xr):Xr(r)}});function Xr(e){return e.memo||(e.value=Object.freeze(e.value)),e}var Zr=j(`$ZodCustom`,(e,t)=>{rn.init(e,t),wn.init(e,t),e._zod.parse=(e,t)=>e,e._zod.check=n=>{let r=n.value,i=t.fn(r);if(i instanceof Promise)return i.then(t=>Qr(t,n,r,e));Qr(i,n,r,e)}});function Qr(e,t,n,r){if(!e){let e={code:`custom`,input:n,inst:r,path:[...r._zod.def.path??[]],continue:!r._zod.def.abort};r._zod.def.params&&(e.params=r._zod.def.params),t.issues.push(Ae(e))}}var $r=class extends Error{constructor(){super(`Cannot parse a reference cycle that closes through a transform`),this.name=`ZodCyclicError`}},ei=`~memo`,ti=[];function ni(e){return typeof e==`object`&&!!e}function ri(e){return e.map(e=>e.path?{...e,path:e.path.slice()}:{...e})}var ii=new WeakMap,ai=0,oi=1,si=2;function ci(e,t,n){let r=ii.get(e);if(r!==void 0)return r?si:ai;if(t.has(e))return si;t.add(e);let i=ai,a=e=>{if(i!==si&&e?._zod){let r=ci(e,t,n);r>i&&(i=r)}},o=(e,r)=>{let i=ai;for(let a of Reflect.ownKeys(e)){let o=Object.getOwnPropertyDescriptor(e,a);if(r&&!o.enumerable)continue;let s=o.get?oi:o.value?._zod?ci(o.value,t,n):ai;s>i&&(i=s)}return i},s=e=>{e>i&&(i=e)},c=e._zod.def;switch(c.type){case`object`:{let e=v(c);s(e?o(e,!0):oi),a(c.catchall);break}case`array`:a(c.element);break;case`tuple`:for(let e of c.items)a(e);a(c.rest);break;case`record`:case`map`:a(c.keyType),a(c.valueType);break;case`set`:a(c.valueType);break;case`union`:for(let e of c.options)a(e);break;case`intersection`:a(c.left),a(c.right);break;case`optional`:case`nullable`:case`default`:case`prefault`:case`catch`:case`readonly`:case`nonoptional`:case`promise`:case`success`:a(c.innerType);break;case`pipe`:a(c.in),a(c.out);break;case`function`:a(c.input),a(c.output);break;case`lazy`:{let r=c._cachedInner??(n?e._zod.innerType:void 0);s(r?ci(r,t,!1):oi);break}case`template_literal`:case`string`:case`number`:case`int`:case`boolean`:case`bigint`:case`symbol`:case`undefined`:case`null`:case`void`:case`never`:case`any`:case`unknown`:case`date`:case`nan`:case`enum`:case`literal`:case`file`:case`transform`:case`custom`:break;default:for(let e in c){let t=Object.getOwnPropertyDescriptor(c,e);if(!t||t.get)continue;let n=t.value;if(n&&typeof n==`object`){if(n._zod)a(n);else if(Array.isArray(n))for(let e of n)a(e)}}}return t.delete(e),li(e,i)}function li(e,t){return t!==oi&&ii.set(e,t===si),t}function ui(e,t){let n=e.buckets.get(t);return n||(n=new WeakMap,e.buckets.set(t,n)),n}var di,fi=[],pi={alloc(e,t,n){let r=di;if(!r)return n;di=void 0;let i={value:n,issues:null};return r.set(t.value,i),fi.push(i),n},guard(e){var t;(t=e._zod).deferred??(t.deferred=[]),e._zod.deferred.push(()=>{let t=e._zod.parse,n=(e,n)=>{if(n.direction!==`backward`&&hi(n,e.value))throw new $r;return t(e,n)};e._zod.parse=n,e._zod.run===t&&(e._zod.run=n)})},attach(e){var t;let n,r=!1,i,a;(t=e._zod).deferred??(t.deferred=[]),e._zod.deferred.push(()=>{let t=e._zod.parse,o=(s,c)=>{if(n===void 0){let i=ci(e,new Set,!1);if(i===ai)return e._zod.parse=t,e._zod.run===o&&(e._zod.run=t),t(s,c);i===si||r?n=!0:r=!0}let l=s.value;if(!ni(l))return t(s,c);let u=c[ei];u||(u={buckets:new WeakMap,backEdges:void 0},c[ei]=u);let d;i===c?d=a:(d=ui(u,e),i=c,a=d);let f=d.get(l);if(f)return s.value=f.value,f.issues?f.issues.length&&s.issues.push(...ri(f.issues)):(s.memo=!0,u.backEdges??(u.backEdges=new WeakSet),u.backEdges.add(f.value)),s;di=d;let p=fi.length,m=t(s,c);di=void 0;let h=fi.length>p?fi.pop():void 0;return m instanceof Promise?m.then(e=>(h&&(h.issues=e.issues.length?ri(e.issues):ti),e)):(h&&(h.issues=m.issues.length?ri(m.issues):ti),m)};e._zod.parse=o,e._zod.run===t&&(e._zod.run=o)})}};function mi(){return pi}function hi(e,t){let n=e[ei]?.backEdges;return n!==void 0&&ni(t)&&n.has(t)}var gi=()=>{let e={string:{unit:`characters`,verb:`to have`},file:{unit:`bytes`,verb:`to have`},array:{unit:`items`,verb:`to have`},set:{unit:`items`,verb:`to have`},map:{unit:`entries`,verb:`to have`}};function t(t){return e[t]??null}let n={regex:`input`,email:`email address`,url:`URL`,emoji:`emoji`,uuid:`UUID`,uuidv4:`UUIDv4`,uuidv6:`UUIDv6`,nanoid:`nanoid`,guid:`GUID`,cuid:`cuid`,cuid2:`cuid2`,ulid:`ULID`,xid:`XID`,ksuid:`KSUID`,datetime:`ISO datetime`,date:`ISO date`,time:`ISO time`,duration:`ISO duration`,ipv4:`IPv4 address`,ipv6:`IPv6 address`,mac:`MAC address`,cidrv4:`IPv4 range`,cidrv6:`IPv6 range`,base64:`base64-encoded string`,base64url:`base64url-encoded string`,json_string:`JSON string`,e164:`E.164 number`,currency_code:`currency code`,credit_card:`credit card number`,iban:`IBAN`,jwt:`JWT`,template_literal:`input`},r={nan:`NaN`};function i(e,t){return e===`number`&&typeof t==`number`&&!Number.isFinite(t)?String(t):r[e]??e}return e=>{switch(e.code){case`invalid_type`:return`Invalid input: expected ${i(e.expected)}, received ${i(ke(e.input),e.input)}`;case`invalid_value`:return e.values.length===1?`Invalid input: expected ${le(e.values[0])}`:`Invalid option: expected one of ${u(e.values,`|`)}`;case`too_big`:{let n=e.exact?`exactly `:e.inclusive?`<=`:`<`,r=t(e.origin);return r?`Too big: expected ${e.origin??`value`} to have ${n}${e.maximum.toString()} ${r.unit??`elements`}`:`Too big: expected ${e.origin??`value`} to be ${n}${e.maximum.toString()}`}case`too_small`:{let n=e.exact?`exactly `:e.inclusive?`>=`:`>`,r=t(e.origin);return r?`Too small: expected ${e.origin} to have ${n}${e.minimum.toString()} ${r.unit}`:`Too small: expected ${e.origin} to be ${n}${e.minimum.toString()}`}case`invalid_format`:{let t=e;return t.format===`starts_with`?`Invalid string: must start with "${t.prefix}"`:t.format===`ends_with`?`Invalid string: must end with "${t.suffix}"`:t.format===`includes`?`Invalid string: must include "${t.includes}"`:t.format===`regex`?`Invalid string: must match pattern ${t.pattern}`:`Invalid ${n[t.format]??e.format}`}case`not_multiple_of`:return`Invalid number: must be a multiple of ${e.divisor}`;case`unrecognized_keys`:return`Unrecognized key${e.keys.length>1?`s`:``}: ${u(e.keys,`, `)}`;case`invalid_key`:return`Invalid key in ${e.origin}`;case`invalid_union`:return e.options&&Array.isArray(e.options)&&e.options.length>0?`Invalid discriminator value. Expected ${e.options.map(e=>`'${e}'`).join(` | `)}`:e.inclusive===!1?`Invalid input: more than one option matched`:`Invalid input`;case`invalid_element`:return`Invalid value in ${e.origin}`;default:return`Invalid input`}}};function _i(){return{localeError:gi()}}var vi,yi=class{constructor(){this._map=new WeakMap,this._idmap=new Map}add(e,...t){let n=t[0];return this._map.set(e,n),n&&typeof n==`object`&&`id`in n&&this._idmap.set(n.id,e),this}clear(){return this._map=new WeakMap,this._idmap=new Map,this}remove(e){let t=this._map.get(e);return t&&typeof t==`object`&&`id`in t&&this._idmap.delete(t.id),this._map.delete(e),this}get(e){let t=e._zod.parent;if(t){let n={...this.get(t)??{}};delete n.id;let r={...n,...this._map.get(e)};return Object.keys(r).length?r:void 0}return this._map.get(e)}has(e){return this._map.has(e)}};function bi(){return new yi}(vi=globalThis).__zod_globalRegistry??(vi.__zod_globalRegistry=bi());var xi=globalThis.__zod_globalRegistry;function Si(e){return e.checks&&=[...e.checks],e}function Ci(e,t){return new e(Si({type:`string`,...E(t)}))}function wi(e,t){return new e({type:`string`,format:`email`,check:`string_format`,abort:!1,...E(t)})}function Ti(e,t){return new e({type:`string`,format:`guid`,check:`string_format`,abort:!1,...E(t)})}function Ei(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,...E(t)})}function Di(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v4`,...E(t)})}function Oi(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v6`,...E(t)})}function ki(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v7`,...E(t)})}function Ai(e,t){return new e({type:`string`,format:`url`,check:`string_format`,abort:!1,...E(t)})}function ji(e,t){return new e({type:`string`,format:`emoji`,check:`string_format`,abort:!1,...E(t)})}function Mi(e,t){return new e({type:`string`,format:`nanoid`,check:`string_format`,abort:!1,...E(t)})}function Ni(e,t){return new e({type:`string`,format:`cuid`,check:`string_format`,abort:!1,...E(t)})}function Pi(e,t){return new e({type:`string`,format:`cuid2`,check:`string_format`,abort:!1,...E(t)})}function Fi(e,t){return new e({type:`string`,format:`ulid`,check:`string_format`,abort:!1,...E(t)})}function Ii(e,t){return new e({type:`string`,format:`xid`,check:`string_format`,abort:!1,...E(t)})}function Li(e,t){return new e({type:`string`,format:`ksuid`,check:`string_format`,abort:!1,...E(t)})}function Ri(e,t){return new e({type:`string`,format:`ipv4`,check:`string_format`,abort:!1,...E(t)})}function zi(e,t){return new e({type:`string`,format:`ipv6`,check:`string_format`,abort:!1,...E(t)})}function Bi(e,t){return new e({type:`string`,format:`cidrv4`,check:`string_format`,abort:!1,...E(t)})}function Vi(e,t){return new e({type:`string`,format:`cidrv6`,check:`string_format`,abort:!1,...E(t)})}function Hi(e,t){return new e({type:`string`,format:`base64`,check:`string_format`,abort:!1,...E(t)})}function Ui(e,t){return new e({type:`string`,format:`base64url`,check:`string_format`,abort:!1,...E(t)})}function Wi(e,t){return new e({type:`string`,format:`e164`,check:`string_format`,abort:!1,...E(t)})}function Gi(e,t){return new e({type:`string`,format:`jwt`,check:`string_format`,abort:!1,...E(t)})}function Ki(e,t){return new e({type:`string`,format:`datetime`,check:`string_format`,offset:!1,local:!1,precision:null,...E(t)})}function qi(e,t){return new e({type:`string`,format:`date`,check:`string_format`,...E(t)})}function Ji(e,t){return new e({type:`string`,format:`time`,check:`string_format`,precision:null,...E(t)})}function Yi(e,t){return new e({type:`string`,format:`duration`,check:`string_format`,...E(t)})}function Xi(e,t){return new e(Si({type:`number`,checks:[],...E(t)}))}function Zi(e,t){return new e({type:`number`,check:`number_format`,abort:!1,format:`safeint`,...E(t)})}function Qi(e,t){return new e({type:`boolean`,...E(t)})}function $i(e){return new e({type:`unknown`})}function ea(e,t){return new e({type:`never`,...E(t)})}function ta(e,t){return new sn({check:`less_than`,...E(t),value:e,inclusive:!1})}function na(e,t){return new sn({check:`less_than`,...E(t),value:e,inclusive:!0})}function ra(e,t){return new cn({check:`greater_than`,...E(t),value:e,inclusive:!1})}function ia(e,t){return new cn({check:`greater_than`,...E(t),value:e,inclusive:!0})}function aa(e,t){return new ln({check:`multiple_of`,...E(t),value:e})}function oa(e,t){return new dn({check:`max_length`,...E(t),maximum:e})}function sa(e,t){return new fn({check:`min_length`,...E(t),minimum:e})}function ca(e,t){return new pn({check:`length_equals`,...E(t),length:e})}function la(e,t){return new hn({check:`string_format`,format:`regex`,...E(t),pattern:e})}function P(e){return new gn({check:`string_format`,format:`lowercase`,...E(e)})}function F(e){return new _n({check:`string_format`,format:`uppercase`,...E(e)})}function ua(e,t){return new vn({check:`string_format`,format:`includes`,...E(t),includes:e})}function da(e,t){return new yn({check:`string_format`,format:`starts_with`,...E(t),prefix:e})}function fa(e,t){return new bn({check:`string_format`,format:`ends_with`,...E(t),suffix:e})}function pa(e){return new xn({check:`overwrite`,tx:e})}function ma(e){return pa(t=>t.normalize(e))}function ha(){return pa(e=>e.trim())}function ga(){return pa(e=>e.toLowerCase())}function _a(){return pa(e=>e.toUpperCase())}function va(){return pa(e=>te(e))}function ya(e,t,n){return new e({type:`array`,element:t,...E(n)})}function ba(e,t,n){return new e({type:`custom`,check:`custom`,fn:t,...E(n)})}function xa(e,t){let n=Sa(t=>(t.addIssue=e=>{if(typeof e==`string`)t.issues.push(Ae(e,t.value,n._zod.def));else{let r=e;r.fatal&&(r.continue=!1),r.code??=`custom`,`input`in r||(r.input=t.value),r.inst??=n,r.continue??=!n._zod.def.abort,t.issues.push(Ae(r))}},e(t.value,t)),t);return n}function Sa(e,t){let n=new rn({check:`custom`,...E(t)});return n._zod.check=e,n}function Ca(e,...t){for(let n of t)for(let t of Reflect.ownKeys(n))Object.prototype.propertyIsEnumerable.call(n,t)&&_(e,t,n[t]);return e}function wa(e){let t=e?.target??`draft-2020-12`;return t===`draft-4`&&(t=`draft-04`),t===`draft-7`&&(t=`draft-07`),{processors:e.processors??{},metadataRegistry:e?.metadata??xi,target:t,unrepresentable:e?.unrepresentable??`throw`,override:e?.override??(()=>{}),io:e?.io??`output`,counter:0,seen:new Map,sharedDefsExtractedFor:void 0,sharedEmitDoneFor:void 0,cycles:e?.cycles??`ref`,reused:e?.reused??`inline`,intersections:[],deferred:[],external:e?.external??void 0}}function Ta(e,t,n,r,i){let a=typeof t.unrepresentable==`function`?t.unrepresentable({zodSchema:e,path:r.path,message:i}):t.unrepresentable;if(a===`any`)return!1;if(a===void 0||a===`throw`)throw Error(i);return Object.assign(n,a),!0}function Ea(e,t,n={path:[],schemaPath:[]}){var r;let i=e._zod.def,a=t.seen.get(e);if(a)return a.count++,n.schemaPath.includes(e)&&(a.cycle=n.path),a.schema;let o={schema:{},count:1,cycle:void 0,path:n.path};t.seen.set(e,o),t.sharedDefsExtractedFor=void 0,t.sharedEmitDoneFor=void 0;let s=e._zod.toJSONSchema?.();if(s)o.schema=s;else{let r={...n,schemaPath:[...n.schemaPath,e],path:n.path};if(e._zod.processJSONSchema)e._zod.processJSONSchema(t,o.schema,r);else{let n=o.schema,a=t.processors[i.type];if(!a)throw Error(`[toJSONSchema]: Non-representable type encountered: ${i.type}`);a(e,t,n,r)}let a=e._zod.parent;a&&(o.ref||=a,Ea(a,t,r),t.seen.get(a).isParent=!0)}let c=t.metadataRegistry.get(e);return c&&Ca(o.schema,c),t.io===`input`&&I(e)&&(delete o.schema.examples,delete o.schema.default),t.io===`input`&&`_prefault`in o.schema&&((r=o.schema).default??(r.default=o.schema._prefault)),delete o.schema._prefault,t.seen.get(e).schema}function Da(e){return e.replace(/~/g,`~0`).replace(/\//g,`~1`)}function Oa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);if(e.external&&e.sharedDefsExtractedFor===e.external)return;let r=new Map;for(let t of e.seen.entries()){let n=e.metadataRegistry.get(t[0])?.id;if(n){let e=r.get(n);if(e&&e!==t[0])throw Error(`Duplicate schema id "${n}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);r.set(n,t[0])}}let i=t=>{let r=e.target===`draft-2020-12`?`$defs`:`definitions`;if(e.external){let n=e.external.registry.get(t[0])?.id,i=e.external.uri??(e=>e);if(n)return{ref:i(n)};let a=t[1].defId??t[1].schema.id??`schema${e.counter++}`;return t[1].defId=a,{defId:a,ref:`${i(`__shared`)}#/${r}/${Da(a)}`}}let i=`#/${r}/`;if(t[1]===n&&!t[1].schema.id)return{ref:`#`};let a=t[1].schema.id??`__schema${e.counter++}`;return{defId:a,ref:i+Da(a)}},a=e=>{if(e[1].schema.$ref)return;let t=e[1],{ref:n,defId:r}=i(e);t.def={...t.schema},r&&(t.defId=r);let a=t.schema;for(let e in a)delete a[e];a.$ref=n};if(e.cycles===`throw`)for(let t of e.seen.entries()){let e=t[1];if(e.cycle)throw Error(`Cycle detected: #/${e.cycle?.join(`/`)}/<root>
 
-Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`)}for(let n of e.seen.entries()){let r=n[1];if(t===n[0])a(n);else{if(e.external){let r=e.external.registry.get(n[0])?.id;if(t!==n[0]&&r){a(n);continue}}(e.metadataRegistry.get(n[0])?.id||r.cycle||r.count>1&&e.reused===`ref`)&&a(n)}}e.external&&(e.sharedDefsExtractedFor=e.external)}function ka(e){let t=e.anyOf;if(!Array.isArray(t)||t.length===0||e.type!==void 0)return;let n=[];for(let e of t){if(!e||typeof e!=`object`)return;ka(e);let t=Object.keys(e);if(t.length!==1||t[0]!==`type`)return;let r=e.type;for(let e of Array.isArray(r)?r:[r]){if(typeof e!=`string`)return;n.includes(e)||n.push(e)}}delete e.anyOf,e.type=n.length===1?n[0]:n}var Aa=new Set([`type`,`properties`,`required`,`additionalProperties`]),ja=[`oneOf`,`anyOf`];function Ma(e){let t=e.additionalProperties;return t===void 0||t===!1||typeof t!=`object`||!t?null:Object.keys(t).length?t:null}function Na(e){let t=[];for(let n of e){if(typeof n!=`object`||n.type!==`object`)return null;for(let e in n)if(!Aa.has(e))return null;t.push(n)}let n={},r=new Set;for(let e of t){for(let r in e.properties){if(Object.prototype.hasOwnProperty.call(n,r))continue;let e=[];for(let n of t){let t=n.properties?.[r]??Ma(n);t!=null&&(e.some(e=>JSON.stringify(e)===JSON.stringify(t))||e.push(t))}_(n,r,e.length===1?e[0]:Na(e)??{allOf:e})}for(let t of e.required??[])r.add(t)}let i={type:`object`,properties:n};if(r.size&&(i.required=[...r]),t.every(e=>e.additionalProperties===!1))i.additionalProperties=!1;else{let e=[];for(let n of t){let t=Ma(n);t&&!e.some(e=>JSON.stringify(e)===JSON.stringify(t))&&e.push(t)}e.length===1?i.additionalProperties=e[0]:e.length>1&&(i.additionalProperties={allOf:e})}return i}function Pa(e){let t=e.allOf;if(!Array.isArray(t)||t.length<2)return;for(let t of Aa)if(t in e)return;let n=t.filter(e=>ja.some(t=>Array.isArray(e[t]))),r=null;if(!n.length)r=Na(t);else{let e=n[0],i=ja.find(t=>Array.isArray(e[t]));if(Object.keys(e).length!==1)return;let a=t.filter(t=>t!==e),o=e[i].map(e=>Na([...a,e]));if(o.some(e=>!e))return;r={[i]:o}}r&&(delete e.allOf,Ca(e,r))}function Fa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);let r=t=>{let n=e.seen.get(t);if(n.ref===null)return;let i=n.def??n.schema,a={...i},o=n.ref;if(n.ref=null,o){r(o);let n=e.seen.get(o),s=n.schema;if(s.$ref&&(e.target===`draft-07`||e.target===`draft-04`||e.target===`openapi-3.0`)?(i.allOf=i.allOf??[],i.allOf.push(s)):Ca(i,s),Ca(i,a),t._zod.parent===o)for(let e in i)e!==`$ref`&&e!==`allOf`&&(e in a||delete i[e]);if(s.$ref&&n.def)for(let e in i)e!==`$ref`&&e!==`allOf`&&e in n.def&&JSON.stringify(i[e])===JSON.stringify(n.def[e])&&delete i[e]}let s=t._zod.parent;if(s&&s!==o){r(s);let t=e.seen.get(s);if(t?.schema.$ref&&(i.$ref=t.schema.$ref,t.def))for(let e in i)e!==`$ref`&&e!==`allOf`&&e in t.def&&JSON.stringify(i[e])===JSON.stringify(t.def[e])&&delete i[e]}e.override({zodSchema:t,jsonSchema:i,path:n.path??[]})};if(!e.external||e.sharedEmitDoneFor!==e.external){for(let t of[...e.seen.entries()].reverse())r(t[0]);if(e.target!==`openapi-3.0`)for(let t of e.seen.entries())ka(t[1].def??t[1].schema);for(let t of e.deferred)t();if(e.intersections.length){let t=new Map;for(let n of e.seen.values())for(let e of[n.schema,n.def]){let n=e?.allOf;if(!Array.isArray(n))continue;let r=t.get(n);r?r.push(e):t.set(n,[e])}for(let n of e.intersections)for(let e of t.get(n)??[])Pa(e)}}let i={};if(e.target===`draft-2020-12`?i.$schema=`https://json-schema.org/draft/2020-12/schema`:e.target===`draft-07`?i.$schema=`http://json-schema.org/draft-07/schema#`:e.target===`draft-04`?i.$schema=`http://json-schema.org/draft-04/schema#`:e.target,e.external?.uri){let n=e.external.registry.get(t)?.id;if(!n)throw Error("Schema is missing an `id` property");i.$id=e.external.uri(n)}Ca(i,n.defId?n.schema:n.def??n.schema);let a=e.metadataRegistry.get(t)?.id;a!==void 0&&i.id===a&&delete i.id;let o=e.external?.defs??{};if(!e.external||e.sharedEmitDoneFor!==e.external)for(let t of e.seen.entries()){let e=t[1];e.def&&e.defId&&(e.def.id===e.defId&&delete e.def.id,_(o,e.defId,e.def))}e.external&&(e.sharedEmitDoneFor=e.external),e.external||Object.keys(o).length>0&&(e.target===`draft-2020-12`?i.$defs=o:i.definitions=o);try{let n=JSON.parse(JSON.stringify(i));return Object.defineProperty(n,"~standard",{value:{...t[`~standard`],jsonSchema:{input:La(t,`input`,e.processors),output:La(t,`output`,e.processors)}},enumerable:!1,writable:!1}),n}catch{throw Error(`Error converting schema to JSON.`)}}function I(e,t){let n=t??{seen:new Set};if(n.seen.has(e))return!1;n.seen.add(e);let r=e._zod.def;if(r.type===`transform`)return!0;if(r.type===`array`)return I(r.element,n);if(r.type===`set`)return I(r.valueType,n);if(r.type===`lazy`)return I(r.getter(),n);if(r.type===`promise`||r.type===`optional`||r.type===`nonoptional`||r.type===`nullable`||r.type===`readonly`||r.type==="default"||r.type===`prefault`||r.type===`catch`)return I(r.innerType,n);if(r.type===`intersection`)return I(r.left,n)||I(r.right,n);if(r.type===`record`||r.type===`map`)return I(r.keyType,n)||I(r.valueType,n);if(r.type===`pipe`)return e._zod.traits.has(`$ZodCodec`)?!0:I(r.in,n)||I(r.out,n);if(r.type===`object`){for(let e in r.shape)if(I(r.shape[e],n))return!0;return!1}if(r.type===`union`){for(let e of r.options)if(I(e,n))return!0;return!1}if(r.type===`tuple`){for(let e of r.items)if(I(e,n))return!0;return!!(r.rest&&I(r.rest,n))}return!1}var Ia=(e,t={})=>n=>{let r=wa({...n,processors:t});return Ea(e,r),Oa(r,e),Fa(r,e)},La=(e,t,n={})=>r=>{let{libraryOptions:i,target:a}=r??{},o=wa({...i??{},target:a,io:t,processors:n});return Ea(e,o),Oa(o,e),Fa(o,e)},Ra=(e,t,n)=>{(e[t]===void 0||n>e[t])&&(e[t]=n)},za=(e,t,n)=>{(e[t]===void 0||n<e[t])&&(e[t]=n)},Ba=(e,t)=>{Ra(e,`minimum`,t),za(e,`maximum`,t)},Va=(e,t)=>{e.multipleOf??=[],e.multipleOf.includes(t)||e.multipleOf.push(t)},Ha=(e,t)=>{e.patterns??=new Set,e.patterns.add(t)},Ua=(e,t)=>{e.mime=e.mime?e.mime.filter(e=>t.includes(e)):[...t]},Wa=(e,t)=>{e.format=t,t.includes(`int`)&&(e.isInt=!0)},Ga=(e,t)=>Ra(e,`minimum`,t.minimum),Ka=(e,t)=>za(e,`maximum`,t.maximum),qa=e=>(t,n)=>{Wa(t,n.format);let[r,i]=e[n.format];Ra(t,`minimum`,r),za(t,`maximum`,i)},Ja={greater_than:(e,t)=>Ra(e,t.inclusive?`minimum`:`exclusiveMinimum`,t.value),less_than:(e,t)=>za(e,t.inclusive?`maximum`:`exclusiveMaximum`,t.value),multiple_of:(e,t)=>Va(e,t.value),number_format:qa(de),bigint_format:qa(fe),min_length:Ga,max_length:Ka,length_equals:(e,t)=>Ba(e,t.length),min_size:Ga,max_size:Ka,size_equals:(e,t)=>Ba(e,t.size),string_format:(e,t)=>{Wa(e,t.format),t.pattern&&Ha(e,t.pattern),(t.format===`base64`||t.format===`base64url`)&&(e.contentEncoding=t.format),(t.local||t.precision===-1)&&(e.laxFormat=!0)},mime_type:(e,t)=>Ua(e,t.mime)};function Ya(e){let t={},n=e._zod.def,r=e._zod.traits.has(`$ZodCheck`)?[e,...n.checks??[]]:n.checks??[];for(let e of r)Ja[e._zod.def.check]?.(t,e._zod.def);let i=e._zod.bag;i.minimum!==void 0&&Ra(t,`minimum`,i.minimum),i.exclusiveMinimum!==void 0&&Ra(t,`exclusiveMinimum`,i.exclusiveMinimum),i.maximum!==void 0&&za(t,`maximum`,i.maximum),i.exclusiveMaximum!==void 0&&za(t,`exclusiveMaximum`,i.exclusiveMaximum),i.multipleOf!==void 0&&Va(t,i.multipleOf),i.format!==void 0&&(t.format??=i.format,i.format.includes(`int`)&&(t.isInt=!0)),i.mime&&Ua(t,i.mime);for(let e of i.patterns??[])Ha(t,e);return t}var Xa={guid:`uuid`,url:`uri`,datetime:`date-time`,json_string:`json-string`,regex:``},Za=new Map([[ar,Ht],[sr,Ut]]),Qa=e=>Za.get(e)??e,$a=(e,t,n,r)=>{let i=n;i.type=`string`;let{minimum:a,maximum:o,format:s,patterns:c,contentEncoding:l,laxFormat:u}=Ya(e);if(typeof a==`number`&&(i.minLength=a),typeof o==`number`&&(i.maxLength=o),s&&(i.format=Xa[s]??s,i.format===``&&delete i.format,(s===`time`||u)&&delete i.format),l&&(i.contentEncoding=l),c&&c.size>0){let e=[...c].map(Qa);e.length===1?i.pattern=e[0].source:e.length>1&&(i.allOf=[...e.map(e=>({...t.target===`draft-07`||t.target===`draft-04`||t.target===`openapi-3.0`?{type:`string`}:{},pattern:e.source}))])}},eo=(e,t,n,r)=>{let i=n,{minimum:a,maximum:o,multipleOf:s,exclusiveMaximum:c,exclusiveMinimum:l,isInt:u}=Ya(e);i.type=u?`integer`:`number`;let d=typeof l==`number`&&l>=(a??-1/0),f=typeof c==`number`&&c<=(o??1/0),p=t.target===`draft-04`||t.target===`openapi-3.0`;if(d?p?(i.minimum=l,i.exclusiveMinimum=!0):i.exclusiveMinimum=l:typeof a==`number`&&(i.minimum=a),f?p?(i.maximum=c,i.exclusiveMaximum=!0):i.exclusiveMaximum=c:typeof o==`number`&&(i.maximum=o),s){let n=new Set;for(let a of s)Number.isFinite(a)&&a!==0?n.add(Math.abs(a)):Ta(e,t,i,r,`A multipleOf divisor of ${a} cannot be represented in JSON Schema`);let[a,...o]=n;a!==void 0&&(i.multipleOf=a),o.length&&(i.allOf=[...i.allOf??[],...o.map(e=>({multipleOf:e}))])}},to=(e,t,n,r)=>{n.type=`boolean`},no=(e,t,n,r)=>{n.not={}},ro=(e,t,n,r)=>{let i=e._zod.def,a=l(i.entries);a.length===0?n.not={}:(a.every(e=>typeof e==`number`)&&(n.type=`number`),a.every(e=>typeof e==`string`)&&(n.type=`string`),n.enum=a)},io=(e,t,n,r)=>{Ta(e,t,n,r,`Custom types cannot be represented in JSON Schema`)},ao=(e,t,n,r)=>{Ta(e,t,n,r,`Transforms cannot be represented in JSON Schema`)},oo=(e,t,n,r)=>{let i=n,a=e._zod.def,{minimum:o,maximum:s}=Ya(e);typeof o==`number`&&(i.minItems=o),typeof s==`number`&&(i.maxItems=s),i.type=`array`,i.items=Ea(a.element,t,{...r,path:[...r.path,`items`]})};function so(e){let t=e._zod.def;return t.type===`pipe`&&t.in._zod.traits.has(`$ZodTransform`)?so(t.out):t.type===`catch`?so(t.innerType):e._zod.optin}var co=(e,t,n,r)=>{let i=n,a=e._zod.def,o=a.shape;if(Object.getOwnPropertySymbols(o).length&&Ta(e,t,i,r,`Symbol keys cannot be represented in JSON Schema`))return;i.type=`object`,i.properties={};for(let e in o)_(i.properties,e,Ea(o[e],t,{...r,path:[...r.path,`properties`,e]}));let s=[];for(let e of Object.keys(o)){let n=a.shape[e];(t.io===`input`?so(n)===void 0:n._zod.optout===void 0)&&s.push(e)}s.length>0&&(i.required=s),a.catchall?._zod.def.type===`never`?i.additionalProperties=!1:a.catchall?a.catchall&&(i.additionalProperties=Ea(a.catchall,t,{...r,path:[...r.path,`additionalProperties`]})):t.io===`output`&&(i.additionalProperties=!1)},lo=(e,t,n,r)=>{let i=e._zod.def,a=i.inclusive===!1,o=i.options.map((e,n)=>Ea(e,t,{...r,path:[...r.path,a?`oneOf`:`anyOf`,n]}));a?n.oneOf=o:n.anyOf=o},uo=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.left,t,{...r,path:[...r.path,`allOf`,0]}),o=Ea(i.right,t,{...r,path:[...r.path,`allOf`,1]}),s=e=>`allOf`in e&&Object.keys(e).length===1,c=[...s(a)?a.allOf:[a],...s(o)?o.allOf:[o]];n.allOf=c,t.intersections.push(c)};function fo(e,t,n){if(t.$ref){if(n.has(t))return t;n.add(t);let r=e.get(t)?.def;if(!r)return t;let i=fo(e,r,n);return i===r?t:i}for(let r of[`anyOf`,`oneOf`]){let i=t[r];if(!Array.isArray(i))continue;let a=i.map(t=>fo(e,t,n));a.some((e,t)=>e!==i[t])&&(t={...t,[r]:a})}let r=Array.isArray(t.type)?t.type:[t.type],i=!r.includes(`string`)&&r.some(e=>e===`number`||e===`integer`),a=t.enum??(t.const===void 0?void 0:[t.const]);if(!i&&!a?.some(e=>typeof e==`number`))return t;let{minimum:o,maximum:s,exclusiveMinimum:c,exclusiveMaximum:l,multipleOf:u,format:d,id:f,...p}=t;return p.enum?p.enum=p.enum.map(e=>typeof e==`number`?String(e):e):typeof p.const==`number`&&(p.const=String(p.const)),i&&(p.type=`string`,a||(p.pattern=(r.includes(`number`)?$t:M).source)),p}var po=new WeakMap;function mo(e){let t=new Map;for(let n of e.seen.values())n.def&&!t.has(n.schema)&&t.set(n.schema,n);let n=new Map;for(let r of po.get(e)??[]){let i=e.seen.get(r),a=(i?.def??i?.schema)?.propertyNames;if(!a||a===!0||n.has(a))continue;let o=fo(t,a,new Set);o!==a&&n.set(a,o)}if(n.size)for(let t of e.seen.values())for(let e of[t.schema,t.def]){let t=e&&n.get(e.propertyNames);t&&(e.propertyNames=t)}}var ho=(e,t,n,r)=>{let i=n,a=e._zod.def;i.type=`object`;let o=a.keyType,s=Ya(o).patterns;if(a.mode===`loose`&&s&&s.size>0){let e=Ea(a.valueType,t,{...r,path:[...r.path,`patternProperties`,`*`]});i.patternProperties={};for(let t of s)_(i.patternProperties,Qa(t).source,e)}else{if(t.target===`draft-07`||t.target===`draft-2020-12`){i.propertyNames=Ea(a.keyType,t,{...r,path:[...r.path,`propertyNames`]});let n=po.get(t);n||(n=[],po.set(t,n),t.deferred.push(()=>mo(t))),n.push(e)}i.additionalProperties=Ea(a.valueType,t,{...r,path:[...r.path,`additionalProperties`]})}let c=o._zod.values,l=t.io===`input`&&so(a.valueType)!==void 0;if(c&&!a.partial&&!l){let e=[...c].filter(e=>typeof e==`string`||typeof e==`number`);e.length>0&&(i.required=e.map(String))}},go=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.innerType,t,r),o=t.seen.get(e);t.target===`openapi-3.0`?(o.ref=i.innerType,n.nullable=!0):n.anyOf=[a,{type:`null`}]},_o=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},vo=Symbol();function yo(e,t,n,r,i){let a=!1,o=JSON.stringify(e,(e,t)=>typeof t==`bigint`?(a=!0,null):t);return a?(Ta(t,n,r,i,`BigInt defaults cannot be represented in JSON Schema`),vo):JSON.parse(o)}var bo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n.default=o)},xo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);if(a.ref=i.innerType,t.io!==`input`)return;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n._prefault=o)},So=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o;try{o=i.catchValue(void 0)}catch{Ta(e,t,n,r,`Dynamic catch values are not supported in JSON Schema`);return}n.default=o},Co=(e,t,n,r)=>{let i=e._zod.def,a=i.in._zod.traits.has(`$ZodTransform`),o=t.io===`input`?a?i.out:i.in:i.out;Ea(o,t,r);let s=t.seen.get(e);s.ref=o},wo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType,n.readOnly=!0},To=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},Eo=new WeakSet([Object.prototype,Error.prototype]);function Do(e,t,n){Object.defineProperty(e,t,{configurable:!0,enumerable:!1,get(){let e=n(this);return Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0}),e},set(e){Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0})}})}var Oo=(e,t)=>{nt.init(e,t),e.name=`ZodError`;let n=Object.getPrototypeOf(e);Eo.has(n)||(Eo.add(n),Do(n,`format`,e=>t=>at(e,t)),Do(n,`flatten`,e=>t=>it(e,t)),Do(n,`addIssue`,e=>t=>{e.issues.push(t),e.message=JSON.stringify(e.issues,d,2)}),Do(n,`addIssues`,e=>t=>{e.issues.push(...t),e.message=JSON.stringify(e.issues,d,2)}),Object.defineProperty(n,"isEmpty",{configurable:!0,enumerable:!1,get(){return this.issues.length===0}}))},ko=j(`ZodError`,Oo),Ao=j(`ZodError`,Oo,void 0,{Parent:Error}),jo=st(Ao),Mo=ct(Ao),No=lt(Ao),Po=dt(Ao),Fo=_t(Ao),Io=vt(Ao),Lo=yt(Ao),Ro=bt(Ao),zo=xt(Ao),Bo=St(Ao),Vo=Ct(Ao),Ho=wt(Ao);function Uo(){Ye.localeError||Xe(_i())}function Wo(){Ye.memoizer||Xe({memoizer:mi()})}var Go=j(`ZodType`,(e,t)=>(Uo(),wn.init(e,t),e.def=t,e.type=t.type,e),{check(...e){let t=this.def;return this.clone(C(t,{checks:[...t.checks??[],...e.map(e=>typeof e==`function`?{_zod:{check:e,def:{check:`custom`},onattach:[]}}:e)]}),{parent:!0})},with(...e){return this.check(...e)},clone(e,t){return ce(this,e,t)},brand(){return this},register(e,t){return e.add(this,t),this},refine(e,t){return this.check(oc(e,t))},superRefine(e,t){return this.check(sc(e,t))},overwrite(e){return this.check(pa(e))},optional(){return Hs(this)},exactOptional(){return Ws(this)},nullable(){return Ks(this)},nullish(){return Hs(Ks(this))},nonoptional(e){return Qs(this,e)},array(){return Ds(this)},or(e){return js([this,e])},and(e){return Ns(this,e)},transform(e){return nc(this,Bs(e))},default(e){return Js(this,e)},prefault(e){return Xs(this,e)},catch(e){return ec(this,e)},pipe(e){return nc(this,e)},readonly(){return ic(this)},describe(e){let t=this.clone();return xi.add(t,{description:e}),t},meta(...e){if(e.length===0)return xi.get(this);let t=this.clone();return xi.add(t,e[0]),t},isOptional(){return this.safeParse(void 0).success},isNullable(){return this.safeParse(null).success},apply(e,...t){return t.length===0?e(this):e(this,...t)},get"~standard"(){return Ne(this,`~standard`,{...Dn(this),jsonSchema:{input:La(this,`input`),output:La(this,`output`)}})},set"~standard"(e){Me(this,`~standard`,e)},parse:function e(t,n){return jo(this,t,n,{callee:e})},parseAsync:async function e(t,n){return await Mo(this,t,n,{callee:e})},safeParse(e,t){return No(this,e,t)},async safeParseAsync(e,t){return Po(this,e,t)},get spa(){return this?.safeParseAsync},set spa(e){Me(this,`spa`,e)},validate(e,t){return mt(this,e,t)},validateAsync(e,t){return gt(this,e,t)},encode:function e(t,n){return Fo(this,t,n,{callee:e})},decode:function e(t,n){return Io(this,t,n,{callee:e})},encodeAsync:async function e(t,n){return await Lo(this,t,n,{callee:e})},decodeAsync:async function e(t,n){return await Ro(this,t,n,{callee:e})},safeEncode(e,t){return zo(this,e,t)},safeDecode(e,t){return Bo(this,e,t)},async safeEncodeAsync(e,t){return Vo(this,e,t)},async safeDecodeAsync(e,t){return Ho(this,e,t)},toJSONSchema(e){return Ia(this,{})(e)},get description(){return xi.get(this)?.description},get _def(){return this._zod.def}}),Ko=j(`_ZodString`,(e,t)=>{On.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>$a(e,t,n,r)},Pe({format:e=>Ya(e).format??null,minLength:e=>Ya(e).minimum??null,maxLength:e=>Ya(e).maximum??null},{regex(...e){return this.check(la(...e))},includes(...e){return this.check(ua(...e))},startsWith(...e){return this.check(da(...e))},endsWith(...e){return this.check(fa(...e))},min(...e){return this.check(sa(...e))},max(...e){return this.check(oa(...e))},length(...e){return this.check(ca(...e))},nonempty(...e){return this.check(sa(1,...e))},lowercase(e){return this.check(P(e))},uppercase(e){return this.check(F(e))},trim(){return this.check(ha())},normalize(...e){return this.check(ma(...e))},toLowerCase(){return this.check(ga())},toUpperCase(){return this.check(_a())},slugify(){return this.check(va())}})),L=j(`ZodString`,(e,t)=>{On.init(e,t),Ko.init(e,t)},{email(e){return this.check(wi(Zo,e))},url(e){return this.check(Ai(es,e))},jwt(e){return this.check(Gi(hs,e))},emoji(e){return this.check(ji(ts,e))},guid(e){return this.check(Ti(Qo,e))},uuid(e){return this.check(Ei($o,e))},uuidv4(e){return this.check(Di($o,e))},uuidv6(e){return this.check(Oi($o,e))},uuidv7(e){return this.check(ki($o,e))},nanoid(e){return this.check(Mi(ns,e))},cuid(e){return this.check(Ni(rs,e))},cuid2(e){return this.check(Pi(is,e))},ulid(e){return this.check(Fi(as,e))},base64(e){return this.check(Hi(fs,e))},base64url(e){return this.check(Ui(ps,e))},xid(e){return this.check(Ii(os,e))},ksuid(e){return this.check(Li(ss,e))},ipv4(e){return this.check(Ri(cs,e))},ipv6(e){return this.check(zi(ls,e))},cidrv4(e){return this.check(Bi(us,e))},cidrv6(e){return this.check(Vi(ds,e))},e164(e){return this.check(Wi(ms,e))},datetime(e){return this.check(Ki(qo,e))},date(e){return this.check(qi(Jo,e))},time(e){return this.check(Ji(Yo,e))},duration(e){return this.check(Yi(Xo,e))}});function R(e){return Ci(L,e)}var z=j(`ZodStringFormat`,(e,t)=>{N.init(e,t),Ko.init(e,t)}),qo=j(`ZodISODateTime`,(e,t)=>{qn.init(e,t),z.init(e,t)}),Jo=j(`ZodISODate`,(e,t)=>{Jn.init(e,t),z.init(e,t)}),Yo=j(`ZodISOTime`,(e,t)=>{Yn.init(e,t),z.init(e,t)}),Xo=j(`ZodISODuration`,(e,t)=>{Xn.init(e,t),z.init(e,t)}),Zo=j(`ZodEmail`,(e,t)=>{jn.init(e,t),z.init(e,t)}),Qo=j(`ZodGUID`,(e,t)=>{kn.init(e,t),z.init(e,t)}),$o=j(`ZodUUID`,(e,t)=>{An.init(e,t),z.init(e,t)}),es=j(`ZodURL`,(e,t)=>{zn.init(e,t),z.init(e,t)}),ts=j(`ZodEmoji`,(e,t)=>{Bn.init(e,t),z.init(e,t)}),ns=j(`ZodNanoID`,(e,t)=>{Vn.init(e,t),z.init(e,t)}),rs=j(`ZodCUID`,(e,t)=>{Hn.init(e,t),z.init(e,t)}),is=j(`ZodCUID2`,(e,t)=>{Un.init(e,t),z.init(e,t)}),as=j(`ZodULID`,(e,t)=>{Wn.init(e,t),z.init(e,t)}),os=j(`ZodXID`,(e,t)=>{Gn.init(e,t),z.init(e,t)}),ss=j(`ZodKSUID`,(e,t)=>{Kn.init(e,t),z.init(e,t)}),cs=j(`ZodIPv4`,(e,t)=>{Zn.init(e,t),z.init(e,t)}),ls=j(`ZodIPv6`,(e,t)=>{er.init(e,t),z.init(e,t)}),us=j(`ZodCIDRv4`,(e,t)=>{tr.init(e,t),z.init(e,t)}),ds=j(`ZodCIDRv6`,(e,t)=>{rr.init(e,t),z.init(e,t)}),fs=j(`ZodBase64`,(e,t)=>{or.init(e,t),z.init(e,t)}),ps=j(`ZodBase64URL`,(e,t)=>{lr.init(e,t),z.init(e,t)}),ms=j(`ZodE164`,(e,t)=>{ur.init(e,t),z.init(e,t)}),hs=j(`ZodJWT`,(e,t)=>{fr.init(e,t),z.init(e,t)}),gs=j(`ZodNumber`,(e,t)=>{pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>eo(e,t,n,r),e.isFinite=!0},Pe({minValue:e=>{let{minimum:t,exclusiveMinimum:n}=Ya(e);return Math.max(t??-1/0,n??-1/0)},maxValue:e=>{let{maximum:t,exclusiveMaximum:n}=Ya(e);return Math.min(t??1/0,n??1/0)},isInt:e=>{let{isInt:t,multipleOf:n}=Ya(e);return!!t||!!n?.some(Number.isSafeInteger)},format:e=>Ya(e).format??null},{gt(e,t){return this.check(ra(e,t))},gte(e,t){return this.check(ia(e,t))},min(e,t){return this.check(ia(e,t))},lt(e,t){return this.check(ta(e,t))},lte(e,t){return this.check(na(e,t))},max(e,t){return this.check(na(e,t))},int(e){return this.check(ys(e))},safe(e){return this.check(ys(e))},positive(e){return this.check(ra(0,e))},nonnegative(e){return this.check(ia(0,e))},negative(e){return this.check(ta(0,e))},nonpositive(e){return this.check(na(0,e))},multipleOf(e,t){return this.check(aa(e,t))},step(e,t){return this.check(aa(e,t))},finite(){return this}}));function _s(e){return Xi(gs,e)}var vs=j(`ZodNumberFormat`,(e,t)=>{mr.init(e,t),gs.init(e,t)});function ys(e){return Zi(vs,e)}var bs=j(`ZodBoolean`,(e,t)=>{hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>to(e,t,n,r)});function xs(e){return Qi(bs,e)}var Ss=j(`ZodUnknown`,(e,t)=>{gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(e,t,n)=>void 0});function Cs(){return $i(Ss)}var ws=j(`ZodNever`,(e,t)=>{_r.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>no(e,t,n,r)});function Ts(e){return ea(ws,e)}var Es=j(`ZodArray`,(e,t)=>{Wo(),xr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>oo(e,t,n,r),e.element=t.element},{min(e,t){return this.check(sa(e,t))},nonempty(e){return this.check(sa(1,e))},max(e,t){return this.check(oa(e,t))},length(e,t){return this.check(ca(e,t))},unwrap(){return this.element}});function Ds(e,t){return ya(Es,e,t)}var Os=j(`ZodObject`,(e,t)=>{Wo(),Dr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>co(e,t,n,r),Be(e,`shape`,e=>e._zod.def.shape,!1)},{keyof(){return Rs(Object.keys(this._zod.def.shape))},catchall(e){return this.clone(C(this._zod.def,{catchall:e}))},passthrough(){return this.clone(C(this._zod.def,{catchall:Cs()}))},loose(){return this.clone(C(this._zod.def,{catchall:Cs()}))},strict(){return this.clone(C(this._zod.def,{catchall:Ts()}))},strip(){return this.clone(C(this._zod.def,{catchall:void 0}))},extend(e){return ge(this,e)},safeExtend(e){return ve(this,e)},merge(e){return ye(this,e)},pick(e){return pe(this,e)},omit(e){return he(this,e)},partial(...e){return be(Vs,this,e[0])},exactPartial(...e){return be(Us,this,e[0],`exactPartial`)},required(...e){return xe(Zs,this,e[0])}});function ks(e,t){return new Os({type:`object`,shape:e??{},...E(t)})}var As=j(`ZodUnion`,(e,t)=>{kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>lo(e,t,n,r),e.options=t.options});function js(e,t){return new As({type:`union`,options:e,...E(t)})}var Ms=j(`ZodIntersection`,(e,t)=>{Ar.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>uo(e,t,n,r)});function Ns(e,t){return new Ms({type:`intersection`,left:e,right:t})}var Ps=j(`ZodRecord`,(e,t)=>{Wo(),Nr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ho(e,t,n,r),e.keyType=t.keyType,e.valueType=t.valueType});function Fs(e,t,n){return!t||!t._zod?new Ps({type:`record`,keyType:R(),valueType:e,...E(t)}):new Ps({type:`record`,keyType:e,valueType:t,...E(n)})}function Is(e,t,n){return new Ps({type:`record`,keyType:e,valueType:t,...E(n),partial:!0})}var Ls=j(`ZodEnum`,(e,t)=>{Pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ro(e,t,n,r),e.enum=t.entries,e.options=[...e._zod.values];let n=new Set(Object.keys(t.entries));e.extract=(e,r)=>{let i={};for(let r of e)if(n.has(r))i[r]=t.entries[r];else throw Error(`Key ${r} not found in enum`);return new Ls({...t,checks:[],...E(r),entries:i})},e.exclude=(e,r)=>{let i={...t.entries};for(let t of e)if(n.has(t))delete i[t];else throw Error(`Key ${t} not found in enum`);return new Ls({...t,checks:[],...E(r),entries:i})}});function Rs(e,t){return new Ls({type:`enum`,entries:Array.isArray(e)?Object.fromEntries(e.map(e=>[e,e])):e,...E(t)})}var zs=j(`ZodTransform`,(e,t)=>{Wo(),Fr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ao(e,t,n,r),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new Je(e.constructor.name);n.addIssue=r=>{if(typeof r==`string`)n.issues.push(Ae(r,n.value,t));else{let t=r;t.fatal&&(t.continue=!1),t.code??=`custom`,`input`in t||(t.input=n.value),t.inst??=e,n.issues.push(Ae(t))}};let i=t.transform(n.value,n);return i instanceof Promise?i.then(e=>(n.value=e,n)):(n.value=i,n)}});function Bs(e){return new zs({type:`transform`,transform:e})}var Vs=j(`ZodOptional`,(e,t)=>{Lr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Hs(e){return new Vs({type:`optional`,innerType:e})}var Us=j(`ZodExactOptional`,(e,t)=>{Rr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ws(e){return new Us({type:`optional`,innerType:e})}var Gs=j(`ZodNullable`,(e,t)=>{zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>go(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ks(e){return new Gs({type:`nullable`,innerType:e})}var qs=j(`ZodDefault`,(e,t)=>{Br.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>bo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeDefault=e.unwrap});function Js(e,t){return new qs({type:`default`,innerType:e,get defaultValue(){return typeof t==`function`?t():ae(t)}})}var Ys=j(`ZodPrefault`,(e,t)=>{Hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>xo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Xs(e,t){return new Ys({type:`prefault`,innerType:e,get defaultValue(){return typeof t==`function`?t():ae(t)}})}var Zs=j(`ZodNonOptional`,(e,t)=>{Ur.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>_o(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Qs(e,t){return new Zs({type:`nonoptional`,innerType:e,...E(t)})}var $s=j(`ZodCatch`,(e,t)=>{Kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>So(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeCatch=e.unwrap});function ec(e,t){return new $s({type:`catch`,innerType:e,catchValue:typeof t==`function`?t:He(t)})}var tc=j(`ZodPipe`,(e,t)=>{qr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>Co(e,t,n,r),e.in=t.in,e.out=t.out});function nc(e,t){return new tc({type:`pipe`,in:e,out:t})}var rc=j(`ZodReadonly`,(e,t)=>{Yr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>wo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function ic(e){return new rc({type:`readonly`,innerType:e})}var ac=j(`ZodCustom`,(e,t)=>{Zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>io(e,t,n,r)});function oc(e,t={}){return ba(ac,e,t)}function sc(e,t){return xa(e,t)}var cc=n(),lc=[`endurance`,`power`,`grace`],uc=[`empathy`,`persuasion`,`demeanor`],dc=[`logic`,`intuition`,`memory`],fc=Rs([...lc,...uc,...dc]),B={physical:lc,social:uc,mental:dc,magic:[]},pc=[`physical`,`social`,`mental`],mc=ks({hp:_s().int(),vp:_s().int(),sp:_s().int(),mp:_s().int()}).partial(),hc=R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be kebab-case`),gc=Rs([`placeholder`,`draft`,`final`]),_c=ks({id:hc,name:R().min(1),status:gc,plane:R().min(1),region:R().optional(),summary:R().min(1),tags:Ds(R()).default([]),lore:R().optional()}),vc=Fs(fc,ks({bonus:_s().int().min(0),max:_s().int().min(0).max(20)}).refine(e=>e.bonus<=e.max,`bonus can't exceed max`)),yc=ks({name:R().min(1),description:R().min(1)}),bc=ks({trait:hc,rank:_s().int().min(1).optional()}),xc=ks({choose:_s().int().min(1),from:R().min(1),note:R().optional(),perRank:xs().optional()}),Sc=_c.extend({features:Ds(yc).default([]),grants:Ds(bc).default([]),resources:mc.default({}),traitAccess:Ds(R()).default([]),stats:vc,freePoints:_s().int().min(0).default(0),maxTotal:_s().int().min(0).optional()}),Cc=Rs([`origin`,`profession`,`past`]),wc=ks({count:_s().int().min(1),group:Rs(pc)}),Tc=_c.extend({type:Cc,grants:Ds(bc).default([]),bonusPoints:Ds(wc).default([]),coreBonus:Is(Rs([`magic`]),_s().int().min(1)).default({}),choices:Ds(xc).default([]),backgroundTraits:Ds(hc).default([]),features:Ds(yc).default([])}),Ec=Rs([`knowledge`,`skill`,`contact`,`starter`,`ability`,`condition`,`membership`,`circumstance`,`other`]),Dc=ks(Object.fromEntries([...fc.options,...Object.keys(B)].map(e=>[e,_s().int().min(0).optional()]))).strict(),Oc=_c.extend({category:Ec,types:Ds(R()).default([]),ranked:xs().default(!1),rankStats:Ds(fc).default([]),minStats:Dc.default({}),prerequisites:Ds(hc).default([]),prerequisiteTags:Ds(R()).default([]),background:xs().default(!1),starterOnly:xs().default(!1),mastery:xs().default(!1),temporary:R().optional(),conveyed:xs().default(!1),rpRequirement:R().optional(),effect:R().min(1),language:R().optional(),choices:Ds(xc).default([]),resources:mc.default({}),coreAccess:Ds(Rs([`magic`])).default([]),list:R().optional(),opensLists:Ds(R()).default([]),grants:Ds(bc).default([])}),kc=ks({group:Rs(Object.keys(B)),points:Is(fc,_s().int().min(0))}),Ac=Rs([`universal`,`background`]),jc=ks({trait:hc,rank:_s().int().min(1).default(1),pick:Ac}),Mc=ks({package:hc.optional(),trait:hc.optional(),from:R().min(1),traits:Ds(R().trim().min(1))}).refine(e=>e.package===void 0!=(e.trait===void 0),`an answer names either a package or a Trait`),Nc=ks({name:R().optional(),kind:hc,origin:hc,profession:hc,past:hc,startPoints:Is(fc,_s().int().min(0)).default({}),level:_s().int().min(1).default(1),levels:Ds(kc),traits:Ds(jc).default([]),choices:Ds(Mc).default([])}),Pc={startingLevel:3},Fc=fc.options,Ic=[`origin`,`profession`,`past`],Lc={language:e=>e.types.includes(`language`),"dreftian-language":e=>e.types.includes(`language`)&&e.region===`dreft`,"spoken-language":e=>e.types.includes(`language`)&&!e.tags.includes(`writing`)},Rc=`spoken-and-written-language`;function zc(e,t){if(e.language)return t.traits.find(t=>t.language===e.language&&t.types.includes(`language`)&&t.tags.includes(`writing`))}var Bc={contact:`Contact`,place:`Place`},Vc=e=>Object.hasOwn(Bc,e);function Hc(e,t){if(e===`spoken-and-written-language`)return t.traits.filter(e=>Lc[`spoken-language`](e)&&zc(e,t));let n=Lc[e];return n?t.traits.filter(n):[]}var Uc=(e,t)=>e[t.by]===t.id&&e.from===t.from;function Wc(e,t,n=1){let r=[];for(let i of t.choices){let a=r.find(e=>e.from===i.from);a?(a.count+=i.choose*(i.perRank===!1?1:n),i.note&&a.notes.push(i.note)):r.push({by:e,id:t.id,name:t.name,from:i.from,count:i.choose*(i.perRank===!1?1:n),notes:i.note?[i.note]:[]})}return r}function Gc(e,t){let n=[];for(let e of t)for(let t of e.bonusPoints){let r=n.find(e=>e.group===t.group);r?(r.count+=t.count,r.from.push(e.name)):n.push({group:t.group,count:t.count,from:[e.name]})}for(let t of n){let n=B[t.group].reduce((t,n)=>t+Math.max(0,(e?.stats[n]?.max??20)-(e?.stats[n]?.bonus??0)),0);t.count=Math.min(t.count,n)}return{any:e?.freePoints??0,groups:n.filter(e=>e.count>0)}}function Kc(e,t){let n=new Set,r=e=>{if(!n.has(e)){n.add(e);for(let n of t.traits.find(t=>t.id===e)?.grants??[])r(n.trait)}};for(let t of e)r(t);return n}function qc(e,t){let n=new Set;for(let r of Kc(e,t))for(let e of t.traits.find(e=>e.id===r)?.opensLists??[])n.add(e);return n}function Jc(e,t){let n=new Set(pc);for(let r of Kc(e,t))for(let e of t.traits.find(e=>e.id===r)?.coreAccess??[])n.add(e);return[...n]}var Yc=e=>`${e.name} (${e.id})`,Xc=e=>/^[aeiou]/.test(e)?`an ${e}`:`a ${e}`;function Zc(e,t,n=Pc){let r=[],i=[],a=(e,t,n)=>r.push({code:e,message:t,path:n}),o=(e,t,n)=>i.push({code:e,message:t,path:n}),s=Nc.safeParse(e);if(!s.success){for(let e of s.error.issues)a(`schema`,`${e.path.join(`.`)||`build`}: ${e.message}`,e.path.join(`.`)||void 0);return{ok:!1,errors:r,warnings:i}}let c=s.data,l=new Map(t.traits.map(e=>[e.id,e])),u=t.kinds.find(e=>e.id===c.kind);u||a(`kind`,`Kind "${c.kind}" doesn't exist`,`kind`);let d=u?.stats,f=[];for(let e of Ic){let n=t.packages.find(t=>t.id===c[e]);n?n.type===e?f.push(n):a(`package`,`${n.name} is ${Xc(n.type)}, not ${Xc(e)}`,e):a(`package`,`${e} "${c[e]}" doesn't exist`,e)}c.level!==n.startingLevel&&a(`level`,`This campaign starts characters at level ${n.startingLevel}, but the build is level ${c.level}`,`level`),c.levels.length!==c.level&&a(`level`,`A level ${c.level} character needs ${c.level} level allocations, but the build has ${c.levels.length}`,`levels`);let p=Object.fromEntries(Fc.map(e=>[e,d?.[e]?.bonus??0]));for(let[e,t=0]of Object.entries(c.startPoints))p[e]+=t;let m=Gc(u,f),h=e=>B[e].reduce((e,t)=>e+(c.startPoints[t]??0),0),g=Object.values(c.startPoints).reduce((e,t)=>e+(t??0),0),_=0;for(let e of m.groups){let t=h(e.group);if(_+=Math.min(t,e.count),t<e.count){let n=e.count-t;a(`allocation`,`Place ${n} ${e.group.charAt(0).toUpperCase()+e.group.slice(1)} bonus ${n===1?`point`:`points`} from ${e.from.join(` and `)}`,`startPoints`)}}let v=m.any,y=g-_;u&&y!==v&&(v||y>0)&&a(`allocation`,v?y<v?y===0?`Place ${u.name}'s ${v} free bonus points`:`Place ${v-y} more of ${u.name}'s ${v} free bonus points`:`${u.name} gives ${v} free bonus points, but the build places ${y}`:m.groups.length?`The build places ${y} more bonus ${y===1?`point`:`points`} than its packages give`:`${u.name} has no free bonus points, but the build places ${g}`,`startPoints`);let b=Object.fromEntries(Object.keys(B).map(e=>[e,0]));if(c.levels.forEach((e,t)=>{let n=`levels[${t}].points`;b[e.group]++;let r=B[e.group],i=r.length?3:0,o=0;for(let[i,s=0]of Object.entries(e.points)){if(!r.includes(i)){let o=r.length?` (${r.join(`, `)})`:`; ${e.group} has no focus stats`;a(`allocation`,`Level ${t+1} puts points in ${i}, which isn't a ${e.group} stat${o}`,n)}p[i]+=s,o+=s}o!==i&&i&&a(`allocation`,`Level ${t+1} spends ${o} focus points; each level gives exactly 3`,n)}),d)for(let e of Fc){let t=d[e]?.max??20;p[e]>20?a(`stat-cap`,`${e} is ${p[e]}; nothing can exceed 20`,`levels`):p[e]>t&&a(`stat-max`,`${e} is ${p[e]}, above the ${u.name} max of ${t}`,`levels`)}let x={universal:{available:Fc.reduce((e,t)=>e+Math.ceil(p[t]/2),0),spent:0,banked:0},background:{available:Fc.reduce((e,t)=>e+Math.floor(p[t]/2),0),spent:0,banked:0}},S=new Map,ee=(e,t,n)=>{let r=S.get(e);if(r)r.rank=Math.max(r.rank,t),r.sources.push(n);else{S.set(e,{trait:e,rank:t,sources:[n]});for(let t of l.get(e)?.grants??[])ee(t.trait,t.rank??1,`trait ${e}`)}};for(let e of u?.grants??[])ee(e.trait,e.rank??1,`kind ${u.id}`);for(let e of f)for(let t of e.grants)ee(t.trait,t.rank??1,`${e.type} ${e.id}`);let C=new Set,w=[],te=(e,n,r)=>{w.push(e);let{name:i,from:s,count:u}=e,d=Bc[s],f=c.choices.findIndex(t=>!C.has(c.choices.indexOf(t))&&Uc(t,e)),p=f<0?0:c.choices[f].traits.length;if(d&&p<u){let e=u-p;o(`choice`,`${i} gives ${u} ${d}${u>1?`s`:``}: record ${e>1?`${e} more`:p?`one more`:s===`contact`?`who`:`which`} on the Choices step`,f<0?`choices`:`choices[${f}]`)}if(f<0){d||a(`choice`,`${i} asks for ${u} from "${s}", but the build doesn't answer it`,`choices`);return}C.add(f);let m=c.choices[f],h=`choices[${f}]`;if((d?p>u:p!==u)&&a(`choice`,`${i} asks for ${u} from "${s}", but the build gives ${p}`,h),new Set(m.traits).size!==m.traits.length&&a(`choice`,`${i}'s "${s}" answer lists the same ${d??`Trait`} twice`,h),Vc(s))return;let g=Hc(s,t);if(g.length===0)o(`choice-pool`,`Can't check ${i}'s "${s}" answer (${m.traits.join(`, `)}): no Traits are defined for that pool yet`,h);else for(let e of m.traits){let t=l.get(e);t?g.includes(t)?r&&S.has(e)&&a(`duplicate-trait`,`${Yc(t)} is already held (from ${S.get(e).sources.join(`, `)}), so ${i} can't give it again`,h):a(`choice`,`${Yc(t)} isn't in the "${s}" pool for ${i}`,h):a(`unknown-trait`,`Trait "${e}" doesn't exist`,h)}for(let e of m.traits)ee(e,1,`${n} choice`);if(s===`spoken-and-written-language`)for(let e of m.traits){let o=l.has(e)?zc(l.get(e),t):void 0;o&&(r&&S.has(o.id)&&a(`duplicate-trait`,`${Yc(o)} is already held (from ${S.get(o.id).sources.join(`, `)}), so ${i} can't give it again`,h),ee(o.id,1,`${n} choice`))}};for(let e of f)for(let t of Wc(`package`,e))te(t,`${e.type} ${e.id}`,!1);let T=new Set(u?.traitAccess??[]),ne=qc(S.keys(),t),re=new Set(f.flatMap(e=>e.backgroundTraits));for(let e of t.traits)e.conveyed||e.list&&!ne.has(e.list)||(e.tags.some(e=>T.has(e))||e.list&&e.background)&&re.add(e.id);let ie=new Map;c.traits.forEach((e,t)=>{let n=l.get(e.trait),r=`traits[${t}]`;n?(x[e.pick].spent++,n.conveyed&&a(`conveyed`,`${Yc(n)} is Conveyed: it comes from a package or from play, not from a pick`,r),e.pick===`universal`&&n.background&&a(`pick-type`,`${Yc(n)} is a Background Trait and needs a background pick`,r),e.pick===`background`&&!re.has(n.id)&&a(`pick-type`,`${Yc(n)} isn't on this character's Background Trait list, so it needs a universal pick`,r),ie.has(n.id)||ie.set(n.id,[]),ie.get(n.id).push({rank:e.rank,index:t})):a(`unknown-trait`,`Trait "${e.trait}" doesn't exist`,r)});for(let[e,t]of ie){let n=l.get(e),r=S.get(e),i=r?.rank??0,o=r?` (from ${r.sources.join(`, `)})`:``;if(!n.ranked){for(let e of t)e.rank>1&&a(`rank`,`${Yc(n)} isn't ranked, so it can't go above rank 1`,`traits[${e.index}]`);i>0?a(`duplicate-trait`,`${Yc(n)} is already held${o} and isn't ranked, so it can't be taken again`,`traits[${t[0].index}]`):t.length>1&&a(`duplicate-trait`,`${Yc(n)} isn't ranked, so it can't be taken twice`,`traits[${t[1].index}]`),ee(e,1,`${c.traits[t[0].index].pick} pick`);continue}let s=i+1;for(let r of[...t].sort((e,t)=>e.rank-t.rank)){let t=`traits[${r.index}]`;r.rank<s?a(`rank`,`${Yc(n)} is already at rank ${s-1}${r.rank<=i?o:``}, so a pick for rank ${r.rank} does nothing`,t):(r.rank>s&&a(`rank`,`${Yc(n)} rank ${r.rank} needs rank ${s} first`,t),s=r.rank+1,ee(e,r.rank,`${c.traits[r.index].pick} pick`))}let u=Math.max(...t.map(e=>e.rank));if(u>1){let e=n.rankStats.filter(e=>p[e]<3*u);if(e.length){let t=e.map(e=>`${e} ${p[e]}`).join(`, `);a(`rank-stats`,`${Yc(n)} rank ${u} needs ${n.rankStats.join(`, `)} of at least ${3*u} (has ${t})`,`traits`)}}}for(let e of[...S.values()]){let t=l.get(e.trait);if(t?.choices.length)for(let n of Wc(`trait`,t,t.ranked?e.rank:1))te(n,`trait ${t.id}`,!0)}c.choices.forEach((e,t)=>{if(C.has(t))return;let n=`choices[${t}]`;if(e.package!==void 0){let t=f.some(t=>t.id===e.package);a(`choice`,t?`${e.package} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for "${e.package}", which isn't one of its packages`,n)}else{let t=l.get(e.trait)?.name??e.trait;a(`choice`,S.has(e.trait)?`${t} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for ${t}, which it doesn't hold`,n)}}),c.traits.forEach((e,t)=>{let n=l.get(e.trait);for(let e of n?.prerequisites??[])if(!S.has(e)){let r=l.get(e)?.name??e;a(`prerequisite`,`${Yc(n)} needs ${r} (${e}) first`,`traits[${t}]`)}for(let e of n?.prerequisiteTags??[])[...S.keys()].some(t=>t!==n.id&&l.get(t)?.tags.includes(e))||a(`prerequisite`,`${Yc(n)} needs a Trait tagged ${e} first`,`traits[${t}]`)});let ae=new Set(Jc(S.keys(),t));for(let e of Object.keys(b)){if(!b[e]||ae.has(e))continue;let n=t.traits.filter(t=>t.coreAccess.includes(e)).map(e=>e.name),r=e.charAt(0).toUpperCase()+e.slice(1);a(`core-access`,`${b[e]} ${b[e]===1?`level goes`:`levels go`} to ${r}, which this character can't level${n.length?` without ${n.join(` or `)}`:``}`,`levels`)}let oe=Object.fromEntries(Object.keys(B).map(e=>[e,0]));for(let e of f)for(let[t,n=0]of Object.entries(e.coreBonus))ae.has(t)&&(oe[t]+=n);for(let e of Object.keys(b))b[e]+=oe[e];let se=qc(S.keys(),t);for(let e of ie.keys()){let n=l.get(e);if(!n.list||se.has(n.list))continue;let r=t.traits.filter(e=>e.opensLists.includes(n.list)).map(e=>e.name),i=n.list.charAt(0).toUpperCase()+n.list.slice(1);a(`trait-list`,`${Yc(n)} is on the ${i} list, which this character can't take from${r.length?` without ${r.join(` or `)}`:``}`,`traits[${ie.get(e)[0].index}]`)}for(let e of ie.keys()){let t=l.get(e),n=Object.entries(t.minStats).filter(([e,t])=>{let n=e in b?b[e]:p[e];return t!==void 0&&n<t});if(n.length){let r=Object.entries(t.minStats).map(([e,t])=>`${e} ${t}`).join(`, `),i=n.map(([e])=>`${e} ${e in b?b[e]:p[e]}`).join(`, `);a(`min-stats`,`${Yc(t)} needs ${r} (has ${i})`,`traits[${ie.get(e)[0].index}]`)}}for(let e of[`universal`,`background`]){let t=x[e];t.banked=Math.max(0,t.available-t.spent),t.spent>t.available&&a(`picks-overspent`,`The build spends ${t.spent} ${e} picks but its stats give only ${t.available}`,`traits`)}let ce=e=>B[e].reduce((e,t)=>e+p[t],0),E={hp:10+ce(`physical`),vp:ce(`social`),sp:ce(`mental`),mp:3*b.magic},le=[`hp`,`vp`,`sp`,`mp`];for(let e of le)E[e]+=u?.resources[e]??0;for(let e of S.values()){let t=l.get(e.trait)?.resources??{};for(let n of le)E[n]+=(t[n]??0)*e.rank}return{ok:r.length===0,errors:r,warnings:i,summary:{stats:p,coreStats:b,coreBonus:oe,coreAccess:[...ae],resources:E,picks:x,traits:[...S.values()],backgroundList:[...re].sort(),traitLists:[...se],questions:w}}}var Qc=[`character`,`background`,`stats`,`traits`,`choices`,`sheet`],$c=Object.keys(B),el=()=>({physical:0,social:0,mental:0,magic:0}),tl={draft:{level:3,core:el(),points:{},traits:[],choices:[]},campaign:{startingLevel:3},step:`character`};function nl(e,t){let n=[];for(let r of $c){let i=B[r].map(e=>[e,t[e]??0]);for(let t=0;t<e[r];t++){let a={group:r,points:{}},o=t===e[r]-1?1/0:3;for(let e of i){let t=Math.min(o,e[1]);t>0&&(a.points[e[0]]=t,e[1]-=t,o-=t)}n.push(a)}}return n}function rl(e){let t=el(),n={};for(let r of e)if(r&&r.group in t){t[r.group]++;for(let[e,t]of Object.entries(r.points??{}))t&&(n[e]=(n[e]??0)+t)}return{core:t,points:n}}function il(e){return{core:{...el(),...e.core},points:e.points&&typeof e.points==`object`?e.points:{}}}function al(e){let{core:t,points:n,...r}=e,i={};for(let[e,a]of Object.entries({...r,levels:nl(t,n)}))a!==void 0&&a!==``&&(i[e]=a);return i}var ol=e=>Array.isArray(e)?e:[],sl=e=>typeof e==`string`&&e!==``?e:void 0;function cl(e){if(typeof e!=`object`||!e||Array.isArray(e))throw Error(`A build is a JSON object`);let t=e,n=ol(t.levels),r=typeof t.level==`number`?t.level:Math.max(1,n.length),i=t.kind===`tatot`&&(t.form===`orcoid`||t.form===`goblinoid`)?`tatot-${t.form}`:sl(t.kind);return{name:sl(t.name),kind:i,origin:sl(t.origin),profession:sl(t.profession),past:sl(t.past),...t.startPoints&&typeof t.startPoints==`object`&&Object.keys(t.startPoints).length?{startPoints:t.startPoints}:{},level:r,...t.core&&typeof t.core==`object`?il(t):rl(n),traits:ol(t.traits).map(e=>({...e,rank:e.rank??1})),choices:ol(t.choices)}}function ll(e,t){let n={...e,level:t};for(let e of[...$c].reverse())for(;n.core[e]>0&&$c.reduce((e,t)=>e+n.core[t],0)>t;)n=ul(n,e,n.core[e]-1);return n}function ul(e,t,n){let r={...e.points},i=B[t].reduce((e,t)=>e+(r[t]??0),0)-n*3;for(let e of[...B[t]].reverse()){if(i<=0)break;let t=Math.min(i,r[e]??0);r[e]=(r[e]??0)-t,r[e]||delete r[e],i-=t}return{...e,core:{...e.core,[t]:n},points:r}}function dl(e,t,n,r){return{...e,traits:[...e.traits,{trait:t,rank:n,pick:r}]}}var fl=`sf-character-builder:v1`;function pl(){try{let e=localStorage.getItem(fl);if(!e)return tl;let t=JSON.parse(e),n=cl(t.draft),r=t.campaign?.startingLevel??n.level,i=t.step===`levels`?`stats`:t.step,a=Qc.includes(i)?i:`character`,o=t.ai&&Array.isArray(t.ai.reasons)?t.ai:void 0;return{draft:n,campaign:{startingLevel:r},step:a,ai:o}}catch{return tl}}function ml(e){try{localStorage.setItem(fl,JSON.stringify(e))}catch{}}function hl(){try{localStorage.removeItem(fl)}catch{}}var gl=e=>e.toLowerCase().normalize(`NFKD`).replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``),_l=/^levels\[(\d+)\]/;function vl(e,t,n){let r=yl(e,t,n);return Object.keys(B).filter(t=>r.includes(t)||e.core[t]>0)}function yl(e,t,n){return n?.summary?n.summary.coreAccess:Jc([...(t.kinds.find(t=>t.id===e.kind)?.grants??[]).map(e=>e.trait),...t.packages.filter(t=>[e.origin,e.profession,e.past].includes(t.id)).flatMap(e=>e.grants.map(e=>e.trait)),...e.traits.map(e=>e.trait)],t)}function bl(e,t,n){let r=Zc(al(e),t,n);return{...r,errors:V(r.errors,e)}}function V(e,t){let n=nl(t.core,t.points),r=new Set,i=[];for(let a of e){if(a.code===`level`&&a.path===`levels`){let e=Object.values(t.core).reduce((e,t)=>e+t,0),n=t.level-e,r=Math.abs(n);i.push({...a,message:n>0?`Place ${r} more core ${r===1?`point`:`points`}`:`Take back ${r} core ${r===1?`point`:`points`}; a level ${t.level} character has ${t.level}`});continue}let e=a.code===`allocation`?_l.exec(a.path??``):null,o=e?n[Number(e[1])]?.group:void 0;if(!o){i.push(a);continue}if(r.has(o))continue;r.add(o);let s=t.core[o]*3,c=B[o].reduce((e,n)=>e+(t.points[n]??0),0),l=Math.abs(s-c),u=o.charAt(0).toUpperCase()+o.slice(1);i.push({...a,path:`levels`,message:c<s?`Place ${l} more ${u} ${l===1?`point`:`points`}`:`${u} has ${l} more ${l===1?`point`:`points`} than its core stat unlocks`})}return i}function xl(e,t,n,r){let i=bl(e,t,n);if(!i.summary)return;let a=new Set(i.errors.map(e=>e.message)),o=new Map(i.summary.traits.map(e=>[e.trait,e.rank])),s=[],c=typeof r==`string`?void 0:r.list;if(c&&!i.summary.traitLists.includes(c))return[];for(let i of t.traits){if(i.list!==c)continue;let l=typeof r==`string`?r:i.background?`background`:`universal`,u=i.ranked?(o.get(i.id)??0)+1:1,d=bl(dl(e,i.id,u,l),t,n),f=`${i.name} asks for `,p=d.errors.filter(e=>!a.has(e.message)&&!(e.code===`choice`&&e.message.startsWith(f)));p.some(e=>e.code===`pick-type`||e.code===`conveyed`)||s.push({trait:i,rank:u,pick:l,reasons:p.map(e=>e.message)})}return s}function Sl(e){switch(e.code){case`kind`:return`character`;case`package`:return`background`;case`level`:return e.path===`level`?`character`:`stats`;case`allocation`:case`core-access`:case`stat-max`:case`stat-cap`:return`stats`;case`choice`:case`choice-pool`:return`choices`;case`schema`:{let t=e.path?.split(`.`)[0];return t===`name`||t===`level`||t===`kind`?`character`:t===`origin`||t===`profession`||t===`past`?`background`:t===`levels`||t===`startPoints`?`stats`:t===`choices`?`choices`:`traits`}default:return e.path===`choices`||e.path?.startsWith(`choices[`)?`choices`:`traits`}}var Cl={kind:`Choose a Kind`,origin:`Choose an Origin`,profession:`Choose a Profession`,past:`Choose a Past`};function wl(e,t){return e.code===`schema`&&e.path&&e.path in Cl&&!t[e.path]?Cl[e.path]:e.message}var Tl=`id: ai-core
-name: AI Core
-status: placeholder
-plane: earth
-summary: "A sentient, self-contained machine mind, capable of inhabiting different forms and of lightning-fast computation."
-tags: [ai-core, artificial-intelligence, machine, earth, kashgar]
-features:
-  - name: Creatures of Logic
-    description: AI Cores get a +3 bonus to every Mental stat.
-  - name: Bodiless
-    description: AI Cores can’t put points into Physical stats. An AI Core inhabits a chassis, which determines its physical stats.
-  - name: Armored Core
-    description: An AI Core’s central core is an item with 10 HP, and it must be destroyed separately from its chassis for the character to be killed.
-  - name: Machine Mind
-    description: An AI Core can interface directly with other machines through the cabled port interfaces on its core.
-# Bodiless keeps Physical at 0, so the maximums total 120, not Human's 135.
-maxTotal: 120
-stats:
-  endurance: { bonus: 0, max: 0 }
-  power: { bonus: 0, max: 0 }
-  grace: { bonus: 0, max: 0 }
-  empathy: { bonus: 0, max: 20 }
-  persuasion: { bonus: 0, max: 20 }
-  demeanor: { bonus: 0, max: 20 }
-  logic: { bonus: 3, max: 20 }
-  intuition: { bonus: 3, max: 20 }
-  memory: { bonus: 3, max: 20 }
-`,El=`id: guwain
-name: Guwain
-status: placeholder
-plane: isekai
-region: dreft
-summary: The “Brine Dwarves.” Averaging four feet and well over 250 pounds. Most live along the coast; a few hold out in mountaintop villages where the air is thin and cold.
-tags: [dwarf, sea, diving, mountains]
-features:
-  - name: Stout
-    description: Higher Endurance and Power maximums, lower Grace maximum.
-  - name: Prodigious Lungs
-    description: Can hold their breath for hours, and are unbothered by the thin air of high altitudes.
-  - name: Beard Nets
-    description: Guwain beards grow in thick, tangled messes. Most Guwain braid theirs, often with tie-offs and a meshed pattern that lets them carry goods inside.
-# Born to magic, like every Kind of Dreft but the Orcoid Tatot.
-grants:
-  - trait: magical-heritage
-stats:
-  endurance: { bonus: 2, max: 20 }
-  power: { bonus: 2, max: 17 }
-  grace: { bonus: 0, max: 10 }
-  empathy: { bonus: 1, max: 15 }
-  persuasion: { bonus: 1, max: 14 }
-  demeanor: { bonus: 1, max: 16 }
-  logic: { bonus: 1, max: 15 }
-  intuition: { bonus: 0, max: 14 }
-  memory: { bonus: 1, max: 14 }
-`,Dl=`id: isek
-name: Isek
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The so-called “Free Elves.” Brash and adventure-seeking by nature, this nigh-immortal Kind rarely sees old age. Young Isek chase rebellion and are possessed of an irresistible wanderlust."
-tags: [elf, immortal, restless, rebel, adventurer]
-features:
-  - name: Nigh Immortal
-    description: Isek don’t age past their prime, though with their inveterate adventure-seeking and simple lack of self-care, few live to see old age.
-  - name: Reckless
-    description: Higher Power and Grace maximums, lower Demeanor maximum.
-  - name: Restless
-    description: Ill-suited to sedentary life. Isek have easier access to military, guild, and caravan Traits.
-traitAccess: [military, guild, caravan]
-# Born to magic, like every Kind of Dreft but the Orcoid Tatot.
-grants:
-  - trait: magical-heritage
-stats:
-  endurance: { bonus: 1, max: 15 }
-  power: { bonus: 2, max: 18 }
-  grace: { bonus: 2, max: 18 }
-  empathy: { bonus: 1, max: 14 }
-  persuasion: { bonus: 1, max: 15 }
-  demeanor: { bonus: 0, max: 10 }
-  logic: { bonus: 0, max: 14 }
-  intuition: { bonus: 1, max: 16 }
-  memory: { bonus: 1, max: 15 }
-`,Ol=`id: tatot-goblinoid
-name: "Tatot, Goblinoid"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Goblinoids are small, with plentiful mana."
-tags: [tatot, goblinoid, merchant, magic]
-features:
-  - name: Goblinoid
-    description: Higher Memory and Logic maximums, access to magic Traits, and +6 MP.
-  - name: Merchant Clans
-    description: Easier access to trading guild and merchant clan Traits.
-traitAccess: [trading-guild, merchant-clan]
-# Born to magic, like every Kind of Dreft but the Orcoid Tatot.
-grants:
-  - trait: magical-heritage
-# Plentiful mana: MP without any Magic.
-resources: { mp: 6 }
-stats:
-  endurance: { bonus: 1, max: 13 }
-  power: { bonus: 0, max: 10 }
-  grace: { bonus: 1, max: 16 }
-  empathy: { bonus: 1, max: 15 }
-  persuasion: { bonus: 1, max: 15 }
-  demeanor: { bonus: 1, max: 14 }
-  logic: { bonus: 2, max: 18 }
-  intuition: { bonus: 1, max: 16 }
-  memory: { bonus: 1, max: 18 }
-`,kl=`id: tatot-orcoid
-name: "Tatot, Orcoid"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Orcoids are larger and stronger, have no mana, and are largely immune to sunsickness."
-tags: [tatot, orcoid, merchant]
-features:
-  - name: Orcoid
-    description: Higher Power and Endurance maximums. No mana, and largely immune to sunsickness.
-  - name: Merchant Clans
-    description: Easier access to trading guild and merchant clan Traits.
-traitAccess: [trading-guild, merchant-clan]
-stats:
-  endurance: { bonus: 2, max: 18 }
-  power: { bonus: 2, max: 18 }
-  grace: { bonus: 1, max: 13 }
-  empathy: { bonus: 1, max: 14 }
-  persuasion: { bonus: 1, max: 15 }
-  demeanor: { bonus: 1, max: 15 }
-  logic: { bonus: 0, max: 13 }
-  intuition: { bonus: 1, max: 15 }
-  memory: { bonus: 0, max: 14 }
-`,Al=`id: human
-name: Human
-status: draft
-plane: earth
-summary: "The humanity of Earth Baseline."
-tags: [generalist, earth]
-features:
-  - name: Generalists
-    description: Humans get a +1 bonus to every focus stat.
-  - name: Unexceptional
-    description: Humans can't exceed 15 in any focus stat unless otherwise modified.
-stats:
-  endurance: { bonus: 1, max: 15 }
-  power: { bonus: 1, max: 15 }
-  grace: { bonus: 1, max: 15 }
-  empathy: { bonus: 1, max: 15 }
-  persuasion: { bonus: 1, max: 15 }
-  demeanor: { bonus: 1, max: 15 }
-  logic: { bonus: 1, max: 15 }
-  intuition: { bonus: 1, max: 15 }
-  memory: { bonus: 1, max: 15 }
-`,jl=`id: american-empire-colonies
-name: "The American Empire: Colonies"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "You grew up in the Empire’s stellar territories, in New Columbia on Luna or aboard the capital Ark, New York, a long way from the Earth the Empire still calls home."
-tags: [american-empire, colonies, luna, ark, space]
-lore: american-empire
-type: origin
-# A free bonus point the player places in a Physical stat.
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: american-history, rank: 1 }
-  - { trait: imperial-law, rank: 1 }
-  - { trait: english }
-  - { trait: english-written }
-backgroundTraits:
-  - new-columbia
-  - ark-new-york
-  - ark-life
-  - the-imperial-military
-  - imperial-politics
-  - earth-baseline-technology
-  - spanish
-`,Ml=`id: american-empire-earth
-name: "The American Empire: Earth"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "You were born in the Empire’s Earth territories, anywhere from the Californias and the Great Lakes to Nueva Mexico, in a country that calls itself the new Rome and is rarely short of a war to prove it."
-tags: [american-empire, earth, empire]
-lore: american-empire
-type: origin
-# A free bonus point the player places in a Physical stat.
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: american-history, rank: 1 }
-  - { trait: american-geography, rank: 1 }
-  - { trait: imperial-law, rank: 1 }
-  - { trait: english }
-  - { trait: english-written }
-backgroundTraits:
-  - the-imperial-military
-  - imperial-politics
-  - the-union-of-texas
-  - earth-baseline-technology
-  - spanish
-  - spanish-written
-`,Nl=`id: centafrica-colonies
-name: "Centafrica: Colonies"
-status: placeholder
-plane: earth
-region: centafrica
-summary: "You grew up aboard Aksum, Centafrica’s station on its long elliptical orbit through the inner solar system."
-tags: [centafrica, colonies, station, space]
-lore: centafrica
-type: origin
-# A free bonus point the player places in a Mental stat.
-bonusPoints:
-  - { count: 1, group: mental }
-grants:
-  - { trait: centafrica, rank: 1 }
-  - { trait: centafrican-law, rank: 1 }
-  - { trait: swahili }
-  - { trait: swahili-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - aksum
-  - ports-and-stations
-  - spacefaring
-  - starships
-  - shipping-lanes
-  - music
-  - earth-baseline-technology
-  - french
-  - english
-`,Pl=`id: centafrica-earth
-name: "Centafrica: Earth"
-status: placeholder
-plane: earth
-region: centafrica
-summary: "You were born in Centafrica, anywhere from Lagos to Kinshasa to Addis Ababa, in a vibrant democracy whose wealth is rarely spread evenly and whose people have long memories."
-tags: [centafrica, earth, democracy, culture]
-lore: centafrica
-type: origin
-# A free bonus point the player places in a Social stat.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: centafrica, rank: 1 }
-  - { trait: centafrican-law, rank: 1 }
-  - { trait: swahili }
-  - { trait: swahili-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - music
-  - art-history
-  - theater
-  - politics
-  - commerce
-  - earth-baseline-technology
-  - french
-  - french-written
-  - english
-  - lingala
-  - yoruba
-  - hausa
-`,Fl=`id: chinese-empire-colonies
-name: "The Empire of China: Colonies"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "You grew up in the Empire’s stellar territories, in Yùtù, the Jade Rabbit colony on Luna, or aboard the Ark Zhulong."
-tags: [chinese-empire, colonies, luna, ark, space]
-lore: chinese-empire
-type: origin
-# A free bonus point the player places in a Mental stat.
-bonusPoints:
-  - { count: 1, group: mental }
-grants:
-  - { trait: the-chinese-empire, rank: 1 }
-  - { trait: chinese-imperial-law, rank: 1 }
-  - { trait: mandarin }
-  - { trait: mandarin-written }
-backgroundTraits:
-  - yutu
-  - zhulong
-  - ark-life
-  - the-corporate-syndicates
-  - earth-baseline-technology
-`,Il=`id: chinese-empire-earth
-name: "The Empire of China: Earth"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "You were born in the Empire of China’s Earth territories, from Wuhan to the old nations of Southeast Asia, during a golden age the corporate syndicates are starting to suspect is ending."
-tags: [chinese-empire, earth, empire, corporate]
-lore: chinese-empire
-type: origin
-# A free bonus point the player places in a Mental stat.
-bonusPoints:
-  - { count: 1, group: mental }
-grants:
-  - { trait: the-chinese-empire, rank: 1 }
-  - { trait: chinese-imperial-law, rank: 1 }
-  - { trait: mandarin }
-  - { trait: mandarin-written }
-backgroundTraits:
-  - the-corporate-syndicates
-  - southeast-asia
-  - earth-baseline-technology
-`,Ll=`id: dreft
-name: Dreft
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village or the mountains."
-tags: [kingdom, dreft, isekai]
-lore: dreft
-type: origin
-# A free bonus point the player places in a Physical stat.
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: dreft, rank: 1 }
-  - { trait: dreftian-law, rank: 1 }
-  - { trait: dreftan }
-# Where in Dreft a character grew up isn't granted; it's bought with
-# background picks from this list.
-backgroundTraits:
-  - port-herminst
-  - glintl
-  - the-switch-port
-  - the-kings-woods
-  - the-corsine-pass
-  - seafaring
-  - coastal-trade
-  - farming
-  - mountaineering
-  - local-folklore
-  - karsef
-`,Rl=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.
-id: the-drovus-empire
-name: "The Drovus Empire"
-status: placeholder
-plane: isekai
-region: drovus
-summary: "You grew up in the Drovus Empire, which has spent the last decade swallowing its neighbors, the Sunrise Princedoms among them."
-tags: [drovus, empire, isekai, military]
-lore: drovus-empire
-type: origin
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: the-drovus-empire, rank: 1 }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - the-sunrise-princedoms
-  - military-tactics
-  - military-drill
-  - heraldry
-`,zl=`id: the-free-american-states
-name: "The Free American States"
-status: placeholder
-plane: earth
-region: free-american-states
-summary: "You grew up in one of the Free States, a fractious free-trade zone of independent countries wedged between the American Empire and the Union of Texas."
-tags: [free-american-states, earth, trade]
-lore: free-american-states
-type: origin
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: the-free-american-states, rank: 1 }
-  - { trait: english }
-  - { trait: english-written }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - spanish
-  - spanish-written
-  - the-union-of-texas
-  - haggler
-  - trade-law
-  - smooth-talker
-`,Bl=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.
-id: kingdom-of-karsef
-name: "Kingdom of Karsef"
-status: placeholder
-plane: isekai
-region: karsef
-summary: "You grew up in the Kingdom of Karsef, across the Corsine Pass from Dreft, and an old rival of it."
-tags: [karsef, kingdom, isekai, mountains]
-lore: kingdom-of-karsef
-type: origin
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: karsef, rank: 1 }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - the-corsine-pass
-  - mountaineering
-  - dreft
-  - shield-wall
-  - military-tactics
-`,Vl=`id: kashgar
-name: "Kashgar"
-status: placeholder
-plane: earth
-region: kashgar
-summary: "You grew up on Kashgar, the largest Ark in the settled systems and the heart of the AI diaspora. Your neighbors were as likely to be AI Cores as people, Kashgari security watched every deck, and home never stayed anywhere for long."
-tags: [ark, kashgar, ai, space, urban]
-lore: kashgar
-type: origin
-# A free bonus point the player places in a Mental stat.
-bonusPoints:
-  - { count: 1, group: mental }
-grants:
-  - { trait: kashgar, rank: 1 }
-  - { trait: ai-culture, rank: 1 }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - ark-life
-  - kashgar-mindworks
-  - artificial-intelligence
-  - cybernetics
-  - robotics
-  - earth-baseline-technology
-`,Hl=`id: the-kingdom-of-india-colonies
-name: "The Kingdom of India: Colonies"
-status: placeholder
-plane: earth
-region: kingdom-of-india
-summary: "You grew up in the Kingdom’s new homes beyond Earth: in Pataliputra, the planar capital where millions arrive every year, or aboard Amaravati, its station in high Earth orbit."
-tags: [india, colonies, planar, pataliputra, station]
-lore: kingdom-of-india
-type: origin
-# A free bonus point the player places in a Social stat.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: the-kingdom-of-india, rank: 1 }
-  - { trait: indian-law, rank: 1 }
-  - { trait: hindi }
-  - { trait: hindi-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - pataliputra
-  - amaravati
-  - indian-theology
-  - planar-exploration
-  - interplanar-relations
-  - ecology
-  - earth-baseline-technology
-  - english
-  - english-written
-`,Ul=`id: the-kingdom-of-india-earth
-name: "The Kingdom of India: Earth"
-status: placeholder
-plane: earth
-region: kingdom-of-india
-summary: "You were born in the Kingdom of India’s Earth territories, a regreened paradise whose crown, and millions of its people, have left for Pataliputra."
-tags: [india, earth, kingdom, theocracy]
-lore: kingdom-of-india
-type: origin
-# A free bonus point the player places in a Physical stat.
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: the-kingdom-of-india, rank: 1 }
-  - { trait: indian-law, rank: 1 }
-  - { trait: hindi }
-  - { trait: hindi-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - indian-theology
-  - ecology
-  - farming
-  - herbalism
-  - pataliputra
-  - earth-baseline-technology
-  - english
-  - english-written
-  - bengali
-  - tamil
-`,Wl=`id: the-lunar-industrial-syndicate
-name: "The Lunar Industrial Syndicate"
-status: placeholder
-plane: earth
-region: lunar-industrial-syndicate
-summary: "You grew up a “citizen shareholder” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its investors first."
-tags: [lunar-industrial-syndicate, earth, luna, corporate]
-lore: lunar-industrial-syndicate
-type: origin
-bonusPoints:
-  - { count: 1, group: mental }
-grants:
-  - { trait: the-lunar-industrial-syndicate, rank: 1 }
-  - { trait: english }
-  - { trait: english-written }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - portuguese
-  - portuguese-written
-  - the-corporate-syndicates
-  - ark-life
-  - starship-engineering
-  - cargo-handling
-`,Gl=`id: sdu-colonies
-name: "The Stellar Democratic Union: Colonies"
-status: placeholder
-plane: earth
-region: sdu
-summary: "You grew up in the Union’s stellar or planar territories: the Martian Association, the Antiluna colony, New Persia on Pairidaeza, or aboard one of the Union’s Arks."
-tags: [sdu, colonies, mars, ark, space]
-lore: stellar-democratic-union
-type: origin
-# A free bonus point the player places in a Social stat.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: the-stellar-democratic-union, rank: 1 }
-  - { trait: sdu-law, rank: 1 }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - the-martian-association
-  - antiluna
-  - new-persia
-  - boneyard
-  - ark-life
-  - union-politics
-  - earth-baseline-technology
-`,Kl=`id: sdu-earth
-name: "The Stellar Democratic Union: Earth"
-status: placeholder
-plane: earth
-region: sdu
-summary: "You were born in the Union’s Earth territories, anywhere from core Europe to Japan, Brazil or Canada, in the largest and richest nation in the settled systems."
-tags: [sdu, earth, union]
-lore: stellar-democratic-union
-type: origin
-# A free bonus point the player places in a Social stat.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: the-stellar-democratic-union, rank: 1 }
-  - { trait: sdu-law, rank: 1 }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - union-politics
-  - tetra
-  - the-diplomatic-wing
-  - the-united-nations
-  - earth-baseline-technology
-`,ql=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.
-id: kingdom-of-sorellion
-name: "Kingdom of Sorellion"
-status: placeholder
-plane: isekai
-region: sorellion
-summary: "You grew up in the Kingdom of Sorellion, one of Dreft’s neighbors on Isekai."
-tags: [sorellion, kingdom, isekai]
-lore: kingdom-of-sorellion
-type: origin
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: sorellion, rank: 1 }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - dreft
-  - heraldry
-  - courtly-manners
-  - haggler
-`,Jl=`id: tetra
-name: Tetra
-status: placeholder
-plane: earth
-region: tetra
-summary: "You grew up on Ark Tetra, the home of the UN and of planar exploration, and the capital of the SDU. Your early life was spent on a colossal drifting space station, where you learned the ways of city life and of living in space."
-tags: [ark, tetra, space, sdu, un, urban, planar-exploration]
-lore: tetra
-type: origin
-# A free bonus point the player places in a Social stat, like the SDU's.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: tetra, rank: 1 }
-  - { trait: sdu-law, rank: 1 }
-# One language of the player's choice, both spoken and written: the answer
-# is the spoken form, and the engine adds its written form.
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - the-diplomatic-wing
-  - the-united-nations
-  - tetra-frontiers-co
-  - the-explorers-lodge
-  - planar-exploration
-  - ark-life
-  - earth-baseline-technology
-  - the-switch-port
-`,Yl=`id: the-union-of-texas
-name: "The Union of Texas"
-status: placeholder
-plane: earth
-region: union-of-texas
-summary: "You grew up in the Union of Texas, an embittered, impoverished military republic that has spent 130 years preparing for a war with the Empire that never came."
-tags: [union-of-texas, earth, military]
-lore: union-of-texas
-type: origin
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: the-union-of-texas, rank: 1 }
-  - { trait: english }
-  - { trait: english-written }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - military-tactics
-  - spanish
-  - spanish-written
-  - the-free-american-states
-  - wielder-rifle
-  - survivalist
-`,Xl=`id: the-ural-federation
-name: "The Ural Federation"
-status: placeholder
-plane: earth
-region: ural-federation
-summary: "You grew up in the Ural Federation, among the tribal statelets of the steppe and the thawed Siberian breadbasket, in a melting pot of native peoples, climate refugees and the last of the Russian diaspora."
-tags: [ural-federation, earth, tribal, steppe]
-lore: ural-federation
-type: origin
-# A free bonus point the player places in a Physical stat.
-bonusPoints:
-  - { count: 1, group: physical }
-grants:
-  - { trait: the-ural-federation, rank: 1 }
-  - { trait: ural-tribal-law, rank: 1 }
-  - { trait: russian }
-  - { trait: russian-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - farming
-  - countryside-lore
-  - wilderness-lore
-  - survivalist
-  - rider-basic-animals
-  - animal-husbandry
-  - the-chinese-empire
-  - earth-baseline-technology
-  - kazakh
-  - mongolian
-  - uyghur
-`,Zl=`id: xanthus
-name: "Xanthus"
-status: placeholder
-plane: earth
-region: xanthus
-summary: "You grew up aboard Xanthus, the free Ark built around an iron asteroid: a pariah state, a model democracy and a haven for anyone escaping poverty or persecution."
-tags: [xanthus, ark, space, democracy, refugee]
-lore: xanthus
-type: origin
-# A free bonus point the player places in a Social stat.
-bonusPoints:
-  - { count: 1, group: social }
-grants:
-  - { trait: xanthus, rank: 1 }
-  - { trait: swahili }
-  - { trait: swahili-written }
-choices:
-  - choose: 1
-    from: spoken-and-written-language
-    note: "+1 Language (Spoken & Written)"
-backgroundTraits:
-  - ark-life
-  - asteroid-mining
-  - ports-and-stations
-  - spacefaring
-  - centafrica
-  - criminal-underworld
-  - starship-engineering
-  - lingala
-  - english
-  - spanish
-  - portuguese
-`,Ql=`id: craft-apprenticeship
-name: "Craft Apprenticeship"
-status: placeholder
-plane: any
-summary: "Spent years apprenticed to a master craftsman, learning a trade one mistake at a time."
-tags: [craft, apprentice, trade]
-type: past
-grants:
-  - { trait: appraisal }
-  - { trait: haggler }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - trade-guilds
-  - commerce
-  - engineering
-`,$l=`id: criminal-family
-name: "Criminal Family"
-status: placeholder
-plane: any
-summary: "Born into a family business that the law would rather not hear about."
-tags: [crime, family, underworld]
-type: past
-grants:
-  - { trait: streetwise }
-  - { trait: criminal-underworld }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - gambling
-  - law-enforcement
-  - security-systems
-`,eu=`id: gutter-trash
-name: "Gutter Trash"
-status: placeholder
-plane: any
-summary: "Grew up on the streets with nothing, and learned to take what wasn’t given and to disappear when it mattered."
-tags: [streets, poverty, urban, crime]
-type: past
-grants:
-  - { trait: streetwise }
-  - { trait: sleight-of-hand }
-  - { trait: concealment }
-backgroundTraits:
-  - gambling
-  - law-enforcement
-`,tu=`id: military-service
-name: "Military Service"
-status: placeholder
-plane: any
-summary: "Served a term in an army, navy or militia, and came out with the habits to prove it."
-tags: [military, veteran, service]
-type: past
-grants:
-  - { trait: military-drill }
-  - { trait: vigilance }
-  - { trait: military-tactics }
-backgroundTraits:
-  - weapons
-  - wilderness-lore
-  - navigation
-`,nu=`id: privileged-upbringing
-name: "Privileged Upbringing"
-status: placeholder
-plane: any
-summary: "Grew up wanting for nothing, with tutors, connections, and the manners that open doors."
-tags: [wealth, privilege, education, family]
-type: past
-grants:
-  - { trait: smooth-talker }
-  - { trait: appraisal }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - high-society
-  - literature
-  - history
-  - politics
-`,ru=`id: raised-at-court
-name: "Raised at Court"
-status: placeholder
-plane: any
-summary: "Grew up around a royal or noble court, among its manners, its rivalries and its whispers."
-tags: [court, nobility, intrigue]
-type: past
-grants:
-  - { trait: courtly-manners }
-  - { trait: court-etiquette }
-  - { trait: heraldry }
-backgroundTraits:
-  - high-society
-  - politics
-  - history
-`,iu=`id: shipborn
-name: "Shipborn"
-status: placeholder
-plane: any
-summary: "Born and raised aboard a ship, whether it sailed the sea or the stars, and never really at home on solid ground."
-tags: [ship, travel, family]
-type: past
-grants:
-  - { trait: cargo-handling }
-  - { trait: tinkerer }
-  - { trait: vigilance }
-backgroundTraits:
-  - navigation
-  - starships
-  - spacefaring
-  - geography
-`,au=`id: simple-farmer
-name: "Simple Farmer"
-status: placeholder
-plane: any
-summary: "Grew up working the land, wherever there was land to work, and learned that the harvest waits for no one."
-tags: [farming, rural, family]
-type: past
-grants:
-  - { trait: teamster }
-  - { trait: simple-cooking }
-  - { trait: farming }
-backgroundTraits:
-  - animal-lore
-  - wilderness-lore
-`,ou=`id: traveling-troupe
-name: "Traveling Troupe"
-status: placeholder
-plane: any
-summary: "Grew up on the road with a company of performers, never in one town for long."
-tags: [performer, travel, troupe]
-type: past
-grants:
-  - { trait: performer-music }
-  - { trait: smooth-talker }
-  - { trait: sleight-of-hand }
-backgroundTraits:
-  - theater
-  - literature
-  - geography
-`,su=`id: countryside-upbringing
-name: "Countryside Upbringing"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Grew up in the sleepy Dreftian countryside, where the year turns on the harvest and every hedge has a story."
-tags: [rural, farming, village, folklore]
-type: past
-grants:
-  - { trait: farming }
-  - { trait: countryside-lore }
-  - { trait: local-folklore }
-  - { trait: teamster }
-backgroundTraits:
-  - animal-lore
-  - wilderness-lore
-`,H=`id: expelled-from-the-mage-schools
-name: "Expelled from the Mage Schools"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Studied at one of Port Herminst’s licensed schools of magic until something went wrong, and left with half an education and a secret."
-tags: [magic, scholar, herminst, disgrace]
-lore: isekai-magic
-type: past
-grants:
-  - { trait: magic-on-isekai }
-  - { trait: port-herminst }
-  - { trait: concealment }
-backgroundTraits:
-  - literature
-  - history
-`,cu=`id: glintl-docks
-name: "Glintl Docks"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Grew up on the busy docks of Glintl, the other great trading port on Dreft’s western coast."
-tags: [port, docks, sea, trade, guwain]
-lore: glintl
-type: past
-grants:
-  - { trait: seafaring }
-  - { trait: coastal-trade }
-  - { trait: glintl }
-  - { trait: haggler }
-backgroundTraits:
-  - commerce
-  - navigation
-  - gambling
-`,lu=`id: karsef-border-veteran
-name: "Karsef Border Veteran"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Served in the skirmishes over the Corsine Pass, where Dreft and Karsef have been testing each other for generations."
-tags: [military, border, mountains, karsef, veteran]
-lore: corsine-mountains
-type: past
-grants:
-  - { trait: shield-wall }
-  - { trait: mountaineering }
-  - { trait: the-corsine-pass }
-  - { trait: karsef }
-backgroundTraits:
-  - weapons
-  - wilderness-lore
-  - geography
-`,uu=`id: merchant-dynasty
-name: Merchant Dynasty
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Child of a trade family grown rich off the switch port, and resented for it."
-tags: [merchant, trade, wealth, family]
-type: past
-grants:
-  - { trait: haggler }
-  - { trait: appraisal }
-  - { trait: trade-law }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - commerce
-  - high-society
-`,du=`id: monster-raided-village
-name: "Monster-Raided Village"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Survived a monster raid on the home village, and learned to watch the tree line ever since."
-tags: [monsters, village, survivor, hunting]
-lore: isekai-monsters
-type: past
-grants:
-  - { trait: vigilance }
-  - { trait: tracker }
-  - { trait: monsters-of-isekai }
-  - { trait: the-kings-woods }
-backgroundTraits:
-  - animal-lore
-  - wilderness-lore
-  - weapons
-`,fu=`id: noble-household
-name: Noble Household
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Born or raised in service to a noble house, just in time for the succession crisis."
-tags: [nobility, court, intrigue, succession]
-type: past
-grants:
-  - { trait: courtly-manners }
-  - { trait: schemer }
-  - { trait: noble-houses-of-dreft }
-  - { trait: succession-law }
-backgroundTraits:
-  - high-society
-  - history
-  - politics
-`,pu=`id: palace-servant
-name: "Palace Servant"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Served in the royal palace at Port Herminst, close enough to the crown to hear things, and there when the queen died under unusual circumstances."
-tags: [palace, court, servant, intrigue, herminst]
-lore: herminst
-type: past
-grants:
-  - { trait: court-etiquette }
-  - { trait: sleight-of-hand }
-  - { trait: noble-houses-of-dreft }
-  - { trait: port-herminst }
-backgroundTraits:
-  - high-society
-  - politics
-`,mu=`id: raised-in-the-caravan-town
-name: Raised in the Caravan Town
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Grew up in the shadow of Castle Tetra, among foreigners and the people who profit from them."
-tags: [switch-port, urban, caravan, foreigners]
-type: past
-grants:
-  - { trait: streetwise }
-  - { trait: sleight-of-hand }
-  - { trait: caravan-routes }
-  - { trait: earth-baseline-customs }
-backgroundTraits:
-  - commerce
-  - geography
-  - animal-lore
-`,hu=`id: returned-from-the-systems
-name: Returned from the Settled Systems
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Left Dreft for the settled systems and came back changed, like everyone who comes back."
-tags: [systems, traveler, technology, earth]
-type: past
-grants:
-  - { trait: tinkerer }
-  - { trait: earth-baseline-technology }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - starships
-  - spacefaring
-`,gu=`id: sunrise-refugee
-name: Sunrise Refugee
-status: placeholder
-plane: isekai
-region: dreft
-summary: Fled the Sunrise Princedoms when Drovus finished absorbing them.
-tags: [refugee, sunrise, drovus, survival]
-type: past
-grants:
-  - { trait: survivalist }
-  - { trait: concealment }
-  - { trait: the-drovus-empire }
-  - { trait: the-sunrise-princedoms }
-backgroundTraits:
-  - bureaucracy
-  - geography
-`,_u=`id: station-rat
-name: "Station Rat"
-status: placeholder
-plane: earth
-summary: "Grew up in the corridors and crawlspaces of a station, where everyone knows how to fix things and where not to go."
-tags: [station, space, urban, tech]
-type: past
-grants:
-  - { trait: tinkerer }
-  - { trait: concealment }
-  - { trait: ports-and-stations }
-backgroundTraits:
-  - spacefaring
-  - engineering
-`,vu=`id: university-educated
-name: "University Educated"
-status: placeholder
-plane: earth
-summary: "Studied at one of the settled systems’ universities, and still owes someone for it."
-tags: [education, university, science]
-type: past
-grants:
-  - { trait: research }
-  - { trait: mathematics }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - physics
-  - chemistry
-  - biology
-  - history
-  - literature
-`,yu=`id: delegation-child
-name: "Delegation Child"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Grew up inside one of the sovereign territorial grounds that every UN member state keeps on Tetra, raised among diplomats and their staff."
-tags: [diplomacy, un, tetra, politics]
-lore: tetra
-type: past
-grants:
-  - { trait: the-united-nations }
-  - { trait: the-diplomatic-wing }
-  - { trait: smooth-talker }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - diplomatic-protocol
-  - politics
-  - high-society
-`,bu=`id: gate-lab-kid
-name: "Gate Lab Kid"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Grew up around the hundreds of gate exploration projects running inside Tetra’s armored bulk, and knows a switch gate better than a playground."
-tags: [planes, switch-gates, research, tetra]
-lore: switch-gates
-type: past
-grants:
-  - { trait: planar-exploration }
-  - { trait: paraphysics }
-  - { trait: tinkerer }
-backgroundTraits:
-  - physics
-  - engineering
-`,xu=`id: holding-company-kid
-name: "Holding Company Kid"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Child of a family working at one of the two dozen planar exploration and holding companies on Tetra, raised on talk of leases and attunements."
-tags: [corporate, planes, tetra, business]
-lore: tetra-frontiers-co
-type: past
-grants:
-  - { trait: tetra-frontiers-co }
-  - { trait: haggler }
-  - { trait: appraisal }
-backgroundTraits:
-  - commerce
-  - bureaucracy
-`,Su=`id: parasapient-quarter
-name: "Parasapient Quarter"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Grew up among Tetra’s parasapient diasporas, the largest resident population of parasapients in the settled systems."
-tags: [parasapients, diaspora, tetra, urban]
-lore: tetra
-type: past
-grants:
-  - { trait: parasapients }
-  - { trait: streetwise }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - bureaucracy
-  - legal-systems
-`,Cu=`id: raised-in-the-infill
-name: "Raised in the Infill"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Grew up in the Ark’s infill and maintenance spaces, in the latticework of supports, wiring and piping that holds Tetra together."
-tags: [ark, maintenance, tetra, urban, tech]
-lore: arks
-type: past
-grants:
-  - { trait: ark-life }
-  - { trait: tinkerer }
-  - { trait: concealment }
-backgroundTraits:
-  - spacefaring
-  - engineering
-`,wu=`id: raised-on-ward-politics
-name: "Raised on Ward Politics"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Grew up in a family that trades in delegated votes, close to the ward representatives and maybe even the Council of 11."
-tags: [politics, liquid-democracy, tetra, votes]
-lore: tetra
-type: past
-grants:
-  - { trait: liquid-democracy }
-  - { trait: schemer }
-  - { trait: smooth-talker }
-backgroundTraits:
-  - politics
-  - bureaucracy
-`,Tu=`id: apothecary
-name: "Apothecary"
-status: placeholder
-plane: any
-summary: "Mixes remedies and simple potions for the sick and injured, and sells them over the counter."
-tags: [potions, healing, herbs, trade]
-type: profession
-grants:
-  - { trait: folk-remedies }
-  - { trait: simple-potion-mixing }
-  - { trait: haggler }
-  - { trait: herbalism }
-backgroundTraits:
-  - medical-aid
-  - advanced-potion-mixing
-  - medicine
-  - alchemy
-  - pharmacology
-  - toxicology
-  - chemistry
-  - biology
-  - commerce
-`,Eu=`id: bard
-name: "Bard"
-status: placeholder
-plane: any
-summary: "Travels from town to town with songs and stories, carrying the news along with them."
-tags: [bard, music, performer, stories]
-type: profession
-grants:
-  - { trait: performer-music }
-  - { trait: smooth-talker }
-  - { trait: music }
-  - { trait: local-folklore }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - sleight-of-hand
-  - local-history
-  - heraldry
-  - history
-  - literature
-  - theater
-`,Du=`id: blacksmith
-name: "Blacksmith"
-status: placeholder
-plane: any
-summary: "Works metal at the forge: tools, fittings, and now and then a blade."
-tags: [craft, smithing, trade]
-type: profession
-grants:
-  - { trait: craft-smithing }
-  - { trait: appraisal }
-  - { trait: haggler }
-  - { trait: metallurgy }
-backgroundTraits:
-  - wielder-longsword
-  - wielder-war-axe
-  - craft-leatherworking
-  - weapons
-  - engineering
-  - trade-guilds
-  - commerce
-`,Ou=`id: courier
-name: "Courier"
-status: placeholder
-plane: any
-summary: "Carries messages and parcels, fast and unread, by whatever route gets them there."
-tags: [courier, travel, messages]
-type: profession
-grants:
-  - { trait: rider-basic-animals }
-  - { trait: survivalist }
-  - { trait: vigilance }
-  - { trait: local-history }
-backgroundTraits:
-  - concealment
-  - pilot-truck
-  - animal-husbandry
-  - geography
-  - navigation
-  - animal-lore
-  - bureaucracy
-`,ku=`id: criminal-enforcer
-name: "Criminal Enforcer"
-status: placeholder
-plane: any
-summary: "Muscle for a criminal outfit: collecting debts, guarding deals and making examples of people who talk."
-tags: [crime, enforcer, muscle]
-type: profession
-grants:
-  - { trait: streetwise }
-  - { trait: intimidation }
-  - { trait: vigilance }
-  - { trait: ambusher }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - concealment
-  - schemer
-  - wielder-pistol
-  - criminal-underworld
-  - weapons
-  - gambling
-  - law-enforcement
-`,Au=`id: doctor
-name: "Doctor"
-status: placeholder
-plane: any
-summary: "Diagnoses and treats illness and injury, in a hospital, a clinic, a ship’s sick bay or a village sickroom."
-tags: [medicine, doctor, healing, science]
-type: profession
-grants:
-  - { trait: medical-aid }
-  - { trait: research }
-  - { trait: smooth-talker }
-  - { trait: medicine }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - surgery
-  - herbalism
-  - cybernetics
-  - pharmacology
-  - pathology
-  - psychology
-  - parasapient-medicine
-  - biology
-  - chemistry
-`,ju=`id: farmer
-name: "Farmer"
-status: placeholder
-plane: any
-summary: "Works the land, raising crops and livestock, wherever there’s land to work."
-tags: [farming, rural, labor]
-type: profession
-grants:
-  - { trait: teamster }
-  - { trait: animal-husbandry }
-  - { trait: simple-cooking }
-  - { trait: farming }
-backgroundTraits:
-  - rider-basic-animals
-  - countryside-lore
-  - herbalism
-  - local-folklore
-  - animal-lore
-  - biology
-  - commerce
-  - wilderness-lore
-`,Mu=`id: jester
-name: "Jester"
-status: placeholder
-plane: any
-summary: "Entertains a court or a crowd, and gets away with saying what no one else there can."
-tags: [jester, performer, court]
-type: profession
-grants:
-  - { trait: performer-acrobatics }
-  - { trait: sleight-of-hand }
-  - { trait: smooth-talker }
-  - { trait: court-etiquette }
-backgroundTraits:
-  - performer-music
-  - schemer
-  - disguise
-  - theater
-  - literature
-  - high-society
-  - politics
-`,Nu=`id: knight
-name: "Knight"
-status: placeholder
-plane: any
-summary: "A sworn warrior of a noble house or order, trained to fight on horseback and to carry its honor."
-tags: [knight, nobility, military]
-type: profession
-grants:
-  - { trait: wielder-longsword }
-  - { trait: shield-wall }
-  - { trait: rider-basic-animals }
-  - { trait: courtly-manners }
-  - { trait: heraldry }
-backgroundTraits:
-  - court-etiquette
-  - military-tactics
-  - vigilance
-  - weapons
-  - history
-  - high-society
-  - animal-lore
-`,Pu=`id: local-police
-name: "Local Police"
-status: placeholder
-plane: any
-summary: "Keeps the peace in a town, city or station, and knows its streets and the people on them."
-tags: [police, law, enforcement]
-type: profession
-grants:
-  - { trait: vigilance }
-  - { trait: investigation }
-  - { trait: wielder-pistol }
-  - { trait: local-history }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - streetwise
-  - intimidation
-  - medical-aid
-  - criminal-underworld
-  - law-enforcement
-  - legal-systems
-  - weapons
-  - security-systems
-`,Fu=`id: musical-artist
-name: "Musical Artist"
-status: placeholder
-plane: any
-summary: "Plays, sings or composes for a living, from taverns and station bars to concert halls."
-tags: [music, artist, performer, culture]
-type: profession
-grants:
-  - { trait: performer-music }
-  - { trait: smooth-talker }
-  - { trait: music }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - performer-acrobatics
-  - sleight-of-hand
-  - haggler
-  - theater
-  - literature
-  - high-society
-`,Iu=`id: ranger
-name: "Ranger"
-status: placeholder
-plane: any
-summary: "Patrols the wild places, tracking dangerous beasts and guiding travelers through."
-tags: [ranger, wilderness, hunting]
-type: profession
-grants:
-  - { trait: tracker }
-  - { trait: survivalist }
-  - { trait: vigilance }
-  - { trait: countryside-lore }
-backgroundTraits:
-  - ambusher
-  - wielder-musket
-  - rider-basic-animals
-  - animal-husbandry
-  - wilderness-lore
-  - animal-lore
-  - geography
-  - navigation
-`,Lu=`id: smuggler
-name: "Smuggler"
-status: placeholder
-plane: any
-summary: "Moves goods past the law, by ship, caravan or cart, along whatever routes the authorities aren’t watching."
-tags: [crime, smuggling, trade, cargo]
-type: profession
-grants:
-  - { trait: concealment }
-  - { trait: sleight-of-hand }
-  - { trait: haggler }
-  - { trait: criminal-underworld }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - streetwise
-  - appraisal
-  - cargo-handling
-  - lockpicking
-  - thieves-cant
-  - navigation
-  - starships
-  - security-systems
-  - gambling
-  - commerce
-`,Ru=`id: spy
-name: "Spy"
-status: placeholder
-plane: any
-summary: "Gathers secrets for a government, a noble house, a guild or a corporation, and is rarely who they say they are."
-tags: [spy, intrigue, secrets]
-type: profession
-grants:
-  - { trait: concealment }
-  - { trait: disguise }
-  - { trait: schemer }
-  - { trait: smooth-talker }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - investigation
-  - sleight-of-hand
-  - lockpicking
-  - thieves-cant
-  - heraldry
-  - cryptography
-  - politics
-  - security-systems
-  - high-society
-  - theater
-`,zu=`id: squire
-name: "Squire"
-status: placeholder
-plane: any
-summary: "A knight’s apprentice, learning to fight and ride by carrying their armor and minding their horse."
-tags: [squire, knight, nobility, military]
-type: profession
-grants:
-  - { trait: rider-basic-animals }
-  - { trait: shield-wall }
-  - { trait: court-etiquette }
-  - { trait: heraldry }
-backgroundTraits:
-  - wielder-longsword
-  - courtly-manners
-  - animal-husbandry
-  - weapons
-  - animal-lore
-  - history
-`,Bu=`id: stonemason
-name: "Stonemason"
-status: placeholder
-plane: any
-summary: "Cuts and lays stone for walls, bridges and buildings, and knows which ones will still stand in a hundred years."
-tags: [craft, masonry, building]
-type: profession
-grants:
-  - { trait: craft-masonry }
-  - { trait: teamster }
-  - { trait: architecture }
-backgroundTraits:
-  - artist-sculpture
-  - mountaineering
-  - appraisal
-  - engineering
-  - trade-guilds
-  - commerce
-`,Vu=`id: surgeon
-name: "Surgeon"
-status: placeholder
-plane: any
-summary: "Operates to repair what medicine alone can’t, from battlefield wounds to failing organs."
-tags: [medicine, surgery, healing, science]
-type: profession
-grants:
-  - { trait: surgery }
-  - { trait: medical-aid }
-  - { trait: medicine }
-backgroundTraits:
-  - research
-  - cybernetics
-  - pharmacology
-  - pathology
-  - parasapient-medicine
-  - biology
-  - chemistry
-`,Hu=`id: tanner
-name: "Tanner"
-status: placeholder
-plane: any
-summary: "Turns hides into leather, including the hides of stranger beasts when someone brings them in."
-tags: [craft, leather, trade]
-type: profession
-grants:
-  - { trait: craft-leatherworking }
-  - { trait: animal-husbandry }
-  - { trait: haggler }
-backgroundTraits:
-  - appraisal
-  - specimen-handling
-  - countryside-lore
-  - animal-lore
-  - chemistry
-  - trade-guilds
-  - commerce
-`,Uu=`id: visual-artist
-name: "Visual Artist"
-status: placeholder
-plane: any
-summary: "Makes a living, or tries to, from painting, sculpture, illustration or design."
-tags: [art, artist, culture]
-type: profession
-grants:
-  - { trait: artist-painting }
-  - { trait: appraisal }
-  - { trait: art-history }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - artist-sculpture
-  - haggler
-  - smooth-talker
-  - history
-  - literature
-  - high-society
-  - commerce
-`,Wu=`id: alchemist
-name: "Alchemist"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Studies the properties of substances and brews potions to unlock them, with more ambition than safety."
-tags: [potions, alchemy, scholar, dreft]
-type: profession
-grants:
-  - { trait: simple-potion-mixing }
-  - { trait: research }
-  - { trait: alchemy }
-  - { trait: herbalism }
-backgroundTraits:
-  - advanced-potion-mixing
-  - appraisal
-  - exotic-materials
-  - chemistry
-  - trade-guilds
-`,Gu=`id: caravaneer
-name: Caravaneer
-status: placeholder
-plane: isekai
-region: dreft
-summary: "An itinerant merchant trader, always moving between ports, cities, and kingdoms."
-tags: [caravan, trade, travel, merchant]
-type: profession
-grants:
-  - { trait: teamster }
-  - { trait: haggler }
-  - { trait: trade-roads }
-  - { trait: bandits-and-brigands }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - commerce
-  - geography
-  - navigation
-  - animal-lore
-`,Ku=`id: dreft-local-militia
-name: "Dreft Local Militia"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Called up from a town or village to defend it from bandits and monsters when the crown’s soldiers are far away."
-tags: [militia, military, village, dreft]
-type: profession
-grants:
-  - { trait: shield-wall }
-  - { trait: vigilance }
-  - { trait: local-history }
-  - { trait: countryside-lore }
-backgroundTraits:
-  - wielder-war-axe
-  - wielder-longsword
-  - tracker
-  - military-tactics
-  - weapons
-  - wilderness-lore
-  - geography
-`,qu=`id: dreft-mercenary
-name: "Dreft Mercenary"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Fights for whoever pays, guarding caravans, settling feuds and filling out noble armies in the succession crisis."
-tags: [mercenary, military, combat, dreft]
-type: profession
-grants:
-  - { trait: wielder-longsword }
-  - { trait: shield-wall }
-  - { trait: haggler }
-  - { trait: bandits-and-brigands }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - wielder-war-axe
-  - wielder-musket
-  - survivalist
-  - intimidation
-  - military-tactics
-  - weapons
-  - gambling
-  - geography
-  - commerce
-`,Ju=`id: gate-hand
-name: Gate Hand
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Works the switch port for Tetra Frontiers Co.: hauling, translating, and generally being useful."
-tags: [switch-port, company, translator, foreigners, isekai, dreft]
-type: profession
-grants:
-  - { trait: smooth-talker }
-  - { trait: haggler }
-  - { trait: tetra-frontiers-co }
-  - { trait: earth-baseline-customs }
-backgroundTraits:
-  - commerce
-  - bureaucracy
-`,Yu=`id: guild-hunter
-name: Guild Hunter
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Hunts monsters for pay and glory. Hunting guilds keep posts and track the monster bounties put up by the kingdom or locals."
-tags: [hunter, monsters, guild, wilderness, combat]
-type: profession
-grants:
-  - { trait: tracker }
-  - { trait: ambusher }
-  - { trait: monsters-of-isekai }
-  - { trait: the-kings-woods }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - animal-lore
-  - wilderness-lore
-  - weapons
-  - trade-guilds
-`,Xu=`id: hedge-witch
-name: Hedge Witch
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Practices magic outside the licensed system of Dreft and its neighboring kingdoms. Working far from the scrutiny of cities and trading posts, these mages are a mixed bag."
-tags: [witch, magic, unlicensed, folk]
-type: profession
-# A bonus point in Magic, without a level, for a character who can level it.
-coreBonus: { magic: 1 }
-grants:
-  - { trait: folk-remedies }
-  - { trait: countryside-lore }
-  - { trait: magic-on-isekai }
-  - { trait: herbalism }
-backgroundTraits:
-  - animal-lore
-  - wilderness-lore
-  - biology
-`,Zu=`id: licensed-mage
-name: Licensed Mage
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Trained in the licensed colleges of magic in Dreft or one of its neighboring kingdoms, these mages practice officially sanctioned, and supposedly safe, magic."
-tags: [mage, magic, licensed, scholar]
-type: profession
-# A bonus point in Magic, without a level, for a character who can level it.
-coreBonus: { magic: 1 }
-grants:
-  - { trait: incantation }
-  - { trait: relic-handling }
-  - { trait: magic-on-isekai }
-  - { trait: dreftian-law }
-backgroundTraits:
-  - history
-  - literature
-  - bureaucracy
-  - chemistry
-`,Qu=`id: royal-guard
-name: Royal Guard
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Sworn to the crown of one of Isekai’s kingdoms, and as adept with a blade as with courtly manners."
-tags: [guard, military, crown, court]
-type: profession
-grants:
-  - { trait: shield-wall }
-  - { trait: vigilance }
-  - { trait: court-etiquette }
-  - { trait: aristocracy }
-backgroundTraits:
-  - weapons
-  - law-enforcement
-  - politics
-  - high-society
-`,$u=`id: american-empire-soldier
-name: "American Empire Soldier"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "A soldier of the Imperial armed forces, trained for an Empire that is rarely short of a frontier to hold or a rival to stare down."
-tags: [military, soldier, american-empire, combat]
-lore: american-empire
-type: profession
-grants:
-  - { trait: wielder-rifle }
-  - { trait: military-drill }
-  - { trait: vigilance }
-  - { trait: the-imperial-military }
-  - { trait: imperial-service-record }
-backgroundTraits:
-  - weapons
-  - military-tactics
-  - wilderness-lore
-`,ed=`id: combat-medic
-name: "Combat Medic"
-status: placeholder
-plane: earth
-summary: "Keeps soldiers alive under fire, patching wounds in the middle of a fight."
-tags: [medicine, military, combat, healing]
-type: profession
-grants:
-  - { trait: medical-aid }
-  - { trait: military-drill }
-  - { trait: vigilance }
-backgroundTraits:
-  - surgery
-  - survivalist
-  - wielder-rifle
-  - medicine
-  - pharmacology
-  - toxicology
-  - psychology
-  - biology
-  - weapons
-  - military-tactics
-`,td=`id: computer-engineer
-name: "Computer Engineer"
-status: placeholder
-plane: earth
-summary: "Designs, builds and fixes the software and systems that run the settled systems."
-tags: [computers, engineering, technology, ai]
-type: profession
-grants:
-  - { trait: programming }
-  - { trait: research }
-  - { trait: computer-systems }
-  - { trait: mathematics }
-backgroundTraits:
-  - robotics
-  - artificial-intelligence
-  - cybernetics
-  - cryptography
-  - security-systems
-  - engineering
-  - physics
-`,nd=`id: emergency-medical-technician
-name: "Emergency Medical Technician"
-status: placeholder
-plane: earth
-summary: "First on the scene of accidents and emergencies, keeping people alive until they reach a hospital."
-tags: [medicine, emergency, healing, urban]
-type: profession
-grants:
-  - { trait: medical-aid }
-  - { trait: vigilance }
-  - { trait: streetwise }
-  - { trait: medicine }
-backgroundTraits:
-  - surgery
-  - pilot-truck
-  - pharmacology
-  - toxicology
-  - psychology
-  - biology
-  - law-enforcement
-`,U=`id: exotic-specimen-dealer
-name: "Exotic Specimen Dealer"
-status: placeholder
-plane: earth
-summary: "Imports extraplanar specimens for labs, zoos and pet shops, with paperwork that’s usually in order."
-tags: [trade, animals, parabiology, merchant, smuggling]
-type: profession
-grants:
-  - { trait: haggler }
-  - { trait: appraisal }
-  - { trait: parazoology }
-  - { trait: cargo-handling }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - commerce
-  - animal-lore
-  - bureaucracy
-  - biology
-  - starships
-`,W=`id: fighter-pilot
-name: "Fighter Pilot"
-status: placeholder
-plane: earth
-summary: "Flies fighters for a navy, a corporation or whoever is paying, and knows a dogfight from the inside."
-tags: [pilot, military, fighter, space]
-type: profession
-grants:
-  - { trait: pilot-fighter }
-  - { trait: military-drill }
-  - { trait: vigilance }
-  - { trait: military-tactics }
-backgroundTraits:
-  - pilot-helicopter
-  - starship-engineering
-  - shipping-lanes
-  - starships
-  - navigation
-  - physics
-  - spacefaring
-  - weapons
-`,G=`id: interplanar-diplomat
-name: "Interplanar Diplomat"
-status: placeholder
-plane: earth
-summary: "Represents a nation to peoples and powers from other planes, where the first job is working out what an insult looks like."
-tags: [diplomacy, politics, parasapients]
-type: profession
-grants:
-  - { trait: smooth-talker }
-  - { trait: interplanar-relations }
-  - { trait: parasapients }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - diplomatic-protocol
-  - politics
-  - history
-  - bureaucracy
-  - high-society
-`,K=`id: interplanar-rights-lawyer
-name: "Interplanar Rights Lawyer"
-status: placeholder
-plane: earth
-summary: "Practices the law of the treatment and rights of beings from beyond the stars, and tests what counts as a person in court."
-tags: [law, rights, parasapients, courts]
-type: profession
-grants:
-  - { trait: legal-advocacy }
-  - { trait: interplanar-law }
-  - { trait: parasapients }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - legal-systems
-  - bureaucracy
-  - politics
-`,q=`id: officer-of-the-bureau-of-planar-management-and-enforcement
-name: "Officer of the Bureau of Planar Management and Enforcement"
-status: placeholder
-plane: earth
-summary: "Enforces the laws on planar exploration for the Bureau, inspecting gates and chasing down unregulated exploitation across the settled systems."
-tags: [law, enforcement, planes, bureau, tetra]
-type: profession
-grants:
-  - { trait: investigation }
-  - { trait: vigilance }
-  - { trait: wielder-pistol }
-  - { trait: the-bureau-of-planar-management }
-  - { trait: interplanar-law }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - planar-surveying
-  - planar-exploration
-  - tetra
-  - paraphysics
-  - law-enforcement
-  - legal-systems
-  - bureaucracy
-  - security-systems
-`,rd=`id: paraarcheologist
-name: "Paraarcheologist"
-status: placeholder
-plane: earth
-summary: "Digs up what parasapient civilizations left behind on other planes, before someone else sells it."
-tags: [science, archeology, ruins, fieldwork]
-type: profession
-grants:
-  - { trait: research }
-  - { trait: excavation }
-  - { trait: paraarcheology }
-  - { trait: appraisal }
-backgroundTraits:
-  - history
-  - geography
-  - chemistry
-`,id=`id: paraecologist
-name: "Paraecologist"
-status: placeholder
-plane: earth
-summary: "Catalogues whole new kingdoms of life, many of them reliant on exotic physics, out in the field and often alongside the Explorers’ Lodge."
-tags: [science, parabiology, fieldwork, ecology, lodge]
-lore: explorers-lodge
-type: profession
-grants:
-  - { trait: survivalist }
-  - { trait: field-sampling }
-  - { trait: parabiology }
-  - { trait: the-explorers-lodge }
-backgroundTraits:
-  - biology
-  - wilderness-lore
-  - animal-lore
-  - geography
-`,ad=`id: paraethnologist
-name: "Paraethnologist"
-status: placeholder
-plane: earth
-summary: "Studies the cultures of parasapient peoples, usually by living among them for as long as they’ll allow it."
-tags: [science, parasapients, cultures, fieldwork]
-type: profession
-grants:
-  - { trait: research }
-  - { trait: parasapients }
-  - { trait: smooth-talker }
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language"
-backgroundTraits:
-  - history
-  - politics
-  - literature
-`,od=`id: paraevolutionary-scientist
-name: "Paraevolutionary Scientist"
-status: placeholder
-plane: earth
-summary: "Studies how extraplanar life came to be, from the history of flora floating in a sea of light to why it evolved at all."
-tags: [science, parabiology, research, evolution]
-type: profession
-grants:
-  - { trait: research }
-  - { trait: parabiology }
-  - { trait: paraflora }
-  - { trait: paraphysics }
-backgroundTraits:
-  - biology
-  - chemistry
-  - history
-`,sd=`id: paraphysiologist
-name: "Paraphysiologist"
-status: placeholder
-plane: earth
-summary: "Researches the strange forms and biologies of extraplanar creatures, like the ones made of ice, usually with one on the table."
-tags: [science, parabiology, research, anatomy]
-type: profession
-grants:
-  - { trait: research }
-  - { trait: parabiology }
-  - { trait: parazoology }
-  - { trait: specimen-handling }
-backgroundTraits:
-  - biology
-  - chemistry
-  - medicine
-`,cd=`id: parazoological-keeper
-name: "Parazoological Keeper"
-status: placeholder
-plane: earth
-summary: "Keeps extraplanar animals alive and contained in a lab, zoo or pet shop, and knows which enclosures not to stand near."
-tags: [animals, parabiology, zoo, care]
-type: profession
-grants:
-  - { trait: specimen-handling }
-  - { trait: parazoology }
-  - { trait: vigilance }
-backgroundTraits:
-  - animal-lore
-  - biology
-  - security-systems
-`,ld=`id: planar-expeditionary-professional
-name: "Planar Expeditionary Professional"
-status: placeholder
-plane: earth
-summary: "A member of the expedition teams that open new planes for the Explorers’ Lodge: surveying, raising the first gate platforms, and surviving whatever is waiting on the other side."
-tags: [planes, exploration, lodge, survey, wilderness]
-lore: explorers-lodge
-type: profession
-grants:
-  - { trait: survivalist }
-  - { trait: planar-surveying }
-  - { trait: planar-exploration }
-  - { trait: the-explorers-lodge }
-  - { trait: explorers-lodge-membership }
-backgroundTraits:
-  - wilderness-lore
-  - geography
-  - navigation
-  - biology
-`,ud=`id: starship-engineer
-name: "Starship Engineer"
-status: placeholder
-plane: earth
-summary: "Keeps starships running: reactors, drives, life support, and everything that rattles in between."
-tags: [engineering, starships, technology, space]
-type: profession
-grants:
-  - { trait: starship-engineering }
-  - { trait: tinkerer }
-  - { trait: exotic-materials }
-  - { trait: ports-and-stations }
-backgroundTraits:
-  - programming
-  - cargo-handling
-  - robotics
-  - engineering
-  - physics
-  - starships
-  - spacefaring
-`,dd=`id: station-maintenance
-name: "Station Maintenance"
-status: placeholder
-plane: earth
-summary: "Keeps a station or Ark habitable: air, water, power and the endless repairs nobody notices until they stop."
-tags: [maintenance, station, ark, technology]
-type: profession
-grants:
-  - { trait: tinkerer }
-  - { trait: cargo-handling }
-  - { trait: ark-life }
-  - { trait: ports-and-stations }
-backgroundTraits:
-  - starship-engineering
-  - programming
-  - concealment
-  - engineering
-  - spacefaring
-  - security-systems
-`,fd=`id: theoretical-paraphysicist
-name: "Theoretical Paraphysicist"
-status: placeholder
-plane: earth
-summary: "A scientist working at the edge of paraphysics, the field The Gift opened up, where new discoveries are made every day and most of them are wrong."
-tags: [science, paraphysics, research, scholar]
-type: profession
-grants:
-  - { trait: research }
-  - { trait: paraphysics }
-  - { trait: exotic-materials }
-  - { trait: mathematics }
-backgroundTraits:
-  - physics
-  - chemistry
-  - engineering
-`,pd=`id: truck-pilot
-name: "Truck Pilot"
-status: placeholder
-plane: earth
-summary: "Hauls cargo in a truck between stations, ships and planetary surfaces, and rarely knows what’s inside the containers."
-tags: [pilot, trucks, shipping, cargo, space]
-lore: trucks
-type: profession
-grants:
-  - { trait: pilot-truck }
-  - { trait: cargo-handling }
-  - { trait: shipping-lanes }
-  - { trait: ports-and-stations }
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact"
-backgroundTraits:
-  - starships
-  - navigation
-  - spacefaring
-  - commerce
-`,md=`id: capable-student
-name: "Capable Student"
-status: draft
-plane: any
-summary: "Learns new knowledge in half the time."
-tags: [learning, study, site-example]
-category: ability
-minStats: { memory: 3, logic: 3 }
-effect: "This character can learn a new (knowledge) Trait in half the specified time."
-`,hd=`id: con-man
-name: "Con Man"
-status: draft
-plane: any
-summary: "A practiced liar, in speech and in writing."
-tags: [lying, deception, social, site-example]
-category: ability
-minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }
-effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."
-`,gd=`id: eagle-eye
-name: "Eagle Eye"
-status: draft
-plane: any
-summary: "Sees unusually well at a distance."
-tags: [sight, perception, site-example]
-category: ability
-conveyed: true
-effect: "This character can request advantage in situations that involve seeing at distance."
-`,_d=`id: gladiator
-name: "Gladiator"
-status: draft
-plane: any
-summary: "Can fight passably with any close combat weapon."
-tags: [combat, melee, site-example]
-category: ability
-minStats: { physical: 5, grace: 5, demeanor: 5 }
-effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."
-`,vd=`id: knowledge-sponge
-name: "Knowledge Sponge"
-status: draft
-plane: any
-summary: "Learns new knowledge in a quarter of the time."
-tags: [learning, study, site-example]
-category: ability
-mastery: true
-minStats: { memory: 5, logic: 5, intuition: 5 }
-prerequisites: [capable-student]
-effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."
-`,yd=`id: magic-access
-name: "Magic Access"
-status: placeholder
-plane: any
-summary: "This character can use magic: they can level the Magic core stat and take Traits on the Magic list."
-tags: [magic, access]
-category: ability
-conveyed: true
-coreAccess: [magic]
-opensLists: [magic]
-effect: "This character can put levels into Magic, a core stat with no focus stats; each point of Magic adds 3 MP (Mana Points). They can also take Traits on the Magic list, like Incantation."
-`,bd=`id: magical-heritage
-name: "Magical Heritage"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Born on a plane where magic is part of the world."
-tags: [magic, dreft, heritage]
-category: ability
-conveyed: true
-# Magic comes with the heritage.
-grants:
-  - trait: magic-access
-effect: "This character was born to magic, and has Magic Access."
-`,xd=`id: mental-fortitude
-name: "Mental Fortitude"
-status: draft
-plane: any
-summary: "Holds together when the mind is badly taxed."
-tags: [will, resistance, site-example]
-category: ability
-minStats: { endurance: 8, logic: 5, demeanor: 5 }
-effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."
-`,Sd=`id: natural-breath-weapon
-name: "Natural Breath Weapon"
-status: draft
-plane: any
-summary: "A biology that lets the character use their breath as a tool or weapon."
-tags: [breath, natural-weapon, combat, site-example]
-category: ability
-ranked: true
-background: true
-minStats: { endurance: 3 }
-effect: "This character's biology allows them to use their breath as a tool or weapon. For each rank of this ability add another d4 to the damage the breath weapon deals."
-`,Cd=`id: sculpted
-name: "Sculpted"
-status: draft
-plane: any
-summary: "Looks every bit as athletic as they are."
-tags: [appearance, athletics, social, site-example]
-category: ability
-minStats: { power: 5, endurance: 5, demeanor: 3 }
-effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."
-`,wd=`id: trail-runner
-name: "Trail Runner"
-status: draft
-plane: any
-summary: "Slow to tire when running, hiking or climbing."
-tags: [endurance, travel, site-example]
-category: ability
-minStats: { power: 3, endurance: 2, grace: 2 }
-effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."
-`,Td=`id: explorers-lodge-membership
-name: "Explorers’ Lodge Membership"
-status: placeholder
-plane: earth
-summary: "This character is a member in good standing of the Explorers’ Lodge."
-tags: [lodge, exploration, membership]
-lore: explorers-lodge
-category: circumstance
-conveyed: true
-effect: Placeholder. Effect not yet written.
-`,Ed=`id: imperial-service-record
-name: "Imperial Service Record"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "This character serves, or has served, in the American Empire’s armed forces."
-tags: [military, american-empire, service]
-category: circumstance
-conveyed: true
-effect: Placeholder. Effect not yet written.
-`,Dd=`id: short-term-fame
-name: "Short Term Fame"
-status: draft
-plane: any
-summary: "Famous, for now, after recent events."
-tags: [fame, social, site-example]
-category: circumstance
-conveyed: true
-temporary: "30 days"
-effect: "Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them."
-`,Od=`id: significant-inheritance
-name: "Significant Inheritance"
-status: draft
-plane: earth
-summary: "An inheritance of 2 million ERC sitting safely in a bank."
-tags: [money, inheritance, wealth, site-example]
-category: circumstance
-conveyed: true
-temporary: "Lost when the money is all spent"
-effect: "This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank."
-`,kd=`id: thieves-guild-membership
-name: "Thieves Guild Membership"
-status: draft
-plane: any
-summary: "An official member of a local Thieves Guild."
-tags: [thieves-guild, membership, crime, site-example]
-category: circumstance
-conveyed: true
-effect: "This character is an official member of a Local Thieves Guild."
-`,Ad=`id: tugboat-captain
-name: "Tugboat Captain"
-status: draft
-plane: any
-summary: "Licensed and trained to command a tugboat."
-tags: [tugboat, license, pilot, site-example]
-category: circumstance
-conveyed: true
-effect: "This character has all required legal training and licenses required to command a Tugboat."
-`,jd=`id: wanted-in-sol
-name: "Wanted in Sol"
-status: draft
-plane: earth
-summary: "Wanted by the nations of the Sol system for past crimes."
-tags: [wanted, crime, sol, site-example]
-category: circumstance
-conveyed: true
-temporary: "Lost when the character's innocence is proclaimed or they are caught"
-effect: "This character is wanted by the nations of the Sol system for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."
-`,Md=`id: cybernetic-intelligence
-name: "Cybernetic Intelligence"
-status: draft
-plane: earth
-summary: "A machine-fast mind for mathematics."
-tags: [cybernetic, mathematics, ai, site-example]
-category: condition
-background: true
-effect: "This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics. This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited."
-`,Nd=`id: damaged
-name: "Damaged"
-status: draft
-plane: any
-summary: "An object below its full HP."
-tags: [objects, damage, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "An object gains this trait if it is below its maximum HP total"
-effect: "This Trait has no effect on its own."
-`,Pd=`id: dead
-name: "Dead"
-status: draft
-plane: any
-summary: "Dead."
-tags: [injury, death, site-example]
-category: condition
-types: [injury]
-conveyed: true
-temporary: "A character gains this trait if they are at 0 or less HP"
-effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."
-`,Fd=`id: destroyed
-name: "Destroyed"
-status: draft
-plane: any
-summary: "An object at 0 HP or less, no longer working."
-tags: [objects, damage, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "An object gains this trait if it is at 0 or less HP"
-effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."
-`,Id=`id: ghost-sight
-name: "Ghost Sight"
-status: draft
-plane: any
-summary: "Perceives beyond the veil, seeing and hearing the supernatural."
-tags: [supernatural, sight, site-example]
-category: condition
-conveyed: true
-temporary: "Lost when the effect that granted this Trait ends"
-effect: "This character perceives beyond the veil. This character can see and hear the supernatural."
-`,Ld=`id: hard-shell
-name: "Hard Shell"
-status: draft
-plane: any
-summary: "A hard natural shell that protects the torso."
-tags: [shell, armor, natural, site-example]
-category: condition
-ranked: true
-background: true
-minStats: { endurance: 5 }
-effect: "This character possesses a hard natural shell that protects them from harm. Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso."
-`,Rd=`id: healthy
-name: "Healthy"
-status: draft
-plane: any
-summary: "At full HP."
-tags: [health, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "A character or object gains this trait while they are at their maximum HP total"
-effect: "This Trait has no effect on its own."
-`,zd=`id: incapacitated
-name: "Incapacitated"
-status: draft
-plane: any
-summary: "Too badly hurt to act or perceive."
-tags: [health, injury, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "A character gains this trait while they are at less than a quarter of their HP total"
-effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."
-`,Bd=`id: injured
-name: "Injured"
-status: draft
-plane: any
-summary: "Below full HP."
-tags: [health, injury, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "A character gains this trait while they are below their maximum HP total"
-effect: "This Trait has no effect on its own."
-`,Vd=`id: long-toothed
-name: "Long Toothed"
-status: draft
-plane: isekai
-summary: "An Orc whose teeth have grown long with age, a mark of wisdom and prestige among Orcs."
-tags: [orcs, age, prestige, social, site-example]
-category: condition
-background: true
-minStats: { power: 10, endurance: 5, demeanor: 5 }
-rpRequirement: "Middle Aged or Older"
-effect: "An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs."
-`,Hd=`id: mechanical
-name: "Mechanical"
-status: draft
-plane: any
-summary: "A machine: harmed by EMP, and usually immune to Death damage."
-tags: [machine, emp, site-example]
-category: condition
-background: true
-effect: "This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage."
-`,Ud=`id: severe-bleeding
-name: "Severe Bleeding"
-status: draft
-plane: any
-summary: "Losing blood fast, until someone treats it."
-tags: [injury, bleeding, site-example]
-category: condition
-types: [injury]
-conveyed: true
-temporary: "This trait is lost when this Condition is Treated"
-effect: "This character loses 1 HP every combat round while in combat. This character loses 1 HP every minute while outside of combat."
-`,Wd=`id: severely-injured
-name: "Severely Injured"
-status: draft
-plane: any
-summary: "Below half HP."
-tags: [health, injury, site-example, hit-points]
-category: condition
-conveyed: true
-temporary: "A character gains this trait while they are below half their maximum HP total"
-effect: "This Trait has no effect on its own."
-`,Gd=`id: sorcerous
-name: "Sorcerous"
-status: draft
-plane: isekai
-summary: "Able to take magic Traits and to put points into the Magic core stat."
-tags: [magic, sorcerous, site-example]
-category: condition
-# On the Magic list: only a character with Magical Heritage can pick it.
-list: magic
-background: true
-effect: "This character may take magic-related traits and may spend stat points on the Magic core stat."
-`,Kd=`id: stimm-rush
-name: "Stimm Rush"
-status: draft
-plane: earth
-summary: "Riding the rush of a Stimm."
-tags: [stimm, drugs, physical, site-example]
-category: condition
-conveyed: true
-temporary: "This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration"
-effect: "This character gains 5 to all physical focus stats."
-`,qd=`id: stone-skin
-name: "Stone Skin"
-status: draft
-plane: any
-summary: "Skin hardened to stone by an enchantment."
-tags: [enchantment, resistance, site-example]
-category: condition
-types: [enchantment]
-conveyed: true
-temporary: "This trait lasts a number of minutes equal to the caster's Rank in this ability"
-effect: "This character gains Rank *3 resistance to all Physical damage types."
-`,Jd=`id: supernatural
-name: "Supernatural"
-status: draft
-plane: any
-summary: "Gone beyond the real: able to take supernatural Traits and to put points into the Supernatural core stat."
-tags: [supernatural, site-example]
-category: condition
-background: true
-effect: "This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat."
-`,Yd=`id: additional-contact
-name: Additional Contact
-status: placeholder
-plane: any
-summary: "Someone the character can call on. Who it is is up to the player."
-tags: [contact, people, network]
-category: contact
-ranked: true
-effect: Placeholder. Effect not yet written.
-choices:
-  - choose: 1
-    from: contact
-    note: "+1 Contact per rank"
-`,Xd=`id: additional-language
-name: Additional Language
-status: placeholder
-plane: any
-summary: "One more language the character speaks."
-tags: [language]
-category: knowledge
-ranked: true
-effect: Placeholder. Effect not yet written.
-choices:
-  - choose: 1
-    from: language
-    note: "+1 Language per rank"
-`,Zd=`id: ai-culture
-name: "AI Culture"
-status: placeholder
-plane: earth
-summary: "The customs, media and politics of AI Cores and the communities around them."
-tags: [ai, culture, kashgar]
-category: knowledge
-ranked: true
-minStats: { memory: 3, empathy: 2 }
-effect: "This character has knowledge of AI society and culture and can be assumed to be familiar with the peoples, places, and customs relevant to AI Cores and the communities around them."
-`,Qd=`# Aksum has no lore entry on the site yet.
-id: aksum
-name: "Aksum"
-status: draft
-plane: earth
-region: centafrica
-summary: "Aksum, Centafrica’s station on its elliptical orbit through the inner solar system."
-tags: [centafrica, station, space]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Aksum and can be assumed to be familiar with the peoples, places, and customs of Centafrica’s inner-system station."
-`,$d=`id: alchemy
-name: "Alchemy"
-status: draft
-plane: isekai
-summary: "The properties of substances and how they combine, the theory behind every potion."
-tags: [alchemy, potions, science]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3, intuition: 2 }
-effect: "This character has knowledge of alchemy and can be assumed to be familiar with the properties of common reagents and how they combine in potions."
-`,ef=`# Amaravati has no lore entry on the site yet.
-id: amaravati
-name: "Amaravati"
-status: draft
-plane: earth
-region: kingdom-of-india
-summary: "Amaravati, the Kingdom of India’s station in high Earth orbit."
-tags: [india, station, orbit]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Amaravati and can be assumed to be familiar with the peoples, places, and customs of India’s station in high Earth orbit."
-`,tf=`id: american-geography
-name: "American Geography"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The Empire’s Earth territories, from the Californias to Nueva Mexico."
-tags: [geography, american-empire, earth]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies."
-`,nf=`id: american-history
-name: "American History"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The history of the United States and the American Empire that replaced it."
-tags: [history, american-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it."
-`,rf=`id: amharic-written
-name: "Amharic (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, amharic, earth, writing]
-category: knowledge
-types: [language]
-language: amharic
-effect: "This character can read and write the Amharic language."
-`,af=`id: amharic
-name: "Amharic (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, amharic, earth]
-category: knowledge
-types: [language]
-language: amharic
-effect: "This character is conversational in the Amharic language and can speak it."
-`,of=`id: animal-lore
-name: "Animal Lore"
-status: draft
-plane: any
-summary: "Common animals: their habits, needs, dangers and uses."
-tags: [animals, nature]
-category: knowledge
-ranked: true
-minStats: { memory: 2, intuition: 2 }
-effect: "This character has knowledge of animals and can be assumed to be familiar with the habits, needs, dangers and uses of common domestic and wild animals."
-`,sf=`id: antiluna
-name: "Antiluna"
-status: placeholder
-plane: earth
-region: sdu
-summary: "The SDU’s colony in high Earth orbit."
-tags: [colony, orbit, sdu]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Antiluna space station and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,cf=`id: arabic-written
-name: "Arabic (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, arabic, earth, writing]
-category: knowledge
-types: [language]
-language: arabic
-effect: "This character can read and write the Arabic language."
-`,lf=`id: arabic
-name: "Arabic (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, arabic, earth]
-category: knowledge
-types: [language]
-language: arabic
-effect: "This character is conversational in the Arabic language and can speak it."
-`,uf=`id: architecture
-name: "Architecture"
-status: draft
-plane: any
-summary: "How buildings and bridges are designed, built and brought down."
-tags: [building, masonry, engineering]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of architecture and can be assumed to be familiar with building styles, structural design and construction methods."
-`,df=`id: aristocracy
-name: Aristocracy
-status: placeholder
-plane: isekai
-summary: "The nobility of Isekai’s kingdoms: titles, ranks and who’s who."
-tags: [nobility, court]
-category: knowledge
-minStats: { memory: 3, demeanor: 3 }
-effect: "This character has knowledge of the aristocracy and can be assumed to be familiar with the nobles, titles, and ranks of the kingdoms surrounding the switch port on Isekai."
-`,ff=`id: ark-life
-name: "Ark Life"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Living and working aboard a drifting Ark, from the air recyclers to the corridors."
-tags: [ark, space, urban]
-category: knowledge
-ranked: true
-minStats: { memory: 1, intuition: 2 }
-effect: "This character has knowledge of life aboard Arks and can be assumed to be familiar with navigating their corridors and cultures."
-`,pf=`id: ark-new-york
-name: "Ark New York"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The Empire’s capital Ark and the absentee Emperor’s court aboard it."
-tags: [ark, new-york, american-empire]
-lore: new-york
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark New York and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,mf=`id: art-history
-name: "Art History"
-status: draft
-plane: any
-summary: "Artists, movements and famous works, and what they are worth."
-tags: [art, culture, history]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of art history and can be assumed to be familiar with notable artists, movements and works and their value."
-`,hf=`id: artificial-intelligence
-name: "Artificial Intelligence"
-status: placeholder
-plane: earth
-summary: "How AI Cores and lesser machine minds are built, trained and kept running."
-tags: [ai, technology, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of artificial intelligence and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,gf=`id: asteroid-mining
-name: "Asteroid Mining"
-status: draft
-plane: earth
-summary: "Finding, claiming and working asteroids for ore and ice."
-tags: [mining, space, asteroid]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of asteroid mining and can be assumed to be familiar with how asteroids are surveyed, claimed, and worked."
-`,J=`id: bandits-and-brigands
-name: "Bandits & Brigands"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Who robs the roads of Dreft, and how."
-tags: [bandits, crime, roads]
-category: knowledge
-minStats: { memory: 2, intuition: 2 }
-effect: "This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places."
-`,_f=`id: bengali-written
-name: "Bengali (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, bengali, earth, writing]
-category: knowledge
-types: [language]
-language: bengali
-effect: "This character can read and write the Bengali language."
-`,vf=`id: bengali
-name: "Bengali (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, bengali, earth]
-category: knowledge
-types: [language]
-language: bengali
-effect: "This character is conversational in the Bengali language and can speak it."
-`,yf=`id: biology
-name: "Biology"
-status: draft
-plane: any
-summary: "Living things: how they grow, work, sicken and die."
-tags: [science, biology, life]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of biology and can be assumed to be familiar with how living things grow, function, reproduce and interact."
-`,bf=`id: boneyard
-name: "Boneyard"
-status: placeholder
-plane: earth
-region: sdu
-summary: "Boneyard, one of the Union’s Arks."
-tags: [ark, sdu]
-lore: boneyard
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark Boneyard and can be assumed to be familiar with the people, places, and customs aboard it."
-`,xf=`id: bureaucracy
-name: "Bureaucracy"
-status: draft
-plane: any
-summary: "Officialdom: forms, permits, departments, and how to get anything done through them."
-tags: [bureaucracy, government, paperwork]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of bureaucracy and can be assumed to be familiar with how officials and departments work, which forms and permits are needed, and who to ask."
-`,Sf=`id: burmese-written
-name: "Burmese (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, burmese, earth, writing]
-category: knowledge
-types: [language]
-language: burmese
-effect: "This character can read and write the Burmese language."
-`,Cf=`id: burmese
-name: "Burmese (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, burmese, earth]
-category: knowledge
-types: [language]
-language: burmese
-effect: "This character is conversational in the Burmese language and can speak it."
-`,wf=`id: cantonese-written
-name: "Cantonese (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, cantonese, earth, writing]
-category: knowledge
-types: [language]
-language: cantonese
-effect: "This character can read and write the Cantonese language."
-`,Tf=`id: cantonese
-name: "Cantonese (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, cantonese, earth]
-category: knowledge
-types: [language]
-language: cantonese
-effect: "This character is conversational in the Cantonese language and can speak it."
-`,Ef=`id: caravan-routes
-name: Caravan Routes
-status: placeholder
-plane: any
-summary: "The people, places, and routes caravans take to and from their destinations."
-tags: [caravan, trade, travel]
-category: knowledge
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of the caravan trade and can be assumed to be familiar with the companies, routes, and oases it uses."
-choices:
-  - choose: 1
-    from: place
-    note: "Where the caravan routes run"
-    perRank: false
-`,Df=`id: centafrica
-name: "Centafrica"
-status: draft
-plane: earth
-region: centafrica
-summary: "Centafrica: its federal democracy, its storied universities and the unreconciled history of its founding."
-tags: [centafrica, politics]
-lore: centafrica
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Centafrica and can be assumed to be familiar with its customs, politics, and territories."
-`,Of=`id: centafrican-law
-name: "Centafrican Law"
-status: draft
-plane: earth
-region: centafrica
-summary: "The laws of Centafrica’s federal democratic republic and how they’re enforced."
-tags: [law, centafrica]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Centafrican law and can be assumed to be familiar with the laws and courts of Centafrica."
-`,kf=`id: chemistry
-name: "Chemistry"
-status: draft
-plane: any
-summary: "What things are made of and how they react."
-tags: [science, chemistry]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of chemistry and can be assumed to be familiar with common substances, how they react, and how to handle them safely."
-`,Af=`id: chinese-imperial-law
-name: "Chinese Imperial Law"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The laws of the Empire of China, written and as the syndicates actually apply them."
-tags: [law, chinese-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."
-`,jf=`id: coastal-trade
-name: Coastal Trade
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The goods, routes and traders of Dreft’s western coast."
-tags: [trade, coast, merchant]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of coastal trade on Isekai and can be assumed to be familiar with its ports, products, and dangers."
-`,Mf=`id: commerce
-name: "Commerce"
-status: draft
-plane: any
-summary: "Trade and business: markets, prices, contracts and money."
-tags: [trade, business, money]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of commerce and can be assumed to be familiar with how markets and businesses work, fair prices, contracts and the movement of money."
-`,Nf=`id: computer-systems
-name: "Computer Systems"
-status: draft
-plane: earth
-summary: "The networks, software and hardware that run the settled systems."
-tags: [computers, technology, networks]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of computer systems and can be assumed to be familiar with common networks, software and hardware and how they are secured."
-`,Pf=`id: countryside-lore
-name: Countryside Lore
-status: placeholder
-plane: any
-summary: "The ways of the countryside, away from the cities and trading posts."
-tags: [rural, folklore, folk]
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the local countryside and can be assumed to be familiar with its people, places, and customs."
-choices:
-  - choose: 1
-    from: place
-    note: "Which countryside"
-    perRank: false
-`,Ff=`id: court-etiquette
-name: Court Etiquette
-status: placeholder
-plane: isekai
-region: dreft
-summary: How to behave at the royal court.
-tags: [court, nobility, etiquette]
-category: knowledge
-minStats: { memory: 2, demeanor: 3 }
-effect: "This character has knowledge of courtly etiquette and can be assumed to be familiar with the rules and manners expected in the royal halls of Isekai."
-`,If=`id: criminal-underworld
-name: "Criminal Underworld"
-status: draft
-plane: any
-summary: "The gangs, fences and smugglers who work outside the law, and the rules they keep among themselves."
-tags: [crime, underworld, streets]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them."
-`,Lf=`id: cryptography
-name: "Cryptography"
-status: draft
-plane: any
-summary: "Codes and ciphers: making them, and breaking them."
-tags: [codes, secrets, spy]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 4 }
-effect: "This character has knowledge of cryptography and can be assumed to be familiar with common codes and ciphers and the methods used to make and break them."
-`,Rf=`id: cybernetics
-name: "Cybernetics"
-status: placeholder
-plane: earth
-summary: "Implants, prosthetics and the medicine of joining people to machines."
-tags: [cybernetics, technology, medicine]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of cybernetics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,zf=`id: diplomatic-protocol
-name: "Diplomatic Protocol"
-status: draft
-plane: any
-summary: "The rules of formal meetings between powers: precedence, ceremony and what not to say."
-tags: [diplomacy, etiquette, politics]
-category: knowledge
-ranked: true
-minStats: { memory: 3, empathy: 3 }
-effect: "This character has knowledge of diplomatic protocol and can be assumed to be familiar with the ceremonies, forms of address and unwritten rules of formal diplomacy."
-`,Bf=`id: dreft
-name: Dreft
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The Kingdom of Dreft: its regions, its crown and its customs."
-tags: [kingdom, dreft]
-lore: dreft
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Kingdom of Dreft and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,Vf=`id: dreftan-written
-name: "Dreftan (Written)"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The common language of Dreft."
-tags: [language, dreft, writing]
-category: knowledge
-types: [language]
-language: dreftan
-effect: This character can read and write the Dreftan language.
-`,Hf=`id: dreftan
-name: "Dreftan (Spoken)"
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The common language of Dreft."
-tags: [language, dreft]
-category: knowledge
-types: [language]
-language: dreftan
-effect: This character is conversational in the Dreftan language and can speak it.
-`,Uf=`id: dreftian-law
-name: Dreftian Law
-status: placeholder
-plane: isekai
-region: dreft
-summary: The laws of the Kingdom of Dreft and how they’re enforced.
-tags: [law, dreft]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Dreftian law and can be assumed to be familiar with the laws of the Kingdom of Dreft and how they’re enforced."
-`,Wf=`id: dutch-written
-name: "Dutch (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, dutch, earth, writing]
-category: knowledge
-types: [language]
-language: dutch
-effect: "This character can read and write the Dutch language."
-`,Y=`id: dutch
-name: "Dutch (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, dutch, earth]
-category: knowledge
-types: [language]
-language: dutch
-effect: "This character is conversational in the Dutch language and can speak it."
-`,Gf=`id: dwarvish-runes-written
-name: "Dwarvish Runes (Written)"
-status: draft
-plane: isekai
-summary: "The runes Dwarvish peoples write in."
-tags: [language, dwarvish, writing, site-example]
-category: knowledge
-types: [language]
-language: dwarvish-runes
-minStats: { memory: 3, intuition: 5 }
-effect: "This character can read and write Dwarvish Runes."
-`,Kf=`# Pairs with Dwarvish Runes (Written).
-id: dwarvish
-name: "Dwarvish (Spoken)"
-status: draft
-plane: isekai
-summary: "The spoken tongue that Dwarvish Runes are written in."
-tags: [language, dwarvish, isekai]
-category: knowledge
-types: [language]
-language: dwarvish-runes
-effect: "This character is conversational in the Dwarvish language and can speak it."
-`,qf=`id: earth-baseline-customs
-name: Earth Baseline Customs
-status: placeholder
-plane: earth
-summary: How people from Earth Baseline expect things to be done.
-tags: [earth, customs, foreigners]
-category: knowledge
-ranked: true
-minStats: { memory: 1 }
-effect: "This character has knowledge of Earth baseline customs and can be assumed to be familiar with how people across the settled systems expect things to be done."
-`,Jf=`id: earth-baseline-technology
-name: Earth Baseline Technology
-status: placeholder
-plane: earth
-summary: The machines and devices of Earth Baseline.
-tags: [earth, technology]
-category: knowledge
-minStats: { memory: 1 }
-effect: "This character has knowledge of Earth baseline technology and can be assumed to be familiar with the machines and devices common across the settled systems."
-`,Yf=`id: ecology
-name: "Ecology"
-status: draft
-plane: any
-summary: "Ecosystems, climate and how damaged land is restored."
-tags: [ecology, science, nature]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of ecology and can be assumed to be familiar with how ecosystems work and how damaged land is restored."
-`,Xf=`id: elemental-magics
-name: "Elemental Magics"
-status: draft
-plane: isekai
-summary: "The theory and history of Elemental Magics."
-tags: [magic, elemental, site-example]
-category: knowledge
-# On the Magic list: only a character with Magical Heritage can pick it.
-list: magic
-ranked: true
-minStats: { memory: 3, intuition: 5 }
-effect: "This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history."
-`,Zf=`id: engineering
-name: "Engineering"
-status: draft
-plane: any
-summary: "How machines, structures and systems are designed and kept running."
-tags: [engineering, technology, building]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 4 }
-effect: "This character has knowledge of engineering and can be assumed to be familiar with how machines, structures and systems are designed, built, maintained and broken."
-`,Qf=`id: english-written
-name: "English (Written)"
-status: placeholder
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, english, earth, writing]
-category: knowledge
-types: [language]
-language: english
-effect: This character can read and write the English language.
-`,$f=`id: english
-name: "English (Spoken)"
-status: placeholder
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, english, earth]
-category: knowledge
-types: [language]
-language: english
-effect: This character is conversational in the English language and can speak it.
-`,ep=`id: exotic-materials
-name: "Exotic Materials"
-status: placeholder
-plane: earth
-summary: "The exotic materials paraphysics depends on: what they are, where they come from and what they do."
-tags: [exotic-materials, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of exotic materials and can be assumed to be familiar with their uses, prices, and the rough paraphysical concepts by which they operate."
-`,tp=`id: farming
-name: Farming
-status: placeholder
-plane: any
-summary: "Crops, livestock and the farming year."
-tags: [farming, rural]
-category: knowledge
-ranked: true
-minStats: { memory: 2, endurance: 2 }
-effect: "This character has knowledge of farming and can be assumed to be familiar with the technologies, techniques, and lifestyles associated with the practice."
-`,np=`id: filipino-written
-name: "Filipino (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, filipino, earth, writing]
-category: knowledge
-types: [language]
-language: filipino
-effect: "This character can read and write the Filipino language."
-`,rp=`id: filipino
-name: "Filipino (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, filipino, earth]
-category: knowledge
-types: [language]
-language: filipino
-effect: "This character is conversational in the Filipino language and can speak it."
-`,X=`id: french-written
-name: "French (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union and Centafrica."
-tags: [language, french, earth, writing]
-category: knowledge
-types: [language]
-language: french
-effect: "This character can read and write the French language."
-`,ip=`id: french
-name: "French (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union and Centafrica."
-tags: [language, french, earth]
-category: knowledge
-types: [language]
-language: french
-effect: "This character is conversational in the French language and can speak it."
-`,ap=`id: gambling
-name: "Gambling"
-status: draft
-plane: any
-summary: "Games of chance: the odds, the tells, and the cheats."
-tags: [gambling, games, underworld]
-category: knowledge
-ranked: true
-minStats: { memory: 2, intuition: 3 }
-effect: "This character has knowledge of gambling and can be assumed to be familiar with common games of chance, their odds, and the tricks cheats use."
-`,op=`id: geography
-name: "Geography"
-status: draft
-plane: any
-summary: "The lay of the land: regions, cities, routes and the people who live along them."
-tags: [geography, travel, places]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of geography and can be assumed to be familiar with the regions, cities, terrain and routes of the places they have lived and traveled."
-`,sp=`id: german-written
-name: "German (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, german, earth, writing]
-category: knowledge
-types: [language]
-language: german
-effect: "This character can read and write the German language."
-`,cp=`id: german
-name: "German (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, german, earth]
-category: knowledge
-types: [language]
-language: german
-effect: "This character is conversational in the German language and can speak it."
-`,lp=`id: glintl
-name: Glintl
-status: placeholder
-plane: isekai
-region: dreft
-summary: Knowing your way around the trading port of Glintl.
-tags: [city, port, guwain]
-lore: glintl
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the trading port of Glintl and can be assumed to be familiar with the peoples, places, and customs of the city."
-`,up=`id: gujarati-written
-name: "Gujarati (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, gujarati, earth, writing]
-category: knowledge
-types: [language]
-language: gujarati
-effect: "This character can read and write the Gujarati language."
-`,dp=`id: gujarati
-name: "Gujarati (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, gujarati, earth]
-category: knowledge
-types: [language]
-language: gujarati
-effect: "This character is conversational in the Gujarati language and can speak it."
-`,fp=`id: hausa-written
-name: "Hausa (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, hausa, earth, writing]
-category: knowledge
-types: [language]
-language: hausa
-effect: "This character can read and write the Hausa language."
-`,pp=`id: hausa
-name: "Hausa (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, hausa, earth]
-category: knowledge
-types: [language]
-language: hausa
-effect: "This character is conversational in the Hausa language and can speak it."
-`,mp=`id: heraldry
-name: "Heraldry"
-status: draft
-plane: any
-summary: "The arms, mottos and lineages of noble houses, and what they say about who you are talking to."
-tags: [nobility, heraldry, court]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of heraldry and can be assumed to be familiar with the arms, colors and lineages of noble houses and orders."
-`,hp=`id: herbalism
-name: Herbalism
-status: placeholder
-plane: any
-summary: "Plants and what they do for, and to, people."
-tags: [herbs, healing, plants]
-category: knowledge
-minStats: { memory: 3, intuition: 3 }
-effect: "This character has knowledge of herbalism and can be assumed to be familiar with the plants, techniques, and precautions involved with the practice."
-`,gp=`id: high-society
-name: "High Society"
-status: draft
-plane: any
-summary: "The world of the rich and well-connected: their manners, fashions, scandals and parties."
-tags: [society, wealth, social]
-category: knowledge
-ranked: true
-minStats: { memory: 2, empathy: 3 }
-effect: "This character has knowledge of high society and can be assumed to be familiar with the manners, fashions, families and scandals of the wealthy and powerful."
-`,_p=`id: hindi-written
-name: "Hindi (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India and Kashgar."
-tags: [language, hindi, earth, writing]
-category: knowledge
-types: [language]
-language: hindi
-effect: "This character can read and write the Hindi language."
-`,vp=`id: hindi
-name: "Hindi (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India and Kashgar."
-tags: [language, hindi, earth]
-category: knowledge
-types: [language]
-language: hindi
-effect: "This character is conversational in the Hindi language and can speak it."
-`,yp=`id: history
-name: "History"
-status: draft
-plane: any
-summary: "The broad sweep of the past: wars, dynasties, discoveries and how the present came to be."
-tags: [history, scholar]
-category: knowledge
-ranked: true
-minStats: { memory: 4 }
-effect: "This character has knowledge of history and can be assumed to be familiar with the major events, people and turning points of their world’s past."
-`,bp=`id: imperial-law
-name: "Imperial Law"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The American Empire’s legal code, its courts and how they’re enforced."
-tags: [law, american-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories."
-`,xp=`id: imperial-politics
-name: "Imperial Politics"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The Emperor, the Prince Regent, the Senate and who is feuding with whom."
-tags: [politics, american-empire, senate]
-lore: american-empire
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Imperial politics and can be assumed to be familiar with the Emperor, the Prince Regent, the Senate, and their feuds."
-`,Sp=`id: indian-law
-name: "Indian Law"
-status: draft
-plane: earth
-region: kingdom-of-india
-summary: "The laws of the Kingdom of India, set by its crown and its temples, and how they’re enforced."
-tags: [law, india]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Indian law and can be assumed to be familiar with the laws and courts of the Kingdom of India."
-`,Cp=`id: indian-theology
-name: "Indian Theology"
-status: draft
-plane: earth
-region: kingdom-of-india
-summary: "The land of 10,000 gods: the faiths of India and the theocracy that rules in their name."
-tags: [religion, india]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Indian theology and can be assumed to be familiar with the gods, temples, and rites of the Kingdom of India."
-`,wp=`id: indonesian-written
-name: "Indonesian (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, indonesian, earth, writing]
-category: knowledge
-types: [language]
-language: indonesian
-effect: "This character can read and write the Indonesian language."
-`,Tp=`id: indonesian
-name: "Indonesian (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, indonesian, earth]
-category: knowledge
-types: [language]
-language: indonesian
-effect: "This character is conversational in the Indonesian language and can speak it."
-`,Ep=`id: interplanar-law
-name: "Interplanar Law"
-status: placeholder
-plane: earth
-summary: "The law of extraplanar beings: the treatment of specimens, the legal status of parasapients, and who counts as a person in which nation."
-tags: [law, parasapients, rights, immigration]
-category: knowledge
-ranked: true
-minStats: { memory: 3, empathy: 3 }
-effect: "This character has knowledge of interplanar law and can be assumed to be familiar with the laws governing extraplanar beings, including the treatment of specimens and the legal status of parasapients."
-`,Dp=`id: interplanar-relations
-name: "Interplanar Relations"
-status: placeholder
-plane: earth
-summary: "The diplomatic and business ties linking nations separated by entire realities."
-tags: [diplomacy, politics, trade, parasapients]
-category: knowledge
-ranked: true
-minStats: { memory: 3, persuasion: 3 }
-effect: "This character has knowledge of interplanar relations and can be assumed to be familiar with the planes, societies, and laws involved with contact between parasapients and representatives of Earth baseline."
-`,Op=`id: italian-written
-name: "Italian (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, italian, earth, writing]
-category: knowledge
-types: [language]
-language: italian
-effect: "This character can read and write the Italian language."
-`,kp=`id: italian
-name: "Italian (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, italian, earth]
-category: knowledge
-types: [language]
-language: italian
-effect: "This character is conversational in the Italian language and can speak it."
-`,Ap=`id: japanese-written
-name: "Japanese (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, japanese, earth, writing]
-category: knowledge
-types: [language]
-language: japanese
-effect: "This character can read and write the Japanese language."
-`,jp=`id: japanese
-name: "Japanese (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, japanese, earth]
-category: knowledge
-types: [language]
-language: japanese
-effect: "This character is conversational in the Japanese language and can speak it."
-`,Mp=`id: javanese-written
-name: "Javanese (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, javanese, earth, writing]
-category: knowledge
-types: [language]
-language: javanese
-effect: "This character can read and write the Javanese language."
-`,Np=`id: javanese
-name: "Javanese (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, javanese, earth]
-category: knowledge
-types: [language]
-language: javanese
-effect: "This character is conversational in the Javanese language and can speak it."
-`,Pp=`id: kannada-written
-name: "Kannada (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, kannada, earth, writing]
-category: knowledge
-types: [language]
-language: kannada
-effect: "This character can read and write the Kannada language."
-`,Fp=`id: kannada
-name: "Kannada (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, kannada, earth]
-category: knowledge
-types: [language]
-language: kannada
-effect: "This character is conversational in the Kannada language and can speak it."
-`,Ip=`id: karsef
-name: Karsef
-status: placeholder
-plane: isekai
-summary: The land across the Corsine Mountains from Dreft.
-tags: [karsef, border, foreign]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Kingdom of Karsef and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,Lp=`id: kashgar-mindworks
-name: "Kashgar Mindworks"
-status: placeholder
-plane: earth
-region: kashgar
-summary: "The company that builds AI Cores, and how it works."
-tags: [ai, company, kashgar]
-lore: kashgar-mindworks
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of Kashgar Mindworks and can be assumed to be familiar with its businesses, locations, employees, culture, and leadership."
-`,Rp=`id: kashgar
-name: "Kashgar"
-status: placeholder
-plane: earth
-region: kashgar
-summary: "Kashgar, the largest Ark in the settled systems and the heart of the AI diaspora: its decks, its politics and its people."
-tags: [kashgar, ark, ai]
-lore: kashgar
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark Kashgar and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,zp=`id: kazakh-written
-name: "Kazakh (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, kazakh, earth, writing]
-category: knowledge
-types: [language]
-language: kazakh
-effect: "This character can read and write the Kazakh language."
-`,Bp=`id: kazakh
-name: "Kazakh (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, kazakh, earth]
-category: knowledge
-types: [language]
-language: kazakh
-effect: "This character is conversational in the Kazakh language and can speak it."
-`,Vp=`id: khmer-written
-name: "Khmer (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, khmer, earth, writing]
-category: knowledge
-types: [language]
-language: khmer
-effect: "This character can read and write the Khmer language."
-`,Hp=`id: khmer
-name: "Khmer (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, khmer, earth]
-category: knowledge
-types: [language]
-language: khmer
-effect: "This character is conversational in the Khmer language and can speak it."
-`,Up=`id: kinyarwanda-written
-name: "Kinyarwanda (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, kinyarwanda, earth, writing]
-category: knowledge
-types: [language]
-language: kinyarwanda
-effect: "This character can read and write the Kinyarwanda language."
-`,Wp=`id: kinyarwanda
-name: "Kinyarwanda (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, kinyarwanda, earth]
-category: knowledge
-types: [language]
-language: kinyarwanda
-effect: "This character is conversational in the Kinyarwanda language and can speak it."
-`,Gp=`id: korean-written
-name: "Korean (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, korean, earth, writing]
-category: knowledge
-types: [language]
-language: korean
-effect: "This character can read and write the Korean language."
-`,Kp=`id: korean
-name: "Korean (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, korean, earth]
-category: knowledge
-types: [language]
-language: korean
-effect: "This character is conversational in the Korean language and can speak it."
-`,qp=`id: kyrgyz-written
-name: "Kyrgyz (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, kyrgyz, earth, writing]
-category: knowledge
-types: [language]
-language: kyrgyz
-effect: "This character can read and write the Kyrgyz language."
-`,Jp=`id: kyrgyz
-name: "Kyrgyz (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, kyrgyz, earth]
-category: knowledge
-types: [language]
-language: kyrgyz
-effect: "This character is conversational in the Kyrgyz language and can speak it."
-`,Yp=`id: lao-written
-name: "Lao (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, lao, earth, writing]
-category: knowledge
-types: [language]
-language: lao
-effect: "This character can read and write the Lao language."
-`,Xp=`id: lao
-name: "Lao (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, lao, earth]
-category: knowledge
-types: [language]
-language: lao
-effect: "This character is conversational in the Lao language and can speak it."
-`,Zp=`id: law-enforcement
-name: "Law Enforcement"
-status: draft
-plane: any
-summary: "How police and guards work: procedures, patrols, evidence and arrests."
-tags: [law, police, enforcement]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of law enforcement and can be assumed to be familiar with police and guard procedures, how evidence is handled, and how arrests and investigations proceed."
-`,Qp=`id: legal-systems
-name: "Legal Systems"
-status: draft
-plane: any
-summary: "How laws are made, courts run, and cases won or lost."
-tags: [law, courts]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3 }
-effect: "This character has knowledge of legal systems and can be assumed to be familiar with how laws are written and enforced, how courts work, and common legal procedures."
-`,$p=`id: lingala-written
-name: "Lingala (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica and Xanthus."
-tags: [language, lingala, earth, writing]
-category: knowledge
-types: [language]
-language: lingala
-effect: "This character can read and write the Lingala language."
-`,em=`id: lingala
-name: "Lingala (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica and Xanthus."
-tags: [language, lingala, earth]
-category: knowledge
-types: [language]
-language: lingala
-effect: "This character is conversational in the Lingala language and can speak it."
-`,tm=`id: liquid-democracy
-name: "Liquid Democracy"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Tetra’s Liquid Democracy: delegated votes, ward representatives and the Council of 11."
-tags: [tetra, politics, liquid-democracy, votes]
-lore: tetra
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Tetra’s Liquid Democracy and can be assumed to be familiar with its delegated votes, ward representatives, and the Council of 11."
-`,nm=`id: literature
-name: "Literature"
-status: draft
-plane: any
-summary: "Books, poems, plays and stories, and the ideas they carry."
-tags: [literature, culture, scholar]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of literature and can be assumed to be familiar with famous works, authors, forms and the ideas they made popular."
-`,rm=`id: local-folklore
-name: Local Folklore
-status: placeholder
-plane: any
-summary: "The stories, superstitions and old warnings of a region."
-tags: [folklore, rural]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the local folklore and can be assumed to be familiar with its history, places, rumors, and taboos."
-choices:
-  - choose: 1
-    from: place
-    note: "Which region's folklore"
-    perRank: false
+Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`)}for(let n of e.seen.entries()){let r=n[1];if(t===n[0])a(n);else{if(e.external){let r=e.external.registry.get(n[0])?.id;if(t!==n[0]&&r){a(n);continue}}(e.metadataRegistry.get(n[0])?.id||r.cycle||r.count>1&&e.reused===`ref`)&&a(n)}}e.external&&(e.sharedDefsExtractedFor=e.external)}function ka(e){let t=e.anyOf;if(!Array.isArray(t)||t.length===0||e.type!==void 0)return;let n=[];for(let e of t){if(!e||typeof e!=`object`)return;ka(e);let t=Object.keys(e);if(t.length!==1||t[0]!==`type`)return;let r=e.type;for(let e of Array.isArray(r)?r:[r]){if(typeof e!=`string`)return;n.includes(e)||n.push(e)}}delete e.anyOf,e.type=n.length===1?n[0]:n}var Aa=new Set([`type`,`properties`,`required`,`additionalProperties`]),ja=[`oneOf`,`anyOf`];function Ma(e){let t=e.additionalProperties;return t===void 0||t===!1||typeof t!=`object`||!t?null:Object.keys(t).length?t:null}function Na(e){let t=[];for(let n of e){if(typeof n!=`object`||n.type!==`object`)return null;for(let e in n)if(!Aa.has(e))return null;t.push(n)}let n={},r=new Set;for(let e of t){for(let r in e.properties){if(Object.prototype.hasOwnProperty.call(n,r))continue;let e=[];for(let n of t){let t=n.properties?.[r]??Ma(n);t!=null&&(e.some(e=>JSON.stringify(e)===JSON.stringify(t))||e.push(t))}_(n,r,e.length===1?e[0]:Na(e)??{allOf:e})}for(let t of e.required??[])r.add(t)}let i={type:`object`,properties:n};if(r.size&&(i.required=[...r]),t.every(e=>e.additionalProperties===!1))i.additionalProperties=!1;else{let e=[];for(let n of t){let t=Ma(n);t&&!e.some(e=>JSON.stringify(e)===JSON.stringify(t))&&e.push(t)}e.length===1?i.additionalProperties=e[0]:e.length>1&&(i.additionalProperties={allOf:e})}return i}function Pa(e){let t=e.allOf;if(!Array.isArray(t)||t.length<2)return;for(let t of Aa)if(t in e)return;let n=t.filter(e=>ja.some(t=>Array.isArray(e[t]))),r=null;if(!n.length)r=Na(t);else{let e=n[0],i=ja.find(t=>Array.isArray(e[t]));if(Object.keys(e).length!==1)return;let a=t.filter(t=>t!==e),o=e[i].map(e=>Na([...a,e]));if(o.some(e=>!e))return;r={[i]:o}}r&&(delete e.allOf,Ca(e,r))}function Fa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);let r=t=>{let n=e.seen.get(t);if(n.ref===null)return;let i=n.def??n.schema,a={...i},o=n.ref;if(n.ref=null,o){r(o);let n=e.seen.get(o),s=n.schema;if(s.$ref&&(e.target===`draft-07`||e.target===`draft-04`||e.target===`openapi-3.0`)?(i.allOf=i.allOf??[],i.allOf.push(s)):Ca(i,s),Ca(i,a),t._zod.parent===o)for(let e in i)e!==`$ref`&&e!==`allOf`&&(e in a||delete i[e]);if(s.$ref&&n.def)for(let e in i)e!==`$ref`&&e!==`allOf`&&e in n.def&&JSON.stringify(i[e])===JSON.stringify(n.def[e])&&delete i[e]}let s=t._zod.parent;if(s&&s!==o){r(s);let t=e.seen.get(s);if(t?.schema.$ref&&(i.$ref=t.schema.$ref,t.def))for(let e in i)e!==`$ref`&&e!==`allOf`&&e in t.def&&JSON.stringify(i[e])===JSON.stringify(t.def[e])&&delete i[e]}e.override({zodSchema:t,jsonSchema:i,path:n.path??[]})};if(!e.external||e.sharedEmitDoneFor!==e.external){for(let t of[...e.seen.entries()].reverse())r(t[0]);if(e.target!==`openapi-3.0`)for(let t of e.seen.entries())ka(t[1].def??t[1].schema);for(let t of e.deferred)t();if(e.intersections.length){let t=new Map;for(let n of e.seen.values())for(let e of[n.schema,n.def]){let n=e?.allOf;if(!Array.isArray(n))continue;let r=t.get(n);r?r.push(e):t.set(n,[e])}for(let n of e.intersections)for(let e of t.get(n)??[])Pa(e)}}let i={};if(e.target===`draft-2020-12`?i.$schema=`https://json-schema.org/draft/2020-12/schema`:e.target===`draft-07`?i.$schema=`http://json-schema.org/draft-07/schema#`:e.target===`draft-04`?i.$schema=`http://json-schema.org/draft-04/schema#`:e.target,e.external?.uri){let n=e.external.registry.get(t)?.id;if(!n)throw Error("Schema is missing an `id` property");i.$id=e.external.uri(n)}Ca(i,n.defId?n.schema:n.def??n.schema);let a=e.metadataRegistry.get(t)?.id;a!==void 0&&i.id===a&&delete i.id;let o=e.external?.defs??{};if(!e.external||e.sharedEmitDoneFor!==e.external)for(let t of e.seen.entries()){let e=t[1];e.def&&e.defId&&(e.def.id===e.defId&&delete e.def.id,_(o,e.defId,e.def))}e.external&&(e.sharedEmitDoneFor=e.external),e.external||Object.keys(o).length>0&&(e.target===`draft-2020-12`?i.$defs=o:i.definitions=o);try{let n=JSON.parse(JSON.stringify(i));return Object.defineProperty(n,"~standard",{value:{...t[`~standard`],jsonSchema:{input:La(t,`input`,e.processors),output:La(t,`output`,e.processors)}},enumerable:!1,writable:!1}),n}catch{throw Error(`Error converting schema to JSON.`)}}function I(e,t){let n=t??{seen:new Set};if(n.seen.has(e))return!1;n.seen.add(e);let r=e._zod.def;if(r.type===`transform`)return!0;if(r.type===`array`)return I(r.element,n);if(r.type===`set`)return I(r.valueType,n);if(r.type===`lazy`)return I(r.getter(),n);if(r.type===`promise`||r.type===`optional`||r.type===`nonoptional`||r.type===`nullable`||r.type===`readonly`||r.type==="default"||r.type===`prefault`||r.type===`catch`)return I(r.innerType,n);if(r.type===`intersection`)return I(r.left,n)||I(r.right,n);if(r.type===`record`||r.type===`map`)return I(r.keyType,n)||I(r.valueType,n);if(r.type===`pipe`)return e._zod.traits.has(`$ZodCodec`)?!0:I(r.in,n)||I(r.out,n);if(r.type===`object`){for(let e in r.shape)if(I(r.shape[e],n))return!0;return!1}if(r.type===`union`){for(let e of r.options)if(I(e,n))return!0;return!1}if(r.type===`tuple`){for(let e of r.items)if(I(e,n))return!0;return!!(r.rest&&I(r.rest,n))}return!1}var Ia=(e,t={})=>n=>{let r=wa({...n,processors:t});return Ea(e,r),Oa(r,e),Fa(r,e)},La=(e,t,n={})=>r=>{let{libraryOptions:i,target:a}=r??{},o=wa({...i??{},target:a,io:t,processors:n});return Ea(e,o),Oa(o,e),Fa(o,e)},Ra=(e,t,n)=>{(e[t]===void 0||n>e[t])&&(e[t]=n)},za=(e,t,n)=>{(e[t]===void 0||n<e[t])&&(e[t]=n)},Ba=(e,t)=>{Ra(e,`minimum`,t),za(e,`maximum`,t)},Va=(e,t)=>{e.multipleOf??=[],e.multipleOf.includes(t)||e.multipleOf.push(t)},Ha=(e,t)=>{e.patterns??=new Set,e.patterns.add(t)},Ua=(e,t)=>{e.mime=e.mime?e.mime.filter(e=>t.includes(e)):[...t]},Wa=(e,t)=>{e.format=t,t.includes(`int`)&&(e.isInt=!0)},Ga=(e,t)=>Ra(e,`minimum`,t.minimum),Ka=(e,t)=>za(e,`maximum`,t.maximum),qa=e=>(t,n)=>{Wa(t,n.format);let[r,i]=e[n.format];Ra(t,`minimum`,r),za(t,`maximum`,i)},Ja={greater_than:(e,t)=>Ra(e,t.inclusive?`minimum`:`exclusiveMinimum`,t.value),less_than:(e,t)=>za(e,t.inclusive?`maximum`:`exclusiveMaximum`,t.value),multiple_of:(e,t)=>Va(e,t.value),number_format:qa(de),bigint_format:qa(fe),min_length:Ga,max_length:Ka,length_equals:(e,t)=>Ba(e,t.length),min_size:Ga,max_size:Ka,size_equals:(e,t)=>Ba(e,t.size),string_format:(e,t)=>{Wa(e,t.format),t.pattern&&Ha(e,t.pattern),(t.format===`base64`||t.format===`base64url`)&&(e.contentEncoding=t.format),(t.local||t.precision===-1)&&(e.laxFormat=!0)},mime_type:(e,t)=>Ua(e,t.mime)};function Ya(e){let t={},n=e._zod.def,r=e._zod.traits.has(`$ZodCheck`)?[e,...n.checks??[]]:n.checks??[];for(let e of r)Ja[e._zod.def.check]?.(t,e._zod.def);let i=e._zod.bag;i.minimum!==void 0&&Ra(t,`minimum`,i.minimum),i.exclusiveMinimum!==void 0&&Ra(t,`exclusiveMinimum`,i.exclusiveMinimum),i.maximum!==void 0&&za(t,`maximum`,i.maximum),i.exclusiveMaximum!==void 0&&za(t,`exclusiveMaximum`,i.exclusiveMaximum),i.multipleOf!==void 0&&Va(t,i.multipleOf),i.format!==void 0&&(t.format??=i.format,i.format.includes(`int`)&&(t.isInt=!0)),i.mime&&Ua(t,i.mime);for(let e of i.patterns??[])Ha(t,e);return t}var Xa={guid:`uuid`,url:`uri`,datetime:`date-time`,json_string:`json-string`,regex:``},Za=new Map([[ar,Ht],[sr,Ut]]),Qa=e=>Za.get(e)??e,$a=(e,t,n,r)=>{let i=n;i.type=`string`;let{minimum:a,maximum:o,format:s,patterns:c,contentEncoding:l,laxFormat:u}=Ya(e);if(typeof a==`number`&&(i.minLength=a),typeof o==`number`&&(i.maxLength=o),s&&(i.format=Xa[s]??s,i.format===``&&delete i.format,(s===`time`||u)&&delete i.format),l&&(i.contentEncoding=l),c&&c.size>0){let e=[...c].map(Qa);e.length===1?i.pattern=e[0].source:e.length>1&&(i.allOf=[...e.map(e=>({...t.target===`draft-07`||t.target===`draft-04`||t.target===`openapi-3.0`?{type:`string`}:{},pattern:e.source}))])}},eo=(e,t,n,r)=>{let i=n,{minimum:a,maximum:o,multipleOf:s,exclusiveMaximum:c,exclusiveMinimum:l,isInt:u}=Ya(e);i.type=u?`integer`:`number`;let d=typeof l==`number`&&l>=(a??-1/0),f=typeof c==`number`&&c<=(o??1/0),p=t.target===`draft-04`||t.target===`openapi-3.0`;if(d?p?(i.minimum=l,i.exclusiveMinimum=!0):i.exclusiveMinimum=l:typeof a==`number`&&(i.minimum=a),f?p?(i.maximum=c,i.exclusiveMaximum=!0):i.exclusiveMaximum=c:typeof o==`number`&&(i.maximum=o),s){let n=new Set;for(let a of s)Number.isFinite(a)&&a!==0?n.add(Math.abs(a)):Ta(e,t,i,r,`A multipleOf divisor of ${a} cannot be represented in JSON Schema`);let[a,...o]=n;a!==void 0&&(i.multipleOf=a),o.length&&(i.allOf=[...i.allOf??[],...o.map(e=>({multipleOf:e}))])}},to=(e,t,n,r)=>{n.type=`boolean`},no=(e,t,n,r)=>{n.not={}},ro=(e,t,n,r)=>{let i=e._zod.def,a=l(i.entries);a.length===0?n.not={}:(a.every(e=>typeof e==`number`)&&(n.type=`number`),a.every(e=>typeof e==`string`)&&(n.type=`string`),n.enum=a)},io=(e,t,n,r)=>{Ta(e,t,n,r,`Custom types cannot be represented in JSON Schema`)},ao=(e,t,n,r)=>{Ta(e,t,n,r,`Transforms cannot be represented in JSON Schema`)},oo=(e,t,n,r)=>{let i=n,a=e._zod.def,{minimum:o,maximum:s}=Ya(e);typeof o==`number`&&(i.minItems=o),typeof s==`number`&&(i.maxItems=s),i.type=`array`,i.items=Ea(a.element,t,{...r,path:[...r.path,`items`]})};function so(e){let t=e._zod.def;return t.type===`pipe`&&t.in._zod.traits.has(`$ZodTransform`)?so(t.out):t.type===`catch`?so(t.innerType):e._zod.optin}var co=(e,t,n,r)=>{let i=n,a=e._zod.def,o=a.shape;if(Object.getOwnPropertySymbols(o).length&&Ta(e,t,i,r,`Symbol keys cannot be represented in JSON Schema`))return;i.type=`object`,i.properties={};for(let e in o)_(i.properties,e,Ea(o[e],t,{...r,path:[...r.path,`properties`,e]}));let s=[];for(let e of Object.keys(o)){let n=a.shape[e];(t.io===`input`?so(n)===void 0:n._zod.optout===void 0)&&s.push(e)}s.length>0&&(i.required=s),a.catchall?._zod.def.type===`never`?i.additionalProperties=!1:a.catchall?a.catchall&&(i.additionalProperties=Ea(a.catchall,t,{...r,path:[...r.path,`additionalProperties`]})):t.io===`output`&&(i.additionalProperties=!1)},lo=(e,t,n,r)=>{let i=e._zod.def,a=i.inclusive===!1,o=i.options.map((e,n)=>Ea(e,t,{...r,path:[...r.path,a?`oneOf`:`anyOf`,n]}));a?n.oneOf=o:n.anyOf=o},uo=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.left,t,{...r,path:[...r.path,`allOf`,0]}),o=Ea(i.right,t,{...r,path:[...r.path,`allOf`,1]}),s=e=>`allOf`in e&&Object.keys(e).length===1,c=[...s(a)?a.allOf:[a],...s(o)?o.allOf:[o]];n.allOf=c,t.intersections.push(c)};function fo(e,t,n){if(t.$ref){if(n.has(t))return t;n.add(t);let r=e.get(t)?.def;if(!r)return t;let i=fo(e,r,n);return i===r?t:i}for(let r of[`anyOf`,`oneOf`]){let i=t[r];if(!Array.isArray(i))continue;let a=i.map(t=>fo(e,t,n));a.some((e,t)=>e!==i[t])&&(t={...t,[r]:a})}let r=Array.isArray(t.type)?t.type:[t.type],i=!r.includes(`string`)&&r.some(e=>e===`number`||e===`integer`),a=t.enum??(t.const===void 0?void 0:[t.const]);if(!i&&!a?.some(e=>typeof e==`number`))return t;let{minimum:o,maximum:s,exclusiveMinimum:c,exclusiveMaximum:l,multipleOf:u,format:d,id:f,...p}=t;return p.enum?p.enum=p.enum.map(e=>typeof e==`number`?String(e):e):typeof p.const==`number`&&(p.const=String(p.const)),i&&(p.type=`string`,a||(p.pattern=(r.includes(`number`)?$t:M).source)),p}var po=new WeakMap;function mo(e){let t=new Map;for(let n of e.seen.values())n.def&&!t.has(n.schema)&&t.set(n.schema,n);let n=new Map;for(let r of po.get(e)??[]){let i=e.seen.get(r),a=(i?.def??i?.schema)?.propertyNames;if(!a||a===!0||n.has(a))continue;let o=fo(t,a,new Set);o!==a&&n.set(a,o)}if(n.size)for(let t of e.seen.values())for(let e of[t.schema,t.def]){let t=e&&n.get(e.propertyNames);t&&(e.propertyNames=t)}}var ho=(e,t,n,r)=>{let i=n,a=e._zod.def;i.type=`object`;let o=a.keyType,s=Ya(o).patterns;if(a.mode===`loose`&&s&&s.size>0){let e=Ea(a.valueType,t,{...r,path:[...r.path,`patternProperties`,`*`]});i.patternProperties={};for(let t of s)_(i.patternProperties,Qa(t).source,e)}else{if(t.target===`draft-07`||t.target===`draft-2020-12`){i.propertyNames=Ea(a.keyType,t,{...r,path:[...r.path,`propertyNames`]});let n=po.get(t);n||(n=[],po.set(t,n),t.deferred.push(()=>mo(t))),n.push(e)}i.additionalProperties=Ea(a.valueType,t,{...r,path:[...r.path,`additionalProperties`]})}let c=o._zod.values,l=t.io===`input`&&so(a.valueType)!==void 0;if(c&&!a.partial&&!l){let e=[...c].filter(e=>typeof e==`string`||typeof e==`number`);e.length>0&&(i.required=e.map(String))}},go=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.innerType,t,r),o=t.seen.get(e);t.target===`openapi-3.0`?(o.ref=i.innerType,n.nullable=!0):n.anyOf=[a,{type:`null`}]},_o=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},vo=Symbol();function yo(e,t,n,r,i){let a=!1,o=JSON.stringify(e,(e,t)=>typeof t==`bigint`?(a=!0,null):t);return a?(Ta(t,n,r,i,`BigInt defaults cannot be represented in JSON Schema`),vo):JSON.parse(o)}var bo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n.default=o)},xo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);if(a.ref=i.innerType,t.io!==`input`)return;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n._prefault=o)},So=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o;try{o=i.catchValue(void 0)}catch{Ta(e,t,n,r,`Dynamic catch values are not supported in JSON Schema`);return}n.default=o},Co=(e,t,n,r)=>{let i=e._zod.def,a=i.in._zod.traits.has(`$ZodTransform`),o=t.io===`input`?a?i.out:i.in:i.out;Ea(o,t,r);let s=t.seen.get(e);s.ref=o},wo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType,n.readOnly=!0},To=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},Eo=new WeakSet([Object.prototype,Error.prototype]);function Do(e,t,n){Object.defineProperty(e,t,{configurable:!0,enumerable:!1,get(){let e=n(this);return Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0}),e},set(e){Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0})}})}var Oo=(e,t)=>{nt.init(e,t),e.name=`ZodError`;let n=Object.getPrototypeOf(e);Eo.has(n)||(Eo.add(n),Do(n,`format`,e=>t=>at(e,t)),Do(n,`flatten`,e=>t=>it(e,t)),Do(n,`addIssue`,e=>t=>{e.issues.push(t),e.message=JSON.stringify(e.issues,d,2)}),Do(n,`addIssues`,e=>t=>{e.issues.push(...t),e.message=JSON.stringify(e.issues,d,2)}),Object.defineProperty(n,"isEmpty",{configurable:!0,enumerable:!1,get(){return this.issues.length===0}}))},ko=j(`ZodError`,Oo),Ao=j(`ZodError`,Oo,void 0,{Parent:Error}),jo=st(Ao),Mo=ct(Ao),No=lt(Ao),Po=dt(Ao),Fo=_t(Ao),Io=vt(Ao),Lo=yt(Ao),Ro=bt(Ao),zo=xt(Ao),Bo=St(Ao),Vo=Ct(Ao),Ho=wt(Ao);function Uo(){Ye.localeError||Xe(_i())}function Wo(){Ye.memoizer||Xe({memoizer:mi()})}var Go=j(`ZodType`,(e,t)=>(Uo(),wn.init(e,t),e.def=t,e.type=t.type,e),{check(...e){let t=this.def;return this.clone(C(t,{checks:[...t.checks??[],...e.map(e=>typeof e==`function`?{_zod:{check:e,def:{check:`custom`},onattach:[]}}:e)]}),{parent:!0})},with(...e){return this.check(...e)},clone(e,t){return ce(this,e,t)},brand(){return this},register(e,t){return e.add(this,t),this},refine(e,t){return this.check(oc(e,t))},superRefine(e,t){return this.check(sc(e,t))},overwrite(e){return this.check(pa(e))},optional(){return Hs(this)},exactOptional(){return Ws(this)},nullable(){return Ks(this)},nullish(){return Hs(Ks(this))},nonoptional(e){return Qs(this,e)},array(){return Ds(this)},or(e){return js([this,e])},and(e){return Ns(this,e)},transform(e){return nc(this,Bs(e))},default(e){return Js(this,e)},prefault(e){return Xs(this,e)},catch(e){return ec(this,e)},pipe(e){return nc(this,e)},readonly(){return ic(this)},describe(e){let t=this.clone();return xi.add(t,{description:e}),t},meta(...e){if(e.length===0)return xi.get(this);let t=this.clone();return xi.add(t,e[0]),t},isOptional(){return this.safeParse(void 0).success},isNullable(){return this.safeParse(null).success},apply(e,...t){return t.length===0?e(this):e(this,...t)},get"~standard"(){return Ne(this,`~standard`,{...Dn(this),jsonSchema:{input:La(this,`input`),output:La(this,`output`)}})},set"~standard"(e){Me(this,`~standard`,e)},parse:function e(t,n){return jo(this,t,n,{callee:e})},parseAsync:async function e(t,n){return await Mo(this,t,n,{callee:e})},safeParse(e,t){return No(this,e,t)},async safeParseAsync(e,t){return Po(this,e,t)},get spa(){return this?.safeParseAsync},set spa(e){Me(this,`spa`,e)},validate(e,t){return mt(this,e,t)},validateAsync(e,t){return gt(this,e,t)},encode:function e(t,n){return Fo(this,t,n,{callee:e})},decode:function e(t,n){return Io(this,t,n,{callee:e})},encodeAsync:async function e(t,n){return await Lo(this,t,n,{callee:e})},decodeAsync:async function e(t,n){return await Ro(this,t,n,{callee:e})},safeEncode(e,t){return zo(this,e,t)},safeDecode(e,t){return Bo(this,e,t)},async safeEncodeAsync(e,t){return Vo(this,e,t)},async safeDecodeAsync(e,t){return Ho(this,e,t)},toJSONSchema(e){return Ia(this,{})(e)},get description(){return xi.get(this)?.description},get _def(){return this._zod.def}}),Ko=j(`_ZodString`,(e,t)=>{On.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>$a(e,t,n,r)},Pe({format:e=>Ya(e).format??null,minLength:e=>Ya(e).minimum??null,maxLength:e=>Ya(e).maximum??null},{regex(...e){return this.check(la(...e))},includes(...e){return this.check(ua(...e))},startsWith(...e){return this.check(da(...e))},endsWith(...e){return this.check(fa(...e))},min(...e){return this.check(sa(...e))},max(...e){return this.check(oa(...e))},length(...e){return this.check(ca(...e))},nonempty(...e){return this.check(sa(1,...e))},lowercase(e){return this.check(P(e))},uppercase(e){return this.check(F(e))},trim(){return this.check(ha())},normalize(...e){return this.check(ma(...e))},toLowerCase(){return this.check(ga())},toUpperCase(){return this.check(_a())},slugify(){return this.check(va())}})),L=j(`ZodString`,(e,t)=>{On.init(e,t),Ko.init(e,t)},{email(e){return this.check(wi(Zo,e))},url(e){return this.check(Ai(es,e))},jwt(e){return this.check(Gi(hs,e))},emoji(e){return this.check(ji(ts,e))},guid(e){return this.check(Ti(Qo,e))},uuid(e){return this.check(Ei($o,e))},uuidv4(e){return this.check(Di($o,e))},uuidv6(e){return this.check(Oi($o,e))},uuidv7(e){return this.check(ki($o,e))},nanoid(e){return this.check(Mi(ns,e))},cuid(e){return this.check(Ni(rs,e))},cuid2(e){return this.check(Pi(is,e))},ulid(e){return this.check(Fi(as,e))},base64(e){return this.check(Hi(fs,e))},base64url(e){return this.check(Ui(ps,e))},xid(e){return this.check(Ii(os,e))},ksuid(e){return this.check(Li(ss,e))},ipv4(e){return this.check(Ri(cs,e))},ipv6(e){return this.check(zi(ls,e))},cidrv4(e){return this.check(Bi(us,e))},cidrv6(e){return this.check(Vi(ds,e))},e164(e){return this.check(Wi(ms,e))},datetime(e){return this.check(Ki(qo,e))},date(e){return this.check(qi(Jo,e))},time(e){return this.check(Ji(Yo,e))},duration(e){return this.check(Yi(Xo,e))}});function R(e){return Ci(L,e)}var z=j(`ZodStringFormat`,(e,t)=>{N.init(e,t),Ko.init(e,t)}),qo=j(`ZodISODateTime`,(e,t)=>{qn.init(e,t),z.init(e,t)}),Jo=j(`ZodISODate`,(e,t)=>{Jn.init(e,t),z.init(e,t)}),Yo=j(`ZodISOTime`,(e,t)=>{Yn.init(e,t),z.init(e,t)}),Xo=j(`ZodISODuration`,(e,t)=>{Xn.init(e,t),z.init(e,t)}),Zo=j(`ZodEmail`,(e,t)=>{jn.init(e,t),z.init(e,t)}),Qo=j(`ZodGUID`,(e,t)=>{kn.init(e,t),z.init(e,t)}),$o=j(`ZodUUID`,(e,t)=>{An.init(e,t),z.init(e,t)}),es=j(`ZodURL`,(e,t)=>{zn.init(e,t),z.init(e,t)}),ts=j(`ZodEmoji`,(e,t)=>{Bn.init(e,t),z.init(e,t)}),ns=j(`ZodNanoID`,(e,t)=>{Vn.init(e,t),z.init(e,t)}),rs=j(`ZodCUID`,(e,t)=>{Hn.init(e,t),z.init(e,t)}),is=j(`ZodCUID2`,(e,t)=>{Un.init(e,t),z.init(e,t)}),as=j(`ZodULID`,(e,t)=>{Wn.init(e,t),z.init(e,t)}),os=j(`ZodXID`,(e,t)=>{Gn.init(e,t),z.init(e,t)}),ss=j(`ZodKSUID`,(e,t)=>{Kn.init(e,t),z.init(e,t)}),cs=j(`ZodIPv4`,(e,t)=>{Zn.init(e,t),z.init(e,t)}),ls=j(`ZodIPv6`,(e,t)=>{er.init(e,t),z.init(e,t)}),us=j(`ZodCIDRv4`,(e,t)=>{tr.init(e,t),z.init(e,t)}),ds=j(`ZodCIDRv6`,(e,t)=>{rr.init(e,t),z.init(e,t)}),fs=j(`ZodBase64`,(e,t)=>{or.init(e,t),z.init(e,t)}),ps=j(`ZodBase64URL`,(e,t)=>{lr.init(e,t),z.init(e,t)}),ms=j(`ZodE164`,(e,t)=>{ur.init(e,t),z.init(e,t)}),hs=j(`ZodJWT`,(e,t)=>{fr.init(e,t),z.init(e,t)}),gs=j(`ZodNumber`,(e,t)=>{pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>eo(e,t,n,r),e.isFinite=!0},Pe({minValue:e=>{let{minimum:t,exclusiveMinimum:n}=Ya(e);return Math.max(t??-1/0,n??-1/0)},maxValue:e=>{let{maximum:t,exclusiveMaximum:n}=Ya(e);return Math.min(t??1/0,n??1/0)},isInt:e=>{let{isInt:t,multipleOf:n}=Ya(e);return!!t||!!n?.some(Number.isSafeInteger)},format:e=>Ya(e).format??null},{gt(e,t){return this.check(ra(e,t))},gte(e,t){return this.check(ia(e,t))},min(e,t){return this.check(ia(e,t))},lt(e,t){return this.check(ta(e,t))},lte(e,t){return this.check(na(e,t))},max(e,t){return this.check(na(e,t))},int(e){return this.check(ys(e))},safe(e){return this.check(ys(e))},positive(e){return this.check(ra(0,e))},nonnegative(e){return this.check(ia(0,e))},negative(e){return this.check(ta(0,e))},nonpositive(e){return this.check(na(0,e))},multipleOf(e,t){return this.check(aa(e,t))},step(e,t){return this.check(aa(e,t))},finite(){return this}}));function _s(e){return Xi(gs,e)}var vs=j(`ZodNumberFormat`,(e,t)=>{mr.init(e,t),gs.init(e,t)});function ys(e){return Zi(vs,e)}var bs=j(`ZodBoolean`,(e,t)=>{hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>to(e,t,n,r)});function xs(e){return Qi(bs,e)}var Ss=j(`ZodUnknown`,(e,t)=>{gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(e,t,n)=>void 0});function Cs(){return $i(Ss)}var ws=j(`ZodNever`,(e,t)=>{_r.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>no(e,t,n,r)});function Ts(e){return ea(ws,e)}var Es=j(`ZodArray`,(e,t)=>{Wo(),xr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>oo(e,t,n,r),e.element=t.element},{min(e,t){return this.check(sa(e,t))},nonempty(e){return this.check(sa(1,e))},max(e,t){return this.check(oa(e,t))},length(e,t){return this.check(ca(e,t))},unwrap(){return this.element}});function Ds(e,t){return ya(Es,e,t)}var Os=j(`ZodObject`,(e,t)=>{Wo(),Dr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>co(e,t,n,r),Be(e,`shape`,e=>e._zod.def.shape,!1)},{keyof(){return Rs(Object.keys(this._zod.def.shape))},catchall(e){return this.clone(C(this._zod.def,{catchall:e}))},passthrough(){return this.clone(C(this._zod.def,{catchall:Cs()}))},loose(){return this.clone(C(this._zod.def,{catchall:Cs()}))},strict(){return this.clone(C(this._zod.def,{catchall:Ts()}))},strip(){return this.clone(C(this._zod.def,{catchall:void 0}))},extend(e){return ge(this,e)},safeExtend(e){return ve(this,e)},merge(e){return ye(this,e)},pick(e){return pe(this,e)},omit(e){return he(this,e)},partial(...e){return be(Vs,this,e[0])},exactPartial(...e){return be(Us,this,e[0],`exactPartial`)},required(...e){return xe(Zs,this,e[0])}});function ks(e,t){return new Os({type:`object`,shape:e??{},...E(t)})}var As=j(`ZodUnion`,(e,t)=>{kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>lo(e,t,n,r),e.options=t.options});function js(e,t){return new As({type:`union`,options:e,...E(t)})}var Ms=j(`ZodIntersection`,(e,t)=>{Ar.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>uo(e,t,n,r)});function Ns(e,t){return new Ms({type:`intersection`,left:e,right:t})}var Ps=j(`ZodRecord`,(e,t)=>{Wo(),Nr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ho(e,t,n,r),e.keyType=t.keyType,e.valueType=t.valueType});function Fs(e,t,n){return!t||!t._zod?new Ps({type:`record`,keyType:R(),valueType:e,...E(t)}):new Ps({type:`record`,keyType:e,valueType:t,...E(n)})}function Is(e,t,n){return new Ps({type:`record`,keyType:e,valueType:t,...E(n),partial:!0})}var Ls=j(`ZodEnum`,(e,t)=>{Pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ro(e,t,n,r),e.enum=t.entries,e.options=[...e._zod.values];let n=new Set(Object.keys(t.entries));e.extract=(e,r)=>{let i={};for(let r of e)if(n.has(r))i[r]=t.entries[r];else throw Error(`Key ${r} not found in enum`);return new Ls({...t,checks:[],...E(r),entries:i})},e.exclude=(e,r)=>{let i={...t.entries};for(let t of e)if(n.has(t))delete i[t];else throw Error(`Key ${t} not found in enum`);return new Ls({...t,checks:[],...E(r),entries:i})}});function Rs(e,t){return new Ls({type:`enum`,entries:Array.isArray(e)?Object.fromEntries(e.map(e=>[e,e])):e,...E(t)})}var zs=j(`ZodTransform`,(e,t)=>{Wo(),Fr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ao(e,t,n,r),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new Je(e.constructor.name);n.addIssue=r=>{if(typeof r==`string`)n.issues.push(Ae(r,n.value,t));else{let t=r;t.fatal&&(t.continue=!1),t.code??=`custom`,`input`in t||(t.input=n.value),t.inst??=e,n.issues.push(Ae(t))}};let i=t.transform(n.value,n);return i instanceof Promise?i.then(e=>(n.value=e,n)):(n.value=i,n)}});function Bs(e){return new zs({type:`transform`,transform:e})}var Vs=j(`ZodOptional`,(e,t)=>{Lr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Hs(e){return new Vs({type:`optional`,innerType:e})}var Us=j(`ZodExactOptional`,(e,t)=>{Rr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ws(e){return new Us({type:`optional`,innerType:e})}var Gs=j(`ZodNullable`,(e,t)=>{zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>go(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ks(e){return new Gs({type:`nullable`,innerType:e})}var qs=j(`ZodDefault`,(e,t)=>{Br.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>bo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeDefault=e.unwrap});function Js(e,t){return new qs({type:`default`,innerType:e,get defaultValue(){return typeof t==`function`?t():ae(t)}})}var Ys=j(`ZodPrefault`,(e,t)=>{Hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>xo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Xs(e,t){return new Ys({type:`prefault`,innerType:e,get defaultValue(){return typeof t==`function`?t():ae(t)}})}var Zs=j(`ZodNonOptional`,(e,t)=>{Ur.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>_o(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Qs(e,t){return new Zs({type:`nonoptional`,innerType:e,...E(t)})}var $s=j(`ZodCatch`,(e,t)=>{Kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>So(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeCatch=e.unwrap});function ec(e,t){return new $s({type:`catch`,innerType:e,catchValue:typeof t==`function`?t:He(t)})}var tc=j(`ZodPipe`,(e,t)=>{qr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>Co(e,t,n,r),e.in=t.in,e.out=t.out});function nc(e,t){return new tc({type:`pipe`,in:e,out:t})}var rc=j(`ZodReadonly`,(e,t)=>{Yr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>wo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function ic(e){return new rc({type:`readonly`,innerType:e})}var ac=j(`ZodCustom`,(e,t)=>{Zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>io(e,t,n,r)});function oc(e,t={}){return ba(ac,e,t)}function sc(e,t){return xa(e,t)}var cc=n(),lc=[`endurance`,`power`,`grace`],uc=[`empathy`,`persuasion`,`demeanor`],dc=[`logic`,`intuition`,`memory`],fc=Rs([...lc,...uc,...dc]),B={physical:lc,social:uc,mental:dc,magic:[]},pc=[`physical`,`social`,`mental`],mc=ks({hp:_s().int(),vp:_s().int(),sp:_s().int(),mp:_s().int()}).partial(),hc=R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be kebab-case`),gc=Rs([`placeholder`,`draft`,`final`]),_c=ks({id:hc,name:R().min(1),status:gc,plane:R().min(1),region:R().optional(),summary:R().min(1),tags:Ds(R()).default([]),lore:R().optional()}),vc=Fs(fc,ks({bonus:_s().int().min(0),max:_s().int().min(0).max(20)}).refine(e=>e.bonus<=e.max,`bonus can't exceed max`)),yc=ks({name:R().min(1),description:R().min(1)}),bc=ks({trait:hc,rank:_s().int().min(1).optional()}),xc=ks({choose:_s().int().min(1),from:R().min(1),note:R().optional(),perRank:xs().optional()}),Sc=_c.extend({features:Ds(yc).default([]),grants:Ds(bc).default([]),resources:mc.default({}),traitAccess:Ds(R()).default([]),stats:vc,freePoints:_s().int().min(0).default(0),maxTotal:_s().int().min(0).optional()}),Cc=Rs([`origin`,`profession`,`past`]),wc=ks({count:_s().int().min(1),group:Rs(pc)}),Tc=_c.extend({type:Cc,grants:Ds(bc).default([]),bonusPoints:Ds(wc).default([]),coreBonus:Is(Rs([`magic`]),_s().int().min(1)).default({}),choices:Ds(xc).default([]),backgroundTraits:Ds(hc).default([]),features:Ds(yc).default([])}),Ec=Rs([`knowledge`,`skill`,`contact`,`starter`,`ability`,`condition`,`membership`,`circumstance`,`other`]),Dc=ks(Object.fromEntries([...fc.options,...Object.keys(B)].map(e=>[e,_s().int().min(0).optional()]))).strict(),Oc=_c.extend({category:Ec,types:Ds(R()).default([]),ranked:xs().default(!1),rankStats:Ds(fc).default([]),minStats:Dc.default({}),prerequisites:Ds(hc).default([]),prerequisiteTags:Ds(R()).default([]),background:xs().default(!1),starterOnly:xs().default(!1),mastery:xs().default(!1),temporary:R().optional(),conveyed:xs().default(!1),rpRequirement:R().optional(),effect:R().min(1),language:R().optional(),choices:Ds(xc).default([]),resources:mc.default({}),coreAccess:Ds(Rs([`magic`])).default([]),list:R().optional(),opensLists:Ds(R()).default([]),grants:Ds(bc).default([])}),kc=ks({group:Rs(Object.keys(B)),points:Is(fc,_s().int().min(0))}),Ac=Rs([`universal`,`background`]),jc=ks({trait:hc,rank:_s().int().min(1).default(1),pick:Ac}),Mc=ks({package:hc.optional(),trait:hc.optional(),from:R().min(1),traits:Ds(R().trim().min(1))}).refine(e=>e.package===void 0!=(e.trait===void 0),`an answer names either a package or a Trait`),Nc=ks({name:R().optional(),kind:hc,origin:hc,profession:hc,past:hc,startPoints:Is(fc,_s().int().min(0)).default({}),level:_s().int().min(1).default(1),levels:Ds(kc),traits:Ds(jc).default([]),choices:Ds(Mc).default([])}),Pc={startingLevel:3},Fc=fc.options,Ic=[`origin`,`profession`,`past`],Lc={language:e=>e.types.includes(`language`),"dreftian-language":e=>e.types.includes(`language`)&&e.region===`dreft`,"spoken-language":e=>e.types.includes(`language`)&&!e.tags.includes(`writing`)},Rc=`spoken-and-written-language`;function zc(e,t){if(e.language)return t.traits.find(t=>t.language===e.language&&t.types.includes(`language`)&&t.tags.includes(`writing`))}var Bc={contact:`Contact`,place:`Place`},Vc=e=>Object.hasOwn(Bc,e);function Hc(e,t){if(e===`spoken-and-written-language`)return t.traits.filter(e=>Lc[`spoken-language`](e)&&zc(e,t));let n=Lc[e];return n?t.traits.filter(n):[]}var Uc=(e,t)=>e[t.by]===t.id&&e.from===t.from;function Wc(e,t,n=1){let r=[];for(let i of t.choices){let a=r.find(e=>e.from===i.from);a?(a.count+=i.choose*(i.perRank===!1?1:n),i.note&&a.notes.push(i.note)):r.push({by:e,id:t.id,name:t.name,from:i.from,count:i.choose*(i.perRank===!1?1:n),notes:i.note?[i.note]:[]})}return r}function Gc(e,t){let n=[];for(let e of t)for(let t of e.bonusPoints){let r=n.find(e=>e.group===t.group);r?(r.count+=t.count,r.from.push(e.name)):n.push({group:t.group,count:t.count,from:[e.name]})}for(let t of n){let n=B[t.group].reduce((t,n)=>t+Math.max(0,(e?.stats[n]?.max??20)-(e?.stats[n]?.bonus??0)),0);t.count=Math.min(t.count,n)}return{any:e?.freePoints??0,groups:n.filter(e=>e.count>0)}}function Kc(e,t){let n=new Set,r=e=>{if(!n.has(e)){n.add(e);for(let n of t.traits.find(t=>t.id===e)?.grants??[])r(n.trait)}};for(let t of e)r(t);return n}function qc(e,t){let n=new Set;for(let r of Kc(e,t))for(let e of t.traits.find(e=>e.id===r)?.opensLists??[])n.add(e);return n}function Jc(e,t){let n=new Set(pc);for(let r of Kc(e,t))for(let e of t.traits.find(e=>e.id===r)?.coreAccess??[])n.add(e);return[...n]}var Yc=e=>`${e.name} (${e.id})`,Xc=e=>/^[aeiou]/.test(e)?`an ${e}`:`a ${e}`;function Zc(e,t,n=Pc){let r=[],i=[],a=(e,t,n)=>r.push({code:e,message:t,path:n}),o=(e,t,n)=>i.push({code:e,message:t,path:n}),s=Nc.safeParse(e);if(!s.success){for(let e of s.error.issues)a(`schema`,`${e.path.join(`.`)||`build`}: ${e.message}`,e.path.join(`.`)||void 0);return{ok:!1,errors:r,warnings:i}}let c=s.data,l=new Map(t.traits.map(e=>[e.id,e])),u=t.kinds.find(e=>e.id===c.kind);u||a(`kind`,`Kind "${c.kind}" doesn't exist`,`kind`);let d=u?.stats,f=[];for(let e of Ic){let n=t.packages.find(t=>t.id===c[e]);n?n.type===e?f.push(n):a(`package`,`${n.name} is ${Xc(n.type)}, not ${Xc(e)}`,e):a(`package`,`${e} "${c[e]}" doesn't exist`,e)}c.level!==n.startingLevel&&a(`level`,`This campaign starts characters at level ${n.startingLevel}, but the build is level ${c.level}`,`level`),c.levels.length!==c.level&&a(`level`,`A level ${c.level} character needs ${c.level} level allocations, but the build has ${c.levels.length}`,`levels`);let p=Object.fromEntries(Fc.map(e=>[e,d?.[e]?.bonus??0]));for(let[e,t=0]of Object.entries(c.startPoints))p[e]+=t;let m=Gc(u,f),h=e=>B[e].reduce((e,t)=>e+(c.startPoints[t]??0),0),g=Object.values(c.startPoints).reduce((e,t)=>e+(t??0),0),_=0;for(let e of m.groups){let t=h(e.group);if(_+=Math.min(t,e.count),t<e.count){let n=e.count-t;a(`allocation`,`Place ${n} ${e.group.charAt(0).toUpperCase()+e.group.slice(1)} bonus ${n===1?`point`:`points`} from ${e.from.join(` and `)}`,`startPoints`)}}let v=m.any,y=g-_;u&&y!==v&&(v||y>0)&&a(`allocation`,v?y<v?y===0?`Place ${u.name}'s ${v} free bonus points`:`Place ${v-y} more of ${u.name}'s ${v} free bonus points`:`${u.name} gives ${v} free bonus points, but the build places ${y}`:m.groups.length?`The build places ${y} more bonus ${y===1?`point`:`points`} than its packages give`:`${u.name} has no free bonus points, but the build places ${g}`,`startPoints`);let b=Object.fromEntries(Object.keys(B).map(e=>[e,0]));if(c.levels.forEach((e,t)=>{let n=`levels[${t}].points`;b[e.group]++;let r=B[e.group],i=r.length?3:0,o=0;for(let[i,s=0]of Object.entries(e.points)){if(!r.includes(i)){let o=r.length?` (${r.join(`, `)})`:`; ${e.group} has no focus stats`;a(`allocation`,`Level ${t+1} puts points in ${i}, which isn't a ${e.group} stat${o}`,n)}p[i]+=s,o+=s}o!==i&&i&&a(`allocation`,`Level ${t+1} spends ${o} focus points; each level gives exactly 3`,n)}),d)for(let e of Fc){let t=d[e]?.max??20;p[e]>20?a(`stat-cap`,`${e} is ${p[e]}; nothing can exceed 20`,`levels`):p[e]>t&&a(`stat-max`,`${e} is ${p[e]}, above the ${u.name} max of ${t}`,`levels`)}let x={universal:{available:Fc.reduce((e,t)=>e+Math.ceil(p[t]/2),0),spent:0,banked:0},background:{available:Fc.reduce((e,t)=>e+Math.floor(p[t]/2),0),spent:0,banked:0}},S=new Map,ee=(e,t,n)=>{let r=S.get(e);if(r)r.rank=Math.max(r.rank,t),r.sources.push(n);else{S.set(e,{trait:e,rank:t,sources:[n]});for(let t of l.get(e)?.grants??[])ee(t.trait,t.rank??1,`trait ${e}`)}};for(let e of u?.grants??[])ee(e.trait,e.rank??1,`kind ${u.id}`);for(let e of f)for(let t of e.grants)ee(t.trait,t.rank??1,`${e.type} ${e.id}`);let C=new Set,w=[],te=(e,n,r)=>{w.push(e);let{name:i,from:s,count:u}=e,d=Bc[s],f=c.choices.findIndex(t=>!C.has(c.choices.indexOf(t))&&Uc(t,e)),p=f<0?0:c.choices[f].traits.length;if(d&&p<u){let e=u-p;o(`choice`,`${i} gives ${u} ${d}${u>1?`s`:``}: record ${e>1?`${e} more`:p?`one more`:s===`contact`?`who`:`which`} on the Choices step`,f<0?`choices`:`choices[${f}]`)}if(f<0){d||a(`choice`,`${i} asks for ${u} from "${s}", but the build doesn't answer it`,`choices`);return}C.add(f);let m=c.choices[f],h=`choices[${f}]`;if((d?p>u:p!==u)&&a(`choice`,`${i} asks for ${u} from "${s}", but the build gives ${p}`,h),new Set(m.traits).size!==m.traits.length&&a(`choice`,`${i}'s "${s}" answer lists the same ${d??`Trait`} twice`,h),Vc(s))return;let g=Hc(s,t);if(g.length===0)o(`choice-pool`,`Can't check ${i}'s "${s}" answer (${m.traits.join(`, `)}): no Traits are defined for that pool yet`,h);else for(let e of m.traits){let t=l.get(e);t?g.includes(t)?r&&S.has(e)&&a(`duplicate-trait`,`${Yc(t)} is already held (from ${S.get(e).sources.join(`, `)}), so ${i} can't give it again`,h):a(`choice`,`${Yc(t)} isn't in the "${s}" pool for ${i}`,h):a(`unknown-trait`,`Trait "${e}" doesn't exist`,h)}for(let e of m.traits)ee(e,1,`${n} choice`);if(s===`spoken-and-written-language`)for(let e of m.traits){let o=l.has(e)?zc(l.get(e),t):void 0;o&&(r&&S.has(o.id)&&a(`duplicate-trait`,`${Yc(o)} is already held (from ${S.get(o.id).sources.join(`, `)}), so ${i} can't give it again`,h),ee(o.id,1,`${n} choice`))}};for(let e of f)for(let t of Wc(`package`,e))te(t,`${e.type} ${e.id}`,!1);let T=new Set(u?.traitAccess??[]),ne=qc(S.keys(),t),re=new Set(f.flatMap(e=>e.backgroundTraits));for(let e of t.traits)e.conveyed||e.list&&!ne.has(e.list)||(e.tags.some(e=>T.has(e))||e.list&&e.background)&&re.add(e.id);let ie=new Map;c.traits.forEach((e,t)=>{let n=l.get(e.trait),r=`traits[${t}]`;n?(x[e.pick].spent++,n.conveyed&&a(`conveyed`,`${Yc(n)} is Conveyed: it comes from a package or from play, not from a pick`,r),e.pick===`universal`&&n.background&&a(`pick-type`,`${Yc(n)} is a Background Trait and needs a background pick`,r),e.pick===`background`&&!re.has(n.id)&&a(`pick-type`,`${Yc(n)} isn't on this character's Background Trait list, so it needs a universal pick`,r),ie.has(n.id)||ie.set(n.id,[]),ie.get(n.id).push({rank:e.rank,index:t})):a(`unknown-trait`,`Trait "${e.trait}" doesn't exist`,r)});for(let[e,t]of ie){let n=l.get(e),r=S.get(e),i=r?.rank??0,o=r?` (from ${r.sources.join(`, `)})`:``;if(!n.ranked){for(let e of t)e.rank>1&&a(`rank`,`${Yc(n)} isn't ranked, so it can't go above rank 1`,`traits[${e.index}]`);i>0?a(`duplicate-trait`,`${Yc(n)} is already held${o} and isn't ranked, so it can't be taken again`,`traits[${t[0].index}]`):t.length>1&&a(`duplicate-trait`,`${Yc(n)} isn't ranked, so it can't be taken twice`,`traits[${t[1].index}]`),ee(e,1,`${c.traits[t[0].index].pick} pick`);continue}let s=i+1;for(let r of[...t].sort((e,t)=>e.rank-t.rank)){let t=`traits[${r.index}]`;r.rank<s?a(`rank`,`${Yc(n)} is already at rank ${s-1}${r.rank<=i?o:``}, so a pick for rank ${r.rank} does nothing`,t):(r.rank>s&&a(`rank`,`${Yc(n)} rank ${r.rank} needs rank ${s} first`,t),s=r.rank+1,ee(e,r.rank,`${c.traits[r.index].pick} pick`))}let u=Math.max(...t.map(e=>e.rank));if(u>1){let e=n.rankStats.filter(e=>p[e]<3*u);if(e.length){let t=e.map(e=>`${e} ${p[e]}`).join(`, `);a(`rank-stats`,`${Yc(n)} rank ${u} needs ${n.rankStats.join(`, `)} of at least ${3*u} (has ${t})`,`traits`)}}}for(let e of[...S.values()]){let t=l.get(e.trait);if(t?.choices.length)for(let n of Wc(`trait`,t,t.ranked?e.rank:1))te(n,`trait ${t.id}`,!0)}c.choices.forEach((e,t)=>{if(C.has(t))return;let n=`choices[${t}]`;if(e.package!==void 0){let t=f.some(t=>t.id===e.package);a(`choice`,t?`${e.package} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for "${e.package}", which isn't one of its packages`,n)}else{let t=l.get(e.trait)?.name??e.trait;a(`choice`,S.has(e.trait)?`${t} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for ${t}, which it doesn't hold`,n)}}),c.traits.forEach((e,t)=>{let n=l.get(e.trait);for(let e of n?.prerequisites??[])if(!S.has(e)){let r=l.get(e)?.name??e;a(`prerequisite`,`${Yc(n)} needs ${r} (${e}) first`,`traits[${t}]`)}for(let e of n?.prerequisiteTags??[])[...S.keys()].some(t=>t!==n.id&&l.get(t)?.tags.includes(e))||a(`prerequisite`,`${Yc(n)} needs a Trait tagged ${e} first`,`traits[${t}]`)});let ae=new Set(Jc(S.keys(),t));for(let e of Object.keys(b)){if(!b[e]||ae.has(e))continue;let n=t.traits.filter(t=>t.coreAccess.includes(e)).map(e=>e.name),r=e.charAt(0).toUpperCase()+e.slice(1);a(`core-access`,`${b[e]} ${b[e]===1?`level goes`:`levels go`} to ${r}, which this character can't level${n.length?` without ${n.join(` or `)}`:``}`,`levels`)}let oe=Object.fromEntries(Object.keys(B).map(e=>[e,0]));for(let e of f)for(let[t,n=0]of Object.entries(e.coreBonus))ae.has(t)&&(oe[t]+=n);for(let e of Object.keys(b))b[e]+=oe[e];let se=qc(S.keys(),t);for(let e of ie.keys()){let n=l.get(e);if(!n.list||se.has(n.list))continue;let r=t.traits.filter(e=>e.opensLists.includes(n.list)).map(e=>e.name),i=n.list.charAt(0).toUpperCase()+n.list.slice(1);a(`trait-list`,`${Yc(n)} is on the ${i} list, which this character can't take from${r.length?` without ${r.join(` or `)}`:``}`,`traits[${ie.get(e)[0].index}]`)}for(let e of ie.keys()){let t=l.get(e),n=Object.entries(t.minStats).filter(([e,t])=>{let n=e in b?b[e]:p[e];return t!==void 0&&n<t});if(n.length){let r=Object.entries(t.minStats).map(([e,t])=>`${e} ${t}`).join(`, `),i=n.map(([e])=>`${e} ${e in b?b[e]:p[e]}`).join(`, `);a(`min-stats`,`${Yc(t)} needs ${r} (has ${i})`,`traits[${ie.get(e)[0].index}]`)}}for(let e of[`universal`,`background`]){let t=x[e];t.banked=Math.max(0,t.available-t.spent),t.spent>t.available&&a(`picks-overspent`,`The build spends ${t.spent} ${e} picks but its stats give only ${t.available}`,`traits`)}let ce=e=>B[e].reduce((e,t)=>e+p[t],0),E={hp:10+ce(`physical`),vp:ce(`social`),sp:ce(`mental`),mp:3*b.magic},le=[`hp`,`vp`,`sp`,`mp`];for(let e of le)E[e]+=u?.resources[e]??0;for(let e of S.values()){let t=l.get(e.trait)?.resources??{};for(let n of le)E[n]+=(t[n]??0)*e.rank}return{ok:r.length===0,errors:r,warnings:i,summary:{stats:p,coreStats:b,coreBonus:oe,coreAccess:[...ae],resources:E,picks:x,traits:[...S.values()],backgroundList:[...re].sort(),traitLists:[...se],questions:w}}}var Qc=[`character`,`background`,`stats`,`traits`,`choices`,`sheet`],$c=Object.keys(B),el=()=>({physical:0,social:0,mental:0,magic:0}),tl={draft:{level:3,core:el(),points:{},traits:[],choices:[]},campaign:{startingLevel:3},step:`character`};function nl(e,t){let n=[];for(let r of $c){let i=B[r].map(e=>[e,t[e]??0]);for(let t=0;t<e[r];t++){let a={group:r,points:{}},o=t===e[r]-1?1/0:3;for(let e of i){let t=Math.min(o,e[1]);t>0&&(a.points[e[0]]=t,e[1]-=t,o-=t)}n.push(a)}}return n}function rl(e){let t=el(),n={};for(let r of e)if(r&&r.group in t){t[r.group]++;for(let[e,t]of Object.entries(r.points??{}))t&&(n[e]=(n[e]??0)+t)}return{core:t,points:n}}function il(e){return{core:{...el(),...e.core},points:e.points&&typeof e.points==`object`?e.points:{}}}function al(e){let{core:t,points:n,...r}=e,i={};for(let[e,a]of Object.entries({...r,levels:nl(t,n)}))a!==void 0&&a!==``&&(i[e]=a);return i}var ol=e=>Array.isArray(e)?e:[],sl=e=>typeof e==`string`&&e!==``?e:void 0;function cl(e){if(typeof e!=`object`||!e||Array.isArray(e))throw Error(`A build is a JSON object`);let t=e,n=ol(t.levels),r=typeof t.level==`number`?t.level:Math.max(1,n.length),i=t.kind===`tatot`&&(t.form===`orcoid`||t.form===`goblinoid`)?`tatot-${t.form}`:sl(t.kind);return{name:sl(t.name),kind:i,origin:sl(t.origin),profession:sl(t.profession),past:sl(t.past),...t.startPoints&&typeof t.startPoints==`object`&&Object.keys(t.startPoints).length?{startPoints:t.startPoints}:{},level:r,...t.core&&typeof t.core==`object`?il(t):rl(n),traits:ol(t.traits).map(e=>({...e,rank:e.rank??1})),choices:ol(t.choices)}}function ll(e,t){let n={...e,level:t};for(let e of[...$c].reverse())for(;n.core[e]>0&&$c.reduce((e,t)=>e+n.core[t],0)>t;)n=ul(n,e,n.core[e]-1);return n}function ul(e,t,n){let r={...e.points},i=B[t].reduce((e,t)=>e+(r[t]??0),0)-n*3;for(let e of[...B[t]].reverse()){if(i<=0)break;let t=Math.min(i,r[e]??0);r[e]=(r[e]??0)-t,r[e]||delete r[e],i-=t}return{...e,core:{...e.core,[t]:n},points:r}}function dl(e,t,n,r){return{...e,traits:[...e.traits,{trait:t,rank:n,pick:r}]}}var fl=`sf-character-builder:v1`;function pl(){try{let e=localStorage.getItem(fl);if(!e)return tl;let t=JSON.parse(e),n=cl(t.draft),r=t.campaign?.startingLevel??n.level,i=t.step===`levels`?`stats`:t.step,a=Qc.includes(i)?i:`character`,o=t.ai&&Array.isArray(t.ai.reasons)?t.ai:void 0;return{draft:n,campaign:{startingLevel:r},step:a,ai:o}}catch{return tl}}function ml(e){try{localStorage.setItem(fl,JSON.stringify(e))}catch{}}function hl(){try{localStorage.removeItem(fl)}catch{}}var gl=e=>e.toLowerCase().normalize(`NFKD`).replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``),_l=/^levels\[(\d+)\]/;function vl(e,t,n){let r=yl(e,t,n);return Object.keys(B).filter(t=>r.includes(t)||e.core[t]>0)}function yl(e,t,n){return n?.summary?n.summary.coreAccess:Jc([...(t.kinds.find(t=>t.id===e.kind)?.grants??[]).map(e=>e.trait),...t.packages.filter(t=>[e.origin,e.profession,e.past].includes(t.id)).flatMap(e=>e.grants.map(e=>e.trait)),...e.traits.map(e=>e.trait)],t)}function bl(e,t,n){let r=Zc(al(e),t,n);return{...r,errors:V(r.errors,e)}}function V(e,t){let n=nl(t.core,t.points),r=new Set,i=[];for(let a of e){if(a.code===`level`&&a.path===`levels`){let e=Object.values(t.core).reduce((e,t)=>e+t,0),n=t.level-e,r=Math.abs(n);i.push({...a,message:n>0?`Place ${r} more core ${r===1?`point`:`points`}`:`Take back ${r} core ${r===1?`point`:`points`}; a level ${t.level} character has ${t.level}`});continue}let e=a.code===`allocation`?_l.exec(a.path??``):null,o=e?n[Number(e[1])]?.group:void 0;if(!o){i.push(a);continue}if(r.has(o))continue;r.add(o);let s=t.core[o]*3,c=B[o].reduce((e,n)=>e+(t.points[n]??0),0),l=Math.abs(s-c),u=o.charAt(0).toUpperCase()+o.slice(1);i.push({...a,path:`levels`,message:c<s?`Place ${l} more ${u} ${l===1?`point`:`points`}`:`${u} has ${l} more ${l===1?`point`:`points`} than its core stat unlocks`})}return i}function xl(e,t,n,r){let i=bl(e,t,n);if(!i.summary)return;let a=new Set(i.errors.map(e=>e.message)),o=new Map(i.summary.traits.map(e=>[e.trait,e.rank])),s=[],c=typeof r==`string`?void 0:r.list;if(c&&!i.summary.traitLists.includes(c))return[];for(let i of t.traits){if(i.list!==c)continue;let l=typeof r==`string`?r:i.background?`background`:`universal`,u=i.ranked?(o.get(i.id)??0)+1:1,d=bl(dl(e,i.id,u,l),t,n),f=`${i.name} asks for `,p=d.errors.filter(e=>!a.has(e.message)&&!(e.code===`choice`&&e.message.startsWith(f)));p.some(e=>e.code===`pick-type`||e.code===`conveyed`)||s.push({trait:i,rank:u,pick:l,reasons:p.map(e=>e.message)})}return s}function Sl(e){switch(e.code){case`kind`:return`character`;case`package`:return`background`;case`level`:return e.path===`level`?`character`:`stats`;case`allocation`:case`core-access`:case`stat-max`:case`stat-cap`:return`stats`;case`choice`:case`choice-pool`:return`choices`;case`schema`:{let t=e.path?.split(`.`)[0];return t===`name`||t===`level`||t===`kind`?`character`:t===`origin`||t===`profession`||t===`past`?`background`:t===`levels`||t===`startPoints`?`stats`:t===`choices`?`choices`:`traits`}default:return e.path===`choices`||e.path?.startsWith(`choices[`)?`choices`:`traits`}}var Cl={kind:`Choose a Kind`,origin:`Choose an Origin`,profession:`Choose a Profession`,past:`Choose a Past`};function wl(e,t){return e.code===`schema`&&e.path&&e.path in Cl&&!t[e.path]?Cl[e.path]:e.message}var Tl=`id: ai-core\r
+name: AI Core\r
+status: placeholder\r
+plane: earth\r
+summary: "A sentient, self-contained machine mind, capable of inhabiting different forms and of lightning-fast computation."\r
+tags: [ai-core, artificial-intelligence, machine, earth, kashgar]\r
+features:\r
+  - name: Creatures of Logic\r
+    description: AI Cores get a +3 bonus to every Mental stat.\r
+  - name: Bodiless\r
+    description: AI Cores can’t put points into Physical stats. An AI Core inhabits a chassis, which determines its physical stats.\r
+  - name: Armored Core\r
+    description: An AI Core’s central core is an item with 10 HP, and it must be destroyed separately from its chassis for the character to be killed.\r
+  - name: Machine Mind\r
+    description: An AI Core can interface directly with other machines through the cabled port interfaces on its core.\r
+# Bodiless keeps Physical at 0, so the maximums total 120, not Human's 135.\r
+maxTotal: 120\r
+stats:\r
+  endurance: { bonus: 0, max: 0 }\r
+  power: { bonus: 0, max: 0 }\r
+  grace: { bonus: 0, max: 0 }\r
+  empathy: { bonus: 0, max: 20 }\r
+  persuasion: { bonus: 0, max: 20 }\r
+  demeanor: { bonus: 0, max: 20 }\r
+  logic: { bonus: 3, max: 20 }\r
+  intuition: { bonus: 3, max: 20 }\r
+  memory: { bonus: 3, max: 20 }\r
+`,El=`id: guwain\r
+name: Guwain\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: The “Brine Dwarves.” Averaging four feet and well over 250 pounds. Most live along the coast; a few hold out in mountaintop villages where the air is thin and cold.\r
+tags: [dwarf, sea, diving, mountains]\r
+features:\r
+  - name: Stout\r
+    description: Higher Endurance and Power maximums, lower Grace maximum.\r
+  - name: Prodigious Lungs\r
+    description: Can hold their breath for hours, and are unbothered by the thin air of high altitudes.\r
+  - name: Beard Nets\r
+    description: Guwain beards grow in thick, tangled messes. Most Guwain braid theirs, often with tie-offs and a meshed pattern that lets them carry goods inside.\r
+# Born to magic, like every Kind of Dreft but the Orcoid Tatot.\r
+grants:\r
+  - trait: magical-heritage\r
+stats:\r
+  endurance: { bonus: 2, max: 20 }\r
+  power: { bonus: 2, max: 17 }\r
+  grace: { bonus: 0, max: 10 }\r
+  empathy: { bonus: 1, max: 15 }\r
+  persuasion: { bonus: 1, max: 14 }\r
+  demeanor: { bonus: 1, max: 16 }\r
+  logic: { bonus: 1, max: 15 }\r
+  intuition: { bonus: 0, max: 14 }\r
+  memory: { bonus: 1, max: 14 }\r
+`,Dl=`id: isek\r
+name: Isek\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The so-called “Free Elves.” Brash and adventure-seeking by nature, this nigh-immortal Kind rarely sees old age. Young Isek chase rebellion and are possessed of an irresistible wanderlust."\r
+tags: [elf, immortal, restless, rebel, adventurer]\r
+features:\r
+  - name: Nigh Immortal\r
+    description: Isek don’t age past their prime, though with their inveterate adventure-seeking and simple lack of self-care, few live to see old age.\r
+  - name: Reckless\r
+    description: Higher Power and Grace maximums, lower Demeanor maximum.\r
+  - name: Restless\r
+    description: Ill-suited to sedentary life. Isek have easier access to military, guild, and caravan Traits.\r
+traitAccess: [military, guild, caravan]\r
+# Born to magic, like every Kind of Dreft but the Orcoid Tatot.\r
+grants:\r
+  - trait: magical-heritage\r
+stats:\r
+  endurance: { bonus: 1, max: 15 }\r
+  power: { bonus: 2, max: 18 }\r
+  grace: { bonus: 2, max: 18 }\r
+  empathy: { bonus: 1, max: 14 }\r
+  persuasion: { bonus: 1, max: 15 }\r
+  demeanor: { bonus: 0, max: 10 }\r
+  logic: { bonus: 0, max: 14 }\r
+  intuition: { bonus: 1, max: 16 }\r
+  memory: { bonus: 1, max: 15 }\r
+`,Ol=`id: tatot-goblinoid\r
+name: "Tatot, Goblinoid"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Goblinoids are small, with plentiful mana."\r
+tags: [tatot, goblinoid, merchant, magic]\r
+features:\r
+  - name: Goblinoid\r
+    description: Higher Memory and Logic maximums, access to magic Traits, and +6 MP.\r
+  - name: Merchant Clans\r
+    description: Easier access to trading guild and merchant clan Traits.\r
+traitAccess: [trading-guild, merchant-clan]\r
+# Born to magic, like every Kind of Dreft but the Orcoid Tatot.\r
+grants:\r
+  - trait: magical-heritage\r
+# Plentiful mana: MP without any Magic.\r
+resources: { mp: 6 }\r
+stats:\r
+  endurance: { bonus: 1, max: 13 }\r
+  power: { bonus: 0, max: 10 }\r
+  grace: { bonus: 1, max: 16 }\r
+  empathy: { bonus: 1, max: 15 }\r
+  persuasion: { bonus: 1, max: 15 }\r
+  demeanor: { bonus: 1, max: 14 }\r
+  logic: { bonus: 2, max: 18 }\r
+  intuition: { bonus: 1, max: 16 }\r
+  memory: { bonus: 1, max: 18 }\r
+`,kl=`id: tatot-orcoid\r
+name: "Tatot, Orcoid"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Orcoids are larger and stronger, have no mana, and are largely immune to sunsickness."\r
+tags: [tatot, orcoid, merchant]\r
+features:\r
+  - name: Orcoid\r
+    description: Higher Power and Endurance maximums. No mana, and largely immune to sunsickness.\r
+  - name: Merchant Clans\r
+    description: Easier access to trading guild and merchant clan Traits.\r
+traitAccess: [trading-guild, merchant-clan]\r
+stats:\r
+  endurance: { bonus: 2, max: 18 }\r
+  power: { bonus: 2, max: 18 }\r
+  grace: { bonus: 1, max: 13 }\r
+  empathy: { bonus: 1, max: 14 }\r
+  persuasion: { bonus: 1, max: 15 }\r
+  demeanor: { bonus: 1, max: 15 }\r
+  logic: { bonus: 0, max: 13 }\r
+  intuition: { bonus: 1, max: 15 }\r
+  memory: { bonus: 0, max: 14 }\r
+`,Al=`id: human\r
+name: Human\r
+status: draft\r
+plane: earth\r
+summary: "The humanity of Earth Baseline."\r
+tags: [generalist, earth]\r
+features:\r
+  - name: Generalists\r
+    description: Humans get a +1 bonus to every focus stat.\r
+  - name: Unexceptional\r
+    description: Humans can't exceed 15 in any focus stat unless otherwise modified.\r
+stats:\r
+  endurance: { bonus: 1, max: 15 }\r
+  power: { bonus: 1, max: 15 }\r
+  grace: { bonus: 1, max: 15 }\r
+  empathy: { bonus: 1, max: 15 }\r
+  persuasion: { bonus: 1, max: 15 }\r
+  demeanor: { bonus: 1, max: 15 }\r
+  logic: { bonus: 1, max: 15 }\r
+  intuition: { bonus: 1, max: 15 }\r
+  memory: { bonus: 1, max: 15 }\r
+`,jl=`id: american-empire-colonies\r
+name: "The American Empire: Colonies"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "You grew up in the Empire’s stellar territories, in New Columbia on Luna or aboard the capital Ark, New York, a long way from the Earth the Empire still calls home."\r
+tags: [american-empire, colonies, luna, ark, space]\r
+lore: american-empire\r
+type: origin\r
+# A free bonus point the player places in a Physical stat.\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: american-history, rank: 1 }\r
+  - { trait: imperial-law, rank: 1 }\r
+  - { trait: english }\r
+  - { trait: english-written }\r
+backgroundTraits:\r
+  - new-columbia\r
+  - ark-new-york\r
+  - ark-life\r
+  - the-imperial-military\r
+  - imperial-politics\r
+  - earth-baseline-technology\r
+  - spanish\r
+`,Ml=`id: american-empire-earth\r
+name: "The American Empire: Earth"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "You were born in the Empire’s Earth territories, anywhere from the Californias and the Great Lakes to Nueva Mexico, in a country that calls itself the new Rome and is rarely short of a war to prove it."\r
+tags: [american-empire, earth, empire]\r
+lore: american-empire\r
+type: origin\r
+# A free bonus point the player places in a Physical stat.\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: american-history, rank: 1 }\r
+  - { trait: american-geography, rank: 1 }\r
+  - { trait: imperial-law, rank: 1 }\r
+  - { trait: english }\r
+  - { trait: english-written }\r
+backgroundTraits:\r
+  - the-imperial-military\r
+  - imperial-politics\r
+  - the-union-of-texas\r
+  - earth-baseline-technology\r
+  - spanish\r
+  - spanish-written\r
+`,Nl=`id: centafrica-colonies\r
+name: "Centafrica: Colonies"\r
+status: placeholder\r
+plane: earth\r
+region: centafrica\r
+summary: "You grew up aboard Aksum, Centafrica’s station on its long elliptical orbit through the inner solar system."\r
+tags: [centafrica, colonies, station, space]\r
+lore: centafrica\r
+type: origin\r
+# A free bonus point the player places in a Mental stat.\r
+bonusPoints:\r
+  - { count: 1, group: mental }\r
+grants:\r
+  - { trait: centafrica, rank: 1 }\r
+  - { trait: centafrican-law, rank: 1 }\r
+  - { trait: swahili }\r
+  - { trait: swahili-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - aksum\r
+  - ports-and-stations\r
+  - spacefaring\r
+  - starships\r
+  - shipping-lanes\r
+  - music\r
+  - earth-baseline-technology\r
+  - french\r
+  - english\r
+`,Pl=`id: centafrica-earth\r
+name: "Centafrica: Earth"\r
+status: placeholder\r
+plane: earth\r
+region: centafrica\r
+summary: "You were born in Centafrica, anywhere from Lagos to Kinshasa to Addis Ababa, in a vibrant democracy whose wealth is rarely spread evenly and whose people have long memories."\r
+tags: [centafrica, earth, democracy, culture]\r
+lore: centafrica\r
+type: origin\r
+# A free bonus point the player places in a Social stat.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: centafrica, rank: 1 }\r
+  - { trait: centafrican-law, rank: 1 }\r
+  - { trait: swahili }\r
+  - { trait: swahili-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - music\r
+  - art-history\r
+  - theater\r
+  - politics\r
+  - commerce\r
+  - earth-baseline-technology\r
+  - french\r
+  - french-written\r
+  - english\r
+  - lingala\r
+  - yoruba\r
+  - hausa\r
+`,Fl=`id: chinese-empire-colonies\r
+name: "The Empire of China: Colonies"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "You grew up in the Empire’s stellar territories, in Yùtù, the Jade Rabbit colony on Luna, or aboard the Ark Zhulong."\r
+tags: [chinese-empire, colonies, luna, ark, space]\r
+lore: chinese-empire\r
+type: origin\r
+# A free bonus point the player places in a Mental stat.\r
+bonusPoints:\r
+  - { count: 1, group: mental }\r
+grants:\r
+  - { trait: the-chinese-empire, rank: 1 }\r
+  - { trait: chinese-imperial-law, rank: 1 }\r
+  - { trait: mandarin }\r
+  - { trait: mandarin-written }\r
+backgroundTraits:\r
+  - yutu\r
+  - zhulong\r
+  - ark-life\r
+  - the-corporate-syndicates\r
+  - earth-baseline-technology\r
+`,Il=`id: chinese-empire-earth\r
+name: "The Empire of China: Earth"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "You were born in the Empire of China’s Earth territories, from Wuhan to the old nations of Southeast Asia, during a golden age the corporate syndicates are starting to suspect is ending."\r
+tags: [chinese-empire, earth, empire, corporate]\r
+lore: chinese-empire\r
+type: origin\r
+# A free bonus point the player places in a Mental stat.\r
+bonusPoints:\r
+  - { count: 1, group: mental }\r
+grants:\r
+  - { trait: the-chinese-empire, rank: 1 }\r
+  - { trait: chinese-imperial-law, rank: 1 }\r
+  - { trait: mandarin }\r
+  - { trait: mandarin-written }\r
+backgroundTraits:\r
+  - the-corporate-syndicates\r
+  - southeast-asia\r
+  - earth-baseline-technology\r
+`,Ll=`id: dreft\r
+name: Dreft\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village or the mountains."\r
+tags: [kingdom, dreft, isekai]\r
+lore: dreft\r
+type: origin\r
+# A free bonus point the player places in a Physical stat.\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: dreft, rank: 1 }\r
+  - { trait: dreftian-law, rank: 1 }\r
+  - { trait: dreftan }\r
+# Where in Dreft a character grew up isn't granted; it's bought with\r
+# background picks from this list.\r
+backgroundTraits:\r
+  - port-herminst\r
+  - glintl\r
+  - the-switch-port\r
+  - the-kings-woods\r
+  - the-corsine-pass\r
+  - seafaring\r
+  - coastal-trade\r
+  - farming\r
+  - mountaineering\r
+  - local-folklore\r
+  - karsef\r
+`,Rl=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
+id: the-drovus-empire\r
+name: "The Drovus Empire"\r
+status: placeholder\r
+plane: isekai\r
+region: drovus\r
+summary: "You grew up in the Drovus Empire, which has spent the last decade swallowing its neighbors, the Sunrise Princedoms among them."\r
+tags: [drovus, empire, isekai, military]\r
+lore: drovus-empire\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: the-drovus-empire, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - the-sunrise-princedoms\r
+  - military-tactics\r
+  - military-drill\r
+  - heraldry\r
+`,zl=`id: the-free-american-states\r
+name: "The Free American States"\r
+status: placeholder\r
+plane: earth\r
+region: free-american-states\r
+summary: "You grew up in one of the Free States, a fractious free-trade zone of independent countries wedged between the American Empire and the Union of Texas."\r
+tags: [free-american-states, earth, trade]\r
+lore: free-american-states\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: the-free-american-states, rank: 1 }\r
+  - { trait: english }\r
+  - { trait: english-written }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - spanish\r
+  - spanish-written\r
+  - the-union-of-texas\r
+  - haggler\r
+  - trade-law\r
+  - smooth-talker\r
+`,Bl=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
+id: kingdom-of-karsef\r
+name: "Kingdom of Karsef"\r
+status: placeholder\r
+plane: isekai\r
+region: karsef\r
+summary: "You grew up in the Kingdom of Karsef, across the Corsine Pass from Dreft, and an old rival of it."\r
+tags: [karsef, kingdom, isekai, mountains]\r
+lore: kingdom-of-karsef\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: karsef, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - the-corsine-pass\r
+  - mountaineering\r
+  - dreft\r
+  - shield-wall\r
+  - military-tactics\r
+`,Vl=`id: kashgar\r
+name: "Kashgar"\r
+status: placeholder\r
+plane: earth\r
+region: kashgar\r
+summary: "You grew up on Kashgar, the largest Ark in the settled systems and the heart of the AI diaspora. Your neighbors were as likely to be AI Cores as people, Kashgari security watched every deck, and home never stayed anywhere for long."\r
+tags: [ark, kashgar, ai, space, urban]\r
+lore: kashgar\r
+type: origin\r
+# A free bonus point the player places in a Mental stat.\r
+bonusPoints:\r
+  - { count: 1, group: mental }\r
+grants:\r
+  - { trait: kashgar, rank: 1 }\r
+  - { trait: ai-culture, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - ark-life\r
+  - kashgar-mindworks\r
+  - artificial-intelligence\r
+  - cybernetics\r
+  - robotics\r
+  - earth-baseline-technology\r
+`,Hl=`id: the-kingdom-of-india-colonies\r
+name: "The Kingdom of India: Colonies"\r
+status: placeholder\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "You grew up in the Kingdom’s new homes beyond Earth: in Pataliputra, the planar capital where millions arrive every year, or aboard Amaravati, its station in high Earth orbit."\r
+tags: [india, colonies, planar, pataliputra, station]\r
+lore: kingdom-of-india\r
+type: origin\r
+# A free bonus point the player places in a Social stat.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: the-kingdom-of-india, rank: 1 }\r
+  - { trait: indian-law, rank: 1 }\r
+  - { trait: hindi }\r
+  - { trait: hindi-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - pataliputra\r
+  - amaravati\r
+  - indian-theology\r
+  - planar-exploration\r
+  - interplanar-relations\r
+  - ecology\r
+  - earth-baseline-technology\r
+  - english\r
+  - english-written\r
+`,Ul=`id: the-kingdom-of-india-earth\r
+name: "The Kingdom of India: Earth"\r
+status: placeholder\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "You were born in the Kingdom of India’s Earth territories, a regreened paradise whose crown, and millions of its people, have left for Pataliputra."\r
+tags: [india, earth, kingdom, theocracy]\r
+lore: kingdom-of-india\r
+type: origin\r
+# A free bonus point the player places in a Physical stat.\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: the-kingdom-of-india, rank: 1 }\r
+  - { trait: indian-law, rank: 1 }\r
+  - { trait: hindi }\r
+  - { trait: hindi-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - indian-theology\r
+  - ecology\r
+  - farming\r
+  - herbalism\r
+  - pataliputra\r
+  - earth-baseline-technology\r
+  - english\r
+  - english-written\r
+  - bengali\r
+  - tamil\r
+`,Wl=`id: the-lunar-industrial-syndicate\r
+name: "The Lunar Industrial Syndicate"\r
+status: placeholder\r
+plane: earth\r
+region: lunar-industrial-syndicate\r
+summary: "You grew up a “citizen shareholder” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its investors first."\r
+tags: [lunar-industrial-syndicate, earth, luna, corporate]\r
+lore: lunar-industrial-syndicate\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: mental }\r
+grants:\r
+  - { trait: the-lunar-industrial-syndicate, rank: 1 }\r
+  - { trait: english }\r
+  - { trait: english-written }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - portuguese\r
+  - portuguese-written\r
+  - the-corporate-syndicates\r
+  - ark-life\r
+  - starship-engineering\r
+  - cargo-handling\r
+`,Gl=`id: sdu-colonies\r
+name: "The Stellar Democratic Union: Colonies"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "You grew up in the Union’s stellar or planar territories: the Martian Association, the Antiluna colony, New Persia on Pairidaeza, or aboard one of the Union’s Arks."\r
+tags: [sdu, colonies, mars, ark, space]\r
+lore: stellar-democratic-union\r
+type: origin\r
+# A free bonus point the player places in a Social stat.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: the-stellar-democratic-union, rank: 1 }\r
+  - { trait: sdu-law, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - the-martian-association\r
+  - antiluna\r
+  - new-persia\r
+  - boneyard\r
+  - ark-life\r
+  - union-politics\r
+  - earth-baseline-technology\r
+`,Kl=`id: sdu-earth\r
+name: "The Stellar Democratic Union: Earth"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "You were born in the Union’s Earth territories, anywhere from core Europe to Japan, Brazil or Canada, in the largest and richest nation in the settled systems."\r
+tags: [sdu, earth, union]\r
+lore: stellar-democratic-union\r
+type: origin\r
+# A free bonus point the player places in a Social stat.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: the-stellar-democratic-union, rank: 1 }\r
+  - { trait: sdu-law, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - union-politics\r
+  - tetra\r
+  - the-diplomatic-wing\r
+  - the-united-nations\r
+  - earth-baseline-technology\r
+`,ql=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.\r
+id: kingdom-of-sorellion\r
+name: "Kingdom of Sorellion"\r
+status: placeholder\r
+plane: isekai\r
+region: sorellion\r
+summary: "You grew up in the Kingdom of Sorellion, one of Dreft’s neighbors on Isekai."\r
+tags: [sorellion, kingdom, isekai]\r
+lore: kingdom-of-sorellion\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: sorellion, rank: 1 }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - dreft\r
+  - heraldry\r
+  - courtly-manners\r
+  - haggler\r
+`,Jl=`id: tetra\r
+name: Tetra\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "You grew up on Ark Tetra, the home of the UN and of planar exploration, and the capital of the SDU. Your early life was spent on a colossal drifting space station, where you learned the ways of city life and of living in space."\r
+tags: [ark, tetra, space, sdu, un, urban, planar-exploration]\r
+lore: tetra\r
+type: origin\r
+# A free bonus point the player places in a Social stat, like the SDU's.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: tetra, rank: 1 }\r
+  - { trait: sdu-law, rank: 1 }\r
+# One language of the player's choice, both spoken and written: the answer\r
+# is the spoken form, and the engine adds its written form.\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - the-diplomatic-wing\r
+  - the-united-nations\r
+  - tetra-frontiers-co\r
+  - the-explorers-lodge\r
+  - planar-exploration\r
+  - ark-life\r
+  - earth-baseline-technology\r
+  - the-switch-port\r
+`,Yl=`id: the-union-of-texas\r
+name: "The Union of Texas"\r
+status: placeholder\r
+plane: earth\r
+region: union-of-texas\r
+summary: "You grew up in the Union of Texas, an embittered, impoverished military republic that has spent 130 years preparing for a war with the Empire that never came."\r
+tags: [union-of-texas, earth, military]\r
+lore: union-of-texas\r
+type: origin\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: the-union-of-texas, rank: 1 }\r
+  - { trait: english }\r
+  - { trait: english-written }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - military-tactics\r
+  - spanish\r
+  - spanish-written\r
+  - the-free-american-states\r
+  - wielder-rifle\r
+  - survivalist\r
+`,Xl=`id: the-ural-federation\r
+name: "The Ural Federation"\r
+status: placeholder\r
+plane: earth\r
+region: ural-federation\r
+summary: "You grew up in the Ural Federation, among the tribal statelets of the steppe and the thawed Siberian breadbasket, in a melting pot of native peoples, climate refugees and the last of the Russian diaspora."\r
+tags: [ural-federation, earth, tribal, steppe]\r
+lore: ural-federation\r
+type: origin\r
+# A free bonus point the player places in a Physical stat.\r
+bonusPoints:\r
+  - { count: 1, group: physical }\r
+grants:\r
+  - { trait: the-ural-federation, rank: 1 }\r
+  - { trait: ural-tribal-law, rank: 1 }\r
+  - { trait: russian }\r
+  - { trait: russian-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - farming\r
+  - countryside-lore\r
+  - wilderness-lore\r
+  - survivalist\r
+  - rider-basic-animals\r
+  - animal-husbandry\r
+  - the-chinese-empire\r
+  - earth-baseline-technology\r
+  - kazakh\r
+  - mongolian\r
+  - uyghur\r
+`,Zl=`id: xanthus\r
+name: "Xanthus"\r
+status: placeholder\r
+plane: earth\r
+region: xanthus\r
+summary: "You grew up aboard Xanthus, the free Ark built around an iron asteroid: a pariah state, a model democracy and a haven for anyone escaping poverty or persecution."\r
+tags: [xanthus, ark, space, democracy, refugee]\r
+lore: xanthus\r
+type: origin\r
+# A free bonus point the player places in a Social stat.\r
+bonusPoints:\r
+  - { count: 1, group: social }\r
+grants:\r
+  - { trait: xanthus, rank: 1 }\r
+  - { trait: swahili }\r
+  - { trait: swahili-written }\r
+choices:\r
+  - choose: 1\r
+    from: spoken-and-written-language\r
+    note: "+1 Language (Spoken & Written)"\r
+backgroundTraits:\r
+  - ark-life\r
+  - asteroid-mining\r
+  - ports-and-stations\r
+  - spacefaring\r
+  - centafrica\r
+  - criminal-underworld\r
+  - starship-engineering\r
+  - lingala\r
+  - english\r
+  - spanish\r
+  - portuguese\r
+`,Ql=`id: craft-apprenticeship\r
+name: "Craft Apprenticeship"\r
+status: placeholder\r
+plane: any\r
+summary: "Spent years apprenticed to a master craftsman, learning a trade one mistake at a time."\r
+tags: [craft, apprentice, trade]\r
+type: past\r
+grants:\r
+  - { trait: appraisal }\r
+  - { trait: haggler }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - trade-guilds\r
+  - commerce\r
+  - engineering\r
+`,$l=`id: criminal-family\r
+name: "Criminal Family"\r
+status: placeholder\r
+plane: any\r
+summary: "Born into a family business that the law would rather not hear about."\r
+tags: [crime, family, underworld]\r
+type: past\r
+grants:\r
+  - { trait: streetwise }\r
+  - { trait: criminal-underworld }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - gambling\r
+  - law-enforcement\r
+  - security-systems\r
+`,eu=`id: gutter-trash\r
+name: "Gutter Trash"\r
+status: placeholder\r
+plane: any\r
+summary: "Grew up on the streets with nothing, and learned to take what wasn’t given and to disappear when it mattered."\r
+tags: [streets, poverty, urban, crime]\r
+type: past\r
+grants:\r
+  - { trait: streetwise }\r
+  - { trait: sleight-of-hand }\r
+  - { trait: concealment }\r
+backgroundTraits:\r
+  - gambling\r
+  - law-enforcement\r
+`,tu=`id: military-service\r
+name: "Military Service"\r
+status: placeholder\r
+plane: any\r
+summary: "Served a term in an army, navy or militia, and came out with the habits to prove it."\r
+tags: [military, veteran, service]\r
+type: past\r
+grants:\r
+  - { trait: military-drill }\r
+  - { trait: vigilance }\r
+  - { trait: military-tactics }\r
+backgroundTraits:\r
+  - weapons\r
+  - wilderness-lore\r
+  - navigation\r
+`,nu=`id: privileged-upbringing\r
+name: "Privileged Upbringing"\r
+status: placeholder\r
+plane: any\r
+summary: "Grew up wanting for nothing, with tutors, connections, and the manners that open doors."\r
+tags: [wealth, privilege, education, family]\r
+type: past\r
+grants:\r
+  - { trait: smooth-talker }\r
+  - { trait: appraisal }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - high-society\r
+  - literature\r
+  - history\r
+  - politics\r
+`,ru=`id: raised-at-court\r
+name: "Raised at Court"\r
+status: placeholder\r
+plane: any\r
+summary: "Grew up around a royal or noble court, among its manners, its rivalries and its whispers."\r
+tags: [court, nobility, intrigue]\r
+type: past\r
+grants:\r
+  - { trait: courtly-manners }\r
+  - { trait: court-etiquette }\r
+  - { trait: heraldry }\r
+backgroundTraits:\r
+  - high-society\r
+  - politics\r
+  - history\r
+`,iu=`id: shipborn\r
+name: "Shipborn"\r
+status: placeholder\r
+plane: any\r
+summary: "Born and raised aboard a ship, whether it sailed the sea or the stars, and never really at home on solid ground."\r
+tags: [ship, travel, family]\r
+type: past\r
+grants:\r
+  - { trait: cargo-handling }\r
+  - { trait: tinkerer }\r
+  - { trait: vigilance }\r
+backgroundTraits:\r
+  - navigation\r
+  - starships\r
+  - spacefaring\r
+  - geography\r
+`,au=`id: simple-farmer\r
+name: "Simple Farmer"\r
+status: placeholder\r
+plane: any\r
+summary: "Grew up working the land, wherever there was land to work, and learned that the harvest waits for no one."\r
+tags: [farming, rural, family]\r
+type: past\r
+grants:\r
+  - { trait: teamster }\r
+  - { trait: simple-cooking }\r
+  - { trait: farming }\r
+backgroundTraits:\r
+  - animal-lore\r
+  - wilderness-lore\r
+`,ou=`id: traveling-troupe\r
+name: "Traveling Troupe"\r
+status: placeholder\r
+plane: any\r
+summary: "Grew up on the road with a company of performers, never in one town for long."\r
+tags: [performer, travel, troupe]\r
+type: past\r
+grants:\r
+  - { trait: performer-music }\r
+  - { trait: smooth-talker }\r
+  - { trait: sleight-of-hand }\r
+backgroundTraits:\r
+  - theater\r
+  - literature\r
+  - geography\r
+`,su=`id: countryside-upbringing\r
+name: "Countryside Upbringing"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Grew up in the sleepy Dreftian countryside, where the year turns on the harvest and every hedge has a story."\r
+tags: [rural, farming, village, folklore]\r
+type: past\r
+grants:\r
+  - { trait: farming }\r
+  - { trait: countryside-lore }\r
+  - { trait: local-folklore }\r
+  - { trait: teamster }\r
+backgroundTraits:\r
+  - animal-lore\r
+  - wilderness-lore\r
+`,H=`id: expelled-from-the-mage-schools\r
+name: "Expelled from the Mage Schools"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Studied at one of Port Herminst’s licensed schools of magic until something went wrong, and left with half an education and a secret."\r
+tags: [magic, scholar, herminst, disgrace]\r
+lore: isekai-magic\r
+type: past\r
+grants:\r
+  - { trait: magic-on-isekai }\r
+  - { trait: port-herminst }\r
+  - { trait: concealment }\r
+backgroundTraits:\r
+  - literature\r
+  - history\r
+`,cu=`id: glintl-docks\r
+name: "Glintl Docks"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Grew up on the busy docks of Glintl, the other great trading port on Dreft’s western coast."\r
+tags: [port, docks, sea, trade, guwain]\r
+lore: glintl\r
+type: past\r
+grants:\r
+  - { trait: seafaring }\r
+  - { trait: coastal-trade }\r
+  - { trait: glintl }\r
+  - { trait: haggler }\r
+backgroundTraits:\r
+  - commerce\r
+  - navigation\r
+  - gambling\r
+`,lu=`id: karsef-border-veteran\r
+name: "Karsef Border Veteran"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Served in the skirmishes over the Corsine Pass, where Dreft and Karsef have been testing each other for generations."\r
+tags: [military, border, mountains, karsef, veteran]\r
+lore: corsine-mountains\r
+type: past\r
+grants:\r
+  - { trait: shield-wall }\r
+  - { trait: mountaineering }\r
+  - { trait: the-corsine-pass }\r
+  - { trait: karsef }\r
+backgroundTraits:\r
+  - weapons\r
+  - wilderness-lore\r
+  - geography\r
+`,uu=`id: merchant-dynasty\r
+name: Merchant Dynasty\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Child of a trade family grown rich off the switch port, and resented for it."\r
+tags: [merchant, trade, wealth, family]\r
+type: past\r
+grants:\r
+  - { trait: haggler }\r
+  - { trait: appraisal }\r
+  - { trait: trade-law }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - commerce\r
+  - high-society\r
+`,du=`id: monster-raided-village\r
+name: "Monster-Raided Village"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Survived a monster raid on the home village, and learned to watch the tree line ever since."\r
+tags: [monsters, village, survivor, hunting]\r
+lore: isekai-monsters\r
+type: past\r
+grants:\r
+  - { trait: vigilance }\r
+  - { trait: tracker }\r
+  - { trait: monsters-of-isekai }\r
+  - { trait: the-kings-woods }\r
+backgroundTraits:\r
+  - animal-lore\r
+  - wilderness-lore\r
+  - weapons\r
+`,fu=`id: noble-household\r
+name: Noble Household\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Born or raised in service to a noble house, just in time for the succession crisis."\r
+tags: [nobility, court, intrigue, succession]\r
+type: past\r
+grants:\r
+  - { trait: courtly-manners }\r
+  - { trait: schemer }\r
+  - { trait: noble-houses-of-dreft }\r
+  - { trait: succession-law }\r
+backgroundTraits:\r
+  - high-society\r
+  - history\r
+  - politics\r
+`,pu=`id: palace-servant\r
+name: "Palace Servant"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Served in the royal palace at Port Herminst, close enough to the crown to hear things, and there when the queen died under unusual circumstances."\r
+tags: [palace, court, servant, intrigue, herminst]\r
+lore: herminst\r
+type: past\r
+grants:\r
+  - { trait: court-etiquette }\r
+  - { trait: sleight-of-hand }\r
+  - { trait: noble-houses-of-dreft }\r
+  - { trait: port-herminst }\r
+backgroundTraits:\r
+  - high-society\r
+  - politics\r
+`,mu=`id: raised-in-the-caravan-town\r
+name: Raised in the Caravan Town\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Grew up in the shadow of Castle Tetra, among foreigners and the people who profit from them."\r
+tags: [switch-port, urban, caravan, foreigners]\r
+type: past\r
+grants:\r
+  - { trait: streetwise }\r
+  - { trait: sleight-of-hand }\r
+  - { trait: caravan-routes }\r
+  - { trait: earth-baseline-customs }\r
+backgroundTraits:\r
+  - commerce\r
+  - geography\r
+  - animal-lore\r
+`,hu=`id: returned-from-the-systems\r
+name: Returned from the Settled Systems\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Left Dreft for the settled systems and came back changed, like everyone who comes back."\r
+tags: [systems, traveler, technology, earth]\r
+type: past\r
+grants:\r
+  - { trait: tinkerer }\r
+  - { trait: earth-baseline-technology }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - starships\r
+  - spacefaring\r
+`,gu=`id: sunrise-refugee\r
+name: Sunrise Refugee\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: Fled the Sunrise Princedoms when Drovus finished absorbing them.\r
+tags: [refugee, sunrise, drovus, survival]\r
+type: past\r
+grants:\r
+  - { trait: survivalist }\r
+  - { trait: concealment }\r
+  - { trait: the-drovus-empire }\r
+  - { trait: the-sunrise-princedoms }\r
+backgroundTraits:\r
+  - bureaucracy\r
+  - geography\r
+`,_u=`id: station-rat\r
+name: "Station Rat"\r
+status: placeholder\r
+plane: earth\r
+summary: "Grew up in the corridors and crawlspaces of a station, where everyone knows how to fix things and where not to go."\r
+tags: [station, space, urban, tech]\r
+type: past\r
+grants:\r
+  - { trait: tinkerer }\r
+  - { trait: concealment }\r
+  - { trait: ports-and-stations }\r
+backgroundTraits:\r
+  - spacefaring\r
+  - engineering\r
+`,vu=`id: university-educated\r
+name: "University Educated"\r
+status: placeholder\r
+plane: earth\r
+summary: "Studied at one of the settled systems’ universities, and still owes someone for it."\r
+tags: [education, university, science]\r
+type: past\r
+grants:\r
+  - { trait: research }\r
+  - { trait: mathematics }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - physics\r
+  - chemistry\r
+  - biology\r
+  - history\r
+  - literature\r
+`,yu=`id: delegation-child\r
+name: "Delegation Child"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Grew up inside one of the sovereign territorial grounds that every UN member state keeps on Tetra, raised among diplomats and their staff."\r
+tags: [diplomacy, un, tetra, politics]\r
+lore: tetra\r
+type: past\r
+grants:\r
+  - { trait: the-united-nations }\r
+  - { trait: the-diplomatic-wing }\r
+  - { trait: smooth-talker }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - diplomatic-protocol\r
+  - politics\r
+  - high-society\r
+`,bu=`id: gate-lab-kid\r
+name: "Gate Lab Kid"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Grew up around the hundreds of gate exploration projects running inside Tetra’s armored bulk, and knows a switch gate better than a playground."\r
+tags: [planes, switch-gates, research, tetra]\r
+lore: switch-gates\r
+type: past\r
+grants:\r
+  - { trait: planar-exploration }\r
+  - { trait: paraphysics }\r
+  - { trait: tinkerer }\r
+backgroundTraits:\r
+  - physics\r
+  - engineering\r
+`,xu=`id: holding-company-kid\r
+name: "Holding Company Kid"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Child of a family working at one of the two dozen planar exploration and holding companies on Tetra, raised on talk of leases and attunements."\r
+tags: [corporate, planes, tetra, business]\r
+lore: tetra-frontiers-co\r
+type: past\r
+grants:\r
+  - { trait: tetra-frontiers-co }\r
+  - { trait: haggler }\r
+  - { trait: appraisal }\r
+backgroundTraits:\r
+  - commerce\r
+  - bureaucracy\r
+`,Su=`id: parasapient-quarter\r
+name: "Parasapient Quarter"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Grew up among Tetra’s parasapient diasporas, the largest resident population of parasapients in the settled systems."\r
+tags: [parasapients, diaspora, tetra, urban]\r
+lore: tetra\r
+type: past\r
+grants:\r
+  - { trait: parasapients }\r
+  - { trait: streetwise }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - bureaucracy\r
+  - legal-systems\r
+`,Cu=`id: raised-in-the-infill\r
+name: "Raised in the Infill"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Grew up in the Ark’s infill and maintenance spaces, in the latticework of supports, wiring and piping that holds Tetra together."\r
+tags: [ark, maintenance, tetra, urban, tech]\r
+lore: arks\r
+type: past\r
+grants:\r
+  - { trait: ark-life }\r
+  - { trait: tinkerer }\r
+  - { trait: concealment }\r
+backgroundTraits:\r
+  - spacefaring\r
+  - engineering\r
+`,wu=`id: raised-on-ward-politics\r
+name: "Raised on Ward Politics"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Grew up in a family that trades in delegated votes, close to the ward representatives and maybe even the Council of 11."\r
+tags: [politics, liquid-democracy, tetra, votes]\r
+lore: tetra\r
+type: past\r
+grants:\r
+  - { trait: liquid-democracy }\r
+  - { trait: schemer }\r
+  - { trait: smooth-talker }\r
+backgroundTraits:\r
+  - politics\r
+  - bureaucracy\r
+`,Tu=`id: apothecary\r
+name: "Apothecary"\r
+status: placeholder\r
+plane: any\r
+summary: "Mixes remedies and simple potions for the sick and injured, and sells them over the counter."\r
+tags: [potions, healing, herbs, trade]\r
+type: profession\r
+grants:\r
+  - { trait: folk-remedies }\r
+  - { trait: simple-potion-mixing }\r
+  - { trait: haggler }\r
+  - { trait: herbalism }\r
+backgroundTraits:\r
+  - medical-aid\r
+  - advanced-potion-mixing\r
+  - medicine\r
+  - alchemy\r
+  - pharmacology\r
+  - toxicology\r
+  - chemistry\r
+  - biology\r
+  - commerce\r
+`,Eu=`id: bard\r
+name: "Bard"\r
+status: placeholder\r
+plane: any\r
+summary: "Travels from town to town with songs and stories, carrying the news along with them."\r
+tags: [bard, music, performer, stories]\r
+type: profession\r
+grants:\r
+  - { trait: performer-music }\r
+  - { trait: smooth-talker }\r
+  - { trait: music }\r
+  - { trait: local-folklore }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - sleight-of-hand\r
+  - local-history\r
+  - heraldry\r
+  - history\r
+  - literature\r
+  - theater\r
+`,Du=`id: blacksmith\r
+name: "Blacksmith"\r
+status: placeholder\r
+plane: any\r
+summary: "Works metal at the forge: tools, fittings, and now and then a blade."\r
+tags: [craft, smithing, trade]\r
+type: profession\r
+grants:\r
+  - { trait: craft-smithing }\r
+  - { trait: appraisal }\r
+  - { trait: haggler }\r
+  - { trait: metallurgy }\r
+backgroundTraits:\r
+  - wielder-longsword\r
+  - wielder-war-axe\r
+  - craft-leatherworking\r
+  - weapons\r
+  - engineering\r
+  - trade-guilds\r
+  - commerce\r
+`,Ou=`id: courier\r
+name: "Courier"\r
+status: placeholder\r
+plane: any\r
+summary: "Carries messages and parcels, fast and unread, by whatever route gets them there."\r
+tags: [courier, travel, messages]\r
+type: profession\r
+grants:\r
+  - { trait: rider-basic-animals }\r
+  - { trait: survivalist }\r
+  - { trait: vigilance }\r
+  - { trait: local-history }\r
+backgroundTraits:\r
+  - concealment\r
+  - pilot-truck\r
+  - animal-husbandry\r
+  - geography\r
+  - navigation\r
+  - animal-lore\r
+  - bureaucracy\r
+`,ku=`id: criminal-enforcer\r
+name: "Criminal Enforcer"\r
+status: placeholder\r
+plane: any\r
+summary: "Muscle for a criminal outfit: collecting debts, guarding deals and making examples of people who talk."\r
+tags: [crime, enforcer, muscle]\r
+type: profession\r
+grants:\r
+  - { trait: streetwise }\r
+  - { trait: intimidation }\r
+  - { trait: vigilance }\r
+  - { trait: ambusher }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - concealment\r
+  - schemer\r
+  - wielder-pistol\r
+  - criminal-underworld\r
+  - weapons\r
+  - gambling\r
+  - law-enforcement\r
+`,Au=`id: doctor\r
+name: "Doctor"\r
+status: placeholder\r
+plane: any\r
+summary: "Diagnoses and treats illness and injury, in a hospital, a clinic, a ship’s sick bay or a village sickroom."\r
+tags: [medicine, doctor, healing, science]\r
+type: profession\r
+grants:\r
+  - { trait: medical-aid }\r
+  - { trait: research }\r
+  - { trait: smooth-talker }\r
+  - { trait: medicine }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - surgery\r
+  - herbalism\r
+  - cybernetics\r
+  - pharmacology\r
+  - pathology\r
+  - psychology\r
+  - parasapient-medicine\r
+  - biology\r
+  - chemistry\r
+`,ju=`id: farmer\r
+name: "Farmer"\r
+status: placeholder\r
+plane: any\r
+summary: "Works the land, raising crops and livestock, wherever there’s land to work."\r
+tags: [farming, rural, labor]\r
+type: profession\r
+grants:\r
+  - { trait: teamster }\r
+  - { trait: animal-husbandry }\r
+  - { trait: simple-cooking }\r
+  - { trait: farming }\r
+backgroundTraits:\r
+  - rider-basic-animals\r
+  - countryside-lore\r
+  - herbalism\r
+  - local-folklore\r
+  - animal-lore\r
+  - biology\r
+  - commerce\r
+  - wilderness-lore\r
+`,Mu=`id: jester\r
+name: "Jester"\r
+status: placeholder\r
+plane: any\r
+summary: "Entertains a court or a crowd, and gets away with saying what no one else there can."\r
+tags: [jester, performer, court]\r
+type: profession\r
+grants:\r
+  - { trait: performer-acrobatics }\r
+  - { trait: sleight-of-hand }\r
+  - { trait: smooth-talker }\r
+  - { trait: court-etiquette }\r
+backgroundTraits:\r
+  - performer-music\r
+  - schemer\r
+  - disguise\r
+  - theater\r
+  - literature\r
+  - high-society\r
+  - politics\r
+`,Nu=`id: knight\r
+name: "Knight"\r
+status: placeholder\r
+plane: any\r
+summary: "A sworn warrior of a noble house or order, trained to fight on horseback and to carry its honor."\r
+tags: [knight, nobility, military]\r
+type: profession\r
+grants:\r
+  - { trait: wielder-longsword }\r
+  - { trait: shield-wall }\r
+  - { trait: rider-basic-animals }\r
+  - { trait: courtly-manners }\r
+  - { trait: heraldry }\r
+backgroundTraits:\r
+  - court-etiquette\r
+  - military-tactics\r
+  - vigilance\r
+  - weapons\r
+  - history\r
+  - high-society\r
+  - animal-lore\r
+`,Pu=`id: local-police\r
+name: "Local Police"\r
+status: placeholder\r
+plane: any\r
+summary: "Keeps the peace in a town, city or station, and knows its streets and the people on them."\r
+tags: [police, law, enforcement]\r
+type: profession\r
+grants:\r
+  - { trait: vigilance }\r
+  - { trait: investigation }\r
+  - { trait: wielder-pistol }\r
+  - { trait: local-history }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - streetwise\r
+  - intimidation\r
+  - medical-aid\r
+  - criminal-underworld\r
+  - law-enforcement\r
+  - legal-systems\r
+  - weapons\r
+  - security-systems\r
+`,Fu=`id: musical-artist\r
+name: "Musical Artist"\r
+status: placeholder\r
+plane: any\r
+summary: "Plays, sings or composes for a living, from taverns and station bars to concert halls."\r
+tags: [music, artist, performer, culture]\r
+type: profession\r
+grants:\r
+  - { trait: performer-music }\r
+  - { trait: smooth-talker }\r
+  - { trait: music }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - performer-acrobatics\r
+  - sleight-of-hand\r
+  - haggler\r
+  - theater\r
+  - literature\r
+  - high-society\r
+`,Iu=`id: ranger\r
+name: "Ranger"\r
+status: placeholder\r
+plane: any\r
+summary: "Patrols the wild places, tracking dangerous beasts and guiding travelers through."\r
+tags: [ranger, wilderness, hunting]\r
+type: profession\r
+grants:\r
+  - { trait: tracker }\r
+  - { trait: survivalist }\r
+  - { trait: vigilance }\r
+  - { trait: countryside-lore }\r
+backgroundTraits:\r
+  - ambusher\r
+  - wielder-musket\r
+  - rider-basic-animals\r
+  - animal-husbandry\r
+  - wilderness-lore\r
+  - animal-lore\r
+  - geography\r
+  - navigation\r
+`,Lu=`id: smuggler\r
+name: "Smuggler"\r
+status: placeholder\r
+plane: any\r
+summary: "Moves goods past the law, by ship, caravan or cart, along whatever routes the authorities aren’t watching."\r
+tags: [crime, smuggling, trade, cargo]\r
+type: profession\r
+grants:\r
+  - { trait: concealment }\r
+  - { trait: sleight-of-hand }\r
+  - { trait: haggler }\r
+  - { trait: criminal-underworld }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - streetwise\r
+  - appraisal\r
+  - cargo-handling\r
+  - lockpicking\r
+  - thieves-cant\r
+  - navigation\r
+  - starships\r
+  - security-systems\r
+  - gambling\r
+  - commerce\r
+`,Ru=`id: spy\r
+name: "Spy"\r
+status: placeholder\r
+plane: any\r
+summary: "Gathers secrets for a government, a noble house, a guild or a corporation, and is rarely who they say they are."\r
+tags: [spy, intrigue, secrets]\r
+type: profession\r
+grants:\r
+  - { trait: concealment }\r
+  - { trait: disguise }\r
+  - { trait: schemer }\r
+  - { trait: smooth-talker }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - investigation\r
+  - sleight-of-hand\r
+  - lockpicking\r
+  - thieves-cant\r
+  - heraldry\r
+  - cryptography\r
+  - politics\r
+  - security-systems\r
+  - high-society\r
+  - theater\r
+`,zu=`id: squire\r
+name: "Squire"\r
+status: placeholder\r
+plane: any\r
+summary: "A knight’s apprentice, learning to fight and ride by carrying their armor and minding their horse."\r
+tags: [squire, knight, nobility, military]\r
+type: profession\r
+grants:\r
+  - { trait: rider-basic-animals }\r
+  - { trait: shield-wall }\r
+  - { trait: court-etiquette }\r
+  - { trait: heraldry }\r
+backgroundTraits:\r
+  - wielder-longsword\r
+  - courtly-manners\r
+  - animal-husbandry\r
+  - weapons\r
+  - animal-lore\r
+  - history\r
+`,Bu=`id: stonemason\r
+name: "Stonemason"\r
+status: placeholder\r
+plane: any\r
+summary: "Cuts and lays stone for walls, bridges and buildings, and knows which ones will still stand in a hundred years."\r
+tags: [craft, masonry, building]\r
+type: profession\r
+grants:\r
+  - { trait: craft-masonry }\r
+  - { trait: teamster }\r
+  - { trait: architecture }\r
+backgroundTraits:\r
+  - artist-sculpture\r
+  - mountaineering\r
+  - appraisal\r
+  - engineering\r
+  - trade-guilds\r
+  - commerce\r
+`,Vu=`id: surgeon\r
+name: "Surgeon"\r
+status: placeholder\r
+plane: any\r
+summary: "Operates to repair what medicine alone can’t, from battlefield wounds to failing organs."\r
+tags: [medicine, surgery, healing, science]\r
+type: profession\r
+grants:\r
+  - { trait: surgery }\r
+  - { trait: medical-aid }\r
+  - { trait: medicine }\r
+backgroundTraits:\r
+  - research\r
+  - cybernetics\r
+  - pharmacology\r
+  - pathology\r
+  - parasapient-medicine\r
+  - biology\r
+  - chemistry\r
+`,Hu=`id: tanner\r
+name: "Tanner"\r
+status: placeholder\r
+plane: any\r
+summary: "Turns hides into leather, including the hides of stranger beasts when someone brings them in."\r
+tags: [craft, leather, trade]\r
+type: profession\r
+grants:\r
+  - { trait: craft-leatherworking }\r
+  - { trait: animal-husbandry }\r
+  - { trait: haggler }\r
+backgroundTraits:\r
+  - appraisal\r
+  - specimen-handling\r
+  - countryside-lore\r
+  - animal-lore\r
+  - chemistry\r
+  - trade-guilds\r
+  - commerce\r
+`,Uu=`id: visual-artist\r
+name: "Visual Artist"\r
+status: placeholder\r
+plane: any\r
+summary: "Makes a living, or tries to, from painting, sculpture, illustration or design."\r
+tags: [art, artist, culture]\r
+type: profession\r
+grants:\r
+  - { trait: artist-painting }\r
+  - { trait: appraisal }\r
+  - { trait: art-history }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - artist-sculpture\r
+  - haggler\r
+  - smooth-talker\r
+  - history\r
+  - literature\r
+  - high-society\r
+  - commerce\r
+`,Wu=`id: alchemist\r
+name: "Alchemist"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Studies the properties of substances and brews potions to unlock them, with more ambition than safety."\r
+tags: [potions, alchemy, scholar, dreft]\r
+type: profession\r
+grants:\r
+  - { trait: simple-potion-mixing }\r
+  - { trait: research }\r
+  - { trait: alchemy }\r
+  - { trait: herbalism }\r
+backgroundTraits:\r
+  - advanced-potion-mixing\r
+  - appraisal\r
+  - exotic-materials\r
+  - chemistry\r
+  - trade-guilds\r
+`,Gu=`id: caravaneer\r
+name: Caravaneer\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "An itinerant merchant trader, always moving between ports, cities, and kingdoms."\r
+tags: [caravan, trade, travel, merchant]\r
+type: profession\r
+grants:\r
+  - { trait: teamster }\r
+  - { trait: haggler }\r
+  - { trait: trade-roads }\r
+  - { trait: bandits-and-brigands }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - commerce\r
+  - geography\r
+  - navigation\r
+  - animal-lore\r
+`,Ku=`id: dreft-local-militia\r
+name: "Dreft Local Militia"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Called up from a town or village to defend it from bandits and monsters when the crown’s soldiers are far away."\r
+tags: [militia, military, village, dreft]\r
+type: profession\r
+grants:\r
+  - { trait: shield-wall }\r
+  - { trait: vigilance }\r
+  - { trait: local-history }\r
+  - { trait: countryside-lore }\r
+backgroundTraits:\r
+  - wielder-war-axe\r
+  - wielder-longsword\r
+  - tracker\r
+  - military-tactics\r
+  - weapons\r
+  - wilderness-lore\r
+  - geography\r
+`,qu=`id: dreft-mercenary\r
+name: "Dreft Mercenary"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Fights for whoever pays, guarding caravans, settling feuds and filling out noble armies in the succession crisis."\r
+tags: [mercenary, military, combat, dreft]\r
+type: profession\r
+grants:\r
+  - { trait: wielder-longsword }\r
+  - { trait: shield-wall }\r
+  - { trait: haggler }\r
+  - { trait: bandits-and-brigands }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - wielder-war-axe\r
+  - wielder-musket\r
+  - survivalist\r
+  - intimidation\r
+  - military-tactics\r
+  - weapons\r
+  - gambling\r
+  - geography\r
+  - commerce\r
+`,Ju=`id: gate-hand\r
+name: Gate Hand\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Works the switch port for Tetra Frontiers Co.: hauling, translating, and generally being useful."\r
+tags: [switch-port, company, translator, foreigners, isekai, dreft]\r
+type: profession\r
+grants:\r
+  - { trait: smooth-talker }\r
+  - { trait: haggler }\r
+  - { trait: tetra-frontiers-co }\r
+  - { trait: earth-baseline-customs }\r
+backgroundTraits:\r
+  - commerce\r
+  - bureaucracy\r
+`,Yu=`id: guild-hunter\r
+name: Guild Hunter\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Hunts monsters for pay and glory. Hunting guilds keep posts and track the monster bounties put up by the kingdom or locals."\r
+tags: [hunter, monsters, guild, wilderness, combat]\r
+type: profession\r
+grants:\r
+  - { trait: tracker }\r
+  - { trait: ambusher }\r
+  - { trait: monsters-of-isekai }\r
+  - { trait: the-kings-woods }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - animal-lore\r
+  - wilderness-lore\r
+  - weapons\r
+  - trade-guilds\r
+`,Xu=`id: hedge-witch\r
+name: Hedge Witch\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Practices magic outside the licensed system of Dreft and its neighboring kingdoms. Working far from the scrutiny of cities and trading posts, these mages are a mixed bag."\r
+tags: [witch, magic, unlicensed, folk]\r
+type: profession\r
+# A bonus point in Magic, without a level, for a character who can level it.\r
+coreBonus: { magic: 1 }\r
+grants:\r
+  - { trait: folk-remedies }\r
+  - { trait: countryside-lore }\r
+  - { trait: magic-on-isekai }\r
+  - { trait: herbalism }\r
+backgroundTraits:\r
+  - animal-lore\r
+  - wilderness-lore\r
+  - biology\r
+`,Zu=`id: licensed-mage\r
+name: Licensed Mage\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Trained in the licensed colleges of magic in Dreft or one of its neighboring kingdoms, these mages practice officially sanctioned, and supposedly safe, magic."\r
+tags: [mage, magic, licensed, scholar]\r
+type: profession\r
+# A bonus point in Magic, without a level, for a character who can level it.\r
+coreBonus: { magic: 1 }\r
+grants:\r
+  - { trait: incantation }\r
+  - { trait: relic-handling }\r
+  - { trait: magic-on-isekai }\r
+  - { trait: dreftian-law }\r
+backgroundTraits:\r
+  - history\r
+  - literature\r
+  - bureaucracy\r
+  - chemistry\r
+`,Qu=`id: royal-guard\r
+name: Royal Guard\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Sworn to the crown of one of Isekai’s kingdoms, and as adept with a blade as with courtly manners."\r
+tags: [guard, military, crown, court]\r
+type: profession\r
+grants:\r
+  - { trait: shield-wall }\r
+  - { trait: vigilance }\r
+  - { trait: court-etiquette }\r
+  - { trait: aristocracy }\r
+backgroundTraits:\r
+  - weapons\r
+  - law-enforcement\r
+  - politics\r
+  - high-society\r
+`,$u=`id: american-empire-soldier\r
+name: "American Empire Soldier"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "A soldier of the Imperial armed forces, trained for an Empire that is rarely short of a frontier to hold or a rival to stare down."\r
+tags: [military, soldier, american-empire, combat]\r
+lore: american-empire\r
+type: profession\r
+grants:\r
+  - { trait: wielder-rifle }\r
+  - { trait: military-drill }\r
+  - { trait: vigilance }\r
+  - { trait: the-imperial-military }\r
+  - { trait: imperial-service-record }\r
+backgroundTraits:\r
+  - weapons\r
+  - military-tactics\r
+  - wilderness-lore\r
+`,ed=`id: combat-medic\r
+name: "Combat Medic"\r
+status: placeholder\r
+plane: earth\r
+summary: "Keeps soldiers alive under fire, patching wounds in the middle of a fight."\r
+tags: [medicine, military, combat, healing]\r
+type: profession\r
+grants:\r
+  - { trait: medical-aid }\r
+  - { trait: military-drill }\r
+  - { trait: vigilance }\r
+backgroundTraits:\r
+  - surgery\r
+  - survivalist\r
+  - wielder-rifle\r
+  - medicine\r
+  - pharmacology\r
+  - toxicology\r
+  - psychology\r
+  - biology\r
+  - weapons\r
+  - military-tactics\r
+`,td=`id: computer-engineer\r
+name: "Computer Engineer"\r
+status: placeholder\r
+plane: earth\r
+summary: "Designs, builds and fixes the software and systems that run the settled systems."\r
+tags: [computers, engineering, technology, ai]\r
+type: profession\r
+grants:\r
+  - { trait: programming }\r
+  - { trait: research }\r
+  - { trait: computer-systems }\r
+  - { trait: mathematics }\r
+backgroundTraits:\r
+  - robotics\r
+  - artificial-intelligence\r
+  - cybernetics\r
+  - cryptography\r
+  - security-systems\r
+  - engineering\r
+  - physics\r
+`,nd=`id: emergency-medical-technician\r
+name: "Emergency Medical Technician"\r
+status: placeholder\r
+plane: earth\r
+summary: "First on the scene of accidents and emergencies, keeping people alive until they reach a hospital."\r
+tags: [medicine, emergency, healing, urban]\r
+type: profession\r
+grants:\r
+  - { trait: medical-aid }\r
+  - { trait: vigilance }\r
+  - { trait: streetwise }\r
+  - { trait: medicine }\r
+backgroundTraits:\r
+  - surgery\r
+  - pilot-truck\r
+  - pharmacology\r
+  - toxicology\r
+  - psychology\r
+  - biology\r
+  - law-enforcement\r
+`,U=`id: exotic-specimen-dealer\r
+name: "Exotic Specimen Dealer"\r
+status: placeholder\r
+plane: earth\r
+summary: "Imports extraplanar specimens for labs, zoos and pet shops, with paperwork that’s usually in order."\r
+tags: [trade, animals, parabiology, merchant, smuggling]\r
+type: profession\r
+grants:\r
+  - { trait: haggler }\r
+  - { trait: appraisal }\r
+  - { trait: parazoology }\r
+  - { trait: cargo-handling }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - commerce\r
+  - animal-lore\r
+  - bureaucracy\r
+  - biology\r
+  - starships\r
+`,W=`id: fighter-pilot\r
+name: "Fighter Pilot"\r
+status: placeholder\r
+plane: earth\r
+summary: "Flies fighters for a navy, a corporation or whoever is paying, and knows a dogfight from the inside."\r
+tags: [pilot, military, fighter, space]\r
+type: profession\r
+grants:\r
+  - { trait: pilot-fighter }\r
+  - { trait: military-drill }\r
+  - { trait: vigilance }\r
+  - { trait: military-tactics }\r
+backgroundTraits:\r
+  - pilot-helicopter\r
+  - starship-engineering\r
+  - shipping-lanes\r
+  - starships\r
+  - navigation\r
+  - physics\r
+  - spacefaring\r
+  - weapons\r
+`,G=`id: interplanar-diplomat\r
+name: "Interplanar Diplomat"\r
+status: placeholder\r
+plane: earth\r
+summary: "Represents a nation to peoples and powers from other planes, where the first job is working out what an insult looks like."\r
+tags: [diplomacy, politics, parasapients]\r
+type: profession\r
+grants:\r
+  - { trait: smooth-talker }\r
+  - { trait: interplanar-relations }\r
+  - { trait: parasapients }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - diplomatic-protocol\r
+  - politics\r
+  - history\r
+  - bureaucracy\r
+  - high-society\r
+`,K=`id: interplanar-rights-lawyer\r
+name: "Interplanar Rights Lawyer"\r
+status: placeholder\r
+plane: earth\r
+summary: "Practices the law of the treatment and rights of beings from beyond the stars, and tests what counts as a person in court."\r
+tags: [law, rights, parasapients, courts]\r
+type: profession\r
+grants:\r
+  - { trait: legal-advocacy }\r
+  - { trait: interplanar-law }\r
+  - { trait: parasapients }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - legal-systems\r
+  - bureaucracy\r
+  - politics\r
+`,q=`id: officer-of-the-bureau-of-planar-management-and-enforcement\r
+name: "Officer of the Bureau of Planar Management and Enforcement"\r
+status: placeholder\r
+plane: earth\r
+summary: "Enforces the laws on planar exploration for the Bureau, inspecting gates and chasing down unregulated exploitation across the settled systems."\r
+tags: [law, enforcement, planes, bureau, tetra]\r
+type: profession\r
+grants:\r
+  - { trait: investigation }\r
+  - { trait: vigilance }\r
+  - { trait: wielder-pistol }\r
+  - { trait: the-bureau-of-planar-management }\r
+  - { trait: interplanar-law }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - planar-surveying\r
+  - planar-exploration\r
+  - tetra\r
+  - paraphysics\r
+  - law-enforcement\r
+  - legal-systems\r
+  - bureaucracy\r
+  - security-systems\r
+`,rd=`id: paraarcheologist\r
+name: "Paraarcheologist"\r
+status: placeholder\r
+plane: earth\r
+summary: "Digs up what parasapient civilizations left behind on other planes, before someone else sells it."\r
+tags: [science, archeology, ruins, fieldwork]\r
+type: profession\r
+grants:\r
+  - { trait: research }\r
+  - { trait: excavation }\r
+  - { trait: paraarcheology }\r
+  - { trait: appraisal }\r
+backgroundTraits:\r
+  - history\r
+  - geography\r
+  - chemistry\r
+`,id=`id: paraecologist\r
+name: "Paraecologist"\r
+status: placeholder\r
+plane: earth\r
+summary: "Catalogues whole new kingdoms of life, many of them reliant on exotic physics, out in the field and often alongside the Explorers’ Lodge."\r
+tags: [science, parabiology, fieldwork, ecology, lodge]\r
+lore: explorers-lodge\r
+type: profession\r
+grants:\r
+  - { trait: survivalist }\r
+  - { trait: field-sampling }\r
+  - { trait: parabiology }\r
+  - { trait: the-explorers-lodge }\r
+backgroundTraits:\r
+  - biology\r
+  - wilderness-lore\r
+  - animal-lore\r
+  - geography\r
+`,ad=`id: paraethnologist\r
+name: "Paraethnologist"\r
+status: placeholder\r
+plane: earth\r
+summary: "Studies the cultures of parasapient peoples, usually by living among them for as long as they’ll allow it."\r
+tags: [science, parasapients, cultures, fieldwork]\r
+type: profession\r
+grants:\r
+  - { trait: research }\r
+  - { trait: parasapients }\r
+  - { trait: smooth-talker }\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language"\r
+backgroundTraits:\r
+  - history\r
+  - politics\r
+  - literature\r
+`,od=`id: paraevolutionary-scientist\r
+name: "Paraevolutionary Scientist"\r
+status: placeholder\r
+plane: earth\r
+summary: "Studies how extraplanar life came to be, from the history of flora floating in a sea of light to why it evolved at all."\r
+tags: [science, parabiology, research, evolution]\r
+type: profession\r
+grants:\r
+  - { trait: research }\r
+  - { trait: parabiology }\r
+  - { trait: paraflora }\r
+  - { trait: paraphysics }\r
+backgroundTraits:\r
+  - biology\r
+  - chemistry\r
+  - history\r
+`,sd=`id: paraphysiologist\r
+name: "Paraphysiologist"\r
+status: placeholder\r
+plane: earth\r
+summary: "Researches the strange forms and biologies of extraplanar creatures, like the ones made of ice, usually with one on the table."\r
+tags: [science, parabiology, research, anatomy]\r
+type: profession\r
+grants:\r
+  - { trait: research }\r
+  - { trait: parabiology }\r
+  - { trait: parazoology }\r
+  - { trait: specimen-handling }\r
+backgroundTraits:\r
+  - biology\r
+  - chemistry\r
+  - medicine\r
+`,cd=`id: parazoological-keeper\r
+name: "Parazoological Keeper"\r
+status: placeholder\r
+plane: earth\r
+summary: "Keeps extraplanar animals alive and contained in a lab, zoo or pet shop, and knows which enclosures not to stand near."\r
+tags: [animals, parabiology, zoo, care]\r
+type: profession\r
+grants:\r
+  - { trait: specimen-handling }\r
+  - { trait: parazoology }\r
+  - { trait: vigilance }\r
+backgroundTraits:\r
+  - animal-lore\r
+  - biology\r
+  - security-systems\r
+`,ld=`id: planar-expeditionary-professional\r
+name: "Planar Expeditionary Professional"\r
+status: placeholder\r
+plane: earth\r
+summary: "A member of the expedition teams that open new planes for the Explorers’ Lodge: surveying, raising the first gate platforms, and surviving whatever is waiting on the other side."\r
+tags: [planes, exploration, lodge, survey, wilderness]\r
+lore: explorers-lodge\r
+type: profession\r
+grants:\r
+  - { trait: survivalist }\r
+  - { trait: planar-surveying }\r
+  - { trait: planar-exploration }\r
+  - { trait: the-explorers-lodge }\r
+  - { trait: explorers-lodge-membership }\r
+backgroundTraits:\r
+  - wilderness-lore\r
+  - geography\r
+  - navigation\r
+  - biology\r
+`,ud=`id: starship-engineer\r
+name: "Starship Engineer"\r
+status: placeholder\r
+plane: earth\r
+summary: "Keeps starships running: reactors, drives, life support, and everything that rattles in between."\r
+tags: [engineering, starships, technology, space]\r
+type: profession\r
+grants:\r
+  - { trait: starship-engineering }\r
+  - { trait: tinkerer }\r
+  - { trait: exotic-materials }\r
+  - { trait: ports-and-stations }\r
+backgroundTraits:\r
+  - programming\r
+  - cargo-handling\r
+  - robotics\r
+  - engineering\r
+  - physics\r
+  - starships\r
+  - spacefaring\r
+`,dd=`id: station-maintenance\r
+name: "Station Maintenance"\r
+status: placeholder\r
+plane: earth\r
+summary: "Keeps a station or Ark habitable: air, water, power and the endless repairs nobody notices until they stop."\r
+tags: [maintenance, station, ark, technology]\r
+type: profession\r
+grants:\r
+  - { trait: tinkerer }\r
+  - { trait: cargo-handling }\r
+  - { trait: ark-life }\r
+  - { trait: ports-and-stations }\r
+backgroundTraits:\r
+  - starship-engineering\r
+  - programming\r
+  - concealment\r
+  - engineering\r
+  - spacefaring\r
+  - security-systems\r
+`,fd=`id: theoretical-paraphysicist\r
+name: "Theoretical Paraphysicist"\r
+status: placeholder\r
+plane: earth\r
+summary: "A scientist working at the edge of paraphysics, the field The Gift opened up, where new discoveries are made every day and most of them are wrong."\r
+tags: [science, paraphysics, research, scholar]\r
+type: profession\r
+grants:\r
+  - { trait: research }\r
+  - { trait: paraphysics }\r
+  - { trait: exotic-materials }\r
+  - { trait: mathematics }\r
+backgroundTraits:\r
+  - physics\r
+  - chemistry\r
+  - engineering\r
+`,pd=`id: truck-pilot\r
+name: "Truck Pilot"\r
+status: placeholder\r
+plane: earth\r
+summary: "Hauls cargo in a truck between stations, ships and planetary surfaces, and rarely knows what’s inside the containers."\r
+tags: [pilot, trucks, shipping, cargo, space]\r
+lore: trucks\r
+type: profession\r
+grants:\r
+  - { trait: pilot-truck }\r
+  - { trait: cargo-handling }\r
+  - { trait: shipping-lanes }\r
+  - { trait: ports-and-stations }\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact"\r
+backgroundTraits:\r
+  - starships\r
+  - navigation\r
+  - spacefaring\r
+  - commerce\r
+`,md=`id: capable-student\r
+name: "Capable Student"\r
+status: draft\r
+plane: any\r
+summary: "Learns new knowledge in half the time."\r
+tags: [learning, study, site-example]\r
+category: ability\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character can learn a new (knowledge) Trait in half the specified time."\r
+`,hd=`id: con-man\r
+name: "Con Man"\r
+status: draft\r
+plane: any\r
+summary: "A practiced liar, in speech and in writing."\r
+tags: [lying, deception, social, site-example]\r
+category: ability\r
+minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }\r
+effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."\r
+`,gd=`id: eagle-eye\r
+name: "Eagle Eye"\r
+status: draft\r
+plane: any\r
+summary: "Sees unusually well at a distance."\r
+tags: [sight, perception, site-example]\r
+category: ability\r
+conveyed: true\r
+effect: "This character can request advantage in situations that involve seeing at distance."\r
+`,_d=`id: gladiator\r
+name: "Gladiator"\r
+status: draft\r
+plane: any\r
+summary: "Can fight passably with any close combat weapon."\r
+tags: [combat, melee, site-example]\r
+category: ability\r
+minStats: { physical: 5, grace: 5, demeanor: 5 }\r
+effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."\r
+`,vd=`id: knowledge-sponge\r
+name: "Knowledge Sponge"\r
+status: draft\r
+plane: any\r
+summary: "Learns new knowledge in a quarter of the time."\r
+tags: [learning, study, site-example]\r
+category: ability\r
+mastery: true\r
+minStats: { memory: 5, logic: 5, intuition: 5 }\r
+prerequisites: [capable-student]\r
+effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."\r
+`,yd=`id: magic-access\r
+name: "Magic Access"\r
+status: placeholder\r
+plane: any\r
+summary: "This character can use magic: they can level the Magic core stat and take Traits on the Magic list."\r
+tags: [magic, access]\r
+category: ability\r
+conveyed: true\r
+coreAccess: [magic]\r
+opensLists: [magic]\r
+effect: "This character can put levels into Magic, a core stat with no focus stats; each point of Magic adds 3 MP (Mana Points). They can also take Traits on the Magic list, like Incantation."\r
+`,bd=`id: magical-heritage\r
+name: "Magical Heritage"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Born on a plane where magic is part of the world."\r
+tags: [magic, dreft, heritage]\r
+category: ability\r
+conveyed: true\r
+# Magic comes with the heritage.\r
+grants:\r
+  - trait: magic-access\r
+effect: "This character was born to magic, and has Magic Access."\r
+`,xd=`id: mental-fortitude\r
+name: "Mental Fortitude"\r
+status: draft\r
+plane: any\r
+summary: "Holds together when the mind is badly taxed."\r
+tags: [will, resistance, site-example]\r
+category: ability\r
+minStats: { endurance: 8, logic: 5, demeanor: 5 }\r
+effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."\r
+`,Sd=`id: natural-breath-weapon\r
+name: "Natural Breath Weapon"\r
+status: draft\r
+plane: any\r
+summary: "A biology that lets the character use their breath as a tool or weapon."\r
+tags: [breath, natural-weapon, combat, site-example]\r
+category: ability\r
+ranked: true\r
+background: true\r
+minStats: { endurance: 3 }\r
+effect: "This character's biology allows them to use their breath as a tool or weapon. For each rank of this ability add another d4 to the damage the breath weapon deals."\r
+`,Cd=`id: sculpted\r
+name: "Sculpted"\r
+status: draft\r
+plane: any\r
+summary: "Looks every bit as athletic as they are."\r
+tags: [appearance, athletics, social, site-example]\r
+category: ability\r
+minStats: { power: 5, endurance: 5, demeanor: 3 }\r
+effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."\r
+`,wd=`id: trail-runner\r
+name: "Trail Runner"\r
+status: draft\r
+plane: any\r
+summary: "Slow to tire when running, hiking or climbing."\r
+tags: [endurance, travel, site-example]\r
+category: ability\r
+minStats: { power: 3, endurance: 2, grace: 2 }\r
+effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."\r
+`,Td=`id: explorers-lodge-membership\r
+name: "Explorers’ Lodge Membership"\r
+status: placeholder\r
+plane: earth\r
+summary: "This character is a member in good standing of the Explorers’ Lodge."\r
+tags: [lodge, exploration, membership]\r
+lore: explorers-lodge\r
+category: circumstance\r
+conveyed: true\r
+effect: Placeholder. Effect not yet written.\r
+`,Ed=`id: imperial-service-record\r
+name: "Imperial Service Record"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "This character serves, or has served, in the American Empire’s armed forces."\r
+tags: [military, american-empire, service]\r
+category: circumstance\r
+conveyed: true\r
+effect: Placeholder. Effect not yet written.\r
+`,Dd=`id: short-term-fame\r
+name: "Short Term Fame"\r
+status: draft\r
+plane: any\r
+summary: "Famous, for now, after recent events."\r
+tags: [fame, social, site-example]\r
+category: circumstance\r
+conveyed: true\r
+temporary: "30 days"\r
+effect: "Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them."\r
+`,Od=`id: significant-inheritance\r
+name: "Significant Inheritance"\r
+status: draft\r
+plane: earth\r
+summary: "An inheritance of 2 million ERC sitting safely in a bank."\r
+tags: [money, inheritance, wealth, site-example]\r
+category: circumstance\r
+conveyed: true\r
+temporary: "Lost when the money is all spent"\r
+effect: "This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank."\r
+`,kd=`id: thieves-guild-membership\r
+name: "Thieves Guild Membership"\r
+status: draft\r
+plane: any\r
+summary: "An official member of a local Thieves Guild."\r
+tags: [thieves-guild, membership, crime, site-example]\r
+category: circumstance\r
+conveyed: true\r
+effect: "This character is an official member of a Local Thieves Guild."\r
+`,Ad=`id: tugboat-captain\r
+name: "Tugboat Captain"\r
+status: draft\r
+plane: any\r
+summary: "Licensed and trained to command a tugboat."\r
+tags: [tugboat, license, pilot, site-example]\r
+category: circumstance\r
+conveyed: true\r
+effect: "This character has all required legal training and licenses required to command a Tugboat."\r
+`,jd=`id: wanted-in-sol\r
+name: "Wanted in Sol"\r
+status: draft\r
+plane: earth\r
+summary: "Wanted by the nations of the Sol system for past crimes."\r
+tags: [wanted, crime, sol, site-example]\r
+category: circumstance\r
+conveyed: true\r
+temporary: "Lost when the character's innocence is proclaimed or they are caught"\r
+effect: "This character is wanted by the nations of the Sol system for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."\r
+`,Md=`id: cybernetic-intelligence\r
+name: "Cybernetic Intelligence"\r
+status: draft\r
+plane: earth\r
+summary: "A machine-fast mind for mathematics."\r
+tags: [cybernetic, mathematics, ai, site-example]\r
+category: condition\r
+background: true\r
+effect: "This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics. This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited."\r
+`,Nd=`id: damaged\r
+name: "Damaged"\r
+status: draft\r
+plane: any\r
+summary: "An object below its full HP."\r
+tags: [objects, damage, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "An object gains this trait if it is below its maximum HP total"\r
+effect: "This Trait has no effect on its own."\r
+`,Pd=`id: dead\r
+name: "Dead"\r
+status: draft\r
+plane: any\r
+summary: "Dead."\r
+tags: [injury, death, site-example]\r
+category: condition\r
+types: [injury]\r
+conveyed: true\r
+temporary: "A character gains this trait if they are at 0 or less HP"\r
+effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."\r
+`,Fd=`id: destroyed\r
+name: "Destroyed"\r
+status: draft\r
+plane: any\r
+summary: "An object at 0 HP or less, no longer working."\r
+tags: [objects, damage, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "An object gains this trait if it is at 0 or less HP"\r
+effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."\r
+`,Id=`id: ghost-sight\r
+name: "Ghost Sight"\r
+status: draft\r
+plane: any\r
+summary: "Perceives beyond the veil, seeing and hearing the supernatural."\r
+tags: [supernatural, sight, site-example]\r
+category: condition\r
+conveyed: true\r
+temporary: "Lost when the effect that granted this Trait ends"\r
+effect: "This character perceives beyond the veil. This character can see and hear the supernatural."\r
+`,Ld=`id: hard-shell\r
+name: "Hard Shell"\r
+status: draft\r
+plane: any\r
+summary: "A hard natural shell that protects the torso."\r
+tags: [shell, armor, natural, site-example]\r
+category: condition\r
+ranked: true\r
+background: true\r
+minStats: { endurance: 5 }\r
+effect: "This character possesses a hard natural shell that protects them from harm. Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso."\r
+`,Rd=`id: healthy\r
+name: "Healthy"\r
+status: draft\r
+plane: any\r
+summary: "At full HP."\r
+tags: [health, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "A character or object gains this trait while they are at their maximum HP total"\r
+effect: "This Trait has no effect on its own."\r
+`,zd=`id: incapacitated\r
+name: "Incapacitated"\r
+status: draft\r
+plane: any\r
+summary: "Too badly hurt to act or perceive."\r
+tags: [health, injury, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "A character gains this trait while they are at less than a quarter of their HP total"\r
+effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."\r
+`,Bd=`id: injured\r
+name: "Injured"\r
+status: draft\r
+plane: any\r
+summary: "Below full HP."\r
+tags: [health, injury, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "A character gains this trait while they are below their maximum HP total"\r
+effect: "This Trait has no effect on its own."\r
+`,Vd=`id: long-toothed\r
+name: "Long Toothed"\r
+status: draft\r
+plane: isekai\r
+summary: "An Orc whose teeth have grown long with age, a mark of wisdom and prestige among Orcs."\r
+tags: [orcs, age, prestige, social, site-example]\r
+category: condition\r
+background: true\r
+minStats: { power: 10, endurance: 5, demeanor: 5 }\r
+rpRequirement: "Middle Aged or Older"\r
+effect: "An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs."\r
+`,Hd=`id: mechanical\r
+name: "Mechanical"\r
+status: draft\r
+plane: any\r
+summary: "A machine: harmed by EMP, and usually immune to Death damage."\r
+tags: [machine, emp, site-example]\r
+category: condition\r
+background: true\r
+effect: "This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage."\r
+`,Ud=`id: severe-bleeding\r
+name: "Severe Bleeding"\r
+status: draft\r
+plane: any\r
+summary: "Losing blood fast, until someone treats it."\r
+tags: [injury, bleeding, site-example]\r
+category: condition\r
+types: [injury]\r
+conveyed: true\r
+temporary: "This trait is lost when this Condition is Treated"\r
+effect: "This character loses 1 HP every combat round while in combat. This character loses 1 HP every minute while outside of combat."\r
+`,Wd=`id: severely-injured\r
+name: "Severely Injured"\r
+status: draft\r
+plane: any\r
+summary: "Below half HP."\r
+tags: [health, injury, site-example, hit-points]\r
+category: condition\r
+conveyed: true\r
+temporary: "A character gains this trait while they are below half their maximum HP total"\r
+effect: "This Trait has no effect on its own."\r
+`,Gd=`id: sorcerous\r
+name: "Sorcerous"\r
+status: draft\r
+plane: isekai\r
+summary: "Able to take magic Traits and to put points into the Magic core stat."\r
+tags: [magic, sorcerous, site-example]\r
+category: condition\r
+# On the Magic list: only a character with Magical Heritage can pick it.\r
+list: magic\r
+background: true\r
+effect: "This character may take magic-related traits and may spend stat points on the Magic core stat."\r
+`,Kd=`id: stimm-rush\r
+name: "Stimm Rush"\r
+status: draft\r
+plane: earth\r
+summary: "Riding the rush of a Stimm."\r
+tags: [stimm, drugs, physical, site-example]\r
+category: condition\r
+conveyed: true\r
+temporary: "This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration"\r
+effect: "This character gains 5 to all physical focus stats."\r
+`,qd=`id: stone-skin\r
+name: "Stone Skin"\r
+status: draft\r
+plane: any\r
+summary: "Skin hardened to stone by an enchantment."\r
+tags: [enchantment, resistance, site-example]\r
+category: condition\r
+types: [enchantment]\r
+conveyed: true\r
+temporary: "This trait lasts a number of minutes equal to the caster's Rank in this ability"\r
+effect: "This character gains Rank *3 resistance to all Physical damage types."\r
+`,Jd=`id: supernatural\r
+name: "Supernatural"\r
+status: draft\r
+plane: any\r
+summary: "Gone beyond the real: able to take supernatural Traits and to put points into the Supernatural core stat."\r
+tags: [supernatural, site-example]\r
+category: condition\r
+background: true\r
+effect: "This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat."\r
+`,Yd=`id: additional-contact\r
+name: Additional Contact\r
+status: placeholder\r
+plane: any\r
+summary: "Someone the character can call on. Who it is is up to the player."\r
+tags: [contact, people, network]\r
+category: contact\r
+ranked: true\r
+effect: Placeholder. Effect not yet written.\r
+choices:\r
+  - choose: 1\r
+    from: contact\r
+    note: "+1 Contact per rank"\r
+`,Xd=`id: additional-language\r
+name: Additional Language\r
+status: placeholder\r
+plane: any\r
+summary: "One more language the character speaks."\r
+tags: [language]\r
+category: knowledge\r
+ranked: true\r
+effect: Placeholder. Effect not yet written.\r
+choices:\r
+  - choose: 1\r
+    from: language\r
+    note: "+1 Language per rank"\r
+`,Zd=`id: ai-culture\r
+name: "AI Culture"\r
+status: placeholder\r
+plane: earth\r
+summary: "The customs, media and politics of AI Cores and the communities around them."\r
+tags: [ai, culture, kashgar]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, empathy: 2 }\r
+effect: "This character has knowledge of AI society and culture and can be assumed to be familiar with the peoples, places, and customs relevant to AI Cores and the communities around them."\r
+`,Qd=`# Aksum has no lore entry on the site yet.\r
+id: aksum\r
+name: "Aksum"\r
+status: draft\r
+plane: earth\r
+region: centafrica\r
+summary: "Aksum, Centafrica’s station on its elliptical orbit through the inner solar system."\r
+tags: [centafrica, station, space]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Aksum and can be assumed to be familiar with the peoples, places, and customs of Centafrica’s inner-system station."\r
+`,$d=`id: alchemy\r
+name: "Alchemy"\r
+status: draft\r
+plane: isekai\r
+summary: "The properties of substances and how they combine, the theory behind every potion."\r
+tags: [alchemy, potions, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3, intuition: 2 }\r
+effect: "This character has knowledge of alchemy and can be assumed to be familiar with the properties of common reagents and how they combine in potions."\r
+`,ef=`# Amaravati has no lore entry on the site yet.\r
+id: amaravati\r
+name: "Amaravati"\r
+status: draft\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "Amaravati, the Kingdom of India’s station in high Earth orbit."\r
+tags: [india, station, orbit]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Amaravati and can be assumed to be familiar with the peoples, places, and customs of India’s station in high Earth orbit."\r
+`,tf=`id: american-geography\r
+name: "American Geography"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The Empire’s Earth territories, from the Californias to Nueva Mexico."\r
+tags: [geography, american-empire, earth]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies."\r
+`,nf=`id: american-history\r
+name: "American History"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The history of the United States and the American Empire that replaced it."\r
+tags: [history, american-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it."\r
+`,rf=`id: amharic-written\r
+name: "Amharic (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, amharic, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: amharic\r
+effect: "This character can read and write the Amharic language."\r
+`,af=`id: amharic\r
+name: "Amharic (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, amharic, earth]\r
+category: knowledge\r
+types: [language]\r
+language: amharic\r
+effect: "This character is conversational in the Amharic language and can speak it."\r
+`,of=`id: animal-lore\r
+name: "Animal Lore"\r
+status: draft\r
+plane: any\r
+summary: "Common animals: their habits, needs, dangers and uses."\r
+tags: [animals, nature]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, intuition: 2 }\r
+effect: "This character has knowledge of animals and can be assumed to be familiar with the habits, needs, dangers and uses of common domestic and wild animals."\r
+`,sf=`id: antiluna\r
+name: "Antiluna"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "The SDU’s colony in high Earth orbit."\r
+tags: [colony, orbit, sdu]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Antiluna space station and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,cf=`id: arabic-written\r
+name: "Arabic (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, arabic, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: arabic\r
+effect: "This character can read and write the Arabic language."\r
+`,lf=`id: arabic\r
+name: "Arabic (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, arabic, earth]\r
+category: knowledge\r
+types: [language]\r
+language: arabic\r
+effect: "This character is conversational in the Arabic language and can speak it."\r
+`,uf=`id: architecture\r
+name: "Architecture"\r
+status: draft\r
+plane: any\r
+summary: "How buildings and bridges are designed, built and brought down."\r
+tags: [building, masonry, engineering]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of architecture and can be assumed to be familiar with building styles, structural design and construction methods."\r
+`,df=`id: aristocracy\r
+name: Aristocracy\r
+status: placeholder\r
+plane: isekai\r
+summary: "The nobility of Isekai’s kingdoms: titles, ranks and who’s who."\r
+tags: [nobility, court]\r
+category: knowledge\r
+minStats: { memory: 3, demeanor: 3 }\r
+effect: "This character has knowledge of the aristocracy and can be assumed to be familiar with the nobles, titles, and ranks of the kingdoms surrounding the switch port on Isekai."\r
+`,ff=`id: ark-life\r
+name: "Ark Life"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Living and working aboard a drifting Ark, from the air recyclers to the corridors."\r
+tags: [ark, space, urban]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 1, intuition: 2 }\r
+effect: "This character has knowledge of life aboard Arks and can be assumed to be familiar with navigating their corridors and cultures."\r
+`,pf=`id: ark-new-york\r
+name: "Ark New York"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The Empire’s capital Ark and the absentee Emperor’s court aboard it."\r
+tags: [ark, new-york, american-empire]\r
+lore: new-york\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark New York and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,mf=`id: art-history\r
+name: "Art History"\r
+status: draft\r
+plane: any\r
+summary: "Artists, movements and famous works, and what they are worth."\r
+tags: [art, culture, history]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of art history and can be assumed to be familiar with notable artists, movements and works and their value."\r
+`,hf=`id: artificial-intelligence\r
+name: "Artificial Intelligence"\r
+status: placeholder\r
+plane: earth\r
+summary: "How AI Cores and lesser machine minds are built, trained and kept running."\r
+tags: [ai, technology, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of artificial intelligence and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
+`,gf=`id: asteroid-mining\r
+name: "Asteroid Mining"\r
+status: draft\r
+plane: earth\r
+summary: "Finding, claiming and working asteroids for ore and ice."\r
+tags: [mining, space, asteroid]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of asteroid mining and can be assumed to be familiar with how asteroids are surveyed, claimed, and worked."\r
+`,J=`id: bandits-and-brigands\r
+name: "Bandits & Brigands"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Who robs the roads of Dreft, and how."\r
+tags: [bandits, crime, roads]\r
+category: knowledge\r
+minStats: { memory: 2, intuition: 2 }\r
+effect: "This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places."\r
+`,_f=`id: bengali-written\r
+name: "Bengali (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, bengali, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: bengali\r
+effect: "This character can read and write the Bengali language."\r
+`,vf=`id: bengali\r
+name: "Bengali (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, bengali, earth]\r
+category: knowledge\r
+types: [language]\r
+language: bengali\r
+effect: "This character is conversational in the Bengali language and can speak it."\r
+`,yf=`id: biology\r
+name: "Biology"\r
+status: draft\r
+plane: any\r
+summary: "Living things: how they grow, work, sicken and die."\r
+tags: [science, biology, life]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of biology and can be assumed to be familiar with how living things grow, function, reproduce and interact."\r
+`,bf=`id: boneyard\r
+name: "Boneyard"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "Boneyard, one of the Union’s Arks."\r
+tags: [ark, sdu]\r
+lore: boneyard\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark Boneyard and can be assumed to be familiar with the people, places, and customs aboard it."\r
+`,xf=`id: bureaucracy\r
+name: "Bureaucracy"\r
+status: draft\r
+plane: any\r
+summary: "Officialdom: forms, permits, departments, and how to get anything done through them."\r
+tags: [bureaucracy, government, paperwork]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of bureaucracy and can be assumed to be familiar with how officials and departments work, which forms and permits are needed, and who to ask."\r
+`,Sf=`id: burmese-written\r
+name: "Burmese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, burmese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: burmese\r
+effect: "This character can read and write the Burmese language."\r
+`,Cf=`id: burmese\r
+name: "Burmese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, burmese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: burmese\r
+effect: "This character is conversational in the Burmese language and can speak it."\r
+`,wf=`id: cantonese-written\r
+name: "Cantonese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, cantonese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: cantonese\r
+effect: "This character can read and write the Cantonese language."\r
+`,Tf=`id: cantonese\r
+name: "Cantonese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, cantonese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: cantonese\r
+effect: "This character is conversational in the Cantonese language and can speak it."\r
+`,Ef=`id: caravan-routes\r
+name: Caravan Routes\r
+status: placeholder\r
+plane: any\r
+summary: "The people, places, and routes caravans take to and from their destinations."\r
+tags: [caravan, trade, travel]\r
+category: knowledge\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of the caravan trade and can be assumed to be familiar with the companies, routes, and oases it uses."\r
+choices:\r
+  - choose: 1\r
+    from: place\r
+    note: "Where the caravan routes run"\r
+    perRank: false\r
+`,Df=`id: centafrica\r
+name: "Centafrica"\r
+status: draft\r
+plane: earth\r
+region: centafrica\r
+summary: "Centafrica: its federal democracy, its storied universities and the unreconciled history of its founding."\r
+tags: [centafrica, politics]\r
+lore: centafrica\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Centafrica and can be assumed to be familiar with its customs, politics, and territories."\r
+`,Of=`id: centafrican-law\r
+name: "Centafrican Law"\r
+status: draft\r
+plane: earth\r
+region: centafrica\r
+summary: "The laws of Centafrica’s federal democratic republic and how they’re enforced."\r
+tags: [law, centafrica]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Centafrican law and can be assumed to be familiar with the laws and courts of Centafrica."\r
+`,kf=`id: chemistry\r
+name: "Chemistry"\r
+status: draft\r
+plane: any\r
+summary: "What things are made of and how they react."\r
+tags: [science, chemistry]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of chemistry and can be assumed to be familiar with common substances, how they react, and how to handle them safely."\r
+`,Af=`id: chinese-imperial-law\r
+name: "Chinese Imperial Law"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The laws of the Empire of China, written and as the syndicates actually apply them."\r
+tags: [law, chinese-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."\r
+`,jf=`id: coastal-trade\r
+name: Coastal Trade\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The goods, routes and traders of Dreft’s western coast."\r
+tags: [trade, coast, merchant]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of coastal trade on Isekai and can be assumed to be familiar with its ports, products, and dangers."\r
+`,Mf=`id: commerce\r
+name: "Commerce"\r
+status: draft\r
+plane: any\r
+summary: "Trade and business: markets, prices, contracts and money."\r
+tags: [trade, business, money]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of commerce and can be assumed to be familiar with how markets and businesses work, fair prices, contracts and the movement of money."\r
+`,Nf=`id: computer-systems\r
+name: "Computer Systems"\r
+status: draft\r
+plane: earth\r
+summary: "The networks, software and hardware that run the settled systems."\r
+tags: [computers, technology, networks]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of computer systems and can be assumed to be familiar with common networks, software and hardware and how they are secured."\r
+`,Pf=`id: countryside-lore\r
+name: Countryside Lore\r
+status: placeholder\r
+plane: any\r
+summary: "The ways of the countryside, away from the cities and trading posts."\r
+tags: [rural, folklore, folk]\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the local countryside and can be assumed to be familiar with its people, places, and customs."\r
+choices:\r
+  - choose: 1\r
+    from: place\r
+    note: "Which countryside"\r
+    perRank: false\r
+`,Ff=`id: court-etiquette\r
+name: Court Etiquette\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: How to behave at the royal court.\r
+tags: [court, nobility, etiquette]\r
+category: knowledge\r
+minStats: { memory: 2, demeanor: 3 }\r
+effect: "This character has knowledge of courtly etiquette and can be assumed to be familiar with the rules and manners expected in the royal halls of Isekai."\r
+`,If=`id: criminal-underworld\r
+name: "Criminal Underworld"\r
+status: draft\r
+plane: any\r
+summary: "The gangs, fences and smugglers who work outside the law, and the rules they keep among themselves."\r
+tags: [crime, underworld, streets]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them."\r
+`,Lf=`id: cryptography\r
+name: "Cryptography"\r
+status: draft\r
+plane: any\r
+summary: "Codes and ciphers: making them, and breaking them."\r
+tags: [codes, secrets, spy]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 4 }\r
+effect: "This character has knowledge of cryptography and can be assumed to be familiar with common codes and ciphers and the methods used to make and break them."\r
+`,Rf=`id: cybernetics\r
+name: "Cybernetics"\r
+status: placeholder\r
+plane: earth\r
+summary: "Implants, prosthetics and the medicine of joining people to machines."\r
+tags: [cybernetics, technology, medicine]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of cybernetics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
+`,zf=`id: diplomatic-protocol\r
+name: "Diplomatic Protocol"\r
+status: draft\r
+plane: any\r
+summary: "The rules of formal meetings between powers: precedence, ceremony and what not to say."\r
+tags: [diplomacy, etiquette, politics]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, empathy: 3 }\r
+effect: "This character has knowledge of diplomatic protocol and can be assumed to be familiar with the ceremonies, forms of address and unwritten rules of formal diplomacy."\r
+`,Bf=`id: dreft\r
+name: Dreft\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The Kingdom of Dreft: its regions, its crown and its customs."\r
+tags: [kingdom, dreft]\r
+lore: dreft\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Kingdom of Dreft and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
+`,Vf=`id: dreftan-written\r
+name: "Dreftan (Written)"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The common language of Dreft."\r
+tags: [language, dreft, writing]\r
+category: knowledge\r
+types: [language]\r
+language: dreftan\r
+effect: This character can read and write the Dreftan language.\r
+`,Hf=`id: dreftan\r
+name: "Dreftan (Spoken)"\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The common language of Dreft."\r
+tags: [language, dreft]\r
+category: knowledge\r
+types: [language]\r
+language: dreftan\r
+effect: This character is conversational in the Dreftan language and can speak it.\r
+`,Uf=`id: dreftian-law\r
+name: Dreftian Law\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: The laws of the Kingdom of Dreft and how they’re enforced.\r
+tags: [law, dreft]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Dreftian law and can be assumed to be familiar with the laws of the Kingdom of Dreft and how they’re enforced."\r
+`,Wf=`id: dutch-written\r
+name: "Dutch (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, dutch, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: dutch\r
+effect: "This character can read and write the Dutch language."\r
+`,Y=`id: dutch\r
+name: "Dutch (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, dutch, earth]\r
+category: knowledge\r
+types: [language]\r
+language: dutch\r
+effect: "This character is conversational in the Dutch language and can speak it."\r
+`,Gf=`id: dwarvish-runes-written\r
+name: "Dwarvish Runes (Written)"\r
+status: draft\r
+plane: isekai\r
+summary: "The runes Dwarvish peoples write in."\r
+tags: [language, dwarvish, writing, site-example]\r
+category: knowledge\r
+types: [language]\r
+language: dwarvish-runes\r
+minStats: { memory: 3, intuition: 5 }\r
+effect: "This character can read and write Dwarvish Runes."\r
+`,Kf=`# Pairs with Dwarvish Runes (Written).\r
+id: dwarvish\r
+name: "Dwarvish (Spoken)"\r
+status: draft\r
+plane: isekai\r
+summary: "The spoken tongue that Dwarvish Runes are written in."\r
+tags: [language, dwarvish, isekai]\r
+category: knowledge\r
+types: [language]\r
+language: dwarvish-runes\r
+effect: "This character is conversational in the Dwarvish language and can speak it."\r
+`,qf=`id: earth-baseline-customs\r
+name: Earth Baseline Customs\r
+status: placeholder\r
+plane: earth\r
+summary: How people from Earth Baseline expect things to be done.\r
+tags: [earth, customs, foreigners]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 1 }\r
+effect: "This character has knowledge of Earth baseline customs and can be assumed to be familiar with how people across the settled systems expect things to be done."\r
+`,Jf=`id: earth-baseline-technology\r
+name: Earth Baseline Technology\r
+status: placeholder\r
+plane: earth\r
+summary: The machines and devices of Earth Baseline.\r
+tags: [earth, technology]\r
+category: knowledge\r
+minStats: { memory: 1 }\r
+effect: "This character has knowledge of Earth baseline technology and can be assumed to be familiar with the machines and devices common across the settled systems."\r
+`,Yf=`id: ecology\r
+name: "Ecology"\r
+status: draft\r
+plane: any\r
+summary: "Ecosystems, climate and how damaged land is restored."\r
+tags: [ecology, science, nature]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of ecology and can be assumed to be familiar with how ecosystems work and how damaged land is restored."\r
+`,Xf=`id: elemental-magics\r
+name: "Elemental Magics"\r
+status: draft\r
+plane: isekai\r
+summary: "The theory and history of Elemental Magics."\r
+tags: [magic, elemental, site-example]\r
+category: knowledge\r
+# On the Magic list: only a character with Magical Heritage can pick it.\r
+list: magic\r
+ranked: true\r
+minStats: { memory: 3, intuition: 5 }\r
+effect: "This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history."\r
+`,Zf=`id: engineering\r
+name: "Engineering"\r
+status: draft\r
+plane: any\r
+summary: "How machines, structures and systems are designed and kept running."\r
+tags: [engineering, technology, building]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 4 }\r
+effect: "This character has knowledge of engineering and can be assumed to be familiar with how machines, structures and systems are designed, built, maintained and broken."\r
+`,Qf=`id: english-written\r
+name: "English (Written)"\r
+status: placeholder\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, english, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: english\r
+effect: This character can read and write the English language.\r
+`,$f=`id: english\r
+name: "English (Spoken)"\r
+status: placeholder\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, english, earth]\r
+category: knowledge\r
+types: [language]\r
+language: english\r
+effect: This character is conversational in the English language and can speak it.\r
+`,ep=`id: exotic-materials\r
+name: "Exotic Materials"\r
+status: placeholder\r
+plane: earth\r
+summary: "The exotic materials paraphysics depends on: what they are, where they come from and what they do."\r
+tags: [exotic-materials, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of exotic materials and can be assumed to be familiar with their uses, prices, and the rough paraphysical concepts by which they operate."\r
+`,tp=`id: farming\r
+name: Farming\r
+status: placeholder\r
+plane: any\r
+summary: "Crops, livestock and the farming year."\r
+tags: [farming, rural]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, endurance: 2 }\r
+effect: "This character has knowledge of farming and can be assumed to be familiar with the technologies, techniques, and lifestyles associated with the practice."\r
+`,np=`id: filipino-written\r
+name: "Filipino (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, filipino, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: filipino\r
+effect: "This character can read and write the Filipino language."\r
+`,rp=`id: filipino\r
+name: "Filipino (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, filipino, earth]\r
+category: knowledge\r
+types: [language]\r
+language: filipino\r
+effect: "This character is conversational in the Filipino language and can speak it."\r
+`,X=`id: french-written\r
+name: "French (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union and Centafrica."\r
+tags: [language, french, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: french\r
+effect: "This character can read and write the French language."\r
+`,ip=`id: french\r
+name: "French (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union and Centafrica."\r
+tags: [language, french, earth]\r
+category: knowledge\r
+types: [language]\r
+language: french\r
+effect: "This character is conversational in the French language and can speak it."\r
+`,ap=`id: gambling\r
+name: "Gambling"\r
+status: draft\r
+plane: any\r
+summary: "Games of chance: the odds, the tells, and the cheats."\r
+tags: [gambling, games, underworld]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, intuition: 3 }\r
+effect: "This character has knowledge of gambling and can be assumed to be familiar with common games of chance, their odds, and the tricks cheats use."\r
+`,op=`id: geography\r
+name: "Geography"\r
+status: draft\r
+plane: any\r
+summary: "The lay of the land: regions, cities, routes and the people who live along them."\r
+tags: [geography, travel, places]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of geography and can be assumed to be familiar with the regions, cities, terrain and routes of the places they have lived and traveled."\r
+`,sp=`id: german-written\r
+name: "German (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, german, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: german\r
+effect: "This character can read and write the German language."\r
+`,cp=`id: german\r
+name: "German (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, german, earth]\r
+category: knowledge\r
+types: [language]\r
+language: german\r
+effect: "This character is conversational in the German language and can speak it."\r
+`,lp=`id: glintl\r
+name: Glintl\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: Knowing your way around the trading port of Glintl.\r
+tags: [city, port, guwain]\r
+lore: glintl\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the trading port of Glintl and can be assumed to be familiar with the peoples, places, and customs of the city."\r
+`,up=`id: gujarati-written\r
+name: "Gujarati (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, gujarati, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: gujarati\r
+effect: "This character can read and write the Gujarati language."\r
+`,dp=`id: gujarati\r
+name: "Gujarati (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, gujarati, earth]\r
+category: knowledge\r
+types: [language]\r
+language: gujarati\r
+effect: "This character is conversational in the Gujarati language and can speak it."\r
+`,fp=`id: hausa-written\r
+name: "Hausa (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, hausa, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: hausa\r
+effect: "This character can read and write the Hausa language."\r
+`,pp=`id: hausa\r
+name: "Hausa (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, hausa, earth]\r
+category: knowledge\r
+types: [language]\r
+language: hausa\r
+effect: "This character is conversational in the Hausa language and can speak it."\r
+`,mp=`id: heraldry\r
+name: "Heraldry"\r
+status: draft\r
+plane: any\r
+summary: "The arms, mottos and lineages of noble houses, and what they say about who you are talking to."\r
+tags: [nobility, heraldry, court]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of heraldry and can be assumed to be familiar with the arms, colors and lineages of noble houses and orders."\r
+`,hp=`id: herbalism\r
+name: Herbalism\r
+status: placeholder\r
+plane: any\r
+summary: "Plants and what they do for, and to, people."\r
+tags: [herbs, healing, plants]\r
+category: knowledge\r
+minStats: { memory: 3, intuition: 3 }\r
+effect: "This character has knowledge of herbalism and can be assumed to be familiar with the plants, techniques, and precautions involved with the practice."\r
+`,gp=`id: high-society\r
+name: "High Society"\r
+status: draft\r
+plane: any\r
+summary: "The world of the rich and well-connected: their manners, fashions, scandals and parties."\r
+tags: [society, wealth, social]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, empathy: 3 }\r
+effect: "This character has knowledge of high society and can be assumed to be familiar with the manners, fashions, families and scandals of the wealthy and powerful."\r
+`,_p=`id: hindi-written\r
+name: "Hindi (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India and Kashgar."\r
+tags: [language, hindi, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: hindi\r
+effect: "This character can read and write the Hindi language."\r
+`,vp=`id: hindi\r
+name: "Hindi (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India and Kashgar."\r
+tags: [language, hindi, earth]\r
+category: knowledge\r
+types: [language]\r
+language: hindi\r
+effect: "This character is conversational in the Hindi language and can speak it."\r
+`,yp=`id: history\r
+name: "History"\r
+status: draft\r
+plane: any\r
+summary: "The broad sweep of the past: wars, dynasties, discoveries and how the present came to be."\r
+tags: [history, scholar]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4 }\r
+effect: "This character has knowledge of history and can be assumed to be familiar with the major events, people and turning points of their world’s past."\r
+`,bp=`id: imperial-law\r
+name: "Imperial Law"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The American Empire’s legal code, its courts and how they’re enforced."\r
+tags: [law, american-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories."\r
+`,xp=`id: imperial-politics\r
+name: "Imperial Politics"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The Emperor, the Prince Regent, the Senate and who is feuding with whom."\r
+tags: [politics, american-empire, senate]\r
+lore: american-empire\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Imperial politics and can be assumed to be familiar with the Emperor, the Prince Regent, the Senate, and their feuds."\r
+`,Sp=`id: indian-law\r
+name: "Indian Law"\r
+status: draft\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "The laws of the Kingdom of India, set by its crown and its temples, and how they’re enforced."\r
+tags: [law, india]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Indian law and can be assumed to be familiar with the laws and courts of the Kingdom of India."\r
+`,Cp=`id: indian-theology\r
+name: "Indian Theology"\r
+status: draft\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "The land of 10,000 gods: the faiths of India and the theocracy that rules in their name."\r
+tags: [religion, india]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Indian theology and can be assumed to be familiar with the gods, temples, and rites of the Kingdom of India."\r
+`,wp=`id: indonesian-written\r
+name: "Indonesian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, indonesian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: indonesian\r
+effect: "This character can read and write the Indonesian language."\r
+`,Tp=`id: indonesian\r
+name: "Indonesian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, indonesian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: indonesian\r
+effect: "This character is conversational in the Indonesian language and can speak it."\r
+`,Ep=`id: interplanar-law\r
+name: "Interplanar Law"\r
+status: placeholder\r
+plane: earth\r
+summary: "The law of extraplanar beings: the treatment of specimens, the legal status of parasapients, and who counts as a person in which nation."\r
+tags: [law, parasapients, rights, immigration]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, empathy: 3 }\r
+effect: "This character has knowledge of interplanar law and can be assumed to be familiar with the laws governing extraplanar beings, including the treatment of specimens and the legal status of parasapients."\r
+`,Dp=`id: interplanar-relations\r
+name: "Interplanar Relations"\r
+status: placeholder\r
+plane: earth\r
+summary: "The diplomatic and business ties linking nations separated by entire realities."\r
+tags: [diplomacy, politics, trade, parasapients]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, persuasion: 3 }\r
+effect: "This character has knowledge of interplanar relations and can be assumed to be familiar with the planes, societies, and laws involved with contact between parasapients and representatives of Earth baseline."\r
+`,Op=`id: italian-written\r
+name: "Italian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, italian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: italian\r
+effect: "This character can read and write the Italian language."\r
+`,kp=`id: italian\r
+name: "Italian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, italian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: italian\r
+effect: "This character is conversational in the Italian language and can speak it."\r
+`,Ap=`id: japanese-written\r
+name: "Japanese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, japanese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: japanese\r
+effect: "This character can read and write the Japanese language."\r
+`,jp=`id: japanese\r
+name: "Japanese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, japanese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: japanese\r
+effect: "This character is conversational in the Japanese language and can speak it."\r
+`,Mp=`id: javanese-written\r
+name: "Javanese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, javanese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: javanese\r
+effect: "This character can read and write the Javanese language."\r
+`,Np=`id: javanese\r
+name: "Javanese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, javanese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: javanese\r
+effect: "This character is conversational in the Javanese language and can speak it."\r
+`,Pp=`id: kannada-written\r
+name: "Kannada (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, kannada, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: kannada\r
+effect: "This character can read and write the Kannada language."\r
+`,Fp=`id: kannada\r
+name: "Kannada (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, kannada, earth]\r
+category: knowledge\r
+types: [language]\r
+language: kannada\r
+effect: "This character is conversational in the Kannada language and can speak it."\r
+`,Ip=`id: karsef\r
+name: Karsef\r
+status: placeholder\r
+plane: isekai\r
+summary: The land across the Corsine Mountains from Dreft.\r
+tags: [karsef, border, foreign]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Kingdom of Karsef and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
+`,Lp=`id: kashgar-mindworks\r
+name: "Kashgar Mindworks"\r
+status: placeholder\r
+plane: earth\r
+region: kashgar\r
+summary: "The company that builds AI Cores, and how it works."\r
+tags: [ai, company, kashgar]\r
+lore: kashgar-mindworks\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Kashgar Mindworks and can be assumed to be familiar with its businesses, locations, employees, culture, and leadership."\r
+`,Rp=`id: kashgar\r
+name: "Kashgar"\r
+status: placeholder\r
+plane: earth\r
+region: kashgar\r
+summary: "Kashgar, the largest Ark in the settled systems and the heart of the AI diaspora: its decks, its politics and its people."\r
+tags: [kashgar, ark, ai]\r
+lore: kashgar\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark Kashgar and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,zp=`id: kazakh-written\r
+name: "Kazakh (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, kazakh, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: kazakh\r
+effect: "This character can read and write the Kazakh language."\r
+`,Bp=`id: kazakh\r
+name: "Kazakh (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, kazakh, earth]\r
+category: knowledge\r
+types: [language]\r
+language: kazakh\r
+effect: "This character is conversational in the Kazakh language and can speak it."\r
+`,Vp=`id: khmer-written\r
+name: "Khmer (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, khmer, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: khmer\r
+effect: "This character can read and write the Khmer language."\r
+`,Hp=`id: khmer\r
+name: "Khmer (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, khmer, earth]\r
+category: knowledge\r
+types: [language]\r
+language: khmer\r
+effect: "This character is conversational in the Khmer language and can speak it."\r
+`,Up=`id: kinyarwanda-written\r
+name: "Kinyarwanda (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, kinyarwanda, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: kinyarwanda\r
+effect: "This character can read and write the Kinyarwanda language."\r
+`,Wp=`id: kinyarwanda\r
+name: "Kinyarwanda (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, kinyarwanda, earth]\r
+category: knowledge\r
+types: [language]\r
+language: kinyarwanda\r
+effect: "This character is conversational in the Kinyarwanda language and can speak it."\r
+`,Gp=`id: korean-written\r
+name: "Korean (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, korean, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: korean\r
+effect: "This character can read and write the Korean language."\r
+`,Kp=`id: korean\r
+name: "Korean (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, korean, earth]\r
+category: knowledge\r
+types: [language]\r
+language: korean\r
+effect: "This character is conversational in the Korean language and can speak it."\r
+`,qp=`id: kyrgyz-written\r
+name: "Kyrgyz (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, kyrgyz, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: kyrgyz\r
+effect: "This character can read and write the Kyrgyz language."\r
+`,Jp=`id: kyrgyz\r
+name: "Kyrgyz (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, kyrgyz, earth]\r
+category: knowledge\r
+types: [language]\r
+language: kyrgyz\r
+effect: "This character is conversational in the Kyrgyz language and can speak it."\r
+`,Yp=`id: lao-written\r
+name: "Lao (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, lao, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: lao\r
+effect: "This character can read and write the Lao language."\r
+`,Xp=`id: lao\r
+name: "Lao (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, lao, earth]\r
+category: knowledge\r
+types: [language]\r
+language: lao\r
+effect: "This character is conversational in the Lao language and can speak it."\r
+`,Zp=`id: law-enforcement\r
+name: "Law Enforcement"\r
+status: draft\r
+plane: any\r
+summary: "How police and guards work: procedures, patrols, evidence and arrests."\r
+tags: [law, police, enforcement]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of law enforcement and can be assumed to be familiar with police and guard procedures, how evidence is handled, and how arrests and investigations proceed."\r
+`,Qp=`id: legal-systems\r
+name: "Legal Systems"\r
+status: draft\r
+plane: any\r
+summary: "How laws are made, courts run, and cases won or lost."\r
+tags: [law, courts]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3 }\r
+effect: "This character has knowledge of legal systems and can be assumed to be familiar with how laws are written and enforced, how courts work, and common legal procedures."\r
+`,$p=`id: lingala-written\r
+name: "Lingala (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica and Xanthus."\r
+tags: [language, lingala, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: lingala\r
+effect: "This character can read and write the Lingala language."\r
+`,em=`id: lingala\r
+name: "Lingala (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica and Xanthus."\r
+tags: [language, lingala, earth]\r
+category: knowledge\r
+types: [language]\r
+language: lingala\r
+effect: "This character is conversational in the Lingala language and can speak it."\r
+`,tm=`id: liquid-democracy\r
+name: "Liquid Democracy"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Tetra’s Liquid Democracy: delegated votes, ward representatives and the Council of 11."\r
+tags: [tetra, politics, liquid-democracy, votes]\r
+lore: tetra\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Tetra’s Liquid Democracy and can be assumed to be familiar with its delegated votes, ward representatives, and the Council of 11."\r
+`,nm=`id: literature\r
+name: "Literature"\r
+status: draft\r
+plane: any\r
+summary: "Books, poems, plays and stories, and the ideas they carry."\r
+tags: [literature, culture, scholar]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of literature and can be assumed to be familiar with famous works, authors, forms and the ideas they made popular."\r
+`,rm=`id: local-folklore\r
+name: Local Folklore\r
+status: placeholder\r
+plane: any\r
+summary: "The stories, superstitions and old warnings of a region."\r
+tags: [folklore, rural]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the local folklore and can be assumed to be familiar with its history, places, rumors, and taboos."\r
+choices:\r
+  - choose: 1\r
+    from: place\r
+    note: "Which region's folklore"\r
+    perRank: false\r
 `,im=`id: local-history
 name: "Local History"
 status: draft
@@ -3862,271 +3862,271 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."
-`,am=`id: magic-on-isekai
-name: Magic on Isekai
-status: placeholder
-plane: isekai
-summary: How magic works on Isekai.
-tags: [magic]
-lore: isekai-magic
-category: knowledge
-# On the Magic list: only a character with Magical Heritage can pick it.
-list: magic
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of the magic on Isekai and can be assumed to be familiar with the philosophies, cultures, methods, and laws related to its practice."
-`,om=`id: malay-written
-name: "Malay (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, malay, earth, writing]
-category: knowledge
-types: [language]
-language: malay
-effect: "This character can read and write the Malay language."
-`,sm=`id: malay
-name: "Malay (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, malay, earth]
-category: knowledge
-types: [language]
-language: malay
-effect: "This character is conversational in the Malay language and can speak it."
-`,cm=`id: malayalam-written
-name: "Malayalam (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, malayalam, earth, writing]
-category: knowledge
-types: [language]
-language: malayalam
-effect: "This character can read and write the Malayalam language."
-`,lm=`id: malayalam
-name: "Malayalam (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, malayalam, earth]
-category: knowledge
-types: [language]
-language: malayalam
-effect: "This character is conversational in the Malayalam language and can speak it."
-`,um=`id: mandarin-written
-name: "Mandarin (Written)"
-status: placeholder
-plane: earth
-summary: "The language of the Empire of China."
-tags: [language, mandarin, earth, writing]
-category: knowledge
-types: [language]
-language: mandarin
-effect: This character can read and write the Mandarin language.
-`,dm=`id: mandarin
-name: "Mandarin (Spoken)"
-status: placeholder
-plane: earth
-summary: "The language of the Empire of China."
-tags: [language, mandarin, earth]
-category: knowledge
-types: [language]
-language: mandarin
-effect: This character is conversational in the Mandarin language and can speak it.
-`,fm=`id: marathi-written
-name: "Marathi (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, marathi, earth, writing]
-category: knowledge
-types: [language]
-language: marathi
-effect: "This character can read and write the Marathi language."
-`,pm=`id: marathi
-name: "Marathi (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, marathi, earth]
-category: knowledge
-types: [language]
-language: marathi
-effect: "This character is conversational in the Marathi language and can speak it."
-`,mm=`id: mathematics
-name: "Mathematics"
-status: placeholder
-plane: any
-summary: "Mathematics and its fields of study."
-tags: [mathematics, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of mathematics and can be assumed to be familiar with mathematical fields of study."
-`,hm=`id: medicine
-name: "Medicine"
-status: draft
-plane: any
-summary: "How bodies work, how they fail, and how to treat them."
-tags: [medicine, healing, science]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3 }
-effect: "This character has knowledge of medicine and can be assumed to be familiar with anatomy, common illnesses and injuries, and how they are treated."
-`,gm=`id: metallurgy
-name: "Metallurgy"
-status: draft
-plane: any
-summary: "Metals and alloys: how they are smelted, worked and tempered."
-tags: [metal, smithing, craft]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of metallurgy and can be assumed to be familiar with common metals and alloys and how they are smelted, worked and tempered."
-`,_m=`id: military-tactics
-name: "Military Tactics"
-status: draft
-plane: any
-summary: "How battles are fought: formations, maneuvers and command."
-tags: [military, tactics, combat]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of military tactics and can be assumed to be familiar with formations, maneuvers, chains of command and how battles are fought."
-`,vm=`id: mongolian-written
-name: "Mongolian (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, mongolian, earth, writing]
-category: knowledge
-types: [language]
-language: mongolian
-effect: "This character can read and write the Mongolian language."
-`,ym=`id: mongolian
-name: "Mongolian (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, mongolian, earth]
-category: knowledge
-types: [language]
-language: mongolian
-effect: "This character is conversational in the Mongolian language and can speak it."
-`,bm=`id: monsters-of-isekai
-name: Monsters of Isekai
-status: placeholder
-plane: isekai
-summary: The monsters of Isekai and how to deal with them.
-tags: [monsters, hunting]
-lore: isekai-monsters
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the monsters of Isekai and can be assumed to be familiar with their names, territories, the goods that they can provide, and their strengths and weaknesses."
-`,xm=`id: mountaineering
-name: Mountaineering
-status: placeholder
-plane: any
-summary: "Climbing, and surviving, in high mountains."
-tags: [mountains, climbing, survival]
-category: knowledge
-ranked: true
-minStats: { memory: 3, endurance: 2 }
-effect: "This character has knowledge of mountaineering and can be assumed to be familiar with the preparation, dangers, and survival craft involved in trekking mountains."
-`,Sm=`id: music
-name: "Music"
-status: draft
-plane: any
-summary: "Musical theory, history and repertoire."
-tags: [music, culture, performance]
-category: knowledge
-ranked: true
-minStats: { memory: 2, intuition: 2 }
-effect: "This character has knowledge of music and can be assumed to be familiar with musical theory, well-known pieces and the traditions they come from."
-`,Cm=`id: navigation
-name: "Navigation"
-status: draft
-plane: any
-summary: "Finding the way: maps, stars, instruments and charts."
-tags: [navigation, travel, maps]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 3 }
-effect: "This character has knowledge of navigation and can be assumed to be familiar with reading maps, charts, stars and instruments, and plotting a course."
-`,wm=`id: nepali-written
-name: "Nepali (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, nepali, earth, writing]
-category: knowledge
-types: [language]
-language: nepali
-effect: "This character can read and write the Nepali language."
-`,Tm=`id: nepali
-name: "Nepali (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, nepali, earth]
-category: knowledge
-types: [language]
-language: nepali
-effect: "This character is conversational in the Nepali language and can speak it."
-`,Em=`id: new-columbia
-name: "New Columbia"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The Empire’s colony on Luna."
-tags: [luna, colony, american-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of New Columbia and can be assumed to be familiar with the peoples, places, and customs of the American Empire’s colony on Luna."
-`,Dm=`id: new-persia
-name: "New Persia"
-status: placeholder
-plane: earth
-region: sdu
-summary: "The SDU’s planar territory on Pairidaeza."
-tags: [planes, colony, sdu]
-lore: pairidaeza
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of New Persia and can be assumed to be familiar with the peoples, places, and customs of the SDU’s planar territory on Pairidaeza."
-`,Om=`id: noble-houses-of-dreft
-name: Noble Houses of Dreft
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Dreft’s noble houses, their histories and their feuds."
-tags: [nobility, politics, houses]
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the noble houses of Dreft and can be assumed to be familiar with their histories and feuds."
-`,km=`id: odia-written
-name: "Odia (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, odia, earth, writing]
-category: knowledge
-types: [language]
-language: odia
-effect: "This character can read and write the Odia language."
-`,Am=`id: odia
-name: "Odia (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, odia, earth]
-category: knowledge
-types: [language]
-language: odia
-effect: "This character is conversational in the Odia language and can speak it."
+`,am=`id: magic-on-isekai\r
+name: Magic on Isekai\r
+status: placeholder\r
+plane: isekai\r
+summary: How magic works on Isekai.\r
+tags: [magic]\r
+lore: isekai-magic\r
+category: knowledge\r
+# On the Magic list: only a character with Magical Heritage can pick it.\r
+list: magic\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of the magic on Isekai and can be assumed to be familiar with the philosophies, cultures, methods, and laws related to its practice."\r
+`,om=`id: malay-written\r
+name: "Malay (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, malay, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: malay\r
+effect: "This character can read and write the Malay language."\r
+`,sm=`id: malay\r
+name: "Malay (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, malay, earth]\r
+category: knowledge\r
+types: [language]\r
+language: malay\r
+effect: "This character is conversational in the Malay language and can speak it."\r
+`,cm=`id: malayalam-written\r
+name: "Malayalam (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, malayalam, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: malayalam\r
+effect: "This character can read and write the Malayalam language."\r
+`,lm=`id: malayalam\r
+name: "Malayalam (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, malayalam, earth]\r
+category: knowledge\r
+types: [language]\r
+language: malayalam\r
+effect: "This character is conversational in the Malayalam language and can speak it."\r
+`,um=`id: mandarin-written\r
+name: "Mandarin (Written)"\r
+status: placeholder\r
+plane: earth\r
+summary: "The language of the Empire of China."\r
+tags: [language, mandarin, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: mandarin\r
+effect: This character can read and write the Mandarin language.\r
+`,dm=`id: mandarin\r
+name: "Mandarin (Spoken)"\r
+status: placeholder\r
+plane: earth\r
+summary: "The language of the Empire of China."\r
+tags: [language, mandarin, earth]\r
+category: knowledge\r
+types: [language]\r
+language: mandarin\r
+effect: This character is conversational in the Mandarin language and can speak it.\r
+`,fm=`id: marathi-written\r
+name: "Marathi (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, marathi, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: marathi\r
+effect: "This character can read and write the Marathi language."\r
+`,pm=`id: marathi\r
+name: "Marathi (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, marathi, earth]\r
+category: knowledge\r
+types: [language]\r
+language: marathi\r
+effect: "This character is conversational in the Marathi language and can speak it."\r
+`,mm=`id: mathematics\r
+name: "Mathematics"\r
+status: placeholder\r
+plane: any\r
+summary: "Mathematics and its fields of study."\r
+tags: [mathematics, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of mathematics and can be assumed to be familiar with mathematical fields of study."\r
+`,hm=`id: medicine\r
+name: "Medicine"\r
+status: draft\r
+plane: any\r
+summary: "How bodies work, how they fail, and how to treat them."\r
+tags: [medicine, healing, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3 }\r
+effect: "This character has knowledge of medicine and can be assumed to be familiar with anatomy, common illnesses and injuries, and how they are treated."\r
+`,gm=`id: metallurgy\r
+name: "Metallurgy"\r
+status: draft\r
+plane: any\r
+summary: "Metals and alloys: how they are smelted, worked and tempered."\r
+tags: [metal, smithing, craft]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of metallurgy and can be assumed to be familiar with common metals and alloys and how they are smelted, worked and tempered."\r
+`,_m=`id: military-tactics\r
+name: "Military Tactics"\r
+status: draft\r
+plane: any\r
+summary: "How battles are fought: formations, maneuvers and command."\r
+tags: [military, tactics, combat]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of military tactics and can be assumed to be familiar with formations, maneuvers, chains of command and how battles are fought."\r
+`,vm=`id: mongolian-written\r
+name: "Mongolian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, mongolian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: mongolian\r
+effect: "This character can read and write the Mongolian language."\r
+`,ym=`id: mongolian\r
+name: "Mongolian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, mongolian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: mongolian\r
+effect: "This character is conversational in the Mongolian language and can speak it."\r
+`,bm=`id: monsters-of-isekai\r
+name: Monsters of Isekai\r
+status: placeholder\r
+plane: isekai\r
+summary: The monsters of Isekai and how to deal with them.\r
+tags: [monsters, hunting]\r
+lore: isekai-monsters\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the monsters of Isekai and can be assumed to be familiar with their names, territories, the goods that they can provide, and their strengths and weaknesses."\r
+`,xm=`id: mountaineering\r
+name: Mountaineering\r
+status: placeholder\r
+plane: any\r
+summary: "Climbing, and surviving, in high mountains."\r
+tags: [mountains, climbing, survival]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, endurance: 2 }\r
+effect: "This character has knowledge of mountaineering and can be assumed to be familiar with the preparation, dangers, and survival craft involved in trekking mountains."\r
+`,Sm=`id: music\r
+name: "Music"\r
+status: draft\r
+plane: any\r
+summary: "Musical theory, history and repertoire."\r
+tags: [music, culture, performance]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, intuition: 2 }\r
+effect: "This character has knowledge of music and can be assumed to be familiar with musical theory, well-known pieces and the traditions they come from."\r
+`,Cm=`id: navigation\r
+name: "Navigation"\r
+status: draft\r
+plane: any\r
+summary: "Finding the way: maps, stars, instruments and charts."\r
+tags: [navigation, travel, maps]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 3 }\r
+effect: "This character has knowledge of navigation and can be assumed to be familiar with reading maps, charts, stars and instruments, and plotting a course."\r
+`,wm=`id: nepali-written\r
+name: "Nepali (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, nepali, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: nepali\r
+effect: "This character can read and write the Nepali language."\r
+`,Tm=`id: nepali\r
+name: "Nepali (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, nepali, earth]\r
+category: knowledge\r
+types: [language]\r
+language: nepali\r
+effect: "This character is conversational in the Nepali language and can speak it."\r
+`,Em=`id: new-columbia\r
+name: "New Columbia"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The Empire’s colony on Luna."\r
+tags: [luna, colony, american-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of New Columbia and can be assumed to be familiar with the peoples, places, and customs of the American Empire’s colony on Luna."\r
+`,Dm=`id: new-persia\r
+name: "New Persia"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "The SDU’s planar territory on Pairidaeza."\r
+tags: [planes, colony, sdu]\r
+lore: pairidaeza\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of New Persia and can be assumed to be familiar with the peoples, places, and customs of the SDU’s planar territory on Pairidaeza."\r
+`,Om=`id: noble-houses-of-dreft\r
+name: Noble Houses of Dreft\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Dreft’s noble houses, their histories and their feuds."\r
+tags: [nobility, politics, houses]\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the noble houses of Dreft and can be assumed to be familiar with their histories and feuds."\r
+`,km=`id: odia-written\r
+name: "Odia (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, odia, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: odia\r
+effect: "This character can read and write the Odia language."\r
+`,Am=`id: odia\r
+name: "Odia (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, odia, earth]\r
+category: knowledge\r
+types: [language]\r
+language: odia\r
+effect: "This character is conversational in the Odia language and can speak it."\r
 `,jm=`id: orc-society
 name: "Orc Society"
 status: draft
@@ -4137,1578 +4137,1578 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."
-`,Mm=`id: oromo-written
-name: "Oromo (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, oromo, earth, writing]
-category: knowledge
-types: [language]
-language: oromo
-effect: "This character can read and write the Oromo language."
-`,Nm=`id: oromo
-name: "Oromo (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, oromo, earth]
-category: knowledge
-types: [language]
-language: oromo
-effect: "This character is conversational in the Oromo language and can speak it."
-`,Pm=`id: paraarcheology
-name: "Paraarcheology"
-status: placeholder
-plane: earth
-summary: "The ruins and remains that parasapient civilizations have left behind on other planes."
-tags: [parabiology, archeology, history, ruins]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of paraarcheology and can be assumed to be familiar with the skills, places, histories, and planar details associated with the study of archeology on other planes."
-`,Fm=`id: parabiology
-name: "Parabiology"
-status: placeholder
-plane: earth
-summary: "The study of extraplanar life in all its forms, and why so many planes hold any at all."
-tags: [parabiology, science, life]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2, empathy: 2 }
-effect: "This character has knowledge of parabiology and can be assumed to be familiar with the living organisms of other planes, and their vital processes, structures, functions, and growth."
-`,Im=`id: paraflora
-name: "Paraflora"
-status: placeholder
-plane: earth
-summary: "Extraplanar plants and the stranger things that fill a plant’s role, from flora floating in a sea of light on down."
-tags: [parabiology, plants, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2, empathy: 2 }
-effect: "This character has knowledge of paraflora and can be assumed to be familiar with extraplanar plants, including their ecologies, growth patterns, and the rough paraphysical concepts by which they may operate."
-`,Lm=`id: paraphysics
-name: "Paraphysics"
-status: placeholder
-plane: earth
-summary: "The science The Gift opened up: the theories that skirt the old limits of nature."
-tags: [paraphysics, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2, intuition: 2 }
-effect: "This character has knowledge of paraphysics and can be assumed to be familiar with paraphysical concepts, paraphysical effects, and axiomatic sciences."
-`,Rm=`id: parasapient-medicine
-name: "Parasapient Medicine"
-status: draft
-plane: earth
-summary: "Treating parasapient patients, whose bodies rarely work the way Earth Baseline medicine expects."
-tags: [medicine, parasapients, parabiology]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3, empathy: 2 }
-effect: "This character has knowledge of parasapient medicine and can be assumed to be familiar with the anatomy and common ailments of the parasapient peoples known to the settled systems, and how to treat them."
-`,zm=`id: parasapients
-name: "Parasapients"
-status: placeholder
-plane: earth
-summary: "The sapient peoples of other planes: their bodies, their cultures, and how they live alongside humanity."
-tags: [parabiology, parasapients, cultures, people]
-category: knowledge
-ranked: true
-minStats: { memory: 3, empathy: 3 }
-effect: "This character has knowledge of parasapients and can be assumed to be familiar with extraplanar sapients, including their cultures, diplomatic relations, and the rough paraphysical concepts by which they may operate."
-`,Bm=`id: parazoology
-name: "Parazoology"
-status: placeholder
-plane: earth
-summary: "Extraplanar animals: how they live, what they eat, and which ones eat people."
-tags: [parabiology, animals, creatures, science]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2, intuition: 2 }
-effect: "This character has knowledge of parazoology and can be assumed to be familiar with extraplanar creatures, including their habitats, needs, and the rough paraphysical concepts by which they may operate."
-`,Vm=`id: pataliputra
-name: "Pataliputra"
-status: draft
-plane: earth
-region: kingdom-of-india
-summary: "295/c/29 - “Pataliputra,” India’s planar capital and the largest planar colony ever attempted."
-tags: [india, planar, colony]
-lore: pataliputra
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Pataliputra and can be assumed to be familiar with the peoples, places, and customs of India’s planar capital."
-`,Hm=`id: pathology
-name: "Pathology"
-status: draft
-plane: any
-summary: "Disease: how it spreads, how it shows itself, and how it is stopped."
-tags: [medicine, disease, contagion]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3, intuition: 2 }
-effect: "This character has knowledge of pathology and can be assumed to be familiar with common diseases, how they spread and present, and how outbreaks are contained."
-`,Um=`id: persian-written
-name: "Persian (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, persian, earth, writing]
-category: knowledge
-types: [language]
-language: persian
-effect: "This character can read and write the Persian language."
-`,Wm=`id: persian
-name: "Persian (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, persian, earth]
-category: knowledge
-types: [language]
-language: persian
-effect: "This character is conversational in the Persian language and can speak it."
-`,Gm=`id: pharmacology
-name: "Pharmacology"
-status: draft
-plane: any
-summary: "Drugs and remedies: what they do, how much is safe, and what they do together."
-tags: [medicine, drugs, pharmacology]
-category: knowledge
-ranked: true
-minStats: { memory: 4, logic: 3 }
-effect: "This character has knowledge of pharmacology and can be assumed to be familiar with common drugs and remedies, their doses, side effects and interactions."
-`,Km=`id: physics
-name: "Physics"
-status: draft
-plane: any
-summary: "How the physical world works: motion, energy, light and matter."
-tags: [science, physics]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 4 }
-effect: "This character has knowledge of physics and can be assumed to be familiar with motion, energy, forces, light and matter, and the math that describes them."
-`,qm=`id: planar-exploration
-name: "Planar Exploration"
-status: placeholder
-plane: earth
-region: tetra
-summary: "How new planes are found, locked and opened, and who does the work."
-tags: [planes, exploration, tetra]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2, intuition: 2 }
-effect: "This character has knowledge of planar exploration and can be assumed to be familiar with the regulations, laws, dangers, and methods involved."
-`,Jm=`id: polish-written
-name: "Polish (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, polish, earth, writing]
-category: knowledge
-types: [language]
-language: polish
-effect: "This character can read and write the Polish language."
-`,Ym=`id: polish
-name: "Polish (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, polish, earth]
-category: knowledge
-types: [language]
-language: polish
-effect: "This character is conversational in the Polish language and can speak it."
-`,Xm=`id: politics
-name: "Politics"
-status: draft
-plane: any
-summary: "How power works: factions, alliances, elections, rivalries and who owes whom."
-tags: [politics, power, intrigue]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 3 }
-effect: "This character has knowledge of politics and can be assumed to be familiar with how power is won, held and traded, and the factions and figures that matter."
-`,Zm=`id: port-herminst
-name: Port Herminst
-status: placeholder
-plane: isekai
-region: dreft
-summary: Knowing your way around Dreft’s capital and biggest port.
-tags: [city, port, capital]
-lore: herminst
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Port Herminst and can be assumed to be familiar with the peoples, places, and customs of Dreft’s capital."
-`,Qm=`id: ports-and-stations
-name: "Ports and Stations"
-status: placeholder
-plane: earth
-summary: "How docks, customs and station traffic control work, and how to get through them."
-tags: [ports, stations, space]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the ports and stations of the settled systems and can be assumed to be familiar with the customs, regulations, industries, ships, and docks involved in trade."
-`,$m=`id: portuguese-written
-name: "Portuguese (Written)"
-status: draft
-plane: earth
-summary: "One of the languages of the Lunar Industrial Syndicate and its former South American nations."
-tags: [language, portuguese, earth, writing]
-category: knowledge
-types: [language]
-language: portuguese
-effect: "This character can read and write the Portuguese language."
-`,eh=`id: portuguese
-name: "Portuguese (Spoken)"
-status: draft
-plane: earth
-summary: "One of the languages of the Lunar Industrial Syndicate and its former South American nations."
-tags: [language, portuguese, earth]
-category: knowledge
-types: [language]
-language: portuguese
-effect: "This character is conversational in the Portuguese language and can speak it."
-`,th=`id: psychology
-name: "Psychology"
-status: draft
-plane: any
-summary: "The mind: how it works, how it breaks, and how it heals."
-tags: [medicine, mind, psychology]
-category: knowledge
-ranked: true
-minStats: { memory: 3, empathy: 4 }
-effect: "This character has knowledge of psychology and can be assumed to be familiar with how minds work, common mental illnesses, and the treatment of trauma and stress."
-`,nh=`id: punjabi-written
-name: "Punjabi (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, punjabi, earth, writing]
-category: knowledge
-types: [language]
-language: punjabi
-effect: "This character can read and write the Punjabi language."
-`,rh=`id: punjabi
-name: "Punjabi (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, punjabi, earth]
-category: knowledge
-types: [language]
-language: punjabi
-effect: "This character is conversational in the Punjabi language and can speak it."
-`,ih=`id: robotics
-name: "Robotics"
-status: placeholder
-plane: earth
-summary: "Drones, chassis and the machines that do the settled systems’ work."
-tags: [robotics, technology, machines]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of robotics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,ah=`id: romanian-written
-name: "Romanian (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, romanian, earth, writing]
-category: knowledge
-types: [language]
-language: romanian
-effect: "This character can read and write the Romanian language."
-`,oh=`id: romanian
-name: "Romanian (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union."
-tags: [language, romanian, earth]
-category: knowledge
-types: [language]
-language: romanian
-effect: "This character is conversational in the Romanian language and can speak it."
-`,sh=`id: russian-written
-name: "Russian (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union and the Ural Federation."
-tags: [language, russian, earth, writing]
-category: knowledge
-types: [language]
-language: russian
-effect: "This character can read and write the Russian language."
-`,ch=`id: russian
-name: "Russian (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Stellar Democratic Union and the Ural Federation."
-tags: [language, russian, earth]
-category: knowledge
-types: [language]
-language: russian
-effect: "This character is conversational in the Russian language and can speak it."
-`,lh=`id: sdu-law
-name: "Stellar Democratic Union Law"
-status: placeholder
-plane: earth
-region: tetra
-summary: "The laws of the Stellar Democratic Union and how they’re enforced."
-tags: [law, sdu, tetra]
-lore: stellar-democratic-union
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Stellar Democratic Union law and can be assumed to be familiar with the laws and courts of the Stellar Democratic Union."
-`,uh=`id: seafaring
-name: Seafaring
-status: placeholder
-plane: any
-summary: "Ships, sailing and life at sea."
-tags: [seafaring, sea]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 3 }
-effect: "This character has knowledge of seafaring and can be assumed to be familiar with the crew and operations of ships on the sea as well as the winds, currents, and seas of a given world."
-choices:
-  - choose: 1
-    from: place
-    note: "Which seas"
-    perRank: false
-`,dh=`id: security-systems
-name: "Security Systems"
-status: draft
-plane: earth
-summary: "Locks, alarms, cameras and checkpoints, and how they are run and beaten."
-tags: [security, technology, surveillance]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of security systems and can be assumed to be familiar with common locks, alarms, surveillance and access controls, and their weaknesses."
-`,fh=`id: shipping-lanes
-name: "Shipping Lanes"
-status: placeholder
-plane: earth
-summary: "The routes, schedules and checkpoints of cargo traffic between stations, ships and surfaces."
-tags: [shipping, trade, space]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the shipping lanes between stations, ships, and surfaces and can be assumed to be familiar with their routes, schedules, and checkpoints."
-`,ph=`id: sinhala-written
-name: "Sinhala (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, sinhala, earth, writing]
-category: knowledge
-types: [language]
-language: sinhala
-effect: "This character can read and write the Sinhala language."
-`,mh=`id: sinhala
-name: "Sinhala (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, sinhala, earth]
-category: knowledge
-types: [language]
-language: sinhala
-effect: "This character is conversational in the Sinhala language and can speak it."
-`,hh=`id: somali-written
-name: "Somali (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, somali, earth, writing]
-category: knowledge
-types: [language]
-language: somali
-effect: "This character can read and write the Somali language."
-`,gh=`id: somali
-name: "Somali (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica."
-tags: [language, somali, earth]
-category: knowledge
-types: [language]
-language: somali
-effect: "This character is conversational in the Somali language and can speak it."
-`,_h=`# Lore for Sorellion is still coming soon on the site.
-id: sorellion
-name: "Sorellion"
-status: draft
-plane: isekai
-summary: "The Kingdom of Sorellion, one of Dreft’s neighbors on Isekai."
-tags: [sorellion, kingdom, isekai]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Kingdom of Sorellion and can be assumed to be familiar with its people, places and customs."
-`,vh=`id: southeast-asia
-name: "Southeast Asia"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The Empire’s Southeast Asian territories, their peoples and their old borders."
-tags: [geography, chinese-empire, earth]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Empire of China’s Southeast Asian territories, their peoples, and their old borders."
-`,yh=`id: spacefaring
-name: "Spacefaring"
-status: draft
-plane: earth
-summary: "Living and working in space: vacuum, zero gravity, airlocks and life support."
-tags: [space, station, survival]
-category: knowledge
-ranked: true
-minStats: { memory: 3, intuition: 2 }
-effect: "This character has knowledge of spacefaring and can be assumed to be familiar with life in vacuum and zero gravity, airlocks, suits, life support, and what to do when they fail."
-`,bh=`id: spanish-written
-name: "Spanish (Written)"
-status: placeholder
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, spanish, earth, writing]
-category: knowledge
-types: [language]
-language: spanish
-effect: This character can read and write the Spanish language.
-`,xh=`id: spanish
-name: "Spanish (Spoken)"
-status: placeholder
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, spanish, earth]
-category: knowledge
-types: [language]
-language: spanish
-effect: This character is conversational in the Spanish language and can speak it.
-`,Sh=`id: starships
-name: "Starships"
-status: draft
-plane: earth
-summary: "The ships of the settled systems: their classes, makers, capabilities and quirks."
-tags: [starships, space, technology]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 2 }
-effect: "This character has knowledge of starships and can be assumed to be familiar with the classes, makers, capabilities and common faults of the starships of the settled systems."
-`,Ch=`id: succession-law
-name: Succession Law
-status: placeholder
-plane: isekai
-region: dreft
-summary: "Who inherits what, and who has a claim to the crown."
-tags: [law, succession, nobility]
-category: knowledge
-minStats: { memory: 6, persuasion: 2 }
-effect: "This character has knowledge of succession law and can be assumed to be familiar with who inherits what in Dreft and who has a claim to the crown."
-`,wh=`id: swahili-written
-name: "Swahili (Written)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica and Xanthus."
-tags: [language, swahili, earth, writing]
-category: knowledge
-types: [language]
-language: swahili
-effect: "This character can read and write the Swahili language."
-`,Th=`id: swahili
-name: "Swahili (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in Centafrica and Xanthus."
-tags: [language, swahili, earth]
-category: knowledge
-types: [language]
-language: swahili
-effect: "This character is conversational in the Swahili language and can speak it."
-`,Eh=`id: tamil-written
-name: "Tamil (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, tamil, earth, writing]
-category: knowledge
-types: [language]
-language: tamil
-effect: "This character can read and write the Tamil language."
-`,Dh=`id: tamil
-name: "Tamil (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, tamil, earth]
-category: knowledge
-types: [language]
-language: tamil
-effect: "This character is conversational in the Tamil language and can speak it."
-`,Oh=`id: telugu-written
-name: "Telugu (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, telugu, earth, writing]
-category: knowledge
-types: [language]
-language: telugu
-effect: "This character can read and write the Telugu language."
-`,kh=`id: telugu
-name: "Telugu (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, telugu, earth]
-category: knowledge
-types: [language]
-language: telugu
-effect: "This character is conversational in the Telugu language and can speak it."
-`,Ah=`id: tetra-frontiers-co
-name: Tetra Frontiers Co.
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The company that runs the switch port, and how it works."
-tags: [company, switch-port, tetra]
-lore: tetra-frontiers-co
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of Tetra Frontiers Co. and can be assumed to be familiar with its holdings, locations, employees, culture, and leadership."
-`,jh=`id: tetra
-name: "Tetra"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Ark Tetra: its wings, its people and how the station runs."
-tags: [tetra, ark, sdu]
-lore: tetra
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark Tetra and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,Mh=`id: thai-written
-name: "Thai (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, thai, earth, writing]
-category: knowledge
-types: [language]
-language: thai
-effect: "This character can read and write the Thai language."
-`,Nh=`id: thai
-name: "Thai (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, thai, earth]
-category: knowledge
-types: [language]
-language: thai
-effect: "This character is conversational in the Thai language and can speak it."
-`,Ph=`id: the-bureau-of-planar-management
-name: "The Bureau of Planar Management"
-status: draft
-plane: earth
-summary: "The Bureau that licenses, inspects and polices planar exploration across the settled systems."
-tags: [bureau, planes, law, tetra]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."
-`,Fh=`id: the-chinese-empire
-name: "The Empire of China"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The Empire of China: the Wuhan Dynasty, its territories and its corporate syndicates."
-tags: [chinese-empire, politics]
-lore: chinese-empire
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."
-`,Ih=`id: the-corporate-syndicates
-name: "The Corporate Syndicates"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The corporate syndicates that make up the Empire of China’s government, and their rivalries."
-tags: [corporate, politics, chinese-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Chinese corporate syndicates and can be assumed to be familiar with their people, ties, and industries."
-`,Lh=`id: the-corsine-pass
-name: The Corsine Pass
-status: placeholder
-plane: isekai
-region: dreft
-summary: The pass through the Corsine Mountains to Karsef.
-tags: [mountains, border, travel]
-category: knowledge
-ranked: true
-minStats: { memory: 2, endurance: 2 }
-effect: "This character has knowledge of the Corsine Pass on Isekai and can be assumed to be familiar with its passes, peoples, and dangers."
-`,Rh=`id: the-diplomatic-wing
-name: "The Diplomatic Wing"
-status: placeholder
-plane: earth
-region: tetra
-summary: "Ark Tetra’s Diplomatic Wing, its embassies and its envoys."
-tags: [tetra, diplomacy, politics]
-lore: diplomatic-wing
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Tetra’s Diplomatic Wing and can be assumed to be familiar with its diplomats, embassies, businesses, and security."
-`,zh=`id: the-drovus-empire
-name: The Drovus Empire
-status: placeholder
-plane: isekai
-summary: The empire that absorbed the Sunrise Princedoms.
-tags: [drovus, empire, foreign]
-lore: drovus-empire
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Drovus Empire and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,Bh=`id: the-explorers-lodge
-name: "The Explorers’ Lodge"
-status: placeholder
-plane: earth
-region: tetra
-summary: "The Explorers’ Lodge: its members, its rules and how expeditions get handed out."
-tags: [lodge, exploration, tetra]
-lore: explorers-lodge
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Explorers’ Lodge and can be assumed to be familiar with its members, its rules, and how expeditions are handed out."
-`,Vh=`id: the-free-american-states
-name: "The Free American States"
-status: draft
-plane: earth
-summary: "The fractious free-trade zone of independent states between the American Empire and the Union of Texas."
-tags: [free-american-states, earth, trade]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Free American States and can be assumed to be familiar with its member states, its trade and its border disputes."
-`,Hh=`id: the-imperial-military
-name: "The Imperial Military"
-status: placeholder
-plane: earth
-region: american-empire
-summary: "The Empire’s armed forces: their branches, ranks, bases and habits."
-tags: [military, american-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Imperial Military and can be assumed to be familiar with its branches, ranks, bases, and habits."
-`,Uh=`id: the-kingdom-of-india
-name: "The Kingdom of India"
-status: draft
-plane: earth
-region: kingdom-of-india
-summary: "The Kingdom of India: its royal house, its temples and the regreening of the subcontinent."
-tags: [india, politics]
-lore: kingdom-of-india
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Kingdom of India and can be assumed to be familiar with its customs, politics, and territories."
-`,Wh=`id: the-kings-woods
-name: The King’s Woods
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The forest east of the switch port, and what lives in it."
-tags: [forest, wilderness, monsters]
-lore: kings-woods
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the King’s Woods and can be assumed to be familiar with its geography, ecology, and locations."
-`,Gh=`id: the-lunar-industrial-syndicate
-name: "The Lunar Industrial Syndicate"
-status: draft
-plane: earth
-summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with investors and citizen shareholders."
-tags: [lunar-industrial-syndicate, luna, corporate]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Lunar Industrial Syndicate and can be assumed to be familiar with its board, holdings, territories and corporate politics."
-`,Kh=`id: the-martian-association
-name: "The Martian Association"
-status: placeholder
-plane: earth
-region: sdu
-summary: "The SDU’s territory on Mars and the people who run it."
-tags: [mars, colony, sdu]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Martian Association and can be assumed to be familiar with the peoples, places, and customs of the SDU’s territory on Mars."
-`,qh=`id: the-stellar-democratic-union
-name: "The Stellar Democratic Union"
-status: placeholder
-plane: earth
-region: sdu
-summary: "The SDU: its member states, its tiers of membership and how the Union holds together."
-tags: [sdu, politics]
-lore: stellar-democratic-union
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Stellar Democratic Union and can be assumed to be familiar with its customs, politics, and territories."
-`,Jh=`id: the-sunrise-princedoms
-name: The Sunrise Princedoms
-status: placeholder
-plane: isekai
-summary: "The princedoms Drovus absorbed, as they were."
-tags: [sunrise, princedoms, refugee]
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Sunrise Princedoms and can be assumed to be familiar with their politics, regions, wildlife, and cultures as they were before Drovus absorbed them."
-`,Yh=`id: the-switch-port
-name: The Switch Port
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The switch port at Castle Tetra, where Dreft meets the settled systems."
-tags: [switch-port, tetra, caravan]
-lore: tetra-switch-port
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the switch port at Castle Tetra and can be assumed to be familiar with its peoples, places, and customs."
-`,Xh=`id: the-union-of-texas
-name: "The Union of Texas"
-status: placeholder
-plane: earth
-summary: "The breakaway states the Empire still faces across a tense border."
-tags: [texas, foreign, politics]
-lore: union-of-texas
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Union of Texas and can be assumed to be familiar with its customs, politics, and territories."
-`,Zh=`id: the-united-nations
-name: "The United Nations"
-status: placeholder
-plane: earth
-region: tetra
-summary: "The UN and its institutions aboard Tetra."
-tags: [un, politics, tetra]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the United Nations and can be assumed to be familiar with its institutions aboard Tetra."
-`,Qh=`id: the-ural-federation
-name: "The Ural Federation"
-status: draft
-plane: earth
-region: ural-federation
-summary: "The Ural Federation: hundreds of tribal statelets across the steppe and the thawed Siberian breadbasket."
-tags: [ural-federation, politics]
-lore: ural-federation
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the Ural Federation and can be assumed to be familiar with its customs, politics, and territories."
-`,$h=`id: theater
-name: "Theater"
-status: draft
-plane: any
-summary: "Plays, performers, stagecraft and the people who put on a show."
-tags: [theater, performance, culture]
-category: knowledge
-ranked: true
-minStats: { memory: 2, persuasion: 2 }
-effect: "This character has knowledge of theater and can be assumed to be familiar with famous plays and performers, stagecraft, and how a performance is put together."
-`,eg=`id: thieves-cant
-name: "Thieves' Cant (Spoken)"
-status: draft
-plane: any
-summary: "The coded slang criminals use to talk business in plain hearing."
-tags: [language, crime, underworld]
-category: knowledge
-types: [language]
-language: thieves-cant
-effect: "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation."
-`,tg=`id: toxicology
-name: "Toxicology"
-status: draft
-plane: any
-summary: "Poisons, venoms and their antidotes."
-tags: [medicine, poison, antidotes]
-category: knowledge
-ranked: true
-minStats: { memory: 3, logic: 3 }
-effect: "This character has knowledge of toxicology and can be assumed to be familiar with common poisons and venoms, their symptoms and their antidotes."
-`,ng=`id: trade-guilds
-name: "Trade Guilds"
-status: draft
-plane: any
-summary: "The guilds and unions of craftsmen and traders: their ranks, rules and rivalries."
-tags: [guild, craft, trade]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of trade guilds and can be assumed to be familiar with how craft and trade guilds are organized, their ranks, rules and the masters who run them."
-`,rg=`id: trade-law
-name: Trade Law
-status: placeholder
-plane: isekai
-region: dreft
-summary: "The rules of trade in Dreft, and their loopholes."
-tags: [law, trade, merchant]
-category: knowledge
-minStats: { memory: 3, persuasion: 2 }
-effect: "This character has knowledge of Dreftian trade law and can be assumed to be familiar with the rules of trade in Dreft and their loopholes."
-`,ig=`id: trade-roads
-name: Trade Roads
-status: placeholder
-plane: isekai
-region: dreft
-summary: The roads trade travels across Dreft.
-tags: [trade, roads, caravan]
-category: knowledge
-minStats: { memory: 3 }
-effect: "This character has knowledge of the trade roads of Dreft and can be assumed to be familiar with their routes, products, and dangers."
-`,ag=`id: turkish-written
-name: "Turkish (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, turkish, earth, writing]
-category: knowledge
-types: [language]
-language: turkish
-effect: "This character can read and write the Turkish language."
-`,og=`id: turkish
-name: "Turkish (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, turkish, earth]
-category: knowledge
-types: [language]
-language: turkish
-effect: "This character is conversational in the Turkish language and can speak it."
-`,sg=`id: ukrainian-written
-name: "Ukrainian (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, ukrainian, earth, writing]
-category: knowledge
-types: [language]
-language: ukrainian
-effect: "This character can read and write the Ukrainian language."
-`,cg=`id: ukrainian
-name: "Ukrainian (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, ukrainian, earth]
-category: knowledge
-types: [language]
-language: ukrainian
-effect: "This character is conversational in the Ukrainian language and can speak it."
-`,lg=`id: union-politics
-name: "Union Politics"
-status: placeholder
-plane: earth
-region: sdu
-summary: "The parties, presidents and member-state rivalries of the SDU."
-tags: [sdu, politics]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Union politics and can be assumed to be familiar with the parties, presidents, and member-state rivalries of the SDU."
-`,ug=`id: ural-tribal-law
-name: "Ural Tribal Law"
-status: draft
-plane: earth
-region: ural-federation
-summary: "The customs and tribal laws of the Ural Federation’s statelets."
-tags: [law, ural-federation]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ural tribal law and can be assumed to be familiar with the customs and laws of the Ural Federation’s statelets."
-`,dg=`id: urdu-written
-name: "Urdu (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, urdu, earth, writing]
-category: knowledge
-types: [language]
-language: urdu
-effect: "This character can read and write the Urdu language."
-`,fg=`id: urdu
-name: "Urdu (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Kingdom of India."
-tags: [language, urdu, earth]
-category: knowledge
-types: [language]
-language: urdu
-effect: "This character is conversational in the Urdu language and can speak it."
-`,pg=`id: uyghur-written
-name: "Uyghur (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, uyghur, earth, writing]
-category: knowledge
-types: [language]
-language: uyghur
-effect: "This character can read and write the Uyghur language."
-`,mg=`id: uyghur
-name: "Uyghur (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Ural Federation."
-tags: [language, uyghur, earth]
-category: knowledge
-types: [language]
-language: uyghur
-effect: "This character is conversational in the Uyghur language and can speak it."
-`,hg=`id: vietnamese-written
-name: "Vietnamese (Written)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, vietnamese, earth, writing]
-category: knowledge
-types: [language]
-language: vietnamese
-effect: "This character can read and write the Vietnamese language."
-`,gg=`id: vietnamese
-name: "Vietnamese (Spoken)"
-status: draft
-plane: earth
-summary: "Spoken in the Empire of China."
-tags: [language, vietnamese, earth]
-category: knowledge
-types: [language]
-language: vietnamese
-effect: "This character is conversational in the Vietnamese language and can speak it."
-`,_g=`id: weapons
-name: "Weapons"
-status: draft
-plane: any
-summary: "Weapons of every kind: how they work, what they do, and how they are made and cared for."
-tags: [weapons, combat, military]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of weapons and can be assumed to be familiar with common weapons, how they work and are maintained, and what they can do."
-`,vg=`id: wilderness-lore
-name: "Wilderness Lore"
-status: draft
-plane: any
-summary: "The wild: terrain, weather, edible plants and how not to die out there."
-tags: [wilderness, survival, nature]
-category: knowledge
-ranked: true
-minStats: { memory: 2, intuition: 3 }
-effect: "This character has knowledge of the wilderness and can be assumed to be familiar with terrain, weather, edible and dangerous plants, and the signs that keep travelers alive."
-`,yg=`id: xanthus
-name: "Xanthus"
-status: draft
-plane: earth
-region: xanthus
-summary: "Xanthus, the free Ark built around an iron asteroid, and the micro-nations that appear in its wake."
-tags: [xanthus, ark]
-lore: xanthus
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark Xanthus and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,bg=`id: yoruba-written
-name: "Yoruba (Written)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, yoruba, earth, writing]
-category: knowledge
-types: [language]
-language: yoruba
-effect: "This character can read and write the Yoruba language."
-`,xg=`id: yoruba
-name: "Yoruba (Spoken)"
-status: draft
-plane: earth
-summary: "One of the common languages of Earth Baseline."
-tags: [language, yoruba, earth]
-category: knowledge
-types: [language]
-language: yoruba
-effect: "This character is conversational in the Yoruba language and can speak it."
-`,Sg=`id: yutu
-name: "Yùtù"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The Jade Rabbit, the Empire of China’s colony on Luna."
-tags: [luna, colony, chinese-empire]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."
-`,Cg=`id: zhulong
-name: "Zhulong"
-status: placeholder
-plane: earth
-region: chinese-empire
-summary: "The Empire of China’s Ark."
-tags: [ark, chinese-empire]
-lore: zhulong
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of Ark Zhulong and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,wg=`id: possessed-by-a-spirit
-name: "Possessed By A Spirit"
-status: draft
-plane: any
-summary: "Lost control of their body to a supernatural entity."
-tags: [supernatural, spirit, possession, site-example]
-category: other
-conveyed: true
-temporary: "lost when the character is no longer possessed"
-effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."
-`,Tg=`id: advanced-cooking
-name: "Advanced Cooking"
-status: draft
-plane: any
-summary: "Cooking at a professional level, for a crowd or a court."
-tags: [cooking, food, expert]
-category: skill
-mastery: true
-minStats: { intuition: 5, memory: 4, empathy: 3 }
-prerequisites: [simple-cooking]
-effect: "This character cooks at a professional level and can feed a large group. This character can request advantage on skill checks involving cooking, and a fine meal can earn them favor in social situations at the GM’s discretion."
-`,Eg=`id: advanced-potion-mixing
-name: "Advanced Potion Mixing"
-status: draft
-plane: isekai
-summary: "Brewing complex, potent potions, and working out new ones."
-tags: [potions, alchemy, expert]
-category: skill
-mastery: true
-minStats: { memory: 6, intuition: 6, logic: 4 }
-prerequisites: [simple-potion-mixing]
-effect: "This character can brew complex and potent potions, and can work out a new recipe from its ingredients’ properties. This character can request advantage on skill checks involving brewing potions."
-`,Dg=`id: ambusher
-name: Ambusher
-status: placeholder
-plane: any
-summary: Setting and springing ambushes.
-tags: [ambush, hunting, combat]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Og=`id: animal-husbandry
-name: "Animal Husbandry"
-status: draft
-plane: any
-summary: "Raising, feeding and caring for livestock and working animals."
-tags: [animals, farming, care]
-category: skill
-ranked: true
-minStats: { empathy: 3, endurance: 2, intuition: 2 }
-effect: "This character is capable of raising, feeding and caring for livestock and working animals without a skill check. Rank *10 added to skill check rolls involving handling and caring for animals."
-`,kg=`id: appraisal
-name: Appraisal
-status: placeholder
-plane: any
-summary: Judging what something is worth.
-tags: [trade, valuation, merchant]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Ag=`id: artist-painting
-name: "Artist: Painting"
-status: draft
-plane: any
-summary: "Painting, from portraits to murals."
-tags: [art, painting, craft]
-category: skill
-ranked: true
-minStats: { grace: 3, intuition: 3, memory: 2 }
-effect: "This character is capable of painting a competent likeness or scene without a skill check. Rank *10 added to skill check rolls involving painting."
-`,jg=`id: artist-sculpture
-name: "Artist: Sculpture"
-status: draft
-plane: any
-summary: "Shaping stone, clay, wood or metal into art."
-tags: [art, sculpture, craft]
-category: skill
-ranked: true
-minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "This character is capable of sculpting a competent figure in stone, clay or wood without a skill check. Rank *10 added to skill check rolls involving sculpture."
-`,Mg=`id: cargo-handling
-name: "Cargo Handling"
-status: placeholder
-plane: any
-summary: "Loading, securing and moving freight, in gravity or out of it."
-tags: [cargo, shipping, labor]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Ng=`id: concealment
-name: Concealment
-status: placeholder
-plane: any
-summary: "Hiding things, and yourself."
-tags: [stealth, hiding]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Pg=`id: courtly-manners
-name: Courtly Manners
-status: placeholder
-plane: any
-summary: Moving gracefully through noble society.
-tags: [court, nobility, social]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Fg=`id: craft-leatherworking
-name: "Craft: Leatherworking"
-status: draft
-plane: any
-summary: "Tanning hides and making leather goods and armor."
-tags: [craft, leather, armor]
-category: skill
-ranked: true
-minStats: { grace: 3, endurance: 2, intuition: 2 }
-effect: "This character is capable of tanning hides and making leather goods and simple leather armor without a skill check. Rank *10 added to skill check rolls involving leatherworking."
-`,Ig=`id: craft-masonry
-name: "Craft: Masonry"
-status: draft
-plane: any
-summary: "Cutting, dressing and laying stone."
-tags: [craft, masonry, building]
-category: skill
-ranked: true
-minStats: { power: 4, endurance: 3, logic: 2 }
-effect: "This character is capable of cutting and laying stone for walls, foundations and simple structures without a skill check. Rank *10 added to skill check rolls involving masonry."
-`,Lg=`id: craft-smithing
-name: "Craft: Smithing"
-status: draft
-plane: any
-summary: "Forging and repairing metal tools, fittings and weapons."
-tags: [craft, smithing, metal]
-category: skill
-ranked: true
-minStats: { power: 4, endurance: 3, grace: 2 }
-effect: "This character is capable of forging and repairing simple metal tools, fittings and weapons without a skill check. Rank *10 added to skill check rolls involving smithing."
-`,Rg=`id: disguise
-name: "Disguise"
-status: draft
-plane: any
-summary: "Passing as someone else, through costume, makeup and manner."
-tags: [disguise, deception, spy]
-category: skill
-ranked: true
-minStats: { demeanor: 4, grace: 2, intuition: 2 }
-effect: "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation."
-`,zg=`id: excavation
-name: "Excavation"
-status: placeholder
-plane: any
-summary: "Digging up the past carefully enough that there’s something left to study."
-tags: [archeology, fieldwork, ruins]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Bg=`id: expert-pilot
-name: "Expert Pilot"
-status: draft
-plane: any
-summary: "A pilot good enough to fly almost anything they have training in, and most things like it."
-tags: [pilot, expert, site-example]
-category: skill
-mastery: true
-minStats: { memory: 5, intuition: 10, grace: 5 }
-prerequisiteTags: [pilot]
-effect: "This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in."
-`,Vg=`id: field-sampling
-name: "Field Sampling"
-status: placeholder
-plane: any
-summary: "Collecting, labelling and preserving samples in the field, wherever the field happens to be."
-tags: [parabiology, science, fieldwork, survey]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Hg=`id: folk-remedies
-name: Folk Remedies
-status: placeholder
-plane: any
-summary: Treating ailments with folk cures.
-tags: [healing, folk, herbs]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Ug=`id: haggler
-name: Haggler
-status: placeholder
-plane: any
-summary: Getting a better price.
-tags: [trade, bargaining, merchant]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Wg=`id: incantation
-name: Incantation
-status: placeholder
-plane: isekai
-summary: Casting spells by incantation.
-tags: [magic, spellcasting]
-category: skill
-# On the Magic list: only a character with Magical Heritage can pick it.
-list: magic
-effect: Placeholder. Effect not yet written.
-`,Gg=`id: intimidation
-name: "Intimidation"
-status: draft
-plane: any
-summary: "Getting what you want through threats and presence."
-tags: [intimidation, social, threat]
-category: skill
-ranked: true
-minStats: { demeanor: 3, power: 3 }
-effect: "This character is capable of making a credible threat without a skill check. Rank *10 added to skill check rolls involving intimidation."
-`,Kg=`id: investigation
-name: "Investigation"
-status: draft
-plane: any
-summary: "Gathering evidence, reading a scene and following leads."
-tags: [investigation, law, detective]
-category: skill
-ranked: true
-minStats: { intuition: 4, logic: 3, memory: 2 }
-effect: "This character is capable of searching a scene and following obvious leads without a skill check. Rank *10 added to skill check rolls involving investigating crimes and mysteries."
-`,qg=`id: legal-advocacy
-name: "Legal Advocacy"
-status: placeholder
-plane: any
-summary: "Arguing a case in court, at a hearing or across a desk, and knowing which forms to file first."
-tags: [law, persuasion, courts]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Jg=`id: lockpicking
-name: "Lockpicking"
-status: draft
-plane: any
-summary: "Opening locks without the key."
-tags: [locks, theft, security]
-category: skill
-ranked: true
-minStats: { grace: 4, intuition: 2 }
-effect: "This character is capable of opening simple mechanical locks with the right tools without a skill check. Rank *10 added to skill check rolls involving picking locks and bypassing security."
-`,Yg=`id: medical-aid
-name: "Medical Aid"
-status: draft
-plane: any
-summary: "First aid: stopping bleeding, dressing wounds and setting bones."
-tags: [medicine, first-aid, healing]
-category: skill
-ranked: true
-minStats: { empathy: 3, memory: 3, grace: 2 }
-effect: "This character is capable of performing basic first aid, such as stopping bleeding, dressing wounds and setting bones, without a skill check. Rank *10 added to skill check rolls involving treating injuries."
-`,Xg=`id: military-drill
-name: "Military Drill"
-status: placeholder
-plane: any
-summary: "Moving, fighting and following orders as part of a unit."
-tags: [military, discipline]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,Zg=`id: performer-acrobatics
-name: "Performer: Acrobatics"
-status: draft
-plane: any
-summary: "Tumbling, juggling and feats of balance for a crowd."
-tags: [acrobatics, performance, agility]
-category: skill
-ranked: true
-minStats: { grace: 4, endurance: 3, persuasion: 2 }
-effect: "This character is capable of tumbling, juggling and keeping their balance in a performance without a skill check. Rank *10 added to skill check rolls involving acrobatics and balance."
-`,Qg=`id: performer-music
-name: "Performer: Music"
-status: draft
-plane: any
-summary: "Playing an instrument or singing for an audience."
-tags: [music, performance, art]
-category: skill
-ranked: true
-minStats: { grace: 3, persuasion: 3, intuition: 2 }
-effect: "This character is capable of playing an instrument or singing well enough to hold an audience without a skill check. Rank *10 added to skill check rolls involving musical performance."
-`,$g=`id: pilot-fighter
-name: "Pilot: Fighter"
-status: draft
-plane: earth
-summary: "Flying fighters in and out of combat."
-tags: [pilot, fighter, military, space]
-category: skill
-ranked: true
-minStats: { grace: 5, intuition: 4, memory: 4 }
-effect: "This character is capable of piloting a fighter in simple scenarios and describing its basic functions and controls without a skill check. Rank *10 added to skill check rolls involving fighter piloting."
-`,e_=`id: pilot-helicopter
-name: "Pilot: Helicopter"
-status: draft
-plane: earth
-summary: "Flying helicopters."
-tags: [pilot, helicopters, site-example]
-category: skill
-ranked: true
-minStats: { memory: 5, intuition: 3, grace: 3 }
-effect: "This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter. Rank *10 added to skill check rolls involving helicopter piloting."
-`,t_=`id: pilot-truck
-name: "Pilot: Truck"
-status: placeholder
-plane: earth
-summary: "Flying cargo trucks between stations, ships and planetary surfaces."
-tags: [pilot, trucks, shipping]
-lore: trucks
-category: skill
-ranked: true
-effect: Placeholder. Effect not yet written.
-`,n_=`id: planar-surveying
-name: "Planar Surveying"
-status: placeholder
-plane: earth
-summary: "Mapping and assessing a newly opened plane in the field."
-tags: [planes, exploration, survey]
-category: skill
-ranked: true
-effect: Placeholder. Effect not yet written.
-`,r_=`id: programming
-name: "Programming"
-status: draft
-plane: earth
-summary: "Writing, reading and breaking software."
-tags: [computers, programming, technology]
-category: skill
-ranked: true
-minStats: { logic: 4, memory: 3, intuition: 2 }
-effect: "This character is capable of writing and debugging simple software and reading other people’s code without a skill check. Rank *10 added to skill check rolls involving programming and hacking."
-`,i_=`id: relic-handling
-name: Relic Handling
-status: placeholder
-plane: isekai
-summary: Handling magical relics without incident.
-tags: [magic, relics]
-category: skill
-# On the Magic list: only a character with Magical Heritage can pick it.
-list: magic
-effect: Placeholder. Effect not yet written.
-`,a_=`id: research
-name: "Research"
-status: placeholder
-plane: any
-summary: "Designing experiments, reading the literature and getting results."
-tags: [science, research]
-category: skill
-ranked: true
-effect: Placeholder. Effect not yet written.
-`,o_=`id: rider-basic-animals
-name: "Rider: Basic Animals"
-status: draft
-plane: any
-summary: "Riding a simple animal as a mount."
-tags: [riding, animals, site-example]
-category: skill
-ranked: true
-minStats: { grace: 4, empathy: 4, persuasion: 3 }
-effect: "This character is capable of riding a basic animal as a mount in simple scenarios without a skill check. Rank *10 added to skill check rolls involving riding a simple animal."
-`,s_=`id: schemer
-name: Schemer
-status: placeholder
-plane: any
-summary: Plotting and seeing through plots.
-tags: [intrigue, politics]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,c_=`id: shield-wall
-name: Shield Wall
-status: placeholder
-plane: any
-summary: Fighting in formation behind a shield.
-tags: [combat, shield, military]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,l_=`id: simple-cooking
-name: "Simple Cooking"
-status: draft
-plane: any
-summary: "Cooking simple, filling meals, even over a campfire."
-tags: [cooking, food, survival]
-category: skill
-ranked: true
-minStats: { memory: 2, intuition: 2 }
-effect: "This character can cook simple, filling meals for themselves and a small group without a skill check, even over a campfire. Rank *10 added to skill check rolls involving cooking."
-`,u_=`id: simple-potion-mixing
-name: "Simple Potion Mixing"
-status: draft
-plane: isekai
-summary: "Brewing simple potions from a known recipe."
-tags: [potions, alchemy, herbs]
-category: skill
-ranked: true
-minStats: { memory: 3, intuition: 3 }
-effect: "This character can brew simple potions, such as healing draughts and sleeping tonics, from a known recipe and the right ingredients without a skill check. Rank *10 added to skill check rolls involving brewing potions."
-`,d_=`id: sleight-of-hand
-name: Sleight of Hand
-status: placeholder
-plane: any
-summary: "Quick, unnoticed work with the hands."
-tags: [theft, trickery]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,f_=`id: smooth-talker
-name: Smooth Talker
-status: placeholder
-plane: any
-summary: "Talking people into things, or out of them."
-tags: [social, persuasion]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,p_=`id: specimen-handling
-name: "Specimen Handling"
-status: placeholder
-plane: any
-summary: "Catching, keeping, feeding and moving living specimens without losing them, or a hand."
-tags: [parabiology, animals, care, handling]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,m_=`id: starship-engineering
-name: "Starship Engineering"
-status: draft
-plane: earth
-summary: "Maintaining and repairing a starship’s reactors, drives and life support."
-tags: [engineering, starships, technology, space]
-category: skill
-ranked: true
-minStats: { logic: 4, memory: 3, grace: 2 }
-effect: "This character is capable of maintaining and making routine repairs to a starship’s reactors, drives and life support without a skill check. Rank *10 added to skill check rolls involving starship repair."
-`,h_=`id: streetwise
-name: Streetwise
-status: placeholder
-plane: any
-summary: "Getting by, and getting answers, on the street."
-tags: [urban, crime, social]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,g_=`id: surgery
-name: "Surgery"
-status: draft
-plane: any
-summary: "Operating to repair serious injuries."
-tags: [medicine, surgery, healing]
-category: skill
-ranked: true
-minStats: { memory: 6, grace: 5, logic: 4 }
-prerequisites: [medical-aid]
-effect: "This character is capable of performing surgery to treat severe injuries, such as removing shrapnel or closing internal wounds, given the proper tools. Rank *10 added to skill check rolls involving surgery."
-`,__=`id: survivalist
-name: Survivalist
-status: placeholder
-plane: any
-summary: Staying alive with little in the wild.
-tags: [survival, wilderness]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,v_=`id: teamster
-name: Teamster
-status: placeholder
-plane: any
-summary: Driving and caring for draft animals and wagons.
-tags: [caravan, animals, driving]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,y_=`id: tinkerer
-name: Tinkerer
-status: placeholder
-plane: any
-summary: Fixing and improvising with machines.
-tags: [technology, repair, crafting]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,b_=`id: tracker
-name: Tracker
-status: placeholder
-plane: any
-summary: Following trails and reading signs.
-tags: [tracking, hunting, wilderness]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,x_=`id: vigilance
-name: Vigilance
-status: placeholder
-plane: any
-summary: Staying alert on watch.
-tags: [guard, awareness]
-category: skill
-effect: Placeholder. Effect not yet written.
-`,S_=`id: wielder-longsword
-name: "Wielder: Longsword"
-status: draft
-plane: any
-summary: "Fighting with, and maintaining, a longsword."
-tags: [combat, melee, swords, site-example]
-category: skill
-ranked: true
-minStats: { grace: 4, power: 4, endurance: 4 }
-effect: "This character is capable of performing the basic tasks of maintaining a Longsword without a skill check. Rank *5 added to skill check rolls involving a Longsword."
-`,C_=`id: wielder-musket
-name: "Wielder: Musket"
-status: draft
-plane: any
-summary: "Fighting with, and maintaining, a musket."
-tags: [combat, firearms, muskets, site-example]
-category: skill
-ranked: true
-minStats: { grace: 3, power: 2, intuition: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Musket without a skill check. Rank *5 added to skill check rolls involving a Musket."
-`,w_=`id: wielder-pistol
-name: "Wielder: Pistol"
-status: draft
-plane: any
-summary: "Fighting with, and maintaining, a pistol."
-tags: [combat, firearms, sidearm]
-category: skill
-ranked: true
-minStats: { grace: 3, intuition: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol."
-`,T_=`id: wielder-rifle
-name: "Wielder: Rifle"
-status: draft
-plane: earth
-summary: "Fighting with, and maintaining, a modern rifle."
-tags: [combat, firearms, military]
-category: skill
-ranked: true
-minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Rifle without a skill check. Rank *5 added to skill check rolls involving a Rifle."
-`,E_=`id: wielder-war-axe
-name: "Wielder: War Axe"
-status: draft
-plane: any
-summary: "Fighting with, and maintaining, a war axe."
-tags: [combat, melee, axes]
-category: skill
-ranked: true
-minStats: { power: 5, endurance: 4, grace: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a War Axe without a skill check. Rank *5 added to skill check rolls involving a War Axe."
+`,Mm=`id: oromo-written\r
+name: "Oromo (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, oromo, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: oromo\r
+effect: "This character can read and write the Oromo language."\r
+`,Nm=`id: oromo\r
+name: "Oromo (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, oromo, earth]\r
+category: knowledge\r
+types: [language]\r
+language: oromo\r
+effect: "This character is conversational in the Oromo language and can speak it."\r
+`,Pm=`id: paraarcheology\r
+name: "Paraarcheology"\r
+status: placeholder\r
+plane: earth\r
+summary: "The ruins and remains that parasapient civilizations have left behind on other planes."\r
+tags: [parabiology, archeology, history, ruins]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of paraarcheology and can be assumed to be familiar with the skills, places, histories, and planar details associated with the study of archeology on other planes."\r
+`,Fm=`id: parabiology\r
+name: "Parabiology"\r
+status: placeholder\r
+plane: earth\r
+summary: "The study of extraplanar life in all its forms, and why so many planes hold any at all."\r
+tags: [parabiology, science, life]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2, empathy: 2 }\r
+effect: "This character has knowledge of parabiology and can be assumed to be familiar with the living organisms of other planes, and their vital processes, structures, functions, and growth."\r
+`,Im=`id: paraflora\r
+name: "Paraflora"\r
+status: placeholder\r
+plane: earth\r
+summary: "Extraplanar plants and the stranger things that fill a plant’s role, from flora floating in a sea of light on down."\r
+tags: [parabiology, plants, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2, empathy: 2 }\r
+effect: "This character has knowledge of paraflora and can be assumed to be familiar with extraplanar plants, including their ecologies, growth patterns, and the rough paraphysical concepts by which they may operate."\r
+`,Lm=`id: paraphysics\r
+name: "Paraphysics"\r
+status: placeholder\r
+plane: earth\r
+summary: "The science The Gift opened up: the theories that skirt the old limits of nature."\r
+tags: [paraphysics, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2, intuition: 2 }\r
+effect: "This character has knowledge of paraphysics and can be assumed to be familiar with paraphysical concepts, paraphysical effects, and axiomatic sciences."\r
+`,Rm=`id: parasapient-medicine\r
+name: "Parasapient Medicine"\r
+status: draft\r
+plane: earth\r
+summary: "Treating parasapient patients, whose bodies rarely work the way Earth Baseline medicine expects."\r
+tags: [medicine, parasapients, parabiology]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3, empathy: 2 }\r
+effect: "This character has knowledge of parasapient medicine and can be assumed to be familiar with the anatomy and common ailments of the parasapient peoples known to the settled systems, and how to treat them."\r
+`,zm=`id: parasapients\r
+name: "Parasapients"\r
+status: placeholder\r
+plane: earth\r
+summary: "The sapient peoples of other planes: their bodies, their cultures, and how they live alongside humanity."\r
+tags: [parabiology, parasapients, cultures, people]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, empathy: 3 }\r
+effect: "This character has knowledge of parasapients and can be assumed to be familiar with extraplanar sapients, including their cultures, diplomatic relations, and the rough paraphysical concepts by which they may operate."\r
+`,Bm=`id: parazoology\r
+name: "Parazoology"\r
+status: placeholder\r
+plane: earth\r
+summary: "Extraplanar animals: how they live, what they eat, and which ones eat people."\r
+tags: [parabiology, animals, creatures, science]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2, intuition: 2 }\r
+effect: "This character has knowledge of parazoology and can be assumed to be familiar with extraplanar creatures, including their habitats, needs, and the rough paraphysical concepts by which they may operate."\r
+`,Vm=`id: pataliputra\r
+name: "Pataliputra"\r
+status: draft\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "295/c/29 - “Pataliputra,” India’s planar capital and the largest planar colony ever attempted."\r
+tags: [india, planar, colony]\r
+lore: pataliputra\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Pataliputra and can be assumed to be familiar with the peoples, places, and customs of India’s planar capital."\r
+`,Hm=`id: pathology\r
+name: "Pathology"\r
+status: draft\r
+plane: any\r
+summary: "Disease: how it spreads, how it shows itself, and how it is stopped."\r
+tags: [medicine, disease, contagion]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3, intuition: 2 }\r
+effect: "This character has knowledge of pathology and can be assumed to be familiar with common diseases, how they spread and present, and how outbreaks are contained."\r
+`,Um=`id: persian-written\r
+name: "Persian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, persian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: persian\r
+effect: "This character can read and write the Persian language."\r
+`,Wm=`id: persian\r
+name: "Persian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, persian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: persian\r
+effect: "This character is conversational in the Persian language and can speak it."\r
+`,Gm=`id: pharmacology\r
+name: "Pharmacology"\r
+status: draft\r
+plane: any\r
+summary: "Drugs and remedies: what they do, how much is safe, and what they do together."\r
+tags: [medicine, drugs, pharmacology]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 4, logic: 3 }\r
+effect: "This character has knowledge of pharmacology and can be assumed to be familiar with common drugs and remedies, their doses, side effects and interactions."\r
+`,Km=`id: physics\r
+name: "Physics"\r
+status: draft\r
+plane: any\r
+summary: "How the physical world works: motion, energy, light and matter."\r
+tags: [science, physics]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 4 }\r
+effect: "This character has knowledge of physics and can be assumed to be familiar with motion, energy, forces, light and matter, and the math that describes them."\r
+`,qm=`id: planar-exploration\r
+name: "Planar Exploration"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "How new planes are found, locked and opened, and who does the work."\r
+tags: [planes, exploration, tetra]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2, intuition: 2 }\r
+effect: "This character has knowledge of planar exploration and can be assumed to be familiar with the regulations, laws, dangers, and methods involved."\r
+`,Jm=`id: polish-written\r
+name: "Polish (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, polish, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: polish\r
+effect: "This character can read and write the Polish language."\r
+`,Ym=`id: polish\r
+name: "Polish (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, polish, earth]\r
+category: knowledge\r
+types: [language]\r
+language: polish\r
+effect: "This character is conversational in the Polish language and can speak it."\r
+`,Xm=`id: politics\r
+name: "Politics"\r
+status: draft\r
+plane: any\r
+summary: "How power works: factions, alliances, elections, rivalries and who owes whom."\r
+tags: [politics, power, intrigue]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 3 }\r
+effect: "This character has knowledge of politics and can be assumed to be familiar with how power is won, held and traded, and the factions and figures that matter."\r
+`,Zm=`id: port-herminst\r
+name: Port Herminst\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: Knowing your way around Dreft’s capital and biggest port.\r
+tags: [city, port, capital]\r
+lore: herminst\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Port Herminst and can be assumed to be familiar with the peoples, places, and customs of Dreft’s capital."\r
+`,Qm=`id: ports-and-stations\r
+name: "Ports and Stations"\r
+status: placeholder\r
+plane: earth\r
+summary: "How docks, customs and station traffic control work, and how to get through them."\r
+tags: [ports, stations, space]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the ports and stations of the settled systems and can be assumed to be familiar with the customs, regulations, industries, ships, and docks involved in trade."\r
+`,$m=`id: portuguese-written\r
+name: "Portuguese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the languages of the Lunar Industrial Syndicate and its former South American nations."\r
+tags: [language, portuguese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: portuguese\r
+effect: "This character can read and write the Portuguese language."\r
+`,eh=`id: portuguese\r
+name: "Portuguese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the languages of the Lunar Industrial Syndicate and its former South American nations."\r
+tags: [language, portuguese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: portuguese\r
+effect: "This character is conversational in the Portuguese language and can speak it."\r
+`,th=`id: psychology\r
+name: "Psychology"\r
+status: draft\r
+plane: any\r
+summary: "The mind: how it works, how it breaks, and how it heals."\r
+tags: [medicine, mind, psychology]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, empathy: 4 }\r
+effect: "This character has knowledge of psychology and can be assumed to be familiar with how minds work, common mental illnesses, and the treatment of trauma and stress."\r
+`,nh=`id: punjabi-written\r
+name: "Punjabi (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, punjabi, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: punjabi\r
+effect: "This character can read and write the Punjabi language."\r
+`,rh=`id: punjabi\r
+name: "Punjabi (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, punjabi, earth]\r
+category: knowledge\r
+types: [language]\r
+language: punjabi\r
+effect: "This character is conversational in the Punjabi language and can speak it."\r
+`,ih=`id: robotics\r
+name: "Robotics"\r
+status: placeholder\r
+plane: earth\r
+summary: "Drones, chassis and the machines that do the settled systems’ work."\r
+tags: [robotics, technology, machines]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of robotics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
+`,ah=`id: romanian-written\r
+name: "Romanian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, romanian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: romanian\r
+effect: "This character can read and write the Romanian language."\r
+`,oh=`id: romanian\r
+name: "Romanian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union."\r
+tags: [language, romanian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: romanian\r
+effect: "This character is conversational in the Romanian language and can speak it."\r
+`,sh=`id: russian-written\r
+name: "Russian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union and the Ural Federation."\r
+tags: [language, russian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: russian\r
+effect: "This character can read and write the Russian language."\r
+`,ch=`id: russian\r
+name: "Russian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Stellar Democratic Union and the Ural Federation."\r
+tags: [language, russian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: russian\r
+effect: "This character is conversational in the Russian language and can speak it."\r
+`,lh=`id: sdu-law\r
+name: "Stellar Democratic Union Law"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "The laws of the Stellar Democratic Union and how they’re enforced."\r
+tags: [law, sdu, tetra]\r
+lore: stellar-democratic-union\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Stellar Democratic Union law and can be assumed to be familiar with the laws and courts of the Stellar Democratic Union."\r
+`,uh=`id: seafaring\r
+name: Seafaring\r
+status: placeholder\r
+plane: any\r
+summary: "Ships, sailing and life at sea."\r
+tags: [seafaring, sea]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 3 }\r
+effect: "This character has knowledge of seafaring and can be assumed to be familiar with the crew and operations of ships on the sea as well as the winds, currents, and seas of a given world."\r
+choices:\r
+  - choose: 1\r
+    from: place\r
+    note: "Which seas"\r
+    perRank: false\r
+`,dh=`id: security-systems\r
+name: "Security Systems"\r
+status: draft\r
+plane: earth\r
+summary: "Locks, alarms, cameras and checkpoints, and how they are run and beaten."\r
+tags: [security, technology, surveillance]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of security systems and can be assumed to be familiar with common locks, alarms, surveillance and access controls, and their weaknesses."\r
+`,fh=`id: shipping-lanes\r
+name: "Shipping Lanes"\r
+status: placeholder\r
+plane: earth\r
+summary: "The routes, schedules and checkpoints of cargo traffic between stations, ships and surfaces."\r
+tags: [shipping, trade, space]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the shipping lanes between stations, ships, and surfaces and can be assumed to be familiar with their routes, schedules, and checkpoints."\r
+`,ph=`id: sinhala-written\r
+name: "Sinhala (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, sinhala, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: sinhala\r
+effect: "This character can read and write the Sinhala language."\r
+`,mh=`id: sinhala\r
+name: "Sinhala (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, sinhala, earth]\r
+category: knowledge\r
+types: [language]\r
+language: sinhala\r
+effect: "This character is conversational in the Sinhala language and can speak it."\r
+`,hh=`id: somali-written\r
+name: "Somali (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, somali, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: somali\r
+effect: "This character can read and write the Somali language."\r
+`,gh=`id: somali\r
+name: "Somali (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica."\r
+tags: [language, somali, earth]\r
+category: knowledge\r
+types: [language]\r
+language: somali\r
+effect: "This character is conversational in the Somali language and can speak it."\r
+`,_h=`# Lore for Sorellion is still coming soon on the site.\r
+id: sorellion\r
+name: "Sorellion"\r
+status: draft\r
+plane: isekai\r
+summary: "The Kingdom of Sorellion, one of Dreft’s neighbors on Isekai."\r
+tags: [sorellion, kingdom, isekai]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Kingdom of Sorellion and can be assumed to be familiar with its people, places and customs."\r
+`,vh=`id: southeast-asia\r
+name: "Southeast Asia"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The Empire’s Southeast Asian territories, their peoples and their old borders."\r
+tags: [geography, chinese-empire, earth]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Empire of China’s Southeast Asian territories, their peoples, and their old borders."\r
+`,yh=`id: spacefaring\r
+name: "Spacefaring"\r
+status: draft\r
+plane: earth\r
+summary: "Living and working in space: vacuum, zero gravity, airlocks and life support."\r
+tags: [space, station, survival]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, intuition: 2 }\r
+effect: "This character has knowledge of spacefaring and can be assumed to be familiar with life in vacuum and zero gravity, airlocks, suits, life support, and what to do when they fail."\r
+`,bh=`id: spanish-written\r
+name: "Spanish (Written)"\r
+status: placeholder\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, spanish, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: spanish\r
+effect: This character can read and write the Spanish language.\r
+`,xh=`id: spanish\r
+name: "Spanish (Spoken)"\r
+status: placeholder\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, spanish, earth]\r
+category: knowledge\r
+types: [language]\r
+language: spanish\r
+effect: This character is conversational in the Spanish language and can speak it.\r
+`,Sh=`id: starships\r
+name: "Starships"\r
+status: draft\r
+plane: earth\r
+summary: "The ships of the settled systems: their classes, makers, capabilities and quirks."\r
+tags: [starships, space, technology]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 2 }\r
+effect: "This character has knowledge of starships and can be assumed to be familiar with the classes, makers, capabilities and common faults of the starships of the settled systems."\r
+`,Ch=`id: succession-law\r
+name: Succession Law\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "Who inherits what, and who has a claim to the crown."\r
+tags: [law, succession, nobility]\r
+category: knowledge\r
+minStats: { memory: 6, persuasion: 2 }\r
+effect: "This character has knowledge of succession law and can be assumed to be familiar with who inherits what in Dreft and who has a claim to the crown."\r
+`,wh=`id: swahili-written\r
+name: "Swahili (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica and Xanthus."\r
+tags: [language, swahili, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: swahili\r
+effect: "This character can read and write the Swahili language."\r
+`,Th=`id: swahili\r
+name: "Swahili (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in Centafrica and Xanthus."\r
+tags: [language, swahili, earth]\r
+category: knowledge\r
+types: [language]\r
+language: swahili\r
+effect: "This character is conversational in the Swahili language and can speak it."\r
+`,Eh=`id: tamil-written\r
+name: "Tamil (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, tamil, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: tamil\r
+effect: "This character can read and write the Tamil language."\r
+`,Dh=`id: tamil\r
+name: "Tamil (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, tamil, earth]\r
+category: knowledge\r
+types: [language]\r
+language: tamil\r
+effect: "This character is conversational in the Tamil language and can speak it."\r
+`,Oh=`id: telugu-written\r
+name: "Telugu (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, telugu, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: telugu\r
+effect: "This character can read and write the Telugu language."\r
+`,kh=`id: telugu\r
+name: "Telugu (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, telugu, earth]\r
+category: knowledge\r
+types: [language]\r
+language: telugu\r
+effect: "This character is conversational in the Telugu language and can speak it."\r
+`,Ah=`id: tetra-frontiers-co\r
+name: Tetra Frontiers Co.\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The company that runs the switch port, and how it works."\r
+tags: [company, switch-port, tetra]\r
+lore: tetra-frontiers-co\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Tetra Frontiers Co. and can be assumed to be familiar with its holdings, locations, employees, culture, and leadership."\r
+`,jh=`id: tetra\r
+name: "Tetra"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Ark Tetra: its wings, its people and how the station runs."\r
+tags: [tetra, ark, sdu]\r
+lore: tetra\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark Tetra and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,Mh=`id: thai-written\r
+name: "Thai (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, thai, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: thai\r
+effect: "This character can read and write the Thai language."\r
+`,Nh=`id: thai\r
+name: "Thai (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, thai, earth]\r
+category: knowledge\r
+types: [language]\r
+language: thai\r
+effect: "This character is conversational in the Thai language and can speak it."\r
+`,Ph=`id: the-bureau-of-planar-management\r
+name: "The Bureau of Planar Management"\r
+status: draft\r
+plane: earth\r
+summary: "The Bureau that licenses, inspects and polices planar exploration across the settled systems."\r
+tags: [bureau, planes, law, tetra]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."\r
+`,Fh=`id: the-chinese-empire\r
+name: "The Empire of China"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The Empire of China: the Wuhan Dynasty, its territories and its corporate syndicates."\r
+tags: [chinese-empire, politics]\r
+lore: chinese-empire\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."\r
+`,Ih=`id: the-corporate-syndicates\r
+name: "The Corporate Syndicates"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The corporate syndicates that make up the Empire of China’s government, and their rivalries."\r
+tags: [corporate, politics, chinese-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Chinese corporate syndicates and can be assumed to be familiar with their people, ties, and industries."\r
+`,Lh=`id: the-corsine-pass\r
+name: The Corsine Pass\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: The pass through the Corsine Mountains to Karsef.\r
+tags: [mountains, border, travel]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, endurance: 2 }\r
+effect: "This character has knowledge of the Corsine Pass on Isekai and can be assumed to be familiar with its passes, peoples, and dangers."\r
+`,Rh=`id: the-diplomatic-wing\r
+name: "The Diplomatic Wing"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "Ark Tetra’s Diplomatic Wing, its embassies and its envoys."\r
+tags: [tetra, diplomacy, politics]\r
+lore: diplomatic-wing\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Tetra’s Diplomatic Wing and can be assumed to be familiar with its diplomats, embassies, businesses, and security."\r
+`,zh=`id: the-drovus-empire\r
+name: The Drovus Empire\r
+status: placeholder\r
+plane: isekai\r
+summary: The empire that absorbed the Sunrise Princedoms.\r
+tags: [drovus, empire, foreign]\r
+lore: drovus-empire\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Drovus Empire and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
+`,Bh=`id: the-explorers-lodge\r
+name: "The Explorers’ Lodge"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "The Explorers’ Lodge: its members, its rules and how expeditions get handed out."\r
+tags: [lodge, exploration, tetra]\r
+lore: explorers-lodge\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Explorers’ Lodge and can be assumed to be familiar with its members, its rules, and how expeditions are handed out."\r
+`,Vh=`id: the-free-american-states\r
+name: "The Free American States"\r
+status: draft\r
+plane: earth\r
+summary: "The fractious free-trade zone of independent states between the American Empire and the Union of Texas."\r
+tags: [free-american-states, earth, trade]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Free American States and can be assumed to be familiar with its member states, its trade and its border disputes."\r
+`,Hh=`id: the-imperial-military\r
+name: "The Imperial Military"\r
+status: placeholder\r
+plane: earth\r
+region: american-empire\r
+summary: "The Empire’s armed forces: their branches, ranks, bases and habits."\r
+tags: [military, american-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Imperial Military and can be assumed to be familiar with its branches, ranks, bases, and habits."\r
+`,Uh=`id: the-kingdom-of-india\r
+name: "The Kingdom of India"\r
+status: draft\r
+plane: earth\r
+region: kingdom-of-india\r
+summary: "The Kingdom of India: its royal house, its temples and the regreening of the subcontinent."\r
+tags: [india, politics]\r
+lore: kingdom-of-india\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Kingdom of India and can be assumed to be familiar with its customs, politics, and territories."\r
+`,Wh=`id: the-kings-woods\r
+name: The King’s Woods\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The forest east of the switch port, and what lives in it."\r
+tags: [forest, wilderness, monsters]\r
+lore: kings-woods\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the King’s Woods and can be assumed to be familiar with its geography, ecology, and locations."\r
+`,Gh=`id: the-lunar-industrial-syndicate\r
+name: "The Lunar Industrial Syndicate"\r
+status: draft\r
+plane: earth\r
+summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with investors and citizen shareholders."\r
+tags: [lunar-industrial-syndicate, luna, corporate]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Lunar Industrial Syndicate and can be assumed to be familiar with its board, holdings, territories and corporate politics."\r
+`,Kh=`id: the-martian-association\r
+name: "The Martian Association"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "The SDU’s territory on Mars and the people who run it."\r
+tags: [mars, colony, sdu]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Martian Association and can be assumed to be familiar with the peoples, places, and customs of the SDU’s territory on Mars."\r
+`,qh=`id: the-stellar-democratic-union\r
+name: "The Stellar Democratic Union"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "The SDU: its member states, its tiers of membership and how the Union holds together."\r
+tags: [sdu, politics]\r
+lore: stellar-democratic-union\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Stellar Democratic Union and can be assumed to be familiar with its customs, politics, and territories."\r
+`,Jh=`id: the-sunrise-princedoms\r
+name: The Sunrise Princedoms\r
+status: placeholder\r
+plane: isekai\r
+summary: "The princedoms Drovus absorbed, as they were."\r
+tags: [sunrise, princedoms, refugee]\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Sunrise Princedoms and can be assumed to be familiar with their politics, regions, wildlife, and cultures as they were before Drovus absorbed them."\r
+`,Yh=`id: the-switch-port\r
+name: The Switch Port\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The switch port at Castle Tetra, where Dreft meets the settled systems."\r
+tags: [switch-port, tetra, caravan]\r
+lore: tetra-switch-port\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the switch port at Castle Tetra and can be assumed to be familiar with its peoples, places, and customs."\r
+`,Xh=`id: the-union-of-texas\r
+name: "The Union of Texas"\r
+status: placeholder\r
+plane: earth\r
+summary: "The breakaway states the Empire still faces across a tense border."\r
+tags: [texas, foreign, politics]\r
+lore: union-of-texas\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Union of Texas and can be assumed to be familiar with its customs, politics, and territories."\r
+`,Zh=`id: the-united-nations\r
+name: "The United Nations"\r
+status: placeholder\r
+plane: earth\r
+region: tetra\r
+summary: "The UN and its institutions aboard Tetra."\r
+tags: [un, politics, tetra]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the United Nations and can be assumed to be familiar with its institutions aboard Tetra."\r
+`,Qh=`id: the-ural-federation\r
+name: "The Ural Federation"\r
+status: draft\r
+plane: earth\r
+region: ural-federation\r
+summary: "The Ural Federation: hundreds of tribal statelets across the steppe and the thawed Siberian breadbasket."\r
+tags: [ural-federation, politics]\r
+lore: ural-federation\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the Ural Federation and can be assumed to be familiar with its customs, politics, and territories."\r
+`,$h=`id: theater\r
+name: "Theater"\r
+status: draft\r
+plane: any\r
+summary: "Plays, performers, stagecraft and the people who put on a show."\r
+tags: [theater, performance, culture]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, persuasion: 2 }\r
+effect: "This character has knowledge of theater and can be assumed to be familiar with famous plays and performers, stagecraft, and how a performance is put together."\r
+`,eg=`id: thieves-cant\r
+name: "Thieves' Cant (Spoken)"\r
+status: draft\r
+plane: any\r
+summary: "The coded slang criminals use to talk business in plain hearing."\r
+tags: [language, crime, underworld]\r
+category: knowledge\r
+types: [language]\r
+language: thieves-cant\r
+effect: "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation."\r
+`,tg=`id: toxicology\r
+name: "Toxicology"\r
+status: draft\r
+plane: any\r
+summary: "Poisons, venoms and their antidotes."\r
+tags: [medicine, poison, antidotes]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3, logic: 3 }\r
+effect: "This character has knowledge of toxicology and can be assumed to be familiar with common poisons and venoms, their symptoms and their antidotes."\r
+`,ng=`id: trade-guilds\r
+name: "Trade Guilds"\r
+status: draft\r
+plane: any\r
+summary: "The guilds and unions of craftsmen and traders: their ranks, rules and rivalries."\r
+tags: [guild, craft, trade]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of trade guilds and can be assumed to be familiar with how craft and trade guilds are organized, their ranks, rules and the masters who run them."\r
+`,rg=`id: trade-law\r
+name: Trade Law\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: "The rules of trade in Dreft, and their loopholes."\r
+tags: [law, trade, merchant]\r
+category: knowledge\r
+minStats: { memory: 3, persuasion: 2 }\r
+effect: "This character has knowledge of Dreftian trade law and can be assumed to be familiar with the rules of trade in Dreft and their loopholes."\r
+`,ig=`id: trade-roads\r
+name: Trade Roads\r
+status: placeholder\r
+plane: isekai\r
+region: dreft\r
+summary: The roads trade travels across Dreft.\r
+tags: [trade, roads, caravan]\r
+category: knowledge\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the trade roads of Dreft and can be assumed to be familiar with their routes, products, and dangers."\r
+`,ag=`id: turkish-written\r
+name: "Turkish (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, turkish, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: turkish\r
+effect: "This character can read and write the Turkish language."\r
+`,og=`id: turkish\r
+name: "Turkish (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, turkish, earth]\r
+category: knowledge\r
+types: [language]\r
+language: turkish\r
+effect: "This character is conversational in the Turkish language and can speak it."\r
+`,sg=`id: ukrainian-written\r
+name: "Ukrainian (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, ukrainian, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: ukrainian\r
+effect: "This character can read and write the Ukrainian language."\r
+`,cg=`id: ukrainian\r
+name: "Ukrainian (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, ukrainian, earth]\r
+category: knowledge\r
+types: [language]\r
+language: ukrainian\r
+effect: "This character is conversational in the Ukrainian language and can speak it."\r
+`,lg=`id: union-politics\r
+name: "Union Politics"\r
+status: placeholder\r
+plane: earth\r
+region: sdu\r
+summary: "The parties, presidents and member-state rivalries of the SDU."\r
+tags: [sdu, politics]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Union politics and can be assumed to be familiar with the parties, presidents, and member-state rivalries of the SDU."\r
+`,ug=`id: ural-tribal-law\r
+name: "Ural Tribal Law"\r
+status: draft\r
+plane: earth\r
+region: ural-federation\r
+summary: "The customs and tribal laws of the Ural Federation’s statelets."\r
+tags: [law, ural-federation]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ural tribal law and can be assumed to be familiar with the customs and laws of the Ural Federation’s statelets."\r
+`,dg=`id: urdu-written\r
+name: "Urdu (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, urdu, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: urdu\r
+effect: "This character can read and write the Urdu language."\r
+`,fg=`id: urdu\r
+name: "Urdu (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Kingdom of India."\r
+tags: [language, urdu, earth]\r
+category: knowledge\r
+types: [language]\r
+language: urdu\r
+effect: "This character is conversational in the Urdu language and can speak it."\r
+`,pg=`id: uyghur-written\r
+name: "Uyghur (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, uyghur, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: uyghur\r
+effect: "This character can read and write the Uyghur language."\r
+`,mg=`id: uyghur\r
+name: "Uyghur (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Ural Federation."\r
+tags: [language, uyghur, earth]\r
+category: knowledge\r
+types: [language]\r
+language: uyghur\r
+effect: "This character is conversational in the Uyghur language and can speak it."\r
+`,hg=`id: vietnamese-written\r
+name: "Vietnamese (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, vietnamese, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: vietnamese\r
+effect: "This character can read and write the Vietnamese language."\r
+`,gg=`id: vietnamese\r
+name: "Vietnamese (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "Spoken in the Empire of China."\r
+tags: [language, vietnamese, earth]\r
+category: knowledge\r
+types: [language]\r
+language: vietnamese\r
+effect: "This character is conversational in the Vietnamese language and can speak it."\r
+`,_g=`id: weapons\r
+name: "Weapons"\r
+status: draft\r
+plane: any\r
+summary: "Weapons of every kind: how they work, what they do, and how they are made and cared for."\r
+tags: [weapons, combat, military]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of weapons and can be assumed to be familiar with common weapons, how they work and are maintained, and what they can do."\r
+`,vg=`id: wilderness-lore\r
+name: "Wilderness Lore"\r
+status: draft\r
+plane: any\r
+summary: "The wild: terrain, weather, edible plants and how not to die out there."\r
+tags: [wilderness, survival, nature]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 2, intuition: 3 }\r
+effect: "This character has knowledge of the wilderness and can be assumed to be familiar with terrain, weather, edible and dangerous plants, and the signs that keep travelers alive."\r
+`,yg=`id: xanthus\r
+name: "Xanthus"\r
+status: draft\r
+plane: earth\r
+region: xanthus\r
+summary: "Xanthus, the free Ark built around an iron asteroid, and the micro-nations that appear in its wake."\r
+tags: [xanthus, ark]\r
+lore: xanthus\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark Xanthus and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,bg=`id: yoruba-written\r
+name: "Yoruba (Written)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, yoruba, earth, writing]\r
+category: knowledge\r
+types: [language]\r
+language: yoruba\r
+effect: "This character can read and write the Yoruba language."\r
+`,xg=`id: yoruba\r
+name: "Yoruba (Spoken)"\r
+status: draft\r
+plane: earth\r
+summary: "One of the common languages of Earth Baseline."\r
+tags: [language, yoruba, earth]\r
+category: knowledge\r
+types: [language]\r
+language: yoruba\r
+effect: "This character is conversational in the Yoruba language and can speak it."\r
+`,Sg=`id: yutu\r
+name: "Yùtù"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The Jade Rabbit, the Empire of China’s colony on Luna."\r
+tags: [luna, colony, chinese-empire]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."\r
+`,Cg=`id: zhulong\r
+name: "Zhulong"\r
+status: placeholder\r
+plane: earth\r
+region: chinese-empire\r
+summary: "The Empire of China’s Ark."\r
+tags: [ark, chinese-empire]\r
+lore: zhulong\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of Ark Zhulong and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
+`,wg=`id: possessed-by-a-spirit\r
+name: "Possessed By A Spirit"\r
+status: draft\r
+plane: any\r
+summary: "Lost control of their body to a supernatural entity."\r
+tags: [supernatural, spirit, possession, site-example]\r
+category: other\r
+conveyed: true\r
+temporary: "lost when the character is no longer possessed"\r
+effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."\r
+`,Tg=`id: advanced-cooking\r
+name: "Advanced Cooking"\r
+status: draft\r
+plane: any\r
+summary: "Cooking at a professional level, for a crowd or a court."\r
+tags: [cooking, food, expert]\r
+category: skill\r
+mastery: true\r
+minStats: { intuition: 5, memory: 4, empathy: 3 }\r
+prerequisites: [simple-cooking]\r
+effect: "This character cooks at a professional level and can feed a large group. This character can request advantage on skill checks involving cooking, and a fine meal can earn them favor in social situations at the GM’s discretion."\r
+`,Eg=`id: advanced-potion-mixing\r
+name: "Advanced Potion Mixing"\r
+status: draft\r
+plane: isekai\r
+summary: "Brewing complex, potent potions, and working out new ones."\r
+tags: [potions, alchemy, expert]\r
+category: skill\r
+mastery: true\r
+minStats: { memory: 6, intuition: 6, logic: 4 }\r
+prerequisites: [simple-potion-mixing]\r
+effect: "This character can brew complex and potent potions, and can work out a new recipe from its ingredients’ properties. This character can request advantage on skill checks involving brewing potions."\r
+`,Dg=`id: ambusher\r
+name: Ambusher\r
+status: placeholder\r
+plane: any\r
+summary: Setting and springing ambushes.\r
+tags: [ambush, hunting, combat]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Og=`id: animal-husbandry\r
+name: "Animal Husbandry"\r
+status: draft\r
+plane: any\r
+summary: "Raising, feeding and caring for livestock and working animals."\r
+tags: [animals, farming, care]\r
+category: skill\r
+ranked: true\r
+minStats: { empathy: 3, endurance: 2, intuition: 2 }\r
+effect: "This character is capable of raising, feeding and caring for livestock and working animals without a skill check. Rank *10 added to skill check rolls involving handling and caring for animals."\r
+`,kg=`id: appraisal\r
+name: Appraisal\r
+status: placeholder\r
+plane: any\r
+summary: Judging what something is worth.\r
+tags: [trade, valuation, merchant]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Ag=`id: artist-painting\r
+name: "Artist: Painting"\r
+status: draft\r
+plane: any\r
+summary: "Painting, from portraits to murals."\r
+tags: [art, painting, craft]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, intuition: 3, memory: 2 }\r
+effect: "This character is capable of painting a competent likeness or scene without a skill check. Rank *10 added to skill check rolls involving painting."\r
+`,jg=`id: artist-sculpture\r
+name: "Artist: Sculpture"\r
+status: draft\r
+plane: any\r
+summary: "Shaping stone, clay, wood or metal into art."\r
+tags: [art, sculpture, craft]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, intuition: 3, power: 2 }\r
+effect: "This character is capable of sculpting a competent figure in stone, clay or wood without a skill check. Rank *10 added to skill check rolls involving sculpture."\r
+`,Mg=`id: cargo-handling\r
+name: "Cargo Handling"\r
+status: placeholder\r
+plane: any\r
+summary: "Loading, securing and moving freight, in gravity or out of it."\r
+tags: [cargo, shipping, labor]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Ng=`id: concealment\r
+name: Concealment\r
+status: placeholder\r
+plane: any\r
+summary: "Hiding things, and yourself."\r
+tags: [stealth, hiding]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Pg=`id: courtly-manners\r
+name: Courtly Manners\r
+status: placeholder\r
+plane: any\r
+summary: Moving gracefully through noble society.\r
+tags: [court, nobility, social]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Fg=`id: craft-leatherworking\r
+name: "Craft: Leatherworking"\r
+status: draft\r
+plane: any\r
+summary: "Tanning hides and making leather goods and armor."\r
+tags: [craft, leather, armor]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, endurance: 2, intuition: 2 }\r
+effect: "This character is capable of tanning hides and making leather goods and simple leather armor without a skill check. Rank *10 added to skill check rolls involving leatherworking."\r
+`,Ig=`id: craft-masonry\r
+name: "Craft: Masonry"\r
+status: draft\r
+plane: any\r
+summary: "Cutting, dressing and laying stone."\r
+tags: [craft, masonry, building]\r
+category: skill\r
+ranked: true\r
+minStats: { power: 4, endurance: 3, logic: 2 }\r
+effect: "This character is capable of cutting and laying stone for walls, foundations and simple structures without a skill check. Rank *10 added to skill check rolls involving masonry."\r
+`,Lg=`id: craft-smithing\r
+name: "Craft: Smithing"\r
+status: draft\r
+plane: any\r
+summary: "Forging and repairing metal tools, fittings and weapons."\r
+tags: [craft, smithing, metal]\r
+category: skill\r
+ranked: true\r
+minStats: { power: 4, endurance: 3, grace: 2 }\r
+effect: "This character is capable of forging and repairing simple metal tools, fittings and weapons without a skill check. Rank *10 added to skill check rolls involving smithing."\r
+`,Rg=`id: disguise\r
+name: "Disguise"\r
+status: draft\r
+plane: any\r
+summary: "Passing as someone else, through costume, makeup and manner."\r
+tags: [disguise, deception, spy]\r
+category: skill\r
+ranked: true\r
+minStats: { demeanor: 4, grace: 2, intuition: 2 }\r
+effect: "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation."\r
+`,zg=`id: excavation\r
+name: "Excavation"\r
+status: placeholder\r
+plane: any\r
+summary: "Digging up the past carefully enough that there’s something left to study."\r
+tags: [archeology, fieldwork, ruins]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Bg=`id: expert-pilot\r
+name: "Expert Pilot"\r
+status: draft\r
+plane: any\r
+summary: "A pilot good enough to fly almost anything they have training in, and most things like it."\r
+tags: [pilot, expert, site-example]\r
+category: skill\r
+mastery: true\r
+minStats: { memory: 5, intuition: 10, grace: 5 }\r
+prerequisiteTags: [pilot]\r
+effect: "This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in."\r
+`,Vg=`id: field-sampling\r
+name: "Field Sampling"\r
+status: placeholder\r
+plane: any\r
+summary: "Collecting, labelling and preserving samples in the field, wherever the field happens to be."\r
+tags: [parabiology, science, fieldwork, survey]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Hg=`id: folk-remedies\r
+name: Folk Remedies\r
+status: placeholder\r
+plane: any\r
+summary: Treating ailments with folk cures.\r
+tags: [healing, folk, herbs]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Ug=`id: haggler\r
+name: Haggler\r
+status: placeholder\r
+plane: any\r
+summary: Getting a better price.\r
+tags: [trade, bargaining, merchant]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Wg=`id: incantation\r
+name: Incantation\r
+status: placeholder\r
+plane: isekai\r
+summary: Casting spells by incantation.\r
+tags: [magic, spellcasting]\r
+category: skill\r
+# On the Magic list: only a character with Magical Heritage can pick it.\r
+list: magic\r
+effect: Placeholder. Effect not yet written.\r
+`,Gg=`id: intimidation\r
+name: "Intimidation"\r
+status: draft\r
+plane: any\r
+summary: "Getting what you want through threats and presence."\r
+tags: [intimidation, social, threat]\r
+category: skill\r
+ranked: true\r
+minStats: { demeanor: 3, power: 3 }\r
+effect: "This character is capable of making a credible threat without a skill check. Rank *10 added to skill check rolls involving intimidation."\r
+`,Kg=`id: investigation\r
+name: "Investigation"\r
+status: draft\r
+plane: any\r
+summary: "Gathering evidence, reading a scene and following leads."\r
+tags: [investigation, law, detective]\r
+category: skill\r
+ranked: true\r
+minStats: { intuition: 4, logic: 3, memory: 2 }\r
+effect: "This character is capable of searching a scene and following obvious leads without a skill check. Rank *10 added to skill check rolls involving investigating crimes and mysteries."\r
+`,qg=`id: legal-advocacy\r
+name: "Legal Advocacy"\r
+status: placeholder\r
+plane: any\r
+summary: "Arguing a case in court, at a hearing or across a desk, and knowing which forms to file first."\r
+tags: [law, persuasion, courts]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Jg=`id: lockpicking\r
+name: "Lockpicking"\r
+status: draft\r
+plane: any\r
+summary: "Opening locks without the key."\r
+tags: [locks, theft, security]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 4, intuition: 2 }\r
+effect: "This character is capable of opening simple mechanical locks with the right tools without a skill check. Rank *10 added to skill check rolls involving picking locks and bypassing security."\r
+`,Yg=`id: medical-aid\r
+name: "Medical Aid"\r
+status: draft\r
+plane: any\r
+summary: "First aid: stopping bleeding, dressing wounds and setting bones."\r
+tags: [medicine, first-aid, healing]\r
+category: skill\r
+ranked: true\r
+minStats: { empathy: 3, memory: 3, grace: 2 }\r
+effect: "This character is capable of performing basic first aid, such as stopping bleeding, dressing wounds and setting bones, without a skill check. Rank *10 added to skill check rolls involving treating injuries."\r
+`,Xg=`id: military-drill\r
+name: "Military Drill"\r
+status: placeholder\r
+plane: any\r
+summary: "Moving, fighting and following orders as part of a unit."\r
+tags: [military, discipline]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,Zg=`id: performer-acrobatics\r
+name: "Performer: Acrobatics"\r
+status: draft\r
+plane: any\r
+summary: "Tumbling, juggling and feats of balance for a crowd."\r
+tags: [acrobatics, performance, agility]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 4, endurance: 3, persuasion: 2 }\r
+effect: "This character is capable of tumbling, juggling and keeping their balance in a performance without a skill check. Rank *10 added to skill check rolls involving acrobatics and balance."\r
+`,Qg=`id: performer-music\r
+name: "Performer: Music"\r
+status: draft\r
+plane: any\r
+summary: "Playing an instrument or singing for an audience."\r
+tags: [music, performance, art]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, persuasion: 3, intuition: 2 }\r
+effect: "This character is capable of playing an instrument or singing well enough to hold an audience without a skill check. Rank *10 added to skill check rolls involving musical performance."\r
+`,$g=`id: pilot-fighter\r
+name: "Pilot: Fighter"\r
+status: draft\r
+plane: earth\r
+summary: "Flying fighters in and out of combat."\r
+tags: [pilot, fighter, military, space]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 5, intuition: 4, memory: 4 }\r
+effect: "This character is capable of piloting a fighter in simple scenarios and describing its basic functions and controls without a skill check. Rank *10 added to skill check rolls involving fighter piloting."\r
+`,e_=`id: pilot-helicopter\r
+name: "Pilot: Helicopter"\r
+status: draft\r
+plane: earth\r
+summary: "Flying helicopters."\r
+tags: [pilot, helicopters, site-example]\r
+category: skill\r
+ranked: true\r
+minStats: { memory: 5, intuition: 3, grace: 3 }\r
+effect: "This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter. Rank *10 added to skill check rolls involving helicopter piloting."\r
+`,t_=`id: pilot-truck\r
+name: "Pilot: Truck"\r
+status: placeholder\r
+plane: earth\r
+summary: "Flying cargo trucks between stations, ships and planetary surfaces."\r
+tags: [pilot, trucks, shipping]\r
+lore: trucks\r
+category: skill\r
+ranked: true\r
+effect: Placeholder. Effect not yet written.\r
+`,n_=`id: planar-surveying\r
+name: "Planar Surveying"\r
+status: placeholder\r
+plane: earth\r
+summary: "Mapping and assessing a newly opened plane in the field."\r
+tags: [planes, exploration, survey]\r
+category: skill\r
+ranked: true\r
+effect: Placeholder. Effect not yet written.\r
+`,r_=`id: programming\r
+name: "Programming"\r
+status: draft\r
+plane: earth\r
+summary: "Writing, reading and breaking software."\r
+tags: [computers, programming, technology]\r
+category: skill\r
+ranked: true\r
+minStats: { logic: 4, memory: 3, intuition: 2 }\r
+effect: "This character is capable of writing and debugging simple software and reading other people’s code without a skill check. Rank *10 added to skill check rolls involving programming and hacking."\r
+`,i_=`id: relic-handling\r
+name: Relic Handling\r
+status: placeholder\r
+plane: isekai\r
+summary: Handling magical relics without incident.\r
+tags: [magic, relics]\r
+category: skill\r
+# On the Magic list: only a character with Magical Heritage can pick it.\r
+list: magic\r
+effect: Placeholder. Effect not yet written.\r
+`,a_=`id: research\r
+name: "Research"\r
+status: placeholder\r
+plane: any\r
+summary: "Designing experiments, reading the literature and getting results."\r
+tags: [science, research]\r
+category: skill\r
+ranked: true\r
+effect: Placeholder. Effect not yet written.\r
+`,o_=`id: rider-basic-animals\r
+name: "Rider: Basic Animals"\r
+status: draft\r
+plane: any\r
+summary: "Riding a simple animal as a mount."\r
+tags: [riding, animals, site-example]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 4, empathy: 4, persuasion: 3 }\r
+effect: "This character is capable of riding a basic animal as a mount in simple scenarios without a skill check. Rank *10 added to skill check rolls involving riding a simple animal."\r
+`,s_=`id: schemer\r
+name: Schemer\r
+status: placeholder\r
+plane: any\r
+summary: Plotting and seeing through plots.\r
+tags: [intrigue, politics]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,c_=`id: shield-wall\r
+name: Shield Wall\r
+status: placeholder\r
+plane: any\r
+summary: Fighting in formation behind a shield.\r
+tags: [combat, shield, military]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,l_=`id: simple-cooking\r
+name: "Simple Cooking"\r
+status: draft\r
+plane: any\r
+summary: "Cooking simple, filling meals, even over a campfire."\r
+tags: [cooking, food, survival]\r
+category: skill\r
+ranked: true\r
+minStats: { memory: 2, intuition: 2 }\r
+effect: "This character can cook simple, filling meals for themselves and a small group without a skill check, even over a campfire. Rank *10 added to skill check rolls involving cooking."\r
+`,u_=`id: simple-potion-mixing\r
+name: "Simple Potion Mixing"\r
+status: draft\r
+plane: isekai\r
+summary: "Brewing simple potions from a known recipe."\r
+tags: [potions, alchemy, herbs]\r
+category: skill\r
+ranked: true\r
+minStats: { memory: 3, intuition: 3 }\r
+effect: "This character can brew simple potions, such as healing draughts and sleeping tonics, from a known recipe and the right ingredients without a skill check. Rank *10 added to skill check rolls involving brewing potions."\r
+`,d_=`id: sleight-of-hand\r
+name: Sleight of Hand\r
+status: placeholder\r
+plane: any\r
+summary: "Quick, unnoticed work with the hands."\r
+tags: [theft, trickery]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,f_=`id: smooth-talker\r
+name: Smooth Talker\r
+status: placeholder\r
+plane: any\r
+summary: "Talking people into things, or out of them."\r
+tags: [social, persuasion]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,p_=`id: specimen-handling\r
+name: "Specimen Handling"\r
+status: placeholder\r
+plane: any\r
+summary: "Catching, keeping, feeding and moving living specimens without losing them, or a hand."\r
+tags: [parabiology, animals, care, handling]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,m_=`id: starship-engineering\r
+name: "Starship Engineering"\r
+status: draft\r
+plane: earth\r
+summary: "Maintaining and repairing a starship’s reactors, drives and life support."\r
+tags: [engineering, starships, technology, space]\r
+category: skill\r
+ranked: true\r
+minStats: { logic: 4, memory: 3, grace: 2 }\r
+effect: "This character is capable of maintaining and making routine repairs to a starship’s reactors, drives and life support without a skill check. Rank *10 added to skill check rolls involving starship repair."\r
+`,h_=`id: streetwise\r
+name: Streetwise\r
+status: placeholder\r
+plane: any\r
+summary: "Getting by, and getting answers, on the street."\r
+tags: [urban, crime, social]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,g_=`id: surgery\r
+name: "Surgery"\r
+status: draft\r
+plane: any\r
+summary: "Operating to repair serious injuries."\r
+tags: [medicine, surgery, healing]\r
+category: skill\r
+ranked: true\r
+minStats: { memory: 6, grace: 5, logic: 4 }\r
+prerequisites: [medical-aid]\r
+effect: "This character is capable of performing surgery to treat severe injuries, such as removing shrapnel or closing internal wounds, given the proper tools. Rank *10 added to skill check rolls involving surgery."\r
+`,__=`id: survivalist\r
+name: Survivalist\r
+status: placeholder\r
+plane: any\r
+summary: Staying alive with little in the wild.\r
+tags: [survival, wilderness]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,v_=`id: teamster\r
+name: Teamster\r
+status: placeholder\r
+plane: any\r
+summary: Driving and caring for draft animals and wagons.\r
+tags: [caravan, animals, driving]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,y_=`id: tinkerer\r
+name: Tinkerer\r
+status: placeholder\r
+plane: any\r
+summary: Fixing and improvising with machines.\r
+tags: [technology, repair, crafting]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,b_=`id: tracker\r
+name: Tracker\r
+status: placeholder\r
+plane: any\r
+summary: Following trails and reading signs.\r
+tags: [tracking, hunting, wilderness]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,x_=`id: vigilance\r
+name: Vigilance\r
+status: placeholder\r
+plane: any\r
+summary: Staying alert on watch.\r
+tags: [guard, awareness]\r
+category: skill\r
+effect: Placeholder. Effect not yet written.\r
+`,S_=`id: wielder-longsword\r
+name: "Wielder: Longsword"\r
+status: draft\r
+plane: any\r
+summary: "Fighting with, and maintaining, a longsword."\r
+tags: [combat, melee, swords, site-example]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 4, power: 4, endurance: 4 }\r
+effect: "This character is capable of performing the basic tasks of maintaining a Longsword without a skill check. Rank *5 added to skill check rolls involving a Longsword."\r
+`,C_=`id: wielder-musket\r
+name: "Wielder: Musket"\r
+status: draft\r
+plane: any\r
+summary: "Fighting with, and maintaining, a musket."\r
+tags: [combat, firearms, muskets, site-example]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, power: 2, intuition: 3 }\r
+effect: "This character is capable of performing the basic tasks of maintaining a Musket without a skill check. Rank *5 added to skill check rolls involving a Musket."\r
+`,w_=`id: wielder-pistol\r
+name: "Wielder: Pistol"\r
+status: draft\r
+plane: any\r
+summary: "Fighting with, and maintaining, a pistol."\r
+tags: [combat, firearms, sidearm]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, intuition: 2 }\r
+effect: "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol."\r
+`,T_=`id: wielder-rifle\r
+name: "Wielder: Rifle"\r
+status: draft\r
+plane: earth\r
+summary: "Fighting with, and maintaining, a modern rifle."\r
+tags: [combat, firearms, military]\r
+category: skill\r
+ranked: true\r
+minStats: { grace: 3, intuition: 3, power: 2 }\r
+effect: "This character is capable of performing the basic tasks of maintaining a Rifle without a skill check. Rank *5 added to skill check rolls involving a Rifle."\r
+`,E_=`id: wielder-war-axe\r
+name: "Wielder: War Axe"\r
+status: draft\r
+plane: any\r
+summary: "Fighting with, and maintaining, a war axe."\r
+tags: [combat, melee, axes]\r
+category: skill\r
+ranked: true\r
+minStats: { power: 5, endurance: 4, grace: 3 }\r
+effect: "This character is capable of performing the basic tasks of maintaining a War Axe without a skill check. Rank *5 added to skill check rolls involving a War Axe."\r
 `,D_=Symbol.for(`yaml.alias`),O_=Symbol.for(`yaml.document`),k_=Symbol.for(`yaml.map`),A_=Symbol.for(`yaml.pair`),j_=Symbol.for(`yaml.scalar`),M_=Symbol.for(`yaml.seq`),N_=Symbol.for(`yaml.node.type`),P_=e=>!!e&&typeof e==`object`&&e[N_]===D_,F_=e=>!!e&&typeof e==`object`&&e[N_]===O_,I_=e=>!!e&&typeof e==`object`&&e[N_]===k_,L_=e=>!!e&&typeof e==`object`&&e[N_]===A_,R_=e=>!!e&&typeof e==`object`&&e[N_]===j_,z_=e=>!!e&&typeof e==`object`&&e[N_]===M_;function B_(e){if(e&&typeof e==`object`)switch(e[N_]){case k_:case M_:return!0}return!1}function V_(e){if(e&&typeof e==`object`)switch(e[N_]){case D_:case k_:case j_:case M_:return!0}return!1}var H_=e=>(R_(e)||B_(e))&&!!e.anchor,U_=Symbol(`break visit`),W_=Symbol(`skip children`),G_=Symbol(`remove node`);function K_(e,t){let n=J_(t);F_(e)?q_(null,e.contents,n,Object.freeze([e]))===G_&&(e.contents=null):q_(null,e,n,Object.freeze([]))}K_.BREAK=U_,K_.SKIP=W_,K_.REMOVE=G_;function q_(e,t,n,r){let i=Y_(e,t,n,r);if(V_(i)||L_(i))return X_(e,r,i),q_(e,i,n,r);if(typeof i!=`symbol`){if(B_(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=q_(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===U_)return U_;else i===G_&&(t.items.splice(e,1),--e)}}else if(L_(t)){r=Object.freeze(r.concat(t));let e=q_(`key`,t.key,n,r);if(e===U_)return U_;e===G_&&(t.key=null);let i=q_(`value`,t.value,n,r);if(i===U_)return U_;i===G_&&(t.value=null)}}return i}function J_(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function Y_(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(I_(t))return n.Map?.(e,t,r);if(z_(t))return n.Seq?.(e,t,r);if(L_(t))return n.Pair?.(e,t,r);if(R_(t))return n.Scalar?.(e,t,r);if(P_(t))return n.Alias?.(e,t,r)}function X_(e,t,n){let r=t[t.length-1];if(B_(r))r.items[e]=n;else if(L_(r))e===`key`?r.key=n:r.value=n;else if(F_(r))r.contents=n;else{let e=P_(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var Z_={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},Q_=e=>e.replace(/[!,[\]{}]/g,e=>Z_[e]),$_=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+Q_(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&V_(e.contents)){let t={};K_(e.contents,(e,n)=>{V_(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
 `)}};$_.defaultYaml={explicit:!1,version:`1.2`},$_.defaultTags={"!!":`tag:yaml.org,2002:`};function ev(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function tv(e){let t=new Set;return K_(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function nv(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function rv(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=tv(e);let a=nv(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(R_(t.node)||B_(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function iv(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=iv(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=iv(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=iv(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=iv(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function av(e,t,n){if(Array.isArray(e))return e.map((e,t)=>av(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!H_(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var ov=class{constructor(e){Object.defineProperty(this,N_,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!F_(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=av(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?iv(i,{"":o},``,o):o}},sv=class extends ov{constructor(e){super(D_),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],K_(e,{Node:(e,t)=>{(P_(t)||H_(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(av(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=cv(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(ev(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function cv(e,t,n){if(P_(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(B_(t)){let r=0;for(let i of t.items){let t=cv(e,i,n);t>r&&(r=t)}return r}if(L_(t)){let r=cv(e,t.key,n),i=cv(e,t.value,n);return Math.max(r,i)}return 1}var lv=e=>!e||typeof e!=`function`&&typeof e!=`object`,Z=class extends ov{constructor(e){super(j_),this.value=e}toJSON(e,t){return t?.keep?this.value:av(this.value,e,t)}toString(){return String(this.value)}};Z.BLOCK_FOLDED=`BLOCK_FOLDED`,Z.BLOCK_LITERAL=`BLOCK_LITERAL`,Z.PLAIN=`PLAIN`,Z.QUOTE_DOUBLE=`QUOTE_DOUBLE`,Z.QUOTE_SINGLE=`QUOTE_SINGLE`;var uv=`tag:yaml.org,2002:`;function dv(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function fv(e,t,n){if(F_(e)&&(e=e.contents),V_(e))return e;if(L_(e)){let t=n.schema[k_].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new sv(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=uv+t.slice(2));let l=dv(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new Z(e);return c&&(c.node=t),t}l=e instanceof Map?o[k_]:Symbol.iterator in Object(e)?o[M_]:o[k_]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new Z(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function pv(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return fv(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var mv=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,hv=class extends ov{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>V_(t)||L_(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(mv(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(B_(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,pv(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(B_(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&R_(i)?i.value:i:B_(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!L_(t))return!1;let n=t.value;return n==null||e&&R_(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return B_(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(B_(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,pv(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},gv=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function _v(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var vv=(e,t,n)=>e.endsWith(`
 `)?_v(n,t):n.includes(`
@@ -5813,7 +5813,7 @@ $&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
 `,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){dx(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(ox(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=ux(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(ox(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(cx(t.key)&&!ox(t.sep,`newline`)){let e=ux(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):ox(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!ox(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){dx(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||ox(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=ux(lx(t));fx(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=ux(lx(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=ux(lx(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function mx(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new ax||null,prettyErrors:t}}function hx(e,t={}){let{lineCounter:n,prettyErrors:r}=mx(t),i=new px(n?.addNewLine),a=new Gb(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new sb(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(lb(e,n)),o.warnings.forEach(lb(e,n))),o}function gx(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=hx(e,n);if(!i)return null;if(i.warnings.forEach(e=>zv(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function _x(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(gx(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function vx(e){let t=[];return{content:{kinds:_x(e,`kinds`,Sc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>_x(e,n,Tc,t)),traits:_x(e,`traits`,Oc,t)},errors:t}}var{content:yx,errors:bx}=vx(Object.entries(Object.assign({"../../content/kinds/ai-core.yaml":Tl,"../../content/kinds/dreft/guwain.yaml":El,"../../content/kinds/dreft/isek.yaml":Dl,"../../content/kinds/dreft/tatot-goblinoid.yaml":Ol,"../../content/kinds/dreft/tatot-orcoid.yaml":kl,"../../content/kinds/human.yaml":Al,"../../content/origins/american-empire/american-empire-colonies.yaml":jl,"../../content/origins/american-empire/american-empire-earth.yaml":Ml,"../../content/origins/centafrica/centafrica-colonies.yaml":Nl,"../../content/origins/centafrica/centafrica-earth.yaml":Pl,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Fl,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Il,"../../content/origins/dreft/dreft.yaml":Ll,"../../content/origins/drovus/the-drovus-empire.yaml":Rl,"../../content/origins/free-american-states/the-free-american-states.yaml":zl,"../../content/origins/karsef/kingdom-of-karsef.yaml":Bl,"../../content/origins/kashgar/kashgar.yaml":Vl,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":Hl,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Ul,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Wl,"../../content/origins/sdu/sdu-colonies.yaml":Gl,"../../content/origins/sdu/sdu-earth.yaml":Kl,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":ql,"../../content/origins/tetra/tetra.yaml":Jl,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Yl,"../../content/origins/ural-federation/the-ural-federation.yaml":Xl,"../../content/origins/xanthus/xanthus.yaml":Zl,"../../content/pasts/any/craft-apprenticeship.yaml":Ql,"../../content/pasts/any/criminal-family.yaml":$l,"../../content/pasts/any/gutter-trash.yaml":eu,"../../content/pasts/any/military-service.yaml":tu,"../../content/pasts/any/privileged-upbringing.yaml":nu,"../../content/pasts/any/raised-at-court.yaml":ru,"../../content/pasts/any/shipborn.yaml":iu,"../../content/pasts/any/simple-farmer.yaml":au,"../../content/pasts/any/traveling-troupe.yaml":ou,"../../content/pasts/dreft/countryside-upbringing.yaml":su,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":H,"../../content/pasts/dreft/glintl-docks.yaml":cu,"../../content/pasts/dreft/karsef-border-veteran.yaml":lu,"../../content/pasts/dreft/merchant-dynasty.yaml":uu,"../../content/pasts/dreft/monster-raided-village.yaml":du,"../../content/pasts/dreft/noble-household.yaml":fu,"../../content/pasts/dreft/palace-servant.yaml":pu,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":mu,"../../content/pasts/dreft/returned-from-the-systems.yaml":hu,"../../content/pasts/dreft/sunrise-refugee.yaml":gu,"../../content/pasts/systems/station-rat.yaml":_u,"../../content/pasts/systems/university-educated.yaml":vu,"../../content/pasts/tetra/delegation-child.yaml":yu,"../../content/pasts/tetra/gate-lab-kid.yaml":bu,"../../content/pasts/tetra/holding-company-kid.yaml":xu,"../../content/pasts/tetra/parasapient-quarter.yaml":Su,"../../content/pasts/tetra/raised-in-the-infill.yaml":Cu,"../../content/pasts/tetra/raised-on-ward-politics.yaml":wu,"../../content/professions/any/apothecary.yaml":Tu,"../../content/professions/any/bard.yaml":Eu,"../../content/professions/any/blacksmith.yaml":Du,"../../content/professions/any/courier.yaml":Ou,"../../content/professions/any/criminal-enforcer.yaml":ku,"../../content/professions/any/doctor.yaml":Au,"../../content/professions/any/farmer.yaml":ju,"../../content/professions/any/jester.yaml":Mu,"../../content/professions/any/knight.yaml":Nu,"../../content/professions/any/local-police.yaml":Pu,"../../content/professions/any/musical-artist.yaml":Fu,"../../content/professions/any/ranger.yaml":Iu,"../../content/professions/any/smuggler.yaml":Lu,"../../content/professions/any/spy.yaml":Ru,"../../content/professions/any/squire.yaml":zu,"../../content/professions/any/stonemason.yaml":Bu,"../../content/professions/any/surgeon.yaml":Vu,"../../content/professions/any/tanner.yaml":Hu,"../../content/professions/any/visual-artist.yaml":Uu,"../../content/professions/dreft/alchemist.yaml":Wu,"../../content/professions/dreft/caravaneer.yaml":Gu,"../../content/professions/dreft/dreft-local-militia.yaml":Ku,"../../content/professions/dreft/dreft-mercenary.yaml":qu,"../../content/professions/dreft/gate-hand.yaml":Ju,"../../content/professions/dreft/guild-hunter.yaml":Yu,"../../content/professions/dreft/hedge-witch.yaml":Xu,"../../content/professions/dreft/licensed-mage.yaml":Zu,"../../content/professions/dreft/royal-guard.yaml":Qu,"../../content/professions/systems/american-empire-soldier.yaml":$u,"../../content/professions/systems/combat-medic.yaml":ed,"../../content/professions/systems/computer-engineer.yaml":td,"../../content/professions/systems/emergency-medical-technician.yaml":nd,"../../content/professions/systems/exotic-specimen-dealer.yaml":U,"../../content/professions/systems/fighter-pilot.yaml":W,"../../content/professions/systems/interplanar-diplomat.yaml":G,"../../content/professions/systems/interplanar-rights-lawyer.yaml":K,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":q,"../../content/professions/systems/paraarcheologist.yaml":rd,"../../content/professions/systems/paraecologist.yaml":id,"../../content/professions/systems/paraethnologist.yaml":ad,"../../content/professions/systems/paraevolutionary-scientist.yaml":od,"../../content/professions/systems/paraphysiologist.yaml":sd,"../../content/professions/systems/parazoological-keeper.yaml":cd,"../../content/professions/systems/planar-expeditionary-professional.yaml":ld,"../../content/professions/systems/starship-engineer.yaml":ud,"../../content/professions/systems/station-maintenance.yaml":dd,"../../content/professions/systems/theoretical-paraphysicist.yaml":fd,"../../content/professions/systems/truck-pilot.yaml":pd,"../../content/traits/ability/capable-student.yaml":md,"../../content/traits/ability/con-man.yaml":hd,"../../content/traits/ability/eagle-eye.yaml":gd,"../../content/traits/ability/gladiator.yaml":_d,"../../content/traits/ability/knowledge-sponge.yaml":vd,"../../content/traits/ability/magic-access.yaml":yd,"../../content/traits/ability/magical-heritage.yaml":bd,"../../content/traits/ability/mental-fortitude.yaml":xd,"../../content/traits/ability/natural-breath-weapon.yaml":Sd,"../../content/traits/ability/sculpted.yaml":Cd,"../../content/traits/ability/trail-runner.yaml":wd,"../../content/traits/circumstance/explorers-lodge-membership.yaml":Td,"../../content/traits/circumstance/imperial-service-record.yaml":Ed,"../../content/traits/circumstance/short-term-fame.yaml":Dd,"../../content/traits/circumstance/significant-inheritance.yaml":Od,"../../content/traits/circumstance/thieves-guild-membership.yaml":kd,"../../content/traits/circumstance/tugboat-captain.yaml":Ad,"../../content/traits/circumstance/wanted-in-sol.yaml":jd,"../../content/traits/condition/cybernetic-intelligence.yaml":Md,"../../content/traits/condition/damaged.yaml":Nd,"../../content/traits/condition/dead.yaml":Pd,"../../content/traits/condition/destroyed.yaml":Fd,"../../content/traits/condition/ghost-sight.yaml":Id,"../../content/traits/condition/hard-shell.yaml":Ld,"../../content/traits/condition/healthy.yaml":Rd,"../../content/traits/condition/incapacitated.yaml":zd,"../../content/traits/condition/injured.yaml":Bd,"../../content/traits/condition/long-toothed.yaml":Vd,"../../content/traits/condition/mechanical.yaml":Hd,"../../content/traits/condition/severe-bleeding.yaml":Ud,"../../content/traits/condition/severely-injured.yaml":Wd,"../../content/traits/condition/sorcerous.yaml":Gd,"../../content/traits/condition/stimm-rush.yaml":Kd,"../../content/traits/condition/stone-skin.yaml":qd,"../../content/traits/condition/supernatural.yaml":Jd,"../../content/traits/contact/additional-contact.yaml":Yd,"../../content/traits/knowledge/additional-language.yaml":Xd,"../../content/traits/knowledge/ai-culture.yaml":Zd,"../../content/traits/knowledge/aksum.yaml":Qd,"../../content/traits/knowledge/alchemy.yaml":$d,"../../content/traits/knowledge/amaravati.yaml":ef,"../../content/traits/knowledge/american-geography.yaml":tf,"../../content/traits/knowledge/american-history.yaml":nf,"../../content/traits/knowledge/amharic-written.yaml":rf,"../../content/traits/knowledge/amharic.yaml":af,"../../content/traits/knowledge/animal-lore.yaml":of,"../../content/traits/knowledge/antiluna.yaml":sf,"../../content/traits/knowledge/arabic-written.yaml":cf,"../../content/traits/knowledge/arabic.yaml":lf,"../../content/traits/knowledge/architecture.yaml":uf,"../../content/traits/knowledge/aristocracy.yaml":df,"../../content/traits/knowledge/ark-life.yaml":ff,"../../content/traits/knowledge/ark-new-york.yaml":pf,"../../content/traits/knowledge/art-history.yaml":mf,"../../content/traits/knowledge/artificial-intelligence.yaml":hf,"../../content/traits/knowledge/asteroid-mining.yaml":gf,"../../content/traits/knowledge/bandits-and-brigands.yaml":J,"../../content/traits/knowledge/bengali-written.yaml":_f,"../../content/traits/knowledge/bengali.yaml":vf,"../../content/traits/knowledge/biology.yaml":yf,"../../content/traits/knowledge/boneyard.yaml":bf,"../../content/traits/knowledge/bureaucracy.yaml":xf,"../../content/traits/knowledge/burmese-written.yaml":Sf,"../../content/traits/knowledge/burmese.yaml":Cf,"../../content/traits/knowledge/cantonese-written.yaml":wf,"../../content/traits/knowledge/cantonese.yaml":Tf,"../../content/traits/knowledge/caravan-routes.yaml":Ef,"../../content/traits/knowledge/centafrica.yaml":Df,"../../content/traits/knowledge/centafrican-law.yaml":Of,"../../content/traits/knowledge/chemistry.yaml":kf,"../../content/traits/knowledge/chinese-imperial-law.yaml":Af,"../../content/traits/knowledge/coastal-trade.yaml":jf,"../../content/traits/knowledge/commerce.yaml":Mf,"../../content/traits/knowledge/computer-systems.yaml":Nf,"../../content/traits/knowledge/countryside-lore.yaml":Pf,"../../content/traits/knowledge/court-etiquette.yaml":Ff,"../../content/traits/knowledge/criminal-underworld.yaml":If,"../../content/traits/knowledge/cryptography.yaml":Lf,"../../content/traits/knowledge/cybernetics.yaml":Rf,"../../content/traits/knowledge/diplomatic-protocol.yaml":zf,"../../content/traits/knowledge/dreft.yaml":Bf,"../../content/traits/knowledge/dreftan-written.yaml":Vf,"../../content/traits/knowledge/dreftan.yaml":Hf,"../../content/traits/knowledge/dreftian-law.yaml":Uf,"../../content/traits/knowledge/dutch-written.yaml":Wf,"../../content/traits/knowledge/dutch.yaml":Y,"../../content/traits/knowledge/dwarvish-runes-written.yaml":Gf,"../../content/traits/knowledge/dwarvish.yaml":Kf,"../../content/traits/knowledge/earth-baseline-customs.yaml":qf,"../../content/traits/knowledge/earth-baseline-technology.yaml":Jf,"../../content/traits/knowledge/ecology.yaml":Yf,"../../content/traits/knowledge/elemental-magics.yaml":Xf,"../../content/traits/knowledge/engineering.yaml":Zf,"../../content/traits/knowledge/english-written.yaml":Qf,"../../content/traits/knowledge/english.yaml":$f,"../../content/traits/knowledge/exotic-materials.yaml":ep,"../../content/traits/knowledge/farming.yaml":tp,"../../content/traits/knowledge/filipino-written.yaml":np,"../../content/traits/knowledge/filipino.yaml":rp,"../../content/traits/knowledge/french-written.yaml":X,"../../content/traits/knowledge/french.yaml":ip,"../../content/traits/knowledge/gambling.yaml":ap,"../../content/traits/knowledge/geography.yaml":op,"../../content/traits/knowledge/german-written.yaml":sp,"../../content/traits/knowledge/german.yaml":cp,"../../content/traits/knowledge/glintl.yaml":lp,"../../content/traits/knowledge/gujarati-written.yaml":up,"../../content/traits/knowledge/gujarati.yaml":dp,"../../content/traits/knowledge/hausa-written.yaml":fp,"../../content/traits/knowledge/hausa.yaml":pp,"../../content/traits/knowledge/heraldry.yaml":mp,"../../content/traits/knowledge/herbalism.yaml":hp,"../../content/traits/knowledge/high-society.yaml":gp,"../../content/traits/knowledge/hindi-written.yaml":_p,"../../content/traits/knowledge/hindi.yaml":vp,"../../content/traits/knowledge/history.yaml":yp,"../../content/traits/knowledge/imperial-law.yaml":bp,"../../content/traits/knowledge/imperial-politics.yaml":xp,"../../content/traits/knowledge/indian-law.yaml":Sp,"../../content/traits/knowledge/indian-theology.yaml":Cp,"../../content/traits/knowledge/indonesian-written.yaml":wp,"../../content/traits/knowledge/indonesian.yaml":Tp,"../../content/traits/knowledge/interplanar-law.yaml":Ep,"../../content/traits/knowledge/interplanar-relations.yaml":Dp,"../../content/traits/knowledge/italian-written.yaml":Op,"../../content/traits/knowledge/italian.yaml":kp,"../../content/traits/knowledge/japanese-written.yaml":Ap,"../../content/traits/knowledge/japanese.yaml":jp,"../../content/traits/knowledge/javanese-written.yaml":Mp,"../../content/traits/knowledge/javanese.yaml":Np,"../../content/traits/knowledge/kannada-written.yaml":Pp,"../../content/traits/knowledge/kannada.yaml":Fp,"../../content/traits/knowledge/karsef.yaml":Ip,"../../content/traits/knowledge/kashgar-mindworks.yaml":Lp,"../../content/traits/knowledge/kashgar.yaml":Rp,"../../content/traits/knowledge/kazakh-written.yaml":zp,"../../content/traits/knowledge/kazakh.yaml":Bp,"../../content/traits/knowledge/khmer-written.yaml":Vp,"../../content/traits/knowledge/khmer.yaml":Hp,"../../content/traits/knowledge/kinyarwanda-written.yaml":Up,"../../content/traits/knowledge/kinyarwanda.yaml":Wp,"../../content/traits/knowledge/korean-written.yaml":Gp,"../../content/traits/knowledge/korean.yaml":Kp,"../../content/traits/knowledge/kyrgyz-written.yaml":qp,"../../content/traits/knowledge/kyrgyz.yaml":Jp,"../../content/traits/knowledge/lao-written.yaml":Yp,"../../content/traits/knowledge/lao.yaml":Xp,"../../content/traits/knowledge/law-enforcement.yaml":Zp,"../../content/traits/knowledge/legal-systems.yaml":Qp,"../../content/traits/knowledge/lingala-written.yaml":$p,"../../content/traits/knowledge/lingala.yaml":em,"../../content/traits/knowledge/liquid-democracy.yaml":tm,"../../content/traits/knowledge/literature.yaml":nm,"../../content/traits/knowledge/local-folklore.yaml":rm,"../../content/traits/knowledge/local-history.yaml":im,"../../content/traits/knowledge/magic-on-isekai.yaml":am,"../../content/traits/knowledge/malay-written.yaml":om,"../../content/traits/knowledge/malay.yaml":sm,"../../content/traits/knowledge/malayalam-written.yaml":cm,"../../content/traits/knowledge/malayalam.yaml":lm,"../../content/traits/knowledge/mandarin-written.yaml":um,"../../content/traits/knowledge/mandarin.yaml":dm,"../../content/traits/knowledge/marathi-written.yaml":fm,"../../content/traits/knowledge/marathi.yaml":pm,"../../content/traits/knowledge/mathematics.yaml":mm,"../../content/traits/knowledge/medicine.yaml":hm,"../../content/traits/knowledge/metallurgy.yaml":gm,"../../content/traits/knowledge/military-tactics.yaml":_m,"../../content/traits/knowledge/mongolian-written.yaml":vm,"../../content/traits/knowledge/mongolian.yaml":ym,"../../content/traits/knowledge/monsters-of-isekai.yaml":bm,"../../content/traits/knowledge/mountaineering.yaml":xm,"../../content/traits/knowledge/music.yaml":Sm,"../../content/traits/knowledge/navigation.yaml":Cm,"../../content/traits/knowledge/nepali-written.yaml":wm,"../../content/traits/knowledge/nepali.yaml":Tm,"../../content/traits/knowledge/new-columbia.yaml":Em,"../../content/traits/knowledge/new-persia.yaml":Dm,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":Om,"../../content/traits/knowledge/odia-written.yaml":km,"../../content/traits/knowledge/odia.yaml":Am,"../../content/traits/knowledge/orc-society.yaml":jm,"../../content/traits/knowledge/oromo-written.yaml":Mm,"../../content/traits/knowledge/oromo.yaml":Nm,"../../content/traits/knowledge/paraarcheology.yaml":Pm,"../../content/traits/knowledge/parabiology.yaml":Fm,"../../content/traits/knowledge/paraflora.yaml":Im,"../../content/traits/knowledge/paraphysics.yaml":Lm,"../../content/traits/knowledge/parasapient-medicine.yaml":Rm,"../../content/traits/knowledge/parasapients.yaml":zm,"../../content/traits/knowledge/parazoology.yaml":Bm,"../../content/traits/knowledge/pataliputra.yaml":Vm,"../../content/traits/knowledge/pathology.yaml":Hm,"../../content/traits/knowledge/persian-written.yaml":Um,"../../content/traits/knowledge/persian.yaml":Wm,"../../content/traits/knowledge/pharmacology.yaml":Gm,"../../content/traits/knowledge/physics.yaml":Km,"../../content/traits/knowledge/planar-exploration.yaml":qm,"../../content/traits/knowledge/polish-written.yaml":Jm,"../../content/traits/knowledge/polish.yaml":Ym,"../../content/traits/knowledge/politics.yaml":Xm,"../../content/traits/knowledge/port-herminst.yaml":Zm,"../../content/traits/knowledge/ports-and-stations.yaml":Qm,"../../content/traits/knowledge/portuguese-written.yaml":$m,"../../content/traits/knowledge/portuguese.yaml":eh,"../../content/traits/knowledge/psychology.yaml":th,"../../content/traits/knowledge/punjabi-written.yaml":nh,"../../content/traits/knowledge/punjabi.yaml":rh,"../../content/traits/knowledge/robotics.yaml":ih,"../../content/traits/knowledge/romanian-written.yaml":ah,"../../content/traits/knowledge/romanian.yaml":oh,"../../content/traits/knowledge/russian-written.yaml":sh,"../../content/traits/knowledge/russian.yaml":ch,"../../content/traits/knowledge/sdu-law.yaml":lh,"../../content/traits/knowledge/seafaring.yaml":uh,"../../content/traits/knowledge/security-systems.yaml":dh,"../../content/traits/knowledge/shipping-lanes.yaml":fh,"../../content/traits/knowledge/sinhala-written.yaml":ph,"../../content/traits/knowledge/sinhala.yaml":mh,"../../content/traits/knowledge/somali-written.yaml":hh,"../../content/traits/knowledge/somali.yaml":gh,"../../content/traits/knowledge/sorellion.yaml":_h,"../../content/traits/knowledge/southeast-asia.yaml":vh,"../../content/traits/knowledge/spacefaring.yaml":yh,"../../content/traits/knowledge/spanish-written.yaml":bh,"../../content/traits/knowledge/spanish.yaml":xh,"../../content/traits/knowledge/starships.yaml":Sh,"../../content/traits/knowledge/succession-law.yaml":Ch,"../../content/traits/knowledge/swahili-written.yaml":wh,"../../content/traits/knowledge/swahili.yaml":Th,"../../content/traits/knowledge/tamil-written.yaml":Eh,"../../content/traits/knowledge/tamil.yaml":Dh,"../../content/traits/knowledge/telugu-written.yaml":Oh,"../../content/traits/knowledge/telugu.yaml":kh,"../../content/traits/knowledge/tetra-frontiers-co.yaml":Ah,"../../content/traits/knowledge/tetra.yaml":jh,"../../content/traits/knowledge/thai-written.yaml":Mh,"../../content/traits/knowledge/thai.yaml":Nh,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":Ph,"../../content/traits/knowledge/the-chinese-empire.yaml":Fh,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Ih,"../../content/traits/knowledge/the-corsine-pass.yaml":Lh,"../../content/traits/knowledge/the-diplomatic-wing.yaml":Rh,"../../content/traits/knowledge/the-drovus-empire.yaml":zh,"../../content/traits/knowledge/the-explorers-lodge.yaml":Bh,"../../content/traits/knowledge/the-free-american-states.yaml":Vh,"../../content/traits/knowledge/the-imperial-military.yaml":Hh,"../../content/traits/knowledge/the-kingdom-of-india.yaml":Uh,"../../content/traits/knowledge/the-kings-woods.yaml":Wh,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Gh,"../../content/traits/knowledge/the-martian-association.yaml":Kh,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":qh,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":Jh,"../../content/traits/knowledge/the-switch-port.yaml":Yh,"../../content/traits/knowledge/the-union-of-texas.yaml":Xh,"../../content/traits/knowledge/the-united-nations.yaml":Zh,"../../content/traits/knowledge/the-ural-federation.yaml":Qh,"../../content/traits/knowledge/theater.yaml":$h,"../../content/traits/knowledge/thieves-cant.yaml":eg,"../../content/traits/knowledge/toxicology.yaml":tg,"../../content/traits/knowledge/trade-guilds.yaml":ng,"../../content/traits/knowledge/trade-law.yaml":rg,"../../content/traits/knowledge/trade-roads.yaml":ig,"../../content/traits/knowledge/turkish-written.yaml":ag,"../../content/traits/knowledge/turkish.yaml":og,"../../content/traits/knowledge/ukrainian-written.yaml":sg,"../../content/traits/knowledge/ukrainian.yaml":cg,"../../content/traits/knowledge/union-politics.yaml":lg,"../../content/traits/knowledge/ural-tribal-law.yaml":ug,"../../content/traits/knowledge/urdu-written.yaml":dg,"../../content/traits/knowledge/urdu.yaml":fg,"../../content/traits/knowledge/uyghur-written.yaml":pg,"../../content/traits/knowledge/uyghur.yaml":mg,"../../content/traits/knowledge/vietnamese-written.yaml":hg,"../../content/traits/knowledge/vietnamese.yaml":gg,"../../content/traits/knowledge/weapons.yaml":_g,"../../content/traits/knowledge/wilderness-lore.yaml":vg,"../../content/traits/knowledge/xanthus.yaml":yg,"../../content/traits/knowledge/yoruba-written.yaml":bg,"../../content/traits/knowledge/yoruba.yaml":xg,"../../content/traits/knowledge/yutu.yaml":Sg,"../../content/traits/knowledge/zhulong.yaml":Cg,"../../content/traits/other/possessed-by-a-spirit.yaml":wg,"../../content/traits/skill/advanced-cooking.yaml":Tg,"../../content/traits/skill/advanced-potion-mixing.yaml":Eg,"../../content/traits/skill/ambusher.yaml":Dg,"../../content/traits/skill/animal-husbandry.yaml":Og,"../../content/traits/skill/appraisal.yaml":kg,"../../content/traits/skill/artist-painting.yaml":Ag,"../../content/traits/skill/artist-sculpture.yaml":jg,"../../content/traits/skill/cargo-handling.yaml":Mg,"../../content/traits/skill/concealment.yaml":Ng,"../../content/traits/skill/courtly-manners.yaml":Pg,"../../content/traits/skill/craft-leatherworking.yaml":Fg,"../../content/traits/skill/craft-masonry.yaml":Ig,"../../content/traits/skill/craft-smithing.yaml":Lg,"../../content/traits/skill/disguise.yaml":Rg,"../../content/traits/skill/excavation.yaml":zg,"../../content/traits/skill/expert-pilot.yaml":Bg,"../../content/traits/skill/field-sampling.yaml":Vg,"../../content/traits/skill/folk-remedies.yaml":Hg,"../../content/traits/skill/haggler.yaml":Ug,"../../content/traits/skill/incantation.yaml":Wg,"../../content/traits/skill/intimidation.yaml":Gg,"../../content/traits/skill/investigation.yaml":Kg,"../../content/traits/skill/legal-advocacy.yaml":qg,"../../content/traits/skill/lockpicking.yaml":Jg,"../../content/traits/skill/medical-aid.yaml":Yg,"../../content/traits/skill/military-drill.yaml":Xg,"../../content/traits/skill/performer-acrobatics.yaml":Zg,"../../content/traits/skill/performer-music.yaml":Qg,"../../content/traits/skill/pilot-fighter.yaml":$g,"../../content/traits/skill/pilot-helicopter.yaml":e_,"../../content/traits/skill/pilot-truck.yaml":t_,"../../content/traits/skill/planar-surveying.yaml":n_,"../../content/traits/skill/programming.yaml":r_,"../../content/traits/skill/relic-handling.yaml":i_,"../../content/traits/skill/research.yaml":a_,"../../content/traits/skill/rider-basic-animals.yaml":o_,"../../content/traits/skill/schemer.yaml":s_,"../../content/traits/skill/shield-wall.yaml":c_,"../../content/traits/skill/simple-cooking.yaml":l_,"../../content/traits/skill/simple-potion-mixing.yaml":u_,"../../content/traits/skill/sleight-of-hand.yaml":d_,"../../content/traits/skill/smooth-talker.yaml":f_,"../../content/traits/skill/specimen-handling.yaml":p_,"../../content/traits/skill/starship-engineering.yaml":m_,"../../content/traits/skill/streetwise.yaml":h_,"../../content/traits/skill/surgery.yaml":g_,"../../content/traits/skill/survivalist.yaml":__,"../../content/traits/skill/teamster.yaml":v_,"../../content/traits/skill/tinkerer.yaml":y_,"../../content/traits/skill/tracker.yaml":b_,"../../content/traits/skill/vigilance.yaml":x_,"../../content/traits/skill/wielder-longsword.yaml":S_,"../../content/traits/skill/wielder-musket.yaml":C_,"../../content/traits/skill/wielder-pistol.yaml":w_,"../../content/traits/skill/wielder-rifle.yaml":T_,"../../content/traits/skill/wielder-war-axe.yaml":E_})).map(([e,t])=>({path:e.slice(14),text:t}))),xx=new Map(yx.traits.map(e=>[e.id,e])),Sx=new Map(yx.packages.map(e=>[e.id,e])),Cx=new Map(yx.kinds.map(e=>[e.id,e])),wx=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],Tx=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],Ex=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),Dx=`(\\d{1,2}|${Ex(wx)})`,Ox=`(\\d{1,2})(?:st|nd|rd|th)|(${Ex(Tx)})`,kx=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${Dx}\\b`,`i`),Ax=RegExp(`\\b(?:${Ox})[\\s-]+(?:level|lvl)\\b`,`i`);function jx(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function Mx(e){let t=kx.exec(e);if(t)return jx(t[1],wx);let n=Ax.exec(e);if(n)return jx(n[1],Tx)??jx(n[2],Tx)}var Nx=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Px=e(((e,t)=>{t.exports=Nx()})),Q=Px(),Fx=Object.keys(B),Ix=Fx.filter(e=>B[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),Lx=e=>xx.get(e)?.name??e,Rx=e=>`region-${e===`isekai`?`dreft`:`systems`}`,zx=e=>Rx(xx.get(e)?.plane),Bx=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Vx={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Hx({plane:e}){let t=e?Vx[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var Ux=e=>e.package===void 0?Lx(e.trait??``):Sx.get(e.package)?.name??e.package;function Wx(e){return e.kind?Cx.get(e.kind)?.stats:void 0}function Gx({step:e,title:t,children:n}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:t}),(0,Q.jsx)(`div`,{className:`stinger-row`,children:(0,Q.jsxs)(`div`,{className:`copy stinger black`,children:[`Step `,Qc.indexOf(e)+1,` of `,Qc.length]})}),n&&(0,Q.jsx)(`p`,{className:`lede`,children:n})]})}function Kx(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}var qx=3e3;function Jx({children:e,fades:t,onDismiss:n}){let[r,i]=(0,cc.useState)(!1),a=(0,cc.useRef)(n);return a.current=n,(0,cc.useEffect)(()=>{if(i(!1),!t)return;let e=setTimeout(()=>i(!0),qx),n=setTimeout(()=>a.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,Q.jsxs)(`div`,{className:`notice${t?` is-success`:``}${r?` is-leaving`:``}`,role:`status`,children:[e,(0,Q.jsx)(`button`,{className:`link`,onClick:n,"aria-label":`Dismiss`,children:`✕`})]})}function Yx({label:e,onClose:t,children:n,className:r=``}){let i=(0,cc.useRef)(null),a=(0,cc.useRef)(t);return a.current=t,(0,cc.useEffect)(()=>{let e=document.activeElement;i.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&a.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[]),(0,Q.jsx)(`div`,{className:`lore-modal is-open ${r}`,role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:i,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:t,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),n]})})}function Xx(e){return(0,Q.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}var Zx=20;function Qx({bonus:e,value:t,max:n}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Zx},(r,i)=>{let a=i+1,o=a<=t?a>n?`over`:a<=e?`default`:`filled`:a<=n?`empty`:`unavailable`;return(0,Q.jsx)(`span`,{className:`stat ${a%2?`dot`:`square`} ${o}`},a)})})}function $x({bonus:e=0,value:t}){return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Zx},(n,r)=>(0,Q.jsx)(`span`,{className:`stat diamond ${r<e?`default`:r<t?`filled`:`empty`}`},r))})}function eS({stats:e}){return(0,Q.jsx)(`div`,{className:`stat-ranges`,children:Ix.map(t=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),B[t].map(t=>(0,Q.jsxs)(`div`,{className:`stat-range`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,Q.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function tS({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,cc.useState)(!1),[o,s]=(0,cc.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,Q.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,Q.jsx)(n,{children:i?(0,Q.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,Q.jsx)(`button`,{type:`button`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var nS={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function rS({to:e}){return(0,Q.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:nS[e]})})}var iS={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function aS({is:e}){return(0,Q.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:iS[e]})})}function oS({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,Q.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:e}),(0,Q.jsxs)(`div`,{className:`stepper`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower level`,children:(0,Q.jsx)(aS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise level`,children:(0,Q.jsx)(aS,{is:`plus`})})]})]})}var sS=[`origin`,`profession`,`past`],cS={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function lS(e){let t=e.map(e=>Lx(e.trait)+(e.rank?` ${e.rank}`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function uS({pkg:e}){return(0,Q.jsxs)(`div`,{className:`grants`,children:[(e.bonusPoints.length>0||Object.keys(e.coreBonus).length>0)&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Bonus`}),e.bonusPoints.map(e=>(0,Q.jsxs)(Xx,{tone:`accent`,children:[`+`,e.count,` `,$(e.group),` focus `,e.count===1?`point`:`points`]},e.group)),Object.entries(e.coreBonus).map(([e,t])=>(0,Q.jsxs)(Xx,{tone:`accent`,children:[`+`,t,` `,$(e)]},e))]}),e.grants.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),lS(e.grants).map(e=>(0,Q.jsx)(Xx,{tone:`accent`,children:e},e))]}),e.choices.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Choose`}),e.choices.map((e,t)=>(0,Q.jsx)(Xx,{children:e.note??Bx(e.choose,e.from)},t))]}),e.backgroundTraits.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Background list`}),lS(e.backgroundTraits.map(e=>({trait:e}))).map(e=>(0,Q.jsx)(Xx,{children:e},e))]}),e.features.map(e=>(0,Q.jsxs)(`p`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))]})}var dS=[[`earth`,`The Settled Systems`],[`isekai`,`Isekai`],[`any`,`Any`]],fS=[`physical`,`social`,`mental`];function pS({slot:e,picked:t,onChoose:n}){let[r,i]=(0,cc.useState)(``),[a,o]=(0,cc.useState)(new Set),s=yx.packages.filter(t=>t.type===e),c=dS.filter(([e])=>s.some(t=>t.plane===e)),l=fS.filter(e=>s.some(t=>t.bonusPoints.some(t=>t.group===e))),u=e=>{let t=new Set(a);t.delete(e)||t.add(e),o(t)},d=r.trim().toLowerCase(),f=s.filter(e=>e.id===t||!a.has(`plane:${e.plane}`)&&!e.bonusPoints.some(e=>a.has(`bonus:${e.group}`))&&(!d||e.name.toLowerCase().includes(d)||e.tags.some(e=>e.toLowerCase().includes(d))));return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:r,onChange:e=>i(e.target.value),"aria-label":`Search ${$(e)}s`}),c.length>1&&c.map(([e,t])=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`plane:${e}`),onChange:()=>u(`plane:${e}`)}),` `,t]},e)),l.length>1&&l.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`bonus:${e}`),onChange:()=>u(`bonus:${e}`)}),` `,$(e),` bonus`]},e))]}),f.length===0?(0,Q.jsxs)(`p`,{className:`empty`,children:[`No `,$(e),`s match.`]}):(0,Q.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(e),children:f.map(e=>(0,Q.jsxs)(Kx,{className:`headed ${Rx(e.plane)}`,label:e.name,selected:t===e.id,onSelect:()=>n(e.id),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Hx,{plane:e.plane}),e.name]}),(0,Q.jsx)(Xx,{tone:`muted`,children:e.plane})]}),(0,Q.jsx)(`p`,{children:e.summary}),(0,Q.jsx)(uS,{pkg:e})]},e.id))})]})}function mS({draft:e,onChange:t}){let[n,r]=(0,cc.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,cc.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,cc.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,cc.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&Sx.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`background`,title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:sS.map(t=>(0,Q.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,Q.jsx)(`summary`,{children:(0,Q.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,Q.jsx)(`span`,{className:`slot-pick`,children:Sx.get(e[t])?.name??e[t]}):(0,Q.jsx)(`span`,{className:`muted`,children:cS[t]}),(0,Q.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,Q.jsx)(aS,{is:n[t]?`minus`:`plus`})})]})}),(0,Q.jsx)(pS,{slot:t,picked:e[t],onChoose:e=>a(t,e)})]},t))})]})}var hS=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},gS={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name: the player's, or one you make up that fits their Kind, home and past.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:fc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`name`,`kind`,`origin`,`profession`,`past`,`focus`,`traits`]},_S=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:Ec.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:Cc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:gS,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), and each listed Trait's id.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],vS=`player-choice`,yS=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,bS=e=>Array.isArray(e)?e:[],xS=(e,t)=>Vc(e)||Hc(e,t).length===0,SS=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function CS(e,t){let n=yS(e)??{},r=Zc(n,t).summary;if(r)return r.questions.filter(e=>xS(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!xS(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function wS(e,t){let n=yS(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});bS(n.traits).forEach((e,t)=>{let n=yS(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=CS(n,t);return bS(n.choices).forEach((e,t)=>{let n=yS(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),c.some(e=>SS(n,e))){let e=Bc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of bS(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function TS(e,t,n=Pc){let r=wS(e,t),i=Zc(e,t,n),a=CS(e,t),o=yS(e),s=i,c=new Set;if(o&&a.some(e=>!Vc(e.from))){let e=bS(o.choices),r=t=>e.some(e=>SS(yS(e),t)),i=a.filter(e=>!r(e)&&!Vc(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${vS}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=Zc({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var ES=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{},...e.opensLists.length?{opensLists:e.opensLists}:{}}),DS=class extends Error{},OS=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function kS(e,t,n){let r=t.traits,i=OS(e.category);i&&(r=r.filter(e=>e.category===i));let a=bS(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=OS(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=wS(i,t);if(a.length)throw new DS(a.map(e=>e.message).join(`; `));let o=Zc(i,t,n).summary?.backgroundList;if(!o)throw new DS(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(OS(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>ES(e.t))}}function AS(e,t){let n=OS(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new DS(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>xS(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:Hc(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function jS(e,t){let n=OS(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new DS(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function MS(e,t,n,r=Pc){let i=yS(t)??{};switch(e){case`search_traits`:return kS(i,n,r);case`list_packages`:{let e=Cc.safeParse(i.type);if(!e.success)throw new DS(`type must be one of ${Cc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return AS(i,n);case`get_kind`:return jS(i,n);default:throw new DS(`Unknown tool "${e}"`)}}var NS=`claude-opus-5-5`,PS=`server-side-fallback-2026-07-01`,FS=e=>!e.startsWith(`claude-haiku`),IS=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function LS(e,t=12,n=NS){return{model:n,maxTurns:t,review:!0,start:t=>new RS(e,t,n)}}var RS=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:_S,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:IS(this.model)},cache_control:{type:`ephemeral`},...FS(this.model)?{betas:[PS],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new hS(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new hS(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},zS=(e,t)=>R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),BS=ks({name:R().optional(),kind:zS(`Kind`,`isek`),origin:zS(`package`,`dreft`),profession:zS(`package`,`guild-hunter`),past:zS(`package`,`countryside-upbringing`),focus:Ds(R()).default([]),magic:_s().int().min(0).default(0),traits:Ds(R()).default([]),choices:Ds(Mc).default([])}),VS=Object.fromEntries(Object.entries(B).flatMap(([e,t])=>t.map(t=>[t,e]))),HS=e=>fc.safeParse(e).success;function US(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function WS(e,t,n,r=[]){let i=[...new Set(e.filter(HS))],a=Object.fromEntries(fc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,B[e.group]);return c(n,fc.options),s}var GS=3,KS=6,qS=5;function JS(e,t,n){let r=[...new Set(e.filter(HS))],i=Object.fromEntries(fc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(B).filter(e=>!r.some(t=>VS[t]===e)).sort((e,t)=>B[t].reduce((e,t)=>e+o(t),0)-B[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>VS[e]))],l=c.length?c:s,u=e=>B[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=KS&&(t-KS)%qS===0,a=Object.keys(B).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=GS&&f(m)%2==1,g=r.filter(e=>VS[e]===m),_=[...B[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...B[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function YS(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function XS(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=YS(Hc(i,t),e,t);if(Vc(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function ZS(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)Vc(e)||Hc(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function QS(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}var $S=(e,t)=>e.summary?.picks[t].banked??0;function eC(e,t,n=Pc){let r=BS.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=QS(i,t),s=US(i,t),c=Gc(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=WS(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=Jc([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=Nc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...JS(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:XS(i,t)}),p=ZS(f,t),m=e=>Zc({...e,choices:[...e.choices,...p]},t,n),h=e=>{let n=m(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||Vc(e.from))continue;let n=YS(Hc(e.from,t),i,t);if(n.length===0){p=[...p.filter(t=>!Uc(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>Uc(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>Uc(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!Uc(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},g=m(f),_=[],v=[];if(!g.ok)return{build:f,taken:_,skipped:v,result:g};let y=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=$S(g,`universal`),r=$S(g,`background`);if(n+r===0)return`no picks left`;let i=g.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=g.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a background pick, and none fit`:`no universal picks left`;let s=p,c=h({...f,traits:[...f.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=m(c);if(!l.ok)return p=s,l.errors[0].message;f=c,g=l};for(let e of i.traits){let t=y(e);t?v.push({trait:e,reason:t}):_.push(e)}return{build:f,taken:_,skipped:v,result:g}}var tC=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
+`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=ux(lx(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=ux(lx(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function mx(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new ax||null,prettyErrors:t}}function hx(e,t={}){let{lineCounter:n,prettyErrors:r}=mx(t),i=new px(n?.addNewLine),a=new Gb(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new sb(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(lb(e,n)),o.warnings.forEach(lb(e,n))),o}function gx(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=hx(e,n);if(!i)return null;if(i.warnings.forEach(e=>zv(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function _x(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(gx(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function vx(e){let t=[];return{content:{kinds:_x(e,`kinds`,Sc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>_x(e,n,Tc,t)),traits:_x(e,`traits`,Oc,t)},errors:t}}var{content:yx,errors:bx}=vx(Object.entries(Object.assign({"../../content/kinds/ai-core.yaml":Tl,"../../content/kinds/dreft/guwain.yaml":El,"../../content/kinds/dreft/isek.yaml":Dl,"../../content/kinds/dreft/tatot-goblinoid.yaml":Ol,"../../content/kinds/dreft/tatot-orcoid.yaml":kl,"../../content/kinds/human.yaml":Al,"../../content/origins/american-empire/american-empire-colonies.yaml":jl,"../../content/origins/american-empire/american-empire-earth.yaml":Ml,"../../content/origins/centafrica/centafrica-colonies.yaml":Nl,"../../content/origins/centafrica/centafrica-earth.yaml":Pl,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Fl,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Il,"../../content/origins/dreft/dreft.yaml":Ll,"../../content/origins/drovus/the-drovus-empire.yaml":Rl,"../../content/origins/free-american-states/the-free-american-states.yaml":zl,"../../content/origins/karsef/kingdom-of-karsef.yaml":Bl,"../../content/origins/kashgar/kashgar.yaml":Vl,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":Hl,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Ul,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Wl,"../../content/origins/sdu/sdu-colonies.yaml":Gl,"../../content/origins/sdu/sdu-earth.yaml":Kl,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":ql,"../../content/origins/tetra/tetra.yaml":Jl,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Yl,"../../content/origins/ural-federation/the-ural-federation.yaml":Xl,"../../content/origins/xanthus/xanthus.yaml":Zl,"../../content/pasts/any/craft-apprenticeship.yaml":Ql,"../../content/pasts/any/criminal-family.yaml":$l,"../../content/pasts/any/gutter-trash.yaml":eu,"../../content/pasts/any/military-service.yaml":tu,"../../content/pasts/any/privileged-upbringing.yaml":nu,"../../content/pasts/any/raised-at-court.yaml":ru,"../../content/pasts/any/shipborn.yaml":iu,"../../content/pasts/any/simple-farmer.yaml":au,"../../content/pasts/any/traveling-troupe.yaml":ou,"../../content/pasts/dreft/countryside-upbringing.yaml":su,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":H,"../../content/pasts/dreft/glintl-docks.yaml":cu,"../../content/pasts/dreft/karsef-border-veteran.yaml":lu,"../../content/pasts/dreft/merchant-dynasty.yaml":uu,"../../content/pasts/dreft/monster-raided-village.yaml":du,"../../content/pasts/dreft/noble-household.yaml":fu,"../../content/pasts/dreft/palace-servant.yaml":pu,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":mu,"../../content/pasts/dreft/returned-from-the-systems.yaml":hu,"../../content/pasts/dreft/sunrise-refugee.yaml":gu,"../../content/pasts/systems/station-rat.yaml":_u,"../../content/pasts/systems/university-educated.yaml":vu,"../../content/pasts/tetra/delegation-child.yaml":yu,"../../content/pasts/tetra/gate-lab-kid.yaml":bu,"../../content/pasts/tetra/holding-company-kid.yaml":xu,"../../content/pasts/tetra/parasapient-quarter.yaml":Su,"../../content/pasts/tetra/raised-in-the-infill.yaml":Cu,"../../content/pasts/tetra/raised-on-ward-politics.yaml":wu,"../../content/professions/any/apothecary.yaml":Tu,"../../content/professions/any/bard.yaml":Eu,"../../content/professions/any/blacksmith.yaml":Du,"../../content/professions/any/courier.yaml":Ou,"../../content/professions/any/criminal-enforcer.yaml":ku,"../../content/professions/any/doctor.yaml":Au,"../../content/professions/any/farmer.yaml":ju,"../../content/professions/any/jester.yaml":Mu,"../../content/professions/any/knight.yaml":Nu,"../../content/professions/any/local-police.yaml":Pu,"../../content/professions/any/musical-artist.yaml":Fu,"../../content/professions/any/ranger.yaml":Iu,"../../content/professions/any/smuggler.yaml":Lu,"../../content/professions/any/spy.yaml":Ru,"../../content/professions/any/squire.yaml":zu,"../../content/professions/any/stonemason.yaml":Bu,"../../content/professions/any/surgeon.yaml":Vu,"../../content/professions/any/tanner.yaml":Hu,"../../content/professions/any/visual-artist.yaml":Uu,"../../content/professions/dreft/alchemist.yaml":Wu,"../../content/professions/dreft/caravaneer.yaml":Gu,"../../content/professions/dreft/dreft-local-militia.yaml":Ku,"../../content/professions/dreft/dreft-mercenary.yaml":qu,"../../content/professions/dreft/gate-hand.yaml":Ju,"../../content/professions/dreft/guild-hunter.yaml":Yu,"../../content/professions/dreft/hedge-witch.yaml":Xu,"../../content/professions/dreft/licensed-mage.yaml":Zu,"../../content/professions/dreft/royal-guard.yaml":Qu,"../../content/professions/systems/american-empire-soldier.yaml":$u,"../../content/professions/systems/combat-medic.yaml":ed,"../../content/professions/systems/computer-engineer.yaml":td,"../../content/professions/systems/emergency-medical-technician.yaml":nd,"../../content/professions/systems/exotic-specimen-dealer.yaml":U,"../../content/professions/systems/fighter-pilot.yaml":W,"../../content/professions/systems/interplanar-diplomat.yaml":G,"../../content/professions/systems/interplanar-rights-lawyer.yaml":K,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":q,"../../content/professions/systems/paraarcheologist.yaml":rd,"../../content/professions/systems/paraecologist.yaml":id,"../../content/professions/systems/paraethnologist.yaml":ad,"../../content/professions/systems/paraevolutionary-scientist.yaml":od,"../../content/professions/systems/paraphysiologist.yaml":sd,"../../content/professions/systems/parazoological-keeper.yaml":cd,"../../content/professions/systems/planar-expeditionary-professional.yaml":ld,"../../content/professions/systems/starship-engineer.yaml":ud,"../../content/professions/systems/station-maintenance.yaml":dd,"../../content/professions/systems/theoretical-paraphysicist.yaml":fd,"../../content/professions/systems/truck-pilot.yaml":pd,"../../content/traits/ability/capable-student.yaml":md,"../../content/traits/ability/con-man.yaml":hd,"../../content/traits/ability/eagle-eye.yaml":gd,"../../content/traits/ability/gladiator.yaml":_d,"../../content/traits/ability/knowledge-sponge.yaml":vd,"../../content/traits/ability/magic-access.yaml":yd,"../../content/traits/ability/magical-heritage.yaml":bd,"../../content/traits/ability/mental-fortitude.yaml":xd,"../../content/traits/ability/natural-breath-weapon.yaml":Sd,"../../content/traits/ability/sculpted.yaml":Cd,"../../content/traits/ability/trail-runner.yaml":wd,"../../content/traits/circumstance/explorers-lodge-membership.yaml":Td,"../../content/traits/circumstance/imperial-service-record.yaml":Ed,"../../content/traits/circumstance/short-term-fame.yaml":Dd,"../../content/traits/circumstance/significant-inheritance.yaml":Od,"../../content/traits/circumstance/thieves-guild-membership.yaml":kd,"../../content/traits/circumstance/tugboat-captain.yaml":Ad,"../../content/traits/circumstance/wanted-in-sol.yaml":jd,"../../content/traits/condition/cybernetic-intelligence.yaml":Md,"../../content/traits/condition/damaged.yaml":Nd,"../../content/traits/condition/dead.yaml":Pd,"../../content/traits/condition/destroyed.yaml":Fd,"../../content/traits/condition/ghost-sight.yaml":Id,"../../content/traits/condition/hard-shell.yaml":Ld,"../../content/traits/condition/healthy.yaml":Rd,"../../content/traits/condition/incapacitated.yaml":zd,"../../content/traits/condition/injured.yaml":Bd,"../../content/traits/condition/long-toothed.yaml":Vd,"../../content/traits/condition/mechanical.yaml":Hd,"../../content/traits/condition/severe-bleeding.yaml":Ud,"../../content/traits/condition/severely-injured.yaml":Wd,"../../content/traits/condition/sorcerous.yaml":Gd,"../../content/traits/condition/stimm-rush.yaml":Kd,"../../content/traits/condition/stone-skin.yaml":qd,"../../content/traits/condition/supernatural.yaml":Jd,"../../content/traits/contact/additional-contact.yaml":Yd,"../../content/traits/knowledge/additional-language.yaml":Xd,"../../content/traits/knowledge/ai-culture.yaml":Zd,"../../content/traits/knowledge/aksum.yaml":Qd,"../../content/traits/knowledge/alchemy.yaml":$d,"../../content/traits/knowledge/amaravati.yaml":ef,"../../content/traits/knowledge/american-geography.yaml":tf,"../../content/traits/knowledge/american-history.yaml":nf,"../../content/traits/knowledge/amharic-written.yaml":rf,"../../content/traits/knowledge/amharic.yaml":af,"../../content/traits/knowledge/animal-lore.yaml":of,"../../content/traits/knowledge/antiluna.yaml":sf,"../../content/traits/knowledge/arabic-written.yaml":cf,"../../content/traits/knowledge/arabic.yaml":lf,"../../content/traits/knowledge/architecture.yaml":uf,"../../content/traits/knowledge/aristocracy.yaml":df,"../../content/traits/knowledge/ark-life.yaml":ff,"../../content/traits/knowledge/ark-new-york.yaml":pf,"../../content/traits/knowledge/art-history.yaml":mf,"../../content/traits/knowledge/artificial-intelligence.yaml":hf,"../../content/traits/knowledge/asteroid-mining.yaml":gf,"../../content/traits/knowledge/bandits-and-brigands.yaml":J,"../../content/traits/knowledge/bengali-written.yaml":_f,"../../content/traits/knowledge/bengali.yaml":vf,"../../content/traits/knowledge/biology.yaml":yf,"../../content/traits/knowledge/boneyard.yaml":bf,"../../content/traits/knowledge/bureaucracy.yaml":xf,"../../content/traits/knowledge/burmese-written.yaml":Sf,"../../content/traits/knowledge/burmese.yaml":Cf,"../../content/traits/knowledge/cantonese-written.yaml":wf,"../../content/traits/knowledge/cantonese.yaml":Tf,"../../content/traits/knowledge/caravan-routes.yaml":Ef,"../../content/traits/knowledge/centafrica.yaml":Df,"../../content/traits/knowledge/centafrican-law.yaml":Of,"../../content/traits/knowledge/chemistry.yaml":kf,"../../content/traits/knowledge/chinese-imperial-law.yaml":Af,"../../content/traits/knowledge/coastal-trade.yaml":jf,"../../content/traits/knowledge/commerce.yaml":Mf,"../../content/traits/knowledge/computer-systems.yaml":Nf,"../../content/traits/knowledge/countryside-lore.yaml":Pf,"../../content/traits/knowledge/court-etiquette.yaml":Ff,"../../content/traits/knowledge/criminal-underworld.yaml":If,"../../content/traits/knowledge/cryptography.yaml":Lf,"../../content/traits/knowledge/cybernetics.yaml":Rf,"../../content/traits/knowledge/diplomatic-protocol.yaml":zf,"../../content/traits/knowledge/dreft.yaml":Bf,"../../content/traits/knowledge/dreftan-written.yaml":Vf,"../../content/traits/knowledge/dreftan.yaml":Hf,"../../content/traits/knowledge/dreftian-law.yaml":Uf,"../../content/traits/knowledge/dutch-written.yaml":Wf,"../../content/traits/knowledge/dutch.yaml":Y,"../../content/traits/knowledge/dwarvish-runes-written.yaml":Gf,"../../content/traits/knowledge/dwarvish.yaml":Kf,"../../content/traits/knowledge/earth-baseline-customs.yaml":qf,"../../content/traits/knowledge/earth-baseline-technology.yaml":Jf,"../../content/traits/knowledge/ecology.yaml":Yf,"../../content/traits/knowledge/elemental-magics.yaml":Xf,"../../content/traits/knowledge/engineering.yaml":Zf,"../../content/traits/knowledge/english-written.yaml":Qf,"../../content/traits/knowledge/english.yaml":$f,"../../content/traits/knowledge/exotic-materials.yaml":ep,"../../content/traits/knowledge/farming.yaml":tp,"../../content/traits/knowledge/filipino-written.yaml":np,"../../content/traits/knowledge/filipino.yaml":rp,"../../content/traits/knowledge/french-written.yaml":X,"../../content/traits/knowledge/french.yaml":ip,"../../content/traits/knowledge/gambling.yaml":ap,"../../content/traits/knowledge/geography.yaml":op,"../../content/traits/knowledge/german-written.yaml":sp,"../../content/traits/knowledge/german.yaml":cp,"../../content/traits/knowledge/glintl.yaml":lp,"../../content/traits/knowledge/gujarati-written.yaml":up,"../../content/traits/knowledge/gujarati.yaml":dp,"../../content/traits/knowledge/hausa-written.yaml":fp,"../../content/traits/knowledge/hausa.yaml":pp,"../../content/traits/knowledge/heraldry.yaml":mp,"../../content/traits/knowledge/herbalism.yaml":hp,"../../content/traits/knowledge/high-society.yaml":gp,"../../content/traits/knowledge/hindi-written.yaml":_p,"../../content/traits/knowledge/hindi.yaml":vp,"../../content/traits/knowledge/history.yaml":yp,"../../content/traits/knowledge/imperial-law.yaml":bp,"../../content/traits/knowledge/imperial-politics.yaml":xp,"../../content/traits/knowledge/indian-law.yaml":Sp,"../../content/traits/knowledge/indian-theology.yaml":Cp,"../../content/traits/knowledge/indonesian-written.yaml":wp,"../../content/traits/knowledge/indonesian.yaml":Tp,"../../content/traits/knowledge/interplanar-law.yaml":Ep,"../../content/traits/knowledge/interplanar-relations.yaml":Dp,"../../content/traits/knowledge/italian-written.yaml":Op,"../../content/traits/knowledge/italian.yaml":kp,"../../content/traits/knowledge/japanese-written.yaml":Ap,"../../content/traits/knowledge/japanese.yaml":jp,"../../content/traits/knowledge/javanese-written.yaml":Mp,"../../content/traits/knowledge/javanese.yaml":Np,"../../content/traits/knowledge/kannada-written.yaml":Pp,"../../content/traits/knowledge/kannada.yaml":Fp,"../../content/traits/knowledge/karsef.yaml":Ip,"../../content/traits/knowledge/kashgar-mindworks.yaml":Lp,"../../content/traits/knowledge/kashgar.yaml":Rp,"../../content/traits/knowledge/kazakh-written.yaml":zp,"../../content/traits/knowledge/kazakh.yaml":Bp,"../../content/traits/knowledge/khmer-written.yaml":Vp,"../../content/traits/knowledge/khmer.yaml":Hp,"../../content/traits/knowledge/kinyarwanda-written.yaml":Up,"../../content/traits/knowledge/kinyarwanda.yaml":Wp,"../../content/traits/knowledge/korean-written.yaml":Gp,"../../content/traits/knowledge/korean.yaml":Kp,"../../content/traits/knowledge/kyrgyz-written.yaml":qp,"../../content/traits/knowledge/kyrgyz.yaml":Jp,"../../content/traits/knowledge/lao-written.yaml":Yp,"../../content/traits/knowledge/lao.yaml":Xp,"../../content/traits/knowledge/law-enforcement.yaml":Zp,"../../content/traits/knowledge/legal-systems.yaml":Qp,"../../content/traits/knowledge/lingala-written.yaml":$p,"../../content/traits/knowledge/lingala.yaml":em,"../../content/traits/knowledge/liquid-democracy.yaml":tm,"../../content/traits/knowledge/literature.yaml":nm,"../../content/traits/knowledge/local-folklore.yaml":rm,"../../content/traits/knowledge/local-history.yaml":im,"../../content/traits/knowledge/magic-on-isekai.yaml":am,"../../content/traits/knowledge/malay-written.yaml":om,"../../content/traits/knowledge/malay.yaml":sm,"../../content/traits/knowledge/malayalam-written.yaml":cm,"../../content/traits/knowledge/malayalam.yaml":lm,"../../content/traits/knowledge/mandarin-written.yaml":um,"../../content/traits/knowledge/mandarin.yaml":dm,"../../content/traits/knowledge/marathi-written.yaml":fm,"../../content/traits/knowledge/marathi.yaml":pm,"../../content/traits/knowledge/mathematics.yaml":mm,"../../content/traits/knowledge/medicine.yaml":hm,"../../content/traits/knowledge/metallurgy.yaml":gm,"../../content/traits/knowledge/military-tactics.yaml":_m,"../../content/traits/knowledge/mongolian-written.yaml":vm,"../../content/traits/knowledge/mongolian.yaml":ym,"../../content/traits/knowledge/monsters-of-isekai.yaml":bm,"../../content/traits/knowledge/mountaineering.yaml":xm,"../../content/traits/knowledge/music.yaml":Sm,"../../content/traits/knowledge/navigation.yaml":Cm,"../../content/traits/knowledge/nepali-written.yaml":wm,"../../content/traits/knowledge/nepali.yaml":Tm,"../../content/traits/knowledge/new-columbia.yaml":Em,"../../content/traits/knowledge/new-persia.yaml":Dm,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":Om,"../../content/traits/knowledge/odia-written.yaml":km,"../../content/traits/knowledge/odia.yaml":Am,"../../content/traits/knowledge/orc-society.yaml":jm,"../../content/traits/knowledge/oromo-written.yaml":Mm,"../../content/traits/knowledge/oromo.yaml":Nm,"../../content/traits/knowledge/paraarcheology.yaml":Pm,"../../content/traits/knowledge/parabiology.yaml":Fm,"../../content/traits/knowledge/paraflora.yaml":Im,"../../content/traits/knowledge/paraphysics.yaml":Lm,"../../content/traits/knowledge/parasapient-medicine.yaml":Rm,"../../content/traits/knowledge/parasapients.yaml":zm,"../../content/traits/knowledge/parazoology.yaml":Bm,"../../content/traits/knowledge/pataliputra.yaml":Vm,"../../content/traits/knowledge/pathology.yaml":Hm,"../../content/traits/knowledge/persian-written.yaml":Um,"../../content/traits/knowledge/persian.yaml":Wm,"../../content/traits/knowledge/pharmacology.yaml":Gm,"../../content/traits/knowledge/physics.yaml":Km,"../../content/traits/knowledge/planar-exploration.yaml":qm,"../../content/traits/knowledge/polish-written.yaml":Jm,"../../content/traits/knowledge/polish.yaml":Ym,"../../content/traits/knowledge/politics.yaml":Xm,"../../content/traits/knowledge/port-herminst.yaml":Zm,"../../content/traits/knowledge/ports-and-stations.yaml":Qm,"../../content/traits/knowledge/portuguese-written.yaml":$m,"../../content/traits/knowledge/portuguese.yaml":eh,"../../content/traits/knowledge/psychology.yaml":th,"../../content/traits/knowledge/punjabi-written.yaml":nh,"../../content/traits/knowledge/punjabi.yaml":rh,"../../content/traits/knowledge/robotics.yaml":ih,"../../content/traits/knowledge/romanian-written.yaml":ah,"../../content/traits/knowledge/romanian.yaml":oh,"../../content/traits/knowledge/russian-written.yaml":sh,"../../content/traits/knowledge/russian.yaml":ch,"../../content/traits/knowledge/sdu-law.yaml":lh,"../../content/traits/knowledge/seafaring.yaml":uh,"../../content/traits/knowledge/security-systems.yaml":dh,"../../content/traits/knowledge/shipping-lanes.yaml":fh,"../../content/traits/knowledge/sinhala-written.yaml":ph,"../../content/traits/knowledge/sinhala.yaml":mh,"../../content/traits/knowledge/somali-written.yaml":hh,"../../content/traits/knowledge/somali.yaml":gh,"../../content/traits/knowledge/sorellion.yaml":_h,"../../content/traits/knowledge/southeast-asia.yaml":vh,"../../content/traits/knowledge/spacefaring.yaml":yh,"../../content/traits/knowledge/spanish-written.yaml":bh,"../../content/traits/knowledge/spanish.yaml":xh,"../../content/traits/knowledge/starships.yaml":Sh,"../../content/traits/knowledge/succession-law.yaml":Ch,"../../content/traits/knowledge/swahili-written.yaml":wh,"../../content/traits/knowledge/swahili.yaml":Th,"../../content/traits/knowledge/tamil-written.yaml":Eh,"../../content/traits/knowledge/tamil.yaml":Dh,"../../content/traits/knowledge/telugu-written.yaml":Oh,"../../content/traits/knowledge/telugu.yaml":kh,"../../content/traits/knowledge/tetra-frontiers-co.yaml":Ah,"../../content/traits/knowledge/tetra.yaml":jh,"../../content/traits/knowledge/thai-written.yaml":Mh,"../../content/traits/knowledge/thai.yaml":Nh,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":Ph,"../../content/traits/knowledge/the-chinese-empire.yaml":Fh,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Ih,"../../content/traits/knowledge/the-corsine-pass.yaml":Lh,"../../content/traits/knowledge/the-diplomatic-wing.yaml":Rh,"../../content/traits/knowledge/the-drovus-empire.yaml":zh,"../../content/traits/knowledge/the-explorers-lodge.yaml":Bh,"../../content/traits/knowledge/the-free-american-states.yaml":Vh,"../../content/traits/knowledge/the-imperial-military.yaml":Hh,"../../content/traits/knowledge/the-kingdom-of-india.yaml":Uh,"../../content/traits/knowledge/the-kings-woods.yaml":Wh,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Gh,"../../content/traits/knowledge/the-martian-association.yaml":Kh,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":qh,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":Jh,"../../content/traits/knowledge/the-switch-port.yaml":Yh,"../../content/traits/knowledge/the-union-of-texas.yaml":Xh,"../../content/traits/knowledge/the-united-nations.yaml":Zh,"../../content/traits/knowledge/the-ural-federation.yaml":Qh,"../../content/traits/knowledge/theater.yaml":$h,"../../content/traits/knowledge/thieves-cant.yaml":eg,"../../content/traits/knowledge/toxicology.yaml":tg,"../../content/traits/knowledge/trade-guilds.yaml":ng,"../../content/traits/knowledge/trade-law.yaml":rg,"../../content/traits/knowledge/trade-roads.yaml":ig,"../../content/traits/knowledge/turkish-written.yaml":ag,"../../content/traits/knowledge/turkish.yaml":og,"../../content/traits/knowledge/ukrainian-written.yaml":sg,"../../content/traits/knowledge/ukrainian.yaml":cg,"../../content/traits/knowledge/union-politics.yaml":lg,"../../content/traits/knowledge/ural-tribal-law.yaml":ug,"../../content/traits/knowledge/urdu-written.yaml":dg,"../../content/traits/knowledge/urdu.yaml":fg,"../../content/traits/knowledge/uyghur-written.yaml":pg,"../../content/traits/knowledge/uyghur.yaml":mg,"../../content/traits/knowledge/vietnamese-written.yaml":hg,"../../content/traits/knowledge/vietnamese.yaml":gg,"../../content/traits/knowledge/weapons.yaml":_g,"../../content/traits/knowledge/wilderness-lore.yaml":vg,"../../content/traits/knowledge/xanthus.yaml":yg,"../../content/traits/knowledge/yoruba-written.yaml":bg,"../../content/traits/knowledge/yoruba.yaml":xg,"../../content/traits/knowledge/yutu.yaml":Sg,"../../content/traits/knowledge/zhulong.yaml":Cg,"../../content/traits/other/possessed-by-a-spirit.yaml":wg,"../../content/traits/skill/advanced-cooking.yaml":Tg,"../../content/traits/skill/advanced-potion-mixing.yaml":Eg,"../../content/traits/skill/ambusher.yaml":Dg,"../../content/traits/skill/animal-husbandry.yaml":Og,"../../content/traits/skill/appraisal.yaml":kg,"../../content/traits/skill/artist-painting.yaml":Ag,"../../content/traits/skill/artist-sculpture.yaml":jg,"../../content/traits/skill/cargo-handling.yaml":Mg,"../../content/traits/skill/concealment.yaml":Ng,"../../content/traits/skill/courtly-manners.yaml":Pg,"../../content/traits/skill/craft-leatherworking.yaml":Fg,"../../content/traits/skill/craft-masonry.yaml":Ig,"../../content/traits/skill/craft-smithing.yaml":Lg,"../../content/traits/skill/disguise.yaml":Rg,"../../content/traits/skill/excavation.yaml":zg,"../../content/traits/skill/expert-pilot.yaml":Bg,"../../content/traits/skill/field-sampling.yaml":Vg,"../../content/traits/skill/folk-remedies.yaml":Hg,"../../content/traits/skill/haggler.yaml":Ug,"../../content/traits/skill/incantation.yaml":Wg,"../../content/traits/skill/intimidation.yaml":Gg,"../../content/traits/skill/investigation.yaml":Kg,"../../content/traits/skill/legal-advocacy.yaml":qg,"../../content/traits/skill/lockpicking.yaml":Jg,"../../content/traits/skill/medical-aid.yaml":Yg,"../../content/traits/skill/military-drill.yaml":Xg,"../../content/traits/skill/performer-acrobatics.yaml":Zg,"../../content/traits/skill/performer-music.yaml":Qg,"../../content/traits/skill/pilot-fighter.yaml":$g,"../../content/traits/skill/pilot-helicopter.yaml":e_,"../../content/traits/skill/pilot-truck.yaml":t_,"../../content/traits/skill/planar-surveying.yaml":n_,"../../content/traits/skill/programming.yaml":r_,"../../content/traits/skill/relic-handling.yaml":i_,"../../content/traits/skill/research.yaml":a_,"../../content/traits/skill/rider-basic-animals.yaml":o_,"../../content/traits/skill/schemer.yaml":s_,"../../content/traits/skill/shield-wall.yaml":c_,"../../content/traits/skill/simple-cooking.yaml":l_,"../../content/traits/skill/simple-potion-mixing.yaml":u_,"../../content/traits/skill/sleight-of-hand.yaml":d_,"../../content/traits/skill/smooth-talker.yaml":f_,"../../content/traits/skill/specimen-handling.yaml":p_,"../../content/traits/skill/starship-engineering.yaml":m_,"../../content/traits/skill/streetwise.yaml":h_,"../../content/traits/skill/surgery.yaml":g_,"../../content/traits/skill/survivalist.yaml":__,"../../content/traits/skill/teamster.yaml":v_,"../../content/traits/skill/tinkerer.yaml":y_,"../../content/traits/skill/tracker.yaml":b_,"../../content/traits/skill/vigilance.yaml":x_,"../../content/traits/skill/wielder-longsword.yaml":S_,"../../content/traits/skill/wielder-musket.yaml":C_,"../../content/traits/skill/wielder-pistol.yaml":w_,"../../content/traits/skill/wielder-rifle.yaml":T_,"../../content/traits/skill/wielder-war-axe.yaml":E_})).map(([e,t])=>({path:e.slice(14),text:t}))),xx=new Map(yx.traits.map(e=>[e.id,e])),Sx=new Map(yx.packages.map(e=>[e.id,e])),Cx=new Map(yx.kinds.map(e=>[e.id,e])),wx=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],Tx=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],Ex=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),Dx=`(\\d{1,2}|${Ex(wx)})`,Ox=`(\\d{1,2})(?:st|nd|rd|th)|(${Ex(Tx)})`,kx=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${Dx}\\b`,`i`),Ax=RegExp(`\\b(?:${Ox})[\\s-]+(?:level|lvl)\\b`,`i`);function jx(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function Mx(e){let t=kx.exec(e);if(t)return jx(t[1],wx);let n=Ax.exec(e);if(n)return jx(n[1],Tx)??jx(n[2],Tx)}var Nx=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Px=e(((e,t)=>{t.exports=Nx()})),Q=Px(),Fx=Object.keys(B),Ix=Fx.filter(e=>B[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),Lx=e=>xx.get(e)?.name??e,Rx=e=>`region-${e===`isekai`?`dreft`:`systems`}`,zx=e=>Rx(xx.get(e)?.plane),Bx=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Vx={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Hx({plane:e}){let t=e?Vx[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var Ux=e=>e.package===void 0?Lx(e.trait??``):Sx.get(e.package)?.name??e.package;function Wx(e){return e.kind?Cx.get(e.kind)?.stats:void 0}function Gx({step:e,title:t,children:n}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:t}),(0,Q.jsx)(`div`,{className:`stinger-row`,children:(0,Q.jsxs)(`div`,{className:`copy stinger black`,children:[`Step `,Qc.indexOf(e)+1,` of `,Qc.length]})}),n&&(0,Q.jsx)(`p`,{className:`lede`,children:n})]})}function Kx(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}var qx=3e3;function Jx({children:e,fades:t,onDismiss:n}){let[r,i]=(0,cc.useState)(!1),a=(0,cc.useRef)(n);return a.current=n,(0,cc.useEffect)(()=>{if(i(!1),!t)return;let e=setTimeout(()=>i(!0),qx),n=setTimeout(()=>a.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,Q.jsxs)(`div`,{className:`notice${t?` is-success`:``}${r?` is-leaving`:``}`,role:`status`,children:[e,(0,Q.jsx)(`button`,{className:`link`,onClick:n,"aria-label":`Dismiss`,children:`✕`})]})}function Yx({label:e,onClose:t,children:n,className:r=``}){let i=(0,cc.useRef)(null),a=(0,cc.useRef)(t);return a.current=t,(0,cc.useEffect)(()=>{let e=document.activeElement;i.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&a.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[]),(0,Q.jsx)(`div`,{className:`lore-modal is-open ${r}`,role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:i,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:t,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),n]})})}function Xx(e){return(0,Q.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}var Zx=20;function Qx(e){let t=(0,cc.useRef)({value:e,from:e});return t.current.value!==e&&(t.current={value:e,from:t.current.value}),t.current.from}function $x({bonus:e,value:t,max:n}){let r=Qx(t);return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Zx},(i,a)=>{let o=a+1,s=o<=t?o>n?`over`:o<=e?`default`:`filled`:o<=n?`empty`:`unavailable`,c=s===`filled`&&o>r?` is-new`:``;return(0,Q.jsx)(`span`,{className:`stat ${o%2?`dot`:`square`} ${s}${c}`},o)})})}function eS({bonus:e=0,value:t}){let n=Qx(t);return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:Zx},(r,i)=>(0,Q.jsx)(`span`,{className:`stat diamond ${i<e?`default`:i<t?`filled${i>=n?` is-new`:``}`:`empty`}`},i))})}function tS({stats:e}){return(0,Q.jsx)(`div`,{className:`stat-ranges`,children:Ix.map(t=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),B[t].map(t=>(0,Q.jsxs)(`div`,{className:`stat-range`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,Q.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function nS({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,cc.useState)(!1),[o,s]=(0,cc.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,Q.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,Q.jsx)(n,{children:i?(0,Q.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,Q.jsx)(`button`,{type:`button`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var rS={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function iS({to:e}){return(0,Q.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:rS[e]})})}var aS={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function oS({is:e}){return(0,Q.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:aS[e]})})}function sS({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,Q.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:e}),(0,Q.jsxs)(`div`,{className:`stepper`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower level`,children:(0,Q.jsx)(oS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise level`,children:(0,Q.jsx)(oS,{is:`plus`})})]})]})}var cS=[`origin`,`profession`,`past`],lS={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function uS(e){let t=e.map(e=>Lx(e.trait)+(e.rank?` ${e.rank}`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function dS({pkg:e}){return(0,Q.jsxs)(`div`,{className:`grants`,children:[(e.bonusPoints.length>0||Object.keys(e.coreBonus).length>0)&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Bonus`}),e.bonusPoints.map(e=>(0,Q.jsxs)(Xx,{tone:`accent`,children:[`+`,e.count,` `,$(e.group),` focus `,e.count===1?`point`:`points`]},e.group)),Object.entries(e.coreBonus).map(([e,t])=>(0,Q.jsxs)(Xx,{tone:`accent`,children:[`+`,t,` `,$(e)]},e))]}),e.grants.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),uS(e.grants).map(e=>(0,Q.jsx)(Xx,{tone:`accent`,children:e},e))]}),e.choices.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Choose`}),e.choices.map((e,t)=>(0,Q.jsx)(Xx,{children:e.note??Bx(e.choose,e.from)},t))]}),e.backgroundTraits.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Background list`}),uS(e.backgroundTraits.map(e=>({trait:e}))).map(e=>(0,Q.jsx)(Xx,{children:e},e))]}),e.features.map(e=>(0,Q.jsxs)(`p`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))]})}var fS=[[`earth`,`The Settled Systems`],[`isekai`,`Isekai`],[`any`,`Any`]],pS=[`physical`,`social`,`mental`];function mS({slot:e,picked:t,onChoose:n}){let[r,i]=(0,cc.useState)(``),[a,o]=(0,cc.useState)(new Set),s=yx.packages.filter(t=>t.type===e),c=fS.filter(([e])=>s.some(t=>t.plane===e)),l=pS.filter(e=>s.some(t=>t.bonusPoints.some(t=>t.group===e))),u=e=>{let t=new Set(a);t.delete(e)||t.add(e),o(t)},d=r.trim().toLowerCase(),f=s.filter(e=>e.id===t||!a.has(`plane:${e.plane}`)&&!e.bonusPoints.some(e=>a.has(`bonus:${e.group}`))&&(!d||e.name.toLowerCase().includes(d)||e.tags.some(e=>e.toLowerCase().includes(d))));return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:r,onChange:e=>i(e.target.value),"aria-label":`Search ${$(e)}s`}),c.length>1&&c.map(([e,t])=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`plane:${e}`),onChange:()=>u(`plane:${e}`)}),` `,t]},e)),l.length>1&&l.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`bonus:${e}`),onChange:()=>u(`bonus:${e}`)}),` `,$(e),` bonus`]},e))]}),f.length===0?(0,Q.jsxs)(`p`,{className:`empty`,children:[`No `,$(e),`s match.`]}):(0,Q.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(e),children:f.map(e=>(0,Q.jsxs)(Kx,{className:`headed ${Rx(e.plane)}`,label:e.name,selected:t===e.id,onSelect:()=>n(e.id),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Hx,{plane:e.plane}),e.name]}),(0,Q.jsx)(Xx,{tone:`muted`,children:e.plane})]}),(0,Q.jsx)(`p`,{children:e.summary}),(0,Q.jsx)(dS,{pkg:e})]},e.id))})]})}function hS({draft:e,onChange:t}){let[n,r]=(0,cc.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,cc.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,cc.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,cc.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&Sx.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`background`,title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:cS.map(t=>(0,Q.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,Q.jsx)(`summary`,{children:(0,Q.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,Q.jsx)(`span`,{className:`slot-pick`,children:Sx.get(e[t])?.name??e[t]}):(0,Q.jsx)(`span`,{className:`muted`,children:lS[t]}),(0,Q.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,Q.jsx)(oS,{is:n[t]?`minus`:`plus`})})]})}),(0,Q.jsx)(mS,{slot:t,picked:e[t],onChoose:e=>a(t,e)})]},t))})]})}var gS=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},_S={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name: the player's, or one you make up that fits their Kind, home and past.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:fc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`name`,`kind`,`origin`,`profession`,`past`,`focus`,`traits`]},vS=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:Ec.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:Cc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:_S,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), and each listed Trait's id.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],yS=`player-choice`,bS=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,xS=e=>Array.isArray(e)?e:[],SS=(e,t)=>Vc(e)||Hc(e,t).length===0,CS=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function wS(e,t){let n=bS(e)??{},r=Zc(n,t).summary;if(r)return r.questions.filter(e=>SS(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!SS(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function TS(e,t){let n=bS(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});xS(n.traits).forEach((e,t)=>{let n=bS(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=wS(n,t);return xS(n.choices).forEach((e,t)=>{let n=bS(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),c.some(e=>CS(n,e))){let e=Bc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of xS(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function ES(e,t,n=Pc){let r=TS(e,t),i=Zc(e,t,n),a=wS(e,t),o=bS(e),s=i,c=new Set;if(o&&a.some(e=>!Vc(e.from))){let e=xS(o.choices),r=t=>e.some(e=>CS(bS(e),t)),i=a.filter(e=>!r(e)&&!Vc(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${yS}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=Zc({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var DS=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{},...e.opensLists.length?{opensLists:e.opensLists}:{}}),OS=class extends Error{},kS=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function AS(e,t,n){let r=t.traits,i=kS(e.category);i&&(r=r.filter(e=>e.category===i));let a=xS(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=kS(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=TS(i,t);if(a.length)throw new OS(a.map(e=>e.message).join(`; `));let o=Zc(i,t,n).summary?.backgroundList;if(!o)throw new OS(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(kS(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>DS(e.t))}}function jS(e,t){let n=kS(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new OS(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>SS(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:Hc(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function MS(e,t){let n=kS(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new OS(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function NS(e,t,n,r=Pc){let i=bS(t)??{};switch(e){case`search_traits`:return AS(i,n,r);case`list_packages`:{let e=Cc.safeParse(i.type);if(!e.success)throw new OS(`type must be one of ${Cc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return jS(i,n);case`get_kind`:return MS(i,n);default:throw new OS(`Unknown tool "${e}"`)}}var PS=`claude-opus-5-5`,FS=`server-side-fallback-2026-07-01`,IS=e=>!e.startsWith(`claude-haiku`),LS=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function RS(e,t=12,n=PS){return{model:n,maxTurns:t,review:!0,start:t=>new zS(e,t,n)}}var zS=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:vS,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:LS(this.model)},cache_control:{type:`ephemeral`},...IS(this.model)?{betas:[FS],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new gS(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new gS(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},BS=(e,t)=>R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),VS=ks({name:R().optional(),kind:BS(`Kind`,`isek`),origin:BS(`package`,`dreft`),profession:BS(`package`,`guild-hunter`),past:BS(`package`,`countryside-upbringing`),focus:Ds(R()).default([]),magic:_s().int().min(0).default(0),traits:Ds(R()).default([]),choices:Ds(Mc).default([])}),HS=Object.fromEntries(Object.entries(B).flatMap(([e,t])=>t.map(t=>[t,e]))),US=e=>fc.safeParse(e).success;function WS(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function GS(e,t,n,r=[]){let i=[...new Set(e.filter(US))],a=Object.fromEntries(fc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,B[e.group]);return c(n,fc.options),s}var KS=3,qS=6,JS=5;function YS(e,t,n){let r=[...new Set(e.filter(US))],i=Object.fromEntries(fc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(B).filter(e=>!r.some(t=>HS[t]===e)).sort((e,t)=>B[t].reduce((e,t)=>e+o(t),0)-B[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>HS[e]))],l=c.length?c:s,u=e=>B[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=qS&&(t-qS)%JS===0,a=Object.keys(B).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=KS&&f(m)%2==1,g=r.filter(e=>HS[e]===m),_=[...B[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...B[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function XS(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function ZS(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=XS(Hc(i,t),e,t);if(Vc(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function QS(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)Vc(e)||Hc(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function $S(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}var eC=(e,t)=>e.summary?.picks[t].banked??0;function tC(e,t,n=Pc){let r=VS.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=$S(i,t),s=WS(i,t),c=Gc(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=GS(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=Jc([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=Nc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...YS(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:ZS(i,t)}),p=QS(f,t),m=e=>Zc({...e,choices:[...e.choices,...p]},t,n),h=e=>{let n=m(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||Vc(e.from))continue;let n=XS(Hc(e.from,t),i,t);if(n.length===0){p=[...p.filter(t=>!Uc(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>Uc(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>Uc(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!Uc(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},g=m(f),_=[],v=[];if(!g.ok)return{build:f,taken:_,skipped:v,result:g};let y=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=eC(g,`universal`),r=eC(g,`background`);if(n+r===0)return`no picks left`;let i=g.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=g.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a background pick, and none fit`:`no universal picks left`;let s=p,c=h({...f,traits:[...f.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=m(c);if(!l.ok)return p=s,l.errors[0].message;f=c,g=l};for(let e of i.traits){let t=y(e);t?v.push({trait:e,reason:t}):_.push(e)}return{build:f,taken:_,skipped:v,result:g}}var nC=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
 
 How you work:
 1. Read the description for the concept: who this person is, what they're good at, where they come from. If the player names a Kind, use it. If they don't, choose the Kind that fits best.
@@ -5835,5 +5835,5 @@ Rules you must follow:
 
 Reasons: give one short line per choice, in plain words a player would use, tied to what they asked for. Targets are kind, origin, profession, past, levels (one line on why the priority stats), and each listed Trait's id.
 
-Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,nC=Object.values(B).flat(),rC=e=>nC.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function iC(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${rC(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}. Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.opensLists.length?`opens the ${n.opensLists.join(`, `)} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
-`)}function aC(e,t,n){let r=fC(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var oC=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function sC(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);return t}function cC(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var lC=(e,t)=>{let n=sC(e);return t.filter(e=>n.has(e.target))};function uC(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var dC=e=>e.filter(e=>e.reason!==`no picks left`),fC=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function pC(e){let{content:t,provider:n}=e,r=e.campaign??Pc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${oC(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:tC,index:iC(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=new Map,g=e.name?.trim()||void 0,_=!1,v=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:y}=await u.send(c,{think:!_});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>aC(e.name,e.input,t)).join(` · `)),l.inputTokens+=y.inputTokens??0,l.outputTokens+=y.outputTokens??0,l.cacheReadTokens+=y.cacheReadTokens??0,l.cacheWriteTokens+=y.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let b=[];for(let a of i)if(a.name===`submit_build`){let i=fC(a.input)??{},c=fC(i.concept),l=uC(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){b.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}_=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(g=c.name.trim());let y=g?{...c,name:g}:c,x;try{x=eC(y,t,r)}catch(e){if(!(e instanceof ko))throw e;x={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in x){b.push({call:a,isError:!0,content:`The concept doesn't match the format: ${x.error}`});continue}let S=TS(x.build,t,r);for(let e of l)h.set(e.target,e);d={build:x.build,check:S,summary:u??d?.summary,reasons:[...h.values()]};let ee={taken:x.taken,skipped:dC(x.skipped)},C=S.accepted?cC(S):void 0;if(S.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...C?{banked:C}:{},...ee})});continue}if(C&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${C}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...ee})});continue}let w=S.accepted?[...sC(x.build)].filter(e=>!e.startsWith(`choice:`)&&!h.has(e)):[];if(w.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${w.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(S.accepted)return d.reasons=lC(x.build,d.reasons),o(`Done`),v(`accepted`,s);o(`The engine sent the concept back with ${S.errors.length+S.unknownIds.length} problems; fixing them`),b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:S.unknownIds,errors:S.errors,...ee})})}else try{let e=MS(a.name,a.input,t,r);b.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof DS))throw e;b.push({call:a,isError:!0,content:e.message})}u.addResults(b)}return d?.check.accepted?(d.reasons=lC(d.build,d.reasons),v(`accepted`,i)):v(`turn-limit`,i)}var mC=class extends Error{error;constructor(e,t){super(t),this.error=e}};function hC(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new mC(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new mC(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function gC(e){let t=LS(hC(e.endpoint,e.fetcher),void 0,e.model);try{return await pC({description:e.description,name:e.name,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:Mx(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof mC)return{error:e.error,message:e.message};if(e instanceof hS)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function _C({draft:e,onChange:t,floor:n}){let r=Wx(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&Sx.get(e)?[Sx.get(e)]:[]),a=Gc(e.kind?Cx.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>B[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(B).find(t=>B[t].includes(e)),m=Fx.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=vl(e,yx),_=yl(e,yx),v=t=>B[t].reduce((t,n)=>t+(e.points[n]??0),0),y=e=>r?.[e]?.bonus??0,b=e=>y(e)+(o[e]??0),x=t=>b(t)+(e.points[t]??0),S=e=>n?y(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):y(e),ee=e=>n?.core[e]??0,C=r=>{if(!n)return t(ul(e,r,e.core[r]-1));let i={...e.points};for(let e of B[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},w=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})};return r?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(Gx,{step:`stats`,title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,Q.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: level a core stat with the + beside its number.`]}),Ix.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any stat.`]}),h<=0&&Ix.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,Q.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:g.map(n=>{let a=e.core[n],o=a*3,s=v(n);if(!B[n].length){let r=h>0&&_.includes(n),o=_.includes(n)?i.reduce((e,t)=>e+(t.coreBonus[n]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group${a===0&&!r?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a+o}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,onClick:()=>C(n),disabled:a<=ee(n),children:(0,Q.jsx)(aS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${n}`,title:h>0&&!_.includes(n)?`This character can't level ${$(n)}`:void 0,onClick:()=>t(ul(e,n,a+1)),disabled:!r,children:(0,Q.jsx)(aS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(n)}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:``}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(n),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)($x,{bonus:o,value:a+o})]}),!_.includes(n)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't level `,$(n),`; take these points back.`]})]},n)}let c=f(n)+Math.max(0,o-s),l=c===0&&s===0,u=B[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-x(t)),0)-Math.max(0,o-s),d=h>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>C(n),disabled:a<=ee(n),children:(0,Q.jsx)(aS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Put a core point in ${n}`,title:h>0&&!d?`${$(n)}'s stats have no room for 3 more points`:void 0,onClick:()=>t(ul(e,n,a+1)),disabled:!d,children:(0,Q.jsx)(aS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(n)}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!d&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These stats have no room for points.`}),B[n].map(e=>{let t=x(e),n=r[e]?.max??0,i=Math.max(0,Math.min(c,n-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>w(e,-1),disabled:t<=S(e),children:(0,Q.jsx)(aS,{is:`minus`})}),(0,Q.jsx)(`button`,{"aria-label":`Add a point to ${e}`,onClick:()=>w(e,1),disabled:c===0||t>=n,children:(0,Q.jsx)(aS,{is:`plus`})})]}),(0,Q.jsx)(Qx,{bonus:b(e),value:t,max:n})]})]},e)})]},n)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`stats`,title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each stat and sets how far each can go.`})]})}var vC=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,yC=/^trait ([a-z0-9-]+) choice$/,bC=/^trait ([a-z0-9-]+)$/;function xC(e){let t=yC.exec(e);if(t)return`${Lx(t[1])} (choice)`;let n=bC.exec(e);if(n)return Lx(n[1]);let r=vC.exec(e);return r?`${(r[1]===`kind`?Cx.get(r[2])?.name:Sx.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function SC({held:e,places:t}){let n=xx.get(e.trait);return(0,Q.jsxs)(`div`,{className:`trait-box ${zx(e.trait)}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:n?.plane}),Lx(e.trait),n?.ranked||e.rank>1?` (${e.rank})`:``]}),(0,Q.jsx)(`div`,{className:`chips`,children:n?(0,Q.jsx)(Xx,{children:$(n.category)}):(0,Q.jsx)(Xx,{tone:`bad`,children:`not in content yet`})}),n&&(0,Q.jsx)(`p`,{className:`effect`,children:n.effect}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[n?.choices.find(e=>e.from===`place`)?.note??`Place`,`:`]}),` `,t.join(`, `)]}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From `,e.sources.map(xC).join(`, `)]})]})}function CC({held:e,places:t,onClose:n}){return(0,Q.jsx)(Yx,{label:Lx(e.trait),onClose:n,children:(0,Q.jsx)(SC,{held:e,places:t})})}function wC({draft:e,result:t,onExport:n,onImport:r,onName:i,embedded:a=!1,statsSlot:o,traitsAction:s,extraColumn:c}){let l=e.kind?Cx.get(e.kind):void 0,u=[e.origin,e.profession,e.past].map(e=>e?Sx.get(e):void 0),d=Wx(e),f=t.summary,p=vl(e,yx,t),m=p.includes(`magic`)||(f?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],h=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Bc[e.from],from:Ux(e)})):[]),g=t=>e.choices.filter(e=>e.trait===t&&e.from===`place`).flatMap(e=>e.traits),_=f?.traits??[],v=e=>xx.get(e.trait)?.category===`knowledge`,y=e=>!!xx.get(e.trait)?.types.includes(`language`),b=[..._.filter(e=>v(e)&&!y(e)),..._.filter(y)],x=_.filter(e=>!v(e)),[S,ee]=(0,cc.useState)(),C=(0,cc.useCallback)(()=>ee(void 0),[]),w=_.find(e=>e.trait===S),te=[...u.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))],T=[[`Kind`,l?.name],[`Origin`,u[0]?.name],[`Profession`,u[1]?.name],[`Past`,u[2]?.name]];return(0,Q.jsxs)(`section`,{className:`sheet${a?` sheet-embedded`:``}`,children:[!a&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(Gx,{step:`sheet`,title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsx)(`button`,{onClick:n,children:`Export`}),(0,Q.jsx)(`button`,{onClick:r,children:`Import`}),(0,Q.jsx)(`button`,{onClick:()=>window.print(),children:`Print`})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[!a&&(0,Q.jsx)(`div`,{className:`level-badge`,"aria-label":`Level ${e.level}`,children:e.level}),!a&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(tS,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i??(()=>{})}),(0,Q.jsxs)(`p`,{className:`lede`,children:[`Level `,e.level,` `,l?.name??`—`,` · `,u.map(e=>e?.name??`—`).join(` · `)]}),(0,Q.jsx)(`p`,{className:`sheet-resources`,children:m.map(e=>(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`i`,{children:f?.resources[e]??`–`}),` `,(0,Q.jsx)(`strong`,{children:e.toUpperCase()})]},e))}),l&&l.features.length>0&&(0,Q.jsx)(`ul`,{className:`features kind-features`,children:l.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),(0,Q.jsx)(`ul`,{className:`call-response sheet-background`,children:T.map(([e,t])=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t??`—`})]},e))})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-body`,children:[o?(0,Q.jsx)(`div`,{className:`sheet-stats`,children:o}):(0,Q.jsx)(`div`,{className:`sheet-stats`,children:p.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:f?.coreStats[t]??`–`}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(t)})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)($x,{bonus:f?.coreBonus[t]??0,value:f?.coreStats[t]??e.core[t]})]}),B[t].map(t=>{let n=f?.stats[t],r=(d?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=d?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,d?.[t]?.max??`–`]})]}),(0,Q.jsx)(Qx,{bonus:r,value:n??r,max:i})]},t)})]},t))}),(0,Q.jsxs)(`div`,{className:`sheet-side`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Knowledges`}),b.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:b.map(e=>{let t=xx.get(e.trait);return(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`tiny-text`,children:y(e)?`Language:`:`Knowledge:`}),` `,(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>ee(e.trait),children:[Lx(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`}),f&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Banked picks`}),(0,Q.jsxs)(`p`,{children:[f.picks.universal.banked,` universal, `,f.picks.background.banked,` background`]})]})]}),c]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box`,children:[s?(0,Q.jsxs)(`div`,{className:`sheet-traits-head`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),s]}):(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),x.length>0?(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:x.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(SC,{held:e,places:g(e.trait)})},e.trait))}):(0,Q.jsx)(`p`,{className:`empty`,children:_.length?`No Traits besides Knowledges.`:`No Traits yet.`}),h.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:h.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),te.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:te.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]}),w&&(0,Q.jsx)(CC,{held:w,places:g(w.trait),onClose:C})]})}var TC=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(Lx),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),EC={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},DC={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},OC=e=>yx.traits.filter(t=>t.opensLists.includes(e)).map(e=>e.name).join(` or `);function kC({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a}){let[o,s]=(0,cc.useState)(`universal`),[c,l]=(0,cc.useState)(``),[u,d]=(0,cc.useState)(new Set),[f,p]=(0,cc.useState)(!0),m=n.summary,h=m?.traitLists??[],g=typeof o==`string`||h.includes(o.list)?o:`universal`,_=typeof g==`string`?g:`list:${g.list}`,v=(0,cc.useMemo)(()=>xl(e,yx,t,g),[e,t,_]);if(!v||!m)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let y=c.trim().toLowerCase(),b=new Set(e.traits.map(e=>e.trait)),x=v.filter(e=>!i?.has(e.trait.id)&&!u.has(e.trait.category)&&(!f||e.reasons.length===0||b.has(e.trait.id))&&(!y||e.trait.name.toLowerCase().includes(y)||e.trait.tags.some(e=>e.toLowerCase().includes(y)))),S=Ec.options.map(e=>({category:e,options:x.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),ee=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},C=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),w=t=>e.traits.map(e=>e.trait).lastIndexOf(t),te=new Map(m.traits.map(e=>[e.trait,e.rank])),T=(t,n,i)=>{let a=w(t);a>=0?C(a):r(dl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=m.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":g===e,className:`tech-field-tab${g===e?` is-active`:``}`,onClick:()=>s(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),h.map(t=>{let n=typeof g!=`string`&&g.list===t,r=new Set(e.traits.filter(e=>xx.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>s({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof g==`string`?DC[g]:`${$(g.list)} Traits, open to this character through ${OC(g.list)}. Background Traits here take background picks; the rest take universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:c,onChange:e=>l(e.target.value),"aria-label":`Search Traits`}),Ec.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!u.has(e),onChange:()=>ee(e)}),` `,EC[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:f,onChange:e=>p(e.target.checked)}),` Hide unavailable`]})]}),v.length===0&&g===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package background Traits and the Kind's Trait access.`}),v.length>0&&x.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:f?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),S.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:EC[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=w(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${zx(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&T(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||T(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(Xx,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(`p`,{className:`effect`,children:t.effect}),TC(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,TC(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>C(w(t.id)),children:(0,Q.jsx)(aS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:te.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(dl(e,t.id,n,i)),children:(0,Q.jsx)(aS,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,Q.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:Lx(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!xx.has(e.trait)&&(0,Q.jsx)(Xx,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>C(t),"aria-label":`Remove ${Lx(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}export{Zc as $,yx as A,Qc as B,Wx as C,Lx as D,$ as E,bl as F,gl as G,cl as H,vl as I,Bc as J,al as K,wl as L,Cx as M,Sx as N,Px as O,xx as P,Hc as Q,Sl as R,Ux as S,Rx as T,pl as U,hl as V,ml as W,Uc as X,Rc as Y,Gc as Z,Jx as _,gC as a,eS as b,MS as c,rS as d,B as et,Kx as f,tS as g,Yx as h,mC as i,n as it,bx as j,Mx as k,mS as l,oS as m,wC as n,c as nt,hC as o,Xx as p,ll as q,_C as r,i as rt,DS as s,kC as t,Ec as tt,uS as u,Hx as v,Bx as w,Gx as x,aS as y,tl as z};
+Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,rC=Object.values(B).flat(),iC=e=>rC.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function aC(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${iC(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}. Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.opensLists.length?`opens the ${n.opensLists.join(`, `)} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
+`)}function oC(e,t,n){let r=pC(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var sC=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function cC(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);return t}function lC(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var uC=(e,t)=>{let n=cC(e);return t.filter(e=>n.has(e.target))};function dC(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var fC=e=>e.filter(e=>e.reason!==`no picks left`),pC=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function mC(e){let{content:t,provider:n}=e,r=e.campaign??Pc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${sC(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:nC,index:aC(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=new Map,g=e.name?.trim()||void 0,_=!1,v=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:y}=await u.send(c,{think:!_});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>oC(e.name,e.input,t)).join(` · `)),l.inputTokens+=y.inputTokens??0,l.outputTokens+=y.outputTokens??0,l.cacheReadTokens+=y.cacheReadTokens??0,l.cacheWriteTokens+=y.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let b=[];for(let a of i)if(a.name===`submit_build`){let i=pC(a.input)??{},c=pC(i.concept),l=dC(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){b.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}_=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(g=c.name.trim());let y=g?{...c,name:g}:c,x;try{x=tC(y,t,r)}catch(e){if(!(e instanceof ko))throw e;x={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in x){b.push({call:a,isError:!0,content:`The concept doesn't match the format: ${x.error}`});continue}let S=ES(x.build,t,r);for(let e of l)h.set(e.target,e);d={build:x.build,check:S,summary:u??d?.summary,reasons:[...h.values()]};let ee={taken:x.taken,skipped:fC(x.skipped)},C=S.accepted?lC(S):void 0;if(S.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...C?{banked:C}:{},...ee})});continue}if(C&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${C}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...ee})});continue}let w=S.accepted?[...cC(x.build)].filter(e=>!e.startsWith(`choice:`)&&!h.has(e)):[];if(w.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${w.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(S.accepted)return d.reasons=uC(x.build,d.reasons),o(`Done`),v(`accepted`,s);o(`The engine sent the concept back with ${S.errors.length+S.unknownIds.length} problems; fixing them`),b.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:S.unknownIds,errors:S.errors,...ee})})}else try{let e=NS(a.name,a.input,t,r);b.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof OS))throw e;b.push({call:a,isError:!0,content:e.message})}u.addResults(b)}return d?.check.accepted?(d.reasons=uC(d.build,d.reasons),v(`accepted`,i)):v(`turn-limit`,i)}var hC=class extends Error{error;constructor(e,t){super(t),this.error=e}};function gC(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new hC(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new hC(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function _C(e){let t=RS(gC(e.endpoint,e.fetcher),void 0,e.model);try{return await mC({description:e.description,name:e.name,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:Mx(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof hC)return{error:e.error,message:e.message};if(e instanceof gS)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function vC({draft:e,onChange:t,floor:n}){let r=Wx(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&Sx.get(e)?[Sx.get(e)]:[]),a=Gc(e.kind?Cx.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>B[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(B).find(t=>B[t].includes(e)),m=Fx.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=vl(e,yx),_=yl(e,yx),v=t=>B[t].reduce((t,n)=>t+(e.points[n]??0),0),y=e=>r?.[e]?.bonus??0,b=e=>y(e)+(o[e]??0),x=t=>b(t)+(e.points[t]??0),S=e=>n?y(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):y(e),ee=e=>n?.core[e]??0,C=r=>{if(!n)return t(ul(e,r,e.core[r]-1));let i={...e.points};for(let e of B[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},w=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})};return r?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(Gx,{step:`stats`,title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,Q.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: level a core stat with the + beside its number.`]}),Ix.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any stat.`]}),h<=0&&Ix.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,Q.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:g.map(n=>{let a=e.core[n],o=a*3,s=v(n);if(!B[n].length){let r=h>0&&_.includes(n),o=_.includes(n)?i.reduce((e,t)=>e+(t.coreBonus[n]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group${a===0&&!r?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a+o}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,onClick:()=>C(n),disabled:a<=ee(n),children:(0,Q.jsx)(oS,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!_.includes(n)?`This character can't level ${$(n)}`:void 0,onClick:()=>t(ul(e,n,a+1)),disabled:!r,children:(0,Q.jsx)(oS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(n)}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:``}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(n),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(eS,{bonus:o,value:a+o})]}),!_.includes(n)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't level `,$(n),`; take these points back.`]})]},n)}let c=f(n)+Math.max(0,o-s),l=c===0&&s===0,u=B[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-x(t)),0)-Math.max(0,o-s),d=h>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:a}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>C(n),disabled:a<=ee(n),children:(0,Q.jsx)(oS,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!d?`${$(n)}'s stats have no room for 3 more points`:void 0,onClick:()=>t(ul(e,n,a+1)),disabled:!d,children:(0,Q.jsx)(oS,{is:`plus`})})]}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(n)}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!d&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These stats have no room for points.`}),B[n].map(e=>{let t=x(e),n=r[e]?.max??0,i=Math.max(0,Math.min(c,n-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>w(e,-1),disabled:t<=S(e),children:(0,Q.jsx)(oS,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Add a point to ${e}`,onClick:()=>w(e,1),disabled:c===0||t>=n,children:(0,Q.jsx)(oS,{is:`plus`})})]}),(0,Q.jsx)($x,{bonus:b(e),value:t,max:n})]})]},e)})]},n)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`stats`,title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each stat and sets how far each can go.`})]})}var yC=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,bC=/^trait ([a-z0-9-]+) choice$/,xC=/^trait ([a-z0-9-]+)$/;function SC(e){let t=bC.exec(e);if(t)return`${Lx(t[1])} (choice)`;let n=xC.exec(e);if(n)return Lx(n[1]);let r=yC.exec(e);return r?`${(r[1]===`kind`?Cx.get(r[2])?.name:Sx.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function CC({held:e,places:t}){let n=xx.get(e.trait);return(0,Q.jsxs)(`div`,{className:`trait-box ${zx(e.trait)}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:n?.plane}),Lx(e.trait),n?.ranked||e.rank>1?` (${e.rank})`:``]}),(0,Q.jsx)(`div`,{className:`chips`,children:n?(0,Q.jsx)(Xx,{children:$(n.category)}):(0,Q.jsx)(Xx,{tone:`bad`,children:`not in content yet`})}),n&&(0,Q.jsx)(`p`,{className:`effect`,children:n.effect}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[n?.choices.find(e=>e.from===`place`)?.note??`Place`,`:`]}),` `,t.join(`, `)]}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From `,e.sources.map(SC).join(`, `)]})]})}function wC({held:e,places:t,onClose:n}){return(0,Q.jsx)(Yx,{label:Lx(e.trait),onClose:n,children:(0,Q.jsx)(CC,{held:e,places:t})})}function TC({draft:e,result:t,onExport:n,onImport:r,onName:i,embedded:a=!1,statsSlot:o,traitsAction:s,extraColumn:c}){let l=e.kind?Cx.get(e.kind):void 0,u=[e.origin,e.profession,e.past].map(e=>e?Sx.get(e):void 0),d=Wx(e),f=t.summary,p=vl(e,yx,t),m=p.includes(`magic`)||(f?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],h=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Bc[e.from],from:Ux(e)})):[]),g=t=>e.choices.filter(e=>e.trait===t&&e.from===`place`).flatMap(e=>e.traits),_=f?.traits??[],v=e=>xx.get(e.trait)?.category===`knowledge`,y=e=>!!xx.get(e.trait)?.types.includes(`language`),b=[..._.filter(e=>v(e)&&!y(e)),..._.filter(y)],x=_.filter(e=>!v(e)),[S,ee]=(0,cc.useState)(),C=(0,cc.useCallback)(()=>ee(void 0),[]),w=_.find(e=>e.trait===S),te=[...u.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))],T=[[`Kind`,l?.name],[`Origin`,u[0]?.name],[`Profession`,u[1]?.name],[`Past`,u[2]?.name]];return(0,Q.jsxs)(`section`,{className:`sheet${a?` sheet-embedded`:``}`,children:[!a&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(Gx,{step:`sheet`,title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsx)(`button`,{onClick:n,children:`Export`}),(0,Q.jsx)(`button`,{onClick:r,children:`Import`}),(0,Q.jsx)(`button`,{onClick:()=>window.print(),children:`Print`})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[!a&&(0,Q.jsx)(`div`,{className:`level-badge`,"aria-label":`Level ${e.level}`,children:e.level}),!a&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(nS,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i??(()=>{})}),(0,Q.jsxs)(`p`,{className:`lede`,children:[`Level `,e.level,` `,l?.name??`—`,` · `,u.map(e=>e?.name??`—`).join(` · `)]}),(0,Q.jsx)(`p`,{className:`sheet-resources`,children:m.map(e=>(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`i`,{children:f?.resources[e]??`–`}),` `,(0,Q.jsx)(`strong`,{children:e.toUpperCase()})]},e))}),l&&l.features.length>0&&(0,Q.jsx)(`ul`,{className:`features kind-features`,children:l.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),(0,Q.jsx)(`ul`,{className:`call-response sheet-background`,children:T.map(([e,t])=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{children:e}),(0,Q.jsx)(`strong`,{children:t??`—`})]},e))})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-body`,children:[o?(0,Q.jsx)(`div`,{className:`sheet-stats`,children:o}):(0,Q.jsx)(`div`,{className:`sheet-stats`,children:p.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core stat`,children:f?.coreStats[t]??`–`}),(0,Q.jsx)(`h4`,{className:`rule`,children:$(t)})]}),!B[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(eS,{bonus:f?.coreBonus[t]??0,value:f?.coreStats[t]??e.core[t]})]}),B[t].map(t=>{let n=f?.stats[t],r=(d?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=d?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,d?.[t]?.max??`–`]})]}),(0,Q.jsx)($x,{bonus:r,value:n??r,max:i})]},t)})]},t))}),(0,Q.jsxs)(`div`,{className:`sheet-side`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Knowledges`}),b.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:b.map(e=>{let t=xx.get(e.trait);return(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`tiny-text`,children:y(e)?`Language:`:`Knowledge:`}),` `,(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>ee(e.trait),children:[Lx(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`}),f&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Banked picks`}),(0,Q.jsxs)(`p`,{children:[f.picks.universal.banked,` universal, `,f.picks.background.banked,` background`]})]})]}),c]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box`,children:[s?(0,Q.jsxs)(`div`,{className:`sheet-traits-head`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),s]}):(0,Q.jsx)(`h3`,{className:`subhead`,children:`Traits`}),x.length>0?(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:x.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(CC,{held:e,places:g(e.trait)})},e.trait))}):(0,Q.jsx)(`p`,{className:`empty`,children:_.length?`No Traits besides Knowledges.`:`No Traits yet.`}),h.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:h.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),te.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:te.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]}),w&&(0,Q.jsx)(wC,{held:w,places:g(w.trait),onClose:C})]})}var EC=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(Lx),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),DC={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},OC={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},kC=e=>yx.traits.filter(t=>t.opensLists.includes(e)).map(e=>e.name).join(` or `);function AC({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a}){let[o,s]=(0,cc.useState)(`universal`),[c,l]=(0,cc.useState)(``),[u,d]=(0,cc.useState)(new Set),[f,p]=(0,cc.useState)(!0),m=n.summary,h=m?.traitLists??[],g=typeof o==`string`||h.includes(o.list)?o:`universal`,_=typeof g==`string`?g:`list:${g.list}`,v=(0,cc.useMemo)(()=>xl(e,yx,t,g),[e,t,_]);if(!v||!m)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let y=c.trim().toLowerCase(),b=new Set(e.traits.map(e=>e.trait)),x=v.filter(e=>!i?.has(e.trait.id)&&!u.has(e.trait.category)&&(!f||e.reasons.length===0||b.has(e.trait.id))&&(!y||e.trait.name.toLowerCase().includes(y)||e.trait.tags.some(e=>e.toLowerCase().includes(y)))),S=Ec.options.map(e=>({category:e,options:x.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),ee=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},C=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),w=t=>e.traits.map(e=>e.trait).lastIndexOf(t),te=new Map(m.traits.map(e=>[e.trait,e.rank])),T=(t,n,i)=>{let a=w(t);a>=0?C(a):r(dl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Gx,{step:`traits`,title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=m.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":g===e,className:`tech-field-tab${g===e?` is-active`:``}`,onClick:()=>s(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),h.map(t=>{let n=typeof g!=`string`&&g.list===t,r=new Set(e.traits.filter(e=>xx.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>s({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof g==`string`?OC[g]:`${$(g.list)} Traits, open to this character through ${kC(g.list)}. Background Traits here take background picks; the rest take universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:c,onChange:e=>l(e.target.value),"aria-label":`Search Traits`}),Ec.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!u.has(e),onChange:()=>ee(e)}),` `,DC[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:f,onChange:e=>p(e.target.checked)}),` Hide unavailable`]})]}),v.length===0&&g===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package background Traits and the Kind's Trait access.`}),v.length>0&&x.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:f?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),S.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:DC[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=w(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${zx(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&T(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||T(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(Hx,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(Xx,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(Xx,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(`p`,{className:`effect`,children:t.effect}),EC(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,EC(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>C(w(t.id)),children:(0,Q.jsx)(oS,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:te.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(dl(e,t.id,n,i)),children:(0,Q.jsx)(oS,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,Q.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:Lx(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!xx.has(e.trait)&&(0,Q.jsx)(Xx,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>C(t),"aria-label":`Remove ${Lx(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}export{Zc as $,yx as A,Qc as B,Wx as C,Lx as D,$ as E,bl as F,gl as G,cl as H,vl as I,Bc as J,al as K,wl as L,Cx as M,Sx as N,Px as O,xx as P,Hc as Q,Sl as R,Ux as S,Rx as T,pl as U,hl as V,ml as W,Uc as X,Rc as Y,Gc as Z,Jx as _,_C as a,tS as b,NS as c,iS as d,B as et,Kx as f,nS as g,Yx as h,hC as i,n as it,bx as j,Mx as k,hS as l,sS as m,TC as n,c as nt,gC as o,Xx as p,ll as q,vC as r,i as rt,OS as s,AC as t,Ec as tt,dS as u,Hx as v,Bx as w,Gx as x,oS as y,tl as z};
