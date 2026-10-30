@@ -12,6 +12,12 @@
 						<li>The Strange Frontiers title at the top of the page now glitches: its green glow flares, cyan and red slices flicker across it, and every so often it skews hard for a moment.</li>
 						<li>The lines under the Strange Frontiers title now read “A Custom AI Native” and “PnP Role-Playing Game.”</li>
 						<li>New: Player Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and items during play, level them up, and ask an assistant about the rules or tell it what just happened.</li>
+						<li>Player Tools: the character’s level sits in a large circle beside their name, with a green Level up badge under it in place of the Level Up button.</li>
+						<li>Player Tools: the rules problems chip and the Download character and Switch character buttons sit in a bar at the top of the panel that scrolls away with the page. Export is now called Download character, and these buttons, Restore all and the switch confirmation are smaller badge buttons.</li>
+						<li>Player Tools: picking a Condition from Add a Condition adds it straight away, without an Add button.</li>
+						<li>Player Tools: the Traits available button says how many Traits the character can pick, and each core stat and its title line sit slightly outside the stats’ left edge.</li>
+						<li>Player Tools: before a character is brought in, the page’s text uses the same column as the rest of Strange Frontiers.</li>
+						<li>Character Creator: the Tatot are the “High Orcs,” with a c.</li>
 					</ul>
 				</article>
 
