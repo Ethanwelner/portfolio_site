@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Parabiology: revised introduction text, and the Isek, Tatot and Guwain entries replace “coming soon” with notes on their lives and societies.</li>
+						<li>Parabiology: the subtitle is now “Life Among the Planes,” the introduction text is revised, and the Isek, Tatot and Guwain entries replace “coming soon” with notes on their lives and societies.</li>
 						<li>“Lodge” is capitalized wherever it means the Explorers’ Lodge.</li>
 						<li>Mechanics: the placeholder subtitles are replaced: Explaining Stats is “Core and Focus,” Explaining Traits “Who and What a Character Is,” Skill Checks “Rolls, Modifiers, and Outcomes,” Items, Armor, and Effects “Outfitting a Character,” and the Sample Character Sheet “Putting It All Together.”</li>
 						<li>Mechanics: the example Traits use the Character Creator’s dark cards, and the example stats and the sample character sheet use its dark stat bars, with light core badges, earned points in green and the Kind’s starting points in purple. The example stats’ Physical, Social and Mental headings get rule lines like the sheet’s, and each core stat and its title line sit slightly outside the stats’ left edge, as in Player Tools. The sample sheet’s level sits on the creator’s slowly turning, purple-glowing blob.</li>
