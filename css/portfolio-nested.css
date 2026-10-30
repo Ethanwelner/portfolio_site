@@ -159,7 +159,7 @@ a {
     position: relative;
 }
 
-.hero-advert {
+.hero-project {
     position: absolute;
     top: 100%;
     left: calc(50% + 48px);
@@ -181,11 +181,11 @@ a {
     }
 }
 
-.hero-advert-lead {
+.hero-project-lead {
     font-size: 1.25rem;
 }
 
-.hero-advert-title {
+.hero-project-title {
     font-size: 2.5rem;
     color: var(--frontiers-green);
 }
