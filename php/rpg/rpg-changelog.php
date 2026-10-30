@@ -11,7 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>The Strange Frontiers title at the top of the page now glitches: its green glow flares, cyan and red slices flicker across it, and every so often it skews hard for a moment.</li>
 						<li>The lines under the Strange Frontiers title now read “A Custom AI Native” and “PnP Role-Playing Game.”</li>
-						<li>New: Game Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and items during play, level them up, and ask an assistant about the rules or tell it what just happened.</li>
+						<li>New: Player Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and items during play, level them up, and ask an assistant about the rules or tell it what just happened.</li>
 					</ul>
 				</article>
 
