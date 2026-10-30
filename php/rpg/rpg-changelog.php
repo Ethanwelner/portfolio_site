@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Mechanics: the example Traits use the Character Creator’s dark cards, and the example stats and the sample character sheet use its dark stat bars, with light core badges, earned points in green and the Kind’s starting points in purple. The sample sheet’s level sits on the creator’s slowly turning, purple-glowing blob.</li>
+						<li>Mechanics: the example Traits use the Character Creator’s dark cards, and the example stats and the sample character sheet use its dark stat bars, with light core badges, earned points in green and the Kind’s starting points in purple. Each core stat and its title line sit slightly outside the stats’ left edge, as in Player Tools. The sample sheet’s level sits on the creator’s slowly turning, purple-glowing blob.</li>
 						<li>Items: new equipment cards, the item counterpart to Trait cards, showing an item’s category, plane, description and value. Example Items on the Items page shows them for weapons, wearables, equipment, vehicles and animals, and misc items, with one value per item: in Dreft’s Luras for items from Isekai, and in ERC for everything else.</li>
 						<li>Items: weapons and vehicles no longer require a Trait. Anyone can use them, but without a related Trait, such as a Wielder or Pilot skill, a character takes a penalty for unfamiliarity.</li>
 						<li>Character Creator: 19 new Wielder skills covering weapon families from daggers, spears, polearms, bows, crossbows and slings to shotguns, machine guns, grenades, flamethrowers and missile launchers, on the Background Trait lists of the soldiers, guards, hunters and knights who would use them.</li>

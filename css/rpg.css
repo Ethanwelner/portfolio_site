@@ -1798,6 +1798,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             color: var(--portfolio-black);
         }
 
+        /* The core stat and its title line sit slightly outside the stats'
+           left edge, as in Player Tools */
+        :has(> .stat-badge) {
+            margin-left: -15px;
+        }
+
         .stat-badge {
             flex-shrink: 0;
             width: 2.75rem;
