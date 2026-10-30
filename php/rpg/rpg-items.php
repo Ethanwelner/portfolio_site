@@ -7,7 +7,7 @@
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 		<div class="flex-14">
 			<h3 class="sub-title mb-3" id="items">Items, Armor, and Effects</h3>
-			<div class="copy stinger white mb-3">placeholder subtitle</div>
+			<div class="copy stinger white mb-3">Outfitting a Character</div>
 		</div>
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 	</div>
