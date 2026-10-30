@@ -455,21 +455,26 @@
 			</div>
 		</div>
 		<div class="d-flex flex-3 flex-column flex-gap-24">
+			<?php
+			// Each entry's type as an icon in place of a "Knowledge:" or "Language:" label
+			$sf_knowledge_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Knowledge" focusable="false"><title>Knowledge</title><path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"/></svg>';
+			$sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Language" focusable="false"><title>Language</title><path d="M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z"/></svg>';
+			?>
 			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
 					<h5>Knowledges</h5>
 					<div class="line"></div>
 				</div>
-				<li><span class="tiny-text">Knowledge:</span> American History (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> American Geography (2)</li>
-				<li><span class="tiny-text">Knowledge:</span> Imperial Law (1)</li>
-				<li><span class="tiny-text">Knowledge:</span> Contraband (2)</li>
-				<li><span class="tiny-text">Knowledge:</span> Security (2)</li>
-				<li><span class="tiny-text">Knowledge:</span> Streetwise (2)</li>
-				<li><span class="tiny-text">Knowledge:</span> Criminal Activity (2)</li>
-				<li><span class="tiny-text">Language:</span> English</li>
-				<li><span class="tiny-text">Language:</span> Spanish</li>
-				<li><span class="tiny-text">Language:</span> Mandarin</li>
+				<li><?php echo $sf_knowledge_icon; ?> American History (1)</li>
+				<li><?php echo $sf_knowledge_icon; ?> American Geography (2)</li>
+				<li><?php echo $sf_knowledge_icon; ?> Imperial Law (1)</li>
+				<li><?php echo $sf_knowledge_icon; ?> Contraband (2)</li>
+				<li><?php echo $sf_knowledge_icon; ?> Security (2)</li>
+				<li><?php echo $sf_knowledge_icon; ?> Streetwise (2)</li>
+				<li><?php echo $sf_knowledge_icon; ?> Criminal Activity (2)</li>
+				<li><?php echo $sf_language_icon; ?> English</li>
+				<li><?php echo $sf_language_icon; ?> Spanish</li>
+				<li><?php echo $sf_language_icon; ?> Mandarin</li>
 			</ul>
 			<ul class="empty-list mb-0 copy">
 				<div class="line-container d-flex flex-fill">
