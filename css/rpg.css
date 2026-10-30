@@ -1745,6 +1745,222 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     column-gap: 12px;
 }
 
+/* Mechanics tab: the Character Creator's dark look (its src/app/styles.css).
+   Trait cards go black with a darker name bar, rounded corners and light
+   text; the example stats and the sample character sheet sit on the
+   creator's dark grays, with light core badges, earned points in green, the
+   Kind's starting point in purple and open slots a lighter outline. */
+#rpg-mechanics {
+    --panel: #2b2b2b;
+    --panel-box: #363636;
+    --panel-text: #e8e8e8;
+    --panel-soft: #b3b3b3;
+    --panel-rule: rgb(255 255 255 / 18%);
+
+    .trait-box {
+        color: var(--panel-text);
+        background-color: var(--portfolio-black);
+        border-color: #5e5e5e;
+        border-radius: 12px;
+
+        .trait-name {
+            /* The bar rounds its own top corners */
+            border-radius: 11px 11px 0 0;
+            padding: 10px 16px;
+            background-color: #181818;
+            color: var(--panel-text);
+        }
+
+        /* Requirement badges as the creator's chips: gray, since black ones
+           would vanish into the card */
+        .badge.bg-dark {
+            background-color: var(--portfolio-gray) !important;
+            border-radius: 4px;
+            padding: .2rem .5rem;
+            font-size: .75rem;
+        }
+    }
+
+    .stat-panel,
+    .c-sheet {
+        color: var(--panel-text);
+
+        .tiny-text {
+            color: var(--panel-soft);
+        }
+
+        .line {
+            background-color: var(--panel-rule);
+        }
+
+        .stat-badge {
+            background-color: var(--portfolio-near-white);
+            color: var(--portfolio-black);
+        }
+
+        /* The core stat and its title line sit slightly outside the stats'
+           left edge, as in Player Tools */
+        :has(> .stat-badge) {
+            margin-left: -15px;
+        }
+
+        .stat-badge {
+            flex-shrink: 0;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0;
+            line-height: 1;
+        }
+
+        /* The creator's slots hold a set size, shrinking only when the
+           column is too narrow for all 20 */
+        .stat-line {
+            grid-template-columns: repeat(20, minmax(0, 20px));
+            gap: 4px;
+        }
+
+        .stat.filled {
+            background-color: var(--frontiers-green);
+        }
+
+        .stat.default {
+            background-color: var(--frontiers-lore-on-black);
+        }
+
+        .stat.empty {
+            border-color: #8a8a8a;
+        }
+    }
+
+    .stat-panel {
+        padding: 24px;
+        background-color: var(--panel);
+        border: 1px solid rgb(255 255 255 / 12%);
+        border-radius: 12px;
+
+        h5 {
+            color: var(--panel-text);
+        }
+
+        .line-container h5 {
+            background-color: var(--panel);
+        }
+    }
+
+    .c-sheet {
+        background-color: var(--panel-box);
+        border-color: rgb(255 255 255 / 12%);
+
+        .c-sheet-box {
+            background-color: var(--panel);
+            border-color: rgb(255 255 255 / 12%);
+        }
+
+        .line-container :is(h4, h5, h6) {
+            background-color: var(--panel);
+        }
+
+        :is(h2, h4, h5, .copy) {
+            color: var(--panel-text);
+        }
+
+        .lore-link,
+        a {
+            color: var(--frontiers-lore-on-black);
+        }
+
+        /* The level as the creator's sheet shows it: a tiny "Level" over
+           the number on a black blob that slowly morphs and turns while its
+           purple glow pulses (.level-blob in the creator's styles). It's a
+           pseudo-element so the number stays upright. */
+        .level-badge {
+            isolation: isolate;
+            z-index: 1;
+            flex-direction: column;
+            width: 72px;
+            height: 72px;
+            padding: 0;
+            border-radius: 0;
+            background: none;
+            color: var(--panel-text);
+            line-height: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                background-color: var(--portfolio-black);
+                box-shadow: 0 0 5px 0 var(--frontiers-lore-on-black);
+                animation:
+                    level-blob-morph 8s ease-in-out infinite,
+                    level-blob-spin 20s linear infinite,
+                    level-blob-glow 3s ease-in-out infinite alternate;
+
+                @media (prefers-reduced-motion: reduce) {
+                    animation: none;
+                }
+            }
+        }
+
+        .level-badge-label {
+            font-size: .625rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .level-badge-number {
+            font-size: 2.25rem;
+        }
+
+        @media only screen and (max-width: 991px) {
+            .level-badge {
+                /* Further out than the creator's -24px/-8px, clear of the name */
+                top: -28px;
+                left: -18px;
+                width: 56px;
+                height: 56px;
+            }
+
+            .level-badge-label {
+                font-size: .5rem;
+            }
+
+            .level-badge-number {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+@keyframes level-blob-morph {
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+@keyframes level-blob-spin {
+    to {
+        rotate: 1turn;
+    }
+}
+
+/* #a67bf0 (--frontiers-lore-on-black), from a faint 5px glow to a bright 16px */
+@keyframes level-blob-glow {
+    from {
+        box-shadow: 0 0 5px 0 rgb(166 123 240 / 45%);
+    }
+    to {
+        box-shadow: 0 0 16px 0 rgb(166 123 240 / 100%);
+    }
+}
+
 /* ========================================
    RPG MEDIA QUERIES
    1199px: the side gutters collapse, so the side nav moves to the right edge
