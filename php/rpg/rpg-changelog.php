@@ -10,6 +10,8 @@
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: 19 new Wielder skills covering weapon families from daggers, spears, polearms, bows, crossbows and slings to shotguns, machine guns, grenades, flamethrowers and missile launchers, on the Background Trait lists of the soldiers, guards, hunters and knights who would use them.</li>
+						<li>Known Planes: Isekai’s population reads ~220 million native (est.) + ~12,000 Earth baseline, and its Paraphysics, Geography and History text is revised. In The Account of the Team’s Trouble, the team leader is now Vikram Archest.</li>
+						<li>Humanity’s home system is the Sol System everywhere on the site and in the Character Creator, in place of “Solar System,” “solar system” and “Sol system.”</li>
 					</ul>
 				</article>
 				<article class="blog-post">

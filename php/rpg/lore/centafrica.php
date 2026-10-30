@@ -70,7 +70,7 @@
 				</ul>
 				<h6>Stellar Territories</h6>
 				<ul class="copy mb-0">
-					<li>Aksum (Inner Solar System Elliptical Station)</li>
+					<li>Aksum (Inner Sol System Elliptical Station)</li>
 				</ul>
 			</div>
 		</div>

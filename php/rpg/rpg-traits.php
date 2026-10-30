@@ -378,7 +378,7 @@
                     <div class="d-inline-flex flex-gap-4">
                       <div class="badge bg-dark white-text d-inline-flex">(None)</div>
                     </div>
-                    <div class="copy">- This character is wanted by the nations of the Sol system for past crimes.</div>
+                    <div class="copy">- This character is wanted by the nations of the Sol System for past crimes.</div>
                     <div class="copy">- This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</div>
                   </div>
                   <div class="trait-box">

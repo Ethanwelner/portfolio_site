@@ -29,10 +29,10 @@
 				Coined as the “Luminiferous Aether” in a humorous paean to the earliest “luminaries” of physics, the fifth fundamental force is a quantum field with a symbiotic relationship with gravity. Where there is gravity, the aether roils and spins and flows, and where gravity is weak and distant, it ceases to exist at all. The nature of this relationship remains a subject of conjecture and research to this day. While the academics argue, however, industry profits.
 			</p>
 			<p class="copy">
-				Aether sails have been commercialized for everything from backyard power generators to starship propulsion. It’s in the latter that it found its most profitable niche. Without aether sails, it’s likely the Exodus would have been impossible. The technology not only allowed for reactionless propulsion across the solar system, it dropped the cost of lifting tonnage into orbit to practically nothing.
+				Aether sails have been commercialized for everything from backyard power generators to starship propulsion. It’s in the latter that it found its most profitable niche. Without aether sails, it’s likely the Exodus would have been impossible. The technology not only allowed for reactionless propulsion across the Sol System, it dropped the cost of lifting tonnage into orbit to practically nothing.
 			</p>
 			<p class="copy mb-0">
-				In 2230, every vessel short of local point-to-point <?php echo sf_lore_link('shuttles', 'shuttlecraft'); ?> features one or more aether sails. All vessels operating within the solar system are required to, in real time, report the ebbs and flows of aetheric weather, and thousands of satellites are spread across the vast distances to report on the aetheric tides.
+				In 2230, every vessel short of local point-to-point <?php echo sf_lore_link('shuttles', 'shuttlecraft'); ?> features one or more aether sails. All vessels operating within the Sol System are required to, in real time, report the ebbs and flows of aetheric weather, and thousands of satellites are spread across the vast distances to report on the aetheric tides.
 			</p>
 		</div>
 	</div>
