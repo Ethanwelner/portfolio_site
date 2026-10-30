@@ -104,6 +104,20 @@
 							</div>
 						</div>
 					</div>
+					<div class="content-stack content-stack-sm">
+						<h3>Example Items</h3>
+<?php foreach (sf_example_items() as $group => $items): ?>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong><?= $group ?></strong></h5>
+								<div class="line"></div>
+							</div>
+							<div class="d-flex flex-wrap flex-gap-12">
+<?php foreach ($items as $item) { sf_equipment_card(...$item); } ?>
+							</div>
+						</div>
+<?php endforeach; ?>
+					</div>
 				</div>
 				<div class="flex-6 content-stack">
 					<div class="content-stack content-stack-sm">
@@ -236,20 +250,6 @@
 								Misc. items are items that do not neatly fall into another category or which are unimportant or generic objects that could have a multitude of uses. A brick would be a misc item; it could be thrown as a weapon or used to build a structure, but by itself it's just a… brick. Most items in an environment can be considered miscellaneous.
 							</p>
 						</div>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<h3>Example Items</h3>
-<?php foreach (sf_example_items() as $group => $items): ?>
-						<div class="content-stack content-stack-xs">
-							<div class="line-container">
-								<h5><strong><?= $group ?></strong></h5>
-								<div class="line"></div>
-							</div>
-							<div class="d-flex flex-wrap flex-gap-12">
-<?php foreach ($items as $item) { sf_equipment_card(...$item); } ?>
-							</div>
-						</div>
-<?php endforeach; ?>
 					</div>
 				</div>
 			</div>
