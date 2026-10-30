@@ -286,7 +286,7 @@
 												<li>This individual ensures compliance with <?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> and is licensed to provide inspection and certification services.</li>
 											</ul>
 										</li>
-										<li>“Passive exploration” and attunement are a process of “null” exchanges, in which the gate “sends” an area of empty vacuum to the plane and examines the matter and radiation “received.”
+										<li>“Passive exploration” and attunement are a process of “null” exchanges, in which the gate “sends” a volume of empty vacuum to the plane and examines the matter and radiation “received.”
 											<ul>
 												<li>Each exchange is recorded by spectrographic instruments to measure the energies radiating from the exchange volume. This is followed by a rapid phase of measurement and experimentation to determine the elemental and chemical composition of the received matter.</li>
 												<li>Paraphysical effects are theorized and tested over repeated exchanges, while the attunement continuously expands the volume of space available for switching.</li>
