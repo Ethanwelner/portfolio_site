@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>10/30/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: 19 new Wielder skills covering weapon families from daggers, spears, polearms, bows, crossbows and slings to shotguns, machine guns, grenades, flamethrowers and missile launchers, on the Background Trait lists of the soldiers, guards, hunters and knights who would use them.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/29/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The Strange Frontiers title at the top of the page now glitches: its green glow flares, cyan and red slices flicker across it, and every so often it skews hard for a moment.</li>
