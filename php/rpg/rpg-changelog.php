@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Items: new equipment cards, the item counterpart to Trait cards, showing an item’s category, plane, description and value. Example Items on the Items page shows them for weapons, wearables, equipment, vehicles and animals, and misc items, with one value per item: in Dreft’s Luras for items from Isekai, and in ERC for everything else.</li>
+						<li>Items: weapons and vehicles no longer require a Trait. Anyone can use them, but without a related Trait, such as a Wielder or Pilot skill, a character takes a penalty for unfamiliarity.</li>
 						<li>Character Creator: 19 new Wielder skills covering weapon families from daggers, spears, polearms, bows, crossbows and slings to shotguns, machine guns, grenades, flamethrowers and missile launchers, on the Background Trait lists of the soldiers, guards, hunters and knights who would use them.</li>
 						<li>Known Planes: Isekai’s population reads ~220 million native (est.) + ~12,000 Earth baseline, and its Paraphysics, Geography and History text is revised. In The Account of the Team’s Trouble, the team leader is now Vikram Archest.</li>
 						<li>Humanity’s home system is the Sol System everywhere on the site and in the Character Creator, in place of “Solar System,” “solar system” and “Sol system.”</li>

@@ -93,6 +93,63 @@ strong .mechanic-text {
     font-weight: 600;
 }
 
+/* Equipment cards, php/rpg/items.php (Example Items on rpg-items.php): the item
+   counterpart to .trait-box, with the item's value in a coin at the bottom right */
+.equipment-box {
+    padding: 0 1rem 1rem 1rem;
+    color: var(--portfolio-black);
+    background-color: var(--portfolio-light-gray);
+    border: 1px solid var(--portfolio-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+
+    .equipment-name {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        background-color: var(--portfolio-gray);
+        padding: .5rem 1rem;
+        color: var(--portfolio-white);
+    }
+
+    .equipment-meta {
+        font-weight: 600;
+        color: var(--portfolio-gray);
+    }
+
+    .equipment-value {
+        align-self: flex-end;
+        margin-top: auto;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--portfolio-black);
+        color: var(--portfolio-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+    }
+
+    .equipment-amount {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .equipment-currency {
+        font-size: 9px;
+        text-transform: uppercase;
+        margin-top: 2px;
+    }
+}
+
 /* Strange Frontiers side nav, rendered by php/rpg/rpg-links.php. The rail
    sits in personal.php's Setting and Mechanics panels; white invert copies are
    included in the black sections of rpg-traits, rpg-items, rpg-technologies

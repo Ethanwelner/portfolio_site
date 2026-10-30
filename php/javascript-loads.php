@@ -660,7 +660,7 @@
 			var h4 = "";
 			var line = "";
 			subTitle = "";
-			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box" ).each(function() {
+			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box, .equipment-box" ).each(function() {
 				var $el = $( this );
 				var title = collapseSearchText( $el.text() );
 
@@ -670,8 +670,8 @@
 					return;
 				}
 
-				if ( $el.hasClass( "trait-box" ) ) {
-					var traitName = collapseSearchText( $el.find( ".trait-name" ).text() );
+				if ( $el.hasClass( "trait-box" ) || $el.hasClass( "equipment-box" ) ) {
+					var traitName = collapseSearchText( $el.find( ".trait-name, .equipment-name" ).text() );
 					var box = this;
 					addRpgSearchEntry( entries, traitName, [ subTitle, h3, line ], title.replace( traitName, "" ), function() {
 						openMechanicsSection( traitName, [ box ] );
