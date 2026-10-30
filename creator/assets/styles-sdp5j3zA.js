@@ -269,7 +269,7 @@ name: "Centafrica: Colonies"
 status: placeholder
 plane: earth
 region: centafrica
-summary: "You grew up aboard Aksum, Centafrica’s station on its long elliptical orbit through the inner solar system."
+summary: "You grew up aboard Aksum, Centafrica’s station on its long elliptical orbit through the inner Sol System."
 tags: [centafrica, colonies, station, space]
 lore: centafrica
 type: origin
@@ -2484,12 +2484,12 @@ effect: "This character has all required legal training and licenses required to
 name: "Wanted in Sol"
 status: draft
 plane: earth
-summary: "Wanted by the nations of the Sol system for past crimes."
+summary: "Wanted by the nations of the Sol System for past crimes."
 tags: [wanted, crime, sol, site-example]
 category: circumstance
 conveyed: true
 temporary: "Lost when the character's innocence is proclaimed or they are caught"
-effect: "This character is wanted by the nations of the Sol system for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."
+effect: "This character is wanted by the nations of the Sol System for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."
 `,Rd=`id: cybernetic-intelligence
 name: "Cybernetic Intelligence"
 status: draft
@@ -2705,7 +2705,7 @@ name: "Aksum"
 status: draft
 plane: earth
 region: centafrica
-summary: "Aksum, Centafrica’s station on its elliptical orbit through the inner solar system."
+summary: "Aksum, Centafrica’s station on its elliptical orbit through the inner Sol System."
 tags: [centafrica, station, space]
 category: knowledge
 ranked: true

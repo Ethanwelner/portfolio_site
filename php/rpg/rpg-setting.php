@@ -88,7 +88,7 @@
 								The century of the <?php echo sf_lore_link('exodus', 'Exodus'); ?> has seen over a billion take to the stars, and that trend is only accelerating. Colonies dot the surfaces of Luna, Mars, and almost every other moon and oversized hunk of dirt or ice within reach. Hundreds of disparate stations hang between the planets, cities in their own right. Vagrant flotillas drift along the Aether, going where the winds take them. All the while, close to a million ships dart between ports.
 							</p>
 							<p class="copy">
-								Humanity wasn’t content with just the Sol system. Over three dozen star systems have populations of at least 1 million, with countless others featuring nascent human development, if not yet full colonial settlement. The race to plant a flag on every unclaimed rock in the galaxy pushes frontier explorers to burn their engines and risk it all to survey new systems and stake their claim.
+								Humanity wasn’t content with just the Sol System. Over three dozen star systems have populations of at least 1 million, with countless others featuring nascent human development, if not yet full colonial settlement. The race to plant a flag on every unclaimed rock in the galaxy pushes frontier explorers to burn their engines and risk it all to survey new systems and stake their claim.
 							</p>
 							<p class="copy">
 								Lumbering between the floating sparks of human life, fleets of dark, windowless warships patrol nebulously defined territories. The largest displace millions of tons and travel amid swarms of support craft. These powerful vessels enforce the territories of stellar nations. Though war has been rare this past century, and war between great powers rarer still, these ships bear the scars of many a disputed claim.
@@ -357,7 +357,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>Colonization of the solar system begins in earnest and is ongoing, though the process is slow-going.</li>
+							<li>Colonization of the Sol System begins in earnest and is ongoing, though the process is slow-going.</li>
 						</ul>
 					</div>
 					<div>

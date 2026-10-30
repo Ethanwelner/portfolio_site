@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<dt>Route</dt>
-			<dd>Traces an elliptical orbit in the Sol system between the orbits of Earth and Mars, charted and maintained to routinely bring it into relative proximity to both planets.</dd>
+			<dd>Traces an elliptical orbit in the Sol System between the orbits of Earth and Mars, charted and maintained to routinely bring it into relative proximity to both planets.</dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
@@ -44,7 +44,7 @@
 					At 2.5 billion tons, Tetra is the drifting epicenter of human politics. It houses not only the UN Headquarters and the presidential campus of <?php echo sf_lore_link('stellar-democratic-union', 'the Stellar Democratic Union'); ?> (SDU), but also sovereign territorial grounds for every UN member state and visiting delegation. Purpose-built to act as the administrative center for a burgeoning stellar civilization, the station circles Sol in long, loping, elliptical orbits, constantly adjusted to bring it near the centers of human political power.
 				</p>
 				<p class="copy">
-					Like its fellow SDU member state, <?php echo sf_lore_link('boneyard', 'the Boneyard'); ?>, Tetra has no <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?> and was never planned to accommodate them. By law, it must remain within the Sol system, available to every UN member state. Its unhurried schedule and common use of already trafficked cargo lanes make it a rare choice for passenger or cargo transportation, but it maintains a thriving tourist industry.
+					Like its fellow SDU member state, <?php echo sf_lore_link('boneyard', 'the Boneyard'); ?>, Tetra has no <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz Field Generators'); ?> and was never planned to accommodate them. By law, it must remain within the Sol System, available to every UN member state. Its unhurried schedule and common use of already trafficked cargo lanes make it a rare choice for passenger or cargo transportation, but it maintains a thriving tourist industry.
 				</p>
 				<p class="copy">
 					Operated and largely funded by the SDU, Tetra, along with its local electorate, is technically one of its member states. Despite this, the Ark maintains a UN-funded and UN-staffed defense fleet composed, in rotating fashion, of ships and personnel provided by member states. Local law enforcement and governance fall to democratically elected ward representatives, while the Council of 11 holds overall authority. Its seats go to the 11 citizens with the highest share of delegated votes, who deliberate and present bills before the citizenry.
