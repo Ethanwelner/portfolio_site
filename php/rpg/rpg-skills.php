@@ -2,7 +2,7 @@
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
 		<h3 class="sub-title mb-3" id="skills">Skill Checks</h3>
-		<div class="copy stinger black mb-3">Measuring a Character Against Adversity</div>
+		<div class="copy stinger black mb-3">Rolls, Modifiers, and Outcomes</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 </div>
