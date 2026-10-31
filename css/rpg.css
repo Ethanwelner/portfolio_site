@@ -1777,12 +1777,15 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .trait-box {
         color: var(--panel-text);
         background-color: var(--portfolio-black);
-        border-color: #5e5e5e;
+        /* A 2px border the color of the name bar, and a soft shadow, as in
+           the creator and Player Tools */
+        border: 2px solid #181818;
         border-radius: 12px;
+        box-shadow: 0 4px 10px #00000030;
 
         .trait-name {
             /* The bar rounds its own top corners */
-            border-radius: 11px 11px 0 0;
+            border-radius: 10px 10px 0 0;
             padding: 10px 16px;
             background-color: #181818;
             color: var(--panel-text);
