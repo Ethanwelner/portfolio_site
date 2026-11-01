@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The boxes inside the character sheet have 1.5rem of padding at the top and bottom and 2rem at the sides, on the Strange Frontiers sample sheet, in the Character Creator and in Player Tools.</li>
 						<li>Player Tools: the assistant’s conversation scrolls to its earlier messages near the top of the page, where they used to be cut off under the d20, and level up’s Submit glitches once every point is placed. The chat’s scrollbars are just a slim handle.</li>
 						<li>Player Tools: Download character, Switch character and the rules problems chip sit in the character sheet beside the name, and the level up button, now a round green +, sits on the level blob’s top right corner.</li>
 						<li>Player Tools: under the character’s name, Kind, Age, Gender, Origin, Profession and Past each sit as a small label over its value, side by side. The Kind and background link to their cards, and age and gender keep their pens.</li>
