@@ -1925,7 +1925,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* 4px down, so Level and the number sit centered together */
         .level-badge-label {
+            margin-top: 4px;
             font-size: .625rem;
             font-weight: 400;
             text-transform: uppercase;
