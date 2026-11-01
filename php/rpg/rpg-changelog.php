@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Player Tools: the line under the character’s name labels each part, as on the Character Creator’s sheet: Kind, Origin, Profession and Past.</li>
 						<li>Character Creator and Player Tools: the character sheet is tighter, with 1rem of padding, 12px corners on the sheet and the darker boxes inside it, and 24px between the boxes.</li>
 						<li>Player Tools: a character’s age and gender show under their name, as on the Character Creator’s sheet, each with a pen to change it there, and the assistant knows them too.</li>
 						<li>The level blob on the character sheet, the Character Creator’s sheet and Player Tools uses Bebas for “Level” and the number.</li>
