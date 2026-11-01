@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Player Tools: a d20 roller on a little green screen above the assistant, staying in view with it as the page scrolls. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the stat for you.</li>
+						<li>Player Tools: the assistant’s conversation and the message box share one box. The message box starts a line tall and grows as you type, and Send is a paper plane inside it that glitches once there’s something to send.</li>
 					</ul>
 				</article>
 				<article class="blog-post">

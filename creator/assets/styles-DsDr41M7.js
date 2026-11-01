@@ -3907,16 +3907,16 @@ choices:\r
     from: place\r
     note: "Which region's folklore"\r
     perRank: false\r
-`,um=`id: local-history
-name: "Local History"
-status: draft
-plane: any
-summary: "The history of one local region: its names, places and what happened there."
-tags: [history, local, site-example]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."
+`,um=`id: local-history\r
+name: "Local History"\r
+status: draft\r
+plane: any\r
+summary: "The history of one local region: its names, places and what happened there."\r
+tags: [history, local, site-example]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."\r
 `,dm=`id: magic-on-isekai\r
 name: Magic on Isekai\r
 status: placeholder\r
@@ -4182,16 +4182,16 @@ category: knowledge\r
 types: [language]\r
 language: odia\r
 effect: "This character is conversational in the Odia language and can speak it."\r
-`,Lm=`id: orc-society
-name: "Orc Society"
-status: draft
-plane: isekai
-summary: "The customs, institutions and traditions of Orc societies."
-tags: [orcs, culture, site-example]
-category: knowledge
-ranked: true
-minStats: { memory: 3 }
-effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."
+`,Lm=`id: orc-society\r
+name: "Orc Society"\r
+status: draft\r
+plane: isekai\r
+summary: "The customs, institutions and traditions of Orc societies."\r
+tags: [orcs, culture, site-example]\r
+category: knowledge\r
+ranked: true\r
+minStats: { memory: 3 }\r
+effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."\r
 `,Rm=`id: oromo-written\r
 name: "Oromo (Written)"\r
 status: draft\r
