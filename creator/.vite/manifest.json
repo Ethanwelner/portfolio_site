@@ -1,6 +1,6 @@
 {
-  "_styles-BJ-dTVle.js": {
-    "file": "assets/styles-BJ-dTVle.js",
+  "_styles-B2pyP_im.js": {
+    "file": "assets/styles-B2pyP_im.js",
     "name": "styles",
     "css": [
       "assets/styles-D9T_YvH2.css"
@@ -11,21 +11,21 @@
     "src": "_styles-D9T_YvH2.css"
   },
   "src/app/main.tsx": {
-    "file": "assets/main-3raxCVga.js",
+    "file": "assets/main-BqKqIVIe.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-BJ-dTVle.js"
+      "_styles-B2pyP_im.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-BFT7CDhP.js",
+    "file": "assets/main-DffTp-Ax.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-BJ-dTVle.js"
+      "_styles-B2pyP_im.js"
     ],
     "css": [
       "assets/main-WewfcKYE.css"
