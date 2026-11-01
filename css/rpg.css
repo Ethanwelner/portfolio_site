@@ -1890,7 +1890,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         /* The level as the creator's sheet shows it: a tiny "Level" over
-           the number on a black blob that slowly morphs and turns while its
+           the number, in Bebas, on a black blob that slowly morphs and turns while its
            purple glow pulses (.level-blob in the creator's styles). It's a
            pseudo-element so the number stays upright. */
         .level-badge {
@@ -1903,6 +1903,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             border-radius: 0;
             background: none;
             color: var(--panel-text);
+            font-family: 'bebas_neueregular';
             line-height: 1;
 
             &::before {
@@ -1931,8 +1932,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             letter-spacing: .08em;
         }
 
+        /* Bebas has one weight */
         .level-badge-number {
             font-size: 2.25rem;
+            font-weight: 400;
         }
 
         @media only screen and (max-width: 991px) {
