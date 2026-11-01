@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: a choice you haven’t made yet says so plainly, like “Centafrica: Colonies gives a choice of 1 spoken and written language: pick it on the Choices step.”</li>
+						<li>Character Creator: a choice you haven’t made yet just says “Language choice needed.” The “Step x of 6” labels are gone, and step titles are in Bebas.</li>
 						<li>Character Creator and Player Tools: on wide screens the description box spans the Knowledges and the Conditions and Items columns beneath it, and the character’s name has a little more room above their info.</li>
 						<li>Character Creator: the sheet shows HP, VP, SP and MP in their own box under the name and info, in Player Tools’ larger type, in place of the small line under the name.</li>
 						<li>Player Tools: the d20 sits inside the top of the chat box, and the conversation scrolls up under it. Your messages show the character’s portrait beside them, and the assistant answers simple actions with just the result, like “HP 13 → 9.”</li>
