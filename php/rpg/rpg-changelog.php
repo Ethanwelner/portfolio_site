@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Player Tools: Download character, Switch character and the rules problems chip sit in the character sheet, in a row with Level up beside the name.</li>
+						<li>Player Tools: Download character, Switch character and the rules problems chip sit in the character sheet beside the name, and the level up button, now “+ Level,” sits on the level blob’s top right corner.</li>
 						<li>Player Tools: under the character’s name, Kind, Age, Gender, Origin, Profession and Past each sit as a small label over its value, side by side. The Kind and background link to their cards, and age and gender keep their pens.</li>
 						<li>Character Creator and Player Tools: the character sheet is tighter, with 1rem of padding, 12px corners on the sheet and the darker boxes inside it, and 24px between the boxes.</li>
 						<li>Player Tools: a character’s age and gender show under their name, as on the Character Creator’s sheet, each with a pen to change it there, and the assistant knows them too.</li>
