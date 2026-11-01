@@ -1631,7 +1631,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     background-color: var(--portfolio-near-white);
     border: 1px solid var(--portfolio-light-gray);
     padding: 1rem;
-    border-radius: 24px;
+    border-radius: 16px;
 }
 
 .c-sheet-box {
