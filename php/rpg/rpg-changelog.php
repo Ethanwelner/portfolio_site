@@ -9,7 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: on wide screens the description box spans the Knowledges and the Conditions and Items columns beneath it.</li>
+						<li>Character Creator and Player Tools: on wide screens the description box spans the Knowledges and the Conditions and Items columns beneath it, and the character’s name has a little more room above their info.</li>
+						<li>Character Creator: the sheet shows HP, VP, SP and MP the way Player Tools does, each with its colored bar, in place of the small line under the name.</li>
 						<li>Player Tools: the d20 sits inside the top of the chat box, and the conversation scrolls up under it. Your messages show the character’s portrait beside them, and the assistant answers simple actions with just the result, like “HP 13 → 9.”</li>
 						<li>Character Creator: the sheet has a Description box beside the portrait and the character’s info. Write in it at any time, and it travels with the character file. A character from the AI builder gets the builder’s description there. Player Tools has the same box beside the portrait. The Kind’s feature list is off the sheet; click the Kind to see it on its card.</li>
 						<li>Character Creator: add a portrait on the Character step. Your browser shrinks the picture to 512px and keeps it inside the character file, so it travels with the JSON into Player Tools without being uploaded anywhere. It shows on the sheet, in the character box and in Player Tools, and stays put if you rebuild the character with the AI builder. Hover a portrait to see the pen, and click it to see it larger, replace it or remove it.</li>
