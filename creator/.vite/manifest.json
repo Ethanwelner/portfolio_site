@@ -3,32 +3,32 @@
     "file": "assets/styles-B9wPEewm.css",
     "src": "_styles-B9wPEewm.css"
   },
-  "_styles-CGCLgnRu.js": {
-    "file": "assets/styles-CGCLgnRu.js",
+  "_styles-DhgNya4V.js": {
+    "file": "assets/styles-DhgNya4V.js",
     "name": "styles",
     "css": [
       "assets/styles-B9wPEewm.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-e4ZuRTK4.js",
+    "file": "assets/main-B3s8yTKX.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CGCLgnRu.js"
+      "_styles-DhgNya4V.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-B-2unvgU.js",
+    "file": "assets/main-BqSYPdWF.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CGCLgnRu.js"
+      "_styles-DhgNya4V.js"
     ],
     "css": [
-      "assets/main-CpSPuIfN.css"
+      "assets/main-DCrwOVRB.css"
     ]
   }
 }
