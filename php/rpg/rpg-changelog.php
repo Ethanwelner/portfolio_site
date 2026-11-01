@@ -12,7 +12,7 @@
 						<li>The boxes inside the character sheet have 1.5rem of padding at the top and bottom and 2rem at the sides, on the Strange Frontiers sample sheet, in the Character Creator and in Player Tools.</li>
 						<li>Player Tools: the d20 also drifts slowly side to side as it floats, on its own loop, and tips gently in 3D while it rests.</li>
 						<li>Player Tools: Restore all is replaced by a round restore button after each resource’s +, which fills that one back to its max.</li>
-						<li>Player Tools: the d20’s numbers move as smoothly as the die, and only the face it shows is at full strength. The Kind and background links under the name use the same lighter purple as the Knowledges.</li>
+						<li>Player Tools: the d20’s numbers move as smoothly as the die, and only the face it shows is at full size and strength; the others are smaller and dimmer, inside their faces. The Kind and background links under the name use the same lighter purple as the Knowledges.</li>
 						<li>Player Tools: the assistant’s conversation scrolls to its earlier messages near the top of the page, where they used to be cut off under the d20, and level up’s Submit glitches once every point is placed. The chat’s scrollbars are just a slim handle.</li>
 						<li>Player Tools: Download character, Switch character and the rules problems chip sit in the character sheet beside the name, and the level up button, now a round green +, sits on the level blob’s top right corner.</li>
 						<li>Player Tools: under the character’s name, Kind, Age, Gender, Origin, Profession and Past each sit as a small label over its value, side by side. The Kind and background link to their cards, and age and gender keep their pens.</li>
