@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Player Tools: a d20 roller on a little green screen above the assistant, staying in view with it as the page scrolls. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the stat for you.</li>
+						<li>Character Creator: age and gender, set on the Character step or in Describe your character. Gender is Unlisted by default, or Male, Female, Indeterminate, None, Fluid or Custom, in your own words. They’re cosmetic and kept apart from Traits and stats: the AI builder names and writes about the character with them but doesn’t build around them, and the sheet shows them under the name.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
