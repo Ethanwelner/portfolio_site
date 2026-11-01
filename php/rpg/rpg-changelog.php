@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/1/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Player Tools: a d20 roller on a little green screen above the assistant, staying in view with it as the page scrolls. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the stat for you.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>10/30/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Rebirth of Science: the introduction, Switch Gates, Lorentz Field Generators and Aether Sails text is revised. Interstellar travel is now a recent frontier: the first experimental Lorentz field generators are tested in 2160, and New Canaan, the first interstellar colony, is founded by the first Ark in 2190, beginning interstellar expansion. Interdimensional colonization begins in 2116, and the End of Science runs from 2070 to 2120. Nearly a dozen star systems now have populations of at least 1 million, and Leviathan’s prototype water gate was installed on a research station in the outer Sol System. The timeline is updated to match.</li>
