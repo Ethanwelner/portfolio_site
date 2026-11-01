@@ -10,7 +10,7 @@
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Rounded corners are 16px instead of 24px on the character sheet, the Character Creator’s character panel, and Player Tools’ boxes and chat box.</li>
-						<li>Player Tools: the d20 floats on the panel, slowly bobbing, with no box behind it and without the “Click to roll” caption.</li>
+						<li>Player Tools: the d20 floats on the panel, bobbing and slowly turning one way and back, with no box behind it and without the “Click to roll” caption.</li>
 						<li>Player Tools: a d20 roller on a little green screen above the assistant, staying in view with it as the page scrolls. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the stat for you.</li>
 						<li>Player Tools: the assistant’s conversation and the message box share one box, with Clear as a badge in its corner and no Assistant title over it. The message box starts a line tall and grows as you type, with Send as a paper plane beside the text that glitches once there’s something to send. The d20’s screen is the same gray as the other boxes.</li>
 						<li>Character Creator: age and gender, set on the Character step or in Describe your character. Gender is Unlisted by default, or Male, Female, Indeterminate, None, Fluid or Custom, in your own words. They’re cosmetic and kept apart from Traits and stats: the AI builder names and writes about the character with them but doesn’t build around them, and the sheet shows them under the name.</li>
