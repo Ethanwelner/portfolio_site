@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: the sheet uses Player Tools’ line under the name (Kind, Age, Gender, Origin, Profession and Past, with pens to edit age and gender) in place of the stacked list beside it, and gains Player Tools’ Conditions above the Items. Conditions travel with the character file like items, so they carry between the creator and Player Tools.</li>
 						<li>The boxes inside the character sheet have 1.5rem of padding at the top and bottom and 2rem at the sides, on the Strange Frontiers sample sheet, in the Character Creator and in Player Tools.</li>
 						<li>Player Tools: the d20 also drifts slowly side to side as it floats, on its own loop, and tips gently in 3D while it rests.</li>
 						<li>Player Tools: Restore all is replaced by a round restore button after each resource’s +, which fills that one back to its max.</li>
