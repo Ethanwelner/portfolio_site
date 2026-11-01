@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Player Tools: a character’s age and gender show under their name, as on the Character Creator’s sheet, and the assistant knows them too.</li>
 						<li>The level blob on the character sheet, the Character Creator’s sheet and Player Tools uses Bebas for “Level” and the number.</li>
 						<li>Rounded corners are 16px instead of 24px on the character sheet, the Character Creator’s character panel, and Player Tools’ boxes and chat box.</li>
 						<li>Player Tools: the d20 floats on the panel, bobbing and slowly turning one way and back, with no box behind it and without the “Click to roll” caption.</li>
