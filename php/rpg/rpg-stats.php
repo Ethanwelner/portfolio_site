@@ -15,20 +15,20 @@
 					<h3>Stats</h3>
 					<!-- OVERVIEW -->
 					<p class="copy">
-						A character's stats are intended to be a representation of that character's physical, mental, and spiritual limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's stats start at 0. A character's Kind adds a bonus to each stat and will contain maximum values a character's stats cannot exceed.
+						A character's stats are intended to be a representation of that character's physical, social, and mental limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's stats start at 0. A character's Kind adds a bonus to each stat and sets maximum values a character's stats cannot exceed.
 					</p>
 					<ul class="copy">
 						<li>When your character gains a level you get a point to spend in any core stat.</li>
-						<li>Adding a point to a core stat gives you 3 to spend in the focus stats of that category.</li>
-						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put levels into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
+						<li>Adding a point to a core stat gives you 3 points to spend in the focus stats of that category.</li>
+						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put points into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
 						<li>The maximum that can be spent on any core or focus stat is 20.</li>
 						<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
-						<li>Hit Points & other resource mechanics are dependent on scores from the focus stats, except Mana Points, which come from Magic.</li>
+						<li>Hit Points and other resource mechanics are dependent on scores from the focus stats, except Mana Points, which come from Magic.</li>
 						<li>Skill Check bonuses and access to certain Traits are dependent on scores from the focus stats.</li>
 						<li>Each point put into a stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's stats at a glance. Neither is strictly required, as the stats they describe can be more compactly described in other ways.</li>
 						<li>An ogre can be all physicality but may only be smart enough to use a club.</li>
 						<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
-						<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to remember what he sees.</li>
+						<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to retain what they see.</li>
 					</ul>
 				</div>
 			</div>
@@ -123,14 +123,14 @@
 					<!-- example stats -->
 					<h3>Example stats</h3>
 					<ul class="copy">
-						<li>Some Kinds will have lowered maximums; the below example is a human and cannot exceed 15 in any focus stat due to the Unexceptional Trait in the Kind section of its Background.</li>
-						<li>The below character started with 1 in each stat due to the human Generalist Trait in the Kind section of its Background.</li>
+						<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus stat due to the Unexceptional Trait in the Kind section of their Background.</li>
+						<li>The character below started with 1 in each stat due to the Human Generalist Trait in the Kind section of their Background.</li>
 						<li>Humans are intended to be the average baseline in this system.</li>
-						<li>This example character has 9 points spent in Physical so 27 to spend in the focus stats.</li>
-						<li>This character has spent only 2 points in Social and 1 in Mental, so its access to Traits that go beyond simple feats of brute strength will be very limited.</li>
+						<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus stats.</li>
+						<li>This character has spent only 2 points in Social and 1 in Mental, so their access to Traits that go beyond simple feats of brute strength will be very limited.</li>
 						<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
-						<li>Universal Traits are available to any character, Background Traits have requirements based on Kind, Origin, or Profession.</li>
-						<li>This character has oriented their stats to be a strong, but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
+						<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, or Profession.</li>
+						<li>This character has oriented their stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
 						<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
 						<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>
 					</ul>
@@ -426,7 +426,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Power represents the body's ability to generate force, be it lifting heavy objects or jumping high distances. A high Power means a character can lift more, push harder, run faster. Such a character has an easier time climbing, has a higher jump distance, and swings harder with an axe. A powerful character isn't inherently resilient, but they can perform impressive feats for short periods of time.
+								Power represents the body's ability to generate force, be it lifting heavy objects or jumping great distances. A high Power means a character can lift more, push harder, and run faster. Such a character has an easier time climbing, has a higher jump distance, and swings harder with an axe. A powerful character isn't inherently resilient, but they can perform impressive feats for short periods of time.
 							</p>
 						</div>
 						<div class="content-stack content-stack-xs">
@@ -435,7 +435,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Grace represents the body's ability to act with accuracy and control. A high Grace means a character can throw accurately, dance gracefully, and perform dexterous and delicate actions. A graceful character isn't inherently fast or powerful, but every action they take is made more effective by their agility and efficiency of movement.
+								Grace represents the body's ability to act with accuracy and control. A high Grace means a character can throw accurately, dance elegantly, and perform dexterous and delicate actions. A graceful character isn't inherently fast or powerful, but every action they take is made more effective by their agility and efficiency of movement.
 							</p>
 						</div>
 					</div>
@@ -448,7 +448,7 @@
 							<div class="line"></div>
 						</div>
 						<p class="copy">
-							Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle tics and cues in their body language, or quickly interpreting orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspicious. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
+							Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle tics and cues in their body language, or grasping the intent behind orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspiciously. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
 						</p>
 					</div>
 					<div class="content-stack content-stack-xs">
@@ -457,7 +457,7 @@
 							<div class="line"></div>
 						</div>
 						<p class="copy">
-							Persuasion represents the character's ability to convince others, be it through a well-structured argument, persuasive rhetoric, or simple force of personality. A high Persuasion means the character can get the better of negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
+							Persuasion represents the character's ability to convince others, be it through a well-structured argument, stirring rhetoric, or simple force of personality. A high Persuasion means the character can get the better of negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
 						</p>
 					</div>
 					<div class="content-stack content-stack-xs">
@@ -466,7 +466,7 @@
 							<div class="line"></div>
 						</div>
 						<p class="copy">
-							Demeanor represents the character's control of their own vibe, be it acting cool under fire, the ability to command a room, or the ability to fade into a crowd. A high Demeanor means that a character can seem trustworthy at a glance, can look poised for the camera, and can command loyalty from their troops. A high Demeanor doesn't mean a character inherently understands or can control others, but looking the part and not cracking under pressure can go a long way.
+							Demeanor represents the character's control of their own vibe, be it keeping cool under fire, commanding a room, or fading into a crowd. A high Demeanor means that a character can seem trustworthy at a glance, can look poised for the camera, and can inspire confidence in their troops. A high Demeanor doesn't mean a character inherently understands or can control others, but looking the part and not cracking under pressure can go a long way.
 						</p>
 					</div>
 				</div>
@@ -478,7 +478,7 @@
 							<div class="line"></div>
 						</div>
 						<p class="copy">
-							Logic represents the character's ability to work through problems in a systematic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems or during difficult situations.
+							Logic represents the character's ability to work through problems in a systematic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems, even in difficult situations. A logical character isn't inherently quick-witted, but given time they can reason their way through almost anything.
 						</p>
 					</div>
 					<div class="content-stack content-stack-xs">
@@ -496,7 +496,7 @@
 							<div class="line"></div>
 						</div>
 						<p class="copy">
-							Memory represents the character's ability to store and recall information. A high Memory will allow a character to remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
+							Memory represents the character's ability to store and recall information. A high Memory means a character can remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
 						</p>
 					</div>
 				</div>
@@ -507,39 +507,39 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Health and Hit Points (HP)</h4>
 						<p class="copy">
-							Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
+							Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 						</p>
 						<p class="copy">
-							HP's are calculated with a starting basis of 10 + each point a character possesses in a Physical focus stat. A max-level Human who has spent every level increasing their Physical stats will have 55 HP before Equipment or Traits are accounted for. HP's are lost as a character is harmed and regained slowly over time or quickly through the use of equipment, abilities, or RP occurrences. Unless hit points have been lost, a character always defaults to possessing their maximum number of HP.
+							HP are calculated as 10 plus one for each point a character has in their Physical focus stats. A max-level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
 						</p>
 						<p class="copy">
-							As HP's are lost a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related traits are listed following this section. Several of these traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred, but these are not directly tied to the character's hit point total, though Condition Traits such as Severe Bleeding may result in a character continuing to lose HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
+							As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
 						</p>
 						<p class="copy">
-							At their most resilient, a maxed-out human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparative systems like D&D sit at around a 30x multiplier. This system, however, does not have the same levels of exponentially increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple leveling.
+							At their most resilient, a maxed-out Human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparable systems like D&D sit at around a 20x multiplier. This system, however, does not have the same steeply increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple leveling.
 						</p>
 						<ul class="copy">
 							<li><strong>Healthy - Conveyed - Condition</strong><br>
-							Temporary (A character or object gains this trait while they are at their maximum HP total)<br>
+							Temporary (A character or object gains this Trait while they are at their maximum HP total)<br>
 							This Trait has no effect on its own.</li>
 							<li><strong>Injured - Conveyed - Condition</strong><br>
-							Temporary (A character gains this trait while they are below their maximum HP total)<br>
+							Temporary (A character gains this Trait while they are below their maximum HP total)<br>
 							This Trait has no effect on its own.</li>
 							<li><strong>Severely Injured - Conveyed - Condition</strong><br>
-							Temporary (A character gains this trait while they are below half their maximum HP total)<br>
+							Temporary (A character gains this Trait while they are below half their maximum HP total)<br>
 							This Trait has no effect on its own.</li>
 							<li><strong>Incapacitated - Conveyed - Condition</strong><br>
-							Temporary (A character gains this trait while they are at less than a quarter of their HP total)<br>
+							Temporary (A character gains this Trait while they are below a quarter of their maximum HP total)<br>
 							This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
 							<li><strong>Dead - Conveyed - Condition</strong><br>
-							Temporary (A character gains this trait if they are at 0 or less HP)<br>
+							Temporary (A character gains this Trait if they are at 0 or less HP)<br>
 							This character is dead and cannot perform voluntary actions.<br>
 							This character cannot be healed by any means unless otherwise stated.</li>
 							<li><strong>Damaged - Conveyed - Condition</strong><br>
-							Temporary (An object gains this trait if it is below its maximum HP total)<br>
+							Temporary (An object gains this Trait if it is below its maximum HP total)<br>
 							This Trait has no effect on its own.</li>
 							<li><strong>Destroyed - Conveyed - Condition</strong><br>
-							Temporary (An object gains this trait if it is at 0 or less HP)<br>
+							Temporary (An object gains this Trait if it is at 0 or less HP)<br>
 							This object has been destroyed and no longer functions in any intended capacity.<br>
 							This object cannot be repaired by any means unless otherwise stated.</li>
 						</ul>
@@ -547,22 +547,22 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Vibe Points (VP)</h4>
 						<p class="copy">
-							VP are a spendable resource that can be used to improve a character's skill checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP's equal to the total of their Social focus stats. Certain Traits and equipment can increase the number or recovery rate of Vibe Points. VP's are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look another way.
+							VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
 						</p>
-						<p class="copy">VP's can be spent on:</p>
+						<p class="copy">VP can be spent on:</p>
 						<ul class="copy">
-							<li>Rerolling a single die in a socially related skill check (such as to try again when lying to a guard about your motives)</li>
-							<li>Asking the GM to improve the results of a socially related skill check (such as improving the result of a negotiation over the price of a new car).</li>
+							<li>Rerolling a single die in a socially related Skill Check (such as to try again when lying to a guard about your motives)</li>
+							<li>Asking the GM to improve the results of a socially related Skill Check (such as getting a better price in a negotiation over a new car).</li>
 							<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
 						</ul>
 					</div>
 					<div class="content-stack content-stack-sm">
 						<h4>Savvy Points (SP)</h4>
 						<p class="copy">
-							SP are a spendable resource that can be used to boost a character's skill checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits or background checks. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is outside of their depth. A character has a maximum number of SP's equal to the total of their Mental focus stats. Certain Traits and equipment can increase the recovery rate of SP's. SP's can be spent on:
+							SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
 						</p>
 						<ul class="copy">
-							<li>Rerolling a single die in a mentally related skill check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
+							<li>Rerolling a single die in a mentally related Skill Check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
 							<li>Requesting competence or advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
 							<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
 						</ul>
@@ -570,7 +570,7 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Mana Points (MP)</h4>
 						<p class="copy">
-							MP are a spendable resource like VP and SP, but they come from the Magic core stat instead of focus stats. A character has a maximum number of MP's equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a level into Magic. Only characters who can level Magic, like most Kinds of Dreft, have MP to begin with.
+							MP are a spendable resource like VP and SP, but they come from the Magic core stat instead of focus stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
 						</p>
 					</div>
 				</div>
