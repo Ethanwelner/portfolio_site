@@ -274,6 +274,7 @@
 
     /* Strange Frontiers advert */
     .hero-project {
+        top: calc(100% + 1rem);
         left: calc(50% - 12px);
         padding: 10px 15px;
     }
