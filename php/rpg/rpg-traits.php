@@ -151,35 +151,44 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Knowledge: Local History - Ranked - Knowledge</div>
-                    <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                    <div class="copy">- This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</div>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name">Knowledge: Imperial Law - Ranked - Knowledge</div>
-                    <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                    <div class="copy">- This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories.</div>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name">Knowledge: Orc Society - Ranked - Knowledge</div>
-                    <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                    <div class="copy">- This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies.</div>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name">Knowledge: Mathematics - Ranked - Knowledge</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Logic 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Local History (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
                     </div>
-                    <div class="copy">- This character has knowledge of mathematics and of mathematical fields of study.</div>
+                    <p class="copy effect">This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</p>
+                    <p class="copy muted small">Needs Memory 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Knowledge: Elemental Magics - Ranked - Knowledge</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Imperial Law (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
                     </div>
-                    <div class="copy">- This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history.</div>
+                    <p class="copy effect">This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories.</p>
+                    <p class="copy muted small">Needs Memory 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Orc Society (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
+                    </div>
+                    <p class="copy effect">This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies.</p>
+                    <p class="copy muted small">Needs Memory 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Mathematics (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
+                    </div>
+                    <p class="copy effect">This character has knowledge of mathematics and of mathematical fields of study.</p>
+                    <p class="copy muted small">Needs Memory 3, Logic 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Elemental Magics (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
+                    </div>
+                    <p class="copy effect">This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history.</p>
+                    <p class="copy muted small">Needs Memory 3, Intuition 5</p>
                   </div>
                 </div>
               </div>
@@ -190,28 +199,28 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">English (Spoken) - Language</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 2)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 2)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>English (Spoken)</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Language</span><span class="chip">Knowledge</span></span>
                     </div>
-                    <div class="copy">- This character is conversational with the English language and can converse in it.</div>
+                    <p class="copy effect">This character is conversational with the English language and can converse in it.</p>
+                    <p class="copy muted small">Needs Memory 2, Intuition 2</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Mandarin (Spoken) (Written) - Language</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 2)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 2)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Mandarin (Spoken) (Written)</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Language</span><span class="chip">Knowledge</span></span>
                     </div>
-                    <div class="copy">- This character is conversational with the Mandarin language and can converse in it, and can read and write it.</div>
+                    <p class="copy effect">This character is conversational with the Mandarin language and can converse in it, and can read and write it.</p>
+                    <p class="copy muted small">Needs Memory 2, Intuition 2</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Dwarvish Runes (Written) - Language</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Dwarvish Runes (Written)</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Language</span><span class="chip">Knowledge</span></span>
                     </div>
-                    <div class="copy">- This character can read and write Dwarvish Runes.</div>
+                    <p class="copy effect">This character can read and write Dwarvish Runes.</p>
+                    <p class="copy muted small">Needs Memory 3, Intuition 5</p>
                   </div>
                 </div>
               </div>
@@ -222,54 +231,48 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Pilot: Helicopter - Ranked - Skill</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Pilot: Helicopter (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
                     </div>
-                    <div class="copy">- This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter.</div>
-                    <div class="copy">- Rank *10 added to skill check rolls involving helicopter piloting.</div>
+                    <p class="copy effect">This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter.</p>
+                    <p class="copy effect">Rank *10 added to skill check rolls involving helicopter piloting.</p>
+                    <p class="copy muted small">Needs Memory 5, Intuition 3, Grace 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Expert Pilot - Mastery - Skill</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 10)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Any Pilot skill)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Expert Pilot</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Skill</span></span>
                     </div>
-                    <div class="copy">- This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in.</div>
+                    <p class="copy effect">This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in.</p>
+                    <p class="copy muted small">Needs Memory 5, Intuition 10, Grace 5, Any Pilot skill</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Rider: Basic Animals - Ranked - Skill</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Empathy 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Persuasion 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Rider: Basic Animals (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
                     </div>
-                    <div class="copy">- This character is capable of riding a basic animal as a mount in simple scenarios without a skill check.</div>
-                    <div class="copy">- Rank *10 added to skill check rolls involving riding a simple animal.</div>
+                    <p class="copy effect">This character is capable of riding a basic animal as a mount in simple scenarios without a skill check.</p>
+                    <p class="copy effect">Rank *10 added to skill check rolls involving riding a simple animal.</p>
+                    <p class="copy muted small">Needs Grace 4, Empathy 4, Persuasion 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Wielder: Longsword - Ranked - Skill</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Power 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 4)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Wielder: Longsword (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
                     </div>
-                    <div class="copy">- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check.</div>
-                    <div class="copy">- Rank *5 added to skill check rolls involving a Longsword.</div>
+                    <p class="copy effect">This character is capable of performing the basic tasks of maintaining a Longsword without a skill check.</p>
+                    <p class="copy effect">Rank *5 added to skill check rolls involving a Longsword.</p>
+                    <p class="copy muted small">Needs Grace 4, Power 4, Endurance 4</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Wielder: Musket - Ranked - Skill</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Power 2)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Wielder: Musket (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
                     </div>
-                    <div class="copy">- This character is capable of performing the basic tasks of maintaining a Musket without a skill check.</div>
-                    <div class="copy">- Rank *5 added to skill check rolls involving a Musket.</div>
+                    <p class="copy effect">This character is capable of performing the basic tasks of maintaining a Musket without a skill check.</p>
+                    <p class="copy effect">Rank *5 added to skill check rolls involving a Musket.</p>
+                    <p class="copy muted small">Needs Grace 3, Power 2, Intuition 3</p>
                   </div>
                 </div>
               </div>
@@ -280,75 +283,67 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Trail Runner - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Power 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 2)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 2)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Trail Runner</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</div>
+                    <p class="copy effect">This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</p>
+                    <p class="copy muted small">Needs Power 3, Endurance 2, Grace 2</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Capable Student - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 3)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Logic 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Capable Student</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character can learn a new (knowledge) Trait in half the specified time.</div>
+                    <p class="copy effect">This character can learn a new (knowledge) Trait in half the specified time.</p>
+                    <p class="copy muted small">Needs Memory 3, Logic 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Knowledge Sponge - Mastery - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Logic 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Capable Student)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Knowledge Sponge</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character can learn a new (knowledge) Trait in a quarter the specified time.</div>
+                    <p class="copy effect">This character can learn a new (knowledge) Trait in a quarter the specified time.</p>
+                    <p class="copy muted small">Needs Memory 5, Logic 5, Intuition 5, Capable Student</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Con Man - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Persuasion 8)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Demeanor 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Intuition 4)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Memory 4)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Con Man</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- Add 5 to any skill check rolls that involve lying in either written or spoken form.</div>
+                    <p class="copy effect">Add 5 to any skill check rolls that involve lying in either written or spoken form.</p>
+                    <p class="copy muted small">Needs Persuasion 8, Demeanor 4, Intuition 4, Memory 4</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Mental Fortitude - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 8)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Logic 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Mental Fortitude</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</div>
+                    <p class="copy effect">This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</p>
+                    <p class="copy muted small">Needs Endurance 8, Logic 5, Demeanor 5</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Sculpted - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Power 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Demeanor 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Sculpted</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate).</div>
+                    <p class="copy effect">This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate).</p>
+                    <p class="copy muted small">Needs Power 5, Endurance 5, Demeanor 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Eagle Eye - Conveyed - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Eagle Eye</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character can request advantage in situations that involve seeing at distance.</div>
+                    <p class="copy effect">This character can request advantage in situations that involve seeing at distance.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Gladiator - Ability</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Physical 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Grace 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Gladiator</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon.</div>
+                    <p class="copy effect">When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon.</p>
+                    <p class="copy muted small">Needs Physical 5, Grace 5, Demeanor 5</p>
                   </div>
                 </div>
               </div>
@@ -359,43 +354,43 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Thieves Guild Membership - Conveyed - Circumstance</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Thieves Guild Membership</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
                     </div>
-                    <div class="copy">- This character is an official member of a Local Thieves Guild.</div>
+                    <p class="copy effect">This character is an official member of a Local Thieves Guild.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Tugboat Captain - Conveyed - Circumstance</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Tugboat Captain</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
                     </div>
-                    <div class="copy">- This character has all required legal training and licenses required to command a Tugboat.</div>
+                    <p class="copy effect">This character has all required legal training and licenses required to command a Tugboat.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Wanted in Sol - Conveyed - Circumstance</div>
-                    <div class="copy">Temporary (Lost when the character's innocence is proclaimed or they are caught)</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Wanted in Sol</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
                     </div>
-                    <div class="copy">- This character is wanted by the nations of the Sol System for past crimes.</div>
-                    <div class="copy">- This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</div>
+                    <p class="copy effect">Temporary (Lost when the character's innocence is proclaimed or they are caught)</p>
+                    <p class="copy effect">This character is wanted by the nations of the Sol System for past crimes.</p>
+                    <p class="copy effect">This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Short Term Fame - Conveyed - Circumstance</div>
-                    <div class="copy">Temporary (30 days)</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Short Term Fame</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
                     </div>
-                    <div class="copy">- Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them.</div>
+                    <p class="copy effect">Temporary (30 days)</p>
+                    <p class="copy effect">Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Significant Inheritance - Conveyed - Circumstance</div>
-                    <div class="copy">Temporary (Lost when the money is all spent)</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Significant Inheritance</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
                     </div>
-                    <div class="copy">- This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank.</div>
+                    <p class="copy effect">Temporary (Lost when the money is all spent)</p>
+                    <p class="copy effect">This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank.</p>
                   </div>
                 </div>
               </div>
@@ -406,32 +401,47 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Stone Skin - Conveyed - Condition - Enchantment</div>
-                    <div class="copy">Temporary (This trait lasts a number of minutes equal to the caster's Rank in this ability)</div>
-                    <div class="copy">- This character gains Rank *3 resistance to all Physical damage types.</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Stone Skin</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">Enchantment</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (This trait lasts a number of minutes equal to the caster's Rank in this ability)</p>
+                    <p class="copy effect">This character gains Rank *3 resistance to all Physical damage types.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Severe Bleeding - Conveyed - Condition - Injury</div>
-                    <div class="copy">Temporary (This trait is lost when this Condition is Treated)</div>
-                    <div class="copy">- This character loses 1 HP every combat round while in combat.</div>
-                    <div class="copy">- This character loses 1 HP every minute while outside of combat.</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Severe Bleeding</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">Injury</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (This trait is lost when this Condition is Treated)</p>
+                    <p class="copy effect">This character loses 1 HP every combat round while in combat.</p>
+                    <p class="copy effect">This character loses 1 HP every minute while outside of combat.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Dead - Conveyed - Condition - Injury</div>
-                    <div class="copy">Temporary (A character gains this trait if they are at 0 or less HP)</div>
-                    <div class="copy">- This character is dead and cannot perform voluntary actions.</div>
-                    <div class="copy">- This character cannot be healed by any means unless otherwise stated.</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Dead</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">Injury</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (A character gains this trait if they are at 0 or less HP)</p>
+                    <p class="copy effect">This character is dead and cannot perform voluntary actions.</p>
+                    <p class="copy effect">This character cannot be healed by any means unless otherwise stated.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Stimm Rush - Conveyed - Condition</div>
-                    <div class="copy">Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)</div>
-                    <div class="copy">- This character gains 5 to all physical focus stats.</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Stimm Rush</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)</p>
+                    <p class="copy effect">This character gains 5 to all physical focus stats.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Ghost Sight - Conveyed - Condition</div>
-                    <div class="copy">Temporary (Lost when the effect that granted this Trait ends)</div>
-                    <div class="copy">- This character perceives beyond the veil.</div>
-                    <div class="copy">- This character can see and hear the supernatural.</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Ghost Sight</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (Lost when the effect that granted this Trait ends)</p>
+                    <p class="copy effect">This character perceives beyond the veil.</p>
+                    <p class="copy effect">This character can see and hear the supernatural.</p>
                   </div>
                 </div>
               </div>
@@ -442,27 +452,18 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Possessed By A Spirit - Conveyed - Other</div>
-                    <div class="copy">Temporary (lost when the character is no longer possessed)</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">None</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Possessed By A Spirit</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Other</span></span>
                     </div>
-                    <div class="copy">- This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them.</div>
-                    <div class="copy">- This character no longer accrues experience.</div>
-                    <div class="copy">- While under the control of this entity the character's Mental and Social stats are considered <span class="badge bg-dark white-text d-inline-flex">(Mental 8)</span> <span class="badge bg-dark white-text d-inline-flex">(Logic 8)</span> <span class="badge bg-dark white-text d-inline-flex">(Intuition 10)</span> <span class="badge bg-dark white-text d-inline-flex">(Memory 9)</span> <span class="badge bg-dark white-text d-inline-flex">(Social 7)</span> <span class="badge bg-dark white-text d-inline-flex">(Empathy 3)</span> <span class="badge bg-dark white-text d-inline-flex">(Persuasion 9)</span> <span class="badge bg-dark white-text d-inline-flex">(Demeanor 12)</span> for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated.</div>
-                    <div class="copy">- If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored.</div>
-                    <div class="copy">- The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them.</div>
-                    <div class="copy">- This character gains the following Temporary Traits and will lose them if they cease to be possessed:
-                      <div class="d-inline-flex flex-gap-4 flex-wrap">
-                        <div class="badge bg-dark white-text d-inline-flex">Supernatural</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Spirit Touched</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Telekinesis(1)</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Inured to pain</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Fearless</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Ghost Sight</div>
-                        <div class="badge bg-dark white-text d-inline-flex">Knowledge: The Supernatural (1)</div>
-                      </div>
-                    </div>
+                    <p class="copy effect">Temporary (lost when the character is no longer possessed)</p>
+                    <p class="copy effect">This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them.</p>
+                    <p class="copy effect">This character no longer accrues experience.</p>
+                    <p class="copy effect">While under the control of this entity the character's Mental and Social stats are considered <span class="chip">Mental 8</span> <span class="chip">Logic 8</span> <span class="chip">Intuition 10</span> <span class="chip">Memory 9</span> <span class="chip">Social 7</span> <span class="chip">Empathy 3</span> <span class="chip">Persuasion 9</span> <span class="chip">Demeanor 12</span> for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated.</p>
+                    <p class="copy effect">If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored.</p>
+                    <p class="copy effect">The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them.</p>
+                    <p class="copy effect">This character gains the following Temporary Traits and will lose them if they cease to be possessed:</p>
+                    <div class="trait-name-chips justify-content-start"><span class="chip chip-muted">Supernatural</span><span class="chip chip-muted">Spirit Touched</span><span class="chip chip-muted">Telekinesis (1)</span><span class="chip chip-muted">Inured to pain</span><span class="chip chip-muted">Fearless</span><span class="chip chip-muted">Ghost Sight</span><span class="chip chip-muted">Knowledge: The Supernatural (1)</span></div>
                   </div>
                 </div>
               </div>
@@ -473,62 +474,62 @@
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Long Toothed - Background - Condition</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Power 10)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Demeanor 5)</div>
-                      <div class="badge bg-dark white-text d-inline-flex">(Middle Aged or Older)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Long Toothed</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</div>
+                    <p class="copy effect">An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</p>
+                    <p class="copy muted small">Needs Power 10, Endurance 5, Demeanor 5, Middle Aged or Older</p>
                   </div>
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
                   <div class="trait-box">
-                    <div class="trait-name">Sorcerous - Background - Condition</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Sorcerous</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- This character may take magic-related traits and may spend stat points on the Magic core stat.</div>
+                    <p class="copy effect">This character may take magic-related traits and may spend stat points on the Magic core stat.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Natural Breath Weapon - Background - Ability - Ranked</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 3)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Natural Breath Weapon (1)</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Ability</span></span>
                     </div>
-                    <div class="copy">- This character's biology allows them to use their breath as a tool or weapon.</div>
-                    <div class="copy">- For each rank of this ability add another d4 to the damage the breath weapon deals.</div>
+                    <p class="copy effect">This character's biology allows them to use their breath as a tool or weapon.</p>
+                    <p class="copy effect">For each rank of this ability add another d4 to the damage the breath weapon deals.</p>
+                    <p class="copy muted small">Needs Endurance 3</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Hard Shell - Background - Condition - Ranked</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(Endurance 5)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Hard Shell (1)</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- This character possesses a hard natural shell that protects them from harm.</div>
-                    <div class="copy">- Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso.</div>
+                    <p class="copy effect">This character possesses a hard natural shell that protects them from harm.</p>
+                    <p class="copy effect">Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso.</p>
+                    <p class="copy muted small">Needs Endurance 5</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Cybernetic Intelligence - Background - Condition</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Cybernetic Intelligence</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics.</div>
-                    <div class="copy">- This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited.</div>
+                    <p class="copy effect">This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics.</p>
+                    <p class="copy effect">This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Supernatural - Background - Condition</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Supernatural</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat.</div>
+                    <p class="copy effect">This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat.</p>
                   </div>
                   <div class="trait-box">
-                    <div class="trait-name">Mechanical - Background - Condition</div>
-                    <div class="d-inline-flex flex-gap-4">
-                      <div class="badge bg-dark white-text d-inline-flex">(None)</div>
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Mechanical</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
                     </div>
-                    <div class="copy">- This character or object is a machine.</div>
-                    <div class="copy">- It can be harmed by EMP damage and is typically immune to Death damage.</div>
+                    <p class="copy effect">This character or object is a machine.</p>
+                    <p class="copy effect">It can be harmed by EMP damage and is typically immune to Death damage.</p>
                   </div>
                 </div>
               </div>

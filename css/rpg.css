@@ -1791,12 +1791,55 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             color: var(--panel-text);
         }
 
-        /* Requirement badges as the creator's chips: gray, since black ones
-           would vanish into the card */
-        .badge.bg-dark {
-            background-color: var(--portfolio-gray) !important;
-            border-radius: 4px;
+        /* As on the creator's sheet: the name at the left of the bar and,
+           at the right, the Trait's flags and category as chips */
+        .trait-name-with-chip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+
+            > span:first-child {
+                min-width: 0;
+            }
+        }
+
+        .trait-name-chips {
+            flex: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* The creator's chips: gray, since black ones would vanish into the
+           card, with the flags (Background, Mastery...) muted */
+        .chip {
+            display: inline-block;
             padding: .2rem .5rem;
+            border-radius: 4px;
+            background-color: var(--portfolio-gray);
+            color: var(--portfolio-white);
+            font-size: .75rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .chip-muted {
+            background-color: var(--portfolio-light-gray);
+            color: var(--portfolio-black);
+        }
+
+        .copy {
+            margin-bottom: 0;
+        }
+
+        .muted {
+            color: var(--panel-soft);
+        }
+
+        .small {
             font-size: .75rem;
         }
     }

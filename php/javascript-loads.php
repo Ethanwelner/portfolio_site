@@ -671,7 +671,12 @@
 				}
 
 				if ( $el.hasClass( "trait-box" ) || $el.hasClass( "equipment-box" ) ) {
-					var traitName = collapseSearchText( $el.find( ".trait-name, .equipment-name" ).text() );
+					// A Trait card's name is the bar's first span; its chips follow it
+					var $name = $el.find( ".trait-name > span:first-child" );
+					if ( !$name.length ) {
+						$name = $el.find( ".trait-name, .equipment-name" );
+					}
+					var traitName = collapseSearchText( $name.text() );
 					var box = this;
 					addRpgSearchEntry( entries, traitName, [ subTitle, h3, line ], title.replace( traitName, "" ), function() {
 						openMechanicsSection( traitName, [ box ] );
