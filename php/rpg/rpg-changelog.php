@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: the sheet’s Knowledges move to their own box beside the Traits, and the Conditions take their column next to the stats.</li>
 						<li>Character Creator and Player Tools: each item is a warm olive-gray card with a lighter edge and darker olive fields (the add form’s fields match, with the name on one line with the count, category and Add), with its name on the same line as its count, category, Equip and Remove where there’s room. Remove is a trash can, set a little apart, and a pen beside it shows or hides the item’s notes (items with notes show them to start).</li>
 						<li>Explaining Stats: revised wording from the Mechanics Doc. Stats now represent a character’s physical, social and mental limitations, HP is 10 plus one for each Physical focus point, a maxed-out Human is roughly 20x (not 30x) as tough as a starting one, and Logic gains a line on reasoning through problems given time.</li>
 						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
