@@ -35,20 +35,36 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
     background-color: transparent;
 }
 
-/* The panel's white moves onto a pseudo-element with holes cut where the
-   breakouts sit (see updateSkyHoles in javascript-loads.php). */
-.rpg-panel.has-sky-holes {
+/* The white panels show the sky through them, inverted: dark stars on white.
+   Their white moves onto two pseudo-elements behind the content, with holes
+   cut where the breakouts sit (see updateSkyHoles in javascript-loads.php).
+   The first, white with difference, inverts the sky behind it, so the
+   #212121 sky turns #dedede and the stars go dark. The second, #212121 with
+   color-dodge, lifts that #dedede to white (222 / (1 - 33/255) = 255) and
+   leaves the dark stars dark. Only the pseudo-elements blend, so the panel's
+   content is untouched. */
+.pane-frontiers .rpg-panel {
     background-color: transparent;
 }
 
-.rpg-panel.has-sky-holes::before {
+.pane-frontiers .rpg-panel::before,
+.pane-frontiers .rpg-panel::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-color: white;
     clip-path: var(--rpg-sky-holes);
     pointer-events: none;
+}
+
+.pane-frontiers .rpg-panel::before {
+    background-color: white;
+    mix-blend-mode: difference;
+}
+
+.pane-frontiers .rpg-panel::after {
+    background-color: var(--portfolio-black);
+    mix-blend-mode: color-dodge;
 }
 
 /* A white tint over the #212121 sky lands on --portfolio-gray (#525252). */
