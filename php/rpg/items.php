@@ -31,9 +31,9 @@ function sf_equipment_card($name, $category, $plane, $description, $value, $curr
 function sf_example_items() {
 	return [
 		'Weapons' => [
-			['Longsword', 'Weapon', 'Any', 'A long straight sword wielded in one or two hands.', 600, 'ERC'],
+			['Longsword', 'Weapon', 'Any', 'A long, straight sword wielded in one or two hands.', 600, 'ERC'],
 			['Crossbow', 'Weapon', 'Any', 'A bow mounted on a stock, slow to load but easy to aim.', 500, 'ERC'],
-			['Rifle', 'Weapon', 'Earth', 'A modern rifle, the standard arm of soldiers across the systems.', 1200, 'ERC'],
+			['Rifle', 'Weapon', 'Earth', 'A modern rifle, the standard arm of soldiers across the Settled Systems.', 1200, 'ERC'],
 			['Missile Launcher', 'Weapon', 'Earth', 'A shoulder-fired tube for rockets and guided missiles.', 25000, 'ERC'],
 		],
 		'Wearables' => [
@@ -42,8 +42,8 @@ function sf_example_items() {
 			['Voidsuit', 'Wearable', 'Earth', 'A sealed, pressurized suit with its own air, for working in space.', 50000, 'ERC'],
 		],
 		'Equipment' => [
-			['Potion Kit', 'Equipment', 'Isekai', 'Vials, a mortar and pestle, a burner and a few common reagents.', 50, 'Luras'],
-			['Healer’s Kit', 'Equipment', 'Any', 'Bandages, salves, splints and needle and thread.', 80, 'ERC'],
+			['Potion Kit', 'Equipment', 'Isekai', 'Vials, a mortar and pestle, a burner, and a few common reagents.', 50, 'Luras'],
+			['Healer’s Kit', 'Equipment', 'Any', 'Bandages, salves, splints, and needle and thread.', 80, 'ERC'],
 			['Comm Unit', 'Equipment', 'Earth', 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 800, 'ERC'],
 		],
 		'Vehicles and Animals' => [

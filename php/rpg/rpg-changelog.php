@@ -9,14 +9,16 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: where the sheet is too narrow for three boxes across (including beside Player Tools’ chat), Items drop under the stats and Conditions and lay their cards side by side. At the same point, the Knowledges move above the Traits. The Conditions stay beside the stats whenever there’s room for them.</li>
-						<li>Character Creator and Player Tools: the sheet’s Knowledges move to their own box beside the Traits, and the stats, Conditions and Items each get their own box along one row.</li>
-						<li>Character Creator and Player Tools: each item is a warm olive-gray card with a lighter edge and darker olive fields (the add form’s fields match, with the name on one line with the count, category and Add), with its name on the same line as its count, category, Equip and Remove where there’s room. Remove is a trash can, set a little apart, and a pen beside it shows or hides the item’s notes (items with notes show them to start).</li>
+						<li>Mechanics: revised wording across Explaining Traits, Skill Checks, Items, Armor, and Effects, and the Sample Character Sheet, from the Mechanics Doc. Language Traits say a character can speak and understand a language, Expert Pilot needs any Pilot Trait, Wielder Traits cover using a weapon as well as maintaining it, Dead is no longer an (Injury), and Possessed by a Spirit lists Persuasion 9.</li>
+						<li>Game terms are capitalized across Strange Frontiers and the Character Creator: Trait, Stat, Level, Rank, Item, Equipment, Advantage, Competence, Roll Modifier, Universal and Background, the Item categories and damage types, Kind names, and the Settled Systems. Trait types are written in parentheses, like (Injury).</li>
+						<li>Character Creator and Player Tools: where the sheet is too narrow for three boxes across (including beside Player Tools’ chat), Items drop under the Stats and Conditions and lay their cards side by side. At the same point, the Knowledges move above the Traits. The Conditions stay beside the Stats whenever there’s room for them.</li>
+						<li>Character Creator and Player Tools: the sheet’s Knowledges move to their own box beside the Traits, and the Stats, Conditions and Items each get their own box along one row.</li>
+						<li>Character Creator and Player Tools: each Item is a warm olive-gray card with a lighter edge and darker olive fields (the add form’s fields match, with the name on one line with the count, category and Add), with its name on the same line as its count, category, Equip and Remove where there’s room. Remove is a trash can, set a little apart, and a pen beside it shows or hides the Item’s notes (Items with notes show them to start).</li>
 						<li>Explaining Stats: revised wording from the Mechanics Doc. Stats now represent a character’s physical, social and mental limitations, HP is 10 plus one for each Physical focus point, a maxed-out Human is roughly 20x (not 30x) as tough as a starting one, and Logic gains a line on reasoning through problems given time.</li>
 						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
 						<li>Space suits are “voidsuits” throughout, including the Voidsuit in Example Items, and ship classes are lowercase mid-sentence (Arks stay capitalized).</li>
 						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
-						<li>Character Creator: the stock items are in. Characters the AI builds start with items that fit their description and work, from their own plane, and the Items column suggests stock items as you type, each showing its description, damage or resistances, uses, slot and value. Player Tools’ assistant knows them too.</li>
+						<li>Character Creator: the stock Items are in. Characters the AI builds start with Items that fit their description and work, from their own plane, and the Items column suggests stock Items as you type, each showing its description, damage or resistances, uses, slot and value. Player Tools’ assistant knows them too.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
@@ -26,14 +28,14 @@
 						<li>Player Tools: your messages show the character’s portrait beside them, and the assistant answers simple actions with just the result, like “HP 13 → 9.”</li>
 						<li>Character Creator: the sheet has a Description box beside the portrait and the character’s info. Write in it at any time, and it travels with the character file. A character from the AI builder gets the builder’s description there. Player Tools has the same box beside the portrait. The Kind’s feature list is off the sheet; click the Kind to see it on its card.</li>
 						<li>Character Creator: add a portrait on the Character step. Your browser shrinks the picture to 512px and keeps it inside the character file, so it travels with the JSON into Player Tools without being uploaded anywhere. It shows on the sheet, in the character box and in Player Tools, and stays put if you rebuild the character with the AI builder. Hover a portrait to see the pen, and click it to see it larger, replace it or remove it.</li>
-						<li>Player Tools: banked picks are a line under the Traits title, saying how many universal and background picks are left, instead of a section of their own.</li>
-						<li>Character Creator: the sheet uses Player Tools’ line under the name (Kind, Age, Gender, Origin, Profession and Past, with pens to edit age and gender) in place of the stacked list beside it, and gains Player Tools’ Conditions above the Items. Conditions travel with the character file like items, so they carry between the creator and Player Tools.</li>
+						<li>Player Tools: banked picks are a line under the Traits title, saying how many Universal and Background picks are left, instead of a section of their own.</li>
+						<li>Character Creator: the sheet uses Player Tools’ line under the name (Kind, Age, Gender, Origin, Profession and Past, with pens to edit age and gender) in place of the stacked list beside it, and gains Player Tools’ Conditions above the Items. Conditions travel with the character file like Items, so they carry between the creator and Player Tools.</li>
 						<li>Player Tools: Restore all is replaced by a round restore button after each resource’s +, which fills that one back to its max.</li>
 						<li>Character Creator and Player Tools: Trait cards show their category as a badge at the right of the name, after a badge for where the Trait came from: Kind, or Origin, Profession or Past for a Background Trait picked from that package. Player Tools’ Conditions get HP and Condition badges the same way, and the Kind and background cards opened from under the name say which they are.</li>
 						<li>Player Tools: the assistant’s conversation scrolls back to its earliest messages, which used to be cut off under the d20.</li>
 						<li>Player Tools: a character’s age and gender show under their name, as on the Character Creator’s sheet, each with a pen to change it there, and the assistant knows them too.</li>
-						<li>Player Tools: a d20 roller beside the assistant. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the stat for you.</li>
-						<li>Character Creator: age and gender, set on the Character step or in Describe your character. Gender is Unlisted by default, or Male, Female, Indeterminate, None, Fluid or Custom, in your own words. They’re cosmetic and kept apart from Traits and stats: the AI builder names and writes about the character with them but doesn’t build around them, and the sheet shows them under the name.</li>
+						<li>Player Tools: a d20 roller beside the assistant. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the Stat for you.</li>
+						<li>Character Creator: age and gender, set on the Character step or in Describe your character. Gender is Unlisted by default, or Male, Female, Indeterminate, None, Fluid or Custom, in your own words. They’re cosmetic and kept apart from Traits and Stats: the AI builder names and writes about the character with them but doesn’t build around them, and the sheet shows them under the name.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
@@ -43,8 +45,8 @@
 						<li>Parabiology: the subtitle is now “Life Among the Planes,” the introduction text is revised, and the Isek, Tatot and Guwain entries replace “coming soon” with notes on their lives and societies.</li>
 						<li>“Lodge” is capitalized wherever it means the Explorers’ Lodge.</li>
 						<li>Mechanics: the placeholder subtitles are replaced: Explaining Stats is “Core and Focus,” Explaining Traits “Who and What a Character Is,” Skill Checks “Rolls, Modifiers, and Outcomes,” Items, Armor, and Effects “Outfitting a Character,” and the Sample Character Sheet “Putting It All Together.”</li>
-						<li>Items: new equipment cards, the item counterpart to Trait cards, showing an item’s category, plane, description and value. Example Items on the Items page shows them for weapons, wearables, equipment, vehicles and animals, and misc items, with one value per item: in Dreft’s Luras for items from Isekai, and in ERC for everything else.</li>
-						<li>Items: weapons and vehicles no longer require a Trait. Anyone can use them, but without a related Trait, such as a Wielder or Pilot skill, a character takes a penalty for unfamiliarity.</li>
+						<li>Items: new Equipment cards, the Item counterpart to Trait cards, showing an Item’s category, plane, description and value. Example Items on the Items page shows them for Weapons, Wearables, Equipment, Vehicles and animals, and Misc Items, with one value per item: in Dreft’s Luras for Items from Isekai, and in ERC for everything else.</li>
+						<li>Items: Weapons and Vehicles no longer require a Trait. Anyone can use them, but without a related Trait, such as a Wielder or Pilot skill, a character takes a penalty for unfamiliarity.</li>
 						<li>Character Creator: 19 new Wielder skills covering weapon families from daggers, spears, polearms, bows, crossbows and slings to shotguns, machine guns, grenades, flamethrowers and missile launchers, on the Background Trait lists of the soldiers, guards, hunters and knights who would use them.</li>
 						<li>Known Planes: Isekai’s population reads ~220 million native (est.) + ~12,000 Earth baseline, and its Paraphysics, Geography and History text is revised. In The Account of the Team’s Trouble, the team leader is now Vikram Archest.</li>
 						<li>Humanity’s home system is the Sol System everywhere on the site and in the Character Creator, in place of “Solar System,” “solar system” and “Sol system.”</li>
@@ -54,7 +56,7 @@
 					<p class="copy mb-3"><i>10/29/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The lines under the Strange Frontiers title now read “A Custom AI Native” and “PnP Role-Playing Game.”</li>
-						<li>New: Player Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and items during play, level them up, and ask an assistant about the rules or tell it what just happened.</li>
+						<li>New: Player Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and Items during play, Level them up, and ask an assistant about the rules or tell it what just happened.</li>
 						<li>Player Tools: Export is now called Download character.</li>
 						<li>Player Tools: picking a Condition from Add a Condition adds it straight away, without an Add button.</li>
 						<li>Player Tools: the Traits available button says how many Traits the character can pick.</li>
@@ -70,7 +72,7 @@
 						<li>Character Creator: the Origin, Profession and Past lists in the Background step each have a search box and checkbox filters for their settings, and Origins can also be filtered by bonus.</li>
 						<li>Character Creator: new Origins for the Kingdom of India (Earth and Colonies), Centafrica (Earth and Colonies), the Ural Federation and Xanthus, with Knowledges for each nation, its law, Indian Theology, Pataliputra, Amaravati, Aksum, Ecology and Asteroid Mining.</li>
 						<li>Character Creator: a background package’s bonus now reads “+1 Mental focus point” instead of “+1 Mental point.”</li>
-						<li>“The systems” is now “the settled systems” throughout the Setting, Sciences, Planes, Stars, Parabiology and lore entries, and the Character Creator’s region heading and card mark read The Settled Systems.</li>
+						<li>“The systems” is now “the Settled Systems” throughout the Setting, Sciences, Planes, Stars, Parabiology and lore entries, and the Character Creator’s region heading and card mark read The Settled Systems.</li>
 						<li>Exotic Materials: Fast Hydrogen is now St-1/E.003, with a half-life of roughly thirty hours, and Gastown’s info box uses the new code. Decoding Exotic Materials explains decimal half-lives and E0, and nests each code rule under its class. Solum Inane, Fast Hydrogen and Slim Water have revised writeups.</li>
 						<li>Character Creator: 29 new Professions, from Smuggler, Blacksmith and Knight to Doctor, Fighter Pilot and Officer of the Bureau of Planar Management and Enforcement, and 11 new Pasts, including Military Service, Station Rat and Raised at Court.</li>
 						<li>Character Creator: six new Origins: The Union of Texas, The Free American States, The Lunar Industrial Syndicate, and, on Isekai, Karsef, Sorellion and the Drovus Empire.</li>
@@ -111,11 +113,11 @@
 					<p class="copy mb-3"><i>10/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: on the Background step, the Origin, Profession and Past each fold away once picked and can be opened again.</li>
-						<li>Mechanics: stats no longer start at a Kind’s minimum. Every character’s stats start at 0, and their Kind adds what used to be its starting stats as a bonus. The numbers come out the same, and the Dreftian starters now list stats as bonus / maximum. The AI Core now gets a flat +3 to every Mental stat instead of 3 points to place itself.</li>
-						<li>Mechanics: added Magic, a fourth core stat with no focus stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, whose Magic Access lets them level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
-						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
-						<li>Mechanics: the Licensed Mage and Hedge Witch professions give +1 Magic without a level, for characters who can level Magic.</li>
-						<li>Character Creator: characters can now be built up to level 25.</li>
+						<li>Mechanics: Stats no longer start at a Kind’s minimum. Every character’s Stats start at 0, and their Kind adds what used to be its starting Stats as a bonus. The numbers come out the same, and the Dreftian starters now list Stats as bonus / maximum. The AI Core now gets a flat +3 to every Mental Stat instead of 3 points to place itself.</li>
+						<li>Mechanics: added Magic, a fourth core Stat with no focus Stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, whose Magic Access lets them Level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
+						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus Stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
+						<li>Mechanics: the Licensed Mage and Hedge Witch Professions give +1 Magic without a Level, for characters who can Level Magic.</li>
+						<li>Character Creator: characters can now be built up to Level 25.</li>
 						<li>Mechanics: Trait lists. Magic Traits like Incantation and Sorcerous are on the Magic list, which only characters with Magic Access (from Magical Heritage) can take from; in the Character Creator they get their own Magic tab on the Traits step.</li>
 					</ul>
 				</article>
@@ -123,9 +125,9 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/24/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: the Character and Kind steps are now one Character step, with the name and starting level above the Kind cards.</li>
+						<li>Character Creator: the Character and Kind steps are now one Character step, with the name and starting Level above the Kind cards.</li>
 						<li>Character Creator: after building a character from a description, the reasons for each choice fold into a Details box under the character’s description.</li>
-						<li>Character Creator: the describe box has a Level stepper beside the description and a Character Name box above it, so a built character comes out at the level and with the name you choose.</li>
+						<li>Character Creator: the describe box has a Level stepper beside the description and a Character Name box above it, so a built character comes out at the Level and with the name you choose.</li>
 						<li>Character Creator: the character sheet lists Knowledges and Languages one per line, like the sample character’s sheet. Each opens its Trait card in a popup.</li>
 						<li>Character Creator: the character sheet shows the Kind’s features at the top, under HP, VP, and SP.</li>
 					</ul>
@@ -135,10 +137,10 @@
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the Strange Frontiers search is now at the top of the page, and opens results right there.</li>
-						<li>Character Creator: characters built from a description spread their stats a little more as their level rises, so a high-level specialist still has some points outside their specialty.</li>
+						<li>Character Creator: characters built from a description spread their Stats a little more as their Level rises, so a high-Level specialist still has some points outside their specialty.</li>
 						<li>Added the Character Creator, a new page beside Strange Frontiers in the nav. Describe a character and the AI builds it from the game’s Kinds, packages, and Traits, or build one step by step; the rules engine checks every choice.</li>
 						<li>Timeline: India’s history now appears on the main timeline, from the 2052 suspension of elections and the 2055–2060 invasion of Pakistan to the 2081 crowning of the first Maharaja, Pataliputra’s discovery in 2141, and the 2170 move of the capital; the 2053 expansion now spans 2053–2064.</li>
-						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum stats.</li>
+						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum Stats.</li>
 						<li>The Kingdom of India now has a full history, from the drought of the 2000s and the annexation of Pakistan to the move of its capital to Pataliputra; Former Pakistan joins its territories, and its prince is Raja Jagadeeshwara Raya IV.</li>
 						<li>Timeline, 2050: a Pakistani nuclear strike on the Kashmir region (was a minor Indo-Pakistani nuclear exchange), matching India’s history.</li>
 					</ul>
@@ -162,9 +164,9 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Inner Ring and Outer Ring are retired: Physical, Social, and Mental are now core stats, and Endurance through Memory are their focus stats. Each level gives a core point, which unlocks 3 focus points. The Stats, Traits, Skill Checks, and sample character sheet pages say so.</li>
-						<li>Mechanics cleanup: Hit Points, Vibe Points, and Savvy Points now all come from Outer Ring stats; every Outer Ring point grants a Trait (circles Universal, squares Background); Traits can have Inner or Outer Ring requirements, and a character must meet them; armor values are now resistances; new Mechanical Trait; Possessed lists all its Mental and Social stats.</li>
-						<li>The sample character sheet’s math now adds up: Edwin Humble is level 5 with 16 HP, 9 VP, and 9 SP, Rank 2 knowledges backed by Memory 6, eight banked Traits, ERC for currency, and Mandarin in place of Orcoid. The stats example’s Social and Mental stats now match its Inner Ring.</li>
+						<li>Inner Ring and Outer Ring are retired: Physical, Social, and Mental are now core Stats, and Endurance through Memory are their focus Stats. Each Level gives a core point, which unlocks 3 focus points. The Stats, Traits, Skill Checks, and sample character sheet pages say so.</li>
+						<li>Mechanics cleanup: Hit Points, Vibe Points, and Savvy Points now all come from Outer Ring Stats; every Outer Ring point grants a Trait (circles Universal, squares Background); Traits can have Inner or Outer Ring requirements, and a character must meet them; armor values are now resistances; new Mechanical Trait; Possessed lists all its Mental and Social Stats.</li>
+						<li>The sample character sheet’s math now adds up: Edwin Humble is Level 5 with 16 HP, 9 VP, and 9 SP, Rank 2 knowledges backed by Memory 6, eight banked Traits, ERC for currency, and Mandarin in place of Orcoid. The Stats example’s Social and Mental Stats now match its Inner Ring.</li>
 						<li>Naming fixes: Expert Pilot, Long Toothed, Severe Bleeding, Criminal Activity, Inherited Pirate Vessel for the Pirate Scion, and High Orcs (with a c).</li>
 						<li>The Rebirth of Science’s Paraphysics field now has an overview: the study of the planes’ rules, why expression matters as much as math, what paraphysics has made possible, and the scientists working at the frontiers.</li>
 						<li>Parabiology now opens with an introduction: how rare life is, the life found in other planes, the field of parabiology, the discovery of parasapience, and extraplanar life arriving in the systems.</li>
@@ -175,7 +177,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/20/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Edwin Humble’s sample character sheet now has 13 HP: 10, plus his 3 points in Physical stats.</li>
+						<li>Edwin Humble’s sample character sheet now has 13 HP: 10, plus his 3 points in Physical Stats.</li>
 					</ul>
 				</article>
 
@@ -187,14 +189,14 @@
 						<li>Opening a New Plane now continues into manned planar exploration: the expedition team, naming the switch port, the twin gate platforms and black box, and the expedition team’s three-month contract.</li>
 						<li>Edwin Humble’s sample character sheet has a new portrait.</li>
 						<li>Added an Attributions link to the footer, crediting the portrait, map, and planet creators.</li>
-						<li>The Mechanics pages and the Dreftian starter packages now say Traits instead of feats wherever they mean the game’s Traits. Every character has 9 stat points at level 0, and characters always start at level 1 at least.</li>
+						<li>The Mechanics pages and the Dreftian starter packages now say Traits instead of feats wherever they mean the game’s Traits. Every character has 9 Stat points at Level 0, and characters always start at Level 1 at least.</li>
 					</ul>
 				</article>
 
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>The sample character sheet’s Inner Ring stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
+						<li>The sample character sheet’s Inner Ring Stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
 						<li>The Adventures tab has its own page nav: Another World, Isekai, Traits, and Tetra.</li>
 					</ul>
 				</article>
@@ -505,7 +507,7 @@
 					<p class="copy mb-3"><i>9/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Replaced the Planar Distance placeholder with Planar Divergence lore.</li>
-						<li>Tightened the mechanics copy and GM terminology across stats, traits, skills, items, and character.</li>
+						<li>Tightened the mechanics copy and GM terminology across Stats, Traits, skills, Items, and character.</li>
 					</ul>
 				</article>
 
@@ -526,7 +528,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>8/17/2025</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Started replacing placeholder content in character and items.</li>
+						<li>Started replacing placeholder content in character and Items.</li>
 					</ul>
 				</article>
 

@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd>As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?> - “Slim Water,” 513/y/11 - “Leviathan” is of interest to all nations in the settled systems.</dd>
+			<dd>As the source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?> - “Slim Water,” 513/y/11 - “Leviathan” is of interest to all nations in the Settled Systems.</dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
@@ -80,7 +80,7 @@
 			</div>
 			<div class="text-cols">
 				<p class="copy">
-					As a hyper-stable source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?>, Leviathan forms, along with 76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>,” the fuel gate/water gate duopoly that modern life in the settled systems relies on. As such, all claims on Leviathan have been revoked, and it is considered a public plane by <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?>. Within the settled systems, it is an almost universal expectation that a voidcraft or settlement of any size will have at least one water gate continuously harvesting Slim Water and storing it for use. Access to a functionally inexhaustible source of water has been vital to the spread of humanity among the stars.
+					As a hyper-stable source of <?php echo sf_lore_link('co-h2o-e2', 'Co-H2O/E2'); ?>, Leviathan forms, along with 76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>,” the fuel gate/water gate duopoly that modern life in the Settled Systems relies on. As such, all claims on Leviathan have been revoked, and it is considered a public plane by <?php echo sf_lore_link('bureau-of-planar-management', 'the Bureau of Planar Management and Enforcement'); ?>. Within the Settled Systems, it is an almost universal expectation that a voidcraft or settlement of any size will have at least one water gate continuously harvesting Slim Water and storing it for use. Access to a functionally inexhaustible source of water has been vital to the spread of humanity among the stars.
 				</p>
 				<p class="copy">
 					Leviathan is of scientific interest for more than just its waters. The existence of endemic natural life in its utterly lightless, crushing depths presents an evolutionary and parazoological riddle. How life could arise in such a hostile and ever-shifting environment is unknown, but the occasional “gate fish,” explosively decompressed and clogging the filters of starships and stations alike, stands as testament to it.
@@ -125,7 +125,7 @@
 					Despite the ongoing mysteries and damaged equipment, Holy Oak knew what it had. The plane’s stability, combined with its consistent production of water in every exchange, could very well solve the one remaining roadblock to true interstellar expansion: the “Water Problem.” Without a reliable source of liquid water on the fringes, an industry of “water delivery” had taken hold in the Sol System, but such an industry would be untenable at interstellar distances and costs. Worse, the need for constant reuse through filtration and eventual resupply prevented any colony from ever being truly independent from Earth. A blockade, or even simple piracy, could leave even the most secure starbase dying of thirst.
 				</p>
 				<p class="copy mb-0">
-					Holy Oak initially licensed the plane to <?php echo sf_lore_link('saltwater-energetics', 'Saltwater Energetics'); ?>, which exploited it through a modified version of its proven fuel gate technology. A prototype “water gate” was installed aboard a remote research station in the outer Sol System, providing it with vital water. Initially large and substantially overbuilt, water gates have since become standard aboard ships and stations throughout the settled systems. For Holy Oak, the windfall was short-lived. The monopoly the company enjoyed over humanity’s access to Co-H2O/E2 was broken in 2176 by the expanded <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?>.
+					Holy Oak initially licensed the plane to <?php echo sf_lore_link('saltwater-energetics', 'Saltwater Energetics'); ?>, which exploited it through a modified version of its proven fuel gate technology. A prototype “water gate” was installed aboard a remote research station in the outer Sol System, providing it with vital water. Initially large and substantially overbuilt, water gates have since become standard aboard ships and stations throughout the Settled Systems. For Holy Oak, the windfall was short-lived. The monopoly the company enjoyed over humanity’s access to Co-H2O/E2 was broken in 2176 by the expanded <?php echo sf_lore_link('planar-protocols', 'Protocols of Planar Exploration and Exploitation'); ?>.
 				</p>
 			</div>
 		</div>

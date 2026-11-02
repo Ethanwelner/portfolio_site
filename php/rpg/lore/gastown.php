@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<dt>Nations of Interest</dt>
-			<dd>As the source of <?php echo sf_lore_link('st-1-e003', 'St-1/E.003'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the settled systems.</dd>
+			<dd>As the source of <?php echo sf_lore_link('st-1-e003', 'St-1/E.003'); ?>, 76/f/55 - “Gastown” is of interest to all nations in the Settled Systems.</dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
@@ -111,7 +111,7 @@
 					Discovered in 2135, Gastown confirmed theories proposing the existence of invariant isotropic realities. The Gujarat Technical Innovation Center was the Crown’s foremost center for planar research, and over a year of quiet study into the paraphysical and classical extent of the plane was conducted before an annual review brought the plane to the attention of the crown prince, Yuvaraja Harihara Krishnadeva Raya III. The crown prince, having graduated from that same academy only four years prior, was enraged to find the solution to space travel being studied like a frog on a dissection table by the professors and lab assistants of his own alma mater. Within the week, the prince had convinced his father not only to declassify the center’s findings but also to release them freely to the world, a grand gesture signaling the magnanimity and wisdom of the Indian people.
 				</p>
 				<p class="copy">
-					It took less than six months for the first fuel gate designs to be lashed to the sides of existing voidcraft. In the century since, the fuel gate has become a universal and irreplaceable part of every long-range ship, satellite, and station in the settled systems.
+					It took less than six months for the first fuel gate designs to be lashed to the sides of existing voidcraft. In the century since, the fuel gate has become a universal and irreplaceable part of every long-range ship, satellite, and station in the Settled Systems.
 				</p>
 				<p class="copy mb-0">
 					In 2230, Gastown is one of a select few planes classified as public space, free for all to access, and with no nation or private enterprise holding a claim over it.

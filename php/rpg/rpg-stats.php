@@ -15,18 +15,18 @@
 					<h3>Stats</h3>
 					<!-- OVERVIEW -->
 					<p class="copy">
-						A character's stats are intended to be a representation of that character's physical, social, and mental limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of stats a character invests in, and they are directly linked. A character's core stats record where each level was invested and set how many focus points a character has in each category. A character's focus stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's stats start at 0. A character's Kind adds a bonus to each stat and sets maximum values a character's stats cannot exceed.
+						A character's Stats are intended to be a representation of that character's physical, social, and mental limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of Stats a character invests in, and they are directly linked. A character's core Stats record where each Level was invested and set how many focus points a character has in each category. A character's focus Stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's Stats start at 0. A character's Kind adds a bonus to each Stat and sets maximum values a character's Stats cannot exceed.
 					</p>
 					<ul class="copy">
-						<li>When your character gains a level you get a point to spend in any core stat.</li>
-						<li>Adding a point to a core stat gives you 3 points to spend in the focus stats of that category.</li>
-						<li>Magic is a core stat with no focus stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put points into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
-						<li>The maximum that can be spent on any core or focus stat is 20.</li>
-						<li>Traits, Equipment, or other effects can cause these stat totals to rise above 20.</li>
-						<li>Hit Points and other resource mechanics are dependent on scores from the focus stats, except Mana Points, which come from Magic.</li>
-						<li>Skill Check bonuses and access to certain Traits are dependent on scores from the focus stats.</li>
-						<li>Each point put into a stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's stats at a glance. Neither is strictly required, as the stats they describe can be more compactly described in other ways.</li>
-						<li>An ogre can be all physicality but may only be smart enough to use a club.</li>
+						<li>When your character gains a Level, you get a point to spend in any core Stat.</li>
+						<li>Adding a point to a core Stat gives you 3 points to spend in the focus Stats of that category.</li>
+						<li>Magic is a core Stat with no focus Stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put points into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
+						<li>The maximum that can be spent on any core or focus Stat is 20.</li>
+						<li>Traits, Equipment, or other effects can cause these Stat totals to rise above 20.</li>
+						<li>Hit Points and other resource mechanics are dependent on scores from the focus Stats, except Mana Points, which come from Magic.</li>
+						<li>Skill Check bonuses and access to certain Traits are dependent on scores from the focus Stats.</li>
+						<li>Each point put into a Stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's Stats at a glance. Neither is strictly required, as the Stats they describe can be more compactly described in other ways.</li>
+						<li>An Ogre can be all physicality but may only be smart enough to use a club.</li>
 						<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
 						<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to retain what they see.</li>
 					</ul>
@@ -34,7 +34,7 @@
 			</div>
 			<div class="d-inline-flex flex-6 justify-content-end align-items-center">
 				<svg class="column-image stat-ring" viewBox="-8 -4 484 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
-					<title id="stat-ring-title">Stat diagram: character level at the center, the three core stats around it, and their focus stats outside</title>
+					<title id="stat-ring-title">Stat diagram: character Level at the center, the three core Stats around it, and their focus Stats outside</title>
 					<g fill="#979797" font-size="12" font-weight="700" text-anchor="middle">
 						<!-- Rings: focus stats outside, core stats inside -->
 						<ellipse class="stat-ring-focus-ring" cx="223.7" cy="207.268" rx="176.076" ry="173.268" fill="none" stroke="#979797" stroke-width="2"/>
@@ -121,18 +121,18 @@
 			<div class="flex-7 content-stack">
 				<div class="content-stack content-stack-sm">
 					<!-- example stats -->
-					<h3>Example stats</h3>
+					<h3>Example Stats</h3>
 					<ul class="copy">
-						<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus stat due to the Unexceptional Trait in the Kind section of their Background.</li>
-						<li>The character below started with 1 in each stat due to the Human Generalist Trait in the Kind section of their Background.</li>
+						<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus Stat due to the Unexceptional Trait in the Kind section of their Background.</li>
+						<li>The character below started with 1 in each Stat due to the Human Generalist Trait in the Kind section of their Background.</li>
 						<li>Humans are intended to be the average baseline in this system.</li>
-						<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus stats.</li>
+						<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus Stats.</li>
 						<li>This character has spent only 2 points in Social and 1 in Mental, so their access to Traits that go beyond simple feats of brute strength will be very limited.</li>
 						<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
-						<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, or Profession.</li>
-						<li>This character has oriented their stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
+						<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, Profession, or Past.</li>
+						<li>This character has oriented their Stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
 						<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
-						<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot skill) anytime soon.</li>
+						<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot Trait) anytime soon.</li>
 					</ul>
 				</div>
 			</div>
@@ -510,13 +510,13 @@
 							Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 						</p>
 						<p class="copy">
-							HP are calculated as 10 plus one for each point a character has in their Physical focus stats. A max-level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
+							HP are calculated as 10 plus one for each point a character has in their Physical focus Stats. A max-Level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
 						</p>
 						<p class="copy">
 							As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
 						</p>
 						<p class="copy">
-							At their most resilient, a maxed-out Human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparable systems like D&D sit at around a 20x multiplier. This system, however, does not have the same steeply increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple leveling.
+							At their most resilient, a maxed-out Human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparable systems like D&D sit at around a 20x multiplier. This system, however, does not have the same steeply increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple Leveling.
 						</p>
 						<ul class="copy">
 							<li><strong>Healthy - Conveyed - Condition</strong><br>
@@ -547,7 +547,7 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Vibe Points (VP)</h4>
 						<p class="copy">
-							VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
+							VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus Stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
 						</p>
 						<p class="copy">VP can be spent on:</p>
 						<ul class="copy">
@@ -559,18 +559,18 @@
 					<div class="content-stack content-stack-sm">
 						<h4>Savvy Points (SP)</h4>
 						<p class="copy">
-							SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
+							SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
 						</p>
 						<ul class="copy">
 							<li>Rerolling a single die in a mentally related Skill Check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
-							<li>Requesting competence or advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
+							<li>Requesting Competence or Advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
 							<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
 						</ul>
 					</div>
 					<div class="content-stack content-stack-sm">
 						<h4>Mana Points (MP)</h4>
 						<p class="copy">
-							MP are a spendable resource like VP and SP, but they come from the Magic core stat instead of focus stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
+							MP are a spendable resource like VP and SP, but they come from the Magic core Stat instead of focus Stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
 						</p>
 					</div>
 				</div>
