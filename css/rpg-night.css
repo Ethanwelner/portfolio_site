@@ -57,9 +57,11 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
     pointer-events: none;
 }
 
+/* A slight blur softens the stars so they don't compete with the text */
 .pane-frontiers .rpg-panel::before {
     background-color: white;
     mix-blend-mode: difference;
+    backdrop-filter: blur(1px);
 }
 
 .pane-frontiers .rpg-panel::after {
