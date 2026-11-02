@@ -1,4 +1,3 @@
-<?php // Overview reference: https://en.wikipedia.org/wiki/4544_Xanthus ?>
 <div class="info-cols">
 	<dl class="copy flex-1 attr-list">
 		<div>

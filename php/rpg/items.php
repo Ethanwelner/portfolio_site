@@ -39,7 +39,7 @@ function sf_example_items() {
 		'Wearables' => [
 			['Chainmail', 'Wearable', 'Any', 'A shirt of interlocking iron rings.', 1200, 'ERC'],
 			['Ballistic Vest', 'Wearable', 'Earth', 'A modern vest with armor plates, made to stop bullets.', 800, 'ERC'],
-			['Vacuum Suit', 'Wearable', 'Earth', 'A sealed, pressurized suit with its own air, for working in space.', 50000, 'ERC'],
+			['Voidsuit', 'Wearable', 'Earth', 'A sealed, pressurized suit with its own air, for working in space.', 50000, 'ERC'],
 		],
 		'Equipment' => [
 			['Potion Kit', 'Equipment', 'Isekai', 'Vials, a mortar and pestle, a burner and a few common reagents.', 50, 'Luras'],
