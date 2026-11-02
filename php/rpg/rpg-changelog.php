@@ -12,6 +12,7 @@
 						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
 						<li>Space suits are “voidsuits” throughout, including the Voidsuit in Example Items, and ship classes are lowercase mid-sentence (Arks stay capitalized).</li>
 						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
+						<li>Character Creator: the stock items are in. Characters the AI builds start with items that fit their description and work, from their own plane, and the Items column suggests stock items as you type, each showing its description, damage or resistances, uses, slot and value. Player Tools’ assistant knows them too.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
