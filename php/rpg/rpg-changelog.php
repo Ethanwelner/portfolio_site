@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: on the Traits step, every card in a group is the same height.</li>
+						<li>Character Creator and Player Tools: on the Traits step and the sheets, every Trait card in a group is the same height.</li>
 						<li>Character Creator and Player Tools: under 1360px the name and info sit below the portrait and the description keeps half the row; above that, where the portrait and name would still stack, the description takes a third.</li>
 						<li>Character Creator and Player Tools: the night sky’s stars show through the gray behind them, wherever the boxes don’t cover it.</li>
 						<li>Character Creator: a choice you haven’t made yet just says “Language choice needed.” The “Step x of 6” labels are gone, and step titles are in Bebas.</li>
