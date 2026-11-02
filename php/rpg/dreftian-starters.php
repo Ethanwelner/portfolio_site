@@ -1,5 +1,5 @@
 <p class="copy mb-5">
-	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as Kind bonus / maximum. For comparison, a Human gets +1 to every focus stat and can’t raise any above 15. Each Kind here gives the same 9 bonus points and the same total of maximums, spread to fit the Kind. Every Kind here but the Orcoid Tatot is born with Magical Heritage, which gives them Magic Access: they can put levels into the Magic core stat and take Magic Traits.
+	Starter packages for characters from Dreft. These are placeholders: Trait lists are still being worked out, and names will change. Stats are listed as Kind bonus / maximum. For comparison, a Human gets +1 to every focus Stat and can’t raise any above 15. Each Kind here gives the same 9 bonus points and the same total of maximums, spread to fit the Kind. Every Kind here but the Orcoid Tatot is born with Magical Heritage, which gives them Magic Access: they can put Levels into the Magic core Stat and take Magic Traits.
 </p>
 <div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 	<div class="flex-7">
@@ -17,7 +17,7 @@
 			<li><strong>Rebel’s Doctrine</strong> – Starts with the Isek doctrine of rebellion and seeking as a knowledge Trait.</li>
 			<li><strong>Restless</strong> – Ill-suited to farm life. Isek have easier access to military, guild, and caravan Traits.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Bonus / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Bonus / maximum Stats</strong></p>
 		<ul class="copy mb-0">
 			<li><strong>Physical:</strong> Endurance +1/15, Power +2/18, Grace +2/18</li>
 			<li><strong>Social:</strong> Empathy +1/14, Persuasion +1/15, Demeanor +0/10</li>
@@ -32,13 +32,13 @@
 			<li><strong>Goblinoid</strong> – Small, with plentiful mana. Higher Memory and Logic maximums, access to <?php echo sf_lore_link('isekai-magic', 'magic'); ?> Traits, and +6 MP.</li>
 			<li><strong>Merchant Clans</strong> – Easier access to trading guild and merchant clan Traits.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Orcoid bonus / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Orcoid bonus / maximum Stats</strong></p>
 		<ul class="copy mb-0">
 			<li><strong>Physical:</strong> Endurance +2/18, Power +2/18, Grace +1/13</li>
 			<li><strong>Social:</strong> Empathy +1/14, Persuasion +1/15, Demeanor +1/15</li>
 			<li><strong>Mental:</strong> Logic +0/13, Intuition +1/15, Memory +0/14</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Goblinoid bonus / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Goblinoid bonus / maximum Stats</strong></p>
 		<ul class="copy mb-0">
 			<li><strong>Physical:</strong> Endurance +1/13, Power +0/10, Grace +1/16</li>
 			<li><strong>Social:</strong> Empathy +1/15, Persuasion +1/15, Demeanor +1/14</li>
@@ -54,7 +54,7 @@
 			<li><strong>Thin Air</strong> – Unbothered by altitude and cold that would slow other Kinds.</li>
 			<li><strong>Beard Nets</strong> – A long enough beard doubles as a net. It’s more useful than it sounds.</li>
 		</ul>
-		<p class="copy mt-3 mb-1"><strong>Bonus / maximum stats</strong></p>
+		<p class="copy mt-3 mb-1"><strong>Bonus / maximum Stats</strong></p>
 		<ul class="copy mb-0">
 			<li><strong>Physical:</strong> Endurance +2/20, Power +2/17, Grace +0/10</li>
 			<li><strong>Social:</strong> Empathy +1/15, Persuasion +1/14, Demeanor +1/16</li>
@@ -125,7 +125,7 @@
 <div class="starter-list">
 	<div class="starter-entry">
 		<h6><strong>Returned from the Settled Systems</strong></h6>
-		<p class="copy mb-2">Left Dreft for the settled systems and came back changed, like everyone who comes back.</p>
+		<p class="copy mb-2">Left Dreft for the Settled Systems and came back changed, like everyone who comes back.</p>
 		<p class="copy mb-0"><strong>Skill Traits:</strong> Tinkerer, 1 additional Contact<br><strong>Knowledge Traits:</strong> Earth Baseline Technology, 1 additional Language</p>
 	</div>
 	<div class="starter-entry">
