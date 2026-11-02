@@ -41,11 +41,16 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
    javascript-loads.php). Only the pseudo-elements blend, so the panel's
    content is untouched.
 
-   The first, #a5a5a5 (165) with difference, inverts the sky behind it: the
-   #212121 (33) sky turns 132 and a white star 90. The second, #7b7b7b (123)
-   with color-dodge, divides by 1 - 123/255, which lifts 132 to white and a
-   star's 90 to about 174, a light gray. A darker first color fades the stars
-   further (its second color is then 255 - (it - 33)). */
+   The first, white with difference at 84% opacity, inverts the sky
+   partway: it lands on 0.16 * sky + 0.84 * (255 - sky), so the #212121 (33)
+   sky turns 192, a typical dim star (about 110) 139 and a white star 41. The
+   second, #404040 (64) with color-dodge, divides by 1 - 64/255, which lifts
+   the 192 background to white, a typical star to about 186 and a white star
+   to about 55. Lower the first layer's opacity for fainter stars (the second
+   color is then 255 minus the sky's new value).
+
+   (A gray difference layer instead of a faded white one folds the sky in
+   two, so dim stars near that gray turn black.) */
 .pane-frontiers .rpg-panel {
     background-color: transparent;
 }
@@ -61,12 +66,13 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
 }
 
 .pane-frontiers .rpg-panel::before {
-    background-color: #a5a5a5;
+    background-color: white;
     mix-blend-mode: difference;
+    opacity: .84;
 }
 
 .pane-frontiers .rpg-panel::after {
-    background-color: #7b7b7b;
+    background-color: #404040;
     mix-blend-mode: color-dodge;
 }
 
