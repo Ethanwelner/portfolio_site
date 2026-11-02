@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: on narrower screens, where the portrait and name would stack, the description box takes a third of the row instead of half.</li>
+						<li>Character Creator and Player Tools: under 1360px the name and info sit below the portrait and the description keeps half the row; above that, where the portrait and name would still stack, the description takes a third.</li>
 						<li>Character Creator and Player Tools: the night sky’s stars show through the gray behind them, wherever the boxes don’t cover it.</li>
 						<li>Character Creator: a choice you haven’t made yet just says “Language choice needed.” The “Step x of 6” labels are gone, and step titles are in Bebas.</li>
 						<li>Character Creator and Player Tools: on wide screens the description box spans the Knowledges and the Conditions and Items columns beneath it, and the character’s name has a little more room above their info.</li>
