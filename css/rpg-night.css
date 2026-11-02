@@ -41,10 +41,10 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
    javascript-loads.php). Only the pseudo-elements blend, so the panel's
    content is untouched.
 
-   The first, #acacac (172) with difference, inverts the sky behind it: the
-   #212121 (33) sky turns 139 and a white star 83. The second, #747474 (116)
-   with color-dodge, divides by 1 - 116/255, which lifts 139 to white and a
-   star's 83 to about 152, a mid gray. A lighter first color fades the stars
+   The first, #a5a5a5 (165) with difference, inverts the sky behind it: the
+   #212121 (33) sky turns 132 and a white star 90. The second, #7b7b7b (123)
+   with color-dodge, divides by 1 - 123/255, which lifts 132 to white and a
+   star's 90 to about 174, a light gray. A darker first color fades the stars
    further (its second color is then 255 - (it - 33)). */
 .pane-frontiers .rpg-panel {
     background-color: transparent;
@@ -61,12 +61,12 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
 }
 
 .pane-frontiers .rpg-panel::before {
-    background-color: #acacac;
+    background-color: #a5a5a5;
     mix-blend-mode: difference;
 }
 
 .pane-frontiers .rpg-panel::after {
-    background-color: #747474;
+    background-color: #7b7b7b;
     mix-blend-mode: color-dodge;
 }
 
