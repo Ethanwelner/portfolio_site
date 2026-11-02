@@ -1,31 +1,31 @@
 {
-  "_styles-Bgvv8GP0.js": {
-    "file": "assets/styles-Bgvv8GP0.js",
+  "_styles-DUe8Ox11.css": {
+    "file": "assets/styles-DUe8Ox11.css",
+    "src": "_styles-DUe8Ox11.css"
+  },
+  "_styles-zPDId86o.js": {
+    "file": "assets/styles-zPDId86o.js",
     "name": "styles",
     "css": [
-      "assets/styles-DV-AbdkI.css"
+      "assets/styles-DUe8Ox11.css"
     ]
   },
-  "_styles-DV-AbdkI.css": {
-    "file": "assets/styles-DV-AbdkI.css",
-    "src": "_styles-DV-AbdkI.css"
-  },
   "src/app/main.tsx": {
-    "file": "assets/main-BD8v6AJs.js",
+    "file": "assets/main-BplRwE8S.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-Bgvv8GP0.js"
+      "_styles-zPDId86o.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-2f1yYffC.js",
+    "file": "assets/main-B3GnG2Jk.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-Bgvv8GP0.js"
+      "_styles-zPDId86o.js"
     ],
     "css": [
       "assets/main-t7DqzI-c.css"
