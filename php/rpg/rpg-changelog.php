@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
+						<li>Space suits are “voidsuits” throughout, including the Voidsuit in Example Items, and ship classes are lowercase mid-sentence (Arks stay capitalized).</li>
 						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
 					</ul>
 				</article>
