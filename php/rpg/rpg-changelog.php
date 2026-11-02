@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/2/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Player Tools: the d20 sits a little lower in the chat column.</li>
