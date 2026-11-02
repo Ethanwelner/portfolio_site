@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/1/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: the gray behind them is see-through, so the night sky shows wherever the boxes don’t cover it.</li>
 						<li>Character Creator: a choice you haven’t made yet just says “Language choice needed.” The “Step x of 6” labels are gone, and step titles are in Bebas.</li>
 						<li>Character Creator and Player Tools: on wide screens the description box spans the Knowledges and the Conditions and Items columns beneath it, and the character’s name has a little more room above their info.</li>
 						<li>Character Creator: the sheet shows HP, VP, SP and MP in their own box under the name and info, in Player Tools’ larger type, in place of the small line under the name.</li>
