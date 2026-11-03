@@ -171,11 +171,33 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			<div class="sheet-resource"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">17<span class="muted"> / 17</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-sp" title="Savvy Points">SP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
-			<div class="sheet-resource sheet-resists"><span class="field-label">Resists</span><span class="sheet-resists-list"><span>1 <svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt resistance" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg></span><span>1 <svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing resistance" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg></span></span></div>
 		</div>
 	</div>
 
 	<div class="sheet-row">
+		<!-- The resistances go here, under HP and over the stats, while the
+		     sheet is a single column, and over the Conditions and Items beside
+		     the stats otherwise -->
+		<div class="c-sheet-box sheet-resistances sheet-resistances-first">
+			<h4 class="sheet-rule">Resistances</h4>
+			<ul class="sheet-resistance-list">
+				<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-a1">
+					<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg><span class="num">1</span>
+					<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-a1">
+						<strong class="sheet-resistance-pop-title">Blunt 1</strong>
+						<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
+					</div>
+				</li>
+				<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-a2">
+					<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg><span class="num">1</span>
+					<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-a2">
+						<strong class="sheet-resistance-pop-title">Slashing 1</strong>
+						<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+
 		<div class="c-sheet-box sheet-body">
 			<div class="sheet-stats">
 				<div class="sheet-group stat-group-physical">
@@ -202,30 +224,54 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			</div>
 		</div>
 
-		<div class="c-sheet-box sheet-conditions">
-			<h4 class="sheet-rule">Conditions</h4>
-			<ul class="sheet-cards">
-				<li class="trait-box sheet-condition">
-					<div class="trait-name trait-name-with-chip"><span>Healthy</span><span class="trait-name-chips"><span class="chip">HP</span><span class="chip">Condition</span></span></div>
-					<p class="muted small">From HP. A character or object gains this trait while they are at their maximum HP total</p>
-					<p class="copy">This Trait has no effect on its own.</p>
-				</li>
-			</ul>
-		</div>
+		<div class="sheet-side-stack">
+			<div class="c-sheet-box sheet-resistances">
+				<h4 class="sheet-rule">Resistances</h4>
+				<ul class="sheet-resistance-list">
+					<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-b1">
+						<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg><span class="num">1</span>
+						<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-b1">
+							<strong class="sheet-resistance-pop-title">Blunt 1</strong>
+							<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
+						</div>
+					</li>
+					<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-b2">
+						<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg><span class="num">1</span>
+						<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-b2">
+							<strong class="sheet-resistance-pop-title">Slashing 1</strong>
+							<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
+						</div>
+					</li>
+				</ul>
+			</div>
 
-		<div class="c-sheet-box sheet-items">
-			<h4 class="sheet-rule">Items</h4>
-			<ul class="sheet-cards">
-				<li class="sheet-item">
-					<div class="sheet-item-row">
-						<span class="sheet-item-count">1×</span>
-						<span class="sheet-item-title">Sturdy Leather Jacket</span>
-						<span class="chip">Armor</span>
-						<span class="sheet-equipped"><span class="sheet-check" aria-hidden="true"></span>Equip</span>
-					</div>
-					<p class="muted small">1 Blunt, 1 Slashing, torso</p>
-				</li>
-			</ul>
+			<div class="sheet-side-row">
+				<div class="c-sheet-box sheet-conditions">
+					<h4 class="sheet-rule">Conditions</h4>
+					<ul class="sheet-cards">
+						<li class="trait-box sheet-condition">
+							<div class="trait-name trait-name-with-chip"><span>Healthy</span><span class="trait-name-chips"><span class="chip">HP</span><span class="chip">Condition</span></span></div>
+							<p class="muted small">From HP. A character or object gains this trait while they are at their maximum HP total</p>
+							<p class="copy">This Trait has no effect on its own.</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="c-sheet-box sheet-items">
+					<h4 class="sheet-rule">Items</h4>
+					<ul class="sheet-cards">
+						<li class="sheet-item">
+							<div class="sheet-item-row">
+								<span class="sheet-item-count">1×</span>
+								<span class="sheet-item-title">Sturdy Leather Jacket</span>
+								<span class="chip">Armor</span>
+								<span class="sheet-equipped"><span class="sheet-check" aria-hidden="true"></span>Equip</span>
+							</div>
+							<p class="muted small">1 Blunt, 1 Slashing, torso</p>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 

@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Player Tools, the Character Creator’s Sheet and the Mechanics tab’s Sample Character Sheet: a Resistances box beside the stats shows the character’s total resistance to each damage type they resist or are weak to, from their equipped Items, Traits and Conditions. Hovering one opens a popover listing where each point comes from, including resistances that cover only part of the body or a moment, like a helmet’s (head), which aren’t in the total. When the sheet is a single column, the box sits under HP, above the stats. The sample sheet’s Resists line moves into this box.</li>
 						<li>Character Creator: AI Cores now hold the Mechanical Condition from their Kind, shown with their Traits, so they’re harmed by EMP damage and usually immune to Death damage.</li>
 						<li>Character Creator: armor and clothing Items show how much they resist, like 3 Blunt, 4 Slashing, 2 Piercing (head) for the Steel Helm, and 14 new armors are in: Leather Jacket, Power Armor, Hide Armor, Brigandine, Padded Coif, Buckler, Tower Shield, Warded Robes, Plate Carrier, Ballistic Shield, Turnout Gear, Rad Suit, Faraday Shroud and Combat Voidsuit.</li>
 						<li>The Stars: the Stations and Systems tabs now hold their first entries, Antiliuna and Alpha Centauri, as placeholders laid out like the Arks.</li>
