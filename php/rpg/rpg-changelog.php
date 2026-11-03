@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Trait cards no longer get a Kind badge for Traits the Kind gives. Background Traits still show which package they were picked from.</li>
 						<li>Character Creator and Player Tools: an item card’s count sits in a circle on the card’s left edge, centered top to bottom and half outside the card, with the Equip checkbox starting the card’s line, and a closed card’s damage and resistance badges sit in its line before the category (under it in a narrow card).</li>
 						<li>Character Creator and Player Tools: badges, like a Trait card’s category or an item’s, use slightly larger text.</li>
 						<li>Character Creator and Player Tools: item cards show a stock item’s damage and resistances under the name line, in a badge of damage type icons and numbers, with “or” between the options when the damage is a choice. Open, a card shows the item’s cost as a badge, and Note sits on its own line under the description, with its label beside the pen.</li>
