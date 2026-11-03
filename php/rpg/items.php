@@ -1,6 +1,8 @@
 <?php
-// Equipment cards, the item counterpart to the Traits page's .trait-box cards
-// (Example Items on rpg-items.php). Items are drafted on the "Items" tab of the
+// Equipment cards (Example Items on rpg-items.php), drawn like the item cards
+// on the Character Creator's sheet and in Player Tools: a line with the
+// name, the category and plane as chips, and the value at the right, then the
+// description under it. Items are drafted on the "Items" tab of the
 // Strange Frontiers traits Sheet. Each item has one value: in Luras for Isekai
 // items, and in ERC for Earth items and items found on any plane. Play
 // converts between currencies as needed.
@@ -18,13 +20,14 @@ function sf_item_value($amount) {
 function sf_equipment_card($name, $category, $plane, $description, $value, $currency) {
 	$label = number_format($value) . ' ' . $currency;
 	echo '<div class="equipment-box">';
-	echo '<div class="equipment-name">' . htmlspecialchars($name) . '</div>';
-	echo '<div class="equipment-meta">' . htmlspecialchars($category) . ' &bull; ' . htmlspecialchars($plane) . '</div>';
-	echo '<div class="copy">' . htmlspecialchars($description) . '</div>';
-	echo '<div class="equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">';
-	echo '<span class="equipment-amount">' . sf_item_value($value) . '</span>';
-	echo '<span class="equipment-currency">' . $currency . '</span>';
-	echo '</div></div>';
+	echo '<div class="equipment-row">';
+	echo '<span class="equipment-name">' . htmlspecialchars($name) . '</span>';
+	echo '<span class="chip">' . htmlspecialchars($category) . '</span>';
+	echo '<span class="chip chip-muted">' . htmlspecialchars($plane) . '</span>';
+	echo '<span class="equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value($value) . ' ' . $currency . '</span>';
+	echo '</div>';
+	echo '<p class="equipment-description">' . htmlspecialchars($description) . '</p>';
+	echo '</div>';
 }
 
 // Example Items, grouped by category: [name, category, plane, description, value, currency]
