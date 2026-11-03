@@ -126,12 +126,24 @@
 								</div>
 								<div class="text-cols">
 									<p class="copy">
-										Biology was one of the few fields not noticeably slowed during the era that came to be called The <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>, and research made steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace for those who could afford it.
+										In the year 2230, a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. Biology was one of the few fields not noticeably slowed during the era that came to be called The <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>, and research made steady progress through the 21st century. Great leaps were made in molecular and cellular biology, genetics, and microbiology, and by 2100 there was a treatment for practically any ailment. Alongside the traditional route of medical science, technologies such as organ printing and genetic tailoring became commonplace, or at least commonplace for those who could afford it.
 									</p>
 									<p class="copy">
-										In the year 2230, a human is still a human, just as it has been for hundreds of thousands of years. Thanks to modern science, though, it can also be something more. With enough time and investment, a person can have eyes that see into the ultraviolet spectrum, bones with four times their natural strength, or a liver that can filter out radiation. A person could even have new and novel organs implanted into them or limbs grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the system, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue.
+										The human machine, in all its dizzying complexity, has become a canvas. With enough time, investment, and tolerance for pain, a person can have eyes that see into the ultraviolet spectrum, bones with four times their natural strength, or a liver that can filter radiation. New and novel organs can be implanted into them, limbs can be grafted onto them. The industry of human “improvement” is one of the largest and most cash-flush in the Settled Systems, and with the introduction of exotic materials and paraphysics there is little doubt the pace of advancement will only continue, leaving medical ethics struggling to keep up.
 									</p>
-									<p class="copy">Cont...</p>
+									<p class="copy">
+										There is a lucrative trade in parabiological samples. Live specimens of never-before-seen flora and fauna can net big credits from research labs hoping to make even bigger breakthroughs. Limbs, clumps of dirt, anonymous slime—it’s all up for grabs. The Bureau has an entire division dedicated solely to the discovery and prosecution of planar poachers, but basement gates and illegal research labs often leave little trace.
+									</p>
+									<p class="copy">
+										Biology in the modern day is a vast field, with its fingers in many industries. Thousands of labs backed by hundreds of companies study and sell a bewildering variety of medicines, procedures, therapies, implants, and more. The following are the top five biomedical and biopharmaceutical firms in the Settled Systems by revenue.
+									</p>
+									<ol class="copy">
+										<li>Jensen &amp; Kim (Pharmacology, Healthcare, Cybernetics)</li>
+										<li>Stohnroth (Healthcare, Surgical Administration, Organ &amp; Therapy Development)</li>
+										<li>Mumbai Ecological Solutions (Agricultural Bioengineering, Closed System Terraforming, Ecogenetic Tailoring)</li>
+										<li>Lunar Gentech (Genetic Therapies, Organ Farming, Meat Cultivation)</li>
+										<li>Blue Frontier (Exotic Pharmacology, Planar Research, Exotic Biomaterial Cultivation)</li>
+									</ol>
 								</div>
 							</div>
 							<div>
@@ -141,7 +153,25 @@
 								</div>
 								<div class="text-cols">
 									<p class="copy">
-										Content coming soon
+										The takeover of networked AI systems in the 21st century benefited human knowledge, at least for a few decades. Before the consolidation of once-storied scientific institutions, before the brain drain of academia and research suffered during The <?php echo sf_lore_link('end-of-science', 'End of Science'); ?>, there was a burst of genuine rapid advancement. No other fields were propelled quite as quickly or as far as those of the life sciences. Biology never encountered the ceiling of materials science that others found so limiting. The living world was a stunningly complex puzzle, a universe in its own right, and the field could take all the computing power server towns could throw at it and ask for more.
+									</p>
+									<p class="copy">
+										Through economic bubbles, wars, natural disasters, and the slow erosion of hope, the field kept on advancing. The drumbeat release of ever more expensive medicines chipped away at human frailties until there were few diseases left to cure. Genetic therapies were developed to make a body stronger, hardier, more beautiful. Techniques emerged to grow organs, first in the lab, then printed on a massive scale.
+									</p>
+									<p class="copy">
+										In response to the loss of farmland to the expanding dust bowls, new crops were crafted, intensively engineered for growth in stacked vertical farms. Cultivated meats were perfected, ever-growing masses of flesh that would be routinely shorn like the hair on a sheep, far cheaper and more efficient than the old beef or poultry industries. In response to the dying Earth, carbon-capturing algae were embedded in the oceans. Extinct species were cloned and reintroduced into the wild with their “deficiencies” removed. New species of plant were sown along the borders, their roots desperately spreading to stop the inevitable advance of desert and shoreline alike. It wasn’t enough to halt their spread.
+									</p>
+									<p class="copy">
+										By the time of the Second Major AI Panic human society was truly split: the rich enjoyed superior health, stronger bodies, and the safety and luxury of walled paradises on Earth and in space. Of course, the “lower” classes could approximate some of those bespoke capabilities with factory-produced cybernetics, but those of genuine wealth regarded such butchery with disdain. The masses packed into their boroughs didn’t deserve the vitality that science had delivered to their superiors, who lived quite literally above them.
+									</p>
+									<p class="copy">
+										This state of affairs came to an abrupt end when the AI infrastructure that underpinned aristocratic wealth across the globe was suddenly and comprehensively destroyed. For decades, science had been done by machines, and with their loss human science was left picking up the pieces. New scientists of flesh and blood quickly grew to fill the roles once held by AI models, while the newly enfranchised AI Cores aided in the transition.
+									</p>
+									<p class="copy">
+										In the rush of recovery and the sudden empowering of the world’s citizenry no one had time to cater to the needs of their former masters. Their individually tailored genetic regimes were only truly possible through the capabilities of old AI, and as their empires of wealth collapsed, their bodies faltered alongside them. Cut off from therapies explicitly designed to keep them coming back, most suffered from debilitating and unique diseases, with no living being qualified to help them.
+									</p>
+									<p class="copy mb-0">
+										Over the following century, biology and medicine followed much the same path, but their benefits spread far more widely. Genetic tailoring and biological enhancement remain more expensive than cybernetic equivalents, and are still seen as a marker of wealth, but it’s not entirely out of reach. Treatments, medicines, and therapies once reserved for the elites now cure the low classes just as well as the high.
 									</p>
 								</div>
 							</div>
