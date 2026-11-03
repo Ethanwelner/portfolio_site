@@ -118,7 +118,7 @@ strong .mechanic-text {
     .equipment-description {
         margin: 8px 0 0;
         color: var(--panel-soft, #b3b3b3);
-        font-size: .75rem;
+        font-size: .875rem;
     }
 
     .equipment-name {
