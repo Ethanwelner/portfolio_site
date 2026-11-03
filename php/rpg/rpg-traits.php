@@ -400,46 +400,46 @@
                   <div class="line"></div>
                 </div>
                 <div class="d-flex flex-wrap flex-gap-12">
-                  <div class="trait-box">
+                  <div class="trait-box condition-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Stone Skin</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">(Enchantment)</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy effect">Temporary (This Trait lasts a number of minutes equal to the caster's Rank in this Ability)</p>
+                    <p class="copy muted small">Temporary (This Trait lasts a number of minutes equal to the caster's Rank in this Ability)</p>
                     <p class="copy effect">This character gains Rank *3 resistance to all Physical damage types.</p>
                   </div>
-                  <div class="trait-box">
+                  <div class="trait-box condition-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Severe Bleeding</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">(Injury)</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy effect">Temporary (This Trait is lost when this Condition is treated)</p>
+                    <p class="copy muted small">Temporary (This Trait is lost when this Condition is treated)</p>
                     <p class="copy effect">This character loses 1 HP every combat round while in combat.</p>
                     <p class="copy effect">This character loses 1 HP every minute while outside of combat.</p>
                   </div>
-                  <div class="trait-box">
+                  <div class="trait-box condition-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Dead</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy effect">Temporary (A character gains this Trait if they are at 0 or less HP)</p>
+                    <p class="copy muted small">Temporary (A character gains this Trait if they are at 0 or less HP)</p>
                     <p class="copy effect">This character is dead and cannot perform voluntary actions.</p>
                     <p class="copy effect">This character cannot be healed by any means unless otherwise stated.</p>
                   </div>
-                  <div class="trait-box">
+                  <div class="trait-box condition-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Stimm Rush</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy effect">Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)</p>
+                    <p class="copy muted small">Temporary (This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration)</p>
                     <p class="copy effect">This character gains 5 to all Physical focus Stats.</p>
                   </div>
-                  <div class="trait-box">
+                  <div class="trait-box condition-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Ghost Sight</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy effect">Temporary (Lost when the effect that granted this Trait ends)</p>
+                    <p class="copy muted small">Temporary (Lost when the effect that granted this Trait ends)</p>
                     <p class="copy effect">This character perceives beyond the veil.</p>
                     <p class="copy effect">This character can see and hear the supernatural.</p>
                   </div>

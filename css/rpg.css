@@ -1857,6 +1857,17 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
+    /* Condition cards in grays, as on the creator's sheet and in Player
+       Tools: a mid gray border and a light gray name bar with dark text */
+    .trait-box.condition-box {
+        border-color: #646464;
+
+        .trait-name {
+            background-color: #b7b4b4;
+            color: var(--portfolio-black);
+        }
+    }
+
     .stat-panel,
     .c-sheet {
         color: var(--panel-text);
