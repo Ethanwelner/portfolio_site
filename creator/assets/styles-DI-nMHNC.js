@@ -302,7 +302,7 @@ summary: "A short double-edged blade, easy to hide and quick in close quarters."
 tags: [melee, blade, concealable]
 type: weapon
 category: weapon
-damage: "3 Slashing, 3 Piercing"
+damage: "3 Slashing / 3 Piercing"
 value: 60
 currency: "ERC"
 `,bu=`id: disguise-kit
@@ -704,7 +704,7 @@ summary: "A long straight sword wielded in one or two hands."
 tags: [melee, blade, sword]
 type: weapon
 category: weapon
-damage: "6 Slashing, 4 Piercing"
+damage: "6 Slashing / 4 Piercing"
 value: 600
 currency: "ERC"
 `,U=`id: luras
@@ -1108,7 +1108,7 @@ summary: "A one-handed sword, light enough to carry everywhere."
 tags: [melee, blade, sword]
 type: weapon
 category: weapon
-damage: "5 Slashing, 4 Piercing"
+damage: "5 Slashing / 4 Piercing"
 value: 250
 currency: "ERC"
 `,Id=`id: shotgun-shells
