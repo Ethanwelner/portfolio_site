@@ -1870,8 +1870,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         .stat-badge {
-            background-color: var(--portfolio-near-white);
-            color: var(--portfolio-black);
+            background-color: var(--portfolio-black);
+            color: var(--portfolio-white);
         }
 
         /* The focus stats and their bubbles sit 15px in from the core
