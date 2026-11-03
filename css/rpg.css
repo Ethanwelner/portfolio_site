@@ -1929,8 +1929,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
-    /* Only as wide as its stat lines need, at the start of its column */
+    /* Only as wide as its stat lines need, centered in its column */
     .stat-panel {
+        align-self: center;
         width: fit-content;
         max-width: 100%;
         padding: 24px;
