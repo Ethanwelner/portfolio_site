@@ -2163,7 +2163,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
-        /* HP, VP and SP at full, centered, then the resistances */
+        /* HP, VP and SP at full, centered */
         .sheet-resources {
             display: flex;
             flex-wrap: wrap;
@@ -2195,12 +2195,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             .muted {
                 color: var(--panel-soft);
             }
-        }
-
-        .sheet-resists-list {
-            display: flex;
-            gap: 16px;
-            font-size: 20px;
         }
 
         /* The stats', Conditions' and Items' boxes, as tall as each other on
@@ -2440,6 +2434,144 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             .small {
                 margin: auto 0 0;
                 font-size: .75rem;
+            }
+        }
+
+        /* The resistances over the Conditions and Items, the three together
+           beside the stats, like the creator's. While the sheet is too narrow
+           for the stats and 13rem beside them, everything takes its own line
+           and the resistances move up, under HP and over the stats (the copy
+           before the stats in the markup). */
+        .sheet-row > .sheet-side-stack {
+            flex: 1000 1 13rem;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sheet-side-row {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 24px;
+
+            > .sheet-conditions {
+                flex: 3 1 13rem;
+                min-width: 0;
+            }
+
+            > .sheet-items {
+                flex: 4 1 20rem;
+                min-width: 0;
+            }
+        }
+
+        .sheet-resistances-first {
+            display: none;
+        }
+
+        @container sheet (width < 780px) {
+            .sheet-resistances-first {
+                display: block;
+            }
+
+            .sheet-row > .sheet-side-stack {
+                flex-basis: 100%;
+
+                > .sheet-resistances {
+                    display: none;
+                }
+            }
+        }
+
+        .sheet-resistances > .sheet-rule {
+            margin-bottom: 12px;
+        }
+
+        /* Each damage type resisted: its icon, then the total, with its
+           sources in a popover above it on hover or focus */
+        .sheet-resistance-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .sheet-resistance {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.375rem;
+            cursor: default;
+            border-radius: 4px;
+
+            > .damage-icon {
+                width: 1.5em;
+                height: 1.5em;
+                fill: currentColor;
+            }
+
+            > .num {
+                font-family: 'Open Sans', sans-serif;
+                font-size: inherit;
+                font-weight: 700;
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--panel-soft);
+                outline-offset: 3px;
+            }
+
+            &:is(:hover, :focus-visible) > .sheet-resistance-pop {
+                display: block;
+            }
+        }
+
+        .sheet-resistance-pop {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            z-index: 20;
+            width: max-content;
+            max-width: 16rem;
+            padding: 10px 12px;
+            transform: translateX(-50%);
+            border: 1px solid var(--portfolio-gray);
+            border-radius: 8px;
+            background-color: var(--panel-box);
+            color: var(--panel-text);
+            font-size: .8rem;
+            box-shadow: 0 4px 16px rgb(0 0 0 / 40%);
+
+            .sheet-resistance-pop-title {
+                display: block;
+                margin-bottom: 6px;
+            }
+
+            ul {
+                display: grid;
+                gap: 4px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                gap: 16px;
+            }
+
+            .num {
+                font-family: 'Open Sans', sans-serif;
+                font-size: inherit;
+                font-weight: 700;
+                line-height: inherit;
             }
         }
     }

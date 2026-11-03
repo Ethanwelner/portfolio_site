@@ -1,31 +1,31 @@
 {
-  "_styles-Keegp1tD.css": {
-    "file": "assets/styles-Keegp1tD.css",
-    "src": "_styles-Keegp1tD.css"
+  "_styles-CCihX2TR.css": {
+    "file": "assets/styles-CCihX2TR.css",
+    "src": "_styles-CCihX2TR.css"
   },
-  "_styles-SvuNloUx.js": {
-    "file": "assets/styles-SvuNloUx.js",
+  "_styles-DGswzwCp.js": {
+    "file": "assets/styles-DGswzwCp.js",
     "name": "styles",
     "css": [
-      "assets/styles-Keegp1tD.css"
+      "assets/styles-CCihX2TR.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-DJnN9YUn.js",
+    "file": "assets/main-CPRBno3x.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-SvuNloUx.js"
+      "_styles-DGswzwCp.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-BeSvLYna.js",
+    "file": "assets/main-BaOPTHAE.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-SvuNloUx.js"
+      "_styles-DGswzwCp.js"
     ],
     "css": [
       "assets/main-DDs6_Bvs.css"
