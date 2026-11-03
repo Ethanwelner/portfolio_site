@@ -10,6 +10,7 @@
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: AI Cores now hold the Mechanical Condition from their Kind, shown with their Traits, so they’re harmed by EMP damage and usually immune to Death damage.</li>
+						<li>Character Creator: armor and clothing Items show how much they resist, like 3 Blunt, 4 Slashing, 2 Piercing (head) for the Steel Helm, and 14 new armors are in: Leather Jacket, Power Armor, Hide Armor, Brigandine, Padded Coif, Buckler, Tower Shield, Warded Robes, Plate Carrier, Ballistic Shield, Turnout Gear, Rad Suit, Faraday Shroud and Combat Voidsuit.</li>
 						<li>The Stars: the Stations and Systems tabs now hold their first entries, Antiliuna and Alpha Centauri, as placeholders laid out like the Arks.</li>
 						<li>Added the five biomedical firms from the Biology tab to the Corporations tab: Blue Frontier, Jensen &amp; Kim, Lunar Gentech, Mumbai Ecological Solutions, and Stohnroth.</li>
 						<li>Rebirth of Science: the Biology tab’s Overview is expanded with human enhancement, the trade in parabiological samples, and the top five biomedical firms, and its History is written, from the advances of the 21st century to the fall of the gene-tailored elite after the Second Major AI Panic.</li>
