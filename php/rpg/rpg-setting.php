@@ -729,7 +729,7 @@
 
 			<div class="tech-field-panel" id="timeline-corporations" role="tabpanel" aria-labelledby="tab-timeline-corporations">
 				<div class="content-stack">
-					<?php foreach (['ten-twenty-holding-corporation', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'luxoptica', 'mars-creative-autonomy', 'meishou-jituan', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
+					<?php foreach (['ten-twenty-holding-corporation', 'blue-frontier', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'jensen-and-kim', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'lunar-gentech', 'luxoptica', 'mars-creative-autonomy', 'meishou-jituan', 'mumbai-ecological-solutions', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'stohnroth', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 				</div>
 			</div>
 		</div>
