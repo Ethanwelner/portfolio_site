@@ -1869,8 +1869,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             background-color: var(--panel-rule);
         }
 
+        /* The core stat's circle in its group's dark shade, with a white number */
         .stat-badge {
-            background-color: var(--portfolio-black);
+            background-color: color-mix(in srgb, var(--stat-color, var(--portfolio-black)) 50%, black);
             color: var(--portfolio-white);
         }
 
