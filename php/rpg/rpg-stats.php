@@ -137,7 +137,9 @@
 				</div>
 			</div>
 				<!-- stat grid -->
-				<div class="d-inline-flex flex-6 flex-gap-48 flex-column stat-panel">
+				<!-- In a plain flex-6 column, so the panel's padding doesn't widen it past the ring's column above -->
+				<div class="d-inline-flex flex-6 flex-column">
+					<div class="d-flex flex-gap-48 flex-column stat-panel">
 					<!-- physical stats -->
 					<div class="d-flex flex-column flex-gap-12 stat-group-physical">
 						<div class="d-flex flex-row flex-gap-12 align-items-center">
@@ -392,6 +394,7 @@
 							<div class="stat dot unavailable"></div>
 							<div class="stat square unavailable"></div>
 						</div>
+					</div>
 					</div>
 				</div>
 		</div>
