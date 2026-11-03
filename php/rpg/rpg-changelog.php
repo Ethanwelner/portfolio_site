@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: item cards show a stock item’s damage and resistances under the name line, each a badge with its damage type’s icon and number. Open, a card shows the item’s cost as a badge, and Note sits on its own line under the description, with its label beside the pen.</li>
 						<li>Character Creator and Player Tools: when a column gets too narrow, Add Condition, Add item and Add traits shorten to just Add instead of pushing out of their boxes.</li>
 						<li>Player Tools, the Character Creator’s Sheet and the Mechanics tab’s Sample Character Sheet: a Resistances box beside the stats shows the character’s total resistance to each damage type they resist or are weak to, from their equipped Items, Traits and Conditions. Hovering one opens a popover listing where each point comes from, including resistances that cover only part of the body or a moment, like a helmet’s (head), which aren’t in the total. When the sheet is a single column, the box sits under HP, above the stats. The sample sheet’s Resists line moves into this box.</li>
 						<li>Character Creator: AI Cores now hold the Mechanical Condition from their Kind, shown with their Traits, so they’re harmed by EMP damage and usually immune to Death damage.</li>
