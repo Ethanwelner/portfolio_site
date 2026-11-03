@@ -2574,6 +2574,22 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
                 line-height: inherit;
             }
         }
+
+        /* Below 1400px, as in Player Tools, the sections tighten: 1rem
+           between the boxes and inside each one */
+        @media (max-width: 1399px) {
+            &,
+            .sheet-row,
+            .sheet-row > .sheet-side-stack,
+            .sheet-side-row,
+            .sheet-lower {
+                gap: 1rem;
+            }
+
+            .c-sheet-box {
+                padding: 1rem;
+            }
+        }
     }
 }
 
