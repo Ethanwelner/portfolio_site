@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: the Sample Character Sheet’s item card matches the Character Creator and Player Tools: the count in a circle on the card’s left edge, then Equip, the name, its resistances in one badge with their icons, and the category.</li>
 						<li>Character Creator and Player Tools: Trait cards no longer get a Kind badge for Traits the Kind gives. Background Traits still show which package they were picked from. Instead, the Kind cards on the Character step get a Kind badge, and the Origin, Profession and Past cards on the Background step get theirs, beside the setting.</li>
 						<li>Character Creator and Player Tools: an item card’s count sits in a circle on the card’s left edge, centered top to bottom and half outside the card, with the Equip checkbox starting the card’s line, and a closed card’s damage and resistance badges sit in its line before the category (under it in a narrow card).</li>
 						<li>Character Creator and Player Tools: badges, like a Trait card’s category or an item’s, use slightly larger text.</li>
