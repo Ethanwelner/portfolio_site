@@ -93,60 +93,52 @@ strong .mechanic-text {
     font-weight: 600;
 }
 
-/* Equipment cards, php/rpg/items.php (Example Items on rpg-items.php): the item
-   counterpart to .trait-box, with the item's value in a coin at the bottom right */
+/* Equipment cards, php/rpg/items.php (Example Items on rpg-items.php), like
+   the item cards on the creator's sheet and in Player Tools: one line on the
+   Traits' black with a warm olive edge, the category a dark olive chip, the
+   plane a muted one and the value at the right */
 .equipment-box {
-    padding: 0 1rem 1rem 1rem;
-    color: var(--portfolio-black);
-    background-color: var(--portfolio-light-gray);
-    border: 1px solid var(--portfolio-gray);
-    border-radius: 4px;
-    overflow: hidden;
     display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
     width: 100%;
+    padding: 12px;
+    color: var(--panel-text, var(--portfolio-near-white));
+    background-color: var(--portfolio-black);
+    border: 2px solid #6d6a5a;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px #00000030;
     font-size: 14px;
 
     .equipment-name {
-        font-size: 1rem;
+        flex: 1 1 auto;
+        min-width: 0;
         font-weight: 600;
-        margin-left: -1rem;
-        margin-right: -1rem;
-        background-color: var(--portfolio-gray);
-        padding: .5rem 1rem;
-        color: var(--portfolio-white);
     }
 
-    .equipment-meta {
+    .chip {
+        padding: 3.2px 8px;
+        background-color: #25241e;
+        border: 1px solid #6d6a5a;
+        border-radius: 4px;
+        color: #d6d1b4;
+        font-size: 12px;
         font-weight: 600;
-        color: var(--portfolio-gray);
+        white-space: nowrap;
+    }
+
+    .chip-muted {
+        background-color: transparent;
+        color: var(--panel-soft, #b3b3b3);
     }
 
     .equipment-value {
-        align-self: flex-end;
-        margin-top: auto;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: var(--portfolio-black);
-        color: var(--portfolio-white);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        line-height: 1;
-    }
-
-    .equipment-amount {
-        font-size: 13px;
-        font-weight: 700;
-    }
-
-    .equipment-currency {
-        font-size: 9px;
-        text-transform: uppercase;
-        margin-top: 2px;
+        min-width: 4.5rem;
+        color: var(--panel-soft, #b3b3b3);
+        font-weight: 600;
+        text-align: right;
+        white-space: nowrap;
     }
 }
 
