@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/3/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: AI Cores now hold the Mechanical Condition from their Kind, shown with their Traits, so they’re harmed by EMP damage and usually immune to Death damage.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The core stat circles on the stats’ title lines take their group’s dark shade (dark red for Physical, dark purple for Social, dark gold for Mental, dark blue for Magic) with white numbers, instead of white with dark numbers, on the character sheet, in the Character Creator and in Player Tools.</li>
