@@ -1895,16 +1895,37 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             gap: 4px;
         }
 
+        /* Each group's points in its resource's color, as in the creator:
+           Physical red, Social purple, Mental yellow, with the bonus points a
+           darker shade. Open and over-max slots stay gray, the latter faded. */
+        .stat-group-physical {
+            --stat-color: var(--frontiers-hp);
+        }
+
+        .stat-group-social {
+            --stat-color: var(--frontiers-vp);
+        }
+
+        .stat-group-mental {
+            --stat-color: var(--frontiers-sp);
+        }
+
         .stat.filled {
-            background-color: var(--frontiers-green);
+            background-color: var(--stat-color, var(--frontiers-green));
         }
 
         .stat.default {
-            background-color: var(--frontiers-lore-on-black);
+            background-color: color-mix(in srgb, var(--stat-color, var(--frontiers-green)) 50%, black);
         }
 
         .stat.empty {
             border-color: #8a8a8a;
+        }
+
+        .stat.unavailable {
+            border-color: #8a8a8a;
+            background-color: #8a8a8a;
+            opacity: .25;
         }
     }
 
@@ -2253,37 +2274,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
         :is(.sheet-conditions, .sheet-items) > .sheet-rule {
             margin-bottom: 16px;
-        }
-
-        /* Each group's points in its resource's color, as in the creator:
-           Physical red, Social purple, Mental yellow, with the bonus points a
-           darker shade. Open and over-max slots stay gray, the latter faded. */
-        .stat-group-physical {
-            --stat-color: var(--frontiers-hp);
-        }
-
-        .stat-group-social {
-            --stat-color: var(--frontiers-vp);
-        }
-
-        .stat-group-mental {
-            --stat-color: var(--frontiers-sp);
-        }
-
-        .sheet-group {
-            .stat.filled {
-                background-color: var(--stat-color);
-            }
-
-            .stat.default {
-                background-color: color-mix(in srgb, var(--stat-color) 50%, black);
-            }
-
-            .stat.unavailable {
-                border-color: #8a8a8a;
-                background-color: #8a8a8a;
-                opacity: .25;
-            }
         }
 
         .sheet-cards {
