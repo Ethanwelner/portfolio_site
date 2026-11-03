@@ -1950,9 +1950,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         .level-badge {
             isolation: isolate;
             z-index: 1;
+            top: -40px;
+            left: -40px;
             flex-direction: column;
-            width: 72px;
-            height: 72px;
+            width: 96px;
+            height: 96px;
             padding: 0;
             border-radius: 0;
             background: none;
@@ -1982,7 +1984,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         /* 4px down, so Level and the number sit centered together */
         .level-badge-label {
             margin-top: 4px;
-            font-size: .625rem;
+            font-size: .875rem;
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: .08em;
@@ -1990,7 +1992,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
         /* Bebas has one weight */
         .level-badge-number {
-            font-size: 2.25rem;
+            font-size: 3rem;
             font-weight: 400;
         }
 
@@ -2009,6 +2011,427 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
             .level-badge-number {
                 font-size: 1.75rem;
+            }
+        }
+    }
+
+    /* The sample character sheet, laid out like the Character Creator's
+       (its src/app/styles.css): a lighter gray sheet with the level's blob on
+       its corner, and darker boxes for the portrait, name and description,
+       HP, VP and SP, the stats, Conditions and Items, and the Knowledges and
+       Traits. Sizes are the creator's. */
+    .sample-sheet {
+        container: sheet / inline-size;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 40px;
+        padding: 16px;
+        border: 1px solid var(--portfolio-gray);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px #00000030;
+        font-family: 'Open Sans', sans-serif;
+
+        .c-sheet-box {
+            padding: 24px;
+            border-color: transparent;
+            border-radius: 12px;
+        }
+
+        /* The portrait and name, then the description: stacked, or two
+           equal columns once the sheet has room */
+        .sheet-head {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 24px 40px;
+
+            @container sheet (width >= 900px) {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            }
+        }
+
+        .sheet-head-who {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 12px 32px;
+        }
+
+        .sheet-portrait {
+            width: 256px;
+            max-width: 100%;
+        }
+
+        .sheet-head-main {
+            flex: 1 1 160px;
+            min-width: 0;
+        }
+
+        .sheet-name {
+            margin: 0 0 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        /* Kind, age, height and weight on a row, then Origin, Profession
+           and Past stacked, then Cash and Wealth: each a label over its value */
+        .sheet-line {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .sheet-line-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            margin: 0;
+        }
+
+        .sheet-line-stack {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sheet-line-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+        }
+
+        .field-label {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* The description, in the creator's black field */
+        .sheet-description {
+            min-height: 160px;
+            padding: 9.6px 12px;
+            background-color: var(--portfolio-black);
+            border-radius: 4px;
+
+            p {
+                margin: 0;
+                color: var(--panel-text);
+                font-size: 14.4px;
+                line-height: 1.5;
+            }
+        }
+
+        /* HP, VP and SP at full, centered, then the resistances */
+        .sheet-resources {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 16px 48px;
+        }
+
+        .sheet-resource {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .resource-name,
+        .num {
+            font-family: 'bebas_neueregular';
+            font-weight: 400;
+        }
+
+        .resource-name {
+            font-size: 24px;
+        }
+
+        .num {
+            font-size: 32px;
+            line-height: 1;
+
+            .muted {
+                color: var(--panel-soft);
+            }
+        }
+
+        .sheet-resists-list {
+            display: flex;
+            gap: 16px;
+            font-size: 20px;
+        }
+
+        /* The stats', Conditions' and Items' boxes, as tall as each other on
+           a line: the stats as wide as they need, the Conditions beside them
+           whenever 13rem is left, and the Items on their own line until the
+           sheet is 1400px wide */
+        .sheet-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 24px;
+
+            > * {
+                flex: 1 1 100%;
+                min-width: 0;
+            }
+
+            > .sheet-body {
+                flex: 1 1 auto;
+            }
+
+            > .sheet-conditions {
+                flex: 1000 1 13rem;
+            }
+
+            @container sheet (width >= 1400px) {
+                > .sheet-conditions {
+                    flex: 3000 1 0;
+                }
+
+                > .sheet-items {
+                    flex: 4000 1 0;
+                }
+            }
+        }
+
+        .sheet-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sheet-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sheet-group-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sheet-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            .tiny-text {
+                color: var(--panel-text);
+
+                .muted {
+                    color: var(--panel-soft);
+                }
+            }
+        }
+
+        /* Section titles with a rule running out to the right */
+        .sheet-rule {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+
+            &::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background-color: var(--panel-rule);
+            }
+        }
+
+        :is(.sheet-conditions, .sheet-items) > .sheet-rule {
+            margin-bottom: 16px;
+        }
+
+        /* Each group's points in its resource's color, as in the creator:
+           Physical red, Social purple, Mental yellow, with the bonus points a
+           darker shade. Open and over-max slots stay gray, the latter faded. */
+        .stat-group-physical {
+            --stat-color: var(--frontiers-hp);
+        }
+
+        .stat-group-social {
+            --stat-color: var(--frontiers-vp);
+        }
+
+        .stat-group-mental {
+            --stat-color: var(--frontiers-sp);
+        }
+
+        .sheet-group {
+            .stat.filled {
+                background-color: var(--stat-color);
+            }
+
+            .stat.default {
+                background-color: color-mix(in srgb, var(--stat-color) 50%, black);
+            }
+
+            .stat.unavailable {
+                border-color: #8a8a8a;
+                background-color: #8a8a8a;
+                opacity: .25;
+            }
+        }
+
+        .sheet-cards {
+            display: grid;
+            gap: 12px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* The Condition in grays: a mid gray edge, a light gray bar */
+        .sheet-condition {
+            border-color: #646464;
+
+            .trait-name {
+                background-color: #b7b4b4;
+                color: var(--portfolio-black);
+            }
+        }
+
+        /* The item: the Traits' black with a warm olive edge, its category
+           a dark olive chip and Equip's box filled pale olive with a check */
+        .sheet-item {
+            padding: 12px;
+            background-color: var(--portfolio-black);
+            border: 2px solid #6d6a5a;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px #00000030;
+            font-size: 14px;
+
+            @supports (corner-shape: scoop) {
+                corner-shape: scoop;
+            }
+
+            p {
+                margin: 8px 0 0;
+            }
+
+            .chip {
+                padding: 3.2px 8px;
+                background-color: #25241e;
+                border: 1px solid #6d6a5a;
+                border-radius: 4px;
+                color: #d6d1b4;
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .muted {
+                color: var(--panel-soft);
+            }
+
+            .small {
+                font-size: .75rem;
+            }
+        }
+
+        .sheet-item-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sheet-item-count {
+            font-weight: 300;
+        }
+
+        .sheet-item-title {
+            flex: 1 1 auto;
+            min-width: 0;
+            font-weight: 600;
+        }
+
+        .sheet-equipped {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sheet-check {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            background: #b5ae86 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%2325241e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+        }
+
+        /* The Knowledges above the Traits, until the sheet is 1400px wide;
+           then to their left, as wide as the longest name (up to 20rem) */
+        .sheet-lower {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            align-items: stretch;
+            gap: 24px;
+
+            @container sheet (width >= 1400px) {
+                grid-template-columns: fit-content(20rem) minmax(0, 1fr);
+            }
+        }
+
+        .sheet-subhead {
+            margin: 0 0 20px;
+            color: var(--panel-text);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .sheet-knowledges {
+            display: grid;
+            gap: 6px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .sheet-type-icon {
+                width: 17.5px;
+                fill: currentColor;
+            }
+        }
+
+        .sheet-banked {
+            margin: 0 0 16px;
+            font-size: 14px;
+        }
+
+        /* The Traits as the creator's cards: the effect, then where the
+           Trait came from at the bottom of the card */
+        .sheet-traits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .trait-box {
+                height: 100%;
+            }
+
+            .small {
+                margin: auto 0 0;
+                font-size: .75rem;
             }
         }
     }

@@ -1,0 +1,356 @@
+{
+	"picks": {
+		"universal": 9,
+		"background": 5
+	},
+	"traits": [
+		{
+			"id": "american-history",
+			"name": "American History (1)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": false,
+			"summary": "The history of the United States and the American Empire that replaced it.",
+			"effect": "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it.",
+			"badges": [],
+			"from": "The American Empire: Earth (origin)"
+		},
+		{
+			"id": "american-geography",
+			"name": "American Geography (1)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": false,
+			"summary": "The Empire’s Earth territories, from the Californias to Nueva Mexico.",
+			"effect": "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies.",
+			"badges": [],
+			"from": "The American Empire: Earth (origin)"
+		},
+		{
+			"id": "imperial-law",
+			"name": "Imperial Law (1)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": false,
+			"summary": "The American Empire’s legal code, its courts and how they’re enforced.",
+			"effect": "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories.",
+			"badges": [],
+			"from": "The American Empire: Earth (origin)"
+		},
+		{
+			"id": "english",
+			"name": "English (Spoken)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": true,
+			"summary": "One of the common languages of Earth Baseline.",
+			"effect": "This character is conversational in the English language and can speak it.",
+			"badges": [],
+			"from": "The American Empire: Earth (origin)"
+		},
+		{
+			"id": "english-written",
+			"name": "English (Written)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": true,
+			"summary": "One of the common languages of Earth Baseline.",
+			"effect": "This character can read and write the English language.",
+			"badges": [],
+			"from": "The American Empire: Earth (origin)"
+		},
+		{
+			"id": "concealment",
+			"name": "Concealment",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Hiding things, and yourself.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "Smuggler (profession), Gutter Trash (past)"
+		},
+		{
+			"id": "sleight-of-hand",
+			"name": "Sleight of Hand",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Quick, unnoticed work with the hands.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "Smuggler (profession), Gutter Trash (past)"
+		},
+		{
+			"id": "haggler",
+			"name": "Haggler",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Getting a better price.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "Smuggler (profession)"
+		},
+		{
+			"id": "criminal-underworld",
+			"name": "Criminal Underworld (1)",
+			"category": "Knowledge",
+			"plane": "any",
+			"language": false,
+			"summary": "The gangs, fences and smugglers who work outside the law, and the rules they keep among themselves.",
+			"effect": "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them.",
+			"badges": [],
+			"from": "Smuggler (profession)"
+		},
+		{
+			"id": "streetwise",
+			"name": "Streetwise",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Getting by, and getting answers, on the street.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "Gutter Trash (past)"
+		},
+		{
+			"id": "smooth-talker",
+			"name": "Smooth Talker",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Talking people into things, or out of them.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "schemer",
+			"name": "Schemer",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Plotting and seeing through plots.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "pilot-truck",
+			"name": "Pilot: Truck (1)",
+			"category": "Skill",
+			"plane": "earth",
+			"language": false,
+			"summary": "Flying cargo trucks between stations, ships and planetary surfaces.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "disguise",
+			"name": "Disguise (1)",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Passing as someone else, through costume, makeup and manner.",
+			"effect": "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "mandarin",
+			"name": "Mandarin (Spoken)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": true,
+			"summary": "The language of the Empire of China.",
+			"effect": "This character is conversational in the Mandarin language and can speak it.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "appraisal",
+			"name": "Appraisal",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Judging what something is worth.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "spanish",
+			"name": "Spanish (Spoken)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": true,
+			"summary": "One of the common languages of Earth Baseline.",
+			"effect": "This character is conversational in the Spanish language and can speak it.",
+			"badges": [
+				"Origin"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "spanish-written",
+			"name": "Spanish (Written)",
+			"category": "Knowledge",
+			"plane": "earth",
+			"language": true,
+			"summary": "One of the common languages of Earth Baseline.",
+			"effect": "This character can read and write the Spanish language.",
+			"badges": [
+				"Origin"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "cargo-handling",
+			"name": "Cargo Handling",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Loading, securing and moving freight, in gravity or out of it.",
+			"effect": "Placeholder. Effect not yet written.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "thieves-cant",
+			"name": "Thieves' Cant (Spoken)",
+			"category": "Knowledge",
+			"plane": "any",
+			"language": true,
+			"summary": "The coded slang criminals use to talk business in plain hearing.",
+			"effect": "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "wielder-dagger",
+			"name": "Wielder: Dagger (1)",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Fighting with, and maintaining, daggers and knives.",
+			"effect": "This character is capable of performing the basic tasks of maintaining a Dagger without a skill check. Rank *5 added to skill check rolls involving a Dagger.",
+			"badges": [
+				"Profession",
+				"Past"
+			],
+			"from": "background pick"
+		}
+	],
+	"background": [
+		{
+			"id": "human",
+			"slot": "Kind",
+			"name": "Human",
+			"plane": "earth",
+			"summary": "The humanity of Earth Baseline.",
+			"lore": "",
+			"features": [
+				{
+					"name": "Generalists",
+					"description": "Humans get a +1 bonus to every focus stat."
+				},
+				{
+					"name": "Unexceptional",
+					"description": "Humans can't exceed 15 in any focus stat unless otherwise modified."
+				}
+			],
+			"bonus": [],
+			"grants": [],
+			"choices": [],
+			"backgroundList": []
+		},
+		{
+			"id": "american-empire-earth",
+			"slot": "Origin",
+			"name": "The American Empire: Earth",
+			"plane": "earth",
+			"summary": "You were born in the Empire’s Earth territories, anywhere from the Californias and the Great Lakes to Nueva Mexico, in a country that calls itself the new Rome and is rarely short of a war to prove it.",
+			"lore": "american-empire",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"American History 1",
+				"American Geography 1",
+				"Imperial Law 1",
+				"English (Spoken & Written)"
+			],
+			"choices": [],
+			"backgroundList": [
+				"The Imperial Military",
+				"Imperial Politics",
+				"The Union of Texas",
+				"Earth Baseline Technology",
+				"Spanish (Spoken & Written)"
+			]
+		},
+		{
+			"id": "smuggler",
+			"slot": "Profession",
+			"name": "Smuggler",
+			"plane": "any",
+			"summary": "Moves goods past the law, by ship, caravan or cart, along whatever routes the authorities aren’t watching.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Concealment",
+				"Sleight of Hand",
+				"Haggler",
+				"Criminal Underworld"
+			],
+			"choices": [
+				"+1 Contact"
+			],
+			"backgroundList": [
+				"Streetwise",
+				"Appraisal",
+				"Cargo Handling",
+				"Lockpicking",
+				"Thieves' Cant (Spoken)",
+				"Navigation",
+				"Starships",
+				"Security Systems",
+				"Gambling",
+				"Commerce",
+				"Wielder: Shotgun",
+				"Wielder: Dagger"
+			]
+		},
+		{
+			"id": "gutter-trash",
+			"slot": "Past",
+			"name": "Gutter Trash",
+			"plane": "any",
+			"summary": "Grew up on the streets with nothing, and learned to take what wasn’t given and to disappear when it mattered.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Streetwise",
+				"Sleight of Hand",
+				"Concealment"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Gambling",
+				"Law Enforcement",
+				"Wielder: Dagger"
+			]
+		}
+	]
+}
