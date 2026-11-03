@@ -146,6 +146,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<p class="sheet-line-row">
 						<span class="sheet-line-item"><span class="field-label">Kind</span><strong><?php echo $sf_sheet_link( 'Kind' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Age</span><strong>30</strong></span>
+						<span class="sheet-line-item"><span class="field-label">Gender</span><strong>Male</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Height</span><strong>6 feet</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Weight</span><strong>190 lbs</strong></span>
 					</p>
@@ -250,7 +251,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<h4 class="sheet-rule">Conditions</h4>
 					<ul class="sheet-cards">
 						<li class="trait-box sheet-condition">
-							<div class="trait-name trait-name-with-chip"><span>Healthy</span><span class="trait-name-chips"><span class="chip">HP</span><span class="chip">Condition</span></span></div>
+							<div class="trait-name">Healthy</div>
 							<p class="muted small">From HP. A character or object gains this trait while they are at their maximum HP total</p>
 							<p class="copy">This Trait has no effect on its own.</p>
 						</li>
