@@ -94,14 +94,11 @@ strong .mechanic-text {
 }
 
 /* Equipment cards, php/rpg/items.php (Example Items on rpg-items.php), like
-   the item cards on the creator's sheet and in Player Tools: one line on the
-   Traits' black with a warm olive edge, the category a dark olive chip, the
-   plane a muted one and the value at the right */
+   the item cards on the creator's sheet and in Player Tools: the Traits'
+   black with a warm olive edge, a line with the category as a dark olive
+   chip, the plane a muted one and the value at the right, then the
+   description under it, muted like the sheet's item notes */
 .equipment-box {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
     width: 100%;
     padding: 12px;
     color: var(--panel-text, var(--portfolio-near-white));
@@ -110,6 +107,19 @@ strong .mechanic-text {
     border-radius: 6px;
     box-shadow: 0 4px 10px #00000030;
     font-size: 14px;
+
+    .equipment-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .equipment-description {
+        margin: 8px 0 0;
+        color: var(--panel-soft, #b3b3b3);
+        font-size: .75rem;
+    }
 
     .equipment-name {
         flex: 1 1 auto;
