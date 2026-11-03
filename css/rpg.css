@@ -156,7 +156,7 @@ strong .mechanic-text {
    creator's item cards take the same bite. */
 @supports (corner-shape: scoop) {
     .equipment-box {
-        border-radius: 10px;
+        border-radius: 8px;
         corner-shape: scoop;
     }
 }
