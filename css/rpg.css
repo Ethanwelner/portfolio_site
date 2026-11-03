@@ -152,11 +152,11 @@ strong .mechanic-text {
 
 /* Item cards get bites scooped out of their corners (corner-shape, after
    codepen.io/smashingmag/pen/vEXyQMZ), so they read apart from Trait cards.
-   16px keeps the bite clear of the name. Browsers without corner-shape keep
-   the plain rounded corners. */
+   Browsers without corner-shape keep the plain rounded corners. The
+   creator's item cards take the same bite. */
 @supports (corner-shape: scoop) {
     .equipment-box {
-        border-radius: 16px;
+        border-radius: 10px;
         corner-shape: scoop;
     }
 }
