@@ -1,4 +1,15 @@
-<?php require_once __DIR__ . '/lore.php'; ?>
+<?php
+require_once __DIR__ . '/lore.php';
+
+// Edwin's Kind, background packages and Traits, dumped from the Character
+// Creator's content and rules engine (Human, The American Empire: Earth,
+// Smuggler and Gutter Trash at Level 5), so the names, effects and sources
+// read as they do in the creator
+$sf_sample = json_decode( file_get_contents( __DIR__ . '/sample-character.json' ), true );
+$sf_e = function ( $text ) {
+	return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' );
+};
+?>
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
@@ -27,7 +38,7 @@
 						<li>Since every focus point grants a Trait, characters will typically start with a set of player-selectable Traits. A Human's 9 bonus points give them 9 Universal Traits, plus the Traits from their Level 1 points, in addition to the Traits automatically granted to them by their Kind, Origin, Profession, and Past. Since they only have a point or two in each Stat, their selection will be relatively limited to less powerful and more common Traits.
 						</li>
 						<li>It may be preferable to start a campaign with characters at Level 2 or 3, so that they can pick out the low-level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
-						<li>This sample character is Level 5: 9 bonus points from its Kind, 1 from its Origin, and 15 from five Levels, so 25 focus points and 25 Traits from them. It has used five of those Traits to raise its Contraband, Security, Streetwise, Criminal Activity, and American Geography knowledges to Rank 2, which it can do because it’s a freshly created character with the Memory 6 that Rank 2 requires, and it has banked nine more for in-game opportunities. Future Stat gains cannot be used to gain Knowledge Traits, though this is at the GM's discretion.
+						<li>This sample character is Level 5: 9 bonus points from its Kind, 1 from its Origin, and 15 from five Levels, so 25 focus points and 25 Traits from them. It has spent five of them as Universal Traits and six as Background Traits from its Origin’s, Profession’s and Past’s lists, and it has banked the other fourteen for in-game opportunities. Future Stat gains cannot be used to gain Knowledge Traits, though this is at the GM's discretion.
 						</li>
 					</ul>
 				</div>
@@ -35,86 +46,32 @@
 			<div class="flex-6 content-stack">
 				<div class="content-stack content-stack-sm">
 					<h3>Backgrounds used in the sample character sheet</h3>
-					<div class="content-stack content-stack-sm">
-						<div class="line-container">
-							<h5><strong>Kind: Human</strong></h5>
-							<div class="line"></div>
+					<?php foreach ( $sf_sample['background'] as $b ) : ?>
+						<div class="content-stack content-stack-sm">
+							<div class="line-container">
+								<h5><strong><?php echo $b['slot'] . ': ' . sf_lore_link( 'sample-' . $b['id'], $sf_e( $b['name'] ) ); ?></strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy"><?php echo $sf_e( $b['summary'] ); ?></p>
+							<?php foreach ( $b['features'] as $f ) : ?>
+								<div class="content-stack content-stack-xxs">
+									<h6><?php echo $sf_e( $f['name'] ); ?></h6>
+									<p class="copy"><?php echo $sf_e( $f['description'] ); ?></p>
+								</div>
+							<?php endforeach; ?>
+							<?php
+							// The Origin's bonus point went into Grace
+							$bonus = array_map( function ( $x ) use ( $b ) { return $x . ( 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); }, $b['bonus'] );
+							foreach ( array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) :
+								if ( ! $list ) { continue; }
+								?>
+								<div class="content-stack content-stack-xxs">
+									<h6><?php echo $label; ?></h6>
+									<p class="copy"><?php echo implode( '<br>', array_map( $sf_e, $list ) ); ?></p>
+								</div>
+							<?php endforeach; ?>
 						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Generalists</h6>
-							<p class="copy">Humans get a +1 bonus to every focus Stat.</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Unexceptional</h6>
-							<p class="copy">Humans cannot exceed 15 in any focus Stat unless otherwise modified.</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Versatile</h6>
-							<p class="copy">Humans can take (Cybernetic) Traits.</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Biological</h6>
-							<p class="copy">Humans can take genetic engineering Traits.</p>
-						</div>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<div class="line-container">
-							<h5><strong>Origin: The American Empire</strong></h5>
-							<div class="line"></div>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Bonus</h6>
-							<p class="copy">+1 Physical point, placed in Grace</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>
-								Public Education<br>
-								Imperial citizens start with the following Knowledge Traits:
-							</h6>
-							<p class="copy">
-								English (language)<br>
-								American History (1)<br>
-								American Geography (1)<br>
-								Imperial Law (1)
-							</p>
-						</div>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<div class="line-container">
-							<h5><strong>Profession: Smuggler</strong></h5>
-							<div class="line"></div>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Skill Traits</h6>
-							<p class="copy">Smooth Talker<br>
-								Concealment<br>
-								1 additional Contact</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Knowledge Traits</h6>
-							<p class="copy">Contraband<br>
-								Security<br>
-								1 additional Language</p>
-						</div>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<div class="line-container">
-							<h5><strong>Past: Raised by the Streets</strong></h5>
-							<div class="line"></div>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Skill Traits</h6>
-							<p class="copy">Schemer<br>
-								Sleight of Hand<br>
-								1 additional Contact</p>
-						</div>
-						<div class="content-stack content-stack-xxs">
-							<h6>Knowledge Traits</h6>
-							<p class="copy">Streetwise<br>
-								Criminal Activity<br>
-								1 additional Language</p>
-						</div>
-					</div>
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
@@ -153,6 +110,24 @@ if ( ! function_exists( 'sf_sample_stat' ) ) {
 
 // Each Knowledge's type as an icon in place of a "Knowledge:" or "Language:" label
 $sf_knowledge_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Knowledge" focusable="false"><title>Knowledge</title><path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"/></svg>';
+// A Knowledge's or background card's link, opening it in the lore popup
+$sf_sheet_link = function ( $key ) use ( $sf_sample, $sf_e ) {
+	foreach ( array_merge( $sf_sample['background'], $sf_sample['traits'] ) as $x ) {
+		if ( ( $x['slot'] ?? $x['id'] ) === $key ) {
+			return sf_lore_link( 'sample-' . $x['id'], $sf_e( $x['name'] ) );
+		}
+	}
+	return '';
+};
+// Knowledges, then Languages, as on the creator's sheet; the rest are cards
+$sf_knowledges = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' === $t['category'] && ! $t['language']; } );
+$sf_languages  = array_filter( $sf_sample['traits'], function ( $t ) { return $t['language']; } );
+$sf_cards      = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' !== $t['category']; } );
+// Where a Trait came from, in words: "a background pick (Origin)"
+$sf_from = function ( $t ) {
+	$from = str_replace( array( 'universal pick', 'background pick' ), array( 'a universal pick', 'a background pick' ), $t['from'] );
+	return $t['badges'] ? $from . ' (' . implode( ', ', $t['badges'] ) . ')' : $from;
+};
 $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Language" focusable="false"><title>Language</title><path d="M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z"/></svg>';
 ?>
 <!-- Laid out like the Character Creator's sheet: the level's blob on the
@@ -169,15 +144,15 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<h2 class="sheet-name">Edwin Humble</h2>
 				<div class="sheet-line">
 					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Kind</span><strong>Human</strong></span>
+						<span class="sheet-line-item"><span class="field-label">Kind</span><strong><?php echo $sf_sheet_link( 'Kind' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Age</span><strong>30</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Height</span><strong>6 feet</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Weight</span><strong>190 lbs</strong></span>
 					</p>
 					<p class="sheet-line-row sheet-line-stack">
-						<span class="sheet-line-item"><span class="field-label">Origin</span><strong>The American Empire</strong></span>
-						<span class="sheet-line-item"><span class="field-label">Profession</span><strong>Smuggler</strong></span>
-						<span class="sheet-line-item"><span class="field-label">Past</span><strong>Raised by the Streets</strong></span>
+						<span class="sheet-line-item"><span class="field-label">Origin</span><strong><?php echo $sf_sheet_link( 'Origin' ); ?></strong></span>
+						<span class="sheet-line-item"><span class="field-label">Profession</span><strong><?php echo $sf_sheet_link( 'Profession' ); ?></strong></span>
+						<span class="sheet-line-item"><span class="field-label">Past</span><strong><?php echo $sf_sheet_link( 'Past' ); ?></strong></span>
 					</p>
 					<p class="sheet-line-row">
 						<span class="sheet-line-item"><span class="field-label">Cash</span><strong>2,000 ERC</strong></span>
@@ -258,51 +233,56 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		<div class="c-sheet-box sheet-side">
 			<h3 class="sheet-subhead">Knowledges</h3>
 			<ul class="sheet-knowledges">
-				<li><?php echo $sf_knowledge_icon; ?> American History (1)</li>
-				<li><?php echo $sf_knowledge_icon; ?> American Geography (1)</li>
-				<li><?php echo $sf_knowledge_icon; ?> Imperial Law (1)</li>
-				<li><?php echo $sf_knowledge_icon; ?> Contraband</li>
-				<li><?php echo $sf_knowledge_icon; ?> Security</li>
-				<li><?php echo $sf_knowledge_icon; ?> Streetwise</li>
-				<li><?php echo $sf_knowledge_icon; ?> Criminal Activity</li>
-				<li><?php echo $sf_language_icon; ?> English</li>
-				<li><?php echo $sf_language_icon; ?> Spanish</li>
-				<li><?php echo $sf_language_icon; ?> Mandarin</li>
+				<?php foreach ( $sf_knowledges as $t ) { echo '<li>' . $sf_knowledge_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
+				<?php foreach ( $sf_languages as $t ) { echo '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
 			</ul>
 		</div>
 		<div class="c-sheet-box">
 			<h3 class="sheet-subhead">Traits</h3>
-			<p class="sheet-banked">9 banked Traits</p>
+			<p class="sheet-banked"><?php echo $sf_sample['picks']['universal']; ?> universal and <?php echo $sf_sample['picks']['background']; ?> background picks available</p>
 			<ul class="sheet-traits">
-				<?php
-				// Name, rank (0 for none) and category chip (empty where the
-				// game doesn't give one yet), as the creator's sheet draws Traits
-				$sf_sample_traits = array(
-					array( 'Smooth Talker', 1, 'Skill' ),
-					array( 'Concealment', 1, 'Skill' ),
-					array( 'Schemer', 0, 'Skill' ),
-					array( 'Sleight of Hand', 1, 'Skill' ),
-					array( 'Act Natural', 2, 'Skill' ),
-					array( 'Wheelman', 1, 'Skill' ),
-					array( 'Pilot: Basic Automotive', 1, 'Skill' ),
-					array( 'Pilot: Basic Voidcraft', 1, 'Skill' ),
-					array( 'Backroads Traveler', 0, 'Skill' ),
-					array( 'Rapid Appraisal', 0, 'Skill' ),
-					array( 'Scrounger', 1, 'Skill' ),
-					array( 'Inheritance (Rickety Cargo Shuttle)', 0, 'Circumstance' ),
-					array( 'Contacts', 2, 'Contact' ),
-					array( 'More Lucky Than Good', 0, '' ),
-					array( 'Forgettable Face', 0, '' ),
-				);
-				foreach ( $sf_sample_traits as $t ) {
-					$name = $t[0] . ( $t[1] ? " ({$t[1]})" : '' );
-					$chip = $t[2] ? "<span class=\"trait-name-chips\"><span class=\"chip\">{$t[2]}</span></span>" : '';
-					echo "<li class=\"trait-box\"><div class=\"trait-name trait-name-with-chip\"><span>{$name}</span>{$chip}</div></li>\n";
-				}
-				?>
+				<?php foreach ( $sf_cards as $t ) : ?>
+					<li class="trait-box">
+						<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><span class="trait-name-chips"><?php foreach ( array_merge( $t['badges'], array( $t['category'] ) ) as $chip ) { echo '<span class="chip">' . $chip . '</span>'; } ?></span></div>
+						<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+						<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+					</li>
+				<?php endforeach; ?>
 			</ul>
 		</div>
 	</div>
+</div>
+
+<!-- What the sheet's Knowledges and background links open in the lore popup -->
+<div hidden>
+	<?php foreach ( array_merge( $sf_knowledges, $sf_languages ) as $t ) : ?>
+		<div id="lore-sample-<?php echo $t['id']; ?>">
+			<h4 class="lore-title"><?php echo $sf_e( $t['name'] ); ?></h4>
+			<div class="lore-body">
+				<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+				<p class="copy small mb-0">Knowledge. From <?php echo $sf_e( $sf_from( $t ) ); ?>.</p>
+			</div>
+		</div>
+	<?php endforeach; ?>
+	<?php foreach ( $sf_sample['background'] as $b ) : ?>
+		<div id="lore-sample-<?php echo $b['id']; ?>">
+			<h4 class="lore-title"><?php echo $sf_e( $b['name'] ); ?></h4>
+			<div class="lore-body">
+				<p class="copy"><strong><?php echo $b['slot']; ?>.</strong> <?php echo $sf_e( $b['summary'] ); ?></p>
+				<?php foreach ( $b['features'] as $f ) : ?>
+					<p class="copy"><strong><?php echo $sf_e( $f['name'] ); ?>.</strong> <?php echo $sf_e( $f['description'] ); ?></p>
+				<?php endforeach; ?>
+				<?php foreach ( array( 'Bonus' => $b['bonus'], 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) : ?>
+					<?php if ( $list ) : ?>
+						<p class="copy"><strong><?php echo $label; ?>:</strong> <?php echo $sf_e( implode( ', ', $list ) ); ?></p>
+					<?php endif; ?>
+				<?php endforeach; ?>
+				<?php if ( $b['lore'] ) : ?>
+					<p class="copy">More in the lore: <?php echo sf_lore_link( $b['lore'], sf_lore_titles()[ $b['lore'] ] ?? $b['lore'] ); ?></p>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endforeach; ?>
 </div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>

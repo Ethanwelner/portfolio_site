@@ -2415,8 +2415,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             font-size: 14px;
         }
 
-        /* The Traits as the creator's cards, here just their name bars, each
-           filling its card when a longer name makes the row taller */
+        /* The Traits as the creator's cards: the effect, then where the
+           Trait came from at the bottom of the card */
         .sheet-traits {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
@@ -2427,13 +2427,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
             .trait-box {
                 height: 100%;
-                padding: 0;
+            }
 
-                .trait-name {
-                    flex: 1;
-                    margin: 0;
-                    border-radius: 10px;
-                }
+            .small {
+                margin: auto 0 0;
+                font-size: .75rem;
             }
         }
     }
