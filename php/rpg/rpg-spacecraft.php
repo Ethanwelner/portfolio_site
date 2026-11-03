@@ -228,15 +228,15 @@
 					</div>
 
 					<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
-						<p class="copy mb-0">
-							Content coming soon
-						</p>
+						<div class="content-stack">
+							<?php foreach (['antiliuna'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						</div>
 					</div>
 
 					<div class="tech-field-panel" id="craft-systems" role="tabpanel" aria-labelledby="tab-craft-systems">
-						<p class="copy mb-0">
-							Content coming soon
-						</p>
+						<div class="content-stack">
+							<?php foreach (['alpha-centauri'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						</div>
 					</div>
 
 					<div class="tech-field-panel" id="craft-technology" role="tabpanel" aria-labelledby="tab-craft-technology">

@@ -58,6 +58,8 @@ function sf_lore_titles() {
 		'tetra' => 'Tetra',
 		'new-york' => 'New York',
 		'zhulong' => 'Zhulong (The Torch Dragon)',
+		'antiliuna' => 'Antiliuna',
+		'alpha-centauri' => 'Alpha Centauri',
 		'american-empire' => 'The American Empire',
 		'union-of-texas' => 'The Union of Texas',
 		'free-american-states' => 'Non-Aligned Free American States',
