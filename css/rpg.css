@@ -1929,7 +1929,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
+    /* Only as wide as its stat lines need, at the start of its column */
     .stat-panel {
+        width: fit-content;
+        max-width: 100%;
         padding: 24px;
         background-color: var(--panel);
         border: 1px solid rgb(255 255 255 / 12%);
