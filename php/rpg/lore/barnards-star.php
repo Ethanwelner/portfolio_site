@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>4 (Barnard b, c, d, and e)</dd>
+			<dd>Barnard b, Barnard c, Barnard d, Barnard e</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>3 (GJ 887 b, c, and e)</dd>
+			<dd>GJ 887 b, GJ 887 c, GJ 887 e</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

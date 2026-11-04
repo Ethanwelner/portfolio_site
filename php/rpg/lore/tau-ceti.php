@@ -15,8 +15,8 @@
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
-			<dt>Confirmed/Candidate Planets</dt>
-			<dd>4–5 multiplanetary system (Tau Ceti b, c, d, e, f)</dd>
+			<dt>Confirmed Planets</dt>
+			<dd>Tau Ceti b, Tau Ceti c, Tau Ceti d, Tau Ceti e, Tau Ceti f</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

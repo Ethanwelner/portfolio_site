@@ -16,7 +16,7 @@
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>3 (Gliese 1061 b, c, d)</dd>
+			<dd>Gliese 1061 b, Gliese 1061 c, Gliese 1061 d</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

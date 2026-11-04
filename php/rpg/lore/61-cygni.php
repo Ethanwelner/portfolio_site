@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>Multi-component binary system with confirmed planetary companions.</dd>
+			<dd>61 Cygni Ab, 61 Cygni Ac, 61 Cygni Bb</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

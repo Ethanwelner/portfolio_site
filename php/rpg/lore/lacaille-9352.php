@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('chinese-empire', 'China'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>4 (Lacaille 9352 b, c, d, e)</dd>
+			<dd>Lacaille 9352 b, Lacaille 9352 c, Lacaille 9352 d, Lacaille 9352 e</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

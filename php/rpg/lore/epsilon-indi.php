@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>Multi-component brown dwarf/gas giant system (Epsilon Indi Ab plus inner planetary architecture)</dd>
+			<dd>Epsilon Indi Ab, Epsilon Indi Ac, Epsilon Indi Ad</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>

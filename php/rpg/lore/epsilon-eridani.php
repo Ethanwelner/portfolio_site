@@ -10,13 +10,13 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
-			<dd>Multiplanetary/debris disk system with confirmed outer/inner architecture (e.g., Ægir / Epsilon Eridani b and c)</dd>
+			<dd>Epsilon Eridani b (Ægir), Epsilon Eridani c</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>
