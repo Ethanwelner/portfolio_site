@@ -142,6 +142,9 @@
                             <?php include 'php/rpg/rpg-skills.php'; ?>
                             <div class="separator"></div>
 
+                            <?php include 'php/rpg/rpg-incidents.php'; ?>
+                            <div class="separator"></div>
+
                             <?php include 'php/rpg/rpg-items.php'; ?>
                             <div class="separator"></div>
 

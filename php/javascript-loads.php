@@ -136,7 +136,7 @@
 		}
 
 		function isFrontiersHash(hash) {
-			return [ "frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations", "dreft-map", "building-a-dreftian", "tetra-exploration" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
+			return [ "frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "incidents", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations", "dreft-map", "building-a-dreftian", "tetra-exploration" ].indexOf( hash ) !== -1 || hash.indexOf( "lore-" ) === 0;
 		}
 
 		function isPhotosHash(hash) {
@@ -295,7 +295,7 @@
 
 		function rpgTabFromHash() {
 			var hash = personalHash();
-			if ( hash === "mechanics" || hash === "rpg-mechanics" || hash === "stats" || hash === "traits" || hash === "skills" || hash === "items" || hash === "character" ) {
+			if ( hash === "mechanics" || hash === "rpg-mechanics" || hash === "stats" || hash === "traits" || hash === "skills" || hash === "incidents" || hash === "items" || hash === "character" ) {
 				return $( "#tab-mechanics" );
 			}
 			if ( hash === "changelog" || hash === "change-log" || hash === "rpg-changelog" ) {

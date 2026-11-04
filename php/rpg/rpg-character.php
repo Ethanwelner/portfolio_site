@@ -172,6 +172,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			<div class="sheet-resource"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">17<span class="muted"> / 17</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-sp" title="Savvy Points">SP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
+			<div class="sheet-resource"><strong class="resource-name" title="Movement">Movement</strong><span class="num">10<span class="muted"> m</span></span></div>
 		</div>
 	</div>
 

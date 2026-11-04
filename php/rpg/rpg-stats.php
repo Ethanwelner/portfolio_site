@@ -420,7 +420,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Endurance represents the body's ability to resist and persist. A high Endurance means a character is hardy and resilient to the elements, attacks, and deprivation. Such a character can go longer without eating, march for longer without tiring, and ward off diseases or poisons more easily. A durable character isn't inherently strong, but they are consistent.
+								Endurance represents the body's ability to resist and persist. A high Endurance means a character is hardy and resilient to the elements, Attacks, and deprivation. Such a character can go longer without eating, march for longer without tiring, and ward off diseases or poisons more easily. A durable character isn't inherently strong, but they are consistent.
 							</p>
 						</div>
 						<div class="content-stack content-stack-xs">

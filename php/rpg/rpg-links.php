@@ -21,6 +21,7 @@ $rpgLinksByKind = [
 		'#stats' => 'Stats',
 		'#traits' => 'Traits',
 		'#skills' => 'Skills',
+		'#incidents' => 'Incidents',
 		'#items' => 'Items',
 		'#character' => 'Character',
 	],
