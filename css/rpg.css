@@ -642,10 +642,20 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
    tech-fields-light is the black-on-white version used in rpg-setting,
    rpg-planes and rpg-parabiology. */
 .tech-fields {
-    padding: 0 24px 36px;
+    /* Pulled out by its padding and border, so the contents line up with the
+       text above and below the box */
+    --tech-fields-inset: 24px;
+    margin-left: calc(-1 * var(--tech-fields-inset) - 1px);
+    margin-right: calc(-1 * var(--tech-fields-inset) - 1px);
+    padding: 0 var(--tech-fields-inset) 36px;
     border: 1px solid var(--portfolio-white);
     border-radius: 10px;
     overflow: hidden;
+
+    /* Phones have a narrower page gutter: a smaller inset keeps the side borders on screen */
+    @media (max-width: 767px) {
+        --tech-fields-inset: 12px;
+    }
 }
 
 .tech-field-tab-list {

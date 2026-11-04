@@ -9,14 +9,14 @@
 			<dd></dd>
 		</div>
 		<div>
-			<dt>Nationality</dt>
-			<dd></dd>
+			<dt>Nationalities</dt>
+			<dd><?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
-			<dt>Confirmed Planets/Candidates</dt>
-			<dd>3 (Lalande 21185 b, c, and d/system structure)</dd>
+			<dt>Confirmed Planets</dt>
+			<dd>Lalande 21185 b, Lalande 21185 c, Lalande 21185 d</dd>
 		</div>
 		<div>
 			<dt>Major Industries</dt>
