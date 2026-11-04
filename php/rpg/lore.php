@@ -30,6 +30,7 @@ function sf_lore_titles() {
 		'lorentz-field-generator' => 'Lorentz Field Generators',
 		'aether-sails' => 'Aether Sails',
 		'fuel-gates' => 'Fuel Gates',
+		'water-gates' => 'Water Gates',
 		'skiffs' => 'Skiffs',
 		'drone-craft' => 'Drone Craft',
 		'shuttles' => 'Shuttles',
