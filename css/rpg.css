@@ -1316,15 +1316,16 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 /* Intro copy columns (Setting, Rebirth of Science, The Planes, The Stars, Parabiology)
-   with a placeholder image beside it. The copy column is 640px, so the image shows
-   from 1372px up, where it gets at least ~260px. */
+   with a placeholder image beside it. The copy column is 768px, like the other
+   single-column copy, so the image shows from 1500px up, where it gets at least
+   ~260px. */
 .intro-with-image {
     display: flex;
     gap: 40px;
 
     > .single-column-content {
-        flex: 0 1 640px;
-        max-width: 640px;
+        flex: 0 1 768px;
+        max-width: 768px;
     }
 }
 
@@ -1372,17 +1373,17 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-@media (min-width: 1372px) {
+@media (min-width: 1500px) {
     .intro-with-image > .image-placeholder,
     .intro-with-image > .intro-image {
         display: flex;
     }
 }
 
-/* The Stars: below 1372px the planet sits after the third paragraph instead of
+/* The Stars: below 1500px the planet sits after the third paragraph instead of
    hiding. The copy column's paragraphs join the intro's own column so the image
    can be ordered between them. */
-@media (max-width: 1371px) {
+@media (max-width: 1499px) {
     .intro-with-image.image-in-copy {
         flex-direction: column;
         gap: 0;
@@ -1406,10 +1407,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
-        /* The paragraphs keep the 640px copy width, and the planet centers on them */
+        /* The paragraphs keep the 768px copy width, and the planet centers on them */
         > .single-column-content > *,
         > .intro-image {
-            max-width: 640px;
+            max-width: 768px;
         }
     }
 }
