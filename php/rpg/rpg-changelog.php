@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The Setting’s Nations tab lists the nations from largest population to smallest, starting with the Stellar Democratic Union.</li>
 						<li>The Stars: every star system lists an estimated population, from 13 billion in the Sol System and 50 million around Alpha Centauri to 1.1 million at YZ Ceti. The Sol System’s Nationalities is a See Nations link that opens the Setting’s Nations tab.</li>
 						<li>The Stars: Water Gates joins the Technology tab under Fuel Gates, as a placeholder for now.</li>
 						<li>The Stars: most star systems now list the nations present there, and each system’s Confirmed Planets is a plain list of planet names. The Sol System heads the list.</li>
