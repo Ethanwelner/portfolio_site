@@ -1388,7 +1388,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         > .intro-image {
             display: flex;
             order: -1;
-            margin-bottom: 1rem;
+            /* 40px from the text on each side, counting the paragraph above's 1rem */
+            margin: 1.5rem 0 2.5rem;
 
             img {
                 max-width: 360px;
