@@ -19,10 +19,6 @@
 			<dd>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

@@ -19,10 +19,6 @@
 			<dd>Lacaille 9352 b, Lacaille 9352 c, Lacaille 9352 d, Lacaille 9352 e</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

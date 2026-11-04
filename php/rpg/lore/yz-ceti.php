@@ -19,10 +19,6 @@
 			<dd>YZ Ceti b, YZ Ceti c, YZ Ceti d</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

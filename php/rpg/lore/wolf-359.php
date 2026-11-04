@@ -6,21 +6,17 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd>14 million</dd>
+			<dd>15 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
-			<dd><?php echo sf_lore_link('chinese-empire', 'China'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?>, <?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
+			<dd><?php echo sf_lore_link('chinese-empire', 'China'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?>, <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, Microstates</dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Wolf 359 b, Wolf 359 c, Wolf 359 d</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

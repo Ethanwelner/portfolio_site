@@ -19,10 +19,6 @@
 			<dd>61 Cygni Ab, 61 Cygni Ac, 61 Cygni Bb</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

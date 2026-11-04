@@ -19,10 +19,6 @@
 			<dd>Barnard b, Barnard c, Barnard d, Barnard e</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

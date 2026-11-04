@@ -19,10 +19,6 @@
 			<dd>Lalande 21185 b, Lalande 21185 c, Lalande 21185 d</dd>
 		</div>
 		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
-		</div>
-		<div>
 			<dt>Locations</dt>
 			<dd></dd>
 		</div>

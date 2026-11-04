@@ -6,21 +6,17 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd>1.2 million</dd>
+			<dd>1.5 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('lunar-industrial-syndicate', 'Luna'); ?></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Gliese 1061 b, Gliese 1061 c, Gliese 1061 d</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
