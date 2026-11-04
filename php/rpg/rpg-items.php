@@ -247,14 +247,14 @@
 				</div>
 
 				<div class="tech-field-panel" id="items-examples" role="tabpanel" aria-labelledby="tab-items-examples">
-					<div class="content-stack">
+					<div class="tab-panel-cols">
 <?php foreach (sf_example_items() as $group => $items): ?>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
 								<h5><strong><?= $group ?></strong></h5>
 								<div class="line"></div>
 							</div>
-							<div class="item-card-grid">
+							<div class="d-flex flex-column flex-gap-12">
 <?php foreach ($items as $item) { sf_equipment_card(...$item); } ?>
 							</div>
 						</div>
