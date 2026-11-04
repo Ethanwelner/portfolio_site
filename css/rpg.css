@@ -1715,6 +1715,43 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Explaining Traits' Trait Rules and Trait Categories tabs (php/rpg/rpg-traits.php): each
+   titled entry kept whole, flowing across two columns, one column at 960px and below. */
+.trait-panel-grid {
+    column-count: 2;
+    column-gap: 40px;
+
+    @media (max-width: 960px) {
+        column-count: 1;
+    }
+
+    > * {
+        break-inside: avoid;
+        margin-bottom: 36px;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Explaining Traits' Example Traits tab: each category's cards in a grid of three
+   columns, two at 1200px and below, one at 767px and below. */
+.trait-card-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 /* A section's text flowing across two text columns: tab panels in php/rpg/, the Details of
    plane, nation, ark and technology entries in php/rpg/lore/, and each Exotic Materials entry
    (.lore-text-cols, rpg-planes.php). */
