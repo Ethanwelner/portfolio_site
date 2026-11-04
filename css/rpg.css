@@ -125,7 +125,7 @@ strong .mechanic-text {
         margin-left: auto;
     }
 
-    /* Damage or resistances: a soft label and one badge, with "or" between
+    /* Damage or resistances: one badge, with "or" between
        a choice's options. In a narrow card they take a line of their own,
        under the name. */
     .equipment-stats {
@@ -138,11 +138,6 @@ strong .mechanic-text {
             order: 1;
             flex-basis: 100%;
         }
-    }
-
-    .equipment-stat-label {
-        color: var(--panel-soft, #b3b3b3);
-        font-size: .8125rem;
     }
 
     .chip.equipment-stat {
@@ -199,16 +194,26 @@ strong .mechanic-text {
     }
 }
 
-/* Resists: a shield at the left of an item's resistances badge, in a
-   circle of the checkbox's pale olive with a dark olive icon, like the
-   creator's */
-.resist-shield {
-    display: inline-grid;
+/* A damage or resistances badge's lead: a circle of the checkbox's pale
+   olive with a dark olive bow, sword or shield, standing in for the badge's
+   left edge. The badge rounds its left side to match, and the circle is as
+   tall as a plain badge, flush with its edge, top and bottom. Like the
+   creator's. */
+.chip:has(> .item-stat-lead) {
+    flex-wrap: nowrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-radius: 999px 4px 4px 999px;
+}
+
+.item-stat-lead {
+    display: grid;
     place-items: center;
     flex: none;
-    width: 1.5em;
-    height: 1.5em;
-    margin: -2px -4px;
+    width: calc(1lh + 6.4px + 2px);
+    height: calc(1lh + 6.4px + 2px);
+    margin: -1px -4px -1px -1px;
     background-color: #b5ae86;
     border-radius: 50%;
 
@@ -2485,6 +2490,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             display: inline-flex;
             align-items: center;
             gap: 10px;
+        }
+
+        /* With its lead circle, rounded on the left and flush with it */
+        .chip.sheet-item-stat:has(> .item-stat-lead) {
+            padding: 0 8px 0 0;
+            border-radius: 999px 4px 4px 999px;
         }
 
         .sheet-item-stat-value {
