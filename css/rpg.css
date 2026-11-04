@@ -1263,6 +1263,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     flex-direction: column;
 }
 
+/* A panel that ends on a dark section (Mechanics, with the Sample Character Sheet)
+   drops its white bottom padding, so the dark section meets the footer. */
+.rpg-panel:has(> .container > .breakout:last-child) {
+    padding-bottom: 0;
+}
+
 /* Setting and Mechanics sections in personal.php */
 #rpg-setting.section.unlimited {
     padding-bottom: 0;
@@ -1700,6 +1706,58 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
     @media (max-width: 959px) {
         column-gap: 24px;
+    }
+}
+
+/* Explaining Stats' Stat Types tab (php/rpg/rpg-stats.php): Physical, Social and Mental
+   side by side, one column at 960px and below. */
+.stat-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px 40px;
+
+    @media (max-width: 960px) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Tab panels whose entries flow across two columns, each entry kept whole: Explaining
+   Traits' Trait Rules and Trait Categories (php/rpg/rpg-traits.php), Skill Checks'
+   Difficulty Ranges (rpg-skills.php) and the Items tabs, Example Items' categories
+   included (rpg-items.php). One column at 960px and below. */
+.tab-panel-cols {
+    column-count: 2;
+    column-gap: 40px;
+
+    @media (max-width: 960px) {
+        column-count: 1;
+    }
+
+    > * {
+        break-inside: avoid;
+        margin-bottom: 36px;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Explaining Traits' Example Traits tab: each category's cards in a grid of three
+   columns, two at 1200px and below, one at 767px and below, each card as tall as
+   the tallest in its row. */
+.trait-card-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 767px) {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 

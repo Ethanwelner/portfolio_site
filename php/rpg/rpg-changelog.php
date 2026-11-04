@@ -9,6 +9,12 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: the Sample Character Sheet’s notes on creating a character and the backgrounds Edwin uses are now Musings and Backgrounds tabs above the sheet.</li>
+						<li>Mechanics: Items, Armor, and Effects opens with What is an Item?, now headed Items, with Item Rules (Exclusivity, Uses, and Damage, Condition, and Destruction), Item Types, Armor and Damage Types, and Example Items moved into tabs below it.</li>
+						<li>Mechanics: Incidents keeps What is an Incident? and Actions at the top, with Priority Order and Movement, Attacking and Damage, Defense and Cover, and Role-Playing Actions moved into tabs below them. The Defenses and Defending link in Attacking opens its tab.</li>
+						<li>Mechanics: Skill Checks keeps What is a Skill Check? at the top, with Difficulty Ranges and Advantage and Competence (Requesting Advantage and Requesting Competence side by side) moved into tabs below it.</li>
+						<li>Mechanics: Explaining Traits keeps its overview at the top, with Trait Rules (Trait Ranks, Universal and Background Traits, Starter-only Traits and Conveyed Traits), Trait Categories and Example Traits moved into tabs below it. Each category in Trait Categories ends with one example Trait card.</li>
+						<li>Mechanics: Explaining Stats keeps its overview and stat diagram at the top, with Example Stats, Stat Types and Stat-Based Resources moved into tabs below them.</li>
 						<li>Mechanics: a new Incidents section, between Skill Checks and Items, sets the rules for combat and other tense scenes: Rounds and Priority Order, the basic Actions, Movement, Attacking with hit and miss Severities, Defenses and Defending, Melee and Ranged Attacks with Line of Sight and Cover, Area of Effect and Thrown weapons, Damage, and Role-Playing Actions.</li>
 						<li>Mechanics: the Sample Character Sheet shows Edwin’s Movement, 10 m, beside his HP, VP and SP.</li>
 						<li>The Setting’s Nations tab lists the nations from largest population to smallest, starting with the Stellar Democratic Union.</li>

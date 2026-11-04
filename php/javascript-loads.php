@@ -687,6 +687,10 @@
 				}
 
 				if ( $el.hasClass( "trait-box" ) || $el.hasClass( "equipment-box" ) ) {
+					// The Trait Categories tab repeats one card from Example Traits per category; index it once
+					if ( $el.closest( "#traits-categories" ).length ) {
+						return;
+					}
 					// A Trait card's name is the bar's first span; its chips follow it
 					var $name = $el.find( ".trait-name > span:first-child" );
 					if ( !$name.length ) {
