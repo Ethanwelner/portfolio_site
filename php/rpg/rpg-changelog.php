@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/4/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: an open item card’s Equip checkbox starts its first line, in the same place as when the card is closed.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator and Player Tools: an open item card’s badges share one row at the top, with damage or resistances at the left and the cost badge next to them. Keywords and other badges will go there too.</li>
