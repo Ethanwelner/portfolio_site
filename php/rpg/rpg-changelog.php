@@ -11,7 +11,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator and Player Tools: an item card’s count stays centered on its top line when the card opens, instead of moving to the middle of the open card.</li>
 						<li>Character Creator and Player Tools: an open item card’s description is in italics. Its uses and slot stay upright. Mechanics: Example Items’ descriptions are in italics too.</li>
-						<li>Character Creator and Player Tools: opening an item card keeps its top line as it is and adds the cost badge, description and Note under it. Edit, the name and age’s pen in a pale olive circle half outside the card’s right edge and centered top to bottom, shows the fields for the count, name and category, with the count first as on the card’s top line, and Remove, a trash can in a circle under Edit’s. The notes field opens to the right of Note instead of under it.</li>
+						<li>Character Creator and Player Tools: opening an item card keeps its top line as it is and adds the cost badge, description and Note under it. Edit, the name and age’s pen in a pale olive circle half outside the card’s right edge, level with the badges under the top line so it stays put as the card changes, shows the fields for the count, name and category, with the count first as on the card’s top line, and Remove, a trash can in a circle under Edit’s. The notes field opens to the right of Note instead of under it.</li>
 						<li>Character Creator and Player Tools: an open item card’s Equip checkbox starts its first line, in the same place as when the card is closed.</li>
 					</ul>
 				</article>
