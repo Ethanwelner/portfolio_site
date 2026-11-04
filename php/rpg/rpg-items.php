@@ -1,13 +1,9 @@
 <?php require_once __DIR__ . '/items.php'; ?>
-<div class="breakout shadow-diffuse black-bg white-text">
-<?php $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
-<div class="separator"></div>
-<div class="container">
 	<div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 		<div class="flex-14">
 			<h3 class="sub-title mb-3" id="items">Items, Armor, and Effects</h3>
-			<div class="copy stinger white mb-3">Outfitting a Character</div>
+			<div class="copy stinger black mb-3">Outfitting a Character</div>
 		</div>
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 	</div>
@@ -256,6 +252,3 @@
 		</div>
 		<div class="flex-2 d-none d-xl-inline-flex"></div>
 		</div>
-	</div>
-	<div class="separator"></div>
-</div>

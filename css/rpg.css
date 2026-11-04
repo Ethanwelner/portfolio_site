@@ -1107,7 +1107,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* Two-column reference tables in Planar Properties (php/rpg/rpg-planes.php):
+/* Reference tables in Planar Properties (php/rpg/rpg-planes.php) and Incidents (rpg-incidents.php):
    Compatibility, Stability, and Aperture scales. */
 .sf-table {
     width: 100%;
@@ -1130,6 +1130,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     td:first-child {
         white-space: nowrap;
         font-weight: 700;
+    }
+
+    .black-bg & :is(th, td) {
+        border-bottom-color: rgb(255 255 255 / 25%);
     }
 
     tbody tr:last-child td {
