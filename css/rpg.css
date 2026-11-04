@@ -1369,6 +1369,41 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* The Stars: below 1372px the planet sits after the third paragraph instead of
+   hiding. The copy column's paragraphs join the intro's own column so the image
+   can be ordered between them. */
+@media (max-width: 1371px) {
+    .intro-with-image.image-in-copy {
+        flex-direction: column;
+        gap: 0;
+
+        > .single-column-content {
+            display: contents;
+        }
+
+        > .single-column-content > :nth-child(-n+3) {
+            order: -2;
+        }
+
+        > .intro-image {
+            display: flex;
+            order: -1;
+            /* 40px from the text on each side, counting the paragraph above's 1rem */
+            margin: 1.5rem 0 2.5rem;
+
+            img {
+                max-width: 360px;
+            }
+        }
+
+        /* The paragraphs keep the 640px copy width, and the planet centers on them */
+        > .single-column-content > *,
+        > .intro-image {
+            max-width: 640px;
+        }
+    }
+}
+
 /* php/personal/blog.php */
 .blog-posts {
     display: flex;
