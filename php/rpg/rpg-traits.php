@@ -566,6 +566,8 @@
                 <div class="line-container">
                   <h5><strong>Background-Only</strong></h5>
                   <div class="line"></div>
+                </div>
+                <div class="trait-card-grid">
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Long Toothed</span>
@@ -574,8 +576,6 @@
                     <p class="copy effect">An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request Advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</p>
                     <p class="copy muted small">Needs Power 10, Endurance 5, Demeanor 5, Middle Aged or Older</p>
                   </div>
-                </div>
-                <div class="trait-card-grid">
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Sorcerous</span>
