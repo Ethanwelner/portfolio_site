@@ -62,7 +62,7 @@
 						<li>A character with expertise in wielding a sword can request Competence when wielding a dagger, even if they don't have a Trait giving them that skill.</li>
 						<li>Requested Competence can result in a wide range of outcomes, from the character being wholly proficient in the task at hand to even being granted a relevant Trait that gives them that skill permanently.</li>
 						<li>A bard skilled with a guitar and a bass can likely request Competence with a lute, but the GM may consider the violin to be a step too far.</li>
-						<li>Many Traits that grant expertise in a skill also grant implied Competence in related skills.</li>
+						<li>Many Traits that grant expertise in a skill also grant implied Competence in related Skills.</li>
 					</ul>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 					<p class="copy">
 						Skill Check requirements range from -10 to 80, with an explanation of what those values represent below. Higher checks require higher relevant rolls and modifiers to succeed. A check that notes a Stat can have that Stat added to its total. A complex check that notes multiple Stats must roll separately for each Stat. In general, as actions grow more complex or multi-staged, the relevant Skill Checks will require more Stats to be rolled against at once.
 						<br><br>
-						Checks at 0 or below are automatically accomplishable even with no skill, and often despite difficulty modifiers to the check. These would only be checked if there was a realistic chance of failure.
+						Checks at 0 or below are automatically accomplishable even with no skill, and often despite Difficulty Modifiers to the check. These would only be checked if there was a realistic chance of failure.
 					</p>
 					<div class="d-flex nowrap align-items-center">
 						<div class="d-flex flex-2 nowrap">
@@ -83,7 +83,7 @@
 								Breathing (Endurance)
 							</div>
 							<div class="copy">
-								Being at the top of a tall mountain may give you a -20 difficulty modifier to breathing, giving a character with a poor Endurance Stat a 50/50 chance of passing out.
+								Being at the top of a tall mountain may give you a -20 Difficulty Modifier to breathing, giving a character with a poor Endurance Stat a 50/50 chance of passing out.
 							</div>
 						</div>
 					</div>
@@ -96,12 +96,12 @@
 								Reading (Intuition)
 							</div>
 							<div class="copy">
-								If the script is in poor handwriting, it might give the action a -10 difficulty modifier, which gives a character with a poor Intuition Stat a 50/50 chance of not understanding the text.
+								If the script is in poor handwriting, it might give the action a -10 Difficulty Modifier, which gives a character with a poor Intuition Stat a 50/50 chance of not understanding the text.
 							</div>
 						</div>
 					</div>
 					<p>
-						Checks between 1 and 20 are accomplishable by any character as long as there are no difficulty modifiers. There is a wide gap between a check of 1 and one of 20, though, and while having relevant Stats, Equipment, or Traits may make these checks easy or even automatic, a character not fit for the task may find them almost impossible.
+						Checks between 1 and 20 are accomplishable by any character as long as there are no Difficulty Modifiers. There is a wide gap between a check of 1 and one of 20, though, and while having relevant Stats, Equipment, or Traits may make these checks easy or even automatic, a character not fit for the task may find them almost impossible.
 					</p>
 					<div class="d-flex nowrap align-items-center">
 						<div class="d-flex flex-2 nowrap">
@@ -112,7 +112,7 @@
 								Jumping a 6-foot gap (Power)
 							</div>
 							<div class="copy">
-								A character may have an injured leg, giving them a -10 difficulty modifier to the jump.
+								A character may have an injured leg, giving them a -10 Difficulty Modifier to the jump.
 							</div>
 						</div>
 					</div>
