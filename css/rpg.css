@@ -1389,6 +1389,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             display: flex;
             order: -1;
             margin-bottom: 1rem;
+
+            img {
+                max-width: 360px;
+            }
         }
 
         /* The paragraphs keep the 640px copy width, and the planet centers on them */
