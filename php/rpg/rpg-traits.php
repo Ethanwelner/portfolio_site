@@ -72,7 +72,7 @@
           </div>
 
           <div class="tech-field-panel is-active" id="traits-rules" role="tabpanel" aria-labelledby="tab-traits-rules">
-            <div class="trait-panel-grid">
+            <div class="tab-panel-cols">
               <div class="content-stack content-stack-xs">
                 <div class="line-container">
                   <h5><strong>Trait Ranks</strong></h5>
@@ -119,7 +119,7 @@
           <div class="tech-field-panel" id="traits-categories" role="tabpanel" aria-labelledby="tab-traits-categories">
             <div class="content-stack content-stack-sm">
               <p class="copy">Because Traits can take so many different forms, they are subdivided into seven categories. The categories listed below represent the fundamental categories of a Trait. A Trait's category determines how it interacts with characters and the game's systems.</p>
-              <div class="trait-panel-grid">
+              <div class="tab-panel-cols">
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
                     <h5><strong>Knowledges</strong></h5>

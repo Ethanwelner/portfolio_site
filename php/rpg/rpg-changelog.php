@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Skill Checks keeps What is a Skill Check? at the top, with Difficulty Ranges and Advantage and Competence (Requesting Advantage and Requesting Competence side by side) moved into tabs below it.</li>
 						<li>Mechanics: Explaining Traits keeps its overview at the top, with Trait Rules (Trait Ranks, Universal and Background Traits, Starter-only Traits and Conveyed Traits), Trait Categories and Example Traits moved into tabs below it. Each category in Trait Categories ends with one example Trait card.</li>
 						<li>Mechanics: Explaining Stats keeps its overview and stat diagram at the top, with Example Stats, Stat Types and Stat-Based Resources moved into tabs below them.</li>
 						<li>Mechanics: a new Incidents section, between Skill Checks and Items, sets the rules for combat and other tense scenes: Rounds and Priority Order, the basic Actions, Movement, Attacking with hit and miss Severities, Defenses and Defending, Melee and Ranged Attacks with Line of Sight and Cover, Area of Effect and Thrown weapons, Damage, and Role-Playing Actions.</li>

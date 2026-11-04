@@ -1715,9 +1715,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* Explaining Traits' Trait Rules and Trait Categories tabs (php/rpg/rpg-traits.php): each
-   titled entry kept whole, flowing across two columns, one column at 960px and below. */
-.trait-panel-grid {
+/* Tab panels whose entries flow across two columns, each entry kept whole: Explaining
+   Traits' Trait Rules and Trait Categories (php/rpg/rpg-traits.php) and Skill Checks'
+   Difficulty Ranges (rpg-skills.php). One column at 960px and below. */
+.tab-panel-cols {
     column-count: 2;
     column-gap: 40px;
 
