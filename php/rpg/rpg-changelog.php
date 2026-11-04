@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: opening an item card keeps its top line as it is and adds the cost badge, description and Note under it. Edit, a pen under the chevron, shows the fields for the name, count and category, and Remove.</li>
 						<li>Character Creator and Player Tools: an open item card’s Equip checkbox starts its first line, in the same place as when the card is closed.</li>
 					</ul>
 				</article>
