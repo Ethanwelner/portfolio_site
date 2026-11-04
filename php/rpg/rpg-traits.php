@@ -128,6 +128,14 @@
                   <p class="copy">Knowledges are Traits that are usually either gained through in-game RP effort or conferred by Background packages. Background packages automatically grant their Knowledges, along with every other Trait they confer, even if the character doesn’t meet the Stats they’d need to choose those Traits otherwise. Multiple Backgrounds can confer the same Knowledge Trait, but unless otherwise specified, this does not increase the Knowledge's Rank. A Knowledge can be Ranked Up multiple times, but each Rank increase involves a commensurate level of increased time, difficulty, or financial investment. Knowledges and additional Knowledge Ranks can also be conferred by Items, magic, or cybernetics or can be gained temporarily via research, but there are limitations to how these forms of knowledge can be utilized.<br><br>
                     When creating a new character, a player can spend the Universal or Background Traits they would gain from their Level on Knowledge Traits instead. This is to represent additional areas of knowledge the character would have accrued up to that point in their life but that may not be specifically written out in the character's Background packages (such as the character getting a bachelor's in history, allowing them to gain American History (2) as a starting character from the American Empire). It is up to the GM to decide how high a Knowledge Rank can be gained in this way.<br><br>
                     Outside of character creation, Knowledges can only be gained through in-game means, such as a character spending a semester learning history or a character having the layout of a forest magically conveyed to them. It is at the GM's discretion to determine how easy or difficult Knowledges are to attain and where their limitations are.</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>American History (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
+                    </div>
+                    <p class="copy effect">This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</p>
+                    <p class="copy muted small">Needs Memory 3</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -135,6 +143,14 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Languages confer the ability for the learner to speak or read/write in that language. Most Languages will be granted by a character's Background package, but Languages can also be temporarily granted by devices like universal translators or magic amulets. Languages can also be learned in the same fashion as Knowledge Traits. Languages function as both Knowledge and an Ability in that they describe a character's ability to understand and use a language. A Language Trait will typically describe how the character can use that language, such as English (Spoken).</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>English (Spoken) - Language</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Language</span><span class="chip">Knowledge</span></span>
+                    </div>
+                    <p class="copy effect">This character can speak and understand English conversationally.</p>
+                    <p class="copy muted small">Needs Memory 2, Intuition 2</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -142,6 +158,15 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Skill Traits represent a character's ability to perform a specific task or engage in a specific activity without fumbling or failing to even understand the basics. A Skill is like Knowledge in that it is a learned Trait, but unlike Knowledge, Skill Traits can be gained over time through training and effort, even without outside aid. Many Skills are Ranked Traits and represent the additive bonuses conveyed through practice and mastery in a given task. Other Skill Traits represent additional improvements or aspects of mastery that go beyond a simple bonus to a die roll during a Skill Check. Mastery Skill Traits will typically list prerequisite Traits that a character must already possess before they can take the more advanced Trait. Skill Traits can be selected when a character is choosing Level-Up Traits, but it is recommended that the GM only allow them to select Skill Traits they had been learning or utilizing.</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Pilot: Helicopter (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character is capable of piloting helicopters in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a helicopter.</p>
+                    <p class="copy effect">Rank *10 added to Skill Check rolls involving helicopter piloting.</p>
+                    <p class="copy muted small">Needs Memory 5, Intuition 3, Grace 3</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -149,6 +174,14 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Abilities are Traits that confer some sort of ability to a character. This can come in a wide variety of forms, from Natural Flight granting a character the power to fly to Hide in Plain Sight letting them sneak and go undetected even while being observed. Abilities are the most common type of Trait to be conferred by Items or Equipment, as they represent some sort of specific physical or mental feat that a character can perform. Not all Abilities are physical, but most manifest as something other than modifying a Skill Check. Abilities are often innate to a Kind or culture and are automatically conferred by Kind or Origin packages. An Ability Trait will always describe what it does and when it can be used, though it will be at the GM's discretion to determine the boundaries of when an ability can be applicable to a situation.</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Trail Runner - Ability</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</p>
+                    <p class="copy muted small">Needs Power 3, Endurance 2, Grace 2</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -156,6 +189,13 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Circumstance Traits describe a character's relationship with the world around them and will typically list noteworthy or exceptional characteristics. While virtually any description of a character's place in society could be listed as a Trait, Circumstance Traits should be reserved for important or unique aspects of a character. As an example, membership in a thieves’ guild would be listed as a Circumstance Trait, but a Luna-HI frequent shipper account would not.</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Thieves’ Guild Membership</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Circumstance</span></span>
+                    </div>
+                    <p class="copy effect">This character is an official member of a local thieves’ guild.</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -163,6 +203,14 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Condition Traits are Traits that represent some sort of ongoing status. These typically describe an effect a character is experiencing, whether physical or mental. Condition Traits can vary widely in what they represent and will almost always have their effects described in the Trait. These can range from a character having cybernetic arms, granting them a significantly improved Power Stat, to a character being a conduit for the spirits and thus able to see ghosts. Injuries will often be represented as temporary Condition Traits and will describe some sort of negative attribute or incapacity forced onto the character.</p>
+                  <div class="trait-box condition-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Stone Skin</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">(Enchantment)</span><span class="chip">Condition</span></span>
+                    </div>
+                    <p class="copy muted small">Temporary (This Trait lasts a number of minutes equal to the caster's Rank in this Ability)</p>
+                    <p class="copy effect">This character gains Rank *3 Resistance to all Physical Damage Types.</p>
+                  </div>
                 </div>
                 <div class="content-stack content-stack-xs">
                   <div class="line-container">
@@ -170,6 +218,20 @@
                     <div class="line"></div>
                   </div>
                   <p class="copy">Other is a catchall category and represents special Traits that go beyond the norm. Most Other Traits are, in reality, multiple Traits listed at the same time for the sake of convenience. As an example, a character being possessed by a daemon may have that possession listed as an Other Trait, and that Trait's description may detail significant alterations to how that character would otherwise function.</p>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Possessed by a Spirit</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Other</span></span>
+                    </div>
+                    <p class="copy effect">Temporary (lost when the character is no longer possessed)</p>
+                    <p class="copy effect">This character has lost control over their body to a supernatural entity. If this is a player character, then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them.</p>
+                    <p class="copy effect">This character no longer accrues experience.</p>
+                    <p class="copy effect">While under the control of this entity the character's Mental and Social Stats are considered <span class="chip">Mental 8</span> <span class="chip">Logic 8</span> <span class="chip">Intuition 10</span> <span class="chip">Memory 9</span> <span class="chip">Social 7</span> <span class="chip">Empathy 3</span> <span class="chip">Persuasion 9</span> <span class="chip">Demeanor 12</span> for most purposes. Condition Traits that modify these Stats are still in effect unless otherwise stated.</p>
+                    <p class="copy effect">If the character had Traits with minimum Stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored.</p>
+                    <p class="copy effect">The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum Stats required for them.</p>
+                    <p class="copy effect">This character gains the following Temporary Traits and will lose them if they cease to be possessed:</p>
+                    <div class="trait-name-chips justify-content-start"><span class="chip chip-muted">Supernatural</span><span class="chip chip-muted">Spirit Touched</span><span class="chip chip-muted">Telekinesis (1)</span><span class="chip chip-muted">Inured to Pain</span><span class="chip chip-muted">Fearless</span><span class="chip chip-muted">Ghost Sight</span><span class="chip chip-muted">Knowledge: The Supernatural (1)</span></div>
+                  </div>
                 </div>
               </div>
             </div>
