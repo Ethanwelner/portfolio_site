@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>1.2 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
