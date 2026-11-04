@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>1.3 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
@@ -17,10 +17,6 @@
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Epsilon Indi Ab, Epsilon Indi Ac, Epsilon Indi Ad</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

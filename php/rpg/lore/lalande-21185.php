@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>4.8 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
@@ -17,10 +17,6 @@
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Lalande 21185 b, Lalande 21185 c, Lalande 21185 d</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

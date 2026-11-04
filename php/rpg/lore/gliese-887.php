@@ -6,21 +6,17 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>6.9 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
-			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?></dd>
+			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?>, Microstates</dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>GJ 887 b, GJ 887 c, GJ 887 e</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

@@ -723,7 +723,7 @@
 					<p class="copy mb-0">
 						The Earth sits at the center of a fractious human civilization. Six major powers compete for technology, territory, and resources while dozens of smaller powers carve out their own destinies.
 					</p>
-					<?php foreach (['american-empire', 'union-of-texas', 'free-american-states', 'chinese-empire', 'stellar-democratic-union', 'kingdom-of-india', 'centafrica', 'ural-federation', 'lunar-industrial-syndicate', 'kashgar', 'xanthus', 'dreft'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+					<?php foreach (['stellar-democratic-union', 'centafrica', 'chinese-empire', 'kingdom-of-india', 'american-empire', 'lunar-industrial-syndicate', 'ural-federation', 'free-american-states', 'union-of-texas', 'kashgar', 'dreft', 'xanthus'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 				</div>
 			</div>
 

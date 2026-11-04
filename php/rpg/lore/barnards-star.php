@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>9.5 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
@@ -17,10 +17,6 @@
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Barnard b, Barnard c, Barnard d, Barnard e</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

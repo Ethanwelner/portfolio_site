@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>1.1 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
@@ -17,10 +17,6 @@
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>YZ Ceti b, YZ Ceti c, YZ Ceti d</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

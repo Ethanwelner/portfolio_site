@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>2.2 million</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
@@ -17,10 +17,6 @@
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>61 Cygni Ab, 61 Cygni Ac, 61 Cygni Bb</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>

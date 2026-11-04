@@ -6,21 +6,17 @@
 		</div>
 		<div>
 			<dt>Population</dt>
-			<dd></dd>
+			<dd>13 billion</dd>
 		</div>
 		<div>
 			<dt>Nationalities</dt>
-			<dd></dd>
+			<dd><a href="#timeline-nations" class="lore-link" data-tab-open="tab-timeline-nations">See Nations</a></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Confirmed Planets</dt>
 			<dd>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</dd>
-		</div>
-		<div>
-			<dt>Major Industries</dt>
-			<dd></dd>
 		</div>
 		<div>
 			<dt>Locations</dt>
