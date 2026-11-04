@@ -1703,6 +1703,18 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Explaining Stats' Stat Types tab (php/rpg/rpg-stats.php): Physical, Social and Mental
+   side by side, one column at 960px and below. */
+.stat-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px 40px;
+
+    @media (max-width: 960px) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
 /* A section's text flowing across two text columns: tab panels in php/rpg/, the Details of
    plane, nation, ark and technology entries in php/rpg/lore/, and each Exotic Materials entry
    (.lore-text-cols, rpg-planes.php). */

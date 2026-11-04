@@ -107,311 +107,294 @@
 				</svg>
 			</div>
 		</div>
-	</div>
-	<div class="flex-2 d-none d-xl-inline-flex"></div>
-</div>
-<div class="separator"></div>
+		<div class="bumper"></div>
+		<div class="tech-fields tech-fields-light">
+			<div class="tech-field-tab-list" role="tablist" aria-label="Stats">
+				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-stats-example" aria-controls="stats-example" aria-selected="true">Example Stats</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-stats-types" aria-controls="stats-types" aria-selected="false">Stat Types</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-stats-resources" aria-controls="stats-resources" aria-selected="false">Stat-Based Resources</button>
+			</div>
 
-
-
-<div class="d-flex flex-wrap flex-xs-nowrap">
-	<div class="flex-2 d-none d-xl-inline-flex"></div>
-	<div class="flex-14">
-		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-			<div class="flex-7 content-stack">
-				<div class="content-stack content-stack-sm">
-					<!-- example stats -->
-					<h3>Example Stats</h3>
-					<ul class="copy">
-						<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus Stat due to the Unexceptional Trait in the Kind section of their Background.</li>
-						<li>The character below started with 1 in each Stat due to the Human Generalist Trait in the Kind section of their Background.</li>
-						<li>Humans are intended to be the average baseline in this system.</li>
-						<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus Stats.</li>
-						<li>This character has spent only 2 points in Social and 1 in Mental, so their access to Traits that go beyond simple feats of brute strength will be very limited.</li>
-						<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
-						<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, Profession, or Past.</li>
-						<li>This character has oriented their Stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
-						<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
-						<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot Trait) anytime soon.</li>
-					</ul>
+			<div class="tech-field-panel is-active" id="stats-example" role="tabpanel" aria-labelledby="tab-stats-example">
+				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+					<div class="flex-7 content-stack">
+						<ul class="copy">
+							<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus Stat due to the Unexceptional Trait in the Kind section of their Background.</li>
+							<li>The character below started with 1 in each Stat due to the Human Generalist Trait in the Kind section of their Background.</li>
+							<li>Humans are intended to be the average baseline in this system.</li>
+							<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus Stats.</li>
+							<li>This character has spent only 2 points in Social and 1 in Mental, so their access to Traits that go beyond simple feats of brute strength will be very limited.</li>
+							<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
+							<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, Profession, or Past.</li>
+							<li>This character has oriented their Stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
+							<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
+							<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot Trait) anytime soon.</li>
+						</ul>
+					</div>
+					<div class="d-inline-flex flex-6 flex-column">
+						<div class="d-flex flex-gap-48 flex-column stat-panel">
+						<!-- physical stats -->
+						<div class="d-flex flex-column flex-gap-12 stat-group-physical">
+							<div class="d-flex flex-row flex-gap-12 align-items-center">
+								<div class="stat-badge">9</div>
+								<div class="line-container d-flex flex-fill">
+									<h5>Physical</h5>
+									<div class="line"></div>
+								</div>
+							</div>
+							<div class="tiny-text">
+								<strong>Endurance - 11</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Power - 15</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Grace - 4</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+						</div>
+						<!-- social stats -->
+						<div class="d-flex flex-column flex-gap-12 stat-group-social">
+							<div class="d-flex flex-row flex-gap-12 align-items-center">
+								<div class="stat-badge">2</div>
+								<div class="line-container d-flex flex-fill">
+									<h5>Social</h5>
+									<div class="line"></div>
+								</div>
+							</div>
+							<div class="tiny-text">
+								<strong>Empathy - 2</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Persuasion - 3</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Demeanor - 4</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+						</div>
+						<!-- mental stats -->
+						<div class="d-flex flex-column flex-gap-12 stat-group-mental">
+							<div class="d-flex flex-row flex-gap-12 align-items-center">
+								<div class="stat-badge">1</div>
+								<div class="line-container d-flex flex-fill">
+									<h5>Mental</h5>
+									<div class="line"></div>
+								</div>
+							</div>
+							<div class="tiny-text">
+								<strong>Logic - 1</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Intuition - 2</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+							<div class="tiny-text">
+								<strong>Memory - 3</strong>
+							</div>
+							<div class="stat-line">
+								<div class="stat dot default"></div>
+								<div class="stat square filled"></div>
+								<div class="stat dot filled"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square empty"></div>
+								<div class="stat dot empty"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+								<div class="stat dot unavailable"></div>
+								<div class="stat square unavailable"></div>
+							</div>
+						</div>
+						</div>
+					</div>
 				</div>
 			</div>
-				<!-- stat grid -->
-				<!-- In a plain flex-6 column, so the panel's padding doesn't widen it past the ring's column above -->
-				<div class="d-inline-flex flex-6 flex-column">
-					<div class="d-flex flex-gap-48 flex-column stat-panel">
-					<!-- physical stats -->
-					<div class="d-flex flex-column flex-gap-12 stat-group-physical">
-						<div class="d-flex flex-row flex-gap-12 align-items-center">
-							<div class="stat-badge">9</div>
-							<div class="line-container d-flex flex-fill">
-								<h5>Physical</h5>
-								<div class="line"></div>
-							</div>
-						</div>
-						<div class="tiny-text">
-							<strong>Endurance - 11</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Power - 15</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Grace - 4</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-					</div>
-					<!-- social stats -->
-					<div class="d-flex flex-column flex-gap-12 stat-group-social">
-						<div class="d-flex flex-row flex-gap-12 align-items-center">
-							<div class="stat-badge">2</div>
-							<div class="line-container d-flex flex-fill">
-								<h5>Social</h5>
-								<div class="line"></div>
-							</div>
-						</div>
-						<div class="tiny-text">
-							<strong>Empathy - 2</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Persuasion - 3</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Demeanor - 4</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-					</div>
-					<!-- mental stats -->
-					<div class="d-flex flex-column flex-gap-12 stat-group-mental">
-						<div class="d-flex flex-row flex-gap-12 align-items-center">
-							<div class="stat-badge">1</div>
-							<div class="line-container d-flex flex-fill">
-								<h5>Mental</h5>
-								<div class="line"></div>
-							</div>
-						</div>
-						<div class="tiny-text">
-							<strong>Logic - 1</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Intuition - 2</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-						<div class="tiny-text">
-							<strong>Memory - 3</strong>
-						</div>
-						<div class="stat-line">
-							<div class="stat dot default"></div>
-							<div class="stat square filled"></div>
-							<div class="stat dot filled"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square empty"></div>
-							<div class="stat dot empty"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-							<div class="stat dot unavailable"></div>
-							<div class="stat square unavailable"></div>
-						</div>
-					</div>
-					</div>
-				</div>
-		</div>
-	</div>
-	<div class="flex-2 d-none d-xl-inline-flex"></div>
-</div>
-<div class="separator"></div>
 
-
-<div class="d-flex flex-wrap flex-xs-nowrap">
-	<div class="flex-2 d-none d-xl-inline-flex"></div>
-	<div class="flex-14">
-		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-			<div class="flex-7 content-stack">
-				<div class="content-stack content-stack-sm">
-					<!-- stat types -->
-					<h3>Stat Types</h3>
+			<div class="tech-field-panel" id="stats-types" role="tabpanel" aria-labelledby="tab-stats-types">
+				<div class="stat-types-grid">
 					<div class="content-stack content-stack-sm">
 						<h4>Physical</h4>
 						<div class="content-stack content-stack-xs">
@@ -442,139 +425,143 @@
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="content-stack content-stack-sm">
-					<h4>Social</h4>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Empathy</strong></h5>
-							<div class="line"></div>
+					<div class="content-stack content-stack-sm">
+						<h4>Social</h4>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Empathy</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle tics and cues in their body language, or grasping the intent behind orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspiciously. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
+							</p>
 						</div>
-						<p class="copy">
-							Empathy represents the character's ability to interpret others, be it understanding their emotional state, picking up on subtle tics and cues in their body language, or grasping the intent behind orders. A high Empathy means the character can read others like a book, understand their thoughts and desires, and quickly ascertain if someone is acting suspiciously. An empathetic character can't inherently convince others to see their point of view, but they can quickly understand what makes someone tick.
-						</p>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Persuasion</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Persuasion represents the character's ability to convince others, be it through a well-structured argument, stirring rhetoric, or simple force of personality. A high Persuasion means the character can get the better of negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
+							</p>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Demeanor</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Demeanor represents the character's control of their own vibe, be it keeping cool under fire, commanding a room, or fading into a crowd. A high Demeanor means that a character can seem trustworthy at a glance, can look poised for the camera, and can inspire confidence in their troops. A high Demeanor doesn't mean a character inherently understands or can control others, but looking the part and not cracking under pressure can go a long way.
+							</p>
+						</div>
 					</div>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Persuasion</strong></h5>
-							<div class="line"></div>
+					<div class="content-stack content-stack-sm">
+						<h4>Mental</h4>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Logic</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Logic represents the character's ability to work through problems in a systematic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems, even in difficult situations. A logical character isn't inherently quick-witted, but given time they can reason their way through almost anything.
+							</p>
 						</div>
-						<p class="copy">
-							Persuasion represents the character's ability to convince others, be it through a well-structured argument, stirring rhetoric, or simple force of personality. A high Persuasion means the character can get the better of negotiations, convince others of a lie, or command loyalty in their troops. Persuasion doesn't make someone likable or respected, but they can get their way despite that.
-						</p>
-					</div>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Demeanor</strong></h5>
-							<div class="line"></div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Intuition</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Intuition represents the character's ability to read a situation without all the facts. A high Intuition means a character can make the leaps in logic needed to get through a challenge quickly and naturally, be it estimating how long the rations will last, reading their opponent's movements for a perfect parry, or figuring out the missing ingredient in a potion. A high Intuition doesn't mean a character knows or understands the situation, but it can give them an edge regardless.
+							</p>
 						</div>
-						<p class="copy">
-							Demeanor represents the character's control of their own vibe, be it keeping cool under fire, commanding a room, or fading into a crowd. A high Demeanor means that a character can seem trustworthy at a glance, can look poised for the camera, and can inspire confidence in their troops. A high Demeanor doesn't mean a character inherently understands or can control others, but looking the part and not cracking under pressure can go a long way.
-						</p>
-					</div>
-				</div>
-				<div class="content-stack content-stack-sm">
-					<h4>Mental</h4>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Logic</strong></h5>
-							<div class="line"></div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Memory</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Memory represents the character's ability to store and recall information. A high Memory means a character can remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
+							</p>
 						</div>
-						<p class="copy">
-							Logic represents the character's ability to work through problems in a systematic and rational manner, be it solving a complex math equation, understanding what a few footprints and broken branches mean, or counting their bullets in a firefight. A high Logic means a character can think abstractly and systematically to figure out complex problems, even in difficult situations. A logical character isn't inherently quick-witted, but given time they can reason their way through almost anything.
-						</p>
-					</div>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Intuition</strong></h5>
-							<div class="line"></div>
-						</div>
-						<p class="copy">
-							Intuition represents the character's ability to read a situation without all the facts. A high Intuition means a character can make the leaps in logic needed to get through a challenge quickly and naturally, be it estimating how long the rations will last, reading their opponent's movements for a perfect parry, or figuring out the missing ingredient in a potion. A high Intuition doesn't mean a character knows or understands the situation, but it can give them an edge regardless.
-						</p>
-					</div>
-					<div class="content-stack content-stack-xs">
-						<div class="line-container">
-							<h5><strong>Memory</strong></h5>
-							<div class="line"></div>
-						</div>
-						<p class="copy">
-							Memory represents the character's ability to store and recall information. A high Memory means a character can remember an obscure fact they learned in school, recall a suspicious face that walked by them at lunch, or recite a prayer without error. Memory doesn't help someone put together the facts in their head but is the starting point for many mental tasks.
-						</p>
 					</div>
 				</div>
 			</div>
-			<div class="flex-6 content-stack">
-				<div class="content-stack content-stack-sm">
-					<h3>Stat-Based Resources</h3>
-					<div class="content-stack content-stack-sm">
-						<h4>Health and Hit Points (HP)</h4>
-						<p class="copy">
-							Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
-						</p>
-						<p class="copy">
-							HP are calculated as 10 plus one for each point a character has in their Physical focus Stats. A max-Level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
-						</p>
-						<p class="copy">
-							As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
-						</p>
-						<p class="copy">
-							At their most resilient, a maxed-out Human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparable systems like D&D sit at around a 20x multiplier. This system, however, does not have the same steeply increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple Leveling.
-						</p>
-						<ul class="copy">
-							<li><strong>Healthy - Conveyed - Condition</strong><br>
-							Temporary (A character or object gains this Trait while they are at their maximum HP total)<br>
-							This Trait has no effect on its own.</li>
-							<li><strong>Injured - Conveyed - Condition</strong><br>
-							Temporary (A character gains this Trait while they are below their maximum HP total)<br>
-							This Trait has no effect on its own.</li>
-							<li><strong>Severely Injured - Conveyed - Condition</strong><br>
-							Temporary (A character gains this Trait while they are below half their maximum HP total)<br>
-							This Trait has no effect on its own.</li>
-							<li><strong>Incapacitated - Conveyed - Condition</strong><br>
-							Temporary (A character gains this Trait while they are below a quarter of their maximum HP total)<br>
-							This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
-							<li><strong>Dead - Conveyed - Condition</strong><br>
-							Temporary (A character gains this Trait if they are at 0 or less HP)<br>
-							This character is dead and cannot perform voluntary actions.<br>
-							This character cannot be healed by any means unless otherwise stated.</li>
-							<li><strong>Damaged - Conveyed - Condition</strong><br>
-							Temporary (An object gains this Trait if it is below its maximum HP total)<br>
-							This Trait has no effect on its own.</li>
-							<li><strong>Destroyed - Conveyed - Condition</strong><br>
-							Temporary (An object gains this Trait if it is at 0 or less HP)<br>
-							This object has been destroyed and no longer functions in any intended capacity.<br>
-							This object cannot be repaired by any means unless otherwise stated.</li>
-						</ul>
+
+			<div class="tech-field-panel" id="stats-resources" role="tabpanel" aria-labelledby="tab-stats-resources">
+				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+					<div class="flex-7 content-stack">
+						<div class="content-stack content-stack-sm">
+							<h4>Health and Hit Points (HP)</h4>
+							<p class="copy">
+								Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
+							</p>
+							<p class="copy">
+								HP are calculated as 10 plus one for each point a character has in their Physical focus Stats. A max-Level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
+							</p>
+							<p class="copy">
+								As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
+							</p>
+							<p class="copy">
+								At their most resilient, a maxed-out Human character can sustain roughly 4 times the damage of a starting character before being incapacitated. While that may sound like a lot, it's actually rather low. Comparable systems like D&D sit at around a 20x multiplier. This system, however, does not have the same steeply increasing numeric values as more combat-oriented systems and contains numerous ways to increase HP outside of simple Leveling.
+							</p>
+							<ul class="copy">
+								<li><strong>Healthy - Conveyed - Condition</strong><br>
+								Temporary (A character or object gains this Trait while they are at their maximum HP total)<br>
+								This Trait has no effect on its own.</li>
+								<li><strong>Injured - Conveyed - Condition</strong><br>
+								Temporary (A character gains this Trait while they are below their maximum HP total)<br>
+								This Trait has no effect on its own.</li>
+								<li><strong>Severely Injured - Conveyed - Condition</strong><br>
+								Temporary (A character gains this Trait while they are below half their maximum HP total)<br>
+								This Trait has no effect on its own.</li>
+								<li><strong>Incapacitated - Conveyed - Condition</strong><br>
+								Temporary (A character gains this Trait while they are below a quarter of their maximum HP total)<br>
+								This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
+								<li><strong>Dead - Conveyed - Condition</strong><br>
+								Temporary (A character gains this Trait if they are at 0 or less HP)<br>
+								This character is dead and cannot perform voluntary actions.<br>
+								This character cannot be healed by any means unless otherwise stated.</li>
+								<li><strong>Damaged - Conveyed - Condition</strong><br>
+								Temporary (An object gains this Trait if it is below its maximum HP total)<br>
+								This Trait has no effect on its own.</li>
+								<li><strong>Destroyed - Conveyed - Condition</strong><br>
+								Temporary (An object gains this Trait if it is at 0 or less HP)<br>
+								This object has been destroyed and no longer functions in any intended capacity.<br>
+								This object cannot be repaired by any means unless otherwise stated.</li>
+							</ul>
+						</div>
 					</div>
-					<div class="content-stack content-stack-sm">
-						<h4>Vibe Points (VP)</h4>
-						<p class="copy">
-							VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus Stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
-						</p>
-						<p class="copy">VP can be spent on:</p>
-						<ul class="copy">
-							<li>Rerolling a single die in a socially related Skill Check (such as to try again when lying to a guard about your motives)</li>
-							<li>Asking the GM to improve the results of a socially related Skill Check (such as getting a better price in a negotiation over a new car).</li>
-							<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
-						</ul>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<h4>Savvy Points (SP)</h4>
-						<p class="copy">
-							SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
-						</p>
-						<ul class="copy">
-							<li>Rerolling a single die in a mentally related Skill Check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
-							<li>Requesting Competence or Advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
-							<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
-						</ul>
-					</div>
-					<div class="content-stack content-stack-sm">
-						<h4>Mana Points (MP)</h4>
-						<p class="copy">
-							MP are a spendable resource like VP and SP, but they come from the Magic core Stat instead of focus Stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
-						</p>
+					<div class="flex-6 content-stack">
+						<div class="content-stack content-stack-sm">
+							<h4>Vibe Points (VP)</h4>
+							<p class="copy">
+								VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus Stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
+							</p>
+							<p class="copy">VP can be spent on:</p>
+							<ul class="copy">
+								<li>Rerolling a single die in a socially related Skill Check (such as to try again when lying to a guard about your motives)</li>
+								<li>Asking the GM to improve the results of a socially related Skill Check (such as getting a better price in a negotiation over a new car).</li>
+								<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
+							</ul>
+						</div>
+						<div class="content-stack content-stack-sm">
+							<h4>Savvy Points (SP)</h4>
+							<p class="copy">
+								SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
+							</p>
+							<ul class="copy">
+								<li>Rerolling a single die in a mentally related Skill Check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
+								<li>Requesting Competence or Advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
+								<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
+							</ul>
+						</div>
+						<div class="content-stack content-stack-sm">
+							<h4>Mana Points (MP)</h4>
+							<p class="copy">
+								MP are a spendable resource like VP and SP, but they come from the Magic core Stat instead of focus Stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

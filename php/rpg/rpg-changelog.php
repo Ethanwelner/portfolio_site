@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Explaining Stats keeps its overview and stat diagram at the top, with Example Stats, Stat Types and Stat-Based Resources moved into tabs below them.</li>
 						<li>Mechanics: a new Incidents section, between Skill Checks and Items, sets the rules for combat and other tense scenes: Rounds and Priority Order, the basic Actions, Movement, Attacking with hit and miss Severities, Defenses and Defending, Melee and Ranged Attacks with Line of Sight and Cover, Area of Effect and Thrown weapons, Damage, and Role-Playing Actions.</li>
 						<li>Mechanics: the Sample Character Sheet shows Edwin’s Movement, 10 m, beside his HP, VP and SP.</li>
 						<li>The Setting’s Nations tab lists the nations from largest population to smallest, starting with the Stellar Democratic Union.</li>
