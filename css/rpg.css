@@ -1263,6 +1263,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     flex-direction: column;
 }
 
+/* A panel that ends on a dark section (Mechanics, with the Sample Character Sheet)
+   drops its white bottom padding, so the dark section meets the footer. */
+.rpg-panel:has(> .container > .breakout:last-child) {
+    padding-bottom: 0;
+}
+
 /* Setting and Mechanics sections in personal.php */
 #rpg-setting.section.unlimited {
     padding-bottom: 0;
