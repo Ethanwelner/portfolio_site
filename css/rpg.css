@@ -648,13 +648,20 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     margin-left: calc(-1 * var(--tech-fields-inset) - 1px);
     margin-right: calc(-1 * var(--tech-fields-inset) - 1px);
     padding: 0 var(--tech-fields-inset) 36px;
-    border: 1px solid var(--portfolio-white);
+    border: 1px solid #969696;
     border-radius: 10px;
     overflow: hidden;
 
     /* Phones have a narrower page gutter: a smaller inset keeps the side borders on screen */
     @media (max-width: 767px) {
         --tech-fields-inset: 12px;
+    }
+
+    /* The Character Creator and Player Tools (.sf-creator) keep their boxes inside
+       their containers, like Player Tools' level up Stats inside the character box */
+    .sf-creator & {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -691,10 +698,6 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
 .tech-field-tab.is-active {
     background: var(--portfolio-white);
     color: var(--portfolio-black);
-}
-
-.tech-fields-light {
-    border-color: var(--portfolio-black);
 }
 
 .tech-fields-light .tech-field-tab.is-active {
