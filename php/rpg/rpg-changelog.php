@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Setting: beside its placeholder image, intro copy takes half the row, up to 768px, so the image gets the other half.</li>
 						<li>Setting: the placeholder images beside intro copy are no taller than 2:3 and sit centered beside the copy.</li>
 						<li>Setting: the intro copy beside the placeholder images (Setting, Rebirth of Science, The Planes, The Stars, Parabiology) is 768px wide, like the rest of the single-column copy, up from 640px. The images show beside it from 1500px wide, so they’re smaller.</li>
 						<li>Mechanics: the Sample Character Sheet’s notes on creating a character and the backgrounds Edwin uses are now Musings and Backgrounds tabs above the sheet.</li>

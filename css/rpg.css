@@ -1316,9 +1316,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 /* Intro copy columns (Setting, Rebirth of Science, The Planes, The Stars, Parabiology)
-   with a placeholder image beside it. The copy column is 768px, like the other
-   single-column copy, so the image shows from 1500px up, where it gets at least
-   ~260px. */
+   with a placeholder image beside it. The copy column is up to 768px, like the
+   other single-column copy, and the image shows beside it from 1500px up, where
+   the copy takes half the row. */
 .intro-with-image {
     container-type: inline-size;
     display: flex;
@@ -1352,7 +1352,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 /* Beside intro copy, the placeholder is a clear column as tall as the copy,
    and its gray box sits centered in it, no taller than 2:3. Its width is what's
-   left of the row (the container) after the copy and the gap. */
+   left of the row (the container) after the copy (half the row, up to 768px)
+   and the gap. */
 .intro-with-image > .image-placeholder {
     position: relative;
     isolation: isolate;
@@ -1363,7 +1364,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         position: absolute;
         inset: 0;
         z-index: -1;
-        height: min(100%, (100cqi - 768px - 40px) * 1.5);
+        height: min(100%, (100cqi - min(50cqi, 768px) - 40px) * 1.5);
         margin: auto 0;
         background-color: var(--portfolio-light-gray);
         border-radius: inherit;
@@ -1402,6 +1403,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .intro-with-image > .image-placeholder,
     .intro-with-image > .intro-image {
         display: flex;
+    }
+
+    /* Beside its image, the copy takes half the row, up to 768px */
+    .intro-with-image > .single-column-content {
+        flex-basis: 50%;
     }
 }
 
