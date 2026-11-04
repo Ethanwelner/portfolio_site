@@ -1634,6 +1634,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     > .lore-entry > .lore-body {
         display: contents;
     }
+
+    /* A closed Details box keeps its own height when its neighbor opens */
+    .lore-details {
+        align-self: start;
+    }
 }
 
 /* Two-column content rows in Strange Frontiers, php/rpg/ and php/rpg/lore/ */
