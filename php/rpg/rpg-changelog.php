@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Setting: the intro copy beside the placeholder images (Setting, Rebirth of Science, The Planes, The Stars, Parabiology) is 768px wide, like the rest of the single-column copy, up from 640px. The images show beside it from 1500px wide, so they’re smaller.</li>
 						<li>Mechanics: the Sample Character Sheet’s notes on creating a character and the backgrounds Edwin uses are now Musings and Backgrounds tabs above the sheet.</li>
 						<li>Mechanics: Items, Armor, and Effects opens with What is an Item?, now headed Items, with Item Rules (Exclusivity, Uses, and Damage, Condition, and Destruction), Item Types, Armor and Damage Types, and Example Items moved into tabs below it.</li>
 						<li>Mechanics: Incidents keeps What is an Incident? and Actions at the top, with Priority Order and Movement, Attacking and Damage, Defense and Cover, and Role-Playing Actions moved into tabs below them. The Defenses and Defending link in Attacking opens its tab.</li>
