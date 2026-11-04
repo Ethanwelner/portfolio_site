@@ -97,7 +97,7 @@ strong .mechanic-text {
    the item cards on the creator's sheet and in Player Tools: the Traits'
    black with a warm olive edge, a line with the name, its damage or
    resistances in one dark olive badge of icons and numbers, the category as
-   a dark olive chip, the plane a muted one and the value as a badge at the
+   a dark olive chip, the plane another and the value as a badge at the
    right, then the description under it, muted like the sheet's item notes */
 .equipment-box {
     width: 100%;
@@ -193,14 +193,29 @@ strong .mechanic-text {
         white-space: nowrap;
     }
 
-    .chip-muted {
-        background-color: transparent;
-        color: var(--panel-soft, #b3b3b3);
-    }
-
     /* The value, a badge like the creator's cost badge */
     .chip.equipment-value {
         text-align: center;
+    }
+}
+
+/* Resists: a shield at the left of an item's resistances badge, in a
+   circle of the checkbox's pale olive with a dark olive icon, like the
+   creator's */
+.resist-shield {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 1.5em;
+    height: 1.5em;
+    margin: -2px -4px;
+    background-color: #b5ae86;
+    border-radius: 50%;
+
+    svg {
+        width: .85em;
+        height: .85em;
+        fill: #25241e;
     }
 }
 

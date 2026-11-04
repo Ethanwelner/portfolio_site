@@ -34,12 +34,18 @@ function sf_damage_icon($type) {
 	return '<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="' . $type . '" focusable="false"><title>' . $type . '</title><path d="' . $paths[$type] . '"/></svg>';
 }
 
+// Resistances' shield (Font Awesome Pro's solid shield) in a pale olive circle
+function sf_resist_shield() {
+	return '<span class="resist-shield"><svg viewBox="0 0 512 512" role="img" aria-label="Resists" focusable="false"><title>Resists</title><path d="M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z"/></svg></span>';
+}
+
 // "6 Slashing / 4 Piercing" or "1 Blunt, 3 Slashing" as one badge of icons and
 // numbers, with "or" between a choice's options, like the creator's item cards.
 // A note on one entry, like a voidsuit's Blunt (decompression), stays with it.
 function sf_item_stats($label, $text) {
 	$options = preg_split('~\s*/\s*(?=\d)~', $text);
-	$html = '<span class="equipment-stats"><span class="equipment-stat-label">' . $label . '</span><span class="chip equipment-stat">';
+	// Resists starts its badge with a shield instead of a label
+	$html = '<span class="equipment-stats">' . ($label === 'Resists' ? '<span class="chip equipment-stat">' . sf_resist_shield() : '<span class="equipment-stat-label">' . $label . '</span><span class="chip equipment-stat">');
 	foreach ($options as $i => $option) {
 		if ($i > 0) {
 			$html .= '<span class="equipment-stat-or">or</span>';
@@ -68,7 +74,7 @@ function sf_equipment_card($name, $category, $plane, $description, $value, $curr
 	}
 	echo '<span class="equipment-chips">';
 	echo '<span class="chip">' . htmlspecialchars($category) . '</span>';
-	echo '<span class="chip chip-muted">' . htmlspecialchars($plane) . '</span>';
+	echo '<span class="chip">' . htmlspecialchars($plane) . '</span>';
 	echo '<span class="chip equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value($value) . ' ' . $currency . '</span>';
 	echo '</span>';
 	echo '</div>';
