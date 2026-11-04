@@ -25,10 +25,14 @@ $sf_e = function ( $text ) {
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-			<div class="flex-7 content-stack">
-				<div class="content-stack content-stack-sm">
-					<h3>Musings on the process for creating a character</h3>
+		<div class="tech-fields">
+			<div class="tech-field-tab-list" role="tablist" aria-label="Sample Character Sheet">
+				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-character-musings" aria-controls="character-musings" aria-selected="true">Musings</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-character-backgrounds" aria-controls="character-backgrounds" aria-selected="false">Backgrounds</button>
+			</div>
+
+			<div class="tech-field-panel is-active" id="character-musings" role="tabpanel" aria-labelledby="tab-character-musings">
+				<div class="text-cols">
 					<ul class="copy">
 						<li>Character Level is tracked separately from focus Stats.</li>
 						<li>Core Stats are listed as a single number docked to their focus Stat lines.</li>
@@ -47,9 +51,9 @@ $sf_e = function ( $text ) {
 					</ul>
 				</div>
 			</div>
-			<div class="flex-6 content-stack">
-				<div class="content-stack content-stack-sm">
-					<h3>Backgrounds used in the sample character sheet</h3>
+
+			<div class="tech-field-panel" id="character-backgrounds" role="tabpanel" aria-labelledby="tab-character-backgrounds">
+				<div class="tab-panel-cols">
 					<?php foreach ( $sf_sample['background'] as $b ) : ?>
 						<div class="content-stack content-stack-sm">
 							<div class="line-container">
