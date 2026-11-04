@@ -159,8 +159,7 @@ strong .mechanic-text {
         }
     }
 
-    .equipment-stat-or,
-    .equipment-stat-where {
+    .equipment-stat-or {
         color: #a29d82;
         font-weight: 400;
     }
@@ -204,7 +203,7 @@ strong .mechanic-text {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
-    border-radius: 999px 4px 4px 999px;
+    border-radius: calc((1lh + 6.4px + 2px) / 2) 4px 4px calc((1lh + 6.4px + 2px) / 2);
 }
 
 .item-stat-lead {
@@ -218,8 +217,8 @@ strong .mechanic-text {
     border-radius: 50%;
 
     svg {
-        width: .85em;
-        height: .85em;
+        width: 1rem;
+        height: 1rem;
         fill: #25241e;
     }
 }
@@ -2472,18 +2471,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
-        /* Its resistances: a soft label, one badge of icons and numbers,
-           and where they apply */
+        /* Its resistances: one badge of icons and numbers, led by a shield */
         .sheet-item-stats {
             display: inline-flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 6px;
-        }
-
-        .sheet-item-stat-label {
-            color: var(--panel-soft);
-            font-size: .8125rem;
         }
 
         .chip.sheet-item-stat {
@@ -2495,7 +2488,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         /* With its lead circle, rounded on the left and flush with it */
         .chip.sheet-item-stat:has(> .item-stat-lead) {
             padding: 0 8px 0 0;
-            border-radius: 999px 4px 4px 999px;
+            border-radius: calc((1lh + 6.4px + 2px) / 2) 4px 4px calc((1lh + 6.4px + 2px) / 2);
         }
 
         .sheet-item-stat-value {

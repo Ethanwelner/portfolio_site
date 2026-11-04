@@ -49,7 +49,8 @@ function sf_item_stat_lead($icon) {
 
 // "6 Slashing / 4 Piercing" or "1 Blunt, 3 Slashing" as one badge of icons and
 // numbers, with "or" between a choice's options, like the creator's item cards.
-// A note on one entry, like a voidsuit's Blunt (decompression), stays with it.
+// A note on one entry, like a voidsuit's Blunt (decompression), is left to
+// the item's description.
 // The badge starts with $lead's circle: bow-arrow, sword or shield.
 function sf_item_stats($lead, $text) {
 	$options = preg_split('~\s*/\s*(?=\d)~', $text);
@@ -60,7 +61,7 @@ function sf_item_stats($lead, $text) {
 		}
 		foreach (explode(',', $option) as $part) {
 			if (preg_match('~^\s*(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?\s*$~', $part, $m)) {
-				$html .= '<span class="equipment-stat-value">' . sf_damage_icon($m[2]) . $m[1] . (isset($m[3]) && $m[3] !== '' ? ' <span class="equipment-stat-where">(' . htmlspecialchars($m[3]) . ')</span>' : '') . '</span>';
+				$html .= '<span class="equipment-stat-value">' . sf_damage_icon($m[2]) . $m[1] . '</span>';
 			}
 		}
 	}
