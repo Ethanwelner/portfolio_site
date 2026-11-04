@@ -60,6 +60,7 @@ function sf_lore_titles() {
 		'new-york' => 'New York',
 		'zhulong' => 'Zhulong (The Torch Dragon)',
 		'antiliuna' => 'Antiliuna',
+		'sol-system' => 'Sol System',
 		'alpha-centauri' => 'Alpha Centauri (Proxima Centauri)',
 		'barnards-star' => 'Barnard’s Star',
 		'wolf-359' => 'Wolf 359',

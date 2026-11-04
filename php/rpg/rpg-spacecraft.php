@@ -235,7 +235,7 @@
 
 					<div class="tech-field-panel" id="craft-systems" role="tabpanel" aria-labelledby="tab-craft-systems">
 						<div class="content-stack lore-grid">
-							<?php foreach (['alpha-centauri', 'barnards-star', 'wolf-359', 'lalande-21185', 'epsilon-eridani', 'gliese-887', 'lacaille-9352', '61-cygni', 'tau-ceti', 'gliese-1061', 'epsilon-indi', 'yz-ceti'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+							<?php foreach (['sol-system', 'alpha-centauri', 'barnards-star', 'wolf-359', 'lalande-21185', 'epsilon-eridani', 'gliese-887', 'lacaille-9352', '61-cygni', 'tau-ceti', 'gliese-1061', 'epsilon-indi', 'yz-ceti'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
 						</div>
 					</div>
 

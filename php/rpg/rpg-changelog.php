@@ -10,7 +10,7 @@
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The Stars: Water Gates joins the Technology tab under Fuel Gates, as a placeholder for now.</li>
-						<li>The Stars: most star systems now list the nations present there, and each system’s Confirmed Planets is a plain list of planet names.</li>
+						<li>The Stars: most star systems now list the nations present there, and each system’s Confirmed Planets is a plain list of planet names. The Sol System heads the list.</li>
 						<li>The Stars: the Systems tab lists twelve nearby star systems, from Alpha Centauri to YZ Ceti, each with its distance in light-years and its known planets. The rest of each entry is a placeholder for now.</li>
 						<li>Character Creator and Player Tools: an item card’s count stays centered on its top line when the card opens, instead of moving to the middle of the open card.</li>
 						<li>Character Creator and Player Tools: an open item card’s description is in italics. Its uses and slot stay upright. Mechanics: Example Items’ descriptions are in italics too.</li>
