@@ -1,6 +1,10 @@
 <div class="info-cols">
 	<dl class="copy flex-1 attr-list">
 		<div>
+			<dt>Distance</dt>
+			<dd>4.25 light-years</dd>
+		</div>
+		<div>
 			<dt>Population</dt>
 			<dd></dd>
 		</div>
@@ -10,6 +14,10 @@
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
+		<div>
+			<dt>Confirmed Planets</dt>
+			<dd>3 (Proxima b, Proxima d, and Proxima c)</dd>
+		</div>
 		<div>
 			<dt>Major Industries</dt>
 			<dd></dd>
