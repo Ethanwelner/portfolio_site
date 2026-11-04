@@ -14,7 +14,7 @@
 		<div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
 			<div class="flex-2 d-none d-xl-inline-flex"></div>
 			<div class="flex-14">
-				<div class="intro-with-image">
+				<div class="intro-with-image image-in-copy">
 					<div class="single-column-content">
 						<p class="copy">
 							Once the stuff of lofty dreams and science fiction, space travel in 2230 is an everyday affair. Over-built and heavily armored bulk <?php echo sf_lore_link('freighters', 'freighters'); ?> manned by skeleton crews lazily ply the aetheric sea, their cavernous cargo holds carrying the basic goods required to keep civilization running. Sleek personal <?php echo sf_lore_link('yachts', 'yachts'); ?> rocket between stations, delivering the elite in style. Vast <?php echo sf_lore_link('arks', 'Arks'); ?> transport ships and passengers between the stars, acting as much as drifting nations as they do ships in their own right. Between them, small <?php echo sf_lore_link('shuttles', 'shuttles'); ?> move millions from ship to shore.
