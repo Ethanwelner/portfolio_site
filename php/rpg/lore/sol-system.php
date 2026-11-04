@@ -10,7 +10,7 @@
 		</div>
 		<div>
 			<dt>Nationalities</dt>
-			<dd></dd>
+			<dd><a href="#timeline-nations" class="lore-link" data-tab-open="tab-timeline-nations">See Nations</a></dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">

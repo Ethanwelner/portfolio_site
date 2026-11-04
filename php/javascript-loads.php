@@ -536,6 +536,22 @@
 			}
 		});
 
+		// Links that open a tab in a tab box elsewhere on the page, such as the
+		// Sol System's "See Nations": switch to the tab and scroll its box into view
+		$( document ).on( "click", "[data-tab-open]", function( event ) {
+			var $tab = $( "#" + $( this ).attr( "data-tab-open" ) );
+			if ( ! $tab.length ) {
+				return;
+			}
+			event.preventDefault();
+			loreModalReturnFocus = null;
+			closeLoreModal();
+			activateTechFieldTab( $tab );
+			var fields = $tab.closest( ".tech-fields" )[0];
+			window.scrollTo( { top: Math.max( 0, window.scrollY + fields.getBoundingClientRect().top ) } );
+			$tab.trigger( "focus" );
+		});
+
 		$loreModalClose.on( "click", closeLoreModal );
 
 		$loreModal.on( "click", function( event ) {
