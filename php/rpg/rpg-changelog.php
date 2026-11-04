@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: an open item card’s description is in italics. Its uses and slot stay upright.</li>
 						<li>Character Creator and Player Tools: opening an item card keeps its top line as it is and adds the cost badge, description and Note under it. Edit, with the same pen as the name and age, sits under the chevron and shows the fields for the name, count and category, and Remove. The notes field opens to the right of Note instead of under it.</li>
 						<li>Character Creator and Player Tools: an open item card’s Equip checkbox starts its first line, in the same place as when the card is closed.</li>
 					</ul>
