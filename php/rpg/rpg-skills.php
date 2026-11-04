@@ -10,8 +10,8 @@
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-			<div class="flex-7 content-stack">
+		<div class="intro-with-image">
+			<div class="single-column-content content-stack">
 				<div class="content-stack content-stack-sm">
 					<h3>What is a Skill Check?</h3>
 					<p class="copy">
@@ -26,10 +26,6 @@
 						Ex. A character may have to take a fear (Demeanor) Skill Check to avoid cowering at the sight of a dragon.
 						<br><br>
 					</p>
-				</div>
-			</div>
-			<div class="flex-6 content-stack">
-				<div class="content-stack content-stack-sm">
 					<ul class="copy">
 						<li>Skill Check results are rolled on a d20. The result of this roll is then modified by all Roll Modifiers and compared against a target value. If the Skill Check meets or exceeds the value, it "succeeds." If the roll falls below the value, it "fails."</li>
 						<li>Most Skill Checks will reference a focus Stat. When a Skill Check references a Stat, you add the character's Stat value to the total.</li>
@@ -48,6 +44,7 @@
 					</ul>
 				</div>
 			</div>
+			<div class="image-placeholder" aria-hidden="true">Image</div>
 		</div>
 		<div class="bumper"></div>
 		<div class="tech-fields tech-fields-light">

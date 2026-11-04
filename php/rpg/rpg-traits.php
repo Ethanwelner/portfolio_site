@@ -14,8 +14,8 @@
     <div class="d-flex flex-wrap flex-xs-nowrap">
       <div class="flex-2 d-none d-xl-inline-flex"></div>
       <div class="flex-14">
-        <div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-          <div class="flex-7 content-stack">
+        <div class="intro-with-image">
+          <div class="single-column-content content-stack">
             <div class="content-stack content-stack-sm">
               <h3>Traits</h3>
               <p class="copy">
@@ -38,10 +38,6 @@
                 They are gained through in-game actions or occurrences.
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="flex-6 content-stack">
-            <div class="content-stack content-stack-sm">
               <p class="copy">Temporary Traits can be granted through Equipment or can be based on temporary circumstances, such as an injury sustained or short-term fame gained from a notorious act. Temporary Traits should have the time or circumstance of their ending in their description.</p>
               <ul class="copy">
                 <li>Traits are self-contained pieces of information assigned to a character or object with specific requirements and effects.</li>
@@ -62,6 +58,7 @@
               </ul>
             </div>
           </div>
+          <div class="image-placeholder" aria-hidden="true">Image</div>
         </div>
         <div class="bumper"></div>
         <div class="tech-fields">

@@ -14,8 +14,8 @@
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-			<div class="flex-7 content-stack">
+		<div class="intro-with-image">
+			<div class="single-column-content content-stack">
 				<div class="content-stack content-stack-sm">
 					<h3>What is an Incident?</h3>
 					<p class="copy">
@@ -26,8 +26,6 @@
 						An Incident ends when the GM declares it so, at which point the flow of time returns to normal role-playing cadence and the characters’ acts no longer need to conform to Incident Action rules.
 					</p>
 				</div>
-			</div>
-			<div class="flex-6 content-stack">
 				<div class="content-stack content-stack-sm">
 					<h3>Actions</h3>
 					<p class="copy">
@@ -60,6 +58,7 @@
 					<p class="copy">These will be explained in the following sections.</p>
 				</div>
 			</div>
+			<div class="image-placeholder" aria-hidden="true">Image</div>
 		</div>
 		<div class="bumper"></div>
 		<div class="tech-fields">
