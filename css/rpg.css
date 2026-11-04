@@ -1320,6 +1320,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    single-column copy, so the image shows from 1500px up, where it gets at least
    ~260px. */
 .intro-with-image {
+    container-type: inline-size;
     display: flex;
     gap: 40px;
 
@@ -1347,6 +1348,30 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         background-color: var(--portfolio-gray);
         color: var(--portfolio-white);
     }
+}
+
+/* Beside intro copy, the placeholder is a clear column as tall as the copy,
+   and its gray box sits centered in it, no taller than 2:3. Its width is what's
+   left of the row (the container) after the copy and the gap. */
+.intro-with-image > .image-placeholder {
+    position: relative;
+    isolation: isolate;
+    background: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        height: min(100%, (100cqi - 768px - 40px) * 1.5);
+        margin: auto 0;
+        background-color: var(--portfolio-light-gray);
+        border-radius: inherit;
+    }
+}
+
+.black-bg .intro-with-image > .image-placeholder::before {
+    background-color: var(--portfolio-gray);
 }
 
 /* A real image in the placeholder's spot. The planet GIFs are 100px pixel art,
