@@ -9,7 +9,7 @@
 			<dd></dd>
 		</div>
 		<div>
-			<dt>Nationality</dt>
+			<dt>Nationalities</dt>
 			<dd></dd>
 		</div>
 	</dl>

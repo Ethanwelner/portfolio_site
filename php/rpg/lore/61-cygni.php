@@ -9,7 +9,7 @@
 			<dd></dd>
 		</div>
 		<div>
-			<dt>Nationality</dt>
+			<dt>Nationalities</dt>
 			<dd><?php echo sf_lore_link('american-empire', 'American Empire'); ?></dd>
 		</div>
 	</dl>

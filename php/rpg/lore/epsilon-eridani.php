@@ -9,7 +9,7 @@
 			<dd></dd>
 		</div>
 		<div>
-			<dt>Nationality</dt>
+			<dt>Nationalities</dt>
 			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?>, <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?></dd>
 		</div>
 	</dl>
