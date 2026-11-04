@@ -34,23 +34,43 @@ function sf_damage_icon($type) {
 	return '<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="' . $type . '" focusable="false"><title>' . $type . '</title><path d="' . $paths[$type] . '"/></svg>';
 }
 
+// A damage or resistances badge's lead circle (Font Awesome Pro solid icons):
+// a bow for ranged and thrown weapons, a sword for other weapons, a shield
+// for resistances
+function sf_item_stat_lead($icon) {
+	$icons = [
+		'bow-arrow' => ['Ranged damage', 'M145.7 286.9l45.25-45.14L100.5 151.3C128.2 136.1 159.5 128 191.1 128c31.1 0 62.88 7.749 90.38 22.5l46.63-46.62c-40.62-25.87-87.76-39.87-137-39.87c-49.75 0-97.26 14.25-138.1 40.62l-3.875-3.873C46.83 97.63 42.7 96.06 38.57 96.06c-4.108 0-8.209 1.558-11.33 4.675l-22.54 22.51C1.586 126.4 .023 130.5 .023 134.6c0 4.113 1.565 8.226 4.692 11.35L145.7 286.9zM408.1 182.4l-46.63 46.62c14.75 27.49 22.5 58.24 22.5 90.36c0 32.49-8.126 63.74-23.25 91.48l-90.5-90.61l-45.25 45.24l141.8 141.8c3.125 3.124 7.22 4.687 11.31 4.687s8.188-1.563 11.31-4.687l22.62-22.62c3.125-3.124 4.688-7.249 4.688-11.37c0-4.124-1.563-8.249-4.688-11.37l-4.625-4.498c26.37-40.87 40.63-88.36 40.63-138.1C447.1 269.1 433.1 222.1 408.1 182.4zM512 15.64c0-8.634-7.093-15.64-15.72-15.64c-1.004 0-2.015 .0896-3.053 .29l-128.6 25.75c-7.885 1.609-12.61 8.447-12.61 15.47c0 3.89 1.449 7.831 4.612 10.99l34.5 34.5L140.5 337.6l-49.75-16.7c-2.104-.6776-4.349-1.006-6.497-1.006c-5.38 0-10.57 2.076-14.5 6.006l-63.75 63.82C1.901 393.8 0 399 0 404.1c0 8.377 5.1 16.6 14.1 19.62l55.62 18.5L88.22 497.9c3.027 9.001 11.24 14.12 19.65 14.12c5.134 0 10.35-1.923 14.47-5.997l63.62-63.74c3.93-3.93 6.011-9.191 6.011-14.57c0-2.148-.3325-4.323-1.01-6.427L174.4 371.4l250.6-250.5l34.5 34.47c3.162 3.161 7.11 4.639 11.01 4.639c7.037 0 13.88-4.755 15.49-12.64l25.72-128.6C511.9 17.75 512 16.65 512 15.64z'],
+		'sword' => ['Melee damage', 'M110.1 227.6c-6.25-6.248-16.37-6.248-22.62 0l-18.75 18.75c-5.498 5.373-6.249 13.87-1.999 20.25l53.37 79.99l-53.5 53.5l-29.25-14.62c-5.375-2.748-11.75-1.623-16 2.625l-17.25 17.25c-5.5 5.375-5.5 14.25 0 19.62l82.87 82.87c5.375 5.5 14.25 5.5 19.62 0l17.25-17.25c4.25-4.25 5.375-10.62 2.625-16l-14.62-29.25l53.5-53.5l79.99 53.41c6.375 4.25 14.87 3.5 20.25-2l18.75-18.79c6.25-6.25 6.25-16.37 0-22.62L110.1 227.6zM493.7 .1497l-93.74 15.88L171.9 244.1l95.99 95.99l228.1-228.1l15.87-93.75C513.3 7.781 504.2-1.35 493.7 .1497z'],
+		'shield' => ['Resists', 'M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z'],
+	];
+	[$label, $path] = $icons[$icon];
+	return '<span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="' . $label . '" focusable="false"><title>' . $label . '</title><path d="' . $path . '"/></svg></span>';
+}
+
 // "6 Slashing / 4 Piercing" or "1 Blunt, 3 Slashing" as one badge of icons and
 // numbers, with "or" between a choice's options, like the creator's item cards.
-// A note on one entry, like a voidsuit's Blunt (decompression), stays with it.
-function sf_item_stats($label, $text) {
+// A note on one entry, like a voidsuit's Blunt (decompression), is left to
+// the item's description.
+// The badge starts with $lead's circle: bow-arrow, sword or shield.
+function sf_item_stats($lead, $text) {
 	$options = preg_split('~\s*/\s*(?=\d)~', $text);
-	$html = '<span class="equipment-stats"><span class="equipment-stat-label">' . $label . '</span><span class="chip equipment-stat">';
+	$html = '<span class="equipment-stats"><span class="chip equipment-stat">' . sf_item_stat_lead($lead);
 	foreach ($options as $i => $option) {
 		if ($i > 0) {
 			$html .= '<span class="equipment-stat-or">or</span>';
 		}
 		foreach (explode(',', $option) as $part) {
 			if (preg_match('~^\s*(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?\s*$~', $part, $m)) {
-				$html .= '<span class="equipment-stat-value">' . sf_damage_icon($m[2]) . $m[1] . (isset($m[3]) && $m[3] !== '' ? ' <span class="equipment-stat-where">(' . htmlspecialchars($m[3]) . ')</span>' : '') . '</span>';
+				$html .= '<span class="equipment-stat-value">' . sf_damage_icon($m[2]) . $m[1] . '</span>';
 			}
 		}
 	}
 	return $html . '</span></span>';
+}
+
+// Example Items the creator tags ranged or thrown, whose damage gets the bow
+function sf_ranged_items() {
+	return ['Crossbow', 'Rifle', 'Missile Launcher'];
 }
 
 // The card: the name, its damage or resistances, the category and plane as
@@ -61,14 +81,14 @@ function sf_equipment_card($name, $category, $plane, $description, $value, $curr
 	echo '<div class="equipment-row">';
 	echo '<span class="equipment-name">' . htmlspecialchars($name) . '</span>';
 	if ($damage) {
-		echo sf_item_stats('Damage', $damage);
+		echo sf_item_stats(in_array($name, sf_ranged_items(), true) ? 'bow-arrow' : 'sword', $damage);
 	}
 	if ($resistances) {
-		echo sf_item_stats('Resists', $resistances);
+		echo sf_item_stats('shield', $resistances);
 	}
 	echo '<span class="equipment-chips">';
 	echo '<span class="chip">' . htmlspecialchars($category) . '</span>';
-	echo '<span class="chip chip-muted">' . htmlspecialchars($plane) . '</span>';
+	echo '<span class="chip">' . htmlspecialchars($plane) . '</span>';
 	echo '<span class="chip equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value($value) . ' ' . $currency . '</span>';
 	echo '</span>';
 	echo '</div>';

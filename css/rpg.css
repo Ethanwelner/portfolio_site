@@ -97,7 +97,7 @@ strong .mechanic-text {
    the item cards on the creator's sheet and in Player Tools: the Traits'
    black with a warm olive edge, a line with the name, its damage or
    resistances in one dark olive badge of icons and numbers, the category as
-   a dark olive chip, the plane a muted one and the value as a badge at the
+   a dark olive chip, the plane another and the value as a badge at the
    right, then the description under it, muted like the sheet's item notes */
 .equipment-box {
     width: 100%;
@@ -125,7 +125,7 @@ strong .mechanic-text {
         margin-left: auto;
     }
 
-    /* Damage or resistances: a soft label and one badge, with "or" between
+    /* Damage or resistances: one badge, with "or" between
        a choice's options. In a narrow card they take a line of their own,
        under the name. */
     .equipment-stats {
@@ -138,11 +138,6 @@ strong .mechanic-text {
             order: 1;
             flex-basis: 100%;
         }
-    }
-
-    .equipment-stat-label {
-        color: var(--panel-soft, #b3b3b3);
-        font-size: .8125rem;
     }
 
     .chip.equipment-stat {
@@ -164,8 +159,7 @@ strong .mechanic-text {
         }
     }
 
-    .equipment-stat-or,
-    .equipment-stat-where {
+    .equipment-stat-or {
         color: #a29d82;
         font-weight: 400;
     }
@@ -193,14 +187,39 @@ strong .mechanic-text {
         white-space: nowrap;
     }
 
-    .chip-muted {
-        background-color: transparent;
-        color: var(--panel-soft, #b3b3b3);
-    }
-
     /* The value, a badge like the creator's cost badge */
     .chip.equipment-value {
         text-align: center;
+    }
+}
+
+/* A damage or resistances badge's lead: a circle of the checkbox's pale
+   olive with a dark olive bow, sword or shield, standing in for the badge's
+   left edge. The badge rounds its left side to match, and the circle is as
+   tall as a plain badge, flush with its edge, top and bottom. Like the
+   creator's. */
+.chip:has(> .item-stat-lead) {
+    flex-wrap: nowrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-radius: calc((1lh + 6.4px + 2px) / 2) 4px 4px calc((1lh + 6.4px + 2px) / 2);
+}
+
+.item-stat-lead {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: calc(1lh + 6.4px + 2px);
+    height: calc(1lh + 6.4px + 2px);
+    margin: -1px -4px -1px -1px;
+    background-color: #b5ae86;
+    border-radius: 50%;
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        fill: #25241e;
     }
 }
 
@@ -2452,8 +2471,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
-        /* Its resistances: a soft label, one badge of icons and numbers,
-           and where they apply */
+        /* Its resistances: one badge of icons and numbers, led by a shield */
         .sheet-item-stats {
             display: inline-flex;
             flex-wrap: wrap;
@@ -2461,15 +2479,16 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             gap: 6px;
         }
 
-        .sheet-item-stat-label {
-            color: var(--panel-soft);
-            font-size: .8125rem;
-        }
-
         .chip.sheet-item-stat {
             display: inline-flex;
             align-items: center;
             gap: 10px;
+        }
+
+        /* With its lead circle, rounded on the left and flush with it */
+        .chip.sheet-item-stat:has(> .item-stat-lead) {
+            padding: 0 8px 0 0;
+            border-radius: calc((1lh + 6.4px + 2px) / 2) 4px 4px calc((1lh + 6.4px + 2px) / 2);
         }
 
         .sheet-item-stat-value {
