@@ -25,63 +25,68 @@ $sf_e = function ( $text ) {
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<div class="tech-fields">
-			<div class="tech-field-tab-list" role="tablist" aria-label="Sample Character Sheet">
-				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-character-musings" aria-controls="character-musings" aria-selected="true">Musings</button>
-				<button type="button" class="tech-field-tab" role="tab" id="tab-character-backgrounds" aria-controls="character-backgrounds" aria-selected="false">Backgrounds</button>
-			</div>
-
-			<div class="tech-field-panel is-active" id="character-musings" role="tabpanel" aria-labelledby="tab-character-musings">
-				<div class="text-cols">
-					<ul class="copy">
-						<li>Character Level is tracked separately from focus Stats.</li>
-						<li>Core Stats are listed as a single number docked to their focus Stat lines.</li>
-						<li>The focus Stat lines start unfilled, and are filled in as the player adds points to them, looking at the circle or squares to know what type of Trait they gain.</li>
-						<li>Characters select a Kind, Origin, Profession, and Past.</li>
-						<li>The character's Kind adds a bonus to their Stats, sets their max Stats, grants any unique ability the Kind may possess, and grants access to various Trait categories.</li>
-						<li>The character's Origin grants access to a starting set of Origin Traits, typically a mix of regular and Knowledge Traits. It also grants access to selectable Traits related to the Origin as well as other RP-specific things (wealth, identification, etc.). Some Origins also give a bonus point to place in one category's focus Stats, like the American Empire's +1 Physical.</li>
-						<li>The character's Profession grants access to a starting set of Profession Traits, typically a mix of regular and Knowledge Traits. It also grants access to selectable Traits related to the Profession as well as other RP-specific things (Equipment, licenses, etc.).</li>
-						<li>Every character's Stats start at 0, and their Kind adds 9 bonus points to their focus Stats, spread out to fit the Kind. A Human gets +1 in each focus Stat.</li>
-						<li>Characters always start at Level 1 or higher, so every new character also gets their Level 1 points: 1 core point and 3 focus points to spend in that category.</li>
-						<li>Since every focus point grants a Trait, characters will typically start with a set of player-selectable Traits. A Human's 9 bonus points give them 9 Universal Traits, plus the Traits from their Level 1 points, in addition to the Traits automatically granted to them by their Kind, Origin, Profession, and Past. Since they only have a point or two in each Stat, their selection will be relatively limited to less powerful and more common Traits.
-						</li>
-						<li>It may be preferable to start a campaign with characters at Level 2 or 3, so that they can pick out the low-level but still specialized Traits their character would possess and to help them differentiate from each other.</li>
-						<li>This sample character is Level 5: 9 bonus points from its Kind, 1 from its Origin, and 15 from five Levels, so 25 focus points and 25 Traits from them. It has spent five of them as Universal Traits and six as Background Traits from its Origin’s, Profession’s and Past’s lists, and it has banked the other fourteen for in-game opportunities. Future Stat gains cannot be used to gain Knowledge Traits, though this is at the GM's discretion.
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="tech-field-panel" id="character-backgrounds" role="tabpanel" aria-labelledby="tab-character-backgrounds">
-				<div class="tab-panel-cols">
-					<?php foreach ( $sf_sample['background'] as $b ) : ?>
-						<div class="content-stack content-stack-sm">
-							<div class="line-container">
-								<h5><strong><?php echo $b['slot'] . ': ' . sf_lore_link( 'sample-' . $b['id'], $sf_e( $b['name'] ) ); ?></strong></h5>
-								<div class="line"></div>
-							</div>
-							<p class="copy"><?php echo $sf_e( $b['summary'] ); ?></p>
-							<?php foreach ( $b['features'] as $f ) : ?>
-								<div class="content-stack content-stack-xxs">
-									<h6><?php echo $sf_e( $f['name'] ); ?></h6>
-									<p class="copy"><?php echo $sf_e( $f['description'] ); ?></p>
-								</div>
-							<?php endforeach; ?>
-							<?php
-							// The Origin's bonus point went into Grace
-							$bonus = array_map( function ( $x ) use ( $b ) { return $x . ( 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); }, $b['bonus'] );
-							foreach ( array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) :
-								if ( ! $list ) { continue; }
-								?>
-								<div class="content-stack content-stack-xxs">
-									<h6><?php echo $label; ?></h6>
-									<p class="copy"><?php echo implode( '<br>', array_map( $sf_e, $list ) ); ?></p>
-								</div>
-							<?php endforeach; ?>
+		<!-- Building a Character leads the section, as in the Mechanics Doc,
+		     with the backgrounds Edwin uses (from the creator) beside it -->
+		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+		<div class="flex-7 content-stack content-stack-sm">
+			<h3>Building a Character</h3>
+			<p class="copy">The sheet below belongs to Edwin Humble, a Level 5 Human smuggler, and shows how the systems in this section come together on a finished character. Every character is built from four Backgrounds, a starting set of Stat points, and the Traits those points grant.</p>
+			<p class="copy">Every character selects a Kind, Origin, Profession, and Past. Together these Backgrounds set a character’s starting Stats and Traits and tie them to the world:</p>
+			<ul class="copy">
+				<li><strong>Kind</strong> is what the character is. It adds 9 bonus points to their focus Stats, spread out to fit the Kind, and sets their maximum Stats. It also grants any unique abilities the Kind possesses and determines which kinds of Traits they can take. Humans get +1 in each focus Stat, cannot exceed 15 in any focus Stat, and can take (Cybernetic) and genetic engineering Traits.</li>
+				<li><strong>Origin</strong> is where the character comes from. It grants a starting set of Traits, typically a mix of Skill and Knowledge Traits, and opens selectable Traits related to the Origin. It also covers RP details like wealth and identification. Some Origins give a bonus point to place in one category’s focus Stats, like the American Empire’s +1 Physical.</li>
+				<li><strong>Profession</strong> is what the character does. It grants a starting set of Traits, opens selectable Traits related to the Profession, and covers RP details like Equipment and licenses.</li>
+				<li><strong>Past</strong> is how the character grew up. Like a Profession, it grants a starting set of Traits and opens selectable Traits related to it.</li>
+			</ul>
+			<p class="copy">Every character’s Stats start at 0 before their Kind’s bonus points are added. Characters always start at Level 1 or higher, so every new character also gets their Level 1 points: 1 core point and the 3 focus points that come with it. Since every focus point grants a Trait, a new character begins with a set of Traits they choose, on top of the ones their Backgrounds grant automatically. A starting Human, for example, has 9 Universal Traits from their Kind’s bonus points plus the Traits from their Level 1 points. With only a point or two in each Stat, these early picks are limited to less powerful and more common Traits. A GM may prefer to start a campaign at Level 2 or 3 so players can pick out the low-level but still specialized Traits that help their characters stand apart from each other.</p>
+			<p class="copy">Reading the sheet:</p>
+			<ul class="copy">
+				<li>Level is tracked at the top, separately from Stats.</li>
+				<li>Each core Stat is shown as a single number beside its category, like Physical (1), with its focus Stats listed below it.</li>
+				<li>Each focus Stat’s dot bar starts empty and fills in as points are added. A circle or square shows whether that point granted a Universal or a Background Trait.</li>
+				<li>Traits are grouped into Knowledges, Abilities, and Skills. Numbers in parentheses are a Trait’s Rank.</li>
+				<li>Picks available are Traits the character has banked for in-game opportunities.</li>
+			</ul>
+			<p class="copy">Edwin’s 25 focus points come from his Kind (9), his Origin (1), and five Levels (15), and each one granted a Trait. He spent five of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other fourteen for in-game opportunities. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
+		</div>
+		<div class="flex-6 content-stack">
+			<h3>Backgrounds used in the sample character sheet</h3>
+			<!-- Each background as the creator's card: its name with what it is
+			     and its setting as badges, the summary and features, then what it
+			     gives as labeled rows of badges -->
+			<div class="content-stack content-stack-xs">
+				<?php foreach ( $sf_sample['background'] as $b ) : ?>
+					<div class="trait-box sample-bg-card">
+						<div class="trait-name trait-name-with-chip">
+							<span><?php echo $sf_e( $b['name'] ); ?></span>
+							<span class="trait-name-chips"><span class="chip"><?php echo $b['slot']; ?></span><span class="chip chip-muted"><?php echo $sf_e( $b['plane'] ); ?></span></span>
 						</div>
-					<?php endforeach; ?>
-				</div>
+						<p class="copy"><?php echo $sf_e( $b['summary'] ); ?></p>
+						<?php foreach ( $b['features'] as $f ) : ?>
+							<p class="copy"><strong><?php echo $sf_e( $f['name'] ); ?>.</strong> <?php echo $sf_e( $f['description'] ); ?></p>
+						<?php endforeach; ?>
+						<?php
+						// The Origin's bonus point went into Grace
+						$bonus = array_map( function ( $x ) use ( $b ) { return $x . ( 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); }, $b['bonus'] );
+						$rows  = array_filter( array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) );
+						?>
+						<?php if ( $rows ) : ?>
+							<div class="sample-bg-grants">
+								<?php foreach ( $rows as $label => $list ) : ?>
+									<div>
+										<span class="sample-bg-label"><?php echo $label; ?></span>
+										<?php foreach ( $list as $x ) { echo '<span class="chip' . ( in_array( $label, array( 'Bonus', 'Grants' ), true ) ? ' chip-accent' : '' ) . '">' . $sf_e( $x ) . '</span>'; } ?>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+						<?php if ( $b['lore'] ) : ?>
+							<p class="copy small">More in the lore: <?php echo sf_lore_link( $b['lore'], sf_lore_titles()[ $b['lore'] ] ?? $b['lore'] ); ?></p>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
 			</div>
+		</div>
 		</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
