@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: an attack spell’s Action, like Cast Fireball, shows its temporary weapon with the item cards’ badges: its damage by type behind the crosshairs, its Max Range behind the arc, then Ranged Attack, its Attack Stat and Area of Effect. On the sheet the per-Rank amounts are worked out for the Rank held.</li>
 						<li>Character sheets: age, gender, height and weight sit on one line, and the Kind, Origin, Profession and Past on the next, each wrapping onto more lines when there isn’t room.</li>
 						<li>Character Creator, Player Tools and the Sample Character Sheet: Abilities show their name and effect, and a chevron opens their badge, where they came from and the Action they grant, like Fireball’s Cast Fireball, written out in full. Trait cards on the Traits step and Conditions show their Actions too.</li>
 						<li>Ranged damage badges on Items use a crosshairs icon in place of the bow. In the Character Creator and Player Tools, a weapon card’s Max Range sits on its top line after the damage, led by a dashed arc in a tan circle like the damage badges, and the Attack Stat badge shows just the Stat, like “Grace / Power”.</li>
