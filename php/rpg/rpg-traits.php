@@ -569,13 +569,6 @@
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Sorcerous</span>
-                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
-                    </div>
-                    <p class="copy effect">This character may take magic-related Traits and may spend Stat points on the Magic core Stat.</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
                       <span>Natural Breath Weapon (1)</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Ability</span></span>
                     </div>
