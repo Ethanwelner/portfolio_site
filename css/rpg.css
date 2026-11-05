@@ -1894,7 +1894,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 .c-sheet-box {
-    padding: 1.5rem;
+    padding: 1.25rem;
     background-color: var(--portfolio-white);
     border: 1px solid var(--portfolio-light-gray);
     border-radius: 4px;
@@ -2319,7 +2319,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         font-family: 'Open Sans', sans-serif;
 
         .c-sheet-box {
-            padding: 24px;
+            padding: 20px;
             border-color: transparent;
             border-radius: 12px;
         }
