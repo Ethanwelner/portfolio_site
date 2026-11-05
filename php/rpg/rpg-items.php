@@ -88,6 +88,7 @@
 								<br><br>
 								Mundane or generic Wearable Items like everyday clothing do not necessarily need to be recorded on a character sheet and can be assumed to be possessed unless otherwise stated.
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Wearables']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -97,6 +98,7 @@
 							<p class="copy">
 								This catchall category comprises a wide variety of concepts, but the unifying feature is that Equipment is useful and will typically have some sort of effect or feature in its description, often granting some sort of ability or benefit to a character when utilized. Watches, grappling hooks, jet packs, cell phones, or magic wands could all be considered Equipment. Vehicles, Weapons, Wearables, and other categories of Item could be considered Equipment, and when they have Equipment-like functions, they will often be listed as Equipment in addition to their other categories.
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Equipment']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -106,6 +108,7 @@
 							<p class="copy">
 								Weapons are a special form of Equipment meant to cause damage or harm. Not every Item capable of doing damage is a Weapon, but most Weapons exist specifically for that purpose. Weapons will convey abilities related to their use. Anyone can use any Weapon, but a character without a related Trait, such as a Wielder Trait, takes a penalty for unfamiliarity. Anyone can pull a trigger, but hitting a target is a different matter. Weapons are often relatively complex forms of Equipment and will need care, maintenance, or proper setup to be used correctly. Sometimes a Weapon will need to be paired with another form of Equipment, such as a bow requiring an arrow, but just as often they will not. Most Weapons will be considered exclusive, though Traits or GM discretion may allow for multiple Weapons to be used simultaneously.
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Weapons']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -117,6 +120,7 @@
 								<br><br>
 								Structures are large and complex Items and will often have Hit Points, Resistances, and levels of Destruction. When a character is occupying a Structure, they are typically considered to be inside of and protected by it (presuming the threat isn’t inside the Structure with them or they aren’t exposed in some other way).
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Structures']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -130,6 +134,7 @@
 								<br><br>
 								Vehicles often require routine maintenance and upkeep, though whether that is tracked is at the GM's discretion. Similarly, Vehicles will often have Hit Points or conditions listed, though it is at the GM's discretion if they want to add additional complexities to the maintenance or handling of a Vehicle. (Ex.: It is at the GM's discretion if a car's gas tank explodes or if the players have to fill that gas tank or even pay attention to the concept of fuel.)
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Vehicles']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -147,6 +152,7 @@
 									<li>Animals and animal-like NPCs will have their characteristics defined by a template and then modified via Traits.</li>
 								</ul>
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Animals, Robots, and Animal-like NPCs']); ?>
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
@@ -156,6 +162,7 @@
 							<p class="copy">
 								Misc Items are Items that do not neatly fall into another category or that are unimportant or generic objects that could have a multitude of uses. A brick would be a Misc Item; it could be thrown as a Weapon or used to build a Structure, but by itself it's just a… brick. Most Items in an environment can be considered miscellaneous.
 							</p>
+							<?php sf_equipment_card(...sf_item_type_examples()['Misc']); ?>
 						</div>
 					</div>
 				</div>
