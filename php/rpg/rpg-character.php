@@ -162,15 +162,16 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			<img loading="lazy" data-src="img/char_portrait_1.webp" alt="Edwin Humble" class="c-sheet-image sheet-portrait">
 			<div class="sheet-head-main">
 				<h2 class="sheet-name">Edwin Humble</h2>
+				<!-- Age, gender, height and weight on one line, then the Kind and the Backgrounds under it -->
 				<div class="sheet-line">
 					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Kind</span><strong><?php echo $sf_sheet_link( 'Kind' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Age</span><strong>30</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Gender</span><strong>Male</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Height</span><strong>6 feet</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Weight</span><strong>190 lbs</strong></span>
 					</p>
 					<p class="sheet-line-row sheet-line-stack">
+						<span class="sheet-line-item"><span class="field-label">Kind</span><strong><?php echo $sf_sheet_link( 'Kind' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Origin</span><strong><?php echo $sf_sheet_link( 'Origin' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Profession</span><strong><?php echo $sf_sheet_link( 'Profession' ); ?></strong></span>
 						<span class="sheet-line-item"><span class="field-label">Past</span><strong><?php echo $sf_sheet_link( 'Past' ); ?></strong></span>
