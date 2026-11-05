@@ -2709,6 +2709,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* "or" between a damage choice's options, like the Dagger's */
+        .sheet-item-stat-or {
+            color: #a29d82;
+            font-weight: 400;
+        }
+
         .sheet-item-chevron {
             flex: none;
             width: 12px;
@@ -2723,6 +2729,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             height: 18px;
             border-radius: 4px;
             background: #b5ae86 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%2325241e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+        }
+
+        /* Equip's box when the item isn't equipped: empty, in the card's olive */
+        .sheet-check.is-off {
+            background: #25241e;
+            border: 1px solid #6d6a5a;
         }
 
         /* The Knowledges, the Abilities and the Skills, each a box, stacked;
