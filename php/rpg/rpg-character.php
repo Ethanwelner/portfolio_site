@@ -25,9 +25,10 @@ $sf_e = function ( $text ) {
 <div class="d-flex flex-wrap flex-xs-nowrap">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
-		<!-- Building a Character leads the section, as in the Mechanics Doc;
-		     the backgrounds Edwin uses stay in the tab box under it -->
-		<div class="single-column-content content-stack content-stack-sm">
+		<!-- Building a Character leads the section, as in the Mechanics Doc,
+		     with the backgrounds Edwin uses (from the creator) beside it -->
+		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+		<div class="flex-7 content-stack content-stack-sm">
 			<h3>Building a Character</h3>
 			<p class="copy">The sheet below belongs to Edwin Humble, a Level 5 Human smuggler, and shows how the systems in this section come together on a finished character. Every character is built from four Backgrounds, a starting set of Stat points, and the Traits those points grant.</p>
 			<p class="copy">Every character selects a Kind, Origin, Profession, and Past. Together these Backgrounds set a character’s starting Stats and Traits and tie them to the world:</p>
@@ -48,14 +49,8 @@ $sf_e = function ( $text ) {
 			</ul>
 			<p class="copy">Edwin’s 25 focus points come from his Kind (9), his Origin (1), and five Levels (15), and each one granted a Trait. He spent five of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other fourteen for in-game opportunities. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
 		</div>
-		<div class="bumper"></div>
-		<div class="tech-fields">
-			<div class="tech-field-tab-list" role="tablist" aria-label="Sample Character Sheet">
-				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-character-backgrounds" aria-controls="character-backgrounds" aria-selected="true">Backgrounds</button>
-			</div>
-
-			<div class="tech-field-panel is-active" id="character-backgrounds" role="tabpanel" aria-labelledby="tab-character-backgrounds">
-				<div class="tab-panel-cols">
+		<div class="flex-6 content-stack">
+			<h3>Backgrounds used in the sample character sheet</h3>
 					<?php foreach ( $sf_sample['background'] as $b ) : ?>
 						<div class="content-stack content-stack-sm">
 							<div class="line-container">
@@ -82,8 +77,7 @@ $sf_e = function ( $text ) {
 							<?php endforeach; ?>
 						</div>
 					<?php endforeach; ?>
-				</div>
-			</div>
+		</div>
 		</div>
 	</div>
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
