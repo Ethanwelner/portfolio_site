@@ -7252,7 +7252,8 @@ tags: [combat, ranged, archery]
 category: skill
 ranked: true
 minStats: { grace: 3, power: 3, intuition: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Bow without a skill check. Rank *5 added to skill check rolls involving a Bow."
+effect: "This character is capable of performing the basic tasks of maintaining a Bow without a skill check. Rank *5 added to skill check rolls involving a Bow. +3 to Attack Rolls made with a Bow, at any Rank."
+modifiers: "Attack Rolls +3 (Bow)"
 `,vb=`id: wielder-crossbow
 name: "Wielder: Crossbow"
 status: draft
@@ -7262,7 +7263,8 @@ tags: [combat, ranged, archery]
 category: skill
 ranked: true
 minStats: { grace: 2, power: 2, intuition: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check. Rank *5 added to skill check rolls involving a Crossbow."
+effect: "This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check. Rank *5 added to skill check rolls involving a Crossbow. +3 to Attack Rolls made with a Crossbow, at any Rank."
+modifiers: "Attack Rolls +3 (Crossbow)"
 `,yb=`id: wielder-dagger
 name: "Wielder: Dagger"
 status: draft
@@ -7272,7 +7274,8 @@ tags: [combat, melee, blades]
 category: skill
 ranked: true
 minStats: { grace: 3, intuition: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Dagger without a skill check. Rank *5 added to skill check rolls involving a Dagger."
+effect: "This character is capable of performing the basic tasks of maintaining a Dagger without a skill check. Rank *5 added to skill check rolls involving a Dagger. +3 to Attack Rolls made with a Dagger, at any Rank."
+modifiers: "Attack Rolls +3 (Dagger)"
 `,bb=`id: wielder-flamethrower
 name: "Wielder: Flamethrower"
 status: draft
@@ -7282,7 +7285,8 @@ tags: [combat, heavy weapons, fire]
 category: skill
 ranked: true
 minStats: { endurance: 3, power: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check. Rank *5 added to skill check rolls involving a Flamethrower."
+effect: "This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check. Rank *5 added to skill check rolls involving a Flamethrower. +3 to Attack Rolls made with a Flamethrower, at any Rank."
+modifiers: "Attack Rolls +3 (Flamethrower)"
 `,xb=`id: wielder-greatsword
 name: "Wielder: Greatsword"
 status: draft
@@ -7292,7 +7296,8 @@ tags: [combat, melee, swords]
 category: skill
 ranked: true
 minStats: { power: 5, endurance: 4, grace: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check. Rank *5 added to skill check rolls involving a Greatsword."
+effect: "This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check. Rank *5 added to skill check rolls involving a Greatsword. +3 to Attack Rolls made with a Greatsword, at any Rank."
+modifiers: "Attack Rolls +3 (Greatsword)"
 `,Sb=`id: wielder-grenade
 name: "Wielder: Grenade"
 status: draft
@@ -7302,7 +7307,8 @@ tags: [combat, explosives, military]
 category: skill
 ranked: true
 minStats: { grace: 2, intuition: 3, power: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Grenade without a skill check. Rank *5 added to skill check rolls involving a Grenade."
+effect: "This character is capable of performing the basic tasks of maintaining a Grenade without a skill check. Rank *5 added to skill check rolls involving a Grenade. +3 to Attack Rolls made with a Grenade, at any Rank."
+modifiers: "Attack Rolls +3 (Grenade)"
 `,Cb=`id: wielder-longsword
 name: "Wielder: Longsword"
 status: draft
@@ -7312,7 +7318,8 @@ tags: [combat, melee, swords, site-example]
 category: skill
 ranked: true
 minStats: { grace: 4, power: 4, endurance: 4 }
-effect: "This character is capable of performing the basic tasks of maintaining a Longsword without a skill check. Rank *5 added to skill check rolls involving a Longsword."
+effect: "This character is capable of performing the basic tasks of maintaining a Longsword without a skill check. Rank *5 added to skill check rolls involving a Longsword. +3 to Attack Rolls made with a Longsword, at any Rank."
+modifiers: "Attack Rolls +3 (Longsword)"
 `,wb=`id: wielder-mace
 name: "Wielder: Mace"
 status: draft
@@ -7322,7 +7329,8 @@ tags: [combat, melee, blunt]
 category: skill
 ranked: true
 minStats: { power: 4, endurance: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Mace without a skill check. Rank *5 added to skill check rolls involving a Mace."
+effect: "This character is capable of performing the basic tasks of maintaining a Mace without a skill check. Rank *5 added to skill check rolls involving a Mace. +3 to Attack Rolls made with a Mace, at any Rank."
+modifiers: "Attack Rolls +3 (Mace)"
 `,Tb=`id: wielder-machine-gun
 name: "Wielder: Machine Gun"
 status: draft
@@ -7332,7 +7340,8 @@ tags: [combat, firearms, heavy weapons, military]
 category: skill
 ranked: true
 minStats: { power: 3, endurance: 3, grace: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check. Rank *5 added to skill check rolls involving a Machine Gun."
+effect: "This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check. Rank *5 added to skill check rolls involving a Machine Gun. +3 to Attack Rolls made with a Machine Gun, at any Rank."
+modifiers: "Attack Rolls +3 (Machine Gun)"
 `,Eb=`id: wielder-missile-launcher
 name: "Wielder: Missile Launcher"
 status: draft
@@ -7342,7 +7351,8 @@ tags: [combat, explosives, heavy weapons, military]
 category: skill
 ranked: true
 minStats: { intuition: 3, logic: 2, endurance: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check. Rank *5 added to skill check rolls involving a Missile Launcher."
+effect: "This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check. Rank *5 added to skill check rolls involving a Missile Launcher. +3 to Attack Rolls made with a Missile Launcher, at any Rank."
+modifiers: "Attack Rolls +3 (Missile Launcher)"
 `,Db=`id: wielder-mortar
 name: "Wielder: Mortar"
 status: draft
@@ -7352,7 +7362,8 @@ tags: [combat, explosives, artillery, military]
 category: skill
 ranked: true
 minStats: { logic: 3, intuition: 3, endurance: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Mortar without a skill check. Rank *5 added to skill check rolls involving a Mortar."
+effect: "This character is capable of performing the basic tasks of maintaining a Mortar without a skill check. Rank *5 added to skill check rolls involving a Mortar. +3 to Attack Rolls made with a Mortar, at any Rank."
+modifiers: "Attack Rolls +3 (Mortar)"
 `,Ob=`id: wielder-musket
 name: "Wielder: Musket"
 status: draft
@@ -7362,7 +7373,8 @@ tags: [combat, firearms, muskets, site-example]
 category: skill
 ranked: true
 minStats: { grace: 3, power: 2, intuition: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Musket without a skill check. Rank *5 added to skill check rolls involving a Musket."
+effect: "This character is capable of performing the basic tasks of maintaining a Musket without a skill check. Rank *5 added to skill check rolls involving a Musket. +3 to Attack Rolls made with a Musket, at any Rank."
+modifiers: "Attack Rolls +3 (Musket)"
 `,kb=`id: wielder-pistol
 name: "Wielder: Pistol"
 status: draft
@@ -7372,7 +7384,8 @@ tags: [combat, firearms, sidearm]
 category: skill
 ranked: true
 minStats: { grace: 3, intuition: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol."
+effect: "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol. +3 to Attack Rolls made with a Pistol, at any Rank."
+modifiers: "Attack Rolls +3 (Pistol)"
 `,Ab=`id: wielder-polearm
 name: "Wielder: Polearm"
 status: draft
@@ -7382,7 +7395,8 @@ tags: [combat, melee, polearms]
 category: skill
 ranked: true
 minStats: { power: 4, grace: 3, endurance: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Polearm without a skill check. Rank *5 added to skill check rolls involving a Polearm."
+effect: "This character is capable of performing the basic tasks of maintaining a Polearm without a skill check. Rank *5 added to skill check rolls involving a Polearm. +3 to Attack Rolls made with a Polearm, at any Rank."
+modifiers: "Attack Rolls +3 (Polearm)"
 `,jb=`id: wielder-rifle
 name: "Wielder: Rifle"
 status: draft
@@ -7392,7 +7406,8 @@ tags: [combat, firearms, military]
 category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Rifle without a skill check. Rank *5 added to skill check rolls involving a Rifle."
+effect: "This character is capable of performing the basic tasks of maintaining a Rifle without a skill check. Rank *5 added to skill check rolls involving a Rifle. +3 to Attack Rolls made with a Rifle, at any Rank."
+modifiers: "Attack Rolls +3 (Rifle)"
 `,Mb=`id: wielder-shortsword
 name: "Wielder: Shortsword"
 status: draft
@@ -7402,7 +7417,8 @@ tags: [combat, melee, swords]
 category: skill
 ranked: true
 minStats: { grace: 3, power: 2, endurance: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check. Rank *5 added to skill check rolls involving a Shortsword."
+effect: "This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check. Rank *5 added to skill check rolls involving a Shortsword. +3 to Attack Rolls made with a Shortsword, at any Rank."
+modifiers: "Attack Rolls +3 (Shortsword)"
 `,Nb=`id: wielder-shotgun
 name: "Wielder: Shotgun"
 status: draft
@@ -7412,7 +7428,8 @@ tags: [combat, firearms]
 category: skill
 ranked: true
 minStats: { grace: 2, power: 3, intuition: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check. Rank *5 added to skill check rolls involving a Shotgun."
+effect: "This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check. Rank *5 added to skill check rolls involving a Shotgun. +3 to Attack Rolls made with a Shotgun, at any Rank."
+modifiers: "Attack Rolls +3 (Shotgun)"
 `,Pb=`id: wielder-siege-engine
 name: "Wielder: Siege Engine"
 status: draft
@@ -7422,7 +7439,8 @@ tags: [combat, siege, artillery]
 category: skill
 ranked: true
 minStats: { logic: 3, intuition: 3, power: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check. Rank *5 added to skill check rolls involving a Siege Engine."
+effect: "This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check. Rank *5 added to skill check rolls involving a Siege Engine. +3 to Attack Rolls made with a Siege Engine, at any Rank."
+modifiers: "Attack Rolls +3 (Siege Engine)"
 `,Fb=`id: wielder-sling
 name: "Wielder: Sling"
 status: draft
@@ -7432,7 +7450,8 @@ tags: [combat, ranged]
 category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a Sling without a skill check. Rank *5 added to skill check rolls involving a Sling."
+effect: "This character is capable of performing the basic tasks of maintaining a Sling without a skill check. Rank *5 added to skill check rolls involving a Sling. +3 to Attack Rolls made with a Sling, at any Rank."
+modifiers: "Attack Rolls +3 (Sling)"
 `,Ib=`id: wielder-sniper-rifle
 name: "Wielder: Sniper Rifle"
 status: draft
@@ -7442,7 +7461,8 @@ tags: [combat, firearms, military]
 category: skill
 ranked: true
 minStats: { intuition: 5, grace: 3, endurance: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check. Rank *5 added to skill check rolls involving a Sniper Rifle."
+effect: "This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check. Rank *5 added to skill check rolls involving a Sniper Rifle. +3 to Attack Rolls made with a Sniper Rifle, at any Rank."
+modifiers: "Attack Rolls +3 (Sniper Rifle)"
 `,Lb=`id: wielder-spear
 name: "Wielder: Spear"
 status: draft
@@ -7452,7 +7472,8 @@ tags: [combat, melee, polearms]
 category: skill
 ranked: true
 minStats: { grace: 3, power: 3, endurance: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Spear without a skill check. Rank *5 added to skill check rolls involving a Spear."
+effect: "This character is capable of performing the basic tasks of maintaining a Spear without a skill check. Rank *5 added to skill check rolls involving a Spear. +3 to Attack Rolls made with a Spear, at any Rank."
+modifiers: "Attack Rolls +3 (Spear)"
 `,Rb=`id: wielder-staff
 name: "Wielder: Staff"
 status: draft
@@ -7462,7 +7483,8 @@ tags: [combat, melee, staves]
 category: skill
 ranked: true
 minStats: { grace: 3, endurance: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Staff without a skill check. Rank *5 added to skill check rolls involving a Staff."
+effect: "This character is capable of performing the basic tasks of maintaining a Staff without a skill check. Rank *5 added to skill check rolls involving a Staff. +3 to Attack Rolls made with a Staff, at any Rank."
+modifiers: "Attack Rolls +3 (Staff)"
 `,zb=`id: wielder-throwing-weapon
 name: "Wielder: Throwing Weapon"
 status: draft
@@ -7472,7 +7494,8 @@ tags: [combat, ranged, thrown]
 category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check. Rank *5 added to skill check rolls involving a Throwing Weapon."
+effect: "This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check. Rank *5 added to skill check rolls involving a Throwing Weapon. +3 to Attack Rolls made with a Throwing Weapon, at any Rank."
+modifiers: "Attack Rolls +3 (Throwing Weapon)"
 `,Bb=`id: wielder-war-axe
 name: "Wielder: War Axe"
 status: draft
@@ -7482,7 +7505,8 @@ tags: [combat, melee, axes]
 category: skill
 ranked: true
 minStats: { power: 5, endurance: 4, grace: 3 }
-effect: "This character is capable of performing the basic tasks of maintaining a War Axe without a skill check. Rank *5 added to skill check rolls involving a War Axe."
+effect: "This character is capable of performing the basic tasks of maintaining a War Axe without a skill check. Rank *5 added to skill check rolls involving a War Axe. +3 to Attack Rolls made with a War Axe, at any Rank."
+modifiers: "Attack Rolls +3 (War Axe)"
 `,Vb=Symbol.for(`yaml.alias`),Hb=Symbol.for(`yaml.document`),Ub=Symbol.for(`yaml.map`),Wb=Symbol.for(`yaml.pair`),Gb=Symbol.for(`yaml.scalar`),Kb=Symbol.for(`yaml.seq`),qb=Symbol.for(`yaml.node.type`),Jb=e=>!!e&&typeof e==`object`&&e[qb]===Vb,Yb=e=>!!e&&typeof e==`object`&&e[qb]===Hb,Xb=e=>!!e&&typeof e==`object`&&e[qb]===Ub,Zb=e=>!!e&&typeof e==`object`&&e[qb]===Wb,Qb=e=>!!e&&typeof e==`object`&&e[qb]===Gb,$b=e=>!!e&&typeof e==`object`&&e[qb]===Kb;function ex(e){if(e&&typeof e==`object`)switch(e[qb]){case Ub:case Kb:return!0}return!1}function tx(e){if(e&&typeof e==`object`)switch(e[qb]){case Vb:case Ub:case Gb:case Kb:return!0}return!1}var nx=e=>(Qb(e)||ex(e))&&!!e.anchor,rx=Symbol(`break visit`),ix=Symbol(`skip children`),ax=Symbol(`remove node`);function ox(e,t){let n=cx(t);Yb(e)?sx(null,e.contents,n,Object.freeze([e]))===ax&&(e.contents=null):sx(null,e,n,Object.freeze([]))}ox.BREAK=rx,ox.SKIP=ix,ox.REMOVE=ax;function sx(e,t,n,r){let i=lx(e,t,n,r);if(tx(i)||Zb(i))return ux(e,r,i),sx(e,i,n,r);if(typeof i!=`symbol`){if(ex(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=sx(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===rx)return rx;else i===ax&&(t.items.splice(e,1),--e)}}else if(Zb(t)){r=Object.freeze(r.concat(t));let e=sx(`key`,t.key,n,r);if(e===rx)return rx;e===ax&&(t.key=null);let i=sx(`value`,t.value,n,r);if(i===rx)return rx;i===ax&&(t.value=null)}}return i}function cx(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function lx(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(Xb(t))return n.Map?.(e,t,r);if($b(t))return n.Seq?.(e,t,r);if(Zb(t))return n.Pair?.(e,t,r);if(Qb(t))return n.Scalar?.(e,t,r);if(Jb(t))return n.Alias?.(e,t,r)}function ux(e,t,n){let r=t[t.length-1];if(ex(r))r.items[e]=n;else if(Zb(r))e===`key`?r.key=n:r.value=n;else if(Yb(r))r.contents=n;else{let e=Jb(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var dx={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},fx=e=>e.replace(/[!,[\]{}]/g,e=>dx[e]),px=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+fx(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&tx(e.contents)){let t={};ox(e.contents,(e,n)=>{tx(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
 `)}};px.defaultYaml={explicit:!1,version:`1.2`},px.defaultTags={"!!":`tag:yaml.org,2002:`};function mx(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function hx(e){let t=new Set;return ox(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function gx(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function _x(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=hx(e);let a=gx(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(Qb(t.node)||ex(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function vx(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=vx(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=vx(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=vx(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=vx(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function yx(e,t,n){if(Array.isArray(e))return e.map((e,t)=>yx(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!nx(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var bx=class{constructor(e){Object.defineProperty(this,qb,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!Yb(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=yx(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?vx(i,{"":o},``,o):o}},xx=class extends bx{constructor(e){super(Vb),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],ox(e,{Node:(e,t)=>{(Jb(t)||nx(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(yx(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=Sx(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(mx(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function Sx(e,t,n){if(Jb(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(ex(t)){let r=0;for(let i of t.items){let t=Sx(e,i,n);t>r&&(r=t)}return r}if(Zb(t)){let r=Sx(e,t.key,n),i=Sx(e,t.value,n);return Math.max(r,i)}return 1}var Cx=e=>!e||typeof e!=`function`&&typeof e!=`object`,X=class extends bx{constructor(e){super(Gb),this.value=e}toJSON(e,t){return t?.keep?this.value:yx(this.value,e,t)}toString(){return String(this.value)}};X.BLOCK_FOLDED=`BLOCK_FOLDED`,X.BLOCK_LITERAL=`BLOCK_LITERAL`,X.PLAIN=`PLAIN`,X.QUOTE_DOUBLE=`QUOTE_DOUBLE`,X.QUOTE_SINGLE=`QUOTE_SINGLE`;var wx=`tag:yaml.org,2002:`;function Tx(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function Ex(e,t,n){if(Yb(e)&&(e=e.contents),tx(e))return e;if(Zb(e)){let t=n.schema[Ub].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new xx(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=wx+t.slice(2));let l=Tx(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new X(e);return c&&(c.node=t),t}l=e instanceof Map?o[Ub]:Symbol.iterator in Object(e)?o[Kb]:o[Ub]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new X(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function Dx(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return Ex(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var Ox=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,kx=class extends bx{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>tx(t)||Zb(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(Ox(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(ex(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,Dx(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(ex(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&Qb(i)?i.value:i:ex(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!Zb(t))return!1;let n=t.value;return n==null||e&&Qb(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return ex(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(ex(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,Dx(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},Ax=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function jx(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var Mx=(e,t,n)=>e.endsWith(`
 `)?jx(n,t):n.includes(`
