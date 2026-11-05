@@ -2300,6 +2300,37 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
+    /* The backgrounds Edwin uses, beside Building a Character, as the
+       creator's background cards: what it gives in rows, each a label over
+       its badges, the Bonus and Grants in the lighter gray */
+    .sample-bg-card {
+        .chip-accent {
+            background-color: #6b6b6b;
+            color: var(--portfolio-white);
+        }
+
+        .small {
+            font-size: .75rem;
+        }
+    }
+
+    .sample-bg-grants {
+        display: grid;
+        gap: 12px;
+
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+    }
+
+    .sample-bg-label {
+        flex-basis: 100%;
+        font-size: .75rem;
+        font-weight: 600;
+    }
+
     /* The sample character sheet, laid out like the Character Creator's
        (its src/app/styles.css): a lighter gray sheet with the level's blob on
        its corner, and darker boxes for the portrait, name and description,

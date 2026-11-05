@@ -51,32 +51,41 @@ $sf_e = function ( $text ) {
 		</div>
 		<div class="flex-6 content-stack">
 			<h3>Backgrounds used in the sample character sheet</h3>
-					<?php foreach ( $sf_sample['background'] as $b ) : ?>
-						<div class="content-stack content-stack-sm">
-							<div class="line-container">
-								<h5><strong><?php echo $b['slot'] . ': ' . sf_lore_link( 'sample-' . $b['id'], $sf_e( $b['name'] ) ); ?></strong></h5>
-								<div class="line"></div>
-							</div>
-							<p class="copy"><?php echo $sf_e( $b['summary'] ); ?></p>
-							<?php foreach ( $b['features'] as $f ) : ?>
-								<div class="content-stack content-stack-xxs">
-									<h6><?php echo $sf_e( $f['name'] ); ?></h6>
-									<p class="copy"><?php echo $sf_e( $f['description'] ); ?></p>
-								</div>
-							<?php endforeach; ?>
-							<?php
-							// The Origin's bonus point went into Grace
-							$bonus = array_map( function ( $x ) use ( $b ) { return $x . ( 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); }, $b['bonus'] );
-							foreach ( array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) :
-								if ( ! $list ) { continue; }
-								?>
-								<div class="content-stack content-stack-xxs">
-									<h6><?php echo $label; ?></h6>
-									<p class="copy"><?php echo implode( '<br>', array_map( $sf_e, $list ) ); ?></p>
-								</div>
-							<?php endforeach; ?>
+			<!-- Each background as the creator's card: its name with what it is
+			     and its setting as badges, the summary and features, then what it
+			     gives as labeled rows of badges -->
+			<div class="content-stack content-stack-xs">
+				<?php foreach ( $sf_sample['background'] as $b ) : ?>
+					<div class="trait-box sample-bg-card">
+						<div class="trait-name trait-name-with-chip">
+							<span><?php echo $sf_e( $b['name'] ); ?></span>
+							<span class="trait-name-chips"><span class="chip"><?php echo $b['slot']; ?></span><span class="chip chip-muted"><?php echo $sf_e( $b['plane'] ); ?></span></span>
 						</div>
-					<?php endforeach; ?>
+						<p class="copy"><?php echo $sf_e( $b['summary'] ); ?></p>
+						<?php foreach ( $b['features'] as $f ) : ?>
+							<p class="copy"><strong><?php echo $sf_e( $f['name'] ); ?>.</strong> <?php echo $sf_e( $f['description'] ); ?></p>
+						<?php endforeach; ?>
+						<?php
+						// The Origin's bonus point went into Grace
+						$bonus = array_map( function ( $x ) use ( $b ) { return $x . ( 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); }, $b['bonus'] );
+						$rows  = array_filter( array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) );
+						?>
+						<?php if ( $rows ) : ?>
+							<div class="sample-bg-grants">
+								<?php foreach ( $rows as $label => $list ) : ?>
+									<div>
+										<span class="sample-bg-label"><?php echo $label; ?></span>
+										<?php foreach ( $list as $x ) { echo '<span class="chip' . ( in_array( $label, array( 'Bonus', 'Grants' ), true ) ? ' chip-accent' : '' ) . '">' . $sf_e( $x ) . '</span>'; } ?>
+									</div>
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+						<?php if ( $b['lore'] ) : ?>
+							<p class="copy small">More in the lore: <?php echo sf_lore_link( $b['lore'], sf_lore_titles()[ $b['lore'] ] ?? $b['lore'] ); ?></p>
+						<?php endif; ?>
+					</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 		</div>
 	</div>
