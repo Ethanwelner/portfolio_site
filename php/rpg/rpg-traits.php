@@ -355,6 +355,7 @@
                     </div>
                     <p class="copy effect">This character is capable of performing the basic tasks of using and maintaining a Longsword without a Skill Check.</p>
                     <p class="copy effect">Rank *5 added to Skill Check rolls involving a Longsword.</p>
+                    <p class="copy effect">+3 to Attack Rolls made with a Longsword, at any Rank.</p>
                     <p class="copy muted small">Needs Grace 4, Power 4, Endurance 4</p>
                   </div>
                   <div class="trait-box">
@@ -364,6 +365,7 @@
                     </div>
                     <p class="copy effect">This character is capable of performing the basic tasks of using and maintaining a Musket without a Skill Check.</p>
                     <p class="copy effect">Rank *5 added to Skill Check rolls involving a Musket.</p>
+                    <p class="copy effect">+3 to Attack Rolls made with a Musket, at any Rank.</p>
                     <p class="copy muted small">Needs Grace 3, Power 2, Intuition 3</p>
                   </div>
                 </div>

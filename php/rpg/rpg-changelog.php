@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Wielder Traits give +3 to Attack Rolls made with their weapon, at any Rank. Their Rank × 5 bonus still applies only to Skill Checks. This covers every Wielder Trait in the Character Creator and Player Tools, and the Wielder: Longsword and Wielder: Musket examples in Explaining Traits.</li>
 						<li>Character Creator and Player Tools: an open weapon card shows how it Attacks: Melee or Ranged (and Thrown), its Max Range, the Stat added to its Attack Rolls, its Area of Effect, and whether reloading takes a Partial or Full Action. The Taser and Stun Baton cost the target its next Action on a hit.</li>
 						<li>Character Creator and Player Tools: shields resist damage and add to Defense when Defending: Buckler +2, Wooden Shield +4, Tower Shield +6, Ballistic Shield +5.</li>
 						<li>Character Creator and Player Tools: a new Flat-Footed Condition gives −1 Priority and −1 to Attack Rolls through the following combat Round.</li>
