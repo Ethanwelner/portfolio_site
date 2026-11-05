@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: an open item card shows its description on one line and its rules on the line under it, with each rule labeled, like “Melee Attack; Max Range: 1 m; Attack Stat: Grace” or “Slot: Headwear”.</li>
+						<li>Character Creator and Player Tools: an open item card shows its cost, how it Attacks and the slot it takes as badges, like “Melee Attack”, “Max Range: 1 m”, “Attack Stat: Grace” and “Slot: Headwear”. Its description sits on its own line, with any other rules, like a shield’s Defense, on the line under it.</li>
 						<li>Wielder Traits give +3 to Attack Rolls made with their weapon, at any Rank. Their Rank × 5 bonus still applies only to Skill Checks. This covers every Wielder Trait in the Character Creator and Player Tools, and the Wielder: Longsword and Wielder: Musket examples in Explaining Traits.</li>
 						<li>Character Creator and Player Tools: an open weapon card shows how it Attacks: Melee or Ranged (and Thrown), its Max Range, the Stat added to its Attack Rolls, its Area of Effect, and whether reloading takes a Partial or Full Action. The Taser and Stun Baton cost the target its next Action on a hit.</li>
 						<li>Character Creator and Player Tools: shields resist damage and add to Defense when Defending: Buckler +2, Wooden Shield +4, Tower Shield +6, Ballistic Shield +5.</li>
