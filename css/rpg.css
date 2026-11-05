@@ -2866,6 +2866,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* The Action an Ability grants, under its effect, set off by a rule at
+           its left, as in the creator */
+        .sheet-traits .trait-action {
+            padding-left: 10px;
+            border-left: 2px solid #969696;
+        }
+
         .trait-card-badges {
             display: flex;
             flex-wrap: wrap;

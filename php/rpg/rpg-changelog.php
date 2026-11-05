@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator, Player Tools and the Sample Character Sheet: Abilities open from a chevron like Skills, to their badge, where they came from, their effect and the Action they grant, like Fireball’s Cast Fireball, written out in full. Trait cards on the Traits step and Conditions show their Actions too.</li>
+						<li>Ranged damage badges on Items use a crosshairs icon in place of the bow.</li>
 						<li>Mechanics, Character Creator and Player Tools: on the character sheet, Abilities take two columns and Skills one, the reverse of before. Each Trait card’s From line sits beside its category badge, and Knowledges are 12px apart.</li>
 						<li>Character Creator: Magical Heritage is a Condition rather than an Ability.</li>
 						<li>Character Creator: a character made with Build it starts without the last character’s portrait.</li>
