@@ -560,10 +560,11 @@
                 <div class="trait-card-grid">
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Long Toothed</span>
-                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Condition</span></span>
+                      <span>Long in the Tooth</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request Advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</p>
+                    <p class="copy effect">This character has kept their teeth through a long life and has the Long Toothed Condition.</p>
+                    <p class="copy effect"><strong>Long Toothed (Condition):</strong> An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request Advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</p>
                     <p class="copy muted small">Needs Power 10, Endurance 5, Demeanor 5, Middle Aged or Older</p>
                   </div>
                   <div class="trait-box">
@@ -589,7 +590,6 @@
                     </div>
                     <p class="copy effect">This character possesses a hard natural shell that protects them from harm.</p>
                     <p class="copy effect">Rank *3 added to this character's Blunt, Slashing, and Piercing Resistances for Attacks that hit their torso.</p>
-                    <p class="copy muted small">(Endurance 5)</p>
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
