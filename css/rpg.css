@@ -2426,11 +2426,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             margin: 0;
         }
 
-        .sheet-line-stack {
-            flex-direction: column;
-            gap: 8px;
-        }
-
         .sheet-line-item {
             display: flex;
             flex-direction: column;
