@@ -353,9 +353,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<?php foreach ( $sf_abilities as $t ) : ?>
 						<li class="trait-box">
 							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
 						</li>
 					<?php endforeach; ?>
 				</ul>
@@ -375,9 +374,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<li>
 						<details class="trait-box">
 							<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
 						</details>
 					</li>
 				<?php endforeach; ?>
@@ -390,9 +388,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<?php foreach ( $sf_other as $t ) : ?>
 						<li class="trait-box">
 							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
 						</li>
 					<?php endforeach; ?>
 				</ul>

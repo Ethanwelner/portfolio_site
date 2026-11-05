@@ -9,6 +9,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics, Character Creator and Player Tools: on the character sheet, Abilities take two columns and Skills one, the reverse of before. Each Trait card’s From line sits beside its category badge, and Knowledges are 12px apart.</li>
+						<li>Character Creator: Magical Heritage is a Condition rather than an Ability.</li>
 						<li>Character Creator: a character made with Build it starts without the last character’s portrait.</li>
 						<li>Character Creator and Player Tools: 35 magic Abilities join the Magic list, each giving a Cast Action, among them Fireball, Lightning, Hoarfrost, Heal, Mending, Skin of Stone, Invisibility, Haste, Sleep, Charm, Dispel Magic and Blink, with Magic minimums from 1 to 4. The Conditions they give come too, like Burning, Corroding, Stone Skin, Shielded, Prone, Frightened, Asleep and Charmed. Long Toothed comes from Long in the Tooth, Hard Shell has no Stat minimum, and AI Cores can take Cybernetic Intelligence as a Background Trait.</li>
 						<li>Sorcerous is gone, since Magic Access does its job. Its card is off the Traits page’s Background-Only examples.</li>

@@ -2756,7 +2756,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         /* The Knowledges, the Abilities and the Skills, each a box, stacked;
-           side by side once there's room, the Abilities and Skills first,
+           side by side once there's room, the Abilities (twice as wide, so
+           their cards take two columns) and Skills first,
            then all three, as in the creator. Any other Traits take a line of
            their own under them. */
         .sheet-lower {
@@ -2772,11 +2773,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
             @container sheet (width >= 900px) {
                 > .sheet-abilities {
-                    flex: 1 1 0;
+                    flex: 2 1 0;
                 }
 
                 > .sheet-skills {
-                    flex: 2 1 0;
+                    flex: 1 1 0;
                 }
             }
 
@@ -2815,7 +2816,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
         .sheet-knowledges {
             display: grid;
-            gap: 6px;
+            gap: 12px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -2868,7 +2869,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         .trait-card-badges {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 4px;
+
+            /* Where the Trait came from, after the category badge */
+            > .trait-card-from {
+                margin: 0 0 0 4px;
+            }
         }
 
         /* A Skill card opens from its chevron, like the item cards. Closed,
