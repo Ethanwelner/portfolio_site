@@ -9,6 +9,9 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Item cards on the character sheets: the category badge, like Weapon or Gear, moves off the top line into the open card, first among its badges, leaving the line to the name and the damage, range and resistance badges.</li>
+						<li>Character Creator and Player Tools: an attack spell’s Action, like Cast Fireball, shows its temporary weapon with the item cards’ badges: its damage by type behind the crosshairs, its Max Range behind the arc and its Area of Effect behind a burst, then Ranged Attack and its Attack Stat. Item cards put Area of Effect, behind the same burst, on their top line after Max Range, like a grenade’s 5 m. On the sheet the per-Rank amounts are worked out for the Rank held.</li>
+						<li>Character sheets: age, gender, height and weight sit on one line, and the Kind, Origin, Profession and Past on the next, each wrapping onto more lines when there isn’t room.</li>
 						<li>Character Creator, Player Tools and the Sample Character Sheet: Abilities show their name and effect, and a chevron opens their badge, where they came from and the Action they grant, like Fireball’s Cast Fireball, written out in full. Trait cards on the Traits step and Conditions show their Actions too.</li>
 						<li>Ranged damage badges on Items use a crosshairs icon in place of the bow. In the Character Creator and Player Tools, a weapon card’s Max Range sits on its top line after the damage, led by a dashed arc in a tan circle like the damage badges, and the Attack Stat badge shows just the Stat, like “Grace / Power”.</li>
 						<li>Mechanics, Character Creator and Player Tools: on the character sheet, Abilities take two columns and Skills one, the reverse of before. Each Trait card’s From line sits beside its category badge, and Knowledges are 12px apart.</li>
