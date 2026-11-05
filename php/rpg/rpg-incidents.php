@@ -198,8 +198,9 @@
 								For Example
 							</p>
 							<ul class="copy">
-								<li>An Attack with a Longsword is a Devastating Hit; the Longsword’s 4 Slashing damage would combine with the Devastating Hit for 4+1 Slashing damage compared against the target's Resistances. The target is wearing leather armor, providing them with a Resistance of 1 against Slashing. The result of the Attack is that the target suffers 4 Slashing damage (4+1 - 1).</li>
+								<li>An Attack with a Spear is a Devastating Hit; the Spear’s 5 Piercing damage would combine with the Devastating Hit for 5+1 Piercing damage compared against the target's Resistances. The target is wearing chainmail, providing them with a Resistance of 1 against Piercing. The result of the Attack is that the target suffers 5 Piercing damage (5+1 - 1).</li>
 								<li>Attacks may do multiple types of damage, such as a fragmentation grenade doing 5 Blunt and 5 Piercing damage, representing both the shock of the explosion and its shrapnel. In cases where an Attack does multiple types of damage all are compared against the target's Resistances and are applied.</li>
+								<li>Some weapons list a choice of damage types, such as the Longsword’s 6 Slashing / 4 Piercing. When Attacking with one, the player must choose which type of damage the Attack deals.</li>
 							</ul>
 						</div>
 					</div>

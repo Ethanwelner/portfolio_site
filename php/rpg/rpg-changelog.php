@@ -9,6 +9,11 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: an open weapon card shows how it Attacks: Melee or Ranged (and Thrown), its Max Range, the Stat added to its Attack Rolls, its Area of Effect, and whether reloading takes a Partial or Full Action. The Taser and Stun Baton cost the target its next Action on a hit.</li>
+						<li>Character Creator and Player Tools: shields resist damage and add to Defense when Defending: Buckler +2, Wooden Shield +4, Tower Shield +6, Ballistic Shield +5.</li>
+						<li>Character Creator and Player Tools: a new Flat-Footed Condition gives −1 Priority and −1 to Attack Rolls through the following combat Round.</li>
+						<li>Character Creator and Player Tools: the sheet shows the character’s Movement after HP, VP and SP: 10 m for every Kind but the bodiless AI Core.</li>
+						<li>Mechanics: in Incidents, Damage notes that a weapon with a choice of damage types, like the Longsword’s 6 Slashing / 4 Piercing, makes the player choose which type an Attack deals. The damage example now uses a Spear against chainmail.</li>
 						<li>Setting: beside its placeholder image, intro copy takes half the row, up to 768px, so the image gets the other half.</li>
 						<li>Setting: the placeholder images beside intro copy are no taller than 2:3 and sit centered beside the copy.</li>
 						<li>Setting: the intro copy beside the placeholder images (Setting, Rebirth of Science, The Planes, The Stars, Parabiology) is 768px wide, like the rest of the single-column copy, up from 640px. The images show beside it from 1500px wide, so they’re smaller.</li>
