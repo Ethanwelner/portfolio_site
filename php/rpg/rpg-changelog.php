@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: a character made with Build it starts without the last character’s portrait.</li>
 						<li>Character Creator and Player Tools: 35 magic Abilities join the Magic list, each giving a Cast Action, among them Fireball, Lightning, Hoarfrost, Heal, Mending, Skin of Stone, Invisibility, Haste, Sleep, Charm, Dispel Magic and Blink, with Magic minimums from 1 to 4. The Conditions they give come too, like Burning, Corroding, Stone Skin, Shielded, Prone, Frightened, Asleep and Charmed. Long Toothed comes from Long in the Tooth, Hard Shell has no Stat minimum, and AI Cores can take Cybernetic Intelligence as a Background Trait.</li>
 						<li>Sorcerous is gone, since Magic Access does its job. Its card is off the Traits page’s Background-Only examples.</li>
 						<li>Mechanics: Conditions no longer carry Stat requirements. In Traits’ Background-Only examples, Long Toothed comes from a new Background Ability, Long in the Tooth, which holds its requirements (Power 10, Endurance 5, Demeanor 5, Middle Aged or Older), and Hard Shell drops its Endurance 5. Character Creator: Cybernetic Intelligence is on every AI Core’s Background Trait list.</li>
