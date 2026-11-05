@@ -306,7 +306,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 							<div class="sheet-item-row">
 								<span class="sheet-check" role="img" aria-label="Equipped"></span>
 								<span class="sheet-item-title">Pistol</span>
-								<span class="sheet-item-stats"><span class="chip sheet-item-stat"><span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="Ranged damage" focusable="false"><title>Ranged damage</title><path d="M145.7 286.9l45.25-45.14L100.5 151.3C128.2 136.1 159.5 128 191.1 128c31.1 0 62.88 7.749 90.38 22.5l46.63-46.62c-40.62-25.87-87.76-39.87-137-39.87c-49.75 0-97.26 14.25-138.1 40.62l-3.875-3.873C46.83 97.63 42.7 96.06 38.57 96.06c-4.108 0-8.209 1.558-11.33 4.675l-22.54 22.51C1.586 126.4 .023 130.5 .023 134.6c0 4.113 1.565 8.226 4.692 11.35L145.7 286.9zM408.1 182.4l-46.63 46.62c14.75 27.49 22.5 58.24 22.5 90.36c0 32.49-8.126 63.74-23.25 91.48l-90.5-90.61l-45.25 45.24l141.8 141.8c3.125 3.124 7.22 4.687 11.31 4.687s8.188-1.563 11.31-4.687l22.62-22.62c3.125-3.124 4.688-7.249 4.688-11.37c0-4.124-1.563-8.249-4.688-11.37l-4.625-4.498c26.37-40.87 40.63-88.36 40.63-138.1C447.1 269.1 433.1 222.1 408.1 182.4zM512 15.64c0-8.634-7.093-15.64-15.72-15.64c-1.004 0-2.015 .0896-3.053 .29l-128.6 25.75c-7.885 1.609-12.61 8.447-12.61 15.47c0 3.89 1.449 7.831 4.612 10.99l34.5 34.5L140.5 337.6l-49.75-16.7c-2.104-.6776-4.349-1.006-6.497-1.006c-5.38 0-10.57 2.076-14.5 6.006l-63.75 63.82C1.901 393.8 0 399 0 404.1c0 8.377 5.1 16.6 14.1 19.62l55.62 18.5L88.22 497.9c3.027 9.001 11.24 14.12 19.65 14.12c5.134 0 10.35-1.923 14.47-5.997l63.62-63.74c3.93-3.93 6.011-9.191 6.011-14.57c0-2.148-.3325-4.323-1.01-6.427L174.4 371.4l250.6-250.5l34.5 34.47c3.162 3.161 7.11 4.639 11.01 4.639c7.037 0 13.88-4.755 15.49-12.64l25.72-128.6C511.9 17.75 512 16.65 512 15.64z"/></svg></span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Piercing" focusable="false"><title>Piercing</title><path d="M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z"/></svg>7</span></span></span>
+								<span class="sheet-item-stats"><span class="chip sheet-item-stat"><span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="Ranged damage" focusable="false"><title>Ranged damage</title><path d="M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z"/></svg></span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Piercing" focusable="false"><title>Piercing</title><path d="M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z"/></svg>7</span></span></span>
 								<span class="chip">Weapon</span>
 								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
 							</div>
@@ -349,13 +349,20 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		<div class="c-sheet-box sheet-abilities">
 			<h3 class="sheet-rule sheet-subhead">Abilities</h3>
 			<?php if ( $sf_abilities ) : ?>
+				<!-- Each Ability shows its name and effect; its chevron opens its badge,
+				     where it came from and any Action it grants -->
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_abilities as $t ) : ?>
-						<li class="trait-box">
-							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+						<li class="trait-box sheet-ability">
+							<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+							<div class="sheet-fold">
+								<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
+								<?php if ( ! empty( $t['action'] ) ) : ?>
+									<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
+									<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
+								<?php endif; ?>
+							</div>
 						</li>
 					<?php endforeach; ?>
 				</ul>
@@ -375,9 +382,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<li>
 						<details class="trait-box">
 							<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
 						</details>
 					</li>
 				<?php endforeach; ?>
@@ -390,9 +396,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<?php foreach ( $sf_other as $t ) : ?>
 						<li class="trait-box">
 							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
 							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
 						</li>
 					<?php endforeach; ?>
 				</ul>

@@ -2756,7 +2756,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         /* The Knowledges, the Abilities and the Skills, each a box, stacked;
-           side by side once there's room, the Abilities and Skills first,
+           side by side once there's room, the Abilities (twice as wide, so
+           their cards take two columns) and Skills first,
            then all three, as in the creator. Any other Traits take a line of
            their own under them. */
         .sheet-lower {
@@ -2772,11 +2773,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
             @container sheet (width >= 900px) {
                 > .sheet-abilities {
-                    flex: 1 1 0;
+                    flex: 2 1 0;
                 }
 
                 > .sheet-skills {
-                    flex: 2 1 0;
+                    flex: 1 1 0;
                 }
             }
 
@@ -2815,7 +2816,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
         .sheet-knowledges {
             display: grid;
-            gap: 6px;
+            gap: 12px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -2865,10 +2866,23 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* The Action an Ability grants, under its effect, set off by a rule at
+           its left, as in the creator */
+        .sheet-traits .trait-action {
+            padding-left: 10px;
+            border-left: 2px solid #969696;
+        }
+
         .trait-card-badges {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 4px;
+
+            /* Where the Trait came from, after the category badge */
+            > .trait-card-from {
+                margin: 0 0 0 4px;
+            }
         }
 
         /* A Skill card opens from its chevron, like the item cards. Closed,
@@ -2904,6 +2918,35 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             &[open] .sheet-trait-chevron {
                 rotate: 180deg;
             }
+        }
+
+        /* An Ability's name and effect stay in view; its chevron opens the
+           badge, where it came from and any Action under them */
+        .sheet-ability {
+            .sheet-fold {
+                display: none;
+            }
+
+            &.is-open {
+                .sheet-fold {
+                    display: block;
+                }
+
+                .sheet-trait-chevron {
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        .sheet-fold-button {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            margin: -4px;
+            border: 0;
+            background: none;
+            color: inherit;
+            cursor: pointer;
         }
 
         .sheet-trait-chevron {
