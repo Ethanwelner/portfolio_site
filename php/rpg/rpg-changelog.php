@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: Movement moves to a small box of its own to the left of Resistances, titled Movement, with a running figure before the number instead of “MOVE”; it reads like “10m”.</li>
+						<li>Character Creator and Player Tools: Movement moves to a small box of its own to the left of Resistances, titled Move, with a running figure before the number instead of “MOVE”; it reads like “10m”.</li>
 						<li>Character Creator and Player Tools: the sheet’s Resistances, Knowledges and Traits titles are 20px, the same size as the other section titles, and the gaps between the sheet’s boxes are 20px.</li>
 						<li>Character Creator and Player Tools: an open item card shows its cost, how it Attacks and the slot it takes as badges, like “Melee Attack”, “Max Range: 1 m”, “Attack Stat: Grace” and “Slot: Headwear”. Its description sits on its own line, with any other rules, like a shield’s Defense, on the line under it.</li>
 						<li>Wielder Traits give +3 to Attack Rolls made with their weapon, at any Rank. Their Rank × 5 bonus still applies only to Skill Checks. This covers every Wielder Trait in the Character Creator and Player Tools, and the Wielder: Longsword and Wielder: Musket examples in Explaining Traits.</li>
