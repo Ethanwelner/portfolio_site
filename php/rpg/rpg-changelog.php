@@ -7,6 +7,15 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/5/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Stats and Example Stats revised from the Mechanics Doc. Magic is now one of the Special Stats, extra core Stats that a Trait opens, with no focus Stats and their own resource. The 20-point cap covers Special Stats, and some Kinds set lower maximums. The Example Stats copy is regrouped around the Human’s Generalist and Unexceptional Traits and what its Physical build can and can’t do.</li>
+						<li>Mechanics: the Explaining Traits intro revised from the Mechanics Doc. It’s regrouped into a Trait’s category and type, how Traits are gained, banking, temporary Traits, and the four kinds of requirements (Stats, Prerequisite Traits, Training and Role-playing), which Background packages skip. The first example Knowledge is Local History, as its text already described, and Capable Student loses its stray parentheses.</li>
+						<li>Mechanics: What Is a Skill Check? and Requesting Competence revised from the Mechanics Doc. Skill Checks now explain the roll first, then core and complex checks, target values, success as a gradient and repeat attempts. Requesting Competence says the GM can allow or deny it and decides its outcome.</li>
+						<li>Setting and Mechanics: the placeholder images beside intro copy are no taller than 3:4, down from 2:3.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator and Player Tools: the sheet’s Traits box splits into Abilities and Skills, each in its own box, side by side after Knowledges. The Origin, Profession and Past badges now mark only Traits selected from that background’s choices, not its grants or Traits bought with a pick from its list.</li>

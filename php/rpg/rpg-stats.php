@@ -15,20 +15,24 @@
 					<h3>Stats</h3>
 					<!-- OVERVIEW -->
 					<p class="copy">
-						A character's Stats are intended to be a representation of that character's physical, social, and mental limitations. Stats are used to track a character's growth or to show a character's level of capability. There are two types of Stats a character invests in, and they are directly linked. A character's core Stats record where each Level was invested and set how many focus points a character has in each category. A character's focus Stats determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character's Stats start at 0. A character's Kind adds a bonus to each Stat and sets maximum values a character's Stats cannot exceed.
+						A character’s Stats represent their physical, social, and mental limits and track how they grow over time. Stats come in two linked types. The three core Stats, Physical, Social, and Mental, record where each Level was invested. Each core Stat has three focus Stats, which determine Skill Checks, access to Traits, and resources like Hit Points, Vibe Points, and Savvy Points. Every character’s Stats start at 0. A character’s Kind adds a bonus to each Stat and sets maximums their Stats cannot exceed.
 					</p>
 					<ul class="copy">
-						<li>When your character gains a Level, you get a point to spend in any core Stat.</li>
-						<li>Adding a point to a core Stat gives you 3 points to spend in the focus Stats of that category.</li>
-						<li>Magic is a core Stat with no focus Stats. Only a character with a Trait that opens it, like Magic Access, which most Kinds of Dreft get through their Magical Heritage, can put points into Magic. Each point in it adds 3 Mana Points instead of focus points.</li>
-						<li>The maximum that can be spent on any core or focus Stat is 20.</li>
-						<li>Traits, Equipment, or other effects can cause these Stat totals to rise above 20.</li>
-						<li>Hit Points and other resource mechanics are dependent on scores from the focus Stats, except Mana Points, which come from Magic.</li>
-						<li>Skill Check bonuses and access to certain Traits are dependent on scores from the focus Stats.</li>
-						<li>Each point put into a Stat is tracked in the dot bar; both of these visualizations are meant to be illustrative of a character's Stats at a glance. Neither is strictly required, as the Stats they describe can be more compactly described in other ways.</li>
+						<li>When a character gains a Level, they get 1 point to spend in any core Stat.</li>
+						<li>Each point added to Physical, Social, or Mental gives 3 points to spend in the focus Stats of that category.</li>
+						<li>No more than 20 points can be spent on any core, focus, or Special Stat, and some Kinds set lower maximums. Traits, Equipment, or other effects can still raise a Stat’s total above 20.</li>
+					</ul>
+					<p class="copy">Beyond Physical, Social, and Mental, some Traits open additional core Stats, called Special Stats. All Special Stats work the same way:</p>
+					<ul class="copy">
+						<li>Only a character with a Trait that grants access, like Magic Access, can put points into a Special Stat.</li>
+						<li>Special Stats have no focus Stats. Each point instead adds 3 points to a resource unique to that Stat, such as Mana Points for Magic.</li>
+						<li>Special Stats are the only Stats whose resources don’t come from focus Stats.</li>
+					</ul>
+					<p class="copy">How a character spreads their points shapes what they can do, and most concepts need points in more than one place:</p>
+					<ul class="copy">
 						<li>An Ogre can be all physicality but may only be smart enough to use a club.</li>
-						<li>A soldier needs to be smart enough to know how to load a musket and graceful enough to aim it.</li>
-						<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere but probably needs Memory to retain what they see.</li>
+						<li>A soldier needs to be smart enough to load a musket and graceful enough to aim it.</li>
+						<li>A spy may be incredibly persuasive and have the Demeanor to fit in anywhere, but probably needs Memory to retain what they see.</li>
 					</ul>
 				</div>
 			</div>
@@ -117,19 +121,20 @@
 
 			<div class="tech-field-panel is-active" id="stats-example" role="tabpanel" aria-labelledby="tab-stats-example">
 				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-					<div class="flex-7 content-stack">
+					<div class="flex-7 content-stack content-stack-sm">
+						<p class="copy">The example below is a Human, the average baseline in this system. Two Traits from the Kind section of their Background shape their Stats:</p>
 						<ul class="copy">
-							<li>Some Kinds will have lowered maximums; the example below is a Human and cannot exceed 15 in any focus Stat due to the Unexceptional Trait in the Kind section of their Background.</li>
-							<li>The character below started with 1 in each Stat due to the Human Generalist Trait in the Kind section of their Background.</li>
-							<li>Humans are intended to be the average baseline in this system.</li>
-							<li>This example character has 9 points spent in Physical and so has 27 points to spend in the focus Stats.</li>
-							<li>This character has spent only 2 points in Social and 1 in Mental, so their access to Traits that go beyond simple feats of brute strength will be very limited.</li>
-							<li>Each point gives a Trait that is Universal (circle/odd number) or based on the character's Background (square/even number).</li>
-							<li>Universal Traits are available to any character; Background Traits have requirements based on Kind, Origin, Profession, or Past.</li>
-							<li>This character has oriented their Stats to be a strong but brainless and crude character with a lot of Power and Endurance. Maybe they swing a Great Club (Endurance 4) (Power 8) like a barbarian or have a set of Plate Armor (Endurance 8) (Power 4).</li>
-							<li>This character lacks the Grace or Intuition to be able to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
-							<li>They're definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot Trait) anytime soon.</li>
+							<li>Generalist gives them 1 point in each focus Stat to start.</li>
+							<li>Unexceptional means none of their focus Stats can exceed 15.</li>
 						</ul>
+						<p class="copy">This character has put 9 core points in Physical, 2 in Social, and 1 in Mental, giving them 27, 6, and 3 focus points to spend. They’ve built a strong but brainless and crude character with a lot of Power and Endurance, which opens some doors and closes others:</p>
+						<ul class="copy">
+							<li>They could swing a Great Club (Endurance 4) (Power 8) like a barbarian or wear a set of Plate Armor (Endurance 8) (Power 4).</li>
+							<li>They lack the Grace or Intuition to use a Fencing Sword (Grace 8) (Intuition 4) with any effectiveness, even if they got their hands on one.</li>
+							<li>They’re definitely not becoming an Expert Pilot (Memory 5) (Intuition 10) (Grace 5) (any Pilot Trait) anytime soon.</li>
+							<li>With so little in Social and Mental, their access to Traits beyond simple feats of brute strength will be very limited.</li>
+						</ul>
+						<p class="copy">Each point also gives a Trait. Odd-numbered points, shown as circles, give a Universal Trait, which any character can take. Even-numbered points, shown as squares, give a Background Trait, which has requirements based on Kind, Origin, Profession, or Past.</p>
 					</div>
 					<div class="d-inline-flex flex-6 flex-column">
 						<div class="d-flex flex-gap-48 flex-column stat-panel">

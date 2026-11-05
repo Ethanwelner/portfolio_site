@@ -19,43 +19,34 @@
             <div class="content-stack content-stack-sm">
               <h3>Traits</h3>
               <p class="copy">
-                Traits, alongside a character’s Stats and Equipment, are the defining characteristics that make a character who and what they are. The Trait system is flexible and functions as a catchall category of things a character knows, things a character can do, things a character belongs to, and relationships the character may have with others. Traits are named and self-contained characteristics categorized by what the Trait is and how it interacts with characters and the game’s systems. A Trait will typically either be part of a structured category that defines how the Trait is used, or it will describe how the Trait manifests itself.
+                Traits, alongside a character’s Stats and Equipment, are the defining characteristics that make a character who and what they are. The Trait system is flexible and works as a catchall for things a character knows, things they can do, groups they belong to, and relationships they have with others. Each Trait is a named, self-contained characteristic that lists its requirements and effects in one place.
                 <br><br>
-                Traits are almost always additive, conveying some additional capability or capacity that a character has, though a rare few can convey negative attributes or restrictions. Trait effects are wide-ranging, from bonuses to certain Skill Checks to combat buffs to new abilities. They can describe a character's relationships to a society, such as memberships in exclusive organizations or even a wanted status for a criminal on the run. Traits can be temporary conditions, such as describing the ramifications of a character's broken leg. Because Traits are so varied, they will typically be organized on a character’s sheet by their theme or by how they are used.
-                <br><br>
-                Characters start with a series of Traits based on their Background packages. A character’s Kind, Origin, Profession, and Past all grant a starting package of Traits that will help to inform who and what a character is. From there, a character gains additional Traits through accruing experience and Leveling Up or through in-game circumstances.
-                <br><br>
-                There are three primary ways permanent Traits are gained:
+                Traits are almost always additive, giving a character some additional capability or capacity, though a rare few convey negative attributes or restrictions. Their effects range from bonuses to certain Skill Checks to combat buffs to new abilities. They can also describe a character’s place in society, such as membership in an exclusive organization or a wanted status for a criminal on the run. Because Traits are so varied, they are typically organized on a character’s sheet by their theme or by how they are used.
               </p>
+              <p class="copy">Every Trait has a category and may also have a type:</p>
               <ul class="copy">
-                <li>
-                They are granted by a Background package when the character is created.
-                </li>
-                <li>
-                They are granted automatically for every focus Stat point a character gains.
-                </li>
-                <li>
-                They are gained through in-game actions or occurrences.
-                </li>
+                <li>A Trait’s category, like Knowledge or Condition, determines how the Trait is used in the game.</li>
+                <li>A Trait’s type, like (Supernatural), (Injury), or (Cybernetic), has no effect on its own. Types let other effects target specific kinds of Traits, such as a doctor healing Injury Traits.</li>
               </ul>
-              <p class="copy">Temporary Traits can be granted through Equipment or can be based on temporary circumstances, such as an injury sustained or short-term fame gained from a notorious act. Temporary Traits should have the time or circumstance of their ending in their description.</p>
+              <p class="copy">Characters start with Traits from their Background packages. A character’s Kind, Origin, Profession, and Past each grant a starting set of Traits that helps inform who and what the character is. After that, characters gain Traits as they Level Up and through in-game circumstances. Permanent Traits are gained in three ways:</p>
               <ul class="copy">
-                <li>Traits are self-contained pieces of information assigned to a character or object with specific requirements and effects.</li>
-                <li>Traits will typically list their name, category, type, and effect in a single place of reference. Traits can be listed by their name on character sheets and in descriptions, with the Trait's effects referenced only when needed.</li>
-                <li>Every focus Stat point grants a Trait, alternating along that Stat’s dot bar: odd-numbered points (circles) grant a Universal Trait and even-numbered points (squares) grant a Background Trait.</li>
-                <li>If, when a character gains a focus Stat point, they do not wish to gain a new Trait, they can "bank" that Trait, until an in-game RP circumstance presents them with the opportunity to gain a Trait that they want. This is a good way for a player to gain Conveyed Traits without it feeling forced.</li>
-                <li>Backgrounds typically provide several Traits when adopted, giving a baseline that informs a character's background and circumstances.</li>
-                <li>Traits can have core or focus Stat requirements. A character must meet a Trait’s minimum Stats to gain it, except for Traits granted by their Background packages (Kind, Origin, Profession, and Past), which they always receive.</li>
-                <li>Some Traits are on a list that only certain characters can take from. Magic Traits like Incantation are on the Magic list, which Magic Access opens; most Kinds of Dreft get Magic Access through their Magical Heritage. A character without a Trait that opens a list can’t take its Traits, though a Background package can still grant them.</li>
-                <li>Traits can be gained outside of Leveling and can be lost.</li>
-                <li>Traits can be temporary.</li>
-                <li>Traits always have a category, like Knowledge or Condition, that determines how the Trait is used in the game.</li>
-                <li>Traits can have a type like (Supernatural), (Injury), or (Cybernetic). These will typically be used in concert with in-game effects that target specific types of Traits, such as a doctor healing Injury Traits. These types have no effect on their own.</li>
-                <li>Traits that would require training can only be gained if the character has received training relevant to that Trait or has been performing a related action for long enough. This is at the GM's discretion.</li>
-                <li>Some Traits will require a character to already possess a prerequisite Trait in order to be gained (such as a Pilot Trait being a prerequisite for the Expert Pilot Trait).</li>
-                <li>Some Traits have specific, listed role-playing requirements.</li>
-                <li>Unless it is a Ranked Trait, a Trait's effect does not stack. Multiple instances of the same Trait will only have the effect of a single instance of that Trait.</li>
+                <li>They are granted by a Background package when the character is created.</li>
+                <li>They are granted for every focus Stat point a character gains. Odd-numbered points (circles) grant a Universal Trait, and even-numbered points (squares) grant a Background Trait.</li>
+                <li>They are gained through in-game actions or occurrences, outside of Leveling Up.</li>
               </ul>
+              <p class="copy">
+                If a character doesn’t want a new Trait when they gain a focus Stat point, they can “bank” that Trait until an in-game RP circumstance gives them the opportunity to gain one they want. This is a good way for a player to gain Conveyed Traits without it feeling forced.
+                <br><br>
+                Traits can also be temporary, and they can be lost. Temporary Traits can be granted through Equipment or by short-lived circumstances, such as an injury sustained or short-term fame gained from a notorious act. A temporary Trait’s description should state the time or circumstance that ends it.
+              </p>
+              <p class="copy">Many Traits have requirements a character must meet before gaining them. Traits granted by a character’s Background packages are exempt from all of these requirements:</p>
+              <ul class="copy">
+                <li><strong>Stats:</strong> A character must meet a Trait’s minimum core, focus, or Special Stats to gain it. A Trait that requires Magic, for example, can only be taken by a character who has access to Magic.</li>
+                <li><strong>Prerequisite Traits:</strong> Some Traits require a character to already have another Trait, such as a Pilot Trait for the Expert Pilot Trait.</li>
+                <li><strong>Training:</strong> Traits that would require training can only be gained if the character has received relevant training or has been performing a related action for long enough. This is at the GM’s discretion.</li>
+                <li><strong>Role-playing:</strong> Some Traits have specific, listed role-playing requirements.</li>
+              </ul>
+              <p class="copy">Unless a Trait is Ranked, its effect does not stack. Multiple instances of the same Trait only have the effect of a single instance. Ranked Traits are explained under Trait Ranks.</p>
             </div>
           </div>
           <div class="image-placeholder" aria-hidden="true">Image</div>
@@ -127,7 +118,7 @@
                     Outside of character creation, Knowledges can only be gained through in-game means, such as a character spending a semester learning history or a character having the layout of a forest magically conveyed to them. It is at the GM's discretion to determine how easy or difficult Knowledges are to attain and where their limitations are.</p>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>American History (1)</span>
+                      <span>Local History (1)</span>
                       <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
                     </div>
                     <p class="copy effect">This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</p>
@@ -244,7 +235,7 @@
                 <div class="trait-card-grid">
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>American History (1)</span>
+                      <span>Local History (1)</span>
                       <span class="trait-name-chips"><span class="chip">Knowledge</span></span>
                     </div>
                     <p class="copy effect">This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences.</p>
@@ -386,7 +377,7 @@
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>(Capable Student)</span>
+                      <span>Capable Student</span>
                       <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
                     <p class="copy effect">This character can learn a new Knowledge Trait in half the specified time.</p>
