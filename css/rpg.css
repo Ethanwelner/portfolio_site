@@ -1730,6 +1730,24 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .lore-details {
         align-self: start;
     }
+
+    /* The info block 1rem under the name, rather than the entries' usual 2rem
+       stacked on the title's own spacing */
+    > .lore-entry > :first-child {
+        margin-bottom: 1rem;
+    }
+
+    .info-cols {
+        margin-top: 0;
+    }
+}
+
+/* Corporations' four facts in two columns: Headquartered and Employees, then
+   Market Cap and Industry */
+#timeline-corporations .attr-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
 }
 
 /* Two-column content rows in Strange Frontiers, php/rpg/ and php/rpg/lore/ */
