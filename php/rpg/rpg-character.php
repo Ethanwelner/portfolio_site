@@ -131,11 +131,18 @@ $sf_sheet_link = function ( $key ) use ( $sf_sample, $sf_e ) {
 $sf_knowledges = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' === $t['category'] && ! $t['language']; } );
 $sf_languages  = array_filter( $sf_sample['traits'], function ( $t ) { return $t['language']; } );
 $sf_cards      = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' !== $t['category']; } );
-// Where a Trait came from, in words: "a background pick (Origin)"
+// Where a Trait came from, in words: "a background pick"
 $sf_from = function ( $t ) {
-	$from = str_replace( array( 'universal pick', 'background pick' ), array( 'a universal pick', 'a background pick' ), $t['from'] );
-	return $t['badges'] ? $from . ' (' . implode( ', ', $t['badges'] ) . ')' : $from;
+	return str_replace( array( 'universal pick', 'background pick' ), array( 'a universal pick', 'a background pick' ), $t['from'] );
 };
+// The cards by category, as the creator's sheet boxes them
+$sf_abilities = array_filter( $sf_cards, function ( $t ) { return 'Ability' === $t['category']; } );
+$sf_skills    = array_filter( $sf_cards, function ( $t ) { return 'Skill' === $t['category']; } );
+$sf_other     = array_filter( $sf_cards, function ( $t ) { return ! in_array( $t['category'], array( 'Ability', 'Skill' ), true ); } );
+// Movement's small box, left of the resistances, as in the creator: its
+// ruled title, then a running figure (the creator's person-running icon)
+// before the number, which runs into its unit
+$sf_move_box = '<div class="c-sheet-box sheet-movement"><h4 class="sheet-rule" title="Movement">Move</h4><div class="sheet-movement-value" title="Movement"><svg class="sheet-movement-icon" viewBox="0 0 448 512" role="img" aria-label="Movement" focusable="false"><title>Movement</title><path d="M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z"/></svg><span class="num">10<span class="sheet-movement-unit">m</span></span></div></div>';
 $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Language" focusable="false"><title>Language</title><path d="M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z"/></svg>';
 ?>
 <!-- Laid out like the Character Creator's sheet: the level's blob on the
@@ -180,7 +187,6 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			<div class="sheet-resource"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">17<span class="muted"> / 17</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-sp" title="Savvy Points">SP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
-			<div class="sheet-resource"><strong class="resource-name" title="Movement">Movement</strong><span class="num">10<span class="muted"> m</span></span></div>
 		</div>
 	</div>
 
@@ -188,7 +194,9 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		<!-- The resistances go here, under HP and over the stats, while the
 		     sheet is a single column, and over the Conditions and Items beside
 		     the stats otherwise -->
-		<div class="c-sheet-box sheet-resistances sheet-resistances-first">
+		<div class="sheet-move-row sheet-resistances-first">
+			<?php echo $sf_move_box; ?>
+			<div class="c-sheet-box sheet-resistances">
 			<h4 class="sheet-rule">Resistances</h4>
 			<ul class="sheet-resistance-list">
 				<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-a1">
@@ -206,6 +214,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					</div>
 				</li>
 			</ul>
+			</div>
 		</div>
 
 		<div class="c-sheet-box sheet-body">
@@ -235,6 +244,8 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		</div>
 
 		<div class="sheet-side-stack">
+			<div class="sheet-move-row">
+			<?php echo $sf_move_box; ?>
 			<div class="c-sheet-box sheet-resistances">
 				<h4 class="sheet-rule">Resistances</h4>
 				<ul class="sheet-resistance-list">
@@ -253,6 +264,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 						</div>
 					</li>
 				</ul>
+			</div>
 			</div>
 
 			<div class="sheet-side-row">
@@ -291,27 +303,69 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		</div>
 	</div>
 
+	<!-- The Knowledges, then the Abilities and the Skills, each a box along
+	     the row, as in the creator. Skill cards start closed to their name and
+	     open from the chevron; a card's category sits in its body. -->
 	<div class="sheet-lower">
 		<div class="c-sheet-box sheet-side">
-			<h3 class="sheet-subhead">Knowledges</h3>
+			<h3 class="sheet-rule sheet-subhead">Knowledges</h3>
 			<ul class="sheet-knowledges">
 				<?php foreach ( $sf_knowledges as $t ) { echo '<li>' . $sf_knowledge_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
 				<?php foreach ( $sf_languages as $t ) { echo '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
 			</ul>
 		</div>
-		<div class="c-sheet-box">
-			<h3 class="sheet-subhead">Traits</h3>
-			<p class="sheet-banked"><?php echo $sf_sample['picks']['universal']; ?> universal and <?php echo $sf_sample['picks']['background']; ?> background picks available</p>
+		<div class="c-sheet-box sheet-abilities">
+			<h3 class="sheet-rule sheet-subhead">Abilities</h3>
+			<?php if ( $sf_abilities ) : ?>
+				<ul class="sheet-traits">
+					<?php foreach ( $sf_abilities as $t ) : ?>
+						<li class="trait-box">
+							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php else : ?>
+				<p class="sheet-empty">No Abilities yet.</p>
+			<?php endif; ?>
+		</div>
+		<div class="c-sheet-box sheet-skills">
+			<!-- The Skills title, then along its line the picks left, together -->
+			<div class="sheet-traits-head">
+				<h3 class="sheet-rule sheet-subhead">Skills</h3>
+				<?php $sf_picks = $sf_sample['picks']['universal'] + $sf_sample['picks']['background']; ?>
+				<span class="sheet-banked"><?php echo $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ); ?> available</span>
+			</div>
 			<ul class="sheet-traits">
-				<?php foreach ( $sf_cards as $t ) : ?>
-					<li class="trait-box">
-						<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><span class="trait-name-chips"><?php foreach ( array_merge( $t['badges'], array( $t['category'] ) ) as $chip ) { echo '<span class="chip">' . $chip . '</span>'; } ?></span></div>
-						<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-						<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+				<?php foreach ( $sf_skills as $t ) : ?>
+					<li>
+						<details class="trait-box">
+							<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+						</details>
 					</li>
 				<?php endforeach; ?>
 			</ul>
 		</div>
+		<?php if ( $sf_other ) : ?>
+			<div class="c-sheet-box sheet-other">
+				<h3 class="sheet-rule sheet-subhead">Other Traits</h3>
+				<ul class="sheet-traits">
+					<?php foreach ( $sf_other as $t ) : ?>
+						<li class="trait-box">
+							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
+							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span></div>
+							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+							<p class="muted small">From <?php echo $sf_e( $sf_from( $t ) ); ?></p>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
 
