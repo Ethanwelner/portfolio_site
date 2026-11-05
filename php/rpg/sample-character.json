@@ -1,6 +1,6 @@
 {
 	"picks": {
-		"universal": 8,
+		"universal": 7,
 		"background": 5
 	},
 	"traits": [
@@ -258,6 +258,17 @@
 			"effect": "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol. +3 to Attack Rolls made with a Pistol, at any Rank.",
 			"badges": [],
 			"from": "universal pick"
+		},
+		{
+			"id": "eagle-eye",
+			"name": "Eagle Eye",
+			"category": "Ability",
+			"plane": "any",
+			"language": false,
+			"summary": "Sees unusually well at a distance.",
+			"effect": "This character can request advantage in situations that involve seeing at distance.",
+			"badges": [],
+			"from": "play, with a banked pick"
 		}
 	],
 	"background": [

@@ -47,7 +47,7 @@ $sf_e = function ( $text ) {
 				<li>Traits are grouped into Knowledges, Abilities, and Skills. Numbers in parentheses are a Trait’s Rank.</li>
 				<li>Picks available are Traits the character has banked for in-game opportunities.</li>
 			</ul>
-			<p class="copy">Edwin’s 25 focus points come from his Kind (9), his Origin (1), and five Levels (15), and each one granted a Trait. He spent six of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other thirteen for in-game opportunities. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
+			<p class="copy">Edwin’s 25 focus points come from his Kind (9), his Origin (1), and five Levels (15), and each one granted a Trait. He spent six of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other thirteen for in-game opportunities. One of those has since gone to Eagle Eye, a Conveyed Ability he gained in play, leaving twelve. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
 		</div>
 		<div class="flex-6 content-stack">
 			<h3>Backgrounds used in the sample character sheet</h3>
@@ -176,7 +176,6 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 						<span class="sheet-line-item"><span class="field-label">Past</span><strong><?php echo $sf_sheet_link( 'Past' ); ?></strong></span>
 					</p>
 					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Cash</span><strong>2,000 ERC</strong></span>
 						<span class="sheet-line-item"><span class="field-label">Wealth</span><strong>15,000 ERC</strong></span>
 					</p>
 				</div>
