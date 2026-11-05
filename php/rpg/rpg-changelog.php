@@ -9,6 +9,10 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: the sheet’s Traits box splits into Abilities and Skills, each in its own box, side by side after Knowledges. The Origin, Profession and Past badges now mark only Traits selected from that background’s choices, not its grants or Traits bought with a pick from its list.</li>
+						<li>Character Creator and Player Tools: Trait cards match the height of the others in their row instead of the tallest card in their section, on the sheet and the Traits step.</li>
+						<li>Character Creator and Player Tools: Skill cards on the sheet start closed to their name and open with a chevron, like item cards. A sheet card’s category badge (Skill, Ability) moves from its header into its body.</li>
+						<li>Character Creator and Player Tools: the picks a character has left show as one total, like “32 picks available”, on the Skills title’s line before Add traits.</li>
 						<li>Character Creator, Player Tools and the sample character sheet: the sheet’s boxes have 1.25rem of padding, down from 1.5rem.</li>
 						<li>Character Creator and Player Tools: Movement moves to a small box of its own to the left of Resistances, titled Move, with a running figure before the number instead of “MOVE”; it reads like “10m”.</li>
 						<li>Character Creator and Player Tools: the sheet’s Resistances, Knowledges and Traits titles are 20px, the same size as the other section titles, and the gaps between the sheet’s boxes are 20px.</li>
