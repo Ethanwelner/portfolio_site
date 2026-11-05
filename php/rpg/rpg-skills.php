@@ -15,33 +15,28 @@
 				<div class="content-stack content-stack-sm">
 					<h3>What is a Skill Check?</h3>
 					<p class="copy">
-						A Skill Check is how the game measures a character's attributes or abilities when an action they take, or a situation they face, calls for it. Skill Checks take a variety of forms, from measuring a character's raw strength or mental fortitude to testing a character's ability to ride a horse or solve a complex equation. Skill Checks, as a game mechanic, are expressed through a die roll on a d20, and the result of that roll is compared against a target value. Meeting or exceeding the required value is a success; falling below is a failure. The die roll will typically be modified by a character's Stat values, Equipment they may be utilizing, or any number of other factors.
-						<br><br>
-						Skill Checks will typically have one or more associated focus Stat values. Add the associated Stat total to the roll for the check. Some effects specify which Stats a check uses, but in most situations the Game Master (GM) will determine what Stats are being measured. When a Skill Check asks for a core Stat, the character can decide which of the focus Stats in that category they wish to use.
-						<br><br>
-						Skill Checks are a way for a GM to measure a character against some form of adversity or to grade their performance. A Skill Check may have a target value that is known to the player or one that is known only to the GM. Some Skill Checks may not have a target value at all and instead measure how "good" the roll is to determine the quality of the character's effort (such as establishing the quality of a character's work of art). How Skill Checks are used is typically a matter of GM style more than a hard and fast set of rules.
+						A Skill Check is how the game measures a character’s attributes or abilities when an action they take, or a situation they face, calls for it. Skill Checks take a variety of forms, from measuring a character’s raw strength or mental fortitude to testing their ability to ride a horse or solve a complex equation. They are a way for the GM to measure a character against some form of adversity or to grade their performance. How Skill Checks are used is typically a matter of GM style more than a hard and fast set of rules.
 						<br><br>
 						Ex. A character may have to take a lifting (Power) Skill Check in order to lift a very heavy object.
 						<br>
 						Ex. A character may have to take a fear (Demeanor) Skill Check to avoid cowering at the sight of a dragon.
-						<br><br>
 					</p>
+					<p class="copy">Skill Checks are rolled on a d20. Add the character’s relevant Stat and any other Roll Modifiers, such as from Equipment, then compare the total against the check’s target value. Meeting or exceeding the target value is a success; falling below it is a failure.</p>
 					<ul class="copy">
-						<li>Skill Check results are rolled on a d20. The result of this roll is then modified by all Roll Modifiers and compared against a target value. If the Skill Check meets or exceeds the value, it "succeeds." If the roll falls below the value, it "fails."</li>
-						<li>Most Skill Checks will reference a focus Stat. When a Skill Check references a Stat, you add the character's Stat value to the total.</li>
-						<li>If a Skill Check references a core Stat, the character can choose one relevant focus Stat to add to the die roll.</li>
-						<li>Some complex Skill Checks will reference more than one focus Stat. For these checks, the player needs to roll for each Stat separately. The result is a combination of those successes and failures, and the GM decides the outcome. Ex. A spy driving a car in a foreign land could have a Skill Check against both their Grace and Memory: Grace for the driving itself, and Memory to recall the road laws of the country they are infiltrating.</li>
-						<li>Skill success is a gradient; barely succeeding may still incur some unforeseen event. Meanwhile, failing or succeeding by a wide margin may result in significant benefits or consequences. The extent to which a character succeeds or fails is up to the GM.
-						<ul>
-							<li>Ex. You were not detected while sneaking but stepped on a twig. The guards are now more alert.</li>
-							<li>Ex. You failed the jump but can still catch the ledge with your arms to avoid falling down the pit.</li>
-							<li>Ex. You brewed a potion perfectly, slightly amplifying its effects.</li>
-							<li>Ex. You fumbled the lock and broke the mechanism; you can't try again.</li>
-						</ul>
-						</li>
-						<li>Some Skill Checks can be repeatedly attempted until the character succeeds or stops trying. It is up to the GM to decide what checks can be repeated and how long they take.</li>
-						<li>If a character's modifiers to the roll would mean that roll automatically meets or exceeds the check's target value, the player can forgo rolling at all if they wish, though the GM may still ask them to roll in order to know how far they exceed the requirement.</li>
+						<li>Most Skill Checks reference a focus Stat, which is added to the roll. Some effects specify which Stat a check uses, but in most situations the GM determines what is being measured.</li>
+						<li>If a Skill Check references a core Stat, the character chooses one focus Stat in that category to add to the roll.</li>
+						<li>Some complex Skill Checks reference more than one focus Stat. The player rolls for each Stat separately, and the GM decides the outcome from the combination of successes and failures. Ex. A spy driving a car in a foreign land could have a Skill Check against both Grace, for the driving itself, and Memory, to recall the road laws of the country they are infiltrating.</li>
+						<li>If a character’s Roll Modifiers would mean they automatically meet or exceed the target value, the player can choose not to roll. The GM may still ask for a roll to know how far they exceed it.</li>
 					</ul>
+					<p class="copy">A Skill Check’s target value may be known to the player or only to the GM. Some Skill Checks have no target value at all and instead measure how good the roll is to determine the quality of the character’s effort, such as establishing the quality of a work of art.</p>
+					<p class="copy">Success is a gradient. Barely succeeding may still bring some unforeseen event, while succeeding or failing by a wide margin may result in significant benefits or consequences. The extent to which a character succeeds or fails is up to the GM:</p>
+					<ul class="copy">
+						<li>You were not detected while sneaking but stepped on a twig. The guards are now more alert.</li>
+						<li>You failed the jump but can still catch the ledge with your arms to avoid falling down the pit.</li>
+						<li>You brewed a potion perfectly, slightly amplifying its effects.</li>
+						<li>You fumbled the lock and broke the mechanism; you can’t try again.</li>
+					</ul>
+					<p class="copy">Some Skill Checks can be repeatedly attempted until the character succeeds or stops trying. It is up to the GM to decide which checks can be repeated and how long each attempt takes.</p>
 				</div>
 			</div>
 			<div class="image-placeholder" aria-hidden="true">Image</div>
@@ -240,13 +235,12 @@
 								<h5><strong>Requesting Competence</strong></h5>
 								<div class="line"></div>
 							</div>
+							<p class="copy">A character can request Competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn’t be penalized as harshly, or at all, for lacking a specific skill. The GM can allow or deny requested Competence and decides its outcome, which can range from the character being treated as wholly proficient in the task at hand to being granted a relevant Trait that gives them that skill permanently.</p>
 							<ul class="copy">
-								<li>A character can request Competence in any situation where they believe other related factors give them enough of a baseline level of capability that they shouldn't be penalized as harshly, or at all, for lacking a specific skill.</li>
-								<li>A character with expertise in wielding a sword can request Competence when wielding a dagger, even if they don't have a Trait giving them that skill.</li>
-								<li>Requested Competence can result in a wide range of outcomes, from the character being wholly proficient in the task at hand to even being granted a relevant Trait that gives them that skill permanently.</li>
-								<li>A bard skilled with a guitar and a bass can likely request Competence with a lute, but the GM may consider the violin to be a step too far.</li>
-								<li>Many Traits that grant expertise in a skill also grant implied Competence in related Skills.</li>
+								<li>A character with expertise in wielding a sword can request Competence when wielding a dagger, even if they don’t have a Trait giving them that skill.</li>
+								<li>A bard skilled with a guitar and a bass can likely request Competence with a lute, but the GM may consider the violin a step too far.</li>
 							</ul>
+							<p class="copy">Many Traits that grant expertise in a skill also grant implied Competence in related Skills.</p>
 						</div>
 					</div>
 				</div>
