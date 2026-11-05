@@ -349,20 +349,20 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 		<div class="c-sheet-box sheet-abilities">
 			<h3 class="sheet-rule sheet-subhead">Abilities</h3>
 			<?php if ( $sf_abilities ) : ?>
-				<!-- Each Ability opens from its chevron, like the Skills, to its badge,
-				     where it came from, its effect and any Action it grants -->
+				<!-- Each Ability shows its name and effect; its chevron opens its badge,
+				     where it came from and any Action it grants -->
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_abilities as $t ) : ?>
-						<li>
-							<details class="trait-box">
-								<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
+						<li class="trait-box sheet-ability">
+							<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+							<div class="sheet-fold">
 								<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-								<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
 								<?php if ( ! empty( $t['action'] ) ) : ?>
 									<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
 									<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
 								<?php endif; ?>
-							</details>
+							</div>
 						</li>
 					<?php endforeach; ?>
 				</ul>

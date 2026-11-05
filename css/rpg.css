@@ -2920,6 +2920,35 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* An Ability's name and effect stay in view; its chevron opens the
+           badge, where it came from and any Action under them */
+        .sheet-ability {
+            .sheet-fold {
+                display: none;
+            }
+
+            &.is-open {
+                .sheet-fold {
+                    display: block;
+                }
+
+                .sheet-trait-chevron {
+                    rotate: 180deg;
+                }
+            }
+        }
+
+        .sheet-fold-button {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            margin: -4px;
+            border: 0;
+            background: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
         .sheet-trait-chevron {
             flex: none;
             width: 12px;
