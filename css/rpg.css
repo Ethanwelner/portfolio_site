@@ -1798,14 +1798,25 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 /* Explaining Stats' Stat Types tab (php/rpg/rpg-stats.php): Physical, Social and Mental
-   side by side, one column at 960px and below. */
+   as rows, one above the other, each with its three focus Stats side by side. The
+   Stats stack at 960px and below. */
 .stat-types-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 
-    @media (max-width: 960px) {
-        grid-template-columns: minmax(0, 1fr);
+    > .content-stack {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 40px;
+
+        > h4 {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 960px) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 }
 
