@@ -1108,3 +1108,67 @@
         // Run the function when the page loads
         document.addEventListener('DOMContentLoaded', autoBoldKeywords);
         </script>
+<script>
+	// Stat diagram: each circle drifts slowly on its own smooth random path and
+	// the branch lines follow. Paused off-screen and for reduced motion.
+	(function () {
+		var svg = document.querySelector( "svg.stat-ring" );
+		if ( !svg || !window.requestAnimationFrame ) return;
+		var motion = window.matchMedia ? window.matchMedia( "(prefers-reduced-motion: reduce)" ) : null;
+		// How far (in SVG units) each kind of circle can wander from its home spot.
+		var reach = { level: 3, core: 5, focus: 7 };
+		var nodes = {};
+		Array.prototype.forEach.call( svg.querySelectorAll( "[data-stat]" ), function ( g ) {
+			var dot = g.querySelector( "ellipse" );
+			var kind = g.classList.contains( "stat-ring-level" ) ? "level" : g.classList.contains( "stat-ring-core" ) ? "core" : "focus";
+			// Two sine waves per axis with unrelated periods (roughly 9–23 s) read as wandering, not orbiting.
+			var waves = [];
+			for ( var i = 0; i < 4; i++ ) {
+				waves.push( { speed: ( Math.PI * 2 ) / ( 9000 + Math.random() * 14000 ), phase: Math.random() * Math.PI * 2 } );
+			}
+			nodes[ g.getAttribute( "data-stat" ) ] = {
+				el: g, x: parseFloat( dot.getAttribute( "cx" ) ), y: parseFloat( dot.getAttribute( "cy" ) ),
+				reach: reach[ kind ], waves: waves, dx: 0, dy: 0
+			};
+		} );
+		var links = Array.prototype.map.call( svg.querySelectorAll( ".stat-ring-link" ), function ( line ) {
+			return { el: line, from: nodes[ line.getAttribute( "data-from" ) ], to: nodes[ line.getAttribute( "data-to" ) ] };
+		} );
+		var visible = false, frame = 0;
+		function draw( t ) {
+			Object.keys( nodes ).forEach( function ( key ) {
+				var n = nodes[ key ], w = n.waves;
+				n.dx = n.reach * ( 0.6 * Math.sin( t * w[ 0 ].speed + w[ 0 ].phase ) + 0.4 * Math.sin( t * w[ 1 ].speed + w[ 1 ].phase ) );
+				n.dy = n.reach * ( 0.6 * Math.sin( t * w[ 2 ].speed + w[ 2 ].phase ) + 0.4 * Math.sin( t * w[ 3 ].speed + w[ 3 ].phase ) );
+				n.el.setAttribute( "transform", "translate(" + n.dx.toFixed( 2 ) + " " + n.dy.toFixed( 2 ) + ")" );
+			} );
+			links.forEach( function ( l ) {
+				l.el.setAttribute( "x1", ( l.from.x + l.from.dx ).toFixed( 2 ) );
+				l.el.setAttribute( "y1", ( l.from.y + l.from.dy ).toFixed( 2 ) );
+				l.el.setAttribute( "x2", ( l.to.x + l.to.dx ).toFixed( 2 ) );
+				l.el.setAttribute( "y2", ( l.to.y + l.to.dy ).toFixed( 2 ) );
+			} );
+		}
+		function tick( t ) {
+			draw( t );
+			frame = requestAnimationFrame( tick );
+		}
+		function update() {
+			var run = visible && !( motion && motion.matches );
+			if ( run && !frame ) frame = requestAnimationFrame( tick );
+			if ( !run && frame ) { cancelAnimationFrame( frame ); frame = 0; }
+		}
+		if ( window.IntersectionObserver ) {
+			new IntersectionObserver( function ( entries ) {
+				visible = entries[ 0 ].isIntersecting;
+				update();
+			} ).observe( svg );
+		} else {
+			visible = true;
+		}
+		if ( motion ) {
+			if ( motion.addEventListener ) motion.addEventListener( "change", update ); else if ( motion.addListener ) motion.addListener( update );
+		}
+		update();
+	})();
+</script>
