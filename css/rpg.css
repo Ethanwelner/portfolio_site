@@ -464,9 +464,11 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     position: relative;
 }
 
+/* The dot sits in em, so it moves in as the nav shrinks: 18px out at 28px,
+   about 16px at 24px and 13px at 20px */
 .personal-page-nav .nav-bullet {
     left: auto;
-    right: -18px;
+    right: -0.65em;
 }
 
 /* Its labels run longer than the homepage's, so it takes the homepage nav's
