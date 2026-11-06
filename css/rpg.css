@@ -3423,8 +3423,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    and the creator: Physical red, Social purple, Mental yellow. The inner part
    (each core Stat's circle and its branch from Character Level) takes the
    group's dark shade, like the core stat badges; the focus Stats and their
-   branches take the full color. Character Level is the gray of the open stat
-   bubbles. */
+   branches take the full color. Character Level is near-black, like the
+   labels. */
 .stat-ring {
     [data-group="physical"],
     .stat-ring-link:is([data-from="physical"], [data-to="physical"]) {
@@ -3458,6 +3458,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     .stat-ring-level ellipse {
-        fill: #8a8a8a;
+        fill: #212121;
     }
 }
