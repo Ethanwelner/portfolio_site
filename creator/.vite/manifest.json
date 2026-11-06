@@ -3,29 +3,29 @@
     "file": "assets/styles-Dx958ELp.css",
     "src": "_styles-Dx958ELp.css"
   },
-  "_styles-KhlNrq7-.js": {
-    "file": "assets/styles-KhlNrq7-.js",
+  "_styles-tsPmKlfC.js": {
+    "file": "assets/styles-tsPmKlfC.js",
     "name": "styles",
     "css": [
       "assets/styles-Dx958ELp.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-C2jC_qC_.js",
+    "file": "assets/main-Fr8taUXU.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-KhlNrq7-.js"
+      "_styles-tsPmKlfC.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-COzTJKw9.js",
+    "file": "assets/main-Bl_f9t5t.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-KhlNrq7-.js"
+      "_styles-tsPmKlfC.js"
     ],
     "css": [
       "assets/main-hTiUDBKE.css"
