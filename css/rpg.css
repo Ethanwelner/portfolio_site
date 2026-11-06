@@ -3418,3 +3418,46 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         display: none !important;
     }
 }
+
+/* Stat diagram: each category in its resource's color, as in the stat lines
+   and the creator: Physical red, Social purple, Mental yellow. The inner part
+   (each core Stat's circle and its branch from Character Level) takes the
+   group's dark shade, like the core stat badges; the focus Stats and their
+   branches take the full color. Character Level is near-black, like the
+   labels. */
+.stat-ring {
+    [data-group="physical"],
+    .stat-ring-link:is([data-from="physical"], [data-to="physical"]) {
+        --stat-color: var(--frontiers-hp);
+    }
+
+    [data-group="social"],
+    .stat-ring-link:is([data-from="social"], [data-to="social"]) {
+        --stat-color: var(--frontiers-vp);
+    }
+
+    [data-group="mental"],
+    .stat-ring-link:is([data-from="mental"], [data-to="mental"]) {
+        --stat-color: var(--frontiers-sp);
+    }
+
+    .stat-ring-group ellipse {
+        fill: var(--stat-color);
+    }
+
+    .stat-ring-link {
+        stroke: var(--stat-color, #979797);
+    }
+
+    .stat-ring-core ellipse {
+        fill: color-mix(in srgb, var(--stat-color) 50%, black);
+    }
+
+    .stat-ring-link[data-from="level"] {
+        stroke: color-mix(in srgb, var(--stat-color) 50%, black);
+    }
+
+    .stat-ring-level ellipse {
+        fill: #212121;
+    }
+}

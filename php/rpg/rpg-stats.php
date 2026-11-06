@@ -38,18 +38,28 @@
 			</div>
 			<div class="d-inline-flex flex-6 justify-content-end align-items-center">
 				<svg class="column-image stat-ring" viewBox="-8 -4 484 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
-					<title id="stat-ring-title">Stat diagram: character Level at the center, the three core Stats around it, and their focus Stats outside</title>
+					<title id="stat-ring-title">Stat diagram: character Level at the center, branching to the three core Stats, which each branch to their three focus Stats</title>
 					<g fill="#979797" font-size="12" font-weight="700" text-anchor="middle">
-						<!-- Rings: focus stats outside, core stats inside -->
-						<ellipse class="stat-ring-focus-ring" cx="223.7" cy="207.268" rx="176.076" ry="173.268" fill="none" stroke="#979797" stroke-width="2"/>
-						<ellipse class="stat-ring-core-ring" cx="223.7" cy="202.408" rx="108.864" ry="107.128" fill="none" stroke="#979797" stroke-width="4"/>
-						<text class="stat-ring-ring-name" x="407.49" y="108.47">Focus<tspan x="407.49" y="122.12">Stats</tspan></text>
-						<text class="stat-ring-ring-name" x="347.34" y="140.35">Core<tspan x="347.34" y="154.12">Stats</tspan></text>
+						<!-- Branches: Level to each core Stat (thick), each core Stat to its focus Stats (thin) -->
+						<g class="stat-ring-links" stroke="#979797" stroke-linecap="round">
+							<line class="stat-ring-link" data-from="level" data-to="physical" x1="223.7" y1="203.708" x2="223.7" y2="95.2798" stroke-width="4"/>
+							<line class="stat-ring-link" data-from="level" data-to="social" x1="223.7" y1="203.708" x2="317.979" y2="255.972" stroke-width="4"/>
+							<line class="stat-ring-link" data-from="level" data-to="mental" x1="223.7" y1="203.708" x2="129.421" y2="255.972" stroke-width="4"/>
+							<line class="stat-ring-link" data-from="physical" data-to="endurance" x1="223.7" y1="95.2798" x2="163.572" y2="44.8658" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="physical" data-to="power" x1="223.7" y1="95.2798" x2="223.7" y2="34" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="physical" data-to="grace" x1="223.7" y1="95.2798" x2="283.828" y2="44" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="social" data-to="empathy" x1="317.979" y1="255.972" x2="396.833" y2="237.474" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="social" data-to="persuasion" x1="317.979" y1="255.972" x2="376.186" y2="293.902" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="social" data-to="demeanor" x1="317.979" y1="255.972" x2="336.704" y2="339.958" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="mental" data-to="logic" x1="129.421" y1="255.972" x2="50.5672" y2="237.474" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="mental" data-to="intuition" x1="129.421" y1="255.972" x2="71.2138" y2="293.902" stroke-width="2"/>
+							<line class="stat-ring-link" data-from="mental" data-to="memory" x1="129.421" y1="255.972" x2="110.696" y2="339.958" stroke-width="2"/>
+						</g>
 						<!-- Physical -->
 						<g class="stat-ring-group" data-group="physical">
 							<g class="stat-ring-core" data-stat="physical">
 								<ellipse cx="223.7" cy="95.2798" rx="20.3241" ry="20"/>
-								<text fill="#212121" class="stat-ring-label" x="223.71" y="134.93">Physical</text>
+								<text fill="#212121" class="stat-ring-label" x="252" y="99.28" text-anchor="start">Physical</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="endurance">
 								<ellipse cx="163.572" cy="44.8658" rx="10.1621" ry="10"/>
@@ -103,7 +113,7 @@
 							</g>
 						</g>
 						<!-- Character level at the center -->
-						<g class="stat-ring-level">
+						<g class="stat-ring-level" data-stat="level">
 							<ellipse cx="223.7" cy="203.708" rx="37.5997" ry="37"/>
 							<text class="stat-ring-label" x="223.89" y="200.71" fill="#ffffff">Character<tspan x="223.89" y="214.83">Level</tspan></text>
 						</g>
