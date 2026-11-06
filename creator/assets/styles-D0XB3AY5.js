@@ -3872,15 +3872,17 @@ minStats: { magic: 4 }
 list: magic
 effect: "This character gains the Cast Blink Action."
 action: "Cast Blink: This character may spend 2 MP to teleport, with anything they're carrying, to a point they can see within 10 m per Rank."
-`,um=`id: capable-student
-name: "Capable Student"
+`,um=`id: brawler
+name: "Brawler"
 status: draft
 plane: any
-summary: "Learns new knowledge in half the time."
-tags: [learning, study, site-example]
+summary: "Fighting with fists, feet, elbows and whatever else is attached."
+tags: [combat, unarmed, brawling]
 category: ability
-minStats: { memory: 3, logic: 3 }
-effect: "This character can learn a new (knowledge) Trait in half the specified time."
+ranked: true
+minStats: { power: 3, endurance: 3 }
+effect: "This character gains the Unarmed Strike Action."
+action: "Unarmed Strike: This character may Attack a target with a temporary weapon that has the following profile: (Melee) (max range 1 m) (1 Blunt per Rank) (Attack Stat: Power)."
 `,dm=`id: chain-lightning
 name: "Chain Lightning"
 status: draft
@@ -3921,16 +3923,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Cleanse Action."
 action: "Cast Cleanse: This character may spend 1 MP to end the Burning and Corroding Conditions on a character or object within 3 m."
-`,mm=`id: con-man
-name: "Con Man"
-status: draft
-plane: any
-summary: "A practiced liar, in speech and in writing."
-tags: [lying, deception, social, site-example]
-category: ability
-minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }
-effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."
-`,hm=`id: create-fire
+`,mm=`id: create-fire
 name: "Create Fire"
 status: draft
 plane: any
@@ -3943,7 +3936,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Create Fire Action."
 action: "Cast Create Fire: This character may spend 1 MP to ignite 1 square meter of material per Rank within 10 m, giving any Items or characters affected the Burning Condition."
-`,gm=`id: create-food
+`,hm=`id: create-food
 name: "Create Food"
 status: draft
 plane: any
@@ -3957,7 +3950,7 @@ prerequisites: [create-water]
 list: magic
 effect: "This character gains the Cast Create Food Action."
 action: "Cast Create Food: This character may spend 1 MP to create enough plain, edible food to feed one person for a day per Rank, at a target location within 3 m."
-`,_m=`id: create-water
+`,gm=`id: create-water
 name: "Create Water"
 status: draft
 plane: any
@@ -3970,7 +3963,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Create Water Action."
 action: "Cast Create Water: This character may spend 1 MP to create a 1-meter-diameter sphere of water per Rank at a target location within 10 m."
-`,vm=`id: darkness
+`,_m=`id: darkness
 name: "Darkness"
 status: draft
 plane: any
@@ -3983,7 +3976,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Darkness Action."
 action: "Cast Darkness: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 20 m, with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."
-`,ym=`id: daze
+`,vm=`id: daze
 name: "Daze"
 status: draft
 plane: any
@@ -3996,7 +3989,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Daze Action."
 action: "Cast Daze: This character may spend 1 MP to give the Flat-Footed Condition to a character within 20 m for the following Round."
-`,bm=`id: detect-magic
+`,ym=`id: detect-magic
 name: "Detect Magic"
 status: draft
 plane: any
@@ -4009,6 +4002,17 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Detect Magic Action."
 action: "Cast Detect Magic: This character may spend 1 MP to sense every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."
+`,bm=`id: disarm
+name: "Disarm"
+status: draft
+plane: any
+summary: "Taking the weapon out of an opponent's hands."
+tags: [combat, unarmed, technique]
+category: ability
+minStats: { grace: 5, intuition: 3 }
+prerequisites: [brawler]
+effect: "This character gains the Disarm Action."
+action: "Disarm: This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet."
 `,xm=`id: dispel-magic
 name: "Dispel Magic"
 status: placeholder
@@ -4022,16 +4026,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Dispel Magic Action."
 action: "Cast Dispel Magic: This character may spend 2 MP to reduce the Rank of one (Enchantment) Condition on a character or object within 10 m by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."
-`,Sm=`id: eagle-eye
-name: "Eagle Eye"
-status: draft
-plane: any
-summary: "Sees unusually well at a distance."
-tags: [sight, perception, site-example]
-category: ability
-conveyed: true
-effect: "This character can request advantage in situations that involve seeing at distance."
-`,Cm=`id: earthen-spike
+`,Sm=`id: earthen-spike
 name: "Earthen Spike"
 status: draft
 plane: any
@@ -4044,7 +4039,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Earthen Spike Action."
 action: "Cast Earthen Spike: This character may spend 2 MP to Attack a target standing on earth or stone with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (4 Piercing per Rank) (Attack Stat: Magic). Characters damaged by Cast Earthen Spike gain the Prone Condition."
-`,wm=`id: elemental-ward
+`,Cm=`id: elemental-ward
 name: "Elemental Ward"
 status: placeholder
 plane: any
@@ -4057,7 +4052,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Elemental Ward Action."
 action: "Cast Elemental Ward: This character may spend 1 MP to give the Elemental Ward Condition to a character within 3 m, against Heat, Cold, Electrical or EMP (the caster's choice). The Condition's Rank is equal to the caster's Elemental Ward Rank."
-`,Tm=`id: entangle
+`,wm=`id: entangle
 name: "Entangle"
 status: placeholder
 plane: any
@@ -4070,7 +4065,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Entangle Action."
 action: "Cast Entangle: This character may spend 2 MP to choose a point within 20 m. Every character within 2 m per Rank of that point gains the Rooted Condition, at a Rank equal to the caster's Entangle Rank."
-`,Em=`id: fear
+`,Tm=`id: fear
 name: "Fear"
 status: placeholder
 plane: any
@@ -4083,7 +4078,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Fear Action."
 action: "Cast Fear: This character may spend 1 MP to give the Frightened Condition to a character within 20 m. The Condition's Rank is equal to the caster's Fear Rank."
-`,Dm=`id: featherfall
+`,Em=`id: featherfall
 name: "Featherfall"
 status: placeholder
 plane: any
@@ -4096,7 +4091,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Featherfall Action."
 action: "Cast Featherfall: This character may spend 1 MP to give the Featherfall Condition to a character within 10 m. The Condition's Rank is equal to the caster's Featherfall Rank."
-`,Om=`id: fireball
+`,Dm=`id: fireball
 name: "Fireball"
 status: draft
 plane: any
@@ -4110,7 +4105,7 @@ prerequisites: [create-fire]
 list: magic
 effect: "This character gains the Cast Fireball Action."
 action: "Cast Fireball: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (2 Blunt per Rank, 4 Heat per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters and Items damaged by Cast Fireball gain the Burning Condition."
-`,km=`id: fog-cloud
+`,Om=`id: fog-cloud
 name: "Fog Cloud"
 status: draft
 plane: any
@@ -4123,16 +4118,19 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Fog Cloud Action."
 action: "Cast Fog Cloud: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 30 m, with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."
-`,Am=`id: gladiator
-name: "Gladiator"
+`,km=`id: grappler
+name: "Grappler"
 status: draft
 plane: any
-summary: "Can fight passably with any close combat weapon."
-tags: [combat, melee, site-example]
+summary: "Grabbing, holding and pinning an opponent."
+tags: [combat, unarmed, wrestling]
 category: ability
-minStats: { physical: 5, grace: 5, demeanor: 5 }
-effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."
-`,jm=`id: greater-heal
+ranked: true
+minStats: { power: 4, endurance: 3, grace: 2 }
+prerequisites: [brawler]
+effect: "- This character gains the Grapple Action.\\n- Rank *5 added to Skill Check rolls involving grappling or escaping a hold."
+action: "Grapple: This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character's Grappler Rank for as long as this character keeps hold, and this character can't move while holding them."
+`,Am=`id: greater-heal
 name: "Greater Heal"
 status: draft
 plane: any
@@ -4146,7 +4144,7 @@ prerequisites: [heal]
 list: magic
 effect: "This character gains the Cast Greater Heal Action."
 action: "Cast Greater Heal: This character may spend 3 MP to heal a living character within 3 m, restoring 8 HP per Rank plus the caster's Magic and ending the Severe Bleeding Condition."
-`,Mm=`id: gust
+`,jm=`id: gust
 name: "Gust"
 status: placeholder
 plane: any
@@ -4159,7 +4157,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Gust Action."
 action: "Cast Gust: This character may spend 1 MP to choose a point within 10 m. Every character within 2 m per Rank of that point is pushed 3 m per Rank away from the caster and gains the Prone Condition."
-`,Nm=`id: haste
+`,Mm=`id: haste
 name: "Haste"
 status: placeholder
 plane: any
@@ -4173,7 +4171,7 @@ prerequisites: [magical-grace]
 list: magic
 effect: "This character gains the Cast Haste Action."
 action: "Cast Haste: This character may spend 2 MP to give the Hasted Condition to a character within 3 m. The Condition's Rank is equal to the caster's Haste Rank."
-`,Pm=`id: heal
+`,Nm=`id: heal
 name: "Heal"
 status: draft
 plane: any
@@ -4186,7 +4184,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Heal Action."
 action: "Cast Heal: This character may spend 1 MP to heal a living character within 3 m per Rank, restoring 4 HP per Rank plus the caster's Magic."
-`,Fm=`id: hoarfrost
+`,Pm=`id: hoarfrost
 name: "Hoarfrost"
 status: draft
 plane: any
@@ -4199,7 +4197,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Hoarfrost Action."
 action: "Cast Hoarfrost: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (5 Cold per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank)."
-`,Im=`id: ice-lance
+`,Fm=`id: ice-lance
 name: "Ice Lance"
 status: draft
 plane: any
@@ -4212,7 +4210,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Ice Lance Action."
 action: "Cast Ice Lance: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (3 Piercing per Rank, 2 Cold per Rank) (Attack Stat: Magic)."
-`,Lm=`id: infravision
+`,Im=`id: infravision
 name: "Infravision"
 status: draft
 plane: any
@@ -4225,7 +4223,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Infravision Action."
 action: "Cast Infravision: This character may spend 1 MP to give the Infravision Condition to a character within 3 m. The Condition's Rank is equal to the caster's Infravision Rank."
-`,Rm=`id: invisibility
+`,Lm=`id: invisibility
 name: "Invisibility"
 status: placeholder
 plane: any
@@ -4238,18 +4236,7 @@ minStats: { magic: 4 }
 list: magic
 effect: "This character gains the Cast Invisibility Action."
 action: "Cast Invisibility: This character may spend 2 MP to give the Invisible Condition to a character within 3 m. The Condition's Rank is equal to the caster's Invisibility Rank."
-`,zm=`id: knowledge-sponge
-name: "Knowledge Sponge"
-status: draft
-plane: any
-summary: "Learns new knowledge in a quarter of the time."
-tags: [learning, study, site-example]
-category: ability
-mastery: true
-minStats: { memory: 5, logic: 5, intuition: 5 }
-prerequisites: [capable-student]
-effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."
-`,Bm=`id: light
+`,Rm=`id: light
 name: "Light"
 status: placeholder
 plane: any
@@ -4262,7 +4249,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Light Action."
 action: "Cast Light: This character may spend 1 MP to give the Glowing Condition to an object within 3 m. The Condition's Rank is equal to the caster's Light Rank."
-`,Vm=`id: lightning
+`,zm=`id: lightning
 name: "Lightning"
 status: draft
 plane: any
@@ -4275,31 +4262,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Lightning Action."
 action: "Cast Lightning: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 Heat per Rank, 5 Electrical per Rank, 2 EMP per Rank) (Attack Stat: Magic)."
-`,Hm=`id: long-in-the-tooth
-name: "Long in the Tooth"
-status: draft
-plane: isekai
-summary: "An Orc who has kept their teeth long into age."
-tags: [orcs, age, prestige, social]
-category: ability
-background: true
-minStats: { power: 10, endurance: 5, demeanor: 5 }
-rpRequirement: "Middle Aged or Older"
-# The Condition comes with it, for as long as it's held.
-grants:
-  - trait: long-toothed
-effect: "This character has kept their teeth through a long life and has the Long Toothed Condition."
-`,Um=`id: magic-access
-name: "Magic Access"
-status: placeholder
-plane: any
-summary: "This character can use magic: they can level the Magic core stat."
-tags: [magic, access]
-category: ability
-conveyed: true
-coreAccess: [magic]
-effect: "This character can level up the Magic core stat."
-`,Wm=`id: magical-endurance
+`,Bm=`id: magical-endurance
 name: "Magical Endurance"
 status: draft
 plane: any
@@ -4312,7 +4275,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Magical Endurance Action."
 action: "Cast Magical Endurance: This character may spend 1 MP to give the Magical Endurance Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Endurance Rank."
-`,Gm=`id: magical-flight
+`,Vm=`id: magical-flight
 name: "Magical Flight"
 status: draft
 plane: any
@@ -4325,7 +4288,7 @@ minStats: { magic: 4 }
 list: magic
 effect: "This character gains the Cast Magical Flight Action."
 action: "Cast Magical Flight: This character may spend 2 MP to give the Magical Flight Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Flight Rank."
-`,Km=`id: magical-grace
+`,Hm=`id: magical-grace
 name: "Magical Grace"
 status: draft
 plane: any
@@ -4338,7 +4301,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Magical Grace Action."
 action: "Cast Magical Grace: This character may spend 1 MP to give the Magical Grace Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Grace Rank."
-`,qm=`id: magical-strength
+`,Um=`id: magical-strength
 name: "Magical Strength"
 status: draft
 plane: any
@@ -4351,7 +4314,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Magical Strength Action."
 action: "Cast Magical Strength: This character may spend 1 MP to give the Magical Strength Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Strength Rank."
-`,Jm=`id: mending
+`,Wm=`id: mending
 name: "Mending"
 status: draft
 plane: any
@@ -4364,16 +4327,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Mending Action."
 action: "Cast Mending: This character may spend 1 MP to repair an object within 3 m, restoring 4 HP per Rank plus the caster's Magic. Mending can't repair a Destroyed object."
-`,Ym=`id: mental-fortitude
-name: "Mental Fortitude"
-status: draft
-plane: any
-summary: "Holds together when the mind is badly taxed."
-tags: [will, resistance, site-example]
-category: ability
-minStats: { endurance: 8, logic: 5, demeanor: 5 }
-effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."
-`,Xm=`id: meteor
+`,Gm=`id: meteor
 name: "Meteor"
 status: draft
 plane: any
@@ -4387,7 +4341,7 @@ prerequisites: [fireball]
 list: magic
 effect: "This character gains the Cast Meteor Action."
 action: "Cast Meteor: This character may spend 4 MP to Attack a location with a temporary weapon that has the following profile: (Ranged) (max range 100 m) (4 Blunt per Rank, 6 Heat per Rank) (Attack Stat: Magic) (area of effect: 5 m per Rank). Characters and Items damaged by Cast Meteor gain the Burning Condition."
-`,Zm=`id: mind-spike
+`,Km=`id: mind-spike
 name: "Mind Spike"
 status: placeholder
 plane: any
@@ -4400,7 +4354,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Mind Spike Action."
 action: "Cast Mind Spike: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (4 Psychic per Rank) (Attack Stat: Magic). Characters damaged by Cast Mind Spike gain the Flat-Footed Condition."
-`,Qm=`id: natural-breath-weapon
+`,qm=`id: natural-breath-weapon
 name: "Natural Breath Weapon"
 status: draft
 plane: any
@@ -4411,16 +4365,17 @@ ranked: true
 background: true
 minStats: { endurance: 3 }
 effect: "This character's biology allows them to use their breath as a tool or weapon. For each rank of this ability add another d4 to the damage the breath weapon deals."
-`,$m=`id: sculpted
-name: "Sculpted"
+`,Jm=`id: rally
+name: "Rally"
 status: draft
 plane: any
-summary: "Looks every bit as athletic as they are."
-tags: [appearance, athletics, social, site-example]
+summary: "Pulling frightened people back together."
+tags: [leadership, morale, combat]
 category: ability
-minStats: { power: 5, endurance: 5, demeanor: 3 }
-effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."
-`,eh=`id: shield-wall
+minStats: { demeanor: 5, persuasion: 4 }
+effect: "This character gains the Rally Action."
+action: "Rally: As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them."
+`,Ym=`id: shield-wall
 name: "Shield Wall"
 status: draft
 plane: any
@@ -4430,7 +4385,7 @@ category: ability
 minStats: { endurance: 4, power: 3, demeanor: 2 }
 effect: "This character gains the Shieldwall Action."
 action: "Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +4 Defense for the Round."
-`,th=`id: shield
+`,Xm=`id: shield
 name: "Shield"
 status: placeholder
 plane: any
@@ -4443,7 +4398,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Shield Action."
 action: "Cast Shield: This character may spend 1 MP to give the Shielded Condition to a character within 3 m. The Condition's Rank is equal to the caster's Shield Rank."
-`,nh=`id: silence
+`,Zm=`id: silence
 name: "Silence"
 status: placeholder
 plane: any
@@ -4456,7 +4411,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Silence Action."
 action: "Cast Silence: This character may spend 2 MP to choose a point within 30 m. Every character within 3 m per Rank of that point gains the Silenced Condition, at a Rank equal to the caster's Silence Rank."
-`,rh=`id: skin-of-stone
+`,Qm=`id: skin-of-stone
 name: "Skin of Stone"
 status: draft
 plane: any
@@ -4470,7 +4425,7 @@ prerequisites: [magical-endurance]
 list: magic
 effect: "This character gains the Cast Stone Skin Action."
 action: "Cast Stone Skin: This character may spend 2 MP to give the Stone Skin Condition to a character within 3 m. The Condition's Rank is equal to the caster's Skin of Stone Rank."
-`,ih=`id: sleep
+`,$m=`id: sleep
 name: "Sleep"
 status: placeholder
 plane: any
@@ -4483,7 +4438,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Sleep Action."
 action: "Cast Sleep: This character may spend 2 MP to give the Asleep Condition to a character within 20 m. The Condition's Rank is equal to the caster's Sleep Rank."
-`,ah=`id: slow
+`,eh=`id: slow
 name: "Slow"
 status: placeholder
 plane: any
@@ -4496,7 +4451,7 @@ minStats: { magic: 3 }
 list: magic
 effect: "This character gains the Cast Slow Action."
 action: "Cast Slow: This character may spend 2 MP to give the Slowed Condition to a character within 20 m. The Condition's Rank is equal to the caster's Slow Rank."
-`,oh=`id: speak-with-animals
+`,th=`id: speak-with-animals
 name: "Speak with Animals"
 status: draft
 plane: any
@@ -4509,7 +4464,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Speak with Animals Action."
 action: "Cast Speak with Animals: This character may spend 1 MP to understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."
-`,sh=`id: spider-climb
+`,nh=`id: spider-climb
 name: "Spider Climb"
 status: draft
 plane: any
@@ -4522,7 +4477,7 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Spider Climb Action."
 action: "Cast Spider Climb: This character may spend 1 MP to give the Spider Climb Condition to a character within 3 m. The Condition's Rank is equal to the caster's Spider Climb Rank."
-`,ch=`id: staunch
+`,rh=`id: staunch
 name: "Staunch"
 status: draft
 plane: any
@@ -4535,7 +4490,18 @@ minStats: { magic: 1 }
 list: magic
 effect: "This character gains the Cast Staunch Action."
 action: "Cast Staunch: This character may spend 1 MP to end the Severe Bleeding Condition on a character within 3 m."
-`,lh=`id: telekinesis
+`,ih=`id: takedown
+name: "Takedown"
+status: draft
+plane: any
+summary: "Throwing or sweeping an opponent to the ground."
+tags: [combat, unarmed, wrestling]
+category: ability
+minStats: { power: 4, grace: 4 }
+prerequisites: [grappler]
+effect: "This character gains the Takedown Action."
+action: "Takedown: This character may make an Attack Roll with Power or Grace against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition."
+`,ah=`id: telekinesis
 name: "Telekinesis"
 status: draft
 plane: any
@@ -4548,7 +4514,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Telekinesis Action."
 action: "Cast Telekinesis: This character may spend 1 MP to lift and move an object of up to 10 kg per Rank within 10 m, up to 5 m per Round, for as long as they keep using their Action on it."
-`,uh=`id: thunderclap
+`,oh=`id: thunderclap
 name: "Thunderclap"
 status: placeholder
 plane: any
@@ -4561,16 +4527,7 @@ minStats: { magic: 2 }
 list: magic
 effect: "This character gains the Cast Thunderclap Action."
 action: "Cast Thunderclap: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (3 Blunt per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters damaged by Cast Thunderclap gain the Deafened Condition."
-`,dh=`id: trail-runner
-name: "Trail Runner"
-status: draft
-plane: any
-summary: "Slow to tire when running, hiking or climbing."
-tags: [endurance, travel, site-example]
-category: ability
-minStats: { power: 3, endurance: 2, grace: 2 }
-effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."
-`,fh=`id: wall-of-stone
+`,sh=`id: wall-of-stone
 name: "Wall of Stone"
 status: draft
 plane: any
@@ -4584,7 +4541,7 @@ prerequisites: [skin-of-stone]
 list: magic
 effect: "This character gains the Cast Wall of Stone Action."
 action: "Cast Wall of Stone: This character may spend 3 MP to raise a stone wall 2 m high, 3 m long per Rank and 0.5 m thick, at a point within 20 m. The wall is a Structure with 20 HP per Rank and gives Heavy Cover to characters behind it."
-`,ph=`id: water-breathing
+`,ch=`id: water-breathing
 name: "Water Breathing"
 status: placeholder
 plane: any
@@ -4598,7 +4555,17 @@ prerequisites: [create-water]
 list: magic
 effect: "This character gains the Cast Water Breathing Action."
 action: "Cast Water Breathing: This character may spend 1 MP to give the Water Breathing Condition to a character within 3 m. The Condition's Rank is equal to the caster's Water Breathing Rank."
-`,mh=`id: wither
+`,lh=`id: weak-point
+name: "Weak Point"
+status: draft
+plane: any
+summary: "Seeing where a creature can be hurt."
+tags: [combat, monsters, tactics]
+category: ability
+minStats: { intuition: 5, logic: 3 }
+effect: "After spending a Full RP Action studying a creature during an Incident, this character gains +2 to Attack Rolls against creatures of that kind for the rest of the Incident."
+modifiers: "Attack Rolls +2 (creatures studied this Incident)"
+`,uh=`id: wither
 name: "Wither"
 status: placeholder
 plane: any
@@ -4611,7 +4578,7 @@ minStats: { magic: 4 }
 list: magic
 effect: "This character gains the Cast Wither Action."
 action: "Cast Wither: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (4 Death per Rank) (Attack Stat: Magic)."
-`,hh=`id: explorers-lodge-membership
+`,dh=`id: explorers-lodge-membership
 name: "Explorers’ Lodge Membership"
 status: placeholder
 plane: earth
@@ -4621,7 +4588,7 @@ lore: explorers-lodge
 category: circumstance
 conveyed: true
 effect: Placeholder. Effect not yet written.
-`,gh=`id: imperial-service-record
+`,fh=`id: imperial-service-record
 name: "Imperial Service Record"
 status: placeholder
 plane: earth
@@ -4631,7 +4598,7 @@ tags: [military, american-empire, service]
 category: circumstance
 conveyed: true
 effect: Placeholder. Effect not yet written.
-`,_h=`id: short-term-fame
+`,ph=`id: short-term-fame
 name: "Short Term Fame"
 status: draft
 plane: any
@@ -4641,7 +4608,7 @@ category: circumstance
 conveyed: true
 temporary: "30 days"
 effect: "Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them."
-`,vh=`id: significant-inheritance
+`,mh=`id: significant-inheritance
 name: "Significant Inheritance"
 status: draft
 plane: earth
@@ -4651,7 +4618,7 @@ category: circumstance
 conveyed: true
 temporary: "Lost when the money is all spent"
 effect: "This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank."
-`,yh=`id: thieves-guild-membership
+`,hh=`id: thieves-guild-membership
 name: "Thieves Guild Membership"
 status: draft
 plane: any
@@ -4660,7 +4627,7 @@ tags: [thieves-guild, membership, crime, site-example]
 category: circumstance
 conveyed: true
 effect: "This character is an official member of a Local Thieves Guild."
-`,bh=`id: tugboat-captain
+`,gh=`id: tugboat-captain
 name: "Tugboat Captain"
 status: draft
 plane: any
@@ -4669,7 +4636,7 @@ tags: [tugboat, license, pilot, site-example]
 category: circumstance
 conveyed: true
 effect: "This character has all required legal training and licenses required to command a Tugboat."
-`,xh=`id: wanted-in-sol
+`,_h=`id: wanted-in-sol
 name: "Wanted in Sol"
 status: draft
 plane: earth
@@ -4679,7 +4646,7 @@ category: circumstance
 conveyed: true
 temporary: "Lost when the character's innocence is proclaimed or they are caught"
 effect: "This character is wanted by the nations of the Sol System for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."
-`,Sh=`id: asleep
+`,vh=`id: asleep
 name: "Asleep"
 status: placeholder
 plane: any
@@ -4691,7 +4658,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one minute per Rank, or until the character takes damage or another character spends their Action waking them."
 effect: "This character is asleep and can't perform voluntary Actions or perceive the world around them."
-`,Ch=`id: burning
+`,yh=`id: burning
 name: "Burning"
 status: draft
 plane: any
@@ -4704,7 +4671,7 @@ conveyed: true
 temporary: "Lasts 3 combat Rounds or 30 seconds."
 effect: "This character suffers 3 Heat damage per Rank each Round, or every 10 seconds outside of combat."
 action: "The character may spend their Action to reduce the Rank of Burning by 1. A character loses Burning at Rank 0."
-`,wh=`id: charmed
+`,bh=`id: charmed
 name: "Charmed"
 status: placeholder
 plane: any
@@ -4716,7 +4683,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts ten minutes per Rank, or until the caster or their allies harm this character."
 effect: "This character regards the caster as a trusted friend and won't Attack them. The caster can request Advantage on Social rolls against this character."
-`,Th=`id: corroding
+`,xh=`id: corroding
 name: "Corroding"
 status: placeholder
 plane: any
@@ -4729,7 +4696,7 @@ conveyed: true
 temporary: "Lasts 3 combat Rounds or 30 seconds."
 effect: "This character or object suffers 2 Acidic/Corrosive damage per Rank each Round, or every 10 seconds outside of combat."
 action: "The character may spend their Action washing or scraping off the acid to reduce the Rank of Corroding by 1. A character loses Corroding at Rank 0."
-`,Eh=`id: cybernetic-intelligence
+`,Sh=`id: cybernetic-intelligence
 name: "Cybernetic Intelligence"
 status: draft
 plane: earth
@@ -4738,7 +4705,7 @@ tags: [cybernetic, mathematics, ai, ai-core, site-example]
 category: condition
 background: true
 effect: "This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics. This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited."
-`,Dh=`id: damaged
+`,Ch=`id: damaged
 name: "Damaged"
 status: draft
 plane: any
@@ -4748,7 +4715,7 @@ category: condition
 conveyed: true
 temporary: "An object gains this trait if it is below its maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Oh=`id: dead
+`,wh=`id: dead
 name: "Dead"
 status: draft
 plane: any
@@ -4759,7 +4726,7 @@ types: [injury]
 conveyed: true
 temporary: "A character gains this trait if they are at 0 or less HP"
 effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."
-`,kh=`id: deafened
+`,Th=`id: deafened
 name: "Deafened"
 status: placeholder
 plane: any
@@ -4770,7 +4737,7 @@ types: [hazard]
 conveyed: true
 temporary: "Lasts one minute."
 effect: "This character can't hear."
-`,Ah=`id: destroyed
+`,Eh=`id: destroyed
 name: "Destroyed"
 status: draft
 plane: any
@@ -4780,7 +4747,7 @@ category: condition
 conveyed: true
 temporary: "An object gains this trait if it is at 0 or less HP"
 effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."
-`,jh=`id: elemental-ward-condition
+`,Dh=`id: elemental-ward-condition
 name: "Elemental Ward"
 status: placeholder
 plane: any
@@ -4792,7 +4759,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character resists one damage type chosen by the caster: Heat, Cold, Electrical or EMP. The amount is Rank *3."
-`,Mh=`id: featherfall-condition
+`,Oh=`id: featherfall-condition
 name: "Featherfall"
 status: placeholder
 plane: any
@@ -4804,7 +4771,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one minute per Rank."
 effect: "This character falls slowly, about 20 m per Round, and takes no damage from falling."
-`,Nh=`id: flat-footed
+`,kh=`id: flat-footed
 name: "Flat-Footed"
 status: draft
 plane: any
@@ -4815,7 +4782,7 @@ conveyed: true
 temporary: "Lasts through the following combat Round"
 effect: "This character has -1 Priority and -1 to Attack Rolls."
 modifiers: "Priority -1, Attack Rolls -1"
-`,Ph=`id: frightened
+`,Ah=`id: frightened
 name: "Frightened"
 status: placeholder
 plane: any
@@ -4828,7 +4795,7 @@ conveyed: true
 temporary: "Lasts 1 combat Round per Rank."
 effect: "This character has -1 to Attack Rolls per Rank and can't willingly Move closer to the source of its fear."
 modifiers: "Attack Rolls -1 per Rank"
-`,Fh=`id: ghost-sight
+`,jh=`id: ghost-sight
 name: "Ghost Sight"
 status: draft
 plane: any
@@ -4838,7 +4805,7 @@ category: condition
 conveyed: true
 temporary: "Lost when the effect that granted this Trait ends"
 effect: "This character perceives beyond the veil. This character can see and hear the supernatural."
-`,Ih=`id: glowing
+`,Mh=`id: glowing
 name: "Glowing"
 status: placeholder
 plane: any
@@ -4850,7 +4817,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This object sheds bright light in a 5 m radius per Rank."
-`,Lh=`id: hard-shell
+`,Nh=`id: hard-shell
 name: "Hard Shell"
 status: draft
 plane: any
@@ -4860,7 +4827,7 @@ category: condition
 ranked: true
 background: true
 effect: "This character possesses a hard natural shell that protects them from harm. Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso."
-`,Rh=`id: hasted
+`,Ph=`id: hasted
 name: "Hasted"
 status: placeholder
 plane: any
@@ -4873,7 +4840,7 @@ conveyed: true
 temporary: "Lasts one minute."
 effect: "This character has +1 Priority per Rank and +5 m Movement per Rank."
 modifiers: "Priority +1 per Rank"
-`,zh=`id: healthy
+`,Fh=`id: healthy
 name: "Healthy"
 status: draft
 plane: any
@@ -4883,7 +4850,7 @@ category: condition
 conveyed: true
 temporary: "A character or object gains this trait while they are at their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Bh=`id: incapacitated
+`,Ih=`id: incapacitated
 name: "Incapacitated"
 status: draft
 plane: any
@@ -4893,7 +4860,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are at less than a quarter of their HP total"
 effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."
-`,Vh=`id: infravision-condition
+`,Lh=`id: infravision-condition
 name: "Infravision"
 status: draft
 plane: any
@@ -4905,7 +4872,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character can see and perceive characters and objects within 15 m per Rank, even through barriers, obscuring clouds, obstacles, or other impediments. This does not affect line of sight drawn through solid objects for the purposes of Attacks."
-`,Hh=`id: injured
+`,Rh=`id: injured
 name: "Injured"
 status: draft
 plane: any
@@ -4915,7 +4882,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,Uh=`id: invisible
+`,zh=`id: invisible
 name: "Invisible"
 status: placeholder
 plane: any
@@ -4927,7 +4894,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts ten minutes per Rank, or until the character Attacks."
 effect: "This character can't be seen by normal sight and can request Advantage on rolls to hide, sneak, or slip past others unnoticed. Characters Attacking it have -2 to Attack Rolls per Rank."
-`,Wh=`id: long-toothed
+`,Bh=`id: long-toothed
 name: "Long Toothed"
 status: draft
 plane: isekai
@@ -4937,7 +4904,7 @@ category: condition
 # Conveyed by Long in the Tooth, which carries the requirements.
 conveyed: true
 effect: "An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs."
-`,Gh=`id: magical-endurance-condition
+`,Vh=`id: magical-endurance-condition
 name: "Magical Endurance"
 status: placeholder
 plane: any
@@ -4949,7 +4916,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character gains +3 Endurance per Rank."
-`,Kh=`id: magical-flight-condition
+`,Hh=`id: magical-flight-condition
 name: "Magical Flight"
 status: placeholder
 plane: any
@@ -4961,7 +4928,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts ten minutes per Rank."
 effect: "This character can fly, moving its full Movement distance through the air in any direction. If this Condition ends while the character is in the air, they fall."
-`,qh=`id: magical-grace-condition
+`,Uh=`id: magical-grace-condition
 name: "Magical Grace"
 status: placeholder
 plane: any
@@ -4973,7 +4940,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character gains +3 Grace per Rank."
-`,Jh=`id: magical-heritage
+`,Wh=`id: magical-heritage
 name: "Magical Heritage"
 status: placeholder
 plane: isekai
@@ -4986,7 +4953,7 @@ conveyed: true
 grants:
   - trait: magic-access
 effect: "This character was born to magic, and has Magic Access."
-`,Yh=`id: magical-strength-condition
+`,Gh=`id: magical-strength-condition
 name: "Magical Strength"
 status: draft
 plane: any
@@ -4998,7 +4965,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character gains +3 Power per Rank."
-`,Xh=`id: mechanical
+`,Kh=`id: mechanical
 name: "Mechanical"
 status: draft
 plane: any
@@ -5007,7 +4974,7 @@ tags: [machine, emp, site-example]
 category: condition
 background: true
 effect: "This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage."
-`,Zh=`id: prone
+`,qh=`id: prone
 name: "Prone"
 status: placeholder
 plane: any
@@ -5018,7 +4985,7 @@ conveyed: true
 temporary: "Lost when the character stands up."
 effect: "This character is lying on the ground and has -1 Priority. Standing up takes half its Movement."
 modifiers: "Priority -1"
-`,Qh=`id: rooted
+`,Jh=`id: rooted
 name: "Rooted"
 status: placeholder
 plane: any
@@ -5031,7 +4998,7 @@ conveyed: true
 temporary: "Lasts until its Rank reaches 0, or one minute at most."
 effect: "This character can't Move."
 action: "The character may spend their Action pulling free to reduce the Rank of Rooted by 1. A character loses Rooted at Rank 0."
-`,$h=`id: severe-bleeding
+`,Yh=`id: severe-bleeding
 name: "Severe Bleeding"
 status: draft
 plane: any
@@ -5042,7 +5009,7 @@ types: [injury]
 conveyed: true
 temporary: "This trait is lost when this Condition is Treated"
 effect: "This character loses 1 HP every combat round while in combat. This character loses 1 HP every minute while outside of combat."
-`,eg=`id: severely-injured
+`,Xh=`id: severely-injured
 name: "Severely Injured"
 status: draft
 plane: any
@@ -5052,7 +5019,7 @@ category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below half their maximum HP total"
 effect: "This Trait has no effect on its own."
-`,tg=`id: shielded
+`,Zh=`id: shielded
 name: "Shielded"
 status: placeholder
 plane: any
@@ -5065,7 +5032,7 @@ conveyed: true
 temporary: "Lasts 1 combat Round per Rank."
 effect: "This character has +2 Defense per Rank."
 modifiers: "Defense +2 per Rank"
-`,ng=`id: silenced
+`,Qh=`id: silenced
 name: "Silenced"
 status: placeholder
 plane: any
@@ -5077,7 +5044,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one minute per Rank, or until the character leaves the silenced area."
 effect: "This character can't make or hear any sound."
-`,rg=`id: slowed
+`,$h=`id: slowed
 name: "Slowed"
 status: placeholder
 plane: any
@@ -5090,7 +5057,7 @@ conveyed: true
 temporary: "Lasts 1 combat Round per Rank."
 effect: "This character has -1 Priority per Rank and half its usual Movement."
 modifiers: "Priority -1 per Rank"
-`,ig=`id: spider-climb-condition
+`,eg=`id: spider-climb-condition
 name: "Spider Climb"
 status: placeholder
 plane: any
@@ -5102,7 +5069,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts two hours per Rank."
 effect: "This character may move its full Movement distance over vertical obstacles and along walls and ceilings."
-`,ag=`id: stimm-rush
+`,tg=`id: stimm-rush
 name: "Stimm Rush"
 status: draft
 plane: earth
@@ -5112,7 +5079,7 @@ category: condition
 conveyed: true
 temporary: "This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration"
 effect: "This character gains 5 to all physical focus stats."
-`,og=`id: stone-skin
+`,ng=`id: stone-skin
 name: "Stone Skin"
 status: draft
 plane: any
@@ -5124,7 +5091,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character gains Rank *3 resistance to all Physical damage types."
-`,sg=`id: supernatural
+`,rg=`id: supernatural
 name: "Supernatural"
 status: draft
 plane: any
@@ -5133,7 +5100,7 @@ tags: [supernatural, site-example]
 category: condition
 background: true
 effect: "This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat."
-`,cg=`id: water-breathing-condition
+`,ig=`id: water-breathing-condition
 name: "Water Breathing"
 status: placeholder
 plane: any
@@ -5145,7 +5112,7 @@ ranked: true
 conveyed: true
 temporary: "Lasts one hour per Rank."
 effect: "This character can breathe water as easily as air."
-`,lg=`id: additional-contact
+`,ag=`id: additional-contact
 name: Additional Contact
 status: placeholder
 plane: any
@@ -5158,7 +5125,7 @@ choices:
   - choose: 1
     from: contact
     note: "+1 Contact per rank"
-`,ug=`id: accounting
+`,og=`id: accounting
 name: "Accounting"
 status: draft
 plane: any
@@ -5168,7 +5135,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of accounting and can be assumed to be familiar with keeping books, reading financial records and tracing money."
-`,dg=`id: additional-language
+`,sg=`id: additional-language
 name: Additional Language
 status: placeholder
 plane: any
@@ -5181,7 +5148,7 @@ choices:
   - choose: 1
     from: language
     note: "+1 Language per rank"
-`,fg=`id: ai-culture
+`,cg=`id: ai-culture
 name: "AI Culture"
 status: placeholder
 plane: earth
@@ -5191,7 +5158,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 2 }
 effect: "This character has knowledge of AI society and culture and can be assumed to be familiar with the peoples, places, and customs relevant to AI Cores and the communities around them."
-`,pg=`# Aksum has no lore entry on the site yet.
+`,lg=`# Aksum has no lore entry on the site yet.
 id: aksum
 name: "Aksum"
 status: draft
@@ -5203,7 +5170,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Aksum and can be assumed to be familiar with the peoples, places, and customs of Centafrica’s inner-system station."
-`,mg=`id: alchemy
+`,ug=`id: alchemy
 name: "Alchemy"
 status: draft
 plane: isekai
@@ -5213,7 +5180,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, intuition: 2 }
 effect: "This character has knowledge of alchemy and can be assumed to be familiar with the properties of common reagents and how they combine in potions."
-`,hg=`# Amaravati has no lore entry on the site yet.
+`,dg=`# Amaravati has no lore entry on the site yet.
 id: amaravati
 name: "Amaravati"
 status: draft
@@ -5225,7 +5192,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Amaravati and can be assumed to be familiar with the peoples, places, and customs of India’s station in high Earth orbit."
-`,gg=`id: american-geography
+`,fg=`id: american-geography
 name: "American Geography"
 status: placeholder
 plane: earth
@@ -5236,7 +5203,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies."
-`,_g=`id: american-history
+`,pg=`id: american-history
 name: "American History"
 status: placeholder
 plane: earth
@@ -5247,7 +5214,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it."
-`,vg=`id: amharic-written
+`,mg=`id: amharic-written
 name: "Amharic (Written)"
 status: draft
 plane: earth
@@ -5257,7 +5224,7 @@ category: knowledge
 types: [language]
 language: amharic
 effect: "This character can read and write the Amharic language."
-`,yg=`id: amharic
+`,hg=`id: amharic
 name: "Amharic (Spoken)"
 status: draft
 plane: earth
@@ -5267,7 +5234,7 @@ category: knowledge
 types: [language]
 language: amharic
 effect: "This character is conversational in the Amharic language and can speak it."
-`,bg=`id: anatomy
+`,gg=`id: anatomy
 name: "Anatomy"
 status: draft
 plane: any
@@ -5277,7 +5244,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of anatomy and can be assumed to be familiar with the structure of the body, its organs and its vulnerable points."
-`,xg=`id: animal-lore
+`,_g=`id: animal-lore
 name: "Animal Lore"
 status: draft
 plane: any
@@ -5287,7 +5254,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of animals and can be assumed to be familiar with the habits, needs, dangers and uses of common domestic and wild animals."
-`,Sg=`id: antiluna
+`,vg=`id: antiluna
 name: "Antiluna"
 status: placeholder
 plane: earth
@@ -5298,7 +5265,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Antiluna space station and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,Cg=`id: arabic-written
+`,yg=`id: arabic-written
 name: "Arabic (Written)"
 status: draft
 plane: earth
@@ -5308,7 +5275,7 @@ category: knowledge
 types: [language]
 language: arabic
 effect: "This character can read and write the Arabic language."
-`,wg=`id: arabic
+`,bg=`id: arabic
 name: "Arabic (Spoken)"
 status: draft
 plane: earth
@@ -5318,7 +5285,7 @@ category: knowledge
 types: [language]
 language: arabic
 effect: "This character is conversational in the Arabic language and can speak it."
-`,Tg=`id: architecture
+`,xg=`id: architecture
 name: "Architecture"
 status: draft
 plane: any
@@ -5328,7 +5295,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of architecture and can be assumed to be familiar with building styles, structural design and construction methods."
-`,Eg=`id: archives-and-libraries
+`,Sg=`id: archives-and-libraries
 name: "Archives and Libraries"
 status: draft
 plane: any
@@ -5338,7 +5305,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of archives and libraries and can be assumed to be familiar with how records and collections are organized and where important ones are kept."
-`,Dg=`id: aristocracy
+`,Cg=`id: aristocracy
 name: Aristocracy
 status: placeholder
 plane: isekai
@@ -5347,7 +5314,7 @@ tags: [nobility, court]
 category: knowledge
 minStats: { memory: 3, demeanor: 3 }
 effect: "This character has knowledge of the aristocracy and can be assumed to be familiar with the nobles, titles, and ranks of the kingdoms surrounding the switch port on Isekai."
-`,Og=`id: ark-life
+`,wg=`id: ark-life
 name: "Ark Life"
 status: placeholder
 plane: earth
@@ -5358,7 +5325,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 1, intuition: 2 }
 effect: "This character has knowledge of life aboard Arks and can be assumed to be familiar with navigating their corridors and cultures."
-`,kg=`id: ark-new-york
+`,Tg=`id: ark-new-york
 name: "Ark New York"
 status: placeholder
 plane: earth
@@ -5370,7 +5337,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark New York and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,Ag=`id: art-history
+`,Eg=`id: art-history
 name: "Art History"
 status: draft
 plane: any
@@ -5380,7 +5347,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of art history and can be assumed to be familiar with notable artists, movements and works and their value."
-`,jg=`id: artificial-intelligence
+`,Dg=`id: artificial-intelligence
 name: "Artificial Intelligence"
 status: placeholder
 plane: earth
@@ -5390,7 +5357,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of artificial intelligence and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,Mg=`id: asteroid-mining
+`,Og=`id: asteroid-mining
 name: "Asteroid Mining"
 status: draft
 plane: earth
@@ -5400,7 +5367,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of asteroid mining and can be assumed to be familiar with how asteroids are surveyed, claimed, and worked."
-`,Ng=`id: aviation
+`,kg=`id: aviation
 name: "Aviation"
 status: draft
 plane: any
@@ -5410,7 +5377,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of aviation and can be assumed to be familiar with how aircraft and airships fly, are maintained and are flown safely."
-`,Pg=`id: bandits-and-brigands
+`,Ag=`id: bandits-and-brigands
 name: "Bandits & Brigands"
 status: placeholder
 plane: isekai
@@ -5420,7 +5387,7 @@ tags: [bandits, crime, roads]
 category: knowledge
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places."
-`,Fg=`id: bengali-written
+`,jg=`id: bengali-written
 name: "Bengali (Written)"
 status: draft
 plane: earth
@@ -5430,7 +5397,7 @@ category: knowledge
 types: [language]
 language: bengali
 effect: "This character can read and write the Bengali language."
-`,Ig=`id: bengali
+`,Mg=`id: bengali
 name: "Bengali (Spoken)"
 status: draft
 plane: earth
@@ -5440,7 +5407,7 @@ category: knowledge
 types: [language]
 language: bengali
 effect: "This character is conversational in the Bengali language and can speak it."
-`,Lg=`id: biology
+`,Ng=`id: biology
 name: "Biology"
 status: draft
 plane: any
@@ -5450,7 +5417,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of biology and can be assumed to be familiar with how living things grow, function, reproduce and interact."
-`,Rg=`id: boneyard
+`,Pg=`id: boneyard
 name: "Boneyard"
 status: placeholder
 plane: earth
@@ -5462,7 +5429,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Boneyard and can be assumed to be familiar with the people, places, and customs aboard it."
-`,zg=`id: bureaucracy
+`,Fg=`id: bureaucracy
 name: "Bureaucracy"
 status: draft
 plane: any
@@ -5472,7 +5439,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of bureaucracy and can be assumed to be familiar with how officials and departments work, which forms and permits are needed, and who to ask."
-`,Bg=`id: burmese-written
+`,Ig=`id: burmese-written
 name: "Burmese (Written)"
 status: draft
 plane: earth
@@ -5482,7 +5449,7 @@ category: knowledge
 types: [language]
 language: burmese
 effect: "This character can read and write the Burmese language."
-`,Vg=`id: burmese
+`,Lg=`id: burmese
 name: "Burmese (Spoken)"
 status: draft
 plane: earth
@@ -5492,7 +5459,7 @@ category: knowledge
 types: [language]
 language: burmese
 effect: "This character is conversational in the Burmese language and can speak it."
-`,Hg=`id: cantonese-written
+`,Rg=`id: cantonese-written
 name: "Cantonese (Written)"
 status: draft
 plane: earth
@@ -5502,7 +5469,7 @@ category: knowledge
 types: [language]
 language: cantonese
 effect: "This character can read and write the Cantonese language."
-`,Ug=`id: cantonese
+`,zg=`id: cantonese
 name: "Cantonese (Spoken)"
 status: draft
 plane: earth
@@ -5512,7 +5479,7 @@ category: knowledge
 types: [language]
 language: cantonese
 effect: "This character is conversational in the Cantonese language and can speak it."
-`,Wg=`id: caravan-routes
+`,Bg=`id: caravan-routes
 name: Caravan Routes
 status: placeholder
 plane: any
@@ -5526,7 +5493,7 @@ choices:
     from: place
     note: "Where the caravan routes run"
     perRank: false
-`,Gg=`id: centafrica
+`,Vg=`id: centafrica
 name: "Centafrica"
 status: draft
 plane: earth
@@ -5538,7 +5505,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Centafrica and can be assumed to be familiar with its customs, politics, and territories."
-`,Kg=`id: centafrican-law
+`,Hg=`id: centafrican-law
 name: "Centafrican Law"
 status: draft
 plane: earth
@@ -5549,7 +5516,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Centafrican law and can be assumed to be familiar with the laws and courts of Centafrica."
-`,qg=`id: chemistry
+`,Ug=`id: chemistry
 name: "Chemistry"
 status: draft
 plane: any
@@ -5559,7 +5526,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of chemistry and can be assumed to be familiar with common substances, how they react, and how to handle them safely."
-`,Jg=`id: chinese-imperial-law
+`,Wg=`id: chinese-imperial-law
 name: "Chinese Imperial Law"
 status: placeholder
 plane: earth
@@ -5570,7 +5537,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."
-`,Yg=`id: coastal-trade
+`,Gg=`id: coastal-trade
 name: Coastal Trade
 status: placeholder
 plane: isekai
@@ -5581,7 +5548,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of coastal trade on Isekai and can be assumed to be familiar with its ports, products, and dangers."
-`,Xg=`id: combat-medicine
+`,Kg=`id: combat-medicine
 name: "Combat Medicine"
 status: draft
 plane: any
@@ -5591,7 +5558,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of combat medicine and can be assumed to be familiar with battlefield wounds, their treatment and getting the injured out alive."
-`,Zg=`id: commerce
+`,qg=`id: commerce
 name: "Commerce"
 status: draft
 plane: any
@@ -5601,7 +5568,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of commerce and can be assumed to be familiar with how markets and businesses work, fair prices, contracts and the movement of money."
-`,Qg=`id: comparative-cultures
+`,Jg=`id: comparative-cultures
 name: "Comparative Cultures"
 status: draft
 plane: any
@@ -5611,7 +5578,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 2 }
 effect: "This character has knowledge of comparative cultures and can be assumed to be familiar with how customs, beliefs and manners differ between peoples."
-`,$g=`id: computer-networks
+`,Yg=`id: computer-networks
 name: "Computer Networks"
 status: draft
 plane: earth
@@ -5621,7 +5588,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of computer networks and can be assumed to be familiar with how networks are built, secured and attacked."
-`,e_=`id: computer-systems
+`,Xg=`id: computer-systems
 name: "Computer Systems"
 status: draft
 plane: earth
@@ -5631,7 +5598,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of computer systems and can be assumed to be familiar with common networks, software and hardware and how they are secured."
-`,t_=`id: contract-law
+`,Zg=`id: contract-law
 name: "Contract Law"
 status: draft
 plane: any
@@ -5641,7 +5608,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of contract law and can be assumed to be familiar with how contracts are formed, enforced and challenged."
-`,n_=`id: countryside-lore
+`,Qg=`id: countryside-lore
 name: Countryside Lore
 status: placeholder
 plane: any
@@ -5655,7 +5622,7 @@ choices:
     from: place
     note: "Which countryside"
     perRank: false
-`,r_=`id: court-etiquette
+`,$g=`id: court-etiquette
 name: Court Etiquette
 status: placeholder
 plane: isekai
@@ -5665,7 +5632,7 @@ tags: [court, nobility, etiquette]
 category: knowledge
 minStats: { memory: 2, demeanor: 3 }
 effect: "This character has knowledge of courtly etiquette and can be assumed to be familiar with the rules and manners expected in the royal halls of Isekai."
-`,i_=`id: criminal-underworld
+`,e_=`id: criminal-underworld
 name: "Criminal Underworld"
 status: draft
 plane: any
@@ -5675,7 +5642,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them."
-`,a_=`id: cryptography
+`,t_=`id: cryptography
 name: "Cryptography"
 status: draft
 plane: any
@@ -5685,7 +5652,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of cryptography and can be assumed to be familiar with common codes and ciphers and the methods used to make and break them."
-`,o_=`id: cybernetics
+`,n_=`id: cybernetics
 name: "Cybernetics"
 status: placeholder
 plane: earth
@@ -5695,7 +5662,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of cybernetics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,s_=`id: dead-languages
+`,r_=`id: dead-languages
 name: "Dead Languages"
 status: draft
 plane: any
@@ -5705,7 +5672,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 2 }
 effect: "This character has knowledge of dead languages and can be assumed to be familiar with the history, grammar and scripts of languages that are no longer spoken."
-`,c_=`id: diplomatic-protocol
+`,i_=`id: diplomatic-protocol
 name: "Diplomatic Protocol"
 status: draft
 plane: any
@@ -5715,7 +5682,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of diplomatic protocol and can be assumed to be familiar with the ceremonies, forms of address and unwritten rules of formal diplomacy."
-`,l_=`id: documents-and-seals
+`,a_=`id: documents-and-seals
 name: "Documents and Seals"
 status: draft
 plane: any
@@ -5725,7 +5692,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of documents and seals and can be assumed to be familiar with official papers, seals, signatures and how authorities verify them."
-`,u_=`id: dreft
+`,o_=`id: dreft
 name: Dreft
 status: placeholder
 plane: isekai
@@ -5737,7 +5704,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Dreft and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,d_=`id: dreftan-written
+`,s_=`id: dreftan-written
 name: "Dreftan (Written)"
 status: placeholder
 plane: isekai
@@ -5748,7 +5715,7 @@ category: knowledge
 types: [language]
 language: dreftan
 effect: This character can read and write the Dreftan language.
-`,f_=`id: dreftan
+`,c_=`id: dreftan
 name: "Dreftan (Spoken)"
 status: placeholder
 plane: isekai
@@ -5759,7 +5726,7 @@ category: knowledge
 types: [language]
 language: dreftan
 effect: This character is conversational in the Dreftan language and can speak it.
-`,p_=`id: dreftian-law
+`,l_=`id: dreftian-law
 name: Dreftian Law
 status: placeholder
 plane: isekai
@@ -5770,7 +5737,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Dreftian law and can be assumed to be familiar with the laws of the Kingdom of Dreft and how they’re enforced."
-`,m_=`id: dutch-written
+`,u_=`id: dutch-written
 name: "Dutch (Written)"
 status: draft
 plane: earth
@@ -5780,7 +5747,7 @@ category: knowledge
 types: [language]
 language: dutch
 effect: "This character can read and write the Dutch language."
-`,h_=`id: dutch
+`,d_=`id: dutch
 name: "Dutch (Spoken)"
 status: draft
 plane: earth
@@ -5790,7 +5757,7 @@ category: knowledge
 types: [language]
 language: dutch
 effect: "This character is conversational in the Dutch language and can speak it."
-`,g_=`id: dwarvish-runes-written
+`,f_=`id: dwarvish-runes-written
 name: "Dwarvish Runes (Written)"
 status: draft
 plane: isekai
@@ -5801,7 +5768,7 @@ types: [language]
 language: dwarvish-runes
 minStats: { memory: 3, intuition: 5 }
 effect: "This character can read and write Dwarvish Runes."
-`,__=`# Pairs with Dwarvish Runes (Written).
+`,p_=`# Pairs with Dwarvish Runes (Written).
 id: dwarvish
 name: "Dwarvish (Spoken)"
 status: draft
@@ -5812,7 +5779,7 @@ category: knowledge
 types: [language]
 language: dwarvish-runes
 effect: "This character is conversational in the Dwarvish language and can speak it."
-`,v_=`id: earth-baseline-customs
+`,m_=`id: earth-baseline-customs
 name: Earth Baseline Customs
 status: placeholder
 plane: earth
@@ -5822,7 +5789,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 1 }
 effect: "This character has knowledge of Earth baseline customs and can be assumed to be familiar with how people across the settled systems expect things to be done."
-`,y_=`id: earth-baseline-technology
+`,h_=`id: earth-baseline-technology
 name: Earth Baseline Technology
 status: placeholder
 plane: earth
@@ -5831,7 +5798,7 @@ tags: [earth, technology]
 category: knowledge
 minStats: { memory: 1 }
 effect: "This character has knowledge of Earth baseline technology and can be assumed to be familiar with the machines and devices common across the settled systems."
-`,b_=`id: ecology
+`,g_=`id: ecology
 name: "Ecology"
 status: draft
 plane: any
@@ -5841,7 +5808,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of ecology and can be assumed to be familiar with how ecosystems work and how damaged land is restored."
-`,x_=`id: electronics
+`,__=`id: electronics
 name: "Electronics"
 status: draft
 plane: any
@@ -5851,7 +5818,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of electronics and can be assumed to be familiar with circuits, components and how electronic devices are built."
-`,S_=`id: elemental-magics
+`,v_=`id: elemental-magics
 name: "Elemental Magics"
 status: draft
 plane: isekai
@@ -5863,7 +5830,7 @@ list: magic
 ranked: true
 minStats: { memory: 3, intuition: 5 }
 effect: "This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history."
-`,C_=`id: enchantment
+`,y_=`id: enchantment
 name: "Enchantment"
 status: draft
 plane: isekai
@@ -5875,7 +5842,7 @@ minStats: { memory: 4, magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character has knowledge of enchantment and can be assumed to be familiar with how magic is bound into objects and what limits it."
-`,w_=`id: engineering
+`,b_=`id: engineering
 name: "Engineering"
 status: draft
 plane: any
@@ -5885,7 +5852,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of engineering and can be assumed to be familiar with how machines, structures and systems are designed, built, maintained and broken."
-`,T_=`id: english-written
+`,x_=`id: english-written
 name: "English (Written)"
 status: placeholder
 plane: earth
@@ -5895,7 +5862,7 @@ category: knowledge
 types: [language]
 language: english
 effect: This character can read and write the English language.
-`,E_=`id: english
+`,S_=`id: english
 name: "English (Spoken)"
 status: placeholder
 plane: earth
@@ -5905,7 +5872,7 @@ category: knowledge
 types: [language]
 language: english
 effect: This character is conversational in the English language and can speak it.
-`,D_=`id: exotic-materials
+`,C_=`id: exotic-materials
 name: "Exotic Materials"
 status: placeholder
 plane: earth
@@ -5915,7 +5882,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of exotic materials and can be assumed to be familiar with their uses, prices, and the rough paraphysical concepts by which they operate."
-`,O_=`id: explosives
+`,w_=`id: explosives
 name: "Explosives"
 status: draft
 plane: any
@@ -5925,7 +5892,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of explosives and can be assumed to be familiar with common explosives, how they're set off and how to store and handle them safely."
-`,k_=`id: extraplanar-threats
+`,T_=`id: extraplanar-threats
 name: "Extraplanar Threats"
 status: draft
 plane: earth
@@ -5935,7 +5902,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, intuition: 2 }
 effect: "This character has knowledge of extraplanar threats and can be assumed to be familiar with the known dangerous beings and organisms of other planes and how they have been fought or contained."
-`,A_=`id: farming
+`,E_=`id: farming
 name: Farming
 status: placeholder
 plane: any
@@ -5945,7 +5912,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, endurance: 2 }
 effect: "This character has knowledge of farming and can be assumed to be familiar with the technologies, techniques, and lifestyles associated with the practice."
-`,j_=`id: filipino-written
+`,D_=`id: filipino-written
 name: "Filipino (Written)"
 status: draft
 plane: earth
@@ -5955,7 +5922,7 @@ category: knowledge
 types: [language]
 language: filipino
 effect: "This character can read and write the Filipino language."
-`,M_=`id: filipino
+`,O_=`id: filipino
 name: "Filipino (Spoken)"
 status: draft
 plane: earth
@@ -5965,7 +5932,7 @@ category: knowledge
 types: [language]
 language: filipino
 effect: "This character is conversational in the Filipino language and can speak it."
-`,N_=`id: french-written
+`,k_=`id: french-written
 name: "French (Written)"
 status: draft
 plane: earth
@@ -5975,7 +5942,7 @@ category: knowledge
 types: [language]
 language: french
 effect: "This character can read and write the French language."
-`,P_=`id: french
+`,A_=`id: french
 name: "French (Spoken)"
 status: draft
 plane: earth
@@ -5985,7 +5952,7 @@ category: knowledge
 types: [language]
 language: french
 effect: "This character is conversational in the French language and can speak it."
-`,F_=`id: gambling
+`,j_=`id: gambling
 name: "Gambling"
 status: draft
 plane: any
@@ -5995,7 +5962,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 3 }
 effect: "This character has knowledge of gambling and can be assumed to be familiar with common games of chance, their odds, and the tricks cheats use."
-`,I_=`id: geography
+`,M_=`id: geography
 name: "Geography"
 status: draft
 plane: any
@@ -6005,7 +5972,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of geography and can be assumed to be familiar with the regions, cities, terrain and routes of the places they have lived and traveled."
-`,L_=`id: geology
+`,N_=`id: geology
 name: "Geology"
 status: draft
 plane: any
@@ -6015,7 +5982,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of geology and can be assumed to be familiar with rocks, minerals and ores, and where and how they're found."
-`,R_=`id: german-written
+`,P_=`id: german-written
 name: "German (Written)"
 status: draft
 plane: earth
@@ -6025,7 +5992,7 @@ category: knowledge
 types: [language]
 language: german
 effect: "This character can read and write the German language."
-`,z_=`id: german
+`,F_=`id: german
 name: "German (Spoken)"
 status: draft
 plane: earth
@@ -6035,7 +6002,7 @@ category: knowledge
 types: [language]
 language: german
 effect: "This character is conversational in the German language and can speak it."
-`,B_=`id: glintl
+`,I_=`id: glintl
 name: Glintl
 status: placeholder
 plane: isekai
@@ -6047,7 +6014,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the trading port of Glintl and can be assumed to be familiar with the peoples, places, and customs of the city."
-`,V_=`id: gujarati-written
+`,L_=`id: gujarati-written
 name: "Gujarati (Written)"
 status: draft
 plane: earth
@@ -6057,7 +6024,7 @@ category: knowledge
 types: [language]
 language: gujarati
 effect: "This character can read and write the Gujarati language."
-`,H_=`id: gujarati
+`,R_=`id: gujarati
 name: "Gujarati (Spoken)"
 status: draft
 plane: earth
@@ -6067,7 +6034,7 @@ category: knowledge
 types: [language]
 language: gujarati
 effect: "This character is conversational in the Gujarati language and can speak it."
-`,U_=`id: hausa-written
+`,z_=`id: hausa-written
 name: "Hausa (Written)"
 status: draft
 plane: earth
@@ -6077,7 +6044,7 @@ category: knowledge
 types: [language]
 language: hausa
 effect: "This character can read and write the Hausa language."
-`,W_=`id: hausa
+`,B_=`id: hausa
 name: "Hausa (Spoken)"
 status: draft
 plane: earth
@@ -6087,7 +6054,7 @@ category: knowledge
 types: [language]
 language: hausa
 effect: "This character is conversational in the Hausa language and can speak it."
-`,G_=`id: heraldry
+`,V_=`id: heraldry
 name: "Heraldry"
 status: draft
 plane: any
@@ -6097,7 +6064,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of heraldry and can be assumed to be familiar with the arms, colors and lineages of noble houses and orders."
-`,K_=`id: herbalism
+`,H_=`id: herbalism
 name: Herbalism
 status: placeholder
 plane: any
@@ -6106,7 +6073,7 @@ tags: [herbs, healing, plants]
 category: knowledge
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of herbalism and can be assumed to be familiar with the plants, techniques, and precautions involved with the practice."
-`,q_=`id: high-society
+`,U_=`id: high-society
 name: "High Society"
 status: draft
 plane: any
@@ -6116,7 +6083,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, empathy: 3 }
 effect: "This character has knowledge of high society and can be assumed to be familiar with the manners, fashions, families and scandals of the wealthy and powerful."
-`,J_=`id: hindi-written
+`,W_=`id: hindi-written
 name: "Hindi (Written)"
 status: draft
 plane: earth
@@ -6126,7 +6093,7 @@ category: knowledge
 types: [language]
 language: hindi
 effect: "This character can read and write the Hindi language."
-`,Y_=`id: hindi
+`,G_=`id: hindi
 name: "Hindi (Spoken)"
 status: draft
 plane: earth
@@ -6136,7 +6103,7 @@ category: knowledge
 types: [language]
 language: hindi
 effect: "This character is conversational in the Hindi language and can speak it."
-`,X_=`id: history
+`,K_=`id: history
 name: "History"
 status: draft
 plane: any
@@ -6146,7 +6113,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4 }
 effect: "This character has knowledge of history and can be assumed to be familiar with the major events, people and turning points of their world’s past."
-`,Z_=`id: imperial-law
+`,q_=`id: imperial-law
 name: "Imperial Law"
 status: placeholder
 plane: earth
@@ -6157,7 +6124,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories."
-`,Q_=`id: imperial-politics
+`,J_=`id: imperial-politics
 name: "Imperial Politics"
 status: placeholder
 plane: earth
@@ -6169,7 +6136,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Imperial politics and can be assumed to be familiar with the Emperor, the Prince Regent, the Senate, and their feuds."
-`,$_=`id: indian-law
+`,Y_=`id: indian-law
 name: "Indian Law"
 status: draft
 plane: earth
@@ -6180,7 +6147,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Indian law and can be assumed to be familiar with the laws and courts of the Kingdom of India."
-`,ev=`id: indian-theology
+`,X_=`id: indian-theology
 name: "Indian Theology"
 status: draft
 plane: earth
@@ -6191,7 +6158,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Indian theology and can be assumed to be familiar with the gods, temples, and rites of the Kingdom of India."
-`,tv=`id: indonesian-written
+`,Z_=`id: indonesian-written
 name: "Indonesian (Written)"
 status: draft
 plane: earth
@@ -6201,7 +6168,7 @@ category: knowledge
 types: [language]
 language: indonesian
 effect: "This character can read and write the Indonesian language."
-`,nv=`id: indonesian
+`,Q_=`id: indonesian
 name: "Indonesian (Spoken)"
 status: draft
 plane: earth
@@ -6211,7 +6178,7 @@ category: knowledge
 types: [language]
 language: indonesian
 effect: "This character is conversational in the Indonesian language and can speak it."
-`,rv=`id: industrial-machinery
+`,$_=`id: industrial-machinery
 name: "Industrial Machinery"
 status: draft
 plane: any
@@ -6221,7 +6188,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of industrial machinery and can be assumed to be familiar with how cranes, drills, loaders and factory machines work and are maintained."
-`,iv=`id: intelligence-tradecraft
+`,ev=`id: intelligence-tradecraft
 name: "Intelligence Tradecraft"
 status: draft
 plane: any
@@ -6231,7 +6198,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of intelligence tradecraft and can be assumed to be familiar with how spies recruit, communicate, watch and avoid being watched."
-`,av=`id: interplanar-law
+`,tv=`id: interplanar-law
 name: "Interplanar Law"
 status: placeholder
 plane: earth
@@ -6241,7 +6208,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of interplanar law and can be assumed to be familiar with the laws governing extraplanar beings, including the treatment of specimens and the legal status of parasapients."
-`,ov=`id: interplanar-relations
+`,nv=`id: interplanar-relations
 name: "Interplanar Relations"
 status: placeholder
 plane: earth
@@ -6251,7 +6218,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, persuasion: 3 }
 effect: "This character has knowledge of interplanar relations and can be assumed to be familiar with the planes, societies, and laws involved with contact between parasapients and representatives of Earth baseline."
-`,sv=`id: italian-written
+`,rv=`id: italian-written
 name: "Italian (Written)"
 status: draft
 plane: earth
@@ -6261,7 +6228,7 @@ category: knowledge
 types: [language]
 language: italian
 effect: "This character can read and write the Italian language."
-`,cv=`id: italian
+`,iv=`id: italian
 name: "Italian (Spoken)"
 status: draft
 plane: earth
@@ -6271,7 +6238,7 @@ category: knowledge
 types: [language]
 language: italian
 effect: "This character is conversational in the Italian language and can speak it."
-`,lv=`id: japanese-written
+`,av=`id: japanese-written
 name: "Japanese (Written)"
 status: draft
 plane: earth
@@ -6281,7 +6248,7 @@ category: knowledge
 types: [language]
 language: japanese
 effect: "This character can read and write the Japanese language."
-`,uv=`id: japanese
+`,ov=`id: japanese
 name: "Japanese (Spoken)"
 status: draft
 plane: earth
@@ -6291,7 +6258,7 @@ category: knowledge
 types: [language]
 language: japanese
 effect: "This character is conversational in the Japanese language and can speak it."
-`,dv=`id: javanese-written
+`,sv=`id: javanese-written
 name: "Javanese (Written)"
 status: draft
 plane: earth
@@ -6301,7 +6268,7 @@ category: knowledge
 types: [language]
 language: javanese
 effect: "This character can read and write the Javanese language."
-`,fv=`id: javanese
+`,cv=`id: javanese
 name: "Javanese (Spoken)"
 status: draft
 plane: earth
@@ -6311,7 +6278,7 @@ category: knowledge
 types: [language]
 language: javanese
 effect: "This character is conversational in the Javanese language and can speak it."
-`,pv=`id: kannada-written
+`,lv=`id: kannada-written
 name: "Kannada (Written)"
 status: draft
 plane: earth
@@ -6321,7 +6288,7 @@ category: knowledge
 types: [language]
 language: kannada
 effect: "This character can read and write the Kannada language."
-`,mv=`id: kannada
+`,uv=`id: kannada
 name: "Kannada (Spoken)"
 status: draft
 plane: earth
@@ -6331,7 +6298,7 @@ category: knowledge
 types: [language]
 language: kannada
 effect: "This character is conversational in the Kannada language and can speak it."
-`,hv=`id: karsef
+`,dv=`id: karsef
 name: Karsef
 status: placeholder
 plane: isekai
@@ -6341,7 +6308,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Karsef and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,gv=`id: kashgar-mindworks
+`,fv=`id: kashgar-mindworks
 name: "Kashgar Mindworks"
 status: placeholder
 plane: earth
@@ -6352,7 +6319,7 @@ lore: kashgar-mindworks
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of Kashgar Mindworks and can be assumed to be familiar with its businesses, locations, employees, culture, and leadership."
-`,_v=`id: kashgar
+`,pv=`id: kashgar
 name: "Kashgar"
 status: placeholder
 plane: earth
@@ -6364,7 +6331,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Kashgar and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,vv=`id: kazakh-written
+`,mv=`id: kazakh-written
 name: "Kazakh (Written)"
 status: draft
 plane: earth
@@ -6374,7 +6341,7 @@ category: knowledge
 types: [language]
 language: kazakh
 effect: "This character can read and write the Kazakh language."
-`,yv=`id: kazakh
+`,hv=`id: kazakh
 name: "Kazakh (Spoken)"
 status: draft
 plane: earth
@@ -6384,7 +6351,7 @@ category: knowledge
 types: [language]
 language: kazakh
 effect: "This character is conversational in the Kazakh language and can speak it."
-`,bv=`id: khmer-written
+`,gv=`id: khmer-written
 name: "Khmer (Written)"
 status: draft
 plane: earth
@@ -6394,7 +6361,7 @@ category: knowledge
 types: [language]
 language: khmer
 effect: "This character can read and write the Khmer language."
-`,xv=`id: khmer
+`,_v=`id: khmer
 name: "Khmer (Spoken)"
 status: draft
 plane: earth
@@ -6404,7 +6371,7 @@ category: knowledge
 types: [language]
 language: khmer
 effect: "This character is conversational in the Khmer language and can speak it."
-`,Sv=`id: kinyarwanda-written
+`,vv=`id: kinyarwanda-written
 name: "Kinyarwanda (Written)"
 status: draft
 plane: earth
@@ -6414,7 +6381,7 @@ category: knowledge
 types: [language]
 language: kinyarwanda
 effect: "This character can read and write the Kinyarwanda language."
-`,Cv=`id: kinyarwanda
+`,yv=`id: kinyarwanda
 name: "Kinyarwanda (Spoken)"
 status: draft
 plane: earth
@@ -6424,7 +6391,7 @@ category: knowledge
 types: [language]
 language: kinyarwanda
 effect: "This character is conversational in the Kinyarwanda language and can speak it."
-`,wv=`id: korean-written
+`,bv=`id: korean-written
 name: "Korean (Written)"
 status: draft
 plane: earth
@@ -6434,7 +6401,7 @@ category: knowledge
 types: [language]
 language: korean
 effect: "This character can read and write the Korean language."
-`,Tv=`id: korean
+`,xv=`id: korean
 name: "Korean (Spoken)"
 status: draft
 plane: earth
@@ -6444,7 +6411,7 @@ category: knowledge
 types: [language]
 language: korean
 effect: "This character is conversational in the Korean language and can speak it."
-`,Ev=`id: kyrgyz-written
+`,Sv=`id: kyrgyz-written
 name: "Kyrgyz (Written)"
 status: draft
 plane: earth
@@ -6454,7 +6421,7 @@ category: knowledge
 types: [language]
 language: kyrgyz
 effect: "This character can read and write the Kyrgyz language."
-`,Dv=`id: kyrgyz
+`,Cv=`id: kyrgyz
 name: "Kyrgyz (Spoken)"
 status: draft
 plane: earth
@@ -6464,7 +6431,7 @@ category: knowledge
 types: [language]
 language: kyrgyz
 effect: "This character is conversational in the Kyrgyz language and can speak it."
-`,Ov=`id: lao-written
+`,wv=`id: lao-written
 name: "Lao (Written)"
 status: draft
 plane: earth
@@ -6474,7 +6441,7 @@ category: knowledge
 types: [language]
 language: lao
 effect: "This character can read and write the Lao language."
-`,kv=`id: lao
+`,Tv=`id: lao
 name: "Lao (Spoken)"
 status: draft
 plane: earth
@@ -6484,7 +6451,7 @@ category: knowledge
 types: [language]
 language: lao
 effect: "This character is conversational in the Lao language and can speak it."
-`,Av=`id: law-enforcement
+`,Ev=`id: law-enforcement
 name: "Law Enforcement"
 status: draft
 plane: any
@@ -6494,7 +6461,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of law enforcement and can be assumed to be familiar with police and guard procedures, how evidence is handled, and how arrests and investigations proceed."
-`,jv=`id: legal-systems
+`,Dv=`id: legal-systems
 name: "Legal Systems"
 status: draft
 plane: any
@@ -6504,7 +6471,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of legal systems and can be assumed to be familiar with how laws are written and enforced, how courts work, and common legal procedures."
-`,Mv=`id: lingala-written
+`,Ov=`id: lingala-written
 name: "Lingala (Written)"
 status: draft
 plane: earth
@@ -6514,7 +6481,7 @@ category: knowledge
 types: [language]
 language: lingala
 effect: "This character can read and write the Lingala language."
-`,Nv=`id: lingala
+`,kv=`id: lingala
 name: "Lingala (Spoken)"
 status: draft
 plane: earth
@@ -6524,7 +6491,7 @@ category: knowledge
 types: [language]
 language: lingala
 effect: "This character is conversational in the Lingala language and can speak it."
-`,Pv=`id: liquid-democracy
+`,Av=`id: liquid-democracy
 name: "Liquid Democracy"
 status: placeholder
 plane: earth
@@ -6536,7 +6503,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra’s Liquid Democracy and can be assumed to be familiar with its delegated votes, ward representatives, and the Council of 11."
-`,Fv=`id: literature
+`,jv=`id: literature
 name: "Literature"
 status: draft
 plane: any
@@ -6546,7 +6513,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of literature and can be assumed to be familiar with famous works, authors, forms and the ideas they made popular."
-`,Iv=`id: local-folklore
+`,Mv=`id: local-folklore
 name: Local Folklore
 status: placeholder
 plane: any
@@ -6561,7 +6528,7 @@ choices:
     from: place
     note: "Which region's folklore"
     perRank: false
-`,Lv=`id: local-history
+`,Nv=`id: local-history
 name: "Local History"
 status: draft
 plane: any
@@ -6571,7 +6538,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."
-`,Rv=`id: logistics
+`,Pv=`id: logistics
 name: "Logistics"
 status: draft
 plane: any
@@ -6581,7 +6548,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of logistics and can be assumed to be familiar with how supplies, people and equipment are moved, stored and accounted for."
-`,zv=`id: magic-on-isekai
+`,Fv=`id: magic-on-isekai
 name: Magic on Isekai
 status: placeholder
 plane: isekai
@@ -6593,7 +6560,7 @@ category: knowledge
 list: magic
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of the magic on Isekai and can be assumed to be familiar with the philosophies, cultures, methods, and laws related to its practice."
-`,Bv=`id: magical-artifacts
+`,Iv=`id: magical-artifacts
 name: "Magical Artifacts"
 status: draft
 plane: isekai
@@ -6605,7 +6572,7 @@ minStats: { memory: 3, intuition: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character has knowledge of magical artifacts and can be assumed to be familiar with famous relics, common enchanted items and the dangers of handling them."
-`,Vv=`id: malay-written
+`,Lv=`id: malay-written
 name: "Malay (Written)"
 status: draft
 plane: earth
@@ -6615,7 +6582,7 @@ category: knowledge
 types: [language]
 language: malay
 effect: "This character can read and write the Malay language."
-`,Hv=`id: malay
+`,Rv=`id: malay
 name: "Malay (Spoken)"
 status: draft
 plane: earth
@@ -6625,7 +6592,7 @@ category: knowledge
 types: [language]
 language: malay
 effect: "This character is conversational in the Malay language and can speak it."
-`,Uv=`id: malayalam-written
+`,zv=`id: malayalam-written
 name: "Malayalam (Written)"
 status: draft
 plane: earth
@@ -6635,7 +6602,7 @@ category: knowledge
 types: [language]
 language: malayalam
 effect: "This character can read and write the Malayalam language."
-`,Wv=`id: malayalam
+`,Bv=`id: malayalam
 name: "Malayalam (Spoken)"
 status: draft
 plane: earth
@@ -6645,7 +6612,7 @@ category: knowledge
 types: [language]
 language: malayalam
 effect: "This character is conversational in the Malayalam language and can speak it."
-`,Gv=`id: mandarin-written
+`,Vv=`id: mandarin-written
 name: "Mandarin (Written)"
 status: placeholder
 plane: earth
@@ -6655,7 +6622,7 @@ category: knowledge
 types: [language]
 language: mandarin
 effect: This character can read and write the Mandarin language.
-`,Kv=`id: mandarin
+`,Hv=`id: mandarin
 name: "Mandarin (Spoken)"
 status: placeholder
 plane: earth
@@ -6665,7 +6632,7 @@ category: knowledge
 types: [language]
 language: mandarin
 effect: This character is conversational in the Mandarin language and can speak it.
-`,qv=`id: marathi-written
+`,Uv=`id: marathi-written
 name: "Marathi (Written)"
 status: draft
 plane: earth
@@ -6675,7 +6642,7 @@ category: knowledge
 types: [language]
 language: marathi
 effect: "This character can read and write the Marathi language."
-`,Jv=`id: marathi
+`,Wv=`id: marathi
 name: "Marathi (Spoken)"
 status: draft
 plane: earth
@@ -6685,7 +6652,7 @@ category: knowledge
 types: [language]
 language: marathi
 effect: "This character is conversational in the Marathi language and can speak it."
-`,Yv=`id: martial-arts
+`,Gv=`id: martial-arts
 name: "Martial Arts"
 status: draft
 plane: any
@@ -6695,7 +6662,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of martial arts and can be assumed to be familiar with the major fighting styles, their techniques and the schools that teach them."
-`,Xv=`id: mathematics
+`,Kv=`id: mathematics
 name: "Mathematics"
 status: placeholder
 plane: any
@@ -6705,7 +6672,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of mathematics and can be assumed to be familiar with mathematical fields of study."
-`,Zv=`id: medicine
+`,qv=`id: medicine
 name: "Medicine"
 status: draft
 plane: any
@@ -6715,7 +6682,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of medicine and can be assumed to be familiar with anatomy, common illnesses and injuries, and how they are treated."
-`,Qv=`id: metallurgy
+`,Jv=`id: metallurgy
 name: "Metallurgy"
 status: draft
 plane: any
@@ -6725,7 +6692,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of metallurgy and can be assumed to be familiar with common metals and alloys and how they are smelted, worked and tempered."
-`,$v=`id: military-tactics
+`,Yv=`id: military-tactics
 name: "Military Tactics"
 status: draft
 plane: any
@@ -6735,7 +6702,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of military tactics and can be assumed to be familiar with formations, maneuvers, chains of command and how battles are fought."
-`,ey=`id: mongolian-written
+`,Xv=`id: mongolian-written
 name: "Mongolian (Written)"
 status: draft
 plane: earth
@@ -6745,7 +6712,7 @@ category: knowledge
 types: [language]
 language: mongolian
 effect: "This character can read and write the Mongolian language."
-`,ty=`id: mongolian
+`,Zv=`id: mongolian
 name: "Mongolian (Spoken)"
 status: draft
 plane: earth
@@ -6755,7 +6722,7 @@ category: knowledge
 types: [language]
 language: mongolian
 effect: "This character is conversational in the Mongolian language and can speak it."
-`,ny=`id: monsters-of-isekai
+`,Qv=`id: monsters-of-isekai
 name: Monsters of Isekai
 status: placeholder
 plane: isekai
@@ -6765,7 +6732,7 @@ lore: isekai-monsters
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the monsters of Isekai and can be assumed to be familiar with their names, territories, the goods that they can provide, and their strengths and weaknesses."
-`,ry=`id: mountaineering
+`,$v=`id: mountaineering
 name: Mountaineering
 status: placeholder
 plane: any
@@ -6775,7 +6742,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, endurance: 2 }
 effect: "This character has knowledge of mountaineering and can be assumed to be familiar with the preparation, dangers, and survival craft involved in trekking mountains."
-`,iy=`id: music
+`,ey=`id: music
 name: "Music"
 status: draft
 plane: any
@@ -6785,7 +6752,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character has knowledge of music and can be assumed to be familiar with musical theory, well-known pieces and the traditions they come from."
-`,ay=`id: navigation
+`,ty=`id: navigation
 name: "Navigation"
 status: draft
 plane: any
@@ -6795,7 +6762,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of navigation and can be assumed to be familiar with reading maps, charts, stars and instruments, and plotting a course."
-`,oy=`id: nepali-written
+`,ny=`id: nepali-written
 name: "Nepali (Written)"
 status: draft
 plane: earth
@@ -6805,7 +6772,7 @@ category: knowledge
 types: [language]
 language: nepali
 effect: "This character can read and write the Nepali language."
-`,sy=`id: nepali
+`,ry=`id: nepali
 name: "Nepali (Spoken)"
 status: draft
 plane: earth
@@ -6815,7 +6782,7 @@ category: knowledge
 types: [language]
 language: nepali
 effect: "This character is conversational in the Nepali language and can speak it."
-`,cy=`id: new-columbia
+`,iy=`id: new-columbia
 name: "New Columbia"
 status: placeholder
 plane: earth
@@ -6826,7 +6793,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of New Columbia and can be assumed to be familiar with the peoples, places, and customs of the American Empire’s colony on Luna."
-`,ly=`id: new-persia
+`,ay=`id: new-persia
 name: "New Persia"
 status: placeholder
 plane: earth
@@ -6838,7 +6805,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of New Persia and can be assumed to be familiar with the peoples, places, and customs of the SDU’s planar territory on Pairidaeza."
-`,uy=`id: noble-houses-of-dreft
+`,oy=`id: noble-houses-of-dreft
 name: Noble Houses of Dreft
 status: placeholder
 plane: isekai
@@ -6848,7 +6815,7 @@ tags: [nobility, politics, houses]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the noble houses of Dreft and can be assumed to be familiar with their histories and feuds."
-`,dy=`id: odia-written
+`,sy=`id: odia-written
 name: "Odia (Written)"
 status: draft
 plane: earth
@@ -6858,7 +6825,7 @@ category: knowledge
 types: [language]
 language: odia
 effect: "This character can read and write the Odia language."
-`,fy=`id: odia
+`,cy=`id: odia
 name: "Odia (Spoken)"
 status: draft
 plane: earth
@@ -6868,7 +6835,7 @@ category: knowledge
 types: [language]
 language: odia
 effect: "This character is conversational in the Odia language and can speak it."
-`,py=`id: orc-society
+`,ly=`id: orc-society
 name: "Orc Society"
 status: draft
 plane: isekai
@@ -6878,7 +6845,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."
-`,my=`id: oromo-written
+`,uy=`id: oromo-written
 name: "Oromo (Written)"
 status: draft
 plane: earth
@@ -6888,7 +6855,7 @@ category: knowledge
 types: [language]
 language: oromo
 effect: "This character can read and write the Oromo language."
-`,hy=`id: oromo
+`,dy=`id: oromo
 name: "Oromo (Spoken)"
 status: draft
 plane: earth
@@ -6898,7 +6865,7 @@ category: knowledge
 types: [language]
 language: oromo
 effect: "This character is conversational in the Oromo language and can speak it."
-`,gy=`id: paraarcheology
+`,fy=`id: paraarcheology
 name: "Paraarcheology"
 status: placeholder
 plane: earth
@@ -6908,7 +6875,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of paraarcheology and can be assumed to be familiar with the skills, places, histories, and planar details associated with the study of archeology on other planes."
-`,_y=`id: parabiology
+`,py=`id: parabiology
 name: "Parabiology"
 status: placeholder
 plane: earth
@@ -6918,7 +6885,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, empathy: 2 }
 effect: "This character has knowledge of parabiology and can be assumed to be familiar with the living organisms of other planes, and their vital processes, structures, functions, and growth."
-`,vy=`id: paraflora
+`,my=`id: paraflora
 name: "Paraflora"
 status: placeholder
 plane: earth
@@ -6928,7 +6895,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, empathy: 2 }
 effect: "This character has knowledge of paraflora and can be assumed to be familiar with extraplanar plants, including their ecologies, growth patterns, and the rough paraphysical concepts by which they may operate."
-`,yy=`id: paraphysics
+`,hy=`id: paraphysics
 name: "Paraphysics"
 status: placeholder
 plane: earth
@@ -6938,7 +6905,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of paraphysics and can be assumed to be familiar with paraphysical concepts, paraphysical effects, and axiomatic sciences."
-`,by=`id: parasapient-medicine
+`,gy=`id: parasapient-medicine
 name: "Parasapient Medicine"
 status: draft
 plane: earth
@@ -6948,7 +6915,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, empathy: 2 }
 effect: "This character has knowledge of parasapient medicine and can be assumed to be familiar with the anatomy and common ailments of the parasapient peoples known to the settled systems, and how to treat them."
-`,xy=`id: parasapients
+`,_y=`id: parasapients
 name: "Parasapients"
 status: placeholder
 plane: earth
@@ -6958,7 +6925,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 3 }
 effect: "This character has knowledge of parasapients and can be assumed to be familiar with extraplanar sapients, including their cultures, diplomatic relations, and the rough paraphysical concepts by which they may operate."
-`,Sy=`id: parazoology
+`,vy=`id: parazoology
 name: "Parazoology"
 status: placeholder
 plane: earth
@@ -6968,7 +6935,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of parazoology and can be assumed to be familiar with extraplanar creatures, including their habitats, needs, and the rough paraphysical concepts by which they may operate."
-`,Cy=`id: pataliputra
+`,yy=`id: pataliputra
 name: "Pataliputra"
 status: draft
 plane: earth
@@ -6980,7 +6947,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Pataliputra and can be assumed to be familiar with the peoples, places, and customs of India’s planar capital."
-`,wy=`id: pathology
+`,by=`id: pathology
 name: "Pathology"
 status: draft
 plane: any
@@ -6990,7 +6957,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3, intuition: 2 }
 effect: "This character has knowledge of pathology and can be assumed to be familiar with common diseases, how they spread and present, and how outbreaks are contained."
-`,Ty=`id: pedagogy
+`,xy=`id: pedagogy
 name: "Pedagogy"
 status: draft
 plane: any
@@ -7000,7 +6967,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 2 }
 effect: "This character has knowledge of pedagogy and can be assumed to be familiar with how people learn and the methods for teaching them."
-`,Ey=`id: persian-written
+`,Sy=`id: persian-written
 name: "Persian (Written)"
 status: draft
 plane: earth
@@ -7010,7 +6977,7 @@ category: knowledge
 types: [language]
 language: persian
 effect: "This character can read and write the Persian language."
-`,Dy=`id: persian
+`,Cy=`id: persian
 name: "Persian (Spoken)"
 status: draft
 plane: earth
@@ -7020,7 +6987,7 @@ category: knowledge
 types: [language]
 language: persian
 effect: "This character is conversational in the Persian language and can speak it."
-`,Oy=`id: pharmacology
+`,wy=`id: pharmacology
 name: "Pharmacology"
 status: draft
 plane: any
@@ -7030,7 +6997,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of pharmacology and can be assumed to be familiar with common drugs and remedies, their doses, side effects and interactions."
-`,ky=`id: physical-training
+`,Ty=`id: physical-training
 name: "Physical Training"
 status: draft
 plane: any
@@ -7040,7 +7007,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, endurance: 2 }
 effect: "This character has knowledge of physical training and can be assumed to be familiar with exercise, conditioning, nutrition and recovery."
-`,Ay=`id: physics
+`,Ey=`id: physics
 name: "Physics"
 status: draft
 plane: any
@@ -7050,7 +7017,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 4 }
 effect: "This character has knowledge of physics and can be assumed to be familiar with motion, energy, forces, light and matter, and the math that describes them."
-`,jy=`id: planar-exploration
+`,Dy=`id: planar-exploration
 name: "Planar Exploration"
 status: placeholder
 plane: earth
@@ -7061,7 +7028,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2, intuition: 2 }
 effect: "This character has knowledge of planar exploration and can be assumed to be familiar with the regulations, laws, dangers, and methods involved."
-`,My=`id: polish-written
+`,Oy=`id: polish-written
 name: "Polish (Written)"
 status: draft
 plane: earth
@@ -7071,7 +7038,7 @@ category: knowledge
 types: [language]
 language: polish
 effect: "This character can read and write the Polish language."
-`,Ny=`id: polish
+`,ky=`id: polish
 name: "Polish (Spoken)"
 status: draft
 plane: earth
@@ -7081,7 +7048,7 @@ category: knowledge
 types: [language]
 language: polish
 effect: "This character is conversational in the Polish language and can speak it."
-`,Py=`id: politics
+`,Ay=`id: politics
 name: "Politics"
 status: draft
 plane: any
@@ -7091,7 +7058,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character has knowledge of politics and can be assumed to be familiar with how power is won, held and traded, and the factions and figures that matter."
-`,Fy=`id: port-herminst
+`,jy=`id: port-herminst
 name: Port Herminst
 status: placeholder
 plane: isekai
@@ -7103,7 +7070,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Port Herminst and can be assumed to be familiar with the peoples, places, and customs of Dreft’s capital."
-`,Iy=`id: ports-and-stations
+`,My=`id: ports-and-stations
 name: "Ports and Stations"
 status: placeholder
 plane: earth
@@ -7113,7 +7080,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the ports and stations of the settled systems and can be assumed to be familiar with the customs, regulations, industries, ships, and docks involved in trade."
-`,Ly=`id: portuguese-written
+`,Ny=`id: portuguese-written
 name: "Portuguese (Written)"
 status: draft
 plane: earth
@@ -7123,7 +7090,7 @@ category: knowledge
 types: [language]
 language: portuguese
 effect: "This character can read and write the Portuguese language."
-`,Ry=`id: portuguese
+`,Py=`id: portuguese
 name: "Portuguese (Spoken)"
 status: draft
 plane: earth
@@ -7133,7 +7100,7 @@ category: knowledge
 types: [language]
 language: portuguese
 effect: "This character is conversational in the Portuguese language and can speak it."
-`,zy=`id: psychology
+`,Fy=`id: psychology
 name: "Psychology"
 status: draft
 plane: any
@@ -7143,7 +7110,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, empathy: 4 }
 effect: "This character has knowledge of psychology and can be assumed to be familiar with how minds work, common mental illnesses, and the treatment of trauma and stress."
-`,By=`id: punjabi-written
+`,Iy=`id: punjabi-written
 name: "Punjabi (Written)"
 status: draft
 plane: earth
@@ -7153,7 +7120,7 @@ category: knowledge
 types: [language]
 language: punjabi
 effect: "This character can read and write the Punjabi language."
-`,Vy=`id: punjabi
+`,Ly=`id: punjabi
 name: "Punjabi (Spoken)"
 status: draft
 plane: earth
@@ -7163,7 +7130,7 @@ category: knowledge
 types: [language]
 language: punjabi
 effect: "This character is conversational in the Punjabi language and can speak it."
-`,Hy=`id: religions-of-isekai
+`,Ry=`id: religions-of-isekai
 name: "Religions of Isekai"
 status: draft
 plane: isekai
@@ -7173,7 +7140,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the religions of Isekai and can be assumed to be familiar with the faiths, temples, holy days and rites of Isekai's peoples."
-`,Uy=`id: religions-of-the-settled-systems
+`,zy=`id: religions-of-the-settled-systems
 name: "Religions of the Settled Systems"
 status: draft
 plane: earth
@@ -7183,7 +7150,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the religions of the Settled Systems and can be assumed to be familiar with the major faiths of Earth and its colonies, their beliefs and their rites."
-`,Wy=`id: rhetoric
+`,By=`id: rhetoric
 name: "Rhetoric"
 status: draft
 plane: any
@@ -7193,7 +7160,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, persuasion: 2 }
 effect: "This character has knowledge of rhetoric and can be assumed to be familiar with the structures, techniques and famous examples of persuasive speech."
-`,Gy=`id: robotics
+`,Vy=`id: robotics
 name: "Robotics"
 status: placeholder
 plane: earth
@@ -7203,7 +7170,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of robotics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."
-`,Ky=`id: romanian-written
+`,Hy=`id: romanian-written
 name: "Romanian (Written)"
 status: draft
 plane: earth
@@ -7213,7 +7180,7 @@ category: knowledge
 types: [language]
 language: romanian
 effect: "This character can read and write the Romanian language."
-`,qy=`id: romanian
+`,Uy=`id: romanian
 name: "Romanian (Spoken)"
 status: draft
 plane: earth
@@ -7223,7 +7190,7 @@ category: knowledge
 types: [language]
 language: romanian
 effect: "This character is conversational in the Romanian language and can speak it."
-`,Jy=`id: runecraft
+`,Wy=`id: runecraft
 name: "Runecraft"
 status: draft
 plane: isekai
@@ -7235,7 +7202,7 @@ minStats: { memory: 4, intuition: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character has knowledge of runecraft and can be assumed to be familiar with the common runes of power, their meanings and their effects."
-`,Yy=`id: russian-written
+`,Gy=`id: russian-written
 name: "Russian (Written)"
 status: draft
 plane: earth
@@ -7245,7 +7212,7 @@ category: knowledge
 types: [language]
 language: russian
 effect: "This character can read and write the Russian language."
-`,Xy=`id: russian
+`,Ky=`id: russian
 name: "Russian (Spoken)"
 status: draft
 plane: earth
@@ -7255,7 +7222,7 @@ category: knowledge
 types: [language]
 language: russian
 effect: "This character is conversational in the Russian language and can speak it."
-`,Zy=`id: sdu-law
+`,qy=`id: sdu-law
 name: "Stellar Democratic Union Law"
 status: placeholder
 plane: earth
@@ -7267,7 +7234,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Stellar Democratic Union law and can be assumed to be familiar with the laws and courts of the Stellar Democratic Union."
-`,Qy=`id: seafaring
+`,Jy=`id: seafaring
 name: Seafaring
 status: placeholder
 plane: any
@@ -7282,7 +7249,7 @@ choices:
     from: place
     note: "Which seas"
     perRank: false
-`,$y=`id: security-systems
+`,Yy=`id: security-systems
 name: "Security Systems"
 status: draft
 plane: earth
@@ -7292,7 +7259,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of security systems and can be assumed to be familiar with common locks, alarms, surveillance and access controls, and their weaknesses."
-`,eb=`id: shipbreaking
+`,Xy=`id: shipbreaking
 name: "Shipbreaking"
 status: draft
 plane: earth
@@ -7302,7 +7269,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of shipbreaking and can be assumed to be familiar with how voidships are taken apart, which parts are worth saving and which are dangerous."
-`,tb=`id: shipping-lanes
+`,Zy=`id: shipping-lanes
 name: "Shipping Lanes"
 status: placeholder
 plane: earth
@@ -7312,7 +7279,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the shipping lanes between stations, ships, and surfaces and can be assumed to be familiar with their routes, schedules, and checkpoints."
-`,nb=`id: sinhala-written
+`,Qy=`id: sinhala-written
 name: "Sinhala (Written)"
 status: draft
 plane: earth
@@ -7322,7 +7289,7 @@ category: knowledge
 types: [language]
 language: sinhala
 effect: "This character can read and write the Sinhala language."
-`,rb=`id: sinhala
+`,$y=`id: sinhala
 name: "Sinhala (Spoken)"
 status: draft
 plane: earth
@@ -7332,7 +7299,7 @@ category: knowledge
 types: [language]
 language: sinhala
 effect: "This character is conversational in the Sinhala language and can speak it."
-`,ib=`id: somali-written
+`,eb=`id: somali-written
 name: "Somali (Written)"
 status: draft
 plane: earth
@@ -7342,7 +7309,7 @@ category: knowledge
 types: [language]
 language: somali
 effect: "This character can read and write the Somali language."
-`,ab=`id: somali
+`,tb=`id: somali
 name: "Somali (Spoken)"
 status: draft
 plane: earth
@@ -7352,7 +7319,7 @@ category: knowledge
 types: [language]
 language: somali
 effect: "This character is conversational in the Somali language and can speak it."
-`,ob=`# Lore for Sorellion is still coming soon on the site.
+`,nb=`# Lore for Sorellion is still coming soon on the site.
 id: sorellion
 name: "Sorellion"
 status: draft
@@ -7363,7 +7330,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of Sorellion and can be assumed to be familiar with its people, places and customs."
-`,sb=`id: southeast-asia
+`,rb=`id: southeast-asia
 name: "Southeast Asia"
 status: placeholder
 plane: earth
@@ -7374,7 +7341,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Southeast Asian geography and can be assumed to be familiar with the Empire of China’s Southeast Asian territories, their peoples, and their old borders."
-`,cb=`id: spacefaring
+`,ib=`id: spacefaring
 name: "Spacefaring"
 status: draft
 plane: earth
@@ -7384,7 +7351,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of spacefaring and can be assumed to be familiar with life in vacuum and zero gravity, airlocks, suits, life support, and what to do when they fail."
-`,lb=`id: spanish-written
+`,ab=`id: spanish-written
 name: "Spanish (Written)"
 status: placeholder
 plane: earth
@@ -7394,7 +7361,7 @@ category: knowledge
 types: [language]
 language: spanish
 effect: This character can read and write the Spanish language.
-`,ub=`id: spanish
+`,ob=`id: spanish
 name: "Spanish (Spoken)"
 status: placeholder
 plane: earth
@@ -7404,7 +7371,7 @@ category: knowledge
 types: [language]
 language: spanish
 effect: This character is conversational in the Spanish language and can speak it.
-`,db=`id: spirits-and-the-dead
+`,sb=`id: spirits-and-the-dead
 name: "Spirits and the Dead"
 status: draft
 plane: any
@@ -7414,7 +7381,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
 effect: "This character has knowledge of spirits and the dead and can be assumed to be familiar with the kinds of spirits, the signs of hauntings and possession, and the traditional ways of dealing with them."
-`,fb=`id: starships
+`,cb=`id: starships
 name: "Starships"
 status: draft
 plane: earth
@@ -7424,7 +7391,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 2 }
 effect: "This character has knowledge of starships and can be assumed to be familiar with the classes, makers, capabilities and common faults of the starships of the settled systems."
-`,pb=`id: succession-law
+`,lb=`id: succession-law
 name: Succession Law
 status: placeholder
 plane: isekai
@@ -7434,7 +7401,7 @@ tags: [law, succession, nobility]
 category: knowledge
 minStats: { memory: 6, persuasion: 2 }
 effect: "This character has knowledge of succession law and can be assumed to be familiar with who inherits what in Dreft and who has a claim to the crown."
-`,mb=`id: swahili-written
+`,ub=`id: swahili-written
 name: "Swahili (Written)"
 status: draft
 plane: earth
@@ -7444,7 +7411,7 @@ category: knowledge
 types: [language]
 language: swahili
 effect: "This character can read and write the Swahili language."
-`,hb=`id: swahili
+`,db=`id: swahili
 name: "Swahili (Spoken)"
 status: draft
 plane: earth
@@ -7454,7 +7421,7 @@ category: knowledge
 types: [language]
 language: swahili
 effect: "This character is conversational in the Swahili language and can speak it."
-`,gb=`id: switch-gates
+`,fb=`id: switch-gates
 name: "Switch Gates"
 status: draft
 plane: earth
@@ -7464,7 +7431,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 4, logic: 3 }
 effect: "This character has knowledge of switch gates and can be assumed to be familiar with how gates are attuned, operated and kept stable."
-`,_b=`id: tamil-written
+`,pb=`id: tamil-written
 name: "Tamil (Written)"
 status: draft
 plane: earth
@@ -7474,7 +7441,7 @@ category: knowledge
 types: [language]
 language: tamil
 effect: "This character can read and write the Tamil language."
-`,vb=`id: tamil
+`,mb=`id: tamil
 name: "Tamil (Spoken)"
 status: draft
 plane: earth
@@ -7484,7 +7451,7 @@ category: knowledge
 types: [language]
 language: tamil
 effect: "This character is conversational in the Tamil language and can speak it."
-`,yb=`id: telugu-written
+`,hb=`id: telugu-written
 name: "Telugu (Written)"
 status: draft
 plane: earth
@@ -7494,7 +7461,7 @@ category: knowledge
 types: [language]
 language: telugu
 effect: "This character can read and write the Telugu language."
-`,bb=`id: telugu
+`,gb=`id: telugu
 name: "Telugu (Spoken)"
 status: draft
 plane: earth
@@ -7504,7 +7471,7 @@ category: knowledge
 types: [language]
 language: telugu
 effect: "This character is conversational in the Telugu language and can speak it."
-`,xb=`id: tetra-frontiers-co
+`,_b=`id: tetra-frontiers-co
 name: Tetra Frontiers Co.
 status: placeholder
 plane: isekai
@@ -7515,7 +7482,7 @@ lore: tetra-frontiers-co
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra Frontiers Co. and can be assumed to be familiar with its holdings, locations, employees, culture, and leadership."
-`,Sb=`id: tetra
+`,vb=`id: tetra
 name: "Tetra"
 status: placeholder
 plane: earth
@@ -7527,7 +7494,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Tetra and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,Cb=`id: thai-written
+`,yb=`id: thai-written
 name: "Thai (Written)"
 status: draft
 plane: earth
@@ -7537,7 +7504,7 @@ category: knowledge
 types: [language]
 language: thai
 effect: "This character can read and write the Thai language."
-`,wb=`id: thai
+`,bb=`id: thai
 name: "Thai (Spoken)"
 status: draft
 plane: earth
@@ -7547,7 +7514,7 @@ category: knowledge
 types: [language]
 language: thai
 effect: "This character is conversational in the Thai language and can speak it."
-`,Tb=`id: the-bureau-of-planar-management
+`,xb=`id: the-bureau-of-planar-management
 name: "The Bureau of Planar Management"
 status: draft
 plane: earth
@@ -7557,7 +7524,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."
-`,Eb=`id: the-chinese-empire
+`,Sb=`id: the-chinese-empire
 name: "The Empire of China"
 status: placeholder
 plane: earth
@@ -7569,7 +7536,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."
-`,Db=`id: the-corporate-syndicates
+`,Cb=`id: the-corporate-syndicates
 name: "The Corporate Syndicates"
 status: placeholder
 plane: earth
@@ -7580,7 +7547,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Chinese corporate syndicates and can be assumed to be familiar with their people, ties, and industries."
-`,Ob=`id: the-corsine-pass
+`,wb=`id: the-corsine-pass
 name: The Corsine Pass
 status: placeholder
 plane: isekai
@@ -7591,7 +7558,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, endurance: 2 }
 effect: "This character has knowledge of the Corsine Pass on Isekai and can be assumed to be familiar with its passes, peoples, and dangers."
-`,kb=`id: the-diplomatic-wing
+`,Tb=`id: the-diplomatic-wing
 name: "The Diplomatic Wing"
 status: placeholder
 plane: earth
@@ -7603,7 +7570,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Tetra’s Diplomatic Wing and can be assumed to be familiar with its diplomats, embassies, businesses, and security."
-`,Ab=`id: the-drovus-empire
+`,Eb=`id: the-drovus-empire
 name: The Drovus Empire
 status: placeholder
 plane: isekai
@@ -7613,7 +7580,7 @@ lore: drovus-empire
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Drovus Empire and can be assumed to be familiar with its politics, regions, wildlife, and cultures."
-`,jb=`id: the-explorers-lodge
+`,Db=`id: the-explorers-lodge
 name: "The Explorers’ Lodge"
 status: placeholder
 plane: earth
@@ -7625,7 +7592,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Explorers’ Lodge and can be assumed to be familiar with its members, its rules, and how expeditions are handed out."
-`,Mb=`id: the-free-american-states
+`,Ob=`id: the-free-american-states
 name: "The Free American States"
 status: draft
 plane: earth
@@ -7635,7 +7602,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Free American States and can be assumed to be familiar with its member states, its trade and its border disputes."
-`,Nb=`id: the-imperial-military
+`,kb=`id: the-imperial-military
 name: "The Imperial Military"
 status: placeholder
 plane: earth
@@ -7646,7 +7613,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Imperial Military and can be assumed to be familiar with its branches, ranks, bases, and habits."
-`,Pb=`id: the-kingdom-of-india
+`,Ab=`id: the-kingdom-of-india
 name: "The Kingdom of India"
 status: draft
 plane: earth
@@ -7658,7 +7625,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Kingdom of India and can be assumed to be familiar with its customs, politics, and territories."
-`,Fb=`id: the-kings-woods
+`,jb=`id: the-kings-woods
 name: The King’s Woods
 status: placeholder
 plane: isekai
@@ -7670,7 +7637,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the King’s Woods and can be assumed to be familiar with its geography, ecology, and locations."
-`,Ib=`id: the-lunar-industrial-syndicate
+`,Mb=`id: the-lunar-industrial-syndicate
 name: "The Lunar Industrial Syndicate"
 status: draft
 plane: earth
@@ -7680,7 +7647,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Lunar Industrial Syndicate and can be assumed to be familiar with its board, holdings, territories and corporate politics."
-`,Lb=`id: the-martian-association
+`,Nb=`id: the-martian-association
 name: "The Martian Association"
 status: placeholder
 plane: earth
@@ -7691,7 +7658,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Martian Association and can be assumed to be familiar with the peoples, places, and customs of the SDU’s territory on Mars."
-`,Rb=`id: the-stellar-democratic-union
+`,Pb=`id: the-stellar-democratic-union
 name: "The Stellar Democratic Union"
 status: placeholder
 plane: earth
@@ -7703,7 +7670,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Stellar Democratic Union and can be assumed to be familiar with its customs, politics, and territories."
-`,zb=`id: the-sunrise-princedoms
+`,Fb=`id: the-sunrise-princedoms
 name: The Sunrise Princedoms
 status: placeholder
 plane: isekai
@@ -7712,7 +7679,7 @@ tags: [sunrise, princedoms, refugee]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Sunrise Princedoms and can be assumed to be familiar with their politics, regions, wildlife, and cultures as they were before Drovus absorbed them."
-`,Bb=`id: the-switch-port
+`,Ib=`id: the-switch-port
 name: The Switch Port
 status: placeholder
 plane: isekai
@@ -7724,7 +7691,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the switch port at Castle Tetra and can be assumed to be familiar with its peoples, places, and customs."
-`,Vb=`id: the-union-of-texas
+`,Lb=`id: the-union-of-texas
 name: "The Union of Texas"
 status: placeholder
 plane: earth
@@ -7734,7 +7701,7 @@ lore: union-of-texas
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Union of Texas and can be assumed to be familiar with its customs, politics, and territories."
-`,Hb=`id: the-united-nations
+`,Rb=`id: the-united-nations
 name: "The United Nations"
 status: placeholder
 plane: earth
@@ -7745,7 +7712,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the United Nations and can be assumed to be familiar with its institutions aboard Tetra."
-`,Ub=`id: the-ural-federation
+`,zb=`id: the-ural-federation
 name: "The Ural Federation"
 status: draft
 plane: earth
@@ -7757,7 +7724,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the Ural Federation and can be assumed to be familiar with its customs, politics, and territories."
-`,Wb=`id: theater
+`,Bb=`id: theater
 name: "Theater"
 status: draft
 plane: any
@@ -7767,7 +7734,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, persuasion: 2 }
 effect: "This character has knowledge of theater and can be assumed to be familiar with famous plays and performers, stagecraft, and how a performance is put together."
-`,Gb=`id: thieves-cant
+`,Vb=`id: thieves-cant
 name: "Thieves' Cant (Spoken)"
 status: draft
 plane: any
@@ -7777,7 +7744,7 @@ category: knowledge
 types: [language]
 language: thieves-cant
 effect: "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation."
-`,Kb=`id: toxicology
+`,Hb=`id: toxicology
 name: "Toxicology"
 status: draft
 plane: any
@@ -7787,7 +7754,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3, logic: 3 }
 effect: "This character has knowledge of toxicology and can be assumed to be familiar with common poisons and venoms, their symptoms and their antidotes."
-`,qb=`id: trade-guilds
+`,Ub=`id: trade-guilds
 name: "Trade Guilds"
 status: draft
 plane: any
@@ -7797,7 +7764,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of trade guilds and can be assumed to be familiar with how craft and trade guilds are organized, their ranks, rules and the masters who run them."
-`,Jb=`id: trade-law
+`,Wb=`id: trade-law
 name: Trade Law
 status: placeholder
 plane: isekai
@@ -7807,7 +7774,7 @@ tags: [law, trade, merchant]
 category: knowledge
 minStats: { memory: 3, persuasion: 2 }
 effect: "This character has knowledge of Dreftian trade law and can be assumed to be familiar with the rules of trade in Dreft and their loopholes."
-`,Yb=`id: trade-roads
+`,Gb=`id: trade-roads
 name: Trade Roads
 status: placeholder
 plane: isekai
@@ -7817,7 +7784,7 @@ tags: [trade, roads, caravan]
 category: knowledge
 minStats: { memory: 3 }
 effect: "This character has knowledge of the trade roads of Dreft and can be assumed to be familiar with their routes, products, and dangers."
-`,Xb=`id: turkish-written
+`,Kb=`id: turkish-written
 name: "Turkish (Written)"
 status: draft
 plane: earth
@@ -7827,7 +7794,7 @@ category: knowledge
 types: [language]
 language: turkish
 effect: "This character can read and write the Turkish language."
-`,Zb=`id: turkish
+`,qb=`id: turkish
 name: "Turkish (Spoken)"
 status: draft
 plane: earth
@@ -7837,7 +7804,7 @@ category: knowledge
 types: [language]
 language: turkish
 effect: "This character is conversational in the Turkish language and can speak it."
-`,Qb=`id: ukrainian-written
+`,Jb=`id: ukrainian-written
 name: "Ukrainian (Written)"
 status: draft
 plane: earth
@@ -7847,7 +7814,7 @@ category: knowledge
 types: [language]
 language: ukrainian
 effect: "This character can read and write the Ukrainian language."
-`,$b=`id: ukrainian
+`,Yb=`id: ukrainian
 name: "Ukrainian (Spoken)"
 status: draft
 plane: earth
@@ -7857,7 +7824,7 @@ category: knowledge
 types: [language]
 language: ukrainian
 effect: "This character is conversational in the Ukrainian language and can speak it."
-`,ex=`id: union-politics
+`,Xb=`id: union-politics
 name: "Union Politics"
 status: placeholder
 plane: earth
@@ -7868,7 +7835,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Union politics and can be assumed to be familiar with the parties, presidents, and member-state rivalries of the SDU."
-`,tx=`id: ural-tribal-law
+`,Zb=`id: ural-tribal-law
 name: "Ural Tribal Law"
 status: draft
 plane: earth
@@ -7879,7 +7846,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ural tribal law and can be assumed to be familiar with the customs and laws of the Ural Federation’s statelets."
-`,nx=`id: urdu-written
+`,Qb=`id: urdu-written
 name: "Urdu (Written)"
 status: draft
 plane: earth
@@ -7889,7 +7856,7 @@ category: knowledge
 types: [language]
 language: urdu
 effect: "This character can read and write the Urdu language."
-`,rx=`id: urdu
+`,$b=`id: urdu
 name: "Urdu (Spoken)"
 status: draft
 plane: earth
@@ -7899,7 +7866,7 @@ category: knowledge
 types: [language]
 language: urdu
 effect: "This character is conversational in the Urdu language and can speak it."
-`,ix=`id: uyghur-written
+`,ex=`id: uyghur-written
 name: "Uyghur (Written)"
 status: draft
 plane: earth
@@ -7909,7 +7876,7 @@ category: knowledge
 types: [language]
 language: uyghur
 effect: "This character can read and write the Uyghur language."
-`,ax=`id: uyghur
+`,tx=`id: uyghur
 name: "Uyghur (Spoken)"
 status: draft
 plane: earth
@@ -7919,7 +7886,7 @@ category: knowledge
 types: [language]
 language: uyghur
 effect: "This character is conversational in the Uyghur language and can speak it."
-`,ox=`id: vietnamese-written
+`,nx=`id: vietnamese-written
 name: "Vietnamese (Written)"
 status: draft
 plane: earth
@@ -7929,7 +7896,7 @@ category: knowledge
 types: [language]
 language: vietnamese
 effect: "This character can read and write the Vietnamese language."
-`,sx=`id: vietnamese
+`,rx=`id: vietnamese
 name: "Vietnamese (Spoken)"
 status: draft
 plane: earth
@@ -7939,7 +7906,7 @@ category: knowledge
 types: [language]
 language: vietnamese
 effect: "This character is conversational in the Vietnamese language and can speak it."
-`,cx=`id: weapons
+`,ix=`id: weapons
 name: "Weapons"
 status: draft
 plane: any
@@ -7949,7 +7916,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of weapons and can be assumed to be familiar with common weapons, how they work and are maintained, and what they can do."
-`,lx=`id: wilderness-lore
+`,ax=`id: wilderness-lore
 name: "Wilderness Lore"
 status: draft
 plane: any
@@ -7959,7 +7926,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 2, intuition: 3 }
 effect: "This character has knowledge of the wilderness and can be assumed to be familiar with terrain, weather, edible and dangerous plants, and the signs that keep travelers alive."
-`,ux=`id: xanthus
+`,ox=`id: xanthus
 name: "Xanthus"
 status: draft
 plane: earth
@@ -7971,7 +7938,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Xanthus and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,dx=`id: yoruba-written
+`,sx=`id: yoruba-written
 name: "Yoruba (Written)"
 status: draft
 plane: earth
@@ -7981,7 +7948,7 @@ category: knowledge
 types: [language]
 language: yoruba
 effect: "This character can read and write the Yoruba language."
-`,fx=`id: yoruba
+`,cx=`id: yoruba
 name: "Yoruba (Spoken)"
 status: draft
 plane: earth
@@ -7991,7 +7958,7 @@ category: knowledge
 types: [language]
 language: yoruba
 effect: "This character is conversational in the Yoruba language and can speak it."
-`,px=`id: yutu
+`,lx=`id: yutu
 name: "Yùtù"
 status: placeholder
 plane: earth
@@ -8002,7 +7969,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."
-`,mx=`id: zhulong
+`,ux=`id: zhulong
 name: "Zhulong"
 status: placeholder
 plane: earth
@@ -8014,7 +7981,31 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of Ark Zhulong and can be assumed to be familiar with the peoples, places, and customs aboard it."
-`,hx=`id: possessed-by-a-spirit
+`,dx=`id: long-in-the-tooth
+name: "Long in the Tooth"
+status: draft
+plane: isekai
+summary: "An Orc who has kept their teeth long into age."
+tags: [orcs, age, prestige, social]
+category: other
+background: true
+minStats: { power: 10, endurance: 5, demeanor: 5 }
+rpRequirement: "Middle Aged or Older"
+# The Condition comes with it, for as long as it's held.
+grants:
+  - trait: long-toothed
+effect: "This character has kept their teeth through a long life and has the Long Toothed Condition."
+`,fx=`id: magic-access
+name: "Magic Access"
+status: placeholder
+plane: any
+summary: "This character can use magic: they can level the Magic core stat."
+tags: [magic, access]
+category: other
+conveyed: true
+coreAccess: [magic]
+effect: "This character can level up the Magic core stat."
+`,px=`id: possessed-by-a-spirit
 name: "Possessed By A Spirit"
 status: draft
 plane: any
@@ -8024,7 +8015,7 @@ category: other
 conveyed: true
 temporary: "lost when the character is no longer possessed"
 effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."
-`,gx=`id: active-listening
+`,mx=`id: active-listening
 name: "Active Listening"
 status: draft
 plane: any
@@ -8033,7 +8024,7 @@ tags: [empathy, social, understanding]
 category: skill
 minStats: { empathy: 3, intuition: 2 }
 effect: "This character gains +3 to Empathy rolls relating to understanding what someone wants, means or is leaving out."
-`,_x=`id: advanced-cooking
+`,hx=`id: advanced-cooking
 name: "Advanced Cooking"
 status: draft
 plane: any
@@ -8044,7 +8035,7 @@ mastery: true
 minStats: { intuition: 5, memory: 4, empathy: 3 }
 prerequisites: [simple-cooking]
 effect: "This character cooks at a professional level and can feed a large group. This character can request advantage on skill checks involving cooking, and a fine meal can earn them favor in social situations at the GM’s discretion."
-`,vx=`id: advanced-potion-mixing
+`,gx=`id: advanced-potion-mixing
 name: "Advanced Potion Mixing"
 status: draft
 plane: isekai
@@ -8055,7 +8046,7 @@ mastery: true
 minStats: { memory: 6, intuition: 6, logic: 4 }
 prerequisites: [simple-potion-mixing]
 effect: "This character can brew complex and potent potions, and can work out a new recipe from its ingredients’ properties. This character can request advantage on skill checks involving brewing potions."
-`,yx=`id: ambusher
+`,_x=`id: ambusher
 name: "Ambusher"
 status: draft
 plane: any
@@ -8065,7 +8056,7 @@ category: skill
 minStats: { intuition: 4, grace: 3 }
 effect: "This character gains +2 Priority and +2 to Attack Rolls and damage in the first Round of a combat Incident in instances where it has the element of surprise."
 modifiers: "Priority +2 (first Round, with surprise), Attack Rolls +2 (first Round, with surprise)"
-`,bx=`id: animal-husbandry
+`,vx=`id: animal-husbandry
 name: "Animal Husbandry"
 status: draft
 plane: any
@@ -8075,7 +8066,7 @@ category: skill
 ranked: true
 minStats: { empathy: 3, endurance: 2, intuition: 2 }
 effect: "This character is capable of raising, feeding and caring for livestock and working animals without a skill check. Rank *10 added to skill check rolls involving handling and caring for animals."
-`,xx=`id: antidote-brewing
+`,yx=`id: antidote-brewing
 name: "Antidote Brewing"
 status: draft
 plane: isekai
@@ -8086,7 +8077,7 @@ ranked: true
 minStats: { memory: 4, intuition: 3, logic: 2 }
 prerequisites: [simple-potion-mixing]
 effect: "This character can brew a simple antidote to a known poison without a Skill Check. Rank *10 added to Skill Check rolls involving brewing antidotes."
-`,Sx=`id: appraisal
+`,bx=`id: appraisal
 name: "Appraisal"
 status: draft
 plane: any
@@ -8095,7 +8086,7 @@ tags: [trade, valuation, merchant]
 category: skill
 minStats: { memory: 3, logic: 3, intuition: 2 }
 effect: "This character gains +8 to rolls for accurately appraising the value of artifacts, merchandise, or commodities in fields that it has familiarity with."
-`,Cx=`id: archival-research
+`,xx=`id: archival-research
 name: "Archival Research"
 status: draft
 plane: any
@@ -8104,7 +8095,7 @@ tags: [scholarship, research, archives]
 category: skill
 minStats: { memory: 4, logic: 3 }
 effect: "This character gains +5 to rolls relating to finding information in libraries, archives and records."
-`,wx=`id: artifact-identification
+`,Sx=`id: artifact-identification
 name: "Artifact Identification"
 status: draft
 plane: isekai
@@ -8116,7 +8107,7 @@ prerequisites: [relic-handling]
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains +5 to rolls relating to identifying the function and power of magical artifacts."
-`,Tx=`id: artifact-repair
+`,Cx=`id: artifact-repair
 name: "Artifact Repair"
 status: draft
 plane: isekai
@@ -8128,7 +8119,7 @@ prerequisites: [enchanting]
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains +5 to rolls relating to repairing a Damaged magical artifact."
-`,Ex=`id: artist-painting
+`,wx=`id: artist-painting
 name: "Artist: Painting"
 status: draft
 plane: any
@@ -8138,7 +8129,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, memory: 2 }
 effect: "This character is capable of painting a competent likeness or scene without a skill check. Rank *10 added to skill check rolls involving painting."
-`,Dx=`id: artist-sculpture
+`,Tx=`id: artist-sculpture
 name: "Artist: Sculpture"
 status: draft
 plane: any
@@ -8148,7 +8139,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
 effect: "This character is capable of sculpting a competent figure in stone, clay or wood without a skill check. Rank *10 added to skill check rolls involving sculpture."
-`,Ox=`id: bait-and-lure
+`,Ex=`id: bait-and-lure
 name: "Bait and Lure"
 status: draft
 plane: any
@@ -8157,7 +8148,7 @@ tags: [hunting, monsters, traps]
 category: skill
 minStats: { intuition: 4, memory: 2 }
 effect: "This character gains +5 to rolls relating to luring or baiting a creature."
-`,kx=`id: battlefield-commander
+`,Dx=`id: battlefield-commander
 name: "Battlefield Commander"
 status: draft
 plane: any
@@ -8168,7 +8159,7 @@ minStats: { demeanor: 5, intuition: 4, logic: 3 }
 prerequisites: [military-drill]
 effect: "Allies within 10 m who can hear this character gain +1 Priority."
 modifiers: "Priority +1 (allies within 10 m who can hear)"
-`,Ax=`id: beast-taming
+`,Ox=`id: beast-taming
 name: "Beast Taming"
 status: draft
 plane: any
@@ -8178,7 +8169,7 @@ category: skill
 minStats: { empathy: 5, demeanor: 4 }
 prerequisites: [monster-handling]
 effect: "This character gains +5 to rolls relating to training a wild or monstrous creature over time."
-`,jx=`id: body-conditioning
+`,kx=`id: body-conditioning
 name: "Body Conditioning"
 status: draft
 plane: any
@@ -8189,7 +8180,7 @@ ranked: true
 minStats: { endurance: 5, power: 3 }
 effect: "Rank *1 added to this character's Blunt Resistance."
 modifiers: "Blunt Resistance +1 per Rank"
-`,Mx=`id: bookkeeping
+`,Ax=`id: bookkeeping
 name: "Bookkeeping"
 status: draft
 plane: any
@@ -8199,7 +8190,7 @@ category: skill
 ranked: true
 minStats: { logic: 3, memory: 3 }
 effect: "This character is capable of keeping accurate accounts without a Skill Check. Rank *10 added to Skill Check rolls involving accounts, ledgers or spotting falsified books."
-`,Nx=`id: born-leader
+`,jx=`id: born-leader
 name: "Born Leader"
 status: draft
 plane: any
@@ -8210,7 +8201,7 @@ mastery: true
 minStats: { demeanor: 8, persuasion: 8, empathy: 6 }
 prerequisites: [crew-management, rally]
 effect: "This character can request Advantage on rolls relating to leading, commanding or rallying a group."
-`,Px=`id: boxing
+`,Mx=`id: boxing
 name: "Boxing"
 status: draft
 plane: any
@@ -8222,18 +8213,7 @@ minStats: { power: 3, grace: 3, endurance: 3 }
 prerequisites: [brawler]
 effect: "- Rank *5 added to Skill Check rolls involving boxing.\\n- +3 to Attack Rolls made with Unarmed Strike."
 modifiers: "Attack Rolls +3 (Unarmed Strike)"
-`,Fx=`id: brawler
-name: "Brawler"
-status: draft
-plane: any
-summary: "Fighting with fists, feet, elbows and whatever else is attached."
-tags: [combat, unarmed, brawling]
-category: skill
-ranked: true
-minStats: { power: 3, endurance: 3 }
-effect: "This character gains the Unarmed Strike Action."
-action: "Unarmed Strike: This character may Attack a target with a temporary weapon that has the following profile: (Melee) (max range 1 m) (1 Blunt per Rank) (Attack Stat: Power)."
-`,Ix=`id: breakthrough
+`,Nx=`id: breakthrough
 name: "Breakthrough"
 status: draft
 plane: any
@@ -8244,7 +8224,7 @@ mastery: true
 minStats: { logic: 10, intuition: 8, memory: 6 }
 prerequisites: [research, inventor]
 effect: "This character can request Advantage on research and invention rolls in a field they hold a Knowledge in."
-`,Lx=`id: brokering
+`,Px=`id: brokering
 name: "Brokering"
 status: draft
 plane: any
@@ -8253,7 +8233,7 @@ tags: [trade, negotiation, merchant]
 category: skill
 minStats: { persuasion: 4, empathy: 3 }
 effect: "This character gains +5 to Persuasion rolls relating to arranging a deal between two other parties."
-`,Rx=`id: bugging
+`,Fx=`id: bugging
 name: "Bugging"
 status: draft
 plane: earth
@@ -8262,7 +8242,7 @@ tags: [espionage, electronics, surveillance]
 category: skill
 minStats: { grace: 3, logic: 3, intuition: 3 }
 effect: "This character gains +5 to rolls relating to planting, hiding or finding listening devices and hidden cameras."
-`,zx=`id: calming-presence
+`,Ix=`id: calming-presence
 name: "Calming Presence"
 status: draft
 plane: any
@@ -8271,7 +8251,16 @@ tags: [empathy, social, calm]
 category: skill
 minStats: { empathy: 4, demeanor: 3 }
 effect: "This character gains +5 to rolls relating to calming a frightened, panicked or hostile person."
-`,Bx=`id: cargo-handling
+`,Lx=`id: capable-student
+name: "Capable Student"
+status: draft
+plane: any
+summary: "Learns new knowledge in half the time."
+tags: [learning, study, site-example]
+category: skill
+minStats: { memory: 3, logic: 3 }
+effect: "This character can learn a new (knowledge) Trait in half the specified time."
+`,Rx=`id: cargo-handling
 name: "Cargo Handling"
 status: draft
 plane: any
@@ -8280,7 +8269,7 @@ tags: [cargo, shipping, labor]
 category: skill
 minStats: { power: 3, endurance: 2, logic: 2 }
 effect: "This character gains +3 to rolls relating to the handling, tracking, or maintenance of cargo."
-`,Vx=`id: casualty-extraction
+`,zx=`id: casualty-extraction
 name: "Casualty Extraction"
 status: draft
 plane: any
@@ -8289,7 +8278,7 @@ tags: [medicine, combat, rescue, movement]
 category: skill
 minStats: { power: 4, endurance: 4 }
 effect: "This character may move their full Movement while dragging or carrying an Incapacitated character."
-`,Hx=`id: cataloguing
+`,Bx=`id: cataloguing
 name: "Cataloguing"
 status: draft
 plane: any
@@ -8298,7 +8287,7 @@ tags: [scholarship, organization, museums]
 category: skill
 minStats: { memory: 4, logic: 2 }
 effect: "This character gains +5 to rolls relating to identifying, organizing and recording collections, finds or specimens."
-`,Ux=`id: climber
+`,Vx=`id: climber
 name: "Climber"
 status: draft
 plane: any
@@ -8308,7 +8297,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, power: 3, endurance: 2 }
 effect: "This character is capable of climbing surfaces with handholds without a Skill Check. Rank *10 added to Skill Check rolls involving climbing."
-`,Wx=`id: combat-medic
+`,Hx=`id: combat-medic
 name: "Combat Medic"
 status: draft
 plane: any
@@ -8318,7 +8307,16 @@ category: skill
 minStats: { grace: 3, memory: 3, demeanor: 3 }
 prerequisites: [medical-aid]
 effect: "Treating a wounded character within 1 m counts as a Partial RP Action for this character during an Incident."
-`,Gx=`id: concealment
+`,Ux=`id: con-man
+name: "Con Man"
+status: draft
+plane: any
+summary: "A practiced liar, in speech and in writing."
+tags: [lying, deception, social, site-example]
+category: skill
+minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }
+effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."
+`,Wx=`id: concealment
 name: "Concealment"
 status: draft
 plane: any
@@ -8327,7 +8325,7 @@ tags: [stealth, hiding]
 category: skill
 minStats: { grace: 3, intuition: 2 }
 effect: "This character gains +3 to rolls relating to sneaking, hiding, or staying concealed."
-`,Kx=`id: containment-protocols
+`,Gx=`id: containment-protocols
 name: "Containment Protocols"
 status: draft
 plane: earth
@@ -8336,7 +8334,7 @@ tags: [parabiology, containment, safety]
 category: skill
 minStats: { logic: 4, grace: 3, demeanor: 2 }
 effect: "This character gains +5 to rolls relating to capturing, containing or transporting dangerous creatures or extraplanar beings."
-`,qx=`id: contortionist
+`,Kx=`id: contortionist
 name: "Contortionist"
 status: draft
 plane: any
@@ -8345,7 +8343,7 @@ tags: [athletics, escape, flexibility]
 category: skill
 minStats: { grace: 5, endurance: 2 }
 effect: "This character gains +5 to Grace rolls relating to squeezing through tight spaces or slipping free of bonds."
-`,Jx=`id: contract-drafting
+`,qx=`id: contract-drafting
 name: "Contract Drafting"
 status: draft
 plane: any
@@ -8355,7 +8353,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 4 }
 effect: "This character is capable of drafting a simple binding contract without a Skill Check. Rank *10 added to Skill Check rolls involving writing contracts."
-`,Yx=`id: counselor
+`,Jx=`id: counselor
 name: "Counselor"
 status: draft
 plane: any
@@ -8364,7 +8362,7 @@ tags: [empathy, care, psychology]
 category: skill
 minStats: { empathy: 5, intuition: 3 }
 effect: "This character gains +5 to Empathy rolls relating to helping someone through grief, fear or trauma."
-`,Xx=`id: counterpuncher
+`,Yx=`id: counterpuncher
 name: "Counterpuncher"
 status: draft
 plane: any
@@ -8374,7 +8372,7 @@ category: skill
 minStats: { grace: 5, intuition: 4, power: 3 }
 prerequisites: [boxing]
 effect: "When a Melee Attack against this character misses by 6 or more while it is Defending, this character may immediately make an Unarmed Strike against the attacker."
-`,Zx=`id: courtly-manners
+`,Xx=`id: courtly-manners
 name: "Courtly Manners"
 status: draft
 plane: any
@@ -8383,7 +8381,7 @@ tags: [court, nobility, social]
 category: skill
 minStats: { demeanor: 3, empathy: 2, memory: 2 }
 effect: "This character gains +3 to Persuasion or Demeanor rolls in situations where high society manners are relevant."
-`,Qx=`id: cover-identity
+`,Zx=`id: cover-identity
 name: "Cover Identity"
 status: draft
 plane: any
@@ -8393,7 +8391,7 @@ category: skill
 minStats: { demeanor: 4, memory: 4 }
 prerequisites: [disguise]
 effect: "This character gains +5 to Demeanor and Memory rolls relating to keeping up a false identity under scrutiny."
-`,$x=`id: craft-leatherworking
+`,Qx=`id: craft-leatherworking
 name: "Craft: Leatherworking"
 status: draft
 plane: any
@@ -8403,7 +8401,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, endurance: 2, intuition: 2 }
 effect: "This character is capable of tanning hides and making leather goods and simple leather armor without a skill check. Rank *10 added to skill check rolls involving leatherworking."
-`,eS=`id: craft-masonry
+`,$x=`id: craft-masonry
 name: "Craft: Masonry"
 status: draft
 plane: any
@@ -8413,7 +8411,7 @@ category: skill
 ranked: true
 minStats: { power: 4, endurance: 3, logic: 2 }
 effect: "This character is capable of cutting and laying stone for walls, foundations and simple structures without a skill check. Rank *10 added to skill check rolls involving masonry."
-`,tS=`id: craft-smithing
+`,eS=`id: craft-smithing
 name: "Craft: Smithing"
 status: draft
 plane: any
@@ -8423,7 +8421,7 @@ category: skill
 ranked: true
 minStats: { power: 4, endurance: 3, grace: 2 }
 effect: "This character is capable of forging and repairing simple metal tools, fittings and weapons without a skill check. Rank *10 added to skill check rolls involving smithing."
-`,nS=`id: crew-management
+`,tS=`id: crew-management
 name: "Crew Management"
 status: draft
 plane: any
@@ -8433,7 +8431,7 @@ category: skill
 ranked: true
 minStats: { persuasion: 3, empathy: 3, logic: 2 }
 effect: "This character is capable of organizing the duties and shifts of a small crew without a Skill Check. Rank *10 added to Skill Check rolls involving managing a crew."
-`,rS=`id: crisis-leadership
+`,nS=`id: crisis-leadership
 name: "Crisis Leadership"
 status: draft
 plane: any
@@ -8442,7 +8440,7 @@ tags: [leadership, crisis, emergency]
 category: skill
 minStats: { demeanor: 4, intuition: 3, persuasion: 3 }
 effect: "This character gains +5 to rolls relating to keeping a group acting together in a disaster or emergency."
-`,iS=`id: cryptanalysis
+`,rS=`id: cryptanalysis
 name: "Cryptanalysis"
 status: draft
 plane: any
@@ -8451,7 +8449,7 @@ tags: [codes, encryption, computers]
 category: skill
 minStats: { logic: 5, memory: 3, intuition: 3 }
 effect: "This character gains +5 to Logic rolls relating to breaking codes, ciphers or encryption."
-`,aS=`id: cultural-fluency
+`,iS=`id: cultural-fluency
 name: "Cultural Fluency"
 status: draft
 plane: any
@@ -8461,7 +8459,7 @@ category: skill
 ranked: true
 minStats: { empathy: 3, memory: 3, demeanor: 2 }
 effect: "This character is capable of avoiding basic social missteps among a culture they hold a Knowledge of without a Skill Check. Rank *10 added to Skill Check rolls involving navigating an unfamiliar culture."
-`,oS=`id: curse-sense
+`,aS=`id: curse-sense
 name: "Curse Sense"
 status: draft
 plane: isekai
@@ -8472,7 +8470,7 @@ minStats: { intuition: 4, magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains +5 to Intuition rolls relating to noticing cursed or dangerous magical objects."
-`,sS=`id: data-analysis
+`,oS=`id: data-analysis
 name: "Data Analysis"
 status: draft
 plane: earth
@@ -8481,7 +8479,7 @@ tags: [science, data, computers]
 category: skill
 minStats: { logic: 5, memory: 3 }
 effect: "This character gains +5 to rolls relating to analyzing large sets of data or sensor readings."
-`,cS=`id: data-recovery
+`,sS=`id: data-recovery
 name: "Data Recovery"
 status: draft
 plane: earth
@@ -8490,7 +8488,7 @@ tags: [computers, data, forensics]
 category: skill
 minStats: { logic: 4, memory: 3 }
 effect: "This character gains +5 to rolls relating to recovering deleted, corrupted or damaged data."
-`,lS=`id: dead-drops
+`,cS=`id: dead-drops
 name: "Dead Drops"
 status: draft
 plane: any
@@ -8499,7 +8497,7 @@ tags: [espionage, tradecraft, smuggling]
 category: skill
 minStats: { grace: 3, intuition: 3, memory: 2 }
 effect: "This character gains +5 to rolls relating to passing messages or items covertly."
-`,uS=`id: decipherment
+`,lS=`id: decipherment
 name: "Decipherment"
 status: draft
 plane: any
@@ -8509,7 +8507,7 @@ category: skill
 ranked: true
 minStats: { memory: 5, logic: 4, intuition: 3 }
 effect: "This character is capable of reading simple texts in a dead language they hold a Knowledge of without a Skill Check. Rank *10 added to Skill Check rolls involving deciphering old or unknown scripts."
-`,dS=`id: demolitions
+`,uS=`id: demolitions
 name: "Demolitions"
 status: draft
 plane: any
@@ -8519,7 +8517,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, grace: 3, demeanor: 2 }
 effect: "This character is capable of safely placing and setting a simple charge without a Skill Check. Rank *10 added to Skill Check rolls involving demolitions."
-`,fS=`id: diplomacy
+`,dS=`id: diplomacy
 name: "Diplomacy"
 status: draft
 plane: any
@@ -8529,18 +8527,7 @@ category: skill
 ranked: true
 minStats: { persuasion: 4, empathy: 4, demeanor: 3 }
 effect: "This character is capable of conducting routine diplomatic business without a Skill Check. Rank *10 added to Skill Check rolls involving diplomacy."
-`,pS=`id: disarm
-name: "Disarm"
-status: draft
-plane: any
-summary: "Taking the weapon out of an opponent's hands."
-tags: [combat, unarmed, technique]
-category: skill
-minStats: { grace: 5, intuition: 3 }
-prerequisites: [brawler]
-effect: "This character gains the Disarm Action."
-action: "Disarm: This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet."
-`,mS=`id: disguise
+`,fS=`id: disguise
 name: "Disguise"
 status: draft
 plane: any
@@ -8550,7 +8537,7 @@ category: skill
 ranked: true
 minStats: { demeanor: 4, grace: 2, intuition: 2 }
 effect: "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation."
-`,hS=`id: dissection
+`,pS=`id: dissection
 name: "Dissection"
 status: draft
 plane: any
@@ -8559,7 +8546,7 @@ tags: [parabiology, anatomy, science]
 category: skill
 minStats: { grace: 3, logic: 3, memory: 3 }
 effect: "This character gains +5 to rolls relating to examining a dead creature to learn its anatomy and weaknesses."
-`,gS=`id: drillmaster
+`,mS=`id: drillmaster
 name: "Drillmaster"
 status: draft
 plane: any
@@ -8568,7 +8555,16 @@ tags: [teaching, training, military]
 category: skill
 minStats: { demeanor: 4, persuasion: 3, endurance: 3 }
 effect: "This character gains +5 to rolls relating to training others in physical or fighting skills."
-`,_S=`id: electronics-repair
+`,hS=`id: eagle-eye
+name: "Eagle Eye"
+status: draft
+plane: any
+summary: "Sees unusually well at a distance."
+tags: [sight, perception, site-example]
+category: skill
+conveyed: true
+effect: "This character can request advantage in situations that involve seeing at distance."
+`,gS=`id: electronics-repair
 name: "Electronics Repair"
 status: draft
 plane: any
@@ -8578,7 +8574,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, logic: 3, memory: 2 }
 effect: "This character is capable of repairing simple electronic devices without a Skill Check. Rank *10 added to Skill Check rolls involving electronics repair."
-`,vS=`id: enchanting
+`,_S=`id: enchanting
 name: "Enchanting"
 status: draft
 plane: isekai
@@ -8591,7 +8587,7 @@ prerequisites: [relic-handling]
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character is capable of enchanting a simple item with a minor magical property, given the time and materials, without a Skill Check. Rank *10 added to Skill Check rolls involving enchanting."
-`,yS=`id: eva-work
+`,vS=`id: eva-work
 name: "EVA Work"
 status: draft
 plane: earth
@@ -8600,7 +8596,7 @@ tags: [space, eva, labor]
 category: skill
 minStats: { grace: 3, endurance: 3, logic: 2 }
 effect: "This character gains +5 to rolls relating to working outside a vessel or station in a pressure suit."
-`,bS=`id: evasive-maneuvers
+`,yS=`id: evasive-maneuvers
 name: "Evasive Maneuvers"
 status: draft
 plane: any
@@ -8611,7 +8607,7 @@ minStats: { grace: 5, intuition: 5 }
 prerequisiteTags: [pilot]
 effect: "A vehicle this character is piloting gains +2 Defense."
 modifiers: "Defense +2 (vehicle being piloted)"
-`,xS=`id: excavation
+`,bS=`id: excavation
 name: "Excavation"
 status: draft
 plane: any
@@ -8620,7 +8616,7 @@ tags: [archeology, fieldwork, ruins]
 category: skill
 minStats: { grace: 3, endurance: 2, memory: 2 }
 effect: "This character gains +5 to rolls relating to the unearthing or handling of artifacts."
-`,SS=`id: exorcism
+`,xS=`id: exorcism
 name: "Exorcism"
 status: draft
 plane: any
@@ -8631,7 +8627,7 @@ ranked: true
 minStats: { demeanor: 5, empathy: 3, memory: 3 }
 prerequisites: [rites-and-ceremonies]
 effect: "Rank *10 added to Skill Check rolls to end the Possessed by a Spirit Trait or drive a spirit out of a person, place or object."
-`,CS=`id: expedition-leader
+`,SS=`id: expedition-leader
 name: "Expedition Leader"
 status: draft
 plane: any
@@ -8641,7 +8637,7 @@ category: skill
 minStats: { demeanor: 4, intuition: 4, endurance: 3 }
 prerequisites: [expedition-logistics]
 effect: "This character gains +5 to rolls relating to leading a group through unfamiliar terrain or an unfamiliar plane, choosing routes and keeping the group together."
-`,wS=`id: expedition-logistics
+`,CS=`id: expedition-logistics
 name: "Expedition Logistics"
 status: draft
 plane: any
@@ -8650,7 +8646,7 @@ tags: [exploration, planning, logistics]
 category: skill
 minStats: { logic: 4, memory: 3 }
 effect: "This character gains +5 to rolls relating to planning routes, supplies and equipment for an expedition."
-`,TS=`id: expert-pilot
+`,wS=`id: expert-pilot
 name: "Expert Pilot"
 status: draft
 plane: any
@@ -8661,7 +8657,7 @@ mastery: true
 minStats: { memory: 5, intuition: 10, grace: 5 }
 prerequisiteTags: [pilot]
 effect: "This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in."
-`,ES=`id: fabrication
+`,TS=`id: fabrication
 name: "Fabrication"
 status: draft
 plane: any
@@ -8671,7 +8667,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, power: 3, logic: 2 }
 effect: "This character is capable of cutting, welding and fitting simple metal structures without a Skill Check. Rank *10 added to Skill Check rolls involving fabrication."
-`,DS=`id: field-pharmacology
+`,ES=`id: field-pharmacology
 name: "Field Pharmacology"
 status: draft
 plane: any
@@ -8680,7 +8676,7 @@ tags: [medicine, drugs, healing]
 category: skill
 minStats: { memory: 4, logic: 3 }
 effect: "This character gains +5 to rolls relating to choosing, dosing and administering drugs and medicines."
-`,OS=`id: field-sampling
+`,DS=`id: field-sampling
 name: "Field Sampling"
 status: draft
 plane: any
@@ -8689,7 +8685,7 @@ tags: [parabiology, science, fieldwork, survey]
 category: skill
 minStats: { logic: 3, grace: 2, memory: 2 }
 effect: "This character gains +5 to rolls relating to the taking or gathering of samples in wilderness or exotic environments."
-`,kS=`id: field-splinting
+`,OS=`id: field-splinting
 name: "Field Splinting"
 status: draft
 plane: any
@@ -8698,7 +8694,7 @@ tags: [medicine, first-aid, improvisation]
 category: skill
 minStats: { grace: 3, intuition: 3 }
 effect: "This character gains +5 to rolls relating to setting bones or immobilizing injuries with improvised materials."
-`,AS=`id: field-surgeon
+`,kS=`id: field-surgeon
 name: "Field Surgeon"
 status: draft
 plane: any
@@ -8709,7 +8705,7 @@ mastery: true
 minStats: { grace: 8, memory: 8, demeanor: 6, logic: 5 }
 prerequisites: [surgery, combat-medic]
 effect: "This character can request Advantage on Surgery and Medical Aid rolls made in the field or under fire."
-`,jS=`id: fine-print
+`,AS=`id: fine-print
 name: "Fine Print"
 status: draft
 plane: any
@@ -8718,7 +8714,7 @@ tags: [law, contracts, awareness]
 category: skill
 minStats: { memory: 4, intuition: 3 }
 effect: "This character gains +5 to rolls relating to spotting hidden clauses, traps or omissions in a contract or document."
-`,MS=`id: first-contact-protocols
+`,jS=`id: first-contact-protocols
 name: "First Contact Protocols"
 status: draft
 plane: earth
@@ -8727,7 +8723,7 @@ tags: [diplomacy, parasapients, exploration]
 category: skill
 minStats: { empathy: 4, intuition: 4, memory: 3 }
 effect: "This character gains +5 to rolls relating to communicating with sapients who share no Language or customs with them."
-`,NS=`id: folk-remedies
+`,MS=`id: folk-remedies
 name: "Folk Remedies"
 status: draft
 plane: any
@@ -8736,7 +8732,7 @@ tags: [healing, folk, herbs]
 category: skill
 minStats: { memory: 3, intuition: 3 }
 effect: "This character gains +5 to rolls relating to using folk or herbal remedies to heal or produce medicaments."
-`,PS=`id: footwork
+`,NS=`id: footwork
 name: "Footwork"
 status: draft
 plane: any
@@ -8746,7 +8742,7 @@ category: skill
 minStats: { grace: 4, endurance: 2 }
 effect: "This character gains +2 Defense against Melee Attacks while Defending."
 modifiers: "Defense +2 (when Defending against Melee Attacks)"
-`,FS=`id: forgery
+`,PS=`id: forgery
 name: "Forgery"
 status: draft
 plane: any
@@ -8756,7 +8752,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, memory: 3, intuition: 2 }
 effect: "This character is capable of forging a simple document or signature without a Skill Check, given a sample to work from. Rank *10 added to Skill Check rolls involving forgery."
-`,IS=`id: freerunner
+`,FS=`id: freerunner
 name: "Freerunner"
 status: draft
 plane: any
@@ -8766,7 +8762,7 @@ category: skill
 ranked: true
 minStats: { grace: 5, power: 3, endurance: 3 }
 effect: "This character is capable of vaulting low obstacles during Movement without a Skill Check. Rank *10 added to Grace Skill Check rolls to overcome obstacles during Movement."
-`,LS=`id: gate-operation
+`,IS=`id: gate-operation
 name: "Gate Operation"
 status: draft
 plane: earth
@@ -8776,7 +8772,7 @@ category: skill
 ranked: true
 minStats: { logic: 5, memory: 4, intuition: 3 }
 effect: "This character is capable of operating an attuned switch gate in routine conditions without a Skill Check. Rank *10 added to Skill Check rolls involving tuning, monitoring or shutting down a switch gate."
-`,RS=`id: ghost-in-the-machine
+`,LS=`id: ghost-in-the-machine
 name: "Ghost in the Machine"
 status: draft
 plane: earth
@@ -8787,19 +8783,16 @@ mastery: true
 minStats: { logic: 10, intuition: 8, memory: 6 }
 prerequisites: [hacking, intrusion-countermeasures]
 effect: "This character can request Advantage on rolls relating to breaking into systems, and can act inside a network without leaving evidence of having been there."
-`,zS=`id: grappler
-name: "Grappler"
+`,RS=`id: gladiator
+name: "Gladiator"
 status: draft
 plane: any
-summary: "Grabbing, holding and pinning an opponent."
-tags: [combat, unarmed, wrestling]
+summary: "Can fight passably with any close combat weapon."
+tags: [combat, melee, site-example]
 category: skill
-ranked: true
-minStats: { power: 4, endurance: 3, grace: 2 }
-prerequisites: [brawler]
-effect: "- This character gains the Grapple Action.\\n- Rank *5 added to Skill Check rolls involving grappling or escaping a hold."
-action: "Grapple: This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character's Grappler Rank for as long as this character keeps hold, and this character can't move while holding them."
-`,BS=`id: hacking
+minStats: { physical: 5, grace: 5, demeanor: 5 }
+effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."
+`,zS=`id: hacking
 name: "Hacking"
 status: draft
 plane: earth
@@ -8810,7 +8803,7 @@ ranked: true
 minStats: { logic: 5, intuition: 4, memory: 3 }
 prerequisites: [programming]
 effect: "This character is capable of bypassing basic security on consumer computer systems without a Skill Check. Rank *10 added to Skill Check rolls involving breaking into computer systems."
-`,VS=`id: haggler
+`,BS=`id: haggler
 name: "Haggler"
 status: draft
 plane: any
@@ -8819,7 +8812,7 @@ tags: [trade, bargaining, merchant]
 category: skill
 minStats: { persuasion: 4, intuition: 2 }
 effect: "This character gains +5 to Persuasion or Demeanor checks relating to haggling, bartering, and price negotiations."
-`,HS=`id: handler
+`,VS=`id: handler
 name: "Handler"
 status: draft
 plane: any
@@ -8828,7 +8821,7 @@ tags: [espionage, informants, social]
 category: skill
 minStats: { empathy: 4, persuasion: 4, intuition: 3 }
 effect: "This character gains +5 to rolls relating to recruiting, running and protecting informants."
-`,US=`id: hardware-engineering
+`,HS=`id: hardware-engineering
 name: "Hardware Engineering"
 status: draft
 plane: earth
@@ -8838,7 +8831,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, grace: 3, memory: 3 }
 effect: "This character is capable of assembling and repairing common computer hardware without a Skill Check. Rank *10 added to Skill Check rolls involving computer hardware."
-`,WS=`id: hazard-assessment
+`,US=`id: hazard-assessment
 name: "Hazard Assessment"
 status: draft
 plane: earth
@@ -8847,7 +8840,7 @@ tags: [planes, exploration, safety]
 category: skill
 minStats: { intuition: 4, logic: 3, memory: 2 }
 effect: "This character gains +5 to Intuition and Logic rolls relating to identifying paraphysical, environmental or biological hazards on an unfamiliar plane."
-`,GS=`id: heavy-machinery
+`,WS=`id: heavy-machinery
 name: "Heavy Machinery"
 status: draft
 plane: any
@@ -8857,7 +8850,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, logic: 3, endurance: 2 }
 effect: "This character is capable of operating heavy machinery in routine conditions without a Skill Check. Rank *10 added to Skill Check rolls involving heavy machinery."
-`,KS=`id: herb-gathering
+`,GS=`id: herb-gathering
 name: "Herb Gathering"
 status: draft
 plane: any
@@ -8867,7 +8860,7 @@ category: skill
 ranked: true
 minStats: { intuition: 3, memory: 2 }
 effect: "This character is capable of finding common useful herbs in a suitable environment without a Skill Check. Rank *10 added to Skill Check rolls involving finding or identifying herbs and reagents in the wild."
-`,qS=`id: holy-conviction
+`,KS=`id: holy-conviction
 name: "Holy Conviction"
 status: draft
 plane: any
@@ -8878,7 +8871,7 @@ mastery: true
 minStats: { demeanor: 8, empathy: 6, memory: 6 }
 prerequisites: [exorcism, spirit-warding]
 effect: "This character can request Advantage on rolls to resist, ward off or banish spirits and supernatural beings."
-`,JS=`id: hull-cutting
+`,qS=`id: hull-cutting
 name: "Hull Cutting"
 status: draft
 plane: earth
@@ -8887,7 +8880,7 @@ tags: [salvage, space, cutting]
 category: skill
 minStats: { power: 3, grace: 3, logic: 2 }
 effect: "This character gains +5 to rolls relating to cutting through hulls, bulkheads and other heavy plating."
-`,YS=`id: incantation
+`,JS=`id: incantation
 name: "Incantation"
 status: draft
 plane: isekai
@@ -8898,7 +8891,7 @@ minStats: { magic: 1, memory: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains +5 to rolls relating to using magic abilities that require incantation."
-`,XS=`id: inspiring-speech
+`,YS=`id: inspiring-speech
 name: "Inspiring Speech"
 status: draft
 plane: any
@@ -8907,7 +8900,7 @@ tags: [leadership, oratory, social]
 category: skill
 minStats: { persuasion: 5, demeanor: 3 }
 effect: "This character gains +5 to Persuasion rolls when addressing a group or crowd."
-`,ZS=`id: interpreter
+`,XS=`id: interpreter
 name: "Interpreter"
 status: draft
 plane: any
@@ -8917,7 +8910,7 @@ category: skill
 ranked: true
 minStats: { memory: 4, empathy: 3, intuition: 2 }
 effect: "This character is capable of interpreting between two Languages they know without a Skill Check. Rank *10 added to Skill Check rolls involving interpreting tone, idiom or nuance."
-`,QS=`id: interrogation
+`,ZS=`id: interrogation
 name: "Interrogation"
 status: draft
 plane: any
@@ -8927,7 +8920,7 @@ category: skill
 ranked: true
 minStats: { demeanor: 4, empathy: 3, intuition: 3 }
 effect: "This character is capable of drawing simple information from a reluctant subject without a Skill Check. Rank *10 added to Skill Check rolls involving interrogation."
-`,$S=`id: intimidation
+`,QS=`id: intimidation
 name: "Intimidation"
 status: draft
 plane: any
@@ -8937,7 +8930,7 @@ category: skill
 ranked: true
 minStats: { demeanor: 3, power: 3 }
 effect: "This character is capable of making a credible threat without a skill check. Rank *10 added to skill check rolls involving intimidation."
-`,eC=`id: intrusion-countermeasures
+`,$S=`id: intrusion-countermeasures
 name: "Intrusion Countermeasures"
 status: draft
 plane: earth
@@ -8948,7 +8941,7 @@ ranked: true
 minStats: { logic: 4, intuition: 4, memory: 3 }
 prerequisites: [programming]
 effect: "This character is capable of noticing a clumsy intrusion into a system they maintain without a Skill Check. Rank *10 added to Skill Check rolls involving detecting or stopping intrusions."
-`,tC=`id: inventor
+`,eC=`id: inventor
 name: "Inventor"
 status: draft
 plane: any
@@ -8959,7 +8952,7 @@ ranked: true
 minStats: { logic: 5, intuition: 4, memory: 3 }
 prerequisites: [tinkerer]
 effect: "This character is capable of drafting a workable design for a simple new device without a Skill Check. Rank *10 added to Skill Check rolls involving designing or improving inventions."
-`,nC=`id: investigation
+`,tC=`id: investigation
 name: "Investigation"
 status: draft
 plane: any
@@ -8969,7 +8962,7 @@ category: skill
 ranked: true
 minStats: { intuition: 4, logic: 3, memory: 2 }
 effect: "This character is capable of searching a scene and following obvious leads without a skill check. Rank *10 added to skill check rolls involving investigating crimes and mysteries."
-`,rC=`id: jumper
+`,nC=`id: jumper
 name: "Jumper"
 status: draft
 plane: any
@@ -8979,7 +8972,7 @@ category: skill
 ranked: true
 minStats: { power: 3, grace: 3 }
 effect: "This character is capable of jumping across a gap of up to 2 m without a Skill Check. Rank *10 added to Skill Check rolls involving jumping."
-`,iC=`id: kata-discipline
+`,rC=`id: kata-discipline
 name: "Kata Discipline"
 status: draft
 plane: any
@@ -8988,6 +8981,17 @@ tags: [martial arts, discipline, focus]
 category: skill
 minStats: { demeanor: 3, endurance: 3, grace: 2 }
 effect: "- This character gains +3 to Demeanor rolls to resist fear or intimidation.\\n- This character gains +3 to Endurance rolls to resist exhaustion."
+`,iC=`id: knowledge-sponge
+name: "Knowledge Sponge"
+status: draft
+plane: any
+summary: "Learns new knowledge in a quarter of the time."
+tags: [learning, study, site-example]
+category: skill
+mastery: true
+minStats: { memory: 5, logic: 5, intuition: 5 }
+prerequisites: [capable-student]
+effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."
 `,aC=`id: lab-technique
 name: "Lab Technique"
 status: draft
@@ -9147,7 +9151,16 @@ tags: [spirits, communication, supernatural]
 category: skill
 minStats: { empathy: 4, intuition: 4 }
 effect: "This character gains +5 to rolls relating to communicating with a spirit that is present."
-`,xC=`id: military-drill
+`,xC=`id: mental-fortitude
+name: "Mental Fortitude"
+status: draft
+plane: any
+summary: "Holds together when the mind is badly taxed."
+tags: [will, resistance, site-example]
+category: skill
+minStats: { endurance: 8, logic: 5, demeanor: 5 }
+effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."
+`,SC=`id: military-drill
 name: "Military Drill"
 status: draft
 plane: any
@@ -9156,7 +9169,7 @@ tags: [military, discipline]
 category: skill
 minStats: { endurance: 3, demeanor: 3 }
 effect: "This character gains +3 to Demeanor and Persuasion rolls relating to commanding troops or giving orders to subordinates in military organizations."
-`,SC=`id: mining
+`,CC=`id: mining
 name: "Mining"
 status: draft
 plane: any
@@ -9166,7 +9179,7 @@ category: skill
 ranked: true
 minStats: { power: 4, endurance: 4, logic: 2 }
 effect: "This character is capable of working a mine face or claim without a Skill Check. Rank *10 added to Skill Check rolls involving mining."
-`,CC=`id: mnemonist
+`,wC=`id: mnemonist
 name: "Mnemonist"
 status: draft
 plane: any
@@ -9175,7 +9188,7 @@ tags: [memory, scholarship]
 category: skill
 minStats: { memory: 5 }
 effect: "This character gains +5 to Memory rolls relating to recalling something they read or heard only once."
-`,wC=`id: monster-handling
+`,TC=`id: monster-handling
 name: "Monster Handling"
 status: draft
 plane: any
@@ -9185,7 +9198,7 @@ category: skill
 ranked: true
 minStats: { empathy: 4, demeanor: 3, endurance: 2 }
 effect: "This character is capable of approaching and handling a tamed dangerous creature without a Skill Check. Rank *10 added to Skill Check rolls involving handling dangerous creatures."
-`,TC=`id: monster-hunter
+`,EC=`id: monster-hunter
 name: "Monster Hunter"
 status: draft
 plane: any
@@ -9196,7 +9209,7 @@ ranked: true
 minStats: { grace: 4, intuition: 4, endurance: 3 }
 effect: "Rank *1 added to this character's Attack Rolls against monsters and extraplanar beings."
 modifiers: "Attack Rolls +1 per Rank (monsters and extraplanar beings)"
-`,EC=`id: morale-officer
+`,DC=`id: morale-officer
 name: "Morale Officer"
 status: draft
 plane: any
@@ -9205,7 +9218,7 @@ tags: [leadership, morale, social]
 category: skill
 minStats: { empathy: 4, persuasion: 3 }
 effect: "This character gains +5 to Persuasion and Empathy rolls relating to keeping a group's spirits up through hardship."
-`,DC=`id: negotiator
+`,OC=`id: negotiator
 name: "Negotiator"
 status: draft
 plane: any
@@ -9215,7 +9228,7 @@ category: skill
 ranked: true
 minStats: { persuasion: 4, empathy: 3, intuition: 2 }
 effect: "This character is capable of negotiating a simple agreement without a Skill Check. Rank *10 added to Skill Check rolls involving negotiation."
-`,OC=`id: network-engineering
+`,kC=`id: network-engineering
 name: "Network Engineering"
 status: draft
 plane: earth
@@ -9225,7 +9238,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 4 }
 effect: "This character is capable of setting up and maintaining a small network without a Skill Check. Rank *10 added to Skill Check rolls involving computer networks."
-`,kC=`id: omen-reading
+`,AC=`id: omen-reading
 name: "Omen Reading"
 status: draft
 plane: any
@@ -9234,7 +9247,7 @@ tags: [faith, omens, divination]
 category: skill
 minStats: { intuition: 4, memory: 2 }
 effect: "This character gains +5 to Intuition rolls relating to interpreting omens and portents. The GM decides what the omens show."
-`,AC=`id: parasapient-field-medicine
+`,jC=`id: parasapient-field-medicine
 name: "Parasapient Field Medicine"
 status: draft
 plane: earth
@@ -9244,7 +9257,7 @@ category: skill
 minStats: { memory: 5, intuition: 3 }
 prerequisites: [medical-aid]
 effect: "This character gains +5 to rolls relating to treating injuries or illnesses of parasapients."
-`,jC=`id: peacemaker
+`,MC=`id: peacemaker
 name: "Peacemaker"
 status: draft
 plane: any
@@ -9255,7 +9268,7 @@ mastery: true
 minStats: { empathy: 10, persuasion: 8, demeanor: 6 }
 prerequisites: [diplomacy, mediator]
 effect: "This character can request Advantage on rolls relating to de-escalating a conflict or ending a hostile Incident through talk."
-`,MC=`id: peak-conditioning
+`,NC=`id: peak-conditioning
 name: "Peak Conditioning"
 status: draft
 plane: any
@@ -9266,7 +9279,7 @@ mastery: true
 minStats: { endurance: 8, power: 6, grace: 6 }
 prerequisites: [long-distance-runner]
 effect: "This character can request Advantage on Endurance, Power or Grace rolls relating to sustained physical exertion."
-`,NC=`id: performer-acrobatics
+`,PC=`id: performer-acrobatics
 name: "Performer: Acrobatics"
 status: draft
 plane: any
@@ -9276,7 +9289,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, endurance: 3, persuasion: 2 }
 effect: "This character is capable of tumbling, juggling and keeping their balance in a performance without a skill check. Rank *10 added to skill check rolls involving acrobatics and balance."
-`,PC=`id: performer-music
+`,FC=`id: performer-music
 name: "Performer: Music"
 status: draft
 plane: any
@@ -9286,7 +9299,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, persuasion: 3, intuition: 2 }
 effect: "This character is capable of playing an instrument or singing well enough to hold an audience without a skill check. Rank *10 added to skill check rolls involving musical performance."
-`,FC=`id: pilot-airplane
+`,IC=`id: pilot-airplane
 name: "Pilot: Airplane"
 status: draft
 plane: earth
@@ -9296,7 +9309,7 @@ category: skill
 ranked: true
 minStats: { memory: 4, grace: 3, intuition: 3 }
 effect: "This character is capable of piloting airplanes in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of an airplane. Rank *10 added to Skill Check rolls involving airplane piloting."
-`,IC=`id: pilot-airship
+`,LC=`id: pilot-airship
 name: "Pilot: Airship"
 status: draft
 plane: any
@@ -9306,7 +9319,7 @@ category: skill
 ranked: true
 minStats: { memory: 4, intuition: 3, grace: 2 }
 effect: "This character is capable of piloting airships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of an airship. Rank *10 added to Skill Check rolls involving airship piloting."
-`,LC=`id: pilot-boat
+`,RC=`id: pilot-boat
 name: "Pilot: Boat"
 status: draft
 plane: any
@@ -9316,7 +9329,7 @@ category: skill
 ranked: true
 minStats: { grace: 3, intuition: 2, memory: 2 }
 effect: "This character is capable of piloting small boats in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a boat. Rank *10 added to Skill Check rolls involving boat handling."
-`,RC=`id: pilot-drone
+`,zC=`id: pilot-drone
 name: "Pilot: Drone"
 status: draft
 plane: earth
@@ -9326,7 +9339,7 @@ category: skill
 ranked: true
 minStats: { intuition: 3, grace: 3, logic: 2 }
 effect: "This character is capable of piloting drones in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a drone. Rank *10 added to Skill Check rolls involving drone piloting."
-`,zC=`id: pilot-fighter
+`,BC=`id: pilot-fighter
 name: "Pilot: Fighter"
 status: draft
 plane: earth
@@ -9336,7 +9349,7 @@ category: skill
 ranked: true
 minStats: { grace: 5, intuition: 4, memory: 4 }
 effect: "This character is capable of piloting a fighter in simple scenarios and describing its basic functions and controls without a skill check. Rank *10 added to skill check rolls involving fighter piloting."
-`,BC=`id: pilot-freighter
+`,VC=`id: pilot-freighter
 name: "Pilot: Freighter"
 status: draft
 plane: earth
@@ -9346,7 +9359,7 @@ category: skill
 ranked: true
 minStats: { memory: 5, logic: 3, intuition: 3 }
 effect: "This character is capable of piloting freighters in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a freighter. Rank *10 added to Skill Check rolls involving freighter piloting."
-`,VC=`id: pilot-ground-vehicle
+`,HC=`id: pilot-ground-vehicle
 name: "Pilot: Ground Vehicle"
 status: draft
 plane: any
@@ -9356,7 +9369,7 @@ category: skill
 ranked: true
 minStats: { grace: 2, intuition: 2, memory: 2 }
 effect: "This character is capable of driving ground vehicles in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a ground vehicle. Rank *10 added to Skill Check rolls involving driving."
-`,HC=`id: pilot-gunship
+`,UC=`id: pilot-gunship
 name: "Pilot: Gunship"
 status: draft
 plane: earth
@@ -9366,7 +9379,7 @@ category: skill
 ranked: true
 minStats: { grace: 4, intuition: 4, memory: 4 }
 effect: "This character is capable of piloting gunships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a gunship. Rank *10 added to Skill Check rolls involving gunship piloting."
-`,UC=`id: pilot-helicopter
+`,WC=`id: pilot-helicopter
 name: "Pilot: Helicopter"
 status: draft
 plane: earth
@@ -9376,7 +9389,7 @@ category: skill
 ranked: true
 minStats: { memory: 5, intuition: 3, grace: 3 }
 effect: "This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter. Rank *10 added to skill check rolls involving helicopter piloting."
-`,WC=`id: pilot-sailing-ship
+`,GC=`id: pilot-sailing-ship
 name: "Pilot: Sailing Ship"
 status: draft
 plane: any
@@ -9386,7 +9399,7 @@ category: skill
 ranked: true
 minStats: { memory: 4, intuition: 3, grace: 2 }
 effect: "This character is capable of sailing a ship in simple scenarios without a Skill Check and is capable of describing the basic functions and rigging of a sailing ship. Rank *10 added to Skill Check rolls involving sailing."
-`,GC=`id: pilot-shuttle
+`,KC=`id: pilot-shuttle
 name: "Pilot: Shuttle"
 status: draft
 plane: earth
@@ -9396,7 +9409,7 @@ category: skill
 ranked: true
 minStats: { memory: 4, grace: 3, intuition: 3 }
 effect: "This character is capable of piloting shuttles in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a shuttle. Rank *10 added to Skill Check rolls involving shuttle piloting."
-`,KC=`id: pilot-truck
+`,qC=`id: pilot-truck
 name: "Pilot: Truck"
 status: draft
 plane: earth
@@ -9407,7 +9420,7 @@ ranked: true
 minStats: { memory: 4, grace: 3, intuition: 3 }
 lore: trucks
 effect: "This character is capable of piloting Truck Class Voidships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a Truck Class Voidship. Rank *10 added to Skill Check rolls involving Truck Class Voidship piloting."
-`,qC=`id: planar-acclimation
+`,JC=`id: planar-acclimation
 name: "Planar Acclimation"
 status: draft
 plane: earth
@@ -9416,7 +9429,7 @@ tags: [planes, exploration, endurance]
 category: skill
 minStats: { endurance: 4, demeanor: 2 }
 effect: "This character gains +5 to Endurance rolls to resist the effects of a plane's foreign paraphysics, including Null Physics at a gate's border."
-`,JC=`id: planar-surveying
+`,YC=`id: planar-surveying
 name: "Planar Surveying"
 status: draft
 plane: earth
@@ -9426,7 +9439,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 3, endurance: 2 }
 effect: "This character gains +5 to rolls relating to the surveying, map making, and general understanding of the topographies of other planes."
-`,YC=`id: poker-face
+`,XC=`id: poker-face
 name: "Poker Face"
 status: draft
 plane: any
@@ -9435,7 +9448,7 @@ tags: [social, deception, gambling]
 category: skill
 minStats: { demeanor: 4 }
 effect: "This character gains +3 to Demeanor rolls relating to hiding their intentions or reactions."
-`,XC=`id: polymath
+`,ZC=`id: polymath
 name: "Polymath"
 status: draft
 plane: any
@@ -9446,7 +9459,7 @@ mastery: true
 minStats: { memory: 10, logic: 6, intuition: 6 }
 prerequisites: [archival-research, mnemonist]
 effect: "This character can request Advantage on Memory and Logic rolls to recall or work out facts in any field they hold a Knowledge of."
-`,ZC=`id: possession-resistance
+`,QC=`id: possession-resistance
 name: "Possession Resistance"
 status: draft
 plane: any
@@ -9455,7 +9468,7 @@ tags: [spirits, resistance, supernatural]
 category: skill
 minStats: { demeanor: 5, endurance: 3 }
 effect: "This character gains +5 to Demeanor rolls to resist possession and supernatural control of their mind."
-`,QC=`id: potion-identification
+`,$C=`id: potion-identification
 name: "Potion Identification"
 status: draft
 plane: isekai
@@ -9464,7 +9477,7 @@ tags: [potions, alchemy, identification]
 category: skill
 minStats: { intuition: 3, memory: 3 }
 effect: "This character gains +5 to rolls relating to identifying a potion and its strength."
-`,$C=`id: procurement
+`,ew=`id: procurement
 name: "Procurement"
 status: draft
 plane: any
@@ -9473,7 +9486,7 @@ tags: [trade, merchant, contacts]
 category: skill
 minStats: { persuasion: 3, memory: 3, intuition: 2 }
 effect: "This character gains +5 to rolls relating to sourcing rare, restricted or hard-to-find goods."
-`,ew=`id: programming
+`,tw=`id: programming
 name: "Programming"
 status: draft
 plane: earth
@@ -9483,7 +9496,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 3, intuition: 2 }
 effect: "This character is capable of writing and debugging simple software and reading other people’s code without a skill check. Rank *10 added to skill check rolls involving programming and hacking."
-`,tw=`id: prototyping
+`,nw=`id: prototyping
 name: "Prototyping"
 status: draft
 plane: any
@@ -9493,7 +9506,7 @@ category: skill
 minStats: { grace: 4, logic: 4, intuition: 3 }
 prerequisites: [inventor]
 effect: "This character gains +5 to rolls relating to building a working prototype from a design."
-`,nw=`id: quartermaster
+`,rw=`id: quartermaster
 name: "Quartermaster"
 status: draft
 plane: any
@@ -9502,16 +9515,6 @@ tags: [leadership, logistics, supplies]
 category: skill
 minStats: { logic: 4, memory: 3 }
 effect: "This character gains +5 to Logic and Memory rolls relating to managing a group's supplies, rations and equipment."
-`,rw=`id: rally
-name: "Rally"
-status: draft
-plane: any
-summary: "Pulling frightened people back together."
-tags: [leadership, morale, combat]
-category: skill
-minStats: { demeanor: 5, persuasion: 4 }
-effect: "This character gains the Rally Action."
-action: "Rally: As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them."
 `,iw=`id: read-the-room
 name: "Read the Room"
 status: draft
@@ -9640,7 +9643,16 @@ category: skill
 minStats: { memory: 3, intuition: 3 }
 prerequisites: [salvage]
 effect: "This character gains +5 to rolls relating to judging the value of salvage and scrap."
-`,_w=`id: sense-the-unseen
+`,_w=`id: sculpted
+name: "Sculpted"
+status: draft
+plane: any
+summary: "Looks every bit as athletic as they are."
+tags: [appearance, athletics, social, site-example]
+category: skill
+minStats: { power: 5, endurance: 5, demeanor: 3 }
+effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."
+`,vw=`id: sense-the-unseen
 name: "Sense the Unseen"
 status: draft
 plane: any
@@ -9649,7 +9661,7 @@ tags: [spirits, awareness, supernatural]
 category: skill
 minStats: { intuition: 5 }
 effect: "This character gains +5 to Intuition rolls relating to noticing spirits, hauntings and other supernatural presences."
-`,vw=`id: shaking-a-tail
+`,yw=`id: shaking-a-tail
 name: "Shaking a Tail"
 status: draft
 plane: any
@@ -9658,7 +9670,7 @@ tags: [espionage, evasion, urban]
 category: skill
 minStats: { intuition: 4, memory: 2 }
 effect: "This character gains +5 to rolls relating to noticing and losing anyone following them."
-`,yw=`id: shoring
+`,bw=`id: shoring
 name: "Shoring"
 status: draft
 plane: any
@@ -9667,7 +9679,7 @@ tags: [engineering, safety, construction]
 category: skill
 minStats: { logic: 4, power: 3 }
 effect: "This character gains +5 to rolls relating to stabilizing collapsing structures, tunnels or wrecks."
-`,bw=`id: simple-cooking
+`,xw=`id: simple-cooking
 name: "Simple Cooking"
 status: draft
 plane: any
@@ -9677,7 +9689,7 @@ category: skill
 ranked: true
 minStats: { memory: 2, intuition: 2 }
 effect: "This character can cook simple, filling meals for themselves and a small group without a skill check, even over a campfire. Rank *10 added to skill check rolls involving cooking."
-`,xw=`id: simple-potion-mixing
+`,Sw=`id: simple-potion-mixing
 name: "Simple Potion Mixing"
 status: draft
 plane: isekai
@@ -9687,7 +9699,7 @@ category: skill
 ranked: true
 minStats: { memory: 3, intuition: 3 }
 effect: "This character can brew simple potions, such as healing draughts and sleeping tonics, from a known recipe and the right ingredients without a skill check. Rank *10 added to skill check rolls involving brewing potions."
-`,Sw=`id: slayer
+`,Cw=`id: slayer
 name: "Slayer"
 status: draft
 plane: any
@@ -9698,7 +9710,7 @@ mastery: true
 minStats: { intuition: 8, grace: 6, power: 6, endurance: 6 }
 prerequisites: [monster-hunter, weak-point]
 effect: "This character can request Advantage on Attack Rolls against a kind of monster or extraplanar being they have fought before."
-`,Cw=`id: sleight-of-hand
+`,ww=`id: sleight-of-hand
 name: "Sleight of Hand"
 status: draft
 plane: any
@@ -9707,7 +9719,7 @@ tags: [theft, trickery]
 category: skill
 minStats: { grace: 4, intuition: 2 }
 effect: "This character gains +5 to Grace when attempting to pickpocket, deceive, or impress with their hands."
-`,ww=`id: smooth-talker
+`,Tw=`id: smooth-talker
 name: "Smooth Talker"
 status: draft
 plane: any
@@ -9716,7 +9728,7 @@ tags: [social, persuasion]
 category: skill
 minStats: { persuasion: 3, empathy: 2 }
 effect: "This character gains +2 to Persuasion or Demeanor rolls."
-`,Tw=`id: social-engineering
+`,Ew=`id: social-engineering
 name: "Social Engineering"
 status: draft
 plane: any
@@ -9725,7 +9737,7 @@ tags: [hacking, deception, social]
 category: skill
 minStats: { persuasion: 4, intuition: 3, demeanor: 2 }
 effect: "This character gains +5 to Persuasion rolls relating to talking someone into giving up access, credentials or information."
-`,Ew=`id: specimen-handling
+`,Dw=`id: specimen-handling
 name: "Specimen Handling"
 status: draft
 plane: any
@@ -9734,7 +9746,7 @@ tags: [parabiology, animals, care, handling]
 category: skill
 minStats: { empathy: 3, grace: 2, endurance: 2 }
 effect: "This character gains +5 to rolls relating to the safe handling of live specimens of mundane or exotic varieties."
-`,Dw=`id: spirit-warding
+`,Ow=`id: spirit-warding
 name: "Spirit Warding"
 status: draft
 plane: any
@@ -9743,7 +9755,7 @@ tags: [faith, spirits, protection, supernatural]
 category: skill
 minStats: { memory: 4, demeanor: 3 }
 effect: "This character gains +5 to rolls relating to setting wards against spirits and the supernatural."
-`,Ow=`id: spiritual-counsel
+`,kw=`id: spiritual-counsel
 name: "Spiritual Counsel"
 status: draft
 plane: any
@@ -9752,7 +9764,7 @@ tags: [faith, counsel, social]
 category: skill
 minStats: { empathy: 4, memory: 3 }
 effect: "This character gains +5 to Empathy rolls relating to guiding someone through doubt, guilt or questions of faith."
-`,kw=`id: sprinter
+`,Aw=`id: sprinter
 name: "Sprinter"
 status: draft
 plane: any
@@ -9762,7 +9774,7 @@ category: skill
 minStats: { grace: 4, endurance: 3 }
 effect: "This character's Movement is increased by 2 m."
 modifiers: "Movement +2 m"
-`,Aw=`id: spymaster
+`,jw=`id: spymaster
 name: "Spymaster"
 status: draft
 plane: any
@@ -9773,7 +9785,7 @@ mastery: true
 minStats: { intuition: 8, persuasion: 6, memory: 6, demeanor: 6 }
 prerequisites: [handler, surveillance]
 effect: "This character can request Advantage on rolls relating to running an intelligence network, and can spend a day working their network to learn a secret, at the GM's discretion."
-`,jw=`id: starship-engineering
+`,Mw=`id: starship-engineering
 name: "Starship Engineering"
 status: draft
 plane: earth
@@ -9783,7 +9795,7 @@ category: skill
 ranked: true
 minStats: { logic: 4, memory: 3, grace: 2 }
 effect: "This character is capable of maintaining and making routine repairs to a starship’s reactors, drives and life support without a skill check. Rank *10 added to skill check rolls involving starship repair."
-`,Mw=`id: streetwise
+`,Nw=`id: streetwise
 name: "Streetwise"
 status: draft
 plane: any
@@ -9792,7 +9804,7 @@ tags: [urban, crime, social]
 category: skill
 minStats: { memory: 3, intuition: 2 }
 effect: "This character gains +3 to Memory and Logic rolls relating to urban or city environments."
-`,Nw=`id: surgery
+`,Pw=`id: surgery
 name: "Surgery"
 status: draft
 plane: any
@@ -9803,7 +9815,7 @@ ranked: true
 minStats: { memory: 6, grace: 5, logic: 4 }
 prerequisites: [medical-aid]
 effect: "This character is capable of performing surgery to treat severe injuries, such as removing shrapnel or closing internal wounds, given the proper tools. Rank *10 added to skill check rolls involving surgery."
-`,Pw=`id: surveillance
+`,Fw=`id: surveillance
 name: "Surveillance"
 status: draft
 plane: any
@@ -9813,7 +9825,7 @@ category: skill
 ranked: true
 minStats: { intuition: 4, grace: 3, demeanor: 2 }
 effect: "This character is capable of watching or following a target through a crowd without being noticed and without a Skill Check. Rank *10 added to Skill Check rolls involving surveillance."
-`,Fw=`id: survivalist
+`,Iw=`id: survivalist
 name: "Survivalist"
 status: draft
 plane: any
@@ -9822,7 +9834,7 @@ tags: [survival, wilderness]
 category: skill
 minStats: { endurance: 3, intuition: 3, memory: 2 }
 effect: "This character gains +3 to rolls relating to navigation, gathering, or the identification of flora and fauna in a wilderness setting."
-`,Iw=`id: suturing
+`,Lw=`id: suturing
 name: "Suturing"
 status: draft
 plane: any
@@ -9833,7 +9845,7 @@ ranked: true
 minStats: { grace: 4, memory: 3 }
 prerequisites: [medical-aid]
 effect: "This character is capable of closing a wound and ending the Severe Bleeding Condition without a Skill Check, given the tools. Rank *10 added to Skill Check rolls involving closing wounds."
-`,Lw=`id: swimmer
+`,Rw=`id: swimmer
 name: "Swimmer"
 status: draft
 plane: any
@@ -9843,7 +9855,7 @@ category: skill
 ranked: true
 minStats: { endurance: 3, power: 2, grace: 2 }
 effect: "This character is capable of swimming in calm water without a Skill Check. Rank *10 added to Skill Check rolls involving swimming or holding their breath."
-`,Rw=`id: systems-administration
+`,zw=`id: systems-administration
 name: "Systems Administration"
 status: draft
 plane: earth
@@ -9852,17 +9864,6 @@ tags: [computers, administration]
 category: skill
 minStats: { logic: 3, memory: 4 }
 effect: "This character gains +5 to rolls relating to managing, maintaining and auditing computer systems."
-`,zw=`id: takedown
-name: "Takedown"
-status: draft
-plane: any
-summary: "Throwing or sweeping an opponent to the ground."
-tags: [combat, unarmed, wrestling]
-category: skill
-minStats: { power: 4, grace: 4 }
-prerequisites: [grappler]
-effect: "This character gains the Takedown Action."
-action: "Takedown: This character may make an Attack Roll with Power or Grace against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition."
 `,Bw=`id: talent-spotter
 name: "Talent Spotter"
 status: draft
@@ -9918,7 +9919,16 @@ tags: [tracking, hunting, wilderness]
 category: skill
 minStats: { intuition: 4, memory: 2 }
 effect: "This character gains +5 to rolls relating to the tracking of sapients or animals in wilderness settings."
-`,Kw=`id: trauma-care
+`,Kw=`id: trail-runner
+name: "Trail Runner"
+status: draft
+plane: any
+summary: "Slow to tire when running, hiking or climbing."
+tags: [endurance, travel, site-example]
+category: skill
+minStats: { power: 3, endurance: 2, grace: 2 }
+effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."
+`,qw=`id: trauma-care
 name: "Trauma Care"
 status: draft
 plane: any
@@ -9929,7 +9939,7 @@ ranked: true
 minStats: { memory: 4, grace: 3, demeanor: 3 }
 prerequisites: [medical-aid]
 effect: "This character is capable of stabilizing a Severely Injured character without a Skill Check. Rank *10 added to Skill Check rolls involving treating severe injuries."
-`,qw=`id: triage
+`,Jw=`id: triage
 name: "Triage"
 status: draft
 plane: any
@@ -9938,7 +9948,7 @@ tags: [medicine, triage, healing]
 category: skill
 minStats: { intuition: 4, memory: 3 }
 effect: "This character gains +5 to rolls relating to assessing injuries and deciding which patients to treat first."
-`,Jw=`id: vigilance
+`,Yw=`id: vigilance
 name: "Vigilance"
 status: draft
 plane: any
@@ -9948,16 +9958,6 @@ category: skill
 minStats: { intuition: 3, endurance: 2 }
 effect: "- This character gains +2 Priority and +2 Defense in the first Round of a combat Incident in which it was caught unaware or surprised.\\n- This character gains +2 to Intuition checks relating to detecting ambushes or surprises."
 modifiers: "Priority +2 (first Round, when surprised), Defense +2 (first Round, when surprised)"
-`,Yw=`id: weak-point
-name: "Weak Point"
-status: draft
-plane: any
-summary: "Seeing where a creature can be hurt."
-tags: [combat, monsters, tactics]
-category: skill
-minStats: { intuition: 5, logic: 3 }
-effect: "After spending a Full RP Action studying a creature during an Incident, this character gains +2 to Attack Rolls against creatures of that kind for the rest of the Incident."
-modifiers: "Attack Rolls +2 (creatures studied this Incident)"
 `,Xw=`id: weightlifter
 name: "Weightlifter"
 status: draft
@@ -10364,7 +10364,7 @@ $&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
 `,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){ck(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(rk(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=sk(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(rk(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(ak(t.key)&&!rk(t.sep,`newline`)){let e=sk(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):rk(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!rk(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){ck(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||rk(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=sk(ok(t));lk(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=sk(ok(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=sk(ok(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function dk(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new nk||null,prettyErrors:t}}function fk(e,t={}){let{lineCounter:n,prettyErrors:r}=dk(t),i=new uk(n?.addNewLine),a=new HO(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new iO(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(oO(e,n)),o.warnings.forEach(oO(e,n))),o}function pk(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=fk(e,n);if(!i)return null;if(i.warnings.forEach(e=>IE(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function mk(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(pk(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function hk(e){let t=[];return{content:{kinds:mk(e,`kinds`,bc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>mk(e,n,Cc,t)),traits:mk(e,`traits`,Ec,t),items:mk(e,`items`,kc,t)},errors:t}}var{content:gk,errors:_k}=hk(Object.entries(Object.assign({"../../content/items/anti-radiation-pills.yaml":nu,"../../content/items/arrows.yaml":ru,"../../content/items/backpack.yaml":iu,"../../content/items/ballistic-shield.yaml":au,"../../content/items/ballistic-vest.yaml":ou,"../../content/items/bedroll.yaml":su,"../../content/items/binoculars.yaml":H,"../../content/items/brigandine.yaml":cu,"../../content/items/buckler.yaml":lu,"../../content/items/cargo-truck.yaml":uu,"../../content/items/chainmail.yaml":du,"../../content/items/club.yaml":fu,"../../content/items/cold-weather-gear.yaml":pu,"../../content/items/combat-helmet.yaml":mu,"../../content/items/combat-knife.yaml":hu,"../../content/items/combat-voidsuit.yaml":gu,"../../content/items/comm-unit.yaml":_u,"../../content/items/compass.yaml":vu,"../../content/items/cooking-kit.yaml":yu,"../../content/items/crossbow-bolts.yaml":bu,"../../content/items/crossbow.yaml":xu,"../../content/items/dagger.yaml":Su,"../../content/items/disguise-kit.yaml":Cu,"../../content/items/earth-reserve-credits.yaml":wu,"../../content/items/emp-grenade.yaml":Tu,"../../content/items/engineers-toolkit.yaml":Eu,"../../content/items/faraday-shroud.yaml":Du,"../../content/items/field-sample-kit.yaml":Ou,"../../content/items/fighter.yaml":ku,"../../content/items/fine-clothes.yaml":Au,"../../content/items/fishing-kit.yaml":ju,"../../content/items/flail.yaml":Mu,"../../content/items/flamethrower.yaml":Nu,"../../content/items/flashlight.yaml":Pu,"../../content/items/flint-and-steel.yaml":Fu,"../../content/items/frag-grenade.yaml":Iu,"../../content/items/fuel-canister.yaml":Lu,"../../content/items/gambeson.yaml":Ru,"../../content/items/geiger-counter.yaml":zu,"../../content/items/grappling-hook.yaml":Bu,"../../content/items/greatsword.yaml":Vu,"../../content/items/halberd.yaml":Hu,"../../content/items/hand-axe.yaml":Uu,"../../content/items/handcuffs.yaml":Wu,"../../content/items/hazmat-suit.yaml":Gu,"../../content/items/healers-kit.yaml":Ku,"../../content/items/helicopter.yaml":qu,"../../content/items/hide-armor.yaml":Ju,"../../content/items/imperial-dollars.yaml":Yu,"../../content/items/incendiary-grenade.yaml":Xu,"../../content/items/insulated-gloves.yaml":Zu,"../../content/items/javelin.yaml":Qu,"../../content/items/lantern.yaml":$u,"../../content/items/leather-armor.yaml":ed,"../../content/items/leather-jacket.yaml":td,"../../content/items/leatherworking-tools.yaml":nd,"../../content/items/lockpicks.yaml":U,"../../content/items/longbow.yaml":rd,"../../content/items/longsword.yaml":W,"../../content/items/luras.yaml":G,"../../content/items/mace.yaml":K,"../../content/items/machine-gun.yaml":id,"../../content/items/masonry-tools.yaml":ad,"../../content/items/maul.yaml":od,"../../content/items/medkit.yaml":sd,"../../content/items/missile-launcher.yaml":cd,"../../content/items/musical-instrument.yaml":ld,"../../content/items/musket.yaml":ud,"../../content/items/night-vision-goggles.yaml":dd,"../../content/items/pack-animal.yaml":fd,"../../content/items/padded-coif.yaml":pd,"../../content/items/painkillers.yaml":md,"../../content/items/painting-supplies.yaml":hd,"../../content/items/pistol-magazine.yaml":gd,"../../content/items/pistol.yaml":_d,"../../content/items/plate-armor.yaml":vd,"../../content/items/plate-carrier.yaml":yd,"../../content/items/portable-computer.yaml":bd,"../../content/items/potion-kit.yaml":xd,"../../content/items/powder-and-shot.yaml":Sd,"../../content/items/power-armor.yaml":Cd,"../../content/items/quarterstaff.yaml":wd,"../../content/items/rad-suit.yaml":Td,"../../content/items/rapier.yaml":Ed,"../../content/items/ration-pack.yaml":Dd,"../../content/items/rebreather.yaml":Od,"../../content/items/renminbi.yaml":kd,"../../content/items/revolver.yaml":Ad,"../../content/items/riding-animal.yaml":jd,"../../content/items/rifle-magazine.yaml":Md,"../../content/items/rifle.yaml":Nd,"../../content/items/riot-gear.yaml":Pd,"../../content/items/rope.yaml":Fd,"../../content/items/rowboat.yaml":Id,"../../content/items/shortbow.yaml":Ld,"../../content/items/shortsword.yaml":Rd,"../../content/items/shotgun-shells.yaml":zd,"../../content/items/shotgun.yaml":Bd,"../../content/items/sling-stones.yaml":Vd,"../../content/items/sling.yaml":Hd,"../../content/items/smithing-tools.yaml":Ud,"../../content/items/smoke-grenade.yaml":Wd,"../../content/items/sniper-rifle.yaml":Gd,"../../content/items/spear.yaml":Kd,"../../content/items/spyglass.yaml":qd,"../../content/items/steel-helm.yaml":Jd,"../../content/items/stun-baton.yaml":Yd,"../../content/items/submachine-gun.yaml":Xd,"../../content/items/surgical-kit.yaml":Zd,"../../content/items/taser.yaml":Qd,"../../content/items/tent.yaml":$d,"../../content/items/throwing-knives.yaml":ef,"../../content/items/torch.yaml":tf,"../../content/items/tower-shield.yaml":nf,"../../content/items/trail-rations.yaml":rf,"../../content/items/travelers-cloak.yaml":af,"../../content/items/turnout-gear.yaml":of,"../../content/items/voidsuit.yaml":sf,"../../content/items/wagon.yaml":cf,"../../content/items/war-axe.yaml":lf,"../../content/items/war-hammer.yaml":uf,"../../content/items/warded-robes.yaml":df,"../../content/items/waterskin.yaml":ff,"../../content/items/wooden-shield.yaml":pf,"../../content/items/writing-kit.yaml":mf,"../../content/kinds/ai-core.yaml":hf,"../../content/kinds/dreft/guwain.yaml":gf,"../../content/kinds/dreft/isek.yaml":_f,"../../content/kinds/dreft/tatot-goblinoid.yaml":q,"../../content/kinds/dreft/tatot-orcoid.yaml":vf,"../../content/kinds/human.yaml":yf,"../../content/origins/american-empire/american-empire-colonies.yaml":bf,"../../content/origins/american-empire/american-empire-earth.yaml":xf,"../../content/origins/centafrica/centafrica-colonies.yaml":Sf,"../../content/origins/centafrica/centafrica-earth.yaml":Cf,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":wf,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Tf,"../../content/origins/dreft/dreft.yaml":Ef,"../../content/origins/drovus/the-drovus-empire.yaml":Df,"../../content/origins/free-american-states/the-free-american-states.yaml":Of,"../../content/origins/karsef/kingdom-of-karsef.yaml":kf,"../../content/origins/kashgar/kashgar.yaml":Af,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":jf,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Mf,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Nf,"../../content/origins/sdu/sdu-colonies.yaml":Pf,"../../content/origins/sdu/sdu-earth.yaml":Ff,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":If,"../../content/origins/tetra/tetra.yaml":Lf,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Rf,"../../content/origins/ural-federation/the-ural-federation.yaml":zf,"../../content/origins/xanthus/xanthus.yaml":Bf,"../../content/pasts/any/craft-apprenticeship.yaml":Vf,"../../content/pasts/any/criminal-family.yaml":Hf,"../../content/pasts/any/gutter-trash.yaml":Uf,"../../content/pasts/any/military-service.yaml":Wf,"../../content/pasts/any/privileged-upbringing.yaml":Gf,"../../content/pasts/any/raised-at-court.yaml":J,"../../content/pasts/any/shipborn.yaml":Kf,"../../content/pasts/any/simple-farmer.yaml":qf,"../../content/pasts/any/traveling-troupe.yaml":Jf,"../../content/pasts/dreft/countryside-upbringing.yaml":Yf,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":Xf,"../../content/pasts/dreft/glintl-docks.yaml":Zf,"../../content/pasts/dreft/karsef-border-veteran.yaml":Qf,"../../content/pasts/dreft/merchant-dynasty.yaml":$f,"../../content/pasts/dreft/monster-raided-village.yaml":ep,"../../content/pasts/dreft/noble-household.yaml":tp,"../../content/pasts/dreft/palace-servant.yaml":np,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":rp,"../../content/pasts/dreft/returned-from-the-systems.yaml":ip,"../../content/pasts/dreft/sunrise-refugee.yaml":Y,"../../content/pasts/systems/station-rat.yaml":ap,"../../content/pasts/systems/university-educated.yaml":op,"../../content/pasts/tetra/delegation-child.yaml":sp,"../../content/pasts/tetra/gate-lab-kid.yaml":cp,"../../content/pasts/tetra/holding-company-kid.yaml":lp,"../../content/pasts/tetra/parasapient-quarter.yaml":up,"../../content/pasts/tetra/raised-in-the-infill.yaml":dp,"../../content/pasts/tetra/raised-on-ward-politics.yaml":fp,"../../content/professions/any/apothecary.yaml":pp,"../../content/professions/any/bard.yaml":mp,"../../content/professions/any/blacksmith.yaml":hp,"../../content/professions/any/courier.yaml":gp,"../../content/professions/any/criminal-enforcer.yaml":_p,"../../content/professions/any/doctor.yaml":vp,"../../content/professions/any/farmer.yaml":yp,"../../content/professions/any/jester.yaml":bp,"../../content/professions/any/knight.yaml":xp,"../../content/professions/any/local-police.yaml":Sp,"../../content/professions/any/musical-artist.yaml":Cp,"../../content/professions/any/ranger.yaml":wp,"../../content/professions/any/smuggler.yaml":Tp,"../../content/professions/any/spy.yaml":Ep,"../../content/professions/any/squire.yaml":Dp,"../../content/professions/any/stonemason.yaml":Op,"../../content/professions/any/surgeon.yaml":kp,"../../content/professions/any/tanner.yaml":Ap,"../../content/professions/any/visual-artist.yaml":jp,"../../content/professions/dreft/alchemist.yaml":Mp,"../../content/professions/dreft/caravaneer.yaml":Np,"../../content/professions/dreft/dreft-local-militia.yaml":Pp,"../../content/professions/dreft/dreft-mercenary.yaml":Fp,"../../content/professions/dreft/gate-hand.yaml":Ip,"../../content/professions/dreft/guild-hunter.yaml":Lp,"../../content/professions/dreft/hedge-witch.yaml":Rp,"../../content/professions/dreft/licensed-mage.yaml":zp,"../../content/professions/dreft/royal-guard.yaml":Bp,"../../content/professions/systems/american-empire-soldier.yaml":Vp,"../../content/professions/systems/combat-medic.yaml":Hp,"../../content/professions/systems/computer-engineer.yaml":Up,"../../content/professions/systems/emergency-medical-technician.yaml":Wp,"../../content/professions/systems/exotic-specimen-dealer.yaml":Gp,"../../content/professions/systems/fighter-pilot.yaml":Kp,"../../content/professions/systems/interplanar-diplomat.yaml":qp,"../../content/professions/systems/interplanar-rights-lawyer.yaml":Jp,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":Yp,"../../content/professions/systems/paraarcheologist.yaml":Xp,"../../content/professions/systems/paraecologist.yaml":Zp,"../../content/professions/systems/paraethnologist.yaml":Qp,"../../content/professions/systems/paraevolutionary-scientist.yaml":$p,"../../content/professions/systems/paraphysiologist.yaml":em,"../../content/professions/systems/parazoological-keeper.yaml":tm,"../../content/professions/systems/planar-expeditionary-professional.yaml":nm,"../../content/professions/systems/starship-engineer.yaml":rm,"../../content/professions/systems/station-maintenance.yaml":im,"../../content/professions/systems/theoretical-paraphysicist.yaml":am,"../../content/professions/systems/truck-pilot.yaml":om,"../../content/traits/ability/acid-spray.yaml":sm,"../../content/traits/ability/banish-spirit.yaml":cm,"../../content/traits/ability/blink.yaml":lm,"../../content/traits/ability/capable-student.yaml":um,"../../content/traits/ability/chain-lightning.yaml":dm,"../../content/traits/ability/charm.yaml":fm,"../../content/traits/ability/cleanse.yaml":pm,"../../content/traits/ability/con-man.yaml":mm,"../../content/traits/ability/create-fire.yaml":hm,"../../content/traits/ability/create-food.yaml":gm,"../../content/traits/ability/create-water.yaml":_m,"../../content/traits/ability/darkness.yaml":vm,"../../content/traits/ability/daze.yaml":ym,"../../content/traits/ability/detect-magic.yaml":bm,"../../content/traits/ability/dispel-magic.yaml":xm,"../../content/traits/ability/eagle-eye.yaml":Sm,"../../content/traits/ability/earthen-spike.yaml":Cm,"../../content/traits/ability/elemental-ward.yaml":wm,"../../content/traits/ability/entangle.yaml":Tm,"../../content/traits/ability/fear.yaml":Em,"../../content/traits/ability/featherfall.yaml":Dm,"../../content/traits/ability/fireball.yaml":Om,"../../content/traits/ability/fog-cloud.yaml":km,"../../content/traits/ability/gladiator.yaml":Am,"../../content/traits/ability/greater-heal.yaml":jm,"../../content/traits/ability/gust.yaml":Mm,"../../content/traits/ability/haste.yaml":Nm,"../../content/traits/ability/heal.yaml":Pm,"../../content/traits/ability/hoarfrost.yaml":Fm,"../../content/traits/ability/ice-lance.yaml":Im,"../../content/traits/ability/infravision.yaml":Lm,"../../content/traits/ability/invisibility.yaml":Rm,"../../content/traits/ability/knowledge-sponge.yaml":zm,"../../content/traits/ability/light.yaml":Bm,"../../content/traits/ability/lightning.yaml":Vm,"../../content/traits/ability/long-in-the-tooth.yaml":Hm,"../../content/traits/ability/magic-access.yaml":Um,"../../content/traits/ability/magical-endurance.yaml":Wm,"../../content/traits/ability/magical-flight.yaml":Gm,"../../content/traits/ability/magical-grace.yaml":Km,"../../content/traits/ability/magical-strength.yaml":qm,"../../content/traits/ability/mending.yaml":Jm,"../../content/traits/ability/mental-fortitude.yaml":Ym,"../../content/traits/ability/meteor.yaml":Xm,"../../content/traits/ability/mind-spike.yaml":Zm,"../../content/traits/ability/natural-breath-weapon.yaml":Qm,"../../content/traits/ability/sculpted.yaml":$m,"../../content/traits/ability/shield-wall.yaml":eh,"../../content/traits/ability/shield.yaml":th,"../../content/traits/ability/silence.yaml":nh,"../../content/traits/ability/skin-of-stone.yaml":rh,"../../content/traits/ability/sleep.yaml":ih,"../../content/traits/ability/slow.yaml":ah,"../../content/traits/ability/speak-with-animals.yaml":oh,"../../content/traits/ability/spider-climb.yaml":sh,"../../content/traits/ability/staunch.yaml":ch,"../../content/traits/ability/telekinesis.yaml":lh,"../../content/traits/ability/thunderclap.yaml":uh,"../../content/traits/ability/trail-runner.yaml":dh,"../../content/traits/ability/wall-of-stone.yaml":fh,"../../content/traits/ability/water-breathing.yaml":ph,"../../content/traits/ability/wither.yaml":mh,"../../content/traits/circumstance/explorers-lodge-membership.yaml":hh,"../../content/traits/circumstance/imperial-service-record.yaml":gh,"../../content/traits/circumstance/short-term-fame.yaml":_h,"../../content/traits/circumstance/significant-inheritance.yaml":vh,"../../content/traits/circumstance/thieves-guild-membership.yaml":yh,"../../content/traits/circumstance/tugboat-captain.yaml":bh,"../../content/traits/circumstance/wanted-in-sol.yaml":xh,"../../content/traits/condition/asleep.yaml":Sh,"../../content/traits/condition/burning.yaml":Ch,"../../content/traits/condition/charmed.yaml":wh,"../../content/traits/condition/corroding.yaml":Th,"../../content/traits/condition/cybernetic-intelligence.yaml":Eh,"../../content/traits/condition/damaged.yaml":Dh,"../../content/traits/condition/dead.yaml":Oh,"../../content/traits/condition/deafened.yaml":kh,"../../content/traits/condition/destroyed.yaml":Ah,"../../content/traits/condition/elemental-ward-condition.yaml":jh,"../../content/traits/condition/featherfall-condition.yaml":Mh,"../../content/traits/condition/flat-footed.yaml":Nh,"../../content/traits/condition/frightened.yaml":Ph,"../../content/traits/condition/ghost-sight.yaml":Fh,"../../content/traits/condition/glowing.yaml":Ih,"../../content/traits/condition/hard-shell.yaml":Lh,"../../content/traits/condition/hasted.yaml":Rh,"../../content/traits/condition/healthy.yaml":zh,"../../content/traits/condition/incapacitated.yaml":Bh,"../../content/traits/condition/infravision-condition.yaml":Vh,"../../content/traits/condition/injured.yaml":Hh,"../../content/traits/condition/invisible.yaml":Uh,"../../content/traits/condition/long-toothed.yaml":Wh,"../../content/traits/condition/magical-endurance-condition.yaml":Gh,"../../content/traits/condition/magical-flight-condition.yaml":Kh,"../../content/traits/condition/magical-grace-condition.yaml":qh,"../../content/traits/condition/magical-heritage.yaml":Jh,"../../content/traits/condition/magical-strength-condition.yaml":Yh,"../../content/traits/condition/mechanical.yaml":Xh,"../../content/traits/condition/prone.yaml":Zh,"../../content/traits/condition/rooted.yaml":Qh,"../../content/traits/condition/severe-bleeding.yaml":$h,"../../content/traits/condition/severely-injured.yaml":eg,"../../content/traits/condition/shielded.yaml":tg,"../../content/traits/condition/silenced.yaml":ng,"../../content/traits/condition/slowed.yaml":rg,"../../content/traits/condition/spider-climb-condition.yaml":ig,"../../content/traits/condition/stimm-rush.yaml":ag,"../../content/traits/condition/stone-skin.yaml":og,"../../content/traits/condition/supernatural.yaml":sg,"../../content/traits/condition/water-breathing-condition.yaml":cg,"../../content/traits/contact/additional-contact.yaml":lg,"../../content/traits/knowledge/accounting.yaml":ug,"../../content/traits/knowledge/additional-language.yaml":dg,"../../content/traits/knowledge/ai-culture.yaml":fg,"../../content/traits/knowledge/aksum.yaml":pg,"../../content/traits/knowledge/alchemy.yaml":mg,"../../content/traits/knowledge/amaravati.yaml":hg,"../../content/traits/knowledge/american-geography.yaml":gg,"../../content/traits/knowledge/american-history.yaml":_g,"../../content/traits/knowledge/amharic-written.yaml":vg,"../../content/traits/knowledge/amharic.yaml":yg,"../../content/traits/knowledge/anatomy.yaml":bg,"../../content/traits/knowledge/animal-lore.yaml":xg,"../../content/traits/knowledge/antiluna.yaml":Sg,"../../content/traits/knowledge/arabic-written.yaml":Cg,"../../content/traits/knowledge/arabic.yaml":wg,"../../content/traits/knowledge/architecture.yaml":Tg,"../../content/traits/knowledge/archives-and-libraries.yaml":Eg,"../../content/traits/knowledge/aristocracy.yaml":Dg,"../../content/traits/knowledge/ark-life.yaml":Og,"../../content/traits/knowledge/ark-new-york.yaml":kg,"../../content/traits/knowledge/art-history.yaml":Ag,"../../content/traits/knowledge/artificial-intelligence.yaml":jg,"../../content/traits/knowledge/asteroid-mining.yaml":Mg,"../../content/traits/knowledge/aviation.yaml":Ng,"../../content/traits/knowledge/bandits-and-brigands.yaml":Pg,"../../content/traits/knowledge/bengali-written.yaml":Fg,"../../content/traits/knowledge/bengali.yaml":Ig,"../../content/traits/knowledge/biology.yaml":Lg,"../../content/traits/knowledge/boneyard.yaml":Rg,"../../content/traits/knowledge/bureaucracy.yaml":zg,"../../content/traits/knowledge/burmese-written.yaml":Bg,"../../content/traits/knowledge/burmese.yaml":Vg,"../../content/traits/knowledge/cantonese-written.yaml":Hg,"../../content/traits/knowledge/cantonese.yaml":Ug,"../../content/traits/knowledge/caravan-routes.yaml":Wg,"../../content/traits/knowledge/centafrica.yaml":Gg,"../../content/traits/knowledge/centafrican-law.yaml":Kg,"../../content/traits/knowledge/chemistry.yaml":qg,"../../content/traits/knowledge/chinese-imperial-law.yaml":Jg,"../../content/traits/knowledge/coastal-trade.yaml":Yg,"../../content/traits/knowledge/combat-medicine.yaml":Xg,"../../content/traits/knowledge/commerce.yaml":Zg,"../../content/traits/knowledge/comparative-cultures.yaml":Qg,"../../content/traits/knowledge/computer-networks.yaml":$g,"../../content/traits/knowledge/computer-systems.yaml":e_,"../../content/traits/knowledge/contract-law.yaml":t_,"../../content/traits/knowledge/countryside-lore.yaml":n_,"../../content/traits/knowledge/court-etiquette.yaml":r_,"../../content/traits/knowledge/criminal-underworld.yaml":i_,"../../content/traits/knowledge/cryptography.yaml":a_,"../../content/traits/knowledge/cybernetics.yaml":o_,"../../content/traits/knowledge/dead-languages.yaml":s_,"../../content/traits/knowledge/diplomatic-protocol.yaml":c_,"../../content/traits/knowledge/documents-and-seals.yaml":l_,"../../content/traits/knowledge/dreft.yaml":u_,"../../content/traits/knowledge/dreftan-written.yaml":d_,"../../content/traits/knowledge/dreftan.yaml":f_,"../../content/traits/knowledge/dreftian-law.yaml":p_,"../../content/traits/knowledge/dutch-written.yaml":m_,"../../content/traits/knowledge/dutch.yaml":h_,"../../content/traits/knowledge/dwarvish-runes-written.yaml":g_,"../../content/traits/knowledge/dwarvish.yaml":__,"../../content/traits/knowledge/earth-baseline-customs.yaml":v_,"../../content/traits/knowledge/earth-baseline-technology.yaml":y_,"../../content/traits/knowledge/ecology.yaml":b_,"../../content/traits/knowledge/electronics.yaml":x_,"../../content/traits/knowledge/elemental-magics.yaml":S_,"../../content/traits/knowledge/enchantment.yaml":C_,"../../content/traits/knowledge/engineering.yaml":w_,"../../content/traits/knowledge/english-written.yaml":T_,"../../content/traits/knowledge/english.yaml":E_,"../../content/traits/knowledge/exotic-materials.yaml":D_,"../../content/traits/knowledge/explosives.yaml":O_,"../../content/traits/knowledge/extraplanar-threats.yaml":k_,"../../content/traits/knowledge/farming.yaml":A_,"../../content/traits/knowledge/filipino-written.yaml":j_,"../../content/traits/knowledge/filipino.yaml":M_,"../../content/traits/knowledge/french-written.yaml":N_,"../../content/traits/knowledge/french.yaml":P_,"../../content/traits/knowledge/gambling.yaml":F_,"../../content/traits/knowledge/geography.yaml":I_,"../../content/traits/knowledge/geology.yaml":L_,"../../content/traits/knowledge/german-written.yaml":R_,"../../content/traits/knowledge/german.yaml":z_,"../../content/traits/knowledge/glintl.yaml":B_,"../../content/traits/knowledge/gujarati-written.yaml":V_,"../../content/traits/knowledge/gujarati.yaml":H_,"../../content/traits/knowledge/hausa-written.yaml":U_,"../../content/traits/knowledge/hausa.yaml":W_,"../../content/traits/knowledge/heraldry.yaml":G_,"../../content/traits/knowledge/herbalism.yaml":K_,"../../content/traits/knowledge/high-society.yaml":q_,"../../content/traits/knowledge/hindi-written.yaml":J_,"../../content/traits/knowledge/hindi.yaml":Y_,"../../content/traits/knowledge/history.yaml":X_,"../../content/traits/knowledge/imperial-law.yaml":Z_,"../../content/traits/knowledge/imperial-politics.yaml":Q_,"../../content/traits/knowledge/indian-law.yaml":$_,"../../content/traits/knowledge/indian-theology.yaml":ev,"../../content/traits/knowledge/indonesian-written.yaml":tv,"../../content/traits/knowledge/indonesian.yaml":nv,"../../content/traits/knowledge/industrial-machinery.yaml":rv,"../../content/traits/knowledge/intelligence-tradecraft.yaml":iv,"../../content/traits/knowledge/interplanar-law.yaml":av,"../../content/traits/knowledge/interplanar-relations.yaml":ov,"../../content/traits/knowledge/italian-written.yaml":sv,"../../content/traits/knowledge/italian.yaml":cv,"../../content/traits/knowledge/japanese-written.yaml":lv,"../../content/traits/knowledge/japanese.yaml":uv,"../../content/traits/knowledge/javanese-written.yaml":dv,"../../content/traits/knowledge/javanese.yaml":fv,"../../content/traits/knowledge/kannada-written.yaml":pv,"../../content/traits/knowledge/kannada.yaml":mv,"../../content/traits/knowledge/karsef.yaml":hv,"../../content/traits/knowledge/kashgar-mindworks.yaml":gv,"../../content/traits/knowledge/kashgar.yaml":_v,"../../content/traits/knowledge/kazakh-written.yaml":vv,"../../content/traits/knowledge/kazakh.yaml":yv,"../../content/traits/knowledge/khmer-written.yaml":bv,"../../content/traits/knowledge/khmer.yaml":xv,"../../content/traits/knowledge/kinyarwanda-written.yaml":Sv,"../../content/traits/knowledge/kinyarwanda.yaml":Cv,"../../content/traits/knowledge/korean-written.yaml":wv,"../../content/traits/knowledge/korean.yaml":Tv,"../../content/traits/knowledge/kyrgyz-written.yaml":Ev,"../../content/traits/knowledge/kyrgyz.yaml":Dv,"../../content/traits/knowledge/lao-written.yaml":Ov,"../../content/traits/knowledge/lao.yaml":kv,"../../content/traits/knowledge/law-enforcement.yaml":Av,"../../content/traits/knowledge/legal-systems.yaml":jv,"../../content/traits/knowledge/lingala-written.yaml":Mv,"../../content/traits/knowledge/lingala.yaml":Nv,"../../content/traits/knowledge/liquid-democracy.yaml":Pv,"../../content/traits/knowledge/literature.yaml":Fv,"../../content/traits/knowledge/local-folklore.yaml":Iv,"../../content/traits/knowledge/local-history.yaml":Lv,"../../content/traits/knowledge/logistics.yaml":Rv,"../../content/traits/knowledge/magic-on-isekai.yaml":zv,"../../content/traits/knowledge/magical-artifacts.yaml":Bv,"../../content/traits/knowledge/malay-written.yaml":Vv,"../../content/traits/knowledge/malay.yaml":Hv,"../../content/traits/knowledge/malayalam-written.yaml":Uv,"../../content/traits/knowledge/malayalam.yaml":Wv,"../../content/traits/knowledge/mandarin-written.yaml":Gv,"../../content/traits/knowledge/mandarin.yaml":Kv,"../../content/traits/knowledge/marathi-written.yaml":qv,"../../content/traits/knowledge/marathi.yaml":Jv,"../../content/traits/knowledge/martial-arts.yaml":Yv,"../../content/traits/knowledge/mathematics.yaml":Xv,"../../content/traits/knowledge/medicine.yaml":Zv,"../../content/traits/knowledge/metallurgy.yaml":Qv,"../../content/traits/knowledge/military-tactics.yaml":$v,"../../content/traits/knowledge/mongolian-written.yaml":ey,"../../content/traits/knowledge/mongolian.yaml":ty,"../../content/traits/knowledge/monsters-of-isekai.yaml":ny,"../../content/traits/knowledge/mountaineering.yaml":ry,"../../content/traits/knowledge/music.yaml":iy,"../../content/traits/knowledge/navigation.yaml":ay,"../../content/traits/knowledge/nepali-written.yaml":oy,"../../content/traits/knowledge/nepali.yaml":sy,"../../content/traits/knowledge/new-columbia.yaml":cy,"../../content/traits/knowledge/new-persia.yaml":ly,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":uy,"../../content/traits/knowledge/odia-written.yaml":dy,"../../content/traits/knowledge/odia.yaml":fy,"../../content/traits/knowledge/orc-society.yaml":py,"../../content/traits/knowledge/oromo-written.yaml":my,"../../content/traits/knowledge/oromo.yaml":hy,"../../content/traits/knowledge/paraarcheology.yaml":gy,"../../content/traits/knowledge/parabiology.yaml":_y,"../../content/traits/knowledge/paraflora.yaml":vy,"../../content/traits/knowledge/paraphysics.yaml":yy,"../../content/traits/knowledge/parasapient-medicine.yaml":by,"../../content/traits/knowledge/parasapients.yaml":xy,"../../content/traits/knowledge/parazoology.yaml":Sy,"../../content/traits/knowledge/pataliputra.yaml":Cy,"../../content/traits/knowledge/pathology.yaml":wy,"../../content/traits/knowledge/pedagogy.yaml":Ty,"../../content/traits/knowledge/persian-written.yaml":Ey,"../../content/traits/knowledge/persian.yaml":Dy,"../../content/traits/knowledge/pharmacology.yaml":Oy,"../../content/traits/knowledge/physical-training.yaml":ky,"../../content/traits/knowledge/physics.yaml":Ay,"../../content/traits/knowledge/planar-exploration.yaml":jy,"../../content/traits/knowledge/polish-written.yaml":My,"../../content/traits/knowledge/polish.yaml":Ny,"../../content/traits/knowledge/politics.yaml":Py,"../../content/traits/knowledge/port-herminst.yaml":Fy,"../../content/traits/knowledge/ports-and-stations.yaml":Iy,"../../content/traits/knowledge/portuguese-written.yaml":Ly,"../../content/traits/knowledge/portuguese.yaml":Ry,"../../content/traits/knowledge/psychology.yaml":zy,"../../content/traits/knowledge/punjabi-written.yaml":By,"../../content/traits/knowledge/punjabi.yaml":Vy,"../../content/traits/knowledge/religions-of-isekai.yaml":Hy,"../../content/traits/knowledge/religions-of-the-settled-systems.yaml":Uy,"../../content/traits/knowledge/rhetoric.yaml":Wy,"../../content/traits/knowledge/robotics.yaml":Gy,"../../content/traits/knowledge/romanian-written.yaml":Ky,"../../content/traits/knowledge/romanian.yaml":qy,"../../content/traits/knowledge/runecraft.yaml":Jy,"../../content/traits/knowledge/russian-written.yaml":Yy,"../../content/traits/knowledge/russian.yaml":Xy,"../../content/traits/knowledge/sdu-law.yaml":Zy,"../../content/traits/knowledge/seafaring.yaml":Qy,"../../content/traits/knowledge/security-systems.yaml":$y,"../../content/traits/knowledge/shipbreaking.yaml":eb,"../../content/traits/knowledge/shipping-lanes.yaml":tb,"../../content/traits/knowledge/sinhala-written.yaml":nb,"../../content/traits/knowledge/sinhala.yaml":rb,"../../content/traits/knowledge/somali-written.yaml":ib,"../../content/traits/knowledge/somali.yaml":ab,"../../content/traits/knowledge/sorellion.yaml":ob,"../../content/traits/knowledge/southeast-asia.yaml":sb,"../../content/traits/knowledge/spacefaring.yaml":cb,"../../content/traits/knowledge/spanish-written.yaml":lb,"../../content/traits/knowledge/spanish.yaml":ub,"../../content/traits/knowledge/spirits-and-the-dead.yaml":db,"../../content/traits/knowledge/starships.yaml":fb,"../../content/traits/knowledge/succession-law.yaml":pb,"../../content/traits/knowledge/swahili-written.yaml":mb,"../../content/traits/knowledge/swahili.yaml":hb,"../../content/traits/knowledge/switch-gates.yaml":gb,"../../content/traits/knowledge/tamil-written.yaml":_b,"../../content/traits/knowledge/tamil.yaml":vb,"../../content/traits/knowledge/telugu-written.yaml":yb,"../../content/traits/knowledge/telugu.yaml":bb,"../../content/traits/knowledge/tetra-frontiers-co.yaml":xb,"../../content/traits/knowledge/tetra.yaml":Sb,"../../content/traits/knowledge/thai-written.yaml":Cb,"../../content/traits/knowledge/thai.yaml":wb,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":Tb,"../../content/traits/knowledge/the-chinese-empire.yaml":Eb,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Db,"../../content/traits/knowledge/the-corsine-pass.yaml":Ob,"../../content/traits/knowledge/the-diplomatic-wing.yaml":kb,"../../content/traits/knowledge/the-drovus-empire.yaml":Ab,"../../content/traits/knowledge/the-explorers-lodge.yaml":jb,"../../content/traits/knowledge/the-free-american-states.yaml":Mb,"../../content/traits/knowledge/the-imperial-military.yaml":Nb,"../../content/traits/knowledge/the-kingdom-of-india.yaml":Pb,"../../content/traits/knowledge/the-kings-woods.yaml":Fb,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Ib,"../../content/traits/knowledge/the-martian-association.yaml":Lb,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":Rb,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":zb,"../../content/traits/knowledge/the-switch-port.yaml":Bb,"../../content/traits/knowledge/the-union-of-texas.yaml":Vb,"../../content/traits/knowledge/the-united-nations.yaml":Hb,"../../content/traits/knowledge/the-ural-federation.yaml":Ub,"../../content/traits/knowledge/theater.yaml":Wb,"../../content/traits/knowledge/thieves-cant.yaml":Gb,"../../content/traits/knowledge/toxicology.yaml":Kb,"../../content/traits/knowledge/trade-guilds.yaml":qb,"../../content/traits/knowledge/trade-law.yaml":Jb,"../../content/traits/knowledge/trade-roads.yaml":Yb,"../../content/traits/knowledge/turkish-written.yaml":Xb,"../../content/traits/knowledge/turkish.yaml":Zb,"../../content/traits/knowledge/ukrainian-written.yaml":Qb,"../../content/traits/knowledge/ukrainian.yaml":$b,"../../content/traits/knowledge/union-politics.yaml":ex,"../../content/traits/knowledge/ural-tribal-law.yaml":tx,"../../content/traits/knowledge/urdu-written.yaml":nx,"../../content/traits/knowledge/urdu.yaml":rx,"../../content/traits/knowledge/uyghur-written.yaml":ix,"../../content/traits/knowledge/uyghur.yaml":ax,"../../content/traits/knowledge/vietnamese-written.yaml":ox,"../../content/traits/knowledge/vietnamese.yaml":sx,"../../content/traits/knowledge/weapons.yaml":cx,"../../content/traits/knowledge/wilderness-lore.yaml":lx,"../../content/traits/knowledge/xanthus.yaml":ux,"../../content/traits/knowledge/yoruba-written.yaml":dx,"../../content/traits/knowledge/yoruba.yaml":fx,"../../content/traits/knowledge/yutu.yaml":px,"../../content/traits/knowledge/zhulong.yaml":mx,"../../content/traits/other/possessed-by-a-spirit.yaml":hx,"../../content/traits/skill/active-listening.yaml":gx,"../../content/traits/skill/advanced-cooking.yaml":_x,"../../content/traits/skill/advanced-potion-mixing.yaml":vx,"../../content/traits/skill/ambusher.yaml":yx,"../../content/traits/skill/animal-husbandry.yaml":bx,"../../content/traits/skill/antidote-brewing.yaml":xx,"../../content/traits/skill/appraisal.yaml":Sx,"../../content/traits/skill/archival-research.yaml":Cx,"../../content/traits/skill/artifact-identification.yaml":wx,"../../content/traits/skill/artifact-repair.yaml":Tx,"../../content/traits/skill/artist-painting.yaml":Ex,"../../content/traits/skill/artist-sculpture.yaml":Dx,"../../content/traits/skill/bait-and-lure.yaml":Ox,"../../content/traits/skill/battlefield-commander.yaml":kx,"../../content/traits/skill/beast-taming.yaml":Ax,"../../content/traits/skill/body-conditioning.yaml":jx,"../../content/traits/skill/bookkeeping.yaml":Mx,"../../content/traits/skill/born-leader.yaml":Nx,"../../content/traits/skill/boxing.yaml":Px,"../../content/traits/skill/brawler.yaml":Fx,"../../content/traits/skill/breakthrough.yaml":Ix,"../../content/traits/skill/brokering.yaml":Lx,"../../content/traits/skill/bugging.yaml":Rx,"../../content/traits/skill/calming-presence.yaml":zx,"../../content/traits/skill/cargo-handling.yaml":Bx,"../../content/traits/skill/casualty-extraction.yaml":Vx,"../../content/traits/skill/cataloguing.yaml":Hx,"../../content/traits/skill/climber.yaml":Ux,"../../content/traits/skill/combat-medic.yaml":Wx,"../../content/traits/skill/concealment.yaml":Gx,"../../content/traits/skill/containment-protocols.yaml":Kx,"../../content/traits/skill/contortionist.yaml":qx,"../../content/traits/skill/contract-drafting.yaml":Jx,"../../content/traits/skill/counselor.yaml":Yx,"../../content/traits/skill/counterpuncher.yaml":Xx,"../../content/traits/skill/courtly-manners.yaml":Zx,"../../content/traits/skill/cover-identity.yaml":Qx,"../../content/traits/skill/craft-leatherworking.yaml":$x,"../../content/traits/skill/craft-masonry.yaml":eS,"../../content/traits/skill/craft-smithing.yaml":tS,"../../content/traits/skill/crew-management.yaml":nS,"../../content/traits/skill/crisis-leadership.yaml":rS,"../../content/traits/skill/cryptanalysis.yaml":iS,"../../content/traits/skill/cultural-fluency.yaml":aS,"../../content/traits/skill/curse-sense.yaml":oS,"../../content/traits/skill/data-analysis.yaml":sS,"../../content/traits/skill/data-recovery.yaml":cS,"../../content/traits/skill/dead-drops.yaml":lS,"../../content/traits/skill/decipherment.yaml":uS,"../../content/traits/skill/demolitions.yaml":dS,"../../content/traits/skill/diplomacy.yaml":fS,"../../content/traits/skill/disarm.yaml":pS,"../../content/traits/skill/disguise.yaml":mS,"../../content/traits/skill/dissection.yaml":hS,"../../content/traits/skill/drillmaster.yaml":gS,"../../content/traits/skill/electronics-repair.yaml":_S,"../../content/traits/skill/enchanting.yaml":vS,"../../content/traits/skill/eva-work.yaml":yS,"../../content/traits/skill/evasive-maneuvers.yaml":bS,"../../content/traits/skill/excavation.yaml":xS,"../../content/traits/skill/exorcism.yaml":SS,"../../content/traits/skill/expedition-leader.yaml":CS,"../../content/traits/skill/expedition-logistics.yaml":wS,"../../content/traits/skill/expert-pilot.yaml":TS,"../../content/traits/skill/fabrication.yaml":ES,"../../content/traits/skill/field-pharmacology.yaml":DS,"../../content/traits/skill/field-sampling.yaml":OS,"../../content/traits/skill/field-splinting.yaml":kS,"../../content/traits/skill/field-surgeon.yaml":AS,"../../content/traits/skill/fine-print.yaml":jS,"../../content/traits/skill/first-contact-protocols.yaml":MS,"../../content/traits/skill/folk-remedies.yaml":NS,"../../content/traits/skill/footwork.yaml":PS,"../../content/traits/skill/forgery.yaml":FS,"../../content/traits/skill/freerunner.yaml":IS,"../../content/traits/skill/gate-operation.yaml":LS,"../../content/traits/skill/ghost-in-the-machine.yaml":RS,"../../content/traits/skill/grappler.yaml":zS,"../../content/traits/skill/hacking.yaml":BS,"../../content/traits/skill/haggler.yaml":VS,"../../content/traits/skill/handler.yaml":HS,"../../content/traits/skill/hardware-engineering.yaml":US,"../../content/traits/skill/hazard-assessment.yaml":WS,"../../content/traits/skill/heavy-machinery.yaml":GS,"../../content/traits/skill/herb-gathering.yaml":KS,"../../content/traits/skill/holy-conviction.yaml":qS,"../../content/traits/skill/hull-cutting.yaml":JS,"../../content/traits/skill/incantation.yaml":YS,"../../content/traits/skill/inspiring-speech.yaml":XS,"../../content/traits/skill/interpreter.yaml":ZS,"../../content/traits/skill/interrogation.yaml":QS,"../../content/traits/skill/intimidation.yaml":$S,"../../content/traits/skill/intrusion-countermeasures.yaml":eC,"../../content/traits/skill/inventor.yaml":tC,"../../content/traits/skill/investigation.yaml":nC,"../../content/traits/skill/jumper.yaml":rC,"../../content/traits/skill/kata-discipline.yaml":iC,"../../content/traits/skill/lab-technique.yaml":aC,"../../content/traits/skill/last-rites.yaml":oC,"../../content/traits/skill/lecturing.yaml":sC,"../../content/traits/skill/legal-advocacy.yaml":cC,"../../content/traits/skill/linguist.yaml":lC,"../../content/traits/skill/lockpicking.yaml":uC,"../../content/traits/skill/long-distance-runner.yaml":dC,"../../content/traits/skill/loophole-finder.yaml":fC,"../../content/traits/skill/market-sense.yaml":pC,"../../content/traits/skill/martial-artist.yaml":mC,"../../content/traits/skill/master-artificer.yaml":hC,"../../content/traits/skill/master-negotiator.yaml":gC,"../../content/traits/skill/master-salvager.yaml":_C,"../../content/traits/skill/mediator.yaml":vC,"../../content/traits/skill/medical-aid.yaml":yC,"../../content/traits/skill/medium.yaml":bC,"../../content/traits/skill/military-drill.yaml":xC,"../../content/traits/skill/mining.yaml":SC,"../../content/traits/skill/mnemonist.yaml":CC,"../../content/traits/skill/monster-handling.yaml":wC,"../../content/traits/skill/monster-hunter.yaml":TC,"../../content/traits/skill/morale-officer.yaml":EC,"../../content/traits/skill/negotiator.yaml":DC,"../../content/traits/skill/network-engineering.yaml":OC,"../../content/traits/skill/omen-reading.yaml":kC,"../../content/traits/skill/parasapient-field-medicine.yaml":AC,"../../content/traits/skill/peacemaker.yaml":jC,"../../content/traits/skill/peak-conditioning.yaml":MC,"../../content/traits/skill/performer-acrobatics.yaml":NC,"../../content/traits/skill/performer-music.yaml":PC,"../../content/traits/skill/pilot-airplane.yaml":FC,"../../content/traits/skill/pilot-airship.yaml":IC,"../../content/traits/skill/pilot-boat.yaml":LC,"../../content/traits/skill/pilot-drone.yaml":RC,"../../content/traits/skill/pilot-fighter.yaml":zC,"../../content/traits/skill/pilot-freighter.yaml":BC,"../../content/traits/skill/pilot-ground-vehicle.yaml":VC,"../../content/traits/skill/pilot-gunship.yaml":HC,"../../content/traits/skill/pilot-helicopter.yaml":UC,"../../content/traits/skill/pilot-sailing-ship.yaml":WC,"../../content/traits/skill/pilot-shuttle.yaml":GC,"../../content/traits/skill/pilot-truck.yaml":KC,"../../content/traits/skill/planar-acclimation.yaml":qC,"../../content/traits/skill/planar-surveying.yaml":JC,"../../content/traits/skill/poker-face.yaml":YC,"../../content/traits/skill/polymath.yaml":XC,"../../content/traits/skill/possession-resistance.yaml":ZC,"../../content/traits/skill/potion-identification.yaml":QC,"../../content/traits/skill/procurement.yaml":$C,"../../content/traits/skill/programming.yaml":ew,"../../content/traits/skill/prototyping.yaml":tw,"../../content/traits/skill/quartermaster.yaml":nw,"../../content/traits/skill/rally.yaml":rw,"../../content/traits/skill/read-the-room.yaml":iw,"../../content/traits/skill/reagent-preparation.yaml":aw,"../../content/traits/skill/relic-handling.yaml":ow,"../../content/traits/skill/research.yaml":sw,"../../content/traits/skill/resist-interrogation.yaml":cw,"../../content/traits/skill/resuscitation.yaml":lw,"../../content/traits/skill/rider-basic-animals.yaml":uw,"../../content/traits/skill/rites-and-ceremonies.yaml":dw,"../../content/traits/skill/rune-carving.yaml":fw,"../../content/traits/skill/salvage.yaml":pw,"../../content/traits/skill/schemer.yaml":mw,"../../content/traits/skill/scientific-method.yaml":hw,"../../content/traits/skill/scrap-appraisal.yaml":gw,"../../content/traits/skill/sense-the-unseen.yaml":_w,"../../content/traits/skill/shaking-a-tail.yaml":vw,"../../content/traits/skill/shoring.yaml":yw,"../../content/traits/skill/simple-cooking.yaml":bw,"../../content/traits/skill/simple-potion-mixing.yaml":xw,"../../content/traits/skill/slayer.yaml":Sw,"../../content/traits/skill/sleight-of-hand.yaml":Cw,"../../content/traits/skill/smooth-talker.yaml":ww,"../../content/traits/skill/social-engineering.yaml":Tw,"../../content/traits/skill/specimen-handling.yaml":Ew,"../../content/traits/skill/spirit-warding.yaml":Dw,"../../content/traits/skill/spiritual-counsel.yaml":Ow,"../../content/traits/skill/sprinter.yaml":kw,"../../content/traits/skill/spymaster.yaml":Aw,"../../content/traits/skill/starship-engineering.yaml":jw,"../../content/traits/skill/streetwise.yaml":Mw,"../../content/traits/skill/surgery.yaml":Nw,"../../content/traits/skill/surveillance.yaml":Pw,"../../content/traits/skill/survivalist.yaml":Fw,"../../content/traits/skill/suturing.yaml":Iw,"../../content/traits/skill/swimmer.yaml":Lw,"../../content/traits/skill/systems-administration.yaml":Rw,"../../content/traits/skill/takedown.yaml":zw,"../../content/traits/skill/talent-spotter.yaml":Bw,"../../content/traits/skill/teaching.yaml":Vw,"../../content/traits/skill/teamster.yaml":Hw,"../../content/traits/skill/textual-criticism.yaml":Uw,"../../content/traits/skill/tinkerer.yaml":Ww,"../../content/traits/skill/tracker.yaml":Gw,"../../content/traits/skill/trauma-care.yaml":Kw,"../../content/traits/skill/triage.yaml":qw,"../../content/traits/skill/vigilance.yaml":Jw,"../../content/traits/skill/weak-point.yaml":Yw,"../../content/traits/skill/weightlifter.yaml":Xw,"../../content/traits/skill/wielder-bow.yaml":Zw,"../../content/traits/skill/wielder-crossbow.yaml":Qw,"../../content/traits/skill/wielder-dagger.yaml":$w,"../../content/traits/skill/wielder-flamethrower.yaml":eT,"../../content/traits/skill/wielder-greatsword.yaml":tT,"../../content/traits/skill/wielder-grenade.yaml":nT,"../../content/traits/skill/wielder-longsword.yaml":rT,"../../content/traits/skill/wielder-mace.yaml":iT,"../../content/traits/skill/wielder-machine-gun.yaml":aT,"../../content/traits/skill/wielder-missile-launcher.yaml":oT,"../../content/traits/skill/wielder-mortar.yaml":sT,"../../content/traits/skill/wielder-musket.yaml":cT,"../../content/traits/skill/wielder-pistol.yaml":lT,"../../content/traits/skill/wielder-polearm.yaml":uT,"../../content/traits/skill/wielder-rifle.yaml":dT,"../../content/traits/skill/wielder-shortsword.yaml":fT,"../../content/traits/skill/wielder-shotgun.yaml":pT,"../../content/traits/skill/wielder-siege-engine.yaml":mT,"../../content/traits/skill/wielder-sling.yaml":hT,"../../content/traits/skill/wielder-sniper-rifle.yaml":gT,"../../content/traits/skill/wielder-spear.yaml":_T,"../../content/traits/skill/wielder-staff.yaml":vT,"../../content/traits/skill/wielder-throwing-weapon.yaml":yT,"../../content/traits/skill/wielder-war-axe.yaml":bT,"../../content/traits/skill/wrangler.yaml":xT,"../../content/traits/skill/xenobiology-fieldwork.yaml":ST,"../../content/traits/skill/zero-g-maneuvering.yaml":CT})).map(([e,t])=>({path:e.slice(14),text:t}))),vk=new Map(gk.traits.map(e=>[e.id,e])),yk=new Map(gk.packages.map(e=>[e.id,e])),bk=new Map(gk.kinds.map(e=>[e.id,e])),xk=new Map(gk.items.map(e=>[e.id,e])),Sk=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],Ck=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],wk=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),Tk=`(\\d{1,2}|${wk(Sk)})`,Ek=`(\\d{1,2})(?:st|nd|rd|th)|(${wk(Ck)})`,Dk=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${Tk}\\b`,`i`),Ok=RegExp(`\\b(?:${Ek})[\\s-]+(?:level|lvl)\\b`,`i`);function kk(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function Ak(e){let t=Dk.exec(e);if(t)return kk(t[1],Sk);let n=Ok.exec(e);if(n)return kk(n[1],Ck)??kk(n[2],Ck)}var Z=n();async function jk(e){if(!e.type.startsWith(`image/`))throw Error(`${e.name} isn't an image.`);let t;try{t=await createImageBitmap(e)}catch{throw Error(`Couldn't read ${e.name}. Try a PNG, JPEG or WebP.`)}let n=Math.min(1,512/Math.max(t.width,t.height)),r=document.createElement(`canvas`);r.width=Math.max(1,Math.round(t.width*n)),r.height=Math.max(1,Math.round(t.height*n)),r.getContext(`2d`).drawImage(t,0,0,r.width,r.height),t.close();let i=r.toDataURL(`image/webp`,.82);if(i.startsWith(`data:image/webp`)||(i=r.toDataURL(`image/jpeg`,.85)),i.length>15e5)throw Error(`${e.name} is still too big after shrinking it.`);return i}var Mk=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function Nk(e){let t=e.match(/^([\s\S]*?)\s*(?:that has|that possesses|with) the following profile:\s*((?:\([^)]*\)[\s,]*)+)\.?\s*([\s\S]*)$/i);if(!t)return;let n={before:`${t[1].trim()}:`,after:t[3].trim(),damage:[],other:[]};for(let[,e]of t[2].matchAll(/\(([^)]*)\)/g)){let t=e.trim(),r;if(/^(ranged|melee)(, thrown)?$/i.test(t))n.attackType=t[0].toUpperCase()+t.slice(1).toLowerCase();else if(r=t.match(/^max range:?\s*(.+)$/i))n.maxRange=/\d$/.test(r[1])?`${r[1]} m`:r[1];else if(r=t.match(/^attack stat:\s*(.+)$/i))n.attackStat=r[1][0].toUpperCase()+r[1].slice(1);else if(r=t.match(/^area of effect:?\s*(\d+(?:\.\d+)?)\s*(m|meters?)(\s+per rank)?$/i))n.areaOfEffect={amount:Number(r[1]),unit:`m`,perRank:!!r[3]};else{let e=t.split(/\s*,\s*/).map(e=>{let t=e.match(/^(\d+)\s+(.+?)(\s+per rank)?$/i),n=t&&Mk(t[2]);return t&&n?{type:n,amount:Number(t[1]),perRank:!!t[3]}:void 0});e.every(e=>e)?n.damage.push(...e):n.other.push(t)}}return n}var Pk=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Fk=e(((e,t)=>{t.exports=Pk()})),Q=Fk(),Ik=Object.keys(V),Lk=Ik.filter(e=>V[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),Rk=e=>vk.get(e)?.name??e,zk=e=>`region-${e===`isekai`?`dreft`:`systems`}`,Bk=e=>zk(vk.get(e)?.plane),Vk=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Hk={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Uk({plane:e}){let t=e?Hk[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var Wk=e=>e.package===void 0?Rk(e.trait??``):yk.get(e.package)?.name??e.package;function Gk(e){return e.kind?bk.get(e.kind)?.stats:void 0}function Kk({title:e,children:t}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:e}),t&&(0,Q.jsx)(`p`,{className:`lede`,children:t})]})}function qk(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}var Jk=3e3;function Yk({children:e,fades:t,bad:n,onDismiss:r}){let[i,a]=(0,Z.useState)(!1),o=(0,Z.useRef)(r);return o.current=r,(0,Z.useEffect)(()=>{if(a(!1),!t)return;let e=setTimeout(()=>a(!0),Jk),n=setTimeout(()=>o.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,Q.jsxs)(`div`,{className:`notice${n?` bad`:t?` is-success`:``}${i?` is-leaving`:``}`,role:`status`,children:[e,(0,Q.jsx)(`button`,{className:`link`,onClick:r,"aria-label":`Dismiss`,children:`✕`})]})}function Xk({label:e,onClose:t,children:n,className:r=``}){let i=(0,Z.useRef)(null),a=(0,Z.useRef)(t);return a.current=t,(0,Z.useEffect)(()=>{let e=document.activeElement;i.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&a.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[]),(0,Q.jsx)(`div`,{className:`lore-modal is-open ${r}`,role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:i,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:t,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,Q.jsx)(`div`,{className:`lore-modal-scroll`,children:n})]})})}function Zk({text:e}){let t=e.split(`
+`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=sk(ok(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=sk(ok(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function dk(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new nk||null,prettyErrors:t}}function fk(e,t={}){let{lineCounter:n,prettyErrors:r}=dk(t),i=new uk(n?.addNewLine),a=new HO(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new iO(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(oO(e,n)),o.warnings.forEach(oO(e,n))),o}function pk(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=fk(e,n);if(!i)return null;if(i.warnings.forEach(e=>IE(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function mk(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(pk(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function hk(e){let t=[];return{content:{kinds:mk(e,`kinds`,bc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>mk(e,n,Cc,t)),traits:mk(e,`traits`,Ec,t),items:mk(e,`items`,kc,t)},errors:t}}var{content:gk,errors:_k}=hk(Object.entries(Object.assign({"../../content/items/anti-radiation-pills.yaml":nu,"../../content/items/arrows.yaml":ru,"../../content/items/backpack.yaml":iu,"../../content/items/ballistic-shield.yaml":au,"../../content/items/ballistic-vest.yaml":ou,"../../content/items/bedroll.yaml":su,"../../content/items/binoculars.yaml":H,"../../content/items/brigandine.yaml":cu,"../../content/items/buckler.yaml":lu,"../../content/items/cargo-truck.yaml":uu,"../../content/items/chainmail.yaml":du,"../../content/items/club.yaml":fu,"../../content/items/cold-weather-gear.yaml":pu,"../../content/items/combat-helmet.yaml":mu,"../../content/items/combat-knife.yaml":hu,"../../content/items/combat-voidsuit.yaml":gu,"../../content/items/comm-unit.yaml":_u,"../../content/items/compass.yaml":vu,"../../content/items/cooking-kit.yaml":yu,"../../content/items/crossbow-bolts.yaml":bu,"../../content/items/crossbow.yaml":xu,"../../content/items/dagger.yaml":Su,"../../content/items/disguise-kit.yaml":Cu,"../../content/items/earth-reserve-credits.yaml":wu,"../../content/items/emp-grenade.yaml":Tu,"../../content/items/engineers-toolkit.yaml":Eu,"../../content/items/faraday-shroud.yaml":Du,"../../content/items/field-sample-kit.yaml":Ou,"../../content/items/fighter.yaml":ku,"../../content/items/fine-clothes.yaml":Au,"../../content/items/fishing-kit.yaml":ju,"../../content/items/flail.yaml":Mu,"../../content/items/flamethrower.yaml":Nu,"../../content/items/flashlight.yaml":Pu,"../../content/items/flint-and-steel.yaml":Fu,"../../content/items/frag-grenade.yaml":Iu,"../../content/items/fuel-canister.yaml":Lu,"../../content/items/gambeson.yaml":Ru,"../../content/items/geiger-counter.yaml":zu,"../../content/items/grappling-hook.yaml":Bu,"../../content/items/greatsword.yaml":Vu,"../../content/items/halberd.yaml":Hu,"../../content/items/hand-axe.yaml":Uu,"../../content/items/handcuffs.yaml":Wu,"../../content/items/hazmat-suit.yaml":Gu,"../../content/items/healers-kit.yaml":Ku,"../../content/items/helicopter.yaml":qu,"../../content/items/hide-armor.yaml":Ju,"../../content/items/imperial-dollars.yaml":Yu,"../../content/items/incendiary-grenade.yaml":Xu,"../../content/items/insulated-gloves.yaml":Zu,"../../content/items/javelin.yaml":Qu,"../../content/items/lantern.yaml":$u,"../../content/items/leather-armor.yaml":ed,"../../content/items/leather-jacket.yaml":td,"../../content/items/leatherworking-tools.yaml":nd,"../../content/items/lockpicks.yaml":U,"../../content/items/longbow.yaml":rd,"../../content/items/longsword.yaml":W,"../../content/items/luras.yaml":G,"../../content/items/mace.yaml":K,"../../content/items/machine-gun.yaml":id,"../../content/items/masonry-tools.yaml":ad,"../../content/items/maul.yaml":od,"../../content/items/medkit.yaml":sd,"../../content/items/missile-launcher.yaml":cd,"../../content/items/musical-instrument.yaml":ld,"../../content/items/musket.yaml":ud,"../../content/items/night-vision-goggles.yaml":dd,"../../content/items/pack-animal.yaml":fd,"../../content/items/padded-coif.yaml":pd,"../../content/items/painkillers.yaml":md,"../../content/items/painting-supplies.yaml":hd,"../../content/items/pistol-magazine.yaml":gd,"../../content/items/pistol.yaml":_d,"../../content/items/plate-armor.yaml":vd,"../../content/items/plate-carrier.yaml":yd,"../../content/items/portable-computer.yaml":bd,"../../content/items/potion-kit.yaml":xd,"../../content/items/powder-and-shot.yaml":Sd,"../../content/items/power-armor.yaml":Cd,"../../content/items/quarterstaff.yaml":wd,"../../content/items/rad-suit.yaml":Td,"../../content/items/rapier.yaml":Ed,"../../content/items/ration-pack.yaml":Dd,"../../content/items/rebreather.yaml":Od,"../../content/items/renminbi.yaml":kd,"../../content/items/revolver.yaml":Ad,"../../content/items/riding-animal.yaml":jd,"../../content/items/rifle-magazine.yaml":Md,"../../content/items/rifle.yaml":Nd,"../../content/items/riot-gear.yaml":Pd,"../../content/items/rope.yaml":Fd,"../../content/items/rowboat.yaml":Id,"../../content/items/shortbow.yaml":Ld,"../../content/items/shortsword.yaml":Rd,"../../content/items/shotgun-shells.yaml":zd,"../../content/items/shotgun.yaml":Bd,"../../content/items/sling-stones.yaml":Vd,"../../content/items/sling.yaml":Hd,"../../content/items/smithing-tools.yaml":Ud,"../../content/items/smoke-grenade.yaml":Wd,"../../content/items/sniper-rifle.yaml":Gd,"../../content/items/spear.yaml":Kd,"../../content/items/spyglass.yaml":qd,"../../content/items/steel-helm.yaml":Jd,"../../content/items/stun-baton.yaml":Yd,"../../content/items/submachine-gun.yaml":Xd,"../../content/items/surgical-kit.yaml":Zd,"../../content/items/taser.yaml":Qd,"../../content/items/tent.yaml":$d,"../../content/items/throwing-knives.yaml":ef,"../../content/items/torch.yaml":tf,"../../content/items/tower-shield.yaml":nf,"../../content/items/trail-rations.yaml":rf,"../../content/items/travelers-cloak.yaml":af,"../../content/items/turnout-gear.yaml":of,"../../content/items/voidsuit.yaml":sf,"../../content/items/wagon.yaml":cf,"../../content/items/war-axe.yaml":lf,"../../content/items/war-hammer.yaml":uf,"../../content/items/warded-robes.yaml":df,"../../content/items/waterskin.yaml":ff,"../../content/items/wooden-shield.yaml":pf,"../../content/items/writing-kit.yaml":mf,"../../content/kinds/ai-core.yaml":hf,"../../content/kinds/dreft/guwain.yaml":gf,"../../content/kinds/dreft/isek.yaml":_f,"../../content/kinds/dreft/tatot-goblinoid.yaml":q,"../../content/kinds/dreft/tatot-orcoid.yaml":vf,"../../content/kinds/human.yaml":yf,"../../content/origins/american-empire/american-empire-colonies.yaml":bf,"../../content/origins/american-empire/american-empire-earth.yaml":xf,"../../content/origins/centafrica/centafrica-colonies.yaml":Sf,"../../content/origins/centafrica/centafrica-earth.yaml":Cf,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":wf,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Tf,"../../content/origins/dreft/dreft.yaml":Ef,"../../content/origins/drovus/the-drovus-empire.yaml":Df,"../../content/origins/free-american-states/the-free-american-states.yaml":Of,"../../content/origins/karsef/kingdom-of-karsef.yaml":kf,"../../content/origins/kashgar/kashgar.yaml":Af,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":jf,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Mf,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":Nf,"../../content/origins/sdu/sdu-colonies.yaml":Pf,"../../content/origins/sdu/sdu-earth.yaml":Ff,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":If,"../../content/origins/tetra/tetra.yaml":Lf,"../../content/origins/union-of-texas/the-union-of-texas.yaml":Rf,"../../content/origins/ural-federation/the-ural-federation.yaml":zf,"../../content/origins/xanthus/xanthus.yaml":Bf,"../../content/pasts/any/craft-apprenticeship.yaml":Vf,"../../content/pasts/any/criminal-family.yaml":Hf,"../../content/pasts/any/gutter-trash.yaml":Uf,"../../content/pasts/any/military-service.yaml":Wf,"../../content/pasts/any/privileged-upbringing.yaml":Gf,"../../content/pasts/any/raised-at-court.yaml":J,"../../content/pasts/any/shipborn.yaml":Kf,"../../content/pasts/any/simple-farmer.yaml":qf,"../../content/pasts/any/traveling-troupe.yaml":Jf,"../../content/pasts/dreft/countryside-upbringing.yaml":Yf,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":Xf,"../../content/pasts/dreft/glintl-docks.yaml":Zf,"../../content/pasts/dreft/karsef-border-veteran.yaml":Qf,"../../content/pasts/dreft/merchant-dynasty.yaml":$f,"../../content/pasts/dreft/monster-raided-village.yaml":ep,"../../content/pasts/dreft/noble-household.yaml":tp,"../../content/pasts/dreft/palace-servant.yaml":np,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":rp,"../../content/pasts/dreft/returned-from-the-systems.yaml":ip,"../../content/pasts/dreft/sunrise-refugee.yaml":Y,"../../content/pasts/systems/station-rat.yaml":ap,"../../content/pasts/systems/university-educated.yaml":op,"../../content/pasts/tetra/delegation-child.yaml":sp,"../../content/pasts/tetra/gate-lab-kid.yaml":cp,"../../content/pasts/tetra/holding-company-kid.yaml":lp,"../../content/pasts/tetra/parasapient-quarter.yaml":up,"../../content/pasts/tetra/raised-in-the-infill.yaml":dp,"../../content/pasts/tetra/raised-on-ward-politics.yaml":fp,"../../content/professions/any/apothecary.yaml":pp,"../../content/professions/any/bard.yaml":mp,"../../content/professions/any/blacksmith.yaml":hp,"../../content/professions/any/courier.yaml":gp,"../../content/professions/any/criminal-enforcer.yaml":_p,"../../content/professions/any/doctor.yaml":vp,"../../content/professions/any/farmer.yaml":yp,"../../content/professions/any/jester.yaml":bp,"../../content/professions/any/knight.yaml":xp,"../../content/professions/any/local-police.yaml":Sp,"../../content/professions/any/musical-artist.yaml":Cp,"../../content/professions/any/ranger.yaml":wp,"../../content/professions/any/smuggler.yaml":Tp,"../../content/professions/any/spy.yaml":Ep,"../../content/professions/any/squire.yaml":Dp,"../../content/professions/any/stonemason.yaml":Op,"../../content/professions/any/surgeon.yaml":kp,"../../content/professions/any/tanner.yaml":Ap,"../../content/professions/any/visual-artist.yaml":jp,"../../content/professions/dreft/alchemist.yaml":Mp,"../../content/professions/dreft/caravaneer.yaml":Np,"../../content/professions/dreft/dreft-local-militia.yaml":Pp,"../../content/professions/dreft/dreft-mercenary.yaml":Fp,"../../content/professions/dreft/gate-hand.yaml":Ip,"../../content/professions/dreft/guild-hunter.yaml":Lp,"../../content/professions/dreft/hedge-witch.yaml":Rp,"../../content/professions/dreft/licensed-mage.yaml":zp,"../../content/professions/dreft/royal-guard.yaml":Bp,"../../content/professions/systems/american-empire-soldier.yaml":Vp,"../../content/professions/systems/combat-medic.yaml":Hp,"../../content/professions/systems/computer-engineer.yaml":Up,"../../content/professions/systems/emergency-medical-technician.yaml":Wp,"../../content/professions/systems/exotic-specimen-dealer.yaml":Gp,"../../content/professions/systems/fighter-pilot.yaml":Kp,"../../content/professions/systems/interplanar-diplomat.yaml":qp,"../../content/professions/systems/interplanar-rights-lawyer.yaml":Jp,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":Yp,"../../content/professions/systems/paraarcheologist.yaml":Xp,"../../content/professions/systems/paraecologist.yaml":Zp,"../../content/professions/systems/paraethnologist.yaml":Qp,"../../content/professions/systems/paraevolutionary-scientist.yaml":$p,"../../content/professions/systems/paraphysiologist.yaml":em,"../../content/professions/systems/parazoological-keeper.yaml":tm,"../../content/professions/systems/planar-expeditionary-professional.yaml":nm,"../../content/professions/systems/starship-engineer.yaml":rm,"../../content/professions/systems/station-maintenance.yaml":im,"../../content/professions/systems/theoretical-paraphysicist.yaml":am,"../../content/professions/systems/truck-pilot.yaml":om,"../../content/traits/ability/acid-spray.yaml":sm,"../../content/traits/ability/banish-spirit.yaml":cm,"../../content/traits/ability/blink.yaml":lm,"../../content/traits/ability/brawler.yaml":um,"../../content/traits/ability/chain-lightning.yaml":dm,"../../content/traits/ability/charm.yaml":fm,"../../content/traits/ability/cleanse.yaml":pm,"../../content/traits/ability/create-fire.yaml":mm,"../../content/traits/ability/create-food.yaml":hm,"../../content/traits/ability/create-water.yaml":gm,"../../content/traits/ability/darkness.yaml":_m,"../../content/traits/ability/daze.yaml":vm,"../../content/traits/ability/detect-magic.yaml":ym,"../../content/traits/ability/disarm.yaml":bm,"../../content/traits/ability/dispel-magic.yaml":xm,"../../content/traits/ability/earthen-spike.yaml":Sm,"../../content/traits/ability/elemental-ward.yaml":Cm,"../../content/traits/ability/entangle.yaml":wm,"../../content/traits/ability/fear.yaml":Tm,"../../content/traits/ability/featherfall.yaml":Em,"../../content/traits/ability/fireball.yaml":Dm,"../../content/traits/ability/fog-cloud.yaml":Om,"../../content/traits/ability/grappler.yaml":km,"../../content/traits/ability/greater-heal.yaml":Am,"../../content/traits/ability/gust.yaml":jm,"../../content/traits/ability/haste.yaml":Mm,"../../content/traits/ability/heal.yaml":Nm,"../../content/traits/ability/hoarfrost.yaml":Pm,"../../content/traits/ability/ice-lance.yaml":Fm,"../../content/traits/ability/infravision.yaml":Im,"../../content/traits/ability/invisibility.yaml":Lm,"../../content/traits/ability/light.yaml":Rm,"../../content/traits/ability/lightning.yaml":zm,"../../content/traits/ability/magical-endurance.yaml":Bm,"../../content/traits/ability/magical-flight.yaml":Vm,"../../content/traits/ability/magical-grace.yaml":Hm,"../../content/traits/ability/magical-strength.yaml":Um,"../../content/traits/ability/mending.yaml":Wm,"../../content/traits/ability/meteor.yaml":Gm,"../../content/traits/ability/mind-spike.yaml":Km,"../../content/traits/ability/natural-breath-weapon.yaml":qm,"../../content/traits/ability/rally.yaml":Jm,"../../content/traits/ability/shield-wall.yaml":Ym,"../../content/traits/ability/shield.yaml":Xm,"../../content/traits/ability/silence.yaml":Zm,"../../content/traits/ability/skin-of-stone.yaml":Qm,"../../content/traits/ability/sleep.yaml":$m,"../../content/traits/ability/slow.yaml":eh,"../../content/traits/ability/speak-with-animals.yaml":th,"../../content/traits/ability/spider-climb.yaml":nh,"../../content/traits/ability/staunch.yaml":rh,"../../content/traits/ability/takedown.yaml":ih,"../../content/traits/ability/telekinesis.yaml":ah,"../../content/traits/ability/thunderclap.yaml":oh,"../../content/traits/ability/wall-of-stone.yaml":sh,"../../content/traits/ability/water-breathing.yaml":ch,"../../content/traits/ability/weak-point.yaml":lh,"../../content/traits/ability/wither.yaml":uh,"../../content/traits/circumstance/explorers-lodge-membership.yaml":dh,"../../content/traits/circumstance/imperial-service-record.yaml":fh,"../../content/traits/circumstance/short-term-fame.yaml":ph,"../../content/traits/circumstance/significant-inheritance.yaml":mh,"../../content/traits/circumstance/thieves-guild-membership.yaml":hh,"../../content/traits/circumstance/tugboat-captain.yaml":gh,"../../content/traits/circumstance/wanted-in-sol.yaml":_h,"../../content/traits/condition/asleep.yaml":vh,"../../content/traits/condition/burning.yaml":yh,"../../content/traits/condition/charmed.yaml":bh,"../../content/traits/condition/corroding.yaml":xh,"../../content/traits/condition/cybernetic-intelligence.yaml":Sh,"../../content/traits/condition/damaged.yaml":Ch,"../../content/traits/condition/dead.yaml":wh,"../../content/traits/condition/deafened.yaml":Th,"../../content/traits/condition/destroyed.yaml":Eh,"../../content/traits/condition/elemental-ward-condition.yaml":Dh,"../../content/traits/condition/featherfall-condition.yaml":Oh,"../../content/traits/condition/flat-footed.yaml":kh,"../../content/traits/condition/frightened.yaml":Ah,"../../content/traits/condition/ghost-sight.yaml":jh,"../../content/traits/condition/glowing.yaml":Mh,"../../content/traits/condition/hard-shell.yaml":Nh,"../../content/traits/condition/hasted.yaml":Ph,"../../content/traits/condition/healthy.yaml":Fh,"../../content/traits/condition/incapacitated.yaml":Ih,"../../content/traits/condition/infravision-condition.yaml":Lh,"../../content/traits/condition/injured.yaml":Rh,"../../content/traits/condition/invisible.yaml":zh,"../../content/traits/condition/long-toothed.yaml":Bh,"../../content/traits/condition/magical-endurance-condition.yaml":Vh,"../../content/traits/condition/magical-flight-condition.yaml":Hh,"../../content/traits/condition/magical-grace-condition.yaml":Uh,"../../content/traits/condition/magical-heritage.yaml":Wh,"../../content/traits/condition/magical-strength-condition.yaml":Gh,"../../content/traits/condition/mechanical.yaml":Kh,"../../content/traits/condition/prone.yaml":qh,"../../content/traits/condition/rooted.yaml":Jh,"../../content/traits/condition/severe-bleeding.yaml":Yh,"../../content/traits/condition/severely-injured.yaml":Xh,"../../content/traits/condition/shielded.yaml":Zh,"../../content/traits/condition/silenced.yaml":Qh,"../../content/traits/condition/slowed.yaml":$h,"../../content/traits/condition/spider-climb-condition.yaml":eg,"../../content/traits/condition/stimm-rush.yaml":tg,"../../content/traits/condition/stone-skin.yaml":ng,"../../content/traits/condition/supernatural.yaml":rg,"../../content/traits/condition/water-breathing-condition.yaml":ig,"../../content/traits/contact/additional-contact.yaml":ag,"../../content/traits/knowledge/accounting.yaml":og,"../../content/traits/knowledge/additional-language.yaml":sg,"../../content/traits/knowledge/ai-culture.yaml":cg,"../../content/traits/knowledge/aksum.yaml":lg,"../../content/traits/knowledge/alchemy.yaml":ug,"../../content/traits/knowledge/amaravati.yaml":dg,"../../content/traits/knowledge/american-geography.yaml":fg,"../../content/traits/knowledge/american-history.yaml":pg,"../../content/traits/knowledge/amharic-written.yaml":mg,"../../content/traits/knowledge/amharic.yaml":hg,"../../content/traits/knowledge/anatomy.yaml":gg,"../../content/traits/knowledge/animal-lore.yaml":_g,"../../content/traits/knowledge/antiluna.yaml":vg,"../../content/traits/knowledge/arabic-written.yaml":yg,"../../content/traits/knowledge/arabic.yaml":bg,"../../content/traits/knowledge/architecture.yaml":xg,"../../content/traits/knowledge/archives-and-libraries.yaml":Sg,"../../content/traits/knowledge/aristocracy.yaml":Cg,"../../content/traits/knowledge/ark-life.yaml":wg,"../../content/traits/knowledge/ark-new-york.yaml":Tg,"../../content/traits/knowledge/art-history.yaml":Eg,"../../content/traits/knowledge/artificial-intelligence.yaml":Dg,"../../content/traits/knowledge/asteroid-mining.yaml":Og,"../../content/traits/knowledge/aviation.yaml":kg,"../../content/traits/knowledge/bandits-and-brigands.yaml":Ag,"../../content/traits/knowledge/bengali-written.yaml":jg,"../../content/traits/knowledge/bengali.yaml":Mg,"../../content/traits/knowledge/biology.yaml":Ng,"../../content/traits/knowledge/boneyard.yaml":Pg,"../../content/traits/knowledge/bureaucracy.yaml":Fg,"../../content/traits/knowledge/burmese-written.yaml":Ig,"../../content/traits/knowledge/burmese.yaml":Lg,"../../content/traits/knowledge/cantonese-written.yaml":Rg,"../../content/traits/knowledge/cantonese.yaml":zg,"../../content/traits/knowledge/caravan-routes.yaml":Bg,"../../content/traits/knowledge/centafrica.yaml":Vg,"../../content/traits/knowledge/centafrican-law.yaml":Hg,"../../content/traits/knowledge/chemistry.yaml":Ug,"../../content/traits/knowledge/chinese-imperial-law.yaml":Wg,"../../content/traits/knowledge/coastal-trade.yaml":Gg,"../../content/traits/knowledge/combat-medicine.yaml":Kg,"../../content/traits/knowledge/commerce.yaml":qg,"../../content/traits/knowledge/comparative-cultures.yaml":Jg,"../../content/traits/knowledge/computer-networks.yaml":Yg,"../../content/traits/knowledge/computer-systems.yaml":Xg,"../../content/traits/knowledge/contract-law.yaml":Zg,"../../content/traits/knowledge/countryside-lore.yaml":Qg,"../../content/traits/knowledge/court-etiquette.yaml":$g,"../../content/traits/knowledge/criminal-underworld.yaml":e_,"../../content/traits/knowledge/cryptography.yaml":t_,"../../content/traits/knowledge/cybernetics.yaml":n_,"../../content/traits/knowledge/dead-languages.yaml":r_,"../../content/traits/knowledge/diplomatic-protocol.yaml":i_,"../../content/traits/knowledge/documents-and-seals.yaml":a_,"../../content/traits/knowledge/dreft.yaml":o_,"../../content/traits/knowledge/dreftan-written.yaml":s_,"../../content/traits/knowledge/dreftan.yaml":c_,"../../content/traits/knowledge/dreftian-law.yaml":l_,"../../content/traits/knowledge/dutch-written.yaml":u_,"../../content/traits/knowledge/dutch.yaml":d_,"../../content/traits/knowledge/dwarvish-runes-written.yaml":f_,"../../content/traits/knowledge/dwarvish.yaml":p_,"../../content/traits/knowledge/earth-baseline-customs.yaml":m_,"../../content/traits/knowledge/earth-baseline-technology.yaml":h_,"../../content/traits/knowledge/ecology.yaml":g_,"../../content/traits/knowledge/electronics.yaml":__,"../../content/traits/knowledge/elemental-magics.yaml":v_,"../../content/traits/knowledge/enchantment.yaml":y_,"../../content/traits/knowledge/engineering.yaml":b_,"../../content/traits/knowledge/english-written.yaml":x_,"../../content/traits/knowledge/english.yaml":S_,"../../content/traits/knowledge/exotic-materials.yaml":C_,"../../content/traits/knowledge/explosives.yaml":w_,"../../content/traits/knowledge/extraplanar-threats.yaml":T_,"../../content/traits/knowledge/farming.yaml":E_,"../../content/traits/knowledge/filipino-written.yaml":D_,"../../content/traits/knowledge/filipino.yaml":O_,"../../content/traits/knowledge/french-written.yaml":k_,"../../content/traits/knowledge/french.yaml":A_,"../../content/traits/knowledge/gambling.yaml":j_,"../../content/traits/knowledge/geography.yaml":M_,"../../content/traits/knowledge/geology.yaml":N_,"../../content/traits/knowledge/german-written.yaml":P_,"../../content/traits/knowledge/german.yaml":F_,"../../content/traits/knowledge/glintl.yaml":I_,"../../content/traits/knowledge/gujarati-written.yaml":L_,"../../content/traits/knowledge/gujarati.yaml":R_,"../../content/traits/knowledge/hausa-written.yaml":z_,"../../content/traits/knowledge/hausa.yaml":B_,"../../content/traits/knowledge/heraldry.yaml":V_,"../../content/traits/knowledge/herbalism.yaml":H_,"../../content/traits/knowledge/high-society.yaml":U_,"../../content/traits/knowledge/hindi-written.yaml":W_,"../../content/traits/knowledge/hindi.yaml":G_,"../../content/traits/knowledge/history.yaml":K_,"../../content/traits/knowledge/imperial-law.yaml":q_,"../../content/traits/knowledge/imperial-politics.yaml":J_,"../../content/traits/knowledge/indian-law.yaml":Y_,"../../content/traits/knowledge/indian-theology.yaml":X_,"../../content/traits/knowledge/indonesian-written.yaml":Z_,"../../content/traits/knowledge/indonesian.yaml":Q_,"../../content/traits/knowledge/industrial-machinery.yaml":$_,"../../content/traits/knowledge/intelligence-tradecraft.yaml":ev,"../../content/traits/knowledge/interplanar-law.yaml":tv,"../../content/traits/knowledge/interplanar-relations.yaml":nv,"../../content/traits/knowledge/italian-written.yaml":rv,"../../content/traits/knowledge/italian.yaml":iv,"../../content/traits/knowledge/japanese-written.yaml":av,"../../content/traits/knowledge/japanese.yaml":ov,"../../content/traits/knowledge/javanese-written.yaml":sv,"../../content/traits/knowledge/javanese.yaml":cv,"../../content/traits/knowledge/kannada-written.yaml":lv,"../../content/traits/knowledge/kannada.yaml":uv,"../../content/traits/knowledge/karsef.yaml":dv,"../../content/traits/knowledge/kashgar-mindworks.yaml":fv,"../../content/traits/knowledge/kashgar.yaml":pv,"../../content/traits/knowledge/kazakh-written.yaml":mv,"../../content/traits/knowledge/kazakh.yaml":hv,"../../content/traits/knowledge/khmer-written.yaml":gv,"../../content/traits/knowledge/khmer.yaml":_v,"../../content/traits/knowledge/kinyarwanda-written.yaml":vv,"../../content/traits/knowledge/kinyarwanda.yaml":yv,"../../content/traits/knowledge/korean-written.yaml":bv,"../../content/traits/knowledge/korean.yaml":xv,"../../content/traits/knowledge/kyrgyz-written.yaml":Sv,"../../content/traits/knowledge/kyrgyz.yaml":Cv,"../../content/traits/knowledge/lao-written.yaml":wv,"../../content/traits/knowledge/lao.yaml":Tv,"../../content/traits/knowledge/law-enforcement.yaml":Ev,"../../content/traits/knowledge/legal-systems.yaml":Dv,"../../content/traits/knowledge/lingala-written.yaml":Ov,"../../content/traits/knowledge/lingala.yaml":kv,"../../content/traits/knowledge/liquid-democracy.yaml":Av,"../../content/traits/knowledge/literature.yaml":jv,"../../content/traits/knowledge/local-folklore.yaml":Mv,"../../content/traits/knowledge/local-history.yaml":Nv,"../../content/traits/knowledge/logistics.yaml":Pv,"../../content/traits/knowledge/magic-on-isekai.yaml":Fv,"../../content/traits/knowledge/magical-artifacts.yaml":Iv,"../../content/traits/knowledge/malay-written.yaml":Lv,"../../content/traits/knowledge/malay.yaml":Rv,"../../content/traits/knowledge/malayalam-written.yaml":zv,"../../content/traits/knowledge/malayalam.yaml":Bv,"../../content/traits/knowledge/mandarin-written.yaml":Vv,"../../content/traits/knowledge/mandarin.yaml":Hv,"../../content/traits/knowledge/marathi-written.yaml":Uv,"../../content/traits/knowledge/marathi.yaml":Wv,"../../content/traits/knowledge/martial-arts.yaml":Gv,"../../content/traits/knowledge/mathematics.yaml":Kv,"../../content/traits/knowledge/medicine.yaml":qv,"../../content/traits/knowledge/metallurgy.yaml":Jv,"../../content/traits/knowledge/military-tactics.yaml":Yv,"../../content/traits/knowledge/mongolian-written.yaml":Xv,"../../content/traits/knowledge/mongolian.yaml":Zv,"../../content/traits/knowledge/monsters-of-isekai.yaml":Qv,"../../content/traits/knowledge/mountaineering.yaml":$v,"../../content/traits/knowledge/music.yaml":ey,"../../content/traits/knowledge/navigation.yaml":ty,"../../content/traits/knowledge/nepali-written.yaml":ny,"../../content/traits/knowledge/nepali.yaml":ry,"../../content/traits/knowledge/new-columbia.yaml":iy,"../../content/traits/knowledge/new-persia.yaml":ay,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":oy,"../../content/traits/knowledge/odia-written.yaml":sy,"../../content/traits/knowledge/odia.yaml":cy,"../../content/traits/knowledge/orc-society.yaml":ly,"../../content/traits/knowledge/oromo-written.yaml":uy,"../../content/traits/knowledge/oromo.yaml":dy,"../../content/traits/knowledge/paraarcheology.yaml":fy,"../../content/traits/knowledge/parabiology.yaml":py,"../../content/traits/knowledge/paraflora.yaml":my,"../../content/traits/knowledge/paraphysics.yaml":hy,"../../content/traits/knowledge/parasapient-medicine.yaml":gy,"../../content/traits/knowledge/parasapients.yaml":_y,"../../content/traits/knowledge/parazoology.yaml":vy,"../../content/traits/knowledge/pataliputra.yaml":yy,"../../content/traits/knowledge/pathology.yaml":by,"../../content/traits/knowledge/pedagogy.yaml":xy,"../../content/traits/knowledge/persian-written.yaml":Sy,"../../content/traits/knowledge/persian.yaml":Cy,"../../content/traits/knowledge/pharmacology.yaml":wy,"../../content/traits/knowledge/physical-training.yaml":Ty,"../../content/traits/knowledge/physics.yaml":Ey,"../../content/traits/knowledge/planar-exploration.yaml":Dy,"../../content/traits/knowledge/polish-written.yaml":Oy,"../../content/traits/knowledge/polish.yaml":ky,"../../content/traits/knowledge/politics.yaml":Ay,"../../content/traits/knowledge/port-herminst.yaml":jy,"../../content/traits/knowledge/ports-and-stations.yaml":My,"../../content/traits/knowledge/portuguese-written.yaml":Ny,"../../content/traits/knowledge/portuguese.yaml":Py,"../../content/traits/knowledge/psychology.yaml":Fy,"../../content/traits/knowledge/punjabi-written.yaml":Iy,"../../content/traits/knowledge/punjabi.yaml":Ly,"../../content/traits/knowledge/religions-of-isekai.yaml":Ry,"../../content/traits/knowledge/religions-of-the-settled-systems.yaml":zy,"../../content/traits/knowledge/rhetoric.yaml":By,"../../content/traits/knowledge/robotics.yaml":Vy,"../../content/traits/knowledge/romanian-written.yaml":Hy,"../../content/traits/knowledge/romanian.yaml":Uy,"../../content/traits/knowledge/runecraft.yaml":Wy,"../../content/traits/knowledge/russian-written.yaml":Gy,"../../content/traits/knowledge/russian.yaml":Ky,"../../content/traits/knowledge/sdu-law.yaml":qy,"../../content/traits/knowledge/seafaring.yaml":Jy,"../../content/traits/knowledge/security-systems.yaml":Yy,"../../content/traits/knowledge/shipbreaking.yaml":Xy,"../../content/traits/knowledge/shipping-lanes.yaml":Zy,"../../content/traits/knowledge/sinhala-written.yaml":Qy,"../../content/traits/knowledge/sinhala.yaml":$y,"../../content/traits/knowledge/somali-written.yaml":eb,"../../content/traits/knowledge/somali.yaml":tb,"../../content/traits/knowledge/sorellion.yaml":nb,"../../content/traits/knowledge/southeast-asia.yaml":rb,"../../content/traits/knowledge/spacefaring.yaml":ib,"../../content/traits/knowledge/spanish-written.yaml":ab,"../../content/traits/knowledge/spanish.yaml":ob,"../../content/traits/knowledge/spirits-and-the-dead.yaml":sb,"../../content/traits/knowledge/starships.yaml":cb,"../../content/traits/knowledge/succession-law.yaml":lb,"../../content/traits/knowledge/swahili-written.yaml":ub,"../../content/traits/knowledge/swahili.yaml":db,"../../content/traits/knowledge/switch-gates.yaml":fb,"../../content/traits/knowledge/tamil-written.yaml":pb,"../../content/traits/knowledge/tamil.yaml":mb,"../../content/traits/knowledge/telugu-written.yaml":hb,"../../content/traits/knowledge/telugu.yaml":gb,"../../content/traits/knowledge/tetra-frontiers-co.yaml":_b,"../../content/traits/knowledge/tetra.yaml":vb,"../../content/traits/knowledge/thai-written.yaml":yb,"../../content/traits/knowledge/thai.yaml":bb,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":xb,"../../content/traits/knowledge/the-chinese-empire.yaml":Sb,"../../content/traits/knowledge/the-corporate-syndicates.yaml":Cb,"../../content/traits/knowledge/the-corsine-pass.yaml":wb,"../../content/traits/knowledge/the-diplomatic-wing.yaml":Tb,"../../content/traits/knowledge/the-drovus-empire.yaml":Eb,"../../content/traits/knowledge/the-explorers-lodge.yaml":Db,"../../content/traits/knowledge/the-free-american-states.yaml":Ob,"../../content/traits/knowledge/the-imperial-military.yaml":kb,"../../content/traits/knowledge/the-kingdom-of-india.yaml":Ab,"../../content/traits/knowledge/the-kings-woods.yaml":jb,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":Mb,"../../content/traits/knowledge/the-martian-association.yaml":Nb,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":Pb,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":Fb,"../../content/traits/knowledge/the-switch-port.yaml":Ib,"../../content/traits/knowledge/the-union-of-texas.yaml":Lb,"../../content/traits/knowledge/the-united-nations.yaml":Rb,"../../content/traits/knowledge/the-ural-federation.yaml":zb,"../../content/traits/knowledge/theater.yaml":Bb,"../../content/traits/knowledge/thieves-cant.yaml":Vb,"../../content/traits/knowledge/toxicology.yaml":Hb,"../../content/traits/knowledge/trade-guilds.yaml":Ub,"../../content/traits/knowledge/trade-law.yaml":Wb,"../../content/traits/knowledge/trade-roads.yaml":Gb,"../../content/traits/knowledge/turkish-written.yaml":Kb,"../../content/traits/knowledge/turkish.yaml":qb,"../../content/traits/knowledge/ukrainian-written.yaml":Jb,"../../content/traits/knowledge/ukrainian.yaml":Yb,"../../content/traits/knowledge/union-politics.yaml":Xb,"../../content/traits/knowledge/ural-tribal-law.yaml":Zb,"../../content/traits/knowledge/urdu-written.yaml":Qb,"../../content/traits/knowledge/urdu.yaml":$b,"../../content/traits/knowledge/uyghur-written.yaml":ex,"../../content/traits/knowledge/uyghur.yaml":tx,"../../content/traits/knowledge/vietnamese-written.yaml":nx,"../../content/traits/knowledge/vietnamese.yaml":rx,"../../content/traits/knowledge/weapons.yaml":ix,"../../content/traits/knowledge/wilderness-lore.yaml":ax,"../../content/traits/knowledge/xanthus.yaml":ox,"../../content/traits/knowledge/yoruba-written.yaml":sx,"../../content/traits/knowledge/yoruba.yaml":cx,"../../content/traits/knowledge/yutu.yaml":lx,"../../content/traits/knowledge/zhulong.yaml":ux,"../../content/traits/other/long-in-the-tooth.yaml":dx,"../../content/traits/other/magic-access.yaml":fx,"../../content/traits/other/possessed-by-a-spirit.yaml":px,"../../content/traits/skill/active-listening.yaml":mx,"../../content/traits/skill/advanced-cooking.yaml":hx,"../../content/traits/skill/advanced-potion-mixing.yaml":gx,"../../content/traits/skill/ambusher.yaml":_x,"../../content/traits/skill/animal-husbandry.yaml":vx,"../../content/traits/skill/antidote-brewing.yaml":yx,"../../content/traits/skill/appraisal.yaml":bx,"../../content/traits/skill/archival-research.yaml":xx,"../../content/traits/skill/artifact-identification.yaml":Sx,"../../content/traits/skill/artifact-repair.yaml":Cx,"../../content/traits/skill/artist-painting.yaml":wx,"../../content/traits/skill/artist-sculpture.yaml":Tx,"../../content/traits/skill/bait-and-lure.yaml":Ex,"../../content/traits/skill/battlefield-commander.yaml":Dx,"../../content/traits/skill/beast-taming.yaml":Ox,"../../content/traits/skill/body-conditioning.yaml":kx,"../../content/traits/skill/bookkeeping.yaml":Ax,"../../content/traits/skill/born-leader.yaml":jx,"../../content/traits/skill/boxing.yaml":Mx,"../../content/traits/skill/breakthrough.yaml":Nx,"../../content/traits/skill/brokering.yaml":Px,"../../content/traits/skill/bugging.yaml":Fx,"../../content/traits/skill/calming-presence.yaml":Ix,"../../content/traits/skill/capable-student.yaml":Lx,"../../content/traits/skill/cargo-handling.yaml":Rx,"../../content/traits/skill/casualty-extraction.yaml":zx,"../../content/traits/skill/cataloguing.yaml":Bx,"../../content/traits/skill/climber.yaml":Vx,"../../content/traits/skill/combat-medic.yaml":Hx,"../../content/traits/skill/con-man.yaml":Ux,"../../content/traits/skill/concealment.yaml":Wx,"../../content/traits/skill/containment-protocols.yaml":Gx,"../../content/traits/skill/contortionist.yaml":Kx,"../../content/traits/skill/contract-drafting.yaml":qx,"../../content/traits/skill/counselor.yaml":Jx,"../../content/traits/skill/counterpuncher.yaml":Yx,"../../content/traits/skill/courtly-manners.yaml":Xx,"../../content/traits/skill/cover-identity.yaml":Zx,"../../content/traits/skill/craft-leatherworking.yaml":Qx,"../../content/traits/skill/craft-masonry.yaml":$x,"../../content/traits/skill/craft-smithing.yaml":eS,"../../content/traits/skill/crew-management.yaml":tS,"../../content/traits/skill/crisis-leadership.yaml":nS,"../../content/traits/skill/cryptanalysis.yaml":rS,"../../content/traits/skill/cultural-fluency.yaml":iS,"../../content/traits/skill/curse-sense.yaml":aS,"../../content/traits/skill/data-analysis.yaml":oS,"../../content/traits/skill/data-recovery.yaml":sS,"../../content/traits/skill/dead-drops.yaml":cS,"../../content/traits/skill/decipherment.yaml":lS,"../../content/traits/skill/demolitions.yaml":uS,"../../content/traits/skill/diplomacy.yaml":dS,"../../content/traits/skill/disguise.yaml":fS,"../../content/traits/skill/dissection.yaml":pS,"../../content/traits/skill/drillmaster.yaml":mS,"../../content/traits/skill/eagle-eye.yaml":hS,"../../content/traits/skill/electronics-repair.yaml":gS,"../../content/traits/skill/enchanting.yaml":_S,"../../content/traits/skill/eva-work.yaml":vS,"../../content/traits/skill/evasive-maneuvers.yaml":yS,"../../content/traits/skill/excavation.yaml":bS,"../../content/traits/skill/exorcism.yaml":xS,"../../content/traits/skill/expedition-leader.yaml":SS,"../../content/traits/skill/expedition-logistics.yaml":CS,"../../content/traits/skill/expert-pilot.yaml":wS,"../../content/traits/skill/fabrication.yaml":TS,"../../content/traits/skill/field-pharmacology.yaml":ES,"../../content/traits/skill/field-sampling.yaml":DS,"../../content/traits/skill/field-splinting.yaml":OS,"../../content/traits/skill/field-surgeon.yaml":kS,"../../content/traits/skill/fine-print.yaml":AS,"../../content/traits/skill/first-contact-protocols.yaml":jS,"../../content/traits/skill/folk-remedies.yaml":MS,"../../content/traits/skill/footwork.yaml":NS,"../../content/traits/skill/forgery.yaml":PS,"../../content/traits/skill/freerunner.yaml":FS,"../../content/traits/skill/gate-operation.yaml":IS,"../../content/traits/skill/ghost-in-the-machine.yaml":LS,"../../content/traits/skill/gladiator.yaml":RS,"../../content/traits/skill/hacking.yaml":zS,"../../content/traits/skill/haggler.yaml":BS,"../../content/traits/skill/handler.yaml":VS,"../../content/traits/skill/hardware-engineering.yaml":HS,"../../content/traits/skill/hazard-assessment.yaml":US,"../../content/traits/skill/heavy-machinery.yaml":WS,"../../content/traits/skill/herb-gathering.yaml":GS,"../../content/traits/skill/holy-conviction.yaml":KS,"../../content/traits/skill/hull-cutting.yaml":qS,"../../content/traits/skill/incantation.yaml":JS,"../../content/traits/skill/inspiring-speech.yaml":YS,"../../content/traits/skill/interpreter.yaml":XS,"../../content/traits/skill/interrogation.yaml":ZS,"../../content/traits/skill/intimidation.yaml":QS,"../../content/traits/skill/intrusion-countermeasures.yaml":$S,"../../content/traits/skill/inventor.yaml":eC,"../../content/traits/skill/investigation.yaml":tC,"../../content/traits/skill/jumper.yaml":nC,"../../content/traits/skill/kata-discipline.yaml":rC,"../../content/traits/skill/knowledge-sponge.yaml":iC,"../../content/traits/skill/lab-technique.yaml":aC,"../../content/traits/skill/last-rites.yaml":oC,"../../content/traits/skill/lecturing.yaml":sC,"../../content/traits/skill/legal-advocacy.yaml":cC,"../../content/traits/skill/linguist.yaml":lC,"../../content/traits/skill/lockpicking.yaml":uC,"../../content/traits/skill/long-distance-runner.yaml":dC,"../../content/traits/skill/loophole-finder.yaml":fC,"../../content/traits/skill/market-sense.yaml":pC,"../../content/traits/skill/martial-artist.yaml":mC,"../../content/traits/skill/master-artificer.yaml":hC,"../../content/traits/skill/master-negotiator.yaml":gC,"../../content/traits/skill/master-salvager.yaml":_C,"../../content/traits/skill/mediator.yaml":vC,"../../content/traits/skill/medical-aid.yaml":yC,"../../content/traits/skill/medium.yaml":bC,"../../content/traits/skill/mental-fortitude.yaml":xC,"../../content/traits/skill/military-drill.yaml":SC,"../../content/traits/skill/mining.yaml":CC,"../../content/traits/skill/mnemonist.yaml":wC,"../../content/traits/skill/monster-handling.yaml":TC,"../../content/traits/skill/monster-hunter.yaml":EC,"../../content/traits/skill/morale-officer.yaml":DC,"../../content/traits/skill/negotiator.yaml":OC,"../../content/traits/skill/network-engineering.yaml":kC,"../../content/traits/skill/omen-reading.yaml":AC,"../../content/traits/skill/parasapient-field-medicine.yaml":jC,"../../content/traits/skill/peacemaker.yaml":MC,"../../content/traits/skill/peak-conditioning.yaml":NC,"../../content/traits/skill/performer-acrobatics.yaml":PC,"../../content/traits/skill/performer-music.yaml":FC,"../../content/traits/skill/pilot-airplane.yaml":IC,"../../content/traits/skill/pilot-airship.yaml":LC,"../../content/traits/skill/pilot-boat.yaml":RC,"../../content/traits/skill/pilot-drone.yaml":zC,"../../content/traits/skill/pilot-fighter.yaml":BC,"../../content/traits/skill/pilot-freighter.yaml":VC,"../../content/traits/skill/pilot-ground-vehicle.yaml":HC,"../../content/traits/skill/pilot-gunship.yaml":UC,"../../content/traits/skill/pilot-helicopter.yaml":WC,"../../content/traits/skill/pilot-sailing-ship.yaml":GC,"../../content/traits/skill/pilot-shuttle.yaml":KC,"../../content/traits/skill/pilot-truck.yaml":qC,"../../content/traits/skill/planar-acclimation.yaml":JC,"../../content/traits/skill/planar-surveying.yaml":YC,"../../content/traits/skill/poker-face.yaml":XC,"../../content/traits/skill/polymath.yaml":ZC,"../../content/traits/skill/possession-resistance.yaml":QC,"../../content/traits/skill/potion-identification.yaml":$C,"../../content/traits/skill/procurement.yaml":ew,"../../content/traits/skill/programming.yaml":tw,"../../content/traits/skill/prototyping.yaml":nw,"../../content/traits/skill/quartermaster.yaml":rw,"../../content/traits/skill/read-the-room.yaml":iw,"../../content/traits/skill/reagent-preparation.yaml":aw,"../../content/traits/skill/relic-handling.yaml":ow,"../../content/traits/skill/research.yaml":sw,"../../content/traits/skill/resist-interrogation.yaml":cw,"../../content/traits/skill/resuscitation.yaml":lw,"../../content/traits/skill/rider-basic-animals.yaml":uw,"../../content/traits/skill/rites-and-ceremonies.yaml":dw,"../../content/traits/skill/rune-carving.yaml":fw,"../../content/traits/skill/salvage.yaml":pw,"../../content/traits/skill/schemer.yaml":mw,"../../content/traits/skill/scientific-method.yaml":hw,"../../content/traits/skill/scrap-appraisal.yaml":gw,"../../content/traits/skill/sculpted.yaml":_w,"../../content/traits/skill/sense-the-unseen.yaml":vw,"../../content/traits/skill/shaking-a-tail.yaml":yw,"../../content/traits/skill/shoring.yaml":bw,"../../content/traits/skill/simple-cooking.yaml":xw,"../../content/traits/skill/simple-potion-mixing.yaml":Sw,"../../content/traits/skill/slayer.yaml":Cw,"../../content/traits/skill/sleight-of-hand.yaml":ww,"../../content/traits/skill/smooth-talker.yaml":Tw,"../../content/traits/skill/social-engineering.yaml":Ew,"../../content/traits/skill/specimen-handling.yaml":Dw,"../../content/traits/skill/spirit-warding.yaml":Ow,"../../content/traits/skill/spiritual-counsel.yaml":kw,"../../content/traits/skill/sprinter.yaml":Aw,"../../content/traits/skill/spymaster.yaml":jw,"../../content/traits/skill/starship-engineering.yaml":Mw,"../../content/traits/skill/streetwise.yaml":Nw,"../../content/traits/skill/surgery.yaml":Pw,"../../content/traits/skill/surveillance.yaml":Fw,"../../content/traits/skill/survivalist.yaml":Iw,"../../content/traits/skill/suturing.yaml":Lw,"../../content/traits/skill/swimmer.yaml":Rw,"../../content/traits/skill/systems-administration.yaml":zw,"../../content/traits/skill/talent-spotter.yaml":Bw,"../../content/traits/skill/teaching.yaml":Vw,"../../content/traits/skill/teamster.yaml":Hw,"../../content/traits/skill/textual-criticism.yaml":Uw,"../../content/traits/skill/tinkerer.yaml":Ww,"../../content/traits/skill/tracker.yaml":Gw,"../../content/traits/skill/trail-runner.yaml":Kw,"../../content/traits/skill/trauma-care.yaml":qw,"../../content/traits/skill/triage.yaml":Jw,"../../content/traits/skill/vigilance.yaml":Yw,"../../content/traits/skill/weightlifter.yaml":Xw,"../../content/traits/skill/wielder-bow.yaml":Zw,"../../content/traits/skill/wielder-crossbow.yaml":Qw,"../../content/traits/skill/wielder-dagger.yaml":$w,"../../content/traits/skill/wielder-flamethrower.yaml":eT,"../../content/traits/skill/wielder-greatsword.yaml":tT,"../../content/traits/skill/wielder-grenade.yaml":nT,"../../content/traits/skill/wielder-longsword.yaml":rT,"../../content/traits/skill/wielder-mace.yaml":iT,"../../content/traits/skill/wielder-machine-gun.yaml":aT,"../../content/traits/skill/wielder-missile-launcher.yaml":oT,"../../content/traits/skill/wielder-mortar.yaml":sT,"../../content/traits/skill/wielder-musket.yaml":cT,"../../content/traits/skill/wielder-pistol.yaml":lT,"../../content/traits/skill/wielder-polearm.yaml":uT,"../../content/traits/skill/wielder-rifle.yaml":dT,"../../content/traits/skill/wielder-shortsword.yaml":fT,"../../content/traits/skill/wielder-shotgun.yaml":pT,"../../content/traits/skill/wielder-siege-engine.yaml":mT,"../../content/traits/skill/wielder-sling.yaml":hT,"../../content/traits/skill/wielder-sniper-rifle.yaml":gT,"../../content/traits/skill/wielder-spear.yaml":_T,"../../content/traits/skill/wielder-staff.yaml":vT,"../../content/traits/skill/wielder-throwing-weapon.yaml":yT,"../../content/traits/skill/wielder-war-axe.yaml":bT,"../../content/traits/skill/wrangler.yaml":xT,"../../content/traits/skill/xenobiology-fieldwork.yaml":ST,"../../content/traits/skill/zero-g-maneuvering.yaml":CT})).map(([e,t])=>({path:e.slice(14),text:t}))),vk=new Map(gk.traits.map(e=>[e.id,e])),yk=new Map(gk.packages.map(e=>[e.id,e])),bk=new Map(gk.kinds.map(e=>[e.id,e])),xk=new Map(gk.items.map(e=>[e.id,e])),Sk=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],Ck=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],wk=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),Tk=`(\\d{1,2}|${wk(Sk)})`,Ek=`(\\d{1,2})(?:st|nd|rd|th)|(${wk(Ck)})`,Dk=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${Tk}\\b`,`i`),Ok=RegExp(`\\b(?:${Ek})[\\s-]+(?:level|lvl)\\b`,`i`);function kk(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function Ak(e){let t=Dk.exec(e);if(t)return kk(t[1],Sk);let n=Ok.exec(e);if(n)return kk(n[1],Ck)??kk(n[2],Ck)}var Z=n();async function jk(e){if(!e.type.startsWith(`image/`))throw Error(`${e.name} isn't an image.`);let t;try{t=await createImageBitmap(e)}catch{throw Error(`Couldn't read ${e.name}. Try a PNG, JPEG or WebP.`)}let n=Math.min(1,512/Math.max(t.width,t.height)),r=document.createElement(`canvas`);r.width=Math.max(1,Math.round(t.width*n)),r.height=Math.max(1,Math.round(t.height*n)),r.getContext(`2d`).drawImage(t,0,0,r.width,r.height),t.close();let i=r.toDataURL(`image/webp`,.82);if(i.startsWith(`data:image/webp`)||(i=r.toDataURL(`image/jpeg`,.85)),i.length>15e5)throw Error(`${e.name} is still too big after shrinking it.`);return i}var Mk=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function Nk(e){let t=e.match(/^([\s\S]*?)\s*(?:that has|that possesses|with) the following profile:\s*((?:\([^)]*\)[\s,]*)+)\.?\s*([\s\S]*)$/i);if(!t)return;let n={before:`${t[1].trim()}:`,after:t[3].trim(),damage:[],other:[]};for(let[,e]of t[2].matchAll(/\(([^)]*)\)/g)){let t=e.trim(),r;if(/^(ranged|melee)(, thrown)?$/i.test(t))n.attackType=t[0].toUpperCase()+t.slice(1).toLowerCase();else if(r=t.match(/^max range:?\s*(.+)$/i))n.maxRange=/\d$/.test(r[1])?`${r[1]} m`:r[1];else if(r=t.match(/^attack stat:\s*(.+)$/i))n.attackStat=r[1][0].toUpperCase()+r[1].slice(1);else if(r=t.match(/^area of effect:?\s*(\d+(?:\.\d+)?)\s*(m|meters?)(\s+per rank)?$/i))n.areaOfEffect={amount:Number(r[1]),unit:`m`,perRank:!!r[3]};else{let e=t.split(/\s*,\s*/).map(e=>{let t=e.match(/^(\d+)\s+(.+?)(\s+per rank)?$/i),n=t&&Mk(t[2]);return t&&n?{type:n,amount:Number(t[1]),perRank:!!t[3]}:void 0});e.every(e=>e)?n.damage.push(...e):n.other.push(t)}}return n}var Pk=e((e=>{var t=Symbol.for(`react.transitional.element`),n=Symbol.for(`react.fragment`);function r(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.Fragment=n,e.jsx=r,e.jsxs=r})),Fk=e(((e,t)=>{t.exports=Pk()})),Q=Fk(),Ik=Object.keys(V),Lk=Ik.filter(e=>V[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),Rk=e=>vk.get(e)?.name??e,zk=e=>`region-${e===`isekai`?`dreft`:`systems`}`,Bk=e=>zk(vk.get(e)?.plane),Vk=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,Hk={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function Uk({plane:e}){let t=e?Hk[e]:void 0;return t?(0,Q.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var Wk=e=>e.package===void 0?Rk(e.trait??``):yk.get(e.package)?.name??e.package;function Gk(e){return e.kind?bk.get(e.kind)?.stats:void 0}function Kk({title:e,children:t}){return(0,Q.jsxs)(`header`,{className:`step-head`,children:[(0,Q.jsx)(`h2`,{children:e}),t&&(0,Q.jsx)(`p`,{className:`lede`,children:t})]})}function qk(e){return(0,Q.jsx)(`div`,{role:`radio`,"aria-checked":e.selected,"aria-label":e.label,tabIndex:0,className:`card${e.className?` ${e.className}`:``}${e.selected?` selected`:``}`,onClick:e.onSelect,onKeyDown:t=>{(t.key===`Enter`||t.key===` `)&&(t.preventDefault(),e.onSelect())},children:e.children})}var Jk=3e3;function Yk({children:e,fades:t,bad:n,onDismiss:r}){let[i,a]=(0,Z.useState)(!1),o=(0,Z.useRef)(r);return o.current=r,(0,Z.useEffect)(()=>{if(a(!1),!t)return;let e=setTimeout(()=>a(!0),Jk),n=setTimeout(()=>o.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,Q.jsxs)(`div`,{className:`notice${n?` bad`:t?` is-success`:``}${i?` is-leaving`:``}`,role:`status`,children:[e,(0,Q.jsx)(`button`,{className:`link`,onClick:r,"aria-label":`Dismiss`,children:`✕`})]})}function Xk({label:e,onClose:t,children:n,className:r=``}){let i=(0,Z.useRef)(null),a=(0,Z.useRef)(t);return a.current=t,(0,Z.useEffect)(()=>{let e=document.activeElement;i.current?.focus(),document.documentElement.classList.add(`lore-modal-open`);let t=e=>{e.key===`Escape`&&a.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`lore-modal-open`),e?.focus()}},[]),(0,Q.jsx)(`div`,{className:`lore-modal is-open ${r}`,role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,Q.jsxs)(`div`,{className:`lore-modal-panel`,children:[(0,Q.jsx)(`button`,{ref:i,type:`button`,className:`lore-modal-close`,"aria-label":`Close`,onClick:t,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,Q.jsx)(`div`,{className:`lore-modal-scroll`,children:n})]})})}function Zk({text:e}){let t=e.split(`
 `).map(e=>e.trim()).filter(Boolean);if(!t.some(e=>e.startsWith(`- `)))return(0,Q.jsx)(`p`,{className:`effect`,children:e});let n=[];for(let e of t)e.startsWith(`- `)?Array.isArray(n.at(-1))?n.at(-1).push(e.slice(2)):n.push([e.slice(2)]):n.push(e);return(0,Q.jsx)(`div`,{className:`effect`,children:n.map((e,t)=>Array.isArray(e)?(0,Q.jsx)(`ul`,{children:e.map((e,t)=>(0,Q.jsx)(`li`,{children:e},t))},t):(0,Q.jsx)(`p`,{children:e},t))})}function Qk({action:e,rank:t}){if(!e)return null;let n=e.indexOf(`: `),r=n>0?e.slice(0,n):void 0,i=n>0?e.slice(n+2):e,a=Nk(i);if(!a)return(0,Q.jsxs)(`p`,{className:`effect trait-action`,children:[r&&(0,Q.jsxs)(`strong`,{children:[r,`:`]}),` `,i]});let o=(e,n)=>n&&t?e*t:e,s=!t&&(a.damage.some(e=>e.perRank)||a.areaOfEffect?.perRank),c=/ranged|thrown/i.test(a.attackType??``);return(0,Q.jsxs)(`div`,{className:`effect trait-action`,children:[(0,Q.jsxs)(`p`,{children:[r&&(0,Q.jsxs)(`strong`,{children:[r,`:`]}),` `,a.before]}),(0,Q.jsxs)(`div`,{className:`tools-item-stats trait-action-stats`,children:[a.damage.length>0&&(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:c?`Ranged damage`:`Melee damage`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(mA,{name:c?`crosshairs`:`sword`,label:c?`Ranged damage`:`Melee damage`})}),a.damage.map(e=>(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[(0,Q.jsx)(mA,{name:e.type===`Acidic/Corrosive`?`acidic`:e.type.toLowerCase(),label:e.type}),o(e.amount,e.perRank)]},e.type))]}),a.maxRange&&(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Max Range`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(mA,{name:`range`,label:`Max Range`})}),(0,Q.jsx)(`span`,{className:`tools-item-stat-value`,children:a.maxRange})]}),a.areaOfEffect&&(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Area of Effect`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(mA,{name:`burst`,label:`Area of Effect`})}),(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[o(a.areaOfEffect.amount,a.areaOfEffect.perRank),` `,a.areaOfEffect.unit]})]}),a.attackType&&(0,Q.jsxs)($k,{children:[a.attackType,` Attack`]}),a.attackStat&&(0,Q.jsx)($k,{children:a.attackStat}),a.other.map(e=>(0,Q.jsx)($k,{children:e},e)),s&&(0,Q.jsx)(`span`,{className:`muted small`,children:`Damage and area per Rank`})]}),a.after&&(0,Q.jsx)(`p`,{children:a.after})]})}function $k(e){return(0,Q.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}var eA=20;function tA(e){let t=(0,Z.useRef)({value:e,from:e});return t.current.value!==e&&(t.current={value:e,from:t.current.value}),t.current.from}function nA({bonus:e,value:t,max:n}){let r=tA(t);return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:eA},(i,a)=>{let o=a+1,s=o<=t?o>n?`over`:o<=e?`default`:`filled`:o<=n?`empty`:`unavailable`,c=s===`filled`&&o>r?` is-new`:``;return(0,Q.jsx)(`span`,{className:`stat ${o%2?`dot`:`square`} ${s}${c}`},o)})})}function rA({bonus:e=0,value:t}){let n=tA(t);return(0,Q.jsx)(`div`,{className:`stat-line`,"aria-hidden":`true`,children:Array.from({length:eA},(r,i)=>(0,Q.jsx)(`span`,{className:`stat diamond ${i<e?`default`:i<t?`filled${i>=n?` is-new`:``}`:`empty`}`},i))})}function iA({stats:e}){return(0,Q.jsx)(`div`,{className:`stat-ranges`,children:Lk.map(t=>(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),V[t].map(t=>(0,Q.jsxs)(`div`,{className:`stat-range`,children:[(0,Q.jsx)(`span`,{children:$(t)}),(0,Q.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,Q.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function aA({portrait:e,name:t,onChange:n,className:r=``}){let i=(0,Z.useRef)(null),[a,o]=(0,Z.useState)(),[s,c]=(0,Z.useState)(!1),[l,u]=(0,Z.useState)(!1),d=t?`Portrait of ${t}`:`Character portrait`;if(!n)return e?(0,Q.jsx)(`div`,{className:`portrait ${r}`,children:(0,Q.jsx)(`img`,{src:e,alt:d})}):null;let f=()=>{u(!1),o(void 0)},p=async e=>{if(e){c(!0),o(void 0);try{n(await jk(e)),u(!1)}catch(e){o(e instanceof Error?e.message:String(e))}finally{c(!1)}}},m=()=>i.current?.click();return(0,Q.jsxs)(`div`,{className:`portrait-field ${r}`,children:[(0,Q.jsx)(`button`,{type:`button`,className:`portrait${e?` portrait-filled`:` portrait-empty`}`,onClick:()=>e?u(!0):m(),disabled:s,"aria-label":e?`Edit the portrait`:`Add a portrait`,children:e?(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`img`,{src:e,alt:``}),(0,Q.jsx)(`span`,{className:`portrait-edit`,"aria-hidden":`true`,children:(0,Q.jsx)(`span`,{className:`pen-icon`})})]}):(0,Q.jsxs)(`span`,{className:`portrait-prompt`,children:[(0,Q.jsx)(mA,{name:`upload`}),s?`Shrinking…`:`Add a portrait`]})}),(0,Q.jsx)(`input`,{ref:i,type:`file`,accept:`image/png,image/jpeg,image/webp,image/gif,image/avif`,hidden:!0,onChange:e=>{p(e.target.files?.[0]),e.target.value=``}}),a&&!l&&(0,Q.jsx)(`p`,{className:`portrait-error`,children:a}),l&&e&&(0,Q.jsxs)(Xk,{label:`Portrait`,onClose:f,className:`portrait-popup`,children:[(0,Q.jsx)(`h3`,{className:`lore-modal-title`,children:`Portrait`}),(0,Q.jsx)(`img`,{className:`portrait-large`,src:e,alt:d}),a&&(0,Q.jsx)(`p`,{className:`portrait-error`,children:a}),(0,Q.jsxs)(`div`,{className:`portrait-actions`,children:[(0,Q.jsxs)(`button`,{type:`button`,className:`primary`,onClick:m,disabled:s,children:[(0,Q.jsx)(mA,{name:`upload`}),s?`Shrinking…`:`Replace image`]}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>{n(void 0),f()},disabled:s,children:`Remove`})]})]})]})}function oA({description:e,onChange:t}){return t?(0,Q.jsx)(`div`,{className:`sheet-description`,children:(0,Q.jsx)(`textarea`,{"aria-label":`Description`,value:e??``,maxLength:4e3,placeholder:`Who they are, how they look, what they want.`,onChange:e=>t(e.target.value||void 0)})}):e?(0,Q.jsx)(`div`,{className:`sheet-description`,children:(0,Q.jsx)(`p`,{children:e})}):null}function sA({looks:e,onChange:t,disabled:n,fieldClass:r,inputClass:i}){let a=n=>{let r=Number(n);t({...e,age:n===``||!Number.isFinite(r)?void 0:Math.min(Pl,Math.max(0,Math.floor(r)))})},o=n=>{let r=n===`unlisted`?void 0:n;t({...e,gender:r,customGender:r===`custom`?e.customGender:void 0})};return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`label`,{className:`${r} age-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,Q.jsx)(`input`,{className:i,type:`number`,inputMode:`numeric`,min:0,max:Pl,step:1,value:e.age??``,placeholder:`—`,onChange:e=>a(e.target.value),disabled:n})]}),(0,Q.jsxs)(`label`,{className:`${r} gender-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,Q.jsx)(`select`,{className:i,value:e.gender??`unlisted`,onChange:e=>o(e.target.value),disabled:n,children:xl.map(e=>(0,Q.jsx)(`option`,{value:e,children:$(e)},e))})]}),e.gender===`custom`&&(0,Q.jsxs)(`label`,{className:`${r} custom-gender-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Custom Gender`}),(0,Q.jsx)(`input`,{className:i,value:e.customGender??``,maxLength:40,placeholder:`In your own words`,onChange:n=>t({...e,customGender:n.target.value||void 0}),disabled:n})]}),(0,Q.jsxs)(`label`,{className:`${r} height-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Height`}),(0,Q.jsx)(`input`,{className:i,value:e.height??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,height:n.target.value||void 0}),disabled:n})]}),(0,Q.jsxs)(`label`,{className:`${r} weight-field`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Weight`}),(0,Q.jsx)(`input`,{className:i,value:e.weight??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,weight:n.target.value||void 0}),disabled:n})]})]})}function cA({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,Z.useState)(!1),[o,s]=(0,Z.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,Q.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,Q.jsx)(n,{children:i?(0,Q.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,Q.jsx)(`button`,{type:`button`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var lA={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function uA({to:e}){return(0,Q.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:lA[e]})})}var dA={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function fA({is:e}){return(0,Q.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:dA[e]})})}var pA={knowledge:{viewBox:`0 0 640 512`,d:`M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z`},language:{viewBox:`0 0 640 512`,d:`M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z`},download:{viewBox:`0 0 512 512`,d:`M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z`},switch:{viewBox:`0 0 512 512`,d:`M464 16c-17.67 0-32 14.31-32 32v74.09C392.1 66.52 327.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.89 5.5 34.88-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c50.5 0 96.26 24.55 124.4 64H336c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32V48C496 30.31 481.7 16 464 16zM441.8 289.6c-16.92-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-50.5 0-96.25-24.55-124.4-64H176c17.67 0 32-14.31 32-32s-14.33-32-32-32h-128c-17.67 0-32 14.31-32 32v144c0 17.69 14.33 32 32 32s32-14.31 32-32v-74.09C119.9 445.5 184.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z`},upload:{viewBox:`0 0 512 512`,d:`M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z`},print:{viewBox:`0 0 512 512`,d:`M448 192H64C28.65 192 0 220.7 0 256v96c0 17.67 14.33 32 32 32h32v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h32c17.67 0 32-14.33 32-32V256C512 220.7 483.3 192 448 192zM384 448H128v-96h256V448zM432 296c-13.25 0-24-10.75-24-24c0-13.27 10.75-24 24-24s24 10.73 24 24C456 285.3 445.3 296 432 296zM128 64h229.5L384 90.51V160h64V77.25c0-8.484-3.375-16.62-9.375-22.62l-45.25-45.25C387.4 3.375 379.2 0 370.8 0H96C78.34 0 64 14.33 64 32v128h64V64z`},plus:{viewBox:`0 0 448 512`,d:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`},restore:{viewBox:`0 0 512 512`,d:`M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z`},send:{viewBox:`0 0 512 512`,d:`M511.1 255.1c0 12.8-7.625 24.38-19.41 29.41L44.6 477.4c-4.062 1.75-8.344 2.594-12.59 2.594c-8.625 0-17.09-3.5-23.28-10.05c-9.219-9.766-11.34-24.25-5.344-36.27l73.66-147.3l242.1-30.37L77.03 225.6l-73.66-147.3C-2.623 66.3-.4982 51.81 8.72 42.05c9.25-9.766 23.56-12.75 35.87-7.453L492.6 226.6C504.4 231.6 511.1 243.2 511.1 255.1z`},blunt:{viewBox:`0 0 512 512`,d:`M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z`},slashing:{viewBox:`0 0 512 512`,d:`M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z`},piercing:{viewBox:`0 0 512 512`,d:`M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z`},heat:{viewBox:`0 0 512 512`,d:`M162.22 21.312c-183.876 106.68 51.994 227.35-10.19 332.47C116.95 413.083 38.11 325.45 43.75 227-6.035 353.376 30.21 443.745 95.22 492.75c1.386.34 17.577.498 41.186.562-28.478-16.9-32.06-75.355 32.813-103.25l15.78-7L182.062 400c-1.356 8.34-.318 13.95 1.188 16.937 1.507 2.987 3.106 3.544 5.844 4.094 5.475 1.1 16.963-2.395 26.28-14.624 18.636-24.457 29.117-80.228-26.874-167l-4.094-6.437-13.906-19.25 23.25 9.905 5.25 1.75c80.85 25.498 135.3 58.46 174.625 112.72 21.544-22.906 38.7-56.835 43.812-91.69l3.5-27.468 13.438 23.97c25.525 45.802 30.267 104.912 11.094 156.5-14.23 38.28-42.036 72.34-84 93.5 13.623-.01 24.05.032 25.25.124 154.76-34.77 139.345-244.952-14.19-394.093.012.726 0 1.46 0 2.188 78.964 185.87-136.465 189.104-119.25 11.47-41.686 100.463-132.86-2.147-91.06-91.283zM269.093 332.25c13.51 15.806 22.35 33.086 22.78 50.812.587 24.03-9.293 47.12-24.53 66.563-14.832 18.926-34.837 34.62-56.625 43.656 33.127-.065 64.926-.16 95.217-.25l-.062-.186c30.95-18.584 47.31-38.83 53.75-57.813 6.44-18.982 3.25-37.246-5.844-53.718-15.44-27.97-49.705-47.71-84.686-49.062z`},cold:{viewBox:`0 0 512 512`,d:`M238.406 26.844c-9.653.12-18.926 2.69-30.437 7.062l-157.282 57c-20.984 7.65-21.587 11.834-22.344 33.28L20.937 358.22c-1.207 27.514-.654 33.187 23.25 43.56l185.783 81.41c19.34 8.29 31.906 7.655 45.186 3.218l181.938-56.53c21.95-7.295 25.04-9.627 25.875-36.845l7.686-250.155c.662-17.37-5.667-24.695-18.78-29.625L271.062 34.375c-12.977-5.344-23.003-7.653-32.657-7.53zm.813 24.875c23.637-.053 45.564 8.434 87.874 24.874 95.545 37.123 131.71 53.8 69.687 77.937-74.002 28.802-128.175 45.115-172.28 25.814L113.47 131.75c-34.57-15.127-44.69-27.46 17.843-50.094 55.64-20.14 82.742-29.882 107.906-29.937zm44.718 43.75c-38.284.402-55.285 21.205-56.813 38.936-.873 10.132 2.95 19.6 12.406 26.25 9.456 6.65 25.355 10.56 48.97 5.938 35.817-7.01 61.536-15.056 77.5-22.844 7.982-3.894 13.464-7.737 16.5-10.844 3.036-3.107 3.453-4.942 3.438-6-.016-1.057-.44-2.675-3.313-5.406-2.873-2.73-8.03-6.04-15.22-9.156-14.378-6.233-36.757-11.877-65.717-15.72-6.355-.842-12.28-1.213-17.75-1.155zM59.25 134c10.372-.29 29.217 7.2 63.906 22.656 140.925 62.786 140.52 65.876 130.97 200.656-7.783 109.81-8.797 109.85-128.47 59.282-73.15-30.91-86.806-40.853-85.187-88.97l5.468-162.937c.674-20.034 1.557-30.358 13.312-30.687zm381.938 30.906c29.172-.384 29.1 28.075 26.75 105.25-4.118 135.132-9.05 140.184-120.375 173.72-70.42 21.21-81.49 25.614-78.97-12.032l11-164.156c3.217-48.034 7.588-51.508 94.813-83.907 31.323-11.633 52.534-18.686 66.78-18.874zm-20.438 40.688c-.332-.002-.674.015-1 .03-5.22.263-10.226 2.77-14.188 8.407-3.96 5.638-6.81 14.71-5.687 27.907 1.448 17.033-4.507 38.11-15.156 56.938-10.65 18.827-26.502 35.91-47.814 38.813-29.127 3.968-42.41 23.58-43.5 42.062-.545 9.24 2.108 18.03 7.688 24.594s14.088 11.335 27.187 12.03c41.146 2.185 71.336-10.766 91.595-39.155 20.26-28.39 30.396-73.76 25.875-136.595-1.876-26.076-14.708-34.977-25-35.03zm-246.25 8.844c-.644 0-1.218.063-1.72.187-2.003.494-3.685 1.53-5.655 4.813-1.913 3.186-3.688 8.618-4.406 16.343l-.064.657c-1.388 16.732-8.098 28.602-17.844 35.063-9.745 6.46-20.794 7.808-31.125 9.094-10.33 1.286-20.177 2.39-28.156 5.75-7.977 3.36-14.36 8.38-19.468 19.78-7.2 16.076-7.143 28.027-3.124 38.563 4.018 10.537 12.688 20.106 24.687 28.75 23.998 17.29 60.27 29.956 88.906 41.844 11.386 4.727 20.496 6.484 27.282 6.126 6.787-.358 11.278-2.423 15.375-6.562 8.195-8.28 14.057-27.692 15-57.344 2.024-63.623-18.84-110.284-38.656-130.875-8.668-9.008-16.52-12.193-21.03-12.188zm184.22 6.812c-.95-.003-1.927.035-2.97.094-35.464 1.99-48.477 12.867-52.5 24.062-4.023 11.196.826 27.07 10.844 39.78 11.488 14.58 20.59 15.736 30.437 12.283 9.848-3.455 20.542-14.108 27.376-26.908s9.512-27.397 7.188-36.28c-1.163-4.443-3.144-7.422-6.47-9.626-2.908-1.928-7.274-3.388-13.905-3.406z`},electrical:{viewBox:`0 0 512 512`,d:`M376 211H256V16L136 301h120v195z`},emp:{viewBox:`0 0 512 512`,d:`M133.844 19.97c-28.18.03-55.19 11.19-77.875 33.624-26.88 26.58-37.526 56.483-36.095 85.875 1.43 29.39 15.237 58.516 39 82.28 9.592 9.593 44.044 33.04 74.78 52.563 1.14.723 2.104 1.293 3.22 2l44.344-44.344c-22.65-18.013-45.176-36.208-53.72-44.75h-.03c-24.88-24.882-22.98-56.233-5.626-73.032 17.354-16.8 48.748-18.29 73.25 5.937 8.61 8.51 26.702 30.837 44.656 53.313l38.438-38.407c-.71-1.12-1.305-2.073-2.032-3.218-19.468-30.66-42.827-64.955-52.47-74.656C195.738 33.16 165.59 20.706 136.564 20c-.91-.022-1.81-.032-2.718-.03zm190.312 77.25-34.72 20.624c.836 1.31 1.673 2.633 2.502 3.937 19.683 31 36.406 59.032 36.406 59.032l3.75 6.25-5.156 5.157-46.313 46.31-7.47 7.47-6.5-8.344s-12.84-16.436-28.5-36.187l-28.843 28.843a9056.369 9056.369 0 0 0 36.22 28.437l8.374 6.47-7.5 7.5-52.344 52.374-5.156 5.156-6.25-3.75s-24.577-14.675-53.125-32.688l-19.78 48.22 36.375-14.344 15.156 81.718 28.126-55.28 60.406 63.25-15.718-86.126 51.875 6.28 2.624 1.345 4.03 47.344 77.595 11.092-12.095 52.375L403.47 492h86.624v-81.594l-50.375-29.22 10.092-41.31-96.718-3.032 14.094-44.313-42.157-29.967 2.345-21.094 52.344 17.06-31.126-69.75 42.72-22.53-65.44-20.063-1.718-48.968zm-35.78 54.03-36.907 36.906c11.742 14.79 19.468 24.643 23.405 29.688l33.656-33.656a2417.118 2417.118 0 0 0-20.155-32.938zm-92.407 92.406-42.876 42.875a2446.831 2446.831 0 0 0 32.937 20.158l39.72-39.75c-5.06-3.934-14.962-11.59-29.78-23.282z`},metaphysical:{viewBox:`0 0 512 512`,d:`M486 203.652H310.111L256 37.113l-54.111 166.539H26l142.22 103.623-54.462 167.612L256 371.24l142.242 103.646-54.473-167.612zm-85.995 28.008-65.335 47.596-15.46-47.596h80.795zM256 127.708l24.658 75.91H231.33zM111.995 231.66h80.795l-15.45 47.596zm55.097 169.713 24.932-76.743 40.194 29.29zm34.041-104.762 21.1-64.951h67.524l21.099 64.95-54.867 39.977zm143.731 104.762-65.082-47.454 40.194-29.29zm-37.983-264.359-10.424-32.092a183.269 183.269 0 0 1 114.322 81.21H376.43a155.293 155.293 0 0 0-69.55-49.118zM129 371.328l-10.413 32.049a182.425 182.425 0 0 1-43.918-142.581l26.684 19.435v2.847A153.804 153.804 0 0 0 129 371.284zm177.104 58.108 26.64 19.413a182.447 182.447 0 0 1-153.51 0l26.64-19.413a154.79 154.79 0 0 0 100.23 0zM135.569 186.133h-34.348a183.269 183.269 0 0 1 114.322-81.21l-10.424 32.091a155.293 155.293 0 0 0-69.55 49.119zm303.12 96.955a181.922 181.922 0 0 1-45.276 120.245L383 371.285a153.804 153.804 0 0 0 27.68-88.197v-2.846l26.683-19.446a183.685 183.685 0 0 1 1.325 22.292z`},death:{viewBox:`0 0 512 512`,d:`M296.625 25.406c-63.794.388-135.81 14.683-206.03 32.844-3.472 34.08 2.226 68.906 14.03 104.25C181.175 75.936 393.65 44.825 486.72 128 456.02 50.466 384.046 24.874 296.624 25.406zM65.655 61.438 27.906 71c5.643 78.022 28.546 132.393 60.44 174.47-16.54 10.348-40.693 19.673-68.782 26.843 5.664 6.597 14.25 16.18 30.53 18.53 24.846-4.33 39.912-14.982 53.75-26.593 76.24 85.145 190.22 118.955 253.126 224.22l49.436-.126C290.996 275.316 81.01 364.804 65.656 61.438z`},psychic:{viewBox:`0 0 512 512`,d:`M65.125 18.344C47.11 49.844 36.72 86.262 36.72 125.124c0 80.293 43.973 150.497 109.124 187.75.403-6.904.92-13.833 1.625-20.75-55.33-34.965-92.064-96.676-92.064-167 0-39.426 11.63-75.964 31.563-106.78H65.124zm69.03 0c-25.61 28.273-41.374 65.635-41.374 106.78 0 51.08 24.052 96.656 61.44 125.97l.06-.25c1.612-6.61 3.473-13.008 5.69-19.125-29.73-25.896-48.5-64.026-48.5-106.595 0-42.848 19.254-80.837 49.436-106.78h-26.75zm210.532 0c30.125 25.95 49.438 64.003 49.438 106.78 0 41.152-17.546 78.157-45.563 103.97 2.26 6.282 4.116 12.876 5.657 19.687 35.748-29.366 58.592-73.883 58.592-123.655 0-41.123-15.81-78.5-41.406-106.78h-26.72zm73.407 0c20.06 30.867 32.094 67.387 32.094 106.78 0 69.457-35.82 130.505-90 165.69.545 7.037.933 14.107 1.187 21.123 64.267-37.483 107.53-107.18 107.53-186.812 0-38.925-10.745-75.328-28.874-106.78h-21.936zm-165.313 2.28c-57.625 0-104.53 46.906-104.53 104.532 0 28.606 11.56 54.573 30.25 73.47 4.13-4.712 8.84-8.817 14.094-12.19-15.844-15.56-25.656-37.237-25.656-61.28 0-47.527 38.316-85.844 85.843-85.844 47.528 0 85.845 38.317 85.845 85.844 0 23.16-9.108 44.114-23.938 59.53 5.488 3.14 10.394 7.033 14.688 11.533 17.327-18.666 27.938-43.657 27.938-71.064 0-57.626-46.905-104.53-104.532-104.53zm-4.186 55.564c-21.622 2.8-40.97 27.91-40.97 60.28 0 17.846 6.173 33.653 15.282 44.595l10.188 12.218-15.656 2.94c-11.884 2.226-20.62 8.512-28.032 18.655-7.41 10.143-13.023 24.216-16.97 40.406-7.188 29.5-8.736 65.498-8.967 97.126h38.999l.655 8.656 9.906 132.5h83.69l8.75-132.437.592-8.72h37.125c-.02-32-.39-68.49-6.906-98.217-3.57-16.297-8.992-30.34-16.5-40.375-7.505-10.035-16.654-16.288-29.967-18.344L273.875 193l10.094-12.625c8.713-10.89 14.592-26.495 14.592-43.906 0-34.515-21.658-60.22-45.468-60.22-2.672 0-4.275-.092-4.5-.063z`},radiation:{viewBox:`0 0 512 512`,d:`M253.78 17.188c-130.728 0-236.905 106.177-236.905 236.906C16.875 384.824 123.052 491 253.78 491c130.73 0 236.907-106.18 236.907-236.906 0-130.73-106.177-236.906-236.906-236.906zm0 18.687c120.63 0 218.22 97.59 218.22 218.22 0 120.626-97.59 218.218-218.22 218.218-120.628 0-218.218-97.59-218.218-218.22s97.59-218.218 218.22-218.218zm101.19 46.313-76.41 132.875c15.916 9.635 25.177 26.33 26.125 43.78h148.407c1.644-70.01-33.49-138.867-98.125-176.656zm-205.126 2.468c-27.1 16.725-50.68 40.147-67.72 69.656-19.01 32.928-26.926 69.12-26 104.532H196a54.04 54.04 0 0 1 7.188-24.438c5.21-9.024 12.64-16 21.218-20.625L149.844 84.657zm100.594 141.156a36.723 36.723 0 0 0-2.594.094c-11.446.793-22.288 7.084-28.5 17.844-9.94 17.216-4.09 38.967 13.125 48.906 17.213 9.94 38.935 4.12 48.874-13.094 9.94-17.215 4.12-38.967-13.094-48.906-5.648-3.26-11.768-4.824-17.813-4.844zm28.218 82.375c-16.127 9.75-36.864 10.846-54.406 1.25l-68.03 117.22c29.454 16.785 61.044 25.177 92.75 26 34.567.898 68.72-7.786 99.124-24.032l-69.438-120.438z`},acidic:{viewBox:`0 0 512 512`,d:`M433.814 68.664c-2.74.05-5.495.423-8.242 1.152-8.47 2.25-15.3 7.512-20.44 14.49C292.905 120.865 186.494 154.58 75.276 190.4c-39.714 12.79-64.6 51.163-53.006 86.784 11.597 35.62 54.342 52.277 94.035 39.277l-.002.002c109.41-35.827 214.424-69.036 325.12-104.656.56.212 1.13.39 1.694.58-2.62 2.935-4.226 6.796-4.226 11.04 0 9.164 7.43 16.593 16.594 16.593 9.165 0 16.596-7.43 16.596-16.593 0-4.32-1.664-8.24-4.367-11.192 12.75-4.865 21.353-16.866 25.535-30.898 4.547-15.257 4.504-33.654-.584-52.48-5.088-18.828-14.327-34.77-25.94-45.712-8.712-8.206-19.263-13.79-30.175-14.43-.91-.052-1.822-.07-2.736-.054zm.497 18.68a17.2 17.2 0 0 1 1.377.035c5.567.358 11.818 3.34 18.22 9.37 8.535 8.04 16.44 21.165 20.716 36.986 3.622 13.4 4 26.397 2.012 36.852h-52.783c-3.517-6.207-6.512-13.352-8.622-21.158-4.276-15.822-4.046-31.094-.716-42.266 3.33-11.172 9.122-17.497 15.855-19.285a16.148 16.148 0 0 1 3.94-.536zm-38.414 17.043c-3.815 14.734-3.516 32.133 1.29 49.92a114.327 114.327 0 0 0 5.728 16.26h-151.22c-64.405 20.742-125.856 40.507-163.35 52.59-23.24 7.486-35.353 27.407-30.406 42.593 4.946 15.188 26.582 24.333 49.75 16.75 66.89-21.89 199.01-64.39 302.822-97.803 3.76 5.807 7.998 10.967 12.62 15.323.066.06.135.118.2.18-104.876 33.753-241.66 77.74-309.83 100.05-30.827 10.09-64.424-1.334-73.344-28.72-8.92-27.385 11.603-56.22 42.438-66.155 68.055-21.93 208.2-66.996 313.302-100.988zm59.58 180.205c-16.948 63.255-40.507 54.472-40.507 91.5 0 22.36 18.146 40.508 40.507 40.508 22.36 0 40.507-18.147 40.507-40.508 0-39.97-23.256-27.12-40.507-91.5z`},"person-running":{viewBox:`0 0 448 512`,d:`M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z`},shield:{viewBox:`0 0 512 512`,d:`M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z`},crosshairs:{viewBox:`0 0 512 512`,d:`M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z`},range:{viewBox:`2.57 -59.10 265.44 265.44`,d:`M171.56 3.16L187.05 7.34A12.12095 12.12095 0 0 1 180.72 30.75L165.24 26.56A12.12095 12.12095 0 0 1 171.56 3.16ZM92.10 9.38L107.22 4.04A12.12155 12.12155 0 0 1 115.30 26.90L100.18 32.24A12.12155 12.12155 0 0 1 92.10 9.38ZM2.93 129.46L6.80 113.89A12.12155 12.12155 0 0 1 30.32 119.74L26.45 135.31A12.12155 12.12155 0 0 1 2.93 129.46ZM31.99 59.53L41.61 46.70A12.12155 12.12155 0 0 1 61.01 61.24L51.39 74.08A12.12155 12.12155 0 0 1 31.99 59.53ZM207.93 56.74A30.0361 30.0361 0 1 0 268.01 56.74A30.0361 30.0361 0 1 0 207.93 56.74Z`},burst:{viewBox:`135.5 153 830 830`,d:`M282.5 982C284 981.4 289.1 977.7 293.9 973.7C298.6 969.7 308.4 961.5 315.5 955.5C322.6 949.6 330.1 943.3 332.1 941.6C336 938.2 336.5 937.8 350.2 926.3C377.5 903.6 390 892.8 391.9 890.4C396.5 884.6 396.5 881.4 392 858.5C390.5 851 389.1 843.5 387.7 836C385.2 822.1 380.8 816.6 372.3 816.6C369.6 816.7 365.5 817.6 363 818.7C360.5 819.9 349.5 824.5 338.5 829C312.5 839.7 312.5 839.7 306 859.1C303.3 867 296.1 888.1 290 906C268.3 969.6 267.8 971 268.5 973.9C268.8 975.5 270.3 977.9 271.8 979.2C275.9 983.1 278.2 983.6 282.5 982ZM478.8 947.4C482.2 945.5 486.2 940.2 487.5 936C487.9 934.6 489.3 931.2 490.5 928.5C491.8 925.8 500.5 904.8 510 882C519.4 859.2 528 838.6 529.1 836.3C530.1 834 531 831.9 531 831.5C531 831.2 532 828.8 533.1 826.2C538.2 814.9 539 813 539 812.5C539 812.1 539.9 810 540.9 807.7C542 805.4 546.1 795.6 550 786C559.2 763.7 559.3 763.5 563.8 760.5C569.2 756.9 575.6 756.3 581.2 758.8C583.7 759.9 599.4 770.4 616.1 782.2C632.8 794 663.1 815.3 683.5 829.6C703.9 844 736 866.6 754.9 879.9C773.8 893.2 791 905 793.1 906C804.7 912 818.3 903.4 818.3 890.3C818.3 887.3 817.8 883.9 817.2 882.7C815.1 878.1 813 873.2 813 872.6C813 872.3 812.1 870.1 811.1 867.7C805.8 856 726.9 663.5 726.4 661.1C725.5 656.6 727.8 650.2 731.9 646.1C735.4 642.6 739.1 641.2 809.1 618.1C923.1 580.3 924.3 579.9 928 578C940.2 571.7 940.7 553.7 928.9 547C925.6 545.2 917.6 543.4 890 538.4C885.3 537.5 877 536 871.5 535C866 533.9 857.5 532.4 852.5 531.5C847.5 530.6 841.5 529.5 839 529C834.6 528.1 823.7 526.1 811.5 523.9C808.2 523.3 803.5 522.5 801 522C798.5 521.5 792.5 520.4 787.5 519.5C782.5 518.6 776.5 517.5 774 517C771.5 516.5 765.5 515.4 760.5 514.5C734.9 509.9 730.6 508.3 727 502.5C722.2 494.6 723.4 488 732.5 474.9C736 469.7 742.7 459.9 747.4 453C752 446.1 762.7 430.4 771.2 418C779.7 405.6 791 389 796.5 381C843.3 312.3 840 317.5 840 312.5C840 306.5 837.5 300.6 833.7 297.7C829.3 294.4 822.8 292.9 818.2 294.2C814.2 295.2 813.6 295.5 798.5 302.5C793 305.1 785.8 308.5 782.5 310C770.4 315.6 761.4 319.8 756 322.3C753 323.7 747.1 326.4 743 328.3C738.9 330.2 731.5 333.7 726.5 336C653.3 370 636.1 378 633.7 378.5C628.7 379.8 622.5 378.2 618.1 374.3C613.7 370.6 612.4 368.3 611 361.5C609.9 355.9 605.5 334.7 602.5 320.5C601.1 313.9 598.9 303.1 597.5 296.5C596.2 289.9 594.1 280.2 593 275C591.9 269.8 589.9 260.1 588.5 253.5C587.1 246.9 585.2 237.4 584.1 232.5C583 227.6 581.4 219.9 580.5 215.5C577.1 198.8 573.2 194.5 561.4 194.5C548.9 194.5 549.6 193.5 516.5 262.5C513.6 268.6 504.6 287 496.5 303.5C488.4 320 480.7 335.8 479.5 338.6C474.2 349.9 463.6 354.9 454.7 350.4C451.2 348.6 435.4 338.5 412.7 323.7C404.9 318.5 390.2 308.9 380 302.3C363.3 291.5 336.3 273.9 306.5 254.5C300.4 250.6 286.4 241.4 275.2 234.2C207.4 190.1 210.5 191.8 202.2 194.1C195.9 195.9 190.3 201.7 189.4 207.6C188.4 214.6 189.5 217.7 198.7 233.1C203.4 241 207.8 248.4 208.4 249.5C210.1 252.6 274.6 360.4 280.5 370C300.3 402.4 323.1 441.5 324.1 444.9C326.4 452.5 322 461.8 314.6 465.1C312.2 466.1 285.2 471.1 249.5 477C215.9 482.5 187.3 487.6 185.7 488.2C179.3 490.7 174.1 500.5 175.5 507.8C176.2 511.7 179.6 517.2 182.1 518.9C183.1 519.5 195.7 529 210.2 540.2C224.7 551.3 247.5 568.9 261 579.2C289.4 601 290.6 602.1 293.2 607.8C296.9 615.9 294.8 620.3 274.5 647.5C270 653.5 262 664.6 256.7 672C251.4 679.4 241.2 693.6 234 703.5C226.8 713.4 215.1 729.6 208 739.5C200.8 749.4 188.9 765.8 181.5 776C148.5 821.3 148.4 821.5 149.4 828.5C150.2 833.8 152.9 838.1 157.6 841.6C160.8 844.1 162.2 844.5 166.9 844.3C170 844.2 174.3 843.3 176.5 842.4C178.7 841.5 181.4 840.4 182.5 840C190 837.1 198.8 833.7 200.5 832.9C201.6 832.4 222.1 824.4 246 815.1C269.9 805.8 290.6 797.8 292 797.2C293.4 796.7 298.8 794.5 304 792.5C309.2 790.4 314.9 788.2 316.5 787.5C318.1 786.8 337.3 779.3 359 770.9C393.5 757.4 399.2 755.5 404.1 755.5C408.7 755.6 410.4 756.1 413.4 758.3C419.5 763 420.1 764.3 423 780.5C423.5 783.2 424.6 789.3 425.5 794C426.4 798.7 427.5 804.8 428 807.5C428.5 810.2 430.1 818.8 431.5 826.5C434.8 844.6 435.4 847.6 438.6 865C440 873 441.6 881.5 442 884C443.2 890.3 445.9 905.5 447 911.5C450.1 928.5 451 933.2 451.9 936.8C455.1 948.6 468.2 953.7 478.8 947.4ZM945.7 745C951.2 743 953.7 735.3 950.2 731.1C949.3 729.9 941.5 723.9 932.9 717.7C924.3 711.6 910.1 701.4 901.4 695.1C892.6 688.8 881.5 680.6 876.5 677C871.5 673.3 861.9 666.4 855.1 661.6C839.1 650.4 839.9 650.5 815 659.7C791.7 668.3 789.2 670 788.3 678.5C787.9 681.9 788.6 684.3 792.4 692.4C794.9 697.8 797 702.4 797 702.5C797 702.7 799.6 708.4 802.9 715.2C811.8 734.1 812.8 734.7 842.5 737C849.6 737.5 860.5 738.4 866.5 739C872.5 739.5 885.6 740.6 895.5 741.5C905.4 742.3 919.6 743.5 927 744.1C934.4 744.7 940.7 745.3 940.9 745.6C941.5 746.2 942.4 746.1 945.7 745ZM665.1 305.5C667.5 304.6 670.9 303.3 672.5 302.6C674.1 301.8 678.4 299.9 682 298.3C685.6 296.7 692.8 293.4 698.2 291C708.8 286.3 712 284 714.2 279.5C716 275.9 716.5 273.6 724.5 238.5C725.2 235.2 726.7 228.4 727.8 223.5C735 192 740 169 740.5 165.5C741.3 159.9 738.4 155.5 733.1 154C726.3 152.2 726.7 151.9 702.5 177C655.6 225.6 643.2 238.6 641.2 241.5C637.3 246.9 636.9 251.2 639.1 261.4C640.1 266.4 642.2 276.1 643.6 283C646.8 298.7 648.3 301.8 654 304.8C659.2 307.4 659.5 307.4 665.1 305.5Z`},sword:{viewBox:`0 0 512 512`,d:`M110.1 227.6c-6.25-6.248-16.37-6.248-22.62 0l-18.75 18.75c-5.498 5.373-6.249 13.87-1.999 20.25l53.37 79.99l-53.5 53.5l-29.25-14.62c-5.375-2.748-11.75-1.623-16 2.625l-17.25 17.25c-5.5 5.375-5.5 14.25 0 19.62l82.87 82.87c5.375 5.5 14.25 5.5 19.62 0l17.25-17.25c4.25-4.25 5.375-10.62 2.625-16l-14.62-29.25l53.5-53.5l79.99 53.41c6.375 4.25 14.87 3.5 20.25-2l18.75-18.79c6.25-6.25 6.25-16.37 0-22.62L110.1 227.6zM493.7 .1497l-93.74 15.88L171.9 244.1l95.99 95.99l228.1-228.1l15.87-93.75C513.3 7.781 504.2-1.35 493.7 .1497z`},physical:{viewBox:`0 0 512 512`,d:`M165.906 18.688C15.593 59.28-42.187 198.55 92.72 245.375h-1.095c.635.086 1.274.186 1.906.28 8.985 3.077 18.83 5.733 29.532 7.94C173.36 273.35 209.74 321.22 212.69 368c-33.514 23.096-59.47 62.844-59.47 62.844l26.28 38.686L138.28 493h81.97c-40.425-40.435-11.76-85.906 36.125-85.906 48.54 0 73.945 48.112 36.156 85.906h81.126l-40.375-23.47 26.283-38.686s-26.376-40.4-60.282-63.406c3.204-46.602 39.5-94.167 89.595-113.844 10.706-2.207 20.546-4.86 29.53-7.938.633-.095 1.273-.195 1.908-.28h-1.125c134.927-46.82 77.163-186.094-73.157-226.69-40.722 39.37 6.54 101.683 43.626 56.877 36.9 69.08 8.603 127.587-72.28 83.406-11.88 24.492-34.213 41.374-60.688 41.374-26.703 0-49.168-17.167-60.97-42-81.774 45.38-110.512-13.372-73.437-82.78 37.09 44.805 84.35-17.508 43.626-56.876zm90.79 35.92c-27.388 0-51.33 27.556-51.33 63.61 0 36.056 23.942 62.995 51.33 62.995 27.387 0 51.327-26.94 51.327-62.994 0-36.058-23.94-63.61-51.328-63.61z`},social:{viewBox:`230 70 1090 1090`,d:`M372 1107H750Q778 1107 781 1079L796 967L912 980Q982 986 1001 888Q1003 870 985 864Q935 850 910 808Q906 795 922 796L985 796Q1005 794 1004 774L999 706H1045Q1097 701 1094 650Q1092 638 1086 627L1018 495Q1004 465 999 430Q970 255 860 175Q760 106 620 112Q440 116 330 220Q235 315 238 480Q240 640 340 750Q378 794 372 852L343 1070Q341 1104 372 1107ZM868 431A52 52 0 1 1 868 535A52 52 0 1 1 868 431ZM1162.8 698.6A138 138 0 0 1 1162.8 919.4A28 28 0 0 1 1129.2 874.6A82 82 0 0 0 1129.2 743.4A28 28 0 0 1 1162.8 698.6ZM1233.2 633.8A233 233 0 0 1 1233.2 987.2A28 28 0 0 1 1196.8 944.8A177 177 0 0 0 1196.8 676.2A28 28 0 0 1 1233.2 633.8Z`},mental:{viewBox:`64 64 512 512`,d:`M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z`},magic:{viewBox:`0 0 576 512`,d:`M248.8 4.994C249.9 1.99 252.8 .0001 256 .0001C259.2 .0001 262.1 1.99 263.2 4.994L277.3 42.67L315 56.79C318 57.92 320 60.79 320 64C320 67.21 318 70.08 315 71.21L277.3 85.33L263.2 123C262.1 126 259.2 128 256 128C252.8 128 249.9 126 248.8 123L234.7 85.33L196.1 71.21C193.1 70.08 192 67.21 192 64C192 60.79 193.1 57.92 196.1 56.79L234.7 42.67L248.8 4.994zM427.4 14.06C446.2-4.686 476.6-4.686 495.3 14.06L529.9 48.64C548.6 67.38 548.6 97.78 529.9 116.5L148.5 497.9C129.8 516.6 99.38 516.6 80.64 497.9L46.06 463.3C27.31 444.6 27.31 414.2 46.06 395.4L427.4 14.06zM461.4 59.31L356.3 164.3L379.6 187.6L484.6 82.58L461.4 59.31zM7.491 117.2L64 96L85.19 39.49C86.88 34.98 91.19 32 96 32C100.8 32 105.1 34.98 106.8 39.49L128 96L184.5 117.2C189 118.9 192 123.2 192 128C192 132.8 189 137.1 184.5 138.8L128 160L106.8 216.5C105.1 221 100.8 224 96 224C91.19 224 86.88 221 85.19 216.5L64 160L7.491 138.8C2.985 137.1 0 132.8 0 128C0 123.2 2.985 118.9 7.491 117.2zM359.5 373.2L416 352L437.2 295.5C438.9 290.1 443.2 288 448 288C452.8 288 457.1 290.1 458.8 295.5L480 352L536.5 373.2C541 374.9 544 379.2 544 384C544 388.8 541 393.1 536.5 394.8L480 416L458.8 472.5C457.1 477 452.8 480 448 480C443.2 480 438.9 477 437.2 472.5L416 416L359.5 394.8C354.1 393.1 352 388.8 352 384C352 379.2 354.1 374.9 359.5 373.2z`}};function mA({name:e,label:t,className:n=``}){let{viewBox:r,d:i}=pA[e];return(0,Q.jsxs)(`svg`,{className:`icon icon-${e} ${n}`.trim(),xmlns:`http://www.w3.org/2000/svg`,viewBox:r,role:t?`img`:void 0,"aria-label":t,"aria-hidden":!t||void 0,children:[t&&(0,Q.jsx)(`title`,{children:t}),(0,Q.jsx)(`path`,{d:i})]})}function hA({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,Q.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:e}),(0,Q.jsxs)(`div`,{className:`stepper`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower Level`,children:(0,Q.jsx)(fA,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise Level`,children:(0,Q.jsx)(fA,{is:`plus`})})]})]})}var gA=[`origin`,`profession`,`past`],_A={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function vA(e){let t=e.map(e=>Rk(e.trait)+(e.rank?` ${e.rank}`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function yA({pkg:e}){return(0,Q.jsxs)(`div`,{className:`grants`,children:[(e.bonusPoints.length>0||Object.keys(e.coreBonus).length>0)&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Bonus`}),e.bonusPoints.map(e=>(0,Q.jsxs)($k,{tone:`accent`,children:[`+`,e.count,` `,$(e.group),` focus `,e.count===1?`point`:`points`]},e.group)),Object.entries(e.coreBonus).map(([e,t])=>(0,Q.jsxs)($k,{tone:`accent`,children:[`+`,t,` `,$(e)]},e))]}),e.grants.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),vA(e.grants).map(e=>(0,Q.jsx)($k,{tone:`accent`,children:e},e))]}),e.choices.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Choose`}),e.choices.map((e,t)=>(0,Q.jsx)($k,{children:e.note??Vk(e.choose,e.from)},t))]}),e.backgroundTraits.length>0&&(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Background list`}),vA(e.backgroundTraits.map(e=>({trait:e}))).map(e=>(0,Q.jsx)($k,{children:e},e))]}),e.features.map(e=>(0,Q.jsxs)(`p`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))]})}var bA=[[`earth`,`The Settled Systems`],[`isekai`,`Isekai`],[`any`,`Any`]],xA=[`physical`,`social`,`mental`];function SA({slot:e,picked:t,onChoose:n}){let[r,i]=(0,Z.useState)(``),[a,o]=(0,Z.useState)(new Set),s=gk.packages.filter(t=>t.type===e),c=bA.filter(([e])=>s.some(t=>t.plane===e)),l=xA.filter(e=>s.some(t=>t.bonusPoints.some(t=>t.group===e))),u=e=>{let t=new Set(a);t.delete(e)||t.add(e),o(t)},d=r.trim().toLowerCase(),f=s.filter(e=>e.id===t||!a.has(`plane:${e.plane}`)&&!e.bonusPoints.some(e=>a.has(`bonus:${e.group}`))&&(!d||e.name.toLowerCase().includes(d)||e.tags.some(e=>e.toLowerCase().includes(d))));return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:r,onChange:e=>i(e.target.value),"aria-label":`Search ${$(e)}s`}),c.length>1&&c.map(([e,t])=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`plane:${e}`),onChange:()=>u(`plane:${e}`)}),` `,t]},e)),l.length>1&&l.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!a.has(`bonus:${e}`),onChange:()=>u(`bonus:${e}`)}),` `,$(e),` bonus`]},e))]}),f.length===0?(0,Q.jsxs)(`p`,{className:`empty`,children:[`No `,$(e),`s match.`]}):(0,Q.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(e),children:f.map(e=>(0,Q.jsxs)(qk,{className:`headed ${zk(e.plane)}`,label:e.name,selected:t===e.id,onSelect:()=>n(e.id),children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(Uk,{plane:e.plane}),e.name]}),(0,Q.jsxs)(`span`,{className:`trait-name-chips`,children:[(0,Q.jsx)($k,{children:$(e.type)}),(0,Q.jsx)($k,{tone:`muted`,children:e.plane})]})]}),(0,Q.jsx)(`p`,{children:e.summary}),(0,Q.jsx)(yA,{pkg:e})]},e.id))})]})}function CA({draft:e,onChange:t}){let[n,r]=(0,Z.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,Z.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,Z.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,Z.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&yk.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(Kk,{title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,Q.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:gA.map(t=>(0,Q.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,Q.jsx)(`summary`,{children:(0,Q.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,Q.jsx)(`span`,{className:`slot-pick`,children:yk.get(e[t])?.name??e[t]}):(0,Q.jsx)(`span`,{className:`muted`,children:_A[t]}),(0,Q.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,Q.jsx)(fA,{is:n[t]?`minus`:`plus`})})]})}),(0,Q.jsx)(SA,{slot:t,picked:e[t],onChoose:e=>a(t,e)})]},t))})]})}var wA=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},TA={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name: the player's, or one you make up that fits their Kind, home and past.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:uc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},items:{type:`array`,items:{type:`string`},description:`Item ids the character carries, most needed first (about 3 to 8): the weapon and armor they'd fight in, the tools and kits of their trade and Traits, and gear for how they live and travel. Only items from the character's own plane or any plane. List an item twice to carry two.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`name`,`kind`,`origin`,`profession`,`past`,`focus`,`traits`,`items`]},EA=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:wc.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:xc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:TA,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), each listed Trait's id, and item:<id> for each item.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],DA=`player-choice`,OA=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,kA=e=>Array.isArray(e)?e:[],AA=(e,t)=>Wc(e)||Gc(e,t).length===0,jA=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function MA(e,t){let n=OA(e)??{},r=el(n,t).summary;if(r)return r.questions.filter(e=>AA(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!AA(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function NA(e,t){let n=OA(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});kA(n.traits).forEach((e,t)=>{let n=OA(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=new Set(t.items.map(e=>e.id));kA(n.items).forEach((e,t)=>{let n=OA(e)?.item;o(n)&&!c.has(n)&&r.push({path:`items[${t}]`,message:`Item "${n}" doesn't exist`})});let l=MA(n,t);return kA(n.choices).forEach((e,t)=>{let n=OA(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),l.some(e=>jA(n,e))){let e=Uc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of kA(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function PA(e,t,n=Lc){let r=NA(e,t),i=el(e,t,n),a=MA(e,t),o=OA(e),s=i,c=new Set;if(o&&a.some(e=>!Wc(e.from))){let e=kA(o.choices),r=t=>e.some(e=>jA(OA(e),t)),i=a.filter(e=>!r(e)&&!Wc(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${DA}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=el({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var FA=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{}}),IA=class extends Error{},LA=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function RA(e,t,n){let r=t.traits,i=LA(e.category);i&&(r=r.filter(e=>e.category===i));let a=kA(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=LA(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=NA(i,t);if(a.length)throw new IA(a.map(e=>e.message).join(`; `));let o=el(i,t,n).summary?.backgroundList;if(!o)throw new IA(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(LA(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>FA(e.t))}}function zA(e,t){let n=LA(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new IA(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>AA(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:Gc(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function BA(e,t){let n=LA(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new IA(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function VA(e,t,n,r=Lc){let i=OA(t)??{};switch(e){case`search_traits`:return RA(i,n,r);case`list_packages`:{let e=xc.safeParse(i.type);if(!e.success)throw new IA(`type must be one of ${xc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return zA(i,n);case`get_kind`:return BA(i,n);default:throw new IA(`Unknown tool "${e}"`)}}var HA=`claude-opus-5-5`,UA=`server-side-fallback-2026-07-01`,WA=e=>!e.startsWith(`claude-haiku`),GA=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function KA(e,t=12,n=HA){return{model:n,maxTurns:t,review:!0,start:t=>new qA(e,t,n)}}var qA=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:EA,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:GA(this.model)},cache_control:{type:`ephemeral`},...WA(this.model)?{betas:[UA],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new wA(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new wA(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},JA=(e,t)=>R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),YA=Os({name:R().optional(),kind:JA(`Kind`,`isek`),origin:JA(`package`,`dreft`),profession:JA(`package`,`guild-hunter`),past:JA(`package`,`countryside-upbringing`),focus:B(R()).default([]),magic:_s().int().min(0).default(0),traits:B(R()).default([]),choices:B(Nc).default([]),items:B(As([R(),Os({item:R(),qty:_s().int().min(1).default(1)})])).default([])}),XA=Object.fromEntries(Object.entries(V).flatMap(([e,t])=>t.map(t=>[t,e]))),ZA=e=>uc.safeParse(e).success;function QA(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function $A(e,t,n,r=[]){let i=[...new Set(e.filter(ZA))],a=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,V[e.group]);return c(n,uc.options),s}var ej=3,tj=6,nj=5;function rj(e,t,n){let r=[...new Set(e.filter(ZA))],i=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(V).filter(e=>!r.some(t=>XA[t]===e)).sort((e,t)=>V[t].reduce((e,t)=>e+o(t),0)-V[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>XA[e]))],l=c.length?c:s,u=e=>V[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=tj&&(t-tj)%nj===0,a=Object.keys(V).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=ej&&f(m)%2==1,g=r.filter(e=>XA[e]===m),_=[...V[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...V[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function ij(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function aj(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=ij(Gc(i,t),e,t);if(Wc(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function oj(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)Wc(e)||Gc(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function sj(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}function cj(e,t){let n=t.packages.find(t=>t.id===e.origin&&t.type===`origin`)?.plane,r=[],i=[],a=new Set;for(let o of e.items){let{item:e,qty:s}=typeof o==`string`?{item:o,qty:1}:o,c=t.items.find(t=>t.id===e),l=c?c.category===`currency`?`money isn't handed out yet`:n&&c.plane!==`any`&&c.plane!==n?`${c.name} is from ${c.plane===`earth`?`Earth`:`Isekai`}, and this character isn't`:void 0:`Item "${e}" doesn't exist`;if(l||!c){i.push({item:e,reason:l});continue}let u=r.find(e=>e.item===c.id);if(u){u.qty+=s;continue}let d=c.category===`weapon`||!!c.slot&&!a.has(c.slot);c.slot&&a.add(c.slot),r.push({item:c.id,name:c.name,qty:s,category:c.category,equipped:d})}return{items:r,skipped:i}}var lj=(e,t)=>e.summary?.picks[t].banked??0;function uj(e,t,n=Lc){let r=YA.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=sj(i,t),s=QA(i,t),c=Jc(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=$A(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=Zc([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=cj(i,t),p=Ic.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...rj(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:aj(i,t),items:f.items}),m=oj(p,t),h=e=>el({...e,choices:[...e.choices,...m]},t,n),g=e=>{let n=h(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||Wc(e.from))continue;let n=ij(Gc(e.from,t),i,t);if(n.length===0){m=[...m.filter(t=>!Kc(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>Kc(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>Kc(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!Kc(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},_=h(p),v=[],y=[];if(!_.ok)return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_};let b=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=lj(_,`universal`),r=lj(_,`background`);if(n+r===0)return`no picks left`;let i=_.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=_.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a Background pick, and none fit`:`no Universal picks left`;let s=m,c=g({...p,traits:[...p.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=h(c);if(!l.ok)return m=s,l.errors[0].message;p=c,_=l};for(let e of i.traits){let t=b(e);t?y.push({trait:e,reason:t}):v.push(e)}return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_}}var dj=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
 
 How you work:
