@@ -10,7 +10,9 @@ $loreModalDark = $loreModalDark ?? false;
 				<path d="M2 2l16 16M18 2L2 18" fill="none" stroke="currentColor" stroke-width="2"/>
 			</svg>
 		</button>
-		<h4 class="lore-modal-title" id="lore-modal-title"></h4>
-		<div class="lore-modal-body"></div>
+		<div class="lore-modal-scroll">
+			<h4 class="lore-modal-title" id="lore-modal-title"></h4>
+			<div class="lore-modal-body"></div>
+		</div>
 	</div>
 </div>
