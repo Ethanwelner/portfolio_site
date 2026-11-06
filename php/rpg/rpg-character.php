@@ -4,7 +4,7 @@ require_once __DIR__ . '/core-stat-icons.php';
 
 // Edwin's Kind, background packages and Traits, dumped from the Character
 // Creator's content and rules engine (Human, The American Empire: Earth,
-// Smuggler and Gutter Trash at Level 5), so the names, effects and sources
+// Smuggler and Gutter Trash at Level 6), so the names, effects and sources
 // read as they do in the creator
 $sf_sample = json_decode( file_get_contents( __DIR__ . '/sample-character.json' ), true );
 $sf_e = function ( $text ) {
@@ -62,7 +62,7 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
 		<div class="flex-7 content-stack content-stack-sm">
 			<h3>Building a Character</h3>
-			<p class="copy">The sheet below belongs to Edwin Humble, a Level 5 Human smuggler, and shows how the systems in this section come together on a finished character. Every character is built from four Backgrounds, a starting set of Stat points, and the Traits those points grant.</p>
+			<p class="copy">The sheet below belongs to Edwin Humble, a Level 6 Human smuggler, and shows how the systems in this section come together on a finished character. Every character is built from four Backgrounds, a starting set of Stat points, and the Traits those points grant.</p>
 			<p class="copy">Every character selects a Kind, Origin, Profession, and Past. Together these Backgrounds set a character’s starting Stats and Traits and tie them to the world:</p>
 			<ul class="copy">
 				<li><strong>Kind</strong> is what the character is. It adds 9 bonus points to their focus Stats, spread out to fit the Kind, and sets their maximum Stats. It also grants any unique abilities the Kind possesses and determines which kinds of Traits they can take. Humans get +1 in each focus Stat, cannot exceed 15 in any focus Stat, and can take (Cybernetic) and genetic engineering Traits.</li>
@@ -79,7 +79,7 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 				<li>Traits are grouped into Knowledges, Abilities, and Skills. Numbers in parentheses are a Trait’s Rank.</li>
 				<li>Picks available are Traits the character has banked for in-game opportunities.</li>
 			</ul>
-			<p class="copy">Edwin’s 25 focus points come from his Kind (9), his Origin (1), and five Levels (15), and each one granted a Trait. He spent six of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other thirteen for in-game opportunities. Four of those have since gone to Skills he gained in play: Eagle Eye, a Conveyed Skill, then Cover Identity, Poker Face and Procurement as his smuggling runs went on, leaving nine. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
+			<p class="copy">Edwin’s 28 focus points come from his Kind (9), his Origin (1), and six Levels (18), and each one granted a Trait. He spent six of those as Universal Traits and six as Background Traits from his Backgrounds’ lists, including the Spanish and Mandarin Languages, and banked the other sixteen for in-game opportunities. Four of those have since gone to Skills he gained in play: Eagle Eye, a Conveyed Skill, then Cover Identity, Poker Face and Procurement as his smuggling runs went on, leaving twelve. Spending Traits on Knowledges this way is allowed because he’s a freshly created character. Future Stat gains can’t be used to gain Knowledge Traits, though this is at the GM’s discretion.</p>
 		</div>
 		<div class="flex-6 content-stack">
 			<h3>Backgrounds used in the sample character sheet</h3>
@@ -187,7 +187,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
      stats, Conditions and Items, then the Knowledges and Traits, each in a
      box of its own -->
 <div class="c-sheet sample-sheet">
-	<div class="level-badge" aria-label="Level 5"><span class="level-badge-label">Level</span><span class="level-badge-number">5</span></div>
+	<div class="level-badge" aria-label="Level 6"><span class="level-badge-label">Level</span><span class="level-badge-number">6</span></div>
 
 	<div class="c-sheet-box sheet-head">
 		<div class="sheet-head-who">
@@ -222,7 +222,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 	<div class="c-sheet-box">
 		<div class="sheet-resources">
 			<div class="sheet-resource"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">17<span class="muted"> / 17</span></span></div>
-			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
+			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">12<span class="muted"> / 12</span></span></div>
 			<div class="sheet-resource"><strong class="resource-name resource-sp" title="Savvy Points">SP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
 		</div>
 	</div>
@@ -266,9 +266,9 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<div class="sheet-group stat-group-social">
 					<div class="sheet-group-head">
 						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'social' ); ?></div>
-						<h4 class="sheet-rule">Social - 2</h4>
+						<h4 class="sheet-rule">Social - 3</h4>
 					</div>
-					<?php sf_sample_stat( 'Empathy', 1, 2 ); sf_sample_stat( 'Persuasion', 1, 3 ); sf_sample_stat( 'Demeanor', 1, 4 ); ?>
+					<?php sf_sample_stat( 'Empathy', 1, 3 ); sf_sample_stat( 'Persuasion', 1, 4 ); sf_sample_stat( 'Demeanor', 1, 5 ); ?>
 				</div>
 				<div class="sheet-group stat-group-mental">
 					<div class="sheet-group-head">
