@@ -384,7 +384,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<?php foreach ( $sf_languages as $t ) { echo '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
 			</ul>
 		</div>
-		<!-- The Abilities and the Skills share a box of their own, so they can split it by its width -->
+		<!-- The Abilities and the Skills share a row of their own, split equally -->
 		<div class="sheet-pair">
 			<div class="c-sheet-box sheet-abilities">
 				<h3 class="sheet-rule sheet-subhead">Abilities</h3>
