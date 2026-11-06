@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/core-stat-icons.php'; ?>
 <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
@@ -154,9 +155,9 @@
 						<!-- physical stats -->
 						<div class="d-flex flex-column flex-gap-12 stat-group-physical">
 							<div class="d-flex flex-row flex-gap-12 align-items-center">
-								<div class="stat-badge">9</div>
+								<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'physical' ); ?></div>
 								<div class="line-container d-flex flex-fill">
-									<h5>Physical</h5>
+									<h5>Physical - 9</h5>
 									<div class="line"></div>
 								</div>
 							</div>
@@ -239,9 +240,9 @@
 						<!-- social stats -->
 						<div class="d-flex flex-column flex-gap-12 stat-group-social">
 							<div class="d-flex flex-row flex-gap-12 align-items-center">
-								<div class="stat-badge">2</div>
+								<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'social' ); ?></div>
 								<div class="line-container d-flex flex-fill">
-									<h5>Social</h5>
+									<h5>Social - 2</h5>
 									<div class="line"></div>
 								</div>
 							</div>
@@ -324,9 +325,9 @@
 						<!-- mental stats -->
 						<div class="d-flex flex-column flex-gap-12 stat-group-mental">
 							<div class="d-flex flex-row flex-gap-12 align-items-center">
-								<div class="stat-badge">1</div>
+								<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'mental' ); ?></div>
 								<div class="line-container d-flex flex-fill">
-									<h5>Mental</h5>
+									<h5>Mental - 1</h5>
 									<div class="line"></div>
 								</div>
 							</div>

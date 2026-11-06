@@ -2047,6 +2047,22 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     justify-content: center;
     width: min-content;
     line-height: 0;
+
+    /* A core Stat's circle holds its icon (php/rpg/core-stat-icons.php), at the
+       sample sheet's 2.75rem; the number is in the title beside it */
+    &:has(.stat-badge-icon) {
+        flex-shrink: 0;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+    }
+}
+
+.stat-badge-icon {
+    flex: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor;
 }
 
 /* Sample character sheet: a ruled stat heading sits beside its badge, so drop

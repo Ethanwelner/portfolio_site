@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/lore.php';
+require_once __DIR__ . '/core-stat-icons.php';
 
 // Edwin's Kind, background packages and Traits, dumped from the Character
 // Creator's content and rules engine (Human, The American Empire: Earth,
@@ -42,7 +43,7 @@ $sf_e = function ( $text ) {
 			<p class="copy">Reading the sheet:</p>
 			<ul class="copy">
 				<li>Level is tracked at the top, separately from Stats.</li>
-				<li>Each core Stat is shown as a single number beside its category, like Physical (1), with its focus Stats listed below it.</li>
+				<li>Each core Stat is shown by its category’s icon, with its number after the name, like Physical - 1, and its focus Stats listed below it.</li>
 				<li>Each focus Stat’s dot bar starts empty and fills in as points are added. A circle or square shows whether that point granted a Universal or a Background Trait.</li>
 				<li>Traits are grouped into Knowledges, Abilities, and Skills. Numbers in parentheses are a Trait’s Rank.</li>
 				<li>Picks available are Traits the character has banked for in-game opportunities.</li>
@@ -226,22 +227,22 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 			<div class="sheet-stats">
 				<div class="sheet-group stat-group-physical">
 					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat">1</div>
-						<h4 class="sheet-rule">Physical</h4>
+						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'physical' ); ?></div>
+						<h4 class="sheet-rule">Physical - 1</h4>
 					</div>
 					<?php sf_sample_stat( 'Endurance', 1, 2 ); sf_sample_stat( 'Power', 1, 2 ); sf_sample_stat( 'Grace', 2, 3 ); ?>
 				</div>
 				<div class="sheet-group stat-group-social">
 					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat">2</div>
-						<h4 class="sheet-rule">Social</h4>
+						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'social' ); ?></div>
+						<h4 class="sheet-rule">Social - 2</h4>
 					</div>
 					<?php sf_sample_stat( 'Empathy', 1, 2 ); sf_sample_stat( 'Persuasion', 1, 3 ); sf_sample_stat( 'Demeanor', 1, 4 ); ?>
 				</div>
 				<div class="sheet-group stat-group-mental">
 					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat">2</div>
-						<h4 class="sheet-rule">Mental</h4>
+						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'mental' ); ?></div>
+						<h4 class="sheet-rule">Mental - 2</h4>
 					</div>
 					<?php sf_sample_stat( 'Logic', 1, 1 ); sf_sample_stat( 'Intuition', 1, 2 ); sf_sample_stat( 'Memory', 1, 6 ); ?>
 				</div>
