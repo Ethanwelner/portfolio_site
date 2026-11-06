@@ -66,7 +66,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Hiding things, and yourself.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +3 to rolls relating to sneaking, hiding, or staying concealed.",
 			"badges": [],
 			"from": "Smuggler (profession), Gutter Trash (past)"
 		},
@@ -77,7 +77,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Quick, unnoticed work with the hands.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +5 to Grace when attempting to pickpocket, deceive, or impress with their hands.",
 			"badges": [],
 			"from": "Smuggler (profession), Gutter Trash (past)"
 		},
@@ -88,7 +88,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Getting a better price.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +5 to Persuasion or Demeanor checks relating to haggling, bartering, and price negotiations.",
 			"badges": [],
 			"from": "Smuggler (profession)"
 		},
@@ -110,7 +110,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Getting by, and getting answers, on the street.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +3 to Memory and Logic rolls relating to urban or city environments.",
 			"badges": [],
 			"from": "Gutter Trash (past)"
 		},
@@ -121,7 +121,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Talking people into things, or out of them.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +2 to Persuasion or Demeanor rolls.",
 			"badges": [],
 			"from": "universal pick"
 		},
@@ -132,7 +132,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Plotting and seeing through plots.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +3 to Logic and Persuasion rolls when attempting to trick or deceive.",
 			"badges": [],
 			"from": "universal pick"
 		},
@@ -143,7 +143,7 @@
 			"plane": "earth",
 			"language": false,
 			"summary": "Flying cargo trucks between stations, ships and planetary surfaces.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character is capable of piloting Truck Class Voidships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a Truck Class Voidship. Rank *10 added to Skill Check rolls involving Truck Class Voidship piloting.",
 			"badges": [],
 			"from": "universal pick"
 		},
@@ -176,7 +176,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Judging what something is worth.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +8 to rolls for accurately appraising the value of artifacts, merchandise, or commodities in fields that it has familiarity with.",
 			"badges": [
 				"Profession"
 			],
@@ -215,7 +215,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Loading, securing and moving freight, in gravity or out of it.",
-			"effect": "Placeholder. Effect not yet written.",
+			"effect": "This character gains +3 to rolls relating to the handling, tracking, or maintenance of cargo.",
 			"badges": [
 				"Profession"
 			],
@@ -241,7 +241,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Fighting with, and maintaining, daggers and knives.",
-			"effect": "This character is capable of performing the basic tasks of maintaining a Dagger without a skill check. Rank *5 added to skill check rolls involving a Dagger. +3 to Attack Rolls made with a Dagger, at any Rank.",
+			"effect": "- Rank *5 added to skill check rolls involving a Dagger.\n- +3 to Attack Rolls made with a Dagger, at any Rank.\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check.",
 			"badges": [
 				"Profession",
 				"Past"
@@ -255,7 +255,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Fighting with, and maintaining, a pistol.",
-			"effect": "This character is capable of performing the basic tasks of maintaining a Pistol without a skill check. Rank *5 added to skill check rolls involving a Pistol. +3 to Attack Rolls made with a Pistol, at any Rank.",
+			"effect": "- Rank *5 added to skill check rolls involving a Pistol.\n- +3 to Attack Rolls made with a Pistol, at any Rank.\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check.",
 			"badges": [],
 			"from": "universal pick"
 		},
