@@ -3248,7 +3248,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     .column-image {
-        padding: 0;
+        padding: 0 24px;
     }
 }
 
