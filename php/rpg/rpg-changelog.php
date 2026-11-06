@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics, the Character Creator and Player Tools: a character sheet’s scrolling Knowledges, Abilities and Skills lists have the same slim scrollbar as Player Tools’ chat.</li>
 						<li>Mechanics, the Character Creator and Player Tools: on character sheets, a Knowledges, Abilities or Skills list taller than 75% of the window stops there and scrolls inside its box.</li>
 						<li>Mechanics and the Character Creator: on character sheets the Abilities and Skills always share their row equally.</li>
 						<li>Mechanics: the Sample Character Sheet is pulled out past the column by its padding and border, like the tab boxes, so the boxes inside it line up with the text above. On phones its Level badge comes in to stay on screen.</li>
