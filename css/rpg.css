@@ -2308,7 +2308,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             isolation: isolate;
             z-index: 1;
             top: -40px;
-            left: -40px;
+            /* In by the sheet's breakout, so it stays where it was beside the
+               text and on screen */
+            left: calc(-40px + var(--sample-sheet-inset) + 1px);
             flex-direction: column;
             width: 96px;
             height: 96px;
@@ -2357,7 +2359,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             .level-badge {
                 /* Further out than the creator's -24px/-8px, clear of the name */
                 top: -28px;
-                left: -18px;
+                left: calc(-18px + var(--sample-sheet-inset) + 1px);
                 width: 56px;
                 height: 56px;
             }
@@ -2415,9 +2417,20 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         flex-direction: column;
         gap: 20px;
         margin-top: 40px;
-        padding: 16px;
+        /* Pulled out by its padding and border like the tab boxes
+           (.tech-fields), so its edges line up with theirs and its boxes
+           with the text above and below */
+        --sample-sheet-inset: 24px;
+        margin-left: calc(-1 * var(--sample-sheet-inset) - 1px);
+        margin-right: calc(-1 * var(--sample-sheet-inset) - 1px);
+        padding: var(--sample-sheet-inset);
         border: 1px solid var(--portfolio-gray);
         border-radius: 12px;
+
+        /* Phones have a narrower page gutter, as for the tab boxes */
+        @media (max-width: 767px) {
+            --sample-sheet-inset: 12px;
+        }
         box-shadow: 0 4px 10px #00000030;
         font-family: 'Open Sans', sans-serif;
 
