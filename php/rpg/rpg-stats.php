@@ -413,6 +413,7 @@
 			</div>
 
 			<div class="tech-field-panel" id="stats-types" role="tabpanel" aria-labelledby="tab-stats-types">
+				<div class="content-stack">
 				<div class="stat-types-grid">
 					<div class="content-stack content-stack-sm">
 						<h4>Physical</h4>
@@ -505,18 +506,60 @@
 						</div>
 					</div>
 				</div>
+				<div class="content-stack content-stack-sm">
+					<h4>Special Stats Ex. (Magic)</h4>
+					<div class="text-cols">
+						<p class="copy">
+							Beyond Physical, Social, and Mental, there are also Special Stats, core Stats that only some characters may have access to, such as Magic. A character can only spend points into a Special Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. A character without that access can’t put points into it, no matter how many Levels they gain.
+						</p>
+						<p class="copy">
+							Special Stats do not have focus Stats. Instead, every point spent into a Special Stat grants 3 of that Stat’s Special Stat points, such as Mana Points (MP) for Magic. As with every other Stat, no more than 20 points can be spent into a Special Stat, though Traits, Equipment, or other effects can raise its total above 20.
+						</p>
+						<p class="copy">
+							Traits built on a Special Stat list it among their Stat requirements, such as a spell that needs Magic 3, and a character without access to that Stat can't meet them. Traits that are only related to it, like Relic Handling, don't require it and are open to any character who meets their other requirements.
+						</p>
+					</div>
+					<div class="content-stack content-stack-xs">
+						<div class="line-container">
+							<h5><strong>Magic</strong></h5>
+							<div class="line"></div>
+						</div>
+						<p class="copy">
+							Magic represents the character's ability to draw on and shape the magical forces of the world, be it lighting a fire with a word, mending a broken blade, or calling lightning down on their enemies. A high Magic means a character can learn more powerful spells and has a deeper pool of Mana Points to draw on. A magical character isn't inherently wise or skilled with what they cast, but they have the raw power to make the impossible happen.
+						</p>
+					</div>
+				</div>
+				</div>
 			</div>
 
 			<div class="tech-field-panel" id="stats-resources" role="tabpanel" aria-labelledby="tab-stats-resources">
-				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-					<div class="flex-7 content-stack">
-						<div class="content-stack content-stack-sm">
-							<h4>Health and Hit Points (HP)</h4>
+				<div class="content-stack">
+					<div class="text-cols">
+						<p class="copy">
+							Player Characters and NPCs have access to a set of three universal resources provided by the points spent within their stats. These are Hit Points, Vibe Points and Savvy Points. Each is used, lost, or gained separately and in different circumstances. Resource points can be spent to use abilities, take actions, or influence the course of role play. They can also be lost due to the actions of others, critical failures in skill checks, or through role playing circumstances.
+						</p>
+						<p class="copy">
+							There are also resources tied to Special Stats, core Stats that only some characters may have access to. In these cases, as Special Stats do not have focus Stats, the player will gain 3 of that Special Stat’s resource points for every point spent into it.
+						</p>
+						<p class="copy">
+							Unless otherwise stated a character may not go above their max total of granted resource points. Some effects may provide temporary boosts to resources, in which case they are added to the character’s current total.
+						</p>
+				
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Health and Hit Points (HP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 							</p>
 							<p class="copy">
 								HP are calculated as 10 plus one for each point a character has in their Physical focus Stats. A max-Level Human who has spent every core point on Physical will have 55 HP before Equipment or Traits are accounted for. HP are lost as a character is harmed and regained slowly over time or quickly through the use of Equipment, abilities, or RP occurrences. Unless Hit Points have been lost, a character always defaults to possessing their maximum number of HP.
+							</p>
+							<p class="copy">
+								A still-living character will regain lost HP at a rate of 1 HP per every six hours of in-game time, totalling 4 Hit Points regained in a 24 hour period.
 							</p>
 							<p class="copy">
 								As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
@@ -549,13 +592,20 @@
 								This object has been destroyed and no longer functions in any intended capacity.<br>
 								This object cannot be repaired by any means unless otherwise stated.</li>
 							</ul>
+						
 						</div>
 					</div>
-					<div class="flex-6 content-stack">
-						<div class="content-stack content-stack-sm">
-							<h4>Vibe Points (VP)</h4>
+					<div>
+						<div class="line-container">
+							<h5><strong>Vibe Points (VP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus Stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
+							</p>
+							<p class="copy">
+								A still-living character will regain lost VP at a rate of 1 VP per every six hours of in-game time, totalling 4 Vibe Points regained in a 24 hour period.
 							</p>
 							<p class="copy">VP can be spent on:</p>
 							<ul class="copy">
@@ -563,23 +613,43 @@
 								<li>Asking the GM to improve the results of a socially related Skill Check (such as getting a better price in a negotiation over a new car).</li>
 								<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
 							</ul>
+						
 						</div>
-						<div class="content-stack content-stack-sm">
-							<h4>Savvy Points (SP)</h4>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Savvy Points (SP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
-								SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP. SP can be spent on:
+								SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP.
 							</p>
+							<p class="copy">
+								A still-living character will regain lost SP at a rate of 1 SP per every six hours of in-game time, totalling 4 Savvy Points regained in a 24 hour period.
+							</p>
+							<p class="copy">SP can be spent on:</p>
 							<ul class="copy">
 								<li>Rerolling a single die in a mentally related Skill Check (such as to try again when attempting to decipher or remember an obscure piece of history)</li>
 								<li>Requesting Competence or Advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
 								<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
 							</ul>
+						
 						</div>
-						<div class="content-stack content-stack-sm">
-							<h4>Mana Points (MP)</h4>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Special Stat Points Ex. (MP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
-								MP are a spendable resource like VP and SP, but they come from the Magic core Stat instead of focus Stats. A character has a maximum number of MP equal to 3 for each point of Magic, plus any MP their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP before putting a point into Magic. Only characters who can put points into Magic, like most Kinds of Dreft, have MP to begin with.
+								Special Stat points are a spendable resource like VP and SP, but they come from their relevant Special Stat instead of focus Stats. A character has a maximum number of a given Special Stat’s points equal to 3 for each point spent into that Special Stat, plus any listed resource points their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP (Mana Points) before putting a point into Magic and only characters who can put points into Magic, like most Kinds of Dreft, would have MP to begin with.
 							</p>
+							<p class="copy">
+								A still-living character will regain lost Special Stat points at a rate of 3 per hour, totalling 72 in a 24 hour period.
+							</p>
+						
 						</div>
 					</div>
 				</div>
