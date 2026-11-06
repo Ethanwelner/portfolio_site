@@ -2935,6 +2935,18 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* A long Knowledges, Abilities or Skills list stops at 75vh and
+           scrolls inside its box (printed, it runs its full length) */
+        :is(.sheet-side > .sheet-knowledges, :is(.sheet-abilities, .sheet-skills) > .sheet-traits) {
+            max-height: 75vh;
+            overflow-y: auto;
+
+            @media print {
+                max-height: none;
+                overflow: visible;
+            }
+        }
+
         .sheet-traits {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
