@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: Knowledge: Enchantment, Artifact Identification, Knowledge: Magical Artifacts and Knowledge: Runecraft join the Magic tab, with the other Traits built on Magic.</li>
 						<li>Character Creator: 15 new spells: Cleanse, Staunch, Detect Magic, Fog Cloud, Ice Lance, Earthen Spike, Telekinesis, Darkness, Daze, Speak with Animals, Wall of Stone, Banish Spirit, Chain Lightning, Greater Heal and Meteor.</li>
 						<li>Character Creator: 50 more Skills, ten each for leadership and command, espionage and intelligence, faith, ritual and spirits, salvage, demolition and heavy industry, and scholarship and teaching. Rally ends Frightened on allies who can hear, and Battlefield Commander gives them +1 Priority.</li>
 						<li>Character Creator: 14 more Knowledges to go with them, including Rhetoric, Intelligence Tradecraft, Religions of Isekai, Spirits and the Dead, Explosives, Dead Languages and Pedagogy.</li>

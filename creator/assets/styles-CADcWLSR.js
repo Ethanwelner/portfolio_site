@@ -5873,6 +5873,8 @@ tags: [magic, enchanting, theory]
 category: knowledge
 ranked: true
 minStats: { memory: 4, magic: 1 }
+# Special Stat: Magic, so it sits on the Magic list with the other Magic Traits.
+list: magic
 effect: "This character has knowledge of enchantment and can be assumed to be familiar with how magic is bound into objects and what limits it."
 `,w_=`id: engineering
 name: "Engineering"
@@ -6601,6 +6603,8 @@ tags: [magic, artifacts, relics]
 category: knowledge
 ranked: true
 minStats: { memory: 3, intuition: 2 }
+# Special Stat: Magic, so it sits on the Magic list with the other Magic Traits.
+list: magic
 effect: "This character has knowledge of magical artifacts and can be assumed to be familiar with famous relics, common enchanted items and the dangers of handling them."
 `,Vv=`id: malay-written
 name: "Malay (Written)"
@@ -7229,6 +7233,8 @@ tags: [magic, runes, writing]
 category: knowledge
 ranked: true
 minStats: { memory: 4, intuition: 2 }
+# Special Stat: Magic, so it sits on the Magic list with the other Magic Traits.
+list: magic
 effect: "This character has knowledge of runecraft and can be assumed to be familiar with the common runes of power, their meanings and their effects."
 `,Yy=`id: russian-written
 name: "Russian (Written)"
@@ -8108,6 +8114,8 @@ tags: [magic, relics, artifacts, identification]
 category: skill
 minStats: { memory: 4, intuition: 4 }
 prerequisites: [relic-handling]
+# Special Stat: Magic, so it sits on the Magic list with the other Magic Traits.
+list: magic
 effect: "This character gains +5 to rolls relating to identifying the function and power of magical artifacts."
 `,Tx=`id: artifact-repair
 name: "Artifact Repair"
