@@ -534,21 +534,24 @@
 
 			<div class="tech-field-panel" id="stats-resources" role="tabpanel" aria-labelledby="tab-stats-resources">
 				<div class="content-stack">
-				<div class="text-cols">
-					<p class="copy">
-						Player Characters and NPCs have access to a set of three universal resources provided by the points spent within their stats. These are Hit Points, Vibe Points and Savvy Points. Each is used, lost, or gained separately and in different circumstances. Resource points can be spent to use abilities, take actions, or influence the course of role play. They can also be lost due to the actions of others, critical failures in skill checks, or through role playing circumstances.
-					</p>
-					<p class="copy">
-						There are also resources tied to Special Stats, core Stats that only some characters may have access to. In these cases, as Special Stats do not have focus Stats, the player will gain 3 of that Special Stat’s resource points for every point spent into it.
-					</p>
-					<p class="copy">
-						Unless otherwise stated a character may not go above their max total of granted resource points. Some effects may provide temporary boosts to resources, in which case they are added to the character’s current total.
-					</p>
-				</div>
-				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-					<div class="flex-7 content-stack">
-						<div class="content-stack content-stack-sm">
-							<h4>Health and Hit Points (HP)</h4>
+					<div class="text-cols">
+						<p class="copy">
+							Player Characters and NPCs have access to a set of three universal resources provided by the points spent within their stats. These are Hit Points, Vibe Points and Savvy Points. Each is used, lost, or gained separately and in different circumstances. Resource points can be spent to use abilities, take actions, or influence the course of role play. They can also be lost due to the actions of others, critical failures in skill checks, or through role playing circumstances.
+						</p>
+						<p class="copy">
+							There are also resources tied to Special Stats, core Stats that only some characters may have access to. In these cases, as Special Stats do not have focus Stats, the player will gain 3 of that Special Stat’s resource points for every point spent into it.
+						</p>
+						<p class="copy">
+							Unless otherwise stated a character may not go above their max total of granted resource points. Some effects may provide temporary boosts to resources, in which case they are added to the character’s current total.
+						</p>
+				
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Health and Hit Points (HP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								Hit Points (abbreviated as HP) are used to calculate the amount of physical harm a character or object can receive. Hit Points are intended as an abstract measurement of the hardiness, size, and capacity to absorb punishment that an object or character possesses. Lost HP do not directly correspond to specific forms of damage but are instead intended as an at-a-glance measure of the health of a character or object.
 							</p>
@@ -589,11 +592,15 @@
 								This object has been destroyed and no longer functions in any intended capacity.<br>
 								This object cannot be repaired by any means unless otherwise stated.</li>
 							</ul>
+						
 						</div>
 					</div>
-					<div class="flex-6 content-stack">
-						<div class="content-stack content-stack-sm">
-							<h4>Vibe Points (VP)</h4>
+					<div>
+						<div class="line-container">
+							<h5><strong>Vibe Points (VP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								VP are a spendable resource that can be used to improve a character's Skill Checks in socially oriented RP scenarios or can be spent on abilities that incur a VP cost. A character has a maximum number of VP equal to the total of their Social focus Stats. Certain Traits and Equipment can increase the number or recovery rate of Vibe Points. VP are regained slowly, over time, and are an important resource to store up and manage when delicate negotiations are expected or when a character really needs to intimidate a guard or get them to look the other way.
 							</p>
@@ -606,9 +613,15 @@
 								<li>Asking the GM to improve the results of a socially related Skill Check (such as getting a better price in a negotiation over a new car).</li>
 								<li>Using an Ability with a listed VP cost such as using the Forgettable Face Trait to make a passerby forget your character's face once per point spent.</li>
 							</ul>
+						
 						</div>
-						<div class="content-stack content-stack-sm">
-							<h4>Savvy Points (SP)</h4>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Savvy Points (SP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								SP are a spendable resource that can be used to boost a character's Skill Checks in mentally oriented RP scenarios or to gain access to intuitions or abilities such as those granted by Traits. SP are regained slowly, over time, and are an important resource to store up and manage when being tossed into new situations or when a character is out of their depth. A character has a maximum number of SP equal to the total of their Mental focus Stats. Certain Traits and Equipment can increase the number or recovery rate of SP.
 							</p>
@@ -621,18 +634,24 @@
 								<li>Requesting Competence or Advantage depending on which is applicable to the situation at hand (indicating that the character is using their intuition or savvy to navigate their way through a situation they may not be experienced with)</li>
 								<li>Using an Ability with a listed SP cost such as using the Born Navigator Trait to automatically succeed in discerning a ship's direction when all that's available is the wind and waves to judge by.</li>
 							</ul>
+						
 						</div>
-						<div class="content-stack content-stack-sm">
-							<h4>Special Stat Points Ex. (MP)</h4>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>Special Stat Points Ex. (MP)</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="text-cols">
 							<p class="copy">
 								Special Stat points are a spendable resource like VP and SP, but they come from their relevant Special Stat instead of focus Stats. A character has a maximum number of a given Special Stat’s points equal to 3 for each point spent into that Special Stat, plus any listed resource points their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP (Mana Points) before putting a point into Magic and only characters who can put points into Magic, like most Kinds of Dreft, would have MP to begin with.
 							</p>
 							<p class="copy">
 								A still-living character will regain lost Special Stat points at a rate of 3 per hour, totalling 72 in a 24 hour period.
 							</p>
+						
 						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 		</div>
