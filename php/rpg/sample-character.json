@@ -262,7 +262,7 @@
 		{
 			"id": "eagle-eye",
 			"name": "Eagle Eye",
-			"category": "Ability",
+			"category": "Skill",
 			"plane": "any",
 			"language": false,
 			"summary": "Sees unusually well at a distance.",

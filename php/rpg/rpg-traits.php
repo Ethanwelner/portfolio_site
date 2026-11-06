@@ -145,7 +145,7 @@
                     <h5><strong>Skills</strong></h5>
                     <div class="line"></div>
                   </div>
-                  <p class="copy">Skill Traits represent a character's ability to perform a specific task or engage in a specific activity without fumbling or failing to even understand the basics. A Skill is like Knowledge in that it is a learned Trait, but unlike Knowledge, Skill Traits can be gained over time through training and effort, even without outside aid. Many Skills are Ranked Traits and represent the additive bonuses conveyed through practice and mastery in a given task. Other Skill Traits represent additional improvements or aspects of mastery that go beyond a simple bonus to a die roll during a Skill Check. Mastery Skill Traits will typically list prerequisite Traits that a character must already possess before they can take the more advanced Trait. Skill Traits can be selected when a character is choosing Level-Up Traits, but it is recommended that the GM only allow them to select Skill Traits they had been learning or utilizing.</p>
+                  <p class="copy">Skill Traits represent things a character is good at: the ability to perform a specific task or engage in a specific activity without fumbling or failing to even understand the basics, and the modifiers they get for it. A Skill is like Knowledge in that it is a learned Trait, but unlike Knowledge, Skill Traits can be gained over time through training and effort, even without outside aid. Many Skills are Ranked Traits and represent the additive bonuses conveyed through practice and mastery in a given task. Other Skill Traits represent additional improvements or aspects of mastery that go beyond a simple bonus to a die roll during a Skill Check. Mastery Skill Traits will typically list prerequisite Traits that a character must already possess before they can take the more advanced Trait. Skill Traits can be selected when a character is choosing Level-Up Traits, but it is recommended that the GM only allow them to select Skill Traits they had been learning or utilizing.</p>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Pilot: Helicopter (1)</span>
@@ -161,14 +161,15 @@
                     <h5><strong>Abilities</strong></h5>
                     <div class="line"></div>
                   </div>
-                  <p class="copy">Abilities are Traits that confer some sort of ability to a character. This can come in a wide variety of forms, from Natural Flight granting a character the power to fly to Hide in Plain Sight letting them sneak and go undetected even while being observed. Abilities are the most common type of Trait to be conferred by Items or Equipment, as they represent some sort of specific physical or mental feat that a character can perform. Not all Abilities are physical, but most manifest as something other than modifying a Skill Check. Abilities are often innate to a Kind or culture and are automatically conferred by Kind or Origin packages. An Ability Trait will always describe what it does and when it can be used, though it will be at the GM's discretion to determine the boundaries of when an ability can be applicable to a situation.</p>
+                  <p class="copy">Abilities are Traits that confer some sort of ability to a character. This can come in a wide variety of forms, from Natural Flight granting a character the power to fly to Hide in Plain Sight letting them sneak and go undetected even while being observed. Abilities are the most common type of Trait to be conferred by Items or Equipment, as they represent some sort of specific physical or mental feat that a character can perform. Not all Abilities are physical, but every Ability is something a character actively decides to use, usually through an Action it grants; a Trait that only adds modifiers to rolls is a Skill. Abilities are often innate to a Kind or culture and are automatically conferred by Kind or Origin packages. An Ability Trait will always describe what it does and when it can be used, though it will be at the GM's discretion to determine the boundaries of when an ability can be applicable to a situation.</p>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Trail Runner - Ability</span>
+                      <span>Rally</span>
                       <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</p>
-                    <p class="copy muted small">Needs Power 3, Endurance 2, Grace 2</p>
+                    <p class="copy effect">This character gains the Rally Action.</p>
+                    <p class="copy effect"><strong>Rally:</strong> As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them.</p>
+                    <p class="copy muted small">Needs Demeanor 5, Persuasion 4</p>
                   </div>
                 </div>
                 <div class="content-stack content-stack-xs">
@@ -359,6 +360,77 @@
                     <p class="copy effect">+3 to Attack Rolls made with a Musket, at any Rank.</p>
                     <p class="copy muted small">Needs Grace 3, Power 2, Intuition 3</p>
                   </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Trail Runner</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</p>
+                    <p class="copy muted small">Needs Power 3, Endurance 2, Grace 2</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Capable Student</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character can learn a new Knowledge Trait in half the specified time.</p>
+                    <p class="copy muted small">Needs Memory 3, Logic 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Knowledge Sponge</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character can learn a new Knowledge Trait in a quarter of the specified time.</p>
+                    <p class="copy muted small">Needs Memory 5, Logic 5, Intuition 5, Capable Student</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Con Man</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">+5 Roll Modifier to any Skill Check rolls that involve lying in either written or spoken form.</p>
+                    <p class="copy muted small">Needs Persuasion 8, Demeanor 4, Intuition 4, Memory 4</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Mental Fortitude</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character can request Advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</p>
+                    <p class="copy muted small">Needs Endurance 8, Logic 5, Demeanor 5</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Sculpted</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character can request Advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate).</p>
+                    <p class="copy muted small">Needs Power 5, Endurance 5, Demeanor 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Eagle Eye</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">This character can request Advantage in situations that involve seeing at distance.</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Gladiator</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">When in combat, this character can use any close combat weapon as if they had the Wielder Trait at Rank 1 for that weapon.</p>
+                    <p class="copy muted small">Needs Physical 5, Grace 5, Demeanor 5</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Brawler (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">Rank *1 added to the Blunt damage of this character's natural weapons.</p>
+                    <p class="copy muted small">Needs Power 3, Endurance 3</p>
+                  </div>
                 </div>
               </div>
               <div class="content-stack content-stack-xs">
@@ -369,66 +441,66 @@
                 <div class="trait-card-grid">
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Trail Runner - Ability</span>
+                      <span>Rally</span>
                       <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">This character takes twice as long to get winded by activities that involve running, hiking, or climbing.</p>
-                    <p class="copy muted small">Needs Power 3, Endurance 2, Grace 2</p>
+                    <p class="copy effect">This character gains the Rally Action.</p>
+                    <p class="copy effect"><strong>Rally:</strong> As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them.</p>
+                    <p class="copy muted small">Needs Demeanor 5, Persuasion 4</p>
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Capable Student</span>
+                      <span>Grappler (1)</span>
                       <span class="trait-name-chips"><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">This character can learn a new Knowledge Trait in half the specified time.</p>
-                    <p class="copy muted small">Needs Memory 3, Logic 3</p>
+                    <p class="copy effect">This character gains the Grapple Action.</p>
+                    <p class="copy effect">Rank *5 added to Skill Check rolls involving grappling or escaping a hold.</p>
+                    <p class="copy effect"><strong>Grapple:</strong> This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character's Grappler Rank for as long as this character keeps hold, and this character can't move while holding them.</p>
+                    <p class="copy muted small">Needs Power 4, Endurance 3, Grace 2, Brawler</p>
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Knowledge Sponge</span>
+                      <span>Takedown</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">This character gains the Takedown Action.</p>
+                    <p class="copy effect"><strong>Takedown:</strong> This character may make an Attack Roll with Power or Grace against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition.</p>
+                    <p class="copy muted small">Needs Power 4, Grace 4, Grappler</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Disarm</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">This character gains the Disarm Action.</p>
+                    <p class="copy effect"><strong>Disarm:</strong> This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet.</p>
+                    <p class="copy muted small">Needs Grace 5, Intuition 3, Brawler</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Weak Point</span>
+                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">After spending a Full RP Action studying a creature during an Incident, this character gains +2 to Attack Rolls against creatures of that kind for the rest of the Incident.</p>
+                    <p class="copy muted small">Needs Intuition 5, Logic 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Expert Boxer</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">This character can learn a new Knowledge Trait in a quarter of the specified time.</p>
-                    <p class="copy muted small">Needs Memory 5, Logic 5, Intuition 5, Capable Student</p>
+                    <p class="copy effect">This character can Attack with the Superman Punch natural weapon.</p>
+                    <p class="copy effect">This character can request Advantage on Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch.</p>
+                    <p class="copy muted small">Needs Power 8, Grace 6, Endurance 6, Intuition 4, Boxing</p>
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
-                      <span>Con Man</span>
-                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
+                      <span>Martial Arts Master</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">+5 Roll Modifier to any Skill Check rolls that involve lying in either written or spoken form.</p>
-                    <p class="copy muted small">Needs Persuasion 8, Demeanor 4, Intuition 4, Memory 4</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
-                      <span>Mental Fortitude - Ability</span>
-                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
-                    </div>
-                    <p class="copy effect">This character can request Advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted.</p>
-                    <p class="copy muted small">Needs Endurance 8, Logic 5, Demeanor 5</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
-                      <span>Sculpted</span>
-                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
-                    </div>
-                    <p class="copy effect">This character can request Advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate).</p>
-                    <p class="copy muted small">Needs Power 5, Endurance 5, Demeanor 3</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
-                      <span>Eagle Eye</span>
-                      <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip">Ability</span></span>
-                    </div>
-                    <p class="copy effect">This character can request Advantage in situations that involve seeing at distance.</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
-                      <span>Gladiator</span>
-                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
-                    </div>
-                    <p class="copy effect">When in combat, this character can use any close combat weapon as if they had the Wielder Trait at Rank 1 for that weapon.</p>
-                    <p class="copy muted small">Needs Physical 5, Grace 5, Demeanor 5</p>
+                    <p class="copy effect">This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.</p>
+                    <p class="copy effect">This character can request Advantage on Attack Rolls made with natural weapons.</p>
+                    <p class="copy muted small">Needs Grace 8, Power 6, Endurance 6, Intuition 5, Martial Artist</p>
                   </div>
                 </div>
               </div>
@@ -561,7 +633,7 @@
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
                       <span>Long in the Tooth</span>
-                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Ability</span></span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Other</span></span>
                     </div>
                     <p class="copy effect">This character has kept their teeth through a long life and has the Long Toothed Condition.</p>
                     <p class="copy effect"><strong>Long Toothed (Condition):</strong> An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request Advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs.</p>
