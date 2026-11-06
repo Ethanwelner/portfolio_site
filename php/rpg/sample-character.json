@@ -1,7 +1,7 @@
 {
 	"picks": {
-		"universal": 6,
-		"background": 6
+		"universal": 0,
+		"background": 1
 	},
 	"traits": [
 		{
@@ -249,6 +249,71 @@
 			"from": "background pick"
 		},
 		{
+			"id": "hidden-holds",
+			"name": "Hidden Holds",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Stashing goods where nobody looks.",
+			"effect": "This character gains +5 to rolls relating to hiding goods in vehicles, cargo, or luggage.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "checkpoint-nerve",
+			"name": "Checkpoint Nerve",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Staying cool when the guards come knocking.",
+			"effect": "This character gains +3 to Persuasion or Demeanor rolls when dealing with customs officers, inspectors, and guards.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "greasing-palms",
+			"name": "Greasing Palms",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Knowing who to pay, and how much.",
+			"effect": "- This character gains +5 to Persuasion rolls when offering a bribe.\n- This character can request Advantage when judging whether someone can be bought.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "fence",
+			"name": "Fence",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Moving goods that can't be sold in the open.",
+			"effect": "This character gains +3 to Persuasion rolls when negotiating the price of stolen or contraband goods.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
+			"id": "running-dark",
+			"name": "Running Dark",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Flying where nobody's watching.",
+			"effect": "This character can request Advantage on piloting Skill Checks to avoid detection, such as slipping past patrols or sensor sweeps.",
+			"badges": [
+				"Profession"
+			],
+			"from": "background pick"
+		},
+		{
 			"id": "wielder-pistol",
 			"name": "Wielder: Pistol (1)",
 			"category": "Skill",
@@ -256,6 +321,74 @@
 			"language": false,
 			"summary": "Fighting with, and maintaining, a pistol.",
 			"effect": "- Rank *5 added to skill check rolls involving a Pistol.\n- +3 to Attack Rolls made with a Pistol, at any Rank.\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "knife-work",
+			"name": "Knife Work (1)",
+			"category": "Ability",
+			"plane": "any",
+			"language": false,
+			"summary": "Fighting dirty with a short blade.",
+			"effect": "Rank *2 added to the Piercing damage of this character's Attacks with a knife or other small bladed weapon against a target that hasn't acted yet this Round.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "bolt",
+			"name": "Bolt",
+			"category": "Ability",
+			"plane": "any",
+			"language": false,
+			"summary": "Getting out while the getting's good.",
+			"effect": "This character gains the Bolt Action.",
+			"action": "Bolt: This character takes Full Movement at +5 Priority for the Round. This character gains the Flat-Footed Condition the following Round.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "sht-talk",
+			"name": "Sh!t Talk",
+			"category": "Ability",
+			"plane": "any",
+			"language": false,
+			"summary": "Running their mouth to throw people off.",
+			"effect": "This character gains the Sh!t Talk Action.",
+			"action": "Sh!t Talk: As an RP Action and Defend, this character keeps up a stream of fast talk. One character within 5 m who can hear and understand them takes -2 to Attack Rolls against this character this Round.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "dock-rat",
+			"name": "Dock Rat",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "At home on any dock, berth, or station.",
+			"effect": "This character gains +3 to rolls in ports, stations, and docks to find a berth, a crew, or work off the books.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "route-memory",
+			"name": "Route Memory",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Never forgetting a way once traveled.",
+			"effect": "This character can request Advantage on Memory Skill Checks to retrace any route they've traveled before, whether on foot, by vehicle, or by ship, and to recall its landmarks, hazards, and checkpoints.",
+			"badges": [],
+			"from": "universal pick"
+		},
+		{
+			"id": "sizing-up",
+			"name": "Sizing Up",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Reading one person across the table.",
+			"effect": "After a few minutes of conversation with someone, this character can request Advantage on Empathy Skill Checks to judge whether they're lying or can be trusted.",
 			"badges": [],
 			"from": "universal pick"
 		},
@@ -383,7 +516,12 @@
 				"Gambling",
 				"Commerce",
 				"Wielder: Shotgun",
-				"Wielder: Dagger"
+				"Wielder: Dagger",
+				"Hidden Holds",
+				"Checkpoint Nerve",
+				"Greasing Palms",
+				"Fence",
+				"Running Dark"
 			]
 		},
 		{
