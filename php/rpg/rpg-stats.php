@@ -510,7 +510,7 @@
 					<h4>Special Stats Ex. (Magic)</h4>
 					<div class="text-cols">
 						<p class="copy">
-							Beyond Physical, Social, and Mental, there are also Special Stats, core Stats that only some characters may have access to, such as Magic. A character can only spend points into a Special Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. Characters without that access can never put points into it, however they Level.
+							Beyond Physical, Social, and Mental, there are also Special Stats, core Stats that only some characters may have access to, such as Magic. A character can only spend points into a Special Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. A character without that access can’t put points into it, no matter how many Levels they gain.
 						</p>
 						<p class="copy">
 							Special Stats do not have focus Stats. Instead, every point spent into a Special Stat grants 3 of that Stat’s Special Stat points, such as Mana Points (MP) for Magic. As with every other Stat, no more than 20 points can be spent into a Special Stat, though Traits, Equipment, or other effects can raise its total above 20.
