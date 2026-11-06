@@ -2920,6 +2920,28 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         /* The Traits as the creator's cards: the category as a badge at the
            top of the body, the effect, then where the Trait came from at the
            bottom. Each card is as tall as the others in its row. */
+        /* A bulleted effect: a line for each part that does something
+           different, like the creator's */
+        .sheet-effect {
+            > p,
+            > ul {
+                margin: 0;
+            }
+
+            > * + * {
+                margin-top: 4px;
+            }
+
+            > ul {
+                padding-left: 1.25em;
+                list-style: disc;
+            }
+
+            li + li {
+                margin-top: 2px;
+            }
+        }
+
         .sheet-traits {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
