@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: the Sample Character Sheet’s item cards keep their badges on the name’s line, as the creator’s do, wrapping them under it one at a time only when they don’t fit, rather than in any card under 480px wide.</li>
 						<li>Character Creator and Player Tools: Condition cards no longer have a note field.</li>
 						<li>Popups across Strange Frontiers, the Character Creator and Player Tools put their close button on the panel’s top right corner, half outside it, and keep it there while a long popup’s content scrolls, rather than letting it scroll away.</li>
 						<li>Character Creator and Player Tools: Add items works like Add traits: a tab per category with a search, and the same item cards as the inventory, each with a large checkbox at its right to pick it and a count, then Add items, which turns green and glitches like Build it once something is picked. A Custom tab holds the form for an item the game doesn’t have. On every item card, the damage, range, area and resistance badges are separate, beside the name at the right, and wrap under it one at a time as the card narrows, rather than all dropping to their own line in any card under 420px wide.</li>
