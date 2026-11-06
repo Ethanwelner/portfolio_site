@@ -2687,22 +2687,29 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             font-weight: 600;
         }
 
-        /* One line, with the resistances dropping under it in a narrow card */
+        /* One line: Equip, the name and its badges, then the chevron */
         .sheet-item-row {
             flex-wrap: nowrap;
+        }
 
-            > .chip,
-            > .sheet-item-stats {
-                flex: none;
+        /* The name and its badges, as in the creator: the name takes what
+           its line leaves and each badge sits at the right, wrapping under
+           it one at a time only when it runs out of room */
+        .sheet-item-main {
+            flex: 1 1 auto;
+            min-width: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 6px 8px;
+
+            > .sheet-item-title {
+                flex: 1 1 auto;
             }
 
-            @container sheet-item (width < 480px) {
-                flex-wrap: wrap;
-
-                > .sheet-item-stats {
-                    order: 1;
-                    flex-basis: 100%;
-                }
+            > .sheet-item-stats {
+                display: contents;
             }
         }
 
