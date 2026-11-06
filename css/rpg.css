@@ -464,9 +464,27 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     position: relative;
 }
 
+/* The dot sits in em, so it moves in as the nav shrinks: 18px out at 28px,
+   about 16px at 24px and 13px at 20px */
 .personal-page-nav .nav-bullet {
     left: auto;
-    right: -18px;
+    right: -0.65em;
+}
+
+/* Its labels run longer than the homepage's, so it takes the homepage nav's
+   smaller sizes sooner: 1.5rem (the homepage's size on short windows and
+   phones) below 1400px, and 1.25rem (its own phone size) below 1200px */
+@media (max-width: 1399px) {
+    .section-scroll-links.personal-page-nav {
+        font-size: 1.5rem;
+        line-height: 1.35;
+    }
+}
+
+@media (max-width: 1199px) {
+    .section-scroll-links.personal-page-nav {
+        font-size: 1.25rem;
+    }
 }
 
 /* Green Strange Frontiers accent: hero title in personal.php and its nav link */
@@ -3418,6 +3436,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 .creator-shell {
     --sf-creator-top: 112px;
     --sf-creator-left: 200px;
+}
+
+/* The nav's smaller size below 1200px is narrower, so the hero moves in */
+@media (max-width: 1199px) {
+    .creator-shell {
+        --sf-creator-left: 172px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
