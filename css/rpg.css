@@ -808,11 +808,18 @@ html.lore-modal-open {
     column-count: 1;
 }
 
+/* The close button stays in the panel's top right corner while a long
+   popup scrolls: sticky (its offset counts from inside the panel's 32px
+   padding, so -12px is 20px from the edge), floated right, with negative
+   margins so it sits 20px in from the corner and takes no room from the
+   content below it */
 .lore-modal-close {
     appearance: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: sticky;
+    top: -12px;
+    z-index: 2;
+    float: right;
+    margin: -12px -12px -36px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -860,8 +867,8 @@ html.lore-modal-open {
     }
 
     .lore-modal-close {
-        top: 14px;
-        right: 14px;
+        top: -10px;
+        margin: -10px -10px -36px 8px;
     }
 }
 
