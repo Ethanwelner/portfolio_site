@@ -489,7 +489,7 @@
 		});
 
 		var $loreModal = $( ".lore-modal" );
-		var $loreModalPanel = $loreModal.find( ".lore-modal-panel" );
+		var $loreModalScroll = $loreModal.find( ".lore-modal-scroll" );
 		var $loreModalTitle = $loreModal.find( ".lore-modal-title" );
 		var $loreModalBody = $loreModal.find( ".lore-modal-body" );
 		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
@@ -501,7 +501,7 @@
 			}
 			$loreModalTitle.html( titleHtml );
 			$loreModalBody.html( bodyHtml );
-			$loreModalPanel.scrollTop( 0 );
+			$loreModalScroll.scrollTop( 0 );
 			$loreModal.addClass( "is-open" );
 			$( "html" ).addClass( "lore-modal-open" );
 			$loreModalClose.trigger( "focus" );
