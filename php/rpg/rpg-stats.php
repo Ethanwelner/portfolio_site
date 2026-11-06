@@ -507,16 +507,16 @@
 					</div>
 				</div>
 				<div class="content-stack content-stack-sm">
-					<h4>Unique Core Stats Ex. (Magic)</h4>
+					<h4>Special Stats Ex. (Magic)</h4>
 					<div class="text-cols">
 						<p class="copy">
-							Beyond Physical, Social, and Mental, there are also unique core Stats that only some characters may have access to, such as Magic. A character can only spend points into a unique core Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. Characters without that access can never put points into it, however they Level.
+							Beyond Physical, Social, and Mental, there are also Special Stats, core Stats that only some characters may have access to, such as Magic. A character can only spend points into a Special Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. Characters without that access can never put points into it, however they Level.
 						</p>
 						<p class="copy">
-							Unique core Stats do not have focus Stats. Instead, every point spent into a unique core Stat grants 3 of that Stat’s unique spendable resource points, such as Mana Points (MP) for Magic. As with every other Stat, no more than 20 points can be spent into a unique core Stat, though Traits, Equipment, or other effects can raise its total above 20.
+							Special Stats do not have focus Stats. Instead, every point spent into a Special Stat grants 3 of that Stat’s Special Stat points, such as Mana Points (MP) for Magic. As with every other Stat, no more than 20 points can be spent into a Special Stat, though Traits, Equipment, or other effects can raise its total above 20.
 						</p>
 						<p class="copy">
-							Traits built on a unique core Stat list it among their Stat requirements, such as a spell that needs Magic 3, and a character without access to that Stat can't meet them. Traits that are only related to it, like Relic Handling, don't require it and are open to any character who meets their other requirements.
+							Traits built on a Special Stat list it among their Stat requirements, such as a spell that needs Magic 3, and a character without access to that Stat can't meet them. Traits that are only related to it, like Relic Handling, don't require it and are open to any character who meets their other requirements.
 						</p>
 					</div>
 					<div class="content-stack content-stack-xs">
@@ -539,7 +539,7 @@
 						Player Characters and NPCs have access to a set of three universal resources provided by the points spent within their stats. These are Hit Points, Vibe Points and Savvy Points. Each is used, lost, or gained separately and in different circumstances. Resource points can be spent to use abilities, take actions, or influence the course of role play. They can also be lost due to the actions of others, critical failures in skill checks, or through role playing circumstances.
 					</p>
 					<p class="copy">
-						There are also unique stat resources tied to unique core stat categories that only some characters may have access to. In these cases, as these core stats do not have focus stats, the player will gain 3 of that stat’s unique resources for every point spent into the core stat.
+						There are also resources tied to Special Stats, core Stats that only some characters may have access to. In these cases, as Special Stats do not have focus Stats, the player will gain 3 of that Special Stat’s resource points for every point spent into it.
 					</p>
 					<p class="copy">
 						Unless otherwise stated a character may not go above their max total of granted resource points. Some effects may provide temporary boosts to resources, in which case they are added to the character’s current total.
@@ -623,12 +623,12 @@
 							</ul>
 						</div>
 						<div class="content-stack content-stack-sm">
-							<h4>Unique Spendable Core Stat Points Ex. (MP)</h4>
+							<h4>Special Stat Points Ex. (MP)</h4>
 							<p class="copy">
-								Unique Core stat points are a spendable resource like VP and SP, but they come from their relevant unique core Stat instead of focus Stats. A character has a maximum number of a given Unique Spendable Stat Point equal to 3 for each point spent into the given unique core stat, plus any listed resource points their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP (Mana Points) before putting a point into Magic and only characters who can put points into Magic, like most Kinds of Dreft, would have MP to begin with.
+								Special Stat points are a spendable resource like VP and SP, but they come from their relevant Special Stat instead of focus Stats. A character has a maximum number of a given Special Stat’s points equal to 3 for each point spent into that Special Stat, plus any listed resource points their Kind or Traits give. A Goblinoid Tatot, for example, starts with 6 MP (Mana Points) before putting a point into Magic and only characters who can put points into Magic, like most Kinds of Dreft, would have MP to begin with.
 							</p>
 							<p class="copy">
-								A still-living character will regain lost unique spendable resource points at a rate of 3 per hour, totalling 72 in a 24 hour period.
+								A still-living character will regain lost Special Stat points at a rate of 3 per hour, totalling 72 in a 24 hour period.
 							</p>
 						</div>
 					</div>
