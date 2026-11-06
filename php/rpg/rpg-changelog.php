@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Add item opens with a dropdown of the game’s items, grouped by category, a count and Add item; a Custom item form under it takes a name, count and category. Editing an item changes its count and name, not its category.</li>
 						<li>Character sheets: Knowledges, Abilities and Skills sit side by side once the sheet is 900px wide, and stack together below that, rather than the Knowledges taking a full-width line above the other two until 1400px.</li>
 						<li>Item cards on the character sheets: the category badge, like Weapon or Gear, moves off the top line into the open card, first among its badges, leaving the line to the name and the damage, range and resistance badges.</li>
 						<li>Character Creator and Player Tools: an attack spell’s Action, like Cast Fireball, shows its temporary weapon with the item cards’ badges: its damage by type behind the crosshairs, its Max Range behind the arc and its Area of Effect behind a burst, then Ranged Attack and its Attack Stat. Item cards put Area of Effect, behind the same burst, on their top line after Max Range, like a grenade’s 5 m. On the sheet the per-Rank amounts are worked out for the Rank held.</li>
