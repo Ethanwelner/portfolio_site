@@ -2822,11 +2822,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             border: 1px solid #6d6a5a;
         }
 
-        /* The Knowledges, the Abilities and the Skills, each a box: side by
-           side once the sheet is 900px wide (the Knowledges only as wide as
-           their longest name, up to 20rem, and the Abilities and Skills
-           sharing the rest), and below that all three stacked at once. Any
-           other Traits take a line of their own under them. */
+        /* The Knowledges, the Abilities and the Skills, each a box: the
+           Knowledges across the whole sheet first (their list in columns),
+           then the Abilities and Skills side by side once the sheet is
+           900px wide and stacked below that. Any other Traits take a line
+           of their own under them. */
         .sheet-lower,
         .sheet-pair {
             display: flex;
@@ -2845,12 +2845,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         @container sheet (width >= 900px) {
-            .sheet-lower > .sheet-side {
-                flex: 0 1 auto;
-                max-width: 20rem;
-            }
-
-            .sheet-lower > .sheet-pair,
             .sheet-pair > * {
                 flex: 1 1 0;
             }
@@ -2891,9 +2885,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* In as many 14rem columns as the sheet's width holds, so the
+           Knowledges box across the sheet stays short */
         .sheet-knowledges {
             display: grid;
-            gap: 12px;
+            grid-template-columns: repeat(auto-fill, minmax(min(14rem, 100%), 1fr));
+            gap: 12px 24px;
             margin: 0;
             padding: 0;
             list-style: none;
