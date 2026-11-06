@@ -423,6 +423,14 @@
                     <p class="copy effect">When in combat, this character can use any close combat weapon as if they had the Wielder Trait at Rank 1 for that weapon.</p>
                     <p class="copy muted small">Needs Physical 5, Grace 5, Demeanor 5</p>
                   </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Brawler (1)</span>
+                      <span class="trait-name-chips"><span class="chip">Skill</span></span>
+                    </div>
+                    <p class="copy effect">Rank *1 added to the Blunt damage of this character's natural weapons.</p>
+                    <p class="copy muted small">Needs Power 3, Endurance 3</p>
+                  </div>
                 </div>
               </div>
               <div class="content-stack content-stack-xs">
@@ -439,15 +447,6 @@
                     <p class="copy effect">This character gains the Rally Action.</p>
                     <p class="copy effect"><strong>Rally:</strong> As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them.</p>
                     <p class="copy muted small">Needs Demeanor 5, Persuasion 4</p>
-                  </div>
-                  <div class="trait-box">
-                    <div class="trait-name trait-name-with-chip">
-                      <span>Brawler (1)</span>
-                      <span class="trait-name-chips"><span class="chip">Ability</span></span>
-                    </div>
-                    <p class="copy effect">This character gains the Unarmed Strike Action.</p>
-                    <p class="copy effect"><strong>Unarmed Strike:</strong> This character may Attack a target with a temporary weapon that has the following profile: (Melee) (max range 1 m) (1 Blunt per Rank) (Attack Stat: Power).</p>
-                    <p class="copy muted small">Needs Power 3, Endurance 3</p>
                   </div>
                   <div class="trait-box">
                     <div class="trait-name trait-name-with-chip">
@@ -484,6 +483,24 @@
                     </div>
                     <p class="copy effect">After spending a Full RP Action studying a creature during an Incident, this character gains +2 to Attack Rolls against creatures of that kind for the rest of the Incident.</p>
                     <p class="copy muted small">Needs Intuition 5, Logic 3</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Expert Boxer</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">This character can Attack with the Superman Punch natural weapon.</p>
+                    <p class="copy effect">This character can request Advantage on Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch.</p>
+                    <p class="copy muted small">Needs Power 8, Grace 6, Endurance 6, Intuition 4, Boxing</p>
+                  </div>
+                  <div class="trait-box">
+                    <div class="trait-name trait-name-with-chip">
+                      <span>Martial Arts Master</span>
+                      <span class="trait-name-chips"><span class="chip chip-muted">Mastery</span><span class="chip">Ability</span></span>
+                    </div>
+                    <p class="copy effect">This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.</p>
+                    <p class="copy effect">This character can request Advantage on Attack Rolls made with natural weapons.</p>
+                    <p class="copy muted small">Needs Grace 8, Power 6, Endurance 6, Intuition 5, Martial Artist</p>
                   </div>
                 </div>
               </div>
