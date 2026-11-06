@@ -1,6 +1,6 @@
 {
 	"picks": {
-		"universal": 7,
+		"universal": 4,
 		"background": 5
 	},
 	"traits": [
@@ -267,6 +267,39 @@
 			"language": false,
 			"summary": "Sees unusually well at a distance.",
 			"effect": "This character can request advantage in situations that involve seeing at distance.",
+			"badges": [],
+			"from": "play, with a banked pick"
+		},
+		{
+			"id": "cover-identity",
+			"name": "Cover Identity",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Living as someone else, down to the details.",
+			"effect": "This character gains +5 to Demeanor and Memory rolls relating to keeping up a false identity under scrutiny.",
+			"badges": [],
+			"from": "play, with a banked pick"
+		},
+		{
+			"id": "poker-face",
+			"name": "Poker Face",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Giving nothing away.",
+			"effect": "This character gains +3 to Demeanor rolls relating to hiding their intentions or reactions.",
+			"badges": [],
+			"from": "play, with a banked pick"
+		},
+		{
+			"id": "procurement",
+			"name": "Procurement",
+			"category": "Skill",
+			"plane": "any",
+			"language": false,
+			"summary": "Finding hard-to-get goods through the right sellers.",
+			"effect": "This character gains +5 to rolls relating to sourcing rare, restricted or hard-to-find goods.",
 			"badges": [],
 			"from": "play, with a banked pick"
 		}
