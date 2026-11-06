@@ -7,6 +7,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/6/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: 100 new Skills, ten each for martial arts and boxing, athletics, invention and planar exploration, potions and magical artifacts, hacking, piloting, negotiation and contracts, diplomacy, field medicine, and monsters and extraplanar beings. Brawler gives an Unarmed Strike Action, and Grappler, Takedown and Disarm give Actions of their own.</li>
+						<li>Character Creator: 15 new Knowledges to go with them, including Martial Arts, Anatomy, Switch Gates, Enchantment, Contract Law, Combat Medicine and Extraplanar Threats.</li>
+						<li>Character Creator: Ambusher, Appraisal, Vigilance and 24 other Skills now have their effects and minimum stats. Shield Wall is now an Ability with a Shieldwall Action.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Player Tools: the d20 sits 24px down from the top of the chat box, up from 12px.</li>
