@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: Magic Access’s effect now just says the character can level up the Magic core stat.</li>
 						<li>Mechanics: the Sample Character Sheet’s item cards keep their badges on the name’s line, as the creator’s do, wrapping them under it one at a time only when they don’t fit, rather than in any card under 480px wide.</li>
 						<li>Character Creator and Player Tools: Condition cards no longer have a note field.</li>
 						<li>Popups across Strange Frontiers, the Character Creator and Player Tools put their close button on the panel’s top right corner, half outside it, and keep it there while a long popup’s content scrolls, rather than letting it scroll away.</li>

@@ -4167,7 +4167,7 @@ category: ability\r
 conveyed: true\r
 coreAccess: [magic]\r
 opensLists: [magic]\r
-effect: "This character can put levels into Magic, a core stat with no focus stats; each point of Magic adds 3 MP (Mana Points). They can also take Traits on the Magic list, like Incantation."\r
+effect: "This character can level up the Magic core stat."\r
 `,Pm=`id: magical-endurance\r
 name: "Magical Endurance"\r
 status: draft\r
