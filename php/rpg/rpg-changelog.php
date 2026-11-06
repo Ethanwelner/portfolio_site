@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: a spell’s Cast Action badges in an ability card, like Cast Lightning’s, use the item badges’ tan colors throughout, not just in the icon’s circle.</li>
 						<li>Character Creator and Player Tools: Trait effects can be bulleted, a line for each part that does something different. Every Wielder skill’s effect is now three bullets, with the basic-tasks sentence last.</li>
 						<li>Character Creator: Magic Access’s effect now just says the character can level up the Magic core stat.</li>
 						<li>Mechanics: the Sample Character Sheet’s item cards keep their badges on the name’s line, as the creator’s do, wrapping them under it one at a time only when they don’t fit, rather than in any card under 480px wide.</li>
