@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics and the Character Creator: on character sheets the Knowledges sit across the top, above the Abilities and Skills, with their list in columns so the box stays short.</li>
 						<li>Mechanics: Edwin spends eleven of his picks on new Traits: Knife Work, Bolt and Sh!t Talk (Abilities), and Dock Rat, Route Memory, Sizing Up, Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence and Running Dark (Skills). The last five are on the Smuggler’s Background list now, and he has one Background pick left.</li>
 						<li>Mechanics: Edwin Humble, the Sample Character Sheet’s character, is Level 6. His new core point went into Social (now 3), with 1 each into Empathy, Persuasion and Demeanor, so his VP is 12 and he has 12 picks available (6 Universal, 6 Background).</li>
 						<li>Mechanics: the Sample Character Sheet’s Traits use the creator’s current wording. Concealment, Sleight of Hand, Haggler, Streetwise, Smooth Talker, Schemer, Pilot: Truck, Appraisal and Cargo Handling have their effects instead of placeholders, and the Wielder skills’ effects are bulleted, as in the creator.</li>
