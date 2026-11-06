@@ -2941,6 +2941,44 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             max-height: 75vh;
             overflow-y: auto;
 
+            /* A slim rounded handle, like Player Tools' chat: no track or
+               arrows (Firefox gets a thin bar in the same colors) */
+            scrollbar-color: auto;
+            scrollbar-width: auto;
+
+            /* A 16px lane with the 6px handle at its right edge: 10px clear of the
+               content, and 5px in from the ends */
+            &::-webkit-scrollbar {
+                width: 16px;
+            }
+
+            &::-webkit-scrollbar-track,
+            &::-webkit-scrollbar-corner {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: rgb(255 255 255 / 25%) padding-box;
+                border: 5px solid transparent;
+                border-width: 5px 0 5px 10px;
+                /* Each corner's radius is its border plus 3px, so the visible handle
+                   is a 6px pill with round ends whatever the borders are */
+                border-radius: 13px 3px 3px 13px / 8px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgb(255 255 255 / 40%) padding-box;
+            }
+
+            @supports not selector(::-webkit-scrollbar) {
+                scrollbar-width: thin;
+                scrollbar-color: rgb(255 255 255 / 25%) transparent;
+            }
+
             @media print {
                 max-height: none;
                 overflow: visible;
