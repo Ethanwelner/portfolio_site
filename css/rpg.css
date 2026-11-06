@@ -41,11 +41,15 @@
     width: 100%;
 }
 
-/* php/rpg/rpg-stats.php */
+/* php/rpg/rpg-stats.php: 48px each side, 24px below 1400px */
 .column-image {
     width: 100%;
     padding: 0 48px;
     object-fit: contain;
+
+    @media (max-width: 1399px) {
+        padding: 0 24px;
+    }
 }
 
 /* Trait cards, php/rpg/rpg-traits.php */
@@ -3245,10 +3249,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
     .c-sheet-box {
         padding: 1rem;
-    }
-
-    .column-image {
-        padding: 0;
     }
 }
 
