@@ -2750,11 +2750,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             border: 1px solid #6d6a5a;
         }
 
-        /* The Knowledges, the Abilities and the Skills, each a box, stacked;
-           side by side once there's room, the Abilities (twice as wide, so
-           their cards take two columns) and Skills first,
-           then all three, as in the creator. Any other Traits take a line of
-           their own under them. */
+        /* The Knowledges, the Abilities and the Skills, each a box: side by
+           side once the sheet is 900px wide (the Knowledges only as wide as
+           their longest name, up to 20rem, and the Abilities twice the Skills'
+           width), and below that all three stacked at once. Any other Traits
+           take a line of their own under them. */
         .sheet-lower {
             display: flex;
             flex-wrap: wrap;
@@ -2767,19 +2767,17 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
 
             @container sheet (width >= 900px) {
+                > .sheet-side {
+                    flex: 0 1 auto;
+                    max-width: 20rem;
+                }
+
                 > .sheet-abilities {
                     flex: 2 1 0;
                 }
 
                 > .sheet-skills {
                     flex: 1 1 0;
-                }
-            }
-
-            @container sheet (width >= 1400px) {
-                > .sheet-side {
-                    flex: 0 1 auto;
-                    max-width: 20rem;
                 }
             }
         }
