@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div class="d-inline-flex flex-6 justify-content-end align-items-center">
-				<svg class="column-image stat-ring" viewBox="-8 -4 484 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
+				<svg class="column-image stat-ring" viewBox="26 -10 406 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
 					<title id="stat-ring-title">Stat diagram: character Level at the center, branching to the three core Stats, which each branch to their three focus Stats</title>
 					<g fill="#979797" font-size="12" font-weight="700" text-anchor="middle">
 						<!-- Branches: Level to each core Stat (thick), each core Stat to its focus Stats (thin) -->
@@ -84,15 +84,15 @@
 							</g>
 							<g class="stat-ring-focus" data-stat="empathy">
 								<ellipse cx="396.833" cy="237.474" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="418.73" y="241.47" text-anchor="start">Empathy</text>
+								<text fill="#212121" class="stat-ring-label" x="396.83" y="221.47">Empathy</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="persuasion">
 								<ellipse cx="376.186" cy="293.902" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="397.93" y="298.06" text-anchor="start">Persuasion</text>
+								<text fill="#212121" class="stat-ring-label" x="386.19" y="276.90">Persuasion</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="demeanor">
 								<ellipse cx="336.704" cy="339.958" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="358.51" y="344.43" text-anchor="start">Demeanor</text>
+								<text fill="#212121" class="stat-ring-label" x="336.70" y="364.96">Demeanor</text>
 							</g>
 						</g>
 						<!-- Mental -->
@@ -104,15 +104,15 @@
 							</g>
 							<g class="stat-ring-focus" data-stat="logic">
 								<ellipse cx="50.5672" cy="237.474" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="29.45" y="241.63" text-anchor="end">Logic</text>
+								<text fill="#212121" class="stat-ring-label" x="50.57" y="221.47">Logic</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="intuition">
 								<ellipse cx="71.2138" cy="293.902" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="49.88" y="298.06" text-anchor="end">Intuition</text>
+								<text fill="#212121" class="stat-ring-label" x="61.21" y="276.90">Intuition</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="memory">
 								<ellipse cx="110.696" cy="339.958" rx="10.1621" ry="10"/>
-								<text fill="#212121" class="stat-ring-label" x="89.85" y="344.43" text-anchor="end">Memory</text>
+								<text fill="#212121" class="stat-ring-label" x="110.70" y="364.96">Memory</text>
 							</g>
 						</g>
 						<!-- Character level at the center -->
