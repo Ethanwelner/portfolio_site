@@ -9,9 +9,11 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: 50 more Skills, ten each for leadership and command, espionage and intelligence, faith, ritual and spirits, salvage, demolition and heavy industry, and scholarship and teaching. Rally ends Frightened on allies who can hear, and Battlefield Commander gives them +1 Priority.</li>
+						<li>Character Creator: 14 more Knowledges to go with them, including Rhetoric, Intelligence Tradecraft, Religions of Isekai, Spirits and the Dead, Explosives, Dead Languages and Pedagogy.</li>
 						<li>Character Creator: 100 new Skills, ten each for martial arts and boxing, athletics, invention and planar exploration, potions and magical artifacts, hacking, piloting, negotiation and contracts, diplomacy, field medicine, and monsters and extraplanar beings. Brawler gives an Unarmed Strike Action, and Grappler, Takedown and Disarm give Actions of their own.</li>
 						<li>Character Creator: 15 new Knowledges to go with them, including Martial Arts, Anatomy, Switch Gates, Enchantment, Contract Law, Combat Medicine and Extraplanar Threats.</li>
-						<li>Character Creator: Ambusher, Appraisal, Vigilance and 24 other Skills now have their effects and minimum stats. Shield Wall is now an Ability with a Shieldwall Action.</li>
+						<li>Character Creator: Ambusher, Appraisal, Vigilance and 24 other Skills now have their effects and minimum stats. Shield Wall is now an Ability with a Shieldwall Action, which gives every ally holding a shield and Defending beside you +4 Defense.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
