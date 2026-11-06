@@ -3259,7 +3259,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 /* Strange Frontiers pages (the personal page's Strange Frontiers pane, the
    Character Creator and Player Tools) from 1200px to 1399px: the column drops
    the 120px it keeps clear for the nav, so content runs wider, and the nav sits
-   30px from the sides instead of 60px, inside the column's side gutters. */
+   30px from the sides instead of 60px, inside the column's side gutters (or,
+   on the creator pages, level with the content's 30px padding). */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
     :is(body:has(.personal-shell.is-frontiers), body:has(.creator-shell)) {
         .container {
@@ -3273,6 +3274,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         :is(.about-social-container, .section-about-social-container) {
             right: 30px;
         }
+    }
+
+    /* The Character Creator and Player Tools have no side gutters in their
+       column, so their content takes 30px padding, level with the nav. */
+    .creator-shell .container {
+        padding-inline: 30px;
     }
 }
 
