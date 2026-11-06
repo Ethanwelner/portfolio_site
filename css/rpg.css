@@ -3256,6 +3256,26 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    767px: side nav moves to the bottom-right corner, tabs and gallery shrink.
    ======================================== */
 
+/* Strange Frontiers pages (the personal page's Strange Frontiers pane, the
+   Character Creator and Player Tools) from 1200px to 1399px: the column drops
+   the 120px it keeps clear for the nav, so content runs wider, and the nav sits
+   30px from the sides instead of 60px, inside the column's side gutters. */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    :is(body:has(.personal-shell.is-frontiers), body:has(.creator-shell)) {
+        .container {
+            max-width: min(1920px, 100%);
+        }
+
+        :is(.logo-bug, .section-logo-bug, .scroll-links, .section-scroll-links, .rpg-links-rail, .rpg-links-clip .rpg-links) {
+            left: 30px;
+        }
+
+        :is(.about-social-container, .section-about-social-container) {
+            right: 30px;
+        }
+    }
+}
+
 @media only screen and (max-width: 1199px) {
     .rpg-links-rail {
         left: auto;
