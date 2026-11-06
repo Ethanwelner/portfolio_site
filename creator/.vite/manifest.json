@@ -1,31 +1,31 @@
 {
-  "_styles-CXH68wr6.js": {
-    "file": "assets/styles-CXH68wr6.js",
+  "_styles-BQmgxtwr.js": {
+    "file": "assets/styles-BQmgxtwr.js",
     "name": "styles",
     "css": [
-      "assets/styles-CbA0YLfo.css"
+      "assets/styles-Lm4MZyo2.css"
     ]
   },
-  "_styles-CbA0YLfo.css": {
-    "file": "assets/styles-CbA0YLfo.css",
-    "src": "_styles-CbA0YLfo.css"
+  "_styles-Lm4MZyo2.css": {
+    "file": "assets/styles-Lm4MZyo2.css",
+    "src": "_styles-Lm4MZyo2.css"
   },
   "src/app/main.tsx": {
-    "file": "assets/main-BQV3t-4x.js",
+    "file": "assets/main-CKYlbk24.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CXH68wr6.js"
+      "_styles-BQmgxtwr.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main--S8atmOi.js",
+    "file": "assets/main-BeD_FYKJ.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CXH68wr6.js"
+      "_styles-BQmgxtwr.js"
     ],
     "css": [
       "assets/main-DL1XEIPt.css"
