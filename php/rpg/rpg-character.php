@@ -353,48 +353,51 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<?php foreach ( $sf_languages as $t ) { echo '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
 			</ul>
 		</div>
-		<div class="c-sheet-box sheet-abilities">
-			<h3 class="sheet-rule sheet-subhead">Abilities</h3>
-			<?php if ( $sf_abilities ) : ?>
-				<!-- Each Ability shows its name and effect; its chevron opens its badge,
-				     where it came from and any Action it grants -->
+		<!-- The Abilities and the Skills share a box of their own, so they can split it by its width -->
+		<div class="sheet-pair">
+			<div class="c-sheet-box sheet-abilities">
+				<h3 class="sheet-rule sheet-subhead">Abilities</h3>
+				<?php if ( $sf_abilities ) : ?>
+					<!-- Each Ability shows its name and effect; its chevron opens its badge,
+					     where it came from and any Action it grants -->
+					<ul class="sheet-traits">
+						<?php foreach ( $sf_abilities as $t ) : ?>
+							<li class="trait-box sheet-ability">
+								<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+								<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+								<div class="sheet-fold">
+									<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
+									<?php if ( ! empty( $t['action'] ) ) : ?>
+										<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
+										<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
+									<?php endif; ?>
+								</div>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				<?php else : ?>
+					<p class="sheet-empty">No Abilities yet.</p>
+				<?php endif; ?>
+			</div>
+			<div class="c-sheet-box sheet-skills">
+				<!-- The Skills title, then along its line the picks left, together -->
+				<div class="sheet-traits-head">
+					<h3 class="sheet-rule sheet-subhead">Skills</h3>
+					<?php $sf_picks = $sf_sample['picks']['universal'] + $sf_sample['picks']['background']; ?>
+					<span class="sheet-banked"><?php echo $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ); ?> available</span>
+				</div>
 				<ul class="sheet-traits">
-					<?php foreach ( $sf_abilities as $t ) : ?>
-						<li class="trait-box sheet-ability">
-							<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
-							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-							<div class="sheet-fold">
+					<?php foreach ( $sf_skills as $t ) : ?>
+						<li>
+							<details class="trait-box">
+								<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
 								<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-								<?php if ( ! empty( $t['action'] ) ) : ?>
-									<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
-									<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
-								<?php endif; ?>
-							</div>
+								<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
+							</details>
 						</li>
 					<?php endforeach; ?>
 				</ul>
-			<?php else : ?>
-				<p class="sheet-empty">No Abilities yet.</p>
-			<?php endif; ?>
-		</div>
-		<div class="c-sheet-box sheet-skills">
-			<!-- The Skills title, then along its line the picks left, together -->
-			<div class="sheet-traits-head">
-				<h3 class="sheet-rule sheet-subhead">Skills</h3>
-				<?php $sf_picks = $sf_sample['picks']['universal'] + $sf_sample['picks']['background']; ?>
-				<span class="sheet-banked"><?php echo $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ); ?> available</span>
 			</div>
-			<ul class="sheet-traits">
-				<?php foreach ( $sf_skills as $t ) : ?>
-					<li>
-						<details class="trait-box">
-							<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-							<p class="copy"><?php echo $sf_e( $t['effect'] ); ?></p>
-						</details>
-					</li>
-				<?php endforeach; ?>
-			</ul>
 		</div>
 		<?php if ( $sf_other ) : ?>
 			<div class="c-sheet-box sheet-other">
