@@ -2371,6 +2371,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
                 left: -18px;
                 width: 56px;
                 height: 56px;
+
+                /* On phones the sheet reaches within 3px of the screen's
+                   edge, so the badge comes in to stay on screen */
+                @media (max-width: 767px) {
+                    left: -3px;
+                }
             }
 
             .level-badge-label {
@@ -2426,6 +2432,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         flex-direction: column;
         gap: 20px;
         margin-top: 40px;
+        /* Pulled out by its padding and border, like the tab boxes
+           (.tech-fields), so the boxes inside line up with the text above */
+        margin-left: -17px;
+        margin-right: -17px;
         padding: 16px;
         border: 1px solid var(--portfolio-gray);
         border-radius: 12px;

@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: the Sample Character Sheet is pulled out past the column by its padding and border, like the tab boxes, so the boxes inside it line up with the text above. On phones its Level badge comes in to stay on screen.</li>
 						<li>Mechanics and the Character Creator: on character sheets the Knowledges sit across the top, above the Abilities and Skills, with their list in columns so the box stays short.</li>
 						<li>Character Creator and Player Tools: eleven new Traits for smugglers and street folk. Skills: Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence, Dock Rat, Running Dark, Route Memory and Sizing Up. Abilities: Knife Work, Bolt and Sh!t Talk. The Smuggler’s Background list adds Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence and Running Dark. On character sheets, Abilities and Skills share their space equally until the Abilities fit two columns.</li>
 						<li>Mechanics: Edwin spends eleven of his picks on new Traits: Knife Work, Bolt and Sh!t Talk (Abilities), and Dock Rat, Route Memory, Sizing Up, Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence and Running Dark (Skills). The last five are on the Smuggler’s Background list now, and he has one Background pick left.</li>
