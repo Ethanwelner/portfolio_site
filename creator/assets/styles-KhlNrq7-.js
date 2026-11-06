@@ -4284,7 +4284,7 @@ tags: [combat, shield, military]
 category: ability
 minStats: { endurance: 4, power: 3, demeanor: 2 }
 effect: "This character gains the Shieldwall Action."
-action: "Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +2 Defense for the Round."
+action: "Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +4 Defense for the Round."
 `,Wm=`id: shield
 name: "Shield"
 status: placeholder
