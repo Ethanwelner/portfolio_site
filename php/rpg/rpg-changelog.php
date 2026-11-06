@@ -9,7 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: Add items works like Add traits: search the game’s items by name or tag, filter by category, and check item cards, each with a count, then Add items. Custom item stays under the cards.</li>
+						<li>Character Creator and Player Tools: Add items works like Add traits: search the game’s items by name or tag, filter by category, and pick from the same item cards as the inventory, each with a count, then Add items. Custom item stays under the cards.</li>
 						<li>Character Creator and Player Tools: Add item opens with a dropdown of the game’s items, grouped by category, a count and Add item; a Custom item form under it takes a name, count and category. Editing an item changes its count and name, not its category.</li>
 						<li>Character sheets: Knowledges, Abilities and Skills sit side by side once the sheet is 900px wide, and stack together below that, rather than the Knowledges taking a full-width line above the other two until 1400px.</li>
 						<li>Item cards on the character sheets: the category badge, like Weapon or Gear, moves off the top line into the open card, first among its badges, leaving the line to the name and the damage, range and resistance badges.</li>
