@@ -154,7 +154,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Passing as someone else, through costume, makeup and manner.",
-			"effect": "This character is capable of putting together a convincing simple disguise without a skill check. Rank *10 added to skill check rolls involving disguise and impersonation.",
+			"effect": "This character is capable of putting together a convincing simple disguise without a skill check. Rank *5 added to skill check rolls involving disguise and impersonation.",
 			"badges": [],
 			"from": "universal pick"
 		},
@@ -432,7 +432,7 @@
 			"plane": "any",
 			"language": false,
 			"summary": "Finding hard-to-get goods through the right sellers.",
-			"effect": "This character gains +5 to rolls relating to sourcing rare, restricted or hard-to-find goods.",
+			"effect": "This character gains +5 to rolls relating to finding and getting hold of goods, equipment or services, legal or otherwise, through the right sellers and suppliers.",
 			"badges": [],
 			"from": "play, with a banked pick"
 		}

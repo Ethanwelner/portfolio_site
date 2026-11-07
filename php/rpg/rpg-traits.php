@@ -337,7 +337,7 @@
                       <span class="trait-name-chips"><span class="chip">Skill</span></span>
                     </div>
                     <p class="copy effect">This character is capable of riding a basic animal as a mount in simple scenarios without a Skill Check.</p>
-                    <p class="copy effect">Rank *10 added to Skill Check rolls involving riding a basic animal.</p>
+                    <p class="copy effect">Rank *5 added to Skill Check rolls involving riding a basic animal.</p>
                     <p class="copy muted small">Needs Grace 4, Empathy 4, Persuasion 3</p>
                   </div>
                   <div class="trait-box">
