@@ -4827,7 +4827,7 @@ category: ability
 minStats: { magic: 3, endurance: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
-effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage (Heat, Cold and Electrical) the Attack deals to Heat, and any Burning, Frozen or Corroding Condition it gives to Burning."
+effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Heat, and any Burning, Frozen or Corroding Condition it gives to Burning."
 `,jh=`id: fog-cloud
 name: "Fog Cloud"
 status: draft
@@ -4977,7 +4977,7 @@ category: ability
 minStats: { magic: 3, demeanor: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
-effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage (Heat, Cold and Electrical) the Attack deals to Cold, and any Burning, Frozen or Corroding Condition it gives to Frozen."
+effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Cold, and any Burning, Frozen or Corroding Condition it gives to Frozen."
 `,Hh=`id: infravision
 name: "Infravision"
 status: draft
@@ -5293,7 +5293,7 @@ category: ability
 minStats: { magic: 3, empathy: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
-effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage (Heat, Cold and Electrical) the Attack deals to Corrosive, and any Burning, Frozen or Corroding Condition it gives to Corroding."
+effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Corrosive, and any Burning, Frozen or Corroding Condition it gives to Corroding."
 `,pg=`id: shield-wall
 name: "Shield Wall"
 status: draft
@@ -5458,7 +5458,7 @@ category: ability
 minStats: { magic: 3, power: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
-effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage (Heat, Cold and Electrical) the Attack deals to Blunt, and any Burning, Frozen or Corroding Condition it gives to Prone."
+effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Blunt, and any Burning, Frozen or Corroding Condition it gives to Prone."
 `,Eg=`id: stormcraft
 name: "Stormcraft"
 status: draft
@@ -5469,7 +5469,7 @@ category: ability
 minStats: { magic: 3, logic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
-effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage (Heat, Cold and Electrical) the Attack deals to Electrical, and any Burning, Frozen or Corroding Condition it gives to Deafened."
+effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Electrical, and any Burning, Frozen or Corroding Condition it gives to Deafened."
 `,Dg=`id: swordsman
 name: "Swordsman"
 status: draft
