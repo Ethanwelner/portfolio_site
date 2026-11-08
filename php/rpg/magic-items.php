@@ -1,7 +1,6 @@
 <?php
 // Example magical Items for the Adventures page's Magic tab (personal.php),
-// one per way of making them in the rules above it: Artifacts, Enchantments
-// and Potions. Each is a creator-style card (background-card.php): what it
+// shown under the rules for making them: Artifacts, Enchantments and Potions. Each is a creator-style card (background-card.php): what it
 // is and its plane as chips, what it does, then what it's imbued with and
 // what making it takes by those rules. Spells, Conditions and potion values
 // are the creator's (content/traits, content/items).
@@ -99,21 +98,20 @@ $sf_magic_items = array(
 	),
 );
 $sf_magic_item_slots = array( 'Artifacts' => 'Artifact', 'Enchantments' => 'Enchantment', 'Potions' => 'Potion' );
-?>
-<div class="content-stack">
-	<?php foreach ( $sf_magic_items as $title => $items ) : ?>
-	<div class="content-stack content-stack-xs">
-		<div class="line-container">
-			<h5><strong>Example <?php echo $title; ?></strong></h5>
-			<div class="line"></div>
-		</div>
+
+// One group's cards, under the rules that make them
+function sf_magic_item_examples( $title ) {
+	global $sf_magic_items, $sf_magic_item_slots;
+	?>
+	<div class="content-stack content-stack-xs mt-3">
+		<h6 class="mb-0"><strong>Example <?php echo $title; ?></strong></h6>
 		<div class="bg-card-grid">
 			<?php
-			foreach ( $items as $item ) {
+			foreach ( $sf_magic_items[ $title ] as $item ) {
 				sf_background_card( $item + array( 'slot' => $sf_magic_item_slots[ $title ], 'plane' => 'isekai', 'id' => '' ) );
 			}
 			?>
 		</div>
 	</div>
-	<?php endforeach; ?>
-</div>
+	<?php
+}

@@ -239,8 +239,9 @@
                                             </ul>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-magic" role="tabpanel" aria-labelledby="tab-adventure-magic">
-                                            <!-- Magic Specific Rules, from the Mechanics Doc -->
-                                            <div class="tab-panel-cols">
+                                            <!-- Magic Specific Rules, from the Mechanics Doc, each with example Items (php/rpg/magic-items.php) -->
+                                            <?php include_once 'php/rpg/magic-items.php'; ?>
+                                            <div class="content-stack">
                                                 <div class="content-stack content-stack-xs">
                                                     <div class="line-container">
                                                         <h5><strong>Artifact Construction</strong></h5>
@@ -257,6 +258,7 @@
                                                         <li>An artifact can be re-empowered, refreshing its duration, in a ritual that costs as much MP as the total cost of the Cast Actions it’s imbued with and uses the reagents for each Cast effect once more.</li>
                                                         <li>Artifacts can have predominantly RP-based effects, or novel effects that use existing Cast Actions in ways other than those above, but constructing them requires a GM-approved process.</li>
                                                     </ul>
+                                                    <?php sf_magic_item_examples( 'Artifacts' ); ?>
                                                 </div>
                                                 <div class="content-stack content-stack-xs">
                                                     <div class="line-container">
@@ -275,6 +277,7 @@
                                                         <li>The Item keeps its MP charge permanently, but if its charge sits below what its Cast Action costs for 1 week per Rank of that Action, the enchantment is lost and the Item is no longer enchanted.</li>
                                                         <li>An Item can only have one enchantment at a time.</li>
                                                     </ul>
+                                                    <?php sf_magic_item_examples( 'Enchantments' ); ?>
                                                 </div>
                                                 <div class="content-stack content-stack-xs">
                                                     <div class="line-container">
@@ -287,6 +290,7 @@
                                                         <li>Requires reagents, which are consumed in the concoction; MP equal to the cost of casting the Cast Actions imbued into the potion; and one hour per Rank of the potion’s effect.</li>
                                                         <li>A potion can have multiple effects at once.</li>
                                                     </ul>
+                                                    <?php sf_magic_item_examples( 'Potions' ); ?>
                                                 </div>
                                                 <div class="content-stack content-stack-xs">
                                                     <div class="line-container">
@@ -301,10 +305,6 @@
                                                         <li>Reagents can be gathered in the wilds with an Intuition gather check, but without Knowledge Ranks in what reagents look like, or whether they’re even there, there is little hope of success.</li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <!-- Example magical Items made by the rules above -->
-                                            <div class="mt-5">
-                                                <?php include 'php/rpg/magic-items.php'; ?>
                                             </div>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
