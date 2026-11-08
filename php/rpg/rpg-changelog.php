@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics, the Character Creator and Player Tools: the Acidic/Corrosive damage type is now just Corrosive, on the Damage Types tab, item resistances like the Hazmat Suit’s, Acid Spray and the Corroding Condition.</li>
 						<li>Mechanics and the Character Creator: Skills that let a character do the basics without a Skill Check (crafts, art, performance, cooking, riding, climbing, jumping and more) add Rank *5 instead of Rank *10. Interrogation, Hazard Assessment and Fancy Footwork have new effects, and Unconscious says how a character wakes up.</li>
 						<li>The Character Creator: new Field Medicine Ability and High Morale Condition. Bookkeeping, Brokering, Active Listening and Cultural Fluency are gone.</li>
 						<li>The Character Creator: Sprinter is an Ability with a Sprint Action (+10 m moving in a straight line). Fine Print now covers loopholes too, so Loophole Finder is gone, and 14 more Skills have broader or clearer effects, among them Diplomacy, Handler, Procurement, Contortionist, Data Analysis and the hacking Skills.</li>
