@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg-night.css'); ?>"/>
         <?php include 'php/rpg/page-slide.php'; ?>
         <title>Ethan Welner Portfolio</title>
+        <link rel="alternate" type="application/rss+xml" title="Strange Frontiers Change Log" href="rpg-feed.php">
     </head>
     <body>
 
