@@ -197,7 +197,7 @@
                       <span>Stone Skin</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">(Enchantment)</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy muted small">Temporary (This Trait lasts a number of minutes equal to the caster's Rank in this Ability)</p>
+                    <p class="copy muted small">Temporary (Every hour after a character is affected by Stone Skin, it loses one Rank of Stone Skin.)</p>
                     <p class="copy effect">This character gains Rank *3 Resistance to all Physical Damage Types.</p>
                   </div>
                 </div>
@@ -562,7 +562,7 @@
                       <span>Stone Skin</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Conveyed</span><span class="chip chip-muted">(Enchantment)</span><span class="chip">Condition</span></span>
                     </div>
-                    <p class="copy muted small">Temporary (This Trait lasts a number of minutes equal to the caster's Rank in this Ability)</p>
+                    <p class="copy muted small">Temporary (Every hour after a character is affected by Stone Skin, it loses one Rank of Stone Skin.)</p>
                     <p class="copy effect">This character gains Rank *3 Resistance to all Physical Damage Types.</p>
                   </div>
                   <div class="trait-box condition-box">
