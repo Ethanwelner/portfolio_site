@@ -7,6 +7,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/8/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Inventor covers devices, machines and tools, including working out what an unfamiliar one is for. Field Medicine reduces Severe Bleeding, Unconscious, temporary blindness or a concussion, and Monster Hunter no longer gives +3 Defense against a marked quarry.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator and Player Tools: a new Grenadier Ability, which gives the Lob Action: throwing a grenade or flask at a spot the character can’t see.</li>

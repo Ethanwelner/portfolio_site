@@ -4780,15 +4780,15 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Featherfall Action."\r
 action: "Cast Featherfall: This character may spend 1 MP to give the Featherfall Condition to a character within 10 m. The Condition's Rank is equal to the caster's Featherfall Rank."\r
-`,Dh=`id: field-medicine\r
-name: "Field Medicine"\r
-status: draft\r
-plane: any\r
-summary: "Healing a wounded comrade under fire."\r
-tags: [medicine, healing, combat]\r
-category: ability\r
-effect: "This character gains the Field Medicine Action."\r
-action: "Field Medicine: As a Full RP Action, this character may make a Grace or Memory check to remove a Condition from a character within 1 m. For every 5 points the roll exceeds 10, one Rank of a Condition is removed."\r
+`,Dh=`id: field-medicine
+name: "Field Medicine"
+status: draft
+plane: any
+summary: "Healing a wounded comrade under fire."
+tags: [medicine, healing, combat]
+category: ability
+effect: "This character gains the Field Medicine Action."
+action: "Field Medicine: As a Full RP Action, this character may make a Grace or Memory check to reduce Severe Bleeding, Unconscious, temporary blindness or a concussion on a character within 1 m. For every 5 points the roll exceeds 10, one Rank of the Condition is removed."
 `,Oh=`id: fireball\r
 name: "Fireball"\r
 status: draft\r
@@ -4845,17 +4845,17 @@ prerequisites: [heal]\r
 list: magic\r
 effect: "This character gains the Cast Greater Heal Action."\r
 action: "Cast Greater Heal: This character may spend 3 MP to heal a living character within 3 m, restoring 8 HP per Rank plus the caster's Magic and ending the Severe Bleeding Condition."\r
-`,Mh=`id: grenadier
-name: "Grenadier"
-status: draft
-plane: any
-summary: "Getting grenades over walls and around corners."
-tags: [combat, ranged, thrown, explosive]
-category: ability
-minStats: { grace: 3, intuition: 4, power: 3 }
-prerequisites: [wielder-throwing-weapon]
-effect: "This character gains the Lob Action."
-action: "Lob: This character Attacks with a thrown weapon that has an area of effect, aimed at a location outside its line of sight. A thrown object must be able to reach that location."
+`,Mh=`id: grenadier\r
+name: "Grenadier"\r
+status: draft\r
+plane: any\r
+summary: "Getting grenades over walls and around corners."\r
+tags: [combat, ranged, thrown, explosive]\r
+category: ability\r
+minStats: { grace: 3, intuition: 4, power: 3 }\r
+prerequisites: [wielder-throwing-weapon]\r
+effect: "This character gains the Lob Action."\r
+action: "Lob: This character Attacks with a thrown weapon that has an area of effect, aimed at a location outside its line of sight. A thrown object must be able to reach that location."\r
 `,Nh=`id: gust\r
 name: "Gust"\r
 status: placeholder\r
@@ -5148,8 +5148,8 @@ category: ability\r
 ranked: true\r
 minStats: { grace: 4, intuition: 4, endurance: 3 }\r
 prerequisites: [hunter]\r
-effect: "- Rank *1 added to this character's Attack Rolls against monsters and extraplanar beings.\\n- +3 Defense against a creature this character has marked with Mark Quarry."\r
-modifiers: "Attack Rolls +1 per Rank (monsters and extraplanar beings), Defense +3 (against a marked quarry)"\r
+effect: "Rank *1 added to this character's Attack Rolls against monsters and extraplanar beings."\r
+modifiers: "Attack Rolls +1 per Rank (monsters and extraplanar beings)"\r
 `,tg=`id: natural-breath-weapon\r
 name: "Natural Breath Weapon"\r
 status: draft\r
@@ -10114,17 +10114,17 @@ ranked: true\r
 minStats: { logic: 4, intuition: 4, memory: 3 }\r
 prerequisites: [programming]\r
 effect: "This character is capable of noticing a clumsy hacking attempt on a system they maintain without a Skill Check. Rank *5 added to Skill Check rolls involving detecting, tracing or stopping hackers."\r
-`,Rw=`id: inventor\r
-name: "Inventor"\r
-status: draft\r
-plane: any\r
-summary: "Designing new devices and making them work."\r
-tags: [invention, engineering, science]\r
-category: skill\r
-ranked: true\r
-minStats: { logic: 5, intuition: 4, memory: 3 }\r
-prerequisites: [tinkerer]\r
-effect: "This character is capable of drafting a workable design for a simple new device without a Skill Check. Rank *10 added to Skill Check rolls involving designing or improving inventions."\r
+`,Rw=`id: inventor
+name: "Inventor"
+status: draft
+plane: any
+summary: "Designing new devices and making them work."
+tags: [invention, engineering, science]
+category: skill
+ranked: true
+minStats: { logic: 5, intuition: 4, memory: 3 }
+prerequisites: [tinkerer]
+effect: "This character is capable of drafting a workable design for a simple device, or working out what an unfamiliar one is for, without a Skill Check. Rank *10 added to Skill Check rolls involving designing, improving or reverse-engineering devices, machines and tools."
 `,zw=`id: investigation\r
 name: "Investigation"\r
 status: draft\r
