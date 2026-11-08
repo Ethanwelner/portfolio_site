@@ -311,7 +311,7 @@
 									<tr><td>Metaphysical</td><td>Cursed</td><td>-2 to all Skill Checks per Rank, +2 to all damage received</td></tr>
 									<tr><td>Death</td><td>Mortis</td><td>-2 HP gained per Rank every time an effect would cause the character to regain HP or gain bonus HP</td></tr>
 									<tr><td>Psychic</td><td>Scrambled</td><td>-2 to all Skill Checks per Rank, -1 Priority</td></tr>
-									<tr><td>Radiation</td><td>Radiation Poisoning</td><td>-2 Endurance per Rank; a character whose Endurance would fall below 0 from Radiation Poisoning dies. -1 HP regained per six-hour period</td></tr>
+									<tr><td>Radiation</td><td>Irradiated</td><td>-2 Endurance per Rank; a character whose Endurance would fall below 0 from Irradiated dies. -1 HP regained per six-hour period</td></tr>
 									<tr><td>Corrosive</td><td>Severe Burn</td><td>+2 to all damage received per Rank, -2 Demeanor</td></tr>
 									<tr><td>EMP</td><td>Scrambled</td><td>-2 to all Skill Checks per Rank, -1 Priority</td></tr>
 								</tbody>
