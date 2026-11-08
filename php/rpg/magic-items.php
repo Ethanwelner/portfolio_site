@@ -51,7 +51,7 @@ $sf_magic_items = array(
 			'description' => 'An amulet that lets its wielder, or a companion, breathe beneath the waves.',
 			'mp'          => 3,
 			'effects'     => array(
-				array( 'Water Breathing (3)', 'For 1 MP from the amulet, its wielder gives a character within 3 m the Water Breathing Condition at Rank 3, about three hours of breathing water as easily as air.' ),
+				array( 'Water Breathing (3)', 'For 1 MP from the amulet, its wielder gives a character within 3 m the Water Breathing Condition at Rank 3: three hours of breathing water as easily as air.' ),
 				array( 'Using it', 'Takes a Magic Skill Check with a difficulty of 15.' ),
 			),
 		),
