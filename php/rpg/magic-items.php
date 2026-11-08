@@ -15,21 +15,21 @@ $sf_magic_items = array(
 			'description' => 'A longsword whose edge is forever slick with magical acid.',
 			'damage'      => '6 Slashing, 4 Corrosive / 4 Piercing, 4 Corrosive',
 			'effects'     => array(
-				array( 'Item – Rustblade (2)', 'The sword has 2 Ranks of the Corrosive Weapon Condition: 4 more Corrosive damage, already in its damage above, and every target it hits gains 1 Rank of the Corroding Condition.' ),
+				array( 'Item – Rustblade (2)', 'The sword has the Corrosive Weapon Condition at Rank 2: 4 more Corrosive damage, already in its damage above, and every target it hits gains 1 Rank of the Corroding Condition.' ),
 			),
 		),
 		array(
 			'name'        => 'L’orian’s Erstwhile Companion',
 			'description' => 'A backpack that hides whoever wears it.',
 			'effects'     => array(
-				array( 'Wearer – Invisibility (1)', 'Its wearer has 1 Rank of the Invisible Condition: it can’t be seen by normal sight and can request Advantage on rolls to hide, sneak, or slip past others unnoticed, and characters Attacking it have -2 to Attack Rolls.' ),
+				array( 'Wearer – Invisibility (1)', 'Its wearer has the Invisible Condition at Rank 1: it can’t be seen by normal sight and can request Advantage on rolls to hide, sneak, or slip past others unnoticed, and characters Attacking it have -2 to Attack Rolls.' ),
 			),
 		),
 		array(
 			'name'        => 'The Ring of the Wild Children',
 			'description' => 'A ring that lets its wearer move unheard among the beasts and keep up with them.',
 			'effects'     => array(
-				array( 'Wearer – Silence (1)', 'Its wearer has 1 Rank of the Silenced Condition: it can’t make or hear any sound.' ),
+				array( 'Wearer – Silence (1)', 'Its wearer has the Silenced Condition at Rank 1: it can’t make or hear any sound.' ),
 				array( 'Wearer – Speak with Animals (1)', 'Its wearer can understand and speak with animals within 10 m. They aren’t made friendly by it, only able to answer.' ),
 				array( 'Wearer – Wild Vigor', 'Its wearer gains +2 Endurance, +2 Power and +2 Grace.' ),
 			),
@@ -51,7 +51,7 @@ $sf_magic_items = array(
 			'description' => 'An amulet that lets its wielder, or a companion, breathe beneath the waves.',
 			'mp'          => 3,
 			'effects'     => array(
-				array( 'Water Breathing (3)', 'For 1 MP from the amulet, its wielder gives a character within 3 m 3 Ranks of the Water Breathing Condition, about three hours of breathing water as easily as air.' ),
+				array( 'Water Breathing (3)', 'For 1 MP from the amulet, its wielder gives a character within 3 m the Water Breathing Condition at Rank 3, about three hours of breathing water as easily as air.' ),
 				array( 'Using it', 'Takes a Magic Skill Check with a difficulty of 15.' ),
 			),
 		),
@@ -70,8 +70,8 @@ $sf_magic_items = array(
 			'description' => 'A two-effect potion for running through a burning building, or out of one.',
 			'value'       => 160,
 			'effects'     => array(
-				array( 'Flameproof (2)', 'Whoever drinks it gains 2 Ranks of the Magically Flameproof Condition: 6 Heat resistance for an hour.' ),
-				array( 'Haste (2)', 'Whoever drinks it gains 2 Ranks of the Hasted Condition: +2 Priority and +10 m Movement for one minute.' ),
+				array( 'Flameproof (2)', 'Whoever drinks it gains the Magically Flameproof Condition at Rank 2: 6 Heat resistance for an hour.' ),
+				array( 'Haste (2)', 'Whoever drinks it gains the Hasted Condition at Rank 2: +2 Priority and +10 m Movement for one minute.' ),
 			),
 		),
 	),
