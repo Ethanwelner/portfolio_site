@@ -1,6 +1,6 @@
 {
-  "_styles-CoA3-AUI.js": {
-    "file": "assets/styles-CoA3-AUI.js",
+  "_styles-BCByI-el.js": {
+    "file": "assets/styles-BCByI-el.js",
     "name": "styles",
     "css": [
       "assets/styles-D2EPSeIb.css"
@@ -11,21 +11,21 @@
     "src": "_styles-D2EPSeIb.css"
   },
   "src/app/main.tsx": {
-    "file": "assets/main-BawrO_Fo.js",
+    "file": "assets/main-CAtQLhfT.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CoA3-AUI.js"
+      "_styles-BCByI-el.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-C5fe44HD.js",
+    "file": "assets/main-DxOUUy4c.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-CoA3-AUI.js"
+      "_styles-BCByI-el.js"
     ],
     "css": [
       "assets/main-Bz5d_Ukx.css"

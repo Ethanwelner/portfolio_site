@@ -348,7 +348,7 @@
 							<p class="copy">
 								Over the course of a game, player characters and NPCs may be injured, but all is not lost! The medical sciences of 2230 have progressed considerably, and the injured can be healed, provided they have access to medical facilities, Items, or esoteric planar ways. Ranks of an injury can be removed, and the speed of Hit Point recovery can be hastened.
 								<br><br>
-								Any character may use the Dress Wounds Full RP Action on themselves or another character, conveying the Bandaged Condition, which doubles the speed of automatic Hit Point recovery for the following 24 hours.
+								A character with the Dress Wounds Ability (Intuition 2) may use the Dress Wounds Full RP Action on themselves or another character, conveying the Bandaged Condition, which doubles the speed of automatic Hit Point recovery for the following 24 hours.
 							</p>
 						</div>
 					</div>

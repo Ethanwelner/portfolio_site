@@ -10,8 +10,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Mechanics: Incidents has an Injuries tab. A Critical Hit that deals a quarter of a target’s HP can injure them on a failed Endurance check, with the injury set by the damage type (Broken Limb for Blunt, Scarred for Slashing, Organ Damage for Piercing, Severe Burn, Cursed, Mortis, Scrambled and Irradiated), alongside Deafened, Blinded and Paralyzed, and the Dress Wounds Action, whose Bandaged Condition doubles HP recovery for a day.</li>
-						<li>Character Creator and Player Tools: the injury Conditions, Bandaged and the Dress Wounds Action. Deafened is now a permanent injury; the Deafened that Thunderclap, Stormcraft, Electrified Weapon and the Thunder Flask give is now Temporarily Deafened, with the same effect for a minute.</li>
+						<li>Mechanics: Incidents has an Injuries tab. A Critical Hit that deals a quarter of a target’s HP can injure them on a failed Endurance check, with the injury set by the damage type (Broken Limb for Blunt, Scarred for Slashing, Organ Damage for Piercing, Severe Burn, Cursed, Mortis, Scrambled and Irradiated), alongside Deafened, Blinded and Paralyzed, and the Dress Wounds Ability (Intuition 2), whose Action gives the Bandaged Condition, doubling HP recovery for a day.</li>
+						<li>Character Creator and Player Tools: the injury Conditions, Bandaged and the Dress Wounds Ability. Deafened is now a permanent injury; the Deafened that Thunderclap, Stormcraft, Electrified Weapon and the Thunder Flask give is now Temporarily Deafened, with the same effect for a minute.</li>
 						<li>Mechanics: Items, Armor, and Effects’ Armor and Damage Types tab is now Resistances and Damage Types.</li>
 						<li>Adventures: two more spell schools in the Magic tab, Restoration and Mentalism, for nine in all.</li>
 						<li>Adventures: the Magic tab has the magic rules: Artifact Construction, Enchantment, Potion Making, and Reagents and the seven spell schools they come from.</li>
