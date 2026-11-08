@@ -4603,7 +4603,7 @@ plane: any
 summary: "Makes a target see the caster as a trusted friend."
 tags: [magic, spell, mind, social]
 category: ability
-types: [illusion, potion]
+types: [mentalism, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4617,7 +4617,7 @@ plane: any
 summary: "Burns away flames and eats away acid."
 tags: [magic, spell, healing, utility]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4698,7 +4698,7 @@ plane: any
 summary: "Clouds a target's mind for a moment."
 tags: [magic, spell, mind, hindrance]
 category: ability
-types: [enervation]
+types: [mentalism]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4737,7 +4737,7 @@ plane: any
 summary: "Unravels enchantments."
 tags: [magic, spell, utility]
 category: ability
-types: [potion]
+types: [enervation, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4842,7 +4842,7 @@ plane: any
 summary: "Fills a target with dread."
 tags: [magic, spell, mind, hindrance]
 category: ability
-types: [illusion]
+types: [mentalism]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4959,7 +4959,7 @@ plane: any
 summary: "Mends grievous wounds."
 tags: [magic, spell, healing]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 5 }
 prerequisites: [heal]
@@ -5014,7 +5014,7 @@ plane: any
 summary: "Closes a living character's wounds."
 tags: [magic, spell, healing]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5232,7 +5232,7 @@ plane: any
 summary: "Pours the caster's own mana into another magic user."
 tags: [magic, spell, mana, support]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5372,7 +5372,7 @@ plane: any
 summary: "Repairs damaged objects."
 tags: [magic, spell, repair]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5401,7 +5401,7 @@ plane: any
 summary: "Drives a spike of pain into a target's mind."
 tags: [magic, spell, mind, attack]
 category: ability
-types: [enervation]
+types: [mentalism]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5561,7 +5561,7 @@ plane: any
 summary: "Puts a target into a deep, sudden sleep."
 tags: [magic, spell, mind, hindrance]
 category: ability
-types: [enervation, potion]
+types: [mentalism, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5627,7 +5627,7 @@ plane: any
 summary: "Closes a bleeding wound with a touch."
 tags: [magic, spell, healing]
 category: ability
-types: [potion]
+types: [restoration, potion]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5728,6 +5728,7 @@ plane: any
 summary: "Moves objects without touching them."
 tags: [magic, spell, utility, movement]
 category: ability
+types: [mentalism]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.

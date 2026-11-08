@@ -295,7 +295,7 @@
                                                     </div>
                                                     <ul class="copy mb-0">
                                                         <li>Reagents are common, uncommon or rare materials with magical attributes, harvested from Isekai or other planes.<ul><li>Common reagents can be farmed or harvested, and may be mundane.</li><li>Uncommon reagents are rarer or more expensive items, sometimes only found on monsters or other animals.</li><li>Rare reagents come from monsters or rare plants and animals.</li></ul></li>
-                                                        <li>Each spell school has its own set of reagents. The spell schools are Enchantment, Enervation, Elemental, Conjuration, Illusion, Divination and Necromancy.</li>
+                                                        <li>Each spell school has its own set of reagents. The spell schools are Enchantment, Enervation, Elemental, Conjuration, Illusion, Divination, Necromancy, Restoration and Mentalism.</li>
                                                         <li>Reagents are found by searching the wilderness or on the bodies of animals or monsters. Not every reagent requires killing the subject: leaves, flowers, seeds, horns, teeth, hair, blood and more can be taken while leaving it alive.</li>
                                                         <li>Monsters list the reagents they provide.</li>
                                                         <li>Reagents can be gathered in the wilds with an Intuition gather check, but without Knowledge Ranks in what reagents look like, or whether they’re even there, there is little hope of success.</li>
