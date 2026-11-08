@@ -4,8 +4,15 @@
 		<div class="single-column-content">
 			<h3 class="sub-title mb-3" id="changelog">Change Log</h3>
 			<div class="copy stinger black mb-3">Content Updates</div>
+			<p class="copy mb-3">Want these in a feed reader or a Discord server? Follow the <a href="rpg-feed.php">change log’s RSS feed</a>.</p>
 
 			<div class="changelog-entries">
+				<article class="blog-post">
+					<p class="copy mb-3"><i>11/8/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Change Log: it has an RSS feed now, with each line as its own post, so it can be followed in a feed reader or a Discord server.</li>
+					</ul>
+				</article>
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
