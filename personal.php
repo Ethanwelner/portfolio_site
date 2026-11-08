@@ -239,7 +239,69 @@
                                             </ul>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-magic" role="tabpanel" aria-labelledby="tab-adventure-magic">
-                                            <p class="copy mb-0">Content coming soon</p>
+                                            <!-- Magic Specific Rules, from the Mechanics Doc -->
+                                            <div class="tab-panel-cols">
+                                                <div class="content-stack content-stack-xs">
+                                                    <div class="line-container">
+                                                        <h5><strong>Artifact Construction</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <ul class="copy mb-0">
+                                                        <li>A way to permanently affix a magical effect onto an Item.</li>
+                                                        <li>The chosen Item keeps its previous properties but gains 5 Item HP for each Rank of Cast effect imbued into it.</li>
+                                                        <li>When constructing the artifact, its maker decides whether each effect targets the Item itself or affects the Item’s wearer.</li>
+                                                        <li>The caster must spend 5 times the total MP that would be required to cast every Cast effect being imbued into the Item. This MP can be spent over the course of the artifact’s construction; it doesn’t need to be spent all at once.</li>
+                                                        <li>Construction requires 3 times the reagents used for each Cast effect, and the reagents are consumed in the process.</li>
+                                                        <li>Most commonly imbues effects from Cast Actions with the artifact attribute.</li>
+                                                        <li>The effect lasts a number of years equal to 3 times the total Ranks of the imbued effects.</li>
+                                                        <li>An artifact can be re-empowered, refreshing its duration, in a ritual that costs as much MP as the total cost of the Cast Actions it’s imbued with and uses the reagents for each Cast effect once more.</li>
+                                                        <li>Artifacts can have predominantly RP-based effects, or novel effects that use existing Cast Actions in ways other than those above, but constructing them requires a GM-approved process.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="content-stack content-stack-xs">
+                                                    <div class="line-container">
+                                                        <h5><strong>Enchantment</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <ul class="copy mb-0">
+                                                        <li>Works with any spell.</li>
+                                                        <li>A way to affix a rechargeable spell effect onto an Item.</li>
+                                                        <li>While holding or wearing the Item, its wielder can use the Cast Action of the spell enchanted onto it.</li>
+                                                        <li>To activate the Item, the wielder makes a Magic Skill Check with a difficulty of 5 per Rank of the enchanted Cast Action. If the check fails, the Action fails, but no MP is spent.</li>
+                                                        <li>A character doesn’t need the Magic Stat to use an enchanted Item.</li>
+                                                        <li>Enchanting an Item requires reagents, which are consumed in the process; MP equal to four times the cost of the spell it grants; and three hours per Rank of the spell’s effect.</li>
+                                                        <li>Each use of the enchantment spends MP stored in the Item equal to the cost of the Cast Action it allows.</li>
+                                                        <li>A magic user recharges the Item by spending their own MP to add the same amount to its store.</li>
+                                                        <li>The Item keeps its MP charge permanently, but if its charge sits below what its Cast Action costs for 1 week per Rank of that Action, the enchantment is lost and the Item is no longer enchanted.</li>
+                                                        <li>An Item can only have one enchantment at a time.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="content-stack content-stack-xs">
+                                                    <div class="line-container">
+                                                        <h5><strong>Potion Making</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <ul class="copy mb-0">
+                                                        <li>A way to affix a spell effect onto a consumable.</li>
+                                                        <li>Requires an Intuition or Magic Skill Check with a difficulty of 5 for every Rank of every effect in the potion. If the check fails, the potion loses one Rank of one Cast Action, chosen by the GM, for every 5 by which the check failed.</li>
+                                                        <li>Requires reagents, which are consumed in the concoction; MP equal to the cost of casting the Cast Actions imbued into the potion; and one hour per Rank of the potion’s effect.</li>
+                                                        <li>A potion can have multiple effects at once.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="content-stack content-stack-xs">
+                                                    <div class="line-container">
+                                                        <h5><strong>Reagents</strong></h5>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    <ul class="copy mb-0">
+                                                        <li>Reagents are common, uncommon or rare materials with magical attributes, harvested from Isekai or other planes.<ul><li>Common reagents can be farmed or harvested, and may be mundane.</li><li>Uncommon reagents are rarer or more expensive items, sometimes only found on monsters or other animals.</li><li>Rare reagents come from monsters or rare plants and animals.</li></ul></li>
+                                                        <li>Each spell school has its own set of reagents. The spell schools are Enchantment, Enervation, Elemental, Conjuration, Illusion, Divination and Necromancy.</li>
+                                                        <li>Reagents are found by searching the wilderness or on the bodies of animals or monsters. Not every reagent requires killing the subject: leaves, flowers, seeds, horns, teeth, hair, blood and more can be taken while leaving it alive.</li>
+                                                        <li>Monsters list the reagents they provide.</li>
+                                                        <li>Reagents can be gathered in the wilds with an Intuition gather check, but without Knowledge Ranks in what reagents look like, or whether they’re even there, there is little hope of success.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
                                             <p class="copy mb-0">Content coming soon</p>
