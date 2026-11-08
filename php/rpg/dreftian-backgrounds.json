@@ -270,8 +270,8 @@
 				"+1 Physical focus point"
 			],
 			"grants": [
-				"Dreft 1",
-				"Dreftian Law 1",
+				"Dreft (1)",
+				"Dreftian Law (1)",
 				"Dreftan (Spoken)"
 			],
 			"choices": [],
@@ -301,7 +301,7 @@
 				"+1 Physical focus point"
 			],
 			"grants": [
-				"Karsef 1"
+				"Karsef (1)"
 			],
 			"choices": [
 				"+1 Language"
@@ -326,7 +326,7 @@
 				"+1 Social focus point"
 			],
 			"grants": [
-				"Sorellion 1"
+				"Sorellion (1)"
 			],
 			"choices": [
 				"+1 Language"
@@ -350,7 +350,7 @@
 				"+1 Physical focus point"
 			],
 			"grants": [
-				"The Drovus Empire 1"
+				"The Drovus Empire (1)"
 			],
 			"choices": [
 				"+1 Language"

@@ -20,7 +20,7 @@ function names(ids, ranks = {}) {
       if (id === written && seen.has(spoken)) continue;
       if (id === spoken && seen.has(written)) { out.push(t.name.replace(/\s*\(Spoken\)$/, '') + ' (Spoken & Written)'); continue; }
     }
-    out.push(tname(id) + (ranks[id] ? ' ' + ranks[id] : ''));
+    out.push(tname(id) + (ranks[id] ? ' (' + ranks[id] + ')' : ''));
   }
   return out;
 }
