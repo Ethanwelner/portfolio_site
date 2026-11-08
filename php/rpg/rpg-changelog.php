@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Items, Armor, and Effects’ Armor and Damage Types tab is now Resistances and Damage Types.</li>
 						<li>Adventures: two more spell schools in the Magic tab, Restoration and Mentalism, for nine in all.</li>
 						<li>Adventures: the Magic tab has the magic rules: Artifact Construction, Enchantment, Potion Making, and Reagents and the seven spell schools they come from.</li>
 						<li>Adventures: Another World’s outline is now the Adventure Hook tab, beside new Magic and Monsters tabs. Isekai and the Kingdom of Dreft has Locations, Institutions and Religions tabs in place of its Politics, Religion, Military, Cultural Institutions and Magic sections, with every Dreftian location in Locations and a list of Dreft’s institutions, from the Crown and the noble houses to the trade guilds, hunting guilds and schools of magic, in Institutions. Building a Dreftian has Kinds, Backgrounds and Characters tabs, showing every Dreftian Kind, Profession and Past and every Isekai Origin (Dreft, Karsef, Sorellion and the Drovus Empire) from the Character Creator as its card, with what it grants and its Background list. Ark Tetra and Planar Exploration now has Ark Tetra’s entry from The Stars.</li>
