@@ -350,6 +350,15 @@
 								<br><br>
 								A character with the Dress Wounds Ability (Intuition 2) may use the Dress Wounds Full RP Action on themselves or another character, conveying the Bandaged Condition, which doubles the speed of automatic Hit Point recovery for the following 24 hours.
 							</p>
+							<div class="trait-box">
+								<div class="trait-name trait-name-with-chip">
+									<span>Dress Wounds</span>
+									<span class="trait-name-chips"><span class="chip">Ability</span></span>
+								</div>
+								<p class="copy effect">This character gains the Dress Wounds Action.</p>
+								<p class="copy effect"><strong>Dress Wounds:</strong> As a Full RP Action, this character may dress the wounds of itself or another character within reach, giving them the Bandaged Condition.</p>
+								<p class="copy muted small">Needs Intuition 2</p>
+							</div>
 						</div>
 					</div>
 				</div>

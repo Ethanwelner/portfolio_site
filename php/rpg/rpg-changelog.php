@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: the Injuries tab shows Dress Wounds as an example Ability card under Healing, Medicine, and Regaining HP.</li>
 						<li>Mechanics: Incidents has an Injuries tab. A Critical Hit that deals a quarter of a target’s HP can injure them on a failed Endurance check, with the injury set by the damage type (Broken Limb for Blunt, Scarred for Slashing, Organ Damage for Piercing, Severe Burn, Cursed, Mortis, Scrambled and Irradiated), alongside Deafened, Blinded and Paralyzed, and the Dress Wounds Ability (Intuition 2), whose Action gives the Bandaged Condition, doubling HP recovery for a day.</li>
 						<li>Character Creator and Player Tools: the injury Conditions, Bandaged and the Dress Wounds Ability. Deafened is now a permanent injury; the Deafened that Thunderclap, Stormcraft, Electrified Weapon and the Thunder Flask give is now Temporarily Deafened, with the same effect for a minute.</li>
 						<li>Mechanics: Items, Armor, and Effects’ Armor and Damage Types tab is now Resistances and Damage Types.</li>
