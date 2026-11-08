@@ -302,6 +302,10 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <!-- Example magical Items made by the rules above -->
+                                            <div class="mt-5">
+                                                <?php include 'php/rpg/magic-items.php'; ?>
+                                            </div>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
                                             <p class="copy mb-0">Content coming soon</p>

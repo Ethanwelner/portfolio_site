@@ -8,9 +8,11 @@
 if ( ! function_exists( 'sf_background_card' ) ) {
 	function sf_background_card( $b, $bonusNote = '' ) {
 		$e     = function ( $s ) { return htmlspecialchars( $s, ENT_QUOTES, 'UTF-8' ); };
-		$bonus = array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] );
-		$rows  = array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] );
-		if ( ! empty( $b['stats'] ) ) {
+		$bonus = array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() );
+		// Other cards (magic-items.php) bring their own rows, the first accented
+		$rows   = $b['rows'] ?? array( 'Bonus' => $bonus, 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] );
+		$accent = isset( $b['rows'] ) ? array( array_key_first( $b['rows'] ) ) : array( 'Bonus', 'Grants' );
+		if ( ! empty( $b['stats'] ) && ! isset( $b['rows'] ) ) {
 			$groups = array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) );
 			foreach ( $groups as $group => $stats ) {
 				$rows[ $group . ' (bonus / maximum)' ] = array_map( function ( $s ) use ( $b ) { $x = $b['stats'][ $s ]; return ucfirst( $s ) . ' +' . $x['bonus'] . '/' . $x['max']; }, $stats );
@@ -21,7 +23,7 @@ if ( ! function_exists( 'sf_background_card' ) ) {
 		// the Isekai mark before the name
 		$dreft = 'isekai' === $b['plane'];
 		// A Kind's lore entry shares the first word of its id (tatot-orcoid is Tatot)
-		$lore = $b['lore'];
+		$lore = $b['lore'] ?? '';
 		if ( ! $lore && 'Kind' === $b['slot'] && isset( sf_lore_titles()[ strtok( $b['id'], '-' ) ] ) ) {
 			$lore = strtok( $b['id'], '-' );
 		}
@@ -40,7 +42,7 @@ if ( ! function_exists( 'sf_background_card' ) ) {
 					<?php foreach ( $rows as $label => $list ) : ?>
 						<div>
 							<span class="sample-bg-label"><?php echo $label; ?></span>
-							<?php foreach ( $list as $x ) { echo '<span class="chip' . ( in_array( $label, array( 'Bonus', 'Grants' ), true ) ? ' chip-accent' : '' ) . '">' . $e( $x ) . '</span>'; } ?>
+							<?php foreach ( $list as $x ) { echo '<span class="chip' . ( in_array( $label, $accent, true ) ? ' chip-accent' : '' ) . '">' . $e( $x ) . '</span>'; } ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
