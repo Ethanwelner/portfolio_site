@@ -326,7 +326,9 @@
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                                 <div class="flex-14">
                                     <h3 class="sub-title mb-3" id="tetra-exploration">Ark Tetra and Planar Exploration</h3>
-                                    <div class="copy stinger black mb-3">Coming soon</div>
+                                    <div class="copy stinger black mb-3">Overview and History</div>
+                                    <?php // Ark Tetra's lore entry from The Stars (php/rpg/lore/tetra.php), without its heading or anchor so the id stays unique
+                                    sf_lore_body('tetra'); ?>
                                 </div>
                                 <div class="flex-2 d-none d-xl-inline-flex"></div>
                             </div>
