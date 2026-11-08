@@ -644,8 +644,8 @@
                       <span>Natural Breath Weapon (1)</span>
                       <span class="trait-name-chips"><span class="chip chip-muted">Background</span><span class="chip">Ability</span></span>
                     </div>
-                    <p class="copy effect">This character's biology allows them to use their breath as a tool or weapon.</p>
-                    <p class="copy effect">For each Rank of this Ability, add another d4 to the damage the breath weapon deals.</p>
+                    <p class="copy effect">This character can Attack with the Breath Weapon natural weapon.</p>
+                    <p class="copy effect">Rank *2 added to the Breath Weapon's damage.</p>
                     <p class="copy muted small">(Endurance 3)</p>
                   </div>
                   <div class="trait-box">
