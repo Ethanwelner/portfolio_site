@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: two new spells. Magical Replenishment gives another magic user up to 3 bonus MP per Rank from the caster’s own, which fade after 1 hour per Rank, and Mana Siphon is a ranged Attack that drains 3 to 5 MP from the target, depending on the hit, into the caster.</li>
 						<li>Character Creator and Player Tools: 13 new metamagic Abilities on the Magic tab. Simple Metamagic casts a spell a Rank higher for double the MP; Flamecraft, Icecraft, Stormcraft, Rustcraft and Stonecraft turn a spell’s Elemental damage into Heat, Cold, Electrical, Corrosive or Blunt for 1 more MP; Master Flamecraft, Master Icecraft, Master Stormcraft, Master Rustcraft and Master Stonecraft make spells of their damage type cheaper and stronger; and Master Mage and Archmage cut the MP every spell costs.</li>
 						<li>Character Creator and Player Tools: Enchanting and Rune Carving give a flat +5 and are no longer Ranked, Artifact Repair needs Intuition instead of Memory, and Master Artificer’s requirements are lower and it gives Advantage on enchanting rolls.</li>
 						<li>Mechanics, the Character Creator and Player Tools: Other Common Elemental Effects on the Damage Types tab are now Uncommon Elemental Effects, and EMP joins Radiation and Corrosive there instead of being an Elemental damage type.</li>
