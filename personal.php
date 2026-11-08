@@ -185,7 +185,7 @@
                                 <div class="flex-14">
                                     <h3 class="sub-title mb-3" id="adventure">Another World</h3>
                                     <p class="copy">
-                                        This is a placeholder stub of content intended to present the vision for this adventure module. I will be using it as the first module I write for the game and as a platform for fleshing out the setting’s deeper narratives. This signifies that I will soon be returning to the game’s mechanics in an effort to begin formalizing them into a playable thing.
+                                        This is a placeholder stub of content intended to present the vision for this adventure module. I will be using it as the first module I write for the game and as a platform for fleshing out the setting’s deeper narratives.
                                     </p>
                                     <div class="tech-fields tech-fields-light mt-4">
                                         <div class="tech-field-tab-list" role="tablist" aria-label="Another World">
