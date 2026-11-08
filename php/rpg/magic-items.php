@@ -15,14 +15,14 @@ $sf_magic_items = array(
 			'description' => 'A longsword whose edge is forever slick with magical acid.',
 			'damage'      => '6 Slashing, 4 Corrosive / 4 Piercing, 4 Corrosive',
 			'effects'     => array(
-				array( 'Item – Rustblade (2)', 'The sword has the Corrosive Weapon Condition at Rank 2: 4 more Corrosive damage, already in its damage above, and every target it hits gains 1 Rank of the Corroding Condition.' ),
+				array( 'Item – Rustblade (2)', 'The sword has the Corrosive Weapon Condition at Rank 2, its damage already added above.' ),
 			),
 		),
 		array(
 			'name'        => 'L’orian’s Erstwhile Companion',
 			'description' => 'A backpack that hides whoever wears it.',
 			'effects'     => array(
-				array( 'Wearer – Invisibility (1)', 'Its wearer has the Invisible Condition at Rank 1: it can’t be seen by normal sight and can request Advantage on rolls to hide, sneak, or slip past others unnoticed, and characters Attacking it have -2 to Attack Rolls.' ),
+				array( 'Wearer – Invisibility (1)', 'Its wearer has the Invisible Condition at Rank 1.' ),
 			),
 		),
 		array(
