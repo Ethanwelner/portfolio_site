@@ -271,45 +271,22 @@
                                                 ?>
                                             </div>
                                             <img loading="lazy" data-src="img/kingdom_of_dreft18.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="breakout-img">
-                                            <div class="d-flex flex-wrap flex-xs-nowrap split-cols mt-5">
-                                                <div class="flex-7">
-                                                    <div class="line-container">
-                                                        <h5><strong>Politics</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <p class="copy mb-5">
-                                                        Content coming soon
-                                                    </p>
-                                                    <div class="line-container">
-                                                        <h5><strong>Religion</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <p class="copy mb-5">
-                                                        Content coming soon
-                                                    </p>
-                                                    <div class="line-container">
-                                                        <h5><strong>Military</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <p class="copy mb-0">
-                                                        Content coming soon
-                                                    </p>
+                                            <div class="tech-fields mt-5">
+                                                <div class="tech-field-tab-list" role="tablist" aria-label="Isekai and the Kingdom of Dreft">
+                                                    <button type="button" class="tech-field-tab is-active" role="tab" id="tab-dreft-locations" aria-controls="dreft-locations" aria-selected="true">Locations</button>
+                                                    <button type="button" class="tech-field-tab" role="tab" id="tab-dreft-institutions" aria-controls="dreft-institutions" aria-selected="false">Institutions</button>
+                                                    <button type="button" class="tech-field-tab" role="tab" id="tab-dreft-religions" aria-controls="dreft-religions" aria-selected="false">Religions</button>
                                                 </div>
-                                                <div class="flex-6">
-                                                    <div class="line-container">
-                                                        <h5><strong>Cultural Institutions</strong></h5>
-                                                        <div class="line"></div>
+                                                <div class="tech-field-panel is-active" id="dreft-locations" role="tabpanel" aria-labelledby="tab-dreft-locations">
+                                                    <div class="tab-panel-cols">
+                                                        <?php foreach (['tetra-switch-port', 'herminst', 'glintl', 'illinsdott', 'kings-woods', 'mende-river', 'moffit-river', 'corsine-mountains'] as $slug) { echo '<div class="content-stack content-stack-xs">'; sf_lore_entry($slug, 'line'); echo '</div>'; } ?>
                                                     </div>
-                                                    <p class="copy mb-5">
-                                                        Content coming soon
-                                                    </p>
-                                                    <div class="line-container">
-                                                        <h5><strong>Magic</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <p class="copy mb-0">
-                                                        Content coming soon
-                                                    </p>
+                                                </div>
+                                                <div class="tech-field-panel" id="dreft-institutions" role="tabpanel" aria-labelledby="tab-dreft-institutions">
+                                                    <p class="copy mb-0">Content coming soon</p>
+                                                </div>
+                                                <div class="tech-field-panel" id="dreft-religions" role="tabpanel" aria-labelledby="tab-dreft-religions">
+                                                    <p class="copy mb-0">Content coming soon</p>
                                                 </div>
                                             </div>
                                         </div>

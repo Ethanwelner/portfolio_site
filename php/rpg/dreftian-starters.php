@@ -7,21 +7,39 @@
 // content/kinds/dreft and the dreft Origins, Professions and Pasts)
 include_once __DIR__ . '/background-card.php';
 $sf_dreft = json_decode( file_get_contents( __DIR__ . '/dreftian-backgrounds.json' ), true );
-$sf_dreft_cols = array(
-	array( 'Kinds' => 'kinds', 'Origins' => 'origins' ),
-	array( 'Professions' => 'professions', 'Pasts' => 'pasts' ),
-);
-foreach ( $sf_dreft_cols as $i => $pair ) :
-	?>
-<div class="d-flex flex-wrap flex-xs-nowrap split-cols<?php echo $i ? ' mt-5' : ''; ?>">
-	<?php foreach ( $pair as $title => $key ) : ?>
-	<div class="<?php echo 'kinds' === $key || 'professions' === $key ? 'flex-7' : 'flex-6'; ?> content-stack content-stack-xs">
-		<div class="line-container">
-			<h5><strong><?php echo $title; ?></strong></h5>
-			<div class="line"></div>
-		</div>
-		<?php foreach ( $sf_dreft[ $key ] as $b ) { sf_background_card( $b ); } ?>
+// Kinds in two columns; the Backgrounds tab sets Origins and Professions
+// beside Pasts
+$sf_dreft_card_cols = function ( $cols ) use ( $sf_dreft ) {
+	echo '<div class="d-flex flex-wrap flex-xs-nowrap split-cols">';
+	foreach ( $cols as $i => $col ) {
+		echo '<div class="' . ( $i ? 'flex-6' : 'flex-7' ) . ' content-stack content-stack-xs">';
+		foreach ( $col as $title => $list ) {
+			if ( $title ) {
+				echo '<div class="line-container"><h5><strong>' . $title . '</strong></h5><div class="line"></div></div>';
+			}
+			foreach ( $list as $b ) {
+				sf_background_card( $b );
+			}
+		}
+		echo '</div>';
+	}
+	echo '</div>';
+};
+$sf_kinds_half = (int) ceil( count( $sf_dreft['kinds'] ) / 2 );
+?>
+<div class="tech-fields">
+	<div class="tech-field-tab-list" role="tablist" aria-label="Building a Dreftian">
+		<button type="button" class="tech-field-tab is-active" role="tab" id="tab-dreft-kinds" aria-controls="dreft-kinds" aria-selected="true">Kinds</button>
+		<button type="button" class="tech-field-tab" role="tab" id="tab-dreft-backgrounds" aria-controls="dreft-backgrounds" aria-selected="false">Backgrounds</button>
+		<button type="button" class="tech-field-tab" role="tab" id="tab-dreft-characters" aria-controls="dreft-characters" aria-selected="false">Characters</button>
 	</div>
-	<?php endforeach; ?>
+	<div class="tech-field-panel is-active" id="dreft-kinds" role="tabpanel" aria-labelledby="tab-dreft-kinds">
+		<?php $sf_dreft_card_cols( array( array( '' => array_slice( $sf_dreft['kinds'], 0, $sf_kinds_half ) ), array( '' => array_slice( $sf_dreft['kinds'], $sf_kinds_half ) ) ) ); ?>
+	</div>
+	<div class="tech-field-panel" id="dreft-backgrounds" role="tabpanel" aria-labelledby="tab-dreft-backgrounds">
+		<?php $sf_dreft_card_cols( array( array( 'Origins' => $sf_dreft['origins'], 'Professions' => $sf_dreft['professions'] ), array( 'Pasts' => $sf_dreft['pasts'] ) ) ); ?>
+	</div>
+	<div class="tech-field-panel" id="dreft-characters" role="tabpanel" aria-labelledby="tab-dreft-characters">
+		<p class="copy mb-0">Content coming soon</p>
+	</div>
 </div>
-<?php endforeach; ?>
