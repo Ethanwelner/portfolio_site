@@ -61,17 +61,19 @@ $sf_magic_items = array(
 			'name'        => 'Healing Potion (3)',
 			'description' => 'The common healing potion, brewed by a skilled hand.',
 			'value'       => 60,
+			'lead'        => 'Whoever drinks it:',
 			'effects'     => array(
-				array( 'Heal (3)', 'Whoever drinks it is healed 12 HP.' ),
+				array( 'Heal (3)', 'Is healed 12 HP.' ),
 			),
 		),
 		array(
 			'name'        => 'Firewalker’s Draught (2)',
 			'description' => 'A two-effect potion for running through a burning building, or out of one.',
 			'value'       => 160,
+			'lead'        => 'Whoever drinks it:',
 			'effects'     => array(
-				array( 'Flameproof (2)', 'Whoever drinks it gains the Magically Flameproof Condition at Rank 2: 6 Heat resistance for an hour.' ),
-				array( 'Haste (2)', 'Whoever drinks it gains the Hasted Condition at Rank 2: +2 Priority and +10 m Movement for one minute.' ),
+				array( 'Flameproof (2)', 'Gains the Magically Flameproof Condition at Rank 2: 6 Heat resistance for an hour.' ),
+				array( 'Haste (2)', 'Gains the Hasted Condition at Rank 2: +2 Priority and +10 m Movement for one minute.' ),
 			),
 		),
 	),
@@ -97,6 +99,9 @@ function sf_magic_item_card( $item, $kind ) {
 	}
 	echo '</span></div>';
 	echo '<p class="equipment-description">' . $e( $item['description'] ) . '</p>';
+	if ( ! empty( $item['lead'] ) ) {
+		echo '<p class="equipment-effect">' . $e( $item['lead'] ) . '</p>';
+	}
 	foreach ( $item['effects'] as $effect ) {
 		echo '<p class="equipment-effect"><strong>' . $e( $effect[0] ) . ':</strong> ' . $e( $effect[1] ) . '</p>';
 	}
