@@ -9,6 +9,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/7/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: a new Grenadier Ability, which gives the Lob Action: throwing a grenade or flask at a spot the character can’t see.</li>
 						<li>Character Creator and Player Tools: a new Frozen Condition, -1 Priority, Defense and Attack Rolls per Rank. Hoarfrost, the Frost Flask and Frost Breath give it.</li>
 						<li>Character Creator and Player Tools: spells and flasks that give a ranked Condition say they give one Rank of it, like Fireball’s Burning. Ranked Conditions that wear off now lose a Rank at a time, like Frozen: every hour for Magical Strength, every combat Round or 10 seconds for Slowed, and every three combat Rounds or 30 seconds for Burning and Corroding.</li>
 						<li>Character Creator: 23 new Circumstances. Memberships come in two tiers, a Member and a Senior Member, for the Explorers’ Lodge (Explorers’ Lodge Membership is now Member of the Explorers’ Lodge), the Monster Hunter Guild, the Mages College of Dreft and the thieves’ guilds, plus a Merchant Clan Member and Elder. Others include Tetra Frontiers Co. Employee, Switch Port Transit Pass, Diplomatic Immunity, Bureau Credentials, Knighted in Dreft, Royal Warrant, Caravan Charter, Research Grant, Owed a Favor, Heavy Debts, Wanted in Dreft and Exiled from Dreft.</li>
