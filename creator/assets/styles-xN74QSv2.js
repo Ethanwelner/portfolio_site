@@ -60,23 +60,23 @@ Error generating stack: `+e.message+`
 
       `)}return o.write(`payload.value = newResult;`),o.write(`return payload;`),o.compile()},o,s=te,c=!Je.jitless,l=c&&ne.value,u=t.catchall,d;e._zod.parse=(i,f)=>{d??=r.value;let p=i.value;return s(p)?c&&l&&f?.async===!1&&f.jitless!==!0?(o||=a(t.shape),i=o(i,f),u?wr([],p,i,f,d,e,f?.abortEarly===!0):i):n(i,f):(i.issues.push({expected:`object`,code:`invalid_type`,input:p,inst:e}),i)}});function Dr(e,t,n,r){for(let n of e)if(n.issues.length===0)return t.value=n.value,t;let i=e.filter(e=>!xe(e));return i.length===1?(t.value=i[0].value,i[0]):(t.issues.push({code:`invalid_union`,input:t.value,inst:n,errors:e.map(e=>e.issues.map(e=>Te(e,r,Ye())))}),t)}var Or=M(`$ZodUnion`,(e,t)=>{Cn.init(e,t),j(e,`optin`,e=>e.def.options.some(e=>e._zod.optin===`defaulted`)?`defaulted`:e.def.options.some(e=>e._zod.optin!==void 0)?`optional`:void 0),j(e,`optout`,e=>e.def.options.some(e=>e._zod.optout===`optional`)?`optional`:void 0),j(e,`values`,e=>{if(e.def.options.every(e=>e._zod.values))return new Set(e.def.options.flatMap(e=>Array.from(e._zod.values)))}),j(e,`pattern`,e=>{if(e.def.options.every(e=>e._zod.pattern)){let t=e.def.options.map(e=>e._zod.pattern);return RegExp(`^(${t.map(e=>h(e.source)).join(`|`)})$`)}});let n=t.options.length===1?t.options[0]._zod.run:null;e._zod.parse=(r,i)=>{if(n)return n(r,i);let a=!1,o=[];for(let e of t.options){let t=e._zod.run({value:r.value,issues:[]},i);if(t instanceof Promise)o.push(t),a=!0;else{if(t.issues.length===0)return t;o.push(t)}}return a?Promise.all(o).then(t=>Dr(t,r,e,i)):Dr(o,r,e,i)}}),kr=M(`$ZodIntersection`,(e,t)=>{Cn.init(e,t),e._zod.parse=(e,n)=>{let r=e.value,i=t.left._zod.run({value:r,issues:[]},n),a=t.right._zod.run({value:r,issues:[]},n);return i instanceof Promise||a instanceof Promise?Promise.all([i,a]).then(([t,n])=>jr(e,t,n)):jr(e,i,a)}});function Ar(e,t){if(e===t||e instanceof Date&&t instanceof Date&&+e==+t)return{valid:!0,data:e};if(re(e)&&re(t)){let n=Object.keys(t),r=Object.keys(e).filter(e=>n.indexOf(e)!==-1),i={...e,...t};Object.prototype.hasOwnProperty.call(i,`__proto__`)&&delete i.__proto__;for(let n of r){if(n===`__proto__`)continue;let r=Ar(e[n],t[n]);if(!r.valid)return{valid:!1,mergeErrorPath:[n,...r.mergeErrorPath]};i[n]=r.data}return{valid:!0,data:i}}if(Array.isArray(e)&&Array.isArray(t)){if(e.length!==t.length)return{valid:!1,mergeErrorPath:[]};let n=[];for(let r=0;r<e.length;r++){let i=e[r],a=t[r],o=Ar(i,a);if(!o.valid)return{valid:!1,mergeErrorPath:[r,...o.mergeErrorPath]};n.push(o.data)}return{valid:!0,data:n}}return{valid:!1,mergeErrorPath:[]}}function jr(e,t,n){let r=new Map,i,a=new Map,o=(e,t)=>{let n;if(e.code===`unrecognized_keys`&&!e.path?.length)i??=e,n=e.keys;else if(e.code===`invalid_key`&&e.origin===`record`&&e.path?.length===1){let t=String(e.path[0]);a.has(t)||a.set(t,e),n=[t]}else return!1;for(let e of n)r.has(e)||r.set(e,{}),r.get(e)[t]=!0;return!0};for(let n of t.issues)o(n,`l`)||e.issues.push(n);for(let t of n.issues)o(t,`r`)||e.issues.push(t);let s=[...r].filter(([,e])=>e.l&&e.r).map(([e])=>e);if(s.length){let t=i?s.filter(e=>i.keys.includes(e)):[];t.length&&e.issues.push({...i,keys:t});for(let n of s)!t.includes(n)&&a.has(n)&&e.issues.push(a.get(n))}let c=Ar(t.value,n.value);if(!c.valid){if(xe(e))return e;throw Error(`Unmergable intersection. Error path: ${JSON.stringify(c.mergeErrorPath)}`)}return e.value=c.data,e}var Mr=M(`$ZodRecord`,(e,t)=>{Cn.init(e,t);let n=Je.memoizer;n?.attach(e),e._zod.parse=(r,i)=>{let a=r.value;if(!re(a))return r.issues.push({expected:`record`,code:`invalid_type`,input:a,inst:e}),r;let o=[],s=t.keyType._zod.values;if(s&&!t.partial){r.value=n?n.alloc(e,r,{},i):{};let c=new Set;for(let n of s)if(typeof n==`string`||typeof n==`number`||typeof n==`symbol`){if(c.add(typeof n==`number`?n.toString():n),n===`__proto__`)continue;let s=t.keyType._zod.run({value:n,issues:[]},i);if(s instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);if(s.issues.length){r.issues.push({code:`invalid_key`,origin:`record`,issues:s.issues.map(e=>Te(e,i,Ye())),input:n,path:[n],inst:e});continue}let l=s.value;if(l===`__proto__`)continue;let u=t.valueType._zod.run({value:a[n],issues:[]},i);u instanceof Promise?o.push(u.then(e=>{e.issues.length&&r.issues.push(...O(n,e.issues)),r.value[l]=e.value})):(u.issues.length&&r.issues.push(...O(n,u.issues)),r.value[l]=u.value)}let l;for(let e in a)if(!c.has(e)){if(t.mode===`loose`){if(e===`__proto__`)continue;r.value[e]=a[e]}else l??=[],l.push(e)}l&&l.length>0&&r.issues.push({code:`unrecognized_keys`,input:a,inst:e,keys:l,continue:!0})}else{r.value=n?n.alloc(e,r,{},i):{};let c;for(let n of Reflect.ownKeys(a)){if(n===`__proto__`||!Object.prototype.propertyIsEnumerable.call(a,n))continue;let l=t.keyType._zod.run({value:n,issues:[]},i);if(l instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);if(typeof n==`string`&&Qt.test(n)&&l.issues.length){let e=t.keyType._zod.run({value:Number(n),issues:[]},i);if(e instanceof Promise)throw Error(`Async schemas not supported in object keys currently`);e.issues.length===0&&(l=e)}if(l.issues.length){t.mode===`loose`?r.value[n]=a[n]:s?(c??=[],c.push(n)):r.issues.push({code:`invalid_key`,origin:`record`,issues:l.issues.map(e=>Te(e,i,Ye())),input:n,path:[n],inst:e});continue}let u=l.value;if(u===`__proto__`)continue;let d=t.valueType._zod.run({value:a[n],issues:[]},i);d instanceof Promise?o.push(d.then(e=>{e.issues.length&&r.issues.push(...O(n,e.issues)),r.value[u]=e.value})):(d.issues.length&&r.issues.push(...O(n,d.issues)),r.value[u]=d.value)}c&&c.length>0&&r.issues.push({code:`unrecognized_keys`,input:a,inst:e,keys:c,continue:!0})}return o.length?Promise.all(o).then(()=>r):r}}),Nr=M(`$ZodEnum`,(e,t)=>{Cn.init(e,t);let n=l(t.entries),r=new Set(n);e._zod.values=r,j(e,`pattern`,e=>{let t=l(e.def.entries).filter(e=>ae.has(typeof e));return RegExp(t.length?`^(${t.map(e=>oe(e.toString())).join(`|`)})$`:`^[^\\s\\S]$`)}),e._zod.parse=(t,i)=>{let a=t.value;return r.has(a)||t.issues.push({code:`invalid_value`,values:n,input:a,inst:e}),t}}),Pr=M(`$ZodTransform`,(e,t)=>{Cn.init(e,t),e._zod.optin=`optional`,Je.memoizer?.guard(e),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new qe(e.constructor.name);let i=t.transform(n.value,n);if(r.async)return(i instanceof Promise?i:Promise.resolve(i)).then(e=>(n.value=e,n));if(i instanceof Promise)throw new Ke;return n.value=i,n}});function Fr(e,t){return e.value=t.issues.length?void 0:t.value,e}var Ir=M(`$ZodOptional`,(e,t)=>{Cn.init(e,t),j(e,`optin`,e=>e.def.innerType._zod.optin===`defaulted`?`defaulted`:`optional`),e._zod.optout=`optional`,j(e,`values`,e=>{let t=e.def.innerType._zod.values;return t?new Set([...t,void 0]):void 0}),j(e,`pattern`,e=>{let t=e.def.innerType._zod.pattern;return t?RegExp(`^(${h(t.source)})?$`):void 0}),e._zod.parse=(e,n)=>{if(e.value===void 0){if(t.innerType._zod.optin!==`defaulted`)return e;let r=t.innerType._zod.run({value:e.value,issues:[]},n);return r instanceof Promise?r.then(t=>Fr(e,t)):Fr(e,r)}return t.innerType._zod.run(e,n)}}),Lr=M(`$ZodExactOptional`,(e,t)=>{Ir.init(e,t),j(e,`values`,e=>e.def.innerType._zod.values),j(e,`pattern`,e=>e.def.innerType._zod.pattern),e._zod.parse=(e,n)=>t.innerType._zod.run(e,n)}),Rr=M(`$ZodNullable`,(e,t)=>{Cn.init(e,t),j(e,`optin`,e=>e.def.innerType._zod.optin),j(e,`optout`,e=>e.def.innerType._zod.optout),j(e,`pattern`,e=>{let t=e.def.innerType._zod.pattern;return t?RegExp(`^(${h(t.source)}|null)$`):void 0}),j(e,`values`,e=>e.def.innerType._zod.values?new Set([...e.def.innerType._zod.values,null]):void 0),e._zod.parse=(e,n)=>e.value===null?e:t.innerType._zod.run(e,n)}),zr=M(`$ZodDefault`,(e,t)=>{Cn.init(e,t),e._zod.optin=`defaulted`,j(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);if(e.value===void 0)return e.value=t.defaultValue,e;let r=t.innerType._zod.run(e,n);return r instanceof Promise?r.then(e=>Br(e,t)):Br(r,t)}});function Br(e,t){return e.value===void 0&&(e.value=t.defaultValue),e}var Vr=M(`$ZodPrefault`,(e,t)=>{Cn.init(e,t),e._zod.optin=`defaulted`,j(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>(n.direction===`backward`||e.value===void 0&&(e.value=t.defaultValue),t.innerType._zod.run(e,n))}),Hr=M(`$ZodNonOptional`,(e,t)=>{Cn.init(e,t),j(e,`values`,e=>{let t=e.def.innerType._zod.values;return t?new Set([...t].filter(e=>e!==void 0)):void 0}),e._zod.parse=(n,r)=>{let i=t.innerType._zod.run(n,r);return i instanceof Promise?i.then(t=>Ur(t,e)):Ur(i,e)}});function Ur(e,t){return!e.issues.length&&e.value===void 0&&e.issues.push({code:`invalid_type`,expected:`nonoptional`,input:e.value,inst:t}),e}function Wr(e,t,n,r){return t.issues.length?(e.value=n.catchValue({...t,value:e.value,error:{issues:t.issues.map(e=>Te(e,r,Ye()))},input:e.value}),e):(e.value=t.value,t.memo&&(e.memo=!0),e)}var Gr=M(`$ZodCatch`,(e,t)=>{Cn.init(e,t),j(e,`optin`,e=>e.def.innerType._zod.optin===`defaulted`?`defaulted`:`optional`),j(e,`optout`,e=>e.def.innerType._zod.optout),j(e,`values`,e=>e.def.innerType._zod.values),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);let r=t.innerType._zod.run({value:e.value,issues:[]},n);return r instanceof Promise?r.then(r=>Wr(e,r,t,n)):Wr(e,r,t,n)}}),Kr=M(`$ZodPipe`,(e,t)=>{Cn.init(e,t),j(e,`values`,e=>e.def.in._zod.values),j(e,`optin`,e=>e.def.in._zod.optin),j(e,`optout`,e=>e.def.out._zod.optout),j(e,`propValues`,e=>e.def.in._zod.propValues),e._zod.parse=(e,n)=>{if(n.direction===`backward`){let r=t.out._zod.run(e,n);return r instanceof Promise?r.then(e=>qr(e,t.in,n)):qr(r,t.in,n)}let r=t.in._zod.run(e,n);return r instanceof Promise?r.then(e=>qr(e,t.out,n)):qr(r,t.out,n)}});function qr(e,t,n){return e.issues.some(e=>e.code!==`unrecognized_keys`)?(e.aborted=!0,e):t._zod.run({value:e.value,issues:e.issues},n)}var Jr=M(`$ZodReadonly`,(e,t)=>{Cn.init(e,t),j(e,`propValues`,e=>e.def.innerType._zod.propValues),j(e,`values`,e=>e.def.innerType._zod.values),j(e,`optin`,e=>e.def.innerType?._zod?.optin),j(e,`optout`,e=>e.def.innerType?._zod?.optout),e._zod.parse=(e,n)=>{if(n.direction===`backward`)return t.innerType._zod.run(e,n);let r=t.innerType._zod.run(e,n);return r instanceof Promise?r.then(Yr):Yr(r)}});function Yr(e){return e.memo||(e.value=Object.freeze(e.value)),e}var Xr=M(`$ZodCustom`,(e,t)=>{nn.init(e,t),Cn.init(e,t),e._zod.parse=(e,t)=>e,e._zod.check=n=>{let r=n.value,i=t.fn(r);if(i instanceof Promise)return i.then(t=>Zr(t,n,r,e));Zr(i,n,r,e)}});function Zr(e,t,n,r){if(!e){let e={code:`custom`,input:n,inst:r,path:[...r._zod.def.path??[]],continue:!r._zod.def.abort};r._zod.def.params&&(e.params=r._zod.def.params),t.issues.push(ke(e))}}var Qr=class extends Error{constructor(){super(`Cannot parse a reference cycle that closes through a transform`),this.name=`ZodCyclicError`}},$r=`~memo`,ei=[];function ti(e){return typeof e==`object`&&!!e}function ni(e){return e.map(e=>e.path?{...e,path:e.path.slice()}:{...e})}var ri=new WeakMap,ii=0,ai=1,oi=2;function si(e,t,n){let r=ri.get(e);if(r!==void 0)return r?oi:ii;if(t.has(e))return oi;t.add(e);let i=ii,a=e=>{if(i!==oi&&e?._zod){let r=si(e,t,n);r>i&&(i=r)}},o=(e,r)=>{let i=ii;for(let a of Reflect.ownKeys(e)){let o=Object.getOwnPropertyDescriptor(e,a);if(r&&!o.enumerable)continue;let s=o.get?ai:o.value?._zod?si(o.value,t,n):ii;s>i&&(i=s)}return i},s=e=>{e>i&&(i=e)},c=e._zod.def;switch(c.type){case`object`:{let e=v(c);s(e?o(e,!0):ai),a(c.catchall);break}case`array`:a(c.element);break;case`tuple`:for(let e of c.items)a(e);a(c.rest);break;case`record`:case`map`:a(c.keyType),a(c.valueType);break;case`set`:a(c.valueType);break;case`union`:for(let e of c.options)a(e);break;case`intersection`:a(c.left),a(c.right);break;case`optional`:case`nullable`:case`default`:case`prefault`:case`catch`:case`readonly`:case`nonoptional`:case`promise`:case`success`:a(c.innerType);break;case`pipe`:a(c.in),a(c.out);break;case`function`:a(c.input),a(c.output);break;case`lazy`:{let r=c._cachedInner??(n?e._zod.innerType:void 0);s(r?si(r,t,!1):ai);break}case`template_literal`:case`string`:case`number`:case`int`:case`boolean`:case`bigint`:case`symbol`:case`undefined`:case`null`:case`void`:case`never`:case`any`:case`unknown`:case`date`:case`nan`:case`enum`:case`literal`:case`file`:case`transform`:case`custom`:break;default:for(let e in c){let t=Object.getOwnPropertyDescriptor(c,e);if(!t||t.get)continue;let n=t.value;if(n&&typeof n==`object`){if(n._zod)a(n);else if(Array.isArray(n))for(let e of n)a(e)}}}return t.delete(e),ci(e,i)}function ci(e,t){return t!==ai&&ri.set(e,t===oi),t}function li(e,t){let n=e.buckets.get(t);return n||(n=new WeakMap,e.buckets.set(t,n)),n}var ui,di=[],fi={alloc(e,t,n){let r=ui;if(!r)return n;ui=void 0;let i={value:n,issues:null};return r.set(t.value,i),di.push(i),n},guard(e){var t;(t=e._zod).deferred??(t.deferred=[]),e._zod.deferred.push(()=>{let t=e._zod.parse,n=(e,n)=>{if(n.direction!==`backward`&&mi(n,e.value))throw new Qr;return t(e,n)};e._zod.parse=n,e._zod.run===t&&(e._zod.run=n)})},attach(e){var t;let n,r=!1,i,a;(t=e._zod).deferred??(t.deferred=[]),e._zod.deferred.push(()=>{let t=e._zod.parse,o=(s,c)=>{if(n===void 0){let i=si(e,new Set,!1);if(i===ii)return e._zod.parse=t,e._zod.run===o&&(e._zod.run=t),t(s,c);i===oi||r?n=!0:r=!0}let l=s.value;if(!ti(l))return t(s,c);let u=c[$r];u||(u={buckets:new WeakMap,backEdges:void 0},c[$r]=u);let d;i===c?d=a:(d=li(u,e),i=c,a=d);let f=d.get(l);if(f)return s.value=f.value,f.issues?f.issues.length&&s.issues.push(...ni(f.issues)):(s.memo=!0,u.backEdges??(u.backEdges=new WeakSet),u.backEdges.add(f.value)),s;ui=d;let p=di.length,m=t(s,c);ui=void 0;let h=di.length>p?di.pop():void 0;return m instanceof Promise?m.then(e=>(h&&(h.issues=e.issues.length?ni(e.issues):ei),e)):(h&&(h.issues=m.issues.length?ni(m.issues):ei),m)};e._zod.parse=o,e._zod.run===t&&(e._zod.run=o)})}};function pi(){return fi}function mi(e,t){let n=e[$r]?.backEdges;return n!==void 0&&ti(t)&&n.has(t)}var hi=()=>{let e={string:{unit:`characters`,verb:`to have`},file:{unit:`bytes`,verb:`to have`},array:{unit:`items`,verb:`to have`},set:{unit:`items`,verb:`to have`},map:{unit:`entries`,verb:`to have`}};function t(t){return e[t]??null}let n={regex:`input`,email:`email address`,url:`URL`,emoji:`emoji`,uuid:`UUID`,uuidv4:`UUIDv4`,uuidv6:`UUIDv6`,nanoid:`nanoid`,guid:`GUID`,cuid:`cuid`,cuid2:`cuid2`,ulid:`ULID`,xid:`XID`,ksuid:`KSUID`,datetime:`ISO datetime`,date:`ISO date`,time:`ISO time`,duration:`ISO duration`,ipv4:`IPv4 address`,ipv6:`IPv6 address`,mac:`MAC address`,cidrv4:`IPv4 range`,cidrv6:`IPv6 range`,base64:`base64-encoded string`,base64url:`base64url-encoded string`,json_string:`JSON string`,e164:`E.164 number`,currency_code:`currency code`,credit_card:`credit card number`,iban:`IBAN`,jwt:`JWT`,template_literal:`input`},r={nan:`NaN`};function i(e,t){return e===`number`&&typeof t==`number`&&!Number.isFinite(t)?String(t):r[e]??e}return e=>{switch(e.code){case`invalid_type`:return`Invalid input: expected ${i(e.expected)}, received ${i(Oe(e.input),e.input)}`;case`invalid_value`:return e.values.length===1?`Invalid input: expected ${ce(e.values[0])}`:`Invalid option: expected one of ${u(e.values,`|`)}`;case`too_big`:{let n=e.exact?`exactly `:e.inclusive?`<=`:`<`,r=t(e.origin);return r?`Too big: expected ${e.origin??`value`} to have ${n}${e.maximum.toString()} ${r.unit??`elements`}`:`Too big: expected ${e.origin??`value`} to be ${n}${e.maximum.toString()}`}case`too_small`:{let n=e.exact?`exactly `:e.inclusive?`>=`:`>`,r=t(e.origin);return r?`Too small: expected ${e.origin} to have ${n}${e.minimum.toString()} ${r.unit}`:`Too small: expected ${e.origin} to be ${n}${e.minimum.toString()}`}case`invalid_format`:{let t=e;return t.format===`starts_with`?`Invalid string: must start with "${t.prefix}"`:t.format===`ends_with`?`Invalid string: must end with "${t.suffix}"`:t.format===`includes`?`Invalid string: must include "${t.includes}"`:t.format===`regex`?`Invalid string: must match pattern ${t.pattern}`:`Invalid ${n[t.format]??e.format}`}case`not_multiple_of`:return`Invalid number: must be a multiple of ${e.divisor}`;case`unrecognized_keys`:return`Unrecognized key${e.keys.length>1?`s`:``}: ${u(e.keys,`, `)}`;case`invalid_key`:return`Invalid key in ${e.origin}`;case`invalid_union`:return e.options&&Array.isArray(e.options)&&e.options.length>0?`Invalid discriminator value. Expected ${e.options.map(e=>`'${e}'`).join(` | `)}`:e.inclusive===!1?`Invalid input: more than one option matched`:`Invalid input`;case`invalid_element`:return`Invalid value in ${e.origin}`;default:return`Invalid input`}}};function gi(){return{localeError:hi()}}var _i,vi=class{constructor(){this._map=new WeakMap,this._idmap=new Map}add(e,...t){let n=t[0];return this._map.set(e,n),n&&typeof n==`object`&&`id`in n&&this._idmap.set(n.id,e),this}clear(){return this._map=new WeakMap,this._idmap=new Map,this}remove(e){let t=this._map.get(e);return t&&typeof t==`object`&&`id`in t&&this._idmap.delete(t.id),this._map.delete(e),this}get(e){let t=e._zod.parent;if(t){let n={...this.get(t)??{}};delete n.id;let r={...n,...this._map.get(e)};return Object.keys(r).length?r:void 0}return this._map.get(e)}has(e){return this._map.has(e)}};function yi(){return new vi}(_i=globalThis).__zod_globalRegistry??(_i.__zod_globalRegistry=yi());var bi=globalThis.__zod_globalRegistry;function xi(e){return e.checks&&=[...e.checks],e}function Si(e,t){return new e(xi({type:`string`,...D(t)}))}function Ci(e,t){return new e({type:`string`,format:`email`,check:`string_format`,abort:!1,...D(t)})}function wi(e,t){return new e({type:`string`,format:`guid`,check:`string_format`,abort:!1,...D(t)})}function Ti(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,...D(t)})}function Ei(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v4`,...D(t)})}function Di(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v6`,...D(t)})}function Oi(e,t){return new e({type:`string`,format:`uuid`,check:`string_format`,abort:!1,version:`v7`,...D(t)})}function ki(e,t){return new e({type:`string`,format:`url`,check:`string_format`,abort:!1,...D(t)})}function Ai(e,t){return new e({type:`string`,format:`emoji`,check:`string_format`,abort:!1,...D(t)})}function ji(e,t){return new e({type:`string`,format:`nanoid`,check:`string_format`,abort:!1,...D(t)})}function Mi(e,t){return new e({type:`string`,format:`cuid`,check:`string_format`,abort:!1,...D(t)})}function Ni(e,t){return new e({type:`string`,format:`cuid2`,check:`string_format`,abort:!1,...D(t)})}function Pi(e,t){return new e({type:`string`,format:`ulid`,check:`string_format`,abort:!1,...D(t)})}function Fi(e,t){return new e({type:`string`,format:`xid`,check:`string_format`,abort:!1,...D(t)})}function Ii(e,t){return new e({type:`string`,format:`ksuid`,check:`string_format`,abort:!1,...D(t)})}function Li(e,t){return new e({type:`string`,format:`ipv4`,check:`string_format`,abort:!1,...D(t)})}function Ri(e,t){return new e({type:`string`,format:`ipv6`,check:`string_format`,abort:!1,...D(t)})}function zi(e,t){return new e({type:`string`,format:`cidrv4`,check:`string_format`,abort:!1,...D(t)})}function Bi(e,t){return new e({type:`string`,format:`cidrv6`,check:`string_format`,abort:!1,...D(t)})}function Vi(e,t){return new e({type:`string`,format:`base64`,check:`string_format`,abort:!1,...D(t)})}function Hi(e,t){return new e({type:`string`,format:`base64url`,check:`string_format`,abort:!1,...D(t)})}function Ui(e,t){return new e({type:`string`,format:`e164`,check:`string_format`,abort:!1,...D(t)})}function Wi(e,t){return new e({type:`string`,format:`jwt`,check:`string_format`,abort:!1,...D(t)})}function Gi(e,t){return new e({type:`string`,format:`datetime`,check:`string_format`,offset:!1,local:!1,precision:null,...D(t)})}function Ki(e,t){return new e({type:`string`,format:`date`,check:`string_format`,...D(t)})}function qi(e,t){return new e({type:`string`,format:`time`,check:`string_format`,precision:null,...D(t)})}function Ji(e,t){return new e({type:`string`,format:`duration`,check:`string_format`,...D(t)})}function Yi(e,t){return new e(xi({type:`number`,checks:[],...D(t)}))}function Xi(e,t){return new e({type:`number`,check:`number_format`,abort:!1,format:`safeint`,...D(t)})}function Zi(e,t){return new e({type:`boolean`,...D(t)})}function Qi(e){return new e({type:`unknown`})}function $i(e,t){return new e({type:`never`,...D(t)})}function ea(e,t){return new on({check:`less_than`,...D(t),value:e,inclusive:!1})}function ta(e,t){return new on({check:`less_than`,...D(t),value:e,inclusive:!0})}function na(e,t){return new sn({check:`greater_than`,...D(t),value:e,inclusive:!1})}function ra(e,t){return new sn({check:`greater_than`,...D(t),value:e,inclusive:!0})}function ia(e,t){return new cn({check:`multiple_of`,...D(t),value:e})}function aa(e,t){return new un({check:`max_length`,...D(t),maximum:e})}function oa(e,t){return new dn({check:`min_length`,...D(t),minimum:e})}function sa(e,t){return new fn({check:`length_equals`,...D(t),length:e})}function ca(e,t){return new mn({check:`string_format`,format:`regex`,...D(t),pattern:e})}function la(e){return new hn({check:`string_format`,format:`lowercase`,...D(e)})}function F(e){return new gn({check:`string_format`,format:`uppercase`,...D(e)})}function ua(e,t){return new _n({check:`string_format`,format:`includes`,...D(t),includes:e})}function da(e,t){return new vn({check:`string_format`,format:`starts_with`,...D(t),prefix:e})}function fa(e,t){return new yn({check:`string_format`,format:`ends_with`,...D(t),suffix:e})}function pa(e){return new bn({check:`overwrite`,tx:e})}function ma(e){return pa(t=>t.normalize(e))}function ha(){return pa(e=>e.trim())}function ga(){return pa(e=>e.toLowerCase())}function _a(){return pa(e=>e.toUpperCase())}function va(){return pa(e=>ee(e))}function ya(e,t,n){return new e({type:`array`,element:t,...D(n)})}function ba(e,t,n){return new e({type:`custom`,check:`custom`,fn:t,...D(n)})}function xa(e,t){let n=Sa(t=>(t.addIssue=e=>{if(typeof e==`string`)t.issues.push(ke(e,t.value,n._zod.def));else{let r=e;r.fatal&&(r.continue=!1),r.code??=`custom`,`input`in r||(r.input=t.value),r.inst??=n,r.continue??=!n._zod.def.abort,t.issues.push(ke(r))}},e(t.value,t)),t);return n}function Sa(e,t){let n=new nn({check:`custom`,...D(t)});return n._zod.check=e,n}function Ca(e,...t){for(let n of t)for(let t of Reflect.ownKeys(n))Object.prototype.propertyIsEnumerable.call(n,t)&&_(e,t,n[t]);return e}function wa(e){let t=e?.target??`draft-2020-12`;return t===`draft-4`&&(t=`draft-04`),t===`draft-7`&&(t=`draft-07`),{processors:e.processors??{},metadataRegistry:e?.metadata??bi,target:t,unrepresentable:e?.unrepresentable??`throw`,override:e?.override??(()=>{}),io:e?.io??`output`,counter:0,seen:new Map,sharedDefsExtractedFor:void 0,sharedEmitDoneFor:void 0,cycles:e?.cycles??`ref`,reused:e?.reused??`inline`,intersections:[],deferred:[],external:e?.external??void 0}}function Ta(e,t,n,r,i){let a=typeof t.unrepresentable==`function`?t.unrepresentable({zodSchema:e,path:r.path,message:i}):t.unrepresentable;if(a===`any`)return!1;if(a===void 0||a===`throw`)throw Error(i);return Object.assign(n,a),!0}function Ea(e,t,n={path:[],schemaPath:[]}){var r;let i=e._zod.def,a=t.seen.get(e);if(a)return a.count++,n.schemaPath.includes(e)&&(a.cycle=n.path),a.schema;let o={schema:{},count:1,cycle:void 0,path:n.path};t.seen.set(e,o),t.sharedDefsExtractedFor=void 0,t.sharedEmitDoneFor=void 0;let s=e._zod.toJSONSchema?.();if(s)o.schema=s;else{let r={...n,schemaPath:[...n.schemaPath,e],path:n.path};if(e._zod.processJSONSchema)e._zod.processJSONSchema(t,o.schema,r);else{let n=o.schema,a=t.processors[i.type];if(!a)throw Error(`[toJSONSchema]: Non-representable type encountered: ${i.type}`);a(e,t,n,r)}let a=e._zod.parent;a&&(o.ref||=a,Ea(a,t,r),t.seen.get(a).isParent=!0)}let c=t.metadataRegistry.get(e);return c&&Ca(o.schema,c),t.io===`input`&&I(e)&&(delete o.schema.examples,delete o.schema.default),t.io===`input`&&`_prefault`in o.schema&&((r=o.schema).default??(r.default=o.schema._prefault)),delete o.schema._prefault,t.seen.get(e).schema}function Da(e){return e.replace(/~/g,`~0`).replace(/\//g,`~1`)}function Oa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);if(e.external&&e.sharedDefsExtractedFor===e.external)return;let r=new Map;for(let t of e.seen.entries()){let n=e.metadataRegistry.get(t[0])?.id;if(n){let e=r.get(n);if(e&&e!==t[0])throw Error(`Duplicate schema id "${n}" detected during JSON Schema conversion. Two different schemas cannot share the same id when converted together.`);r.set(n,t[0])}}let i=t=>{let r=e.target===`draft-2020-12`?`$defs`:`definitions`;if(e.external){let n=e.external.registry.get(t[0])?.id,i=e.external.uri??(e=>e);if(n)return{ref:i(n)};let a=t[1].defId??t[1].schema.id??`schema${e.counter++}`;return t[1].defId=a,{defId:a,ref:`${i(`__shared`)}#/${r}/${Da(a)}`}}let i=`#/${r}/`;if(t[1]===n&&!t[1].schema.id)return{ref:`#`};let a=t[1].schema.id??`__schema${e.counter++}`;return{defId:a,ref:i+Da(a)}},a=e=>{if(e[1].schema.$ref)return;let t=e[1],{ref:n,defId:r}=i(e);t.def={...t.schema},r&&(t.defId=r);let a=t.schema;for(let e in a)delete a[e];a.$ref=n};if(e.cycles===`throw`)for(let t of e.seen.entries()){let e=t[1];if(e.cycle)throw Error(`Cycle detected: #/${e.cycle?.join(`/`)}/<root>
 
-Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`)}for(let n of e.seen.entries()){let r=n[1];if(t===n[0])a(n);else{if(e.external){let r=e.external.registry.get(n[0])?.id;if(t!==n[0]&&r){a(n);continue}}(e.metadataRegistry.get(n[0])?.id||r.cycle||r.count>1&&e.reused===`ref`)&&a(n)}}e.external&&(e.sharedDefsExtractedFor=e.external)}function ka(e){let t=e.anyOf;if(!Array.isArray(t)||t.length===0||e.type!==void 0)return;let n=[];for(let e of t){if(!e||typeof e!=`object`)return;ka(e);let t=Object.keys(e);if(t.length!==1||t[0]!==`type`)return;let r=e.type;for(let e of Array.isArray(r)?r:[r]){if(typeof e!=`string`)return;n.includes(e)||n.push(e)}}delete e.anyOf,e.type=n.length===1?n[0]:n}var Aa=new Set([`type`,`properties`,`required`,`additionalProperties`]),ja=[`oneOf`,`anyOf`];function Ma(e){let t=e.additionalProperties;return t===void 0||t===!1||typeof t!=`object`||!t?null:Object.keys(t).length?t:null}function Na(e){let t=[];for(let n of e){if(typeof n!=`object`||n.type!==`object`)return null;for(let e in n)if(!Aa.has(e))return null;t.push(n)}let n={},r=new Set;for(let e of t){for(let r in e.properties){if(Object.prototype.hasOwnProperty.call(n,r))continue;let e=[];for(let n of t){let t=n.properties?.[r]??Ma(n);t!=null&&(e.some(e=>JSON.stringify(e)===JSON.stringify(t))||e.push(t))}_(n,r,e.length===1?e[0]:Na(e)??{allOf:e})}for(let t of e.required??[])r.add(t)}let i={type:`object`,properties:n};if(r.size&&(i.required=[...r]),t.every(e=>e.additionalProperties===!1))i.additionalProperties=!1;else{let e=[];for(let n of t){let t=Ma(n);t&&!e.some(e=>JSON.stringify(e)===JSON.stringify(t))&&e.push(t)}e.length===1?i.additionalProperties=e[0]:e.length>1&&(i.additionalProperties={allOf:e})}return i}function Pa(e){let t=e.allOf;if(!Array.isArray(t)||t.length<2)return;for(let t of Aa)if(t in e)return;let n=t.filter(e=>ja.some(t=>Array.isArray(e[t]))),r=null;if(!n.length)r=Na(t);else{let e=n[0],i=ja.find(t=>Array.isArray(e[t]));if(Object.keys(e).length!==1)return;let a=t.filter(t=>t!==e),o=e[i].map(e=>Na([...a,e]));if(o.some(e=>!e))return;r={[i]:o}}r&&(delete e.allOf,Ca(e,r))}function Fa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);let r=t=>{let n=e.seen.get(t);if(n.ref===null)return;let i=n.def??n.schema,a={...i},o=n.ref;if(n.ref=null,o){r(o);let n=e.seen.get(o),s=n.schema;if(s.$ref&&(e.target===`draft-07`||e.target===`draft-04`||e.target===`openapi-3.0`)?(i.allOf=i.allOf??[],i.allOf.push(s)):Ca(i,s),Ca(i,a),t._zod.parent===o)for(let e in i)e!==`$ref`&&e!==`allOf`&&(e in a||delete i[e]);if(s.$ref&&n.def)for(let e in i)e!==`$ref`&&e!==`allOf`&&e in n.def&&JSON.stringify(i[e])===JSON.stringify(n.def[e])&&delete i[e]}let s=t._zod.parent;if(s&&s!==o){r(s);let t=e.seen.get(s);if(t?.schema.$ref&&(i.$ref=t.schema.$ref,t.def))for(let e in i)e!==`$ref`&&e!==`allOf`&&e in t.def&&JSON.stringify(i[e])===JSON.stringify(t.def[e])&&delete i[e]}e.override({zodSchema:t,jsonSchema:i,path:n.path??[]})};if(!e.external||e.sharedEmitDoneFor!==e.external){for(let t of[...e.seen.entries()].reverse())r(t[0]);if(e.target!==`openapi-3.0`)for(let t of e.seen.entries())ka(t[1].def??t[1].schema);for(let t of e.deferred)t();if(e.intersections.length){let t=new Map;for(let n of e.seen.values())for(let e of[n.schema,n.def]){let n=e?.allOf;if(!Array.isArray(n))continue;let r=t.get(n);r?r.push(e):t.set(n,[e])}for(let n of e.intersections)for(let e of t.get(n)??[])Pa(e)}}let i={};if(e.target===`draft-2020-12`?i.$schema=`https://json-schema.org/draft/2020-12/schema`:e.target===`draft-07`?i.$schema=`http://json-schema.org/draft-07/schema#`:e.target===`draft-04`?i.$schema=`http://json-schema.org/draft-04/schema#`:e.target,e.external?.uri){let n=e.external.registry.get(t)?.id;if(!n)throw Error("Schema is missing an `id` property");i.$id=e.external.uri(n)}Ca(i,n.defId?n.schema:n.def??n.schema);let a=e.metadataRegistry.get(t)?.id;a!==void 0&&i.id===a&&delete i.id;let o=e.external?.defs??{};if(!e.external||e.sharedEmitDoneFor!==e.external)for(let t of e.seen.entries()){let e=t[1];e.def&&e.defId&&(e.def.id===e.defId&&delete e.def.id,_(o,e.defId,e.def))}e.external&&(e.sharedEmitDoneFor=e.external),e.external||Object.keys(o).length>0&&(e.target===`draft-2020-12`?i.$defs=o:i.definitions=o);try{let n=JSON.parse(JSON.stringify(i));return Object.defineProperty(n,"~standard",{value:{...t[`~standard`],jsonSchema:{input:La(t,`input`,e.processors),output:La(t,`output`,e.processors)}},enumerable:!1,writable:!1}),n}catch{throw Error(`Error converting schema to JSON.`)}}function I(e,t){let n=t??{seen:new Set};if(n.seen.has(e))return!1;n.seen.add(e);let r=e._zod.def;if(r.type===`transform`)return!0;if(r.type===`array`)return I(r.element,n);if(r.type===`set`)return I(r.valueType,n);if(r.type===`lazy`)return I(r.getter(),n);if(r.type===`promise`||r.type===`optional`||r.type===`nonoptional`||r.type===`nullable`||r.type===`readonly`||r.type==="default"||r.type===`prefault`||r.type===`catch`)return I(r.innerType,n);if(r.type===`intersection`)return I(r.left,n)||I(r.right,n);if(r.type===`record`||r.type===`map`)return I(r.keyType,n)||I(r.valueType,n);if(r.type===`pipe`)return e._zod.traits.has(`$ZodCodec`)?!0:I(r.in,n)||I(r.out,n);if(r.type===`object`){for(let e in r.shape)if(I(r.shape[e],n))return!0;return!1}if(r.type===`union`){for(let e of r.options)if(I(e,n))return!0;return!1}if(r.type===`tuple`){for(let e of r.items)if(I(e,n))return!0;return!!(r.rest&&I(r.rest,n))}return!1}var Ia=(e,t={})=>n=>{let r=wa({...n,processors:t});return Ea(e,r),Oa(r,e),Fa(r,e)},La=(e,t,n={})=>r=>{let{libraryOptions:i,target:a}=r??{},o=wa({...i??{},target:a,io:t,processors:n});return Ea(e,o),Oa(o,e),Fa(o,e)},Ra=(e,t,n)=>{(e[t]===void 0||n>e[t])&&(e[t]=n)},za=(e,t,n)=>{(e[t]===void 0||n<e[t])&&(e[t]=n)},Ba=(e,t)=>{Ra(e,`minimum`,t),za(e,`maximum`,t)},Va=(e,t)=>{e.multipleOf??=[],e.multipleOf.includes(t)||e.multipleOf.push(t)},Ha=(e,t)=>{e.patterns??=new Set,e.patterns.add(t)},Ua=(e,t)=>{e.mime=e.mime?e.mime.filter(e=>t.includes(e)):[...t]},Wa=(e,t)=>{e.format=t,t.includes(`int`)&&(e.isInt=!0)},Ga=(e,t)=>Ra(e,`minimum`,t.minimum),Ka=(e,t)=>za(e,`maximum`,t.maximum),qa=e=>(t,n)=>{Wa(t,n.format);let[r,i]=e[n.format];Ra(t,`minimum`,r),za(t,`maximum`,i)},Ja={greater_than:(e,t)=>Ra(e,t.inclusive?`minimum`:`exclusiveMinimum`,t.value),less_than:(e,t)=>za(e,t.inclusive?`maximum`:`exclusiveMaximum`,t.value),multiple_of:(e,t)=>Va(e,t.value),number_format:qa(ue),bigint_format:qa(de),min_length:Ga,max_length:Ka,length_equals:(e,t)=>Ba(e,t.length),min_size:Ga,max_size:Ka,size_equals:(e,t)=>Ba(e,t.size),string_format:(e,t)=>{Wa(e,t.format),t.pattern&&Ha(e,t.pattern),(t.format===`base64`||t.format===`base64url`)&&(e.contentEncoding=t.format),(t.local||t.precision===-1)&&(e.laxFormat=!0)},mime_type:(e,t)=>Ua(e,t.mime)};function Ya(e){let t={},n=e._zod.def,r=e._zod.traits.has(`$ZodCheck`)?[e,...n.checks??[]]:n.checks??[];for(let e of r)Ja[e._zod.def.check]?.(t,e._zod.def);let i=e._zod.bag;i.minimum!==void 0&&Ra(t,`minimum`,i.minimum),i.exclusiveMinimum!==void 0&&Ra(t,`exclusiveMinimum`,i.exclusiveMinimum),i.maximum!==void 0&&za(t,`maximum`,i.maximum),i.exclusiveMaximum!==void 0&&za(t,`exclusiveMaximum`,i.exclusiveMaximum),i.multipleOf!==void 0&&Va(t,i.multipleOf),i.format!==void 0&&(t.format??=i.format,i.format.includes(`int`)&&(t.isInt=!0)),i.mime&&Ua(t,i.mime);for(let e of i.patterns??[])Ha(t,e);return t}var Xa={guid:`uuid`,url:`uri`,datetime:`date-time`,json_string:`json-string`,regex:``},Za=new Map([[ir,Vt],[or,Ht]]),Qa=e=>Za.get(e)??e,$a=(e,t,n,r)=>{let i=n;i.type=`string`;let{minimum:a,maximum:o,format:s,patterns:c,contentEncoding:l,laxFormat:u}=Ya(e);if(typeof a==`number`&&(i.minLength=a),typeof o==`number`&&(i.maxLength=o),s&&(i.format=Xa[s]??s,i.format===``&&delete i.format,(s===`time`||u)&&delete i.format),l&&(i.contentEncoding=l),c&&c.size>0){let e=[...c].map(Qa);e.length===1?i.pattern=e[0].source:e.length>1&&(i.allOf=[...e.map(e=>({...t.target===`draft-07`||t.target===`draft-04`||t.target===`openapi-3.0`?{type:`string`}:{},pattern:e.source}))])}},eo=(e,t,n,r)=>{let i=n,{minimum:a,maximum:o,multipleOf:s,exclusiveMaximum:c,exclusiveMinimum:l,isInt:u}=Ya(e);i.type=u?`integer`:`number`;let d=typeof l==`number`&&l>=(a??-1/0),f=typeof c==`number`&&c<=(o??1/0),p=t.target===`draft-04`||t.target===`openapi-3.0`;if(d?p?(i.minimum=l,i.exclusiveMinimum=!0):i.exclusiveMinimum=l:typeof a==`number`&&(i.minimum=a),f?p?(i.maximum=c,i.exclusiveMaximum=!0):i.exclusiveMaximum=c:typeof o==`number`&&(i.maximum=o),s){let n=new Set;for(let a of s)Number.isFinite(a)&&a!==0?n.add(Math.abs(a)):Ta(e,t,i,r,`A multipleOf divisor of ${a} cannot be represented in JSON Schema`);let[a,...o]=n;a!==void 0&&(i.multipleOf=a),o.length&&(i.allOf=[...i.allOf??[],...o.map(e=>({multipleOf:e}))])}},to=(e,t,n,r)=>{n.type=`boolean`},no=(e,t,n,r)=>{n.not={}},ro=(e,t,n,r)=>{let i=e._zod.def,a=l(i.entries);a.length===0?n.not={}:(a.every(e=>typeof e==`number`)&&(n.type=`number`),a.every(e=>typeof e==`string`)&&(n.type=`string`),n.enum=a)},io=(e,t,n,r)=>{Ta(e,t,n,r,`Custom types cannot be represented in JSON Schema`)},ao=(e,t,n,r)=>{Ta(e,t,n,r,`Transforms cannot be represented in JSON Schema`)},oo=(e,t,n,r)=>{let i=n,a=e._zod.def,{minimum:o,maximum:s}=Ya(e);typeof o==`number`&&(i.minItems=o),typeof s==`number`&&(i.maxItems=s),i.type=`array`,i.items=Ea(a.element,t,{...r,path:[...r.path,`items`]})};function so(e){let t=e._zod.def;return t.type===`pipe`&&t.in._zod.traits.has(`$ZodTransform`)?so(t.out):t.type===`catch`?so(t.innerType):e._zod.optin}var co=(e,t,n,r)=>{let i=n,a=e._zod.def,o=a.shape;if(Object.getOwnPropertySymbols(o).length&&Ta(e,t,i,r,`Symbol keys cannot be represented in JSON Schema`))return;i.type=`object`,i.properties={};for(let e in o)_(i.properties,e,Ea(o[e],t,{...r,path:[...r.path,`properties`,e]}));let s=[];for(let e of Object.keys(o)){let n=a.shape[e];(t.io===`input`?so(n)===void 0:n._zod.optout===void 0)&&s.push(e)}s.length>0&&(i.required=s),a.catchall?._zod.def.type===`never`?i.additionalProperties=!1:a.catchall?a.catchall&&(i.additionalProperties=Ea(a.catchall,t,{...r,path:[...r.path,`additionalProperties`]})):t.io===`output`&&(i.additionalProperties=!1)},lo=(e,t,n,r)=>{let i=e._zod.def,a=i.inclusive===!1,o=i.options.map((e,n)=>Ea(e,t,{...r,path:[...r.path,a?`oneOf`:`anyOf`,n]}));a?n.oneOf=o:n.anyOf=o},uo=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.left,t,{...r,path:[...r.path,`allOf`,0]}),o=Ea(i.right,t,{...r,path:[...r.path,`allOf`,1]}),s=e=>`allOf`in e&&Object.keys(e).length===1,c=[...s(a)?a.allOf:[a],...s(o)?o.allOf:[o]];n.allOf=c,t.intersections.push(c)};function fo(e,t,n){if(t.$ref){if(n.has(t))return t;n.add(t);let r=e.get(t)?.def;if(!r)return t;let i=fo(e,r,n);return i===r?t:i}for(let r of[`anyOf`,`oneOf`]){let i=t[r];if(!Array.isArray(i))continue;let a=i.map(t=>fo(e,t,n));a.some((e,t)=>e!==i[t])&&(t={...t,[r]:a})}let r=Array.isArray(t.type)?t.type:[t.type],i=!r.includes(`string`)&&r.some(e=>e===`number`||e===`integer`),a=t.enum??(t.const===void 0?void 0:[t.const]);if(!i&&!a?.some(e=>typeof e==`number`))return t;let{minimum:o,maximum:s,exclusiveMinimum:c,exclusiveMaximum:l,multipleOf:u,format:d,id:f,...p}=t;return p.enum?p.enum=p.enum.map(e=>typeof e==`number`?String(e):e):typeof p.const==`number`&&(p.const=String(p.const)),i&&(p.type=`string`,a||(p.pattern=(r.includes(`number`)?Qt:N).source)),p}var po=new WeakMap;function mo(e){let t=new Map;for(let n of e.seen.values())n.def&&!t.has(n.schema)&&t.set(n.schema,n);let n=new Map;for(let r of po.get(e)??[]){let i=e.seen.get(r),a=(i?.def??i?.schema)?.propertyNames;if(!a||a===!0||n.has(a))continue;let o=fo(t,a,new Set);o!==a&&n.set(a,o)}if(n.size)for(let t of e.seen.values())for(let e of[t.schema,t.def]){let t=e&&n.get(e.propertyNames);t&&(e.propertyNames=t)}}var ho=(e,t,n,r)=>{let i=n,a=e._zod.def;i.type=`object`;let o=a.keyType,s=Ya(o).patterns;if(a.mode===`loose`&&s&&s.size>0){let e=Ea(a.valueType,t,{...r,path:[...r.path,`patternProperties`,`*`]});i.patternProperties={};for(let t of s)_(i.patternProperties,Qa(t).source,e)}else{if(t.target===`draft-07`||t.target===`draft-2020-12`){i.propertyNames=Ea(a.keyType,t,{...r,path:[...r.path,`propertyNames`]});let n=po.get(t);n||(n=[],po.set(t,n),t.deferred.push(()=>mo(t))),n.push(e)}i.additionalProperties=Ea(a.valueType,t,{...r,path:[...r.path,`additionalProperties`]})}let c=o._zod.values,l=t.io===`input`&&so(a.valueType)!==void 0;if(c&&!a.partial&&!l){let e=[...c].filter(e=>typeof e==`string`||typeof e==`number`);e.length>0&&(i.required=e.map(String))}},go=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.innerType,t,r),o=t.seen.get(e);t.target===`openapi-3.0`?(o.ref=i.innerType,n.nullable=!0):n.anyOf=[a,{type:`null`}]},_o=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},vo=Symbol();function yo(e,t,n,r,i){let a=!1,o=JSON.stringify(e,(e,t)=>typeof t==`bigint`?(a=!0,null):t);return a?(Ta(t,n,r,i,`BigInt defaults cannot be represented in JSON Schema`),vo):JSON.parse(o)}var bo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n.default=o)},xo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);if(a.ref=i.innerType,t.io!==`input`)return;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n._prefault=o)},So=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o;try{o=i.catchValue(void 0)}catch{Ta(e,t,n,r,`Dynamic catch values are not supported in JSON Schema`);return}n.default=o},Co=(e,t,n,r)=>{let i=e._zod.def,a=i.in._zod.traits.has(`$ZodTransform`),o=t.io===`input`?a?i.out:i.in:i.out;Ea(o,t,r);let s=t.seen.get(e);s.ref=o},wo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType,n.readOnly=!0},To=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},Eo=new WeakSet([Object.prototype,Error.prototype]);function Do(e,t,n){Object.defineProperty(e,t,{configurable:!0,enumerable:!1,get(){let e=n(this);return Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0}),e},set(e){Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0})}})}var Oo=(e,t)=>{tt.init(e,t),e.name=`ZodError`;let n=Object.getPrototypeOf(e);Eo.has(n)||(Eo.add(n),Do(n,`format`,e=>t=>it(e,t)),Do(n,`flatten`,e=>t=>rt(e,t)),Do(n,`addIssue`,e=>t=>{e.issues.push(t),e.message=JSON.stringify(e.issues,d,2)}),Do(n,`addIssues`,e=>t=>{e.issues.push(...t),e.message=JSON.stringify(e.issues,d,2)}),Object.defineProperty(n,"isEmpty",{configurable:!0,enumerable:!1,get(){return this.issues.length===0}}))},ko=M(`ZodError`,Oo),Ao=M(`ZodError`,Oo,void 0,{Parent:Error}),jo=ot(Ao),Mo=st(Ao),No=ct(Ao),Po=ut(Ao),Fo=gt(Ao),Io=_t(Ao),Lo=vt(Ao),Ro=yt(Ao),zo=bt(Ao),Bo=xt(Ao),Vo=St(Ao),Ho=Ct(Ao);function Uo(){Je.localeError||Ye(gi())}function Wo(){Je.memoizer||Ye({memoizer:pi()})}var Go=M(`ZodType`,(e,t)=>(Uo(),Cn.init(e,t),e.def=t,e.type=t.type,e),{check(...e){let t=this.def;return this.clone(w(t,{checks:[...t.checks??[],...e.map(e=>typeof e==`function`?{_zod:{check:e,def:{check:`custom`},onattach:[]}}:e)]}),{parent:!0})},with(...e){return this.check(...e)},clone(e,t){return se(this,e,t)},brand(){return this},register(e,t){return e.add(this,t),this},refine(e,t){return this.check(ac(e,t))},superRefine(e,t){return this.check(oc(e,t))},overwrite(e){return this.check(pa(e))},optional(){return Vs(this)},exactOptional(){return Us(this)},nullable(){return Gs(this)},nullish(){return Vs(Gs(this))},nonoptional(e){return Zs(this,e)},array(){return B(this)},or(e){return As([this,e])},and(e){return Ms(this,e)},transform(e){return tc(this,zs(e))},default(e){return qs(this,e)},prefault(e){return Ys(this,e)},catch(e){return $s(this,e)},pipe(e){return tc(this,e)},readonly(){return rc(this)},describe(e){let t=this.clone();return bi.add(t,{description:e}),t},meta(...e){if(e.length===0)return bi.get(this);let t=this.clone();return bi.add(t,e[0]),t},isOptional(){return this.safeParse(void 0).success},isNullable(){return this.safeParse(null).success},apply(e,...t){return t.length===0?e(this):e(this,...t)},get"~standard"(){return Me(this,`~standard`,{...En(this),jsonSchema:{input:La(this,`input`),output:La(this,`output`)}})},set"~standard"(e){je(this,`~standard`,e)},parse:function e(t,n){return jo(this,t,n,{callee:e})},parseAsync:async function e(t,n){return await Mo(this,t,n,{callee:e})},safeParse(e,t){return No(this,e,t)},async safeParseAsync(e,t){return Po(this,e,t)},get spa(){return this?.safeParseAsync},set spa(e){je(this,`spa`,e)},validate(e,t){return pt(this,e,t)},validateAsync(e,t){return ht(this,e,t)},encode:function e(t,n){return Fo(this,t,n,{callee:e})},decode:function e(t,n){return Io(this,t,n,{callee:e})},encodeAsync:async function e(t,n){return await Lo(this,t,n,{callee:e})},decodeAsync:async function e(t,n){return await Ro(this,t,n,{callee:e})},safeEncode(e,t){return zo(this,e,t)},safeDecode(e,t){return Bo(this,e,t)},async safeEncodeAsync(e,t){return Vo(this,e,t)},async safeDecodeAsync(e,t){return Ho(this,e,t)},toJSONSchema(e){return Ia(this,{})(e)},get description(){return bi.get(this)?.description},get _def(){return this._zod.def}}),Ko=M(`_ZodString`,(e,t)=>{Dn.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>$a(e,t,n,r)},Ne({format:e=>Ya(e).format??null,minLength:e=>Ya(e).minimum??null,maxLength:e=>Ya(e).maximum??null},{regex(...e){return this.check(ca(...e))},includes(...e){return this.check(ua(...e))},startsWith(...e){return this.check(da(...e))},endsWith(...e){return this.check(fa(...e))},min(...e){return this.check(oa(...e))},max(...e){return this.check(aa(...e))},length(...e){return this.check(sa(...e))},nonempty(...e){return this.check(oa(1,...e))},lowercase(e){return this.check(la(e))},uppercase(e){return this.check(F(e))},trim(){return this.check(ha())},normalize(...e){return this.check(ma(...e))},toLowerCase(){return this.check(ga())},toUpperCase(){return this.check(_a())},slugify(){return this.check(va())}})),L=M(`ZodString`,(e,t)=>{Dn.init(e,t),Ko.init(e,t)},{email(e){return this.check(Ci(Zo,e))},url(e){return this.check(ki(es,e))},jwt(e){return this.check(Wi(hs,e))},emoji(e){return this.check(Ai(ts,e))},guid(e){return this.check(wi(Qo,e))},uuid(e){return this.check(Ti($o,e))},uuidv4(e){return this.check(Ei($o,e))},uuidv6(e){return this.check(Di($o,e))},uuidv7(e){return this.check(Oi($o,e))},nanoid(e){return this.check(ji(ns,e))},cuid(e){return this.check(Mi(rs,e))},cuid2(e){return this.check(Ni(is,e))},ulid(e){return this.check(Pi(as,e))},base64(e){return this.check(Vi(fs,e))},base64url(e){return this.check(Hi(ps,e))},xid(e){return this.check(Fi(os,e))},ksuid(e){return this.check(Ii(ss,e))},ipv4(e){return this.check(Li(cs,e))},ipv6(e){return this.check(Ri(ls,e))},cidrv4(e){return this.check(zi(us,e))},cidrv6(e){return this.check(Bi(ds,e))},e164(e){return this.check(Ui(ms,e))},datetime(e){return this.check(Gi(qo,e))},date(e){return this.check(Ki(Jo,e))},time(e){return this.check(qi(Yo,e))},duration(e){return this.check(Ji(Xo,e))}});function R(e){return Si(L,e)}var z=M(`ZodStringFormat`,(e,t)=>{P.init(e,t),Ko.init(e,t)}),qo=M(`ZodISODateTime`,(e,t)=>{Kn.init(e,t),z.init(e,t)}),Jo=M(`ZodISODate`,(e,t)=>{qn.init(e,t),z.init(e,t)}),Yo=M(`ZodISOTime`,(e,t)=>{Jn.init(e,t),z.init(e,t)}),Xo=M(`ZodISODuration`,(e,t)=>{Yn.init(e,t),z.init(e,t)}),Zo=M(`ZodEmail`,(e,t)=>{An.init(e,t),z.init(e,t)}),Qo=M(`ZodGUID`,(e,t)=>{On.init(e,t),z.init(e,t)}),$o=M(`ZodUUID`,(e,t)=>{kn.init(e,t),z.init(e,t)}),es=M(`ZodURL`,(e,t)=>{Rn.init(e,t),z.init(e,t)}),ts=M(`ZodEmoji`,(e,t)=>{zn.init(e,t),z.init(e,t)}),ns=M(`ZodNanoID`,(e,t)=>{Bn.init(e,t),z.init(e,t)}),rs=M(`ZodCUID`,(e,t)=>{Vn.init(e,t),z.init(e,t)}),is=M(`ZodCUID2`,(e,t)=>{Hn.init(e,t),z.init(e,t)}),as=M(`ZodULID`,(e,t)=>{Un.init(e,t),z.init(e,t)}),os=M(`ZodXID`,(e,t)=>{Wn.init(e,t),z.init(e,t)}),ss=M(`ZodKSUID`,(e,t)=>{Gn.init(e,t),z.init(e,t)}),cs=M(`ZodIPv4`,(e,t)=>{Xn.init(e,t),z.init(e,t)}),ls=M(`ZodIPv6`,(e,t)=>{$n.init(e,t),z.init(e,t)}),us=M(`ZodCIDRv4`,(e,t)=>{er.init(e,t),z.init(e,t)}),ds=M(`ZodCIDRv6`,(e,t)=>{nr.init(e,t),z.init(e,t)}),fs=M(`ZodBase64`,(e,t)=>{ar.init(e,t),z.init(e,t)}),ps=M(`ZodBase64URL`,(e,t)=>{cr.init(e,t),z.init(e,t)}),ms=M(`ZodE164`,(e,t)=>{lr.init(e,t),z.init(e,t)}),hs=M(`ZodJWT`,(e,t)=>{dr.init(e,t),z.init(e,t)}),gs=M(`ZodNumber`,(e,t)=>{fr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>eo(e,t,n,r),e.isFinite=!0},Ne({minValue:e=>{let{minimum:t,exclusiveMinimum:n}=Ya(e);return Math.max(t??-1/0,n??-1/0)},maxValue:e=>{let{maximum:t,exclusiveMaximum:n}=Ya(e);return Math.min(t??1/0,n??1/0)},isInt:e=>{let{isInt:t,multipleOf:n}=Ya(e);return!!t||!!n?.some(Number.isSafeInteger)},format:e=>Ya(e).format??null},{gt(e,t){return this.check(na(e,t))},gte(e,t){return this.check(ra(e,t))},min(e,t){return this.check(ra(e,t))},lt(e,t){return this.check(ea(e,t))},lte(e,t){return this.check(ta(e,t))},max(e,t){return this.check(ta(e,t))},int(e){return this.check(ys(e))},safe(e){return this.check(ys(e))},positive(e){return this.check(na(0,e))},nonnegative(e){return this.check(ra(0,e))},negative(e){return this.check(ea(0,e))},nonpositive(e){return this.check(ta(0,e))},multipleOf(e,t){return this.check(ia(e,t))},step(e,t){return this.check(ia(e,t))},finite(){return this}}));function _s(e){return Yi(gs,e)}var vs=M(`ZodNumberFormat`,(e,t)=>{pr.init(e,t),gs.init(e,t)});function ys(e){return Xi(vs,e)}var bs=M(`ZodBoolean`,(e,t)=>{mr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>to(e,t,n,r)});function xs(e){return Zi(bs,e)}var Ss=M(`ZodUnknown`,(e,t)=>{hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(e,t,n)=>void 0});function Cs(){return Qi(Ss)}var ws=M(`ZodNever`,(e,t)=>{gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>no(e,t,n,r)});function Ts(e){return $i(ws,e)}var Es=M(`ZodArray`,(e,t)=>{Wo(),br.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>oo(e,t,n,r),e.element=t.element},{min(e,t){return this.check(oa(e,t))},nonempty(e){return this.check(oa(1,e))},max(e,t){return this.check(aa(e,t))},length(e,t){return this.check(sa(e,t))},unwrap(){return this.element}});function B(e,t){return ya(Es,e,t)}var Ds=M(`ZodObject`,(e,t)=>{Wo(),Er.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>co(e,t,n,r),ze(e,`shape`,e=>e._zod.def.shape,!1)},{keyof(){return Ls(Object.keys(this._zod.def.shape))},catchall(e){return this.clone(w(this._zod.def,{catchall:e}))},passthrough(){return this.clone(w(this._zod.def,{catchall:Cs()}))},loose(){return this.clone(w(this._zod.def,{catchall:Cs()}))},strict(){return this.clone(w(this._zod.def,{catchall:Ts()}))},strip(){return this.clone(w(this._zod.def,{catchall:void 0}))},extend(e){return he(this,e)},safeExtend(e){return _e(this,e)},merge(e){return ve(this,e)},pick(e){return fe(this,e)},omit(e){return me(this,e)},partial(...e){return ye(Bs,this,e[0])},exactPartial(...e){return ye(Hs,this,e[0],`exactPartial`)},required(...e){return be(Xs,this,e[0])}});function Os(e,t){return new Ds({type:`object`,shape:e??{},...D(t)})}var ks=M(`ZodUnion`,(e,t)=>{Or.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>lo(e,t,n,r),e.options=t.options});function As(e,t){return new ks({type:`union`,options:e,...D(t)})}var js=M(`ZodIntersection`,(e,t)=>{kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>uo(e,t,n,r)});function Ms(e,t){return new js({type:`intersection`,left:e,right:t})}var Ns=M(`ZodRecord`,(e,t)=>{Wo(),Mr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ho(e,t,n,r),e.keyType=t.keyType,e.valueType=t.valueType});function Ps(e,t,n){return!t||!t._zod?new Ns({type:`record`,keyType:R(),valueType:e,...D(t)}):new Ns({type:`record`,keyType:e,valueType:t,...D(n)})}function Fs(e,t,n){return new Ns({type:`record`,keyType:e,valueType:t,...D(n),partial:!0})}var Is=M(`ZodEnum`,(e,t)=>{Nr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ro(e,t,n,r),e.enum=t.entries,e.options=[...e._zod.values];let n=new Set(Object.keys(t.entries));e.extract=(e,r)=>{let i={};for(let r of e)if(n.has(r))i[r]=t.entries[r];else throw Error(`Key ${r} not found in enum`);return new Is({...t,checks:[],...D(r),entries:i})},e.exclude=(e,r)=>{let i={...t.entries};for(let t of e)if(n.has(t))delete i[t];else throw Error(`Key ${t} not found in enum`);return new Is({...t,checks:[],...D(r),entries:i})}});function Ls(e,t){return new Is({type:`enum`,entries:Array.isArray(e)?Object.fromEntries(e.map(e=>[e,e])):e,...D(t)})}var Rs=M(`ZodTransform`,(e,t)=>{Wo(),Pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ao(e,t,n,r),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new qe(e.constructor.name);n.addIssue=r=>{if(typeof r==`string`)n.issues.push(ke(r,n.value,t));else{let t=r;t.fatal&&(t.continue=!1),t.code??=`custom`,`input`in t||(t.input=n.value),t.inst??=e,n.issues.push(ke(t))}};let i=t.transform(n.value,n);return i instanceof Promise?i.then(e=>(n.value=e,n)):(n.value=i,n)}});function zs(e){return new Rs({type:`transform`,transform:e})}var Bs=M(`ZodOptional`,(e,t)=>{Ir.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Vs(e){return new Bs({type:`optional`,innerType:e})}var Hs=M(`ZodExactOptional`,(e,t)=>{Lr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Us(e){return new Hs({type:`optional`,innerType:e})}var Ws=M(`ZodNullable`,(e,t)=>{Rr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>go(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Gs(e){return new Ws({type:`nullable`,innerType:e})}var Ks=M(`ZodDefault`,(e,t)=>{zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>bo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeDefault=e.unwrap});function qs(e,t){return new Ks({type:`default`,innerType:e,get defaultValue(){return typeof t==`function`?t():ie(t)}})}var Js=M(`ZodPrefault`,(e,t)=>{Vr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>xo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ys(e,t){return new Js({type:`prefault`,innerType:e,get defaultValue(){return typeof t==`function`?t():ie(t)}})}var Xs=M(`ZodNonOptional`,(e,t)=>{Hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>_o(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Zs(e,t){return new Xs({type:`nonoptional`,innerType:e,...D(t)})}var Qs=M(`ZodCatch`,(e,t)=>{Gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>So(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeCatch=e.unwrap});function $s(e,t){return new Qs({type:`catch`,innerType:e,catchValue:typeof t==`function`?t:Ve(t)})}var ec=M(`ZodPipe`,(e,t)=>{Kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>Co(e,t,n,r),e.in=t.in,e.out=t.out});function tc(e,t){return new ec({type:`pipe`,in:e,out:t})}var nc=M(`ZodReadonly`,(e,t)=>{Jr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>wo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function rc(e){return new nc({type:`readonly`,innerType:e})}var ic=M(`ZodCustom`,(e,t)=>{Xr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>io(e,t,n,r)});function ac(e,t={}){return ba(ic,e,t)}function oc(e,t){return xa(e,t)}var sc=[`endurance`,`power`,`grace`],cc=[`empathy`,`persuasion`,`demeanor`],lc=[`logic`,`intuition`,`memory`],uc=Ls([...sc,...cc,...lc]),V={physical:sc,social:cc,mental:lc,magic:[]},dc=[`physical`,`social`,`mental`],fc=Os({hp:_s().int(),vp:_s().int(),sp:_s().int(),mp:_s().int()}).partial(),pc=R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be kebab-case`),mc=Ls([`placeholder`,`draft`,`final`]),hc=Os({id:pc,name:R().min(1),status:mc,plane:R().min(1),region:R().optional(),summary:R().min(1),tags:B(R()).default([]),lore:R().optional()}),gc=Ps(uc,Os({bonus:_s().int().min(0),max:_s().int().min(0).max(20)}).refine(e=>e.bonus<=e.max,`bonus can't exceed max`)),_c=Os({name:R().min(1),description:R().min(1)}),vc=Os({trait:pc,rank:_s().int().min(1).optional()}),yc=Os({choose:_s().int().min(1),from:R().min(1),note:R().optional(),perRank:xs().optional()}),bc=hc.extend({features:B(_c).default([]),grants:B(vc).default([]),resources:fc.default({}),traitAccess:B(R()).default([]),stats:gc,freePoints:_s().int().min(0).default(0),maxTotal:_s().int().min(0).optional(),movement:R().optional()}),xc=Ls([`origin`,`profession`,`past`]),Sc=Os({count:_s().int().min(1),group:Ls(dc)}),Cc=hc.extend({type:xc,grants:B(vc).default([]),bonusPoints:B(Sc).default([]),coreBonus:Fs(Ls([`magic`]),_s().int().min(1)).default({}),choices:B(yc).default([]),backgroundTraits:B(pc).default([]),features:B(_c).default([])}),wc=Ls([`knowledge`,`skill`,`contact`,`starter`,`ability`,`condition`,`membership`,`circumstance`,`other`]),Tc=Os(Object.fromEntries([...uc.options,...Object.keys(V)].map(e=>[e,_s().int().min(0).optional()]))).strict(),Ec=hc.extend({category:wc,types:B(R()).default([]),ranked:xs().default(!1),rankStats:B(uc).default([]),minStats:Tc.default({}),prerequisites:B(pc).default([]),prerequisiteTags:B(R()).default([]),background:xs().default(!1),starterOnly:xs().default(!1),mastery:xs().default(!1),temporary:R().optional(),conveyed:xs().default(!1),rpRequirement:R().optional(),effect:R().min(1),language:R().optional(),choices:B(yc).default([]),resources:fc.default({}),coreAccess:B(Ls([`magic`])).default([]),list:R().optional(),grants:B(vc).default([]),modifiers:R().optional(),action:R().optional()}),Dc=[`weapon`,`armor`,`gear`,`consumable`,`currency`,`other`],Oc=Ls([`weapon`,`wearable`,`equipment`,`structure`,`vehicle`,`animal`,`misc`]),kc=hc.extend({type:Oc,category:Ls(Dc),damage:R().optional(),resistances:R().optional(),attackType:Ls([`Melee`,`Ranged`,`Ranged, Thrown`]).optional(),maxRange:R().optional(),attackStat:R().optional(),areaOfEffect:R().optional(),reload:Ls([`Partial`,`Full`]).optional(),onHit:R().optional(),modifiers:R().optional(),uses:R().optional(),slot:R().optional(),value:_s().int().min(0).optional(),currency:R().optional(),notes:R().optional()}),Ac=Os({group:Ls(Object.keys(V)),points:Fs(uc,_s().int().min(0))}),jc=Ls([`universal`,`background`]),Mc=Os({trait:pc,rank:_s().int().min(1).default(1),pick:jc}),Nc=Os({package:pc.optional(),trait:pc.optional(),from:R().min(1),traits:B(R().trim().min(1))}).refine(e=>e.package===void 0!=(e.trait===void 0),`an answer names either a package or a Trait`),Pc=Os({id:R().optional(),item:pc.optional(),name:R().trim().min(1),qty:_s().int().min(0).default(1),category:Ls(Dc).default(`gear`),equipped:xs().default(!1),notes:R().optional()}),Fc=Os({trait:R().trim().min(1),rank:_s().int().min(1).default(1),note:R().optional()}),Ic=Os({name:R().optional(),age:_s().int().min(0).optional(),gender:Ls([`male`,`female`,`indeterminate`,`none`,`fluid`,`custom`]).optional(),customGender:R().optional(),height:R().optional(),weight:R().optional(),portrait:R().optional(),description:R().optional(),kind:pc,origin:pc,profession:pc,past:pc,startPoints:Fs(uc,_s().int().min(0)).default({}),level:_s().int().min(1).default(1),levels:B(Ac),traits:B(Mc).default([]),choices:B(Nc).default([]),items:B(Pc).default([]),conditions:B(Fc).default([])}),Lc={startingLevel:3},Rc=uc.options,zc=[`origin`,`profession`,`past`],Bc={language:e=>e.types.includes(`language`),"dreftian-language":e=>e.types.includes(`language`)&&e.region===`dreft`,"spoken-language":e=>e.types.includes(`language`)&&!e.tags.includes(`writing`)},Vc=`spoken-and-written-language`;function Hc(e,t){if(e.language)return t.traits.find(t=>t.language===e.language&&t.types.includes(`language`)&&t.tags.includes(`writing`))}var Uc={contact:`Contact`,place:`Place`,quarry:`Quarry`},Wc=e=>Object.hasOwn(Uc,e);function Gc(e,t){if(e===`spoken-and-written-language`)return t.traits.filter(e=>Bc[`spoken-language`](e)&&Hc(e,t));let n=Bc[e];return n?t.traits.filter(n):[]}var Kc=(e,t)=>e[t.by]===t.id&&e.from===t.from;function qc(e,t,n=1){let r=[];for(let i of t.choices){let a=r.find(e=>e.from===i.from);a?(a.count+=i.choose*(i.perRank===!1?1:n),i.note&&a.notes.push(i.note)):r.push({by:e,id:t.id,name:t.name,from:i.from,count:i.choose*(i.perRank===!1?1:n),notes:i.note?[i.note]:[]})}return r}function Jc(e,t){let n=[];for(let e of t)for(let t of e.bonusPoints){let r=n.find(e=>e.group===t.group);r?(r.count+=t.count,r.from.push(e.name)):n.push({group:t.group,count:t.count,from:[e.name]})}for(let t of n){let n=V[t.group].reduce((t,n)=>t+Math.max(0,(e?.stats[n]?.max??20)-(e?.stats[n]?.bonus??0)),0);t.count=Math.min(t.count,n)}return{any:e?.freePoints??0,groups:n.filter(e=>e.count>0)}}function Yc(e,t){let n=new Set,r=e=>{if(!n.has(e)){n.add(e);for(let n of t.traits.find(t=>t.id===e)?.grants??[])r(n.trait)}};for(let t of e)r(t);return n}function Xc(e){return[...new Set(e.traits.flatMap(e=>e.list?[e.list]:[]))].sort()}function Zc(e,t){let n=new Set(dc);for(let r of Yc(e,t))for(let e of t.traits.find(e=>e.id===r)?.coreAccess??[])n.add(e);return[...n]}var Qc=e=>`${e.name} (${e.id})`,$c=e=>/^[aeiou]/.test(e)?`an ${e}`:`a ${e}`;function el(e,t,n=Lc){let r=[],i=[],a=(e,t,n)=>r.push({code:e,message:t,path:n}),o=(e,t,n)=>i.push({code:e,message:t,path:n}),s=Ic.safeParse(e);if(!s.success){for(let e of s.error.issues)a(`schema`,`${e.path.join(`.`)||`build`}: ${e.message}`,e.path.join(`.`)||void 0);return{ok:!1,errors:r,warnings:i}}let c=s.data,l=new Map(t.traits.map(e=>[e.id,e])),u=t.kinds.find(e=>e.id===c.kind);u||a(`kind`,`Kind "${c.kind}" doesn't exist`,`kind`);let d=u?.stats,f=[];for(let e of zc){let n=t.packages.find(t=>t.id===c[e]);n?n.type===e?f.push(n):a(`package`,`${n.name} is ${$c(n.type)}, not ${$c(e)}`,e):a(`package`,`${e} "${c[e]}" doesn't exist`,e)}c.level!==n.startingLevel&&a(`level`,`This campaign starts characters at level ${n.startingLevel}, but the build is level ${c.level}`,`level`),c.levels.length!==c.level&&a(`level`,`A level ${c.level} character needs ${c.level} level allocations, but the build has ${c.levels.length}`,`levels`);let p=Object.fromEntries(Rc.map(e=>[e,d?.[e]?.bonus??0]));for(let[e,t=0]of Object.entries(c.startPoints))p[e]+=t;let m=Jc(u,f),h=e=>V[e].reduce((e,t)=>e+(c.startPoints[t]??0),0),g=Object.values(c.startPoints).reduce((e,t)=>e+(t??0),0),_=0;for(let e of m.groups){let t=h(e.group);if(_+=Math.min(t,e.count),t<e.count){let n=e.count-t;a(`allocation`,`Place ${n} ${e.group.charAt(0).toUpperCase()+e.group.slice(1)} bonus ${n===1?`point`:`points`} from ${e.from.join(` and `)}`,`startPoints`)}}let v=m.any,y=g-_;u&&y!==v&&(v||y>0)&&a(`allocation`,v?y<v?y===0?`Place ${u.name}'s ${v} free bonus points`:`Place ${v-y} more of ${u.name}'s ${v} free bonus points`:`${u.name} gives ${v} free bonus points, but the build places ${y}`:m.groups.length?`The build places ${y} more bonus ${y===1?`point`:`points`} than its packages give`:`${u.name} has no free bonus points, but the build places ${g}`,`startPoints`);let b=Object.fromEntries(Object.keys(V).map(e=>[e,0]));if(c.levels.forEach((e,t)=>{let n=`levels[${t}].points`;b[e.group]++;let r=V[e.group],i=r.length?3:0,o=0;for(let[i,s=0]of Object.entries(e.points)){if(!r.includes(i)){let o=r.length?` (${r.join(`, `)})`:`; ${e.group} has no focus Stats`;a(`allocation`,`Level ${t+1} puts points in ${i}, which isn't a ${e.group} Stat${o}`,n)}p[i]+=s,o+=s}o!==i&&i&&a(`allocation`,`Level ${t+1} spends ${o} focus points; each Level gives exactly 3`,n)}),d)for(let e of Rc){let t=d[e]?.max??20;p[e]>20?a(`stat-cap`,`${e} is ${p[e]}; nothing can exceed 20`,`levels`):p[e]>t&&a(`stat-max`,`${e} is ${p[e]}, above the ${u.name} max of ${t}`,`levels`)}let x={universal:{available:Rc.reduce((e,t)=>e+Math.ceil(p[t]/2),0),spent:0,banked:0},background:{available:Rc.reduce((e,t)=>e+Math.floor(p[t]/2),0),spent:0,banked:0}},S=new Map,C=(e,t,n)=>{let r=S.get(e);if(r)r.rank=Math.max(r.rank,t),r.sources.push(n);else{S.set(e,{trait:e,rank:t,sources:[n]});for(let t of l.get(e)?.grants??[])C(t.trait,t.rank??1,`trait ${e}`)}};for(let e of u?.grants??[])C(e.trait,e.rank??1,`kind ${u.id}`);for(let e of f)for(let t of e.grants)C(t.trait,t.rank??1,`${e.type} ${e.id}`);let w=new Set,T=[],ee=(e,n,i)=>{T.push(e);let{name:s,from:u,count:d}=e,f=Uc[u],p=`${u.replace(/-/g,` `)}${d>1?`s`:``}`,m=c.choices.findIndex(t=>!w.has(c.choices.indexOf(t))&&Kc(t,e)),h=m<0?0:c.choices[m].traits.length;if(f&&h<d){let e=d-h;o(`choice`,`${s} gives ${d} ${f}${d>1?`s`:``}: record ${e>1?`${e} more`:h?`one more`:u===`contact`?`who`:`which`} on the Choices step`,m<0?`choices`:`choices[${m}]`)}if(m<0){f||r.push({code:`choice`,message:`${s} gives a choice of ${d} ${p}: pick ${d>1?`them`:`it`} on the Choices step`,path:`choices`,pool:u});return}w.add(m);let g=c.choices[m],_=`choices[${m}]`;if((f?h>d:h!==d)&&a(`choice`,`${s} gives a choice of ${d} ${p}, but the build picks ${h}`,_),new Set(g.traits).size!==g.traits.length&&a(`choice`,`${s}'s "${u}" answer lists the same ${f??`Trait`} twice`,_),Wc(u))return;let v=Gc(u,t);if(v.length===0)o(`choice-pool`,`Can't check ${s}'s "${u}" answer (${g.traits.join(`, `)}): no Traits are defined for that pool yet`,_);else for(let e of g.traits){let t=l.get(e);t?v.includes(t)?i&&S.has(e)&&a(`duplicate-trait`,`${Qc(t)} is already held (from ${S.get(e).sources.join(`, `)}), so ${s} can't give it again`,_):a(`choice`,`${Qc(t)} isn't in the "${u}" pool for ${s}`,_):a(`unknown-trait`,`Trait "${e}" doesn't exist`,_)}for(let e of g.traits)C(e,1,`${n} choice`);if(u===`spoken-and-written-language`)for(let e of g.traits){let r=l.has(e)?Hc(l.get(e),t):void 0;r&&(i&&S.has(r.id)&&a(`duplicate-trait`,`${Qc(r)} is already held (from ${S.get(r.id).sources.join(`, `)}), so ${s} can't give it again`,_),C(r.id,1,`${n} choice`))}};for(let e of f)for(let t of qc(`package`,e))ee(t,`${e.type} ${e.id}`,!1);let E=new Set(u?.traitAccess??[]),te=new Set(f.flatMap(e=>e.backgroundTraits));for(let e of t.traits)e.conveyed||(e.tags.some(e=>E.has(e))||e.list&&e.background)&&te.add(e.id);let ne=new Map;c.traits.forEach((e,t)=>{let n=l.get(e.trait),r=`traits[${t}]`;n?(x[e.pick].spent++,n.conveyed&&a(`conveyed`,`${Qc(n)} is Conveyed: it comes from a package or from play, not from a pick`,r),e.pick===`universal`&&n.background&&a(`pick-type`,`${Qc(n)} is a Background Trait and needs a Background pick`,r),e.pick===`background`&&!te.has(n.id)&&a(`pick-type`,`${Qc(n)} isn't on this character's Background Trait list, so it needs a Universal pick`,r),ne.has(n.id)||ne.set(n.id,[]),ne.get(n.id).push({rank:e.rank,index:t})):a(`unknown-trait`,`Trait "${e.trait}" doesn't exist`,r)});for(let[e,t]of ne){let n=l.get(e),r=S.get(e),i=r?.rank??0,o=r?` (from ${r.sources.join(`, `)})`:``;if(!n.ranked){for(let e of t)e.rank>1&&a(`rank`,`${Qc(n)} isn't ranked, so it can't go above rank 1`,`traits[${e.index}]`);i>0?a(`duplicate-trait`,`${Qc(n)} is already held${o} and isn't ranked, so it can't be taken again`,`traits[${t[0].index}]`):t.length>1&&a(`duplicate-trait`,`${Qc(n)} isn't ranked, so it can't be taken twice`,`traits[${t[1].index}]`),C(e,1,`${c.traits[t[0].index].pick} pick`);continue}let s=i+1;for(let r of[...t].sort((e,t)=>e.rank-t.rank)){let t=`traits[${r.index}]`;r.rank<s?a(`rank`,`${Qc(n)} is already at rank ${s-1}${r.rank<=i?o:``}, so a pick for rank ${r.rank} does nothing`,t):(r.rank>s&&a(`rank`,`${Qc(n)} rank ${r.rank} needs rank ${s} first`,t),s=r.rank+1,C(e,r.rank,`${c.traits[r.index].pick} pick`))}let u=Math.max(...t.map(e=>e.rank));if(u>1){let e=n.rankStats.filter(e=>p[e]<3*u);if(e.length){let t=e.map(e=>`${e} ${p[e]}`).join(`, `);a(`rank-stats`,`${Qc(n)} rank ${u} needs ${n.rankStats.join(`, `)} of at least ${3*u} (has ${t})`,`traits`)}}}for(let e of[...S.values()]){let t=l.get(e.trait);if(t?.choices.length)for(let n of qc(`trait`,t,t.ranked?e.rank:1))ee(n,`trait ${t.id}`,!0)}c.choices.forEach((e,t)=>{if(w.has(t))return;let n=`choices[${t}]`;if(e.package!==void 0){let t=f.some(t=>t.id===e.package);a(`choice`,t?`${e.package} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for "${e.package}", which isn't one of its packages`,n)}else{let t=l.get(e.trait)?.name??e.trait;a(`choice`,S.has(e.trait)?`${t} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for ${t}, which it doesn't hold`,n)}}),c.traits.forEach((e,t)=>{let n=l.get(e.trait);for(let e of n?.prerequisites??[])if(!S.has(e)){let r=l.get(e)?.name??e;a(`prerequisite`,`${Qc(n)} needs ${r} (${e}) first`,`traits[${t}]`)}for(let e of n?.prerequisiteTags??[])[...S.keys()].some(t=>t!==n.id&&l.get(t)?.tags.includes(e))||a(`prerequisite`,`${Qc(n)} needs a Trait tagged ${e} first`,`traits[${t}]`)});let re=new Set(Zc(S.keys(),t));for(let e of Object.keys(b)){if(!b[e]||re.has(e))continue;let n=t.traits.filter(t=>t.coreAccess.includes(e)).map(e=>e.name),r=e.charAt(0).toUpperCase()+e.slice(1);a(`core-access`,`${b[e]} ${b[e]===1?`Level goes`:`Levels go`} to ${r}, which this character can't Level${n.length?` without ${n.join(` or `)}`:``}`,`levels`)}let ie=Object.fromEntries(Object.keys(V).map(e=>[e,0]));for(let e of f)for(let[t,n=0]of Object.entries(e.coreBonus))re.has(t)&&(ie[t]+=n);for(let e of Object.keys(b))b[e]+=ie[e];let ae=Xc(t);for(let e of ne.keys()){let t=l.get(e),n=Object.entries(t.minStats).filter(([e,t])=>{let n=e in b?b[e]:p[e];return t!==void 0&&n<t});if(n.length){let r=Object.entries(t.minStats).map(([e,t])=>`${e} ${t}`).join(`, `),i=n.map(([e])=>`${e} ${e in b?b[e]:p[e]}`).join(`, `);a(`min-stats`,`${Qc(t)} needs ${r} (has ${i})`,`traits[${ne.get(e)[0].index}]`)}}for(let e of[`universal`,`background`]){let t=x[e];t.banked=Math.max(0,t.available-t.spent),t.spent>t.available&&a(`picks-overspent`,`The build spends ${t.spent} ${e===`universal`?`Universal`:`Background`} picks but its Stats give only ${t.available}`,`traits`)}let oe=e=>V[e].reduce((e,t)=>e+p[t],0),se={hp:10+oe(`physical`),vp:oe(`social`),sp:oe(`mental`),mp:3*b.magic},D=[`hp`,`vp`,`sp`,`mp`];for(let e of D)se[e]+=u?.resources[e]??0;for(let e of S.values()){let t=l.get(e.trait)?.resources??{};for(let n of D)se[n]+=(t[n]??0)*e.rank}return{ok:r.length===0,errors:r,warnings:i,summary:{stats:p,coreStats:b,coreBonus:ie,coreAccess:[...re],resources:se,movement:u?.movement??`10 m`,picks:x,traits:[...S.values()],backgroundList:[...te].sort(),traitLists:ae,questions:T}}}var tl={Physical:[`Blunt`,`Slashing`,`Piercing`],Elemental:[`Heat`,`Cold`,`Electrical`,`EMP`],Supernatural:[`Metaphysical`,`Death`,`Psychic`],Other:[`Radiation`,`Corrosive`]},nl=Object.values(tl).flat(),rl=[`Power`,`Grace`,`Endurance`,`Physical`],il=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function al(e){let t=e.split(/\s*\/\s*(?=\d)/).map(e=>e.split(`,`).map(e=>{let t=e.trim().match(/^(?:(\d+)\s+)?(.+?)(\s+per\s+rank)?(?:\s*\+\s*(\w+))?$/i),n=t&&il(t[2]),r=t?.[4]&&rl.find(e=>e.toLowerCase()===t[4].toLowerCase());if((!t?.[4]||r)&&(!t?.[3]||t[1]))return n?{type:n,...t[1]?{amount:Number(t[1])}:{},...r?{plus:r}:{},...t[3]?{perRank:!0}:{}}:void 0}));return t.every(e=>e.every(Boolean))?t:void 0}function ol(e){let t=al(e);return t?t.map(e=>{let t=e.map(e=>(e.amount===void 0?e.type:`${e.amount} ${e.type}`)+(e.perRank?` per Rank`:``)+(e.plus?` + ${e.plus}`:``));return t.length>1?`${t.slice(0,-1).join(`, `)} and ${t.at(-1)}`:t[0]}).join(` or `):e}function sl(e){return[e.attackType?`${e.attackType} Attack`:``,e.maxRange?`Max Range: ${e.maxRange}`:``,e.attackStat?`Attack Stat: ${e.attackStat}`:``,e.areaOfEffect?`Area of Effect: ${e.areaOfEffect}`:``,e.reload?`Reload: ${e.reload} Action`:``,e.onHit?`On Hit: ${e.onHit}`:``].filter(Boolean).join(`; `)}var cl=()=>Math.random().toString(36).slice(2,10);function ll(e,t){let n=e.find(e=>e.name.toLowerCase()===t.name.toLowerCase());return n?e.map(e=>e===n?{...e,qty:e.qty+t.qty}:e):[...e,{...t,id:cl()}]}function ul(e,t,n){let r=e.find(e=>e.name.toLowerCase()===t.toLowerCase());return r?n===void 0||n>=r.qty?e.filter(e=>e!==r):e.map(e=>e===r?{...e,qty:e.qty-n}:e):e}function dl(e){return Array.isArray(e)?e.flatMap(e=>{if(typeof e!=`object`||!e)return[];let t=e;if(typeof t.name!=`string`||!t.name.trim())return[];let n=Dc.includes(t.category)?t.category:`gear`;return[{id:typeof t.id==`string`&&t.id?t.id:cl(),...typeof t.item==`string`&&t.item?{item:t.item}:{},name:t.name,qty:typeof t.qty==`number`&&t.qty>=0?Math.round(t.qty):1,category:n,equipped:t.equipped===!0,...typeof t.notes==`string`&&t.notes?{notes:t.notes}:{}}]}):[]}function fl(e){let t=[e.damage?`${ol(e.damage)} damage`:``,sl(e),e.resistances?`resists ${e.resistances}`:``,e.modifiers??``,e.uses??``,e.slot?`Slot: ${e.slot}`:``,e.value!==void 0&&e.currency?`${e.value.toLocaleString(`en-US`)} ${e.currency}`:``].filter(Boolean).join(`; `);return t.charAt(0).toUpperCase()+t.slice(1)}function pl(e){return[e.value!==void 0&&e.currency?`${e.value.toLocaleString(`en-US`)} ${e.currency}`:``,e.attackType?`${e.attackType} Attack`:``,e.maxRange?`Max Range: ${e.maxRange}`:``,e.attackStat?e.attackStat:``,e.areaOfEffect?`Area of Effect: ${e.areaOfEffect}`:``,e.reload?`Reload: ${e.reload} Action`:``,e.slot?`Slot: ${e.slot}`:``].filter(Boolean)}function ml(e){let t=[e.modifiers??``,e.uses??``,e.onHit?`On Hit: ${e.onHit}`:``].filter(Boolean).join(`; `);return t.charAt(0).toUpperCase()+t.slice(1)}function hl(e,t){let n=t.trim().toLowerCase();return e.find(e=>e.name.toLowerCase()===n)}var gl=[`healthy`,`injured`,`severely-injured`,`incapacitated`,`dead`];function _l(e,t){return e<=0?[`dead`]:e>=t?[`healthy`]:[`injured`,...e<t/2?[`severely-injured`]:[],...e<t/4?[`incapacitated`]:[]]}function vl(e){return e.traits.filter(e=>e.category===`condition`&&e.temporary&&!gl.includes(e.id)).filter(e=>!/\bobject\b/i.test(e.temporary??``)||/\bcharacter\b/i.test(e.temporary??``)).sort((e,t)=>e.name.localeCompare(t.name))}function yl(e,t,n,r=1,i){let a=t.traits.find(e=>e.id===n),o=e.find(e=>e.trait===n);return o?a?.ranked?e.map(e=>e===o?{...e,rank:e.rank+r,note:i??e.note}:e):e:[...e,{trait:n,rank:a?.ranked?r:1,...i?{note:i}:{}}]}function bl(e,t){return e.filter(e=>e.trait!==t)}function xl(e){return Array.isArray(e)?e.flatMap(e=>{if(!e||typeof e!=`object`||typeof e.trait!=`string`)return[];let{trait:t,rank:n,note:r}=e;return[{trait:t,rank:typeof n==`number`&&n>=1?Math.floor(n):1,...typeof r==`string`&&r?{note:r}:{}}]}):[]}var Sl=[`unlisted`,`male`,`female`,`indeterminate`,`none`,`fluid`,`custom`],Cl=[`character`,`background`,`stats`,`traits`,`choices`,`sheet`],wl=Object.keys(V),Tl=()=>({physical:0,social:0,mental:0,magic:0}),El={draft:{level:3,core:Tl(),points:{},traits:[],choices:[]},campaign:{startingLevel:3},step:`character`};function Dl(e,t){let n=[];for(let r of wl){let i=V[r].map(e=>[e,t[e]??0]);for(let t=0;t<e[r];t++){let a={group:r,points:{}},o=t===e[r]-1?1/0:3;for(let e of i){let t=Math.min(o,e[1]);t>0&&(a.points[e[0]]=t,e[1]-=t,o-=t)}n.push(a)}}return n}function Ol(e){let t=Tl(),n={};for(let r of e)if(r&&r.group in t){t[r.group]++;for(let[e,t]of Object.entries(r.points??{}))t&&(n[e]=(n[e]??0)+t)}return{core:t,points:n}}function kl(e){return{core:{...Tl(),...e.core},points:e.points&&typeof e.points==`object`?e.points:{}}}function Al(e){let{core:t,points:n,...r}=e,i={};for(let[e,a]of Object.entries({...r,levels:Dl(t,n)}))a!==void 0&&a!==``&&(e!==`items`&&e!==`conditions`||!Array.isArray(a)||a.length)&&(i[e]=a);return i}var jl=e=>Array.isArray(e)?e:[],Ml=e=>typeof e==`string`&&e!==``?e:void 0,Nl=e=>typeof e==`string`&&e.length<=15e5&&/^data:image\/(webp|jpeg|png);base64,[A-Za-z0-9+/]+=*$/.test(e)?e:void 0,Pl=e=>typeof e==`number`&&Number.isInteger(e)&&e>=0&&e<=9999?e:void 0,Fl=9999,Il=e=>typeof e==`string`&&e.trim()!==``?e.trim().slice(0,20):void 0,Ll=e=>Sl.includes(e)&&e!==`unlisted`?e:void 0;function Rl(e){if(e.gender)return e.gender===`custom`?e.customGender?.trim()||void 0:e.gender[0].toUpperCase()+e.gender.slice(1)}function zl(e){if(typeof e!=`object`||!e||Array.isArray(e))throw Error(`A build is a JSON object`);let t=e,n=jl(t.levels),r=typeof t.level==`number`?t.level:Math.max(1,n.length),i=t.kind===`tatot`&&(t.form===`orcoid`||t.form===`goblinoid`)?`tatot-${t.form}`:Ml(t.kind);return{name:Ml(t.name),age:Pl(t.age),gender:Ll(t.gender),customGender:t.gender===`custom`?Ml(t.customGender):void 0,height:Il(t.height),weight:Il(t.weight),portrait:Nl(t.portrait),description:Ml(t.description),kind:i,origin:Ml(t.origin),profession:Ml(t.profession),past:Ml(t.past),...t.startPoints&&typeof t.startPoints==`object`&&Object.keys(t.startPoints).length?{startPoints:t.startPoints}:{},level:r,...t.core&&typeof t.core==`object`?kl(t):Ol(n),traits:jl(t.traits).map(e=>({...e,rank:e.rank??1})),choices:jl(t.choices),...Array.isArray(t.items)&&t.items.length?{items:dl(t.items)}:{},...Array.isArray(t.conditions)&&t.conditions.length?{conditions:xl(t.conditions)}:{}}}function Bl(e,t){let n={...e,level:t};for(let e of[...wl].reverse())for(;n.core[e]>0&&wl.reduce((e,t)=>e+n.core[t],0)>t;)n=Vl(n,e,n.core[e]-1);return n}function Vl(e,t,n){let r={...e.points},i=V[t].reduce((e,t)=>e+(r[t]??0),0)-n*3;for(let e of[...V[t]].reverse()){if(i<=0)break;let t=Math.min(i,r[e]??0);r[e]=(r[e]??0)-t,r[e]||delete r[e],i-=t}return{...e,core:{...e.core,[t]:n},points:r}}function Hl(e,t,n,r){return{...e,traits:[...e.traits,{trait:t,rank:n,pick:r}]}}var Ul=`sf-character-builder:v1`;function Wl(){try{let e=localStorage.getItem(Ul);if(!e)return El;let t=JSON.parse(e),n=zl(t.draft),r=t.campaign?.startingLevel??n.level,i=t.step===`levels`?`stats`:t.step,a=Cl.includes(i)?i:`character`,o=t.ai&&Array.isArray(t.ai.reasons)?t.ai:void 0;return{draft:n,campaign:{startingLevel:r},step:a,ai:o}}catch{return El}}function Gl(e){try{localStorage.setItem(Ul,JSON.stringify(e))}catch{}}function Kl(){try{localStorage.removeItem(Ul)}catch{}}var ql=e=>e.toLowerCase().normalize(`NFKD`).replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``),Jl=/^levels\[(\d+)\]/;function Yl(e,t,n){let r=Xl(e,t,n);return Object.keys(V).filter(t=>r.includes(t)||e.core[t]>0)}function Xl(e,t,n){return n?.summary?n.summary.coreAccess:Zc([...(t.kinds.find(t=>t.id===e.kind)?.grants??[]).map(e=>e.trait),...t.packages.filter(t=>[e.origin,e.profession,e.past].includes(t.id)).flatMap(e=>e.grants.map(e=>e.trait)),...e.traits.map(e=>e.trait)],t)}function Zl(e,t,n){let r=el(Al(e),t,n);return{...r,errors:Ql(r.errors,e)}}function Ql(e,t){let n=Dl(t.core,t.points),r=new Set,i=[];for(let a of e){if(a.code===`level`&&a.path===`levels`){let e=Object.values(t.core).reduce((e,t)=>e+t,0),n=t.level-e,r=Math.abs(n);i.push({...a,message:n>0?`Place ${r} more core ${r===1?`point`:`points`}`:`Take back ${r} core ${r===1?`point`:`points`}; a level ${t.level} character has ${t.level}`});continue}let e=a.code===`allocation`?Jl.exec(a.path??``):null,o=e?n[Number(e[1])]?.group:void 0;if(!o){i.push(a);continue}if(r.has(o))continue;r.add(o);let s=t.core[o]*3,c=V[o].reduce((e,n)=>e+(t.points[n]??0),0),l=Math.abs(s-c),u=o.charAt(0).toUpperCase()+o.slice(1);i.push({...a,path:`levels`,message:c<s?`Place ${l} more ${u} ${l===1?`point`:`points`}`:`${u} has ${l} more ${l===1?`point`:`points`} than its core Stat unlocks`})}return i}function $l(e,t,n,r){let i=Zl(e,t,n);if(!i.summary)return;let a=new Set(i.errors.map(e=>e.message)),o=new Map(i.summary.traits.map(e=>[e.trait,e.rank])),s=[],c=typeof r==`string`?void 0:r.list;for(let i of t.traits){if(i.list!==c)continue;let l=typeof r==`string`?r:i.background?`background`:`universal`,u=i.ranked?(o.get(i.id)??0)+1:1,d=Zl(Hl(e,i.id,u,l),t,n),f=`${i.name} gives a choice of `,p=d.errors.filter(e=>!a.has(e.message)&&!(e.code===`choice`&&e.message.startsWith(f)));p.some(e=>e.code===`pick-type`||e.code===`conveyed`)||s.push({trait:i,rank:u,pick:l,reasons:p.map(e=>e.message)})}return s}function eu(e){switch(e.code){case`kind`:return`character`;case`package`:return`background`;case`level`:return e.path===`level`?`character`:`stats`;case`allocation`:case`core-access`:case`stat-max`:case`stat-cap`:return`stats`;case`choice`:case`choice-pool`:return`choices`;case`schema`:{let t=e.path?.split(`.`)[0];return t===`name`||t===`level`||t===`kind`?`character`:t===`origin`||t===`profession`||t===`past`?`background`:t===`levels`||t===`startPoints`?`stats`:t===`choices`?`choices`:`traits`}default:return e.path===`choices`||e.path?.startsWith(`choices[`)?`choices`:`traits`}}var tu={kind:`Choose a Kind`,origin:`Choose an Origin`,profession:`Choose a Profession`,past:`Choose a Past`};function nu(e,t){if(e.code===`schema`&&e.path&&e.path in tu&&!t[e.path])return tu[e.path];if(e.pool){let t=e.pool.split(`-`).pop();return`${t[0].toUpperCase()}${t.slice(1)} choice needed`}return e.message}var ru=`id: acid-flask
-name: "Acid Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and sprays acid like Acid Spray."
-tags: [potion, magic, thrown, acid]
-type: weapon
-category: consumable
-damage: "3 Corrosive per Rank"
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "1 m per Rank"
-onHit: "Characters and Items damaged by it gain the Corroding Condition"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Acid Spray. Value is per Rank."
+Set the \`cycles\` parameter to \`"ref"\` to resolve cyclical schemas with defs.`)}for(let n of e.seen.entries()){let r=n[1];if(t===n[0])a(n);else{if(e.external){let r=e.external.registry.get(n[0])?.id;if(t!==n[0]&&r){a(n);continue}}(e.metadataRegistry.get(n[0])?.id||r.cycle||r.count>1&&e.reused===`ref`)&&a(n)}}e.external&&(e.sharedDefsExtractedFor=e.external)}function ka(e){let t=e.anyOf;if(!Array.isArray(t)||t.length===0||e.type!==void 0)return;let n=[];for(let e of t){if(!e||typeof e!=`object`)return;ka(e);let t=Object.keys(e);if(t.length!==1||t[0]!==`type`)return;let r=e.type;for(let e of Array.isArray(r)?r:[r]){if(typeof e!=`string`)return;n.includes(e)||n.push(e)}}delete e.anyOf,e.type=n.length===1?n[0]:n}var Aa=new Set([`type`,`properties`,`required`,`additionalProperties`]),ja=[`oneOf`,`anyOf`];function Ma(e){let t=e.additionalProperties;return t===void 0||t===!1||typeof t!=`object`||!t?null:Object.keys(t).length?t:null}function Na(e){let t=[];for(let n of e){if(typeof n!=`object`||n.type!==`object`)return null;for(let e in n)if(!Aa.has(e))return null;t.push(n)}let n={},r=new Set;for(let e of t){for(let r in e.properties){if(Object.prototype.hasOwnProperty.call(n,r))continue;let e=[];for(let n of t){let t=n.properties?.[r]??Ma(n);t!=null&&(e.some(e=>JSON.stringify(e)===JSON.stringify(t))||e.push(t))}_(n,r,e.length===1?e[0]:Na(e)??{allOf:e})}for(let t of e.required??[])r.add(t)}let i={type:`object`,properties:n};if(r.size&&(i.required=[...r]),t.every(e=>e.additionalProperties===!1))i.additionalProperties=!1;else{let e=[];for(let n of t){let t=Ma(n);t&&!e.some(e=>JSON.stringify(e)===JSON.stringify(t))&&e.push(t)}e.length===1?i.additionalProperties=e[0]:e.length>1&&(i.additionalProperties={allOf:e})}return i}function Pa(e){let t=e.allOf;if(!Array.isArray(t)||t.length<2)return;for(let t of Aa)if(t in e)return;let n=t.filter(e=>ja.some(t=>Array.isArray(e[t]))),r=null;if(!n.length)r=Na(t);else{let e=n[0],i=ja.find(t=>Array.isArray(e[t]));if(Object.keys(e).length!==1)return;let a=t.filter(t=>t!==e),o=e[i].map(e=>Na([...a,e]));if(o.some(e=>!e))return;r={[i]:o}}r&&(delete e.allOf,Ca(e,r))}function Fa(e,t){let n=e.seen.get(t);if(!n)throw Error(`Unprocessed schema. This is a bug in Zod.`);let r=t=>{let n=e.seen.get(t);if(n.ref===null)return;let i=n.def??n.schema,a={...i},o=n.ref;if(n.ref=null,o){r(o);let n=e.seen.get(o),s=n.schema;if(s.$ref&&(e.target===`draft-07`||e.target===`draft-04`||e.target===`openapi-3.0`)?(i.allOf=i.allOf??[],i.allOf.push(s)):Ca(i,s),Ca(i,a),t._zod.parent===o)for(let e in i)e!==`$ref`&&e!==`allOf`&&(e in a||delete i[e]);if(s.$ref&&n.def)for(let e in i)e!==`$ref`&&e!==`allOf`&&e in n.def&&JSON.stringify(i[e])===JSON.stringify(n.def[e])&&delete i[e]}let s=t._zod.parent;if(s&&s!==o){r(s);let t=e.seen.get(s);if(t?.schema.$ref&&(i.$ref=t.schema.$ref,t.def))for(let e in i)e!==`$ref`&&e!==`allOf`&&e in t.def&&JSON.stringify(i[e])===JSON.stringify(t.def[e])&&delete i[e]}e.override({zodSchema:t,jsonSchema:i,path:n.path??[]})};if(!e.external||e.sharedEmitDoneFor!==e.external){for(let t of[...e.seen.entries()].reverse())r(t[0]);if(e.target!==`openapi-3.0`)for(let t of e.seen.entries())ka(t[1].def??t[1].schema);for(let t of e.deferred)t();if(e.intersections.length){let t=new Map;for(let n of e.seen.values())for(let e of[n.schema,n.def]){let n=e?.allOf;if(!Array.isArray(n))continue;let r=t.get(n);r?r.push(e):t.set(n,[e])}for(let n of e.intersections)for(let e of t.get(n)??[])Pa(e)}}let i={};if(e.target===`draft-2020-12`?i.$schema=`https://json-schema.org/draft/2020-12/schema`:e.target===`draft-07`?i.$schema=`http://json-schema.org/draft-07/schema#`:e.target===`draft-04`?i.$schema=`http://json-schema.org/draft-04/schema#`:e.target,e.external?.uri){let n=e.external.registry.get(t)?.id;if(!n)throw Error("Schema is missing an `id` property");i.$id=e.external.uri(n)}Ca(i,n.defId?n.schema:n.def??n.schema);let a=e.metadataRegistry.get(t)?.id;a!==void 0&&i.id===a&&delete i.id;let o=e.external?.defs??{};if(!e.external||e.sharedEmitDoneFor!==e.external)for(let t of e.seen.entries()){let e=t[1];e.def&&e.defId&&(e.def.id===e.defId&&delete e.def.id,_(o,e.defId,e.def))}e.external&&(e.sharedEmitDoneFor=e.external),e.external||Object.keys(o).length>0&&(e.target===`draft-2020-12`?i.$defs=o:i.definitions=o);try{let n=JSON.parse(JSON.stringify(i));return Object.defineProperty(n,"~standard",{value:{...t[`~standard`],jsonSchema:{input:La(t,`input`,e.processors),output:La(t,`output`,e.processors)}},enumerable:!1,writable:!1}),n}catch{throw Error(`Error converting schema to JSON.`)}}function I(e,t){let n=t??{seen:new Set};if(n.seen.has(e))return!1;n.seen.add(e);let r=e._zod.def;if(r.type===`transform`)return!0;if(r.type===`array`)return I(r.element,n);if(r.type===`set`)return I(r.valueType,n);if(r.type===`lazy`)return I(r.getter(),n);if(r.type===`promise`||r.type===`optional`||r.type===`nonoptional`||r.type===`nullable`||r.type===`readonly`||r.type==="default"||r.type===`prefault`||r.type===`catch`)return I(r.innerType,n);if(r.type===`intersection`)return I(r.left,n)||I(r.right,n);if(r.type===`record`||r.type===`map`)return I(r.keyType,n)||I(r.valueType,n);if(r.type===`pipe`)return e._zod.traits.has(`$ZodCodec`)?!0:I(r.in,n)||I(r.out,n);if(r.type===`object`){for(let e in r.shape)if(I(r.shape[e],n))return!0;return!1}if(r.type===`union`){for(let e of r.options)if(I(e,n))return!0;return!1}if(r.type===`tuple`){for(let e of r.items)if(I(e,n))return!0;return!!(r.rest&&I(r.rest,n))}return!1}var Ia=(e,t={})=>n=>{let r=wa({...n,processors:t});return Ea(e,r),Oa(r,e),Fa(r,e)},La=(e,t,n={})=>r=>{let{libraryOptions:i,target:a}=r??{},o=wa({...i??{},target:a,io:t,processors:n});return Ea(e,o),Oa(o,e),Fa(o,e)},Ra=(e,t,n)=>{(e[t]===void 0||n>e[t])&&(e[t]=n)},za=(e,t,n)=>{(e[t]===void 0||n<e[t])&&(e[t]=n)},Ba=(e,t)=>{Ra(e,`minimum`,t),za(e,`maximum`,t)},Va=(e,t)=>{e.multipleOf??=[],e.multipleOf.includes(t)||e.multipleOf.push(t)},Ha=(e,t)=>{e.patterns??=new Set,e.patterns.add(t)},Ua=(e,t)=>{e.mime=e.mime?e.mime.filter(e=>t.includes(e)):[...t]},Wa=(e,t)=>{e.format=t,t.includes(`int`)&&(e.isInt=!0)},Ga=(e,t)=>Ra(e,`minimum`,t.minimum),Ka=(e,t)=>za(e,`maximum`,t.maximum),qa=e=>(t,n)=>{Wa(t,n.format);let[r,i]=e[n.format];Ra(t,`minimum`,r),za(t,`maximum`,i)},Ja={greater_than:(e,t)=>Ra(e,t.inclusive?`minimum`:`exclusiveMinimum`,t.value),less_than:(e,t)=>za(e,t.inclusive?`maximum`:`exclusiveMaximum`,t.value),multiple_of:(e,t)=>Va(e,t.value),number_format:qa(ue),bigint_format:qa(de),min_length:Ga,max_length:Ka,length_equals:(e,t)=>Ba(e,t.length),min_size:Ga,max_size:Ka,size_equals:(e,t)=>Ba(e,t.size),string_format:(e,t)=>{Wa(e,t.format),t.pattern&&Ha(e,t.pattern),(t.format===`base64`||t.format===`base64url`)&&(e.contentEncoding=t.format),(t.local||t.precision===-1)&&(e.laxFormat=!0)},mime_type:(e,t)=>Ua(e,t.mime)};function Ya(e){let t={},n=e._zod.def,r=e._zod.traits.has(`$ZodCheck`)?[e,...n.checks??[]]:n.checks??[];for(let e of r)Ja[e._zod.def.check]?.(t,e._zod.def);let i=e._zod.bag;i.minimum!==void 0&&Ra(t,`minimum`,i.minimum),i.exclusiveMinimum!==void 0&&Ra(t,`exclusiveMinimum`,i.exclusiveMinimum),i.maximum!==void 0&&za(t,`maximum`,i.maximum),i.exclusiveMaximum!==void 0&&za(t,`exclusiveMaximum`,i.exclusiveMaximum),i.multipleOf!==void 0&&Va(t,i.multipleOf),i.format!==void 0&&(t.format??=i.format,i.format.includes(`int`)&&(t.isInt=!0)),i.mime&&Ua(t,i.mime);for(let e of i.patterns??[])Ha(t,e);return t}var Xa={guid:`uuid`,url:`uri`,datetime:`date-time`,json_string:`json-string`,regex:``},Za=new Map([[ir,Vt],[or,Ht]]),Qa=e=>Za.get(e)??e,$a=(e,t,n,r)=>{let i=n;i.type=`string`;let{minimum:a,maximum:o,format:s,patterns:c,contentEncoding:l,laxFormat:u}=Ya(e);if(typeof a==`number`&&(i.minLength=a),typeof o==`number`&&(i.maxLength=o),s&&(i.format=Xa[s]??s,i.format===``&&delete i.format,(s===`time`||u)&&delete i.format),l&&(i.contentEncoding=l),c&&c.size>0){let e=[...c].map(Qa);e.length===1?i.pattern=e[0].source:e.length>1&&(i.allOf=[...e.map(e=>({...t.target===`draft-07`||t.target===`draft-04`||t.target===`openapi-3.0`?{type:`string`}:{},pattern:e.source}))])}},eo=(e,t,n,r)=>{let i=n,{minimum:a,maximum:o,multipleOf:s,exclusiveMaximum:c,exclusiveMinimum:l,isInt:u}=Ya(e);i.type=u?`integer`:`number`;let d=typeof l==`number`&&l>=(a??-1/0),f=typeof c==`number`&&c<=(o??1/0),p=t.target===`draft-04`||t.target===`openapi-3.0`;if(d?p?(i.minimum=l,i.exclusiveMinimum=!0):i.exclusiveMinimum=l:typeof a==`number`&&(i.minimum=a),f?p?(i.maximum=c,i.exclusiveMaximum=!0):i.exclusiveMaximum=c:typeof o==`number`&&(i.maximum=o),s){let n=new Set;for(let a of s)Number.isFinite(a)&&a!==0?n.add(Math.abs(a)):Ta(e,t,i,r,`A multipleOf divisor of ${a} cannot be represented in JSON Schema`);let[a,...o]=n;a!==void 0&&(i.multipleOf=a),o.length&&(i.allOf=[...i.allOf??[],...o.map(e=>({multipleOf:e}))])}},to=(e,t,n,r)=>{n.type=`boolean`},no=(e,t,n,r)=>{n.not={}},ro=(e,t,n,r)=>{let i=e._zod.def,a=l(i.entries);a.length===0?n.not={}:(a.every(e=>typeof e==`number`)&&(n.type=`number`),a.every(e=>typeof e==`string`)&&(n.type=`string`),n.enum=a)},io=(e,t,n,r)=>{Ta(e,t,n,r,`Custom types cannot be represented in JSON Schema`)},ao=(e,t,n,r)=>{Ta(e,t,n,r,`Transforms cannot be represented in JSON Schema`)},oo=(e,t,n,r)=>{let i=n,a=e._zod.def,{minimum:o,maximum:s}=Ya(e);typeof o==`number`&&(i.minItems=o),typeof s==`number`&&(i.maxItems=s),i.type=`array`,i.items=Ea(a.element,t,{...r,path:[...r.path,`items`]})};function so(e){let t=e._zod.def;return t.type===`pipe`&&t.in._zod.traits.has(`$ZodTransform`)?so(t.out):t.type===`catch`?so(t.innerType):e._zod.optin}var co=(e,t,n,r)=>{let i=n,a=e._zod.def,o=a.shape;if(Object.getOwnPropertySymbols(o).length&&Ta(e,t,i,r,`Symbol keys cannot be represented in JSON Schema`))return;i.type=`object`,i.properties={};for(let e in o)_(i.properties,e,Ea(o[e],t,{...r,path:[...r.path,`properties`,e]}));let s=[];for(let e of Object.keys(o)){let n=a.shape[e];(t.io===`input`?so(n)===void 0:n._zod.optout===void 0)&&s.push(e)}s.length>0&&(i.required=s),a.catchall?._zod.def.type===`never`?i.additionalProperties=!1:a.catchall?a.catchall&&(i.additionalProperties=Ea(a.catchall,t,{...r,path:[...r.path,`additionalProperties`]})):t.io===`output`&&(i.additionalProperties=!1)},lo=(e,t,n,r)=>{let i=e._zod.def,a=i.inclusive===!1,o=i.options.map((e,n)=>Ea(e,t,{...r,path:[...r.path,a?`oneOf`:`anyOf`,n]}));a?n.oneOf=o:n.anyOf=o},uo=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.left,t,{...r,path:[...r.path,`allOf`,0]}),o=Ea(i.right,t,{...r,path:[...r.path,`allOf`,1]}),s=e=>`allOf`in e&&Object.keys(e).length===1,c=[...s(a)?a.allOf:[a],...s(o)?o.allOf:[o]];n.allOf=c,t.intersections.push(c)};function fo(e,t,n){if(t.$ref){if(n.has(t))return t;n.add(t);let r=e.get(t)?.def;if(!r)return t;let i=fo(e,r,n);return i===r?t:i}for(let r of[`anyOf`,`oneOf`]){let i=t[r];if(!Array.isArray(i))continue;let a=i.map(t=>fo(e,t,n));a.some((e,t)=>e!==i[t])&&(t={...t,[r]:a})}let r=Array.isArray(t.type)?t.type:[t.type],i=!r.includes(`string`)&&r.some(e=>e===`number`||e===`integer`),a=t.enum??(t.const===void 0?void 0:[t.const]);if(!i&&!a?.some(e=>typeof e==`number`))return t;let{minimum:o,maximum:s,exclusiveMinimum:c,exclusiveMaximum:l,multipleOf:u,format:d,id:f,...p}=t;return p.enum?p.enum=p.enum.map(e=>typeof e==`number`?String(e):e):typeof p.const==`number`&&(p.const=String(p.const)),i&&(p.type=`string`,a||(p.pattern=(r.includes(`number`)?Qt:N).source)),p}var po=new WeakMap;function mo(e){let t=new Map;for(let n of e.seen.values())n.def&&!t.has(n.schema)&&t.set(n.schema,n);let n=new Map;for(let r of po.get(e)??[]){let i=e.seen.get(r),a=(i?.def??i?.schema)?.propertyNames;if(!a||a===!0||n.has(a))continue;let o=fo(t,a,new Set);o!==a&&n.set(a,o)}if(n.size)for(let t of e.seen.values())for(let e of[t.schema,t.def]){let t=e&&n.get(e.propertyNames);t&&(e.propertyNames=t)}}var ho=(e,t,n,r)=>{let i=n,a=e._zod.def;i.type=`object`;let o=a.keyType,s=Ya(o).patterns;if(a.mode===`loose`&&s&&s.size>0){let e=Ea(a.valueType,t,{...r,path:[...r.path,`patternProperties`,`*`]});i.patternProperties={};for(let t of s)_(i.patternProperties,Qa(t).source,e)}else{if(t.target===`draft-07`||t.target===`draft-2020-12`){i.propertyNames=Ea(a.keyType,t,{...r,path:[...r.path,`propertyNames`]});let n=po.get(t);n||(n=[],po.set(t,n),t.deferred.push(()=>mo(t))),n.push(e)}i.additionalProperties=Ea(a.valueType,t,{...r,path:[...r.path,`additionalProperties`]})}let c=o._zod.values,l=t.io===`input`&&so(a.valueType)!==void 0;if(c&&!a.partial&&!l){let e=[...c].filter(e=>typeof e==`string`||typeof e==`number`);e.length>0&&(i.required=e.map(String))}},go=(e,t,n,r)=>{let i=e._zod.def,a=Ea(i.innerType,t,r),o=t.seen.get(e);t.target===`openapi-3.0`?(o.ref=i.innerType,n.nullable=!0):n.anyOf=[a,{type:`null`}]},_o=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},vo=Symbol();function yo(e,t,n,r,i){let a=!1,o=JSON.stringify(e,(e,t)=>typeof t==`bigint`?(a=!0,null):t);return a?(Ta(t,n,r,i,`BigInt defaults cannot be represented in JSON Schema`),vo):JSON.parse(o)}var bo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n.default=o)},xo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);if(a.ref=i.innerType,t.io!==`input`)return;let o=yo(i.defaultValue,e,t,n,r);o!==vo&&(n._prefault=o)},So=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType;let o;try{o=i.catchValue(void 0)}catch{Ta(e,t,n,r,`Dynamic catch values are not supported in JSON Schema`);return}n.default=o},Co=(e,t,n,r)=>{let i=e._zod.def,a=i.in._zod.traits.has(`$ZodTransform`),o=t.io===`input`?a?i.out:i.in:i.out;Ea(o,t,r);let s=t.seen.get(e);s.ref=o},wo=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType,n.readOnly=!0},To=(e,t,n,r)=>{let i=e._zod.def;Ea(i.innerType,t,r);let a=t.seen.get(e);a.ref=i.innerType},Eo=new WeakSet([Object.prototype,Error.prototype]);function Do(e,t,n){Object.defineProperty(e,t,{configurable:!0,enumerable:!1,get(){let e=n(this);return Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0}),e},set(e){Object.defineProperty(this,t,{value:e,configurable:!0,writable:!0})}})}var Oo=(e,t)=>{tt.init(e,t),e.name=`ZodError`;let n=Object.getPrototypeOf(e);Eo.has(n)||(Eo.add(n),Do(n,`format`,e=>t=>it(e,t)),Do(n,`flatten`,e=>t=>rt(e,t)),Do(n,`addIssue`,e=>t=>{e.issues.push(t),e.message=JSON.stringify(e.issues,d,2)}),Do(n,`addIssues`,e=>t=>{e.issues.push(...t),e.message=JSON.stringify(e.issues,d,2)}),Object.defineProperty(n,"isEmpty",{configurable:!0,enumerable:!1,get(){return this.issues.length===0}}))},ko=M(`ZodError`,Oo),Ao=M(`ZodError`,Oo,void 0,{Parent:Error}),jo=ot(Ao),Mo=st(Ao),No=ct(Ao),Po=ut(Ao),Fo=gt(Ao),Io=_t(Ao),Lo=vt(Ao),Ro=yt(Ao),zo=bt(Ao),Bo=xt(Ao),Vo=St(Ao),Ho=Ct(Ao);function Uo(){Je.localeError||Ye(gi())}function Wo(){Je.memoizer||Ye({memoizer:pi()})}var Go=M(`ZodType`,(e,t)=>(Uo(),Cn.init(e,t),e.def=t,e.type=t.type,e),{check(...e){let t=this.def;return this.clone(w(t,{checks:[...t.checks??[],...e.map(e=>typeof e==`function`?{_zod:{check:e,def:{check:`custom`},onattach:[]}}:e)]}),{parent:!0})},with(...e){return this.check(...e)},clone(e,t){return se(this,e,t)},brand(){return this},register(e,t){return e.add(this,t),this},refine(e,t){return this.check(ac(e,t))},superRefine(e,t){return this.check(oc(e,t))},overwrite(e){return this.check(pa(e))},optional(){return Vs(this)},exactOptional(){return Us(this)},nullable(){return Gs(this)},nullish(){return Vs(Gs(this))},nonoptional(e){return Zs(this,e)},array(){return B(this)},or(e){return As([this,e])},and(e){return Ms(this,e)},transform(e){return tc(this,zs(e))},default(e){return qs(this,e)},prefault(e){return Ys(this,e)},catch(e){return $s(this,e)},pipe(e){return tc(this,e)},readonly(){return rc(this)},describe(e){let t=this.clone();return bi.add(t,{description:e}),t},meta(...e){if(e.length===0)return bi.get(this);let t=this.clone();return bi.add(t,e[0]),t},isOptional(){return this.safeParse(void 0).success},isNullable(){return this.safeParse(null).success},apply(e,...t){return t.length===0?e(this):e(this,...t)},get"~standard"(){return Me(this,`~standard`,{...En(this),jsonSchema:{input:La(this,`input`),output:La(this,`output`)}})},set"~standard"(e){je(this,`~standard`,e)},parse:function e(t,n){return jo(this,t,n,{callee:e})},parseAsync:async function e(t,n){return await Mo(this,t,n,{callee:e})},safeParse(e,t){return No(this,e,t)},async safeParseAsync(e,t){return Po(this,e,t)},get spa(){return this?.safeParseAsync},set spa(e){je(this,`spa`,e)},validate(e,t){return pt(this,e,t)},validateAsync(e,t){return ht(this,e,t)},encode:function e(t,n){return Fo(this,t,n,{callee:e})},decode:function e(t,n){return Io(this,t,n,{callee:e})},encodeAsync:async function e(t,n){return await Lo(this,t,n,{callee:e})},decodeAsync:async function e(t,n){return await Ro(this,t,n,{callee:e})},safeEncode(e,t){return zo(this,e,t)},safeDecode(e,t){return Bo(this,e,t)},async safeEncodeAsync(e,t){return Vo(this,e,t)},async safeDecodeAsync(e,t){return Ho(this,e,t)},toJSONSchema(e){return Ia(this,{})(e)},get description(){return bi.get(this)?.description},get _def(){return this._zod.def}}),Ko=M(`_ZodString`,(e,t)=>{Dn.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>$a(e,t,n,r)},Ne({format:e=>Ya(e).format??null,minLength:e=>Ya(e).minimum??null,maxLength:e=>Ya(e).maximum??null},{regex(...e){return this.check(ca(...e))},includes(...e){return this.check(ua(...e))},startsWith(...e){return this.check(da(...e))},endsWith(...e){return this.check(fa(...e))},min(...e){return this.check(oa(...e))},max(...e){return this.check(aa(...e))},length(...e){return this.check(sa(...e))},nonempty(...e){return this.check(oa(1,...e))},lowercase(e){return this.check(la(e))},uppercase(e){return this.check(F(e))},trim(){return this.check(ha())},normalize(...e){return this.check(ma(...e))},toLowerCase(){return this.check(ga())},toUpperCase(){return this.check(_a())},slugify(){return this.check(va())}})),L=M(`ZodString`,(e,t)=>{Dn.init(e,t),Ko.init(e,t)},{email(e){return this.check(Ci(Zo,e))},url(e){return this.check(ki(es,e))},jwt(e){return this.check(Wi(hs,e))},emoji(e){return this.check(Ai(ts,e))},guid(e){return this.check(wi(Qo,e))},uuid(e){return this.check(Ti($o,e))},uuidv4(e){return this.check(Ei($o,e))},uuidv6(e){return this.check(Di($o,e))},uuidv7(e){return this.check(Oi($o,e))},nanoid(e){return this.check(ji(ns,e))},cuid(e){return this.check(Mi(rs,e))},cuid2(e){return this.check(Ni(is,e))},ulid(e){return this.check(Pi(as,e))},base64(e){return this.check(Vi(fs,e))},base64url(e){return this.check(Hi(ps,e))},xid(e){return this.check(Fi(os,e))},ksuid(e){return this.check(Ii(ss,e))},ipv4(e){return this.check(Li(cs,e))},ipv6(e){return this.check(Ri(ls,e))},cidrv4(e){return this.check(zi(us,e))},cidrv6(e){return this.check(Bi(ds,e))},e164(e){return this.check(Ui(ms,e))},datetime(e){return this.check(Gi(qo,e))},date(e){return this.check(Ki(Jo,e))},time(e){return this.check(qi(Yo,e))},duration(e){return this.check(Ji(Xo,e))}});function R(e){return Si(L,e)}var z=M(`ZodStringFormat`,(e,t)=>{P.init(e,t),Ko.init(e,t)}),qo=M(`ZodISODateTime`,(e,t)=>{Kn.init(e,t),z.init(e,t)}),Jo=M(`ZodISODate`,(e,t)=>{qn.init(e,t),z.init(e,t)}),Yo=M(`ZodISOTime`,(e,t)=>{Jn.init(e,t),z.init(e,t)}),Xo=M(`ZodISODuration`,(e,t)=>{Yn.init(e,t),z.init(e,t)}),Zo=M(`ZodEmail`,(e,t)=>{An.init(e,t),z.init(e,t)}),Qo=M(`ZodGUID`,(e,t)=>{On.init(e,t),z.init(e,t)}),$o=M(`ZodUUID`,(e,t)=>{kn.init(e,t),z.init(e,t)}),es=M(`ZodURL`,(e,t)=>{Rn.init(e,t),z.init(e,t)}),ts=M(`ZodEmoji`,(e,t)=>{zn.init(e,t),z.init(e,t)}),ns=M(`ZodNanoID`,(e,t)=>{Bn.init(e,t),z.init(e,t)}),rs=M(`ZodCUID`,(e,t)=>{Vn.init(e,t),z.init(e,t)}),is=M(`ZodCUID2`,(e,t)=>{Hn.init(e,t),z.init(e,t)}),as=M(`ZodULID`,(e,t)=>{Un.init(e,t),z.init(e,t)}),os=M(`ZodXID`,(e,t)=>{Wn.init(e,t),z.init(e,t)}),ss=M(`ZodKSUID`,(e,t)=>{Gn.init(e,t),z.init(e,t)}),cs=M(`ZodIPv4`,(e,t)=>{Xn.init(e,t),z.init(e,t)}),ls=M(`ZodIPv6`,(e,t)=>{$n.init(e,t),z.init(e,t)}),us=M(`ZodCIDRv4`,(e,t)=>{er.init(e,t),z.init(e,t)}),ds=M(`ZodCIDRv6`,(e,t)=>{nr.init(e,t),z.init(e,t)}),fs=M(`ZodBase64`,(e,t)=>{ar.init(e,t),z.init(e,t)}),ps=M(`ZodBase64URL`,(e,t)=>{cr.init(e,t),z.init(e,t)}),ms=M(`ZodE164`,(e,t)=>{lr.init(e,t),z.init(e,t)}),hs=M(`ZodJWT`,(e,t)=>{dr.init(e,t),z.init(e,t)}),gs=M(`ZodNumber`,(e,t)=>{fr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>eo(e,t,n,r),e.isFinite=!0},Ne({minValue:e=>{let{minimum:t,exclusiveMinimum:n}=Ya(e);return Math.max(t??-1/0,n??-1/0)},maxValue:e=>{let{maximum:t,exclusiveMaximum:n}=Ya(e);return Math.min(t??1/0,n??1/0)},isInt:e=>{let{isInt:t,multipleOf:n}=Ya(e);return!!t||!!n?.some(Number.isSafeInteger)},format:e=>Ya(e).format??null},{gt(e,t){return this.check(na(e,t))},gte(e,t){return this.check(ra(e,t))},min(e,t){return this.check(ra(e,t))},lt(e,t){return this.check(ea(e,t))},lte(e,t){return this.check(ta(e,t))},max(e,t){return this.check(ta(e,t))},int(e){return this.check(ys(e))},safe(e){return this.check(ys(e))},positive(e){return this.check(na(0,e))},nonnegative(e){return this.check(ra(0,e))},negative(e){return this.check(ea(0,e))},nonpositive(e){return this.check(ta(0,e))},multipleOf(e,t){return this.check(ia(e,t))},step(e,t){return this.check(ia(e,t))},finite(){return this}}));function _s(e){return Yi(gs,e)}var vs=M(`ZodNumberFormat`,(e,t)=>{pr.init(e,t),gs.init(e,t)});function ys(e){return Xi(vs,e)}var bs=M(`ZodBoolean`,(e,t)=>{mr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>to(e,t,n,r)});function xs(e){return Zi(bs,e)}var Ss=M(`ZodUnknown`,(e,t)=>{hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(e,t,n)=>void 0});function Cs(){return Qi(Ss)}var ws=M(`ZodNever`,(e,t)=>{gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>no(e,t,n,r)});function Ts(e){return $i(ws,e)}var Es=M(`ZodArray`,(e,t)=>{Wo(),br.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>oo(e,t,n,r),e.element=t.element},{min(e,t){return this.check(oa(e,t))},nonempty(e){return this.check(oa(1,e))},max(e,t){return this.check(aa(e,t))},length(e,t){return this.check(sa(e,t))},unwrap(){return this.element}});function B(e,t){return ya(Es,e,t)}var Ds=M(`ZodObject`,(e,t)=>{Wo(),Er.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>co(e,t,n,r),ze(e,`shape`,e=>e._zod.def.shape,!1)},{keyof(){return Ls(Object.keys(this._zod.def.shape))},catchall(e){return this.clone(w(this._zod.def,{catchall:e}))},passthrough(){return this.clone(w(this._zod.def,{catchall:Cs()}))},loose(){return this.clone(w(this._zod.def,{catchall:Cs()}))},strict(){return this.clone(w(this._zod.def,{catchall:Ts()}))},strip(){return this.clone(w(this._zod.def,{catchall:void 0}))},extend(e){return he(this,e)},safeExtend(e){return _e(this,e)},merge(e){return ve(this,e)},pick(e){return fe(this,e)},omit(e){return me(this,e)},partial(...e){return ye(Bs,this,e[0])},exactPartial(...e){return ye(Hs,this,e[0],`exactPartial`)},required(...e){return be(Xs,this,e[0])}});function Os(e,t){return new Ds({type:`object`,shape:e??{},...D(t)})}var ks=M(`ZodUnion`,(e,t)=>{Or.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>lo(e,t,n,r),e.options=t.options});function As(e,t){return new ks({type:`union`,options:e,...D(t)})}var js=M(`ZodIntersection`,(e,t)=>{kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>uo(e,t,n,r)});function Ms(e,t){return new js({type:`intersection`,left:e,right:t})}var Ns=M(`ZodRecord`,(e,t)=>{Wo(),Mr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ho(e,t,n,r),e.keyType=t.keyType,e.valueType=t.valueType});function Ps(e,t,n){return!t||!t._zod?new Ns({type:`record`,keyType:R(),valueType:e,...D(t)}):new Ns({type:`record`,keyType:e,valueType:t,...D(n)})}function Fs(e,t,n){return new Ns({type:`record`,keyType:e,valueType:t,...D(n),partial:!0})}var Is=M(`ZodEnum`,(e,t)=>{Nr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ro(e,t,n,r),e.enum=t.entries,e.options=[...e._zod.values];let n=new Set(Object.keys(t.entries));e.extract=(e,r)=>{let i={};for(let r of e)if(n.has(r))i[r]=t.entries[r];else throw Error(`Key ${r} not found in enum`);return new Is({...t,checks:[],...D(r),entries:i})},e.exclude=(e,r)=>{let i={...t.entries};for(let t of e)if(n.has(t))delete i[t];else throw Error(`Key ${t} not found in enum`);return new Is({...t,checks:[],...D(r),entries:i})}});function Ls(e,t){return new Is({type:`enum`,entries:Array.isArray(e)?Object.fromEntries(e.map(e=>[e,e])):e,...D(t)})}var Rs=M(`ZodTransform`,(e,t)=>{Wo(),Pr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>ao(e,t,n,r),e._zod.parse=(n,r)=>{if(r.direction===`backward`)throw new qe(e.constructor.name);n.addIssue=r=>{if(typeof r==`string`)n.issues.push(ke(r,n.value,t));else{let t=r;t.fatal&&(t.continue=!1),t.code??=`custom`,`input`in t||(t.input=n.value),t.inst??=e,n.issues.push(ke(t))}};let i=t.transform(n.value,n);return i instanceof Promise?i.then(e=>(n.value=e,n)):(n.value=i,n)}});function zs(e){return new Rs({type:`transform`,transform:e})}var Bs=M(`ZodOptional`,(e,t)=>{Ir.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Vs(e){return new Bs({type:`optional`,innerType:e})}var Hs=M(`ZodExactOptional`,(e,t)=>{Lr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>To(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Us(e){return new Hs({type:`optional`,innerType:e})}var Ws=M(`ZodNullable`,(e,t)=>{Rr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>go(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Gs(e){return new Ws({type:`nullable`,innerType:e})}var Ks=M(`ZodDefault`,(e,t)=>{zr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>bo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeDefault=e.unwrap});function qs(e,t){return new Ks({type:`default`,innerType:e,get defaultValue(){return typeof t==`function`?t():ie(t)}})}var Js=M(`ZodPrefault`,(e,t)=>{Vr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>xo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Ys(e,t){return new Js({type:`prefault`,innerType:e,get defaultValue(){return typeof t==`function`?t():ie(t)}})}var Xs=M(`ZodNonOptional`,(e,t)=>{Hr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>_o(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function Zs(e,t){return new Xs({type:`nonoptional`,innerType:e,...D(t)})}var Qs=M(`ZodCatch`,(e,t)=>{Gr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>So(e,t,n,r),e.unwrap=()=>e._zod.def.innerType,e.removeCatch=e.unwrap});function $s(e,t){return new Qs({type:`catch`,innerType:e,catchValue:typeof t==`function`?t:Ve(t)})}var ec=M(`ZodPipe`,(e,t)=>{Kr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>Co(e,t,n,r),e.in=t.in,e.out=t.out});function tc(e,t){return new ec({type:`pipe`,in:e,out:t})}var nc=M(`ZodReadonly`,(e,t)=>{Jr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>wo(e,t,n,r),e.unwrap=()=>e._zod.def.innerType});function rc(e){return new nc({type:`readonly`,innerType:e})}var ic=M(`ZodCustom`,(e,t)=>{Xr.init(e,t),Go.init(e,t),e._zod.processJSONSchema=(t,n,r)=>io(e,t,n,r)});function ac(e,t={}){return ba(ic,e,t)}function oc(e,t){return xa(e,t)}var sc=[`endurance`,`power`,`grace`],cc=[`empathy`,`persuasion`,`demeanor`],lc=[`logic`,`intuition`,`memory`],uc=Ls([...sc,...cc,...lc]),V={physical:sc,social:cc,mental:lc,magic:[]},dc=[`physical`,`social`,`mental`],fc=Os({hp:_s().int(),vp:_s().int(),sp:_s().int(),mp:_s().int()}).partial(),pc=R().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be kebab-case`),mc=Ls([`placeholder`,`draft`,`final`]),hc=Os({id:pc,name:R().min(1),status:mc,plane:R().min(1),region:R().optional(),summary:R().min(1),tags:B(R()).default([]),lore:R().optional()}),gc=Ps(uc,Os({bonus:_s().int().min(0),max:_s().int().min(0).max(20)}).refine(e=>e.bonus<=e.max,`bonus can't exceed max`)),_c=Os({name:R().min(1),description:R().min(1)}),vc=Os({trait:pc,rank:_s().int().min(1).optional()}),yc=Os({choose:_s().int().min(1),from:R().min(1),note:R().optional(),perRank:xs().optional()}),bc=hc.extend({features:B(_c).default([]),grants:B(vc).default([]),resources:fc.default({}),traitAccess:B(R()).default([]),stats:gc,freePoints:_s().int().min(0).default(0),maxTotal:_s().int().min(0).optional(),movement:R().optional()}),xc=Ls([`origin`,`profession`,`past`]),Sc=Os({count:_s().int().min(1),group:Ls(dc)}),Cc=hc.extend({type:xc,grants:B(vc).default([]),bonusPoints:B(Sc).default([]),coreBonus:Fs(Ls([`magic`]),_s().int().min(1)).default({}),choices:B(yc).default([]),backgroundTraits:B(pc).default([]),features:B(_c).default([])}),wc=Ls([`knowledge`,`skill`,`contact`,`starter`,`ability`,`condition`,`membership`,`circumstance`,`other`]),Tc=Os(Object.fromEntries([...uc.options,...Object.keys(V)].map(e=>[e,_s().int().min(0).optional()]))).strict(),Ec=hc.extend({category:wc,types:B(R()).default([]),ranked:xs().default(!1),rankStats:B(uc).default([]),minStats:Tc.default({}),prerequisites:B(pc).default([]),prerequisiteTags:B(R()).default([]),background:xs().default(!1),starterOnly:xs().default(!1),mastery:xs().default(!1),temporary:R().optional(),conveyed:xs().default(!1),rpRequirement:R().optional(),effect:R().min(1),language:R().optional(),choices:B(yc).default([]),resources:fc.default({}),coreAccess:B(Ls([`magic`])).default([]),list:R().optional(),grants:B(vc).default([]),modifiers:R().optional(),action:R().optional()}),Dc=[`weapon`,`armor`,`gear`,`consumable`,`currency`,`other`],Oc=Ls([`weapon`,`wearable`,`equipment`,`structure`,`vehicle`,`animal`,`misc`]),kc=hc.extend({type:Oc,category:Ls(Dc),damage:R().optional(),resistances:R().optional(),attackType:Ls([`Melee`,`Ranged`,`Ranged, Thrown`]).optional(),maxRange:R().optional(),attackStat:R().optional(),areaOfEffect:R().optional(),reload:Ls([`Partial`,`Full`]).optional(),onHit:R().optional(),modifiers:R().optional(),uses:R().optional(),slot:R().optional(),value:_s().int().min(0).optional(),currency:R().optional(),notes:R().optional()}),Ac=Os({group:Ls(Object.keys(V)),points:Fs(uc,_s().int().min(0))}),jc=Ls([`universal`,`background`]),Mc=Os({trait:pc,rank:_s().int().min(1).default(1),pick:jc}),Nc=Os({package:pc.optional(),trait:pc.optional(),from:R().min(1),traits:B(R().trim().min(1))}).refine(e=>e.package===void 0!=(e.trait===void 0),`an answer names either a package or a Trait`),Pc=Os({id:R().optional(),item:pc.optional(),name:R().trim().min(1),qty:_s().int().min(0).default(1),category:Ls(Dc).default(`gear`),equipped:xs().default(!1),notes:R().optional()}),Fc=Os({trait:R().trim().min(1),rank:_s().int().min(1).default(1),note:R().optional()}),Ic=Os({name:R().optional(),age:_s().int().min(0).optional(),gender:Ls([`male`,`female`,`indeterminate`,`none`,`fluid`,`custom`]).optional(),customGender:R().optional(),height:R().optional(),weight:R().optional(),portrait:R().optional(),description:R().optional(),kind:pc,origin:pc,profession:pc,past:pc,startPoints:Fs(uc,_s().int().min(0)).default({}),level:_s().int().min(1).default(1),levels:B(Ac),traits:B(Mc).default([]),choices:B(Nc).default([]),items:B(Pc).default([]),conditions:B(Fc).default([])}),Lc={startingLevel:3},Rc=uc.options,zc=[`origin`,`profession`,`past`],Bc={language:e=>e.types.includes(`language`),"dreftian-language":e=>e.types.includes(`language`)&&e.region===`dreft`,"spoken-language":e=>e.types.includes(`language`)&&!e.tags.includes(`writing`)},Vc=`spoken-and-written-language`;function Hc(e,t){if(e.language)return t.traits.find(t=>t.language===e.language&&t.types.includes(`language`)&&t.tags.includes(`writing`))}var Uc={contact:`Contact`,place:`Place`,quarry:`Quarry`},Wc=e=>Object.hasOwn(Uc,e);function Gc(e,t){if(e===`spoken-and-written-language`)return t.traits.filter(e=>Bc[`spoken-language`](e)&&Hc(e,t));let n=Bc[e];return n?t.traits.filter(n):[]}var Kc=(e,t)=>e[t.by]===t.id&&e.from===t.from;function qc(e,t,n=1){let r=[];for(let i of t.choices){let a=r.find(e=>e.from===i.from);a?(a.count+=i.choose*(i.perRank===!1?1:n),i.note&&a.notes.push(i.note)):r.push({by:e,id:t.id,name:t.name,from:i.from,count:i.choose*(i.perRank===!1?1:n),notes:i.note?[i.note]:[]})}return r}function Jc(e,t){let n=[];for(let e of t)for(let t of e.bonusPoints){let r=n.find(e=>e.group===t.group);r?(r.count+=t.count,r.from.push(e.name)):n.push({group:t.group,count:t.count,from:[e.name]})}for(let t of n){let n=V[t.group].reduce((t,n)=>t+Math.max(0,(e?.stats[n]?.max??20)-(e?.stats[n]?.bonus??0)),0);t.count=Math.min(t.count,n)}return{any:e?.freePoints??0,groups:n.filter(e=>e.count>0)}}function Yc(e,t){let n=new Set,r=e=>{if(!n.has(e)){n.add(e);for(let n of t.traits.find(t=>t.id===e)?.grants??[])r(n.trait)}};for(let t of e)r(t);return n}function Xc(e){return[...new Set(e.traits.flatMap(e=>e.list?[e.list]:[]))].sort()}function Zc(e,t){let n=new Set(dc);for(let r of Yc(e,t))for(let e of t.traits.find(e=>e.id===r)?.coreAccess??[])n.add(e);return[...n]}var Qc=e=>`${e.name} (${e.id})`,$c=e=>/^[aeiou]/.test(e)?`an ${e}`:`a ${e}`;function el(e,t,n=Lc){let r=[],i=[],a=(e,t,n)=>r.push({code:e,message:t,path:n}),o=(e,t,n)=>i.push({code:e,message:t,path:n}),s=Ic.safeParse(e);if(!s.success){for(let e of s.error.issues)a(`schema`,`${e.path.join(`.`)||`build`}: ${e.message}`,e.path.join(`.`)||void 0);return{ok:!1,errors:r,warnings:i}}let c=s.data,l=new Map(t.traits.map(e=>[e.id,e])),u=t.kinds.find(e=>e.id===c.kind);u||a(`kind`,`Kind "${c.kind}" doesn't exist`,`kind`);let d=u?.stats,f=[];for(let e of zc){let n=t.packages.find(t=>t.id===c[e]);n?n.type===e?f.push(n):a(`package`,`${n.name} is ${$c(n.type)}, not ${$c(e)}`,e):a(`package`,`${e} "${c[e]}" doesn't exist`,e)}c.level!==n.startingLevel&&a(`level`,`This campaign starts characters at level ${n.startingLevel}, but the build is level ${c.level}`,`level`),c.levels.length!==c.level&&a(`level`,`A level ${c.level} character needs ${c.level} level allocations, but the build has ${c.levels.length}`,`levels`);let p=Object.fromEntries(Rc.map(e=>[e,d?.[e]?.bonus??0]));for(let[e,t=0]of Object.entries(c.startPoints))p[e]+=t;let m=Jc(u,f),h=e=>V[e].reduce((e,t)=>e+(c.startPoints[t]??0),0),g=Object.values(c.startPoints).reduce((e,t)=>e+(t??0),0),_=0;for(let e of m.groups){let t=h(e.group);if(_+=Math.min(t,e.count),t<e.count){let n=e.count-t;a(`allocation`,`Place ${n} ${e.group.charAt(0).toUpperCase()+e.group.slice(1)} bonus ${n===1?`point`:`points`} from ${e.from.join(` and `)}`,`startPoints`)}}let v=m.any,y=g-_;u&&y!==v&&(v||y>0)&&a(`allocation`,v?y<v?y===0?`Place ${u.name}'s ${v} free bonus points`:`Place ${v-y} more of ${u.name}'s ${v} free bonus points`:`${u.name} gives ${v} free bonus points, but the build places ${y}`:m.groups.length?`The build places ${y} more bonus ${y===1?`point`:`points`} than its packages give`:`${u.name} has no free bonus points, but the build places ${g}`,`startPoints`);let b=Object.fromEntries(Object.keys(V).map(e=>[e,0]));if(c.levels.forEach((e,t)=>{let n=`levels[${t}].points`;b[e.group]++;let r=V[e.group],i=r.length?3:0,o=0;for(let[i,s=0]of Object.entries(e.points)){if(!r.includes(i)){let o=r.length?` (${r.join(`, `)})`:`; ${e.group} has no focus Stats`;a(`allocation`,`Level ${t+1} puts points in ${i}, which isn't a ${e.group} Stat${o}`,n)}p[i]+=s,o+=s}o!==i&&i&&a(`allocation`,`Level ${t+1} spends ${o} focus points; each Level gives exactly 3`,n)}),d)for(let e of Rc){let t=d[e]?.max??20;p[e]>20?a(`stat-cap`,`${e} is ${p[e]}; nothing can exceed 20`,`levels`):p[e]>t&&a(`stat-max`,`${e} is ${p[e]}, above the ${u.name} max of ${t}`,`levels`)}let x={universal:{available:Rc.reduce((e,t)=>e+Math.ceil(p[t]/2),0),spent:0,banked:0},background:{available:Rc.reduce((e,t)=>e+Math.floor(p[t]/2),0),spent:0,banked:0}},S=new Map,C=(e,t,n)=>{let r=S.get(e);if(r)r.rank=Math.max(r.rank,t),r.sources.push(n);else{S.set(e,{trait:e,rank:t,sources:[n]});for(let t of l.get(e)?.grants??[])C(t.trait,t.rank??1,`trait ${e}`)}};for(let e of u?.grants??[])C(e.trait,e.rank??1,`kind ${u.id}`);for(let e of f)for(let t of e.grants)C(t.trait,t.rank??1,`${e.type} ${e.id}`);let w=new Set,T=[],ee=(e,n,i)=>{T.push(e);let{name:s,from:u,count:d}=e,f=Uc[u],p=`${u.replace(/-/g,` `)}${d>1?`s`:``}`,m=c.choices.findIndex(t=>!w.has(c.choices.indexOf(t))&&Kc(t,e)),h=m<0?0:c.choices[m].traits.length;if(f&&h<d){let e=d-h;o(`choice`,`${s} gives ${d} ${f}${d>1?`s`:``}: record ${e>1?`${e} more`:h?`one more`:u===`contact`?`who`:`which`} on the Choices step`,m<0?`choices`:`choices[${m}]`)}if(m<0){f||r.push({code:`choice`,message:`${s} gives a choice of ${d} ${p}: pick ${d>1?`them`:`it`} on the Choices step`,path:`choices`,pool:u});return}w.add(m);let g=c.choices[m],_=`choices[${m}]`;if((f?h>d:h!==d)&&a(`choice`,`${s} gives a choice of ${d} ${p}, but the build picks ${h}`,_),new Set(g.traits).size!==g.traits.length&&a(`choice`,`${s}'s "${u}" answer lists the same ${f??`Trait`} twice`,_),Wc(u))return;let v=Gc(u,t);if(v.length===0)o(`choice-pool`,`Can't check ${s}'s "${u}" answer (${g.traits.join(`, `)}): no Traits are defined for that pool yet`,_);else for(let e of g.traits){let t=l.get(e);t?v.includes(t)?i&&S.has(e)&&a(`duplicate-trait`,`${Qc(t)} is already held (from ${S.get(e).sources.join(`, `)}), so ${s} can't give it again`,_):a(`choice`,`${Qc(t)} isn't in the "${u}" pool for ${s}`,_):a(`unknown-trait`,`Trait "${e}" doesn't exist`,_)}for(let e of g.traits)C(e,1,`${n} choice`);if(u===`spoken-and-written-language`)for(let e of g.traits){let r=l.has(e)?Hc(l.get(e),t):void 0;r&&(i&&S.has(r.id)&&a(`duplicate-trait`,`${Qc(r)} is already held (from ${S.get(r.id).sources.join(`, `)}), so ${s} can't give it again`,_),C(r.id,1,`${n} choice`))}};for(let e of f)for(let t of qc(`package`,e))ee(t,`${e.type} ${e.id}`,!1);let E=new Set(u?.traitAccess??[]),te=new Set(f.flatMap(e=>e.backgroundTraits));for(let e of t.traits)e.conveyed||(e.tags.some(e=>E.has(e))||e.list&&e.background)&&te.add(e.id);let ne=new Map;c.traits.forEach((e,t)=>{let n=l.get(e.trait),r=`traits[${t}]`;n?(x[e.pick].spent++,n.conveyed&&a(`conveyed`,`${Qc(n)} is Conveyed: it comes from a package or from play, not from a pick`,r),e.pick===`universal`&&n.background&&a(`pick-type`,`${Qc(n)} is a Background Trait and needs a Background pick`,r),e.pick===`background`&&!te.has(n.id)&&a(`pick-type`,`${Qc(n)} isn't on this character's Background Trait list, so it needs a Universal pick`,r),ne.has(n.id)||ne.set(n.id,[]),ne.get(n.id).push({rank:e.rank,index:t})):a(`unknown-trait`,`Trait "${e.trait}" doesn't exist`,r)});for(let[e,t]of ne){let n=l.get(e),r=S.get(e),i=r?.rank??0,o=r?` (from ${r.sources.join(`, `)})`:``;if(!n.ranked){for(let e of t)e.rank>1&&a(`rank`,`${Qc(n)} isn't ranked, so it can't go above rank 1`,`traits[${e.index}]`);i>0?a(`duplicate-trait`,`${Qc(n)} is already held${o} and isn't ranked, so it can't be taken again`,`traits[${t[0].index}]`):t.length>1&&a(`duplicate-trait`,`${Qc(n)} isn't ranked, so it can't be taken twice`,`traits[${t[1].index}]`),C(e,1,`${c.traits[t[0].index].pick} pick`);continue}let s=i+1;for(let r of[...t].sort((e,t)=>e.rank-t.rank)){let t=`traits[${r.index}]`;r.rank<s?a(`rank`,`${Qc(n)} is already at rank ${s-1}${r.rank<=i?o:``}, so a pick for rank ${r.rank} does nothing`,t):(r.rank>s&&a(`rank`,`${Qc(n)} rank ${r.rank} needs rank ${s} first`,t),s=r.rank+1,C(e,r.rank,`${c.traits[r.index].pick} pick`))}let u=Math.max(...t.map(e=>e.rank));if(u>1){let e=n.rankStats.filter(e=>p[e]<3*u);if(e.length){let t=e.map(e=>`${e} ${p[e]}`).join(`, `);a(`rank-stats`,`${Qc(n)} rank ${u} needs ${n.rankStats.join(`, `)} of at least ${3*u} (has ${t})`,`traits`)}}}for(let e of[...S.values()]){let t=l.get(e.trait);if(t?.choices.length)for(let n of qc(`trait`,t,t.ranked?e.rank:1))ee(n,`trait ${t.id}`,!0)}c.choices.forEach((e,t)=>{if(w.has(t))return;let n=`choices[${t}]`;if(e.package!==void 0){let t=f.some(t=>t.id===e.package);a(`choice`,t?`${e.package} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for "${e.package}", which isn't one of its packages`,n)}else{let t=l.get(e.trait)?.name??e.trait;a(`choice`,S.has(e.trait)?`${t} has no "${e.from}" choice, or it's answered twice`:`The build answers a choice for ${t}, which it doesn't hold`,n)}}),c.traits.forEach((e,t)=>{let n=l.get(e.trait);for(let e of n?.prerequisites??[])if(!S.has(e)){let r=l.get(e)?.name??e;a(`prerequisite`,`${Qc(n)} needs ${r} (${e}) first`,`traits[${t}]`)}for(let e of n?.prerequisiteTags??[])[...S.keys()].some(t=>t!==n.id&&l.get(t)?.tags.includes(e))||a(`prerequisite`,`${Qc(n)} needs a Trait tagged ${e} first`,`traits[${t}]`)});let re=new Set(Zc(S.keys(),t));for(let e of Object.keys(b)){if(!b[e]||re.has(e))continue;let n=t.traits.filter(t=>t.coreAccess.includes(e)).map(e=>e.name),r=e.charAt(0).toUpperCase()+e.slice(1);a(`core-access`,`${b[e]} ${b[e]===1?`Level goes`:`Levels go`} to ${r}, which this character can't Level${n.length?` without ${n.join(` or `)}`:``}`,`levels`)}let ie=Object.fromEntries(Object.keys(V).map(e=>[e,0]));for(let e of f)for(let[t,n=0]of Object.entries(e.coreBonus))re.has(t)&&(ie[t]+=n);for(let e of Object.keys(b))b[e]+=ie[e];let ae=Xc(t);for(let e of ne.keys()){let t=l.get(e),n=Object.entries(t.minStats).filter(([e,t])=>{let n=e in b?b[e]:p[e];return t!==void 0&&n<t});if(n.length){let r=Object.entries(t.minStats).map(([e,t])=>`${e} ${t}`).join(`, `),i=n.map(([e])=>`${e} ${e in b?b[e]:p[e]}`).join(`, `);a(`min-stats`,`${Qc(t)} needs ${r} (has ${i})`,`traits[${ne.get(e)[0].index}]`)}}for(let e of[`universal`,`background`]){let t=x[e];t.banked=Math.max(0,t.available-t.spent),t.spent>t.available&&a(`picks-overspent`,`The build spends ${t.spent} ${e===`universal`?`Universal`:`Background`} picks but its Stats give only ${t.available}`,`traits`)}let oe=e=>V[e].reduce((e,t)=>e+p[t],0),se={hp:10+oe(`physical`),vp:oe(`social`),sp:oe(`mental`),mp:3*b.magic},D=[`hp`,`vp`,`sp`,`mp`];for(let e of D)se[e]+=u?.resources[e]??0;for(let e of S.values()){let t=l.get(e.trait)?.resources??{};for(let n of D)se[n]+=(t[n]??0)*e.rank}return{ok:r.length===0,errors:r,warnings:i,summary:{stats:p,coreStats:b,coreBonus:ie,coreAccess:[...re],resources:se,movement:u?.movement??`10 m`,picks:x,traits:[...S.values()],backgroundList:[...te].sort(),traitLists:ae,questions:T}}}var tl={Physical:[`Blunt`,`Slashing`,`Piercing`],Elemental:[`Heat`,`Cold`,`Electrical`,`EMP`],Supernatural:[`Metaphysical`,`Death`,`Psychic`],Other:[`Radiation`,`Corrosive`]},nl=Object.values(tl).flat(),rl=[`Power`,`Grace`,`Endurance`,`Physical`],il=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function al(e){let t=e.split(/\s*\/\s*(?=\d)/).map(e=>e.split(`,`).map(e=>{let t=e.trim().match(/^(?:(\d+)\s+)?(.+?)(\s+per\s+rank)?(?:\s*\+\s*(\w+))?$/i),n=t&&il(t[2]),r=t?.[4]&&rl.find(e=>e.toLowerCase()===t[4].toLowerCase());if((!t?.[4]||r)&&(!t?.[3]||t[1]))return n?{type:n,...t[1]?{amount:Number(t[1])}:{},...r?{plus:r}:{},...t[3]?{perRank:!0}:{}}:void 0}));return t.every(e=>e.every(Boolean))?t:void 0}function ol(e){let t=al(e);return t?t.map(e=>{let t=e.map(e=>(e.amount===void 0?e.type:`${e.amount} ${e.type}`)+(e.perRank?` per Rank`:``)+(e.plus?` + ${e.plus}`:``));return t.length>1?`${t.slice(0,-1).join(`, `)} and ${t.at(-1)}`:t[0]}).join(` or `):e}function sl(e){return[e.attackType?`${e.attackType} Attack`:``,e.maxRange?`Max Range: ${e.maxRange}`:``,e.attackStat?`Attack Stat: ${e.attackStat}`:``,e.areaOfEffect?`Area of Effect: ${e.areaOfEffect}`:``,e.reload?`Reload: ${e.reload} Action`:``,e.onHit?`On Hit: ${e.onHit}`:``].filter(Boolean).join(`; `)}var cl=()=>Math.random().toString(36).slice(2,10);function ll(e,t){let n=e.find(e=>e.name.toLowerCase()===t.name.toLowerCase());return n?e.map(e=>e===n?{...e,qty:e.qty+t.qty}:e):[...e,{...t,id:cl()}]}function ul(e,t,n){let r=e.find(e=>e.name.toLowerCase()===t.toLowerCase());return r?n===void 0||n>=r.qty?e.filter(e=>e!==r):e.map(e=>e===r?{...e,qty:e.qty-n}:e):e}function dl(e){return Array.isArray(e)?e.flatMap(e=>{if(typeof e!=`object`||!e)return[];let t=e;if(typeof t.name!=`string`||!t.name.trim())return[];let n=Dc.includes(t.category)?t.category:`gear`;return[{id:typeof t.id==`string`&&t.id?t.id:cl(),...typeof t.item==`string`&&t.item?{item:t.item}:{},name:t.name,qty:typeof t.qty==`number`&&t.qty>=0?Math.round(t.qty):1,category:n,equipped:t.equipped===!0,...typeof t.notes==`string`&&t.notes?{notes:t.notes}:{}}]}):[]}function fl(e){let t=[e.damage?`${ol(e.damage)} damage`:``,sl(e),e.resistances?`resists ${e.resistances}`:``,e.modifiers??``,e.uses??``,e.slot?`Slot: ${e.slot}`:``,e.value!==void 0&&e.currency?`${e.value.toLocaleString(`en-US`)} ${e.currency}`:``].filter(Boolean).join(`; `);return t.charAt(0).toUpperCase()+t.slice(1)}function pl(e){return[e.value!==void 0&&e.currency?`${e.value.toLocaleString(`en-US`)} ${e.currency}`:``,e.attackType?`${e.attackType} Attack`:``,e.maxRange?`Max Range: ${e.maxRange}`:``,e.attackStat?e.attackStat:``,e.areaOfEffect?`Area of Effect: ${e.areaOfEffect}`:``,e.reload?`Reload: ${e.reload} Action`:``,e.slot?`Slot: ${e.slot}`:``].filter(Boolean)}function ml(e){let t=[e.modifiers??``,e.uses??``,e.onHit?`On Hit: ${e.onHit}`:``].filter(Boolean).join(`; `);return t.charAt(0).toUpperCase()+t.slice(1)}function hl(e,t){let n=t.trim().toLowerCase();return e.find(e=>e.name.toLowerCase()===n)}var gl=[`healthy`,`injured`,`severely-injured`,`incapacitated`,`dead`];function _l(e,t){return e<=0?[`dead`]:e>=t?[`healthy`]:[`injured`,...e<t/2?[`severely-injured`]:[],...e<t/4?[`incapacitated`]:[]]}function vl(e){return e.traits.filter(e=>e.category===`condition`&&e.temporary&&!gl.includes(e.id)).filter(e=>!/\bobject\b/i.test(e.temporary??``)||/\bcharacter\b/i.test(e.temporary??``)).sort((e,t)=>e.name.localeCompare(t.name))}function yl(e,t,n,r=1,i){let a=t.traits.find(e=>e.id===n),o=e.find(e=>e.trait===n);return o?a?.ranked?e.map(e=>e===o?{...e,rank:e.rank+r,note:i??e.note}:e):e:[...e,{trait:n,rank:a?.ranked?r:1,...i?{note:i}:{}}]}function bl(e,t){return e.filter(e=>e.trait!==t)}function xl(e){return Array.isArray(e)?e.flatMap(e=>{if(!e||typeof e!=`object`||typeof e.trait!=`string`)return[];let{trait:t,rank:n,note:r}=e;return[{trait:t,rank:typeof n==`number`&&n>=1?Math.floor(n):1,...typeof r==`string`&&r?{note:r}:{}}]}):[]}var Sl=[`unlisted`,`male`,`female`,`indeterminate`,`none`,`fluid`,`custom`],Cl=[`character`,`background`,`stats`,`traits`,`choices`,`sheet`],wl=Object.keys(V),Tl=()=>({physical:0,social:0,mental:0,magic:0}),El={draft:{level:3,core:Tl(),points:{},traits:[],choices:[]},campaign:{startingLevel:3},step:`character`};function Dl(e,t){let n=[];for(let r of wl){let i=V[r].map(e=>[e,t[e]??0]);for(let t=0;t<e[r];t++){let a={group:r,points:{}},o=t===e[r]-1?1/0:3;for(let e of i){let t=Math.min(o,e[1]);t>0&&(a.points[e[0]]=t,e[1]-=t,o-=t)}n.push(a)}}return n}function Ol(e){let t=Tl(),n={};for(let r of e)if(r&&r.group in t){t[r.group]++;for(let[e,t]of Object.entries(r.points??{}))t&&(n[e]=(n[e]??0)+t)}return{core:t,points:n}}function kl(e){return{core:{...Tl(),...e.core},points:e.points&&typeof e.points==`object`?e.points:{}}}function Al(e){let{core:t,points:n,...r}=e,i={};for(let[e,a]of Object.entries({...r,levels:Dl(t,n)}))a!==void 0&&a!==``&&(e!==`items`&&e!==`conditions`||!Array.isArray(a)||a.length)&&(i[e]=a);return i}var jl=e=>Array.isArray(e)?e:[],Ml=e=>typeof e==`string`&&e!==``?e:void 0,Nl=e=>typeof e==`string`&&e.length<=15e5&&/^data:image\/(webp|jpeg|png);base64,[A-Za-z0-9+/]+=*$/.test(e)?e:void 0,Pl=e=>typeof e==`number`&&Number.isInteger(e)&&e>=0&&e<=9999?e:void 0,Fl=9999,Il=e=>typeof e==`string`&&e.trim()!==``?e.trim().slice(0,20):void 0,Ll=e=>Sl.includes(e)&&e!==`unlisted`?e:void 0;function Rl(e){if(e.gender)return e.gender===`custom`?e.customGender?.trim()||void 0:e.gender[0].toUpperCase()+e.gender.slice(1)}function zl(e){if(typeof e!=`object`||!e||Array.isArray(e))throw Error(`A build is a JSON object`);let t=e,n=jl(t.levels),r=typeof t.level==`number`?t.level:Math.max(1,n.length),i=t.kind===`tatot`&&(t.form===`orcoid`||t.form===`goblinoid`)?`tatot-${t.form}`:Ml(t.kind);return{name:Ml(t.name),age:Pl(t.age),gender:Ll(t.gender),customGender:t.gender===`custom`?Ml(t.customGender):void 0,height:Il(t.height),weight:Il(t.weight),portrait:Nl(t.portrait),description:Ml(t.description),kind:i,origin:Ml(t.origin),profession:Ml(t.profession),past:Ml(t.past),...t.startPoints&&typeof t.startPoints==`object`&&Object.keys(t.startPoints).length?{startPoints:t.startPoints}:{},level:r,...t.core&&typeof t.core==`object`?kl(t):Ol(n),traits:jl(t.traits).map(e=>({...e,rank:e.rank??1})),choices:jl(t.choices),...Array.isArray(t.items)&&t.items.length?{items:dl(t.items)}:{},...Array.isArray(t.conditions)&&t.conditions.length?{conditions:xl(t.conditions)}:{}}}function Bl(e,t){let n={...e,level:t};for(let e of[...wl].reverse())for(;n.core[e]>0&&wl.reduce((e,t)=>e+n.core[t],0)>t;)n=Vl(n,e,n.core[e]-1);return n}function Vl(e,t,n){let r={...e.points},i=V[t].reduce((e,t)=>e+(r[t]??0),0)-n*3;for(let e of[...V[t]].reverse()){if(i<=0)break;let t=Math.min(i,r[e]??0);r[e]=(r[e]??0)-t,r[e]||delete r[e],i-=t}return{...e,core:{...e.core,[t]:n},points:r}}function Hl(e,t,n,r){return{...e,traits:[...e.traits,{trait:t,rank:n,pick:r}]}}var Ul=`sf-character-builder:v1`;function Wl(){try{let e=localStorage.getItem(Ul);if(!e)return El;let t=JSON.parse(e),n=zl(t.draft),r=t.campaign?.startingLevel??n.level,i=t.step===`levels`?`stats`:t.step,a=Cl.includes(i)?i:`character`,o=t.ai&&Array.isArray(t.ai.reasons)?t.ai:void 0;return{draft:n,campaign:{startingLevel:r},step:a,ai:o}}catch{return El}}function Gl(e){try{localStorage.setItem(Ul,JSON.stringify(e))}catch{}}function Kl(){try{localStorage.removeItem(Ul)}catch{}}var ql=e=>e.toLowerCase().normalize(`NFKD`).replace(/[^a-z0-9]+/g,`-`).replace(/^-+|-+$/g,``),Jl=/^levels\[(\d+)\]/;function Yl(e,t,n){let r=Xl(e,t,n);return Object.keys(V).filter(t=>r.includes(t)||e.core[t]>0)}function Xl(e,t,n){return n?.summary?n.summary.coreAccess:Zc([...(t.kinds.find(t=>t.id===e.kind)?.grants??[]).map(e=>e.trait),...t.packages.filter(t=>[e.origin,e.profession,e.past].includes(t.id)).flatMap(e=>e.grants.map(e=>e.trait)),...e.traits.map(e=>e.trait)],t)}function Zl(e,t,n){let r=el(Al(e),t,n);return{...r,errors:Ql(r.errors,e)}}function Ql(e,t){let n=Dl(t.core,t.points),r=new Set,i=[];for(let a of e){if(a.code===`level`&&a.path===`levels`){let e=Object.values(t.core).reduce((e,t)=>e+t,0),n=t.level-e,r=Math.abs(n);i.push({...a,message:n>0?`Place ${r} more core ${r===1?`point`:`points`}`:`Take back ${r} core ${r===1?`point`:`points`}; a level ${t.level} character has ${t.level}`});continue}let e=a.code===`allocation`?Jl.exec(a.path??``):null,o=e?n[Number(e[1])]?.group:void 0;if(!o){i.push(a);continue}if(r.has(o))continue;r.add(o);let s=t.core[o]*3,c=V[o].reduce((e,n)=>e+(t.points[n]??0),0),l=Math.abs(s-c),u=o.charAt(0).toUpperCase()+o.slice(1);i.push({...a,path:`levels`,message:c<s?`Place ${l} more ${u} ${l===1?`point`:`points`}`:`${u} has ${l} more ${l===1?`point`:`points`} than its core Stat unlocks`})}return i}function $l(e,t,n,r){let i=Zl(e,t,n);if(!i.summary)return;let a=new Set(i.errors.map(e=>e.message)),o=new Map(i.summary.traits.map(e=>[e.trait,e.rank])),s=[],c=typeof r==`string`?void 0:r.list;for(let i of t.traits){if(i.list!==c)continue;let l=i.ranked?(o.get(i.id)??0)+1:1,u=`${i.name} gives a choice of `,d=r=>({pick:r,added:Zl(Hl(e,i.id,l,r),t,n).errors.filter(e=>!a.has(e.message)&&!(e.code===`choice`&&e.message.startsWith(u)))}),{pick:f,added:p}=d(typeof r==`string`?r:`background`);typeof r!=`string`&&p.length&&!i.background&&({pick:f,added:p}=d(`universal`)),!p.some(e=>e.code===`pick-type`||e.code===`conveyed`)&&s.push({trait:i,rank:l,pick:f,reasons:p.map(e=>e.message)})}return s}function eu(e){switch(e.code){case`kind`:return`character`;case`package`:return`background`;case`level`:return e.path===`level`?`character`:`stats`;case`allocation`:case`core-access`:case`stat-max`:case`stat-cap`:return`stats`;case`choice`:case`choice-pool`:return`choices`;case`schema`:{let t=e.path?.split(`.`)[0];return t===`name`||t===`level`||t===`kind`?`character`:t===`origin`||t===`profession`||t===`past`?`background`:t===`levels`||t===`startPoints`?`stats`:t===`choices`?`choices`:`traits`}default:return e.path===`choices`||e.path?.startsWith(`choices[`)?`choices`:`traits`}}var tu={kind:`Choose a Kind`,origin:`Choose an Origin`,profession:`Choose a Profession`,past:`Choose a Past`};function nu(e,t){if(e.code===`schema`&&e.path&&e.path in tu&&!t[e.path])return tu[e.path];if(e.pool){let t=e.pool.split(`-`).pop();return`${t[0].toUpperCase()}${t.slice(1)} choice needed`}return e.message}var ru=`id: acid-flask\r
+name: "Acid Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and sprays acid like Acid Spray."\r
+tags: [potion, magic, thrown, acid]\r
+type: weapon\r
+category: consumable\r
+damage: "3 Corrosive per Rank"\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "1 m per Rank"\r
+onHit: "Characters and Items damaged by it gain the Corroding Condition"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Acid Spray. Value is per Rank."\r
 `,iu=`id: anti-radiation-pills\r
 name: "Anti-Radiation Pills"\r
 status: draft\r
@@ -135,21 +135,21 @@ resistances: "2 Blunt, 1 Slashing, 5 Piercing, 1 Cold"\r
 slot: "Body Armor"\r
 value: 800\r
 currency: "ERC"\r
-`,cu=`id: banishing-water
-name: "Banishing Water"
-status: draft
-plane: isekai
-summary: "Thrown at a character possessed by a spirit."
-tags: [potion, magic, thrown, spirits]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-onHit: "Solid Hit or better: the character loses the Possessed by a Spirit Trait and the spirit is driven off"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Banish Spirit. Value is per Rank."
+`,cu=`id: banishing-water\r
+name: "Banishing Water"\r
+status: draft\r
+plane: isekai\r
+summary: "Thrown at a character possessed by a spirit."\r
+tags: [potion, magic, thrown, spirits]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+onHit: "Solid Hit or better: the character loses the Possessed by a Spirit Trait and the spirit is driven off"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Banish Spirit. Value is per Rank."\r
 `,lu=`id: bedroll\r
 name: "Bedroll"\r
 status: draft\r
@@ -185,21 +185,21 @@ type: equipment\r
 category: gear\r
 value: 500\r
 currency: "ERC"\r
-`,fu=`id: breath-weapon
-name: "Breath Weapon"
-status: draft
-plane: any
-summary: "A blast of breath from deep in the lungs."
-tags: [natural weapon, breath]
-type: weapon
-category: weapon
-damage: "1 Blunt + Physical"
-attackType: "Ranged"
-maxRange: "10 m"
-attackStat: "Physical"
-areaOfEffect: "3 m"
-uses: "uses 1: every 3 Rounds, or once a minute outside of combat"
-notes: "Natural weapon, granted by Natural Breath Weapon."
+`,fu=`id: breath-weapon\r
+name: "Breath Weapon"\r
+status: draft\r
+plane: any\r
+summary: "A blast of breath from deep in the lungs."\r
+tags: [natural weapon, breath]\r
+type: weapon\r
+category: weapon\r
+damage: "1 Blunt + Physical"\r
+attackType: "Ranged"\r
+maxRange: "10 m"\r
+attackStat: "Physical"\r
+areaOfEffect: "3 m"\r
+uses: "uses 1: every 3 Rounds, or once a minute outside of combat"\r
+notes: "Natural weapon, granted by Natural Breath Weapon."\r
 `,pu=`id: brigandine\r
 name: "Brigandine"\r
 status: draft\r
@@ -247,30 +247,30 @@ resistances: "1 Blunt, 3 Slashing, 1 Piercing"\r
 slot: "Body Armor"\r
 value: 1200\r
 currency: "ERC"\r
-`,_u=`id: charm-potion
-name: "Charm Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Charmed Condition at the potion's Rank, toward the character who gave it to them."
-tags: [potion, magic, enchantment, social]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Charm. Value is per Rank."
-`,vu=`id: cleansing-potion
-name: "Cleansing Potion"
-status: draft
-plane: isekai
-summary: "Drunk, or poured over a character or object, it ends the Burning and Corroding Conditions."
-tags: [potion, magic, fire, acid]
-type: misc
-category: consumable
-uses: "uses 1: when drunk or poured"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Cleanse. Value is per Rank."
+`,_u=`id: charm-potion\r
+name: "Charm Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Charmed Condition at the potion's Rank, toward the character who gave it to them."\r
+tags: [potion, magic, enchantment, social]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Charm. Value is per Rank."\r
+`,vu=`id: cleansing-potion\r
+name: "Cleansing Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Drunk, or poured over a character or object, it ends the Burning and Corroding Conditions."\r
+tags: [potion, magic, fire, acid]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk or poured"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Cleanse. Value is per Rank."\r
 `,yu=`id: club\r
 name: "Club"\r
 status: draft\r
@@ -406,20 +406,20 @@ maxRange: "1 m"\r
 attackStat: "Grace"\r
 value: 60\r
 currency: "ERC"\r
-`,Au=`id: darkness-flask
-name: "Darkness Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and fills a sphere 3 m across per Rank with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."
-tags: [potion, magic, thrown, darkness, cover]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-uses: "uses 1: when thrown"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Darkness. Value is per Rank."
+`,Au=`id: darkness-flask\r
+name: "Darkness Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and fills a sphere 3 m across per Rank with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."\r
+tags: [potion, magic, thrown, darkness, cover]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+uses: "uses 1: when thrown"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Darkness. Value is per Rank."\r
 `,ju=`id: disguise-kit\r
 name: "Disguise Kit"\r
 status: draft\r
@@ -430,18 +430,18 @@ type: equipment\r
 category: gear\r
 value: 150\r
 currency: "ERC"\r
-`,Mu=`id: dispelling-potion
-name: "Dispelling Potion"
-status: draft
-plane: isekai
-summary: "Drunk, or poured over a character or object, it reduces the Rank of one (Enchantment) Condition on them by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."
-tags: [potion, magic, dispel]
-type: misc
-category: consumable
-uses: "uses 1: when drunk or poured"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Dispel Magic. Value is per Rank."
+`,Mu=`id: dispelling-potion\r
+name: "Dispelling Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Drunk, or poured over a character or object, it reduces the Rank of one (Enchantment) Condition on them by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."\r
+tags: [potion, magic, dispel]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk or poured"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Dispel Magic. Value is per Rank."\r
 `,Nu=`id: earth-reserve-credits\r
 name: "Earth Reserve Credits (ERC)"\r
 status: draft\r
@@ -467,18 +467,18 @@ areaOfEffect: "5 m"\r
 uses: "uses 1: when thrown"\r
 value: 400\r
 currency: "ERC"\r
-`,Fu=`id: endurance-potion
-name: "Endurance Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Magical Endurance Condition at the potion's Rank."
-tags: [potion, magic, enhancement, endurance]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Magical Endurance. Value is per Rank."
+`,Fu=`id: endurance-potion\r
+name: "Endurance Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Magical Endurance Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, endurance]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Magical Endurance. Value is per Rank."\r
 `,Iu=`id: engineers-toolkit\r
 name: "Engineer’s Toolkit"\r
 status: draft\r
@@ -489,38 +489,38 @@ type: equipment\r
 category: gear\r
 value: 2000\r
 currency: "ERC"\r
-`,Lu=`id: entangling-flask
-name: "Entangling Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and roots grow out of it. Every character within 2 m per Rank of it gains the Rooted Condition at the flask's Rank."
-tags: [potion, magic, thrown, plants, enchantment]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "2 m per Rank"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Entangle. Value is per Rank."
-`,Ru=`id: explosive-flask
-name: "Explosive Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and explodes like a Fireball."
-tags: [potion, magic, thrown, fire, explosive]
-type: weapon
-category: consumable
-damage: "2 Blunt per Rank, 4 Heat per Rank"
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "3 m per Rank"
-onHit: "Characters and Items damaged by it gain the Burning Condition"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Fireball. Value is per Rank."
+`,Lu=`id: entangling-flask\r
+name: "Entangling Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and roots grow out of it. Every character within 2 m per Rank of it gains the Rooted Condition at the flask's Rank."\r
+tags: [potion, magic, thrown, plants, enchantment]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "2 m per Rank"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Entangle. Value is per Rank."\r
+`,Ru=`id: explosive-flask\r
+name: "Explosive Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and explodes like a Fireball."\r
+tags: [potion, magic, thrown, fire, explosive]\r
+type: weapon\r
+category: consumable\r
+damage: "2 Blunt per Rank, 4 Heat per Rank"\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "3 m per Rank"\r
+onHit: "Characters and Items damaged by it gain the Burning Condition"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Fireball. Value is per Rank."\r
 `,zu=`id: faraday-shroud\r
 name: "Faraday Shroud"\r
 status: draft\r
@@ -651,20 +651,20 @@ type: equipment\r
 category: gear\r
 value: 10\r
 currency: "ERC"\r
-`,Xu=`id: fog-flask
-name: "Fog Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and fills a sphere 3 m across per Rank with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."
-tags: [potion, magic, thrown, fog, cover]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-uses: "uses 1: when thrown"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Fog Cloud. Value is per Rank."
+`,Xu=`id: fog-flask\r
+name: "Fog Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and fills a sphere 3 m across per Rank with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."\r
+tags: [potion, magic, thrown, fog, cover]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+uses: "uses 1: when thrown"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Fog Cloud. Value is per Rank."\r
 `,Zu=`id: frag-grenade\r
 name: "Frag Grenade"\r
 status: draft\r
@@ -680,22 +680,22 @@ areaOfEffect: "5 m"\r
 uses: "uses 1: when thrown"\r
 value: 50\r
 currency: "ERC"\r
-`,Qu=`id: frost-flask
-name: "Frost Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands and bursts into frost like Hoarfrost."
-tags: [potion, magic, thrown, cold]
-type: weapon
-category: consumable
-damage: "5 Cold per Rank"
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "3 m per Rank"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Hoarfrost. Value is per Rank."
+`,Qu=`id: frost-flask\r
+name: "Frost Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands and bursts into frost like Hoarfrost."\r
+tags: [potion, magic, thrown, cold]\r
+type: weapon\r
+category: consumable\r
+damage: "5 Cold per Rank"\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "3 m per Rank"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Hoarfrost. Value is per Rank."\r
 `,$u=`id: fuel-canister\r
 name: "Fuel Canister"\r
 status: draft\r
@@ -729,30 +729,30 @@ type: equipment\r
 category: gear\r
 value: 300\r
 currency: "ERC"\r
-`,nd=`id: glowing-oil
-name: "Glowing Oil"
-status: draft
-plane: isekai
-summary: "Poured over an object, it gives the object the Glowing Condition at the oil's Rank."
-tags: [potion, magic, light]
-type: misc
-category: consumable
-uses: "uses 1: when poured"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Light. Value is per Rank."
-`,U=`id: grace-potion
-name: "Grace Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Magical Grace Condition at the potion's Rank."
-tags: [potion, magic, enhancement, grace]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Magical Grace. Value is per Rank."
+`,nd=`id: glowing-oil\r
+name: "Glowing Oil"\r
+status: draft\r
+plane: isekai\r
+summary: "Poured over an object, it gives the object the Glowing Condition at the oil's Rank."\r
+tags: [potion, magic, light]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when poured"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Light. Value is per Rank."\r
+`,U=`id: grace-potion\r
+name: "Grace Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Magical Grace Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, grace]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Magical Grace. Value is per Rank."\r
 `,rd=`id: grappling-hook\r
 name: "Grappling Hook"\r
 status: draft\r
@@ -763,30 +763,30 @@ type: equipment\r
 category: gear\r
 value: 50\r
 currency: "ERC"\r
-`,W=`id: greater-healing-potion
-name: "Greater Healing Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it is healed 8 HP per Rank, and loses the Severe Bleeding Condition."
-tags: [potion, magic, healing]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 60
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Greater Heal. Value is per Rank."
-`,G=`id: greater-mana-potion
-name: "Greater Mana Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it regains 12 MP."
-tags: [potion, magic, mana]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 120
-currency: "Luras"
-notes: "Not brewed at a Rank."
+`,W=`id: greater-healing-potion\r
+name: "Greater Healing Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it is healed 8 HP per Rank, and loses the Severe Bleeding Condition."\r
+tags: [potion, magic, healing]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 60\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Greater Heal. Value is per Rank."\r
+`,G=`id: greater-mana-potion\r
+name: "Greater Mana Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it regains 12 MP."\r
+tags: [potion, magic, mana]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 120\r
+currency: "Luras"\r
+notes: "Not brewed at a Rank."\r
 `,K=`id: greatsword\r
 name: "Greatsword"\r
 status: draft\r
@@ -801,21 +801,21 @@ maxRange: "2 m"\r
 attackStat: "Power"\r
 value: 1000\r
 currency: "ERC"\r
-`,id=`id: gust-flask
-name: "Gust Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands in a burst of wind. Every character within 2 m per Rank of it is pushed 3 m per Rank away and gains the Prone Condition."
-tags: [potion, magic, thrown, wind]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "2 m per Rank"
-uses: "uses 1: when thrown"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Gust. Value is per Rank."
+`,id=`id: gust-flask\r
+name: "Gust Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands in a burst of wind. Every character within 2 m per Rank of it is pushed 3 m per Rank away and gains the Prone Condition."\r
+tags: [potion, magic, thrown, wind]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "2 m per Rank"\r
+uses: "uses 1: when thrown"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Gust. Value is per Rank."\r
 `,ad=`id: halberd\r
 name: "Halberd"\r
 status: draft\r
@@ -869,18 +869,18 @@ attackStat: "Power"\r
 onHit: "Critical Hit: the target makes an Endurance check against the damage dealt *3 and gains the Unconscious Condition if it fails"\r
 modifiers: "Attack Rolls -3"\r
 notes: "Natural weapon, granted by Boxing."\r
-`,ld=`id: hazmat-suit
-name: "Hazmat Suit"
-status: draft
-plane: earth
-summary: "A sealed suit for chemical, biological and radiation hazards."
-tags: [hazard, survival]
-type: wearable
-category: armor
-resistances: "2 Heat, 4 Electrical, 4 Radiation, 3 Corrosive"
-slot: "Body Armor"
-value: 400
-currency: "ERC"
+`,ld=`id: hazmat-suit\r
+name: "Hazmat Suit"\r
+status: draft\r
+plane: earth\r
+summary: "A sealed suit for chemical, biological and radiation hazards."\r
+tags: [hazard, survival]\r
+type: wearable\r
+category: armor\r
+resistances: "2 Heat, 4 Electrical, 4 Radiation, 3 Corrosive"\r
+slot: "Body Armor"\r
+value: 400\r
+currency: "ERC"\r
 `,ud=`id: healers-kit\r
 name: "Healer’s Kit"\r
 status: draft\r
@@ -892,18 +892,18 @@ category: gear\r
 uses: "uses 10: per treatment"\r
 value: 80\r
 currency: "ERC"\r
-`,dd=`id: healing-potion
-name: "Healing Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it is healed 4 HP per Rank."
-tags: [potion, magic, healing]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Heal. Value is per Rank."
+`,dd=`id: healing-potion\r
+name: "Healing Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it is healed 4 HP per Rank."\r
+tags: [potion, magic, healing]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Heal. Value is per Rank."\r
 `,fd=`id: helicopter\r
 name: "Helicopter"\r
 status: draft\r
@@ -1113,18 +1113,18 @@ attackStat: "Grace"\r
 reload: "Full"\r
 value: 9000\r
 currency: "ERC"\r
-`,kd=`id: mana-potion
-name: "Mana Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it regains 6 MP."
-tags: [potion, magic, mana]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 60
-currency: "Luras"
-notes: "Not brewed at a Rank."
+`,kd=`id: mana-potion\r
+name: "Mana Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it regains 6 MP."\r
+tags: [potion, magic, mana]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 60\r
+currency: "Luras"\r
+notes: "Not brewed at a Rank."\r
 `,Ad=`id: masonry-tools\r
 name: "Masonry Tools"\r
 status: draft\r
@@ -1160,18 +1160,18 @@ category: gear\r
 uses: "uses 10: per treatment"\r
 value: 250\r
 currency: "ERC"\r
-`,Nd=`id: mending-oil
-name: "Mending Oil"
-status: draft
-plane: isekai
-summary: "Poured over an object, it restores 4 HP per Rank. It can't repair a Destroyed object."
-tags: [potion, magic, repair]
-type: misc
-category: consumable
-uses: "uses 1: when poured"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Mending. Value is per Rank."
+`,Nd=`id: mending-oil\r
+name: "Mending Oil"\r
+status: draft\r
+plane: isekai\r
+summary: "Poured over an object, it restores 4 HP per Rank. It can't repair a Destroyed object."\r
+tags: [potion, magic, repair]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when poured"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Mending. Value is per Rank."\r
 `,Pd=`id: missile-launcher\r
 name: "Missile Launcher"\r
 status: draft\r
@@ -1337,150 +1337,150 @@ type: equipment\r
 category: gear\r
 value: 50\r
 currency: "Luras"\r
-`,Jd=`id: potion-of-detect-magic
-name: "Potion of Detect Magic"
-status: draft
-plane: isekai
-summary: "Whoever drinks it senses every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."
-tags: [potion, magic, senses, detection]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Detect Magic. Value is per Rank."
-`,Yd=`id: potion-of-elemental-ward
-name: "Potion of Elemental Ward"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Elemental Ward Condition at the potion's Rank, against Heat, Cold, Electrical or EMP, chosen when it's brewed."
-tags: [potion, magic, enhancement, defense]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Elemental Ward. Value is per Rank."
-`,Xd=`id: potion-of-featherfall
-name: "Potion of Featherfall"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Featherfall Condition at the potion's Rank."
-tags: [potion, magic, enhancement, falling]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Featherfall. Value is per Rank."
-`,Zd=`id: potion-of-flight
-name: "Potion of Flight"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Magical Flight Condition at the potion's Rank."
-tags: [potion, magic, enhancement, flight]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Magical Flight. Value is per Rank."
-`,Qd=`id: potion-of-haste
-name: "Potion of Haste"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Hasted Condition at the potion's Rank."
-tags: [potion, magic, enhancement, movement]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Haste. Value is per Rank."
-`,$d=`id: potion-of-infravision
-name: "Potion of Infravision"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Infravision Condition at the potion's Rank."
-tags: [potion, magic, enhancement, senses]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Infravision. Value is per Rank."
-`,ef=`id: potion-of-invisibility
-name: "Potion of Invisibility"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Invisible Condition at the potion's Rank."
-tags: [potion, magic, enhancement, stealth]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Invisibility. Value is per Rank."
-`,tf=`id: potion-of-shielding
-name: "Potion of Shielding"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Shielded Condition at the potion's Rank."
-tags: [potion, magic, enhancement, defense]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Shield. Value is per Rank."
-`,nf=`id: potion-of-speak-with-animals
-name: "Potion of Speak with Animals"
-status: draft
-plane: isekai
-summary: "Whoever drinks it can understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."
-tags: [potion, magic, animals]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Speak with Animals. Value is per Rank."
-`,rf=`id: potion-of-spider-climb
-name: "Potion of Spider Climb"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Spider Climb Condition at the potion's Rank."
-tags: [potion, magic, enhancement, climbing]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Spider Climb. Value is per Rank."
-`,af=`id: potion-of-stone-skin
-name: "Potion of Stone Skin"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Stone Skin Condition at the potion's Rank."
-tags: [potion, magic, enhancement, defense]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Skin of Stone. Value is per Rank."
-`,of=`id: potion-of-water-breathing
-name: "Potion of Water Breathing"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Water Breathing Condition at the potion's Rank."
-tags: [potion, magic, enhancement, water]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Water Breathing. Value is per Rank."
+`,Jd=`id: potion-of-detect-magic\r
+name: "Potion of Detect Magic"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it senses every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."\r
+tags: [potion, magic, senses, detection]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Detect Magic. Value is per Rank."\r
+`,Yd=`id: potion-of-elemental-ward\r
+name: "Potion of Elemental Ward"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Elemental Ward Condition at the potion's Rank, against Heat, Cold, Electrical or EMP, chosen when it's brewed."\r
+tags: [potion, magic, enhancement, defense]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Elemental Ward. Value is per Rank."\r
+`,Xd=`id: potion-of-featherfall\r
+name: "Potion of Featherfall"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Featherfall Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, falling]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Featherfall. Value is per Rank."\r
+`,Zd=`id: potion-of-flight\r
+name: "Potion of Flight"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Magical Flight Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, flight]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Magical Flight. Value is per Rank."\r
+`,Qd=`id: potion-of-haste\r
+name: "Potion of Haste"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Hasted Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, movement]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Haste. Value is per Rank."\r
+`,$d=`id: potion-of-infravision\r
+name: "Potion of Infravision"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Infravision Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, senses]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Infravision. Value is per Rank."\r
+`,ef=`id: potion-of-invisibility\r
+name: "Potion of Invisibility"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Invisible Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, stealth]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Invisibility. Value is per Rank."\r
+`,tf=`id: potion-of-shielding\r
+name: "Potion of Shielding"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Shielded Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, defense]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Shield. Value is per Rank."\r
+`,nf=`id: potion-of-speak-with-animals\r
+name: "Potion of Speak with Animals"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it can understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."\r
+tags: [potion, magic, animals]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Speak with Animals. Value is per Rank."\r
+`,rf=`id: potion-of-spider-climb\r
+name: "Potion of Spider Climb"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Spider Climb Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, climbing]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Spider Climb. Value is per Rank."\r
+`,af=`id: potion-of-stone-skin\r
+name: "Potion of Stone Skin"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Stone Skin Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, defense]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Skin of Stone. Value is per Rank."\r
+`,of=`id: potion-of-water-breathing\r
+name: "Potion of Water Breathing"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Water Breathing Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, water]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Water Breathing. Value is per Rank."\r
 `,sf=`id: powder-and-shot\r
 name: "Powder and Shot"\r
 status: draft\r
@@ -1518,18 +1518,18 @@ maxRange: "2 m"\r
 attackStat: "Grace / Power"\r
 value: 40\r
 currency: "ERC"\r
-`,uf=`id: rad-suit
-name: "Rad Suit"
-status: draft
-plane: earth
-summary: "A lead-lined suit for work in irradiated areas."
-tags: [radiation, survival]
-type: wearable
-category: armor
-resistances: "1 Blunt, 6 Radiation, 1 Corrosive"
-slot: "Body Armor"
-value: 1500
-currency: "ERC"
+`,uf=`id: rad-suit\r
+name: "Rad Suit"\r
+status: draft\r
+plane: earth\r
+summary: "A lead-lined suit for work in irradiated areas."\r
+tags: [radiation, survival]\r
+type: wearable\r
+category: armor\r
+resistances: "1 Blunt, 6 Radiation, 1 Corrosive"\r
+slot: "Body Armor"\r
+value: 1500\r
+currency: "ERC"\r
 `,df=`id: rapier\r
 name: "Rapier"\r
 status: draft\r
@@ -1730,33 +1730,33 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 700\r
 currency: "ERC"\r
-`,Ef=`id: silence-flask
-name: "Silence Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands. Every character within 3 m per Rank of it gains the Silenced Condition at the flask's Rank."
-tags: [potion, magic, thrown, silence, enchantment]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "3 m per Rank"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Silence. Value is per Rank."
-`,Df=`id: sleeping-draught
-name: "Sleeping Draught"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Asleep Condition at the potion's Rank."
-tags: [potion, magic, enchantment, sleep]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Sleep. Value is per Rank."
+`,Ef=`id: silence-flask\r
+name: "Silence Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands. Every character within 3 m per Rank of it gains the Silenced Condition at the flask's Rank."\r
+tags: [potion, magic, thrown, silence, enchantment]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "3 m per Rank"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Silence. Value is per Rank."\r
+`,Df=`id: sleeping-draught\r
+name: "Sleeping Draught"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Asleep Condition at the potion's Rank."\r
+tags: [potion, magic, enchantment, sleep]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Sleep. Value is per Rank."\r
 `,Of=`id: sling-stones\r
 name: "Sling Stones"\r
 status: draft\r
@@ -1783,21 +1783,21 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 15\r
 currency: "ERC"\r
-`,Af=`id: slowing-flask
-name: "Slowing Flask"
-status: draft
-plane: isekai
-summary: "Breaks on the character it hits, who gains the Slowed Condition at the flask's Rank."
-tags: [potion, magic, thrown, enchantment, movement]
-type: equipment
-category: consumable
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-onHit: "The target gains the Slowed Condition at the flask's Rank"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Slow. Value is per Rank."
+`,Af=`id: slowing-flask\r
+name: "Slowing Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "Breaks on the character it hits, who gains the Slowed Condition at the flask's Rank."\r
+tags: [potion, magic, thrown, enchantment, movement]\r
+type: equipment\r
+category: consumable\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+onHit: "The target gains the Slowed Condition at the flask's Rank"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Slow. Value is per Rank."\r
 `,jf=`id: smithing-tools\r
 name: "Smithing Tools"\r
 status: draft\r
@@ -1861,18 +1861,18 @@ type: equipment\r
 category: gear\r
 value: 150\r
 currency: "ERC"\r
-`,If=`id: staunching-potion
-name: "Staunching Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it loses the Severe Bleeding Condition."
-tags: [potion, magic, healing]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Staunch. Value is per Rank."
+`,If=`id: staunching-potion\r
+name: "Staunching Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it loses the Severe Bleeding Condition."\r
+tags: [potion, magic, healing]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Staunch. Value is per Rank."\r
 `,Lf=`id: steel-helm\r
 name: "Steel Helm"\r
 status: draft\r
@@ -1885,18 +1885,18 @@ resistances: "3 Blunt, 4 Slashing, 2 Piercing (head)"\r
 slot: "Headwear"\r
 value: 250\r
 currency: "ERC"\r
-`,Rf=`id: strength-potion
-name: "Strength Potion"
-status: draft
-plane: isekai
-summary: "Whoever drinks it gains the Magical Strength Condition at the potion's Rank."
-tags: [potion, magic, enhancement, strength]
-type: misc
-category: consumable
-uses: "uses 1: when drunk"
-value: 20
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Magical Strength. Value is per Rank."
+`,Rf=`id: strength-potion\r
+name: "Strength Potion"\r
+status: draft\r
+plane: isekai\r
+summary: "Whoever drinks it gains the Magical Strength Condition at the potion's Rank."\r
+tags: [potion, magic, enhancement, strength]\r
+type: misc\r
+category: consumable\r
+uses: "uses 1: when drunk"\r
+value: 20\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Magical Strength. Value is per Rank."\r
 `,zf=`id: stun-baton\r
 name: "Stun Baton"\r
 status: draft\r
@@ -1993,23 +1993,23 @@ attackStat: "Grace"\r
 uses: "uses 6: when thrown, until recovered"\r
 value: 80\r
 currency: "ERC"\r
-`,J=`id: thunder-flask
-name: "Thunder Flask"
-status: draft
-plane: isekai
-summary: "The flask breaks where it lands with a Thunderclap."
-tags: [potion, magic, thrown, sound]
-type: weapon
-category: consumable
-damage: "3 Blunt per Rank"
-attackType: "Ranged, Thrown"
-attackStat: "Grace"
-areaOfEffect: "3 m per Rank"
-onHit: "Characters damaged by it gain the Deafened Condition"
-uses: "uses 1: when thrown"
-value: 40
-currency: "Luras"
-notes: "Brewed at a Rank: the brewer's Rank in Thunderclap. Value is per Rank."
+`,J=`id: thunder-flask\r
+name: "Thunder Flask"\r
+status: draft\r
+plane: isekai\r
+summary: "The flask breaks where it lands with a Thunderclap."\r
+tags: [potion, magic, thrown, sound]\r
+type: weapon\r
+category: consumable\r
+damage: "3 Blunt per Rank"\r
+attackType: "Ranged, Thrown"\r
+attackStat: "Grace"\r
+areaOfEffect: "3 m per Rank"\r
+onHit: "Characters damaged by it gain the Deafened Condition"\r
+uses: "uses 1: when thrown"\r
+value: 40\r
+currency: "Luras"\r
+notes: "Brewed at a Rank: the brewer's Rank in Thunderclap. Value is per Rank."\r
 `,Kf=`id: torch\r
 name: "Torch"\r
 status: draft\r
@@ -4451,20 +4451,20 @@ backgroundTraits:\r
   - navigation\r
   - spacefaring\r
   - commerce\r
-`,eh=`id: acid-spray
-name: "Acid Spray"
-status: placeholder
-plane: any
-summary: "Sprays a target with burning acid."
-tags: [magic, spell, acid, attack]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Acid Spray Action."
-action: "Cast Acid Spray: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 10 m) (3 Corrosive per Rank) (Attack Stat: Magic) (area of effect: 1 m per Rank). Characters and Items damaged by Cast Acid Spray gain the Corroding Condition."
+`,eh=`id: acid-spray\r
+name: "Acid Spray"\r
+status: placeholder\r
+plane: any\r
+summary: "Sprays a target with burning acid."\r
+tags: [magic, spell, acid, attack]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Acid Spray Action."\r
+action: "Cast Acid Spray: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 10 m) (3 Corrosive per Rank) (Attack Stat: Magic) (area of effect: 1 m per Rank). Characters and Items damaged by Cast Acid Spray gain the Corroding Condition."\r
 `,th=`id: archer\r
 name: "Archer"\r
 status: draft\r
@@ -4477,20 +4477,20 @@ minStats: { grace: 4, intuition: 4, power: 2 }\r
 prerequisiteTags: [archery]\r
 effect: "- This character gains the Aimed Shot Action.\\n- Rank *5 added to Skill Check rolls involving archery."\r
 action: "Aimed Shot: This character Attacks with a bow or crossbow at +4 to the Attack Roll, but loses 6 Priority for the Round."\r
-`,nh=`id: banish-spirit
-name: "Banish Spirit"
-status: draft
-plane: any
-summary: "Drives a possessing spirit out of its host."
-tags: [magic, spell, spirits, supernatural]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 4 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Banish Spirit Action."
-action: "Cast Banish Spirit: This character may spend 2 MP to make an Attack Roll with Magic against a spirit possessing a character within 3 m. On a Solid Hit or better, the character loses the Possessed by a Spirit Trait and the spirit is driven off."
+`,nh=`id: banish-spirit\r
+name: "Banish Spirit"\r
+status: draft\r
+plane: any\r
+summary: "Drives a possessing spirit out of its host."\r
+tags: [magic, spell, spirits, supernatural]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 4 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Banish Spirit Action."\r
+action: "Cast Banish Spirit: This character may spend 2 MP to make an Attack Roll with Magic against a spirit possessing a character within 3 m. On a Solid Hit or better, the character loses the Possessed by a Spirit Trait and the spirit is driven off."\r
 `,rh=`id: barbarian\r
 name: "Barbarian"\r
 status: draft\r
@@ -4551,34 +4551,34 @@ prerequisites: [lightning]\r
 list: magic\r
 effect: "This character gains the Cast Chain Lightning Action."\r
 action: "Cast Chain Lightning: This character may spend 3 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (4 Electrical per Rank, 1 EMP per Rank) (Attack Stat: Magic). On a hit, the lightning leaps to one more character per Rank within 5 m of the last one struck, each hit as if with a Glancing Blow."\r
-`,ch=`id: charm
-name: "Charm"
-status: placeholder
-plane: any
-summary: "Makes a target see the caster as a trusted friend."
-tags: [magic, spell, mind, social]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Charm Action."
-action: "Cast Charm: This character may spend 2 MP to give the Charmed Condition to a character within 10 m. The Condition's Rank is equal to the caster's Charm Rank."
-`,lh=`id: cleanse
-name: "Cleanse"
-status: draft
-plane: any
-summary: "Burns away flames and eats away acid."
-tags: [magic, spell, healing, utility]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Cleanse Action."
-action: "Cast Cleanse: This character may spend 1 MP to end the Burning and Corroding Conditions on a character or object within 3 m."
+`,ch=`id: charm\r
+name: "Charm"\r
+status: placeholder\r
+plane: any\r
+summary: "Makes a target see the caster as a trusted friend."\r
+tags: [magic, spell, mind, social]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Charm Action."\r
+action: "Cast Charm: This character may spend 2 MP to give the Charmed Condition to a character within 10 m. The Condition's Rank is equal to the caster's Charm Rank."\r
+`,lh=`id: cleanse\r
+name: "Cleanse"\r
+status: draft\r
+plane: any\r
+summary: "Burns away flames and eats away acid."\r
+tags: [magic, spell, healing, utility]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Cleanse Action."\r
+action: "Cast Cleanse: This character may spend 1 MP to end the Burning and Corroding Conditions on a character or object within 3 m."\r
 `,uh=`id: counterpuncher\r
 name: "Counterpuncher"\r
 status: draft\r
@@ -4629,20 +4629,20 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Create Water Action."\r
 action: "Cast Create Water: This character may spend 1 MP to create a 1-meter-diameter sphere of water per Rank at a target location within 10 m."\r
-`,mh=`id: darkness
-name: "Darkness"
-status: draft
-plane: any
-summary: "Fills a space with darkness no lamp can pierce."
-tags: [magic, spell, darkness, stealth]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Darkness Action."
-action: "Cast Darkness: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 20 m, with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."
+`,mh=`id: darkness\r
+name: "Darkness"\r
+status: draft\r
+plane: any\r
+summary: "Fills a space with darkness no lamp can pierce."\r
+tags: [magic, spell, darkness, stealth]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Darkness Action."\r
+action: "Cast Darkness: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 20 m, with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."\r
 `,hh=`id: daze\r
 name: "Daze"\r
 status: draft\r
@@ -4656,20 +4656,20 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Daze Action."\r
 action: "Cast Daze: This character may spend 1 MP to give the Flat-Footed Condition to a character within 20 m for the following Round."\r
-`,gh=`id: detect-magic
-name: "Detect Magic"
-status: draft
-plane: any
-summary: "Senses the magic nearby."
-tags: [magic, spell, senses, utility]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Detect Magic Action."
-action: "Cast Detect Magic: This character may spend 1 MP to sense every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."
+`,gh=`id: detect-magic\r
+name: "Detect Magic"\r
+status: draft\r
+plane: any\r
+summary: "Senses the magic nearby."\r
+tags: [magic, spell, senses, utility]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Detect Magic Action."\r
+action: "Cast Detect Magic: This character may spend 1 MP to sense every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."\r
 `,_h=`id: disarm\r
 name: "Disarm"\r
 status: draft\r
@@ -4681,20 +4681,20 @@ minStats: { grace: 5, intuition: 3 }\r
 prerequisites: [brawler]\r
 effect: "This character gains the Disarm Action."\r
 action: "Disarm: This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet."\r
-`,vh=`id: dispel-magic
-name: "Dispel Magic"
-status: placeholder
-plane: any
-summary: "Unravels enchantments."
-tags: [magic, spell, utility]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Dispel Magic Action."
-action: "Cast Dispel Magic: This character may spend 2 MP to reduce the Rank of one (Enchantment) Condition on a character or object within 10 m by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."
+`,vh=`id: dispel-magic\r
+name: "Dispel Magic"\r
+status: placeholder\r
+plane: any\r
+summary: "Unravels enchantments."\r
+tags: [magic, spell, utility]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Dispel Magic Action."\r
+action: "Cast Dispel Magic: This character may spend 2 MP to reduce the Rank of one (Enchantment) Condition on a character or object within 10 m by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."\r
 `,yh=`id: earthen-spike\r
 name: "Earthen Spike"\r
 status: draft\r
@@ -4708,34 +4708,34 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Earthen Spike Action."\r
 action: "Cast Earthen Spike: This character may spend 2 MP to Attack a target standing on earth or stone with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (4 Piercing per Rank) (Attack Stat: Magic). Characters damaged by Cast Earthen Spike gain the Prone Condition."\r
-`,bh=`id: elemental-ward
-name: "Elemental Ward"
-status: placeholder
-plane: any
-summary: "Shields a character from one kind of elemental damage."
-tags: [magic, spell, enchantment, resistance]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Elemental Ward Action."
-action: "Cast Elemental Ward: This character may spend 1 MP to give the Elemental Ward Condition to a character within 3 m, against Heat, Cold, Electrical or EMP (the caster's choice). The Condition's Rank is equal to the caster's Elemental Ward Rank."
-`,xh=`id: entangle
-name: "Entangle"
-status: placeholder
-plane: any
-summary: "Makes the ground grab at the legs of everyone nearby."
-tags: [magic, spell, earth, hindrance]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Entangle Action."
-action: "Cast Entangle: This character may spend 2 MP to choose a point within 20 m. Every character within 2 m per Rank of that point gains the Rooted Condition, at a Rank equal to the caster's Entangle Rank."
+`,bh=`id: elemental-ward\r
+name: "Elemental Ward"\r
+status: placeholder\r
+plane: any\r
+summary: "Shields a character from one kind of elemental damage."\r
+tags: [magic, spell, enchantment, resistance]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Elemental Ward Action."\r
+action: "Cast Elemental Ward: This character may spend 1 MP to give the Elemental Ward Condition to a character within 3 m, against Heat, Cold, Electrical or EMP (the caster's choice). The Condition's Rank is equal to the caster's Elemental Ward Rank."\r
+`,xh=`id: entangle\r
+name: "Entangle"\r
+status: placeholder\r
+plane: any\r
+summary: "Makes the ground grab at the legs of everyone nearby."\r
+tags: [magic, spell, earth, hindrance]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Entangle Action."\r
+action: "Cast Entangle: This character may spend 2 MP to choose a point within 20 m. Every character within 2 m per Rank of that point gains the Rooted Condition, at a Rank equal to the caster's Entangle Rank."\r
 `,Sh=`id: expert-archer\r
 name: "Expert Archer"\r
 status: draft\r
@@ -4784,20 +4784,20 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Fear Action."\r
 action: "Cast Fear: This character may spend 1 MP to give the Frightened Condition to a character within 20 m. The Condition's Rank is equal to the caster's Fear Rank."\r
-`,Eh=`id: featherfall
-name: "Featherfall"
-status: placeholder
-plane: any
-summary: "Slows a fall to a gentle drift."
-tags: [magic, spell, air, enchantment, movement]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Featherfall Action."
-action: "Cast Featherfall: This character may spend 1 MP to give the Featherfall Condition to a character within 10 m. The Condition's Rank is equal to the caster's Featherfall Rank."
+`,Eh=`id: featherfall\r
+name: "Featherfall"\r
+status: placeholder\r
+plane: any\r
+summary: "Slows a fall to a gentle drift."\r
+tags: [magic, spell, air, enchantment, movement]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Featherfall Action."\r
+action: "Cast Featherfall: This character may spend 1 MP to give the Featherfall Condition to a character within 10 m. The Condition's Rank is equal to the caster's Featherfall Rank."\r
 `,Dh=`id: field-medicine\r
 name: "Field Medicine"\r
 status: draft\r
@@ -4807,35 +4807,35 @@ tags: [medicine, healing, combat]\r
 category: ability\r
 effect: "This character gains the Field Medicine Action."\r
 action: "Field Medicine: As a Full RP Action, this character may make a Grace or Memory check to remove a Condition from a character within 1 m. For every 5 points the roll exceeds 10, one Rank of a Condition is removed."\r
-`,Oh=`id: fireball
-name: "Fireball"
-status: draft
-plane: any
-summary: "Hurls a ball of fire that bursts on impact."
-tags: [magic, spell, fire, attack]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-prerequisites: [create-fire]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Fireball Action."
-action: "Cast Fireball: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (2 Blunt per Rank, 4 Heat per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters and Items damaged by Cast Fireball gain the Burning Condition."
-`,kh=`id: fog-cloud
-name: "Fog Cloud"
-status: draft
-plane: any
-summary: "Summons a thick, rolling fog."
-tags: [magic, spell, water, air, stealth]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Fog Cloud Action."
-action: "Cast Fog Cloud: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 30 m, with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."
+`,Oh=`id: fireball\r
+name: "Fireball"\r
+status: draft\r
+plane: any\r
+summary: "Hurls a ball of fire that bursts on impact."\r
+tags: [magic, spell, fire, attack]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+prerequisites: [create-fire]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Fireball Action."\r
+action: "Cast Fireball: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (2 Blunt per Rank, 4 Heat per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters and Items damaged by Cast Fireball gain the Burning Condition."\r
+`,kh=`id: fog-cloud\r
+name: "Fog Cloud"\r
+status: draft\r
+plane: any\r
+summary: "Summons a thick, rolling fog."\r
+tags: [magic, spell, water, air, stealth]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Fog Cloud Action."\r
+action: "Cast Fog Cloud: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 30 m, with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."\r
 `,Ah=`id: grappler\r
 name: "Grappler"\r
 status: draft\r
@@ -4848,78 +4848,78 @@ minStats: { power: 4, endurance: 3, grace: 2 }\r
 prerequisites: [brawler]\r
 effect: "- This character gains the Grapple Action.\\n- Rank *5 added to Skill Check rolls involving grappling or escaping a hold."\r
 action: "Grapple: This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character's Grappler Rank for as long as this character keeps hold, and this character can't move while holding them."\r
-`,jh=`id: greater-heal
-name: "Greater Heal"
-status: draft
-plane: any
-summary: "Mends grievous wounds."
-tags: [magic, spell, healing]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 5 }
-prerequisites: [heal]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Greater Heal Action."
-action: "Cast Greater Heal: This character may spend 3 MP to heal a living character within 3 m, restoring 8 HP per Rank plus the caster's Magic and ending the Severe Bleeding Condition."
-`,Mh=`id: gust
-name: "Gust"
-status: placeholder
-plane: any
-summary: "Knocks people flat with a blast of wind."
-tags: [magic, spell, air, hindrance]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Gust Action."
-action: "Cast Gust: This character may spend 1 MP to choose a point within 10 m. Every character within 2 m per Rank of that point is pushed 3 m per Rank away from the caster and gains the Prone Condition."
-`,Nh=`id: haste
-name: "Haste"
-status: placeholder
-plane: any
-summary: "Speeds a character up."
-tags: [magic, spell, enchantment, movement]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 4 }
-prerequisites: [magical-grace]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Haste Action."
-action: "Cast Haste: This character may spend 2 MP to give the Hasted Condition to a character within 3 m. The Condition's Rank is equal to the caster's Haste Rank."
-`,Ph=`id: heal
-name: "Heal"
-status: draft
-plane: any
-summary: "Closes a living character's wounds."
-tags: [magic, spell, healing]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Heal Action."
-action: "Cast Heal: This character may spend 1 MP to heal a living character within 3 m per Rank, restoring 4 HP per Rank plus the caster's Magic."
-`,Fh=`id: hoarfrost
-name: "Hoarfrost"
-status: draft
-plane: any
-summary: "Blasts an area with killing frost."
-tags: [magic, spell, cold, attack]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Hoarfrost Action."
-action: "Cast Hoarfrost: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (5 Cold per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank)."
+`,jh=`id: greater-heal\r
+name: "Greater Heal"\r
+status: draft\r
+plane: any\r
+summary: "Mends grievous wounds."\r
+tags: [magic, spell, healing]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 5 }\r
+prerequisites: [heal]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Greater Heal Action."\r
+action: "Cast Greater Heal: This character may spend 3 MP to heal a living character within 3 m, restoring 8 HP per Rank plus the caster's Magic and ending the Severe Bleeding Condition."\r
+`,Mh=`id: gust\r
+name: "Gust"\r
+status: placeholder\r
+plane: any\r
+summary: "Knocks people flat with a blast of wind."\r
+tags: [magic, spell, air, hindrance]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Gust Action."\r
+action: "Cast Gust: This character may spend 1 MP to choose a point within 10 m. Every character within 2 m per Rank of that point is pushed 3 m per Rank away from the caster and gains the Prone Condition."\r
+`,Nh=`id: haste\r
+name: "Haste"\r
+status: placeholder\r
+plane: any\r
+summary: "Speeds a character up."\r
+tags: [magic, spell, enchantment, movement]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 4 }\r
+prerequisites: [magical-grace]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Haste Action."\r
+action: "Cast Haste: This character may spend 2 MP to give the Hasted Condition to a character within 3 m. The Condition's Rank is equal to the caster's Haste Rank."\r
+`,Ph=`id: heal\r
+name: "Heal"\r
+status: draft\r
+plane: any\r
+summary: "Closes a living character's wounds."\r
+tags: [magic, spell, healing]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Heal Action."\r
+action: "Cast Heal: This character may spend 1 MP to heal a living character within 3 m per Rank, restoring 4 HP per Rank plus the caster's Magic."\r
+`,Fh=`id: hoarfrost\r
+name: "Hoarfrost"\r
+status: draft\r
+plane: any\r
+summary: "Blasts an area with killing frost."\r
+tags: [magic, spell, cold, attack]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Hoarfrost Action."\r
+action: "Cast Hoarfrost: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (5 Cold per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank)."\r
 `,Ih=`id: hunter\r
 name: "Hunter"\r
 status: draft\r
@@ -4950,34 +4950,34 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Ice Lance Action."\r
 action: "Cast Ice Lance: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (3 Piercing per Rank, 2 Cold per Rank) (Attack Stat: Magic)."\r
-`,Rh=`id: infravision
-name: "Infravision"
-status: draft
-plane: any
-summary: "Lets a character see through walls and smoke for a time."
-tags: [magic, spell, senses, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Infravision Action."
-action: "Cast Infravision: This character may spend 1 MP to give the Infravision Condition to a character within 3 m. The Condition's Rank is equal to the caster's Infravision Rank."
-`,zh=`id: invisibility
-name: "Invisibility"
-status: placeholder
-plane: any
-summary: "Hides a character from sight."
-tags: [magic, spell, stealth, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 4 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Invisibility Action."
-action: "Cast Invisibility: This character may spend 2 MP to give the Invisible Condition to a character within 3 m. The Condition's Rank is equal to the caster's Invisibility Rank."
+`,Rh=`id: infravision\r
+name: "Infravision"\r
+status: draft\r
+plane: any\r
+summary: "Lets a character see through walls and smoke for a time."\r
+tags: [magic, spell, senses, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Infravision Action."\r
+action: "Cast Infravision: This character may spend 1 MP to give the Infravision Condition to a character within 3 m. The Condition's Rank is equal to the caster's Infravision Rank."\r
+`,zh=`id: invisibility\r
+name: "Invisibility"\r
+status: placeholder\r
+plane: any\r
+summary: "Hides a character from sight."\r
+tags: [magic, spell, stealth, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 4 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Invisibility Action."\r
+action: "Cast Invisibility: This character may spend 2 MP to give the Invisible Condition to a character within 3 m. The Condition's Rank is equal to the caster's Invisibility Rank."\r
 `,Bh=`id: knife-work\r
 name: "Knife Work"\r
 status: draft\r
@@ -5000,20 +5000,20 @@ minStats: { power: 5, endurance: 5, grace: 3, demeanor: 3 }\r
 prerequisites: [rider-basic-animals]\r
 effect: "- This character gains the Charge Action.\\n- This character can request Advantage on rolls to stay in the saddle or keep control of their mount in a fight."\r
 action: "Charge: While mounted, this character may Move up to their mount's Movement in a straight line toward a target and Attack it with a melee weapon at the end, adding +3 to the damage."\r
-`,Hh=`id: light
-name: "Light"
-status: placeholder
-plane: any
-summary: "Makes an object shine like a lamp."
-tags: [magic, spell, light, utility]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Light Action."
-action: "Cast Light: This character may spend 1 MP to give the Glowing Condition to an object within 3 m. The Condition's Rank is equal to the caster's Light Rank."
+`,Hh=`id: light\r
+name: "Light"\r
+status: placeholder\r
+plane: any\r
+summary: "Makes an object shine like a lamp."\r
+tags: [magic, spell, light, utility]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Light Action."\r
+action: "Cast Light: This character may spend 1 MP to give the Glowing Condition to an object within 3 m. The Condition's Rank is equal to the caster's Light Rank."\r
 `,Uh=`id: lightning\r
 name: "Lightning"\r
 status: draft\r
@@ -5027,62 +5027,62 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Lightning Action."\r
 action: "Cast Lightning: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 Heat per Rank, 5 Electrical per Rank, 2 EMP per Rank) (Attack Stat: Magic)."\r
-`,Wh=`id: magical-endurance
-name: "Magical Endurance"
-status: draft
-plane: any
-summary: "Magically boosts a character's Endurance."
-tags: [magic, spell, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Magical Endurance Action."
-action: "Cast Magical Endurance: This character may spend 1 MP to give the Magical Endurance Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Endurance Rank."
-`,Gh=`id: magical-flight
-name: "Magical Flight"
-status: draft
-plane: any
-summary: "Lets a character fly for a time."
-tags: [magic, spell, air, enchantment, movement]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 4 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Magical Flight Action."
-action: "Cast Magical Flight: This character may spend 2 MP to give the Magical Flight Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Flight Rank."
-`,Kh=`id: magical-grace
-name: "Magical Grace"
-status: draft
-plane: any
-summary: "Magically boosts a character's Grace."
-tags: [magic, spell, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Magical Grace Action."
-action: "Cast Magical Grace: This character may spend 1 MP to give the Magical Grace Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Grace Rank."
-`,qh=`id: magical-strength
-name: "Magical Strength"
-status: draft
-plane: any
-summary: "Magically boosts a character's Power."
-tags: [magic, spell, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Magical Strength Action."
-action: "Cast Magical Strength: This character may spend 1 MP to give the Magical Strength Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Strength Rank."
+`,Wh=`id: magical-endurance\r
+name: "Magical Endurance"\r
+status: draft\r
+plane: any\r
+summary: "Magically boosts a character's Endurance."\r
+tags: [magic, spell, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Magical Endurance Action."\r
+action: "Cast Magical Endurance: This character may spend 1 MP to give the Magical Endurance Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Endurance Rank."\r
+`,Gh=`id: magical-flight\r
+name: "Magical Flight"\r
+status: draft\r
+plane: any\r
+summary: "Lets a character fly for a time."\r
+tags: [magic, spell, air, enchantment, movement]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 4 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Magical Flight Action."\r
+action: "Cast Magical Flight: This character may spend 2 MP to give the Magical Flight Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Flight Rank."\r
+`,Kh=`id: magical-grace\r
+name: "Magical Grace"\r
+status: draft\r
+plane: any\r
+summary: "Magically boosts a character's Grace."\r
+tags: [magic, spell, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Magical Grace Action."\r
+action: "Cast Magical Grace: This character may spend 1 MP to give the Magical Grace Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Grace Rank."\r
+`,qh=`id: magical-strength\r
+name: "Magical Strength"\r
+status: draft\r
+plane: any\r
+summary: "Magically boosts a character's Power."\r
+tags: [magic, spell, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Magical Strength Action."\r
+action: "Cast Magical Strength: This character may spend 1 MP to give the Magical Strength Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Strength Rank."\r
 `,Jh=`id: martial-artist\r
 name: "Martial Artist"\r
 status: draft\r
@@ -5104,20 +5104,20 @@ mastery: true\r
 minStats: { grace: 8, power: 6, endurance: 6, intuition: 5 }\r
 prerequisites: [martial-artist]\r
 effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character can request Advantage on Attack Rolls made with natural weapons."\r
-`,Xh=`id: mending
-name: "Mending"
-status: draft
-plane: any
-summary: "Repairs damaged objects."
-tags: [magic, spell, repair]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Mending Action."
-action: "Cast Mending: This character may spend 1 MP to repair an object within 3 m, restoring 4 HP per Rank plus the caster's Magic. Mending can't repair a Destroyed object."
+`,Xh=`id: mending\r
+name: "Mending"\r
+status: draft\r
+plane: any\r
+summary: "Repairs damaged objects."\r
+tags: [magic, spell, repair]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Mending Action."\r
+action: "Cast Mending: This character may spend 1 MP to repair an object within 3 m, restoring 4 HP per Rank plus the caster's Magic. Mending can't repair a Destroyed object."\r
 `,Zh=`id: meteor\r
 name: "Meteor"\r
 status: draft\r
@@ -5157,17 +5157,17 @@ minStats: { grace: 4, intuition: 4, endurance: 3 }\r
 prerequisites: [hunter]\r
 effect: "- Rank *1 added to this character's Attack Rolls against monsters and extraplanar beings.\\n- +3 Defense against a creature this character has marked with Mark Quarry."\r
 modifiers: "Attack Rolls +1 per Rank (monsters and extraplanar beings), Defense +3 (against a marked quarry)"\r
-`,eg=`id: natural-breath-weapon
-name: "Natural Breath Weapon"
-status: draft
-plane: any
-summary: "A biology that lets the character use their breath as a tool or weapon."
-tags: [breath, natural-weapon, combat, site-example]
-category: ability
-ranked: true
-background: true
-minStats: { endurance: 3 }
-effect: "- This character can Attack with the Breath Weapon natural weapon.\\n- Rank *2 added to the Breath Weapon's damage."
+`,eg=`id: natural-breath-weapon\r
+name: "Natural Breath Weapon"\r
+status: draft\r
+plane: any\r
+summary: "A biology that lets the character use their breath as a tool or weapon."\r
+tags: [breath, natural-weapon, combat, site-example]\r
+category: ability\r
+ranked: true\r
+background: true\r
+minStats: { endurance: 3 }\r
+effect: "- This character can Attack with the Breath Weapon natural weapon.\\n- Rank *2 added to the Breath Weapon's damage."\r
 `,tg=`id: rally\r
 name: "Rally"\r
 status: draft\r
@@ -5188,20 +5188,20 @@ category: ability\r
 minStats: { endurance: 4, power: 3, demeanor: 2 }\r
 effect: "This character gains the Shieldwall Action."\r
 action: "Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +4 Defense for the Round."\r
-`,rg=`id: shield
-name: "Shield"
-status: placeholder
-plane: any
-summary: "Wraps a character in a shimmering barrier."
-tags: [magic, spell, enchantment, defense]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Shield Action."
-action: "Cast Shield: This character may spend 1 MP to give the Shielded Condition to a character within 3 m. The Condition's Rank is equal to the caster's Shield Rank."
+`,rg=`id: shield\r
+name: "Shield"\r
+status: placeholder\r
+plane: any\r
+summary: "Wraps a character in a shimmering barrier."\r
+tags: [magic, spell, enchantment, defense]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Shield Action."\r
+action: "Cast Shield: This character may spend 1 MP to give the Shielded Condition to a character within 3 m. The Condition's Rank is equal to the caster's Shield Rank."\r
 `,ig=`id: sht-talk\r
 name: "Sh!t Talk"\r
 status: draft\r
@@ -5212,91 +5212,91 @@ category: ability\r
 minStats: { persuasion: 4, demeanor: 3 }\r
 effect: "This character gains the Sh!t Talk Action."\r
 action: "Sh!t Talk: As an RP Action and Defend, this character keeps up a stream of fast talk. One character within 5 m who can hear and understand them takes -2 to Attack Rolls against this character this Round."\r
-`,ag=`id: silence
-name: "Silence"
-status: placeholder
-plane: any
-summary: "Smothers all sound in an area."
-tags: [magic, spell, stealth]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Silence Action."
-action: "Cast Silence: This character may spend 2 MP to choose a point within 30 m. Every character within 3 m per Rank of that point gains the Silenced Condition, at a Rank equal to the caster's Silence Rank."
-`,og=`id: skin-of-stone
-name: "Skin of Stone"
-status: draft
-plane: any
-summary: "Turns a character's skin to stone for a time."
-tags: [magic, spell, earth, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-prerequisites: [magical-endurance]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Stone Skin Action."
-action: "Cast Stone Skin: This character may spend 2 MP to give the Stone Skin Condition to a character within 3 m. The Condition's Rank is equal to the caster's Skin of Stone Rank."
-`,sg=`id: sleep
-name: "Sleep"
-status: placeholder
-plane: any
-summary: "Puts a target into a deep, sudden sleep."
-tags: [magic, spell, mind, hindrance]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Sleep Action."
-action: "Cast Sleep: This character may spend 2 MP to give the Asleep Condition to a character within 20 m. The Condition's Rank is equal to the caster's Sleep Rank."
-`,cg=`id: slow
-name: "Slow"
-status: placeholder
-plane: any
-summary: "Drags a target's movements to a crawl."
-tags: [magic, spell, hindrance]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 3 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Slow Action."
-action: "Cast Slow: This character may spend 2 MP to give the Slowed Condition to a character within 20 m. The Condition's Rank is equal to the caster's Slow Rank."
-`,lg=`id: speak-with-animals
-name: "Speak with Animals"
-status: draft
-plane: any
-summary: "Lets the caster talk with beasts."
-tags: [magic, spell, animals, communication]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Speak with Animals Action."
-action: "Cast Speak with Animals: This character may spend 1 MP to understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."
-`,ug=`id: spider-climb
-name: "Spider Climb"
-status: draft
-plane: any
-summary: "Lets a character climb walls and walk on ceilings."
-tags: [magic, spell, enchantment, movement]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Spider Climb Action."
-action: "Cast Spider Climb: This character may spend 1 MP to give the Spider Climb Condition to a character within 3 m. The Condition's Rank is equal to the caster's Spider Climb Rank."
+`,ag=`id: silence\r
+name: "Silence"\r
+status: placeholder\r
+plane: any\r
+summary: "Smothers all sound in an area."\r
+tags: [magic, spell, stealth]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Silence Action."\r
+action: "Cast Silence: This character may spend 2 MP to choose a point within 30 m. Every character within 3 m per Rank of that point gains the Silenced Condition, at a Rank equal to the caster's Silence Rank."\r
+`,og=`id: skin-of-stone\r
+name: "Skin of Stone"\r
+status: draft\r
+plane: any\r
+summary: "Turns a character's skin to stone for a time."\r
+tags: [magic, spell, earth, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+prerequisites: [magical-endurance]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Stone Skin Action."\r
+action: "Cast Stone Skin: This character may spend 2 MP to give the Stone Skin Condition to a character within 3 m. The Condition's Rank is equal to the caster's Skin of Stone Rank."\r
+`,sg=`id: sleep\r
+name: "Sleep"\r
+status: placeholder\r
+plane: any\r
+summary: "Puts a target into a deep, sudden sleep."\r
+tags: [magic, spell, mind, hindrance]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Sleep Action."\r
+action: "Cast Sleep: This character may spend 2 MP to give the Asleep Condition to a character within 20 m. The Condition's Rank is equal to the caster's Sleep Rank."\r
+`,cg=`id: slow\r
+name: "Slow"\r
+status: placeholder\r
+plane: any\r
+summary: "Drags a target's movements to a crawl."\r
+tags: [magic, spell, hindrance]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 3 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Slow Action."\r
+action: "Cast Slow: This character may spend 2 MP to give the Slowed Condition to a character within 20 m. The Condition's Rank is equal to the caster's Slow Rank."\r
+`,lg=`id: speak-with-animals\r
+name: "Speak with Animals"\r
+status: draft\r
+plane: any\r
+summary: "Lets the caster talk with beasts."\r
+tags: [magic, spell, animals, communication]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Speak with Animals Action."\r
+action: "Cast Speak with Animals: This character may spend 1 MP to understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."\r
+`,ug=`id: spider-climb\r
+name: "Spider Climb"\r
+status: draft\r
+plane: any\r
+summary: "Lets a character climb walls and walk on ceilings."\r
+tags: [magic, spell, enchantment, movement]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Spider Climb Action."\r
+action: "Cast Spider Climb: This character may spend 1 MP to give the Spider Climb Condition to a character within 3 m. The Condition's Rank is equal to the caster's Spider Climb Rank."\r
 `,dg=`id: sprinter\r
 name: "Sprinter"\r
 status: draft\r
@@ -5307,20 +5307,20 @@ category: ability\r
 minStats: { grace: 4, endurance: 3 }\r
 effect: "This character gains the Sprint Action."\r
 action: "Sprint: This character takes Full Movement in a straight line, with +10 m added to its Movement for the Round."\r
-`,fg=`id: staunch
-name: "Staunch"
-status: draft
-plane: any
-summary: "Closes a bleeding wound with a touch."
-tags: [magic, spell, healing]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 1 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Staunch Action."
-action: "Cast Staunch: This character may spend 1 MP to end the Severe Bleeding Condition on a character within 3 m."
+`,fg=`id: staunch\r
+name: "Staunch"\r
+status: draft\r
+plane: any\r
+summary: "Closes a bleeding wound with a touch."\r
+tags: [magic, spell, healing]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 1 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Staunch Action."\r
+action: "Cast Staunch: This character may spend 1 MP to end the Severe Bleeding Condition on a character within 3 m."\r
 `,pg=`id: swordsman\r
 name: "Swordsman"\r
 status: draft\r
@@ -5357,20 +5357,20 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Telekinesis Action."\r
 action: "Cast Telekinesis: This character may spend 1 MP to lift and move an object of up to 10 kg per Rank within 10 m, up to 5 m per Round, for as long as they keep using their Action on it."\r
-`,gg=`id: thunderclap
-name: "Thunderclap"
-status: placeholder
-plane: any
-summary: "A deafening crack of thunder."
-tags: [magic, spell, sound, attack]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Thunderclap Action."
-action: "Cast Thunderclap: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (3 Blunt per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters damaged by Cast Thunderclap gain the Deafened Condition."
+`,gg=`id: thunderclap\r
+name: "Thunderclap"\r
+status: placeholder\r
+plane: any\r
+summary: "A deafening crack of thunder."\r
+tags: [magic, spell, sound, attack]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Thunderclap Action."\r
+action: "Cast Thunderclap: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (3 Blunt per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters damaged by Cast Thunderclap gain the Deafened Condition."\r
 `,_g=`id: wall-of-stone\r
 name: "Wall of Stone"\r
 status: draft\r
@@ -5385,21 +5385,21 @@ prerequisites: [skin-of-stone]\r
 list: magic\r
 effect: "This character gains the Cast Wall of Stone Action."\r
 action: "Cast Wall of Stone: This character may spend 3 MP to raise a stone wall 2 m high, 3 m long per Rank and 0.5 m thick, at a point within 20 m. The wall is a Structure with 20 HP per Rank and gives Heavy Cover to characters behind it."\r
-`,vg=`id: water-breathing
-name: "Water Breathing"
-status: placeholder
-plane: any
-summary: "Lets a character breathe underwater."
-tags: [magic, spell, water, enchantment]
-category: ability
-types: [potion]
-ranked: true
-minStats: { magic: 2 }
-prerequisites: [create-water]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "This character gains the Cast Water Breathing Action."
-action: "Cast Water Breathing: This character may spend 1 MP to give the Water Breathing Condition to a character within 3 m. The Condition's Rank is equal to the caster's Water Breathing Rank."
+`,vg=`id: water-breathing\r
+name: "Water Breathing"\r
+status: placeholder\r
+plane: any\r
+summary: "Lets a character breathe underwater."\r
+tags: [magic, spell, water, enchantment]\r
+category: ability\r
+types: [potion]\r
+ranked: true\r
+minStats: { magic: 2 }\r
+prerequisites: [create-water]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "This character gains the Cast Water Breathing Action."\r
+action: "Cast Water Breathing: This character may spend 1 MP to give the Water Breathing Condition to a character within 3 m. The Condition's Rank is equal to the caster's Water Breathing Rank."\r
 `,yg=`id: weak-point\r
 name: "Weak Point"\r
 status: draft\r
@@ -5528,19 +5528,19 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts ten minutes per Rank, or until the caster or their allies harm this character."\r
 effect: "This character regards the caster as a trusted friend and won't Attack them. The caster can request Advantage on Social rolls against this character."\r
-`,jg=`id: corroding
-name: "Corroding"
-status: placeholder
-plane: any
-summary: "Being eaten away by acid."
-tags: [acid, hazard]
-category: condition
-types: [hazard]
-ranked: true
-conveyed: true
-temporary: "Lasts 3 combat Rounds or 30 seconds."
-effect: "This character or object suffers 2 Corrosive damage per Rank each Round, or every 10 seconds outside of combat."
-action: "The character may spend their Action washing or scraping off the acid to reduce the Rank of Corroding by 1. A character loses Corroding at Rank 0."
+`,jg=`id: corroding\r
+name: "Corroding"\r
+status: placeholder\r
+plane: any\r
+summary: "Being eaten away by acid."\r
+tags: [acid, hazard]\r
+category: condition\r
+types: [hazard]\r
+ranked: true\r
+conveyed: true\r
+temporary: "Lasts 3 combat Rounds or 30 seconds."\r
+effect: "This character or object suffers 2 Corrosive damage per Rank each Round, or every 10 seconds outside of combat."\r
+action: "The character may spend their Action washing or scraping off the acid to reduce the Rank of Corroding by 1. A character loses Corroding at Rank 0."\r
 `,Mg=`id: cybernetic-intelligence\r
 name: "Cybernetic Intelligence"\r
 status: draft\r
@@ -8891,15 +8891,15 @@ category: other\r
 conveyed: true\r
 temporary: "lost when the character is no longer possessed"\r
 effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."\r
-`,DS=`id: acid-breath
-name: "Acid Breath"
-status: draft
-plane: any
-summary: "Breath that comes out as acid."
-tags: [breath, natural weapon, acid]
-category: skill
-prerequisites: [natural-breath-weapon]
-effect: "- This character's Breath Weapon deals Corrosive damage in place of Blunt, with +2 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Corroding Condition.\\n- Can't be taken alongside Fire Breath or Frost Breath."
+`,DS=`id: acid-breath\r
+name: "Acid Breath"\r
+status: draft\r
+plane: any\r
+summary: "Breath that comes out as acid."\r
+tags: [breath, natural weapon, acid]\r
+category: skill\r
+prerequisites: [natural-breath-weapon]\r
+effect: "- This character's Breath Weapon deals Corrosive damage in place of Blunt, with +2 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Corroding Condition.\\n- Can't be taken alongside Fire Breath or Frost Breath."\r
 `,OS=`id: advanced-cooking\r
 name: "Advanced Cooking"\r
 status: draft\r
@@ -9598,15 +9598,15 @@ tags: [law, contracts, awareness]\r
 category: skill\r
 minStats: { memory: 4, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to reading contracts, laws, regulations and other documents closely, such as spotting hidden clauses, omissions, loopholes and flaws."\r
-`,GC=`id: fire-breath
-name: "Fire Breath"
-status: draft
-plane: any
-summary: "Breath that comes out as fire."
-tags: [breath, natural weapon, fire]
-category: skill
-prerequisites: [natural-breath-weapon]
-effect: "- This character's Breath Weapon deals Heat damage in place of Blunt, with +4 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Burning Condition.\\n- Can't be taken alongside Frost Breath or Acid Breath."
+`,GC=`id: fire-breath\r
+name: "Fire Breath"\r
+status: draft\r
+plane: any\r
+summary: "Breath that comes out as fire."\r
+tags: [breath, natural weapon, fire]\r
+category: skill\r
+prerequisites: [natural-breath-weapon]\r
+effect: "- This character's Breath Weapon deals Heat damage in place of Blunt, with +4 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Burning Condition.\\n- Can't be taken alongside Frost Breath or Acid Breath."\r
 `,KC=`id: first-contact-protocols\r
 name: "First Contact Protocols"\r
 status: draft\r
@@ -9655,15 +9655,15 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 5, power: 3, endurance: 3 }\r
 effect: "This character is capable of vaulting low obstacles during Movement without a Skill Check. Rank *5 added to Grace Skill Check rolls to overcome obstacles during Movement."\r
-`,ZC=`id: frost-breath
-name: "Frost Breath"
-status: draft
-plane: any
-summary: "Breath that comes out freezing cold."
-tags: [breath, natural weapon, cold]
-category: skill
-prerequisites: [natural-breath-weapon]
-effect: "- This character's Breath Weapon deals Cold damage in place of Blunt, with +3 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Slowed Condition.\\n- Can't be taken alongside Fire Breath or Acid Breath."
+`,ZC=`id: frost-breath\r
+name: "Frost Breath"\r
+status: draft\r
+plane: any\r
+summary: "Breath that comes out freezing cold."\r
+tags: [breath, natural weapon, cold]\r
+category: skill\r
+prerequisites: [natural-breath-weapon]\r
+effect: "- This character's Breath Weapon deals Cold damage in place of Blunt, with +3 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Slowed Condition.\\n- Can't be taken alongside Fire Breath or Acid Breath."\r
 `,QC=`id: gate-operation\r
 name: "Gate Operation"\r
 status: draft\r
@@ -10913,6 +10913,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, bows."\r
 tags: [combat, ranged, archery]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, power: 3, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Bow.\\n- +3 to Attack Rolls made with a Bow, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Bow without a skill check."\r
@@ -10924,6 +10925,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, crossbows."\r
 tags: [combat, ranged, archery]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 2, power: 2, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Crossbow.\\n- +3 to Attack Rolls made with a Crossbow, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check."\r
@@ -10935,6 +10937,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, daggers and knives."\r
 tags: [combat, melee, blades]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Dagger.\\n- +3 to Attack Rolls made with a Dagger, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check."\r
@@ -10946,6 +10949,7 @@ plane: earth\r
 summary: "Fighting with, and maintaining, flamethrowers and their fuel tanks."\r
 tags: [combat, heavy weapons, fire]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { endurance: 3, power: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Flamethrower.\\n- +3 to Attack Rolls made with a Flamethrower, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check."\r
@@ -10957,6 +10961,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, heavy two-handed swords."\r
 tags: [combat, melee, swords]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { power: 5, endurance: 4, grace: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Greatsword.\\n- +3 to Attack Rolls made with a Greatsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check."\r
@@ -10968,6 +10973,7 @@ plane: earth\r
 summary: "Throwing, launching and safely handling grenades."\r
 tags: [combat, explosives, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 2, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Grenade.\\n- +3 to Attack Rolls made with a Grenade, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Grenade without a skill check."\r
@@ -10979,6 +10985,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, a longsword."\r
 tags: [combat, melee, swords, site-example]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 4, power: 4, endurance: 4 }\r
 effect: "- Rank *5 added to skill check rolls involving a Longsword.\\n- +3 to Attack Rolls made with a Longsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check."\r
@@ -10990,6 +10997,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, clubs, maces, flails and war hammers."\r
 tags: [combat, melee, blunt]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { power: 4, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Mace.\\n- +3 to Attack Rolls made with a Mace, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Mace without a skill check."\r
@@ -11001,6 +11009,7 @@ plane: earth\r
 summary: "Fighting with, and maintaining, heavy automatic weapons fired from the hip, a bipod or a mount."\r
 tags: [combat, firearms, heavy weapons, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { power: 3, endurance: 3, grace: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Machine Gun.\\n- +3 to Attack Rolls made with a Machine Gun, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check."\r
@@ -11012,6 +11021,7 @@ plane: earth\r
 summary: "Firing and maintaining shoulder-fired rockets and guided missiles."\r
 tags: [combat, explosives, heavy weapons, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { intuition: 3, logic: 2, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Missile Launcher.\\n- +3 to Attack Rolls made with a Missile Launcher, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check."\r
@@ -11023,6 +11033,7 @@ plane: earth\r
 summary: "Crewing, aiming and maintaining mortars and light field artillery."\r
 tags: [combat, explosives, artillery, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { logic: 3, intuition: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Mortar.\\n- +3 to Attack Rolls made with a Mortar, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Mortar without a skill check."\r
@@ -11034,6 +11045,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, a musket."\r
 tags: [combat, firearms, muskets, site-example]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, power: 2, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Musket.\\n- +3 to Attack Rolls made with a Musket, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Musket without a skill check."\r
@@ -11045,6 +11057,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, a pistol."\r
 tags: [combat, firearms, sidearm]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Pistol.\\n- +3 to Attack Rolls made with a Pistol, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check."\r
@@ -11056,6 +11069,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, long-hafted weapons like halberds, glaives and pikes."\r
 tags: [combat, melee, polearms]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { power: 4, grace: 3, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Polearm.\\n- +3 to Attack Rolls made with a Polearm, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Polearm without a skill check."\r
@@ -11067,6 +11081,7 @@ plane: earth\r
 summary: "Fighting with, and maintaining, a modern rifle."\r
 tags: [combat, firearms, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Rifle.\\n- +3 to Attack Rolls made with a Rifle, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Rifle without a skill check."\r
@@ -11078,6 +11093,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, one-handed swords and sabers."\r
 tags: [combat, melee, swords]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, power: 2, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Shortsword.\\n- +3 to Attack Rolls made with a Shortsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check."\r
@@ -11089,6 +11105,7 @@ plane: earth\r
 summary: "Fighting with, and maintaining, shotguns."\r
 tags: [combat, firearms]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 2, power: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Shotgun.\\n- +3 to Attack Rolls made with a Shotgun, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check."\r
@@ -11100,6 +11117,7 @@ plane: any\r
 summary: "Crewing, aiming and maintaining catapults, trebuchets, ballistae and cannons."\r
 tags: [combat, siege, artillery]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { logic: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Siege Engine.\\n- +3 to Attack Rolls made with a Siege Engine, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check."\r
@@ -11111,6 +11129,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, slings."\r
 tags: [combat, ranged]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Sling.\\n- +3 to Attack Rolls made with a Sling, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Sling without a skill check."\r
@@ -11122,6 +11141,7 @@ plane: earth\r
 summary: "Fighting with, and maintaining, long-range precision rifles."\r
 tags: [combat, firearms, military]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { intuition: 5, grace: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Sniper Rifle.\\n- +3 to Attack Rolls made with a Sniper Rifle, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check."\r
@@ -11133,6 +11153,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, spears and lances."\r
 tags: [combat, melee, polearms]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, power: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Spear.\\n- +3 to Attack Rolls made with a Spear, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Spear without a skill check."\r
@@ -11144,6 +11165,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, a staff or quarterstaff."\r
 tags: [combat, melee, staves]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Staff.\\n- +3 to Attack Rolls made with a Staff, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Staff without a skill check."\r
@@ -11155,6 +11177,7 @@ plane: any\r
 summary: "Fighting with thrown weapons like knives, axes and javelins."\r
 tags: [combat, ranged, thrown]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Throwing Weapon.\\n- +3 to Attack Rolls made with a Throwing Weapon, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check."\r
@@ -11166,6 +11189,7 @@ plane: any\r
 summary: "Fighting with, and maintaining, a war axe."\r
 tags: [combat, melee, axes]\r
 category: skill\r
+list: wielder\r
 ranked: true\r
 minStats: { power: 5, endurance: 4, grace: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a War Axe.\\n- +3 to Attack Rolls made with a War Axe, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a War Axe without a skill check."\r
@@ -11327,4 +11351,4 @@ Rules you must follow:
 Reasons: give one short line per choice, in plain words a player would use, tied to what they asked for. Targets are kind, origin, profession, past, levels (one line on why the priority stats), each listed Trait's id, and item:<id> for each item.
 
 Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,MM=Object.values(V).flat(),NM=e=>MM.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function PM(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${NM(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}. Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}t.push(``,`## Items`,`Format: id: name [category; plane; slot; damage, attack, resistances or modifiers] summary. Any-plane items suit everyone.`);for(let n of e.items){if(n.category===`currency`)continue;let e=[n.category,n.plane,n.slot?`slot ${n.slot}`:``,n.damage?`damage ${ol(n.damage)}`:``,sl(n),n.resistances?`resists ${n.resistances}`:``,n.modifiers??``,n.uses??``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${e.join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
-`)}function FM(e,t,n){let r=UM(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var IM=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function LM(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);for(let n of Array.isArray(e.items)?e.items:[])typeof n?.item==`string`&&t.add(`item:${n.item}`);return t}function RM(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var zM=(e,t)=>{let n=LM(e);return t.filter(e=>n.has(e.target))};function BM(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var VM=e=>e.filter(e=>e.reason!==`no picks left`);function HM({age:e,gender:t,height:n,weight:r}){let i=[e===void 0?``:`age ${e}`,t?.trim()?`gender ${t.trim()}`:``,n?.trim()?`height ${n.trim()}`:``,r?.trim()?`weight ${r.trim()}`:``].filter(Boolean);return i.length?`The player set this character's ${i.length>1?`${i.slice(0,-1).join(`, `)} and ${i.at(-1)}`:i[0]}. These are cosmetic. Respect them in the name, summary and reasons (use pronouns and a name that fit), but don't let them decide the Kind, packages, Traits, stats or choices.\n\n`:``}var UM=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function WM(e){let{content:t,provider:n}=e,r=e.campaign??Lc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${IM(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:jM,index:PM(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+HM(e)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=!1,g=new Map,_=e.name?.trim()||void 0,v=!1,y=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:b}=await u.send(c,{think:!v});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>FM(e.name,e.input,t)).join(` · `)),l.inputTokens+=b.inputTokens??0,l.outputTokens+=b.outputTokens??0,l.cacheReadTokens+=b.cacheReadTokens??0,l.cacheWriteTokens+=b.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let x=[];for(let a of i)if(a.name===`submit_build`){let i=UM(a.input)??{},c=UM(i.concept),l=BM(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){x.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}v=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(_=c.name.trim());let b=_?{...c,name:_}:c,S;try{S=AM(b,t,r)}catch(e){if(!(e instanceof ko))throw e;S={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in S){x.push({call:a,isError:!0,content:`The concept doesn't match the format: ${S.error}`});continue}let C=eM(S.build,t,r);for(let e of l)g.set(e.target,e);d={build:S.build,check:C,summary:u??d?.summary,reasons:[...g.values()]};let w={taken:S.taken,skipped:VM(S.skipped),...S.skippedItems.length?{skippedItems:S.skippedItems}:{}},T=C.accepted?RM(C):void 0;if(C.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Check the items too: what this character would carry for their work, fights and travels. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...T?{banked:T}:{},...w})});continue}if(T&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${T}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...w})});continue}if(C.accepted&&!S.build.items.length&&!h){o(`Build is legal; asking for items`),h=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,items:`The engine built a legal character, but it carries nothing. Submit again with the same concept and the items it would carry (from the Items in the index), with a reason for each.`,...w})});continue}let ee=C.accepted?[...LM(S.build)].filter(e=>!e.startsWith(`choice:`)&&!g.has(e)):[];if(ee.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${ee.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(C.accepted)return d.reasons=zM(S.build,d.reasons),o(`Done`),y(`accepted`,s);o(`The engine sent the concept back with ${C.errors.length+C.unknownIds.length} problems; fixing them`),x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:C.unknownIds,errors:C.errors,...w})})}else try{let e=sM(a.name,a.input,t,r);x.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof nM))throw e;x.push({call:a,isError:!0,content:e.message})}u.addResults(x)}return d?.check.accepted?(d.reasons=zM(d.build,d.reasons),y(`accepted`,i)):y(`turn-limit`,i)}var GM=class extends Error{error;constructor(e,t){super(t),this.error=e}};function KM(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new GM(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new GM(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function qM(e){let t=fM(KM(e.endpoint,e.fetcher),void 0,e.model);try{return await WM({description:e.description,name:e.name,age:e.age,gender:e.gender,height:e.height,weight:e.weight,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:XA(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof GM)return{error:e.error,message:e.message};if(e instanceof Wj)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function JM({draft:e,onChange:t,floor:n}){let r=dj(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&zA.get(e)?[zA.get(e)]:[]),a=Jc(e.kind?BA.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>V[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(V).find(t=>V[t].includes(e)),m=nj.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=Yl(e,IA),_=Xl(e,IA),v=t=>V[t].reduce((t,n)=>t+(e.points[n]??0),0),y=e=>r?.[e]?.bonus??0,b=e=>y(e)+(o[e]??0),x=t=>b(t)+(e.points[t]??0),S=e=>n?y(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):y(e),C=e=>n?.core[e]??0,w=r=>{if(!n)return t(Vl(e,r,e.core[r]-1));let i={...e.points};for(let e of V[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},T=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})};return r?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(fj,{title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,Q.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: Level a core Stat with the + beside its number.`]}),rj.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` Stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any Stat.`]}),h<=0&&rj.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,Q.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any Stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:g.map(n=>{let a=e.core[n],o=a*3,s=v(n);if(!V[n].length){let r=h>0&&_.includes(n),o=_.includes(n)?i.reduce((e,t)=>e+(t.coreBonus[n]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${n}${a===0&&!r?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:n})}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,onClick:()=>w(n),disabled:a<=C(n),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!_.includes(n)?`This character can't Level ${$(n)}`:void 0,onClick:()=>t(Vl(e,n,a+1)),disabled:!r,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(n),` - `,a+o]}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:` resource-mp`}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(n),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Cj,{bonus:o,value:a+o})]}),!_.includes(n)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't Level `,$(n),`; take these points back.`]})]},n)}let c=f(n)+Math.max(0,o-s),l=c===0&&s===0,u=V[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-x(t)),0)-Math.max(0,o-s),d=h>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${n}${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:n})}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>w(n),disabled:a<=C(n),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!d?`${$(n)}'s Stats have no room for 3 more points`:void 0,onClick:()=>t(Vl(e,n,a+1)),disabled:!d,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(n),` - `,a]}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!d&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These Stats have no room for points.`}),V[n].map(e=>{let t=x(e),n=r[e]?.max??0,i=Math.max(0,Math.min(c,n-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>T(e,-1),disabled:t<=S(e),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Add a point to ${e}`,onClick:()=>T(e,1),disabled:c===0||t>=n,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsx)(Sj,{bonus:b(e),value:t,max:n})]})]},e)})]},n)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each Stat and sets how far each can go.`})]})}var YM=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function XM(e,t){let n=e.match(/\(([^)]*)\)\s*$/);return e.split(`,`).flatMap(e=>{let r=e.trim().match(/^(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?$/),i=r&&YM(r[2]);if(!r||!i)return[];let a=n?n[1]:r[3];return[{type:i,amount:Number(r[1]),from:t,...a?{where:a.trim()}:{}}]})}function ZM(e,t,n){return e.split(/(?<=\.)\s+/).flatMap(e=>{let r=e.match(/Rank \*(\d+)/i),i=r?null:e.match(/\+(\d+) to [^.]*resist/i);if(!r&&!i||!/resist/i.test(e))return[];let a=r?Number(r[1])*t:Number(i[1]),o=new Set;for(let[t,n]of Object.entries(tl))RegExp(`all ${t} damage types`,`i`).test(e)&&n.forEach(e=>o.add(e));for(let t of nl)RegExp(`\\b${t.replace(`/`,`\\/`)}\\b`).test(e)&&o.add(t);let s=e.match(/attacks that hit (?:its|their|the) (\w+)/i)?.[1];return[...o].map(e=>({type:e,amount:a,from:n,...s?{where:s}:{}}))})}function QM(e,t,n){let r=t.flatMap(t=>{if(!t.equipped)return[];let n=t.item&&e.items.find(e=>e.id===t.item)||hl(e.items,t.name);return n?.resistances?XM(n.resistances,n.name):[]}),i=new Map;for(let e of n)i.set(e.trait,Math.max(i.get(e.trait)??0,e.rank));let a=[...i].flatMap(([t,n])=>{let r=e.traits.find(e=>e.id===t);return r?ZM(r.effect,n,r.name):[]});return[...r,...a]}var $M=e=>e.toLowerCase();function eN({items:e,held:t}){let n=(0,Z.useMemo)(()=>QM(IA,e,t),[e,t]),r=(0,Z.useId)(),i=nl.map(e=>{let t=n.filter(t=>t.type===e);return{type:e,own:t,total:t.filter(e=>!e.where).reduce((e,t)=>e+t.amount,0)}}).filter(e=>e.total!==0||e.own.some(e=>e.where&&e.amount!==0));return(0,Q.jsxs)(`div`,{className:`sheet-resistances`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Resistances`}),i.length?(0,Q.jsx)(`ul`,{className:`sheet-resistance-list`,children:i.map(({type:e,own:t,total:n},i)=>(0,Q.jsxs)(`li`,{className:`sheet-resistance`,tabIndex:0,"aria-describedby":`${r}-${i}`,children:[(0,Q.jsx)(Pj,{name:$M(e),label:e}),(0,Q.jsx)(`span`,{className:`num`,children:n}),(0,Q.jsxs)(`div`,{className:`sheet-resistance-pop`,role:`tooltip`,id:`${r}-${i}`,children:[(0,Q.jsxs)(`strong`,{className:`sheet-resistance-pop-title`,children:[e,` `,n]}),(0,Q.jsx)(`ul`,{children:t.map((e,t)=>(0,Q.jsxs)(`li`,{className:e.where?`is-partial`:void 0,children:[(0,Q.jsxs)(`span`,{children:[e.from,e.where&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` (`,e.where,`)`]})]}),(0,Q.jsx)(`span`,{className:`num`,children:e.where&&e.amount>0?`+${e.amount}`:e.amount})]},t))})]})]},e))}):(0,Q.jsx)(`p`,{className:`empty`,children:`None.`})]})}function tN({id:e,onClose:t}){let n=BA.get(e),r=n?void 0:zA.get(e),i=n??r;return i?(0,Q.jsx)(gj,{label:i.name,onClose:t,className:`lore-modal-card`,children:(0,Q.jsxs)(`div`,{className:`card headed tools-background-card ${aj(i.plane)}`,children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(lj,{plane:i.plane}),i.name]}),(0,Q.jsxs)(`span`,{className:`trait-name-chips`,children:[(0,Q.jsx)(yj,{children:n?`Kind`:$(r.type)}),(0,Q.jsx)(yj,{tone:`muted`,children:i.plane})]})]}),(0,Q.jsx)(`p`,{children:i.summary}),i.lore&&(0,Q.jsx)(`p`,{className:`muted`,children:i.lore}),n&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(wj,{stats:n.stats}),n.grants.length>0&&(0,Q.jsx)(`div`,{className:`grants`,children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),n.grants.map(e=>(0,Q.jsx)(yj,{tone:`accent`,children:ij(e.trait)},e.trait))]})}),(0,Q.jsx)(`ul`,{className:`features`,children:n.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),r&&(0,Q.jsx)(zj,{pkg:r})]})}):null}var nN=e=>e[0].toUpperCase()+e.slice(1);function rN({looks:e,onChange:t}){let[n,r]=(0,Z.useState)(),[i,a]=(0,Z.useState)(``),[o,s]=(0,Z.useState)(``),[c,l]=(0,Z.useState)(`unlisted`),[u,d]=(0,Z.useState)(``),f=()=>{a(e.age===void 0?``:String(e.age)),r(`age`)},p=()=>{l(e.gender??`unlisted`),d(e.customGender??``),r(`gender`)},m=n=>{if(n){let n=Number(i);t({...e,age:i.trim()===``||!Number.isFinite(n)?void 0:Math.min(Fl,Math.max(0,Math.floor(n)))})}r(void 0)},h=(n,r)=>{let i=n===`unlisted`?void 0:n;t({...e,gender:i,customGender:i===`custom`&&r.trim()||void 0})},g=e=>{e.currentTarget.contains(e.relatedTarget)||(h(c,u),r(void 0))},_=e=>t=>{t.key===`Enter`&&e(!0),t.key===`Escape`&&e(!1)},v=e=>{e&&h(c,u),r(void 0)},y=t=>{s(e[t]??``),r(t)},b=n=>i=>{i&&t({...e,[n]:o.trim()||void 0}),r(void 0)},x=(t,r)=>(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:r}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===t?(0,Q.jsx)(`input`,{className:`tools-look-input tools-look-size`,"aria-label":r,maxLength:20,placeholder:`—`,autoFocus:!0,value:o,onChange:e=>s(e.target.value),onBlur:()=>b(t)(!0),onKeyDown:_(b(t))}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:()=>y(t),children:(0,Q.jsx)(`strong`,{children:e[t]??`—`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the ${t}`,onMouseDown:e=>n===t&&e.preventDefault(),onClick:()=>n===t?b(t)(!0):y(t),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]});return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===`age`?(0,Q.jsx)(`input`,{className:`tools-look-input tools-look-age`,type:`number`,inputMode:`numeric`,min:0,max:Fl,step:1,"aria-label":`Age`,placeholder:`—`,autoFocus:!0,value:i,onChange:e=>a(e.target.value),onBlur:()=>m(!0),onKeyDown:_(m)}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:f,children:(0,Q.jsx)(`strong`,{children:e.age??`—`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the age`,onMouseDown:e=>n===`age`&&e.preventDefault(),onClick:()=>n===`age`?m(!0):f(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===`gender`?(0,Q.jsxs)(`span`,{className:`tools-look-gender`,onBlur:g,children:[(0,Q.jsx)(`select`,{className:`tools-look-input`,"aria-label":`Gender`,autoFocus:!0,value:c,onChange:e=>{l(e.target.value),e.target.value!==`custom`&&(h(e.target.value,``),r(void 0))},onKeyDown:e=>e.key===`Escape`&&v(!1),children:Sl.map(e=>(0,Q.jsx)(`option`,{value:e,children:nN(e)},e))}),c===`custom`&&(0,Q.jsx)(`input`,{className:`tools-look-input`,"aria-label":`Custom gender`,maxLength:40,placeholder:`In your own words`,autoFocus:!0,value:u,onChange:e=>d(e.target.value),onKeyDown:_(v)})]}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:p,children:(0,Q.jsx)(`strong`,{children:Rl(e)??`Unlisted`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the gender`,onMouseDown:e=>n===`gender`&&e.preventDefault(),onClick:()=>n===`gender`?v(!0):p(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),x(`height`,`Height`),x(`weight`,`Weight`)]})}var iN=[`Kind`,`Origin`,`Profession`,`Past`];function aN({draft:e,onLooks:t}){let[n,r]=(0,Z.useState)(),i=(0,Z.useCallback)(()=>r(void 0),[]),a=(e,t)=>t&&(0,Q.jsxs)(`span`,{className:`tools-line-item`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:iN[e]}),(0,Q.jsx)(`button`,{type:`button`,className:`link`,onClick:()=>r(t),children:(e===0?BA.get(t)?.name:zA.get(t)?.name)??t})]});return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`tools-line`,children:[(0,Q.jsx)(`p`,{className:`tools-line-row`,children:(0,Q.jsx)(rN,{looks:e,onChange:t})}),(0,Q.jsxs)(`p`,{className:`tools-line-row`,children:[a(0,e.kind),a(1,e.origin),a(2,e.profession),a(3,e.past)]})]}),n&&(0,Q.jsx)(tN,{id:n,onClose:i})]})}function oN({conditions:e,hp:t,maxHp:n,onChange:r}){let i=(0,Z.useMemo)(()=>vl(IA),[]),a=_l(t,n),[o,s]=(0,Z.useState)(!1),c=(t,n)=>r(e.map(e=>e===t?{...e,...n}:e));return(0,Q.jsxs)(`section`,{className:`tools-conditions-side`,"aria-label":`Conditions`,children:[(0,Q.jsxs)(`div`,{className:`sheet-section-head`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Conditions`}),(0,Q.jsxs)(`button`,{type:`button`,className:`sheet-section-add`,"aria-label":`Add Condition`,onClick:()=>s(!0),children:[`Add`,(0,Q.jsx)(`span`,{className:`sheet-section-add-noun`,children:` Condition`})]})]}),o&&(0,Q.jsxs)(gj,{label:`Add a Condition`,onClose:()=>s(!1),className:`sheet-add-popup`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Add a Condition`}),(0,Q.jsx)(`div`,{className:`tools-add`,children:(0,Q.jsxs)(`select`,{"aria-label":`Condition to add`,value:``,onChange:t=>{t.target.value&&(r(yl(e,IA,t.target.value)),s(!1))},children:[(0,Q.jsx)(`option`,{value:``,children:`Pick a Condition…`}),i.map(e=>(0,Q.jsx)(`option`,{value:e.id,children:e.name},e.id))]})})]}),(0,Q.jsxs)(`ul`,{className:`tools-conditions`,children:[a.map(e=>{let t=RA.get(e);return(0,Q.jsxs)(`li`,{className:`trait-box`,children:[(0,Q.jsx)(`div`,{className:`trait-name`,children:t?.name??e}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From HP. `,t?.temporary]}),t&&(0,Q.jsx)(_j,{text:t.effect}),(0,Q.jsx)(vj,{action:t?.action})]},e)}),e.map(t=>{let n=RA.get(t.trait);return(0,Q.jsxs)(`li`,{className:`trait-box`,children:[(0,Q.jsxs)(`div`,{className:`trait-name tools-condition-head`,children:[(0,Q.jsxs)(`span`,{children:[n?.name??t.trait,n?.ranked?` (${t.rank})`:``]}),(0,Q.jsx)(`button`,{type:`button`,className:`tools-condition-remove`,"aria-label":`Remove ${n?.name??t.trait}`,onClick:()=>r(bl(e,t.trait)),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`12`,height:`12`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`})})})]}),n?.ranked&&(0,Q.jsxs)(`div`,{className:`stepper tools-rank`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>c(t,{rank:t.rank-1}),disabled:t.rank<=1,"aria-label":`Lower rank`,children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:t.rank}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>c(t,{rank:t.rank+1}),"aria-label":`Raise rank`,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),n?.temporary&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[n.temporary,`.`]}),n&&(0,Q.jsx)(_j,{text:n.effect}),(0,Q.jsx)(vj,{action:n?.action})]},t.trait)})]})]})}var sN=`Max Range: `,cN=`Area of Effect: `,lN=IA.items.filter(e=>e.category!==`currency`&&(!e.tags.includes(`natural weapon`)||e.tags.includes(`universal`))).sort((e,t)=>e.name.localeCompare(t.name));function uN({stock:e}){let t=e.damage?al(e.damage):void 0,n=e.resistances?XM(e.resistances,e.name):[];if(!e.damage&&!n.length&&!e.maxRange&&!e.areaOfEffect)return null;let r=e.tags?.some(e=>e===`ranged`||e===`thrown`),i=(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:r?`crosshairs`:`sword`,label:r?`Ranged damage`:`Melee damage`})});return(0,Q.jsxs)(`div`,{className:`tools-item-stats`,children:[e.damage&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:t?(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[i,t.map((e,t)=>(0,Q.jsxs)(Z.Fragment,{children:[t>0&&(0,Q.jsx)(`span`,{className:`tools-item-stat-or`,children:`or`}),e.map(e=>(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[(0,Q.jsx)(Pj,{name:$M(e.type),label:e.type}),e.amount,e.perRank&&`/Rank`,e.plus&&` + ${e.plus}`]},e.type))]},t))]}):(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[i,e.damage]})}),e.maxRange&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Max Range`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`range`,label:`Max Range`})}),(0,Q.jsx)(`span`,{className:`tools-item-stat-value`,children:e.maxRange})]})}),e.areaOfEffect&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Area of Effect`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`burst`,label:`Area of Effect`})}),(0,Q.jsx)(`span`,{className:`tools-item-stat-value`,children:e.areaOfEffect})]})}),n.length>0&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`shield`,label:`Resists`})}),n.map((e,t)=>(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[(0,Q.jsx)(Pj,{name:$M(e.type),label:e.type}),e.amount]},t))]})})]})}function dN({onAdd:e,custom:t}){let n=Dc.filter(e=>lN.some(t=>t.category===e)),[r,i]=(0,Z.useState)(n[0]),[a,o]=(0,Z.useState)(``),[s,c]=(0,Z.useState)(new Map),[l,u]=(0,Z.useState)(new Set),d=e=>{let t=new Set(l);t.delete(e)||t.add(e),u(t)},f=e=>{let t=new Map(s);t.delete(e)||t.set(e,1),c(t)},p=(e,t)=>c(new Map(s).set(e,Math.max(1,t))),m=a.trim().toLowerCase().split(/\s+/).filter(Boolean),h=e=>{let t=[e.name,e.summary,e.type??``,...e.tags??[]].join(` `).toLowerCase();return m.every(e=>t.includes(e))},g=lN.filter(e=>e.category===r&&h(e)),_=[...s.values()].reduce((e,t)=>e+t,0);return(0,Q.jsxs)(`div`,{className:`item-picker`,children:[(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Item category`,children:[n.map(e=>(0,Q.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":r===e,className:`tech-field-tab${r===e?` is-active`:``}`,onClick:()=>i(e),children:$(e)},e)),(0,Q.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":r===`custom`,className:`tech-field-tab${r===`custom`?` is-active`:``}`,onClick:()=>i(`custom`),children:`Custom`})]}),r===`custom`?(0,Q.jsxs)(`div`,{className:`item-picker-custom`,children:[(0,Q.jsx)(`p`,{className:`hint`,children:`An item the game doesn't have yet: name it, say how many, and choose its category.`}),t]}):(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`div`,{className:`filters`,children:(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:a,onChange:e=>o(e.target.value),"aria-label":`Search items`})}),g.length===0&&(0,Q.jsxs)(`p`,{className:`empty`,children:[`No `,$(r).toLowerCase(),` items match.`]}),(0,Q.jsx)(`ul`,{className:`item-pick-list`,children:g.map(e=>{let t=s.get(e.id),n=t!==void 0,r=l.has(e.id),i=ml(e),a=pl(e).filter(e=>!e.startsWith(sN)&&!e.startsWith(cN));return(0,Q.jsxs)(`li`,{className:`item-pick-row${n?` selected`:``}`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box tools-item item-pick`,children:[n&&(0,Q.jsx)(`span`,{className:`tools-item-count`,"aria-label":`${t} of ${e.name}`,children:t}),(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-summary`,children:[(0,Q.jsxs)(`span`,{className:`tools-item-main`,children:[(0,Q.jsx)(`span`,{className:`tools-item-title`,children:e.name}),(0,Q.jsx)(uN,{stock:e})]}),(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${r?`Collapse`:`Expand`} ${e.name}`,"aria-expanded":r,title:r?`Collapse`:`Expand`,onClick:()=>d(e.id),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})]}),r&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`tools-item-badges`,children:[(0,Q.jsx)(yj,{children:$(e.category)}),a.map(e=>(0,Q.jsx)(yj,{children:e},e))]}),(0,Q.jsxs)(`div`,{className:`tools-item-stock`,children:[(0,Q.jsx)(`p`,{className:`tools-item-flavor`,children:e.summary}),i&&(0,Q.jsx)(`p`,{className:`tools-item-details`,children:i})]})]}),n&&(0,Q.jsxs)(`div`,{className:`rank-step item-pick-count`,children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Count`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`One fewer ${e.name}`,disabled:t<=1,onClick:()=>p(e.id,t-1),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:t}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`One more ${e.name}`,onClick:()=>p(e.id,t+1),children:(0,Q.jsx)(Mj,{is:`plus`})})]})]}),(0,Q.jsx)(`input`,{type:`checkbox`,className:`item-pick-check`,"aria-label":`Add ${e.name}`,checked:n,onChange:()=>f(e.id)})]},e.id)})})]})]}),(r!==`custom`||_>0)&&(0,Q.jsx)(`div`,{className:`item-picker-submit`,children:(0,Q.jsx)(`button`,{type:`button`,className:`build-button`,disabled:_===0,onClick:()=>e([...s].map(([e,t])=>({stock:VA.get(e),qty:t})).filter(e=>e.stock)),children:_===0?`Add items`:`Add ${_} ${_===1?`item`:`items`}`})})]})}function fN({items:e,onChange:t}){let[n,r]=(0,Z.useState)(``),[i,a]=(0,Z.useState)(`1`),[o,s]=(0,Z.useState)(`gear`),[c,l]=(0,Z.useState)(!1),[u,d]=(0,Z.useState)(new Map),f=e=>u.get(e.id)??!!e.notes,p=e=>d(new Map(u).set(e.id,!f(e))),[m,h]=(0,Z.useState)(),[g,_]=(0,Z.useState)(new Set),[v,y]=(0,Z.useState)(new Set),b=e=>{let t=new Set(g);if(!t.delete(e.id))t.add(e.id);else if(v.has(e.id)){let t=new Set(v);t.delete(e.id),y(t)}_(t)},x=e=>{let t=new Set(v);t.delete(e.id)||t.add(e.id),y(t)},S=(n,r)=>t(e.map(e=>e===n?{...e,...r}:e)),C=n=>t(e.filter(e=>e!==n)),w=e=>Math.max(1,Math.round(Number(e))||1),T=n=>{t(n.reduce((e,{stock:t,qty:n})=>ll(e,{item:t.id,name:t.name,qty:n,category:t.category,equipped:!1}),e)),l(!1)},ee=()=>{if(!n.trim())return;let s=hl(IA.items,n),c=w(i);t(ll(e,s?{item:s.id,name:s.name,qty:c,category:s.category,equipped:!1}:{name:n.trim(),qty:c,category:o,equipped:!1})),r(``),a(`1`),l(!1)};return(0,Q.jsxs)(`section`,{className:`tools-items`,children:[(0,Q.jsxs)(`div`,{className:`sheet-section-head`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Items`}),(0,Q.jsxs)(`button`,{type:`button`,className:`sheet-section-add`,"aria-label":`Add item`,onClick:()=>l(!0),children:[`Add`,(0,Q.jsx)(`span`,{className:`sheet-section-add-noun`,children:` item`})]})]}),c&&(0,Q.jsxs)(gj,{label:`Add items`,onClose:()=>l(!1),className:`sheet-add-popup item-picker-popup`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Add items`}),(0,Q.jsx)(dN,{onAdd:T,custom:(0,Q.jsxs)(`form`,{className:`tools-add`,onSubmit:e=>{e.preventDefault(),ee()},children:[(0,Q.jsx)(`input`,{type:`text`,placeholder:`Item name`,"aria-label":`Custom item name`,className:`tools-add-name`,value:n,onChange:e=>r(e.target.value)}),(0,Q.jsx)(`input`,{type:`number`,min:1,"aria-label":`Custom item count`,className:`tools-qty`,value:i,onChange:e=>a(e.target.value)}),(0,Q.jsx)(`select`,{"aria-label":`Category`,value:o,onChange:e=>s(e.target.value),children:Dc.map(e=>(0,Q.jsx)(`option`,{value:e,children:$(e)},e))}),(0,Q.jsx)(`button`,{type:`submit`,disabled:!n.trim(),children:`Add custom item`})]})})]}),e.length===0?(0,Q.jsx)(`p`,{className:`empty`,children:`No Items yet.`}):(0,Q.jsx)(`ul`,{className:`tools-item-list`,children:e.map(e=>{let t=e.item?VA.get(e.item):void 0,n=t?ml(t):``,r=g.has(e.id),i=(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${r?`Collapse`:`Expand`} ${e.name}`,"aria-expanded":r,title:r?`Collapse`:`Expand`,onClick:()=>b(e),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})}),a=(0,Q.jsx)(`span`,{className:`tools-item-count`,"aria-label":`${e.qty} of ${e.name}`,children:e.qty}),o=(0,Q.jsxs)(`label`,{className:`tools-equipped`,title:`Equip`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,"aria-label":`Equip`,checked:e.equipped,onChange:t=>S(e,{equipped:t.target.checked})}),(0,Q.jsx)(`span`,{className:`tools-equipped-label`,children:`Equip`})]}),s=v.has(e.id),c=(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-summary`,children:[o,(0,Q.jsxs)(`span`,{className:`tools-item-main`,children:[(0,Q.jsx)(`span`,{className:`tools-item-title`,children:e.name}),t&&(0,Q.jsx)(uN,{stock:t})]}),i]});if(!r)return(0,Q.jsxs)(`li`,{className:`c-sheet-box tools-item`,children:[a,c]},e.id);let l=t?pl(t).filter(e=>!e.startsWith(sN)&&!e.startsWith(cN)):[];return(0,Q.jsxs)(`li`,{className:`c-sheet-box tools-item`,children:[a,c,(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-edge tools-item-edit-toggle`,"aria-label":`Edit ${e.name}`,title:`Edit`,"aria-expanded":s,onClick:()=>x(e),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})}),s&&(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-edge tools-item-remove`,"aria-label":`Remove ${e.name}`,title:`Remove`,onClick:()=>C(e),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z`})})}),(0,Q.jsxs)(`div`,{className:`tools-item-badges`,children:[(0,Q.jsx)(yj,{children:$(e.category)}),l.map(e=>(0,Q.jsx)(yj,{children:e},e))]}),s&&(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-fields`,children:[(0,Q.jsx)(`input`,{type:`number`,min:0,className:`tools-qty`,"aria-label":`How many ${e.name}`,value:e.qty,onChange:t=>S(e,{qty:Math.max(0,Math.round(Number(t.target.value))||0)})}),(0,Q.jsx)(`input`,{type:`text`,className:`tools-item-name`,"aria-label":`Item name`,value:e.name,onChange:t=>S(e,{name:t.target.value})})]}),t&&(0,Q.jsxs)(`div`,{className:`tools-item-stock`,children:[(0,Q.jsx)(`p`,{className:`tools-item-flavor`,children:t.summary}),n&&(0,Q.jsx)(`p`,{className:`tools-item-details`,children:n})]}),(0,Q.jsxs)(`div`,{className:`tools-item-note-line`,children:[(0,Q.jsxs)(`button`,{type:`button`,className:`tools-item-note-toggle`,"aria-expanded":f(e),onClick:()=>{f(e)||h(e.id),p(e)},children:[(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 576 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75zM58.57 323.5L291.7 90.34L421.7 220.3L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L58.57 323.5zM552 464C565.3 464 576 474.7 576 488C576 501.3 565.3 512 552 512H248C234.7 512 224 501.3 224 488C224 474.7 234.7 464 248 464H552z`})}),`Note`]}),f(e)&&(0,Q.jsx)(`input`,{type:`text`,className:`tools-note`,placeholder:`Notes, like damage, resistances or charges`,"aria-label":`${e.name} notes`,autoFocus:m===e.id,value:e.notes??``,onChange:t=>S(e,{notes:t.target.value||void 0})})]})]},e.id)})})]})}var pN={hp:`Hit Points`,vp:`Vibe Points`,sp:`Savvy Points`,mp:`Mana Points`},mN=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,hN=/^trait ([a-z0-9-]+) choice$/,gN=/^trait ([a-z0-9-]+)$/;function _N(e){let t=hN.exec(e);if(t)return`${ij(t[1])} (choice)`;let n=gN.exec(e);if(n)return ij(n[1]);let r=mN.exec(e);return r?`${(r[1]===`kind`?BA.get(r[2])?.name:zA.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function vN(e){let t=new Set;for(let n of e.sources){let e=mN.exec(n);e&&e[1]!==`kind`&&e[3]&&t.add(e[1])}return[`origin`,`profession`,`past`].filter(e=>t.has(e)).map($)}function yN({held:e,places:t,open:n=!0,onToggle:r,keepEffect:i=!1}){let a=RA.get(e.trait),o=ij(e.trait),s=vN(e);return(0,Q.jsxs)(`div`,{className:`trait-box ${oj(e.trait)}${r&&!n&&!i?` is-collapsed`:``}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name trait-name-with-chip`,children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(lj,{plane:a?.plane}),o,a?.ranked||e.rank>1?` (${e.rank})`:``]}),(s.length>0||r)&&(0,Q.jsxs)(`span`,{className:`trait-name-chips`,children:[s.map(e=>(0,Q.jsx)(yj,{children:e},e)),r&&(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${n?`Collapse`:`Expand`} ${o}`,"aria-expanded":n,title:n?`Collapse`:`Expand`,onClick:r,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})]})]}),i&&a&&(0,Q.jsx)(_j,{text:a.effect}),n&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`trait-card-badges`,children:[a?(0,Q.jsx)(yj,{children:$(a.category)}):(0,Q.jsx)(yj,{tone:`bad`,children:`not in content yet`}),(0,Q.jsxs)(`span`,{className:`muted small trait-card-from`,children:[`From `,e.sources.map(_N).join(`, `)]})]}),!i&&a&&(0,Q.jsx)(_j,{text:a.effect}),(0,Q.jsx)(vj,{action:a?.action,rank:e.rank}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[a?.choices.find(e=>e.from!==`contact`&&Wc(e.from))?.note??`Place`,`:`]}),` `,t.join(`, `)]})]})]})}function bN({held:e,places:t,draft:n,onClose:r}){return(0,Q.jsx)(gj,{label:ij(e.trait),onClose:r,className:`lore-modal-card`,children:(0,Q.jsx)(yN,{held:e,places:t,draft:n})})}function xN({stack:e,top:t,children:n}){return e?(0,Q.jsxs)(`div`,{className:`sheet-side-stack`,children:[t,(0,Q.jsx)(`div`,{className:`sheet-side-row`,children:n})]}):(0,Q.jsx)(Q.Fragment,{children:n})}function SN({movement:e}){let t=e?.match(/^\s*([\d.]+)\s*([a-z]+)\s*$/i);return(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-movement`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,title:`Movement`,children:`Move`}),(0,Q.jsxs)(`div`,{className:`sheet-movement-value`,title:`Movement`,children:[(0,Q.jsx)(Pj,{name:`person-running`,label:`Movement`}),(0,Q.jsx)(`span`,{className:`num`,children:t?(0,Q.jsxs)(Q.Fragment,{children:[t[1],(0,Q.jsx)(`span`,{className:`sheet-movement-unit`,children:t[2]})]}):e??`–`})]})]})}function CN({draft:e,result:t,onExport:n,onImport:r,onName:i,onLooks:a,onPortrait:o,onDescription:s,embedded:c=!1,statsSlot:l,resistancesSlot:u,traitsAction:d,items:f,onItems:p,conditions:m,onConditions:h,hp:g}){let _=[e.origin,e.profession,e.past].map(e=>e?zA.get(e):void 0),v=dj(e),y=t.summary,b=Yl(e,IA,t),x=b.includes(`magic`)||(y?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],S=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Uc[e.from],from:uj(e)})):[]),C=t=>e.choices.filter(e=>e.trait===t&&e.from!==`contact`&&Wc(e.from)).flatMap(e=>e.traits),w=y?.traits??[],T=e=>RA.get(e.trait)?.category===`knowledge`,ee=e=>!!RA.get(e.trait)?.types.includes(`language`),E=[...w.filter(e=>T(e)&&!ee(e)),...w.filter(ee)],te=w.filter(e=>!T(e)),ne=e=>RA.get(e.trait)?.category,re=te.filter(e=>ne(e)===`skill`),ie=te.filter(e=>ne(e)===`ability`),ae=te.filter(e=>ne(e)!==`skill`&&ne(e)!==`ability`),[oe,se]=(0,Z.useState)(new Set),D=e=>{let t=new Set(oe);t.delete(e)||t.add(e),se(t)},ce=y?y.picks.universal.banked+y.picks.background.banked:0,le=(e,t=!1,n=!1)=>(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:e.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(yN,{held:e,places:C(e.trait),...t?{open:oe.has(e.trait),onToggle:()=>D(e.trait)}:{},keepEffect:n})},e.trait))}),[ue,de]=(0,Z.useState)(),fe=(0,Z.useCallback)(()=>de(void 0),[]),pe=(0,Z.useRef)(null),[me,he]=(0,Z.useState)(!1),ge=!!u;(0,Z.useLayoutEffect)(()=>{let e=pe.current;if(!e||!ge)return;let t=()=>{let t=e.querySelector(`:scope > .sheet-body`),n=e.querySelector(`:scope > .sheet-side-stack`);t&&n&&he(n.getBoundingClientRect().top>t.getBoundingClientRect().top+1)};t();let n=new ResizeObserver(t);return n.observe(e),()=>n.disconnect()},[ge]);let _e=u&&(0,Q.jsxs)(`div`,{className:`sheet-move-row`,children:[(0,Q.jsx)(SN,{movement:y?.movement}),(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-resistances`,children:u})]}),ve=w.find(e=>e.trait===ue),ye=[..._.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))];return(0,Q.jsxs)(`section`,{className:`sheet${c?` sheet-embedded`:``}`,children:[!c&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(fj,{title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsxs)(`button`,{onClick:n,children:[(0,Q.jsx)(Pj,{name:`download`}),`Download`]}),(0,Q.jsxs)(`button`,{onClick:r,children:[(0,Q.jsx)(Pj,{name:`upload`}),`Import`]}),(0,Q.jsxs)(`button`,{onClick:()=>window.print(),children:[(0,Q.jsx)(Pj,{name:`print`}),`Print`]})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[!c&&(0,Q.jsxs)(`div`,{className:`level-badge level-blob`,"aria-label":`Level ${e.level}`,children:[(0,Q.jsx)(`span`,{className:`level-badge-label`,children:`Level`}),(0,Q.jsx)(`span`,{className:`level-badge-number`,children:e.level})]}),!c&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-who`,children:[(0,Q.jsx)(Tj,{className:`sheet-portrait`,portrait:e.portrait,name:e.name,onChange:o}),(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(Oj,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i??(()=>{})}),(0,Q.jsx)(aN,{draft:e,onLooks:a??(()=>{})})]})]}),(0,Q.jsx)(Ej,{description:e.description,onChange:s})]}),!c&&(0,Q.jsx)(`div`,{className:`c-sheet-box`,children:(0,Q.jsx)(`div`,{className:`tools-resources sheet-resources`,children:x.map(e=>(0,Q.jsx)(`div`,{className:`tools-resource`,children:(0,Q.jsxs)(`div`,{className:`tools-resource-value`,children:[(0,Q.jsx)(`strong`,{className:`tools-resource-name resource-${e}`,title:pN[e],children:e.toUpperCase()}),(0,Q.jsxs)(`span`,{className:`num`,children:[y?.resources[e]??`–`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` / `,y?.resources[e]??`–`]})]})]})},e))})}),(0,Q.jsxs)(`div`,{className:`sheet-row`,ref:pe,children:[me&&_e,(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-body`,children:l?(0,Q.jsx)(`div`,{className:`sheet-stats`,children:l}):(0,Q.jsx)(`div`,{className:`sheet-stats`,children:b.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${t}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:t})}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(t),` - `,y?.coreStats[t]??`–`]})]}),!V[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Cj,{bonus:y?.coreBonus[t]??0,value:y?.coreStats[t]??e.core[t]})]}),V[t].map(t=>{let n=y?.stats[t],r=(v?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=v?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,v?.[t]?.max??`–`]})]}),(0,Q.jsx)(Sj,{bonus:r,value:n??r,max:i})]},t)})]},t))})}),p&&h&&(0,Q.jsxs)(xN,{stack:ge,top:!me&&_e,children:[(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-conditions`,children:(0,Q.jsx)(oN,{conditions:m??[],hp:g??y?.resources.hp??0,maxHp:y?.resources.hp??0,onChange:h})}),(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-items`,children:(0,Q.jsx)(fN,{items:f??[],onChange:p})})]})]}),(0,Q.jsxs)(`div`,{className:`sheet-lower`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-side`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Knowledges`}),E.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:E.map(e=>{let t=RA.get(e.trait);return(0,Q.jsxs)(`li`,{children:[ee(e)?(0,Q.jsx)(Pj,{name:`language`,label:`Language`}):(0,Q.jsx)(Pj,{name:`knowledge`,label:`Knowledge`}),(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>de(e.trait),children:[ij(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`})]}),(0,Q.jsxs)(`div`,{className:`sheet-pair`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-abilities`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Abilities`}),ie.length>0?le(ie,!0,!0):(0,Q.jsx)(`p`,{className:`empty`,children:`No Abilities yet.`})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-skills`,children:[(0,Q.jsxs)(`div`,{className:`sheet-traits-head`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Skills`}),y&&(0,Q.jsxs)(`span`,{className:`sheet-banked`,children:[ce,` `,ce===1?`pick`:`picks`,` available`]}),d]}),re.length>0?le(re,!0):(0,Q.jsx)(`p`,{className:`empty`,children:`No Skills yet.`})]})]}),(ae.length>0||S.length>0||ye.length>0)&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-other`,children:[ae.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Other Traits`}),le(ae)]}),S.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:S.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),ye.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:ye.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]})]}),ve&&(0,Q.jsx)(bN,{held:ve,places:C(ve.trait),draft:e,onClose:fe})]})}var wN=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(ij),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),TN={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},EN={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`};function DN({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a}){let[o,s]=(0,Z.useState)(`universal`),[c,l]=(0,Z.useState)(``),[u,d]=(0,Z.useState)(new Set),[f,p]=(0,Z.useState)(!0),m=n.summary,h=m?.traitLists??[],g=typeof o==`string`||h.includes(o.list)?o:`universal`,_=typeof g==`string`?g:`list:${g.list}`,v=(0,Z.useMemo)(()=>$l(e,IA,t,g),[e,t,_]);if(!v||!m)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let y=c.trim().toLowerCase(),b=new Set(e.traits.map(e=>e.trait)),x=v.filter(e=>!i?.has(e.trait.id)&&!u.has(e.trait.category)&&(!f||e.reasons.length===0||b.has(e.trait.id))&&(!y||e.trait.name.toLowerCase().includes(y)||e.trait.tags.some(e=>e.toLowerCase().includes(y)))),S=wc.options.map(e=>({category:e,options:x.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),C=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},w=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),T=t=>e.traits.map(e=>e.trait).lastIndexOf(t),ee=new Map(m.traits.map(e=>[e.trait,e.rank])),E=(t,n,i)=>{let a=T(t);a>=0?w(a):r(Hl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=m.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":g===e,className:`tech-field-tab${g===e?` is-active`:``}`,onClick:()=>s(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),h.map(t=>{let n=typeof g!=`string`&&g.list===t,r=new Set(e.traits.filter(e=>RA.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>s({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof g==`string`?EN[g]:`Traits built on ${$(g.list)}, or closely related to it. Any character can take one whose stat requirements they meet. Background Traits here take Background picks; the rest take Universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:c,onChange:e=>l(e.target.value),"aria-label":`Search Traits`}),wc.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!u.has(e),onChange:()=>C(e)}),` `,TN[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:f,onChange:e=>p(e.target.checked)}),` Hide unavailable`]})]}),v.length===0&&g===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package Background Traits and the Kind's Trait access.`}),v.length>0&&x.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:f?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),S.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:TN[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=T(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${oj(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&E(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||E(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(lj,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(yj,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(yj,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(yj,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(yj,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(_j,{text:t.effect}),(0,Q.jsx)(vj,{action:t.action}),wN(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,wN(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>w(T(t.id)),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:ee.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(Hl(e,t.id,n,i)),children:(0,Q.jsx)(Mj,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,Q.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:ij(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!RA.has(e.trait)&&(0,Q.jsx)(yj,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>w(t),"aria-label":`Remove ${ij(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}export{ql as $,sj as A,zA as B,Tj as C,fj as D,wj as E,XA as F,eu as G,Zl as H,IA as I,Kl as J,El as K,LA as L,$ as M,ij as N,uj as O,tj as P,Gl as Q,VA as R,hj as S,n as St,Mj as T,Yl as U,RA as V,nu as W,Rl as X,zl as Y,Wl as Z,Pj as _,Dc as _t,eN as a,bl as at,gj as b,c as bt,qM as c,hl as ct,sM as d,Uc as dt,Al as et,Uj as f,Vc as ft,Ej as g,el as gt,yj as h,Gc as ht,aN as i,yl as it,aj as j,dj as k,KM as l,ll as lt,pj as m,Jc as mt,pN as n,_l as nt,JM as o,fl as ot,Aj as p,Kc as pt,Cl as q,CN as r,xl as rt,GM as s,dl as st,DN as t,Bl as tt,nM as u,ul as ut,Fj as v,V as vt,lj as w,Oj as x,i as xt,Dj as y,wc as yt,BA as z};
+`)}function FM(e,t,n){let r=UM(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var IM=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function LM(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);for(let n of Array.isArray(e.items)?e.items:[])typeof n?.item==`string`&&t.add(`item:${n.item}`);return t}function RM(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var zM=(e,t)=>{let n=LM(e);return t.filter(e=>n.has(e.target))};function BM(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var VM=e=>e.filter(e=>e.reason!==`no picks left`);function HM({age:e,gender:t,height:n,weight:r}){let i=[e===void 0?``:`age ${e}`,t?.trim()?`gender ${t.trim()}`:``,n?.trim()?`height ${n.trim()}`:``,r?.trim()?`weight ${r.trim()}`:``].filter(Boolean);return i.length?`The player set this character's ${i.length>1?`${i.slice(0,-1).join(`, `)} and ${i.at(-1)}`:i[0]}. These are cosmetic. Respect them in the name, summary and reasons (use pronouns and a name that fit), but don't let them decide the Kind, packages, Traits, stats or choices.\n\n`:``}var UM=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function WM(e){let{content:t,provider:n}=e,r=e.campaign??Lc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${IM(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:jM,index:PM(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+HM(e)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=!1,g=new Map,_=e.name?.trim()||void 0,v=!1,y=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:b}=await u.send(c,{think:!v});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>FM(e.name,e.input,t)).join(` · `)),l.inputTokens+=b.inputTokens??0,l.outputTokens+=b.outputTokens??0,l.cacheReadTokens+=b.cacheReadTokens??0,l.cacheWriteTokens+=b.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let x=[];for(let a of i)if(a.name===`submit_build`){let i=UM(a.input)??{},c=UM(i.concept),l=BM(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){x.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}v=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(_=c.name.trim());let b=_?{...c,name:_}:c,S;try{S=AM(b,t,r)}catch(e){if(!(e instanceof ko))throw e;S={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in S){x.push({call:a,isError:!0,content:`The concept doesn't match the format: ${S.error}`});continue}let C=eM(S.build,t,r);for(let e of l)g.set(e.target,e);d={build:S.build,check:C,summary:u??d?.summary,reasons:[...g.values()]};let w={taken:S.taken,skipped:VM(S.skipped),...S.skippedItems.length?{skippedItems:S.skippedItems}:{}},T=C.accepted?RM(C):void 0;if(C.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Check the items too: what this character would carry for their work, fights and travels. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...T?{banked:T}:{},...w})});continue}if(T&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${T}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...w})});continue}if(C.accepted&&!S.build.items.length&&!h){o(`Build is legal; asking for items`),h=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,items:`The engine built a legal character, but it carries nothing. Submit again with the same concept and the items it would carry (from the Items in the index), with a reason for each.`,...w})});continue}let ee=C.accepted?[...LM(S.build)].filter(e=>!e.startsWith(`choice:`)&&!g.has(e)):[];if(ee.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${ee.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(C.accepted)return d.reasons=zM(S.build,d.reasons),o(`Done`),y(`accepted`,s);o(`The engine sent the concept back with ${C.errors.length+C.unknownIds.length} problems; fixing them`),x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:C.unknownIds,errors:C.errors,...w})})}else try{let e=sM(a.name,a.input,t,r);x.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof nM))throw e;x.push({call:a,isError:!0,content:e.message})}u.addResults(x)}return d?.check.accepted?(d.reasons=zM(d.build,d.reasons),y(`accepted`,i)):y(`turn-limit`,i)}var GM=class extends Error{error;constructor(e,t){super(t),this.error=e}};function KM(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new GM(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new GM(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function qM(e){let t=fM(KM(e.endpoint,e.fetcher),void 0,e.model);try{return await WM({description:e.description,name:e.name,age:e.age,gender:e.gender,height:e.height,weight:e.weight,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:XA(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof GM)return{error:e.error,message:e.message};if(e instanceof Wj)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function JM({draft:e,onChange:t,floor:n}){let r=dj(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&zA.get(e)?[zA.get(e)]:[]),a=Jc(e.kind?BA.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>V[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(V).find(t=>V[t].includes(e)),m=nj.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=Yl(e,IA),_=Xl(e,IA),v=t=>V[t].reduce((t,n)=>t+(e.points[n]??0),0),y=e=>r?.[e]?.bonus??0,b=e=>y(e)+(o[e]??0),x=t=>b(t)+(e.points[t]??0),S=e=>n?y(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):y(e),C=e=>n?.core[e]??0,w=r=>{if(!n)return t(Vl(e,r,e.core[r]-1));let i={...e.points};for(let e of V[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},T=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})};return r?(0,Q.jsxs)(`section`,{children:[(0,Q.jsxs)(fj,{title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,Q.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: Level a core Stat with the + beside its number.`]}),rj.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` Stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any Stat.`]}),h<=0&&rj.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,Q.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,Q.jsxs)(`p`,{className:`pool-summary`,children:[(0,Q.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,Q.jsxs)(`span`,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,Q.jsxs)(Q.Fragment,{children:[` · `,(0,Q.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,Q.jsx)(`span`,{className:`muted`,children:` (spent first, on any Stat)`})]})]}),(0,Q.jsx)(`div`,{className:`pool-stats`,children:g.map(n=>{let a=e.core[n],o=a*3,s=v(n);if(!V[n].length){let r=h>0&&_.includes(n),o=_.includes(n)?i.reduce((e,t)=>e+(t.coreBonus[n]??0),0):0;return(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${n}${a===0&&!r?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:n})}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,onClick:()=>w(n),disabled:a<=C(n),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!_.includes(n)?`This character can't Level ${$(n)}`:void 0,onClick:()=>t(Vl(e,n,a+1)),disabled:!r,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(n),` - `,a+o]}),(0,Q.jsxs)(`span`,{className:`num${a+o===0?` muted`:` resource-mp`}`,children:[3*(a+o),` MP`]})]}),(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(n),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Cj,{bonus:o,value:a+o})]}),!_.includes(n)&&(0,Q.jsxs)(`p`,{className:`hint`,children:[`This character can't Level `,$(n),`; take these points back.`]})]},n)}let c=f(n)+Math.max(0,o-s),l=c===0&&s===0,u=V[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-x(t)),0)-Math.max(0,o-s),d=h>0&&u>=3,p=Math.max(0,s-(a-1)*3);return(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${n}${l?` locked`:``}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsxs)(`div`,{className:`core-control`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:n})}),(0,Q.jsx)(`button`,{"aria-label":`Take a core point from ${n}`,title:a>0&&p?`Also takes back ${p} focus ${p===1?`point`:`points`}`:void 0,onClick:()=>w(n),disabled:a<=C(n),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Put a core point in ${n}`,title:h>0&&!d?`${$(n)}'s Stats have no room for 3 more points`:void 0,onClick:()=>t(Vl(e,n,a+1)),disabled:!d,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(n),` - `,a]}),(0,Q.jsxs)(`span`,{className:`num${a===0?` muted`:s===o?` good`:s>o?` bad`:``}`,children:[s,`/`,o]})]}),a===0&&!d&&u<3&&(0,Q.jsx)(`p`,{className:`hint`,children:`These Stats have no room for points.`}),V[n].map(e=>{let t=x(e),n=r[e]?.max??0,i=Math.max(0,Math.min(c,n-t));return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(e),` - `,t]}),i>0&&(0,Q.jsxs)(`span`,{className:`stat-spend muted`,children:[`Spend `,i,` `,i===1?`point`:`points`]})]}),(0,Q.jsxs)(`div`,{className:`pool-stat-row`,children:[(0,Q.jsxs)(`div`,{className:`stat-buttons`,children:[(0,Q.jsx)(`button`,{"aria-label":`Take a point from ${e}`,onClick:()=>T(e,-1),disabled:t<=S(e),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`button`,{className:`is-plus`,"aria-label":`Add a point to ${e}`,onClick:()=>T(e,1),disabled:c===0||t>=n,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),(0,Q.jsx)(Sj,{bonus:b(e),value:t,max:n})]})]},e)})]},n)})})]})]}):(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Stats`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each Stat and sets how far each can go.`})]})}var YM=e=>nl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function XM(e,t){let n=e.match(/\(([^)]*)\)\s*$/);return e.split(`,`).flatMap(e=>{let r=e.trim().match(/^(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?$/),i=r&&YM(r[2]);if(!r||!i)return[];let a=n?n[1]:r[3];return[{type:i,amount:Number(r[1]),from:t,...a?{where:a.trim()}:{}}]})}function ZM(e,t,n){return e.split(/(?<=\.)\s+/).flatMap(e=>{let r=e.match(/Rank \*(\d+)/i),i=r?null:e.match(/\+(\d+) to [^.]*resist/i);if(!r&&!i||!/resist/i.test(e))return[];let a=r?Number(r[1])*t:Number(i[1]),o=new Set;for(let[t,n]of Object.entries(tl))RegExp(`all ${t} damage types`,`i`).test(e)&&n.forEach(e=>o.add(e));for(let t of nl)RegExp(`\\b${t.replace(`/`,`\\/`)}\\b`).test(e)&&o.add(t);let s=e.match(/attacks that hit (?:its|their|the) (\w+)/i)?.[1];return[...o].map(e=>({type:e,amount:a,from:n,...s?{where:s}:{}}))})}function QM(e,t,n){let r=t.flatMap(t=>{if(!t.equipped)return[];let n=t.item&&e.items.find(e=>e.id===t.item)||hl(e.items,t.name);return n?.resistances?XM(n.resistances,n.name):[]}),i=new Map;for(let e of n)i.set(e.trait,Math.max(i.get(e.trait)??0,e.rank));let a=[...i].flatMap(([t,n])=>{let r=e.traits.find(e=>e.id===t);return r?ZM(r.effect,n,r.name):[]});return[...r,...a]}var $M=e=>e.toLowerCase();function eN({items:e,held:t}){let n=(0,Z.useMemo)(()=>QM(IA,e,t),[e,t]),r=(0,Z.useId)(),i=nl.map(e=>{let t=n.filter(t=>t.type===e);return{type:e,own:t,total:t.filter(e=>!e.where).reduce((e,t)=>e+t.amount,0)}}).filter(e=>e.total!==0||e.own.some(e=>e.where&&e.amount!==0));return(0,Q.jsxs)(`div`,{className:`sheet-resistances`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Resistances`}),i.length?(0,Q.jsx)(`ul`,{className:`sheet-resistance-list`,children:i.map(({type:e,own:t,total:n},i)=>(0,Q.jsxs)(`li`,{className:`sheet-resistance`,tabIndex:0,"aria-describedby":`${r}-${i}`,children:[(0,Q.jsx)(Pj,{name:$M(e),label:e}),(0,Q.jsx)(`span`,{className:`num`,children:n}),(0,Q.jsxs)(`div`,{className:`sheet-resistance-pop`,role:`tooltip`,id:`${r}-${i}`,children:[(0,Q.jsxs)(`strong`,{className:`sheet-resistance-pop-title`,children:[e,` `,n]}),(0,Q.jsx)(`ul`,{children:t.map((e,t)=>(0,Q.jsxs)(`li`,{className:e.where?`is-partial`:void 0,children:[(0,Q.jsxs)(`span`,{children:[e.from,e.where&&(0,Q.jsxs)(`span`,{className:`muted`,children:[` (`,e.where,`)`]})]}),(0,Q.jsx)(`span`,{className:`num`,children:e.where&&e.amount>0?`+${e.amount}`:e.amount})]},t))})]})]},e))}):(0,Q.jsx)(`p`,{className:`empty`,children:`None.`})]})}function tN({id:e,onClose:t}){let n=BA.get(e),r=n?void 0:zA.get(e),i=n??r;return i?(0,Q.jsx)(gj,{label:i.name,onClose:t,className:`lore-modal-card`,children:(0,Q.jsxs)(`div`,{className:`card headed tools-background-card ${aj(i.plane)}`,children:[(0,Q.jsxs)(`div`,{className:`card-head`,children:[(0,Q.jsxs)(`h3`,{children:[(0,Q.jsx)(lj,{plane:i.plane}),i.name]}),(0,Q.jsxs)(`span`,{className:`trait-name-chips`,children:[(0,Q.jsx)(yj,{children:n?`Kind`:$(r.type)}),(0,Q.jsx)(yj,{tone:`muted`,children:i.plane})]})]}),(0,Q.jsx)(`p`,{children:i.summary}),i.lore&&(0,Q.jsx)(`p`,{className:`muted`,children:i.lore}),n&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(wj,{stats:n.stats}),n.grants.length>0&&(0,Q.jsx)(`div`,{className:`grants`,children:(0,Q.jsxs)(`div`,{children:[(0,Q.jsx)(`span`,{className:`label`,children:`Grants`}),n.grants.map(e=>(0,Q.jsx)(yj,{tone:`accent`,children:ij(e.trait)},e.trait))]})}),(0,Q.jsx)(`ul`,{className:`features`,children:n.features.map(e=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]}),r&&(0,Q.jsx)(zj,{pkg:r})]})}):null}var nN=e=>e[0].toUpperCase()+e.slice(1);function rN({looks:e,onChange:t}){let[n,r]=(0,Z.useState)(),[i,a]=(0,Z.useState)(``),[o,s]=(0,Z.useState)(``),[c,l]=(0,Z.useState)(`unlisted`),[u,d]=(0,Z.useState)(``),f=()=>{a(e.age===void 0?``:String(e.age)),r(`age`)},p=()=>{l(e.gender??`unlisted`),d(e.customGender??``),r(`gender`)},m=n=>{if(n){let n=Number(i);t({...e,age:i.trim()===``||!Number.isFinite(n)?void 0:Math.min(Fl,Math.max(0,Math.floor(n)))})}r(void 0)},h=(n,r)=>{let i=n===`unlisted`?void 0:n;t({...e,gender:i,customGender:i===`custom`&&r.trim()||void 0})},g=e=>{e.currentTarget.contains(e.relatedTarget)||(h(c,u),r(void 0))},_=e=>t=>{t.key===`Enter`&&e(!0),t.key===`Escape`&&e(!1)},v=e=>{e&&h(c,u),r(void 0)},y=t=>{s(e[t]??``),r(t)},b=n=>i=>{i&&t({...e,[n]:o.trim()||void 0}),r(void 0)},x=(t,r)=>(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:r}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===t?(0,Q.jsx)(`input`,{className:`tools-look-input tools-look-size`,"aria-label":r,maxLength:20,placeholder:`—`,autoFocus:!0,value:o,onChange:e=>s(e.target.value),onBlur:()=>b(t)(!0),onKeyDown:_(b(t))}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:()=>y(t),children:(0,Q.jsx)(`strong`,{children:e[t]??`—`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the ${t}`,onMouseDown:e=>n===t&&e.preventDefault(),onClick:()=>n===t?b(t)(!0):y(t),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]});return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===`age`?(0,Q.jsx)(`input`,{className:`tools-look-input tools-look-age`,type:`number`,inputMode:`numeric`,min:0,max:Fl,step:1,"aria-label":`Age`,placeholder:`—`,autoFocus:!0,value:i,onChange:e=>a(e.target.value),onBlur:()=>m(!0),onKeyDown:_(m)}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:f,children:(0,Q.jsx)(`strong`,{children:e.age??`—`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the age`,onMouseDown:e=>n===`age`&&e.preventDefault(),onClick:()=>n===`age`?m(!0):f(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),(0,Q.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,Q.jsxs)(`span`,{className:`tools-look-row`,children:[n===`gender`?(0,Q.jsxs)(`span`,{className:`tools-look-gender`,onBlur:g,children:[(0,Q.jsx)(`select`,{className:`tools-look-input`,"aria-label":`Gender`,autoFocus:!0,value:c,onChange:e=>{l(e.target.value),e.target.value!==`custom`&&(h(e.target.value,``),r(void 0))},onKeyDown:e=>e.key===`Escape`&&v(!1),children:Sl.map(e=>(0,Q.jsx)(`option`,{value:e,children:nN(e)},e))}),c===`custom`&&(0,Q.jsx)(`input`,{className:`tools-look-input`,"aria-label":`Custom gender`,maxLength:40,placeholder:`In your own words`,autoFocus:!0,value:u,onChange:e=>d(e.target.value),onKeyDown:_(v)})]}):(0,Q.jsx)(`button`,{type:`button`,className:`tools-look-value`,onClick:p,children:(0,Q.jsx)(`strong`,{children:Rl(e)??`Unlisted`})}),(0,Q.jsx)(`button`,{type:`button`,className:`name-edit tools-look-edit`,"aria-label":`Edit the gender`,onMouseDown:e=>n===`gender`&&e.preventDefault(),onClick:()=>n===`gender`?v(!0):p(),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),x(`height`,`Height`),x(`weight`,`Weight`)]})}var iN=[`Kind`,`Origin`,`Profession`,`Past`];function aN({draft:e,onLooks:t}){let[n,r]=(0,Z.useState)(),i=(0,Z.useCallback)(()=>r(void 0),[]),a=(e,t)=>t&&(0,Q.jsxs)(`span`,{className:`tools-line-item`,children:[(0,Q.jsx)(`span`,{className:`field-label`,children:iN[e]}),(0,Q.jsx)(`button`,{type:`button`,className:`link`,onClick:()=>r(t),children:(e===0?BA.get(t)?.name:zA.get(t)?.name)??t})]});return(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`tools-line`,children:[(0,Q.jsx)(`p`,{className:`tools-line-row`,children:(0,Q.jsx)(rN,{looks:e,onChange:t})}),(0,Q.jsxs)(`p`,{className:`tools-line-row`,children:[a(0,e.kind),a(1,e.origin),a(2,e.profession),a(3,e.past)]})]}),n&&(0,Q.jsx)(tN,{id:n,onClose:i})]})}function oN({conditions:e,hp:t,maxHp:n,onChange:r}){let i=(0,Z.useMemo)(()=>vl(IA),[]),a=_l(t,n),[o,s]=(0,Z.useState)(!1),c=(t,n)=>r(e.map(e=>e===t?{...e,...n}:e));return(0,Q.jsxs)(`section`,{className:`tools-conditions-side`,"aria-label":`Conditions`,children:[(0,Q.jsxs)(`div`,{className:`sheet-section-head`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Conditions`}),(0,Q.jsxs)(`button`,{type:`button`,className:`sheet-section-add`,"aria-label":`Add Condition`,onClick:()=>s(!0),children:[`Add`,(0,Q.jsx)(`span`,{className:`sheet-section-add-noun`,children:` Condition`})]})]}),o&&(0,Q.jsxs)(gj,{label:`Add a Condition`,onClose:()=>s(!1),className:`sheet-add-popup`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Add a Condition`}),(0,Q.jsx)(`div`,{className:`tools-add`,children:(0,Q.jsxs)(`select`,{"aria-label":`Condition to add`,value:``,onChange:t=>{t.target.value&&(r(yl(e,IA,t.target.value)),s(!1))},children:[(0,Q.jsx)(`option`,{value:``,children:`Pick a Condition…`}),i.map(e=>(0,Q.jsx)(`option`,{value:e.id,children:e.name},e.id))]})})]}),(0,Q.jsxs)(`ul`,{className:`tools-conditions`,children:[a.map(e=>{let t=RA.get(e);return(0,Q.jsxs)(`li`,{className:`trait-box`,children:[(0,Q.jsx)(`div`,{className:`trait-name`,children:t?.name??e}),(0,Q.jsxs)(`p`,{className:`muted small`,children:[`From HP. `,t?.temporary]}),t&&(0,Q.jsx)(_j,{text:t.effect}),(0,Q.jsx)(vj,{action:t?.action})]},e)}),e.map(t=>{let n=RA.get(t.trait);return(0,Q.jsxs)(`li`,{className:`trait-box`,children:[(0,Q.jsxs)(`div`,{className:`trait-name tools-condition-head`,children:[(0,Q.jsxs)(`span`,{children:[n?.name??t.trait,n?.ranked?` (${t.rank})`:``]}),(0,Q.jsx)(`button`,{type:`button`,className:`tools-condition-remove`,"aria-label":`Remove ${n?.name??t.trait}`,onClick:()=>r(bl(e,t.trait)),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`12`,height:`12`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2.5`})})})]}),n?.ranked&&(0,Q.jsxs)(`div`,{className:`stepper tools-rank`,children:[(0,Q.jsx)(`button`,{type:`button`,onClick:()=>c(t,{rank:t.rank-1}),disabled:t.rank<=1,"aria-label":`Lower rank`,children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:t.rank}),(0,Q.jsx)(`button`,{type:`button`,onClick:()=>c(t,{rank:t.rank+1}),"aria-label":`Raise rank`,children:(0,Q.jsx)(Mj,{is:`plus`})})]}),n?.temporary&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[n.temporary,`.`]}),n&&(0,Q.jsx)(_j,{text:n.effect}),(0,Q.jsx)(vj,{action:n?.action})]},t.trait)})]})]})}var sN=`Max Range: `,cN=`Area of Effect: `,lN=IA.items.filter(e=>e.category!==`currency`&&(!e.tags.includes(`natural weapon`)||e.tags.includes(`universal`))).sort((e,t)=>e.name.localeCompare(t.name));function uN({stock:e}){let t=e.damage?al(e.damage):void 0,n=e.resistances?XM(e.resistances,e.name):[];if(!e.damage&&!n.length&&!e.maxRange&&!e.areaOfEffect)return null;let r=e.tags?.some(e=>e===`ranged`||e===`thrown`),i=(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:r?`crosshairs`:`sword`,label:r?`Ranged damage`:`Melee damage`})});return(0,Q.jsxs)(`div`,{className:`tools-item-stats`,children:[e.damage&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:t?(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[i,t.map((e,t)=>(0,Q.jsxs)(Z.Fragment,{children:[t>0&&(0,Q.jsx)(`span`,{className:`tools-item-stat-or`,children:`or`}),e.map(e=>(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[(0,Q.jsx)(Pj,{name:$M(e.type),label:e.type}),e.amount,e.perRank&&`/Rank`,e.plus&&` + ${e.plus}`]},e.type))]},t))]}):(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[i,e.damage]})}),e.maxRange&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Max Range`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`range`,label:`Max Range`})}),(0,Q.jsx)(`span`,{className:`tools-item-stat-value`,children:e.maxRange})]})}),e.areaOfEffect&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,title:`Area of Effect`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`burst`,label:`Area of Effect`})}),(0,Q.jsx)(`span`,{className:`tools-item-stat-value`,children:e.areaOfEffect})]})}),n.length>0&&(0,Q.jsx)(`span`,{className:`tools-item-stat-group`,children:(0,Q.jsxs)(`span`,{className:`chip tools-item-stat`,children:[(0,Q.jsx)(`span`,{className:`tools-item-stat-lead`,children:(0,Q.jsx)(Pj,{name:`shield`,label:`Resists`})}),n.map((e,t)=>(0,Q.jsxs)(`span`,{className:`tools-item-stat-value`,children:[(0,Q.jsx)(Pj,{name:$M(e.type),label:e.type}),e.amount]},t))]})})]})}function dN({onAdd:e,custom:t}){let n=Dc.filter(e=>lN.some(t=>t.category===e)),[r,i]=(0,Z.useState)(n[0]),[a,o]=(0,Z.useState)(``),[s,c]=(0,Z.useState)(new Map),[l,u]=(0,Z.useState)(new Set),d=e=>{let t=new Set(l);t.delete(e)||t.add(e),u(t)},f=e=>{let t=new Map(s);t.delete(e)||t.set(e,1),c(t)},p=(e,t)=>c(new Map(s).set(e,Math.max(1,t))),m=a.trim().toLowerCase().split(/\s+/).filter(Boolean),h=e=>{let t=[e.name,e.summary,e.type??``,...e.tags??[]].join(` `).toLowerCase();return m.every(e=>t.includes(e))},g=lN.filter(e=>e.category===r&&h(e)),_=[...s.values()].reduce((e,t)=>e+t,0);return(0,Q.jsxs)(`div`,{className:`item-picker`,children:[(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Item category`,children:[n.map(e=>(0,Q.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":r===e,className:`tech-field-tab${r===e?` is-active`:``}`,onClick:()=>i(e),children:$(e)},e)),(0,Q.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":r===`custom`,className:`tech-field-tab${r===`custom`?` is-active`:``}`,onClick:()=>i(`custom`),children:`Custom`})]}),r===`custom`?(0,Q.jsxs)(`div`,{className:`item-picker-custom`,children:[(0,Q.jsx)(`p`,{className:`hint`,children:`An item the game doesn't have yet: name it, say how many, and choose its category.`}),t]}):(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`div`,{className:`filters`,children:(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:a,onChange:e=>o(e.target.value),"aria-label":`Search items`})}),g.length===0&&(0,Q.jsxs)(`p`,{className:`empty`,children:[`No `,$(r).toLowerCase(),` items match.`]}),(0,Q.jsx)(`ul`,{className:`item-pick-list`,children:g.map(e=>{let t=s.get(e.id),n=t!==void 0,r=l.has(e.id),i=ml(e),a=pl(e).filter(e=>!e.startsWith(sN)&&!e.startsWith(cN));return(0,Q.jsxs)(`li`,{className:`item-pick-row${n?` selected`:``}`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box tools-item item-pick`,children:[n&&(0,Q.jsx)(`span`,{className:`tools-item-count`,"aria-label":`${t} of ${e.name}`,children:t}),(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-summary`,children:[(0,Q.jsxs)(`span`,{className:`tools-item-main`,children:[(0,Q.jsx)(`span`,{className:`tools-item-title`,children:e.name}),(0,Q.jsx)(uN,{stock:e})]}),(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${r?`Collapse`:`Expand`} ${e.name}`,"aria-expanded":r,title:r?`Collapse`:`Expand`,onClick:()=>d(e.id),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})]}),r&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`tools-item-badges`,children:[(0,Q.jsx)(yj,{children:$(e.category)}),a.map(e=>(0,Q.jsx)(yj,{children:e},e))]}),(0,Q.jsxs)(`div`,{className:`tools-item-stock`,children:[(0,Q.jsx)(`p`,{className:`tools-item-flavor`,children:e.summary}),i&&(0,Q.jsx)(`p`,{className:`tools-item-details`,children:i})]})]}),n&&(0,Q.jsxs)(`div`,{className:`rank-step item-pick-count`,children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Count`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`One fewer ${e.name}`,disabled:t<=1,onClick:()=>p(e.id,t-1),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:t}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`One more ${e.name}`,onClick:()=>p(e.id,t+1),children:(0,Q.jsx)(Mj,{is:`plus`})})]})]}),(0,Q.jsx)(`input`,{type:`checkbox`,className:`item-pick-check`,"aria-label":`Add ${e.name}`,checked:n,onChange:()=>f(e.id)})]},e.id)})})]})]}),(r!==`custom`||_>0)&&(0,Q.jsx)(`div`,{className:`item-picker-submit`,children:(0,Q.jsx)(`button`,{type:`button`,className:`build-button`,disabled:_===0,onClick:()=>e([...s].map(([e,t])=>({stock:VA.get(e),qty:t})).filter(e=>e.stock)),children:_===0?`Add items`:`Add ${_} ${_===1?`item`:`items`}`})})]})}function fN({items:e,onChange:t}){let[n,r]=(0,Z.useState)(``),[i,a]=(0,Z.useState)(`1`),[o,s]=(0,Z.useState)(`gear`),[c,l]=(0,Z.useState)(!1),[u,d]=(0,Z.useState)(new Map),f=e=>u.get(e.id)??!!e.notes,p=e=>d(new Map(u).set(e.id,!f(e))),[m,h]=(0,Z.useState)(),[g,_]=(0,Z.useState)(new Set),[v,y]=(0,Z.useState)(new Set),b=e=>{let t=new Set(g);if(!t.delete(e.id))t.add(e.id);else if(v.has(e.id)){let t=new Set(v);t.delete(e.id),y(t)}_(t)},x=e=>{let t=new Set(v);t.delete(e.id)||t.add(e.id),y(t)},S=(n,r)=>t(e.map(e=>e===n?{...e,...r}:e)),C=n=>t(e.filter(e=>e!==n)),w=e=>Math.max(1,Math.round(Number(e))||1),T=n=>{t(n.reduce((e,{stock:t,qty:n})=>ll(e,{item:t.id,name:t.name,qty:n,category:t.category,equipped:!1}),e)),l(!1)},ee=()=>{if(!n.trim())return;let s=hl(IA.items,n),c=w(i);t(ll(e,s?{item:s.id,name:s.name,qty:c,category:s.category,equipped:!1}:{name:n.trim(),qty:c,category:o,equipped:!1})),r(``),a(`1`),l(!1)};return(0,Q.jsxs)(`section`,{className:`tools-items`,children:[(0,Q.jsxs)(`div`,{className:`sheet-section-head`,children:[(0,Q.jsx)(`h4`,{className:`rule`,children:`Items`}),(0,Q.jsxs)(`button`,{type:`button`,className:`sheet-section-add`,"aria-label":`Add item`,onClick:()=>l(!0),children:[`Add`,(0,Q.jsx)(`span`,{className:`sheet-section-add-noun`,children:` item`})]})]}),c&&(0,Q.jsxs)(gj,{label:`Add items`,onClose:()=>l(!1),className:`sheet-add-popup item-picker-popup`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Add items`}),(0,Q.jsx)(dN,{onAdd:T,custom:(0,Q.jsxs)(`form`,{className:`tools-add`,onSubmit:e=>{e.preventDefault(),ee()},children:[(0,Q.jsx)(`input`,{type:`text`,placeholder:`Item name`,"aria-label":`Custom item name`,className:`tools-add-name`,value:n,onChange:e=>r(e.target.value)}),(0,Q.jsx)(`input`,{type:`number`,min:1,"aria-label":`Custom item count`,className:`tools-qty`,value:i,onChange:e=>a(e.target.value)}),(0,Q.jsx)(`select`,{"aria-label":`Category`,value:o,onChange:e=>s(e.target.value),children:Dc.map(e=>(0,Q.jsx)(`option`,{value:e,children:$(e)},e))}),(0,Q.jsx)(`button`,{type:`submit`,disabled:!n.trim(),children:`Add custom item`})]})})]}),e.length===0?(0,Q.jsx)(`p`,{className:`empty`,children:`No Items yet.`}):(0,Q.jsx)(`ul`,{className:`tools-item-list`,children:e.map(e=>{let t=e.item?VA.get(e.item):void 0,n=t?ml(t):``,r=g.has(e.id),i=(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${r?`Collapse`:`Expand`} ${e.name}`,"aria-expanded":r,title:r?`Collapse`:`Expand`,onClick:()=>b(e),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})}),a=(0,Q.jsx)(`span`,{className:`tools-item-count`,"aria-label":`${e.qty} of ${e.name}`,children:e.qty}),o=(0,Q.jsxs)(`label`,{className:`tools-equipped`,title:`Equip`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,"aria-label":`Equip`,checked:e.equipped,onChange:t=>S(e,{equipped:t.target.checked})}),(0,Q.jsx)(`span`,{className:`tools-equipped-label`,children:`Equip`})]}),s=v.has(e.id),c=(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-summary`,children:[o,(0,Q.jsxs)(`span`,{className:`tools-item-main`,children:[(0,Q.jsx)(`span`,{className:`tools-item-title`,children:e.name}),t&&(0,Q.jsx)(uN,{stock:t})]}),i]});if(!r)return(0,Q.jsxs)(`li`,{className:`c-sheet-box tools-item`,children:[a,c]},e.id);let l=t?pl(t).filter(e=>!e.startsWith(sN)&&!e.startsWith(cN)):[];return(0,Q.jsxs)(`li`,{className:`c-sheet-box tools-item`,children:[a,c,(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-edge tools-item-edit-toggle`,"aria-label":`Edit ${e.name}`,title:`Edit`,"aria-expanded":s,onClick:()=>x(e),children:(0,Q.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})}),s&&(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-edge tools-item-remove`,"aria-label":`Remove ${e.name}`,title:`Remove`,onClick:()=>C(e),children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z`})})}),(0,Q.jsxs)(`div`,{className:`tools-item-badges`,children:[(0,Q.jsx)(yj,{children:$(e.category)}),l.map(e=>(0,Q.jsx)(yj,{children:e},e))]}),s&&(0,Q.jsxs)(`div`,{className:`tools-item-row tools-item-fields`,children:[(0,Q.jsx)(`input`,{type:`number`,min:0,className:`tools-qty`,"aria-label":`How many ${e.name}`,value:e.qty,onChange:t=>S(e,{qty:Math.max(0,Math.round(Number(t.target.value))||0)})}),(0,Q.jsx)(`input`,{type:`text`,className:`tools-item-name`,"aria-label":`Item name`,value:e.name,onChange:t=>S(e,{name:t.target.value})})]}),t&&(0,Q.jsxs)(`div`,{className:`tools-item-stock`,children:[(0,Q.jsx)(`p`,{className:`tools-item-flavor`,children:t.summary}),n&&(0,Q.jsx)(`p`,{className:`tools-item-details`,children:n})]}),(0,Q.jsxs)(`div`,{className:`tools-item-note-line`,children:[(0,Q.jsxs)(`button`,{type:`button`,className:`tools-item-note-toggle`,"aria-expanded":f(e),onClick:()=>{f(e)||h(e.id),p(e)},children:[(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 576 512`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75zM58.57 323.5L291.7 90.34L421.7 220.3L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L58.57 323.5zM552 464C565.3 464 576 474.7 576 488C576 501.3 565.3 512 552 512H248C234.7 512 224 501.3 224 488C224 474.7 234.7 464 248 464H552z`})}),`Note`]}),f(e)&&(0,Q.jsx)(`input`,{type:`text`,className:`tools-note`,placeholder:`Notes, like damage, resistances or charges`,"aria-label":`${e.name} notes`,autoFocus:m===e.id,value:e.notes??``,onChange:t=>S(e,{notes:t.target.value||void 0})})]})]},e.id)})})]})}var pN={hp:`Hit Points`,vp:`Vibe Points`,sp:`Savvy Points`,mp:`Mana Points`},mN=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,hN=/^trait ([a-z0-9-]+) choice$/,gN=/^trait ([a-z0-9-]+)$/;function _N(e){let t=hN.exec(e);if(t)return`${ij(t[1])} (choice)`;let n=gN.exec(e);if(n)return ij(n[1]);let r=mN.exec(e);return r?`${(r[1]===`kind`?BA.get(r[2])?.name:zA.get(r[2])?.name)??r[2]} (${r[1]}${r[3]??``})`:e}function vN(e){let t=new Set;for(let n of e.sources){let e=mN.exec(n);e&&e[1]!==`kind`&&e[3]&&t.add(e[1])}return[`origin`,`profession`,`past`].filter(e=>t.has(e)).map($)}function yN({held:e,places:t,open:n=!0,onToggle:r,keepEffect:i=!1}){let a=RA.get(e.trait),o=ij(e.trait),s=vN(e);return(0,Q.jsxs)(`div`,{className:`trait-box ${oj(e.trait)}${r&&!n&&!i?` is-collapsed`:``}`,children:[(0,Q.jsxs)(`div`,{className:`trait-name trait-name-with-chip`,children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(lj,{plane:a?.plane}),o,a?.ranked||e.rank>1?` (${e.rank})`:``]}),(s.length>0||r)&&(0,Q.jsxs)(`span`,{className:`trait-name-chips`,children:[s.map(e=>(0,Q.jsx)(yj,{children:e},e)),r&&(0,Q.jsx)(`button`,{type:`button`,className:`tools-item-icon tools-item-expand`,"aria-label":`${n?`Collapse`:`Expand`} ${o}`,"aria-expanded":n,title:n?`Collapse`:`Expand`,onClick:r,children:(0,Q.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 12 8`,"aria-hidden":`true`,children:(0,Q.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})]})]}),i&&a&&(0,Q.jsx)(_j,{text:a.effect}),n&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsxs)(`div`,{className:`trait-card-badges`,children:[a?(0,Q.jsx)(yj,{children:$(a.category)}):(0,Q.jsx)(yj,{tone:`bad`,children:`not in content yet`}),(0,Q.jsxs)(`span`,{className:`muted small trait-card-from`,children:[`From `,e.sources.map(_N).join(`, `)]})]}),!i&&a&&(0,Q.jsx)(_j,{text:a.effect}),(0,Q.jsx)(vj,{action:a?.action,rank:e.rank}),t.length>0&&(0,Q.jsxs)(`p`,{className:`small`,children:[(0,Q.jsxs)(`strong`,{children:[a?.choices.find(e=>e.from!==`contact`&&Wc(e.from))?.note??`Place`,`:`]}),` `,t.join(`, `)]})]})]})}function bN({held:e,places:t,draft:n,onClose:r}){return(0,Q.jsx)(gj,{label:ij(e.trait),onClose:r,className:`lore-modal-card`,children:(0,Q.jsx)(yN,{held:e,places:t,draft:n})})}function xN({stack:e,top:t,children:n}){return e?(0,Q.jsxs)(`div`,{className:`sheet-side-stack`,children:[t,(0,Q.jsx)(`div`,{className:`sheet-side-row`,children:n})]}):(0,Q.jsx)(Q.Fragment,{children:n})}function SN({movement:e}){let t=e?.match(/^\s*([\d.]+)\s*([a-z]+)\s*$/i);return(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-movement`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,title:`Movement`,children:`Move`}),(0,Q.jsxs)(`div`,{className:`sheet-movement-value`,title:`Movement`,children:[(0,Q.jsx)(Pj,{name:`person-running`,label:`Movement`}),(0,Q.jsx)(`span`,{className:`num`,children:t?(0,Q.jsxs)(Q.Fragment,{children:[t[1],(0,Q.jsx)(`span`,{className:`sheet-movement-unit`,children:t[2]})]}):e??`–`})]})]})}function CN({draft:e,result:t,onExport:n,onImport:r,onName:i,onLooks:a,onPortrait:o,onDescription:s,embedded:c=!1,statsSlot:l,resistancesSlot:u,traitsAction:d,items:f,onItems:p,conditions:m,onConditions:h,hp:g}){let _=[e.origin,e.profession,e.past].map(e=>e?zA.get(e):void 0),v=dj(e),y=t.summary,b=Yl(e,IA,t),x=b.includes(`magic`)||(y?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],S=e.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Uc[e.from],from:uj(e)})):[]),C=t=>e.choices.filter(e=>e.trait===t&&e.from!==`contact`&&Wc(e.from)).flatMap(e=>e.traits),w=y?.traits??[],T=e=>RA.get(e.trait)?.category===`knowledge`,ee=e=>!!RA.get(e.trait)?.types.includes(`language`),E=[...w.filter(e=>T(e)&&!ee(e)),...w.filter(ee)],te=w.filter(e=>!T(e)),ne=e=>RA.get(e.trait)?.category,re=te.filter(e=>ne(e)===`skill`),ie=te.filter(e=>ne(e)===`ability`),ae=te.filter(e=>ne(e)!==`skill`&&ne(e)!==`ability`),[oe,se]=(0,Z.useState)(new Set),D=e=>{let t=new Set(oe);t.delete(e)||t.add(e),se(t)},ce=y?y.picks.universal.banked+y.picks.background.banked:0,le=(e,t=!1,n=!1)=>(0,Q.jsx)(`ul`,{className:`sheet-traits`,children:e.map(e=>(0,Q.jsx)(`li`,{children:(0,Q.jsx)(yN,{held:e,places:C(e.trait),...t?{open:oe.has(e.trait),onToggle:()=>D(e.trait)}:{},keepEffect:n})},e.trait))}),[ue,de]=(0,Z.useState)(),fe=(0,Z.useCallback)(()=>de(void 0),[]),pe=(0,Z.useRef)(null),[me,he]=(0,Z.useState)(!1),ge=!!u;(0,Z.useLayoutEffect)(()=>{let e=pe.current;if(!e||!ge)return;let t=()=>{let t=e.querySelector(`:scope > .sheet-body`),n=e.querySelector(`:scope > .sheet-side-stack`);t&&n&&he(n.getBoundingClientRect().top>t.getBoundingClientRect().top+1)};t();let n=new ResizeObserver(t);return n.observe(e),()=>n.disconnect()},[ge]);let _e=u&&(0,Q.jsxs)(`div`,{className:`sheet-move-row`,children:[(0,Q.jsx)(SN,{movement:y?.movement}),(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-resistances`,children:u})]}),ve=w.find(e=>e.trait===ue),ye=[..._.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name})))];return(0,Q.jsxs)(`section`,{className:`sheet${c?` sheet-embedded`:``}`,children:[!c&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(fj,{title:`Sheet`}),(0,Q.jsxs)(`div`,{className:`sheet-actions`,children:[(0,Q.jsx)(`span`,{className:`status ${t.ok?`good`:`bad`}`,children:t.ok?`Legal`:`${t.errors.length} ${t.errors.length===1?`error`:`errors`}`}),(0,Q.jsxs)(`button`,{onClick:n,children:[(0,Q.jsx)(Pj,{name:`download`}),`Download`]}),(0,Q.jsxs)(`button`,{onClick:r,children:[(0,Q.jsx)(Pj,{name:`upload`}),`Import`]}),(0,Q.jsxs)(`button`,{onClick:()=>window.print(),children:[(0,Q.jsx)(Pj,{name:`print`}),`Print`]})]})]}),(0,Q.jsxs)(`div`,{className:`c-sheet`,children:[!c&&(0,Q.jsxs)(`div`,{className:`level-badge level-blob`,"aria-label":`Level ${e.level}`,children:[(0,Q.jsx)(`span`,{className:`level-badge-label`,children:`Level`}),(0,Q.jsx)(`span`,{className:`level-badge-number`,children:e.level})]}),!c&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-head`,children:[(0,Q.jsxs)(`div`,{className:`sheet-head-who`,children:[(0,Q.jsx)(Tj,{className:`sheet-portrait`,portrait:e.portrait,name:e.name,onChange:o}),(0,Q.jsxs)(`div`,{className:`sheet-head-main`,children:[(0,Q.jsx)(Oj,{className:`sheet-name`,heading:`h2`,name:e.name,onChange:i??(()=>{})}),(0,Q.jsx)(aN,{draft:e,onLooks:a??(()=>{})})]})]}),(0,Q.jsx)(Ej,{description:e.description,onChange:s})]}),!c&&(0,Q.jsx)(`div`,{className:`c-sheet-box`,children:(0,Q.jsx)(`div`,{className:`tools-resources sheet-resources`,children:x.map(e=>(0,Q.jsx)(`div`,{className:`tools-resource`,children:(0,Q.jsxs)(`div`,{className:`tools-resource-value`,children:[(0,Q.jsx)(`strong`,{className:`tools-resource-name resource-${e}`,title:pN[e],children:e.toUpperCase()}),(0,Q.jsxs)(`span`,{className:`num`,children:[y?.resources[e]??`–`,(0,Q.jsxs)(`span`,{className:`muted`,children:[` / `,y?.resources[e]??`–`]})]})]})},e))})}),(0,Q.jsxs)(`div`,{className:`sheet-row`,ref:pe,children:[me&&_e,(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-body`,children:l?(0,Q.jsx)(`div`,{className:`sheet-stats`,children:l}):(0,Q.jsx)(`div`,{className:`sheet-stats`,children:b.map(t=>(0,Q.jsxs)(`div`,{className:`sheet-group stat-group-${t}`,children:[(0,Q.jsxs)(`div`,{className:`sheet-group-head`,children:[(0,Q.jsx)(`span`,{className:`stat-badge`,title:`Core Stat`,children:(0,Q.jsx)(Pj,{name:t})}),(0,Q.jsxs)(`h4`,{className:`rule`,children:[$(t),` - `,y?.coreStats[t]??`–`]})]}),!V[t].length&&(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsx)(`div`,{className:`tiny-text`,children:(0,Q.jsxs)(`strong`,{children:[`Each point in `,$(t),` adds `,3,` MP (Mana Points)`]})}),(0,Q.jsx)(Cj,{bonus:y?.coreBonus[t]??0,value:y?.coreStats[t]??e.core[t]})]}),V[t].map(t=>{let n=y?.stats[t],r=(v?.[t]?.bonus??0)+(e.startPoints?.[t]??0),i=v?.[t]?.max??0;return(0,Q.jsxs)(`div`,{className:`sheet-stat`,children:[(0,Q.jsxs)(`div`,{className:`tiny-text`,children:[(0,Q.jsxs)(`strong`,{children:[$(t),` - `,n??`–`]}),(0,Q.jsxs)(`span`,{className:`muted`,children:[` max `,v?.[t]?.max??`–`]})]}),(0,Q.jsx)(Sj,{bonus:r,value:n??r,max:i})]},t)})]},t))})}),p&&h&&(0,Q.jsxs)(xN,{stack:ge,top:!me&&_e,children:[(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-conditions`,children:(0,Q.jsx)(oN,{conditions:m??[],hp:g??y?.resources.hp??0,maxHp:y?.resources.hp??0,onChange:h})}),(0,Q.jsx)(`div`,{className:`c-sheet-box sheet-items`,children:(0,Q.jsx)(fN,{items:f??[],onChange:p})})]})]}),(0,Q.jsxs)(`div`,{className:`sheet-lower`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-side`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Knowledges`}),E.length>0?(0,Q.jsx)(`ul`,{className:`knowledge-list`,children:E.map(e=>{let t=RA.get(e.trait);return(0,Q.jsxs)(`li`,{children:[ee(e)?(0,Q.jsx)(Pj,{name:`language`,label:`Language`}):(0,Q.jsx)(Pj,{name:`knowledge`,label:`Knowledge`}),(0,Q.jsxs)(`button`,{type:`button`,className:`link`,onClick:()=>de(e.trait),children:[ij(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,Q.jsx)(`p`,{className:`empty`,children:`None yet.`})]}),(0,Q.jsxs)(`div`,{className:`sheet-pair`,children:[(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-abilities`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Abilities`}),ie.length>0?le(ie,!0,!0):(0,Q.jsx)(`p`,{className:`empty`,children:`No Abilities yet.`})]}),(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-skills`,children:[(0,Q.jsxs)(`div`,{className:`sheet-traits-head`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Skills`}),y&&(0,Q.jsxs)(`span`,{className:`sheet-banked`,children:[ce,` `,ce===1?`pick`:`picks`,` available`]}),d]}),re.length>0?le(re,!0):(0,Q.jsx)(`p`,{className:`empty`,children:`No Skills yet.`})]})]}),(ae.length>0||S.length>0||ye.length>0)&&(0,Q.jsxs)(`div`,{className:`c-sheet-box sheet-other`,children:[ae.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Other Traits`}),le(ae)]}),S.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Contacts`}),(0,Q.jsx)(`ul`,{className:`features`,children:S.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.text}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),ye.length>0&&(0,Q.jsxs)(Q.Fragment,{children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:`Features`}),(0,Q.jsx)(`ul`,{className:`features`,children:ye.map((e,t)=>(0,Q.jsxs)(`li`,{children:[(0,Q.jsx)(`strong`,{children:e.name}),` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})]})]}),ve&&(0,Q.jsx)(bN,{held:ve,places:C(ve.trait),draft:e,onClose:fe})]})}var wN=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(ij),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),TN={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},EN={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},DN={wielder:`Wielder Skills, one per weapon. They're ordinary Skills, kept on their own tab so they don't crowd the rest.`};function ON({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a}){let[o,s]=(0,Z.useState)(`universal`),[c,l]=(0,Z.useState)(``),[u,d]=(0,Z.useState)(new Set),[f,p]=(0,Z.useState)(!0),m=n.summary,h=m?.traitLists??[],g=typeof o==`string`||h.includes(o.list)?o:`universal`,_=typeof g==`string`?g:`list:${g.list}`,v=(0,Z.useMemo)(()=>$l(e,IA,t,g),[e,t,_]);if(!v||!m)return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Traits`}),(0,Q.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let y=c.trim().toLowerCase(),b=new Set(e.traits.map(e=>e.trait)),x=v.filter(e=>!i?.has(e.trait.id)&&!u.has(e.trait.category)&&(!f||e.reasons.length===0||b.has(e.trait.id))&&(!y||e.trait.name.toLowerCase().includes(y)||e.trait.tags.some(e=>e.toLowerCase().includes(y)))),S=wc.options.map(e=>({category:e,options:x.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),C=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},w=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),T=t=>e.traits.map(e=>e.trait).lastIndexOf(t),ee=new Map(m.traits.map(e=>[e.trait,e.rank])),E=(t,n,i)=>{let a=T(t);a>=0?w(a):r(Hl(e,t,n,i))};return(0,Q.jsxs)(`section`,{children:[(0,Q.jsx)(fj,{title:`Traits`,children:`Spend picks on Traits. Unspent picks are banked for later.`}),(0,Q.jsxs)(`div`,{className:`tech-fields tech-fields-light`,children:[(0,Q.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=m.picks[e];return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":g===e,className:`tech-field-tab${g===e?` is-active`:``}`,onClick:()=>s(e),children:[$(e),` `,(0,Q.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),h.map(t=>{let n=typeof g!=`string`&&g.list===t,r=new Set(e.traits.filter(e=>RA.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,Q.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>s({list:t}),children:[$(t),` `,(0,Q.jsx)(`span`,{className:`num`,children:r})]},t)})]}),(0,Q.jsx)(`p`,{className:`hint`,children:typeof g==`string`?EN[g]:(DN[g.list]??`Traits built on ${$(g.list)}, or closely related to it. Any character can take one whose stat requirements they meet.`)+` Traits on this character's Background Trait list take a Background pick while one is left; the rest take Universal picks.`}),(0,Q.jsxs)(`div`,{className:`filters`,children:[(0,Q.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:c,onChange:e=>l(e.target.value),"aria-label":`Search Traits`}),wc.options.map(e=>(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:!u.has(e),onChange:()=>C(e)}),` `,TN[e]]},e)),(0,Q.jsxs)(`label`,{className:`check`,children:[(0,Q.jsx)(`input`,{type:`checkbox`,checked:f,onChange:e=>p(e.target.checked)}),` Hide unavailable`]})]}),v.length===0&&g===`background`&&(0,Q.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package Background Traits and the Kind's Trait access.`}),v.length>0&&x.length===0&&(0,Q.jsx)(`p`,{className:`empty`,children:f?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),S.map(t=>(0,Q.jsxs)(`div`,{className:`trait-group`,children:[(0,Q.jsx)(`h3`,{className:`subhead`,children:TN[t.category]}),(0,Q.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=T(t.id)>=0,s=!o&&a.length>0;return(0,Q.jsxs)(`li`,{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,className:`trait trait-box ${oj(t.id)}${o?` selected`:``}${s?` rejected`:``}`,onClick:()=>!s&&E(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||E(t.id,n,i))},children:[(0,Q.jsxs)(`h3`,{className:`trait-name`,children:[(0,Q.jsx)(lj,{plane:t.plane}),t.name]}),(0,Q.jsxs)(`div`,{className:`trait-main`,children:[(0,Q.jsxs)(`div`,{className:`chips`,children:[(0,Q.jsx)(yj,{children:$(t.category)}),t.ranked&&(0,Q.jsx)(yj,{tone:`muted`,children:`Ranked`}),t.background&&(0,Q.jsx)(yj,{tone:`muted`,children:`Background`}),t.mastery&&(0,Q.jsx)(yj,{tone:`muted`,children:`Mastery`})]}),(0,Q.jsx)(`p`,{children:t.summary}),(0,Q.jsx)(_j,{text:t.effect}),(0,Q.jsx)(vj,{action:t.action}),wN(t)&&(0,Q.jsxs)(`p`,{className:`muted small`,children:[`Needs `,wN(t)]}),t.tags.length>0&&(0,Q.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,Q.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,Q.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,Q.jsx)(`button`,{type:`button`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>w(T(t.id)),children:(0,Q.jsx)(Mj,{is:`minus`})}),(0,Q.jsx)(`span`,{className:`num`,children:ee.get(t.id)??0}),(0,Q.jsx)(`button`,{type:`button`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(Hl(e,t.id,n,i)),children:(0,Q.jsx)(Mj,{is:`plus`})})]}),s&&(0,Q.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,Q.jsx)(`li`,{children:e},e))})]})]},t.id)})})]},t.category)),(0,Q.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,Q.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):(0,Q.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,Q.jsxs)(`li`,{children:[(0,Q.jsxs)(`span`,{children:[(0,Q.jsx)(`strong`,{children:ij(e.trait)}),` rank `,e.rank??1,` `,(0,Q.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!RA.has(e.trait)&&(0,Q.jsx)(yj,{tone:`bad`,children:`unknown`})]}),(0,Q.jsx)(`button`,{className:`link`,onClick:()=>w(t),"aria-label":`Remove ${ij(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]})]})}export{ql as $,sj as A,zA as B,Tj as C,fj as D,wj as E,XA as F,eu as G,Zl as H,IA as I,Kl as J,El as K,LA as L,$ as M,ij as N,uj as O,tj as P,Gl as Q,VA as R,hj as S,n as St,Mj as T,Yl as U,RA as V,nu as W,Rl as X,zl as Y,Wl as Z,Pj as _,Dc as _t,eN as a,bl as at,gj as b,c as bt,qM as c,hl as ct,sM as d,Uc as dt,Al as et,Uj as f,Vc as ft,Ej as g,el as gt,yj as h,Gc as ht,aN as i,yl as it,aj as j,dj as k,KM as l,ll as lt,pj as m,Jc as mt,pN as n,_l as nt,JM as o,fl as ot,Aj as p,Kc as pt,Cl as q,CN as r,xl as rt,GM as s,dl as st,ON as t,Bl as tt,nM as u,ul as ut,Fj as v,V as vt,lj as w,Oj as x,i as xt,Dj as y,wc as yt,BA as z};
