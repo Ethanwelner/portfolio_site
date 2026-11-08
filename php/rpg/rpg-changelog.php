@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Adventures: the Magic tab has example magical Items under the rules for making them, with what each does and the MP an enchanted Item holds: three artifacts (Santar’s Sword of Rust, L’orian’s Erstwhile Companion and The Ring of the Wild Children), two enchanted Items (Traveler’s Respite and the Amulet of the Seas) and two potions (a Rank 3 Healing Potion and Firewalker’s Draught, with Flameproof and Haste at Rank 2).</li>
 						<li>Mechanics: the Injuries tab shows Dress Wounds as an example Ability card under Healing, Medicine, and Regaining HP.</li>
 						<li>Mechanics: Incidents has an Injuries tab. A Critical Hit that deals a quarter of a target’s HP can injure them on a failed Endurance check, with the injury set by the damage type (Broken Limb for Blunt, Scarred for Slashing, Organ Damage for Piercing, Severe Burn, Cursed, Mortis, Scrambled and Irradiated), alongside Deafened, Blinded and Paralyzed, and the Dress Wounds Ability (Intuition 2), whose Action gives the Bandaged Condition, doubling HP recovery for a day.</li>
 						<li>Character Creator and Player Tools: the injury Conditions, Bandaged and the Dress Wounds Ability. Deafened is now a permanent injury; the Deafened that Thunderclap, Stormcraft, Electrified Weapon and the Thunder Flask give is now Temporarily Deafened, with the same effect for a minute.</li>
