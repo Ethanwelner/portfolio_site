@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Inventor covers devices, machines and tools, including working out what an unfamiliar one is for. Field Medicine reduces Severe Bleeding, Unconscious, temporary blindness or a concussion, and Monster Hunter no longer gives +3 Defense against a marked quarry.</li>
 						<li>Change Log: it has an RSS feed now, with each line as its own post, so it can be followed in a feed reader or a Discord server.</li>
 					</ul>
 				</article>
