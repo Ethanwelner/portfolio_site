@@ -67,6 +67,7 @@
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-attacking" aria-controls="incidents-attacking" aria-selected="false">Attacking and Damage</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-defense" aria-controls="incidents-defense" aria-selected="false">Defense and Cover</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-rp" aria-controls="incidents-rp" aria-selected="false">Role-Playing Actions</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-injuries" aria-controls="incidents-injuries" aria-selected="false">Injuries</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="incidents-rounds" role="tabpanel" aria-labelledby="tab-incidents-rounds">
@@ -282,6 +283,75 @@
 						<li>Tying a rope to a moving carriage with a Grace Skill Check</li>
 						<li>Lifting a discarded Item from the ground</li>
 					</ul>
+				</div>
+			</div>
+			<div class="tech-field-panel" id="incidents-injuries" role="tabpanel" aria-labelledby="tab-incidents-injuries">
+				<!-- Injuries, from the Mechanics Doc's Incidents tab -->
+				<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+					<div class="flex-7 content-stack">
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Injuries</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Injuries may be suffered by individuals through Critical Hits, the effects of Traits or Items, or RP circumstances. Injuries convey a Condition to the sufferer based on the type of damage received during a Critical Hit, or the RP circumstances that led to the injury. Unless specified in the Condition, injuries are permanent, but they may be removed through Items, Traits, Skill Checks, or RP circumstances. Injuries inflicted by Attacks are based on damage types and use the following table.
+							</p>
+							<table class="copy sf-table">
+								<thead>
+									<tr><th>Damage Type</th><th>Injury</th><th>Effect</th></tr>
+								</thead>
+								<tbody>
+									<tr><td>Blunt</td><td>Broken Limb</td><td>-2 to Attack Rolls per Rank, -1 Priority</td></tr>
+									<tr><td>Slashing</td><td>Scarred</td><td>-2 Persuasion, -2 Demeanor per Rank</td></tr>
+									<tr><td>Piercing</td><td>Organ Damage</td><td>-1 Priority, +2 to all damage received per Rank</td></tr>
+									<tr><td>Heat</td><td>Severe Burn</td><td>+2 to all damage received per Rank, -2 Demeanor</td></tr>
+									<tr><td>Cold</td><td>Severe Burn</td><td>+2 to all damage received per Rank, -2 Demeanor</td></tr>
+									<tr><td>Electrical</td><td>Severe Burn</td><td>+2 to all damage received per Rank, -2 Demeanor</td></tr>
+									<tr><td>Metaphysical</td><td>Cursed</td><td>-2 to all Skill Checks per Rank, +2 to all damage received</td></tr>
+									<tr><td>Death</td><td>Mortis</td><td>-2 HP gained per Rank every time an effect would cause the character to regain HP or gain bonus HP</td></tr>
+									<tr><td>Psychic</td><td>Scrambled</td><td>-2 to all Skill Checks per Rank, -1 Priority</td></tr>
+									<tr><td>Radiation</td><td>Irradiated</td><td>-2 Endurance per Rank; a character whose Endurance would fall below 0 from Irradiated dies. -1 HP regained per six-hour period</td></tr>
+									<tr><td>Corrosive</td><td>Severe Burn</td><td>+2 to all damage received per Rank, -2 Demeanor</td></tr>
+									<tr><td>EMP</td><td>Scrambled</td><td>-2 to all Skill Checks per Rank, -1 Priority</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="flex-6 content-stack">
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Critical Hits</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								If a Critical Hit is rolled and the target receives damage equal to a quarter or more of their total Hit Points, they may be subject to an injury. The target must roll an Endurance Skill Check of 10 + the total damage received. If the target fails, they gain one Rank in an injury Condition chosen by the attacker from the injuries available for the types of damage the target suffered.
+							</p>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Other Injuries</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">Some injuries may be inflicted by specific weapons, Traits, or circumstances outside of the table. The following are a sample of such injuries:</p>
+							<ul class="copy">
+								<li><strong>Deafened</strong> – The character suffers -20 to all Skill Checks that require hearing and can no longer understand verbal communication.</li>
+								<li><strong>Blinded</strong> – The character suffers -20 to all Skill Checks that require sight, and the GM may request additional checks for basic actions such as walking or manipulating objects.</li>
+								<li><strong>Paralyzed</strong> – The character’s Grace and Movement are reduced to 0. The character can’t perform any actions that require voluntary movement.</li>
+							</ul>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Healing, Medicine, and Regaining HP</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Over the course of a game, player characters and NPCs may be injured, but all is not lost! The medical sciences of 2230 have progressed considerably, and the injured can be healed, provided they have access to medical facilities, Items, or esoteric planar ways. Ranks of an injury can be removed, and the speed of Hit Point recovery can be hastened.
+								<br><br>
+								A character with the Dress Wounds Ability (Intuition 2) may use the Dress Wounds Full RP Action on themselves or another character, conveying the Bandaged Condition, which doubles the speed of automatic Hit Point recovery for the following 24 hours.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

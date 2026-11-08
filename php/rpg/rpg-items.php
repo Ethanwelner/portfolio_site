@@ -25,7 +25,7 @@
 				<div class="tech-field-tab-list" role="tablist" aria-label="Items, Armor, and Effects">
 					<button type="button" class="tech-field-tab is-active" role="tab" id="tab-items-rules" aria-controls="items-rules" aria-selected="true">Item Rules</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-items-types" aria-controls="items-types" aria-selected="false">Item Types</button>
-					<button type="button" class="tech-field-tab" role="tab" id="tab-items-armor" aria-controls="items-armor" aria-selected="false">Armor and Damage Types</button>
+					<button type="button" class="tech-field-tab" role="tab" id="tab-items-armor" aria-controls="items-armor" aria-selected="false">Resistances and Damage Types</button>
 					<button type="button" class="tech-field-tab" role="tab" id="tab-items-examples" aria-controls="items-examples" aria-selected="false">Example Items</button>
 				</div>
 
