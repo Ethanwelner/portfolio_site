@@ -7,8 +7,7 @@
 // content/kinds/dreft and the dreft Origins, Professions and Pasts)
 include_once __DIR__ . '/background-card.php';
 $sf_dreft = json_decode( file_get_contents( __DIR__ . '/dreftian-backgrounds.json' ), true );
-// Kinds in two columns; the Backgrounds tab sets Origins and Professions
-// beside Pasts
+// Kinds in two columns
 $sf_dreft_card_cols = function ( $cols ) use ( $sf_dreft ) {
 	echo '<div class="d-flex flex-wrap flex-xs-nowrap split-cols">';
 	foreach ( $cols as $i => $col ) {
@@ -37,7 +36,19 @@ $sf_kinds_half = (int) ceil( count( $sf_dreft['kinds'] ) / 2 );
 		<?php $sf_dreft_card_cols( array( array( '' => array_slice( $sf_dreft['kinds'], 0, $sf_kinds_half ) ), array( '' => array_slice( $sf_dreft['kinds'], $sf_kinds_half ) ) ) ); ?>
 	</div>
 	<div class="tech-field-panel" id="dreft-backgrounds" role="tabpanel" aria-labelledby="tab-dreft-backgrounds">
-		<?php $sf_dreft_card_cols( array( array( 'Origins' => $sf_dreft['origins'], 'Professions' => $sf_dreft['professions'] ), array( 'Pasts' => $sf_dreft['pasts'] ) ) ); ?>
+		<div class="content-stack">
+			<?php foreach ( array( 'Origins' => 'origins', 'Professions' => 'professions', 'Pasts' => 'pasts' ) as $title => $key ) : ?>
+			<div class="content-stack content-stack-xs">
+				<div class="line-container">
+					<h5><strong><?php echo $title; ?></strong></h5>
+					<div class="line"></div>
+				</div>
+				<div class="bg-card-grid">
+					<?php foreach ( $sf_dreft[ $key ] as $b ) { sf_background_card( $b ); } ?>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
 	</div>
 	<div class="tech-field-panel" id="dreft-characters" role="tabpanel" aria-labelledby="tab-dreft-characters">
 		<p class="copy mb-0">Content coming soon</p>
