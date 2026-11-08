@@ -6062,7 +6062,7 @@ category: condition
 types: [enchantment]
 ranked: true
 conveyed: true
-temporary: "Lasts one minute."
+temporary: "Lasts 10 minutes per Rank."
 effect: "This weapon deals 2 more Corrosive damage per Rank. Targets hit by this weapon gain 1 Rank of the Corroding Condition."
 `,S_=`id: cybernetic-intelligence
 name: "Cybernetic Intelligence"
@@ -6125,8 +6125,8 @@ category: condition
 types: [enchantment]
 ranked: true
 conveyed: true
-temporary: "Lasts one minute."
-effect: "This weapon deals 2 more Blunt damage per Rank. Targets hit by this weapon gain the Prone Condition."
+temporary: "Lasts 10 minutes per Rank."
+effect: "This weapon deals 3 more Blunt damage per Rank. On a Solid Hit or better, the target gains the Prone Condition."
 `,O_=`id: electrified-weapon
 name: "Electrified Weapon"
 status: draft
@@ -6137,8 +6137,8 @@ category: condition
 types: [enchantment]
 ranked: true
 conveyed: true
-temporary: "Lasts one minute."
-effect: "This weapon deals 2 more Electrical damage per Rank. Targets hit by this weapon gain the Deafened Condition."
+temporary: "Lasts 10 minutes per Rank."
+effect: "This weapon deals 4 more Electrical damage per Rank. Targets hit by this weapon gain the Deafened Condition."
 `,k_=`id: elemental-ward-condition
 name: "Elemental Ward"
 status: placeholder
@@ -6173,8 +6173,8 @@ category: condition
 types: [enchantment]
 ranked: true
 conveyed: true
-temporary: "Lasts one minute."
-effect: "This weapon deals 2 more Heat damage per Rank. Targets hit by this weapon gain 1 Rank of the Burning Condition."
+temporary: "Lasts 10 minutes per Rank."
+effect: "This weapon deals 4 more Heat damage per Rank. Targets hit by this weapon gain 1 Rank of the Burning Condition."
 `,M_=`id: flat-footed
 name: "Flat-Footed"
 status: draft
@@ -6196,8 +6196,8 @@ category: condition
 types: [enchantment]
 ranked: true
 conveyed: true
-temporary: "Lasts one minute."
-effect: "This weapon deals 2 more Cold damage per Rank. Targets hit by this weapon gain 1 Rank of the Frozen Condition."
+temporary: "Lasts 10 minutes per Rank."
+effect: "This weapon deals 3 more Cold damage per Rank. Targets hit by this weapon gain 1 Rank of the Frozen Condition."
 `,P_=`id: frightened
 name: "Frightened"
 status: placeholder
