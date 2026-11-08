@@ -4488,7 +4488,7 @@ plane: any
 summary: "Sprays a target with burning acid."
 tags: [magic, spell, acid, attack]
 category: ability
-types: [potion]
+types: [elemental, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4527,7 +4527,7 @@ plane: any
 summary: "Drives a possessing spirit out of its host."
 tags: [magic, spell, spirits, supernatural]
 category: ability
-types: [potion]
+types: [necromancy, potion]
 ranked: true
 minStats: { magic: 4 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4552,6 +4552,7 @@ plane: any
 summary: "Steps through space to a nearby spot."
 tags: [magic, spell, movement, teleport]
 category: ability
+types: [conjuration]
 ranked: true
 minStats: { magic: 4 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4587,6 +4588,7 @@ plane: any
 summary: "Lightning that leaps from one target to the next."
 tags: [magic, spell, lightning, attack]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 5 }
 prerequisites: [lightning]
@@ -4601,7 +4603,7 @@ plane: any
 summary: "Makes a target see the caster as a trusted friend."
 tags: [magic, spell, mind, social]
 category: ability
-types: [potion]
+types: [illusion, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4639,6 +4641,7 @@ plane: any
 summary: "Sets a small patch of material alight."
 tags: [magic, spell, fire]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4652,6 +4655,7 @@ plane: any
 summary: "Conjures plain, filling food."
 tags: [magic, spell, survival]
 category: ability
+types: [conjuration]
 ranked: true
 minStats: { magic: 2 }
 prerequisites: [create-water]
@@ -4666,6 +4670,7 @@ plane: any
 summary: "Conjures a sphere of clean water."
 tags: [magic, spell, water, survival]
 category: ability
+types: [conjuration]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4679,7 +4684,7 @@ plane: any
 summary: "Fills a space with darkness no lamp can pierce."
 tags: [magic, spell, darkness, stealth]
 category: ability
-types: [potion]
+types: [illusion, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4693,6 +4698,7 @@ plane: any
 summary: "Clouds a target's mind for a moment."
 tags: [magic, spell, mind, hindrance]
 category: ability
+types: [enervation]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4706,7 +4712,7 @@ plane: any
 summary: "Senses the magic nearby."
 tags: [magic, spell, senses, utility]
 category: ability
-types: [potion]
+types: [divination, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4745,6 +4751,7 @@ plane: any
 summary: "Weighs a weapon down with magical stone."
 tags: [magic, spell, enchantment, weapon, earth, stone]
 category: ability
+types: [enchantment, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4758,6 +4765,7 @@ plane: any
 summary: "Drives a spike of stone up out of the ground."
 tags: [magic, spell, earth, attack]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4771,7 +4779,7 @@ plane: any
 summary: "Shields a character from one kind of elemental damage."
 tags: [magic, spell, enchantment, resistance]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4785,7 +4793,7 @@ plane: any
 summary: "Makes the ground grab at the legs of everyone nearby."
 tags: [magic, spell, earth, hindrance]
 category: ability
-types: [potion]
+types: [conjuration, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4834,6 +4842,7 @@ plane: any
 summary: "Fills a target with dread."
 tags: [magic, spell, mind, hindrance]
 category: ability
+types: [illusion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4847,7 +4856,7 @@ plane: any
 summary: "Slows a fall to a gentle drift."
 tags: [magic, spell, air, enchantment, movement]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4870,7 +4879,7 @@ plane: any
 summary: "Hurls a ball of fire that bursts on impact."
 tags: [magic, spell, fire, attack]
 category: ability
-types: [potion]
+types: [elemental, potion]
 ranked: true
 minStats: { magic: 3 }
 prerequisites: [create-fire]
@@ -4885,6 +4894,7 @@ plane: any
 summary: "Wreathes a weapon in magical fire."
 tags: [magic, spell, enchantment, weapon, fire]
 category: ability
+types: [enchantment, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4909,7 +4919,7 @@ plane: any
 summary: "Protects a character or item from flames and heat."
 tags: [magic, spell, enchantment, defense, fire]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4923,7 +4933,7 @@ plane: any
 summary: "Summons a thick, rolling fog."
 tags: [magic, spell, water, air, stealth]
 category: ability
-types: [potion]
+types: [conjuration, potion]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4975,7 +4985,7 @@ plane: any
 summary: "Knocks people flat with a blast of wind."
 tags: [magic, spell, air, hindrance]
 category: ability
-types: [potion]
+types: [elemental, potion]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -4989,7 +4999,7 @@ plane: any
 summary: "Speeds a character up."
 tags: [magic, spell, enchantment, movement]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 4 }
 prerequisites: [magical-grace]
@@ -5018,7 +5028,7 @@ plane: any
 summary: "Blasts an area with killing frost."
 tags: [magic, spell, cold, attack]
 category: ability
-types: [potion]
+types: [elemental, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5049,6 +5059,7 @@ plane: any
 summary: "Fires a spear of ice."
 tags: [magic, spell, cold, attack]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5062,6 +5073,7 @@ plane: any
 summary: "Sheathes a weapon in magical frost."
 tags: [magic, spell, enchantment, weapon, ice, cold]
 category: ability
+types: [enchantment, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5086,7 +5098,7 @@ plane: any
 summary: "Protects a character or item from frost and cold."
 tags: [magic, spell, enchantment, defense, ice, cold]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5100,7 +5112,7 @@ plane: any
 summary: "Lets a character see through walls and smoke for a time."
 tags: [magic, spell, senses, enchantment]
 category: ability
-types: [potion]
+types: [divination, potion, artifact]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5114,7 +5126,7 @@ plane: any
 summary: "Hides a character from sight."
 tags: [magic, spell, stealth, enchantment]
 category: ability
-types: [potion]
+types: [illusion, potion, artifact]
 ranked: true
 minStats: { magic: 4 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5150,7 +5162,7 @@ plane: any
 summary: "Makes an object shine like a lamp."
 tags: [magic, spell, light, utility]
 category: ability
-types: [potion]
+types: [illusion, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5164,6 +5176,7 @@ plane: any
 summary: "Throws a bolt of lightning."
 tags: [magic, spell, lightning, attack]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5177,7 +5190,7 @@ plane: any
 summary: "Magically boosts a character's Endurance."
 tags: [magic, spell, enchantment]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5191,7 +5204,7 @@ plane: any
 summary: "Lets a character fly for a time."
 tags: [magic, spell, air, enchantment, movement]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 4 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5205,7 +5218,7 @@ plane: any
 summary: "Magically boosts a character's Grace."
 tags: [magic, spell, enchantment]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5233,7 +5246,7 @@ plane: any
 summary: "Magically boosts a character's Power."
 tags: [magic, spell, enchantment]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5247,6 +5260,7 @@ plane: any
 summary: "Draws mana out of a target and into the caster."
 tags: [magic, spell, mana, attack]
 category: ability
+types: [enervation]
 ranked: true
 minStats: { magic: 4, empathy: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5372,6 +5386,7 @@ plane: any
 summary: "Calls down a burning stone from the sky."
 tags: [magic, spell, fire, earth, attack]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 6 }
 prerequisites: [fireball]
@@ -5386,6 +5401,7 @@ plane: any
 summary: "Drives a spike of pain into a target's mind."
 tags: [magic, spell, mind, attack]
 category: ability
+types: [enervation]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5432,6 +5448,7 @@ plane: any
 summary: "Coats a weapon in magical acid."
 tags: [magic, spell, enchantment, weapon, acid, corrosion]
 category: ability
+types: [enchantment, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5456,7 +5473,7 @@ plane: any
 summary: "Protects a character or item from acid and rust."
 tags: [magic, spell, enchantment, defense, acid, corrosion]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5480,7 +5497,7 @@ plane: any
 summary: "Wraps a character in a shimmering barrier."
 tags: [magic, spell, enchantment, defense]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5504,7 +5521,7 @@ plane: any
 summary: "Smothers all sound in an area."
 tags: [magic, spell, stealth]
 category: ability
-types: [potion]
+types: [illusion, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5529,7 +5546,7 @@ plane: any
 summary: "Turns a character's skin to stone for a time."
 tags: [magic, spell, earth, enchantment]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 2 }
 prerequisites: [magical-endurance]
@@ -5544,7 +5561,7 @@ plane: any
 summary: "Puts a target into a deep, sudden sleep."
 tags: [magic, spell, mind, hindrance]
 category: ability
-types: [potion]
+types: [enervation, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5558,7 +5575,7 @@ plane: any
 summary: "Drags a target's movements to a crawl."
 tags: [magic, spell, hindrance]
 category: ability
-types: [potion]
+types: [enervation, potion]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5572,7 +5589,7 @@ plane: any
 summary: "Lets the caster talk with beasts."
 tags: [magic, spell, animals, communication]
 category: ability
-types: [potion]
+types: [divination, potion, artifact]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5586,7 +5603,7 @@ plane: any
 summary: "Lets a character climb walls and walk on ceilings."
 tags: [magic, spell, enchantment, movement]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 1 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5635,7 +5652,7 @@ plane: any
 summary: "Protects a character or item from crushing blows of stone and earth."
 tags: [magic, spell, enchantment, defense, earth, stone]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5649,6 +5666,7 @@ plane: any
 summary: "Charges a weapon with magical lightning."
 tags: [magic, spell, enchantment, weapon, lightning, storm]
 category: ability
+types: [enchantment, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5673,7 +5691,7 @@ plane: any
 summary: "Protects a character or item from lightning and electricity."
 tags: [magic, spell, enchantment, defense, lightning, storm]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5723,7 +5741,7 @@ plane: any
 summary: "A deafening crack of thunder."
 tags: [magic, spell, sound, attack]
 category: ability
-types: [potion]
+types: [elemental, potion]
 ranked: true
 minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
@@ -5737,6 +5755,7 @@ plane: any
 summary: "Raises a wall of stone out of the ground."
 tags: [magic, spell, earth, defense]
 category: ability
+types: [elemental]
 ranked: true
 minStats: { magic: 4 }
 prerequisites: [skin-of-stone]
@@ -5751,7 +5770,7 @@ plane: any
 summary: "Lets a character breathe underwater."
 tags: [magic, spell, water, enchantment]
 category: ability
-types: [potion]
+types: [enchantment, potion, artifact]
 ranked: true
 minStats: { magic: 2 }
 prerequisites: [create-water]
@@ -5776,6 +5795,7 @@ plane: any
 summary: "Draws the life out of a target."
 tags: [magic, spell, death, attack]
 category: ability
+types: [necromancy]
 ranked: true
 minStats: { magic: 4 }
 # On the Magic list: its own tab on the Traits step, open to every character.
