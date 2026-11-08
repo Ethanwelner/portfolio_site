@@ -2201,6 +2201,26 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
+    /* Isekai's cards, as in the creator: Dreft's green border and header,
+       and the Isekai mark (an inline SVG) before the name */
+    .trait-box.region-dreft {
+        border-color: var(--frontiers-dreft);
+
+        .trait-name {
+            background-color: var(--frontiers-dreft);
+        }
+    }
+
+    .setting-icon {
+        display: inline-block;
+        flex-shrink: 0;
+        width: 1.15em;
+        height: 1.15em;
+        margin-right: .45em;
+        vertical-align: -.2em;
+        fill: currentColor;
+    }
+
     /* Condition cards in grays, as on the creator's sheet and in Player
        Tools: a mid gray border and a light gray name bar with dark text */
     .trait-box.condition-box {

@@ -1,5 +1,5 @@
 // Usage: node scripts/dreftian-backgrounds.cjs ~/strange-frontiers-character-creator php/rpg/dreftian-backgrounds.json
-// Rerun when the creator's Dreftian Kinds, Origins, Professions or Pasts change.
+// Rerun when the creator's Dreftian Kinds, Professions or Pasts, or its Isekai Origins, change.
 // Builds the Building a Dreftian cards' data from the creator's content,
 // in the shape of the site's sample-character.json backgrounds.
 const fs = require('fs'), path = require('path');
@@ -43,7 +43,11 @@ function pkg(p, slot) {
 }
 const out = {
   kinds: dir(path.join(C, 'kinds/dreft')).map((k) => pkg(k, 'Kind')),
-  origins: dir(path.join(C, 'origins/dreft')).map((k) => pkg(k, 'Origin')),
+  // Every Origin on Isekai: Dreft first, then its neighbors
+  origins: fs.readdirSync(path.join(C, 'origins')).flatMap((d) => dir(path.join(C, 'origins', d)))
+    .filter((o) => o.plane === 'isekai')
+    .sort((a, b) => (b.region === 'dreft') - (a.region === 'dreft') || a.name.localeCompare(b.name))
+    .map((k) => pkg(k, 'Origin')),
   professions: dir(path.join(C, 'professions/dreft')).map((k) => pkg(k, 'Profession')),
   pasts: dir(path.join(C, 'pasts/dreft')).map((k) => pkg(k, 'Past')),
 };

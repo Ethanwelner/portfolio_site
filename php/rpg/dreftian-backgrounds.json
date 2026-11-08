@@ -288,6 +288,79 @@
 				"Local Folklore",
 				"Karsef"
 			]
+		},
+		{
+			"id": "kingdom-of-karsef",
+			"slot": "Origin",
+			"name": "Kingdom of Karsef",
+			"plane": "isekai",
+			"summary": "You grew up in the Kingdom of Karsef, across the Corsine Pass from Dreft, and an old rival of it.",
+			"lore": "kingdom-of-karsef",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"Karsef 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"The Corsine Pass",
+				"Mountaineering",
+				"Dreft",
+				"Shield Wall",
+				"Military Tactics"
+			]
+		},
+		{
+			"id": "kingdom-of-sorellion",
+			"slot": "Origin",
+			"name": "Kingdom of Sorellion",
+			"plane": "isekai",
+			"summary": "You grew up in the Kingdom of Sorellion, one of Dreft’s neighbors on Isekai.",
+			"lore": "kingdom-of-sorellion",
+			"features": [],
+			"bonus": [
+				"+1 Social focus point"
+			],
+			"grants": [
+				"Sorellion 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"Dreft",
+				"Heraldry",
+				"Courtly Manners",
+				"Haggler"
+			]
+		},
+		{
+			"id": "the-drovus-empire",
+			"slot": "Origin",
+			"name": "The Drovus Empire",
+			"plane": "isekai",
+			"summary": "You grew up in the Drovus Empire, which has spent the last decade swallowing its neighbors, the Sunrise Princedoms among them.",
+			"lore": "drovus-empire",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"The Drovus Empire 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"The Sunrise Princedoms",
+				"Military Tactics",
+				"Military Drill",
+				"Heraldry"
+			]
 		}
 	],
 	"professions": [
