@@ -234,7 +234,7 @@
 						</div>
 						<div class="content-stack content-stack-sm">
 							<div class="line-container">
-								<h5><strong>Other Common Elemental Effects</strong></h5>
+								<h5><strong>Uncommon Elemental Effects</strong></h5>
 								<div class="line"></div>
 							</div>
 							<div class="content-stack content-stack-xxs">

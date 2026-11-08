@@ -10,7 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Mechanics, the Character Creator and Player Tools: EMP is now one of the Other Common Elemental Effects on the Damage Types tab, alongside Radiation and Corrosive, instead of an Elemental damage type.</li>
+						<li>Mechanics, the Character Creator and Player Tools: Other Common Elemental Effects on the Damage Types tab are now Uncommon Elemental Effects, and EMP joins Radiation and Corrosive there instead of being an Elemental damage type.</li>
 						<li>Change Log: new lines now post to the Strange Frontiers Discord server through the RSS feed.</li>
 						<li>Character Creator and Player Tools: Inventor covers devices, machines and tools, including working out what an unfamiliar one is for. Field Medicine reduces Severe Bleeding, Unconscious, temporary blindness or a concussion, and Monster Hunter no longer gives +3 Defense against a marked quarry.</li>
 						<li>Change Log: it has an RSS feed now, with each line as its own post, so it can be followed in a feed reader or a Discord server.</li>
