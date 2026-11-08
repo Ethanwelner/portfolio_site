@@ -780,14 +780,14 @@ notes: "Brewed at a Rank: the brewer's Rank in Greater Heal. Value is per Rank."
 name: "Greater Mana Potion"
 status: draft
 plane: isekai
-summary: "Whoever drinks it regains 12 MP."
+summary: "Whoever drinks it gains 12 bonus MP, if they have the Magic Stat. Bonus MP not spent within 2 hours is lost."
 tags: [potion, magic, mana]
 type: misc
 category: consumable
 uses: "uses 1: when drunk"
 value: 120
 currency: "Luras"
-notes: "Not brewed at a Rank."
+notes: "Magical Replenishment at Rank 2. Not brewed at a Rank."
 `,K=`id: greatsword
 name: "Greatsword"
 status: draft
@@ -1118,14 +1118,14 @@ currency: "ERC"
 name: "Mana Potion"
 status: draft
 plane: isekai
-summary: "Whoever drinks it regains 6 MP."
+summary: "Whoever drinks it gains 6 bonus MP, if they have the Magic Stat. Bonus MP not spent within 1 hour is lost."
 tags: [potion, magic, mana]
 type: misc
 category: consumable
 uses: "uses 1: when drunk"
 value: 60
 currency: "Luras"
-notes: "Not brewed at a Rank."
+notes: "Magical Replenishment at Rank 1. Not brewed at a Rank."
 `,Ad=`id: masonry-tools
 name: "Masonry Tools"
 status: draft
@@ -5110,7 +5110,7 @@ minStats: { magic: 2 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains the Cast Magical Replenishment Action."
-action: "Cast Magical Replenishment: This character may spend up to 3 MP per Rank to give a character within 3 m who has the Magic Stat that many bonus MP. Bonus MP not spent within 1 hour per Rank is lost."
+action: "Cast Magical Replenishment: This character may spend up to 6 MP per Rank to give a character within 3 m who has the Magic Stat that many bonus MP. Bonus MP not spent within 1 hour per Rank is lost."
 `,Qh=`id: magical-strength
 name: "Magical Strength"
 status: draft
@@ -5137,7 +5137,7 @@ minStats: { magic: 4, empathy: 3 }
 # On the Magic list: its own tab on the Traits step, open to every character.
 list: magic
 effect: "This character gains the Cast Mana Siphon Action."
-action: "Cast Mana Siphon: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 EMP per Rank) (Attack Stat: Magic). On a hit, the target loses up to 3 MP; on a Devastating Hit, up to 4 MP; on a Critical Hit, up to 5 MP. This character gains as much MP as the target lost."
+action: "Cast Mana Siphon: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 EMP per Rank) (Attack Stat: Magic). On a hit, the target loses up to 3 MP; on a Devastating Hit, up to 4 MP; on a Critical Hit, up to 5 MP. This character gains as much MP as the target lost. MP gained above this character's maximum is bonus MP, which is lost if not spent within 1 hour per Rank."
 `,eg=`id: martial-artist
 name: "Martial Artist"
 status: draft
