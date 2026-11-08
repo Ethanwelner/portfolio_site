@@ -1,0 +1,847 @@
+{
+	"kinds": [
+		{
+			"id": "guwain",
+			"slot": "Kind",
+			"name": "Guwain",
+			"plane": "isekai",
+			"summary": "The “Brine Dwarves.” Averaging four feet and well over 250 pounds. Most live along the coast; a few hold out in mountaintop villages where the air is thin and cold.",
+			"lore": "",
+			"features": [
+				{
+					"name": "Stout",
+					"description": "Higher Endurance and Power maximums, lower Grace maximum."
+				},
+				{
+					"name": "Prodigious Lungs",
+					"description": "Can hold their breath for hours, and are unbothered by the thin air of high altitudes."
+				},
+				{
+					"name": "Beard Nets",
+					"description": "Guwain beards grow in thick, tangled messes. Most Guwain braid theirs, often with tie-offs and a meshed pattern that lets them carry goods inside."
+				}
+			],
+			"bonus": [],
+			"grants": [
+				"Magical Heritage"
+			],
+			"choices": [],
+			"backgroundList": [],
+			"stats": {
+				"endurance": {
+					"bonus": 2,
+					"max": 20
+				},
+				"power": {
+					"bonus": 2,
+					"max": 17
+				},
+				"grace": {
+					"bonus": 0,
+					"max": 10
+				},
+				"empathy": {
+					"bonus": 1,
+					"max": 15
+				},
+				"persuasion": {
+					"bonus": 1,
+					"max": 14
+				},
+				"demeanor": {
+					"bonus": 1,
+					"max": 16
+				},
+				"logic": {
+					"bonus": 1,
+					"max": 15
+				},
+				"intuition": {
+					"bonus": 0,
+					"max": 14
+				},
+				"memory": {
+					"bonus": 1,
+					"max": 14
+				}
+			}
+		},
+		{
+			"id": "isek",
+			"slot": "Kind",
+			"name": "Isek",
+			"plane": "isekai",
+			"summary": "The so-called “Free Elves.” Brash and adventure-seeking by nature, this nigh-immortal Kind rarely sees old age. Young Isek chase rebellion and are possessed of an irresistible wanderlust.",
+			"lore": "",
+			"features": [
+				{
+					"name": "Nigh Immortal",
+					"description": "Isek don’t age past their prime, though with their inveterate adventure-seeking and simple lack of self-care, few live to see old age."
+				},
+				{
+					"name": "Reckless",
+					"description": "Higher Power and Grace maximums, lower Demeanor maximum."
+				},
+				{
+					"name": "Restless",
+					"description": "Ill-suited to sedentary life. Isek have easier access to military, guild, and caravan Traits."
+				}
+			],
+			"bonus": [],
+			"grants": [
+				"Magical Heritage"
+			],
+			"choices": [],
+			"backgroundList": [],
+			"stats": {
+				"endurance": {
+					"bonus": 1,
+					"max": 15
+				},
+				"power": {
+					"bonus": 2,
+					"max": 18
+				},
+				"grace": {
+					"bonus": 2,
+					"max": 18
+				},
+				"empathy": {
+					"bonus": 1,
+					"max": 14
+				},
+				"persuasion": {
+					"bonus": 1,
+					"max": 15
+				},
+				"demeanor": {
+					"bonus": 0,
+					"max": 10
+				},
+				"logic": {
+					"bonus": 0,
+					"max": 14
+				},
+				"intuition": {
+					"bonus": 1,
+					"max": 16
+				},
+				"memory": {
+					"bonus": 1,
+					"max": 15
+				}
+			}
+		},
+		{
+			"id": "tatot-goblinoid",
+			"slot": "Kind",
+			"name": "Tatot, Goblinoid",
+			"plane": "isekai",
+			"summary": "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Goblinoids are small, with plentiful mana.",
+			"lore": "",
+			"features": [
+				{
+					"name": "Goblinoid",
+					"description": "Higher Memory and Logic maximums, access to magic Traits, and +6 MP."
+				},
+				{
+					"name": "Merchant Clans",
+					"description": "Easier access to trading guild and merchant clan Traits."
+				}
+			],
+			"bonus": [
+				"+6 MP"
+			],
+			"grants": [
+				"Magical Heritage"
+			],
+			"choices": [],
+			"backgroundList": [],
+			"stats": {
+				"endurance": {
+					"bonus": 1,
+					"max": 13
+				},
+				"power": {
+					"bonus": 0,
+					"max": 10
+				},
+				"grace": {
+					"bonus": 1,
+					"max": 16
+				},
+				"empathy": {
+					"bonus": 1,
+					"max": 15
+				},
+				"persuasion": {
+					"bonus": 1,
+					"max": 15
+				},
+				"demeanor": {
+					"bonus": 1,
+					"max": 14
+				},
+				"logic": {
+					"bonus": 2,
+					"max": 18
+				},
+				"intuition": {
+					"bonus": 1,
+					"max": 16
+				},
+				"memory": {
+					"bonus": 1,
+					"max": 18
+				}
+			}
+		},
+		{
+			"id": "tatot-orcoid",
+			"slot": "Kind",
+			"name": "Tatot, Orcoid",
+			"plane": "isekai",
+			"summary": "The “High Orcs.” A polyphenic Kind: every Tatot is born either orcoid or goblinoid. Orcoids are larger and stronger, have no mana, and are largely immune to sunsickness.",
+			"lore": "",
+			"features": [
+				{
+					"name": "Orcoid",
+					"description": "Higher Power and Endurance maximums. No mana, and largely immune to sunsickness."
+				},
+				{
+					"name": "Merchant Clans",
+					"description": "Easier access to trading guild and merchant clan Traits."
+				}
+			],
+			"bonus": [],
+			"grants": [],
+			"choices": [],
+			"backgroundList": [],
+			"stats": {
+				"endurance": {
+					"bonus": 2,
+					"max": 18
+				},
+				"power": {
+					"bonus": 2,
+					"max": 18
+				},
+				"grace": {
+					"bonus": 1,
+					"max": 13
+				},
+				"empathy": {
+					"bonus": 1,
+					"max": 14
+				},
+				"persuasion": {
+					"bonus": 1,
+					"max": 15
+				},
+				"demeanor": {
+					"bonus": 1,
+					"max": 15
+				},
+				"logic": {
+					"bonus": 0,
+					"max": 13
+				},
+				"intuition": {
+					"bonus": 1,
+					"max": 15
+				},
+				"memory": {
+					"bonus": 0,
+					"max": 14
+				}
+			}
+		}
+	],
+	"origins": [
+		{
+			"id": "dreft",
+			"slot": "Origin",
+			"name": "Dreft",
+			"plane": "isekai",
+			"summary": "Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village or the mountains.",
+			"lore": "dreft",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"Dreft 1",
+				"Dreftian Law 1",
+				"Dreftan (Spoken)"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Port Herminst",
+				"Glintl",
+				"The Switch Port",
+				"The King’s Woods",
+				"The Corsine Pass",
+				"Seafaring",
+				"Coastal Trade",
+				"Farming",
+				"Mountaineering",
+				"Local Folklore",
+				"Karsef"
+			]
+		},
+		{
+			"id": "kingdom-of-karsef",
+			"slot": "Origin",
+			"name": "Kingdom of Karsef",
+			"plane": "isekai",
+			"summary": "You grew up in the Kingdom of Karsef, across the Corsine Pass from Dreft, and an old rival of it.",
+			"lore": "kingdom-of-karsef",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"Karsef 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"The Corsine Pass",
+				"Mountaineering",
+				"Dreft",
+				"Shield Wall",
+				"Military Tactics"
+			]
+		},
+		{
+			"id": "kingdom-of-sorellion",
+			"slot": "Origin",
+			"name": "Kingdom of Sorellion",
+			"plane": "isekai",
+			"summary": "You grew up in the Kingdom of Sorellion, one of Dreft’s neighbors on Isekai.",
+			"lore": "kingdom-of-sorellion",
+			"features": [],
+			"bonus": [
+				"+1 Social focus point"
+			],
+			"grants": [
+				"Sorellion 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"Dreft",
+				"Heraldry",
+				"Courtly Manners",
+				"Haggler"
+			]
+		},
+		{
+			"id": "the-drovus-empire",
+			"slot": "Origin",
+			"name": "The Drovus Empire",
+			"plane": "isekai",
+			"summary": "You grew up in the Drovus Empire, which has spent the last decade swallowing its neighbors, the Sunrise Princedoms among them.",
+			"lore": "drovus-empire",
+			"features": [],
+			"bonus": [
+				"+1 Physical focus point"
+			],
+			"grants": [
+				"The Drovus Empire 1"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"The Sunrise Princedoms",
+				"Military Tactics",
+				"Military Drill",
+				"Heraldry"
+			]
+		}
+	],
+	"professions": [
+		{
+			"id": "alchemist",
+			"slot": "Profession",
+			"name": "Alchemist",
+			"plane": "isekai",
+			"summary": "Studies the properties of substances and brews potions to unlock them, with more ambition than safety.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Simple Potion Mixing",
+				"Research",
+				"Alchemy",
+				"Herbalism"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Advanced Potion Mixing",
+				"Appraisal",
+				"Exotic Materials",
+				"Chemistry",
+				"Trade Guilds"
+			]
+		},
+		{
+			"id": "caravaneer",
+			"slot": "Profession",
+			"name": "Caravaneer",
+			"plane": "isekai",
+			"summary": "An itinerant merchant trader, always moving between ports, cities, and kingdoms.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Teamster",
+				"Haggler",
+				"Trade Roads",
+				"Bandits & Brigands"
+			],
+			"choices": [
+				"+1 Contact"
+			],
+			"backgroundList": [
+				"Commerce",
+				"Navigation",
+				"Animal Lore",
+				"Wielder: Crossbow"
+			]
+		},
+		{
+			"id": "dreft-local-militia",
+			"slot": "Profession",
+			"name": "Dreft Local Militia",
+			"plane": "isekai",
+			"summary": "Called up from a town or village to defend it from bandits and monsters when the crown’s soldiers are far away.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Shield Wall",
+				"Vigilance",
+				"Local History",
+				"Countryside Lore"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Wielder: War Axe",
+				"Wielder: Longsword",
+				"Tracker",
+				"Military Tactics",
+				"Weapons",
+				"Wilderness Lore",
+				"Wielder: Spear",
+				"Wielder: Crossbow",
+				"Wielder: Polearm"
+			]
+		},
+		{
+			"id": "dreft-mercenary",
+			"slot": "Profession",
+			"name": "Dreft Mercenary",
+			"plane": "isekai",
+			"summary": "Fights for whoever pays, guarding caravans, settling feuds and filling out noble armies in the succession crisis.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Wielder: Longsword",
+				"Shield Wall",
+				"Haggler",
+				"Bandits & Brigands"
+			],
+			"choices": [
+				"+1 Contact"
+			],
+			"backgroundList": [
+				"Wielder: War Axe",
+				"Wielder: Musket",
+				"Survivalist",
+				"Intimidation",
+				"Military Tactics",
+				"Weapons",
+				"Gambling",
+				"Commerce",
+				"Wielder: Polearm",
+				"Wielder: Crossbow",
+				"Wielder: Greatsword",
+				"Wielder: Siege Engine"
+			]
+		},
+		{
+			"id": "gate-hand",
+			"slot": "Profession",
+			"name": "Gate Hand",
+			"plane": "isekai",
+			"summary": "Works the switch port for Tetra Frontiers Co.: hauling, translating, and generally being useful.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Smooth Talker",
+				"Haggler",
+				"Tetra Frontiers Co.",
+				"Earth Baseline Customs"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Commerce",
+				"Bureaucracy"
+			]
+		},
+		{
+			"id": "guild-hunter",
+			"slot": "Profession",
+			"name": "Guild Hunter",
+			"plane": "isekai",
+			"summary": "Hunts monsters for pay and glory. Hunting guilds keep posts and track the monster bounties put up by the kingdom or locals.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Tracker",
+				"Ambusher",
+				"Monsters of Isekai",
+				"The King’s Woods"
+			],
+			"choices": [
+				"+1 Contact"
+			],
+			"backgroundList": [
+				"Animal Lore",
+				"Wilderness Lore",
+				"Weapons",
+				"Trade Guilds",
+				"Wielder: Bow",
+				"Wielder: Spear",
+				"Wielder: Throwing Weapon"
+			]
+		},
+		{
+			"id": "hedge-witch",
+			"slot": "Profession",
+			"name": "Hedge Witch",
+			"plane": "isekai",
+			"summary": "Practices magic outside the licensed system of Dreft and its neighboring kingdoms. Working far from the scrutiny of cities and trading posts, these mages are a mixed bag.",
+			"lore": "",
+			"features": [],
+			"bonus": [
+				"+1 Magic"
+			],
+			"grants": [
+				"Folk Remedies",
+				"Countryside Lore",
+				"Magic on Isekai",
+				"Herbalism"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Animal Lore",
+				"Wilderness Lore",
+				"Biology",
+				"Wielder: Staff"
+			]
+		},
+		{
+			"id": "licensed-mage",
+			"slot": "Profession",
+			"name": "Licensed Mage",
+			"plane": "isekai",
+			"summary": "Trained in the licensed colleges of magic in Dreft or one of its neighboring kingdoms, these mages practice officially sanctioned, and supposedly safe, magic.",
+			"lore": "",
+			"features": [],
+			"bonus": [
+				"+1 Magic"
+			],
+			"grants": [
+				"Incantation",
+				"Relic Handling",
+				"Magic on Isekai",
+				"Dreftian Law"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Local History",
+				"Literature",
+				"Bureaucracy",
+				"Chemistry",
+				"Wielder: Staff"
+			]
+		},
+		{
+			"id": "royal-guard",
+			"slot": "Profession",
+			"name": "Royal Guard",
+			"plane": "isekai",
+			"summary": "Sworn to the crown of one of Isekai’s kingdoms, and as adept with a blade as with courtly manners.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Shield Wall",
+				"Vigilance",
+				"Court Etiquette",
+				"Aristocracy"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Weapons",
+				"Law Enforcement",
+				"Politics",
+				"High Society",
+				"Wielder: Polearm",
+				"Wielder: Crossbow",
+				"Wielder: Shortsword"
+			]
+		}
+	],
+	"pasts": [
+		{
+			"id": "countryside-upbringing",
+			"slot": "Past",
+			"name": "Countryside Upbringing",
+			"plane": "isekai",
+			"summary": "Grew up in the sleepy Dreftian countryside, where the year turns on the harvest and every hedge has a story.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Farming",
+				"Countryside Lore",
+				"Local Folklore",
+				"Teamster"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Animal Lore",
+				"Wilderness Lore",
+				"Wielder: Sling",
+				"Wielder: Bow"
+			]
+		},
+		{
+			"id": "expelled-from-the-mage-schools",
+			"slot": "Past",
+			"name": "Expelled from the Mage Schools",
+			"plane": "isekai",
+			"summary": "Studied at one of Port Herminst’s licensed schools of magic until something went wrong, and left with half an education and a secret.",
+			"lore": "isekai-magic",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Magic on Isekai",
+				"Port Herminst",
+				"Concealment"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Literature",
+				"Local History"
+			]
+		},
+		{
+			"id": "glintl-docks",
+			"slot": "Past",
+			"name": "Glintl Docks",
+			"plane": "isekai",
+			"summary": "Grew up on the busy docks of Glintl, the other great trading port on Dreft’s western coast.",
+			"lore": "glintl",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Seafaring",
+				"Coastal Trade",
+				"Glintl",
+				"Haggler"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Commerce",
+				"Navigation",
+				"Gambling"
+			]
+		},
+		{
+			"id": "karsef-border-veteran",
+			"slot": "Past",
+			"name": "Karsef Border Veteran",
+			"plane": "isekai",
+			"summary": "Served in the skirmishes over the Corsine Pass, where Dreft and Karsef have been testing each other for generations.",
+			"lore": "corsine-mountains",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Shield Wall",
+				"Mountaineering",
+				"The Corsine Pass",
+				"Karsef"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Weapons",
+				"Wilderness Lore",
+				"Wielder: Crossbow",
+				"Wielder: Spear",
+				"Wielder: Polearm"
+			]
+		},
+		{
+			"id": "merchant-dynasty",
+			"slot": "Past",
+			"name": "Merchant Dynasty",
+			"plane": "isekai",
+			"summary": "Child of a trade family grown rich off the switch port, and resented for it.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Haggler",
+				"Appraisal",
+				"Trade Law"
+			],
+			"choices": [
+				"+1 Language"
+			],
+			"backgroundList": [
+				"Commerce",
+				"High Society"
+			]
+		},
+		{
+			"id": "monster-raided-village",
+			"slot": "Past",
+			"name": "Monster-Raided Village",
+			"plane": "isekai",
+			"summary": "Survived a monster raid on the home village, and learned to watch the tree line ever since.",
+			"lore": "isekai-monsters",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Vigilance",
+				"Tracker",
+				"Monsters of Isekai",
+				"The King’s Woods"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Animal Lore",
+				"Wilderness Lore",
+				"Weapons",
+				"Wielder: Spear",
+				"Wielder: Sling"
+			]
+		},
+		{
+			"id": "noble-household",
+			"slot": "Past",
+			"name": "Noble Household",
+			"plane": "isekai",
+			"summary": "Born or raised in service to a noble house, just in time for the succession crisis.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Courtly Manners",
+				"Schemer",
+				"Noble Houses of Dreft",
+				"Succession Law"
+			],
+			"choices": [],
+			"backgroundList": [
+				"High Society",
+				"Local History",
+				"Politics"
+			]
+		},
+		{
+			"id": "palace-servant",
+			"slot": "Past",
+			"name": "Palace Servant",
+			"plane": "isekai",
+			"summary": "Served in the royal palace at Port Herminst, close enough to the crown to hear things, and there when the queen died under unusual circumstances.",
+			"lore": "herminst",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Court Etiquette",
+				"Sleight of Hand",
+				"Noble Houses of Dreft",
+				"Port Herminst"
+			],
+			"choices": [],
+			"backgroundList": [
+				"High Society",
+				"Politics"
+			]
+		},
+		{
+			"id": "raised-in-the-caravan-town",
+			"slot": "Past",
+			"name": "Raised in the Caravan Town",
+			"plane": "isekai",
+			"summary": "Grew up in the shadow of Castle Tetra, among foreigners and the people who profit from them.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Streetwise",
+				"Sleight of Hand",
+				"Caravan Routes",
+				"Earth Baseline Customs"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Commerce",
+				"Animal Lore"
+			]
+		},
+		{
+			"id": "returned-from-the-systems",
+			"slot": "Past",
+			"name": "Returned from the Settled Systems",
+			"plane": "isekai",
+			"summary": "Left Dreft for the settled systems and came back changed, like everyone who comes back.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Tinkerer",
+				"Earth Baseline Technology"
+			],
+			"choices": [
+				"+1 Contact",
+				"+1 Language"
+			],
+			"backgroundList": [
+				"Starships",
+				"Spacefaring"
+			]
+		},
+		{
+			"id": "sunrise-refugee",
+			"slot": "Past",
+			"name": "Sunrise Refugee",
+			"plane": "isekai",
+			"summary": "Fled the Sunrise Princedoms when Drovus finished absorbing them.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Survivalist",
+				"Concealment",
+				"The Drovus Empire",
+				"The Sunrise Princedoms"
+			],
+			"choices": [],
+			"backgroundList": [
+				"Bureaucracy"
+			]
+		}
+	]
+}
