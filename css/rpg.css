@@ -2672,11 +2672,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         /* A long Knowledges, Abilities, Skills, Conditions or Items list
-           stops at 75vh and scrolls inside its box, so one long column
+           stops at 60vh and scrolls inside its box, so one long column
            doesn't leave the one beside it far shorter (printed, it runs its
            full length) */
         :is(.sheet-side > .sheet-knowledges, :is(.sheet-abilities, .sheet-skills) > .sheet-traits, :is(.sheet-conditions, .sheet-items) > .sheet-cards) {
-            max-height: 75vh;
+            max-height: 60vh;
             overflow-y: auto;
 
             /* A slim rounded handle, like Player Tools' chat: no track or
