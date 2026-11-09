@@ -64,7 +64,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	// script below, written once per page, does the opening.
 	function sf_card_chevron( $open, $label, $class ) {
 		$svg = '<svg' . ( 'sf-card-fold' === $class ? ' class="sf-card-chevron"' : '' ) . ' viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
-		$html = '<button type="button" class="' . $class . '" data-sf-fold aria-label="' . ( $open ? 'Collapse ' : 'Expand ' ) . sf_card_e( $label ) . '" aria-expanded="' . ( $open ? 'true' : 'false' ) . '" title="' . ( $open ? 'Collapse' : 'Expand' ) . '">' . $svg . '</button>';
+		$html = '<button type="button" class="sf-btn sf-btn--bare ' . $class . '" data-sf-fold aria-label="' . ( $open ? 'Collapse ' : 'Expand ' ) . sf_card_e( $label ) . '" aria-expanded="' . ( $open ? 'true' : 'false' ) . '" title="' . ( $open ? 'Collapse' : 'Expand' ) . '">' . $svg . '</button>';
 		static $script = false;
 		if ( ! $script ) {
 			$script = true;

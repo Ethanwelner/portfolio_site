@@ -34,5 +34,7 @@ if (!headers_sent()) {
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/portfolio-nested.css'); ?>"/>
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/portfolio-media-queries.css'); ?>"/>
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg.css'); ?>"/>
+<!-- Strange Frontiers buttons (php/rpg/components/buttons.php) -->
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-buttons.css'); ?>"/>
 <!-- Strange Frontiers card components (php/rpg/components/cards.php) -->
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-cards.css'); ?>"/>

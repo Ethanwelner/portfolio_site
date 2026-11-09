@@ -6,6 +6,7 @@
 // dark one to show it looks the same in both.
 require_once 'php/rpg/lore.php';
 require_once 'php/rpg/components/cards.php';
+require_once 'php/rpg/components/buttons.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -186,8 +187,70 @@ $sf_backgrounds = $sf_sample['background'];
 $sf_backgrounds[] = $sf_dreft['kinds'][0];
 $sf_backgrounds[] = $sf_dreft['professions'][0];
 
+// Button icons, as the creator draws them (src/app/components/ui.tsx)
+$sf_icon = function ( $name ) {
+	$icons = array(
+		'download' => 'M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.670-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z',
+		'restore'  => 'M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z',
+		'send'     => 'M511.1 255.1c0 12.8-7.625 24.38-19.41 29.41L44.6 477.4c-4.062 1.75-8.344 2.594-12.59 2.594c-8.625 0-17.09-3.5-23.28-10.05c-9.219-9.766-11.34-24.25-5.344-36.27l73.66-147.3l242.1-30.37L77.03 225.6l-73.66-147.3C-2.623 66.3-.4982 51.81 8.72 42.05c9.25-9.766 23.56-12.75 35.87-7.453L492.6 226.6C504.4 231.6 511.1 243.2 511.1 255.1z',
+	);
+	return '<svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="' . $icons[ $name ] . '"/></svg>';
+};
+$sf_sign = '<svg class="sign-icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.990H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg>';
+$sf_close = '<svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 2l16 16M18 2L2 18" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+// Each button option, drawn by sf_button(), with what the creator uses it for
+$sf_button_rows = array(
+	'Tone' => array(
+		array( $sf_icon( 'download' ) . ' Download', array(), 'gray, the default: Download, Import, Print, Cancel' ),
+		array( 'Build it', array( 'tone' => 'primary' ), 'primary, the creator’s green: Build it, the next step, Submit' ),
+		array( 'Replace image', array( 'tone' => 'dark' ), 'dark: Replace image, Switch character' ),
+		array( 'Yes', array( 'tone' => 'light' ), 'light: on a dark panel' ),
+		array( 'New', array( 'tone' => 'ghost' ), 'ghost: New, Yes and Cancel in the creator’s hero' ),
+		array( 'Delete', array( 'tone' => 'danger' ), 'danger' ),
+	),
+	'Size' => array(
+		array( 'Add<span class="sheet-section-add-noun"> Condition</span>', array( 'size' => 'small', 'tone' => 'condition' ), 'small, condition: a section’s Add' ),
+		array( 'Add<span class="sheet-section-add-noun"> item</span>', array( 'size' => 'small', 'tone' => 'item' ), 'small, item' ),
+		array( 'Add<span class="sheet-section-add-noun"> traits</span>', array( 'size' => 'small', 'tone' => 'primary' ), 'small, primary' ),
+		array( $sf_icon( 'download' ) . ' Download character', array( 'size' => 'pill' ), 'pill: Player Tools’ badges' ),
+		array( 'Level up', array( 'size' => 'pill', 'tone' => 'primary' ), 'pill, primary' ),
+	),
+	'Round' => array(
+		array( $sf_sign, array( 'round' => 'xs', 'attrs' => array( 'aria-label' => 'Add one' ) ), 'xs, 24px: a picker’s count and Rank' ),
+		array( $sf_sign, array( 'round' => 'sm', 'tone' => 'primary', 'ready' => true, 'attrs' => array( 'aria-label' => 'Add one' ) ), 'sm, 28px: a stat’s − and +, green and glitching while usable' ),
+		array( $sf_icon( 'restore' ), array( 'round' => 'md', 'attrs' => array( 'aria-label' => 'Restore' ) ), 'md, 32px: HP, VP, SP and MP, Clear' ),
+		array( $sf_icon( 'send' ), array( 'round' => 'md', 'tone' => 'primary', 'attrs' => array( 'aria-label' => 'Send' ) ), 'md, primary: Send' ),
+		array( $sf_sign, array( 'round' => 'lg', 'attrs' => array( 'aria-label' => 'Add one' ) ), 'lg, 36px: the Level, a Condition’s Rank' ),
+		array( $sf_close, array( 'round' => 'lg', 'tone' => 'dark', 'attrs' => array( 'aria-label' => 'Close' ) ), 'lg, dark: the lore popup’s close' ),
+	),
+	'Kind' => array(
+		array( 'Caravaneer', array( 'kind' => 'link' ), 'link: a Kind or package, a Knowledge, Remove' ),
+		array( 'Grosh', array( 'kind' => 'bare' ), 'bare: a value or an icon to click' ),
+	),
+	'State' => array(
+		array( 'Download', array( 'disabled' => true ), 'disabled' ),
+		array( 'Traits', array( 'tone' => 'primary', 'waiting' => true ), 'waiting: faded, but it works (the next step before its step is done)' ),
+		array( 'Traits', array( 'tone' => 'primary', 'ready' => true ), 'ready: glitches, waiting on the player' ),
+		array( 'Building 0:12', array( 'tone' => 'primary', 'disabled' => true, 'attrs' => array( 'aria-busy' => 'true' ) ), 'busy: working, at full strength' ),
+	),
+);
+$sf_button_table = function () use ( $sf_button_rows ) {
+	foreach ( $sf_button_rows as $group => $rows ) {
+		echo '<p class="sf-library-label">' . $group . '</p><div class="sf-library-buttons">';
+		foreach ( $rows as $row ) {
+			echo '<div class="sf-library-button">' . sf_button( $row[0], $row[1] ) . '<span class="sf-library-note">' . sf_card_e( $row[2] ) . '</span></div>';
+		}
+		echo '</div>';
+	}
+};
+
 // Where each component is used
 $sf_used_in = array(
+	'button'     => array(
+		'Every button in the Character Creator and Player Tools (src/app/components/Button.tsx)',
+		'php/rpg/lore-modal-shell.php: the lore popup’s close',
+		'php/rpg/components/cards.php: a folding card’s chevron (bare)',
+	),
 	'trait'      => array(
 		'php/rpg/rpg-traits.php: Trait Categories and Example Traits',
 		'php/rpg/rpg-incidents.php: Dress Wounds',
@@ -228,6 +291,9 @@ $sf_list = function ( $items ) {
 			.sf-library-api { margin: 0 0 24px; padding: 12px 16px; background: var(--portfolio-near-white); border: 1px solid var(--portfolio-light-gray); border-radius: 4px; font-size: .8125rem; white-space: pre-wrap; }
 			.sf-card-grid + .sf-library-label { margin-top: 32px; }
 			.sf-library-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); align-items: start; gap: 16px; }
+			.sf-library-buttons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px; margin-bottom: 24px; }
+			.sf-library-button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 220px; }
+			.sf-library-note { font-size: .75rem; opacity: .7; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 		</style>
 	</head>
@@ -236,9 +302,33 @@ $sf_list = function ( $items ) {
 			<div class="container">
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
-				<p class="copy">There’s one card per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
+				<p class="copy">For the cards, there’s one per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
+			</div>
+		</div>
+
+		<!-- Buttons -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Button</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_button( 'Build it', array( 'tone' =&gt; 'primary', 'ready' =&gt; true ) );
+sf_button_class( array( 'round' =&gt; 'lg', 'tone' =&gt; 'dark' ), 'lore-modal-close' );
+tone: gray | primary | dark | light | ghost | danger | condition | item
+size: default | small | pill    round: xs | sm | md | lg    kind: bare | link
+states: ready, waiting, disabled, aria-busy; also: class, href, attrs</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['button'] ); ?>
+				<?php $sf_button_table(); ?>
+				<p class="sf-library-label">Tabs (css/rpg.css)</p>
+				<div class="tech-fields"><div class="tech-field-tab-list" role="tablist"><button type="button" class="tech-field-tab is-active" role="tab" aria-selected="true">Example Traits</button><button type="button" class="tech-field-tab" role="tab" aria-selected="false">Trait Rules</button></div></div>
+			</div>
+		</div>
+		<div class="sf-library-band is-dark">
+			<div class="container">
+				<p class="sf-library-label">The same buttons on a dark section</p>
+				<?php $sf_button_table(); ?>
 			</div>
 		</div>
 
