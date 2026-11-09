@@ -2550,6 +2550,14 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             list-style: none;
         }
 
+        /* Room for the item cards' count circles, which hang past their left
+           edge and the list would clip once it scrolls; the margins give the
+           room back, as in the creator */
+        .sheet-items > .sheet-cards {
+            padding: 0 14px;
+            margin: 0 -14px;
+        }
+
         /* The Condition in grays: a mid gray edge, a light gray bar */
         .sheet-condition {
             border-color: #646464;
@@ -2663,9 +2671,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
-        /* A long Knowledges, Abilities or Skills list stops at 75vh and
-           scrolls inside its box (printed, it runs its full length) */
-        :is(.sheet-side > .sheet-knowledges, :is(.sheet-abilities, .sheet-skills) > .sheet-traits) {
+        /* A long Knowledges, Abilities, Skills, Conditions or Items list
+           stops at 75vh and scrolls inside its box, so one long column
+           doesn't leave the one beside it far shorter (printed, it runs its
+           full length) */
+        :is(.sheet-side > .sheet-knowledges, :is(.sheet-abilities, .sheet-skills) > .sheet-traits, :is(.sheet-conditions, .sheet-items) > .sheet-cards) {
             max-height: 75vh;
             overflow-y: auto;
 
