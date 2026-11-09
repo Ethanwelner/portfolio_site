@@ -411,33 +411,30 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 	</div>
 </div>
 
-<!-- What the sheet's Knowledges and background links open in the lore popup -->
+<!-- What the sheet's Knowledges and background links open in the lore
+     popup: the card on its own, as the creator's sheet opens them
+     (.lore-card puts the popup in its card mode) -->
 <div hidden>
 	<?php foreach ( array_merge( $sf_knowledges, $sf_languages ) as $t ) : ?>
-		<div id="lore-sample-<?php echo $t['id']; ?>">
+		<div id="lore-sample-<?php echo $t['id']; ?>" class="lore-card">
 			<h4 class="lore-title"><?php echo $sf_e( $t['name'] ); ?></h4>
 			<div class="lore-body">
-				<?php echo $sf_effect( $t['effect'] ); ?>
-				<p class="copy small mb-0">Knowledge. From <?php echo $sf_e( $sf_from( $t ) ); ?>.</p>
+				<?php
+				sf_card_trait( array(
+					'kind'   => $t['language'] ? 'language' : 'knowledge',
+					'name'   => $t['name'],
+					'effect' => $t['effect'],
+					'from'   => $sf_from( $t ),
+				) );
+				?>
 			</div>
 		</div>
 	<?php endforeach; ?>
 	<?php foreach ( $sf_sample['background'] as $b ) : ?>
-		<div id="lore-sample-<?php echo $b['id']; ?>">
+		<div id="lore-sample-<?php echo $b['id']; ?>" class="lore-card">
 			<h4 class="lore-title"><?php echo $sf_e( $b['name'] ); ?></h4>
 			<div class="lore-body">
-				<p class="copy"><strong><?php echo $b['slot']; ?>.</strong> <?php echo $sf_e( $b['summary'] ); ?></p>
-				<?php foreach ( $b['features'] as $f ) : ?>
-					<p class="copy"><strong><?php echo $sf_e( $f['name'] ); ?>.</strong> <?php echo $sf_e( $f['description'] ); ?></p>
-				<?php endforeach; ?>
-				<?php foreach ( array( 'Bonus' => $b['bonus'], 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) : ?>
-					<?php if ( $list ) : ?>
-						<p class="copy"><strong><?php echo $label; ?>:</strong> <?php echo $sf_e( implode( ', ', $list ) ); ?></p>
-					<?php endif; ?>
-				<?php endforeach; ?>
-				<?php if ( $b['lore'] ) : ?>
-					<p class="copy">More in the lore: <?php echo sf_lore_link( $b['lore'], sf_lore_titles()[ $b['lore'] ] ?? $b['lore'] ); ?></p>
-				<?php endif; ?>
+				<?php sf_background_card( $b, 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); ?>
 			</div>
 		</div>
 	<?php endforeach; ?>

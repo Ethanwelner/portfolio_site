@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: on the Sample Character Sheet, a Knowledge, Language or background opens in the popup as its card, as it does in the Character Creator.</li>
 						<li>Setting: Murk Legs in Parazoology has a compact monster sheet with its Stats, HP, VP and SP, Massive Claws and Horrid Bite, and a permanent Rank 2 Dark Haze.</li>
 						<li>Character Creator: new Illusion spell Dark Haze (Magic 4), which gives the Dark Haze Condition. Anyone trying to see a character with it needs an Intuition check of 10 per Rank, or they see only a dark, shimmering haze.</li>
 					</ul>

@@ -495,10 +495,13 @@
 		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
 		var loreModalReturnFocus = null;
 
-		function showLoreModal(titleHtml, bodyHtml, trigger) {
+		// asCard shows a card on its own (a sample Knowledge or background):
+		// the card is the popup's edge, its title kept for screen readers
+		function showLoreModal(titleHtml, bodyHtml, trigger, asCard) {
 			if ( ! $loreModal.hasClass( "is-open" ) ) {
 				loreModalReturnFocus = trigger;
 			}
+			$loreModal.toggleClass( "lore-modal-card", !! asCard );
 			$loreModalTitle.html( titleHtml );
 			$loreModalBody.html( bodyHtml );
 			$loreModalScroll.scrollTop( 0 );
@@ -515,7 +518,7 @@
 			if ( ! $entry.length ) {
 				return false;
 			}
-			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.find( ".lore-body" ).first().html(), trigger );
+			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.find( ".lore-body" ).first().html(), trigger, $entry.hasClass( "lore-card" ) );
 			return true;
 		}
 

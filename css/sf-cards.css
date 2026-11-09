@@ -222,3 +222,53 @@ details.sf-card {
     flex-wrap: wrap;
     gap: 4px;
 }
+
+/* A card on its own in the lore popup (.lore-modal-card, set by
+   showLoreModal for a .lore-card entry: the sample sheet's Knowledges and
+   backgrounds), as the creator's popups show them: the card is the popup's
+   edge, with no panel around it, and the close button, light as in the
+   creator, sits on its top right corner. The title stays for screen
+   readers. A long card scrolls itself. */
+.lore-modal.lore-modal-card {
+    .lore-modal-panel {
+        max-width: 560px;
+        border-radius: 12px;
+        background: none;
+        box-shadow: none;
+    }
+
+    .lore-modal-scroll {
+        padding: 0;
+        overflow: visible;
+    }
+
+    .lore-modal-title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    .lore-modal-body > .sf-card {
+        max-height: calc(100dvh - 128px);
+        overflow-y: auto;
+    }
+
+    .lore-modal-close {
+        width: 28px;
+        height: 28px;
+        background: var(--portfolio-near-white);
+        color: var(--portfolio-black);
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--portfolio-near-white) 75%, var(--portfolio-black));
+        }
+
+        svg {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
