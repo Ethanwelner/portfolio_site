@@ -1,0 +1,217 @@
+/* ========================================
+   STRANGE FRONTIERS CARD COMPONENTS
+   php/rpg/components/cards.php
+   ========================================
+   Trait and background cards, styled the same everywhere: they carry their
+   own colors instead of picking them up from a dark section, so a card in
+   the Setting's white band, the Mechanics section or a lore popup matches.
+   Values are the creator's and Player Tools': a black body, a 2px edge the
+   color of the name bar, gray chips with the flags muted. Item cards use
+   .equipment-box in rpg.css. */
+
+.sf-card {
+    --sf-card-body: var(--portfolio-black, #212121);
+    --sf-card-bar: #181818;
+    --sf-card-bar-text: #e8e8e8;
+    --sf-card-text: #e8e8e8;
+    --sf-card-soft: #b3b3b3;
+    --sf-card-rule: #969696;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    color: var(--sf-card-text);
+    background-color: var(--sf-card-body);
+    border: 2px solid var(--sf-card-bar);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #00000030;
+    font-size: 14px;
+    line-height: 1.5;
+
+    /* Isekai's cards: Dreft's green bar and edge */
+    &.sf-card--dreft {
+        --sf-card-bar: var(--frontiers-dreft, #1c372b);
+    }
+}
+
+/* The name at the left of the bar and, at the right, the flags and
+   category as chips. When they don't fit beside the name, the chips wrap
+   under it, still at the right, instead of squeezing it. */
+.sf-card-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px 8px;
+    padding: 10px 16px;
+    background-color: var(--sf-card-bar);
+    color: var(--sf-card-bar-text);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sf-card-name {
+    flex: 1 0 auto;
+    max-width: 100%;
+}
+
+.sf-card-chips {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.sf-card-setting-icon {
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    margin-right: .45em;
+    vertical-align: -.2em;
+    fill: currentColor;
+}
+
+.sf-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px 14px;
+
+    p,
+    ul {
+        margin: 0;
+    }
+
+    ul {
+        padding-left: 1.25rem;
+    }
+}
+
+.sf-card-effect {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* The Action a Trait grants, set off by a rule at its left */
+.sf-card-action {
+    padding-left: 10px;
+    border-left: 2px solid var(--sf-card-rule);
+}
+
+/* Requirements, durations and where it came from */
+.sf-card-note {
+    color: var(--sf-card-soft);
+    font-size: .75rem;
+
+    a {
+        color: var(--frontiers-lore-on-black, #a67bf0);
+    }
+}
+
+.sf-chip {
+    display: inline-block;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+    background-color: var(--portfolio-gray, #525252);
+    color: var(--portfolio-white, #fff);
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    white-space: nowrap;
+
+    &.sf-chip--muted {
+        background-color: var(--portfolio-light-gray, #eaeaea);
+        color: var(--portfolio-black, #212121);
+    }
+
+    &.sf-chip--accent {
+        background-color: #6b6b6b;
+    }
+}
+
+/* Conditions in grays, as on the creator's sheet: a mid gray edge and a
+   light gray bar with dark text */
+.sf-trait-card--condition {
+    --sf-card-bar: #b7b4b4;
+    --sf-card-bar-text: var(--portfolio-black, #212121);
+
+    border-color: #646464;
+
+    /* White flags, so they show against the light gray bar */
+    .sf-card-bar .sf-chip--muted {
+        background-color: var(--portfolio-white, #fff);
+    }
+}
+
+/* A folding card opens from the chevron in its bar. Closed, it's the bar
+   alone, rounded all round. */
+details.sf-card {
+    > summary {
+        cursor: pointer;
+        list-style: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--sf-card-soft);
+            outline-offset: -2px;
+        }
+    }
+
+    .sf-card-chevron {
+        flex: none;
+        width: 12px;
+        height: 8px;
+        margin-left: 4px;
+        transition: transform .15s ease;
+    }
+
+    &[open] .sf-card-chevron {
+        transform: rotate(180deg);
+    }
+}
+
+/* Background cards: what it gives in rows, each a label over its chips */
+.sf-background-rows {
+    display: grid;
+    gap: 12px;
+
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+}
+
+.sf-background-label {
+    flex-basis: 100%;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+/* Item cards: the badges as one group (each helper wraps its badge in its
+   own .equipment-stats), so a narrow card moves them under the name
+   together, and a damage formula's total muted after it */
+.sf-item-badges > .equipment-stats {
+    display: contents;
+}
+
+.sf-damage-total {
+    color: #a29d82;
+    font-weight: 400;
+}
+
+/* A grid of cards, columns at least 256px wide */
+.sf-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(256px, 100%), 1fr));
+    align-items: start;
+    gap: 16px;
+}
