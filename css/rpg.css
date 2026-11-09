@@ -3870,8 +3870,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Attacks and Traits share one grid of columns at least 360px wide: two
+   across on a wide sheet, one on a narrow one, so a lone Trait card is as
+   wide as an Attack card beside it */
 .npc-sheet-list {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+    align-items: start;
     gap: 12px;
     margin: 0;
     padding: 0;
