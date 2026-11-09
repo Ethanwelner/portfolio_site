@@ -10,6 +10,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Resistances and Damage Types fills out Death and Psychic damage. Death damage is rarely resisted, so Death Attacks hit hard but have no secondary effects; Psychic Attacks deal moderate damage and give Conditions.</li>
+						<li>Character Creator: new Necromancy spells Grave Touch (Magic 2), Blight (Magic 5) and Stilled Heart (Magic 6), and a Mentalism spell, Mind Shatter (Magic 6, after Mind Spike). Wither now deals 6 Death per Rank.</li>
 						<li>Mechanics: Character Level at the center of the stat diagram glitches like the Strange Frontiers title.</li>
 						<li>Adventures: the Magic tab has example magical Items under the rules for making them, with what each does and the MP an enchanted Item holds: three artifacts (Santar’s Sword of Rust, L’orian’s Erstwhile Companion and The Ring of the Wild Children), two enchanted Items (Traveler’s Respite and the Amulet of the Seas) and two potions (a Rank 3 Healing Potion and Firewalker’s Draught, with Flameproof and Haste at Rank 2).</li>
 						<li>Mechanics: the Injuries tab shows Dress Wounds as an example Ability card under Healing, Medicine, and Regaining HP.</li>
