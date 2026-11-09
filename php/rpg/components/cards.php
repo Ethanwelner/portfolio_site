@@ -56,9 +56,11 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 *            Mastery, Background, Permanent...
 	 * types      Optional. Its magic types, muted in parentheses: (Illusion).
 	 * region     Optional. "dreft" for Isekai's green bar and mark.
-	 * effect     What it does. Lines starting "- " become bullets.
+	 * effect     What it does. Each line is a paragraph; lines starting "- "
+	 *            become bullets.
 	 * action     Optional. The Action it grants, "Name: what it does", set
-	 *            off by a rule at its left.
+	 *            off by a rule at its left. An array for several.
+	 * grants     Optional. Traits it gives, as a row of chips after the effect.
 	 * temporary  Optional. How long a Condition lasts.
 	 * needs      Optional. Its Stat requirements and prerequisites.
 	 * from       Optional. Where a character got it, on a sheet.
@@ -98,9 +100,16 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			$body .= '<p class="sf-card-note">Temporary: ' . sf_card_e( $t['temporary'] ) . '</p>';
 		}
 		$body .= sf_card_effect( $t['effect'] );
-		if ( ! empty( $t['action'] ) ) {
-			$colon = strpos( $t['action'], ': ' );
-			$body .= '<p class="sf-card-action">' . ( false !== $colon ? '<strong>' . sf_card_e( substr( $t['action'], 0, $colon ) ) . ':</strong> ' . sf_card_e( substr( $t['action'], $colon + 2 ) ) : sf_card_e( $t['action'] ) ) . '</p>';
+		foreach ( (array) ( $t['action'] ?? array() ) as $action ) {
+			$colon = strpos( $action, ': ' );
+			$body .= '<p class="sf-card-action">' . ( false !== $colon ? '<strong>' . sf_card_e( substr( $action, 0, $colon ) ) . ':</strong> ' . sf_card_e( substr( $action, $colon + 2 ) ) : sf_card_e( $action ) ) . '</p>';
+		}
+		if ( ! empty( $t['grants'] ) ) {
+			$body .= '<div class="sf-card-grants">';
+			foreach ( $t['grants'] as $grant ) {
+				$body .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $grant ) . '</span>';
+			}
+			$body .= '</div>';
 		}
 		if ( ! empty( $t['needs'] ) ) {
 			$body .= '<p class="sf-card-note">Needs ' . sf_card_e( $t['needs'] ) . '</p>';

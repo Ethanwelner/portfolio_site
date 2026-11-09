@@ -151,6 +151,19 @@ $sf_from = function ( $t ) {
 $sf_abilities = array_filter( $sf_cards, function ( $t ) { return 'Ability' === $t['category']; } );
 $sf_skills    = array_filter( $sf_cards, function ( $t ) { return 'Skill' === $t['category']; } );
 $sf_other     = array_filter( $sf_cards, function ( $t ) { return ! in_array( $t['category'], array( 'Ability', 'Skill' ), true ); } );
+// A sample Trait as a trait card (php/rpg/components/cards.php), folding
+// as the creator's sheet does: Abilities open, Skills closed to their name
+require_once __DIR__ . '/components/cards.php';
+$sf_card = function ( $t, $fold = '' ) use ( $sf_from ) {
+	sf_card_trait( array(
+		'kind'   => strtolower( $t['category'] ),
+		'name'   => $t['name'],
+		'effect' => $t['effect'],
+		'action' => $t['action'] ?? '',
+		'from'   => $sf_from( $t ),
+		'fold'   => $fold,
+	) );
+};
 // Movement's small box, left of the resistances, as in the creator: its
 // ruled title, then a running figure (the creator's person-running icon)
 // before the number, which runs into its unit
@@ -283,11 +296,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<div class="c-sheet-box sheet-conditions">
 					<h4 class="sheet-rule">Conditions</h4>
 					<ul class="sheet-cards">
-						<li class="trait-box sheet-condition">
-							<div class="trait-name">Healthy</div>
-							<p class="muted small">From HP. A character or object gains this trait while they are at their maximum HP total</p>
-							<p class="copy">This Trait has no effect on its own.</p>
-						</li>
+						<li><?php sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => 'This Trait has no effect on its own.', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) ); ?></li>
 					</ul>
 				</div>
 
@@ -368,17 +377,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					     where it came from and any Action it grants -->
 					<ul class="sheet-traits">
 						<?php foreach ( $sf_abilities as $t ) : ?>
-							<li class="trait-box sheet-ability">
-								<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
-								<?php echo $sf_effect( $t['effect'] ); ?>
-								<div class="sheet-fold">
-									<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-									<?php if ( ! empty( $t['action'] ) ) : ?>
-										<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
-										<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
-									<?php endif; ?>
-								</div>
-							</li>
+							<li><?php $sf_card( $t, 'open' ); ?></li>
 						<?php endforeach; ?>
 					</ul>
 				<?php else : ?>
@@ -394,13 +393,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				</div>
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_skills as $t ) : ?>
-						<li>
-							<details class="trait-box">
-								<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-								<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-								<?php echo $sf_effect( $t['effect'] ); ?>
-							</details>
-						</li>
+						<li><?php $sf_card( $t, 'closed' ); ?></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
@@ -410,11 +403,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<h3 class="sheet-rule sheet-subhead">Other Traits</h3>
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_other as $t ) : ?>
-						<li class="trait-box">
-							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-							<?php echo $sf_effect( $t['effect'] ); ?>
-						</li>
+						<li><?php $sf_card( $t ); ?></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>

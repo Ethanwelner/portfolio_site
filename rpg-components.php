@@ -174,16 +174,16 @@ $sf_backgrounds = $sf_sample['background'];
 $sf_backgrounds[] = $sf_dreft['kinds'][0];
 $sf_backgrounds[] = $sf_dreft['professions'][0];
 
-// What still draws each kind its own way, to move onto the component
+// Where each component is used
 $sf_used_in = array(
 	'trait'      => array(
-		'php/rpg/rpg-traits.php: 53 hand-written trait-box cards (Knowledges, Languages, Skills, Abilities, Conditions, Other)',
+		'php/rpg/rpg-traits.php: Trait Categories and Example Traits',
 		'php/rpg/rpg-incidents.php: Dress Wounds',
-		'php/rpg/rpg-character.php: the sample sheet’s Abilities, Skills, Other Traits and Healthy Condition',
+		'php/rpg/rpg-character.php: the sample sheet’s Healthy Condition, Abilities (open), Skills (closed) and Other Traits',
 		'php/rpg/npc-sheet.php: an NPC’s Traits (Murk Legs’ Dark Haze)',
 	),
 	'item'       => array(
-		'php/rpg/items.php: sf_equipment_card(), the Example Items',
+		'php/rpg/items.php: sf_equipment_card(), the Item Types and Example Items',
 		'php/rpg/magic-items.php: sf_magic_item_card(), Artifacts, Enchantments and Potions',
 		'php/rpg/npc-sheet.php: an NPC’s Attacks (Murk Legs)',
 	),
@@ -203,7 +203,6 @@ $sf_list = function ( $items ) {
 <html lang="en">
 	<head>
 		<?php include 'php/head-loads.php'; ?>
-		<link rel="stylesheet" type="text/css" href="<?php echo asset_url( 'css/sf-cards.css' ); ?>"/>
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
 		<style>
@@ -225,7 +224,7 @@ $sf_list = function ( $items ) {
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
 				<p class="copy">Every card of a kind should come from its component in <code>php/rpg/components/cards.php</code>, so new cards can’t drift from the old ones. Trait and Background cards are styled by <code>css/sf-cards.css</code> and carry their own colors, so a card looks the same in a light section, a dark one or a lore popup. Item cards use the item styles already in <code>css/rpg.css</code>.</p>
-				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is the code that still draws that kind of card its own way, to move onto the component.</p>
+				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
 		</div>
 
@@ -235,8 +234,8 @@ $sf_list = function ( $items ) {
 				<div class="line-container"><h5><strong>Trait Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_trait( array( 'kind' =&gt; 'ability', 'name' =&gt; 'Rally', 'effect' =&gt; '…', 'action' =&gt; 'Rally: …', 'needs' =&gt; 'Demeanor 5, Persuasion 4' ) );
 kind: knowledge | language | skill | ability | condition | circumstance | other
-optional: rank, flags, types, region ('dreft'), action, temporary, needs, from, fold ('open' | 'closed')</pre>
-				<p class="sf-library-label">To move onto it</p>
+optional: rank, flags, types, region ('dreft'), action (one or an array), grants, temporary, needs, from, fold ('open' | 'closed')</pre>
+				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['trait'] ); ?>
 				<p class="sf-library-label">Each kind and variant</p>
 				<div class="sf-card-grid">
@@ -263,7 +262,7 @@ optional: rank, flags, types, region ('dreft'), action, temporary, needs, from, 
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
 optional: chips, value + currency, damage, formula, ranged, range, area, resistances, mp, description, lead, effects</pre>
-				<p class="sf-library-label">To move onto it</p>
+				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
 				<p class="sf-library-label">Weapons, wearables, equipment, magic Items and natural weapons</p>
 				<div class="sf-library-items">
@@ -286,7 +285,7 @@ optional: chips, value + currency, damage, formula, ranged, range, area, resista
 				<div class="line-container"><h5><strong>Background Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_background( $background, ', placed in Grace' );
 takes a background as the creator exports it: sample-character.json, dreftian-backgrounds.json</pre>
-				<p class="sf-library-label">To move onto it</p>
+				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['background'] ); ?>
 				<p class="sf-library-label">Edwin’s Kind, Origin, Profession and Past, then a Dreftian Kind and Profession</p>
 				<div class="sf-library-backgrounds">
@@ -308,8 +307,7 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 				<div class="line-container"><h5><strong>Not Components Yet</strong></h5><div class="line"></div></div>
 				<ul class="copy mb-0">
 					<li>The sample sheet’s Item rows (count, Equip check, name and badges, opening from a chevron) and its Knowledge and Language list.</li>
-					<li>The NPC sheet (php/rpg/npc-sheet.php), which should draw its Attacks and Traits with these cards.</li>
-					<li>The creator and Player Tools (React) have their own cards. Matching them to these is a separate step.</li>
+										<li>The creator and Player Tools (React) have their own cards. Matching them to these is a separate step.</li>
 				</ul>
 			</div>
 		</div>

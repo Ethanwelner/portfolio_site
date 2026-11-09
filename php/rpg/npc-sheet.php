@@ -5,7 +5,7 @@
 // Strange Frontiers doc's To Do tab. HP, VP and SP follow the creator
 // (src/engine/validate.ts): HP is 10 plus the Physical focus Stats, VP the
 // Social focus Stats, SP the Mental focus Stats.
-require_once __DIR__ . '/items.php';
+require_once __DIR__ . '/components/cards.php';
 require_once __DIR__ . '/core-stat-icons.php';
 
 if ( ! function_exists( 'sf_npc_sheet' ) ) {
@@ -64,37 +64,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			<?php if ( ! empty( $npc['attacks'] ) ) : ?>
 				<div class="c-sheet-box">
 					<h6 class="npc-sheet-rule">Attacks</h6>
+					<!-- Each Attack is an item card (php/rpg/components/cards.php) -->
 					<ul class="npc-sheet-list">
 						<?php foreach ( $npc['attacks'] as $a ) : ?>
-							<!-- As an Example Item's weapon card (items.php) and the creator's
-							     item cards: the name, the damage badge led by a sword, the
-							     Max Range (an arc) and Area of Effect (a burst) badges, any
-							     other chips, then a note -->
-							<li class="equipment-box">
-								<div class="equipment-row">
-									<span class="equipment-name"><?php echo $e( $a['name'] ); ?></span>
-									<!-- The badges as one group, so a narrow card moves them under
-									     the name together instead of one line each -->
-									<span class="equipment-stats npc-attack-stats">
-										<?php if ( ! empty( $a['formula'] ) ) : ?>
-											<!-- A damage formula, as the creator's badges show Fists'
-											     "1 + Power": the type's icon and the formula, then what
-											     it comes to for this character, muted -->
-											<span class="equipment-stats"><span class="chip equipment-stat" title="<?php echo $e( $a['formula'] . ' ' . $a['type'] . ': ' . $a['damage'] . ' ' . $a['type'] ); ?>"><?php echo sf_item_stat_lead( 'sword' ); ?><span class="equipment-stat-value"><?php echo sf_damage_icon( $a['type'] ) . $e( $a['formula'] ); ?> <span class="npc-damage-total">(<?php echo (int) $a['damage']; ?>)</span></span></span></span>
-										<?php else : ?>
-											<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
-										<?php endif; ?>
-										<?php if ( ! empty( $a['range'] ) ) { echo sf_item_reach( 'range', $a['range'] ); } ?>
-										<?php if ( ! empty( $a['area'] ) ) { echo sf_item_reach( 'burst', $a['area'] ); } ?>
-									</span>
-									<span class="equipment-chips">
-										<?php foreach ( $a['chips'] as $chip ) : ?>
-											<span class="chip"><?php echo $e( $chip ); ?></span>
-										<?php endforeach; ?>
-									</span>
-								</div>
-								<p class="equipment-description"><?php echo $e( $a['profile'] ); ?></p>
-							</li>
+							<li><?php sf_card_item( $a ); ?></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>
@@ -103,17 +76,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			<?php if ( ! empty( $npc['traits'] ) ) : ?>
 				<div class="c-sheet-box">
 					<h6 class="npc-sheet-rule">Traits</h6>
+					<!-- Each Trait is a trait card (php/rpg/components/cards.php) -->
 					<ul class="npc-sheet-list">
 						<?php foreach ( $npc['traits'] as $t ) : ?>
-							<li class="npc-sheet-card">
-								<div class="npc-sheet-line">
-									<strong><?php echo $e( $t['name'] ); ?></strong>
-									<?php foreach ( $t['chips'] as $chip ) : ?>
-										<span class="npc-sheet-chip"><?php echo $e( $chip ); ?></span>
-									<?php endforeach; ?>
-								</div>
-								<p class="npc-sheet-detail"><?php echo $t['effect']; ?></p>
-							</li>
+							<li><?php sf_card_trait( $t ); ?></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>

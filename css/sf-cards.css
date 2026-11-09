@@ -215,3 +215,10 @@ details.sf-card {
     align-items: start;
     gap: 16px;
 }
+
+/* Traits a card gives, as a row of chips after its effect */
+.sf-card-grants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}

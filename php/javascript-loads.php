@@ -676,7 +676,7 @@
 			var h4 = "";
 			var line = "";
 			subTitle = "";
-			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box, .equipment-box" ).each(function() {
+			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .sf-card, .equipment-box" ).each(function() {
 				var $el = $( this );
 				var title = collapseSearchText( $el.text() );
 
@@ -686,16 +686,13 @@
 					return;
 				}
 
-				if ( $el.hasClass( "trait-box" ) || $el.hasClass( "equipment-box" ) ) {
+				if ( $el.hasClass( "sf-card" ) || $el.hasClass( "equipment-box" ) ) {
 					// The Trait Categories tab repeats one card from Example Traits per category; index it once
 					if ( $el.closest( "#traits-categories" ).length ) {
 						return;
 					}
-					// A Trait card's name is the bar's first span; its chips follow it
-					var $name = $el.find( ".trait-name > span:first-child" );
-					if ( !$name.length ) {
-						$name = $el.find( ".trait-name, .equipment-name" );
-					}
+					// A card's name (php/rpg/components/cards.php); its chips follow it
+					var $name = $el.find( ".sf-card-name, .equipment-name" ).first();
 					var traitName = collapseSearchText( $name.text() );
 					var box = this;
 					addRpgSearchEntry( entries, traitName, [ subTitle, h3, line ], title.replace( traitName, "" ), function() {
