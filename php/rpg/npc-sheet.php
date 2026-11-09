@@ -66,12 +66,16 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 					<h6 class="npc-sheet-rule">Attacks</h6>
 					<ul class="npc-sheet-list">
 						<?php foreach ( $npc['attacks'] as $a ) : ?>
-							<!-- As an Example Item's weapon card (items.php): the name, the
-							     damage badge led by a sword, the profile as chips, then a note -->
+							<!-- As an Example Item's weapon card (items.php) and the creator's
+							     item cards: the name, the damage badge led by a sword, the
+							     Max Range (an arc) and Area of Effect (a burst) badges, any
+							     other chips, then a note -->
 							<li class="equipment-box">
 								<div class="equipment-row">
 									<span class="equipment-name"><?php echo $e( $a['name'] ); ?></span>
 									<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
+									<?php if ( ! empty( $a['range'] ) ) { echo sf_item_reach( 'range', $a['range'] ); } ?>
+									<?php if ( ! empty( $a['area'] ) ) { echo sf_item_reach( 'burst', $a['area'] ); } ?>
 									<span class="equipment-chips">
 										<?php foreach ( $a['chips'] as $chip ) : ?>
 											<span class="chip"><?php echo $e( $chip ); ?></span>
