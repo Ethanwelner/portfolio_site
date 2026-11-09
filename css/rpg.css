@@ -3870,6 +3870,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* An attack's damage, range and area badges each come in their own
+   .equipment-stats; inside the group they flow as its children, so the
+   narrow-card rule moves the group, not each badge */
+.npc-attack-stats > .equipment-stats {
+    display: contents;
+}
+
 /* Attacks and Traits share one grid of columns at least 360px wide: two
    across on a wide sheet, one on a narrow one, so a lone Trait card is as
    wide as an Attack card beside it */

@@ -73,9 +73,13 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 							<li class="equipment-box">
 								<div class="equipment-row">
 									<span class="equipment-name"><?php echo $e( $a['name'] ); ?></span>
-									<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
-									<?php if ( ! empty( $a['range'] ) ) { echo sf_item_reach( 'range', $a['range'] ); } ?>
-									<?php if ( ! empty( $a['area'] ) ) { echo sf_item_reach( 'burst', $a['area'] ); } ?>
+									<!-- The badges as one group, so a narrow card moves them under
+									     the name together instead of one line each -->
+									<span class="equipment-stats npc-attack-stats">
+										<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
+										<?php if ( ! empty( $a['range'] ) ) { echo sf_item_reach( 'range', $a['range'] ); } ?>
+										<?php if ( ! empty( $a['area'] ) ) { echo sf_item_reach( 'burst', $a['area'] ); } ?>
+									</span>
 									<span class="equipment-chips">
 										<?php foreach ( $a['chips'] as $chip ) : ?>
 											<span class="chip"><?php echo $e( $chip ); ?></span>
