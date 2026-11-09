@@ -76,7 +76,14 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 									<!-- The badges as one group, so a narrow card moves them under
 									     the name together instead of one line each -->
 									<span class="equipment-stats npc-attack-stats">
-										<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
+										<?php if ( ! empty( $a['formula'] ) ) : ?>
+											<!-- A damage formula, as the creator's badges show Fists'
+											     "1 + Power": the type's icon and the formula, then what
+											     it comes to for this character, muted -->
+											<span class="equipment-stats"><span class="chip equipment-stat" title="<?php echo $e( $a['formula'] . ' ' . $a['type'] . ': ' . $a['damage'] . ' ' . $a['type'] ); ?>"><?php echo sf_item_stat_lead( 'sword' ); ?><span class="equipment-stat-value"><?php echo sf_damage_icon( $a['type'] ) . $e( $a['formula'] ); ?> <span class="npc-damage-total">(<?php echo (int) $a['damage']; ?>)</span></span></span></span>
+										<?php else : ?>
+											<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
+										<?php endif; ?>
 										<?php if ( ! empty( $a['range'] ) ) { echo sf_item_reach( 'range', $a['range'] ); } ?>
 										<?php if ( ! empty( $a['area'] ) ) { echo sf_item_reach( 'burst', $a['area'] ); } ?>
 									</span>
