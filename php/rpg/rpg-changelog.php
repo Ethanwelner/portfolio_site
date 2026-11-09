@@ -8,6 +8,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/9/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Setting: Murk Legs in Parazoology has a compact monster sheet with its Stats, HP, VP and SP, Massive Claws and Horrid Bite, and a permanent Rank 2 Dark Haze.</li>
+						<li>Character Creator: new Illusion spell Dark Haze (Magic 4), which gives the Dark Haze Condition. Anyone trying to see a character with it needs an Intuition check of 10 per Rank, or they see only a dark, shimmering haze.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: Deathproof, Mindproof, Deathblade and Mindblade join the other proof and blade spells, with their Conditions (Magically Deathproof, Magically Mindproof, Withering Weapon and Maddening Weapon) and Deathproof and Mindproof Potions.</li>
