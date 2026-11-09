@@ -3682,4 +3682,37 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .stat-ring-level ellipse {
         fill: #212121;
     }
+
+    /* Character Level glitches like the Strange Frontiers title: the whole
+       circle takes the skews, and its label the green glow and the cyan and
+       red slices */
+    .stat-ring-level {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: frontiers-glitch-shift 4s ease-in-out infinite alternate;
+    }
+
+    .stat-ring-level-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        text-align: center;
+
+        .frontiers-glitch {
+            white-space: pre-line;
+            /* The circle already skews, so the label only glows */
+            animation: frontiers-glitch-glow 8s ease-in-out infinite alternate;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .stat-ring-level {
+            animation: none;
+        }
+    }
 }
