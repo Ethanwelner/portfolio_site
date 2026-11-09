@@ -2908,6 +2908,56 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             height: 8px;
             margin: 0 6px 0 4px;
             opacity: .4;
+            transition: opacity 200ms, transform 200ms;
+        }
+
+        /* The item opens from its line, as the creator's do from the
+           chevron: the chevron goes full strength and points up, and the
+           count stays centered on the line */
+        .sheet-item-fold > summary {
+            cursor: pointer;
+            list-style: none;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &:hover .sheet-item-chevron {
+                opacity: 1;
+            }
+        }
+
+        .sheet-item-fold[open] .sheet-item-chevron {
+            opacity: 1;
+            transform: rotate(180deg);
+        }
+
+        .sheet-item:has(> .sheet-item-fold[open]) > .sheet-item-count {
+            top: 14.15px;
+            transform: none;
+        }
+
+        /* The open card's badges the line leaves out: its category first,
+           then its value, how it Attacks and the slot it takes */
+        .sheet-item-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        /* Its description, in italics, under them */
+        .sheet-item-stock {
+            margin-top: 8px;
+            font-size: .875rem;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .sheet-item-flavor {
+            font-style: italic;
         }
 
         .sheet-check {

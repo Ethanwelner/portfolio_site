@@ -305,11 +305,13 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					<ul class="sheet-cards">
 						<!-- As in the creator and Player Tools: the count in a circle on the
 						     card's left edge, then Equip, the name, its resistances in one
-						     badge led by a shield, and the chevron that opens the card there
-						     (the category waits in the open card) -->
+						     badge led by a shield, and the chevron. The line opens the card
+						     (a <details>) to its category, value and the like, then its
+						     description -->
 						<li class="sheet-item">
 							<span class="sheet-item-count" aria-label="1 of Sturdy Leather Jacket">1</span>
-							<div class="sheet-item-row">
+							<details class="sheet-item-fold">
+							<summary class="sheet-item-row">
 								<span class="sheet-check" role="img" aria-label="Equipped"></span>
 								<span class="sheet-item-main">
 									<span class="sheet-item-title">Sturdy Leather Jacket</span>
@@ -318,38 +320,53 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 									</span>
 								</span>
 								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
+							</summary>
+							<div class="sheet-item-badges"><span class="chip">Armor</span><span class="chip">200 ERC</span><span class="chip">Slot: Outerwear</span></div>
+							<div class="sheet-item-stock"><p class="sheet-item-flavor">A heavy leather jacket. Turns a scrape or a cold wind, not much more.</p></div>
+							</details>
 						</li>
 						<li class="sheet-item">
 							<span class="sheet-item-count" aria-label="1 of Pistol">1</span>
-							<div class="sheet-item-row">
+							<details class="sheet-item-fold">
+							<summary class="sheet-item-row">
 								<span class="sheet-check" role="img" aria-label="Equipped"></span>
 								<span class="sheet-item-main">
 									<span class="sheet-item-title">Pistol</span>
 									<span class="sheet-item-stats"><span class="chip sheet-item-stat"><span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="Ranged damage" focusable="false"><title>Ranged damage</title><path d="M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z"/></svg></span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Piercing" focusable="false"><title>Piercing</title><path d="M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z"/></svg>7</span></span></span>
 								</span>
 								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
+							</summary>
+							<div class="sheet-item-badges"><span class="chip">Weapon</span><span class="chip">600 ERC</span><span class="chip">Ranged Attack</span><span class="chip">Grace</span><span class="chip">Reload: Partial Action</span></div>
+							<div class="sheet-item-stock"><p class="sheet-item-flavor">A modern handgun.</p></div>
+							</details>
 						</li>
 						<li class="sheet-item">
 							<span class="sheet-item-count" aria-label="1 of Disguise Kit">1</span>
-							<div class="sheet-item-row">
+							<details class="sheet-item-fold">
+							<summary class="sheet-item-row">
 								<span class="sheet-check is-off" role="img" aria-label="Not equipped"></span>
 								<span class="sheet-item-main">
 									<span class="sheet-item-title">Disguise Kit</span>
 								</span>
 								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
+							</summary>
+							<div class="sheet-item-badges"><span class="chip">Gear</span><span class="chip">150 ERC</span></div>
+							<div class="sheet-item-stock"><p class="sheet-item-flavor">Makeup, wigs, false hair and a few changes of clothes.</p></div>
+							</details>
 						</li>
 						<li class="sheet-item">
 							<span class="sheet-item-count" aria-label="1 of Comm Unit">1</span>
-							<div class="sheet-item-row">
+							<details class="sheet-item-fold">
+							<summary class="sheet-item-row">
 								<span class="sheet-check is-off" role="img" aria-label="Not equipped"></span>
 								<span class="sheet-item-main">
 									<span class="sheet-item-title">Comm Unit</span>
 								</span>
 								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
+							</summary>
+							<div class="sheet-item-badges"><span class="chip">Gear</span><span class="chip">800 ERC</span></div>
+							<div class="sheet-item-stock"><p class="sheet-item-flavor">A personal communicator and computer. Doesn’t reach across a switch gate without a relay.</p></div>
+							</details>
 						</li>
 					</ul>
 				</div>
