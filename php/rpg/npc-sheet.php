@@ -47,7 +47,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 			<div class="npc-sheet-stats">
 				<?php foreach ( array( 'physical' => 'Physical', 'social' => 'Social', 'mental' => 'Mental' ) as $group => $label ) : ?>
-					<div class="c-sheet-box npc-sheet-group">
+					<div class="c-sheet-box npc-sheet-group stat-group-<?php echo $group; ?>">
 						<div class="npc-sheet-core">
 							<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( $group ); ?></div>
 							<strong><?php echo $label; ?></strong><span class="num"><?php echo $npc['stats'][ $label ]; ?></span>
@@ -66,12 +66,19 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 					<h6 class="npc-sheet-rule">Attacks</h6>
 					<ul class="npc-sheet-list">
 						<?php foreach ( $npc['attacks'] as $a ) : ?>
-							<li>
-								<div class="npc-sheet-line">
-									<strong><?php echo $e( $a['name'] ); ?></strong>
-									<span class="npc-sheet-damage"><?php echo sf_damage_icon( $a['type'] ) . $a['damage'] . ' ' . $a['type']; ?></span>
+							<!-- As an Example Item's weapon card (items.php): the name, the
+							     damage badge led by a sword, the profile as chips, then a note -->
+							<li class="equipment-box">
+								<div class="equipment-row">
+									<span class="equipment-name"><?php echo $e( $a['name'] ); ?></span>
+									<?php echo sf_item_stats( 'sword', $a['damage'] . ' ' . $a['type'] ); ?>
+									<span class="equipment-chips">
+										<?php foreach ( $a['chips'] as $chip ) : ?>
+											<span class="chip"><?php echo $e( $chip ); ?></span>
+										<?php endforeach; ?>
+									</span>
 								</div>
-								<p class="npc-sheet-detail"><?php echo $e( $a['profile'] ); ?></p>
+								<p class="equipment-description"><?php echo $e( $a['profile'] ); ?></p>
 							</li>
 						<?php endforeach; ?>
 					</ul>
@@ -83,7 +90,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 					<h6 class="npc-sheet-rule">Traits</h6>
 					<ul class="npc-sheet-list">
 						<?php foreach ( $npc['traits'] as $t ) : ?>
-							<li>
+							<li class="npc-sheet-card">
 								<div class="npc-sheet-line">
 									<strong><?php echo $e( $t['name'] ); ?></strong>
 									<?php foreach ( $t['chips'] as $chip ) : ?>

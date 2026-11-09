@@ -3725,14 +3725,30 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* Compact NPC and monster sheet (php/rpg/npc-sheet.php): the name and HP, VP,
-   SP and Movement on one line, the three core Stats with their focus Stats as
-   plain numbers, then Attacks and Traits as short lists. */
-.npc-sheet {
+/* Compact NPC and monster sheet (php/rpg/npc-sheet.php), in the dark of the
+   sample sheet, the creator and Player Tools wherever it sits: the name and
+   HP, VP, SP and Movement on one line, the three core Stats with their focus
+   Stats as plain numbers, then Attacks and Traits as cards with a dark name
+   bar. It carries its own copy of the Mechanics section's panel colors. */
+.c-sheet.npc-sheet {
+    --panel: #2b2b2b;
+    --panel-box: #363636;
+    --panel-text: #e8e8e8;
+    --panel-soft: #b3b3b3;
+    --panel-rule: rgb(255 255 255 / 18%);
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding: 12px;
+    background-color: var(--panel-box);
+    border-color: rgb(255 255 255 / 12%);
+    color: var(--panel-text);
+
+    .c-sheet-box {
+        padding: 14px 16px;
+        background-color: var(--panel);
+        border-color: rgb(255 255 255 / 12%);
+    }
 }
 
 .npc-sheet-head {
@@ -3741,17 +3757,17 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     align-items: center;
     justify-content: space-between;
     gap: 8px 16px;
-    padding: 0 4px;
 }
 
 .npc-sheet-name {
     margin: 0;
+    color: var(--panel-text);
     font-weight: 700;
 }
 
 .npc-sheet-kind {
     margin: 0;
-    color: var(--portfolio-gray);
+    color: var(--panel-soft);
     font-size: .875rem;
 }
 
@@ -3778,8 +3794,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-.npc-sheet .c-sheet-box {
-    padding: 12px 16px;
+/* Each group in its resource's color, as on the sample sheet: Physical red,
+   Social purple, Mental yellow, with the core stat's circle a darker shade */
+.npc-sheet-group {
+    &.stat-group-physical { --stat-color: var(--frontiers-hp); }
+    &.stat-group-social { --stat-color: var(--frontiers-vp); }
+    &.stat-group-mental { --stat-color: var(--frontiers-sp); }
 }
 
 .npc-sheet-core {
@@ -3792,6 +3812,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .stat-badge:has(.stat-badge-icon) {
         width: 2.25rem;
         height: 2.25rem;
+        background-color: color-mix(in srgb, var(--stat-color) 50%, black);
+        color: var(--portfolio-white);
     }
 
     .stat-badge-icon {
@@ -3801,22 +3823,25 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
     .num {
         margin-left: auto;
+        color: var(--stat-color);
         font-weight: 700;
     }
 }
 
 .npc-sheet-focus {
     margin: 0;
+    padding-left: 15px;
     font-size: .9375rem;
 
     > div {
         display: flex;
         justify-content: space-between;
-        padding: 2px 0;
-        border-top: 1px solid var(--portfolio-light-gray);
+        padding: 3px 0;
+        border-top: 1px solid var(--panel-rule);
     }
 
     dt {
+        color: var(--panel-soft);
         font-weight: 400;
     }
 
@@ -3826,45 +3851,73 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Section titles with a rule running out to the right, like .sheet-rule */
 .npc-sheet-rule {
-    margin: 0 0 8px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--portfolio-light-gray);
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 12px;
+    color: var(--panel-text);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--panel-rule);
+    }
 }
 
 .npc-sheet-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    gap: 12px;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/* Attack and Trait cards, like the sheet's .trait-box: black, a 2px edge
+   the color of the name bar, the name and its chips in the bar */
+.npc-sheet-card {
+    overflow: hidden;
+    background-color: var(--portfolio-black);
+    border: 2px solid #181818;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #00000030;
 }
 
 .npc-sheet-line {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 6px 10px;
+    gap: 6px 8px;
+    padding: 8px 14px;
+    background-color: #181818;
+
+    strong {
+        margin-right: auto;
+    }
 }
 
-.npc-sheet-damage,
 .npc-sheet-chip {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 2px 8px;
-    border: 1px solid var(--portfolio-light-gray);
+    padding: .2rem .5rem;
     border-radius: 4px;
-    background-color: var(--portfolio-near-white);
-    font-size: .875rem;
+    background-color: var(--portfolio-gray);
+    color: var(--portfolio-white);
+    font-size: .8125rem;
     font-weight: 600;
     white-space: nowrap;
 }
 
 .npc-sheet-detail {
-    margin: 4px 0 0;
+    margin: 0;
+    padding: 10px 14px 12px;
+    color: var(--panel-text);
     font-size: .9375rem;
     line-height: 1.5;
 }

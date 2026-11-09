@@ -27,13 +27,15 @@ sf_npc_sheet(
 				'name'    => 'Massive Claws',
 				'damage'  => 10,
 				'type'    => 'Slashing',
-				'profile' => 'Natural weapon. Power - 5 damage, (Melee) (max range 3 m) (area of effect: 3 m).',
+				'chips'   => array( 'Melee', '3 m', '3 m area' ),
+				'profile' => 'Natural weapon. Deals Power - 5 damage to everything in its area.',
 			),
 			array(
 				'name'    => 'Horrid Bite',
 				'damage'  => 15,
 				'type'    => 'Piercing',
-				'profile' => 'Natural weapon. Power damage, (Melee) (max range 3 m).',
+				'chips'   => array( 'Melee', '3 m' ),
+				'profile' => 'Natural weapon. Deals Power damage.',
 			),
 		),
 		'traits'  => array(
