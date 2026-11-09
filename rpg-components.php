@@ -95,7 +95,8 @@ $sf_traits = array(
 		'needs'  => 'Power 10, Endurance 5, Demeanor 5, Middle Aged or Older',
 	),
 );
-// Folding, as on the sample sheet: closed to the bar, and open
+// Folding (fold), as on a character sheet: a Skill closed to its bar and one
+// open, then an Ability closed to its name and effect (keep)
 $sf_folding = array(
 	array(
 		'kind'   => 'skill',
@@ -118,7 +119,8 @@ $sf_folding = array(
 		'effect' => $sf_trait( 'Bolt' )['effect'],
 		'action' => $sf_trait( 'Bolt' )['action'],
 		'from'   => $sf_trait( 'Bolt' )['from'],
-		'fold'   => 'open',
+		'fold'   => 'closed',
+		'keep'   => true,
 	),
 );
 
@@ -168,6 +170,16 @@ $sf_items[] = array(
 	'description' => 'Natural weapon, granted by Natural Breath Weapon.',
 );
 
+// The same Item card as each interface draws it: a catalog's (always open),
+// a character sheet's (count, read-only Equip, closed to its line), and the
+// sheet's open
+$sf_item_modes = array(
+	array( 'Catalog (no options)', array() ),
+	array( 'Sheet: count, equip “on”, fold “closed”', array( 'count' => 1, 'equip' => 'on', 'fold' => 'closed' ) ),
+	array( 'Sheet: count, equip “off”, fold “open”', array( 'count' => 2, 'equip' => 'off', 'fold' => 'open' ) ),
+);
+$sf_pistol = array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.' );
+
 // Background cards: Edwin's four, then a Dreftian Kind with its Stats and a
 // Dreftian Profession
 $sf_backgrounds = $sf_sample['background'];
@@ -179,16 +191,17 @@ $sf_used_in = array(
 	'trait'      => array(
 		'php/rpg/rpg-traits.php: Trait Categories and Example Traits',
 		'php/rpg/rpg-incidents.php: Dress Wounds',
-		'php/rpg/rpg-character.php: the sample sheet’s Healthy Condition, Abilities (open), Skills (closed) and Other Traits',
+		'php/rpg/rpg-character.php: the sample sheet’s Healthy Condition, Abilities (closed, keeping their effect), Skills (closed), Other Traits, and its Knowledges’ popups',
 		'php/rpg/npc-sheet.php: an NPC’s Traits (Murk Legs’ Dark Haze)',
 	),
 	'item'       => array(
 		'php/rpg/items.php: sf_equipment_card(), the Item Types and Example Items',
 		'php/rpg/magic-items.php: sf_magic_item_card(), Artifacts, Enchantments and Potions',
 		'php/rpg/npc-sheet.php: an NPC’s Attacks (Murk Legs)',
+		'php/rpg/rpg-character.php: the sample sheet’s Items (count, read-only Equip, closed)',
 	),
 	'background' => array(
-		'php/rpg/background-card.php: sf_background_card(), beside the sample sheet and in Building a Dreftian',
+		'php/rpg/background-card.php: sf_background_card(), beside the sample sheet, in its popups and in Building a Dreftian',
 	),
 );
 $sf_list = function ( $items ) {
@@ -223,7 +236,8 @@ $sf_list = function ( $items ) {
 			<div class="container">
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
-				<p class="copy">Every card of a kind should come from its component in <code>php/rpg/components/cards.php</code>, so new cards can’t drift from the old ones. Trait and Background cards are styled by <code>css/sf-cards.css</code> and carry their own colors, so a card looks the same in a light section, a dark one or a lore popup. Item cards use the item styles already in <code>css/rpg.css</code>.</p>
+				<p class="copy">There’s one card per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
 		</div>
@@ -234,14 +248,15 @@ $sf_list = function ( $items ) {
 				<div class="line-container"><h5><strong>Trait Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_trait( array( 'kind' =&gt; 'ability', 'name' =&gt; 'Rally', 'effect' =&gt; '…', 'action' =&gt; 'Rally: …', 'needs' =&gt; 'Demeanor 5, Persuasion 4' ) );
 kind: knowledge | language | skill | ability | condition | circumstance | other
-optional: rank, flags, types, region ('dreft'), action (one or an array), grants, temporary, needs, from, fold ('open' | 'closed')</pre>
+optional: rank, plane ('isekai' | 'earth'), chips, flags, types, action (one or an array), grants, temporary, needs, from
+options: fold ('open' | 'closed'), keep (true: the effect stays in view while it's closed)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['trait'] ); ?>
 				<p class="sf-library-label">Each kind and variant</p>
 				<div class="sf-card-grid">
 					<?php foreach ( $sf_traits as $t ) { sf_card_trait( $t ); } ?>
 				</div>
-				<p class="sf-library-label">Folding, as on a character sheet</p>
+				<p class="sf-library-label">fold and keep, as on a character sheet: closed, open, and an Ability closed to its name and effect</p>
 				<div class="sf-card-grid">
 					<?php foreach ( $sf_folding as $t ) { sf_card_trait( $t ); } ?>
 				</div>
@@ -261,9 +276,19 @@ optional: rank, flags, types, region ('dreft'), action (one or an array), grants
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: chips, value + currency, damage, formula, ranged, range, area, resistances, mp, description, lead, effects</pre>
+optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, mp, description, lead, effects
+options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
+				<p class="sf-library-label">The same card in each interface</p>
+				<div class="sf-library-items">
+					<?php foreach ( $sf_item_modes as $mode ) : ?>
+						<div>
+							<p class="copy small mb-2"><?php echo sf_card_e( $mode[0] ); ?></p>
+							<?php sf_card_item( $sf_pistol + $mode[1] ); ?>
+						</div>
+					<?php endforeach; ?>
+				</div>
 				<p class="sf-library-label">Weapons, wearables, equipment, magic Items and natural weapons</p>
 				<div class="sf-library-items">
 					<?php foreach ( $sf_items as $i ) { sf_card_item( $i ); } ?>
@@ -306,8 +331,7 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 			<div class="container">
 				<div class="line-container"><h5><strong>Not Components Yet</strong></h5><div class="line"></div></div>
 				<ul class="copy mb-0">
-					<li>The sample sheet’s Item rows (count, Equip check, name and badges, opening from a chevron) and its Knowledge and Language list.</li>
-										<li>The creator and Player Tools (React) have their own cards. Matching them to these is a separate step.</li>
+					<li>The sample sheet’s Knowledge and Language list.</li>
 				</ul>
 			</div>
 		</div>

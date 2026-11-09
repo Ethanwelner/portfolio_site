@@ -1,6 +1,6 @@
 <?php
-// Card components for Strange Frontiers. Every card of a kind should come
-// from one of these functions, so a new card can't drift from the others:
+// Card components for Strange Frontiers: one per kind of card, so a new card
+// can't drift from the others.
 //
 //   sf_card_trait()      Knowledges, Languages, Skills, Abilities and spells,
 //                        Conditions, Circumstances and Other Traits
@@ -8,11 +8,29 @@
 //                        natural weapons (an NPC's or monster's Attacks)
 //   sf_card_background() Kinds, Origins, Professions and Pasts
 //
-// Each takes one array of what the card shows. Trait and background cards
-// are styled by css/sf-cards.css, which carries its own colors so a card
-// looks the same in a light section, a dark one or a lore popup. Item cards
-// use the item styles in css/rpg.css (.equipment-box), already global.
-// The component library (rpg-components.php) shows every variant.
+// The Character Creator's and Player Tools' cards are the reference. These
+// draw the same markup as the creator's components
+// (strange-frontiers-character-creator src/app/components/cards.tsx), styled
+// by the same stylesheet: css/sf-cards.css here is a copy of the creator's
+// src/app/cards.css. Change a card in the creator first, then bring the
+// markup here and copy the stylesheet over.
+//
+// Each card takes options that say how it behaves on the page that draws it,
+// under the same names as the creator's:
+//
+//   Trait card       fold  'open' or 'closed': opens and closes from the
+//                          chevron at the end of its bar, and only there
+//                    keep  true: its effect stays in view while it's closed
+//                          (an Ability's)
+//   Item card        count how many, in a circle on its left edge
+//                    equip 'on' or 'off': its Equip box, read-only
+//                    fold  'open' or 'closed', as for a Trait card
+//   Background card  (none on the site)
+//
+// A card without fold is always open. The site's pages are static, so the
+// creator's live options (Equip's checkbox, Edit, Note, picking a card)
+// don't exist here; the same cards are drawn read-only. The component
+// library (rpg-components.php) shows every variant.
 require_once dirname( __DIR__ ) . '/items.php';
 
 if ( ! function_exists( 'sf_card_e' ) ) {
@@ -20,17 +38,51 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		return htmlspecialchars( (string) $text, ENT_QUOTES, 'UTF-8' );
 	}
 
-	// Isekai's mark, before the name of a Dreft card, as in the creator
-	function sf_card_isekai_icon() {
-		return '<svg class="sf-card-setting-icon" viewBox="0 0 512 512" role="img" aria-label="Isekai"><title>Isekai</title><path d="m194.547 20.182-12.815 195.064L73.522 94.22l45.562 160.89-92.547-8.542 54.106 103.94-61.225 8.54 79.943 65.73a159.426 159.426 0 0 1-4.204-36.206l-20.963-1.7 1.508-18.626 20.536 1.664a156.566 156.566 0 0 1 15.233-51.414l-40.48-29.09 10.908-15.176 38.9 27.96a158.684 158.684 0 0 1 35.288-38.31l-27.73-50.21 16.36-9.033 26.845 48.607a156.696 156.696 0 0 1 48.88-19.217l-12.952-90.87 18.502-2.637 12.94 90.785c4.583-.4 9.22-.62 13.906-.62h.004c4.13 0 8.223.163 12.275.475l6.574-62.775 18.587 1.945-6.634 63.37a157.415 157.415 0 0 1 37.95 12.68l18.37-36.737L356.678 218l-18.746 37.492a159.36 159.36 0 0 1 24.59 19.342l46.53-52.115 13.942 12.446-47.707 53.438a157.87 157.87 0 0 1 20.957 33.115l32.97-22.372 10.493 15.464-36.393 24.696a155.963 155.963 0 0 1 7.327 36.707l19.594-3.19 3.002 18.448-22.29 3.627a156.823 156.823 0 0 1-4.706 32.09l80.9-63.87-56.24-5.695 54.034-85.428-59.73 9.252 39.868-103.57-88.28 35.94 32.75-116.752-96.82 111.057-17.085-168.008-42.715 108.207-58.375-128.142zm58.29 229.193c-76.976.002-138.993 62.02-138.993 138.996 0 33.147 11.532 63.544 30.783 87.485l-130.545-46.02h-.713v62.487h146.823l.004.004h29.6c-.002 0-.004-.002-.006-.004h1.548l-3.07-1.082c-28.443-20.302-46.98-53.577-46.98-91.19 0-61.712 49.773-112.13 111.55-112.13 61.776 0 112.13 50.354 112.13 112.13 0 37.508-18.62 70.66-47.05 90.97l-3.69 1.302h1.848l-.006.004h29.424c.002 0 .003-.003.004-.004h146.7v-62.488h-.716l-130.195 45.898c19.395-23.942 31.13-54.303 31.13-87.36 0-76.932-62.6-138.995-139.577-138.997h-.004z"/></svg>';
+	// The setting's mark before a card's name, as the creator's SettingIcon:
+	// Isekai's for Isekai, The Settled Systems' for Earth
+	function sf_card_setting_icon( $plane ) {
+		$settings = array(
+			'isekai' => array( 'isekai', 'Isekai' ),
+			'earth'  => array( 'systems', 'The Settled Systems' ),
+		);
+		if ( ! isset( $settings[ $plane ] ) ) {
+			return '';
+		}
+		list( $mark, $name ) = $settings[ $plane ];
+		return '<span class="setting-icon setting-' . $mark . '" role="img" aria-label="' . $name . '" title="' . $name . '"></span>';
 	}
 
-	// A Trait's effect, as the creator shows it: lines starting with "- " are
-	// bullets, other lines paragraphs
+	// The Isekai plane (old callers say region 'dreft')
+	function sf_card_plane( $c ) {
+		if ( ! empty( $c['plane'] ) ) {
+			return strtolower( $c['plane'] );
+		}
+		return 'dreft' === ( $c['region'] ?? '' ) ? 'isekai' : '';
+	}
+
+	// A folding card's chevron, the only place that opens and closes it. The
+	// script below, written once per page, does the opening.
+	function sf_card_chevron( $open, $label, $class ) {
+		$svg = '<svg' . ( 'sf-card-fold' === $class ? ' class="sf-card-chevron"' : '' ) . ' viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
+		$html = '<button type="button" class="' . $class . '" data-sf-fold aria-label="' . ( $open ? 'Collapse ' : 'Expand ' ) . sf_card_e( $label ) . '" aria-expanded="' . ( $open ? 'true' : 'false' ) . '" title="' . ( $open ? 'Collapse' : 'Expand' ) . '">' . $svg . '</button>';
+		static $script = false;
+		if ( ! $script ) {
+			$script = true;
+			$html  .= '<script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("[data-sf-fold]");if(!b)return;var c=b.closest(".sf-card, .sf-item-card"),o=c.classList.contains("is-closed"),n=b.getAttribute("aria-label").replace(/^(Collapse|Expand) /,"");c.classList.toggle("is-open",o);c.classList.toggle("is-closed",!o);b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",(o?"Collapse ":"Expand ")+n);b.title=o?"Collapse":"Expand";});</script>';
+		}
+		return $html;
+	}
+
+	// A Trait's effect, as the creator's Effect: lines starting with "- " are
+	// bullets, other lines paragraphs; a plain effect is one paragraph
 	function sf_card_effect( $text ) {
 		$lines = array_values( array_filter( array_map( 'trim', explode( "\n", $text ) ), 'strlen' ) );
-		$html  = '';
-		$open  = false;
+		$bullets = array_filter( $lines, function ( $l ) { return 0 === strpos( $l, '- ' ); } );
+		if ( ! $bullets ) {
+			return '<p class="sf-card-effect">' . sf_card_e( $text ) . '</p>';
+		}
+		$html = '';
+		$open = false;
 		foreach ( $lines as $l ) {
 			if ( 0 === strpos( $l, '- ' ) ) {
 				$html .= ( $open ? '' : '<ul>' ) . '<li>' . sf_card_e( substr( $l, 2 ) ) . '</li>';
@@ -43,69 +95,94 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		return '<div class="sf-card-effect">' . $html . ( $open ? '</ul>' : '' ) . '</div>';
 	}
 
+	// The Action a Trait grants, "Name: what it does"
+	function sf_card_action( $action ) {
+		$colon = strpos( $action, ': ' );
+		return '<p class="sf-card-action">' . ( false !== $colon ? '<strong>' . sf_card_e( substr( $action, 0, $colon ) ) . ':</strong> ' . sf_card_e( substr( $action, $colon + 2 ) ) : sf_card_e( $action ) ) . '</p>';
+	}
+
 	/**
-	 * A Trait card: the name bar (name, Rank, then the flags and category as
-	 * chips), then what it does.
+	 * A Trait card: the name bar (the setting's mark, the name, its Rank, then
+	 * its chips and the chevron at the right), then its body: the category
+	 * and flags with where it came from, then its effect and Actions. A
+	 * Condition shows where it came from and how long it lasts instead.
 	 *
 	 * kind       knowledge | language | skill | ability | condition |
-	 *            circumstance | other. Sets the category chip; a condition
-	 *            gets the gray bar.
+	 *            circumstance | other. A condition gets the gray bar.
 	 * name       The Trait's name.
 	 * rank       Optional. Shown after the name, like "Local History (1)".
-	 * flags      Optional. Muted chips before the category: Conveyed, Ranked,
-	 *            Mastery, Background, Permanent...
+	 * plane      Optional. 'isekai' for Dreft's green and Isekai's mark,
+	 *            'earth' for The Settled Systems' mark. (region 'dreft' works
+	 *            too.)
+	 * chips      Optional. Chips in the bar, like where a sheet's Trait was
+	 *            chosen from (Origin, Profession, Past).
+	 * flags      Optional. Muted chips after the category: Ranked, Mastery,
+	 *            Background, Conveyed, Permanent...
 	 * types      Optional. Its magic types, muted in parentheses: (Illusion).
-	 * region     Optional. "dreft" for Isekai's green bar and mark.
-	 * effect     What it does. Each line is a paragraph; lines starting "- "
-	 *            become bullets.
-	 * action     Optional. The Action it grants, "Name: what it does", set
-	 *            off by a rule at its left. An array for several.
-	 * grants     Optional. Traits it gives, as a row of chips after the effect.
+	 * effect     What it does. Lines starting "- " become bullets.
+	 * action     Optional. The Action it grants, "Name: what it does". An
+	 *            array for several.
+	 * grants     Optional. Traits it gives, as a row of muted chips.
 	 * temporary  Optional. How long a Condition lasts.
 	 * needs      Optional. Its Stat requirements and prerequisites.
-	 * from       Optional. Where a character got it, on a sheet.
-	 * fold       Optional. "open" or "closed": the body opens from a chevron
-	 *            in the bar, like the sheet's Skills.
+	 * from       Optional. Where a character got it.
+	 * fold       Optional. 'open' or 'closed': it opens from the chevron.
+	 * keep       Optional. True: its effect stays in view while it's closed.
 	 */
 	function sf_card_trait( $t ) {
-		$kinds = array(
-			'knowledge'    => 'Knowledge',
-			'language'     => 'Language',
-			'skill'        => 'Skill',
-			'ability'      => 'Ability',
-			'condition'    => 'Condition',
-			'circumstance' => 'Circumstance',
-			'other'        => 'Other',
-		);
-		$kind    = $t['kind'];
-		$classes = 'sf-card sf-trait-card sf-trait-card--' . $kind;
-		if ( ! empty( $t['region'] ) ) {
-			$classes .= ' sf-card--' . $t['region'];
+		$kind   = $t['kind'];
+		$plane  = sf_card_plane( $t );
+		$fold   = $t['fold'] ?? '';
+		$keep   = ! empty( $t['keep'] ) && $fold;
+		$classes = 'sf-card sf-trait-card sf-trait-card--' . $kind . ( 'isekai' === $plane ? ' sf-card--dreft' : '' );
+		if ( $fold ) {
+			$classes .= 'open' === $fold ? ' is-open' : ' is-closed';
 		}
-		$name = sf_card_e( $t['name'] ) . ( isset( $t['rank'] ) ? ' (' . (int) $t['rank'] . ')' : '' );
-		if ( 'dreft' === ( $t['region'] ?? '' ) ) {
-			$name = sf_card_isekai_icon() . $name;
+		if ( $keep ) {
+			$classes .= ' has-keep';
 		}
-		$chips = '';
-		foreach ( $t['flags'] ?? array() as $flag ) {
-			$chips .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $flag ) . '</span>';
-		}
-		foreach ( $t['types'] ?? array() as $type ) {
-			$chips .= '<span class="sf-chip sf-chip--muted">(' . sf_card_e( $type ) . ')</span>';
-		}
-		$chips .= '<span class="sf-chip">' . $kinds[ $kind ] . '</span>';
 
-		$body = '';
-		if ( ! empty( $t['temporary'] ) ) {
-			$body .= '<p class="sf-card-note">Temporary: ' . sf_card_e( $t['temporary'] ) . '</p>';
+		$chips = '';
+		foreach ( $t['chips'] ?? array() as $chip ) {
+			$chips .= '<span class="sf-chip">' . sf_card_e( $chip ) . '</span>';
 		}
-		$body .= sf_card_effect( $t['effect'] );
+		if ( $fold ) {
+			$chips .= sf_card_chevron( 'open' === $fold, $t['name'], 'sf-card-fold' );
+		}
+
+		$effect = sf_card_effect( $t['effect'] );
+		$body   = '';
+		if ( 'condition' === $kind ) {
+			$note = trim( ( empty( $t['from'] ) ? '' : 'From ' . rtrim( $t['from'], '.' ) . '. ' ) . ( $t['temporary'] ?? '' ) );
+			if ( $note ) {
+				$body .= '<p class="sf-card-note">' . sf_card_e( $note ) . '</p>';
+			}
+		} else {
+			// The category (a Language is a Knowledge), its flags and magic
+			// types, then where it came from, on one line
+			$title = 'language' === $kind ? 'Knowledge' : ucfirst( $kind );
+			$tags  = '<span class="sf-chip">' . $title . '</span>';
+			foreach ( $t['flags'] ?? array() as $flag ) {
+				$tags .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $flag ) . '</span>';
+			}
+			foreach ( $t['types'] ?? array() as $type ) {
+				$tags .= '<span class="sf-chip sf-chip--muted">(' . sf_card_e( $type ) . ')</span>';
+			}
+			if ( ! empty( $t['from'] ) ) {
+				$tags .= '<span class="sf-card-note">From ' . sf_card_e( $t['from'] ) . '</span>';
+			}
+			$body .= '<div class="sf-card-tags">' . $tags . '</div>';
+		}
+		if ( ! $keep ) {
+			$body .= $effect;
+		}
 		foreach ( (array) ( $t['action'] ?? array() ) as $action ) {
-			$colon = strpos( $action, ': ' );
-			$body .= '<p class="sf-card-action">' . ( false !== $colon ? '<strong>' . sf_card_e( substr( $action, 0, $colon ) ) . ':</strong> ' . sf_card_e( substr( $action, $colon + 2 ) ) : sf_card_e( $action ) ) . '</p>';
+			if ( $action ) {
+				$body .= sf_card_action( $action );
+			}
 		}
 		if ( ! empty( $t['grants'] ) ) {
-			$body .= '<div class="sf-card-grants">';
+			$body .= '<div class="sf-card-tags">';
 			foreach ( $t['grants'] as $grant ) {
 				$body .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $grant ) . '</span>';
 			}
@@ -114,36 +191,30 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( ! empty( $t['needs'] ) ) {
 			$body .= '<p class="sf-card-note">Needs ' . sf_card_e( $t['needs'] ) . '</p>';
 		}
-		if ( ! empty( $t['from'] ) ) {
-			$body .= '<p class="sf-card-note">From ' . sf_card_e( $t['from'] ) . '</p>';
-		}
 
-		// A folding card's chevron sits with the chips, so it wraps with them
-		$chevron = empty( $t['fold'] ) ? '' : '<svg class="sf-card-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
-		$bar     = '<span class="sf-card-name">' . $name . '</span><span class="sf-card-chips">' . $chips . $chevron . '</span>';
-		if ( ! empty( $t['fold'] ) ) {
-			echo '<details class="' . $classes . '"' . ( 'open' === $t['fold'] ? ' open' : '' ) . '>';
-			echo '<summary class="sf-card-bar">' . $bar . '</summary>';
-			echo '<div class="sf-card-body">' . $body . '</div>';
-			echo '</details>';
-			return;
-		}
+		$name = sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] ) . ( isset( $t['rank'] ) ? ' (' . (int) $t['rank'] . ')' : '' );
 		echo '<div class="' . $classes . '">';
-		echo '<div class="sf-card-bar">' . $bar . '</div>';
-		echo '<div class="sf-card-body">' . $body . '</div>';
+		echo '<div class="sf-card-bar"><span class="sf-card-name">' . $name . '</span>' . ( $chips ? '<span class="sf-card-chips">' . $chips . '</span>' : '' ) . '</div>';
+		echo '<div class="sf-card-body">' . ( $keep ? $effect : '' ) . ( $fold ? '<div class="sf-card-more">' . $body . '</div>' : $body ) . '</div>';
 		echo '</div>';
 	}
 
 	/**
-	 * An Item card: the name, its badges (damage led by a sword or crosshairs,
-	 * Max Range, Area of Effect, resistances led by a shield) and stored MP,
-	 * its chips and value at the right, then its description and effects.
+	 * An Item card, as the creator's: its top line (Equip, the name and its
+	 * badges: damage led by a sword or crosshairs, Max Range, Area of Effect,
+	 * resistances led by a shield, and an enchanted Item's MP), then, open,
+	 * its category, value and the like as chips, its description in italics
+	 * and its rules.
 	 *
 	 * name         The Item's name.
-	 * category     Optional. Weapon, Wearable, Equipment, Artifact...
-	 * plane        Optional. Any, Earth, Isekai...
-	 * chips        Optional. More chips, like Melee or Natural weapon.
+	 * category     Weapon, Armor, Gear, Artifact...
 	 * value        Optional. Its value, with currency (ERC or Luras).
+	 * attack       Optional. How it Attacks: Melee, Ranged, Thrown.
+	 * stat         Optional. Its Attack Stat: Power, Grace...
+	 * reload       Optional. Its reload: Partial, Full...
+	 * slot         Optional. The slot it takes: Body Armor, Outerwear...
+	 * chips        Optional. More chips, like Natural weapon.
+	 * plane        Optional. Any, Earth, Isekai: a chip after the rest.
 	 * damage       Optional. As the creator words it: "7 Piercing",
 	 *              "6 Slashing / 4 Piercing" for a choice.
 	 * formula      Optional. A damage formula shown in place of the number,
@@ -153,20 +224,23 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * area         Optional. Area of Effect, like "3 m".
 	 * resistances  Optional. "1 Blunt, 1 Slashing".
 	 * mp           Optional. An enchanted Item's stored MP.
-	 * description  Optional. In italics under the name.
-	 * lead         Optional. A line before the effects.
+	 * description  Optional. In italics.
+	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
+	 * count        Optional. How many, in a circle on its left edge.
+	 * equip        Optional. 'on' or 'off': its Equip box, read-only.
+	 * fold         Optional. 'open' or 'closed': it opens from the chevron.
 	 */
 	function sf_card_item( $i ) {
 		$badges = '';
 		if ( ! empty( $i['damage'] ) ) {
 			$lead = ! empty( $i['ranged'] ) ? 'crosshairs' : 'sword';
 			if ( ! empty( $i['formula'] ) && preg_match( '~^\s*(-?\d+)\s+(.+?)\s*$~', $i['damage'], $m ) ) {
-				$badges .= '<span class="chip equipment-stat" title="' . sf_card_e( $i['formula'] . ' ' . $m[2] . ': ' . $m[1] . ' ' . $m[2] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . sf_card_e( $i['formula'] ) . ' <span class="sf-damage-total">(' . (int) $m[1] . ')</span></span></span>';
+				$badges .= '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . sf_card_e( $i['formula'] . ' ' . $m[2] . ': ' . $m[1] . ' ' . $m[2] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . sf_card_e( $i['formula'] ) . ' <span class="sf-damage-total">(' . (int) $m[1] . ')</span></span></span></span>';
 			} elseif ( preg_match( '~^\s*(\d+)\s+(\w+)\s*\+\s*(.+?)\s*$~', $i['damage'], $m ) ) {
 				// Damage plus a Stat, like Fists' "1 Blunt + Power": the type's
 				// icon, then "1 + Power", as the creator's badges show it
-				$badges .= '<span class="chip equipment-stat" title="' . sf_card_e( $i['damage'] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . (int) $m[1] . ' + ' . sf_card_e( $m[3] ) . '</span></span>';
+				$badges .= '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . sf_card_e( $i['damage'] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . (int) $m[1] . ' + ' . sf_card_e( $m[3] ) . '</span></span></span>';
 			} else {
 				$badges .= sf_item_stats( $lead, $i['damage'] );
 			}
@@ -181,45 +255,66 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			$badges .= sf_item_stats( 'shield', $i['resistances'] );
 		}
 
-		echo '<div class="equipment-box sf-item-card">';
-		echo '<div class="equipment-row">';
-		echo '<span class="equipment-name">' . sf_card_e( $i['name'] ) . '</span>';
-		// One group, so a narrow card moves the badges under the name together
+		$fold    = $i['fold'] ?? '';
+		$classes = 'equipment-box sf-item-card' . ( $fold ? ( 'open' === $fold ? ' is-open' : ' is-closed' ) : '' );
+		echo '<div class="' . $classes . '">';
+		if ( isset( $i['count'] ) ) {
+			echo '<span class="sf-item-count" aria-label="' . (int) $i['count'] . ' of ' . sf_card_e( $i['name'] ) . '">' . (int) $i['count'] . '</span>';
+		}
+		echo '<div class="equipment-row sf-item-summary">';
+		if ( ! empty( $i['equip'] ) ) {
+			echo '<label class="sf-item-equip" title="Equip"><input type="checkbox" aria-label="Equip"' . ( 'on' === $i['equip'] ? ' checked' : '' ) . ' disabled><span class="sf-item-equip-label">Equip</span></label>';
+		}
+		echo '<span class="sf-item-main"><span class="equipment-name">' . sf_card_e( $i['name'] ) . '</span>';
 		if ( $badges ) {
-			echo '<span class="equipment-stats sf-item-badges">' . $badges . '</span>';
+			echo '<div class="equipment-stats sf-item-badges">' . $badges . '</div>';
 		}
 		if ( isset( $i['mp'] ) ) {
 			echo '<span class="equipment-mp"><strong class="resource-name resource-mp" title="Mana Points">MP</strong><span class="num">' . (int) $i['mp'] . '<span class="muted"> / ' . (int) $i['mp'] . '</span></span></span>';
 		}
-		$chips = array_merge( $i['chips'] ?? array(), array_filter( array( $i['category'] ?? '', $i['plane'] ?? '' ) ) );
-		if ( $chips || isset( $i['value'] ) ) {
-			echo '<span class="equipment-chips">';
-			foreach ( $chips as $chip ) {
-				echo '<span class="chip">' . sf_card_e( $chip ) . '</span>';
-			}
-			if ( isset( $i['value'] ) ) {
-				$label = number_format( $i['value'] ) . ' ' . $i['currency'];
-				echo '<span class="chip equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value( $i['value'] ) . ' ' . sf_card_e( $i['currency'] ) . '</span>';
-			}
-			echo '</span>';
+		echo '</span>';
+		if ( $fold ) {
+			echo sf_card_chevron( 'open' === $fold, $i['name'], 'sf-item-icon sf-item-expand' );
 		}
 		echo '</div>';
-		if ( ! empty( $i['description'] ) ) {
-			echo '<p class="equipment-description">' . sf_card_e( $i['description'] ) . '</p>';
+
+		// Open: the chips the top line leaves out, in the creator's order
+		$chips = array( $i['category'] ?? '' );
+		if ( isset( $i['value'] ) ) {
+			$chips[] = number_format( $i['value'] ) . ' ' . $i['currency'];
 		}
-		if ( ! empty( $i['lead'] ) ) {
-			echo '<p class="equipment-effect">' . sf_card_e( $i['lead'] ) . '</p>';
-		}
-		foreach ( $i['effects'] ?? array() as $effect ) {
-			echo '<p class="equipment-effect"><strong>' . sf_card_e( $effect[0] ) . ':</strong> ' . sf_card_e( $effect[1] ) . '</p>';
+		$chips[] = empty( $i['attack'] ) ? '' : $i['attack'] . ' Attack';
+		$chips[] = $i['stat'] ?? '';
+		$chips[] = empty( $i['reload'] ) ? '' : 'Reload: ' . $i['reload'] . ' Action';
+		$chips[] = empty( $i['slot'] ) ? '' : 'Slot: ' . $i['slot'];
+		$chips   = array_merge( $chips, $i['chips'] ?? array(), array( $i['plane'] ?? '' ) );
+		echo '<div class="sf-item-more"><div class="equipment-chips">';
+		foreach ( array_filter( $chips ) as $chip ) {
+			echo '<span class="chip">' . sf_card_e( $chip ) . '</span>';
 		}
 		echo '</div>';
+		if ( ! empty( $i['description'] ) || ! empty( $i['lead'] ) || ! empty( $i['effects'] ) ) {
+			echo '<div class="sf-item-stock">';
+			if ( ! empty( $i['description'] ) ) {
+				echo '<p class="equipment-description">' . sf_card_e( $i['description'] ) . '</p>';
+			}
+			if ( ! empty( $i['lead'] ) ) {
+				echo '<p class="equipment-effect">' . sf_card_e( $i['lead'] ) . '</p>';
+			}
+			foreach ( $i['effects'] ?? array() as $effect ) {
+				echo '<p class="equipment-effect"><strong>' . sf_card_e( $effect[0] ) . ':</strong> ' . sf_card_e( $effect[1] ) . '</p>';
+			}
+			echo '</div>';
+		}
+		echo '</div></div>';
 	}
 
 	/**
 	 * A Background card, as the creator's: the name with its slot and plane
-	 * as chips, the summary and features, then what it gives as labeled rows
-	 * of chips, Bonus and Grants in the lighter gray.
+	 * as chips, the summary, then for a Kind its stats' bonus and maximum,
+	 * its Grants and its features, and for a package what it gives as
+	 * labeled rows of chips, Bonus and Grants in the lighter gray, and its
+	 * features.
 	 *
 	 * Takes a background as the creator exports it (sample-character.json,
 	 * dreftian-backgrounds.json): id, slot (Kind | Origin | Profession |
@@ -228,49 +323,70 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * $bonusNote is added to each Bonus, like Edwin's ", placed in Grace".
 	 */
 	function sf_card_background( $b, $bonusNote = '' ) {
-		$rows = array(
-			'Bonus'           => array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() ),
-			'Grants'          => $b['grants'] ?? array(),
-			'Choose'          => $b['choices'] ?? array(),
-			'Background list' => $b['backgroundList'] ?? array(),
-		);
-		if ( ! empty( $b['stats'] ) ) {
-			$groups = array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) );
-			foreach ( $groups as $group => $stats ) {
-				$rows[ $group . ' (bonus / maximum)' ] = array_map( function ( $s ) use ( $b ) { $x = $b['stats'][ $s ]; return ucfirst( $s ) . ' +' . $x['bonus'] . '/' . $x['max']; }, $stats );
+		$plane = strtolower( $b['plane'] );
+		echo '<div class="sf-card sf-background-card' . ( 'isekai' === $plane ? ' sf-card--dreft' : '' ) . '">';
+		echo '<div class="sf-card-bar"><h3 class="sf-card-name">' . sf_card_setting_icon( $plane ) . sf_card_e( $b['name'] ) . '</h3>';
+		echo '<span class="sf-card-chips"><span class="sf-chip">' . sf_card_e( $b['slot'] ) . '</span><span class="sf-chip sf-chip--muted">' . sf_card_e( $plane ) . '</span></span></div>';
+		echo '<div class="sf-card-body">';
+		echo '<p>' . sf_card_e( $b['summary'] ) . '</p>';
+
+		$row = function ( $label, $list, $accent ) {
+			if ( ! $list ) {
+				return '';
+			}
+			$html = '<div><span class="sf-background-label">' . sf_card_e( $label ) . '</span>';
+			foreach ( $list as $x ) {
+				$html .= '<span class="sf-chip' . ( $accent ? ' sf-chip--accent' : '' ) . '">' . sf_card_e( $x ) . '</span>';
+			}
+			return $html . '</div>';
+		};
+		$features = $b['features'] ?? array();
+
+		if ( 'Kind' === $b['slot'] ) {
+			// Each stat's bonus and maximum, grouped Physical / Social / Mental
+			if ( ! empty( $b['stats'] ) ) {
+				echo '<div class="stat-ranges">';
+				foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
+					echo '<div><div class="stat-ranges-group">' . $group . '</div>';
+					foreach ( $stats as $s ) {
+						$x = $b['stats'][ $s ];
+						echo '<div class="stat-range"><span>' . ucfirst( $s ) . '</span><span class="num">+' . (int) $x['bonus'] . '<span class="muted">/' . (int) $x['max'] . '</span></span></div>';
+					}
+					echo '</div>';
+				}
+				echo '</div>';
+			}
+			$rows = $row( 'Grants', $b['grants'] ?? array(), true );
+			if ( $rows ) {
+				echo '<div class="sf-background-rows">' . $rows . '</div>';
+			}
+			if ( $features ) {
+				echo '<ul class="sf-card-features">';
+				foreach ( $features as $f ) {
+					echo '<li><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</li>';
+				}
+				echo '</ul>';
+			}
+		} else {
+			$rows  = $row( 'Bonus', array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() ), true );
+			$rows .= $row( 'Grants', $b['grants'] ?? array(), true );
+			$rows .= $row( 'Choose', $b['choices'] ?? array(), false );
+			$rows .= $row( 'Background list', $b['backgroundList'] ?? array(), false );
+			foreach ( $features as $f ) {
+				$rows .= '<p><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</p>';
+			}
+			if ( $rows ) {
+				echo '<div class="sf-background-rows">' . $rows . '</div>';
 			}
 		}
+
 		// A Kind's lore entry shares the first word of its id (tatot-orcoid is Tatot)
 		$lore = $b['lore'] ?? '';
 		if ( ! $lore && 'Kind' === $b['slot'] && function_exists( 'sf_lore_titles' ) && isset( sf_lore_titles()[ strtok( $b['id'], '-' ) ] ) ) {
 			$lore = strtok( $b['id'], '-' );
 		}
-		$b['rows'] = $rows;
-		$b['lore'] = $lore && function_exists( 'sf_lore_titles' ) ? array( $lore, sf_lore_titles()[ $lore ] ?? $lore ) : '';
-
-		$dreft = 'isekai' === strtolower( $b['plane'] );
-		echo '<div class="sf-card sf-background-card' . ( $dreft ? ' sf-card--dreft' : '' ) . '">';
-		echo '<div class="sf-card-bar"><span class="sf-card-name">' . ( $dreft ? sf_card_isekai_icon() : '' ) . sf_card_e( $b['name'] ) . '</span>';
-		echo '<span class="sf-card-chips"><span class="sf-chip">' . sf_card_e( $b['slot'] ) . '</span><span class="sf-chip sf-chip--muted">' . sf_card_e( ucfirst( $b['plane'] ) ) . '</span></span></div>';
-		echo '<div class="sf-card-body">';
-		echo '<p>' . sf_card_e( $b['summary'] ) . '</p>';
-		foreach ( $b['features'] ?? array() as $f ) {
-			echo '<p><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</p>';
-		}
-		$rows = array_filter( $b['rows'] ?? array() );
-		if ( $rows ) {
-			echo '<div class="sf-background-rows">';
-			foreach ( $rows as $label => $list ) {
-				echo '<div><span class="sf-background-label">' . sf_card_e( $label ) . '</span>';
-				foreach ( $list as $x ) {
-					echo '<span class="sf-chip' . ( in_array( $label, array( 'Bonus', 'Grants' ), true ) ? ' sf-chip--accent' : '' ) . '">' . sf_card_e( $x ) . '</span>';
-				}
-				echo '</div>';
-			}
-			echo '</div>';
-		}
-		if ( ! empty( $b['lore'] ) && function_exists( 'sf_lore_link' ) ) {
-			echo '<p class="sf-card-note">More in the lore: ' . sf_lore_link( $b['lore'][0], $b['lore'][1] ) . '</p>';
+		if ( $lore && function_exists( 'sf_lore_link' ) ) {
+			echo '<p class="sf-card-note">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
 		}
 		echo '</div></div>';
 	}

@@ -60,7 +60,7 @@ function sf_item_stat_lead($icon) {
 // The badge starts with $lead's circle: crosshairs, sword or shield.
 function sf_item_stats($lead, $text) {
 	$options = preg_split('~\s*/\s*(?=\d)~', $text);
-	$html = '<span class="equipment-stats"><span class="chip equipment-stat">' . sf_item_stat_lead($lead);
+	$html = '<span class="sf-item-badge-group"><span class="chip equipment-stat">' . sf_item_stat_lead($lead);
 	foreach ($options as $i => $option) {
 		if ($i > 0) {
 			$html .= '<span class="equipment-stat-or">or</span>';
@@ -82,7 +82,7 @@ function sf_ranged_items() {
 // A Max Range or Area of Effect badge, like the creator's item cards: the
 // arc or burst in its lead circle, then the distance
 function sf_item_reach($icon, $text) {
-	return '<span class="equipment-stats"><span class="chip equipment-stat" title="' . ('range' === $icon ? 'Max Range' : 'Area of Effect') . '">' . sf_item_stat_lead($icon) . '<span class="equipment-stat-value">' . htmlspecialchars($text) . '</span></span></span>';
+	return '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . ('range' === $icon ? 'Max Range' : 'Area of Effect') . '">' . sf_item_stat_lead($icon) . '<span class="equipment-stat-value">' . htmlspecialchars($text) . '</span></span></span>';
 }
 
 // An Example Item's card, drawn by the item card component
