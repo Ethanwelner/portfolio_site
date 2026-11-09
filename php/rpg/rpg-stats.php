@@ -119,11 +119,7 @@
 						<!-- Character level at the center -->
 						<g class="stat-ring-level" data-stat="level">
 							<ellipse cx="223.7" cy="203.708" rx="46" ry="46"/>
-							<!-- The label is HTML so it can glitch like the Strange Frontiers title -->
-							<foreignObject x="177.7" y="157.708" width="92" height="92">
-								<div xmlns="http://www.w3.org/1999/xhtml" class="stat-ring-level-label"><span class="frontiers-glitch" data-text="Character&#10;Level">Character
-Level</span></div>
-							</foreignObject>
+							<text class="stat-ring-label" x="223.89" y="200.71" fill="#ffffff">Character<tspan x="223.89" y="214.83">Level</tspan></text>
 						</g>
 					</g>
 				</svg>

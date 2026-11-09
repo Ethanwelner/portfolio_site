@@ -577,6 +577,19 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     }
 }
 
+/* The title's glow as a filter, for shapes (the stat diagram's Character Level) */
+@keyframes stat-ring-level-glow {
+    0%, 40%, 50%, 60%, 90%, 95%, 100% {
+        filter: drop-shadow(0 -2px 5px var(--frontiers-green));
+    }
+    45%, 75% {
+        filter: drop-shadow(0 -2px 5px var(--frontiers-green)) drop-shadow(0 0 6px var(--frontiers-green)) drop-shadow(2px 1px 8px rgb(100, 240, 255));
+    }
+    97.5% {
+        filter: drop-shadow(2px 1px 3px rgb(255, 100, 100));
+    }
+}
+
 @keyframes frontiers-glitch-shift {
     0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% { transform: skewX(0deg); }
     41% { transform: skewX(10deg); }
@@ -3683,31 +3696,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         fill: #212121;
     }
 
-    /* Character Level glitches like the Strange Frontiers title: the whole
-       circle takes the skews, and its label the green glow and the cyan and
-       red slices */
+    /* Character Level glitches like the Strange Frontiers title: the
+       circle, label and all, takes its skews and its flaring green glow */
     .stat-ring-level {
         transform-box: fill-box;
         transform-origin: center;
-        animation: frontiers-glitch-shift 4s ease-in-out infinite alternate;
-    }
-
-    .stat-ring-level-label {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: #ffffff;
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 14px;
-        text-align: center;
-
-        .frontiers-glitch {
-            white-space: pre-line;
-            /* The circle already skews, so the label only glows */
-            animation: frontiers-glitch-glow 8s ease-in-out infinite alternate;
-        }
+        filter: drop-shadow(0 -2px 5px var(--frontiers-green));
+        animation: frontiers-glitch-shift 4s ease-in-out infinite alternate, stat-ring-level-glow 8s ease-in-out infinite alternate;
     }
 
     @media (prefers-reduced-motion: reduce) {
