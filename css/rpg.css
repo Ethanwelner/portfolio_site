@@ -2723,6 +2723,16 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             }
         }
 
+        /* The Items stop sooner on a tall screen: 60vh, but no more than
+           640px (printed, they run their full length) */
+        .sheet-items > .sheet-cards {
+            max-height: min(60vh, 640px);
+
+            @media print {
+                max-height: none;
+            }
+        }
+
         .sheet-traits {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
