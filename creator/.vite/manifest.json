@@ -1,6 +1,6 @@
 {
-  "_styles-C0qpNiBt.js": {
-    "file": "assets/styles-C0qpNiBt.js",
+  "_styles-B2zSEqoq.js": {
+    "file": "assets/styles-B2zSEqoq.js",
     "name": "styles",
     "css": [
       "assets/styles-D2EPSeIb.css"
@@ -11,21 +11,21 @@
     "src": "_styles-D2EPSeIb.css"
   },
   "src/app/main.tsx": {
-    "file": "assets/main-DmShRAII.js",
+    "file": "assets/main-DvdRhbgR.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-C0qpNiBt.js"
+      "_styles-B2zSEqoq.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-BccaKr8Q.js",
+    "file": "assets/main-C9pxNpom.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_styles-C0qpNiBt.js"
+      "_styles-B2zSEqoq.js"
     ],
     "css": [
       "assets/main-Bz5d_Ukx.css"
