@@ -30,7 +30,7 @@ sf_npc_sheet(
 				'range'   => '3 m',
 				'area'    => '3 m',
 				'chips'   => array( 'Melee' ),
-				'profile' => 'Natural weapon. Deals Power - 5 damage to everything in its area.',
+				'profile' => 'Natural weapon.',
 			),
 			array(
 				'name'    => 'Horrid Bite',
@@ -38,7 +38,7 @@ sf_npc_sheet(
 				'type'    => 'Piercing',
 				'range'   => '3 m',
 				'chips'   => array( 'Melee' ),
-				'profile' => 'Natural weapon. Deals Power damage.',
+				'profile' => 'Natural weapon.',
 			),
 		),
 		'traits'  => array(
