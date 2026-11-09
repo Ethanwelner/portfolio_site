@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/8/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: Deathproof, Mindproof, Deathblade and Mindblade join the other proof and blade spells, with their Conditions (Magically Deathproof, Magically Mindproof, Withering Weapon and Maddening Weapon) and Deathproof and Mindproof Potions.</li>
 						<li>Mechanics: Resistances and Damage Types fills out Death and Psychic damage. Death damage is rarely resisted, so Death Attacks hit hard but have no secondary effects; Psychic Attacks deal moderate damage and give Conditions.</li>
 						<li>Character Creator: new Necromancy spells Grave Touch (Magic 2), Blight (Magic 5) and Stilled Heart (Magic 6), and a Mentalism spell, Mind Shatter (Magic 6, after Mind Spike). Wither now deals 6 Death per Rank.</li>
 						<li>Mechanics: Character Level at the center of the stat diagram glitches like the Strange Frontiers title.</li>
