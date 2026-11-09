@@ -2717,9 +2717,21 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
                 scrollbar-color: rgb(255 255 255 / 25%) transparent;
             }
 
+            /* It fades out over its last 48px into the box's gray instead
+               of cutting off hard, and the fade goes as it reaches the
+               bottom (a scroll-driven animation on its own scroll, so a
+               list that doesn't scroll has no fade). Browsers without
+               scroll timelines keep the hard edge. */
+            @supports (animation-timeline: scroll()) {
+                mask-image: linear-gradient(to bottom, #000 calc(100% - var(--sf-list-fade)), transparent);
+                animation: sf-list-fade linear both;
+                animation-timeline: scroll(self);
+            }
+
             @media print {
                 max-height: none;
                 overflow: visible;
+                mask-image: none;
             }
         }
 
@@ -3509,5 +3521,25 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             width: 12px;
             height: 12px;
         }
+    }
+}
+
+/* How much of a scrolling sheet list's bottom fades out: 48px until the
+   last 5% of the scroll, then down to none at the bottom, as in the
+   Character Creator */
+@property --sf-list-fade {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0px;
+}
+
+@keyframes sf-list-fade {
+    0%,
+    95% {
+        --sf-list-fade: 48px;
+    }
+
+    100% {
+        --sf-list-fade: 0px;
     }
 }
