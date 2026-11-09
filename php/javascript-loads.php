@@ -495,10 +495,13 @@
 		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
 		var loreModalReturnFocus = null;
 
-		function showLoreModal(titleHtml, bodyHtml, trigger) {
+		// asCard shows a card on its own (a sample Knowledge or background):
+		// the card is the popup's edge, its title kept for screen readers
+		function showLoreModal(titleHtml, bodyHtml, trigger, asCard) {
 			if ( ! $loreModal.hasClass( "is-open" ) ) {
 				loreModalReturnFocus = trigger;
 			}
+			$loreModal.toggleClass( "lore-modal-card", !! asCard );
 			$loreModalTitle.html( titleHtml );
 			$loreModalBody.html( bodyHtml );
 			$loreModalScroll.scrollTop( 0 );
@@ -515,7 +518,7 @@
 			if ( ! $entry.length ) {
 				return false;
 			}
-			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.find( ".lore-body" ).first().html(), trigger );
+			showLoreModal( $entry.find( ".lore-title" ).first().html(), $entry.find( ".lore-body" ).first().html(), trigger, $entry.hasClass( "lore-card" ) );
 			return true;
 		}
 
@@ -676,7 +679,7 @@
 			var h4 = "";
 			var line = "";
 			subTitle = "";
-			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .trait-box, .equipment-box" ).each(function() {
+			$root.find( "#rpg-mechanics" ).find( "h3, h4, .line-container, .sf-card, .equipment-box" ).each(function() {
 				var $el = $( this );
 				var title = collapseSearchText( $el.text() );
 
@@ -686,16 +689,13 @@
 					return;
 				}
 
-				if ( $el.hasClass( "trait-box" ) || $el.hasClass( "equipment-box" ) ) {
+				if ( $el.hasClass( "sf-card" ) || $el.hasClass( "equipment-box" ) ) {
 					// The Trait Categories tab repeats one card from Example Traits per category; index it once
 					if ( $el.closest( "#traits-categories" ).length ) {
 						return;
 					}
-					// A Trait card's name is the bar's first span; its chips follow it
-					var $name = $el.find( ".trait-name > span:first-child" );
-					if ( !$name.length ) {
-						$name = $el.find( ".trait-name, .equipment-name" );
-					}
+					// A card's name (php/rpg/components/cards.php); its chips follow it
+					var $name = $el.find( ".sf-card-name, .equipment-name" ).first();
 					var traitName = collapseSearchText( $name.text() );
 					var box = this;
 					addRpgSearchEntry( entries, traitName, [ subTitle, h3, line ], title.replace( traitName, "" ), function() {

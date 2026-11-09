@@ -60,7 +60,7 @@ function sf_item_stat_lead($icon) {
 // The badge starts with $lead's circle: crosshairs, sword or shield.
 function sf_item_stats($lead, $text) {
 	$options = preg_split('~\s*/\s*(?=\d)~', $text);
-	$html = '<span class="equipment-stats"><span class="chip equipment-stat">' . sf_item_stat_lead($lead);
+	$html = '<span class="sf-item-badge-group"><span class="chip equipment-stat">' . sf_item_stat_lead($lead);
 	foreach ($options as $i => $option) {
 		if ($i > 0) {
 			$html .= '<span class="equipment-stat-or">or</span>';
@@ -82,30 +82,24 @@ function sf_ranged_items() {
 // A Max Range or Area of Effect badge, like the creator's item cards: the
 // arc or burst in its lead circle, then the distance
 function sf_item_reach($icon, $text) {
-	return '<span class="equipment-stats"><span class="chip equipment-stat" title="' . ('range' === $icon ? 'Max Range' : 'Area of Effect') . '">' . sf_item_stat_lead($icon) . '<span class="equipment-stat-value">' . htmlspecialchars($text) . '</span></span></span>';
+	return '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . ('range' === $icon ? 'Max Range' : 'Area of Effect') . '">' . sf_item_stat_lead($icon) . '<span class="equipment-stat-value">' . htmlspecialchars($text) . '</span></span></span>';
 }
 
-// The card: the name, its damage or resistances, the category and plane as
-// chips and the value as a badge at the right, then the description under it
+// An Example Item's card, drawn by the item card component
+// (php/rpg/components/cards.php)
 function sf_equipment_card($name, $category, $plane, $description, $value, $currency, $damage = '', $resistances = '') {
-	$label = number_format($value) . ' ' . $currency;
-	echo '<div class="equipment-box">';
-	echo '<div class="equipment-row">';
-	echo '<span class="equipment-name">' . htmlspecialchars($name) . '</span>';
-	if ($damage) {
-		echo sf_item_stats(in_array($name, sf_ranged_items(), true) ? 'crosshairs' : 'sword', $damage);
-	}
-	if ($resistances) {
-		echo sf_item_stats('shield', $resistances);
-	}
-	echo '<span class="equipment-chips">';
-	echo '<span class="chip">' . htmlspecialchars($category) . '</span>';
-	echo '<span class="chip">' . htmlspecialchars($plane) . '</span>';
-	echo '<span class="chip equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value($value) . ' ' . $currency . '</span>';
-	echo '</span>';
-	echo '</div>';
-	echo '<p class="equipment-description">' . htmlspecialchars($description) . '</p>';
-	echo '</div>';
+	require_once __DIR__ . '/components/cards.php';
+	sf_card_item([
+		'name'        => $name,
+		'category'    => $category,
+		'plane'       => $plane,
+		'description' => $description,
+		'value'       => $value,
+		'currency'    => $currency,
+		'damage'      => $damage,
+		'resistances' => $resistances,
+		'ranged'      => in_array($name, sf_ranged_items(), true),
+	]);
 }
 
 // Example Items, grouped by category: [name, category, plane, description,

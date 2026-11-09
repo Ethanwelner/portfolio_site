@@ -82,30 +82,13 @@ $sf_magic_item_kinds = array( 'Artifacts' => 'Artifact', 'Enchantments' => 'Ench
 
 // One magic Item's card
 function sf_magic_item_card( $item, $kind ) {
-	$e = function ( $s ) { return htmlspecialchars( $s, ENT_QUOTES, 'UTF-8' ); };
-	echo '<div class="equipment-box magic-item">';
-	echo '<div class="equipment-row">';
-	echo '<span class="equipment-name">' . $e( $item['name'] ) . '</span>';
-	if ( ! empty( $item['damage'] ) ) {
-		echo sf_item_stats( 'sword', $item['damage'] );
-	}
-	if ( isset( $item['mp'] ) ) {
-		echo '<span class="equipment-mp"><strong class="resource-name resource-mp" title="Mana Points">MP</strong><span class="num">' . $item['mp'] . '<span class="muted"> / ' . $item['mp'] . '</span></span></span>';
-	}
-	echo '<span class="equipment-chips"><span class="chip">' . $kind . '</span><span class="chip">Isekai</span>';
+	require_once __DIR__ . '/components/cards.php';
+	$item['category'] = $kind;
+	$item['plane']    = 'Isekai';
 	if ( isset( $item['value'] ) ) {
-		$label = $item['value'] . ' Luras';
-		echo '<span class="chip equipment-value" title="' . $label . '" aria-label="Value: ' . $label . '">' . sf_item_value( $item['value'] ) . ' Luras</span>';
+		$item['currency'] = 'Luras';
 	}
-	echo '</span></div>';
-	echo '<p class="equipment-description">' . $e( $item['description'] ) . '</p>';
-	if ( ! empty( $item['lead'] ) ) {
-		echo '<p class="equipment-effect">' . $e( $item['lead'] ) . '</p>';
-	}
-	foreach ( $item['effects'] as $effect ) {
-		echo '<p class="equipment-effect"><strong>' . $e( $effect[0] ) . ':</strong> ' . $e( $effect[1] ) . '</p>';
-	}
-	echo '</div>';
+	sf_card_item( $item );
 }
 
 // One group's cards, under the rules that make them

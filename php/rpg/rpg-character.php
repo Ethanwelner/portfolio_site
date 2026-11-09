@@ -151,6 +151,21 @@ $sf_from = function ( $t ) {
 $sf_abilities = array_filter( $sf_cards, function ( $t ) { return 'Ability' === $t['category']; } );
 $sf_skills    = array_filter( $sf_cards, function ( $t ) { return 'Skill' === $t['category']; } );
 $sf_other     = array_filter( $sf_cards, function ( $t ) { return ! in_array( $t['category'], array( 'Ability', 'Skill' ), true ); } );
+// A sample Trait as a trait card (php/rpg/components/cards.php), folding
+// as the creator's sheet does: Abilities closed to their name and effect,
+// Skills closed to their name
+require_once __DIR__ . '/components/cards.php';
+$sf_card = function ( $t, $fold = '', $keep = false ) use ( $sf_from ) {
+	sf_card_trait( array(
+		'kind'   => strtolower( $t['category'] ),
+		'name'   => $t['name'],
+		'effect' => $t['effect'],
+		'action' => $t['action'] ?? '',
+		'from'   => $sf_from( $t ),
+		'fold'   => $fold,
+		'keep'   => $keep,
+	) );
+};
 // Movement's small box, left of the resistances, as in the creator: its
 // ruled title, then a running figure (the creator's person-running icon)
 // before the number, which runs into its unit
@@ -283,65 +298,30 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<div class="c-sheet-box sheet-conditions">
 					<h4 class="sheet-rule">Conditions</h4>
 					<ul class="sheet-cards">
-						<li class="trait-box sheet-condition">
-							<div class="trait-name">Healthy</div>
-							<p class="muted small">From HP. A character or object gains this trait while they are at their maximum HP total</p>
-							<p class="copy">This Trait has no effect on its own.</p>
-						</li>
+						<li><?php sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => 'This Trait has no effect on its own.', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) ); ?></li>
 					</ul>
 				</div>
 
 				<div class="c-sheet-box sheet-items">
 					<h4 class="sheet-rule">Items</h4>
+					<!-- The item card component, as the creator's inventory draws it:
+					     the count on its left edge, Equip (read-only here), the name
+					     and its badges, and the chevron that opens it to its category,
+					     value and the like, then its description -->
 					<ul class="sheet-cards">
-						<!-- As in the creator and Player Tools: the count in a circle on the
-						     card's left edge, then Equip, the name, its resistances in one
-						     badge led by a shield, and the chevron that opens the card there
-						     (the category waits in the open card) -->
-						<li class="sheet-item">
-							<span class="sheet-item-count" aria-label="1 of Sturdy Leather Jacket">1</span>
-							<div class="sheet-item-row">
-								<span class="sheet-check" role="img" aria-label="Equipped"></span>
-								<span class="sheet-item-main">
-									<span class="sheet-item-title">Sturdy Leather Jacket</span>
-									<span class="sheet-item-stats">
-										<span class="chip sheet-item-stat"><span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="Resists" focusable="false"><title>Resists</title><path d="M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z"/></svg></span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg>1</span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg>1</span></span>
-									</span>
-								</span>
-								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
-						</li>
-						<li class="sheet-item">
-							<span class="sheet-item-count" aria-label="1 of Pistol">1</span>
-							<div class="sheet-item-row">
-								<span class="sheet-check" role="img" aria-label="Equipped"></span>
-								<span class="sheet-item-main">
-									<span class="sheet-item-title">Pistol</span>
-									<span class="sheet-item-stats"><span class="chip sheet-item-stat"><span class="item-stat-lead"><svg viewBox="0 0 512 512" role="img" aria-label="Ranged damage" focusable="false"><title>Ranged damage</title><path d="M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z"/></svg></span><span class="sheet-item-stat-value"><svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Piercing" focusable="false"><title>Piercing</title><path d="M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z"/></svg>7</span></span></span>
-								</span>
-								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
-						</li>
-						<li class="sheet-item">
-							<span class="sheet-item-count" aria-label="1 of Disguise Kit">1</span>
-							<div class="sheet-item-row">
-								<span class="sheet-check is-off" role="img" aria-label="Not equipped"></span>
-								<span class="sheet-item-main">
-									<span class="sheet-item-title">Disguise Kit</span>
-								</span>
-								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
-						</li>
-						<li class="sheet-item">
-							<span class="sheet-item-count" aria-label="1 of Comm Unit">1</span>
-							<div class="sheet-item-row">
-								<span class="sheet-check is-off" role="img" aria-label="Not equipped"></span>
-								<span class="sheet-item-main">
-									<span class="sheet-item-title">Comm Unit</span>
-								</span>
-								<svg class="sheet-item-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-							</div>
-						</li>
+						<?php
+						$sf_sheet_items = array(
+							array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
+							array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
+							array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
+							array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
+						);
+						foreach ( $sf_sheet_items as $item ) {
+							echo '<li>';
+							sf_card_item( $item + array( 'count' => 1, 'fold' => 'closed' ) );
+							echo '</li>';
+						}
+						?>
 					</ul>
 				</div>
 			</div>
@@ -368,17 +348,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 					     where it came from and any Action it grants -->
 					<ul class="sheet-traits">
 						<?php foreach ( $sf_abilities as $t ) : ?>
-							<li class="trait-box sheet-ability">
-								<div class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><button type="button" class="sheet-fold-button" aria-expanded="false" aria-label="Show <?php echo $sf_e( $t['name'] ); ?>’s details" onclick="var o=this.closest('li').classList.toggle('is-open');this.setAttribute('aria-expanded',o)"><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
-								<?php echo $sf_effect( $t['effect'] ); ?>
-								<div class="sheet-fold">
-									<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-									<?php if ( ! empty( $t['action'] ) ) : ?>
-										<?php $sf_colon = strpos( $t['action'], ': ' ); ?>
-										<p class="copy trait-action"><?php echo false !== $sf_colon ? '<strong>' . $sf_e( substr( $t['action'], 0, $sf_colon ) ) . ':</strong> ' . $sf_e( substr( $t['action'], $sf_colon + 2 ) ) : $sf_e( $t['action'] ); ?></p>
-									<?php endif; ?>
-								</div>
-							</li>
+							<li><?php $sf_card( $t, 'closed', true ); ?></li>
 						<?php endforeach; ?>
 					</ul>
 				<?php else : ?>
@@ -394,13 +364,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				</div>
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_skills as $t ) : ?>
-						<li>
-							<details class="trait-box">
-								<summary class="trait-name trait-name-with-chip"><span><?php echo $sf_e( $t['name'] ); ?></span><svg class="sheet-trait-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="M1 1.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></summary>
-								<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-								<?php echo $sf_effect( $t['effect'] ); ?>
-							</details>
-						</li>
+						<li><?php $sf_card( $t, 'closed' ); ?></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
@@ -410,11 +374,7 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 				<h3 class="sheet-rule sheet-subhead">Other Traits</h3>
 				<ul class="sheet-traits">
 					<?php foreach ( $sf_other as $t ) : ?>
-						<li class="trait-box">
-							<div class="trait-name"><?php echo $sf_e( $t['name'] ); ?></div>
-							<div class="trait-card-badges"><span class="chip"><?php echo $t['category']; ?></span><span class="muted small trait-card-from">From <?php echo $sf_e( $sf_from( $t ) ); ?></span></div>
-							<?php echo $sf_effect( $t['effect'] ); ?>
-						</li>
+						<li><?php $sf_card( $t ); ?></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
@@ -422,33 +382,30 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 	</div>
 </div>
 
-<!-- What the sheet's Knowledges and background links open in the lore popup -->
+<!-- What the sheet's Knowledges and background links open in the lore
+     popup: the card on its own, as the creator's sheet opens them
+     (.lore-card puts the popup in its card mode) -->
 <div hidden>
 	<?php foreach ( array_merge( $sf_knowledges, $sf_languages ) as $t ) : ?>
-		<div id="lore-sample-<?php echo $t['id']; ?>">
+		<div id="lore-sample-<?php echo $t['id']; ?>" class="lore-card">
 			<h4 class="lore-title"><?php echo $sf_e( $t['name'] ); ?></h4>
 			<div class="lore-body">
-				<?php echo $sf_effect( $t['effect'] ); ?>
-				<p class="copy small mb-0">Knowledge. From <?php echo $sf_e( $sf_from( $t ) ); ?>.</p>
+				<?php
+				sf_card_trait( array(
+					'kind'   => $t['language'] ? 'language' : 'knowledge',
+					'name'   => $t['name'],
+					'effect' => $t['effect'],
+					'from'   => $sf_from( $t ),
+				) );
+				?>
 			</div>
 		</div>
 	<?php endforeach; ?>
 	<?php foreach ( $sf_sample['background'] as $b ) : ?>
-		<div id="lore-sample-<?php echo $b['id']; ?>">
+		<div id="lore-sample-<?php echo $b['id']; ?>" class="lore-card">
 			<h4 class="lore-title"><?php echo $sf_e( $b['name'] ); ?></h4>
 			<div class="lore-body">
-				<p class="copy"><strong><?php echo $b['slot']; ?>.</strong> <?php echo $sf_e( $b['summary'] ); ?></p>
-				<?php foreach ( $b['features'] as $f ) : ?>
-					<p class="copy"><strong><?php echo $sf_e( $f['name'] ); ?>.</strong> <?php echo $sf_e( $f['description'] ); ?></p>
-				<?php endforeach; ?>
-				<?php foreach ( array( 'Bonus' => $b['bonus'], 'Grants' => $b['grants'], 'Choose' => $b['choices'], 'Background list' => $b['backgroundList'] ) as $label => $list ) : ?>
-					<?php if ( $list ) : ?>
-						<p class="copy"><strong><?php echo $label; ?>:</strong> <?php echo $sf_e( implode( ', ', $list ) ); ?></p>
-					<?php endif; ?>
-				<?php endforeach; ?>
-				<?php if ( $b['lore'] ) : ?>
-					<p class="copy">More in the lore: <?php echo sf_lore_link( $b['lore'], sf_lore_titles()[ $b['lore'] ] ?? $b['lore'] ); ?></p>
-				<?php endif; ?>
+				<?php sf_background_card( $b, 'Origin' === $b['slot'] ? ', placed in Grace' : '' ); ?>
 			</div>
 		</div>
 	<?php endforeach; ?>
