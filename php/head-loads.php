@@ -38,3 +38,5 @@ if (!headers_sent()) {
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-buttons.css'); ?>"/>
 <!-- Strange Frontiers card components (php/rpg/components/cards.php) -->
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-cards.css'); ?>"/>
+<!-- Strange Frontiers stat block (php/rpg/components/stats.php) -->
+<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-stats.css'); ?>"/>

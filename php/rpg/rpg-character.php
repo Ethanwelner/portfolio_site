@@ -110,23 +110,7 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 	<div class="flex-2 d-none d-xl-inline-flex"></div>
 	<div class="flex-14">
 <?php
-// One stat's 20 slots, drawn as the creator's sheet draws them (StatLine in
-// the creator): circles on odd points and squares on even, the Kind's bonus
-// points first, then the player's, open slots up to the max and faded slots
-// past it.
-if ( ! function_exists( 'sf_sample_stat' ) ) {
-	function sf_sample_stat( $name, $bonus, $value, $max = 15 ) {
-		echo "<div class=\"sheet-stat\">\n";
-		echo "\t<div class=\"tiny-text\"><strong>{$name} - {$value}</strong><span class=\"muted\"> max {$max}</span></div>\n";
-		echo "\t<div class=\"stat-line\">";
-		for ( $point = 1; $point <= 20; $point++ ) {
-			$shape = $point % 2 ? 'dot' : 'square';
-			$fill  = $point <= $value ? ( $point <= $bonus ? 'default' : 'filled' ) : ( $point <= $max ? 'empty' : 'unavailable' );
-			echo "<div class=\"stat {$shape} {$fill}\"></div>";
-		}
-		echo "</div>\n</div>\n";
-	}
-}
+require_once __DIR__ . '/components/stats.php';
 
 // Each Knowledge's type as an icon in place of a "Knowledge:" or "Language:" label
 $sf_knowledge_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Knowledge" focusable="false"><title>Knowledge</title><path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"/></svg>';
@@ -246,27 +230,20 @@ $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="im
 
 		<div class="c-sheet-box sheet-body">
 			<div class="sheet-stats">
-				<div class="sheet-group stat-group-physical">
-					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'physical' ); ?></div>
-						<h4 class="sheet-rule">Physical - 1</h4>
-					</div>
-					<?php sf_sample_stat( 'Endurance', 1, 2 ); sf_sample_stat( 'Power', 1, 2 ); sf_sample_stat( 'Grace', 2, 3 ); ?>
-				</div>
-				<div class="sheet-group stat-group-social">
-					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'social' ); ?></div>
-						<h4 class="sheet-rule">Social - 3</h4>
-					</div>
-					<?php sf_sample_stat( 'Empathy', 1, 3 ); sf_sample_stat( 'Persuasion', 1, 4 ); sf_sample_stat( 'Demeanor', 1, 5 ); ?>
-				</div>
-				<div class="sheet-group stat-group-mental">
-					<div class="sheet-group-head">
-						<div class="stat-badge" title="Core Stat"><?php sf_core_stat_icon( 'mental' ); ?></div>
-						<h4 class="sheet-rule">Mental - 2</h4>
-					</div>
-					<?php sf_sample_stat( 'Logic', 1, 1 ); sf_sample_stat( 'Intuition', 1, 2 ); sf_sample_stat( 'Memory', 1, 6 ); ?>
-				</div>
+				<!-- The stat block (php/rpg/components/stats.php) with each stat's maximum, as on the creator's sheet -->
+				<?php
+				$sf_stat = function ( $name, $bonus, $value ) {
+					return array( 'name' => $name, 'bonus' => $bonus, 'value' => $value, 'max' => 15 );
+				};
+				sf_stat_block(
+					array(
+						array( 'group' => 'physical', 'core' => 1, 'stats' => array( $sf_stat( 'Endurance', 1, 2 ), $sf_stat( 'Power', 1, 2 ), $sf_stat( 'Grace', 2, 3 ) ) ),
+						array( 'group' => 'social', 'core' => 3, 'stats' => array( $sf_stat( 'Empathy', 1, 3 ), $sf_stat( 'Persuasion', 1, 4 ), $sf_stat( 'Demeanor', 1, 5 ) ) ),
+						array( 'group' => 'mental', 'core' => 2, 'stats' => array( $sf_stat( 'Logic', 1, 1 ), $sf_stat( 'Intuition', 1, 2 ), $sf_stat( 'Memory', 1, 6 ) ) ),
+					),
+					array( 'max' => true )
+				);
+				?>
 			</div>
 		</div>
 

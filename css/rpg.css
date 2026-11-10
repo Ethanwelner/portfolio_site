@@ -1804,8 +1804,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 /* Character sheet, php/rpg/rpg-character.php (through .c-variables below).
-   .stat-line, .stat and .stat-badge are also used in rpg-stats, rpg-skills
-   and rpg-traits. */
+   Its stats are the stat block (php/rpg/components/stats.php, css/sf-stats.css);
+   .stat-badge here is the NPC sheet's (php/rpg/npc-sheet.php). */
 .empty-list {
     list-style-type: none;
     padding-left: 0;
@@ -1892,46 +1892,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     image-rendering: pixelated;
 }
 
-.stat-line {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(20, 1fr);
-    gap: 1.5%;
-}
-
-.stat {
-    grid-column: span 1;
-    aspect-ratio: 1/1;
-    /* min-width: 16px;
-    min-height: 16px; */
-    width: 100%;
-
-    
-    &.dot {
-        border-radius: 50%;
-    }
-    
-    &.square {
-        border-radius: 4px;
-    }
-    
-    &.default {
-        background-color: var(--portfolio-medium-gray);
-    }
-    
-    &.filled {
-        background-color: var(--portfolio-black);
-    }
-    
-    &.empty {
-        border: 2px solid var(--portfolio-gray);
-    }
-    
-    &.unavailable {
-        border: 2px solid var(--portfolio-red);
-    }
-}
-
 .stat-badge {
     font-size: 1.25rem;
     font-weight: 600;
@@ -1962,12 +1922,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     width: 1.6rem;
     height: 1.6rem;
     fill: currentColor;
-}
-
-/* Sample character sheet: a ruled stat heading sits beside its badge, so drop
-   .line-container's bottom margin to keep the rule on the badge's center line */
-.stat-badge + .line-container {
-    margin-bottom: 0;
 }
 
 .c-variables {
@@ -2092,10 +2046,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .c-sheet {
         color: var(--panel-text);
 
-        .tiny-text {
-            color: var(--panel-soft);
-        }
-
         .line {
             background-color: var(--panel-rule);
         }
@@ -2119,46 +2069,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             padding: 0;
             line-height: 1;
         }
-
-        /* The creator's slots hold a set size, shrinking only when the
-           column is too narrow for all 20 */
-        .stat-line {
-            grid-template-columns: repeat(20, minmax(0, 20px));
-            gap: 4px;
-        }
-
-        /* Each group's points in its resource's color, as in the creator:
-           Physical red, Social purple, Mental yellow, with the bonus points a
-           darker shade. Open and over-max slots stay gray, the latter faded. */
-        .stat-group-physical {
-            --stat-color: var(--frontiers-hp);
-        }
-
-        .stat-group-social {
-            --stat-color: var(--frontiers-vp);
-        }
-
-        .stat-group-mental {
-            --stat-color: var(--frontiers-sp);
-        }
-
-        .stat.filled {
-            background-color: var(--stat-color, var(--frontiers-green));
-        }
-
-        .stat.default {
-            background-color: color-mix(in srgb, var(--stat-color, var(--frontiers-green)) 50%, black);
-        }
-
-        .stat.empty {
-            border-color: #888a8c;
-        }
-
-        .stat.unavailable {
-            border-color: #888a8c;
-            background-color: #888a8c;
-            opacity: .25;
-        }
     }
 
     /* Only as wide as its stat lines need, centered in its column */
@@ -2170,14 +2080,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         background-color: var(--panel);
         border: 1px solid rgb(255 255 255 / 12%);
         border-radius: 12px;
-
-        h5 {
-            color: var(--panel-text);
-        }
-
-        .line-container h5 {
-            background-color: var(--panel);
-        }
     }
 
     .c-sheet {
@@ -2483,38 +2385,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
                 > .sheet-items {
                     flex: 4000 1 0;
-                }
-            }
-        }
-
-        .sheet-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .sheet-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .sheet-group-head {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .sheet-stat {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-
-            .tiny-text {
-                color: var(--panel-text);
-
-                .muted {
-                    color: var(--panel-soft);
                 }
             }
         }

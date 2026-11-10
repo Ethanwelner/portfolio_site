@@ -7,6 +7,7 @@
 require_once 'php/rpg/lore.php';
 require_once 'php/rpg/components/cards.php';
 require_once 'php/rpg/components/buttons.php';
+require_once 'php/rpg/components/stats.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -266,6 +267,25 @@ $sf_used_in = array(
 	'background' => array(
 		'php/rpg/background-card.php: sf_background_card(), beside the sample sheet, in its popups and in Building a Dreftian',
 	),
+	'stats'      => array(
+		'php/rpg/rpg-stats.php: Example Stats (plain)',
+		'php/rpg/rpg-character.php: the sample sheet’s stats (max)',
+		'The Character Creator’s Sheet (max) and Stats step (edit), and Player Tools’ sheet (plain) and level up (edit) (src/app/components/stats.tsx)',
+	),
+);
+
+// Stat blocks: Edwin's stats, and a character with Magic (a package's bonus point first)
+$sf_stat = function ( $name, $bonus, $value, $max = 15 ) {
+	return array( 'name' => $name, 'bonus' => $bonus, 'value' => $value, 'max' => $max );
+};
+$sf_edwin_stats = array(
+	array( 'group' => 'physical', 'core' => 1, 'stats' => array( $sf_stat( 'Endurance', 1, 2 ), $sf_stat( 'Power', 1, 2 ), $sf_stat( 'Grace', 2, 3 ) ) ),
+	array( 'group' => 'social', 'core' => 3, 'stats' => array( $sf_stat( 'Empathy', 1, 3 ), $sf_stat( 'Persuasion', 1, 4 ), $sf_stat( 'Demeanor', 1, 5 ) ) ),
+	array( 'group' => 'mental', 'core' => 2, 'stats' => array( $sf_stat( 'Logic', 1, 1 ), $sf_stat( 'Intuition', 1, 2 ), $sf_stat( 'Memory', 1, 6 ) ) ),
+);
+$sf_mage_stats = array(
+	array( 'group' => 'mental', 'core' => 3, 'stats' => array( $sf_stat( 'Logic', 1, 4 ), $sf_stat( 'Intuition', 1, 4 ), $sf_stat( 'Memory', 1, 4 ) ) ),
+	array( 'group' => 'magic', 'core' => 3, 'bonus' => 1 ),
 );
 $sf_list = function ( $items ) {
 	echo '<ul class="copy sf-library-used">';
@@ -294,6 +314,8 @@ $sf_list = function ( $items ) {
 			.sf-library-buttons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px; margin-bottom: 24px; }
 			.sf-library-button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 220px; }
 			.sf-library-note { font-size: .75rem; opacity: .7; }
+			.sf-library-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); align-items: start; gap: 16px; }
+			.sf-library-stat-box { padding: 24px; background-color: #292b2c; border-radius: 12px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 		</style>
 	</head>
@@ -305,6 +327,7 @@ $sf_list = function ( $items ) {
 				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
 				<p class="copy">For the cards, there’s one per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
+				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
 		</div>
@@ -413,6 +436,27 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 				<p class="sf-library-label">The same cards on a dark section</p>
 				<div class="sf-library-backgrounds">
 					<?php sf_card_background( $sf_backgrounds[0] ); sf_card_background( $sf_dreft['kinds'][0] ); ?>
+				</div>
+			</div>
+		</div>
+
+		<!-- Stat block -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Stat Block</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_stat_block( array( array( 'group' =&gt; 'physical', 'core' =&gt; 3, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 1, 'max' =&gt; 15 ), … ) ), … ), array( 'max' =&gt; true ) );
+group: physical | social | mental | magic (Magic takes core and an optional bonus, no stats)
+options: max (true: each stat's maximum beside its number). The creator adds edit (the − and + on each stat) for its Stats step and Player Tools' level up.</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['stats'] ); ?>
+				<p class="sf-library-label">Plain, as on Player Tools’ sheet, then max, as on the creator’s Sheet</p>
+				<div class="sf-library-stats">
+					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats ); ?></div>
+					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats, array( 'max' => true ) ); ?></div>
+				</div>
+				<p class="sf-library-label" style="margin-top: 32px">Magic, a diamond per point, with a package’s bonus point first</p>
+				<div class="sf-library-stats">
+					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_mage_stats ); ?></div>
 				</div>
 			</div>
 		</div>
