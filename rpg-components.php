@@ -9,6 +9,7 @@ require_once 'php/rpg/components/cards.php';
 require_once 'php/rpg/components/buttons.php';
 require_once 'php/rpg/components/stats.php';
 require_once 'php/rpg/components/sheet.php';
+require_once 'php/rpg/components/npc-sheet.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -257,12 +258,12 @@ $sf_used_in = array(
 		'php/rpg/rpg-traits.php: Trait Categories and Example Traits',
 		'php/rpg/rpg-incidents.php: Dress Wounds',
 		'php/rpg/rpg-character.php: the sample sheet’s Healthy Condition, Abilities (closed, keeping their effect), Skills (closed), Other Traits, and its Knowledges’ popups',
-		'php/rpg/npc-sheet.php: an NPC’s Traits (Murk Legs’ Dark Haze)',
+		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Traits (Murk Legs’ Dark Haze)',
 	),
 	'item'       => array(
 		'php/rpg/items.php: sf_equipment_card(), the Item Types and Example Items',
 		'php/rpg/magic-items.php: sf_magic_item_card(), Artifacts, Enchantments and Potions',
-		'php/rpg/npc-sheet.php: an NPC’s Attacks (Murk Legs)',
+		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Attacks and Items (Murk Legs)',
 		'php/rpg/rpg-character.php: the sample sheet’s Items (count, read-only Equip, closed)',
 	),
 	'background' => array(
@@ -272,6 +273,9 @@ $sf_used_in = array(
 		'php/rpg/rpg-stats.php: Example Stats (plain)',
 		'php/rpg/rpg-character.php: the sample sheet’s stats (max)',
 		'The Character Creator’s Sheet (max) and Stats step (edit), and Player Tools’ sheet (plain) and level up (edit) (src/app/components/stats.tsx)',
+	),
+	'npc'        => array(
+		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry',
 	),
 	'sheet'      => array(
 		'php/rpg/rpg-character.php: the sample sheet (sample)',
@@ -334,6 +338,7 @@ $sf_list = function ( $items ) {
 				<p class="copy">For the cards, there’s one per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
+				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
 				<p class="copy">So does the character sheet’s layout: <code>php/rpg/components/sheet.php</code> draws the creator’s markup, and <code>css/sf-sheet.css</code> is a copy of the creator’s <code>src/app/sheet.css</code>. Player Tools’ sheet is the reference, and each sheet’s context sets what it draws.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
@@ -507,6 +512,47 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 						'other'        => sf_sheet_title( 'Other Traits' ) . $sf_slot( 'other: anything else, when there is any' ),
 					),
 					array( 'class' => 'sf-library-sheet' )
+				);
+				?>
+			</div>
+		</div>
+
+		<!-- NPC and monster sheet -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>NPC and Monster Sheet</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_npc_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'description' =&gt; …, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, …, 'Magic' =&gt; 2 ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( … ), 'items' =&gt; array( … ) ), array( 'fold' =&gt; 'closed' ) );
+HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them. Magic, description, attacks, traits and items are optional: what's left out isn't drawn.
+options: fold ('closed' or 'open': the cards fold, for a page with many), heading (the name's level, h5 by default)</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['npc'] ); ?>
+				<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
+				<?php include 'php/rpg/lore/murk-legs.php'; ?>
+				<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
+				<?php
+				sf_npc_sheet(
+					array(
+						'name'        => 'Hedge Witch',
+						'kind'        => 'NPC, Dreft',
+						'description' => 'A village healer who knows a little more magic than she lets on.',
+						'move'        => '10 m',
+						'stats'       => array(
+							'Physical' => 1, 'Endurance' => 2, 'Power' => 1, 'Grace' => 2,
+							'Social' => 2, 'Empathy' => 4, 'Persuasion' => 3, 'Demeanor' => 2,
+							'Mental' => 3, 'Logic' => 3, 'Intuition' => 5, 'Memory' => 4,
+							'Magic' => 2,
+						),
+						'attacks'     => array(
+							array( 'name' => 'Walking Staff', 'damage' => '4 Blunt', 'formula' => 'Power', 'range' => '2 m', 'chips' => array( 'Melee' ), 'description' => 'A gnarled ash staff.' ),
+						),
+						'traits'      => array(
+							array( 'kind' => 'skill', 'name' => 'Herbalism', 'rank' => 2, 'effect' => 'Rank ×5 added to Skill Checks involving herbs and remedies.' ),
+						),
+						'items'       => array(
+							array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial, brewed at Rank 1.', 'count' => 2 ),
+						),
+					),
+					array( 'fold' => 'closed' )
 				);
 				?>
 			</div>

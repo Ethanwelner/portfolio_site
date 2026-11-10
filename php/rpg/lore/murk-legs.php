@@ -1,4 +1,4 @@
-<?php require_once dirname( __DIR__ ) . '/npc-sheet.php'; ?>
+<?php require_once dirname( __DIR__ ) . '/components/npc-sheet.php'; ?>
 <p class="copy">
 	Stats for a typical Murk Legs. The full entry is coming soon.
 </p>

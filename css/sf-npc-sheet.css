@@ -1,0 +1,238 @@
+/* ========================================
+   STRANGE FRONTIERS NPC AND MONSTER SHEET
+   ========================================
+   The short-form sheet (php/rpg/components/npc-sheet.php): the name and
+   what it is, HP, VP, SP, MP and Movement on one line, the core Stats with
+   their focus Stats as plain numbers, then Attacks, Traits and Items as
+   cards. The full character sheet's sibling (css/sf-sheet.css): the same
+   dark panel and grays, cut down to what a GM needs at the table.
+
+   It carries its own colors, so it looks the same in a lore entry, a popup
+   or a light section. */
+
+.sf-npc {
+    --npc-frame: var(--panel-box, #343638);
+    --npc-box: var(--panel, #292b2c);
+    --npc-edge: var(--card-border, #5c5e60);
+    --npc-text: var(--panel-text, #e7e8e9);
+    --npc-soft: var(--panel-soft, #b2b3b4);
+    --npc-rule: rgb(255 255 255 / 18%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--npc-frame);
+    border: 1px solid var(--npc-edge);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #00000030;
+    color: var(--npc-text);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sf-npc-box {
+    min-width: 0;
+    padding: 14px 16px;
+    background-color: var(--npc-box);
+    border-radius: 12px;
+}
+
+/* ---- The name and what it is, then HP, VP, SP, MP and Movement along
+   the same line, wrapping under it when there's no room ---- */
+
+.sf-npc-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 4px 4px 0;
+}
+
+.sf-npc-name {
+    margin: 0;
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.sf-npc-kind {
+    margin: 0;
+    color: var(--npc-soft);
+    font-size: .875rem;
+}
+
+.sf-npc-resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sf-npc-resource {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 1.125rem;
+}
+
+.sf-npc-resource-name--hp { color: var(--frontiers-hp); }
+.sf-npc-resource-name--vp { color: var(--frontiers-vp); }
+.sf-npc-resource-name--sp { color: var(--frontiers-sp); }
+.sf-npc-resource-name--mp { color: var(--frontiers-mp); }
+
+.sf-npc-value {
+    font-variant-numeric: tabular-nums;
+}
+
+.sf-npc-description {
+    margin: 0;
+    padding: 0 4px;
+    color: var(--npc-soft);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+/* ---- The core Stats side by side, each in its resource's color (Physical
+   red, Social purple, Mental yellow, Magic blue), stacked on phones ---- */
+
+.sf-npc-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+    gap: 12px;
+}
+
+.sf-npc-group {
+    --stat-color: var(--frontiers-green, #4ed37b);
+}
+
+.sf-npc-group--physical { --stat-color: var(--frontiers-hp); }
+.sf-npc-group--social { --stat-color: var(--frontiers-vp); }
+.sf-npc-group--mental { --stat-color: var(--frontiers-sp); }
+.sf-npc-group--magic { --stat-color: var(--frontiers-mp); }
+
+/* The core Stat's icon in a circle of its color's dark shade, its name,
+   then its number in the color */
+.sf-npc-core {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 1.125rem;
+
+    strong {
+        font-weight: 600;
+    }
+
+    .sf-npc-value {
+        margin-left: auto;
+        color: var(--stat-color);
+        font-weight: 700;
+    }
+}
+
+.sf-npc-badge {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--stat-color) 50%, black);
+    color: #ffffff;
+}
+
+.sf-npc .sf-npc-badge-icon {
+    flex: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: currentColor;
+}
+
+/* The focus Stats, a ruled line each, 15px in from the core Stat */
+.sf-npc-focus {
+    margin: 0;
+    padding-left: 15px;
+    font-size: .9375rem;
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        padding: 3px 0;
+        border-top: 1px solid var(--npc-rule);
+    }
+
+    dt {
+        color: var(--npc-soft);
+        font-weight: 400;
+    }
+
+    dd {
+        margin: 0;
+        font-weight: 600;
+    }
+}
+
+/* What Magic's points give, where the others list focus Stats */
+.sf-npc-note {
+    margin: 0;
+    padding: 3px 0 0 15px;
+    border-top: 1px solid var(--npc-rule);
+    color: var(--npc-soft);
+    font-size: .9375rem;
+}
+
+/* ---- Attacks, Traits and Items ---- */
+
+/* A box's title, with a rule running out to the right */
+.sf-npc-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 0 12px;
+    color: inherit;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--npc-rule);
+    }
+}
+
+/* Every box's cards share one grid of columns at least 360px wide: two
+   across on a wide sheet, one on a narrow one, so a lone Trait card is as
+   wide as an Attack card beside it */
+.sf-npc-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+    align-items: start;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Printed, it goes light, with dark text */
+@media print {
+    .sf-npc {
+        --npc-frame: var(--portfolio-near-white, #f6f6f6);
+        --npc-box: var(--portfolio-white, #ffffff);
+        --npc-edge: var(--portfolio-light-gray, #d9d9d9);
+        --npc-text: var(--portfolio-black, #1e1f20);
+        --npc-soft: var(--portfolio-gray, #626466);
+        --npc-rule: rgb(0 0 0 / 15%);
+        box-shadow: none;
+    }
+
+    .sf-npc-box {
+        border: 1px solid var(--npc-edge);
+    }
+}
