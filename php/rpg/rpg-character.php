@@ -150,214 +150,137 @@ $sf_card = function ( $t, $fold = '', $keep = false ) use ( $sf_from ) {
 		'keep'   => $keep,
 	) );
 };
-// Movement's small box, left of the resistances, as in the creator: its
-// ruled title, then a running figure (the creator's person-running icon)
-// before the number, which runs into its unit
-$sf_move_box = '<div class="c-sheet-box sheet-movement"><h4 class="sheet-rule" title="Movement">Move</h4><div class="sheet-movement-value" title="Movement"><svg class="sheet-movement-icon" viewBox="0 0 448 512" role="img" aria-label="Movement" focusable="false"><title>Movement</title><path d="M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z"/></svg><span class="num">10<span class="sheet-movement-unit">m</span></span></div></div>';
 $sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Language" focusable="false"><title>Language</title><path d="M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z"/></svg>';
 ?>
-<!-- Laid out like the Character Creator's sheet: the level's blob on the
-     corner, the portrait, name and description, HP, VP and SP, then the
-     stats, Conditions and Items, then the Knowledges and Traits, each in a
-     box of its own -->
-<div class="c-sheet sample-sheet">
-	<div class="level-badge" aria-label="Level 6"><span class="level-badge-label">Level</span><span class="level-badge-number">6</span></div>
+<!-- Edwin's sheet in the shared layout (php/rpg/components/sheet.php), in
+     its sample context: everything a sheet shows in play, with nothing to
+     change. The level's blob on the corner, the portrait, name and
+     description, HP, VP and SP at full, then the stats beside Movement, the
+     resistances, Conditions and Items, then the Knowledges, Abilities and
+     Skills. -->
+<?php
+require_once __DIR__ . '/components/sheet.php';
 
-	<div class="c-sheet-box sheet-head">
-		<div class="sheet-head-who">
-			<img loading="lazy" data-src="img/char_portrait_1.webp" alt="Edwin Humble" class="c-sheet-image sheet-portrait">
-			<div class="sheet-head-main">
-				<h2 class="sheet-name">Edwin Humble</h2>
-				<!-- Age, gender, height and weight on one line, then the Kind and the Backgrounds on the next, each wrapping when it runs out of room -->
-				<div class="sheet-line">
-					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Age</span><strong>30</strong></span>
-						<span class="sheet-line-item"><span class="field-label">Gender</span><strong>Male</strong></span>
-						<span class="sheet-line-item"><span class="field-label">Height</span><strong>6 feet</strong></span>
-						<span class="sheet-line-item"><span class="field-label">Weight</span><strong>190 lbs</strong></span>
-					</p>
-					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Kind</span><strong><?php echo $sf_sheet_link( 'Kind' ); ?></strong></span>
-						<span class="sheet-line-item"><span class="field-label">Origin</span><strong><?php echo $sf_sheet_link( 'Origin' ); ?></strong></span>
-						<span class="sheet-line-item"><span class="field-label">Profession</span><strong><?php echo $sf_sheet_link( 'Profession' ); ?></strong></span>
-						<span class="sheet-line-item"><span class="field-label">Past</span><strong><?php echo $sf_sheet_link( 'Past' ); ?></strong></span>
-					</p>
-					<p class="sheet-line-row">
-						<span class="sheet-line-item"><span class="field-label">Wealth</span><strong>15,000 ERC</strong></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="sheet-description">
-			<p>Edwin Humble is a truck driver and part-time smuggler in Earth orbit, working the American Empire’s Sol territories. Raised rough, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father's cargo <?php echo sf_lore_link('shuttles', 'shuttle'); ?> during one of the man's rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the “family business” and runs a small-time cargo transportation operation under his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin's two goals in life are to get rich and to find out who was responsible for his father's murder.</p>
-		</div>
-	</div>
+// The resistances: each damage type's icon and total, its sources in a
+// popover. Drawn twice by the layout, so each copy's ids are its own.
+$sf_blunt_icon    = '<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg>';
+$sf_slashing_icon = '<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg>';
+$sf_resistances = function ( $copy ) use ( $sf_blunt_icon, $sf_slashing_icon ) {
+	$html = sf_sheet_title( 'Resistances' ) . '<ul class="sf-resistance-list">';
+	foreach ( array( array( 'Blunt', $sf_blunt_icon ), array( 'Slashing', $sf_slashing_icon ) ) as $i => $r ) {
+		$id    = 'sample-resist-' . $copy . ( $i + 1 );
+		$html .= '<li class="sf-resistance" tabindex="0" aria-describedby="' . $id . '">' . $r[1] . '<span class="sf-resistance-total">1</span>'
+			. '<div class="sf-resistance-pop" role="tooltip" id="' . $id . '"><strong class="sf-resistance-pop-title">' . $r[0] . ' 1</strong>'
+			. '<ul><li><span>Sturdy Leather Jacket <span class="sf-sheet-muted">(torso)</span></span><span class="sf-resistance-pop-total">1</span></li></ul></div></li>';
+	}
+	return $html . '</ul>';
+};
 
-	<div class="c-sheet-box">
-		<div class="sheet-resources">
-			<div class="sheet-resource"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">17<span class="muted"> / 17</span></span></div>
-			<div class="sheet-resource"><strong class="resource-name resource-vp" title="Vibe Points">VP</strong><span class="num">12<span class="muted"> / 12</span></span></div>
-			<div class="sheet-resource"><strong class="resource-name resource-sp" title="Savvy Points">SP</strong><span class="num">9<span class="muted"> / 9</span></span></div>
-		</div>
-	</div>
+// The stat block (php/rpg/components/stats.php), with each stat's maximum
+require_once __DIR__ . '/components/stats.php';
+$sf_stat = function ( $name, $bonus, $value ) {
+	return array( 'name' => $name, 'bonus' => $bonus, 'value' => $value, 'max' => 15 );
+};
+$sf_stats = sf_sheet_capture( function () use ( $sf_stat ) {
+	sf_stat_block(
+		array(
+			array( 'group' => 'physical', 'core' => 1, 'stats' => array( $sf_stat( 'Endurance', 1, 2 ), $sf_stat( 'Power', 1, 2 ), $sf_stat( 'Grace', 2, 3 ) ) ),
+			array( 'group' => 'social', 'core' => 3, 'stats' => array( $sf_stat( 'Empathy', 1, 3 ), $sf_stat( 'Persuasion', 1, 4 ), $sf_stat( 'Demeanor', 1, 5 ) ) ),
+			array( 'group' => 'mental', 'core' => 2, 'stats' => array( $sf_stat( 'Logic', 1, 1 ), $sf_stat( 'Intuition', 1, 2 ), $sf_stat( 'Memory', 1, 6 ) ) ),
+		),
+		array( 'max' => SF_SHEET_RULES['sample']['statMax'] )
+	);
+} );
 
-	<div class="sheet-row">
-		<!-- The resistances go here, under HP and over the stats, while the
-		     sheet is a single column, and over the Conditions and Items beside
-		     the stats otherwise -->
-		<div class="sheet-move-row sheet-resistances-first">
-			<?php echo $sf_move_box; ?>
-			<div class="c-sheet-box sheet-resistances">
-			<h4 class="sheet-rule">Resistances</h4>
-			<ul class="sheet-resistance-list">
-				<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-a1">
-					<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg><span class="num">1</span>
-					<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-a1">
-						<strong class="sheet-resistance-pop-title">Blunt 1</strong>
-						<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
-					</div>
-				</li>
-				<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-a2">
-					<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg><span class="num">1</span>
-					<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-a2">
-						<strong class="sheet-resistance-pop-title">Slashing 1</strong>
-						<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
-					</div>
-				</li>
-			</ul>
-			</div>
-		</div>
+// Healthy, from full HP
+$sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true ) . '<ul class="sf-sheet-cards sf-sheet-scroll"><li>'
+	. sf_sheet_capture( function () {
+		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => 'This Trait has no effect on its own.', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) );
+	} ) . '</li></ul>';
 
-		<div class="c-sheet-box sheet-body">
-			<div class="sheet-stats">
-				<!-- The stat block (php/rpg/components/stats.php) with each stat's maximum, as on the creator's sheet -->
-				<?php
-				$sf_stat = function ( $name, $bonus, $value ) {
-					return array( 'name' => $name, 'bonus' => $bonus, 'value' => $value, 'max' => 15 );
-				};
-				sf_stat_block(
-					array(
-						array( 'group' => 'physical', 'core' => 1, 'stats' => array( $sf_stat( 'Endurance', 1, 2 ), $sf_stat( 'Power', 1, 2 ), $sf_stat( 'Grace', 2, 3 ) ) ),
-						array( 'group' => 'social', 'core' => 3, 'stats' => array( $sf_stat( 'Empathy', 1, 3 ), $sf_stat( 'Persuasion', 1, 4 ), $sf_stat( 'Demeanor', 1, 5 ) ) ),
-						array( 'group' => 'mental', 'core' => 2, 'stats' => array( $sf_stat( 'Logic', 1, 1 ), $sf_stat( 'Intuition', 1, 2 ), $sf_stat( 'Memory', 1, 6 ) ) ),
-					),
-					array( 'max' => true )
-				);
-				?>
-			</div>
-		</div>
+// The item cards, as the creator's inventory draws them: the count on its
+// left edge, Equip (read-only here), the name and its badges, and the
+// chevron that opens it to its category, value and the like, then its
+// description
+$sf_sheet_items = array(
+	array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
+	array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
+	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
+	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
+);
+$sf_items = sf_sheet_title( 'Items', '', 'h4', true ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
+	. sf_sheet_capture( function () use ( $sf_sheet_items ) {
+		foreach ( $sf_sheet_items as $item ) {
+			echo '<li>';
+			sf_card_item( $item + array( 'count' => 1, 'fold' => 'closed' ) );
+			echo '</li>';
+		}
+	} ) . '</ul>';
 
-		<div class="sheet-side-stack">
-			<div class="sheet-move-row">
-			<?php echo $sf_move_box; ?>
-			<div class="c-sheet-box sheet-resistances">
-				<h4 class="sheet-rule">Resistances</h4>
-				<ul class="sheet-resistance-list">
-					<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-b1">
-						<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Blunt" focusable="false"><title>Blunt</title><path d="M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z"/></svg><span class="num">1</span>
-						<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-b1">
-							<strong class="sheet-resistance-pop-title">Blunt 1</strong>
-							<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
-						</div>
-					</li>
-					<li class="sheet-resistance" tabindex="0" aria-describedby="sample-resist-b2">
-						<svg class="damage-icon" viewBox="0 0 512 512" role="img" aria-label="Slashing" focusable="false"><title>Slashing</title><path d="M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z"/></svg><span class="num">1</span>
-						<div class="sheet-resistance-pop" role="tooltip" id="sample-resist-b2">
-							<strong class="sheet-resistance-pop-title">Slashing 1</strong>
-							<ul><li><span>Sturdy Leather Jacket <span class="muted">(torso)</span></span><span class="num">1</span></li></ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-			</div>
+// Knowledges, then Languages, each a link opening its card
+$sf_knowledge_list = '<ul class="sf-sheet-knowledge-list sf-sheet-scroll">';
+foreach ( $sf_knowledges as $t ) {
+	$sf_knowledge_list .= '<li>' . $sf_knowledge_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n";
+}
+foreach ( $sf_languages as $t ) {
+	$sf_knowledge_list .= '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n";
+}
+$sf_knowledge_list .= '</ul>';
 
-			<div class="sheet-side-row">
-				<div class="c-sheet-box sheet-conditions">
-					<h4 class="sheet-rule">Conditions</h4>
-					<ul class="sheet-cards">
-						<li><?php sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => 'This Trait has no effect on its own.', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) ); ?></li>
-					</ul>
-				</div>
+// Cards in the layout's card grid: Abilities closed to their name and
+// effect, Skills to their name, each opening from its chevron
+$sf_trait_cards = function ( $list, $fold = '', $keep = false, $scroll = true ) use ( $sf_card ) {
+	if ( ! $list ) {
+		return '';
+	}
+	return '<ul class="sf-sheet-traits' . ( $scroll ? ' sf-sheet-scroll' : '' ) . '">' . sf_sheet_capture( function () use ( $list, $fold, $keep, $sf_card ) {
+		foreach ( $list as $t ) {
+			echo '<li>';
+			$sf_card( $t, $fold, $keep );
+			echo '</li>';
+		}
+	} ) . '</ul>';
+};
+$sf_picks = $sf_sample['picks']['universal'] + $sf_sample['picks']['background'];
 
-				<div class="c-sheet-box sheet-items">
-					<h4 class="sheet-rule">Items</h4>
-					<!-- The item card component, as the creator's inventory draws it:
-					     the count on its left edge, Equip (read-only here), the name
-					     and its badges, and the chevron that opens it to its category,
-					     value and the like, then its description -->
-					<ul class="sheet-cards">
-						<?php
-						$sf_sheet_items = array(
-							array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
-							array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
-							array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
-							array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
-						);
-						foreach ( $sf_sheet_items as $item ) {
-							echo '<li>';
-							sf_card_item( $item + array( 'count' => 1, 'fold' => 'closed' ) );
-							echo '</li>';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- The Knowledges, then the Abilities and the Skills, each a box along
-	     the row, as in the creator. Skill cards start closed to their name and
-	     open from the chevron; a card's category sits in its body. -->
-	<div class="sheet-lower">
-		<div class="c-sheet-box sheet-side">
-			<h3 class="sheet-rule sheet-subhead">Knowledges</h3>
-			<ul class="sheet-knowledges">
-				<?php foreach ( $sf_knowledges as $t ) { echo '<li>' . $sf_knowledge_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
-				<?php foreach ( $sf_languages as $t ) { echo '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n"; } ?>
-			</ul>
-		</div>
-		<!-- The Abilities and the Skills share a row of their own, split equally -->
-		<div class="sheet-pair">
-			<div class="c-sheet-box sheet-abilities">
-				<h3 class="sheet-rule sheet-subhead">Abilities</h3>
-				<?php if ( $sf_abilities ) : ?>
-					<!-- Each Ability shows its name and effect; its chevron opens its badge,
-					     where it came from and any Action it grants -->
-					<ul class="sheet-traits">
-						<?php foreach ( $sf_abilities as $t ) : ?>
-							<li><?php $sf_card( $t, 'closed', true ); ?></li>
-						<?php endforeach; ?>
-					</ul>
-				<?php else : ?>
-					<p class="sheet-empty">No Abilities yet.</p>
-				<?php endif; ?>
-			</div>
-			<div class="c-sheet-box sheet-skills">
-				<!-- The Skills title, then along its line the picks left, together -->
-				<div class="sheet-traits-head">
-					<h3 class="sheet-rule sheet-subhead">Skills</h3>
-					<?php $sf_picks = $sf_sample['picks']['universal'] + $sf_sample['picks']['background']; ?>
-					<span class="sheet-banked"><?php echo $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ); ?> available</span>
-				</div>
-				<ul class="sheet-traits">
-					<?php foreach ( $sf_skills as $t ) : ?>
-						<li><?php $sf_card( $t, 'closed' ); ?></li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-		</div>
-		<?php if ( $sf_other ) : ?>
-			<div class="c-sheet-box sheet-other">
-				<h3 class="sheet-rule sheet-subhead">Other Traits</h3>
-				<ul class="sheet-traits">
-					<?php foreach ( $sf_other as $t ) : ?>
-						<li><?php $sf_card( $t ); ?></li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-		<?php endif; ?>
-	</div>
-</div>
+sf_sheet_layout(
+	array(
+		'context'      => 'sample',
+		'level'        => 6,
+		'who'          => '<img loading="lazy" data-src="img/char_portrait_1.webp" alt="Edwin Humble" class="c-sheet-image sheet-portrait sf-sheet-portrait">'
+			. '<div class="sf-sheet-main"><h2 class="sheet-name">Edwin Humble</h2>'
+			// Age, gender, height and weight on one line, then the Kind and the
+			// Backgrounds on the next, each wrapping when it runs out of room
+			. '<div class="sheet-line">'
+			. '<p class="sheet-line-row">'
+			. '<span class="sheet-line-item"><span class="field-label">Age</span><strong>30</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Gender</span><strong>Male</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Height</span><strong>6 feet</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Weight</span><strong>190 lbs</strong></span>'
+			. '</p><p class="sheet-line-row">'
+			. '<span class="sheet-line-item"><span class="field-label">Kind</span><strong>' . $sf_sheet_link( 'Kind' ) . '</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Origin</span><strong>' . $sf_sheet_link( 'Origin' ) . '</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Profession</span><strong>' . $sf_sheet_link( 'Profession' ) . '</strong></span>'
+			. '<span class="sheet-line-item"><span class="field-label">Past</span><strong>' . $sf_sheet_link( 'Past' ) . '</strong></span>'
+			. '</p><p class="sheet-line-row">'
+			. '<span class="sheet-line-item"><span class="field-label">Wealth</span><strong>15,000 ERC</strong></span>'
+			. '</p></div></div>',
+		'description'  => '<p>Edwin Humble is a truck driver and part-time smuggler in Earth orbit, working the American Empire’s Sol territories. Raised rough, Edwin was cared for by his mother in the teeming streets of Chicago before stowing away on his father\'s cargo ' . sf_lore_link( 'shuttles', 'shuttle' ) . ' during one of the man\'s rare visits. The boy quickly learned the trade of private cargo running, both the legal and less-than-legal sides of it. After a delivery went south and his father was killed, Edwin took over the “family business” and runs a small-time cargo transportation operation under his own name, though his real income comes from what’s stored in the secret compartment at the back of the shuttle. Edwin\'s two goals in life are to get rich and to find out who was responsible for his father\'s murder.</p>',
+		'resources'    => sf_sheet_full_resources( array( 'hp' => 17, 'vp' => 12, 'sp' => 9 ) ),
+		'stats'        => $sf_stats,
+		'movement'     => '10 m',
+		'resistances'  => $sf_resistances,
+		'conditions'   => $sf_conditions,
+		'items'        => $sf_items,
+		'knowledges'   => $sf_knowledge_list,
+		'abilities'    => $sf_abilities ? $sf_trait_cards( $sf_abilities, 'closed', true ) : '<p class="sf-sheet-empty">No Abilities yet.</p>',
+		'skills'       => $sf_skills ? $sf_trait_cards( $sf_skills, 'closed' ) : '<p class="sf-sheet-empty">No Skills yet.</p>',
+		'skills_aside' => '<span class="sf-sheet-aside">' . $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ) . ' available</span>',
+		'other'        => $sf_other ? sf_sheet_title( 'Other Traits' ) . $sf_trait_cards( $sf_other, '', false, false ) : '',
+	),
+	array( 'class' => 'sample-sheet' )
+);
+?>
 
 <!-- What the sheet's Knowledges and background links open in the lore
      popup: the card on its own, as the creator's sheet opens them

@@ -1,34 +1,34 @@
 {
-  "_stats-BarKI2N0.css": {
-    "file": "assets/stats-BarKI2N0.css",
-    "src": "_stats-BarKI2N0.css"
-  },
-  "_stats-BbKUu5QZ.js": {
-    "file": "assets/stats-BbKUu5QZ.js",
-    "name": "stats",
+  "_sheet--m4x1jnW.js": {
+    "file": "assets/sheet--m4x1jnW.js",
+    "name": "sheet",
     "css": [
-      "assets/stats-BarKI2N0.css"
+      "assets/sheet-D7XRlHoi.css"
     ]
   },
+  "_sheet-D7XRlHoi.css": {
+    "file": "assets/sheet-D7XRlHoi.css",
+    "src": "_sheet-D7XRlHoi.css"
+  },
   "src/app/main.tsx": {
-    "file": "assets/main-CeDAwtml.js",
+    "file": "assets/main-DpbkfsTZ.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_stats-BbKUu5QZ.js"
+      "_sheet--m4x1jnW.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-C4IC_4Vr.js",
+    "file": "assets/main-DIyf4prl.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_stats-BbKUu5QZ.js"
+      "_sheet--m4x1jnW.js"
     ],
     "css": [
-      "assets/main-tqLTvYce.css"
+      "assets/main-g4GwyKwf.css"
     ]
   }
 }

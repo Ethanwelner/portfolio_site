@@ -8,6 +8,7 @@ require_once 'php/rpg/lore.php';
 require_once 'php/rpg/components/cards.php';
 require_once 'php/rpg/components/buttons.php';
 require_once 'php/rpg/components/stats.php';
+require_once 'php/rpg/components/sheet.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -272,6 +273,10 @@ $sf_used_in = array(
 		'php/rpg/rpg-character.php: the sample sheet’s stats (max)',
 		'The Character Creator’s Sheet (max) and Stats step (edit), and Player Tools’ sheet (plain) and level up (edit) (src/app/components/stats.tsx)',
 	),
+	'sheet'      => array(
+		'php/rpg/rpg-character.php: the sample sheet (sample)',
+		'Player Tools’ sheet (play) and the Character Creator’s Sheet step (build) (src/app/components/sheet-layout.tsx, through Sheet.tsx)',
+	),
 );
 
 // Stat blocks: Edwin's stats, and a character with Magic (a package's bonus point first)
@@ -316,6 +321,7 @@ $sf_list = function ( $items ) {
 			.sf-library-note { font-size: .75rem; opacity: .7; }
 			.sf-library-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-stat-box { padding: 24px; background-color: #292b2c; border-radius: 12px; }
+			.sf-library-sheet { margin-top: 64px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 		</style>
 	</head>
@@ -328,6 +334,7 @@ $sf_list = function ( $items ) {
 				<p class="copy">For the cards, there’s one per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
+				<p class="copy">So does the character sheet’s layout: <code>php/rpg/components/sheet.php</code> draws the creator’s markup, and <code>css/sf-sheet.css</code> is a copy of the creator’s <code>src/app/sheet.css</code>. Player Tools’ sheet is the reference, and each sheet’s context sets what it draws.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
 		</div>
@@ -461,12 +468,47 @@ options: max (true: each stat's maximum beside its number). The creator adds edi
 			</div>
 		</div>
 
+		<!-- Sheet layout -->
 		<div class="sf-library-band">
 			<div class="container">
-				<div class="line-container"><h5><strong>Not Components Yet</strong></h5><div class="line"></div></div>
-				<ul class="copy mb-0">
-					<li>The sample sheet’s Knowledge and Language list.</li>
+				<div class="line-container"><h5><strong>Sheet Layout</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_sheet_layout( array( 'context' =&gt; 'sample', 'level' =&gt; 6, 'who' =&gt; …, 'description' =&gt; …, 'resources' =&gt; sf_sheet_full_resources( array( 'hp' =&gt; 17, … ) ), 'stats' =&gt; …, 'movement' =&gt; '10 m', 'resistances' =&gt; …, 'conditions' =&gt; …, 'items' =&gt; …, 'knowledges' =&gt; …, 'abilities' =&gt; …, 'skills' =&gt; …, 'skills_aside' =&gt; …, 'other' =&gt; … ), array( 'class' =&gt; 'sample-sheet' ) );
+Each slot is HTML (sf_sheet_capture() turns a component that echoes into it). sf_sheet_title( $text, $aside ) draws a box's ruled title.
+context: play | build | sample. Only sample is drawn on the site; the creator draws play and build.</pre>
+				<p class="sf-library-label">Each context’s rules</p>
+				<ul class="copy sf-library-used">
+					<li><strong>play</strong> (Player Tools, at the table): Level up on the blob’s corner; Download, Switch and the rules problems over the sheet; HP and the rest live, with their controls; the stats plain, editable while there are points to place; Conditions and Items changed as play goes; Add traits beside the picks left.</li>
+					<li><strong>build</strong> (the Character Creator’s Sheet step): no Level up or play actions (its Download, Import and Print sit over the sheet); resources at full; each stat’s maximum; the name, portrait, description, starting Conditions and Items editable; picks left shown, spent in the Traits step.</li>
+					<li><strong>sample</strong> (the site’s sample sheet): all of it, as it would look in play, with nothing to change. Resources at full, each stat’s maximum, cards and links that open.</li>
 				</ul>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['sheet'] ); ?>
+				<p class="sf-library-label">The boxes, with what fills each</p>
+				<?php
+				$sf_slot = function ( $text ) {
+					return '<p class="sf-sheet-empty">' . $text . '</p>';
+				};
+				sf_sheet_layout(
+					array(
+						'context'      => 'sample',
+						'level'        => 1,
+						'who'          => $sf_slot( 'who: the portrait, name and character line' ),
+						'description'  => $sf_slot( 'description' ),
+						'resources'    => sf_sheet_full_resources( array( 'hp' => 10, 'vp' => 10, 'sp' => 10 ) ),
+						'stats'        => $sf_slot( 'stats: the stat block' ),
+						'movement'     => '10 m',
+						'resistances'  => sf_sheet_title( 'Resistances' ) . $sf_slot( 'resistances' ),
+						'conditions'   => sf_sheet_title( 'Conditions', '', 'h4', true ) . $sf_slot( 'conditions: Condition cards' ),
+						'items'        => sf_sheet_title( 'Items', '', 'h4', true ) . $sf_slot( 'items: item cards' ),
+						'knowledges'   => $sf_slot( 'knowledges: the list of links' ),
+						'abilities'    => $sf_slot( 'abilities: Trait cards' ),
+						'skills'       => $sf_slot( 'skills: Trait cards' ),
+						'skills_aside' => '<span class="sf-sheet-aside">skills_aside</span>',
+						'other'        => sf_sheet_title( 'Other Traits' ) . $sf_slot( 'other: anything else, when there is any' ),
+					),
+					array( 'class' => 'sf-library-sheet' )
+				);
+				?>
 			</div>
 		</div>
 
