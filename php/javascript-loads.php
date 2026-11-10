@@ -1,3 +1,17 @@
+<!-- The rough edge on Ability cards (css/sf-cards.css): fractal noise
+     displacing a shape's edges (dannydjones' "SVG Filters" CodePen). It's
+     here, at the end of every page, rather than with the cards, since a
+     filter inside a hidden tab wouldn't work. The creator has the same one
+     in its index.html and tools.html. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <filter id="sf-rough-edge">
+            <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="4" />
+            <feDisplacementMap in="SourceGraphic" scale="4" />
+        </filter>
+    </defs>
+</svg>
+
 <!-- js plugins -->
 
 <!-- jquery -->
