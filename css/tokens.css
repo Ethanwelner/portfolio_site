@@ -4,22 +4,22 @@
 
 :root {
     --portfolio-white: #ffffff;
-    --portfolio-near-white: #f6fbfb;
-    --portfolio-black: #1c2223;
+    --portfolio-near-white: #f8fafc;
+    --portfolio-black: #1f2223;
     --portfolio-red: #eb0844;
     --portfolio-yellow: #FCB10F;
     --portfolio-blue: #244479;
     --portfolio-green: #47B767;
-    --portfolio-gray: #4d5454;
-    --portfolio-medium-gray: #909898;
-    --portfolio-light-gray: #e7ebeb;
+    --portfolio-gray: #4f5354;
+    --portfolio-medium-gray: #939799;
+    --portfolio-light-gray: #e8eaec;
 
     --portfolio-radius: 8px;
 
     /* Strange Frontiers (css/rpg.css and the Character Creator) */
     --frontiers-green: #2dfc64;
     --frontiers-lore: #884ddc;
-    /* #884ddc is 3.18:1 on #1c2223; this lighter purple clears 4.5:1. */
+    /* #884ddc is 3.18:1 on #1f2223; this lighter purple clears 4.5:1. */
     --frontiers-lore-on-black: #a67bf0;
     --frontiers-dreft: #1c372b;
     /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,

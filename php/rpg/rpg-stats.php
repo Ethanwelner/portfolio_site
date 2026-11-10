@@ -40,9 +40,9 @@
 			<div class="d-inline-flex flex-6 justify-content-end align-items-center">
 				<svg class="column-image stat-ring" viewBox="26 -10 406 388" role="img" aria-labelledby="stat-ring-title" xmlns="http://www.w3.org/2000/svg">
 					<title id="stat-ring-title">Stat diagram: character Level at the center, branching to the three core Stats, which each branch to their three focus Stats</title>
-					<g fill="#919999" font-size="12" font-weight="700" text-anchor="middle">
+					<g fill="#94989a" font-size="12" font-weight="700" text-anchor="middle">
 						<!-- Branches: Level to each core Stat (thick), each core Stat to its focus Stats (thin) -->
-						<g class="stat-ring-links" stroke="#919999" stroke-linecap="round">
+						<g class="stat-ring-links" stroke="#94989a" stroke-linecap="round">
 							<line class="stat-ring-link" data-from="level" data-to="physical" x1="223.7" y1="203.708" x2="223.7" y2="95.2798" stroke-width="4"/>
 							<line class="stat-ring-link" data-from="level" data-to="social" x1="223.7" y1="203.708" x2="317.979" y2="255.972" stroke-width="4"/>
 							<line class="stat-ring-link" data-from="level" data-to="mental" x1="223.7" y1="203.708" x2="129.421" y2="255.972" stroke-width="4"/>
@@ -61,19 +61,19 @@
 							<g class="stat-ring-core" data-stat="physical">
 								<ellipse cx="223.7" cy="95.2798" rx="27" ry="27"/>
 								<svg class="stat-ring-icon" x="206.700" y="78.280" width="34" height="34" viewBox="0 0 512 512" fill="#ffffff" color="#ffffff" aria-hidden="true"><path d="M165.906 18.688C15.593 59.28-42.187 198.55 92.72 245.375h-1.095c.635.086 1.274.186 1.906.28 8.985 3.077 18.83 5.733 29.532 7.94C173.36 273.35 209.74 321.22 212.69 368c-33.514 23.096-59.47 62.844-59.47 62.844l26.28 38.686L138.28 493h81.97c-40.425-40.435-11.76-85.906 36.125-85.906 48.54 0 73.945 48.112 36.156 85.906h81.126l-40.375-23.47 26.283-38.686s-26.376-40.4-60.282-63.406c3.204-46.602 39.5-94.167 89.595-113.844 10.706-2.207 20.546-4.86 29.53-7.938.633-.095 1.273-.195 1.908-.28h-1.125c134.927-46.82 77.163-186.094-73.157-226.69-40.722 39.37 6.54 101.683 43.626 56.877 36.9 69.08 8.603 127.587-72.28 83.406-11.88 24.492-34.213 41.374-60.688 41.374-26.703 0-49.168-17.167-60.97-42-81.774 45.38-110.512-13.372-73.437-82.78 37.09 44.805 84.35-17.508 43.626-56.876zm90.79 35.92c-27.388 0-51.33 27.556-51.33 63.61 0 36.056 23.942 62.995 51.33 62.995 27.387 0 51.327-26.94 51.327-62.994 0-36.058-23.94-63.61-51.328-63.61z"/></svg>
-								<text fill="#1c2223" class="stat-ring-label" x="258" y="99.28" text-anchor="start">Physical</text>
+								<text fill="#1f2223" class="stat-ring-label" x="258" y="99.28" text-anchor="start">Physical</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="endurance">
 								<ellipse cx="163.572" cy="44.8658" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="163.80" y="21.87">Endurance</text>
+								<text fill="#1f2223" class="stat-ring-label" x="163.80" y="21.87">Endurance</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="power">
 								<ellipse cx="223.7" cy="34" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="224.00" y="11.47">Power</text>
+								<text fill="#1f2223" class="stat-ring-label" x="224.00" y="11.47">Power</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="grace">
 								<ellipse cx="283.828" cy="44" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="283.95" y="21.35">Grace</text>
+								<text fill="#1f2223" class="stat-ring-label" x="283.95" y="21.35">Grace</text>
 							</g>
 						</g>
 						<!-- Social -->
@@ -81,19 +81,19 @@
 							<g class="stat-ring-core" data-stat="social">
 								<ellipse cx="317.979" cy="255.972" rx="27" ry="27"/>
 								<svg class="stat-ring-icon" x="300.979" y="238.972" width="34" height="34" viewBox="230 70 1090 1090" fill="#ffffff" color="#ffffff" aria-hidden="true"><path fill-rule="evenodd" d="M372 1107H750Q778 1107 781 1079L796 967L912 980Q982 986 1001 888Q1003 870 985 864Q935 850 910 808Q906 795 922 796L985 796Q1005 794 1004 774L999 706H1045Q1097 701 1094 650Q1092 638 1086 627L1018 495Q1004 465 999 430Q970 255 860 175Q760 106 620 112Q440 116 330 220Q235 315 238 480Q240 640 340 750Q378 794 372 852L343 1070Q341 1104 372 1107ZM868 431A52 52 0 1 0 868 535A52 52 0 1 0 868 431Z"/><path fill="none" stroke="currentColor" stroke-width="56" stroke-linecap="round" d="M1146 721A110 110 0 0 1 1146 897M1215 655A205 205 0 0 1 1215 966"/></svg>
-								<text fill="#1c2223" class="stat-ring-label" x="317.98" y="220">Social</text>
+								<text fill="#1f2223" class="stat-ring-label" x="317.98" y="220">Social</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="empathy">
 								<ellipse cx="396.833" cy="237.474" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="396.83" y="221.47">Empathy</text>
+								<text fill="#1f2223" class="stat-ring-label" x="396.83" y="221.47">Empathy</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="persuasion">
 								<ellipse cx="376.186" cy="293.902" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="386.19" y="276.90">Persuasion</text>
+								<text fill="#1f2223" class="stat-ring-label" x="386.19" y="276.90">Persuasion</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="demeanor">
 								<ellipse cx="336.704" cy="339.958" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="336.70" y="364.96">Demeanor</text>
+								<text fill="#1f2223" class="stat-ring-label" x="336.70" y="364.96">Demeanor</text>
 							</g>
 						</g>
 						<!-- Mental -->
@@ -101,19 +101,19 @@
 							<g class="stat-ring-core" data-stat="mental">
 								<ellipse cx="129.421" cy="255.972" rx="27" ry="27"/>
 								<svg class="stat-ring-icon" x="112.421" y="238.972" width="34" height="34" viewBox="64 64 512 512" fill="#ffffff" color="#ffffff" aria-hidden="true"><path d="M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z"/></svg>
-								<text fill="#1c2223" class="stat-ring-label" x="129.42" y="220">Mental</text>
+								<text fill="#1f2223" class="stat-ring-label" x="129.42" y="220">Mental</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="logic">
 								<ellipse cx="50.5672" cy="237.474" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="50.57" y="221.47">Logic</text>
+								<text fill="#1f2223" class="stat-ring-label" x="50.57" y="221.47">Logic</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="intuition">
 								<ellipse cx="71.2138" cy="293.902" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="61.21" y="276.90">Intuition</text>
+								<text fill="#1f2223" class="stat-ring-label" x="61.21" y="276.90">Intuition</text>
 							</g>
 							<g class="stat-ring-focus" data-stat="memory">
 								<ellipse cx="110.696" cy="339.958" rx="10.1621" ry="10"/>
-								<text fill="#1c2223" class="stat-ring-label" x="110.70" y="364.96">Memory</text>
+								<text fill="#1f2223" class="stat-ring-label" x="110.70" y="364.96">Memory</text>
 							</g>
 						</g>
 						<!-- Character level at the center -->
