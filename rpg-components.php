@@ -251,7 +251,7 @@ $sf_button_table = function () use ( $sf_button_rows ) {
 $sf_used_in = array(
 	'button'     => array(
 		'Every button in the Character Creator and Player Tools (src/app/components/Button.tsx)',
-		'php/rpg/lore-modal-shell.php: the lore popup’s close',
+		'php/rpg/components/popup.php: the popup’s X',
 		'php/rpg/components/cards.php: a folding card’s chevron (bare)',
 	),
 	'trait'      => array(
@@ -273,6 +273,11 @@ $sf_used_in = array(
 		'php/rpg/rpg-stats.php: Example Stats (plain)',
 		'php/rpg/rpg-character.php: the sample sheet’s stats (max)',
 		'The Character Creator’s Sheet (max) and Stats step (edit), and Player Tools’ sheet (plain) and level up (edit) (src/app/components/stats.tsx)',
+	),
+	'popup'      => array(
+		'php/rpg/lore-modal.php: the lore popup on personal.php and this page (light), opened by every lore link, the search, and the sample sheet’s Knowledges and backgrounds (card)',
+		'creator.php and game-tools.php: the search’s lore popup (dark)',
+		'Every popup in the Character Creator and Player Tools (dark): a Knowledge’s or Kind’s card (card), the portrait, Add a Condition and Switch character (narrow), Add items and Choose Traits (wide), Rules problems (src/app/components/popup.tsx)',
 	),
 	'npc'        => array(
 		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry',
@@ -339,6 +344,7 @@ $sf_list = function ( $items ) {
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
+				<p class="copy">The popup too: <code>php/rpg/components/popup.php</code> draws the creator’s markup (the backdrop, the panel and the X on its corner), and <code>css/sf-popup.css</code> is a copy of the creator’s <code>src/app/popup.css</code>.</p>
 				<p class="copy">So does the character sheet’s layout: <code>php/rpg/components/sheet.php</code> draws the creator’s markup, and <code>css/sf-sheet.css</code> is a copy of the creator’s <code>src/app/sheet.css</code>. Player Tools’ sheet is the reference, and each sheet’s context sets what it draws.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
 			</div>
@@ -349,7 +355,7 @@ $sf_list = function ( $items ) {
 			<div class="container">
 				<div class="line-container"><h5><strong>Button</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_button( 'Build it', array( 'tone' =&gt; 'primary', 'ready' =&gt; true ) );
-sf_button_class( array( 'round' =&gt; 'lg', 'tone' =&gt; 'dark' ), 'lore-modal-close' );
+sf_button_class( array( 'round' =&gt; 'lg', 'tone' =&gt; 'dark' ), 'sf-popup-close' );
 tone: gray | primary | dark | light | ghost | danger | condition | item
 size: default | small | pill    round: xs | sm | md | lg    kind: bare | link
 states: ready, waiting, disabled, aria-busy; also: class, href, attrs</pre>
@@ -514,6 +520,20 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 					array( 'class' => 'sf-library-sheet' )
 				);
 				?>
+			</div>
+		</div>
+
+		<!-- Popup -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Popup</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_popup_shell( array( 'tone' =&gt; 'dark', 'size' =&gt; 'narrow' ) );
+The page's one popup, empty and closed, filled and opened by showLoreModal() (php/javascript-loads.php). The creator's is &lt;Popup label tone size card title onClose&gt;.
+options: tone (light: the white panel, a dark X; dark: the creator's gray, a light X), size (narrow 480px, default 720px, wide 1100px), card (a card on its own is the popup's edge; on the site, set per entry by .lore-card)</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['popup'] ); ?>
+				<p class="sf-library-label">Open it</p>
+				<p class="copy">A lore entry in this page’s light popup: <?php echo sf_lore_link( 'isekai', 'Isekai' ); ?>.</p>
 			</div>
 		</div>
 

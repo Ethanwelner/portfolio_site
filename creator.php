@@ -49,7 +49,7 @@ if (! $creator) {
 
         <?php include 'php/about.php'; ?>
         <?php // Search results open here, on a dark panel like the creator's; the lore itself comes from personal.php. ?>
-        <?php $loreModalDark = true; include 'php/rpg/lore-modal-shell.php'; ?>
+        <?php require_once 'php/rpg/components/popup.php'; sf_popup_shell( array( 'tone' => 'dark' ) ); ?>
         <?php include 'php/javascript-loads.php'; ?>
 
     </body>
