@@ -18,4 +18,4 @@
 		</div>
 	</div>
 </div>
-<?php include __DIR__ . '/lore-modal-shell.php'; ?>
+<?php require_once __DIR__ . '/components/popup.php'; sf_popup_shell(); ?>

@@ -488,11 +488,11 @@
 			}
 		});
 
-		var $loreModal = $( ".lore-modal" );
-		var $loreModalScroll = $loreModal.find( ".lore-modal-scroll" );
-		var $loreModalTitle = $loreModal.find( ".lore-modal-title" );
-		var $loreModalBody = $loreModal.find( ".lore-modal-body" );
-		var $loreModalClose = $loreModal.find( ".lore-modal-close" );
+		var $loreModal = $( ".sf-popup" );
+		var $loreModalScroll = $loreModal.find( ".sf-popup-scroll" );
+		var $loreModalTitle = $loreModal.find( ".sf-popup-title" );
+		var $loreModalBody = $loreModal.find( ".sf-popup-body" );
+		var $loreModalClose = $loreModal.find( ".sf-popup-close" );
 		var loreModalReturnFocus = null;
 
 		// asCard shows a card on its own (a sample Knowledge or background):
@@ -501,12 +501,12 @@
 			if ( ! $loreModal.hasClass( "is-open" ) ) {
 				loreModalReturnFocus = trigger;
 			}
-			$loreModal.toggleClass( "lore-modal-card", !! asCard );
+			$loreModal.toggleClass( "sf-popup--card", !! asCard );
 			$loreModalTitle.html( titleHtml );
 			$loreModalBody.html( bodyHtml );
 			$loreModalScroll.scrollTop( 0 );
 			$loreModal.addClass( "is-open" );
-			$( "html" ).addClass( "lore-modal-open" );
+			$( "html" ).addClass( "sf-popup-open" );
 			$loreModalClose.trigger( "focus" );
 		}
 
@@ -527,7 +527,7 @@
 				return;
 			}
 			$loreModal.removeClass( "is-open" );
-			$( "html" ).removeClass( "lore-modal-open" );
+			$( "html" ).removeClass( "sf-popup-open" );
 			if ( loreModalReturnFocus ) {
 				loreModalReturnFocus.focus();
 			}

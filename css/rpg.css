@@ -633,110 +633,23 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     border-radius: 2px;
 }
 
-/* Lore popup, php/rpg/lore-modal.php (included by personal.php). Opened and
-   filled from the hidden lore store by php/javascript-loads.php. */
-html.lore-modal-open {
-    overflow: hidden;
-}
-
-.lore-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 64px 24px;
-    background: rgba(0, 0, 0, .75);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .2s ease, visibility .2s ease;
-}
-
-.lore-modal.is-open {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .2s ease, visibility 0s;
-}
-
-/* The panel is the popup's frame, holding the close button at its corner;
-   its content scrolls inside it (.lore-modal-scroll), so the button stays
-   put and can hang over the edge */
-.lore-modal-panel {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 720px;
-    max-height: 100%;
-    border-radius: 8px;
-    background: var(--portfolio-white);
-    color: var(--portfolio-black);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .4);
-}
-
-.lore-modal-scroll {
-    flex: 0 1 auto;
-    min-height: 0;
-    overflow-y: auto;
-    padding: 32px;
-    border-radius: inherit;
-}
-
-.lore-modal-title {
-    margin-bottom: 16px;
-    padding-right: 48px;
-}
-
-.lore-modal-body > :last-child {
-    margin-bottom: 0;
-}
-
-.lore-modal-body .d-flex.flex-wrap {
+/* What the lore popup holds (php/rpg/lore-modal.php, opened and filled by
+   php/javascript-loads.php). The popup itself is the popup component
+   (php/rpg/components/popup.php, css/sf-popup.css). */
+.sf-popup-body .d-flex.flex-wrap {
     flex-direction: column;
     gap: 24px;
 }
 
 /* The popup is too narrow for two text columns. */
-.lore-modal-body .text-cols {
+.sf-popup-body .text-cols {
     column-count: 1;
 }
 
-/* The close button, a round button (css/sf-buttons.css: dark, or light in
-   the dark popup), sits on the panel's top right corner, half outside it,
-   and stays there while the content scrolls */
-.lore-modal-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    transform: translate(50%, -50%);
-}
-
-/* The dark popup, on creator.php: light text on the panel (black-bg) */
-.lore-modal-dark {
-    .lore-modal-panel {
-        /* The creator's panel gray (--panel in its styles) */
-        background-color: #292b2c;
-        color: var(--portfolio-near-white);
-    }
-}
-
-@media (max-width: 767px) {
-    .lore-modal {
-        padding: 24px 16px;
-    }
-
-    .lore-modal-scroll {
-        padding: 24px;
-    }
-
-    /* Small enough that its outer half fits the 16px beside the panel */
-    .lore-modal .sf-btn.lore-modal-close {
-        --sf-btn-size: 32px;
-    }
+/* A dark popup's panel on the site also takes black-bg for its light text
+   and links, but keeps the popup's own gray */
+.sf-popup--dark .sf-popup-panel.black-bg {
+    background-color: var(--popup-panel);
 }
 
 /* Strange Frontiers search, personal.php. Indexed and filled by
@@ -2406,50 +2319,3 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     gap: 16px;
 }
 
-/* A card on its own in the lore popup (.lore-modal-card, set by
-   showLoreModal for a .lore-card entry: the sample sheet's Knowledges and
-   backgrounds), as the creator's popups show them: the card is the popup's
-   edge, with no panel around it, and the close button, light as in the
-   creator, sits on its top right corner. The title stays for screen
-   readers. A long card scrolls itself. */
-.lore-modal.lore-modal-card {
-    .lore-modal-panel {
-        max-width: 560px;
-        border-radius: 12px;
-        background: none;
-        box-shadow: none;
-    }
-
-    .lore-modal-scroll {
-        padding: 0;
-        overflow: visible;
-    }
-
-    .lore-modal-title {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip-path: inset(50%);
-        white-space: nowrap;
-    }
-
-    .lore-modal-body > .sf-card {
-        max-height: calc(100dvh - 128px);
-        overflow-y: auto;
-    }
-
-    /* A smaller light round button, as in the creator */
-    .sf-btn.lore-modal-close {
-        --sf-btn-size: 28px;
-        --sf-btn-bg: var(--portfolio-near-white);
-        --sf-btn-fg: var(--portfolio-black);
-        --sf-btn-mix: var(--portfolio-black);
-        --sf-btn-keep: 75%;
-
-        svg {
-            width: 12px;
-            height: 12px;
-        }
-    }
-}
