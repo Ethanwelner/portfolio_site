@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The site, Character Creator and Player Tools: the grays and blacks are now a subtle cool gray with a little blue-green in them.</li>
 						<li>Mechanics, the Character Creator and Player Tools: on character sheets, every list of cards (Knowledges, Abilities, Skills, Conditions and Items) stops at 60% of the screen’s height and scrolls inside its box, so one long column doesn’t leave the one beside it far shorter. A list that scrolls fades out at the bottom instead of cutting off.</li>
 						<li>Character Creator and Player Tools: every button comes from one shared set, the same on the site. A Stat’s − and + is the standard gray while it can’t be used, the Traits and Add items pickers’ steppers are round like the others, and Player Tools’ Send is a little larger.</li>
 						<li>Mechanics: on the Sample Character Sheet, a Knowledge, Language or background opens in the popup as its card, as it does in the Character Creator.</li>
