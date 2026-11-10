@@ -45,7 +45,6 @@
 						<li>Character Creator and Player Tools: spells and flasks that give a ranked Condition say they give one Rank of it, like Fireball’s Burning. Ranked Conditions that wear off now lose a Rank at a time, like Frozen: every hour for Magical Strength, every combat Round or 10 seconds for Slowed, and every three combat Rounds or 30 seconds for Burning and Corroding.</li>
 						<li>Character Creator: 23 new Circumstances. Memberships come in two tiers, a Member and a Senior Member, for the Explorers’ Lodge (Explorers’ Lodge Membership is now Member of the Explorers’ Lodge), the Monster Hunter Guild, the Mages College of Dreft and the thieves’ guilds, plus a Merchant Clan Member and Elder. Others include Tetra Frontiers Co. Employee, Switch Port Transit Pass, Diplomatic Immunity, Bureau Credentials, Knighted in Dreft, Royal Warrant, Caravan Charter, Research Grant, Owed a Favor, Heavy Debts, Wanted in Dreft and Exiled from Dreft.</li>
 						<li>Character Creator: Knowledges reviewed. Geography, History, Legal Systems, Southeast Asia, Dead Languages and Archives and Libraries are gone as too broad or too specific; packages that offered History offer Local History instead. Pedagogy is now Education. Criminal Underworld, Heraldry and Navigation ask where the character knows them. Fourteen Knowledges need less, mostly Memory 3 in place of 4, like Physics, Pharmacology and Contract Law, and Religions of Isekai and of the Settled Systems now need Empathy 2.</li>
-						<li>Character Creator: the Wielder Skills have their own tab when picking Traits. A Wielder Skill on a character’s Background Trait list still takes a Background pick.</li>
 						<li>Mechanics, the Character Creator and Player Tools: the Acidic/Corrosive damage type is now just Corrosive, on the Damage Types tab, item resistances like the Hazmat Suit’s, Acid Spray and the Corroding Condition. Corrosive effects give objects the Corroding Condition.</li>
 						<li>Character Creator and Player Tools: Natural Breath Weapon now grants the Breath Weapon natural weapon (1 Blunt + Physical, 10 m range, 3 m area, once every 3 Rounds), and adds 2 to its damage per Rank. Fire Breath, Frost Breath and Acid Breath turn its damage to Heat, Cold or Corrosive, with a Condition on a Devastating Hit or better. A character takes only one of them.</li>
 						<li>Character Creator and Player Tools: 37 potions. Most are brewed at the Rank of the spell they come from: drink one, like a Strength Potion, Potion of Haste or Healing Potion, for the spell’s effect, or throw a flask, like an Explosive Flask or Acid Flask, and the spell goes off where it breaks. The Mana Potion restores 6 MP and the Greater Mana Potion 12. Spells with a potion are marked Potion.</li>
@@ -57,17 +56,10 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/6/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Mechanics, the Character Creator and Player Tools: a character sheet’s scrolling Knowledges, Abilities and Skills lists have the same slim scrollbar as Player Tools’ chat.</li>
-						<li>Player Tools: in the Choose Traits popup, Submit turns green and glitches like Add items once Traits are picked.</li>
-						<li>Mechanics, the Character Creator and Player Tools: on character sheets, a Knowledges, Abilities or Skills list taller than 75% of the window stops there and scrolls inside its box.</li>
-						<li>Mechanics and the Character Creator: on character sheets the Abilities and Skills always share their row equally.</li>
-						<li>Mechanics: the Sample Character Sheet is pulled out past the column by its padding and border, like the tab boxes, so the boxes inside it line up with the text above. On phones its Level badge comes in to stay on screen.</li>
-						<li>Mechanics and the Character Creator: on character sheets the Knowledges sit across the top, above the Abilities and Skills, with their list in columns so the box stays short.</li>
 						<li>Character Creator and Player Tools: eleven new Traits for smugglers and street folk. Skills: Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence, Dock Rat, Running Dark, Route Memory and Sizing Up. Abilities: Knife Work, Bolt and Sh!t Talk. The Smuggler’s Background list adds Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence and Running Dark. On character sheets, Abilities and Skills share their space equally until the Abilities fit two columns.</li>
 						<li>Mechanics: Edwin spends eleven of his picks on new Traits: Knife Work, Bolt and Sh!t Talk (Abilities), and Dock Rat, Route Memory, Sizing Up, Hidden Holds, Checkpoint Nerve, Greasing Palms, Fence and Running Dark (Skills). The last five are on the Smuggler’s Background list now, and he has one Background pick left.</li>
 						<li>Mechanics: Edwin Humble, the Sample Character Sheet’s character, is Level 6. His new core point went into Social (now 3), with 1 each into Empathy, Persuasion and Demeanor, so his VP is 12 and he has 12 picks available (6 Universal, 6 Background).</li>
 						<li>Mechanics: the Sample Character Sheet’s Traits use the creator’s current wording. Concealment, Sleight of Hand, Haggler, Streetwise, Smooth Talker, Schemer, Pilot: Truck, Appraisal and Cargo Handling have their effects instead of placeholders, and the Wielder skills’ effects are bulleted, as in the creator.</li>
-						<li>Mechanics and the Character Creator: on character sheets, the Abilities and Skills boxes share their space equally until the Abilities have room for two columns of cards, then the Abilities take twice the Skills’ width as before, so the Skills aren’t crushed beside a single column of Abilities.</li>
 						<li>Character Creator: new combat Abilities in the same vein as Boxing and Expert Boxer. Swordsman gives a Riposte Action, an Attack back in the next Priority step after a miss, and its Mastery, Expert Swordsman, a Flurry of two sword Attacks and Advantage with swords. Archer gives an Aimed Shot at +4 that costs 6 Priority for the Round, and Expert Archer a two-arrow Volley and Advantage with bows and crossbows. Knight, built on Rider, gives a mounted Charge. Barbarian spends 1 VP to gain the new Rage Condition, which doubles Attack damage, gives -10 to Social and Mental rolls, and ends after any turn without an Attack. Hunter, built on Tracker, has the player write in what counts as their quarry, and Mark Quarry spends 1 SP and a Knowledge check for +3 to Attack Rolls against it for the Incident. Monster Hunter is now an Ability built on Hunter, adding +3 Defense against a marked quarry; Slayer still sits above it. Counterpuncher’s Attack back also comes in the next Priority step.</li>
 						<li>Character Creator: Traits that give a character something new to do are now Abilities. Boxing (Haymaker and Uppercut), Martial Artist (Roundhouse Kick) and Counterpuncher (an Attack back after a miss) move from Skills.</li>
 						<li>Mechanics: Edwin Humble spends three banked picks on new Skills from his smuggling runs: Cover Identity, Poker Face and Procurement, leaving nine picks available.</li>
@@ -87,92 +79,40 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/5/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Player Tools: the d20 sits 24px down from the top of the chat box, up from 12px.</li>
-						<li>Character Creator and Player Tools: a spell’s Cast Action badges in an ability card, like Cast Lightning’s, use the item badges’ tan colors throughout, not just in the icon’s circle.</li>
-						<li>Character Creator and Player Tools: Trait effects can be bulleted, a line for each part that does something different. Every Wielder skill’s effect is now three bullets, with the basic-tasks sentence last.</li>
 						<li>Character Creator: Magic Access’s effect now just says the character can level up the Magic core stat.</li>
-						<li>Mechanics: the Sample Character Sheet’s item cards keep their badges on the name’s line, as the creator’s do, wrapping them under it one at a time only when they don’t fit, rather than in any card under 480px wide.</li>
-						<li>Character Creator and Player Tools: Condition cards no longer have a note field.</li>
-						<li>Popups across Strange Frontiers, the Character Creator and Player Tools put their close button on the panel’s top right corner, half outside it, and keep it there while a long popup’s content scrolls, rather than letting it scroll away.</li>
-						<li>Character Creator and Player Tools: Add items works like Add traits: a tab per category with a search, and the same item cards as the inventory, each with a large checkbox at its right to pick it and a count, then Add items, which turns green and glitches like Build it once something is picked. A Custom tab holds the form for an item the game doesn’t have. On every item card, the damage, range, area and resistance badges are separate, beside the name at the right, and wrap under it one at a time as the card narrows, rather than all dropping to their own line in any card under 420px wide.</li>
-						<li>Character Creator and Player Tools: Add item opens with a dropdown of the game’s items, grouped by category, a count and Add item; a Custom item form under it takes a name, count and category. Editing an item changes its count and name, not its category.</li>
-						<li>Character sheets: Knowledges, Abilities and Skills sit side by side once the sheet is 900px wide, and stack together below that, rather than the Knowledges taking a full-width line above the other two until 1400px.</li>
-						<li>Item cards on the character sheets: the category badge, like Weapon or Gear, moves off the top line into the open card, first among its badges, leaving the line to the name and the damage, range and resistance badges.</li>
-						<li>Character Creator and Player Tools: an attack spell’s Action, like Cast Fireball, shows its temporary weapon with the item cards’ badges: its damage by type behind the crosshairs, its Max Range behind the arc and its Area of Effect behind a burst, then Ranged Attack and its Attack Stat. Item cards put Area of Effect, behind the same burst, on their top line after Max Range, like a grenade’s 5 m. On the sheet the per-Rank amounts are worked out for the Rank held.</li>
-						<li>Character sheets: age, gender, height and weight sit on one line, and the Kind, Origin, Profession and Past on the next, each wrapping onto more lines when there isn’t room.</li>
-						<li>Character Creator, Player Tools and the Sample Character Sheet: Abilities show their name and effect, and a chevron opens their badge, where they came from and the Action they grant, like Fireball’s Cast Fireball, written out in full. Trait cards on the Traits step and Conditions show their Actions too.</li>
-						<li>Ranged damage badges on Items use a crosshairs icon in place of the bow. In the Character Creator and Player Tools, a weapon card’s Max Range sits on its top line after the damage, led by a dashed arc in a tan circle like the damage badges, and the Attack Stat badge shows just the Stat, like “Grace / Power”.</li>
-						<li>Mechanics, Character Creator and Player Tools: on the character sheet, Abilities take two columns and Skills one, the reverse of before. Each Trait card’s From line sits beside its category badge, and Knowledges are 12px apart.</li>
 						<li>Character Creator: Magical Heritage is a Condition rather than an Ability.</li>
-						<li>Character Creator: a character made with Build it starts without the last character’s portrait.</li>
 						<li>Character Creator and Player Tools: 35 magic Abilities join the Magic list, each giving a Cast Action, among them Fireball, Lightning, Hoarfrost, Heal, Mending, Skin of Stone, Invisibility, Haste, Sleep, Charm, Dispel Magic and Blink, with Magic minimums from 1 to 4. The Conditions they give come too, like Burning, Corroding, Stone Skin, Shielded, Prone, Frightened, Asleep and Charmed. Long Toothed comes from Long in the Tooth, Hard Shell has no Stat minimum, and AI Cores can take Cybernetic Intelligence as a Background Trait.</li>
 						<li>Sorcerous is gone, since Magic Access does its job. Its card is off the Traits page’s Background-Only examples.</li>
 						<li>Mechanics: Conditions no longer carry Stat requirements. In Traits’ Background-Only examples, Long Toothed comes from a new Background Ability, Long in the Tooth, which holds its requirements (Power 10, Endurance 5, Demeanor 5, Middle Aged or Older), and Hard Shell drops its Endurance 5. Character Creator: Cybernetic Intelligence is on every AI Core’s Background Trait list.</li>
 						<li>Mechanics: in Items, each Item Type on the Item Types tab now has an example Item card from the Character Creator under its description: Power Armor (Wearables), a Grappling Hook (Equipment), a Longbow (Weapons), a Tent (Structures), a Rowboat (Vehicles), a Pack Animal (Animals) and Sling Stones (Misc). Item cards can show Radiation resistance.</li>
-						<li>The Setting’s Corporations and The Stars’ Systems: each entry’s facts sit 1rem under its name, down from about 3rem. Corporations list Headquartered, Employees, Market Cap and Industry in two columns.</li>
 						<li>Mechanics: Edwin carries three more items from the Character Creator: an equipped Pistol (7 Piercing), a Disguise Kit and a Comm Unit. He takes Wielder: Pistol with one of his universal picks, and Eagle Eye, a Conveyed Ability, came to him in play with one of his banked picks, leaving 12 picks available. His Cash is off the sheet; his Wealth stays.</li>
 						<li>Mechanics: the Sample Character Sheet opens with Building a Character, from the Mechanics Doc, in place of the Musings tab. It covers the four Backgrounds, starting Stats and Traits, how to read the sheet, and where Edwin’s 25 focus points went. The backgrounds Edwin uses sit beside it as cards, like the Character Creator’s, each with its Bonus, Grants, Choose and Background list as badges, and the section’s tab box is gone.</li>
-						<li>Mechanics: the Sample Character Sheet catches up with the Character Creator’s sheet. Edwin’s Movement is a small Move box (“10m”, with a running figure) to the left of his Resistances. His Knowledges, Abilities and Skills each get a box along one row, with “14 picks available” on the Skills title’s line. Skill cards start closed to their name and open with a chevron, with the category badge in the card’s body. Package badges are gone, since none of his Traits came from a package’s choices. Its titles are 20px, and the gaps between its boxes are 20px.</li>
 						<li>Mechanics: Stats and Example Stats revised from the Mechanics Doc. Magic is now one of the Special Stats, extra core Stats that a Trait opens, with no focus Stats and their own resource. The 20-point cap covers Special Stats, and some Kinds set lower maximums. The Example Stats copy is regrouped around the Human’s Generalist and Unexceptional Traits and what its Physical build can and can’t do.</li>
 						<li>Mechanics: the Explaining Traits intro revised from the Mechanics Doc. It’s regrouped into a Trait’s category and type, how Traits are gained, banking, temporary Traits, and the four kinds of requirements (Stats, Prerequisite Traits, Training and Role-playing), which Background packages skip. The first example Knowledge is Local History, as its text already described, and Capable Student loses its stray parentheses.</li>
 						<li>Mechanics: What Is a Skill Check? and Requesting Competence revised from the Mechanics Doc. Skill Checks now explain the roll first, then core and complex checks, target values, success as a gradient and repeat attempts. Requesting Competence says the GM can allow or deny it and decides its outcome.</li>
-						<li>Setting and Mechanics: the placeholder images beside intro copy are no taller than 3:4, down from 2:3.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: the sheet’s Traits box splits into Abilities and Skills, each in its own box, side by side after Knowledges. The Origin, Profession and Past badges now mark only Traits selected from that background’s choices, not its grants or Traits bought with a pick from its list.</li>
-						<li>Character Creator and Player Tools: Trait cards match the height of the others in their row instead of the tallest card in their section, on the sheet and the Traits step.</li>
-						<li>Character Creator and Player Tools: Skill cards on the sheet start closed to their name and open with a chevron, like item cards. A sheet card’s category badge (Skill, Ability) moves from its header into its body.</li>
-						<li>Character Creator and Player Tools: the picks a character has left show as one total, like “32 picks available”, on the Skills title’s line before Add traits.</li>
-						<li>Character Creator, Player Tools and the sample character sheet: the sheet’s boxes have 1.25rem of padding, down from 1.5rem.</li>
-						<li>Character Creator and Player Tools: Movement moves to a small box of its own to the left of Resistances, titled Move, with a running figure before the number instead of “MOVE”; it reads like “10m”.</li>
-						<li>Character Creator and Player Tools: the sheet’s Resistances, Knowledges and Traits titles are 20px, the same size as the other section titles, and the gaps between the sheet’s boxes are 20px.</li>
-						<li>Character Creator and Player Tools: an open item card shows its cost, how it Attacks and the slot it takes as badges, like “Melee Attack”, “Max Range: 1 m”, “Attack Stat: Grace” and “Slot: Headwear”. Its description sits on its own line, with any other rules, like a shield’s Defense, on the line under it.</li>
 						<li>Wielder Traits give +3 to Attack Rolls made with their weapon, at any Rank. Their Rank × 5 bonus still applies only to Skill Checks. This covers every Wielder Trait in the Character Creator and Player Tools, and the Wielder: Longsword and Wielder: Musket examples in Explaining Traits.</li>
-						<li>Character Creator and Player Tools: an open weapon card shows how it Attacks: Melee or Ranged (and Thrown), its Max Range, the Stat added to its Attack Rolls, its Area of Effect, and whether reloading takes a Partial or Full Action. The Taser and Stun Baton cost the target its next Action on a hit.</li>
 						<li>Character Creator and Player Tools: shields resist damage and add to Defense when Defending: Buckler +2, Wooden Shield +4, Tower Shield +6, Ballistic Shield +5.</li>
 						<li>Character Creator and Player Tools: a new Flat-Footed Condition gives −1 Priority and −1 to Attack Rolls through the following combat Round.</li>
 						<li>Character Creator and Player Tools: the sheet shows the character’s Movement after HP, VP and SP: 10 m for every Kind but the bodiless AI Core.</li>
 						<li>Mechanics: in Incidents, Damage notes that a weapon with a choice of damage types, like the Longsword’s 6 Slashing / 4 Piercing, makes the player choose which type an Attack deals. The damage example now uses a Spear against chainmail.</li>
-						<li>Setting: beside its placeholder image, intro copy takes half the row, up to 768px, so the image gets the other half.</li>
-						<li>Setting: the placeholder images beside intro copy are no taller than 2:3 and sit centered beside the copy.</li>
-						<li>Setting: the intro copy beside the placeholder images (Setting, Rebirth of Science, The Planes, The Stars, Parabiology) is 768px wide, like the rest of the single-column copy, up from 640px. The images show beside it from 1500px wide, so they’re smaller.</li>
-						<li>Mechanics: the Sample Character Sheet’s notes on creating a character and the backgrounds Edwin uses are now Musings and Backgrounds tabs above the sheet.</li>
-						<li>Mechanics: Items, Armor, and Effects opens with What is an Item?, now headed Items, with Item Rules (Exclusivity, Uses, and Damage, Condition, and Destruction), Item Types, Armor and Damage Types, and Example Items moved into tabs below it.</li>
-						<li>Mechanics: Incidents keeps What is an Incident? and Actions at the top, with Priority Order and Movement, Attacking and Damage, Defense and Cover, and Role-Playing Actions moved into tabs below them. The Defenses and Defending link in Attacking opens its tab.</li>
-						<li>Mechanics: Skill Checks keeps What is a Skill Check? at the top, with Difficulty Ranges and Advantage and Competence (Requesting Advantage and Requesting Competence side by side) moved into tabs below it.</li>
-						<li>Mechanics: Explaining Traits keeps its overview at the top, with Trait Rules (Trait Ranks, Universal and Background Traits, Starter-only Traits and Conveyed Traits), Trait Categories and Example Traits moved into tabs below it. Each category in Trait Categories ends with one example Trait card.</li>
-						<li>Mechanics: Explaining Stats keeps its overview and stat diagram at the top, with Example Stats, Stat Types and Stat-Based Resources moved into tabs below them.</li>
 						<li>Mechanics: a new Incidents section, between Skill Checks and Items, sets the rules for combat and other tense scenes: Rounds and Priority Order, the basic Actions, Movement, Attacking with hit and miss Severities, Defenses and Defending, Melee and Ranged Attacks with Line of Sight and Cover, Area of Effect and Thrown weapons, Damage, and Role-Playing Actions.</li>
 						<li>Mechanics: the Sample Character Sheet shows Edwin’s Movement, 10 m, beside his HP, VP and SP.</li>
-						<li>The Setting’s Nations tab lists the nations from largest population to smallest, starting with the Stellar Democratic Union.</li>
 						<li>The Stars: every star system lists an estimated population, from 13 billion in the Sol System and 50 million around Alpha Centauri to 1.1 million at YZ Ceti. The Sol System’s Nationalities is a See Nations link that opens the Setting’s Nations tab.</li>
 						<li>The Stars: Water Gates joins the Technology tab under Fuel Gates, as a placeholder for now.</li>
 						<li>The Stars: most star systems now list the nations present there, and each system’s Confirmed Planets is a plain list of planet names. The Sol System heads the list.</li>
 						<li>The Stars: the Systems tab lists twelve nearby star systems, from Alpha Centauri to YZ Ceti, each with its distance in light-years and its known planets. The rest of each entry is a placeholder for now.</li>
-						<li>Character Creator and Player Tools: an item card’s count stays centered on its top line when the card opens, instead of moving to the middle of the open card.</li>
-						<li>Character Creator and Player Tools: an open item card’s description is in italics. Its uses and slot stay upright. Mechanics: Example Items’ descriptions are in italics too.</li>
-						<li>Character Creator and Player Tools: opening an item card keeps its top line as it is and adds the cost badge, description and Note under it. Edit, the name and age’s pen in a pale olive circle half outside the card’s right edge, level with the badges under the top line so it stays put as the card changes, shows the fields for the count, name and category, with the count first as on the card’s top line, and Remove, a trash can in a circle under Edit’s. The notes field opens to the right of Note instead of under it.</li>
-						<li>Character Creator and Player Tools: an open item card’s Equip checkbox starts its first line, in the same place as when the card is closed.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/3/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator and Player Tools: an open item card’s badges share one row at the top, with damage or resistances at the left and the cost badge next to them. Keywords and other badges will go there too.</li>
-						<li>Character Creator, Player Tools and Mechanics: an item’s damage and resistances badges start with a pale olive circle on their rounded left edge, flush with the badge, instead of the words “Damage” and “Resists”: a shield for resistances, a bow for ranged and thrown weapons’ damage, and a sword for other weapons’ damage. Notes on where a resistance applies, like (head) or (when raised), are left to the item’s description. On Example Items, the plane badge (Any, Isekai, Earth) uses the same olive colors as the other item badges.</li>
-						<li>Mechanics: the Sample Character Sheet’s item card matches the Character Creator and Player Tools: the count in a circle on the card’s left edge, then Equip, the name, its resistances in one badge with their icons, and the category. The Items page’s Example Items do the same: weapons show their damage and armor its resistances in a badge of damage type icons and numbers (with “or” between a weapon’s options), and the value is a badge beside the category and plane, all at the badges’ larger size.</li>
-						<li>Character Creator and Player Tools: Trait cards no longer get a Kind badge for Traits the Kind gives. Background Traits still show which package they were picked from. Instead, the Kind cards on the Character step get a Kind badge, and the Origin, Profession and Past cards on the Background step get theirs, beside the setting.</li>
-						<li>Character Creator and Player Tools: an item card’s count sits in a circle on the card’s left edge, centered top to bottom and half outside the card, with the Equip checkbox starting the card’s line, and a closed card’s damage and resistance badges sit in its line before the category (under it in a narrow card).</li>
-						<li>Character Creator and Player Tools: badges, like a Trait card’s category or an item’s, use slightly larger text.</li>
-						<li>Character Creator and Player Tools: item cards show a stock item’s damage and resistances under the name line, in a badge of damage type icons and numbers, with “or” between the options when the damage is a choice. Open, a card shows the item’s cost as a badge, and Note sits on its own line under the description, with its label beside the pen.</li>
-						<li>Character Creator and Player Tools: when a column gets too narrow, Add Condition, Add item and Add traits shorten to just Add instead of pushing out of their boxes.</li>
-						<li>Player Tools, the Character Creator’s Sheet and the Mechanics tab’s Sample Character Sheet: a Resistances box beside the stats shows the character’s total resistance to each damage type they resist or are weak to, from their equipped Items, Traits and Conditions. Hovering one opens a popover listing where each point comes from, including resistances that cover only part of the body or a moment, like a helmet’s (head), which aren’t in the total. When the sheet is a single column, the box sits under HP, above the stats. The sample sheet’s Resists line moves into this box.</li>
 						<li>Character Creator: AI Cores now hold the Mechanical Condition from their Kind, shown with their Traits, so they’re harmed by EMP damage and usually immune to Death damage.</li>
 						<li>Character Creator: armor and clothing Items show how much they resist, like 3 Blunt, 4 Slashing, 2 Piercing (head) for the Steel Helm, and 14 new armors are in: Leather Jacket, Power Armor, Hide Armor, Brigandine, Padded Coif, Buckler, Tower Shield, Warded Robes, Plate Carrier, Ballistic Shield, Turnout Gear, Rad Suit, Faraday Shroud and Combat Voidsuit.</li>
-						<li>Character Creator and Player Tools: characters have a Height and a Weight beside their Age and Gender, written however you like (6′1″, 185 cm, 85 kg). Like Age and Gender they’re cosmetic: you can set them on the Character step, before an AI build, or with the pens on the sheet, and the AI builder writes with them without building around them.</li>
 						<li>Character Creator and Player Tools: weapons show how much damage they deal, like 7 Slashing for the War Axe. Damage separated by commas is all dealt at once, and a slash between options, like the Longsword’s 6 Slashing / 4 Piercing, means the player picks one. Nine new weapons are in: Rapier, Hand Axe, Flail, Maul, Combat Knife, Revolver, Submachine Gun, Taser and Incendiary Grenade.</li>
 						<li>The Stars: the Stations and Systems tabs now hold their first entries, Antiliuna and Alpha Centauri, as placeholders laid out like the Arks.</li>
 						<li>Added the five biomedical firms from the Biology tab to the Corporations tab: Blue Frontier, Jensen &amp; Kim, Lunar Gentech, Mumbai Ecological Solutions, and Stohnroth.</li>
@@ -183,33 +123,13 @@
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Mechanics: Edwin Humble’s Sample Character Sheet now comes from the Character Creator’s content: The American Empire: Earth, Smuggler and Gutter Trash, with the creator’s Trait cards (effect and source) and a legal set of picks. His Knowledges and his Kind, Origin, Profession and Past open their cards in the lore popup, and Backgrounds Used lists the creator’s grants and Background lists.</li>
-						<li>Character Creator and Player Tools: Items and Conditions have Add item and Add Condition buttons at the right of their titles, opening their add forms in a popup. Player Tools’ Traits available button is now Add traits, since the picks left show under the Traits title. Each Item folds to one line, and its chevron opens it to its fields, description and notes.</li>
 						<li>Mechanics: revised wording across Explaining Traits, Skill Checks, Items, Armor, and Effects, and the Sample Character Sheet, from the Mechanics Doc. Language Traits say a character can speak and understand a language, Expert Pilot needs any Pilot Trait, Wielder Traits cover using a weapon as well as maintaining it, Dead is no longer an (Injury), and Possessed by a Spirit lists Persuasion 9.</li>
 						<li>Game terms are capitalized across Strange Frontiers and the Character Creator: Trait, Stat, Level, Rank, Item, Equipment, Advantage, Competence, Roll Modifier, Universal and Background, the Item categories and damage types, Kind names, and the Settled Systems. Trait types are written in parentheses, like (Injury).</li>
-						<li>Character Creator and Player Tools: the sheet’s Knowledges move to their own box beside the Traits.</li>
-						<li>Character Creator and Player Tools: a pen on each Item shows or hides its notes (Items with notes show them to start), and Remove is a trash can.</li>
 						<li>Explaining Stats: revised wording from the Mechanics Doc. Stats now represent a character’s physical, social and mental limitations, HP is 10 plus one for each Physical focus point, a maxed-out Human is roughly 20x (not 30x) as tough as a starting one, and Logic gains a line on reasoning through problems given time.</li>
 						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
 						<li>Space suits are “voidsuits” throughout, including the Voidsuit in Example Items, and ship classes are lowercase mid-sentence (Arks stay capitalized).</li>
 						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
 						<li>Character Creator: the stock Items are in. Characters the AI builds start with Items that fit their description and work, from their own plane, and the Items column suggests stock Items as you type, each showing its description, damage or resistances, uses, slot and value. Player Tools’ assistant knows them too.</li>
-					</ul>
-				</article>
-				<article class="blog-post">
-					<p class="copy mb-3"><i>11/1/2026</i></p>
-					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: a choice you haven’t made yet just says “Language choice needed.”</li>
-						<li>Player Tools: your messages show the character’s portrait beside them, and the assistant answers simple actions with just the result, like “HP 13 → 9.”</li>
-						<li>Character Creator: the sheet has a Description box beside the portrait and the character’s info. Write in it at any time, and it travels with the character file. A character from the AI builder gets the builder’s description there. Player Tools has the same box beside the portrait. The Kind’s feature list is off the sheet; click the Kind to see it on its card.</li>
-						<li>Character Creator: add a portrait on the Character step. Your browser shrinks the picture to 512px and keeps it inside the character file, so it travels with the JSON into Player Tools without being uploaded anywhere. It shows on the sheet, in the character box and in Player Tools, and stays put if you rebuild the character with the AI builder. Hover a portrait to see the pen, and click it to see it larger, replace it or remove it.</li>
-						<li>Player Tools: banked picks are a line under the Traits title, saying how many Universal and Background picks are left, instead of a section of their own.</li>
-						<li>Character Creator: the sheet uses Player Tools’ line under the name (Kind, Age, Gender, Origin, Profession and Past, with pens to edit age and gender) in place of the stacked list beside it, and gains Player Tools’ Conditions above the Items. Conditions travel with the character file like Items, so they carry between the creator and Player Tools.</li>
-						<li>Player Tools: Restore all is replaced by a round restore button after each resource’s +, which fills that one back to its max.</li>
-						<li>Character Creator and Player Tools: Trait cards show their category as a badge at the right of the name, after a badge for where the Trait came from: Kind, or Origin, Profession or Past for a Background Trait picked from that package. Player Tools’ Conditions get HP and Condition badges the same way, and the Kind and background cards opened from under the name say which they are.</li>
-						<li>Player Tools: the assistant’s conversation scrolls back to its earliest messages, which used to be cut off under the d20.</li>
-						<li>Player Tools: a character’s age and gender show under their name, as on the Character Creator’s sheet, each with a pen to change it there, and the assistant knows them too.</li>
-						<li>Player Tools: a d20 roller beside the assistant. Click the die to roll, and the roll shows up in the assistant’s chat. Ask the assistant to roll a check and it rolls the same die, adding the Stat for you.</li>
-						<li>Character Creator: age and gender, set on the Character step or in Describe your character. Gender is Unlisted by default, or Male, Female, Indeterminate, None, Fluid or Custom, in your own words. They’re cosmetic and kept apart from Traits and Stats: the AI builder names and writes about the character with them but doesn’t build around them, and the sheet shows them under the name.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
@@ -231,9 +151,6 @@
 					<ul class="copy changelog-list mb-0">
 						<li>The lines under the Strange Frontiers title now read “A Custom AI Native” and “PnP Role-Playing Game.”</li>
 						<li>New: Player Tools, linked under the Character Creator. Bring in a character from the Character Creator to track HP, VP, SP and MP, Conditions and Items during play, Level them up, and ask an assistant about the rules or tell it what just happened.</li>
-						<li>Player Tools: Export is now called Download character.</li>
-						<li>Player Tools: picking a Condition from Add a Condition adds it straight away, without an Add button.</li>
-						<li>Player Tools: the Traits available button says how many Traits the character can pick.</li>
 						<li>Character Creator: the Tatot are the “High Orcs,” with a c.</li>
 					</ul>
 				</article>
@@ -243,7 +160,6 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Known Planes: revised Overview, History and Geography text for Paraloka, Gastown, Qliphoth and Leviathan. Saturday’s Furnace’s Compatibility is now Low, Leviathan’s population is now 0, Pairidaeza averages 36°C and Pataliputra 34°C at the gate, and The Lost World lists Timber, Minerals, Exotic Fauna and Low-Grade Exotic Materials.</li>
 						<li>“The Gift” is capitalized everywhere it names the lunar artifact, and the plane codes 65/t/137 and 314/x/50 are lowercase throughout the site.</li>
-						<li>Character Creator: the Origin, Profession and Past lists in the Background step each have a search box and checkbox filters for their settings, and Origins can also be filtered by bonus.</li>
 						<li>Character Creator: new Origins for the Kingdom of India (Earth and Colonies), Centafrica (Earth and Colonies), the Ural Federation and Xanthus, with Knowledges for each nation, its law, Indian Theology, Pataliputra, Amaravati, Aksum, Ecology and Asteroid Mining.</li>
 						<li>Character Creator: a background package’s bonus now reads “+1 Mental focus point” instead of “+1 Mental point.”</li>
 						<li>“The systems” is now “the Settled Systems” throughout the Setting, Sciences, Planes, Stars, Parabiology and lore entries, and the Character Creator’s region heading and card mark read The Settled Systems.</li>
@@ -251,10 +167,8 @@
 						<li>Character Creator: 29 new Professions, from Smuggler, Blacksmith and Knight to Doctor, Fighter Pilot and Officer of the Bureau of Planar Management and Enforcement, and 11 new Pasts, including Military Service, Station Rat and Raised at Court.</li>
 						<li>Character Creator: six new Origins: The Union of Texas, The Free American States, The Lunar Industrial Syndicate, and, on Isekai, Karsef, Sorellion and the Drovus Empire.</li>
 						<li>Character Creator: 23 new skills (among them Medical Aid, Surgery, potion mixing, cooking, crafts, performing and Wielder: Pistol), 14 new Knowledges, and every language spoken in the Nations, each spoken and written.</li>
-						<li>Character Creator: a spare language the builder picks for you now comes from your Origin’s world first.</li>
 						<li>Character Creator: five new medical Knowledges, Pharmacology, Pathology, Toxicology, Psychology and Parasapient Medicine, on the Background Trait lists of the Doctor, Surgeon, Combat Medic, Emergency Medical Technician and Apothecary.</li>
 						<li>Character Creator: 25 broad Knowledges, from Physics, History and Commerce to Wilderness Lore, Weapons and Starships, so every Profession and Past now has relevant Knowledges on its Background Trait list.</li>
-						<li>Character Creator: the Description box shows a different example character each time the page loads, from an orcoid Tatot mercenary of Karsef to an AI Core spy for the Empire of China.</li>
 						<li>Setting: The Players of 2230 now covers all six major powers, adding the Stellar Democratic Union, the Kingdom of India, and Centafrica. The Empire of China’s paragraph names Emperor Zhang, and the Syndicate’s constitution is now at odds with its profit-at-all-costs past.</li>
 						<li>The Chinese Empire is now called the Empire of China everywhere in the Setting and lore (its pop-up title, Zhulong and Flatland’s info boxes, and the 2070 timeline entries).</li>
 						<li>Character Creator: the Empire of China’s Origins, Knowledges and languages use its new name, and the Syndicate’s Origin and Knowledge speak of citizen shareholders and investors.</li>
@@ -286,32 +200,18 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: on the Background step, the Origin, Profession and Past each fold away once picked and can be opened again.</li>
 						<li>Mechanics: Stats no longer start at a Kind’s minimum. Every character’s Stats start at 0, and their Kind adds what used to be its starting Stats as a bonus. The numbers come out the same, and the Dreftian starters now list Stats as bonus / maximum. The AI Core now gets a flat +3 to every Mental Stat instead of 3 points to place itself.</li>
 						<li>Mechanics: added Magic, a fourth core Stat with no focus Stats. Each point of Magic adds 3 Mana Points (MP), a new resource like VP and SP. Every Kind of Dreft but the Orcoid Tatot is born with Magical Heritage, whose Magic Access lets them Level Magic, and the Goblinoid Tatot starts with 6 MP.</li>
 						<li>Mechanics: some Origins now give a bonus point to place in one category’s focus Stats: +1 Physical for the American Empire and Dreft, +1 Social for the Stellar Democratic Union and Tetra, and +1 Mental for the Chinese Empire and Kashgar.</li>
 						<li>Mechanics: the Licensed Mage and Hedge Witch Professions give +1 Magic without a Level, for characters who can Level Magic.</li>
-						<li>Character Creator: characters can now be built up to Level 25.</li>
 						<li>Mechanics: Trait lists. Magic Traits like Incantation and Sorcerous are on the Magic list, which only characters with Magic Access (from Magical Heritage) can take from; in the Character Creator they get their own Magic tab on the Traits step.</li>
 					</ul>
 				</article>
 
-				<article class="blog-post">
-					<p class="copy mb-3"><i>10/24/2026</i></p>
-					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: the Character and Kind steps are now one Character step, with the name and starting Level above the Kind cards.</li>
-						<li>Character Creator: after building a character from a description, the reasons for each choice fold into a Details box under the character’s description.</li>
-						<li>Character Creator: the describe box has a Level stepper beside the description and a Character Name box above it, so a built character comes out at the Level and with the name you choose.</li>
-						<li>Character Creator: the character sheet lists Knowledges and Languages one per line, like the sample character’s sheet. Each opens its Trait card in a popup.</li>
-						<li>Character Creator: the character sheet shows the Kind’s features at the top, under HP, VP, and SP.</li>
-					</ul>
-				</article>
 
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Character Creator: the Strange Frontiers search is now at the top of the page, and opens results right there.</li>
-						<li>Character Creator: characters built from a description spread their Stats a little more as their Level rises, so a high-Level specialist still has some points outside their specialty.</li>
 						<li>Added the Character Creator, a new page beside Strange Frontiers in the nav. Describe a character and the AI builds it from the game’s Kinds, packages, and Traits, or build one step by step; the rules engine checks every choice.</li>
 						<li>Timeline: India’s history now appears on the main timeline, from the 2052 suspension of elections and the 2055–2060 invasion of Pakistan to the 2081 crowning of the first Maharaja, Pataliputra’s discovery in 2141, and the 2170 move of the capital; the 2053 expansion now spans 2053–2064.</li>
 						<li>Background packages (Kind, Origin, Profession, and Past) now always grant their Traits, even when the character doesn’t meet those Traits’ minimum Stats.</li>
@@ -323,8 +223,6 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Edwin Humble’s sheet now lists only the resistances he has.</li>
-						<li>Credited the damage type icons from game-icons.net in the Attributions popup.</li>
 						<li>Planar Properties: every Stability level now has a description (axiomatic instability, attunement energy, and lock decay for the unstable levels), and Unstable now comes before High Unstable.</li>
 						<li>Known Planes: every plane now has a Stability rating (Stable, Hyper-Stable, or Meta-Stable), and Pairidaeza, Pataliputra, and Qliphoth have full fact boxes (Pairidaeza’s gate sits on its Iranian Plateau, with New Persepolis as the capital of New Persia). Gastown’s elevation is now -4, The Lost World’s elevation, divergence, and aperture are 3, 3, and 6, and Isekai’s distance and aperture are grades 8 and 4.</li>
 						<li>Planar Properties now explains Distance, Compatibility (Incompatible to High), and Aperture (with its size scale, 0 to 10), and adds Stability with its scale from Hyper-Stable to Hyper-Unstable. The three scales are tables.</li>
@@ -362,7 +260,6 @@
 						<li>Opening a New Plane now covers automated early planar exploration: turtle boxes, screamers, drone, crawler, and rocket surveys, and the receiver box. Trimmed a redundant line about inspection and certification.</li>
 						<li>Opening a New Plane now continues into manned planar exploration: the expedition team, naming the switch port, the twin gate platforms and black box, and the expedition team’s three-month contract.</li>
 						<li>Edwin Humble’s sample character sheet has a new portrait.</li>
-						<li>Added an Attributions link to the footer, crediting the portrait, map, and planet creators.</li>
 						<li>The Mechanics pages and the Dreftian starter packages now say Traits instead of feats wherever they mean the game’s Traits. Every character has 9 Stat points at Level 0, and characters always start at Level 1 at least.</li>
 					</ul>
 				</article>
@@ -371,7 +268,6 @@
 					<p class="copy mb-3"><i>10/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The sample character sheet’s Inner Ring Stats are now Physical 1, Social 2, and Mental 1, and its Demeanor is 3.</li>
-						<li>The Adventures tab has its own page nav: Another World, Isekai, Traits, and Tetra.</li>
 					</ul>
 				</article>
 
@@ -452,8 +348,6 @@
 						<li>Wrote the Chinese Empire and Eighth Lunar Industrial Syndicate histories and filled in every nation’s capital.</li>
 						<li>Added Stellar Metals and 10/20 Holding Corporation to the Corporations tab.</li>
 						<li>Timeline entries are now bulleted, with new events drawn from the nation histories.</li>
-						<li>Starship classes now sit in Details accordions.</li>
-						<li>The first Setting nav link is now The Setting.</li>
 					</ul>
 				</article>
 
@@ -464,7 +358,6 @@
 						<li>Added Kashgar, Xanthus, and The Eighth Lunar Industrial Syndicate to the Nations tab, and listed each Ark under its nation’s stellar territories.</li>
 						<li>Moved the Gift timeline back a decade and filled in Known Planes information, including discovery dates.</li>
 						<li>Added exotic materials, corporations, and Fuel Gates.</li>
-						<li>Lore entries now tuck extra information into boxed Details accordions.</li>
 					</ul>
 				</article>
 
@@ -505,7 +398,6 @@
 					<p class="copy mb-3"><i>10/4/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Wrote content for every starship class, from Skiffs and Drone Craft up through Dreadnoughts, Stellar Carriers, Colony Ships, and Arks.</li>
-						<li>Starship classes are now lore entries, and references to them across the setting link to pop-up entries.</li>
 						<li>Replaced Battlecruisers with Dreadnoughts; Starcruisers are now described as LFG-equipped cruisers.</li>
 						<li>Added Lifters and Administration Craft as starship classes and standardized the spelling of Arks.</li>
 						<li>Renamed The Planar Hierarchy to The Planes and gave The Stars the subtitle “Life in the Stellar Sea.”</li>
@@ -517,7 +409,6 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Added ship class sections to the Starships tab: Skiff, Shuttle, Cutter, Corvette, Cruiser, Carrier, Capital, and Ark.</li>
 						<li>Wrote The Stars introduction.</li>
-						<li>Lore terms like The Gift, Paraloka, St-245/E6, and Switch Gates now link to pop-up entries across the setting.</li>
 						<li>Combined The Setting and Timeline tabs into a single Setting tab and condensed the timeline.</li>
 					</ul>
 				</article>
@@ -572,7 +463,6 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>9/25/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Moved the timeline into Setting / Timeline tabs and pointed the side nav at Introduction.</li>
 						<li>Retitled the introduction stinger to The Worlds Of Strange Frontiers.</li>
 					</ul>
 				</article>
