@@ -1,31 +1,31 @@
 {
-  "_cards-D7fS7VDu.js": {
-    "file": "assets/cards-D7fS7VDu.js",
+  "_cards-BRxaLa_J.css": {
+    "file": "assets/cards-BRxaLa_J.css",
+    "src": "_cards-BRxaLa_J.css"
+  },
+  "_cards-C32ZyBfu.js": {
+    "file": "assets/cards-C32ZyBfu.js",
     "name": "cards",
     "css": [
-      "assets/cards-Du7g9SgF.css"
+      "assets/cards-BRxaLa_J.css"
     ]
   },
-  "_cards-Du7g9SgF.css": {
-    "file": "assets/cards-Du7g9SgF.css",
-    "src": "_cards-Du7g9SgF.css"
-  },
   "src/app/main.tsx": {
-    "file": "assets/main-CK-M-EMz.js",
+    "file": "assets/main-LZ81pmXc.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_cards-D7fS7VDu.js"
+      "_cards-C32ZyBfu.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-DSf2Jojh.js",
+    "file": "assets/main-CWFz6Kox.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_cards-D7fS7VDu.js"
+      "_cards-C32ZyBfu.js"
     ],
     "css": [
       "assets/main-WzsZQY79.css"
