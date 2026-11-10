@@ -244,7 +244,7 @@
 				    </div>
 				    <div class="d-inline-flex flex-6 justify-content-end align-items-center splash-proto-container">
 				    	<svg xmlns="http://www.w3.org/2000/svg" width="107.718" height="107.726" viewBox="0 0 107.718 107.726" class="forecaster-logo">
-						  <path id="Path_8" data-name="Path 8" d="M209.779,0V107.726H317.5V0ZM244.7,83.984H233.461V40.071H244.7Zm32.664.11H249.9V56.645h11.241V72.854h16.216Zm0-16.462H266.118V51.423H249.9V40.183h27.457Zm16.454,16.462H282.581V40.183h11.232Zm0-49.23H233.461V23.63h60.352Z" transform="translate(-209.779)" fill="#1f2123"/>
+						  <path id="Path_8" data-name="Path 8" d="M209.779,0V107.726H317.5V0ZM244.7,83.984H233.461V40.071H244.7Zm32.664.11H249.9V56.645h11.241V72.854h16.216Zm0-16.462H266.118V51.423H249.9V40.183h27.457Zm16.454,16.462H282.581V40.183h11.232Zm0-49.23H233.461V23.63h60.352Z" transform="translate(-209.779)" fill="#1f2122"/>
 						</svg>
 				    </div>
 				</div>
@@ -551,9 +551,9 @@
 			$(document).ready(function () {
 
 				var hoverColor = 0;
-				$('.highlight-text').css('color', '#1f2123');
-				$('.highlight-bg').css('background', '#1f2123')
-				$('.highlight-stroke').css('stroke', '#1f2123');
+				$('.highlight-text').css('color', '#1f2122');
+				$('.highlight-bg').css('background', '#1f2122')
+				$('.highlight-stroke').css('stroke', '#1f2122');
 
 
 				// element fadein timeouts
@@ -578,7 +578,7 @@
 					$('#nav-des').css('color', '#FCB10F');
 					$('#nav-cod').css('color', '#244479');
 					$('#nav-res').css('color', '#47B767');
-					$('#nav-per').css('color', '#1f2123');
+					$('#nav-per').css('color', '#1f2122');
 
 					if (hoverColor == 1) {
 							// bupkiss
@@ -617,9 +617,9 @@
 				});
 				$('#nav-per').hover(function () {
 					hoverColor = 1;
-					$('.highlight-text').css('color', '#1f2123');
-					$('.highlight-bg').css('background', '#1f2123');
-					$('.highlight-stroke').css('stroke', '#1f2123');
+					$('.highlight-text').css('color', '#1f2122');
+					$('.highlight-bg').css('background', '#1f2122');
+					$('.highlight-stroke').css('stroke', '#1f2122');
 				});
 
 
