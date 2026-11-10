@@ -1990,9 +1990,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     .trait-box {
         color: var(--panel-text);
         background-color: var(--portfolio-black);
-        /* A 2px border the color of the name bar, and a soft shadow, as in
+        /* A 1px border the color of the name bar, and a soft shadow, as in
            the creator and Player Tools */
-        border: 2px solid #161819;
+        border: 1px solid #161819;
         border-radius: 12px;
         box-shadow: 0 4px 10px #00000030;
 
