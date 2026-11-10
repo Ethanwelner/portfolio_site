@@ -1,4 +1,4 @@
-<!-- The hand-drawn edge on Ability cards (css/sf-cards.css), drawn as a
+<!-- The hand-drawn edge on Condition cards (css/sf-cards.css), drawn as a
      vector path. A copy of the creator's src/app/card-edges.js. -->
 <script src="<?php echo asset_url('js/sf-card-edges.js'); ?>"></script>
 
