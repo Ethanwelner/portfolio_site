@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The site, Character Creator and Player Tools: the grays and blacks are now a subtle cool gray with a little blue in them.</li>
 						<li>Mechanics, the Character Creator and Player Tools: Trait, Item and Background cards have a thinner 1px border.</li>
 						<li>Character Creator and Player Tools: on character sheets, the Stats’ badges and points, and HP, VP, SP and MP’s names and meters, glow softly in their colors.</li>
 						<li>Mechanics, the Character Creator and Player Tools: on character sheets, every list of cards (Knowledges, Abilities, Skills, Conditions and Items) stops at 60% of the screen’s height and scrolls inside its box, so one long column doesn’t leave the one beside it far shorter. A list that scrolls fades out at the bottom instead of cutting off.</li>

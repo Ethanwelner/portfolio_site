@@ -5,9 +5,10 @@
 /* One viewport-fixed sky sits behind the whole page. Dark bands are transparent
    windows onto it; white areas paint over it. The base color has to live on
    <html>: a body background (Bootstrap sets white) paints above the negative
-   z-index sky. */
+   z-index sky. The sky stays a true neutral #212121, not the site's cooler
+   --portfolio-black, as do its stars and blend layers below. */
 html:has(> body > .rpg-night) {
-    background-color: var(--portfolio-black);
+    background-color: #212121;
 }
 
 body:has(> .rpg-night) {
