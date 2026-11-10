@@ -1783,9 +1783,9 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
-/* Character sheet, php/rpg/rpg-character.php (through .c-variables below).
-   Its stats are the stat block (php/rpg/components/stats.php, css/sf-stats.css);
-   .stat-badge here is the NPC sheet's (php/rpg/npc-sheet.php). */
+/* The sample sheet's pieces (php/rpg/rpg-character.php). Its layout is the
+   sheet layout (php/rpg/components/sheet.php, css/sf-sheet.css) and its stats
+   the stat block (php/rpg/components/stats.php, css/sf-stats.css). */
 .empty-list {
     list-style-type: none;
     padding-left: 0;
@@ -1801,20 +1801,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         margin-bottom: 0;
         font-weight: 300;
     }
-}
-
-.c-sheet {
-    background-color: var(--portfolio-near-white);
-    border: 1px solid var(--portfolio-light-gray);
-    padding: 1rem;
-    border-radius: 16px;
-}
-
-.c-sheet-box {
-    padding: 1.25rem;
-    background-color: var(--portfolio-white);
-    border: 1px solid var(--portfolio-light-gray);
-    border-radius: 4px;
 }
 
 /* Inline damage type icons beside their labels (rpg-items, rpg-character).
@@ -1870,38 +1856,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     object-fit: contain;
     aspect-ratio: 1/1;
     image-rendering: pixelated;
-}
-
-.stat-badge {
-    font-size: 1.25rem;
-    font-weight: 600;
-    background-color: var(--portfolio-black);
-    color: var(--portfolio-white);
-    padding: .75rem;
-    border-radius: 50%;
-    text-align: center;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: min-content;
-    line-height: 0;
-
-    /* A core Stat's circle holds its icon (php/rpg/core-stat-icons.php), at the
-       sample sheet's 2.75rem; the number is in the title beside it */
-    &:has(.stat-badge-icon) {
-        flex-shrink: 0;
-        width: 2.75rem;
-        height: 2.75rem;
-        padding: 0;
-    }
-}
-
-.stat-badge-icon {
-    flex: none;
-    width: 1.6rem;
-    height: 1.6rem;
-    fill: currentColor;
 }
 
 .c-variables {
@@ -2022,32 +1976,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
-    .stat-panel,
-    .c-sheet {
+    .stat-panel {
         color: var(--panel-text);
 
         .line {
             background-color: var(--panel-rule);
-        }
-
-        /* The core stat's circle in its group's dark shade, with a white number */
-        .stat-badge {
-            background-color: color-mix(in srgb, var(--stat-color, var(--portfolio-black)) 50%, black);
-            color: var(--portfolio-white);
-        }
-
-        /* The focus stats and their bubbles sit 15px in from the core
-           stat and its title line, as in Player Tools */
-        :has(> .stat-badge) ~ * {
-            padding-left: 15px;
-        }
-
-        .stat-badge {
-            flex-shrink: 0;
-            width: 2.75rem;
-            height: 2.75rem;
-            padding: 0;
-            line-height: 1;
         }
     }
 
@@ -2060,29 +1993,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         background-color: var(--panel);
         border: 1px solid rgb(255 255 255 / 12%);
         border-radius: 12px;
-    }
-
-    .c-sheet {
-        background-color: var(--panel-box);
-        border-color: rgb(255 255 255 / 12%);
-
-        .c-sheet-box {
-            background-color: var(--panel);
-            border-color: rgb(255 255 255 / 12%);
-        }
-
-        .line-container :is(h4, h5, h6) {
-            background-color: var(--panel);
-        }
-
-        :is(h2, h4, h5, .copy) {
-            color: var(--panel-text);
-        }
-
-        .lore-link,
-        a {
-            color: var(--frontiers-lore-on-black);
-        }
     }
 
     /* The backgrounds Edwin uses, beside Building a Character, as the
@@ -2256,14 +2166,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         right: calc(5vw - (100vw - 100%));
     }
 
-    .c-sheet {
-        padding: .5rem;
-        border-radius: 4px;
-    }
-
-    .c-sheet-box {
-        padding: 1rem;
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2488,164 +2390,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             animation: none;
         }
     }
-}
-
-/* Compact NPC and monster sheet (php/rpg/npc-sheet.php), in the dark of the
-   sample sheet, the creator and Player Tools wherever it sits: the name and
-   HP, VP, SP and Movement on one line, the three core Stats with their focus
-   Stats as plain numbers, then Attacks and Traits as cards with a dark name
-   bar. It carries its own copy of the Mechanics section's panel colors. */
-.c-sheet.npc-sheet {
-    --panel: #292b2c;
-    --panel-box: #343638;
-    --panel-text: #e7e8e9;
-    --panel-soft: #b2b3b4;
-    --panel-rule: rgb(255 255 255 / 18%);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 12px;
-    background-color: var(--panel-box);
-    border-color: rgb(255 255 255 / 12%);
-    color: var(--panel-text);
-
-    .c-sheet-box {
-        padding: 14px 16px;
-        background-color: var(--panel);
-        border-color: rgb(255 255 255 / 12%);
-    }
-}
-
-.npc-sheet-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px 16px;
-}
-
-.npc-sheet-name {
-    margin: 0;
-    color: var(--panel-text);
-    font-weight: 700;
-}
-
-.npc-sheet-kind {
-    margin: 0;
-    color: var(--panel-soft);
-    font-size: .875rem;
-}
-
-.npc-sheet-resources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-
-    .npc-sheet-resource {
-        display: inline-flex;
-        align-items: baseline;
-        gap: 6px;
-        font-size: 1.125rem;
-    }
-}
-
-.npc-sheet-stats {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-
-    @media (max-width: 575.98px) {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Each group in its resource's color, as on the sample sheet: Physical red,
-   Social purple, Mental yellow, with the core stat's circle a darker shade */
-.npc-sheet-group {
-    &.stat-group-physical { --stat-color: var(--frontiers-hp); }
-    &.stat-group-social { --stat-color: var(--frontiers-vp); }
-    &.stat-group-mental { --stat-color: var(--frontiers-sp); }
-}
-
-.npc-sheet-core {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    font-size: 1.125rem;
-
-    .stat-badge:has(.stat-badge-icon) {
-        width: 2.25rem;
-        height: 2.25rem;
-        background-color: color-mix(in srgb, var(--stat-color) 50%, black);
-        color: var(--portfolio-white);
-    }
-
-    .stat-badge-icon {
-        width: 1.3rem;
-        height: 1.3rem;
-    }
-
-    .num {
-        margin-left: auto;
-        color: var(--stat-color);
-        font-weight: 700;
-    }
-}
-
-.npc-sheet-focus {
-    margin: 0;
-    padding-left: 15px;
-    font-size: .9375rem;
-
-    > div {
-        display: flex;
-        justify-content: space-between;
-        padding: 3px 0;
-        border-top: 1px solid var(--panel-rule);
-    }
-
-    dt {
-        color: var(--panel-soft);
-        font-weight: 400;
-    }
-
-    dd {
-        margin: 0;
-        font-weight: 600;
-    }
-}
-
-/* Section titles with a rule running out to the right, like .sheet-rule */
-.npc-sheet-rule {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 0 0 12px;
-    color: var(--panel-text);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 300;
-
-    &::after {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background-color: var(--panel-rule);
-    }
-}
-
-/* Attacks and Traits share one grid of columns at least 360px wide: two
-   across on a wide sheet, one on a narrow one, so a lone Trait card is as
-   wide as an Attack card beside it */
-.npc-sheet-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
-    align-items: start;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 /* ========================================
