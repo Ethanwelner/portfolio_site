@@ -122,14 +122,14 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/2/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Mechanics: Edwin Humble’s Sample Character Sheet now comes from the Character Creator’s content: The American Empire: Earth, Smuggler and Gutter Trash, with the creator’s Trait cards (effect and source) and a legal set of picks. His Knowledges and his Kind, Origin, Profession and Past open their cards in the lore popup, and Backgrounds Used lists the creator’s grants and Background lists.</li>
+						<li>Mechanics: Edwin Humble’s Sample Character Sheet now comes from the Character Creator’s content: The American Empire: Earth, Smuggler and Gutter Trash, with the creator’s Trait cards (effect and source) and a legal set of picks.</li>
 						<li>Mechanics: revised wording across Explaining Traits, Skill Checks, Items, Armor, and Effects, and the Sample Character Sheet, from the Mechanics Doc. Language Traits say a character can speak and understand a language, Expert Pilot needs any Pilot Trait, Wielder Traits cover using a weapon as well as maintaining it, Dead is no longer an (Injury), and Possessed by a Spirit lists Persuasion 9.</li>
 						<li>Game terms are capitalized across Strange Frontiers and the Character Creator: Trait, Stat, Level, Rank, Item, Equipment, Advantage, Competence, Roll Modifier, Universal and Background, the Item categories and damage types, Kind names, and the Settled Systems. Trait types are written in parentheses, like (Injury).</li>
 						<li>Explaining Stats: revised wording from the Mechanics Doc. Stats now represent a character’s physical, social and mental limitations, HP is 10 plus one for each Physical focus point, a maxed-out Human is roughly 20x (not 30x) as tough as a starting one, and Logic gains a line on reasoning through problems given time.</li>
 						<li>The Stars: revised wording for the Starships overview, most ship classes (cutters, dreadnoughts, miners, stellar carriers and more), Arks and Tetra, from the Doc. Tetra was first laid down in 2163, not 2165.</li>
 						<li>Space suits are “voidsuits” throughout, including the Voidsuit in Example Items, and ship classes are lowercase mid-sentence (Arks stay capitalized).</li>
 						<li>Rebirth of Science: revised wording across Paraphysics, Artificial Intelligence, Biology, Cybernetics and Robotics, from the Doc. A typical AI Core is now a 15 cm (6-inch) ball.</li>
-						<li>Character Creator: the stock Items are in. Characters the AI builds start with Items that fit their description and work, from their own plane, and the Items column suggests stock Items as you type, each showing its description, damage or resistances, uses, slot and value. Player Tools’ assistant knows them too.</li>
+						<li>Character Creator: the stock Items are in. Characters the AI builds start with Items that fit their description and work, from their own plane. Player Tools’ assistant knows them too.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
@@ -180,7 +180,6 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>10/27/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>The Setting section’s title now says Setting, and the first tab in its tab box (Setting, Timeline, Nations, Corporations) is now called Introduction.</li>
 						<li>Setting: the placeholder “2230, The Systems, and Beyond” is replaced by two new sections from the Doc, The Settled Systems (Earth, the Exodus, the star systems, warships, and commerce) and The Players of 2230 (the American Empire, the Eighth Lunar Industrial Syndicate, and the Empire of China).</li>
 						<li>Exotic Materials: St-1/E1 - “Fast Hydrogen” and Co-H2O/E2 - “Slim Water” now have full writeups, covering what each does, how dangerous Fast Hydrogen is to handle, and why ships “water cycle” their Slim Water.</li>
 						<li>Exotic Materials: the tab now opens with Decoding Exotic Materials, the Bureau’s naming guidelines for exotic material codes, and has a placeholder for Ob-Med/E2 - “Sanguis Cruor.”</li>
