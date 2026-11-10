@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Add a Condition is now a search. Type to narrow the list by name, summary or tag, and use the checkboxes to show Injury, Hazard, Magic, Combat or Misc Conditions. Click one, or press Enter for the first match, to add it.</li>
 						<li>The site, Character Creator and Player Tools: the grays and blacks are now a subtle cool gray with a little blue in them.</li>
 						<li>Mechanics, the Character Creator and Player Tools: Trait, Item and Background cards have a thinner 1px border.</li>
 						<li>Character Creator and Player Tools: on character sheets, the Stats’ badges and points, and HP, VP, SP and MP’s names and meters, glow softly in their colors.</li>
