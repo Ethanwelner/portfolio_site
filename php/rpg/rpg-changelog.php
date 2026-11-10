@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/10/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: the Weapons Knowledge is gone, since it was far too broad. It’s off the Background Trait lists of the 12 Professions and 3 Pasts that had it.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/9/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Setting: Murk Legs in Parazoology has a compact monster sheet with its Stats, HP, VP and SP, Massive Claws and Horrid Bite, and a permanent Rank 2 Dark Haze.</li>

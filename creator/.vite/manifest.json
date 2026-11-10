@@ -3,29 +3,29 @@
     "file": "assets/stats-BarKI2N0.css",
     "src": "_stats-BarKI2N0.css"
   },
-  "_stats-CX9YLfzV.js": {
-    "file": "assets/stats-CX9YLfzV.js",
+  "_stats-BbKUu5QZ.js": {
+    "file": "assets/stats-BbKUu5QZ.js",
     "name": "stats",
     "css": [
       "assets/stats-BarKI2N0.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-BvMAjGtn.js",
+    "file": "assets/main-CeDAwtml.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_stats-CX9YLfzV.js"
+      "_stats-BbKUu5QZ.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-DAPD5p5o.js",
+    "file": "assets/main-C4IC_4Vr.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_stats-CX9YLfzV.js"
+      "_stats-BbKUu5QZ.js"
     ],
     "css": [
       "assets/main-tqLTvYce.css"
