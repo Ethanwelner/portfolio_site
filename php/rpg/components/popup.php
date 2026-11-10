@@ -21,6 +21,8 @@
 //   card   true: a card on its own, the card the popup's edge. The site's
 //          script sets it per entry instead (an entry with .lore-card), so
 //          one popup shows both.
+//   scroll 'panel' (the content scrolls as one) or 'inner' (the panel holds
+//          still and the part marked .sf-popup-grow scrolls inside)
 require_once __DIR__ . '/buttons.php';
 
 if ( ! function_exists( 'sf_popup_shell' ) ) {
@@ -29,7 +31,8 @@ if ( ! function_exists( 'sf_popup_shell' ) ) {
 		$size = $options['size'] ?? 'default';
 		return 'sf-popup sf-popup--' . ( 'dark' === $tone ? 'dark' : 'light' )
 			. ( in_array( $size, array( 'narrow', 'wide' ), true ) ? ' sf-popup--' . $size : '' )
-			. ( empty( $options['card'] ) ? '' : ' sf-popup--card' );
+			. ( empty( $options['card'] ) ? '' : ' sf-popup--card' )
+			. ( 'inner' === ( $options['scroll'] ?? 'panel' ) ? ' sf-popup--inner' : '' );
 	}
 
 	// The X on the panel's corner: the round button, light on a dark panel
