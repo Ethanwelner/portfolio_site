@@ -554,7 +554,7 @@ body:has(.personal-shell.is-sliding) > .section-about-social-container {
     margin-left: calc(-1 * var(--tech-fields-inset) - 1px);
     margin-right: calc(-1 * var(--tech-fields-inset) - 1px);
     padding: 0 var(--tech-fields-inset) 36px;
-    border: 1px solid #939799;
+    border: 1px solid #949698;
     border-radius: 10px;
     overflow: hidden;
 
@@ -739,7 +739,7 @@ html.lore-modal-open {
 .lore-modal-dark {
     .lore-modal-panel {
         /* The creator's panel gray (--panel in its styles) */
-        background-color: #292c2d;
+        background-color: #2a2b2c;
         color: var(--portfolio-near-white);
     }
 }
@@ -781,7 +781,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     left: 14px;
     width: 15px;
     height: 15px;
-    color: #979b9d;
+    color: #989a9c;
     transform: translateY(-50%);
     pointer-events: none;
 }
@@ -801,7 +801,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 }
 
 .rpg-search-input::placeholder {
-    color: #979b9d;
+    color: #989a9c;
     opacity: 1;
 }
 
@@ -836,7 +836,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 .rpg-search-result:hover,
 .rpg-search-result.is-active {
-    background: #eaecee;
+    background: #ebeced;
 }
 
 .rpg-search-result-title {
@@ -849,7 +849,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 .rpg-search-result-context {
     display: block;
     margin-top: 2px;
-    color: #686c6d;
+    color: #696b6c;
     font-size: 11px;
     letter-spacing: .02em;
     text-transform: uppercase;
@@ -858,7 +858,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 .rpg-search-result-snippet {
     display: block;
     margin-top: 4px;
-    color: #424546;
+    color: #434445;
     font-size: 12px;
     line-height: 1.45;
 }
@@ -871,7 +871,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 .rpg-search-empty {
     padding: 8px 12px;
-    color: #686c6d;
+    color: #696b6c;
     font-size: 13px;
 }
 
@@ -1981,10 +1981,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    Kind's starting point in purple and open slots a lighter outline. */
 /* Also covers Adventures, whose Building a Dreftian uses the background cards */
 :is(#rpg-mechanics, #rpg-adventure) {
-    --panel: #292c2d;
-    --panel-box: #343738;
-    --panel-text: #e6e8ea;
-    --panel-soft: #b1b3b5;
+    --panel: #2a2b2c;
+    --panel-box: #353637;
+    --panel-text: #e7e8e9;
+    --panel-soft: #b2b3b4;
     --panel-rule: rgb(255 255 255 / 18%);
 
     .trait-box {
@@ -1992,7 +1992,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         background-color: var(--portfolio-black);
         /* A 2px border the color of the name bar, and a soft shadow, as in
            the creator and Player Tools */
-        border: 2px solid #16191a;
+        border: 2px solid #171819;
         border-radius: 12px;
         box-shadow: 0 4px 10px #00000030;
 
@@ -2000,7 +2000,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             /* The bar rounds its own top corners */
             border-radius: 10px 10px 0 0;
             padding: 10px 16px;
-            background-color: #16191a;
+            background-color: #171819;
             color: var(--panel-text);
         }
 
@@ -2080,7 +2080,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     /* Condition cards in grays, as on the creator's sheet and in Player
        Tools: a mid gray border and a light gray name bar with dark text */
     .trait-box.condition-box {
-        border-color: #616566;
+        border-color: #626465;
 
         .trait-name {
             background-color: #b7b4b4;
@@ -2151,12 +2151,12 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
 
         .stat.empty {
-            border-color: #878b8d;
+            border-color: #888a8c;
         }
 
         .stat.unavailable {
-            border-color: #878b8d;
-            background-color: #878b8d;
+            border-color: #888a8c;
+            background-color: #888a8c;
             opacity: .25;
         }
     }
@@ -2285,7 +2285,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
        its badges, the Bonus and Grants in the lighter gray */
     .sample-bg-card {
         .chip-accent {
-            background-color: #686c6d;
+            background-color: #696b6c;
             color: var(--portfolio-white);
         }
 
@@ -2560,7 +2560,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
         /* The Condition in grays: a mid gray edge, a light gray bar */
         .sheet-condition {
-            border-color: #616566;
+            border-color: #626465;
 
             .trait-name {
                 background-color: #b7b4b4;
@@ -3277,7 +3277,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     .stat-ring-link {
-        stroke: var(--stat-color, #94989a);
+        stroke: var(--stat-color, #959799);
     }
 
     .stat-ring-core ellipse {
@@ -3289,7 +3289,7 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 
     .stat-ring-level ellipse {
-        fill: #1f2223;
+        fill: #202122;
     }
 
     /* Character Level glitches like the creator's glitching buttons, the
@@ -3313,10 +3313,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
    Stats as plain numbers, then Attacks and Traits as cards with a dark name
    bar. It carries its own copy of the Mechanics section's panel colors. */
 .c-sheet.npc-sheet {
-    --panel: #292c2d;
-    --panel-box: #343738;
-    --panel-text: #e6e8ea;
-    --panel-soft: #b1b3b5;
+    --panel: #2a2b2c;
+    --panel-box: #353637;
+    --panel-text: #e7e8e9;
+    --panel-soft: #b2b3b4;
     --panel-rule: rgb(255 255 255 / 18%);
     display: flex;
     flex-direction: column;

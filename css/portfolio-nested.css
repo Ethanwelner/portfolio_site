@@ -1162,7 +1162,7 @@ img.warning-gif {
 
         &.cursor-logo,
         &.openai-logo {
-            fill: #1f2223;
+            fill: #202122;
         }
     }
 }
@@ -2333,7 +2333,7 @@ img.warning-gif {
     height: calc(100% * 868 / 1185);
     overflow: hidden;
     z-index: 2;
-    background: #f3f5f7;
+    background: #f4f5f6;
 }
 
 .lti-demo-activities-content {
