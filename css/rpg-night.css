@@ -42,9 +42,9 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
    content is untouched.
 
    The first, white with difference at 84% opacity, inverts the sky
-   partway: it lands on 0.16 * sky + 0.84 * (255 - sky), so the #212121 (33)
+   partway: it lands on 0.16 * sky + 0.84 * (255 - sky), so the #1c2223 (33)
    sky turns 192, a typical dim star (about 110) 139 and a white star 41. The
-   second, #404040 (64) with color-dodge, divides by 1 - 64/255, which lifts
+   second, #3b4242 (64) with color-dodge, divides by 1 - 64/255, which lifts
    the 192 background to white, a typical star to about 186 and a white star
    to about 55. Lower the first layer's opacity for fainter stars (the second
    color is then 255 minus the sky's new value).
@@ -72,11 +72,11 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
 }
 
 .pane-frontiers .rpg-panel::after {
-    background-color: #404040;
+    background-color: #3b4242;
     mix-blend-mode: color-dodge;
 }
 
-/* A white tint over the #212121 sky lands on --portfolio-gray (#525252). */
+/* A white tint over the #1c2223 sky lands on --portfolio-gray (#4d5454). */
 .rpg-night-footer {
     background-color: rgb(255 255 255 / 22%);
 }
