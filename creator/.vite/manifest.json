@@ -1,31 +1,31 @@
 {
-  "_popup-C6jOoISm.js": {
-    "file": "assets/popup-C6jOoISm.js",
+  "_popup-CsTid3xW.css": {
+    "file": "assets/popup-CsTid3xW.css",
+    "src": "_popup-CsTid3xW.css"
+  },
+  "_popup-Da4_PV6X.js": {
+    "file": "assets/popup-Da4_PV6X.js",
     "name": "popup",
     "css": [
       "assets/popup-CsTid3xW.css"
     ]
   },
-  "_popup-CsTid3xW.css": {
-    "file": "assets/popup-CsTid3xW.css",
-    "src": "_popup-CsTid3xW.css"
-  },
   "src/app/main.tsx": {
-    "file": "assets/main-BrFCOrqL.js",
+    "file": "assets/main-DVGZiSve.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-C6jOoISm.js"
+      "_popup-Da4_PV6X.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-D-arGsOS.js",
+    "file": "assets/main-IVqa18No.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-C6jOoISm.js"
+      "_popup-Da4_PV6X.js"
     ],
     "css": [
       "assets/main-eipnF_ix.css"
