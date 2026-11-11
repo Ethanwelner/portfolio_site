@@ -45,7 +45,7 @@
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-history" aria-controls="timeline-history" aria-selected="false">Timeline</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
-				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-beliefs" aria-controls="timeline-beliefs" aria-selected="false">Beliefs</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-beliefs" aria-controls="timeline-beliefs" aria-selected="false">Religions &amp; Philosophies</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="timeline-events" role="tabpanel" aria-labelledby="tab-timeline-events">
