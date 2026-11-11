@@ -318,7 +318,7 @@ $sf_laborer    = array(
 	'value'       => 85000,
 	'currency'    => 'ERC',
 	'resistances' => '2 Blunt, 2 Slashing, 1 Piercing',
-	'description' => 'A heavy, humanoid work frame built for cargo bays and shipyards.',
+	'description' => 'A heavy work frame on treads and hydraulic arms, built for cargo bays and shipyards.',
 	'physical'    => array( 'core' => 4, 'stats' => array( $sf_stat( 'Endurance', 0, 5, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
 	'attacks'     => array(
 		array(
@@ -331,6 +331,11 @@ $sf_laborer    = array(
 	),
 	'traits'      => array(
 		$sf_mechanical,
+		array(
+			'kind'   => 'condition',
+			'name'   => 'Non-humanoid',
+			'effect' => 'This character is incapable of wielding weapons designed for human hands or wearing equipment designed for use on humanoid bodies.',
+		),
 		array(
 			'kind'   => 'skill',
 			'name'   => 'Cargo Handling',
