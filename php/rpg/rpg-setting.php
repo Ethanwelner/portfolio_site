@@ -45,6 +45,7 @@
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-history" aria-controls="timeline-history" aria-selected="false">Timeline</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-nations" aria-controls="timeline-nations" aria-selected="false">Nations</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-corporations" aria-controls="timeline-corporations" aria-selected="false">Corporations</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-timeline-beliefs" aria-controls="timeline-beliefs" aria-selected="false">Beliefs</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="timeline-events" role="tabpanel" aria-labelledby="tab-timeline-events">
@@ -731,6 +732,10 @@
 				<div class="content-stack lore-grid">
 					<?php foreach (['ten-twenty-holding-corporation', 'blue-frontier', 'general-robotics', 'holy-oak-discovery-services', 'huanghe-yanjiuyuan', 'jensen-and-kim', 'kashgar-mindworks', 'lagos-core-defense', 'luna-hi', 'lunar-gentech', 'luxoptica', 'mars-creative-autonomy', 'meishou-jituan', 'mumbai-ecological-solutions', 'plum-technologies', 'saltwater-energetics', 'shine', 'sistemas-de-controle-amazonia', 'stellar-metals', 'stellar-omnium', 'stohnroth', 'tetra-frontiers-co'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 				</div>
+			</div>
+
+			<div class="tech-field-panel" id="timeline-beliefs" role="tabpanel" aria-labelledby="tab-timeline-beliefs">
+				<p class="copy mb-0">Content coming soon</p>
 			</div>
 		</div>
 	</div>
