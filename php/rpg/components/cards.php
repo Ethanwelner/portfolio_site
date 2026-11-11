@@ -389,7 +389,8 @@ document.addEventListener('click', function (e) {
 	 * Physical stats of its own: its chassis's are its, and so are its HP.
 	 *
 	 * physical  array( 'core' => 4, 'stats' => array( array( 'name' =>
-	 *           'Endurance', 'value' => 5, 'bonus' => 0, 'max' => 20 ), ... ) )
+	 *           'Endurance', 'value' => 5, 'bonus' => 0, 'max' => 5 ), ... ) ):
+	 *           max is the value, since no Level raises a chassis's stats
 	 * hp        Optional. Its HP now, when it's taken damage; full without it.
 	 * hp_bonus  Optional. More max HP from its Traits, like Reinforced's +10.
 	 * attacks   Optional. Item cards' arrays, as sf_card_item() takes them.
