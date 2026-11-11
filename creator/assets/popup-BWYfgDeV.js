@@ -11987,7 +11987,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, power: 3, intuition: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Bow.\\n- +3 to Attack Rolls made with a Bow, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Bow without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Bow.\\n- +3 to Attack Rolls made with a Bow.\\n- This character is capable of performing the basic tasks of maintaining a Bow without a skill check."
 modifiers: "Attack Rolls +3 (Bow)"
 `,rO=`id: wielder-crossbow
 name: "Wielder: Crossbow"
@@ -11999,7 +11999,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 2, power: 2, intuition: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Crossbow.\\n- +3 to Attack Rolls made with a Crossbow, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Crossbow.\\n- +3 to Attack Rolls made with a Crossbow.\\n- This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check."
 modifiers: "Attack Rolls +3 (Crossbow)"
 `,iO=`id: wielder-dagger
 name: "Wielder: Dagger"
@@ -12011,7 +12011,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, intuition: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Dagger.\\n- +3 to Attack Rolls made with a Dagger, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Dagger.\\n- +3 to Attack Rolls made with a Dagger.\\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check."
 modifiers: "Attack Rolls +3 (Dagger)"
 `,aO=`id: wielder-flamethrower
 name: "Wielder: Flamethrower"
@@ -12023,7 +12023,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { endurance: 3, power: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Flamethrower.\\n- +3 to Attack Rolls made with a Flamethrower, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Flamethrower.\\n- +3 to Attack Rolls made with a Flamethrower.\\n- This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check."
 modifiers: "Attack Rolls +3 (Flamethrower)"
 `,oO=`id: wielder-greatsword
 name: "Wielder: Greatsword"
@@ -12035,7 +12035,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { power: 5, endurance: 4, grace: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Greatsword.\\n- +3 to Attack Rolls made with a Greatsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Greatsword.\\n- +3 to Attack Rolls made with a Greatsword.\\n- This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check."
 modifiers: "Attack Rolls +3 (Greatsword)"
 `,sO=`id: wielder-grenade
 name: "Wielder: Grenade"
@@ -12047,7 +12047,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 2, intuition: 3, power: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Grenade.\\n- +3 to Attack Rolls made with a Grenade, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Grenade without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Grenade.\\n- +3 to Attack Rolls made with a Grenade.\\n- This character is capable of performing the basic tasks of maintaining a Grenade without a skill check."
 modifiers: "Attack Rolls +3 (Grenade)"
 `,cO=`id: wielder-longsword
 name: "Wielder: Longsword"
@@ -12059,7 +12059,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 4, power: 4, endurance: 4 }
-effect: "- Rank *5 added to skill check rolls involving a Longsword.\\n- +3 to Attack Rolls made with a Longsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Longsword.\\n- +3 to Attack Rolls made with a Longsword.\\n- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check."
 modifiers: "Attack Rolls +3 (Longsword)"
 `,lO=`id: wielder-mace
 name: "Wielder: Mace"
@@ -12071,7 +12071,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { power: 4, endurance: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Mace.\\n- +3 to Attack Rolls made with a Mace, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Mace without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Mace.\\n- +3 to Attack Rolls made with a Mace.\\n- This character is capable of performing the basic tasks of maintaining a Mace without a skill check."
 modifiers: "Attack Rolls +3 (Mace)"
 `,uO=`id: wielder-machine-gun
 name: "Wielder: Machine Gun"
@@ -12083,7 +12083,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { power: 3, endurance: 3, grace: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Machine Gun.\\n- +3 to Attack Rolls made with a Machine Gun, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Machine Gun.\\n- +3 to Attack Rolls made with a Machine Gun.\\n- This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check."
 modifiers: "Attack Rolls +3 (Machine Gun)"
 `,dO=`id: wielder-missile-launcher
 name: "Wielder: Missile Launcher"
@@ -12095,7 +12095,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { intuition: 3, logic: 2, endurance: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Missile Launcher.\\n- +3 to Attack Rolls made with a Missile Launcher, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Missile Launcher.\\n- +3 to Attack Rolls made with a Missile Launcher.\\n- This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check."
 modifiers: "Attack Rolls +3 (Missile Launcher)"
 `,fO=`id: wielder-mortar
 name: "Wielder: Mortar"
@@ -12107,7 +12107,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { logic: 3, intuition: 3, endurance: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Mortar.\\n- +3 to Attack Rolls made with a Mortar, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Mortar without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Mortar.\\n- +3 to Attack Rolls made with a Mortar.\\n- This character is capable of performing the basic tasks of maintaining a Mortar without a skill check."
 modifiers: "Attack Rolls +3 (Mortar)"
 `,pO=`id: wielder-musket
 name: "Wielder: Musket"
@@ -12119,7 +12119,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, power: 2, intuition: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Musket.\\n- +3 to Attack Rolls made with a Musket, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Musket without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Musket.\\n- +3 to Attack Rolls made with a Musket.\\n- This character is capable of performing the basic tasks of maintaining a Musket without a skill check."
 modifiers: "Attack Rolls +3 (Musket)"
 `,mO=`id: wielder-pistol
 name: "Wielder: Pistol"
@@ -12131,7 +12131,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, intuition: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Pistol.\\n- +3 to Attack Rolls made with a Pistol, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Pistol.\\n- +3 to Attack Rolls made with a Pistol.\\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check."
 modifiers: "Attack Rolls +3 (Pistol)"
 `,hO=`id: wielder-polearm
 name: "Wielder: Polearm"
@@ -12143,7 +12143,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { power: 4, grace: 3, endurance: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Polearm.\\n- +3 to Attack Rolls made with a Polearm, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Polearm without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Polearm.\\n- +3 to Attack Rolls made with a Polearm.\\n- This character is capable of performing the basic tasks of maintaining a Polearm without a skill check."
 modifiers: "Attack Rolls +3 (Polearm)"
 `,gO=`id: wielder-rifle
 name: "Wielder: Rifle"
@@ -12155,7 +12155,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Rifle.\\n- +3 to Attack Rolls made with a Rifle, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Rifle without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Rifle.\\n- +3 to Attack Rolls made with a Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Rifle without a skill check."
 modifiers: "Attack Rolls +3 (Rifle)"
 `,_O=`id: wielder-shortsword
 name: "Wielder: Shortsword"
@@ -12167,7 +12167,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, power: 2, endurance: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Shortsword.\\n- +3 to Attack Rolls made with a Shortsword, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Shortsword.\\n- +3 to Attack Rolls made with a Shortsword.\\n- This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check."
 modifiers: "Attack Rolls +3 (Shortsword)"
 `,vO=`id: wielder-shotgun
 name: "Wielder: Shotgun"
@@ -12179,7 +12179,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 2, power: 3, intuition: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Shotgun.\\n- +3 to Attack Rolls made with a Shotgun, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Shotgun.\\n- +3 to Attack Rolls made with a Shotgun.\\n- This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check."
 modifiers: "Attack Rolls +3 (Shotgun)"
 `,yO=`id: wielder-siege-engine
 name: "Wielder: Siege Engine"
@@ -12191,7 +12191,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { logic: 3, intuition: 3, power: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Siege Engine.\\n- +3 to Attack Rolls made with a Siege Engine, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Siege Engine.\\n- +3 to Attack Rolls made with a Siege Engine.\\n- This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check."
 modifiers: "Attack Rolls +3 (Siege Engine)"
 `,bO=`id: wielder-sling
 name: "Wielder: Sling"
@@ -12203,7 +12203,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, intuition: 3 }
-effect: "- Rank *5 added to skill check rolls involving a Sling.\\n- +3 to Attack Rolls made with a Sling, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Sling without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Sling.\\n- +3 to Attack Rolls made with a Sling.\\n- This character is capable of performing the basic tasks of maintaining a Sling without a skill check."
 modifiers: "Attack Rolls +3 (Sling)"
 `,xO=`id: wielder-sniper-rifle
 name: "Wielder: Sniper Rifle"
@@ -12215,7 +12215,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { intuition: 5, grace: 3, endurance: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Sniper Rifle.\\n- +3 to Attack Rolls made with a Sniper Rifle, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Sniper Rifle.\\n- +3 to Attack Rolls made with a Sniper Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check."
 modifiers: "Attack Rolls +3 (Sniper Rifle)"
 `,SO=`id: wielder-spear
 name: "Wielder: Spear"
@@ -12227,7 +12227,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, power: 3, endurance: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Spear.\\n- +3 to Attack Rolls made with a Spear, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Spear without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Spear.\\n- +3 to Attack Rolls made with a Spear.\\n- This character is capable of performing the basic tasks of maintaining a Spear without a skill check."
 modifiers: "Attack Rolls +3 (Spear)"
 `,CO=`id: wielder-staff
 name: "Wielder: Staff"
@@ -12239,7 +12239,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, endurance: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Staff.\\n- +3 to Attack Rolls made with a Staff, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Staff without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Staff.\\n- +3 to Attack Rolls made with a Staff.\\n- This character is capable of performing the basic tasks of maintaining a Staff without a skill check."
 modifiers: "Attack Rolls +3 (Staff)"
 `,wO=`id: wielder-throwing-weapon
 name: "Wielder: Throwing Weapon"
@@ -12251,7 +12251,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { grace: 3, intuition: 3, power: 2 }
-effect: "- Rank *5 added to skill check rolls involving a Throwing Weapon.\\n- +3 to Attack Rolls made with a Throwing Weapon, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a Throwing Weapon.\\n- +3 to Attack Rolls made with a Throwing Weapon.\\n- This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check."
 modifiers: "Attack Rolls +3 (Throwing Weapon)"
 `,TO=`id: wielder-war-axe
 name: "Wielder: War Axe"
@@ -12263,7 +12263,7 @@ category: skill
 list: wielder
 ranked: true
 minStats: { power: 5, endurance: 4, grace: 3 }
-effect: "- Rank *5 added to skill check rolls involving a War Axe.\\n- +3 to Attack Rolls made with a War Axe, at any Rank.\\n- This character is capable of performing the basic tasks of maintaining a War Axe without a skill check."
+effect: "- Rank *5 added to skill check rolls involving a War Axe.\\n- +3 to Attack Rolls made with a War Axe.\\n- This character is capable of performing the basic tasks of maintaining a War Axe without a skill check."
 modifiers: "Attack Rolls +3 (War Axe)"
 `,EO=`id: wrangler
 name: "Wrangler"

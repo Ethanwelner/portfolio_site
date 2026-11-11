@@ -329,7 +329,7 @@ Rank *5 added to Skill Check rolls involving riding a basic animal.',
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Longsword without a Skill Check.
 Rank *5 added to Skill Check rolls involving a Longsword.
-+3 to Attack Rolls made with a Longsword, at any Rank.',
++3 to Attack Rolls made with a Longsword.',
                   	'needs' => 'Grace 4, Power 4, Endurance 4',
                   ) ); ?>
                   <?php sf_card_trait( array(
@@ -338,7 +338,7 @@ Rank *5 added to Skill Check rolls involving a Longsword.
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Musket without a Skill Check.
 Rank *5 added to Skill Check rolls involving a Musket.
-+3 to Attack Rolls made with a Musket, at any Rank.',
++3 to Attack Rolls made with a Musket.',
                   	'needs' => 'Grace 3, Power 2, Intuition 3',
                   ) ); ?>
                   <?php sf_card_trait( array(
