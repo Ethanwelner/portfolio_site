@@ -195,7 +195,7 @@ $sf_stats = sf_sheet_capture( function () use ( $sf_stat ) {
 // Healthy, from full HP
 $sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true ) . '<ul class="sf-sheet-cards sf-sheet-scroll"><li>'
 	. sf_sheet_capture( function () {
-		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => 'This Trait has no effect on its own.', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) );
+		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => '', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) );
 	} ) . '</li></ul>';
 
 // The item cards, as the creator's inventory draws them: the count on its
