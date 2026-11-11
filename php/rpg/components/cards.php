@@ -231,6 +231,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * area         Optional. Area of Effect, like "3 m".
 	 * resistances  Optional. "1 Blunt, 1 Slashing".
 	 * mp           Optional. An enchanted Item's stored MP.
+	 * hp           Optional. array( now, max ): a chassis's HP.
 	 * description  Optional. In italics.
 	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
@@ -281,6 +282,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( isset( $i['mp'] ) ) {
 			echo '<span class="equipment-mp"><strong class="resource-name resource-mp" title="Mana Points">MP</strong><span class="num">' . (int) $i['mp'] . '<span class="muted"> / ' . (int) $i['mp'] . '</span></span></span>';
 		}
+		if ( isset( $i['hp'] ) ) {
+			echo '<span class="equipment-mp equipment-hp"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">' . (int) $i['hp'][0] . '<span class="muted"> / ' . (int) $i['hp'][1] . '</span></span></span>';
+		}
 		echo '</span>';
 		if ( $fold ) {
 			echo sf_card_chevron( 'open' === $fold, $i['name'], 'sf-item-icon sf-item-expand' );
@@ -326,28 +330,42 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * inhabits, an Item card that holds part of a character sheet. Its top
 	 * line and chips are an Item card's (its armor as resistances); open,
 	 * under its description, its Physical core and focus stats as a stat
-	 * block (sf_stat_block), then the Traits it gives whoever inhabits it, as
-	 * Trait cards (sf_card_trait). An AI Core has no Physical stats of its
-	 * own: its chassis's are its.
+	 * block (sf_stat_block), its Attacks as Item cards (natural weapons) and
+	 * the Traits it gives whoever inhabits it, as Trait cards
+	 * (sf_card_trait). Its HP sit on its top line, worked out as a
+	 * character's are: 10 plus its Physical focus stats. An AI Core has no
+	 * Physical stats of its own: its chassis's are its, and so are its HP.
 	 *
 	 * physical  array( 'core' => 4, 'stats' => array( array( 'name' =>
 	 *           'Endurance', 'value' => 5, 'bonus' => 0, 'max' => 20 ), ... ) )
+	 * hp        Optional. Its HP now, when it's taken damage; full without it.
+	 * attacks   Optional. Item cards' arrays, as sf_card_item() takes them.
 	 * traits    Optional. Trait cards' arrays, as sf_card_trait() takes them.
 	 * Everything else is sf_card_item()'s; category defaults to Chassis.
 	 */
 	function sf_card_chassis( $c ) {
 		$physical = $c['physical'];
+		$attacks  = $c['attacks'] ?? array();
 		$traits   = $c['traits'] ?? array();
-		unset( $c['physical'], $c['traits'] );
+		$max_hp   = 10 + array_sum( array_column( $physical['stats'], 'value' ) );
+		$hp       = array( $c['hp'] ?? $max_hp, $max_hp );
+		unset( $c['physical'], $c['attacks'], $c['traits'] );
 		sf_card_item(
-			$c + array(
+			array( 'hp' => $hp ) + $c + array(
 				'category' => 'Chassis',
 				'class'    => 'sf-chassis-card',
-				'body'     => function () use ( $physical, $traits ) {
+				'body'     => function () use ( $physical, $attacks, $traits ) {
 					echo '<div class="sf-chassis">';
 					sf_stat_block( array( array( 'group' => 'physical' ) + $physical ) );
+					if ( $attacks ) {
+						echo '<div class="sf-chassis-list"><h5 class="sf-chassis-label">Attacks</h5>';
+						foreach ( $attacks as $a ) {
+							sf_card_item( $a );
+						}
+						echo '</div>';
+					}
 					if ( $traits ) {
-						echo '<div class="sf-chassis-traits"><h5 class="sf-chassis-label">Traits</h5>';
+						echo '<div class="sf-chassis-list"><h5 class="sf-chassis-label">Traits</h5>';
 						foreach ( $traits as $t ) {
 							sf_card_trait( $t );
 						}

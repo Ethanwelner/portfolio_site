@@ -305,8 +305,8 @@ $sf_mage_stats = array(
 	array( 'group' => 'magic', 'core' => 3, 'bonus' => 1 ),
 );
 // Chassis cards: placeholder AI Core chassis, each an Item card with its
-// Physical stats (the core's 3 focus points a point, 20 at most) and the
-// Traits it gives. Mechanical is the AI Core Kind's own Condition.
+// Physical stats (the core's 3 focus points a point, 20 at most), its HP
+// (10 plus those stats), its Attacks and the Traits it gives. Mechanical is the AI Core Kind's own Condition.
 $sf_mechanical = array(
 	'kind'   => 'condition',
 	'name'   => 'Mechanical',
@@ -320,6 +320,15 @@ $sf_laborer    = array(
 	'resistances' => '2 Blunt, 2 Slashing, 1 Piercing',
 	'description' => 'A heavy, humanoid work frame built for cargo bays and shipyards.',
 	'physical'    => array( 'core' => 4, 'stats' => array( $sf_stat( 'Endurance', 0, 5, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'attacks'     => array(
+		array(
+			'name'        => 'Hydraulic Fist',
+			'damage'      => '2 Blunt + Power',
+			'range'       => '1 m',
+			'chips'       => array( 'Melee', 'Natural weapon' ),
+			'description' => 'A work fist on a hydraulic arm, built to bend steel.',
+		),
+	),
 	'traits'      => array(
 		$sf_mechanical,
 		array(
@@ -338,6 +347,7 @@ $sf_courier    = array(
 	'resistances' => '1 Blunt',
 	'description' => 'A light, fast frame on four rotors, for carrying messages and small parcels.',
 	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 1, 20 ), $sf_stat( 'Power', 0, 1, 20 ), $sf_stat( 'Grace', 0, 4, 20 ) ) ),
+	'hp'          => 12,
 	'traits'      => array( $sf_mechanical ),
 );
 
@@ -381,7 +391,7 @@ $sf_list = function ( $items ) {
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
 				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
-				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis and Background. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its Physical stats and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis and Background. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
@@ -448,7 +458,7 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, mp, description, lead, effects
+optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, mp, hp, description, lead, effects, body, class
 options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
@@ -481,12 +491,13 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 			<div class="container">
 				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 20 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
-an Item card (category Chassis) holding part of a character sheet: its Physical core and focus stats as a stat block, then the Traits it gives as Trait cards
-physical: core, stats (Endurance, Power, Grace)    traits: Trait cards' arrays, as sf_card_trait() takes them
+an Item card (category Chassis) holding part of a character sheet: its HP on its top line, then its Physical core and focus stats as a stat block, its Attacks as Item cards and the Traits it gives as Trait cards
+physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats, on its top line; hp: its HP now, when it's taken damage
+attacks: Item cards' arrays, as sf_card_item() takes them    traits: Trait cards' arrays, as sf_card_trait() takes them
 optional and options: everything sf_card_item() takes (resistances for its armor, fold, count, equip)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['chassis'] ); ?>
-				<p class="sf-library-label">Placeholder chassis, open, then folded closed as on a character sheet</p>
+				<p class="sf-library-label">Placeholder chassis: one with an Attack, one that’s taken damage, then folded closed as on a character sheet</p>
 				<div class="sf-library-chassis">
 					<?php sf_card_chassis( $sf_laborer ); ?>
 					<?php sf_card_chassis( $sf_courier ); ?>
