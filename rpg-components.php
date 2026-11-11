@@ -313,6 +313,11 @@ $sf_mechanical = array(
 	'name'   => 'Mechanical',
 	'effect' => 'This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage.',
 );
+$sf_non_humanoid = array(
+	'kind'   => 'condition',
+	'name'   => 'Non-humanoid',
+	'effect' => 'This character is incapable of wielding weapons designed for human hands or wearing equipment designed for use on humanoid bodies.',
+);
 $sf_laborer    = array(
 	'name'        => 'Industrial Laborer Chassis',
 	'plane'       => 'Earth',
@@ -332,11 +337,7 @@ $sf_laborer    = array(
 	),
 	'traits'      => array(
 		$sf_mechanical,
-		array(
-			'kind'   => 'condition',
-			'name'   => 'Non-humanoid',
-			'effect' => 'This character is incapable of wielding weapons designed for human hands or wearing equipment designed for use on humanoid bodies.',
-		),
+		$sf_non_humanoid,
 		array(
 			'kind'   => 'skill',
 			'name'   => 'Cargo Handling',
@@ -354,7 +355,15 @@ $sf_courier    = array(
 	'description' => 'A light, fast frame on four rotors, for carrying messages and small parcels.',
 	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 1, 20 ), $sf_stat( 'Power', 0, 1, 20 ), $sf_stat( 'Grace', 0, 4, 20 ) ) ),
 	'hp'          => 12,
-	'traits'      => array( $sf_mechanical ),
+	'traits'      => array(
+		$sf_mechanical,
+		$sf_non_humanoid,
+		array(
+			'kind'   => 'condition',
+			'name'   => 'Flight',
+			'effect' => 'This character can fly, moving its full Movement distance through the air in any direction.',
+		),
+	),
 );
 
 // Each section's components sit in one outlined box, with Light and Dark
