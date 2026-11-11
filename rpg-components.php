@@ -306,7 +306,8 @@ $sf_mage_stats = array(
 	array( 'group' => 'magic', 'core' => 3, 'bonus' => 1 ),
 );
 // Chassis cards: placeholder AI Core chassis, each an Item card with its
-// Physical stats (the core's 3 focus points a point, 20 at most), its HP
+// Physical stats (the core's 3 focus points a point, each its own maximum:
+// no Level raises them), its HP
 // (10 plus those stats), its Attacks and the Traits it gives. Mechanical is the AI Core Kind's own Condition.
 $sf_mechanical = array(
 	'kind'   => 'condition',
@@ -325,7 +326,7 @@ $sf_laborer    = array(
 	'currency'    => 'ERC',
 	'resistances' => '2 Blunt, 2 Slashing, 1 Piercing',
 	'description' => 'A heavy work frame on treads and hydraulic arms, built for cargo bays and shipyards.',
-	'physical'    => array( 'core' => 4, 'stats' => array( $sf_stat( 'Endurance', 0, 5, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'physical'    => array( 'core' => 4, 'stats' => array( $sf_stat( 'Endurance', 0, 5, 5 ), $sf_stat( 'Power', 0, 5, 5 ), $sf_stat( 'Grace', 0, 2, 2 ) ) ),
 	'attacks'     => array(
 		array(
 			'name'        => 'Hydraulic Fist',
@@ -353,7 +354,7 @@ $sf_courier    = array(
 	'currency'    => 'ERC',
 	'resistances' => '1 Blunt',
 	'description' => 'A light, fast frame on four rotors, for carrying messages and small parcels.',
-	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 1, 20 ), $sf_stat( 'Power', 0, 1, 20 ), $sf_stat( 'Grace', 0, 4, 20 ) ) ),
+	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 1, 1 ), $sf_stat( 'Power', 0, 1, 1 ), $sf_stat( 'Grace', 0, 4, 4 ) ) ),
 	'hp'          => 12,
 	'traits'      => array(
 		$sf_mechanical,
@@ -385,7 +386,7 @@ $sf_humanoid   = array(
 	'currency'    => 'ERC',
 	'resistances' => '1 Blunt',
 	'description' => 'A person-shaped frame of ordinary height, built to work among people and use what they use.',
-	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 2, 20 ), $sf_stat( 'Power', 0, 2, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 2, 2 ), $sf_stat( 'Power', 0, 2, 2 ), $sf_stat( 'Grace', 0, 2, 2 ) ) ),
 	'traits'      => array( $sf_mechanical ),
 );
 $sf_combat     = array(
@@ -395,7 +396,7 @@ $sf_combat     = array(
 	'currency'    => 'ERC',
 	'resistances' => '3 Blunt, 3 Slashing, 4 Piercing',
 	'description' => 'A squat, armored frame on four legs, with a machine gun built into its body.',
-	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 10, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 3, 20 ) ) ),
+	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 10, 10 ), $sf_stat( 'Power', 0, 5, 5 ), $sf_stat( 'Grace', 0, 3, 3 ) ) ),
 	'attacks'     => array(
 		array(
 			'name'        => 'Mounted Machine Gun',
@@ -551,7 +552,7 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 		<div class="sf-library-band">
 			<div class="container">
 				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
-				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 20 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
+				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 5 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
 an Item card (category Chassis) holding part of a character sheet: its HP on its top line, then its Physical core and focus stats as a stat block, its Attacks as Item cards and the Traits it gives as Trait cards
 physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats + hp_bonus (from Traits like Reinforced), on its top line with − and +; hp: its HP now, when it's taken damage; its resistances lead the chips line
 attacks: Item cards' arrays, as sf_card_item() takes them    traits: Trait cards' arrays, as sf_card_trait() takes them
