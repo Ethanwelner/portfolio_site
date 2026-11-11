@@ -6,6 +6,8 @@
 //                        Conditions, Circumstances and Other Traits
 //   sf_card_item()       Weapons, wearables, equipment, magic Items and
 //                        natural weapons (an NPC's or monster's Attacks)
+//   sf_card_chassis()    An AI Core's chassis: an Item card holding
+//                        Physical stats and Traits
 //   sf_card_background() Kinds, Origins, Professions and Pasts
 //
 // The Character Creator's and Player Tools' cards are the reference. These
@@ -25,6 +27,7 @@
 //   Item card        count how many, in a circle on its left edge
 //                    equip 'on' or 'off': its Equip box, read-only
 //                    fold  'open' or 'closed', as for a Trait card
+//                    body  more of the card, under its description
 //   Background card  (none on the site)
 //
 // A card without fold is always open. The site's pages are static, so the
@@ -32,6 +35,7 @@
 // don't exist here; the same cards are drawn read-only. The component
 // library (rpg-components.php) shows every variant.
 require_once dirname( __DIR__ ) . '/items.php';
+require_once __DIR__ . '/stats.php';
 
 if ( ! function_exists( 'sf_card_e' ) ) {
 	function sf_card_e( $text ) {
@@ -233,6 +237,8 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * count        Optional. How many, in a circle on its left edge.
 	 * equip        Optional. 'on' or 'off': its Equip box, read-only.
 	 * fold         Optional. 'open' or 'closed': it opens from the chevron.
+	 * body         Optional. A function that draws more of the card, under
+	 *              its description, like a chassis's stats and Traits.
 	 */
 	function sf_card_item( $i ) {
 		$badges = '';
@@ -259,7 +265,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		}
 
 		$fold    = $i['fold'] ?? '';
-		$classes = 'equipment-box sf-item-card' . ( $fold ? ( 'open' === $fold ? ' is-open' : ' is-closed' ) : '' );
+		$classes = 'equipment-box sf-item-card' . ( $fold ? ( 'open' === $fold ? ' is-open' : ' is-closed' ) : '' ) . ( empty( $i['class'] ) ? '' : ' ' . $i['class'] );
 		echo '<div class="' . $classes . '">';
 		if ( isset( $i['count'] ) ) {
 			echo '<span class="sf-item-count" aria-label="' . (int) $i['count'] . ' of ' . sf_card_e( $i['name'] ) . '">' . (int) $i['count'] . '</span>';
@@ -309,7 +315,48 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			}
 			echo '</div>';
 		}
+		if ( ! empty( $i['body'] ) ) {
+			call_user_func( $i['body'] );
+		}
 		echo '</div></div>';
+	}
+
+	/**
+	 * A Chassis card, as the creator's ChassisCard: the body an AI Core
+	 * inhabits, an Item card that holds part of a character sheet. Its top
+	 * line and chips are an Item card's (its armor as resistances); open,
+	 * under its description, its Physical core and focus stats as a stat
+	 * block (sf_stat_block), then the Traits it gives whoever inhabits it, as
+	 * Trait cards (sf_card_trait). An AI Core has no Physical stats of its
+	 * own: its chassis's are its.
+	 *
+	 * physical  array( 'core' => 4, 'stats' => array( array( 'name' =>
+	 *           'Endurance', 'value' => 5, 'bonus' => 0, 'max' => 20 ), ... ) )
+	 * traits    Optional. Trait cards' arrays, as sf_card_trait() takes them.
+	 * Everything else is sf_card_item()'s; category defaults to Chassis.
+	 */
+	function sf_card_chassis( $c ) {
+		$physical = $c['physical'];
+		$traits   = $c['traits'] ?? array();
+		unset( $c['physical'], $c['traits'] );
+		sf_card_item(
+			$c + array(
+				'category' => 'Chassis',
+				'class'    => 'sf-chassis-card',
+				'body'     => function () use ( $physical, $traits ) {
+					echo '<div class="sf-chassis">';
+					sf_stat_block( array( array( 'group' => 'physical' ) + $physical ) );
+					if ( $traits ) {
+						echo '<div class="sf-chassis-traits"><h5 class="sf-chassis-label">Traits</h5>';
+						foreach ( $traits as $t ) {
+							sf_card_trait( $t );
+						}
+						echo '</div>';
+					}
+					echo '</div>';
+				},
+			)
+		);
 	}
 
 	/**
