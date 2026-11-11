@@ -325,8 +325,7 @@
 							</p>
 							<ul class="copy">
 								<li><strong>Healthy - Conveyed - Condition</strong><br>
-								Temporary (A character or object gains this Trait while they are at their maximum HP total)<br>
-								This Trait has no effect on its own.</li>
+								Temporary (A character or object gains this Trait while they are at their maximum HP total)</li>
 								<li><strong>Injured - Conveyed - Condition</strong><br>
 								Temporary (A character gains this Trait while they are below their maximum HP total)<br>
 								This Trait has no effect on its own.</li>

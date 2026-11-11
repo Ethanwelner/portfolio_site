@@ -77,6 +77,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	// bullets, other lines paragraphs; a plain effect is one paragraph
 	function sf_card_effect( $text ) {
 		$lines = array_values( array_filter( array_map( 'trim', explode( "\n", $text ) ), 'strlen' ) );
+		if ( ! $lines ) {
+			return '';
+		}
 		$bullets = array_filter( $lines, function ( $l ) { return 0 === strpos( $l, '- ' ); } );
 		if ( ! $bullets ) {
 			return '<p class="sf-card-effect">' . sf_card_e( $text ) . '</p>';
