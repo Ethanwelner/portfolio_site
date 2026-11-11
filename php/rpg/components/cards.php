@@ -391,6 +391,7 @@ document.addEventListener('click', function (e) {
 	 * physical  array( 'core' => 4, 'stats' => array( array( 'name' =>
 	 *           'Endurance', 'value' => 5, 'bonus' => 0, 'max' => 20 ), ... ) )
 	 * hp        Optional. Its HP now, when it's taken damage; full without it.
+	 * hp_bonus  Optional. More max HP from its Traits, like Reinforced's +10.
 	 * attacks   Optional. Item cards' arrays, as sf_card_item() takes them.
 	 * traits    Optional. Trait cards' arrays, as sf_card_trait() takes them.
 	 * Everything else is sf_card_item()'s; category defaults to Chassis.
@@ -399,9 +400,9 @@ document.addEventListener('click', function (e) {
 		$physical = $c['physical'];
 		$attacks  = $c['attacks'] ?? array();
 		$traits   = $c['traits'] ?? array();
-		$max_hp   = 10 + array_sum( array_column( $physical['stats'], 'value' ) );
+		$max_hp   = 10 + array_sum( array_column( $physical['stats'], 'value' ) ) + (int) ( $c['hp_bonus'] ?? 0 );
 		$hp       = array( $c['hp'] ?? $max_hp, $max_hp );
-		unset( $c['physical'], $c['attacks'], $c['traits'] );
+		unset( $c['physical'], $c['attacks'], $c['traits'], $c['hp_bonus'] );
 		sf_card_item(
 			array( 'hp' => $hp, 'resists_in_chips' => true ) + $c + array(
 				'category' => 'Chassis',

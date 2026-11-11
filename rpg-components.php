@@ -409,7 +409,16 @@ $sf_combat     = array(
 			'description' => 'A heavy automatic gun on a turret in the frame’s body. It can’t be taken off or disarmed.',
 		),
 	),
-	'traits'      => array( $sf_mechanical, $sf_non_humanoid ),
+	'hp_bonus'    => 10,
+	'traits'      => array(
+		$sf_mechanical,
+		$sf_non_humanoid,
+		array(
+			'kind'   => 'condition',
+			'name'   => 'Reinforced',
+			'effect' => 'This character or item has +10 Hit Points.',
+		),
+	),
 );
 
 $sf_list = function ( $items ) {
@@ -544,7 +553,7 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 20 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
 an Item card (category Chassis) holding part of a character sheet: its HP on its top line, then its Physical core and focus stats as a stat block, its Attacks as Item cards and the Traits it gives as Trait cards
-physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats, on its top line with − and +; hp: its HP now, when it's taken damage; its resistances lead the chips line
+physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats + hp_bonus (from Traits like Reinforced), on its top line with − and +; hp: its HP now, when it's taken damage; its resistances lead the chips line
 attacks: Item cards' arrays, as sf_card_item() takes them    traits: Trait cards' arrays, as sf_card_trait() takes them
 optional and options: everything sf_card_item() takes (resistances for its armor, fold, count, equip)</pre>
 				<p class="sf-library-label">Used in</p>
