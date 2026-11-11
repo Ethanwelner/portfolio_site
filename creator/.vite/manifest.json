@@ -1,31 +1,31 @@
 {
-  "_popup-BDiCo_4P.css": {
-    "file": "assets/popup-BDiCo_4P.css",
-    "src": "_popup-BDiCo_4P.css"
-  },
-  "_popup-BrDlW_Kw.js": {
-    "file": "assets/popup-BrDlW_Kw.js",
+  "_popup-B8LH66sF.js": {
+    "file": "assets/popup-B8LH66sF.js",
     "name": "popup",
     "css": [
       "assets/popup-BDiCo_4P.css"
     ]
   },
+  "_popup-BDiCo_4P.css": {
+    "file": "assets/popup-BDiCo_4P.css",
+    "src": "_popup-BDiCo_4P.css"
+  },
   "src/app/main.tsx": {
-    "file": "assets/main-DrADjU73.js",
+    "file": "assets/main-w6dUfMai.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-BrDlW_Kw.js"
+      "_popup-B8LH66sF.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-p4Qp_69R.js",
+    "file": "assets/main-CaplfqUu.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-BrDlW_Kw.js"
+      "_popup-B8LH66sF.js"
     ],
     "css": [
       "assets/main-eipnF_ix.css"
