@@ -458,7 +458,7 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, mp, hp, description, lead, effects, body, class
+optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
 options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
@@ -492,7 +492,7 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 20 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
 an Item card (category Chassis) holding part of a character sheet: its HP on its top line, then its Physical core and focus stats as a stat block, its Attacks as Item cards and the Traits it gives as Trait cards
-physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats, on its top line; hp: its HP now, when it's taken damage
+physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats, on its top line with − and +; hp: its HP now, when it's taken damage; its resistances lead the chips line
 attacks: Item cards' arrays, as sf_card_item() takes them    traits: Trait cards' arrays, as sf_card_trait() takes them
 optional and options: everything sf_card_item() takes (resistances for its armor, fold, count, equip)</pre>
 				<p class="sf-library-label">Used in</p>

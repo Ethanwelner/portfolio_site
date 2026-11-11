@@ -36,6 +36,7 @@
 // library (rpg-components.php) shows every variant.
 require_once dirname( __DIR__ ) . '/items.php';
 require_once __DIR__ . '/stats.php';
+require_once __DIR__ . '/buttons.php';
 
 if ( ! function_exists( 'sf_card_e' ) ) {
 	function sf_card_e( $text ) {
@@ -230,8 +231,12 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * range        Optional. Max Range, like "3 m".
 	 * area         Optional. Area of Effect, like "3 m".
 	 * resistances  Optional. "1 Blunt, 1 Slashing".
-	 * mp           Optional. An enchanted Item's stored MP.
-	 * hp           Optional. array( now, max ): a chassis's HP.
+	 * mp           Optional. An enchanted Item's stored MP (its max), with
+	 *              − and + (sf_item_resource).
+	 * mp_now       Optional. Its MP now; full without it.
+	 * hp           Optional. array( now, max ): a chassis's HP, with − and +.
+	 * resists_in_chips  Optional. True: the resistances badge leads the
+	 *              chips line instead of the top line (a chassis).
 	 * description  Optional. In italics.
 	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
@@ -261,8 +266,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( ! empty( $i['area'] ) ) {
 			$badges .= sf_item_reach( 'burst', $i['area'] );
 		}
-		if ( ! empty( $i['resistances'] ) ) {
-			$badges .= sf_item_stats( 'shield', $i['resistances'] );
+		$resists = empty( $i['resistances'] ) ? '' : sf_item_stats( 'shield', $i['resistances'] );
+		if ( empty( $i['resists_in_chips'] ) ) {
+			$badges .= $resists;
 		}
 
 		$fold    = $i['fold'] ?? '';
@@ -280,10 +286,10 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			echo '<div class="equipment-stats sf-item-badges">' . $badges . '</div>';
 		}
 		if ( isset( $i['mp'] ) ) {
-			echo '<span class="equipment-mp"><strong class="resource-name resource-mp" title="Mana Points">MP</strong><span class="num">' . (int) $i['mp'] . '<span class="muted"> / ' . (int) $i['mp'] . '</span></span></span>';
+			sf_item_resource( 'mp', (int) $i['mp'], (int) ( $i['mp_now'] ?? $i['mp'] ) );
 		}
 		if ( isset( $i['hp'] ) ) {
-			echo '<span class="equipment-mp equipment-hp"><strong class="resource-name resource-hp" title="Hit Points">HP</strong><span class="num">' . (int) $i['hp'][0] . '<span class="muted"> / ' . (int) $i['hp'][1] . '</span></span></span>';
+			sf_item_resource( 'hp', (int) $i['hp'][1], (int) $i['hp'][0] );
 		}
 		echo '</span>';
 		if ( $fold ) {
@@ -302,6 +308,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		$chips[] = empty( $i['slot'] ) ? '' : 'Slot: ' . $i['slot'];
 		$chips   = array_merge( $chips, $i['chips'] ?? array(), array( $i['plane'] ?? '' ) );
 		echo '<div class="sf-item-more"><div class="equipment-chips">';
+		if ( ! empty( $i['resists_in_chips'] ) ) {
+			echo $resists;
+		}
 		foreach ( array_filter( $chips ) as $chip ) {
 			echo '<span class="chip">' . sf_card_e( $chip ) . '</span>';
 		}
@@ -326,9 +335,52 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	}
 
 	/**
+	 * HP or MP on an Item's top line, as the creator's ItemResource and the
+	 * character sheet's trackers: its name, −, the value over its max, +. −
+	 * stops at 0; + goes past the max (bonus points), and the value then takes
+	 * the resource's color. The site's pages are static, so a small script
+	 * (drawn once, with the first readout) makes − and + work in the page.
+	 */
+	function sf_item_resource( $kind, $max, $now ) {
+		static $script = false;
+		$name  = strtoupper( $kind );
+		$title = 'hp' === $kind ? 'Hit Points' : 'Mana Points';
+		$minus = '<svg class="sign-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"/></svg>';
+		$plus  = '<svg class="sign-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"/></svg>';
+		$over  = $now > $max;
+		echo '<span class="equipment-mp equipment-resource equipment-' . $kind . '" data-sf-resource="' . $kind . '" data-max="' . $max . '" data-now="' . $now . '">';
+		echo '<strong class="resource-name resource-' . $kind . '" title="' . $title . '">' . $name . '</strong>';
+		echo sf_button( $minus, array( 'round' => 'xs', 'disabled' => $now <= 0, 'attrs' => array( 'aria-label' => '1 less ' . $name, 'data-sf-step' => '-1' ) ) );
+		echo '<span class="num" aria-live="polite"><span class="equipment-resource-now' . ( $over ? ' resource-' . $kind : '' ) . '"' . ( $over ? ' title="Above the max of ' . $max . '"' : '' ) . '>' . $now . '</span><span class="muted"> / ' . $max . '</span></span>';
+		echo sf_button( $plus, array( 'round' => 'xs', 'attrs' => array( 'aria-label' => '1 more ' . $name, 'data-sf-step' => '1' ) ) );
+		echo '</span>';
+		if ( ! $script ) {
+			$script = true;
+			?>
+<script>
+document.addEventListener('click', function (e) {
+	var step = e.target.closest('[data-sf-step]');
+	var box = step && step.closest('[data-sf-resource]');
+	if (!box) return;
+	var max = Number(box.dataset.max);
+	var now = Math.max(0, Number(box.dataset.now) + Number(step.dataset.sfStep));
+	box.dataset.now = now;
+	var value = box.querySelector('.equipment-resource-now');
+	value.textContent = now;
+	value.className = 'equipment-resource-now' + (now > max ? ' resource-' + box.dataset.sfResource : '');
+	if (now > max) { value.title = 'Above the max of ' + max; } else { value.removeAttribute('title'); }
+	box.querySelector('[data-sf-step="-1"]').disabled = now <= 0;
+});
+</script>
+			<?php
+		}
+	}
+
+	/**
 	 * A Chassis card, as the creator's ChassisCard: the body an AI Core
 	 * inhabits, an Item card that holds part of a character sheet. Its top
-	 * line and chips are an Item card's (its armor as resistances); open,
+	 * line is an Item card's with its HP, which − and + change, as on a
+	 * character sheet; its armor's resistances badge leads its chips. Open,
 	 * under its description, its Physical core and focus stats as a stat
 	 * block (sf_stat_block), its Attacks as Item cards (natural weapons) and
 	 * the Traits it gives whoever inhabits it, as Trait cards
@@ -351,7 +403,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		$hp       = array( $c['hp'] ?? $max_hp, $max_hp );
 		unset( $c['physical'], $c['attacks'], $c['traits'] );
 		sf_card_item(
-			array( 'hp' => $hp ) + $c + array(
+			array( 'hp' => $hp, 'resists_in_chips' => true ) + $c + array(
 				'category' => 'Chassis',
 				'class'    => 'sf-chassis-card',
 				'body'     => function () use ( $physical, $attacks, $traits ) {
