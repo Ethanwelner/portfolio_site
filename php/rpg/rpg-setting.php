@@ -735,7 +735,71 @@
 			</div>
 
 			<div class="tech-field-panel" id="timeline-beliefs" role="tabpanel" aria-labelledby="tab-timeline-beliefs">
-				<p class="copy mb-0">Content coming soon</p>
+				<!-- From the lore Doc's Religions and Philosophies tab -->
+				<div class="content-stack">
+					<div>
+						<div class="line-container">
+							<h5><strong>Major Religions</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div>
+								<h6 class="mb-2"><strong>Christianity</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										The revelation of other planes and non-human sentient life has badly damaged the claim to truth held by the Abrahamic religions, and while Christianity hasn’t suffered the two centuries of tragedy that have befallen its peers, it’s nonetheless struggling to maintain its flock. Indeed, the religions of the old world are now, in 2230, seen as a bit passé, representative of a humanity that just didn’t know any better. Many once-Christian sects have adopted theosophical beliefs and turned towards a more inclusive, exploratory, and non-dogmatic faith, seeing their old doctrines as obsolete.
+									</p>
+									<p class="copy">
+										In response to two hundred years of theological upheaval, Catholicism has done what it’s done so successfully throughout history and incorporated these new post-planar belief structures and realities into its canon. Its first non-human bishop, 14/Faith, was ordained on <?php echo sf_lore_link('kashgar', 'Kashgar'); ?> in 2105, and its missionaries proselytize in any plane that may have souls in need of saving. Despite these pivots, the apparent contradictions between scripture and the lived reality of an interplanar humanity make recruitment difficult.
+									</p>
+									<p class="copy mb-0">
+										The many sects of Protestantism have proven less stable and less capable of incorporating new doctrines than those of the more monolithic Catholic Church, and are increasingly seen as xenophobic or “out of date” in light of the much expanded size of the universe. The fracturing of America and the apparent failure of the explicitly evangelical project in the <?php echo sf_lore_link('union-of-texas', 'Union of Texas'); ?>, alongside the collapse of Russia and its Orthodox majority have dealt further blows to Protestantism’s hold on religious authority.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Hinduism</strong></h6>
+								<div class="text-cols">
+									<p class="copy mb-0">
+										Hinduism is inextricably tied to the civilization of the subcontinent, and that’s more true today than it has ever been. The <?php echo sf_lore_link('kingdom-of-india', 'Kingdom of India'); ?>, led by Crown Prince Raja Jagadeeshwara Raya IV, is a theocratic monarchy, and the kingdom’s highest office is also Hinduism’s seat of spiritual authority. Hinduism has continued as the loose collection of spiritual practices, cultural beliefs, and philosophical motifs that it has always been, but its practice is now enshrined in law for all citizens of the hermit kingdom. It’s proven a flexible belief system and has incorporated the emergent realities of higher planes and life outside of our reality well… perhaps even too well. Maharaja Raja Achyuta Deva Raya III initiated a project to deliver his people to the holy land of <?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>, where spirits dwell and gods mingle with man.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Islam</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										Even before the revelation of planar realities, the peoples of Islam had been struggling. The rapid aridification of the Middle East combined with the rampant groundwater depletion of its nations had reduced the Fertile Crescent to an unbearable dust-choked desert. Wholly reliant on power-hungry desalination plants powered and funded by hydrocarbons, when the oil ran dry so did the region’s ability to support life. At the same time, the territorial and cultural conquests instituted by India and the People’s Republic of China “encouraged” a great emigration of the faithful out of their territories.
+									</p>
+									<p class="copy mb-0">
+										A century of existence in the “refugee nations” created on the periphery of Europe, Southeast Asia, and central Africa was something of a crucible for the faith; what emerged on the other side bore little resemblance to the structured state-run religious institutions that had represented the faith in the prior century. Fractured into dozens of highly localized and divergent sects, and devoid of state sponsorship, the diasporic Islamic populations have been forced to adapt to their circumstances, melding into the religiously tolerant and cosmopolitan member states of the <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?> or forming their own micro-state religious communities in the stellar fringes, or even on another plane entirely.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Buddhism</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										For much of the 21st century, Buddhism found itself under siege. The theocratic authoritarian turn in India presented the faith’s practitioners with a simple choice: convert or be driven out. In China, the CCP exerted increasing control over the spiritual tradition, successfully turning it into yet one more tool of power. In the conquered territories of both nations the story was much the same: convert, flee, or become little more than a puppet.
+									</p>
+									<p class="copy">
+										During this time, Buddhism became, in many ways, an underground faith in Asia, practiced in secret in the Kingdom’s territories and quietly tolerating the CCP’s clumsy attempts at influence in China. Despite this, the faith prospered globally. Its concepts of impermanence, non-attachment, and enlightenment suited a world on the brink, where hope was dwindling and the traditional Abrahamic faiths seemed to have little to say about the worth of a human compared to an AI.
+									</p>
+									<p class="copy mb-0">
+										When the Empire of China abandoned its claim to spiritual authority in one of the first edicts of its first AI emperor, the faith surged back into prominence, and its open-ended philosophical outlook on the world has deftly handled the revelation of an interplanar reality. In 2230, Buddhism is second only to Hinduism in followers, and its practitioners spread across human civilization.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="line-container">
+							<h5><strong>New Philosophies and Religious Ideas in 2230</strong></h5>
+							<div class="line"></div>
+						</div>
+						<p class="copy mb-0">Content coming soon</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
