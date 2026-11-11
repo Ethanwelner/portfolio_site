@@ -392,7 +392,7 @@ $sf_combat     = array(
 	'currency'    => 'ERC',
 	'resistances' => '3 Blunt, 3 Slashing, 4 Piercing',
 	'description' => 'A squat, armored frame on four legs, with a machine gun built into its body.',
-	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 7, 20 ), $sf_stat( 'Power', 0, 4, 20 ), $sf_stat( 'Grace', 0, 7, 20 ) ) ),
+	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 10, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 3, 20 ) ) ),
 	'attacks'     => array(
 		array(
 			'name'        => 'Mounted Machine Gun',
