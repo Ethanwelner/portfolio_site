@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/11/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: a new Private Security Contractor Profession, with Corporate Security, Vigilance and Wielder: Pistol, and 14 new Traits for private security. Knowledges: Corporate Security and Executive Protection. Skills: Threat Assessment, Access Control, Crowd Control, Escort Driving, Wielder: Stun Baton and Wielder: Taser. Abilities: Bodyguard (the Cover Action, taking an Attack meant for someone the character is guarding), Cuff (the Restrain Action) and Stand Down (the Command Action, which Frightens or disarms). Circumstances: a Private Security License, covering whatever the player chooses, and Security Contractor. A new Restrained Condition stops a character making Attack Actions until it’s freed or escapes.</li>
 						<li>Character Creator: when the AI builder names a character, it follows naming conventions for the character’s Kind and Origin.</li>
 						<li>Setting: a Religions &amp; Philosophies tab. Major Religions covers where Christianity, Hinduism, Islam and Buddhism stand in 2230, after two centuries of planar revelation; New Philosophies and Religious Ideas is coming soon.</li>
 						<li>Player Tools: the amount fields with Damage and Heal under HP, VP, SP and MP are hidden for now. The − and + still change them, and the assistant can still apply damage and healing.</li>
