@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/11/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Adventures: the Magic tab’s enchanted Items, Traveler’s Respite and the Amulet of the Seas, have − and + buttons on their stored MP, to track it as it’s spent and recharged.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/10/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Character Creator: the Weapons Knowledge is gone, since it was far too broad. It’s off the Background Trait lists of the 12 Professions and 3 Pasts that had it.</li>

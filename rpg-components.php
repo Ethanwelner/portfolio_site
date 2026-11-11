@@ -2,8 +2,9 @@
 // Strange Frontiers component library. Hidden: nothing links here, it's
 // left out of the sitemap, and search engines are asked not to index it.
 // Every card kind is drawn by its component in php/rpg/components/cards.php,
-// with real content from the site and the creator, on a light band and a
-// dark one to show it looks the same in both.
+// with real content from the site and the creator, in one outlined box per
+// section whose Light and Dark buttons switch its background, to show it
+// looks the same on both.
 require_once 'php/rpg/lore.php';
 require_once 'php/rpg/components/cards.php';
 require_once 'php/rpg/components/buttons.php';
@@ -266,6 +267,9 @@ $sf_used_in = array(
 		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Attacks and Items (Murk Legs)',
 		'php/rpg/rpg-character.php: the sample sheet’s Items (count, read-only Equip, closed)',
 	),
+	'chassis'    => array(
+		'Nowhere yet: the AI Core chassis system is new. The creator’s ChassisCard (src/app/components/cards.tsx) is ready for the Character Creator and Player Tools.',
+	),
 	'background' => array(
 		'php/rpg/background-card.php: sf_background_card(), beside the sample sheet, in its popups and in Building a Dreftian',
 	),
@@ -301,6 +305,122 @@ $sf_mage_stats = array(
 	array( 'group' => 'mental', 'core' => 3, 'stats' => array( $sf_stat( 'Logic', 1, 4 ), $sf_stat( 'Intuition', 1, 4 ), $sf_stat( 'Memory', 1, 4 ) ) ),
 	array( 'group' => 'magic', 'core' => 3, 'bonus' => 1 ),
 );
+// Chassis cards: placeholder AI Core chassis, each an Item card with its
+// Physical stats (the core's 3 focus points a point, 20 at most), its HP
+// (10 plus those stats), its Attacks and the Traits it gives. Mechanical is the AI Core Kind's own Condition.
+$sf_mechanical = array(
+	'kind'   => 'condition',
+	'name'   => 'Mechanical',
+	'effect' => 'This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage.',
+);
+$sf_non_humanoid = array(
+	'kind'   => 'condition',
+	'name'   => 'Non-humanoid',
+	'effect' => 'This character is incapable of wielding weapons designed for human hands or wearing equipment designed for use on humanoid bodies.',
+);
+$sf_laborer    = array(
+	'name'        => 'Industrial Laborer Chassis',
+	'plane'       => 'Earth',
+	'value'       => 85000,
+	'currency'    => 'ERC',
+	'resistances' => '2 Blunt, 2 Slashing, 1 Piercing',
+	'description' => 'A heavy work frame on treads and hydraulic arms, built for cargo bays and shipyards.',
+	'physical'    => array( 'core' => 4, 'stats' => array( $sf_stat( 'Endurance', 0, 5, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'attacks'     => array(
+		array(
+			'name'        => 'Hydraulic Fist',
+			'damage'      => '2 Blunt + Power',
+			'range'       => '1 m',
+			'chips'       => array( 'Melee', 'Natural weapon' ),
+			'description' => 'A work fist on a hydraulic arm, built to bend steel.',
+		),
+	),
+	'traits'      => array(
+		$sf_mechanical,
+		$sf_non_humanoid,
+		array(
+			'kind'   => 'skill',
+			'name'   => 'Cargo Handling',
+			'effect' => 'This character gains +3 to rolls relating to the handling, tracking, or maintenance of cargo.',
+			'needs'  => 'Power 3, Endurance 2, Logic 2',
+		),
+	),
+);
+$sf_courier    = array(
+	'name'        => 'Courier Drone Chassis',
+	'plane'       => 'Earth',
+	'value'       => 30000,
+	'currency'    => 'ERC',
+	'resistances' => '1 Blunt',
+	'description' => 'A light, fast frame on four rotors, for carrying messages and small parcels.',
+	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 1, 20 ), $sf_stat( 'Power', 0, 1, 20 ), $sf_stat( 'Grace', 0, 4, 20 ) ) ),
+	'hp'          => 12,
+	'traits'      => array(
+		$sf_mechanical,
+		$sf_non_humanoid,
+		array(
+			'kind'   => 'condition',
+			'name'   => 'Flight',
+			'effect' => 'This character can fly, moving its full Movement distance through the air in any direction.',
+		),
+	),
+);
+
+// Each section's components sit in one outlined box, with Light and Dark
+// at its top right to set the box's background, so every component is shown
+// once and checked on both. Dark first: Strange Frontiers is mostly dark.
+$sf_theme_toggle = function () {
+	echo '<div class="sf-library-stage-bar"><span class="sf-library-label">Components</span><div class="sf-library-theme" role="group" aria-label="Background">';
+	// Font Awesome Pro 6 sun-bright and moon (solid), inline
+	$sun  = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M120.2 154.2c4.672 4.688 10.83 7.031 16.97 7.031S149.5 158.9 154.2 154.2c9.375-9.375 9.375-24.56 0-33.93L108.9 74.97c-9.344-9.375-24.56-9.375-33.94 0s-9.375 24.56 0 33.94L120.2 154.2zM256 112c13.25 0 24-10.75 24-24v-64C280 10.75 269.3 0 256 0S232 10.75 232 24v64C232 101.3 242.8 112 256 112zM112 256c0-13.25-10.75-24-24-24h-64C10.75 232 0 242.8 0 256s10.75 24 24 24h64C101.3 280 112 269.3 112 256zM374.8 161.2c6.141 0 12.3-2.344 16.97-7.031l45.25-45.28c9.375-9.375 9.375-24.56 0-33.94s-24.59-9.375-33.94 0l-45.25 45.28c-9.375 9.375-9.375 24.56 0 33.93C362.5 158.9 368.7 161.2 374.8 161.2zM256 400c-13.25 0-24 10.75-24 24v64C232 501.3 242.8 512 256 512s24-10.75 24-24v-64C280 410.8 269.3 400 256 400zM120.2 357.8l-45.25 45.28c-9.375 9.375-9.375 24.56 0 33.94c4.688 4.688 10.83 7.031 16.97 7.031s12.3-2.344 16.97-7.031l45.25-45.28c9.375-9.375 9.375-24.56 0-33.93S129.6 348.4 120.2 357.8zM488 232h-64c-13.25 0-24 10.75-24 24s10.75 24 24 24h64C501.3 280 512 269.3 512 256S501.3 232 488 232zM391.8 357.8c-9.344-9.375-24.56-9.372-33.94 .0031s-9.375 24.56 0 33.93l45.25 45.28c4.672 4.688 10.83 7.031 16.97 7.031s12.28-2.344 16.97-7.031c9.375-9.375 9.375-24.56 0-33.94L391.8 357.8zM256 144C194.1 144 144 194.1 144 256c0 61.86 50.14 112 112 112s112-50.14 112-112C368 194.1 317.9 144 256 144z"/></svg>';
+	$moon = '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>';
+	echo sf_button( $sun . 'Light', array( 'size' => 'small', 'attrs' => array( 'aria-pressed' => 'false', 'data-sf-theme' => 'light' ) ) );
+	echo sf_button( $moon . 'Dark', array( 'size' => 'small', 'tone' => 'primary', 'attrs' => array( 'aria-pressed' => 'true', 'data-sf-theme' => 'dark' ) ) );
+	echo '</div></div>';
+};
+$sf_humanoid   = array(
+	'name'        => 'Humanoid Service Chassis',
+	'plane'       => 'Earth',
+	'value'       => 45000,
+	'currency'    => 'ERC',
+	'resistances' => '1 Blunt',
+	'description' => 'A person-shaped frame of ordinary height, built to work among people and use what they use.',
+	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 2, 20 ), $sf_stat( 'Power', 0, 2, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'traits'      => array( $sf_mechanical ),
+);
+$sf_combat     = array(
+	'name'        => 'Combat Walker Chassis',
+	'plane'       => 'Earth',
+	'value'       => 400000,
+	'currency'    => 'ERC',
+	'resistances' => '3 Blunt, 3 Slashing, 4 Piercing',
+	'description' => 'A squat, armored frame on four legs, with a machine gun built into its body.',
+	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 10, 20 ), $sf_stat( 'Power', 0, 5, 20 ), $sf_stat( 'Grace', 0, 3, 20 ) ) ),
+	'attacks'     => array(
+		array(
+			'name'        => 'Mounted Machine Gun',
+			'damage'      => '7 Piercing',
+			'ranged'      => true,
+			'range'       => '600 m',
+			'attack'      => 'Ranged',
+			'stat'        => 'Grace',
+			'reload'      => 'Full',
+			'chips'       => array( 'Built-in' ),
+			'description' => 'A heavy automatic gun on a turret in the frame’s body. It can’t be taken off or disarmed.',
+		),
+	),
+	'hp_bonus'    => 10,
+	'traits'      => array(
+		$sf_mechanical,
+		$sf_non_humanoid,
+		array(
+			'kind'   => 'condition',
+			'name'   => 'Reinforced',
+			'effect' => 'This character or item has +10 Hit Points.',
+		),
+	),
+);
+
 $sf_list = function ( $items ) {
 	echo '<ul class="copy sf-library-used">';
 	foreach ( $items as $x ) {
@@ -317,8 +437,12 @@ $sf_list = function ( $items ) {
 		<title>Strange Frontiers Components</title>
 		<style>
 			.sf-library-band { padding: 48px 0; }
-			.sf-library-band.is-dark { background-color: var(--portfolio-black); color: var(--portfolio-white); }
-			.sf-library-band.is-dark .copy, .sf-library-band.is-dark h3, .sf-library-band.is-dark h4 { color: var(--portfolio-white); }
+			.sf-library-stage { padding: 16px 24px 24px; background-color: var(--portfolio-white); border: 1px solid var(--portfolio-light-gray); border-radius: 8px; transition: background-color 200ms, border-color 200ms; }
+			.sf-library-stage.is-dark { background-color: var(--portfolio-black); border-color: #4a4c4d; color: var(--portfolio-white); }
+			.sf-library-stage.is-dark :is(.copy, h3, h4, h5) { color: var(--portfolio-white); }
+			.sf-library-stage-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+			.sf-library-stage-bar .sf-library-label { margin: 0; }
+			.sf-library-theme { display: flex; gap: 6px; }
 			.sf-library-label { margin: 0 0 12px; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
 			.sf-library-used { margin: 0 0 24px; font-size: .875rem; }
 			.sf-library-used li { margin-bottom: 4px; }
@@ -328,6 +452,7 @@ $sf_list = function ( $items ) {
 			.sf-library-buttons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px; margin-bottom: 24px; }
 			.sf-library-button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 220px; }
 			.sf-library-note { font-size: .75rem; opacity: .7; }
+			.sf-library-chassis { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(480px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-stat-box { padding: 24px; background-color: #292b2c; border-radius: 12px; }
 			.sf-library-sheet { margin-top: 64px; }
@@ -340,7 +465,7 @@ $sf_list = function ( $items ) {
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
 				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
-				<p class="copy">For the cards, there’s one per kind of card: Trait, Item and Background. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis and Background. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
@@ -361,15 +486,12 @@ size: default | small | pill    round: xs | sm | md | lg    kind: bare | link
 states: ready, waiting, disabled, aria-busy; also: class, href, attrs</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['button'] ); ?>
-				<?php $sf_button_table(); ?>
-				<p class="sf-library-label">Tabs (css/rpg.css)</p>
-				<div class="tech-fields"><div class="tech-field-tab-list" role="tablist"><button type="button" class="tech-field-tab is-active" role="tab" aria-selected="true">Example Traits</button><button type="button" class="tech-field-tab" role="tab" aria-selected="false">Trait Rules</button></div></div>
-			</div>
-		</div>
-		<div class="sf-library-band is-dark">
-			<div class="container">
-				<p class="sf-library-label">The same buttons on a dark section</p>
-				<?php $sf_button_table(); ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<?php $sf_button_table(); ?>
+					<p class="sf-library-label">Tabs (css/rpg.css)</p>
+					<div class="tech-fields"><div class="tech-field-tab-list" role="tablist"><button type="button" class="tech-field-tab is-active" role="tab" aria-selected="true">Example Traits</button><button type="button" class="tech-field-tab" role="tab" aria-selected="false">Trait Rules</button></div></div>
+				</div>
 			</div>
 		</div>
 
@@ -383,21 +505,16 @@ optional: rank, plane ('isekai' | 'earth'), chips, flags, types, action (one or 
 options: fold ('open' | 'closed'), keep (true: the effect stays in view while it's closed)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['trait'] ); ?>
-				<p class="sf-library-label">Each kind and variant</p>
-				<div class="sf-card-grid">
-					<?php foreach ( $sf_traits as $t ) { sf_card_trait( $t ); } ?>
-				</div>
-				<p class="sf-library-label">fold and keep, as on a character sheet: closed, open, and an Ability closed to its name and effect</p>
-				<div class="sf-card-grid">
-					<?php foreach ( $sf_folding as $t ) { sf_card_trait( $t ); } ?>
-				</div>
-			</div>
-		</div>
-		<div class="sf-library-band is-dark">
-			<div class="container">
-				<p class="sf-library-label">The same cards on a dark section</p>
-				<div class="sf-card-grid">
-					<?php foreach ( array( $sf_traits[3], $sf_traits[5], $sf_traits[7], $sf_folding[0] ) as $t ) { sf_card_trait( $t ); } ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Each kind and variant</p>
+					<div class="sf-card-grid">
+						<?php foreach ( $sf_traits as $t ) { sf_card_trait( $t ); } ?>
+					</div>
+					<p class="sf-library-label">fold and keep, as on a character sheet: closed, open, and an Ability closed to its name and effect</p>
+					<div class="sf-card-grid">
+						<?php foreach ( $sf_folding as $t ) { sf_card_trait( $t ); } ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -407,30 +524,50 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, mp, description, lead, effects
+optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
 options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
-				<p class="sf-library-label">The same card in each interface</p>
-				<div class="sf-library-items">
-					<?php foreach ( $sf_item_modes as $mode ) : ?>
-						<div>
-							<p class="copy small mb-2"><?php echo sf_card_e( $mode[0] ); ?></p>
-							<?php sf_card_item( $sf_pistol + $mode[1] ); ?>
-						</div>
-					<?php endforeach; ?>
-				</div>
-				<p class="sf-library-label">Weapons, wearables, equipment, magic Items and natural weapons</p>
-				<div class="sf-library-items">
-					<?php foreach ( $sf_items as $i ) { sf_card_item( $i ); } ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">The same card in each interface</p>
+					<div class="sf-library-items">
+						<?php foreach ( $sf_item_modes as $mode ) : ?>
+							<div>
+								<p class="copy small mb-2"><?php echo sf_card_e( $mode[0] ); ?></p>
+								<?php sf_card_item( $sf_pistol + $mode[1] ); ?>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					<p class="sf-library-label">Weapons, wearables, equipment, magic Items and natural weapons</p>
+					<div class="sf-library-items">
+						<?php foreach ( $sf_items as $i ) { sf_card_item( $i ); } ?>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="sf-library-band is-dark">
+
+		<!-- Chassis cards -->
+		<div class="sf-library-band">
 			<div class="container">
-				<p class="sf-library-label">The same cards on a dark section</p>
-				<div class="sf-library-items">
-					<?php foreach ( array( $sf_items[0], $sf_items[2], $sf_items[ count( $sf_items ) - 2 ] ) as $i ) { sf_card_item( $i ); } ?>
+				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 20 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
+an Item card (category Chassis) holding part of a character sheet: its HP on its top line, then its Physical core and focus stats as a stat block, its Attacks as Item cards and the Traits it gives as Trait cards
+physical: core, stats (Endurance, Power, Grace)    HP: 10 + its Physical focus stats + hp_bonus (from Traits like Reinforced), on its top line with − and +; hp: its HP now, when it's taken damage; its resistances lead the chips line
+attacks: Item cards' arrays, as sf_card_item() takes them    traits: Trait cards' arrays, as sf_card_trait() takes them
+optional and options: everything sf_card_item() takes (resistances for its armor, fold, count, equip)</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['chassis'] ); ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Placeholder chassis: a laborer with an Attack, a drone that’s taken damage, a humanoid and a combat walker with a built-in gun, then folded closed as on a character sheet</p>
+					<div class="sf-library-chassis">
+						<?php sf_card_chassis( $sf_laborer ); ?>
+						<?php sf_card_chassis( $sf_courier ); ?>
+						<?php sf_card_chassis( $sf_humanoid ); ?>
+						<?php sf_card_chassis( $sf_combat ); ?>
+						<?php sf_card_chassis( $sf_laborer + array( 'fold' => 'closed', 'equip' => 'on' ) ); ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -443,17 +580,12 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 takes a background as the creator exports it: sample-character.json, dreftian-backgrounds.json</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['background'] ); ?>
-				<p class="sf-library-label">Edwin’s Kind, Origin, Profession and Past, then a Dreftian Kind and Profession</p>
-				<div class="sf-library-backgrounds">
-					<?php foreach ( $sf_backgrounds as $b ) { sf_card_background( $b, 'Origin' === $b['slot'] && 'earth' === $b['plane'] ? ', placed in Grace' : '' ); } ?>
-				</div>
-			</div>
-		</div>
-		<div class="sf-library-band is-dark">
-			<div class="container">
-				<p class="sf-library-label">The same cards on a dark section</p>
-				<div class="sf-library-backgrounds">
-					<?php sf_card_background( $sf_backgrounds[0] ); sf_card_background( $sf_dreft['kinds'][0] ); ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Edwin’s Kind, Origin, Profession and Past, then a Dreftian Kind and Profession</p>
+					<div class="sf-library-backgrounds">
+						<?php foreach ( $sf_backgrounds as $b ) { sf_card_background( $b, 'Origin' === $b['slot'] && 'earth' === $b['plane'] ? ', placed in Grace' : '' ); } ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -467,14 +599,17 @@ group: physical | social | mental | magic (Magic takes core and an optional bonu
 options: max (true: each stat's maximum beside its number). The creator adds edit (the − and + on each stat) for its Stats step and Player Tools' level up.</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['stats'] ); ?>
-				<p class="sf-library-label">Plain, as on Player Tools’ sheet, then max, as on the creator’s Sheet</p>
-				<div class="sf-library-stats">
-					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats ); ?></div>
-					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats, array( 'max' => true ) ); ?></div>
-				</div>
-				<p class="sf-library-label" style="margin-top: 32px">Magic, a diamond per point, with a package’s bonus point first</p>
-				<div class="sf-library-stats">
-					<div class="sf-library-stat-box"><?php sf_stat_block( $sf_mage_stats ); ?></div>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Plain, as on Player Tools’ sheet, then max, as on the creator’s Sheet</p>
+					<div class="sf-library-stats">
+						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats ); ?></div>
+						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats, array( 'max' => true ) ); ?></div>
+					</div>
+					<p class="sf-library-label" style="margin-top: 32px">Magic, a diamond per point, with a package’s bonus point first</p>
+					<div class="sf-library-stats">
+						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_mage_stats ); ?></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -494,32 +629,35 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 				</ul>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['sheet'] ); ?>
-				<p class="sf-library-label">The boxes, with what fills each</p>
-				<?php
-				$sf_slot = function ( $text ) {
-					return '<p class="sf-sheet-empty">' . $text . '</p>';
-				};
-				sf_sheet_layout(
-					array(
-						'context'      => 'sample',
-						'level'        => 1,
-						'who'          => $sf_slot( 'who: the portrait, name and character line' ),
-						'description'  => $sf_slot( 'description' ),
-						'resources'    => sf_sheet_full_resources( array( 'hp' => 10, 'vp' => 10, 'sp' => 10 ) ),
-						'stats'        => $sf_slot( 'stats: the stat block' ),
-						'movement'     => '10 m',
-						'resistances'  => sf_sheet_title( 'Resistances' ) . $sf_slot( 'resistances' ),
-						'conditions'   => sf_sheet_title( 'Conditions', '', 'h4', true ) . $sf_slot( 'conditions: Condition cards' ),
-						'items'        => sf_sheet_title( 'Items', '', 'h4', true ) . $sf_slot( 'items: item cards' ),
-						'knowledges'   => $sf_slot( 'knowledges: the list of links' ),
-						'abilities'    => $sf_slot( 'abilities: Trait cards' ),
-						'skills'       => $sf_slot( 'skills: Trait cards' ),
-						'skills_aside' => '<span class="sf-sheet-aside">skills_aside</span>',
-						'other'        => sf_sheet_title( 'Other Traits' ) . $sf_slot( 'other: anything else, when there is any' ),
-					),
-					array( 'class' => 'sf-library-sheet' )
-				);
-				?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">The boxes, with what fills each</p>
+					<?php
+					$sf_slot = function ( $text ) {
+						return '<p class="sf-sheet-empty">' . $text . '</p>';
+					};
+					sf_sheet_layout(
+						array(
+							'context'      => 'sample',
+							'level'        => 1,
+							'who'          => $sf_slot( 'who: the portrait, name and character line' ),
+							'description'  => $sf_slot( 'description' ),
+							'resources'    => sf_sheet_full_resources( array( 'hp' => 10, 'vp' => 10, 'sp' => 10 ) ),
+							'stats'        => $sf_slot( 'stats: the stat block' ),
+							'movement'     => '10 m',
+							'resistances'  => sf_sheet_title( 'Resistances' ) . $sf_slot( 'resistances' ),
+							'conditions'   => sf_sheet_title( 'Conditions', '', 'h4', true ) . $sf_slot( 'conditions: Condition cards' ),
+							'items'        => sf_sheet_title( 'Items', '', 'h4', true ) . $sf_slot( 'items: item cards' ),
+							'knowledges'   => $sf_slot( 'knowledges: the list of links' ),
+							'abilities'    => $sf_slot( 'abilities: Trait cards' ),
+							'skills'       => $sf_slot( 'skills: Trait cards' ),
+							'skills_aside' => '<span class="sf-sheet-aside">skills_aside</span>',
+							'other'        => sf_sheet_title( 'Other Traits' ) . $sf_slot( 'other: anything else, when there is any' ),
+						),
+						array( 'class' => 'sf-library-sheet' )
+					);
+					?>
+				</div>
 			</div>
 		</div>
 
@@ -532,8 +670,11 @@ The page's one popup, empty and closed, filled and opened by showLoreModal() (ph
 options: tone (light: the white panel, a dark X; dark: the creator's gray, a light X), size (narrow 480px, default 720px, wide 1100px), card (a card on its own is the popup's edge; on the site, set per entry by .lore-card)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['popup'] ); ?>
-				<p class="sf-library-label">Open it</p>
-				<p class="copy">A lore entry in this page’s light popup: <?php echo sf_lore_link( 'isekai', 'Isekai' ); ?>.</p>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Open it</p>
+					<p class="copy">A lore entry in this page’s light popup: <?php echo sf_lore_link( 'isekai', 'Isekai' ); ?>.</p>
+				</div>
 			</div>
 		</div>
 
@@ -546,39 +687,56 @@ HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP S
 options: fold ('closed' or 'open': the cards fold, for a page with many), heading (the name's level, h5 by default)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['npc'] ); ?>
-				<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
-				<?php include 'php/rpg/lore/murk-legs.php'; ?>
-				<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
-				<?php
-				sf_npc_sheet(
-					array(
-						'name'        => 'Hedge Witch',
-						'kind'        => 'NPC, Dreft',
-						'description' => 'A village healer who knows a little more magic than she lets on.',
-						'move'        => '10 m',
-						'stats'       => array(
-							'Physical' => 1, 'Endurance' => 2, 'Power' => 1, 'Grace' => 2,
-							'Social' => 2, 'Empathy' => 4, 'Persuasion' => 3, 'Demeanor' => 2,
-							'Mental' => 3, 'Logic' => 3, 'Intuition' => 5, 'Memory' => 4,
-							'Magic' => 2,
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
+					<?php include 'php/rpg/lore/murk-legs.php'; ?>
+					<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
+					<?php
+					sf_npc_sheet(
+						array(
+							'name'        => 'Hedge Witch',
+							'kind'        => 'NPC, Dreft',
+							'description' => 'A village healer who knows a little more magic than she lets on.',
+							'move'        => '10 m',
+							'stats'       => array(
+								'Physical' => 1, 'Endurance' => 2, 'Power' => 1, 'Grace' => 2,
+								'Social' => 2, 'Empathy' => 4, 'Persuasion' => 3, 'Demeanor' => 2,
+								'Mental' => 3, 'Logic' => 3, 'Intuition' => 5, 'Memory' => 4,
+								'Magic' => 2,
+							),
+							'attacks'     => array(
+								array( 'name' => 'Walking Staff', 'damage' => '4 Blunt', 'formula' => 'Power', 'range' => '2 m', 'chips' => array( 'Melee' ), 'description' => 'A gnarled ash staff.' ),
+							),
+							'traits'      => array(
+								array( 'kind' => 'skill', 'name' => 'Herbalism', 'rank' => 2, 'effect' => 'Rank ×5 added to Skill Checks involving herbs and remedies.' ),
+							),
+							'items'       => array(
+								array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial, brewed at Rank 1.', 'count' => 2 ),
+							),
 						),
-						'attacks'     => array(
-							array( 'name' => 'Walking Staff', 'damage' => '4 Blunt', 'formula' => 'Power', 'range' => '2 m', 'chips' => array( 'Melee' ), 'description' => 'A gnarled ash staff.' ),
-						),
-						'traits'      => array(
-							array( 'kind' => 'skill', 'name' => 'Herbalism', 'rank' => 2, 'effect' => 'Rank ×5 added to Skill Checks involving herbs and remedies.' ),
-						),
-						'items'       => array(
-							array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial, brewed at Rank 1.', 'count' => 2 ),
-						),
-					),
-					array( 'fold' => 'closed' )
-				);
-				?>
+						array( 'fold' => 'closed' )
+					);
+					?>
+				</div>
 			</div>
 		</div>
 
 		<?php include 'php/rpg/lore-modal.php'; ?>
 		<?php include 'php/javascript-loads.php'; ?>
+		<script>
+		// Light and Dark: set the box's background, and press the one chosen
+		document.addEventListener('click', function (e) {
+			var button = e.target.closest('[data-sf-theme]');
+			if (!button) return;
+			var stage = button.closest('.sf-library-stage');
+			stage.classList.toggle('is-dark', button.dataset.sfTheme === 'dark');
+			stage.querySelectorAll('.sf-library-theme [data-sf-theme]').forEach(function (b) {
+				var on = b === button;
+				b.setAttribute('aria-pressed', on ? 'true' : 'false');
+				b.classList.toggle('sf-btn--primary', on);
+			});
+		});
+		</script>
 	</body>
 </html>
