@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/11/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: AI Cores inhabit chassis. A chassis is an item: add one from Add item’s Chassis tab (free for now) and equip it, and its Physical stats, HP, Movement, Attacks and Traits become the AI Core’s. An AI Core can own several and inhabit one at a time; equipping another moves it there. Its core keeps its own 10 HP, shown apart from the chassis’s. Four chassis to start: Industrial Laborer, Courier Drone, Humanoid Service and Combat Walker, with the new Non-humanoid, Flight and Reinforced Conditions.</li>
 						<li>Adventures: the Magic tab’s enchanted Items, Traveler’s Respite and the Amulet of the Seas, have − and + buttons on their stored MP, to track it as it’s spent and recharged.</li>
 					</ul>
 				</article>
