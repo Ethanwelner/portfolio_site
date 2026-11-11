@@ -375,6 +375,40 @@ $sf_theme_toggle = function () {
 	echo sf_button( 'Dark', array( 'size' => 'small', 'attrs' => array( 'aria-pressed' => 'false', 'data-sf-theme' => 'dark' ) ) );
 	echo '</div></div>';
 };
+$sf_humanoid   = array(
+	'name'        => 'Humanoid Service Chassis',
+	'plane'       => 'Earth',
+	'value'       => 45000,
+	'currency'    => 'ERC',
+	'resistances' => '1 Blunt',
+	'description' => 'A person-shaped frame of ordinary height, built to work among people and use what they use.',
+	'physical'    => array( 'core' => 2, 'stats' => array( $sf_stat( 'Endurance', 0, 2, 20 ), $sf_stat( 'Power', 0, 2, 20 ), $sf_stat( 'Grace', 0, 2, 20 ) ) ),
+	'traits'      => array( $sf_mechanical ),
+);
+$sf_combat     = array(
+	'name'        => 'Combat Walker Chassis',
+	'plane'       => 'Earth',
+	'value'       => 400000,
+	'currency'    => 'ERC',
+	'resistances' => '3 Blunt, 3 Slashing, 4 Piercing',
+	'description' => 'A squat, armored frame on four legs, with a machine gun built into its body.',
+	'physical'    => array( 'core' => 6, 'stats' => array( $sf_stat( 'Endurance', 0, 7, 20 ), $sf_stat( 'Power', 0, 4, 20 ), $sf_stat( 'Grace', 0, 7, 20 ) ) ),
+	'attacks'     => array(
+		array(
+			'name'        => 'Mounted Machine Gun',
+			'damage'      => '7 Piercing',
+			'ranged'      => true,
+			'range'       => '600 m',
+			'attack'      => 'Ranged',
+			'stat'        => 'Grace',
+			'reload'      => 'Full',
+			'chips'       => array( 'Built-in' ),
+			'description' => 'A heavy automatic gun on a turret in the frame’s body. It can’t be taken off or disarmed.',
+		),
+	),
+	'traits'      => array( $sf_mechanical, $sf_non_humanoid ),
+);
+
 $sf_list = function ( $items ) {
 	echo '<ul class="copy sf-library-used">';
 	foreach ( $items as $x ) {
@@ -514,10 +548,12 @@ optional and options: everything sf_card_item() takes (resistances for its armor
 				<?php $sf_list( $sf_used_in['chassis'] ); ?>
 				<div class="sf-library-stage">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">Placeholder chassis: one with an Attack, one that’s taken damage, then folded closed as on a character sheet</p>
+					<p class="sf-library-label">Placeholder chassis: a laborer with an Attack, a drone that’s taken damage, a humanoid and a combat walker with a built-in gun, then folded closed as on a character sheet</p>
 					<div class="sf-library-chassis">
 						<?php sf_card_chassis( $sf_laborer ); ?>
 						<?php sf_card_chassis( $sf_courier ); ?>
+						<?php sf_card_chassis( $sf_humanoid ); ?>
+						<?php sf_card_chassis( $sf_combat ); ?>
 						<?php sf_card_chassis( $sf_laborer + array( 'fold' => 'closed', 'equip' => 'on' ) ); ?>
 					</div>
 				</div>
