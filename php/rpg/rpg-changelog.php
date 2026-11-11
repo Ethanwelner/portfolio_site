@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/11/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: when the AI builder names a character, it follows naming conventions for the character’s Kind and Origin.</li>
 						<li>Setting: a Religions &amp; Philosophies tab. Major Religions covers where Christianity, Hinduism, Islam and Buddhism stand in 2230, after two centuries of planar revelation; New Philosophies and Religious Ideas is coming soon.</li>
 						<li>Player Tools: the amount fields with Damage and Heal under HP, VP, SP and MP are hidden for now. The − and + still change them, and the assistant can still apply damage and healing.</li>
 						<li>Character Creator and Player Tools: Wealth. Characters start with a kit bought with Kit Points instead of money. Each item has a Kit Cost from Basic (free) to 5, and a character’s Wealth, from its Origin, Profession and Past, sets how many points it gets (3 + 2 per point of Wealth) and the dearest item it can start with. Wealthy backgrounds like Raised at Court or a Merchant Dynasty start with more and better gear; Gutter Trash starts lean. Points left over become starting cash in ERC or Luras when the character goes into play, and Wealth stays on the sheet as a badge by the Items title, showing the Kit Points left while you build. Money is no longer an item: it’s a badge beside it, one per currency, that takes a change like +50 or −20, or a new total. An AI Core gets its first chassis free, up to Kit Cost 3.</li>
