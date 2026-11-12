@@ -10,6 +10,9 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/12/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The American Empire’s history now runs from the 2046 riots to the 2194 move aboard the Ark “New York”, adding the proclamation of the Empire, the Drone Wars in Latin America, the division of Mexico, the Second AI Panic, the boom years, the first switch-gate catastrophe, its interstellar colonies and the present day.</li>
+						<li>The Kingdom of India is a technocratic monarchy led by Prince Raja Jagadeeshwara Raya IV.</li>
+						<li>The Eighth Lunar Industrial Syndicate’s people are its “Citizens,” and its owners are shareholders.</li>
 						<li>Character Creator and Player Tools: Additional Language is gone. Every Language is already its own Knowledge to pick, so a Trait that only asked which Language to take was an extra step.</li>
 						<li>Character Creator and Player Tools: Additional Contact is now a Skill, and Contacts are no longer a category of Trait, so Choose Traits loses its Contacts checkbox.</li>
 					</ul>
