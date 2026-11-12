@@ -88,7 +88,22 @@ category: consumable\r
 uses: "uses 4: when taken"\r
 value: 30\r
 currency: "ERC"\r
-`,bu=`id: arrows\r
+`,bu=`id: armored-humanoid-chassis
+name: "Armored Humanoid Chassis"
+status: draft
+plane: earth
+summary: "A humanoid frame plated and braced over every joint, built to keep working while it takes fire."
+tags: [chassis, ai-core, humanoid, advanced, armored]
+type: chassis
+category: chassis
+resistances: "3 Blunt, 2 Slashing, 2 Piercing"
+value: 280000
+currency: "ERC"
+chassis:
+  core: 4
+  stats: { endurance: 7, power: 3, grace: 2 }
+  traits: [mechanical, reinforced]
+`,xu=`id: arrows\r
 name: "Arrows"\r
 status: draft\r
 plane: any\r
@@ -99,7 +114,7 @@ category: consumable\r
 uses: "uses 20: when fired, some recoverable"\r
 value: 40\r
 currency: "ERC"\r
-`,xu=`id: backpack\r
+`,Su=`id: backpack\r
 name: "Backpack"\r
 status: draft\r
 plane: any\r
@@ -110,7 +125,7 @@ category: gear\r
 slot: "Back"\r
 value: 80\r
 currency: "ERC"\r
-`,Su=`id: ballistic-shield\r
+`,Cu=`id: ballistic-shield\r
 name: "Ballistic Shield"\r
 status: draft\r
 plane: earth\r
@@ -123,7 +138,7 @@ modifiers: "Defense +5 (when Defending)"\r
 slot: "Off Hand"\r
 value: 1200\r
 currency: "ERC"\r
-`,Cu=`id: ballistic-vest\r
+`,wu=`id: ballistic-vest\r
 name: "Ballistic Vest"\r
 status: draft\r
 plane: earth\r
@@ -135,7 +150,7 @@ resistances: "2 Blunt, 1 Slashing, 5 Piercing, 1 Cold"\r
 slot: "Body Armor"\r
 value: 800\r
 currency: "ERC"\r
-`,wu=`id: banishing-water\r
+`,Tu=`id: banishing-water\r
 name: "Banishing Water"\r
 status: draft\r
 plane: isekai\r
@@ -150,7 +165,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Banish Spirit. Value is per Rank."\r
-`,Tu=`id: bedroll\r
+`,Eu=`id: bedroll\r
 name: "Bedroll"\r
 status: draft\r
 plane: any\r
@@ -160,7 +175,7 @@ type: equipment\r
 category: gear\r
 value: 60\r
 currency: "ERC"\r
-`,Eu=`id: bicycle-kick\r
+`,Du=`id: bicycle-kick\r
 name: "Bicycle Kick"\r
 status: draft\r
 plane: any\r
@@ -175,7 +190,7 @@ attackStat: "Grace"\r
 onHit: "Solid Hit or better: the target loses its next Action"\r
 modifiers: "Attack Rolls -3"\r
 notes: "Natural weapon, granted by Martial Arts Master."\r
-`,Du=`id: binoculars\r
+`,Ou=`id: binoculars\r
 name: "Binoculars"\r
 status: draft\r
 plane: earth\r
@@ -185,7 +200,7 @@ type: equipment\r
 category: gear\r
 value: 500\r
 currency: "ERC"\r
-`,Ou=`id: breath-weapon\r
+`,ku=`id: breath-weapon\r
 name: "Breath Weapon"\r
 status: draft\r
 plane: any\r
@@ -200,7 +215,7 @@ attackStat: "Physical"\r
 areaOfEffect: "3 m"\r
 uses: "uses 1: every 3 Rounds, or once a minute outside of combat"\r
 notes: "Natural weapon, granted by Natural Breath Weapon."\r
-`,ku=`id: brigandine\r
+`,Au=`id: brigandine\r
 name: "Brigandine"\r
 status: draft\r
 plane: any\r
@@ -212,7 +227,7 @@ resistances: "2 Blunt, 3 Slashing, 2 Piercing"\r
 slot: "Body Armor"\r
 value: 900\r
 currency: "ERC"\r
-`,Au=`id: buckler\r
+`,ju=`id: buckler\r
 name: "Buckler"\r
 status: draft\r
 plane: any\r
@@ -225,7 +240,21 @@ modifiers: "Defense +2 (when Defending)"\r
 slot: "Off Hand"\r
 value: 60\r
 currency: "ERC"\r
-`,ju=`id: cargo-truck\r
+`,Mu=`id: budget-humanoid-chassis
+name: "Budget Humanoid Chassis"
+status: draft
+plane: earth
+summary: "A bare, mass-produced frame of ordinary height: cheap to buy, cheap to fix, and built to do as little as it can get away with."
+tags: [chassis, ai-core, humanoid, budget]
+type: chassis
+category: chassis
+value: 6000
+currency: "ERC"
+chassis:
+  core: 1
+  stats: { endurance: 1, power: 1, grace: 1 }
+  traits: [mechanical]
+`,Nu=`id: cargo-truck\r
 name: "Cargo Truck"\r
 status: draft\r
 plane: earth\r
@@ -235,7 +264,7 @@ type: vehicle\r
 category: other\r
 value: 900000\r
 currency: "ERC"\r
-`,Mu=`id: chainmail\r
+`,Pu=`id: chainmail\r
 name: "Chainmail"\r
 status: draft\r
 plane: any\r
@@ -247,7 +276,7 @@ resistances: "1 Blunt, 3 Slashing, 1 Piercing"\r
 slot: "Body Armor"\r
 value: 1200\r
 currency: "ERC"\r
-`,Nu=`id: charm-potion\r
+`,Fu=`id: charm-potion\r
 name: "Charm Potion"\r
 status: draft\r
 plane: isekai\r
@@ -259,7 +288,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Charm. Value is per Rank."\r
-`,Pu=`id: cleansing-potion\r
+`,Iu=`id: cleansing-potion\r
 name: "Cleansing Potion"\r
 status: draft\r
 plane: isekai\r
@@ -271,7 +300,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Cleanse. Value is per Rank."\r
-`,Fu=`id: club\r
+`,Lu=`id: club\r
 name: "Club"\r
 status: draft\r
 plane: any\r
@@ -285,7 +314,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 20\r
 currency: "ERC"\r
-`,Iu=`id: cold-weather-gear\r
+`,Ru=`id: cold-weather-gear\r
 name: "Cold Weather Gear"\r
 status: draft\r
 plane: any\r
@@ -297,7 +326,7 @@ resistances: "3 Cold"\r
 slot: "Outerwear"\r
 value: 300\r
 currency: "ERC"\r
-`,Lu=`id: combat-helmet\r
+`,zu=`id: combat-helmet\r
 name: "Combat Helmet"\r
 status: draft\r
 plane: earth\r
@@ -309,7 +338,7 @@ resistances: "4 Blunt, 2 Slashing, 5 Piercing (head)"\r
 slot: "Headwear"\r
 value: 500\r
 currency: "ERC"\r
-`,Ru=`id: combat-knife\r
+`,Bu=`id: combat-knife\r
 name: "Combat Knife"\r
 status: draft\r
 plane: earth\r
@@ -323,7 +352,7 @@ maxRange: "1 m"\r
 attackStat: "Grace"\r
 value: 120\r
 currency: "ERC"\r
-`,zu=`id: combat-voidsuit\r
+`,Vu=`id: combat-voidsuit\r
 name: "Combat Voidsuit"\r
 status: draft\r
 plane: earth\r
@@ -336,7 +365,7 @@ uses: "uses 1: per air tank"\r
 slot: "Body Armor"\r
 value: 120000\r
 currency: "ERC"\r
-`,Bu=`id: combat-walker-chassis\r
+`,Hu=`id: combat-walker-chassis\r
 name: "Combat Walker Chassis"\r
 status: placeholder\r
 plane: earth\r
@@ -352,7 +381,7 @@ chassis:\r
   stats: { endurance: 10, power: 5, grace: 3 }\r
   attacks: [mounted-machine-gun]\r
   traits: [mechanical, non-humanoid, reinforced]\r
-`,Vu=`id: comm-unit\r
+`,Uu=`id: comm-unit\r
 name: "Comm Unit"\r
 status: draft\r
 plane: earth\r
@@ -362,7 +391,7 @@ type: equipment\r
 category: gear\r
 value: 800\r
 currency: "ERC"\r
-`,Hu=`id: compass\r
+`,Wu=`id: compass\r
 name: "Compass"\r
 status: draft\r
 plane: any\r
@@ -372,7 +401,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,Uu=`id: cooking-kit\r
+`,Gu=`id: cooking-kit\r
 name: "Cooking Kit"\r
 status: draft\r
 plane: any\r
@@ -382,7 +411,7 @@ type: equipment\r
 category: gear\r
 value: 60\r
 currency: "ERC"\r
-`,Wu=`id: courier-drone-chassis\r
+`,Ku=`id: courier-drone-chassis\r
 name: "Courier Drone Chassis"\r
 status: placeholder\r
 plane: earth\r
@@ -397,7 +426,7 @@ chassis:\r
   core: 2\r
   stats: { endurance: 1, power: 1, grace: 4 }\r
   traits: [mechanical, non-humanoid, flight]\r
-`,Gu=`id: crossbow-bolts\r
+`,qu=`id: crossbow-bolts\r
 name: "Crossbow Bolts"\r
 status: draft\r
 plane: any\r
@@ -408,7 +437,7 @@ category: consumable\r
 uses: "uses 20: when fired, some recoverable"\r
 value: 40\r
 currency: "ERC"\r
-`,Ku=`id: crossbow\r
+`,Ju=`id: crossbow\r
 name: "Crossbow"\r
 status: draft\r
 plane: any\r
@@ -423,7 +452,7 @@ attackStat: "Grace"\r
 reload: "Full"\r
 value: 500\r
 currency: "ERC"\r
-`,qu=`id: dagger\r
+`,Yu=`id: dagger\r
 name: "Dagger"\r
 status: draft\r
 plane: any\r
@@ -437,7 +466,7 @@ maxRange: "1 m"\r
 attackStat: "Grace"\r
 value: 60\r
 currency: "ERC"\r
-`,Ju=`id: darkness-flask\r
+`,Xu=`id: darkness-flask\r
 name: "Darkness Flask"\r
 status: draft\r
 plane: isekai\r
@@ -451,7 +480,7 @@ uses: "uses 1: when thrown"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Darkness. Value is per Rank."\r
-`,Yu=`id: deathproof-potion\r
+`,Zu=`id: deathproof-potion\r
 name: "Deathproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -463,7 +492,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Deathproof. Value is per Rank."\r
-`,Xu=`id: disguise-kit\r
+`,Qu=`id: disguise-kit\r
 name: "Disguise Kit"\r
 status: draft\r
 plane: any\r
@@ -473,7 +502,7 @@ type: equipment\r
 category: gear\r
 value: 150\r
 currency: "ERC"\r
-`,Zu=`id: dispelling-potion\r
+`,$u=`id: dispelling-potion\r
 name: "Dispelling Potion"\r
 status: draft\r
 plane: isekai\r
@@ -485,7 +514,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Dispel Magic. Value is per Rank."\r
-`,Qu=`id: earth-reserve-credits\r
+`,K=`id: earth-reserve-credits\r
 name: "Earth Reserve Credits (ERC)"\r
 status: draft\r
 plane: earth\r
@@ -495,7 +524,7 @@ type: misc\r
 category: currency\r
 value: 1\r
 currency: "ERC"\r
-`,$u=`id: emp-grenade\r
+`,ed=`id: emp-grenade\r
 name: "EMP Grenade"\r
 status: draft\r
 plane: earth\r
@@ -510,7 +539,7 @@ areaOfEffect: "5 m"\r
 uses: "uses 1: when thrown"\r
 value: 400\r
 currency: "ERC"\r
-`,K=`id: endurance-potion\r
+`,q=`id: endurance-potion\r
 name: "Endurance Potion"\r
 status: draft\r
 plane: isekai\r
@@ -522,7 +551,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Magical Endurance. Value is per Rank."\r
-`,ed=`id: engineers-toolkit\r
+`,J=`id: engineers-toolkit\r
 name: "Engineer’s Toolkit"\r
 status: draft\r
 plane: earth\r
@@ -532,7 +561,7 @@ type: equipment\r
 category: gear\r
 value: 2000\r
 currency: "ERC"\r
-`,q=`id: entangling-flask\r
+`,Y=`id: entangling-flask\r
 name: "Entangling Flask"\r
 status: draft\r
 plane: isekai\r
@@ -547,7 +576,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Entangle. Value is per Rank."\r
-`,J=`id: explosive-flask\r
+`,td=`id: explosive-flask\r
 name: "Explosive Flask"\r
 status: draft\r
 plane: isekai\r
@@ -564,7 +593,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Fireball. Value is per Rank."\r
-`,Y=`id: faraday-shroud\r
+`,nd=`id: faraday-shroud\r
 name: "Faraday Shroud"\r
 status: draft\r
 plane: earth\r
@@ -576,7 +605,7 @@ resistances: "4 EMP, 2 Electrical"\r
 slot: "Outerwear"\r
 value: 2000\r
 currency: "ERC"\r
-`,td=`id: field-sample-kit\r
+`,rd=`id: field-sample-kit\r
 name: "Field Sample Kit"\r
 status: draft\r
 plane: earth\r
@@ -586,7 +615,7 @@ type: equipment\r
 category: gear\r
 value: 400\r
 currency: "ERC"\r
-`,nd=`id: fighter\r
+`,id=`id: fighter\r
 name: "Fighter"\r
 status: draft\r
 plane: earth\r
@@ -596,7 +625,7 @@ type: vehicle\r
 category: other\r
 value: 30000000\r
 currency: "ERC"\r
-`,rd=`id: fine-clothes\r
+`,ad=`id: fine-clothes\r
 name: "Fine Clothes"\r
 status: draft\r
 plane: any\r
@@ -607,7 +636,7 @@ category: gear\r
 slot: "Clothing"\r
 value: 800\r
 currency: "ERC"\r
-`,id=`id: fishing-kit\r
+`,od=`id: fishing-kit\r
 name: "Fishing Kit"\r
 status: draft\r
 plane: any\r
@@ -617,7 +646,7 @@ type: equipment\r
 category: gear\r
 value: 40\r
 currency: "ERC"\r
-`,ad=`id: fists\r
+`,sd=`id: fists\r
 name: "Fists"\r
 status: draft\r
 plane: any\r
@@ -630,7 +659,7 @@ attackType: "Melee"\r
 maxRange: "1 m"\r
 attackStat: "Grace"\r
 notes: "Natural weapon: every character has it."\r
-`,od=`id: five-fingered-palm-of-death\r
+`,cd=`id: five-fingered-palm-of-death\r
 name: "Five Fingered Palm of Death"\r
 status: draft\r
 plane: any\r
@@ -645,7 +674,7 @@ attackStat: "Grace"\r
 onHit: "Critical Hit: the target makes an Endurance check against the damage dealt *5, and its HP drops to 0 if it fails"\r
 modifiers: "Attack Rolls -5"\r
 notes: "Natural weapon, granted by Martial Arts Master."\r
-`,sd=`id: flail\r
+`,ld=`id: flail\r
 name: "Flail"\r
 status: draft\r
 plane: any\r
@@ -659,7 +688,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 350\r
 currency: "ERC"\r
-`,cd=`id: flameproof-potion\r
+`,ud=`id: flameproof-potion\r
 name: "Flameproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -671,7 +700,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Flameproof. Value is per Rank."\r
-`,ld=`id: flamethrower\r
+`,dd=`id: flamethrower\r
 name: "Flamethrower"\r
 status: draft\r
 plane: earth\r
@@ -686,7 +715,7 @@ attackStat: "Grace"\r
 reload: "Full"\r
 value: 3000\r
 currency: "ERC"\r
-`,ud=`id: flashlight\r
+`,fd=`id: flashlight\r
 name: "Flashlight"\r
 status: draft\r
 plane: earth\r
@@ -696,7 +725,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,dd=`id: flint-and-steel\r
+`,pd=`id: flint-and-steel\r
 name: "Flint and Steel"\r
 status: draft\r
 plane: any\r
@@ -706,7 +735,7 @@ type: equipment\r
 category: gear\r
 value: 10\r
 currency: "ERC"\r
-`,fd=`id: fog-flask\r
+`,md=`id: fog-flask\r
 name: "Fog Flask"\r
 status: draft\r
 plane: isekai\r
@@ -720,7 +749,7 @@ uses: "uses 1: when thrown"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Fog Cloud. Value is per Rank."\r
-`,pd=`id: frag-grenade\r
+`,hd=`id: frag-grenade\r
 name: "Frag Grenade"\r
 status: draft\r
 plane: earth\r
@@ -735,7 +764,7 @@ areaOfEffect: "5 m"\r
 uses: "uses 1: when thrown"\r
 value: 50\r
 currency: "ERC"\r
-`,md=`id: frost-flask\r
+`,gd=`id: frost-flask\r
 name: "Frost Flask"\r
 status: draft\r
 plane: isekai\r
@@ -752,7 +781,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Hoarfrost. Value is per Rank."\r
-`,hd=`id: fuel-canister\r
+`,_d=`id: fuel-canister\r
 name: "Fuel Canister"\r
 status: draft\r
 plane: earth\r
@@ -763,7 +792,7 @@ category: consumable\r
 uses: "uses 1: per refill"\r
 value: 150\r
 currency: "ERC"\r
-`,gd=`id: gambeson\r
+`,vd=`id: gambeson\r
 name: "Gambeson"\r
 status: draft\r
 plane: any\r
@@ -775,7 +804,7 @@ resistances: "2 Blunt, 1 Slashing, 2 Cold"\r
 slot: "Body Armor"\r
 value: 150\r
 currency: "ERC"\r
-`,_d=`id: geiger-counter\r
+`,yd=`id: geiger-counter\r
 name: "Geiger Counter"\r
 status: draft\r
 plane: earth\r
@@ -785,7 +814,7 @@ type: equipment\r
 category: gear\r
 value: 300\r
 currency: "ERC"\r
-`,vd=`id: glowing-oil\r
+`,bd=`id: glowing-oil\r
 name: "Glowing Oil"\r
 status: draft\r
 plane: isekai\r
@@ -797,7 +826,7 @@ uses: "uses 1: when poured"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Light. Value is per Rank."\r
-`,yd=`id: grace-potion\r
+`,xd=`id: grace-potion\r
 name: "Grace Potion"\r
 status: draft\r
 plane: isekai\r
@@ -809,7 +838,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Magical Grace. Value is per Rank."\r
-`,bd=`id: grappling-hook\r
+`,Sd=`id: grappling-hook\r
 name: "Grappling Hook"\r
 status: draft\r
 plane: any\r
@@ -819,7 +848,7 @@ type: equipment\r
 category: gear\r
 value: 50\r
 currency: "ERC"\r
-`,xd=`id: greater-healing-potion\r
+`,Cd=`id: greater-healing-potion\r
 name: "Greater Healing Potion"\r
 status: draft\r
 plane: isekai\r
@@ -831,7 +860,7 @@ uses: "uses 1: when drunk"\r
 value: 60\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Greater Heal. Value is per Rank."\r
-`,Sd=`id: greatsword\r
+`,wd=`id: greatsword\r
 name: "Greatsword"\r
 status: draft\r
 plane: any\r
@@ -845,7 +874,7 @@ maxRange: "2 m"\r
 attackStat: "Power"\r
 value: 1000\r
 currency: "ERC"\r
-`,Cd=`id: gust-flask\r
+`,Td=`id: gust-flask\r
 name: "Gust Flask"\r
 status: draft\r
 plane: isekai\r
@@ -860,7 +889,7 @@ uses: "uses 1: when thrown"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Gust. Value is per Rank."\r
-`,wd=`id: halberd\r
+`,Ed=`id: halberd\r
 name: "Halberd"\r
 status: draft\r
 plane: any\r
@@ -874,7 +903,7 @@ maxRange: "3 m"\r
 attackStat: "Power"\r
 value: 500\r
 currency: "ERC"\r
-`,Td=`id: hand-axe\r
+`,Dd=`id: hand-axe\r
 name: "Hand Axe"\r
 status: draft\r
 plane: any\r
@@ -888,7 +917,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 80\r
 currency: "ERC"\r
-`,Ed=`id: handcuffs\r
+`,Od=`id: handcuffs\r
 name: "Handcuffs"\r
 status: draft\r
 plane: earth\r
@@ -898,7 +927,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,Dd=`id: haymaker\r
+`,kd=`id: haymaker\r
 name: "Haymaker"\r
 status: draft\r
 plane: any\r
@@ -913,7 +942,7 @@ attackStat: "Power"\r
 onHit: "Critical Hit: the target makes an Endurance check against the damage dealt *3 and gains the Unconscious Condition if it fails"\r
 modifiers: "Attack Rolls -3"\r
 notes: "Natural weapon, granted by Boxing."\r
-`,Od=`id: hazmat-suit\r
+`,Ad=`id: hazmat-suit\r
 name: "Hazmat Suit"\r
 status: draft\r
 plane: earth\r
@@ -925,7 +954,7 @@ resistances: "2 Heat, 4 Electrical, 4 Radiation, 3 Corrosive"\r
 slot: "Body Armor"\r
 value: 400\r
 currency: "ERC"\r
-`,kd=`id: healers-kit\r
+`,jd=`id: healers-kit\r
 name: "Healer’s Kit"\r
 status: draft\r
 plane: any\r
@@ -936,7 +965,7 @@ category: gear\r
 uses: "uses 10: per treatment"\r
 value: 80\r
 currency: "ERC"\r
-`,Ad=`id: healing-potion\r
+`,Md=`id: healing-potion\r
 name: "Healing Potion"\r
 status: draft\r
 plane: isekai\r
@@ -948,7 +977,22 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Heal. Value is per Rank."\r
-`,jd=`id: helicopter\r
+`,Nd=`id: heavy-humanoid-chassis
+name: "Heavy Humanoid Chassis"
+status: draft
+plane: earth
+summary: "A broad-shouldered humanoid frame with oversized actuators, built to lift, haul and hit hard."
+tags: [chassis, ai-core, humanoid, advanced, strength]
+type: chassis
+category: chassis
+resistances: "2 Blunt, 1 Slashing, 1 Piercing"
+value: 250000
+currency: "ERC"
+chassis:
+  core: 4
+  stats: { endurance: 3, power: 7, grace: 2 }
+  traits: [mechanical]
+`,Pd=`id: helicopter\r
 name: "Helicopter"\r
 status: draft\r
 plane: earth\r
@@ -958,7 +1002,7 @@ type: vehicle\r
 category: other\r
 value: 1500000\r
 currency: "ERC"\r
-`,Md=`id: hide-armor\r
+`,Fd=`id: hide-armor\r
 name: "Hide Armor"\r
 status: draft\r
 plane: isekai\r
@@ -970,7 +1014,7 @@ resistances: "1 Blunt, 2 Slashing, 2 Cold"\r
 slot: "Body Armor"\r
 value: 80\r
 currency: "Luras"\r
-`,Nd=`id: humanoid-service-chassis\r
+`,Id=`id: humanoid-service-chassis\r
 name: "Humanoid Service Chassis"\r
 status: placeholder\r
 plane: earth\r
@@ -985,7 +1029,7 @@ chassis:\r
   core: 2\r
   stats: { endurance: 2, power: 2, grace: 2 }\r
   traits: [mechanical]\r
-`,Pd=`id: hydraulic-fist\r
+`,Ld=`id: hydraulic-fist\r
 name: "Hydraulic Fist"\r
 status: draft\r
 plane: earth\r
@@ -998,7 +1042,7 @@ attackType: "Melee"\r
 maxRange: "1 m"\r
 attackStat: "Power"\r
 notes: "Built into the Industrial Laborer Chassis."\r
-`,Fd=`id: iceproof-potion\r
+`,Rd=`id: iceproof-potion\r
 name: "Iceproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -1010,7 +1054,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Iceproof. Value is per Rank."\r
-`,Id=`id: imperial-dollars\r
+`,zd=`id: imperial-dollars\r
 name: "Imperial Dollars (ID)"\r
 status: draft\r
 plane: earth\r
@@ -1020,7 +1064,7 @@ tags: [currency]\r
 type: misc\r
 category: currency\r
 notes: "Exchange rate to ERC not set yet."\r
-`,Ld=`id: incendiary-grenade\r
+`,Bd=`id: incendiary-grenade\r
 name: "Incendiary Grenade"\r
 status: draft\r
 plane: earth\r
@@ -1035,7 +1079,7 @@ areaOfEffect: "4 m"\r
 uses: "uses 1: when thrown"\r
 value: 150\r
 currency: "ERC"\r
-`,Rd=`id: industrial-laborer-chassis\r
+`,Vd=`id: industrial-laborer-chassis\r
 name: "Industrial Laborer Chassis"\r
 status: placeholder\r
 plane: earth\r
@@ -1051,7 +1095,7 @@ chassis:\r
   stats: { endurance: 5, power: 5, grace: 2 }\r
   attacks: [hydraulic-fist]\r
   traits: [mechanical, non-humanoid, cargo-handling]\r
-`,zd=`id: insulated-gloves\r
+`,Hd=`id: insulated-gloves\r
 name: "Insulated Gloves"\r
 status: draft\r
 plane: earth\r
@@ -1063,7 +1107,7 @@ resistances: "2 Cold, 4 Electrical (hands)"\r
 slot: "Gloves"\r
 value: 50\r
 currency: "ERC"\r
-`,Bd=`id: javelin\r
+`,Ud=`id: javelin\r
 name: "Javelin"\r
 status: draft\r
 plane: any\r
@@ -1077,7 +1121,7 @@ attackStat: "Grace"\r
 uses: "uses 1: when thrown, until recovered"\r
 value: 50\r
 currency: "ERC"\r
-`,Vd=`id: kick\r
+`,Wd=`id: kick\r
 name: "Kick"\r
 status: draft\r
 plane: any\r
@@ -1090,7 +1134,7 @@ attackType: "Melee"\r
 maxRange: "1 m"\r
 attackStat: "Grace"\r
 notes: "Natural weapon: every character has it."\r
-`,Hd=`id: lantern\r
+`,Gd=`id: lantern\r
 name: "Lantern"\r
 status: draft\r
 plane: any\r
@@ -1100,7 +1144,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,Ud=`id: leather-armor\r
+`,Kd=`id: leather-armor\r
 name: "Leather Armor"\r
 status: draft\r
 plane: any\r
@@ -1112,7 +1156,7 @@ resistances: "2 Blunt, 1 Slashing, 1 Cold"\r
 slot: "Body Armor"\r
 value: 300\r
 currency: "ERC"\r
-`,Wd=`id: leather-jacket\r
+`,qd=`id: leather-jacket\r
 name: "Leather Jacket"\r
 status: draft\r
 plane: any\r
@@ -1124,7 +1168,7 @@ resistances: "1 Blunt, 1 Slashing, 1 Cold"\r
 slot: "Outerwear"\r
 value: 200\r
 currency: "ERC"\r
-`,Gd=`id: leatherworking-tools\r
+`,Jd=`id: leatherworking-tools\r
 name: "Leatherworking Tools"\r
 status: draft\r
 plane: any\r
@@ -1134,7 +1178,7 @@ type: equipment\r
 category: gear\r
 value: 150\r
 currency: "ERC"\r
-`,Kd=`id: lockpicks\r
+`,Yd=`id: lockpicks\r
 name: "Lockpicks"\r
 status: draft\r
 plane: any\r
@@ -1144,7 +1188,7 @@ type: equipment\r
 category: gear\r
 value: 40\r
 currency: "ERC"\r
-`,qd=`id: longbow\r
+`,Xd=`id: longbow\r
 name: "Longbow"\r
 status: draft\r
 plane: any\r
@@ -1159,7 +1203,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 400\r
 currency: "ERC"\r
-`,Jd=`id: longsword\r
+`,Zd=`id: longsword\r
 name: "Longsword"\r
 status: draft\r
 plane: any\r
@@ -1173,7 +1217,7 @@ maxRange: "2 m"\r
 attackStat: "Grace / Power"\r
 value: 600\r
 currency: "ERC"\r
-`,Yd=`id: luras\r
+`,Qd=`id: luras\r
 name: "Luras"\r
 status: draft\r
 plane: isekai\r
@@ -1184,7 +1228,7 @@ type: misc\r
 category: currency\r
 value: 1\r
 currency: "Luras"\r
-`,Xd=`id: mace\r
+`,$d=`id: mace\r
 name: "Mace"\r
 status: draft\r
 plane: any\r
@@ -1198,7 +1242,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 250\r
 currency: "ERC"\r
-`,Zd=`id: machine-gun\r
+`,ef=`id: machine-gun\r
 name: "Machine Gun"\r
 status: draft\r
 plane: earth\r
@@ -1213,7 +1257,7 @@ attackStat: "Grace"\r
 reload: "Full"\r
 value: 9000\r
 currency: "ERC"\r
-`,Qd=`id: mana-potion\r
+`,tf=`id: mana-potion\r
 name: "Mana Potion"\r
 status: draft\r
 plane: isekai\r
@@ -1225,7 +1269,7 @@ uses: "uses 1: when drunk"\r
 value: 60\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Magical Replenishment. Value is per Rank."\r
-`,$d=`id: masonry-tools\r
+`,nf=`id: masonry-tools\r
 name: "Masonry Tools"\r
 status: draft\r
 plane: any\r
@@ -1235,7 +1279,7 @@ type: equipment\r
 category: gear\r
 value: 200\r
 currency: "ERC"\r
-`,ef=`id: maul\r
+`,rf=`id: maul\r
 name: "Maul"\r
 status: draft\r
 plane: any\r
@@ -1249,7 +1293,7 @@ maxRange: "2 m"\r
 attackStat: "Power"\r
 value: 400\r
 currency: "ERC"\r
-`,tf=`id: medkit\r
+`,af=`id: medkit\r
 name: "Medkit"\r
 status: draft\r
 plane: earth\r
@@ -1260,7 +1304,7 @@ category: gear\r
 uses: "uses 10: per treatment"\r
 value: 250\r
 currency: "ERC"\r
-`,nf=`id: mending-oil\r
+`,of=`id: mending-oil\r
 name: "Mending Oil"\r
 status: draft\r
 plane: isekai\r
@@ -1272,7 +1316,7 @@ uses: "uses 1: when poured"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Mending. Value is per Rank."\r
-`,rf=`id: mindproof-potion\r
+`,sf=`id: mindproof-potion\r
 name: "Mindproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -1284,7 +1328,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Mindproof. Value is per Rank."\r
-`,af=`id: missile-launcher\r
+`,cf=`id: missile-launcher\r
 name: "Missile Launcher"\r
 status: draft\r
 plane: earth\r
@@ -1300,7 +1344,7 @@ areaOfEffect: "5 m"\r
 reload: "Full"\r
 value: 25000\r
 currency: "ERC"\r
-`,of=`id: mounted-machine-gun\r
+`,lf=`id: mounted-machine-gun\r
 name: "Mounted Machine Gun"\r
 status: draft\r
 plane: earth\r
@@ -1314,7 +1358,7 @@ maxRange: "600 m"\r
 attackStat: "Grace"\r
 reload: "Full"\r
 notes: "Built into the Combat Walker Chassis; the Machine Gun's numbers."\r
-`,sf=`id: musical-instrument\r
+`,uf=`id: musical-instrument\r
 name: "Musical Instrument"\r
 status: draft\r
 plane: any\r
@@ -1324,7 +1368,7 @@ type: equipment\r
 category: gear\r
 value: 400\r
 currency: "ERC"\r
-`,cf=`id: musket\r
+`,df=`id: musket\r
 name: "Musket"\r
 status: draft\r
 plane: any\r
@@ -1339,7 +1383,7 @@ attackStat: "Grace"\r
 reload: "Full"\r
 value: 1500\r
 currency: "ERC"\r
-`,lf=`id: night-vision-goggles\r
+`,ff=`id: night-vision-goggles\r
 name: "Night Vision Goggles"\r
 status: draft\r
 plane: earth\r
@@ -1350,7 +1394,7 @@ category: gear\r
 slot: "Eyewear"\r
 value: 3000\r
 currency: "ERC"\r
-`,uf=`id: pack-animal\r
+`,pf=`id: pack-animal\r
 name: "Pack Animal"\r
 status: draft\r
 plane: any\r
@@ -1360,7 +1404,7 @@ type: animal\r
 category: other\r
 value: 2500\r
 currency: "ERC"\r
-`,df=`id: padded-coif\r
+`,mf=`id: padded-coif\r
 name: "Padded Coif"\r
 status: draft\r
 plane: any\r
@@ -1372,7 +1416,7 @@ resistances: "2 Blunt, 1 Slashing (head)"\r
 slot: "Headwear"\r
 value: 40\r
 currency: "ERC"\r
-`,ff=`id: painkillers\r
+`,X=`id: painkillers\r
 name: "Painkillers"\r
 status: draft\r
 plane: earth\r
@@ -1383,7 +1427,7 @@ category: consumable\r
 uses: "uses 6: when taken"\r
 value: 15\r
 currency: "ERC"\r
-`,pf=`id: painting-supplies\r
+`,hf=`id: painting-supplies\r
 name: "Painting Supplies"\r
 status: draft\r
 plane: any\r
@@ -1393,7 +1437,22 @@ type: equipment\r
 category: gear\r
 value: 100\r
 currency: "ERC"\r
-`,mf=`id: pistol-magazine\r
+`,gf=`id: performance-humanoid-chassis
+name: "Performance Humanoid Chassis"
+status: draft
+plane: earth
+summary: "A light, finely balanced humanoid frame with fast, precise actuators, built for speed and fine work."
+tags: [chassis, ai-core, humanoid, advanced, agile]
+type: chassis
+category: chassis
+resistances: "1 Blunt"
+value: 220000
+currency: "ERC"
+chassis:
+  core: 4
+  stats: { endurance: 4, power: 2, grace: 6 }
+  traits: [mechanical]
+`,_f=`id: pistol-magazine\r
 name: "Pistol Magazine"\r
 status: draft\r
 plane: earth\r
@@ -1404,7 +1463,7 @@ category: consumable\r
 uses: "uses 1: per reload"\r
 value: 30\r
 currency: "ERC"\r
-`,X=`id: pistol\r
+`,vf=`id: pistol\r
 name: "Pistol"\r
 status: draft\r
 plane: earth\r
@@ -1419,7 +1478,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 600\r
 currency: "ERC"\r
-`,hf=`id: plate-armor\r
+`,yf=`id: plate-armor\r
 name: "Plate Armor"\r
 status: draft\r
 plane: any\r
@@ -1431,7 +1490,7 @@ resistances: "4 Blunt, 4 Slashing, 2 Piercing, 2 Heat"\r
 slot: "Body Armor"\r
 value: 5000\r
 currency: "ERC"\r
-`,gf=`id: plate-carrier\r
+`,bf=`id: plate-carrier\r
 name: "Plate Carrier"\r
 status: draft\r
 plane: earth\r
@@ -1443,7 +1502,7 @@ resistances: "3 Blunt, 2 Slashing, 7 Piercing"\r
 slot: "Body Armor"\r
 value: 2500\r
 currency: "ERC"\r
-`,_f=`id: portable-computer\r
+`,xf=`id: portable-computer\r
 name: "Portable Computer"\r
 status: draft\r
 plane: earth\r
@@ -1453,7 +1512,7 @@ type: equipment\r
 category: gear\r
 value: 1500\r
 currency: "ERC"\r
-`,vf=`id: potion-kit\r
+`,Sf=`id: potion-kit\r
 name: "Potion Kit"\r
 status: draft\r
 plane: isekai\r
@@ -1463,7 +1522,7 @@ type: equipment\r
 category: gear\r
 value: 50\r
 currency: "Luras"\r
-`,yf=`id: potion-of-detect-magic\r
+`,Cf=`id: potion-of-detect-magic\r
 name: "Potion of Detect Magic"\r
 status: draft\r
 plane: isekai\r
@@ -1475,7 +1534,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Detect Magic. Value is per Rank."\r
-`,bf=`id: potion-of-elemental-ward\r
+`,wf=`id: potion-of-elemental-ward\r
 name: "Potion of Elemental Ward"\r
 status: draft\r
 plane: isekai\r
@@ -1487,7 +1546,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Elemental Ward. Value is per Rank."\r
-`,xf=`id: potion-of-featherfall\r
+`,Tf=`id: potion-of-featherfall\r
 name: "Potion of Featherfall"\r
 status: draft\r
 plane: isekai\r
@@ -1499,7 +1558,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Featherfall. Value is per Rank."\r
-`,Sf=`id: potion-of-flight\r
+`,Ef=`id: potion-of-flight\r
 name: "Potion of Flight"\r
 status: draft\r
 plane: isekai\r
@@ -1511,7 +1570,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Magical Flight. Value is per Rank."\r
-`,Cf=`id: potion-of-haste\r
+`,Df=`id: potion-of-haste\r
 name: "Potion of Haste"\r
 status: draft\r
 plane: isekai\r
@@ -1523,7 +1582,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Haste. Value is per Rank."\r
-`,wf=`id: potion-of-infravision\r
+`,Of=`id: potion-of-infravision\r
 name: "Potion of Infravision"\r
 status: draft\r
 plane: isekai\r
@@ -1535,7 +1594,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Infravision. Value is per Rank."\r
-`,Tf=`id: potion-of-invisibility\r
+`,kf=`id: potion-of-invisibility\r
 name: "Potion of Invisibility"\r
 status: draft\r
 plane: isekai\r
@@ -1547,7 +1606,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Invisibility. Value is per Rank."\r
-`,Ef=`id: potion-of-shielding\r
+`,Af=`id: potion-of-shielding\r
 name: "Potion of Shielding"\r
 status: draft\r
 plane: isekai\r
@@ -1559,7 +1618,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Shield. Value is per Rank."\r
-`,Df=`id: potion-of-speak-with-animals\r
+`,jf=`id: potion-of-speak-with-animals\r
 name: "Potion of Speak with Animals"\r
 status: draft\r
 plane: isekai\r
@@ -1571,7 +1630,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Speak with Animals. Value is per Rank."\r
-`,Of=`id: potion-of-spider-climb\r
+`,Mf=`id: potion-of-spider-climb\r
 name: "Potion of Spider Climb"\r
 status: draft\r
 plane: isekai\r
@@ -1583,7 +1642,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Spider Climb. Value is per Rank."\r
-`,kf=`id: potion-of-stone-skin\r
+`,Nf=`id: potion-of-stone-skin\r
 name: "Potion of Stone Skin"\r
 status: draft\r
 plane: isekai\r
@@ -1595,7 +1654,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Skin of Stone. Value is per Rank."\r
-`,Af=`id: potion-of-water-breathing\r
+`,Pf=`id: potion-of-water-breathing\r
 name: "Potion of Water Breathing"\r
 status: draft\r
 plane: isekai\r
@@ -1607,7 +1666,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Water Breathing. Value is per Rank."\r
-`,jf=`id: powder-and-shot\r
+`,Ff=`id: powder-and-shot\r
 name: "Powder and Shot"\r
 status: draft\r
 plane: any\r
@@ -1618,7 +1677,7 @@ category: consumable\r
 uses: "uses 20: when fired"\r
 value: 30\r
 currency: "ERC"\r
-`,Mf=`id: power-armor\r
+`,If=`id: power-armor\r
 name: "Power Armor"\r
 status: draft\r
 plane: earth\r
@@ -1630,7 +1689,22 @@ resistances: "6 Blunt, 6 Slashing, 6 Piercing, 2 Heat, 2 Cold, 2 Radiation"\r
 slot: "Body Armor"\r
 value: 250000\r
 currency: "ERC"\r
-`,Nf=`id: quarterstaff\r
+`,Lf=`id: premier-humanoid-chassis
+name: "Premier Humanoid Chassis"
+status: draft
+plane: earth
+summary: "A top-of-the-line humanoid frame, nearly indistinguishable from a person at a glance, that's strong, tough and quick in equal measure. Few AI Cores will ever own one."
+tags: [chassis, ai-core, humanoid, luxury]
+type: chassis
+category: chassis
+resistances: "3 Blunt, 3 Slashing, 3 Piercing"
+value: 2500000
+currency: "ERC"
+chassis:
+  core: 6
+  stats: { endurance: 6, power: 6, grace: 6 }
+  traits: [mechanical]
+`,Rf=`id: quarterstaff\r
 name: "Quarterstaff"\r
 status: draft\r
 plane: any\r
@@ -1644,7 +1718,7 @@ maxRange: "2 m"\r
 attackStat: "Grace / Power"\r
 value: 40\r
 currency: "ERC"\r
-`,Pf=`id: rad-suit\r
+`,zf=`id: rad-suit\r
 name: "Rad Suit"\r
 status: draft\r
 plane: earth\r
@@ -1656,7 +1730,7 @@ resistances: "1 Blunt, 6 Radiation, 1 Corrosive"\r
 slot: "Body Armor"\r
 value: 1500\r
 currency: "ERC"\r
-`,Ff=`id: rapier\r
+`,Bf=`id: rapier\r
 name: "Rapier"\r
 status: draft\r
 plane: any\r
@@ -1670,7 +1744,7 @@ maxRange: "1 m"\r
 attackStat: "Grace"\r
 value: 450\r
 currency: "ERC"\r
-`,If=`id: ration-pack\r
+`,Vf=`id: ration-pack\r
 name: "Ration Pack"\r
 status: draft\r
 plane: earth\r
@@ -1681,7 +1755,7 @@ category: consumable\r
 uses: "uses 1: when eaten"\r
 value: 12\r
 currency: "ERC"\r
-`,Lf=`id: rebreather\r
+`,Hf=`id: rebreather\r
 name: "Rebreather"\r
 status: draft\r
 plane: earth\r
@@ -1693,7 +1767,7 @@ uses: "uses 1: per tank, about an hour"\r
 slot: "Face"\r
 value: 600\r
 currency: "ERC"\r
-`,Rf=`id: renminbi\r
+`,Z=`id: renminbi\r
 name: "Rénmínbì (RMB)"\r
 status: draft\r
 plane: earth\r
@@ -1703,7 +1777,7 @@ tags: [currency]\r
 type: misc\r
 category: currency\r
 notes: "Exchange rate to ERC not set yet."\r
-`,zf=`id: revolver\r
+`,Uf=`id: revolver\r
 name: "Revolver"\r
 status: draft\r
 plane: earth\r
@@ -1718,7 +1792,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 800\r
 currency: "ERC"\r
-`,Bf=`id: riding-animal\r
+`,Wf=`id: riding-animal\r
 name: "Riding Animal"\r
 status: draft\r
 plane: any\r
@@ -1728,7 +1802,7 @@ type: animal\r
 category: other\r
 value: 5000\r
 currency: "ERC"\r
-`,Vf=`id: rifle-magazine\r
+`,Gf=`id: rifle-magazine\r
 name: "Rifle Magazine"\r
 status: draft\r
 plane: earth\r
@@ -1739,7 +1813,7 @@ category: consumable\r
 uses: "uses 1: per reload"\r
 value: 40\r
 currency: "ERC"\r
-`,Hf=`id: rifle\r
+`,Kf=`id: rifle\r
 name: "Rifle"\r
 status: draft\r
 plane: earth\r
@@ -1754,7 +1828,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 1200\r
 currency: "ERC"\r
-`,Z=`id: riot-gear\r
+`,qf=`id: riot-gear\r
 name: "Riot Gear"\r
 status: draft\r
 plane: earth\r
@@ -1766,7 +1840,7 @@ resistances: "4 Blunt, 3 Slashing, 2 Piercing, 1 Cold"\r
 slot: "Body Armor"\r
 value: 1500\r
 currency: "ERC"\r
-`,Uf=`id: rope\r
+`,Jf=`id: rope\r
 name: "Rope"\r
 status: draft\r
 plane: any\r
@@ -1776,7 +1850,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,Wf=`id: roundhouse-kick\r
+`,Yf=`id: roundhouse-kick\r
 name: "Roundhouse Kick"\r
 status: draft\r
 plane: any\r
@@ -1791,7 +1865,7 @@ attackStat: "Power"\r
 onHit: "Devastating Hit or better: the target gains the Prone Condition"\r
 modifiers: "Attack Rolls -2"\r
 notes: "Natural weapon, granted by Martial Artist."\r
-`,Gf=`id: rowboat\r
+`,Xf=`id: rowboat\r
 name: "Rowboat"\r
 status: draft\r
 plane: any\r
@@ -1801,7 +1875,7 @@ type: vehicle\r
 category: other\r
 value: 1500\r
 currency: "ERC"\r
-`,Kf=`id: rustproof-potion\r
+`,Zf=`id: rustproof-potion\r
 name: "Rustproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -1813,7 +1887,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Rustproof. Value is per Rank."\r
-`,qf=`id: shortbow\r
+`,Qf=`id: shortbow\r
 name: "Shortbow"\r
 status: draft\r
 plane: any\r
@@ -1828,7 +1902,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 200\r
 currency: "ERC"\r
-`,Jf=`id: shortsword\r
+`,$f=`id: shortsword\r
 name: "Shortsword"\r
 status: draft\r
 plane: any\r
@@ -1842,7 +1916,7 @@ maxRange: "1 m"\r
 attackStat: "Grace / Power"\r
 value: 250\r
 currency: "ERC"\r
-`,Yf=`id: shotgun-shells\r
+`,ep=`id: shotgun-shells\r
 name: "Shotgun Shells"\r
 status: draft\r
 plane: earth\r
@@ -1853,7 +1927,7 @@ category: consumable\r
 uses: "uses 25: when fired"\r
 value: 25\r
 currency: "ERC"\r
-`,Xf=`id: shotgun\r
+`,tp=`id: shotgun\r
 name: "Shotgun"\r
 status: draft\r
 plane: earth\r
@@ -1868,7 +1942,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 700\r
 currency: "ERC"\r
-`,Zf=`id: silence-flask\r
+`,np=`id: silence-flask\r
 name: "Silence Flask"\r
 status: draft\r
 plane: isekai\r
@@ -1883,7 +1957,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Silence. Value is per Rank."\r
-`,Qf=`id: sleeping-draught\r
+`,rp=`id: sleeping-draught\r
 name: "Sleeping Draught"\r
 status: draft\r
 plane: isekai\r
@@ -1895,7 +1969,7 @@ uses: "uses 1: when drunk"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Sleep. Value is per Rank."\r
-`,$f=`id: sling-stones\r
+`,ip=`id: sling-stones\r
 name: "Sling Stones"\r
 status: draft\r
 plane: any\r
@@ -1906,7 +1980,7 @@ category: consumable\r
 uses: "uses 20: when fired"\r
 value: 5\r
 currency: "ERC"\r
-`,ep=`id: sling\r
+`,ap=`id: sling\r
 name: "Sling"\r
 status: draft\r
 plane: any\r
@@ -1921,7 +1995,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 15\r
 currency: "ERC"\r
-`,tp=`id: slowing-flask\r
+`,op=`id: slowing-flask\r
 name: "Slowing Flask"\r
 status: draft\r
 plane: isekai\r
@@ -1936,7 +2010,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Slow. Value is per Rank."\r
-`,np=`id: smithing-tools\r
+`,sp=`id: smithing-tools\r
 name: "Smithing Tools"\r
 status: draft\r
 plane: any\r
@@ -1946,7 +2020,7 @@ type: equipment\r
 category: gear\r
 value: 400\r
 currency: "ERC"\r
-`,rp=`id: smoke-grenade\r
+`,cp=`id: smoke-grenade\r
 name: "Smoke Grenade"\r
 status: draft\r
 plane: earth\r
@@ -1960,7 +2034,7 @@ areaOfEffect: "5 m"\r
 uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "ERC"\r
-`,ip=`id: sniper-rifle\r
+`,lp=`id: sniper-rifle\r
 name: "Sniper Rifle"\r
 status: draft\r
 plane: earth\r
@@ -1975,7 +2049,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 4000\r
 currency: "ERC"\r
-`,ap=`id: spear\r
+`,up=`id: spear\r
 name: "Spear"\r
 status: draft\r
 plane: any\r
@@ -1989,7 +2063,7 @@ maxRange: "3 m"\r
 attackStat: "Grace / Power"\r
 value: 150\r
 currency: "ERC"\r
-`,op=`id: spyglass\r
+`,dp=`id: spyglass\r
 name: "Spyglass"\r
 status: draft\r
 plane: any\r
@@ -1999,7 +2073,7 @@ type: equipment\r
 category: gear\r
 value: 150\r
 currency: "ERC"\r
-`,sp=`id: staunching-potion\r
+`,fp=`id: staunching-potion\r
 name: "Staunching Potion"\r
 status: draft\r
 plane: isekai\r
@@ -2011,7 +2085,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Staunch. Value is per Rank."\r
-`,cp=`id: steel-helm\r
+`,pp=`id: steel-helm\r
 name: "Steel Helm"\r
 status: draft\r
 plane: any\r
@@ -2023,7 +2097,7 @@ resistances: "3 Blunt, 4 Slashing, 2 Piercing (head)"\r
 slot: "Headwear"\r
 value: 250\r
 currency: "ERC"\r
-`,lp=`id: stoneproof-potion\r
+`,mp=`id: stoneproof-potion\r
 name: "Stoneproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -2035,7 +2109,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Stoneproof. Value is per Rank."\r
-`,up=`id: stormproof-potion\r
+`,hp=`id: stormproof-potion\r
 name: "Stormproof Potion"\r
 status: draft\r
 plane: isekai\r
@@ -2047,7 +2121,7 @@ uses: "uses 1: when drunk or poured"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Stormproof. Value is per Rank."\r
-`,dp=`id: strength-potion\r
+`,gp=`id: strength-potion\r
 name: "Strength Potion"\r
 status: draft\r
 plane: isekai\r
@@ -2059,7 +2133,7 @@ uses: "uses 1: when drunk"\r
 value: 20\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Magical Strength. Value is per Rank."\r
-`,fp=`id: stun-baton\r
+`,_p=`id: stun-baton\r
 name: "Stun Baton"\r
 status: draft\r
 plane: earth\r
@@ -2074,7 +2148,7 @@ attackStat: "Power"\r
 onHit: "Solid Hit or better: the target loses its next Action"\r
 value: 150\r
 currency: "ERC"\r
-`,pp=`id: submachine-gun\r
+`,vp=`id: submachine-gun\r
 name: "Submachine Gun"\r
 status: draft\r
 plane: earth\r
@@ -2089,7 +2163,7 @@ attackStat: "Grace"\r
 reload: "Partial"\r
 value: 2500\r
 currency: "ERC"\r
-`,mp=`id: superman-punch\r
+`,yp=`id: superman-punch\r
 name: "Superman Punch"\r
 status: draft\r
 plane: any\r
@@ -2104,7 +2178,7 @@ attackStat: "Grace"\r
 onHit: "Critical Hit: the target makes an Endurance check against the damage dealt *3 and gains the Unconscious Condition if it fails"\r
 modifiers: "Attack Rolls -5"\r
 notes: "Natural weapon, granted by Expert Boxer."\r
-`,hp=`id: surgical-kit\r
+`,bp=`id: surgical-kit\r
 name: "Surgical Kit"\r
 status: draft\r
 plane: any\r
@@ -2114,7 +2188,7 @@ type: equipment\r
 category: gear\r
 value: 600\r
 currency: "ERC"\r
-`,gp=`id: taser\r
+`,xp=`id: taser\r
 name: "Taser"\r
 status: draft\r
 plane: earth\r
@@ -2131,7 +2205,7 @@ onHit: "Any hit: the target loses its next Action"\r
 uses: "uses 1: per cartridge"\r
 value: 300\r
 currency: "ERC"\r
-`,_p=`id: tent\r
+`,Sp=`id: tent\r
 name: "Tent"\r
 status: draft\r
 plane: any\r
@@ -2141,7 +2215,7 @@ type: structure\r
 category: gear\r
 value: 200\r
 currency: "ERC"\r
-`,vp=`id: throwing-knives\r
+`,Cp=`id: throwing-knives\r
 name: "Throwing Knives"\r
 status: draft\r
 plane: any\r
@@ -2155,7 +2229,7 @@ attackStat: "Grace"\r
 uses: "uses 6: when thrown, until recovered"\r
 value: 80\r
 currency: "ERC"\r
-`,yp=`id: thunder-flask\r
+`,wp=`id: thunder-flask\r
 name: "Thunder Flask"\r
 status: draft\r
 plane: isekai\r
@@ -2172,7 +2246,7 @@ uses: "uses 1: when thrown"\r
 value: 40\r
 currency: "Luras"\r
 notes: "Brewed at a Rank: the brewer's Rank in Thunderclap. Value is per Rank."\r
-`,bp=`id: torch\r
+`,Tp=`id: torch\r
 name: "Torch"\r
 status: draft\r
 plane: any\r
@@ -2187,7 +2261,7 @@ attackStat: "Power"\r
 uses: "uses 1: burns about an hour"\r
 value: 5\r
 currency: "ERC"\r
-`,xp=`id: tower-shield\r
+`,Ep=`id: tower-shield\r
 name: "Tower Shield"\r
 status: draft\r
 plane: any\r
@@ -2200,7 +2274,7 @@ modifiers: "Defense +6 (when Defending)"\r
 slot: "Off Hand"\r
 value: 300\r
 currency: "ERC"\r
-`,Sp=`id: trail-rations\r
+`,Dp=`id: trail-rations\r
 name: "Trail Rations"\r
 status: draft\r
 plane: any\r
@@ -2211,7 +2285,7 @@ category: consumable\r
 uses: "uses 1: when eaten"\r
 value: 15\r
 currency: "ERC"\r
-`,Cp=`id: travelers-cloak\r
+`,Op=`id: travelers-cloak\r
 name: "Traveler’s Cloak"\r
 status: draft\r
 plane: any\r
@@ -2223,7 +2297,7 @@ resistances: "2 Cold"\r
 slot: "Outerwear"\r
 value: 60\r
 currency: "ERC"\r
-`,wp=`id: turnout-gear\r
+`,kp=`id: turnout-gear\r
 name: "Turnout Gear"\r
 status: draft\r
 plane: earth\r
@@ -2235,7 +2309,7 @@ resistances: "1 Blunt, 1 Slashing, 4 Heat, 1 Cold"\r
 slot: "Body Armor"\r
 value: 2000\r
 currency: "ERC"\r
-`,Tp=`id: uppercut\r
+`,Ap=`id: uppercut\r
 name: "Uppercut"\r
 status: draft\r
 plane: any\r
@@ -2250,7 +2324,7 @@ attackStat: "Grace"\r
 onHit: "Devastating Hit or better: the Attack ignores 2 of the target's Blunt Resistance"\r
 modifiers: "Attack Rolls -2"\r
 notes: "Natural weapon, granted by Boxing."\r
-`,Ep=`id: voidsuit\r
+`,jp=`id: voidsuit\r
 name: "Voidsuit"\r
 status: draft\r
 plane: earth\r
@@ -2263,7 +2337,7 @@ uses: "uses 1: per air tank"\r
 slot: "Body Armor"\r
 value: 50000\r
 currency: "ERC"\r
-`,Dp=`id: wagon\r
+`,Mp=`id: wagon\r
 name: "Wagon"\r
 status: draft\r
 plane: any\r
@@ -2273,7 +2347,7 @@ type: vehicle\r
 category: other\r
 value: 3000\r
 currency: "ERC"\r
-`,Op=`id: war-axe\r
+`,Np=`id: war-axe\r
 name: "War Axe"\r
 status: draft\r
 plane: any\r
@@ -2287,7 +2361,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 300\r
 currency: "ERC"\r
-`,kp=`id: war-hammer\r
+`,Pp=`id: war-hammer\r
 name: "War Hammer"\r
 status: draft\r
 plane: any\r
@@ -2301,7 +2375,7 @@ maxRange: "1 m"\r
 attackStat: "Power"\r
 value: 300\r
 currency: "ERC"\r
-`,Ap=`id: warded-robes\r
+`,Fp=`id: warded-robes\r
 name: "Warded Robes"\r
 status: draft\r
 plane: isekai\r
@@ -2315,7 +2389,7 @@ slot: "Body Armor"\r
 value: 400\r
 currency: "Luras"\r
 notes: "Suggested by Claude; check with the magic pass."\r
-`,jp=`id: waterskin\r
+`,Ip=`id: waterskin\r
 name: "Waterskin"\r
 status: draft\r
 plane: any\r
@@ -2325,7 +2399,7 @@ type: equipment\r
 category: gear\r
 value: 15\r
 currency: "ERC"\r
-`,Mp=`id: wooden-shield\r
+`,Lp=`id: wooden-shield\r
 name: "Wooden Shield"\r
 status: draft\r
 plane: any\r
@@ -2338,7 +2412,7 @@ modifiers: "Defense +4 (when Defending)"\r
 slot: "Off Hand"\r
 value: 100\r
 currency: "ERC"\r
-`,Np=`id: writing-kit\r
+`,Rp=`id: writing-kit\r
 name: "Writing Kit"\r
 status: draft\r
 plane: any\r
@@ -2348,7 +2422,7 @@ type: equipment\r
 category: gear\r
 value: 30\r
 currency: "ERC"\r
-`,Pp=`id: ai-core\r
+`,zp=`id: ai-core\r
 name: AI Core\r
 status: placeholder\r
 plane: earth\r
@@ -2384,7 +2458,7 @@ stats:\r
 movement: "-"\r
 # Armored Core: the core is an item with its own 10 HP, apart from its chassis.\r
 core: { hp: 10 }\r
-`,Fp=`id: guwain\r
+`,Bp=`id: guwain\r
 name: Guwain\r
 status: placeholder\r
 plane: isekai\r
@@ -2412,7 +2486,7 @@ stats:\r
   logic: { bonus: 1, max: 15 }\r
   intuition: { bonus: 0, max: 14 }\r
   memory: { bonus: 1, max: 14 }\r
-`,Ip=`id: isek\r
+`,Vp=`id: isek\r
 name: Isek\r
 status: placeholder\r
 plane: isekai\r
@@ -2441,7 +2515,7 @@ stats:\r
   logic: { bonus: 0, max: 14 }\r
   intuition: { bonus: 1, max: 16 }\r
   memory: { bonus: 1, max: 15 }\r
-`,Lp=`id: tatot-goblinoid\r
+`,Hp=`id: tatot-goblinoid\r
 name: "Tatot, Goblinoid"\r
 status: placeholder\r
 plane: isekai\r
@@ -2470,7 +2544,7 @@ stats:\r
   logic: { bonus: 2, max: 18 }\r
   intuition: { bonus: 1, max: 16 }\r
   memory: { bonus: 1, max: 18 }\r
-`,Rp=`id: tatot-orcoid\r
+`,Up=`id: tatot-orcoid\r
 name: "Tatot, Orcoid"\r
 status: placeholder\r
 plane: isekai\r
@@ -2494,7 +2568,7 @@ stats:\r
   logic: { bonus: 0, max: 13 }\r
   intuition: { bonus: 1, max: 15 }\r
   memory: { bonus: 0, max: 14 }\r
-`,zp=`id: human\r
+`,Wp=`id: human\r
 name: Human\r
 status: draft\r
 plane: earth\r
@@ -2517,7 +2591,7 @@ stats:\r
   intuition: { bonus: 1, max: 15 }\r
   memory: { bonus: 1, max: 15 }\r
 movement: "10 m"\r
-`,Bp=`id: american-empire-colonies\r
+`,Gp=`id: american-empire-colonies\r
 name: "The American Empire: Colonies"\r
 status: placeholder\r
 plane: earth\r
@@ -2543,7 +2617,7 @@ backgroundTraits:\r
   - imperial-politics\r
   - earth-baseline-technology\r
   - spanish\r
-`,Vp=`id: american-empire-earth\r
+`,Kp=`id: american-empire-earth\r
 name: "The American Empire: Earth"\r
 status: placeholder\r
 plane: earth\r
@@ -2569,7 +2643,7 @@ backgroundTraits:\r
   - earth-baseline-technology\r
   - spanish\r
   - spanish-written\r
-`,Hp=`id: centafrica-colonies\r
+`,qp=`id: centafrica-colonies\r
 name: "Centafrica: Colonies"\r
 status: placeholder\r
 plane: earth\r
@@ -2601,7 +2675,7 @@ backgroundTraits:\r
   - earth-baseline-technology\r
   - french\r
   - english\r
-`,Up=`id: centafrica-earth\r
+`,Jp=`id: centafrica-earth\r
 name: "Centafrica: Earth"\r
 status: placeholder\r
 plane: earth\r
@@ -2636,7 +2710,7 @@ backgroundTraits:\r
   - lingala\r
   - yoruba\r
   - hausa\r
-`,Wp=`id: chinese-empire-colonies\r
+`,Yp=`id: chinese-empire-colonies\r
 name: "The Empire of China: Colonies"\r
 status: placeholder\r
 plane: earth\r
@@ -2660,7 +2734,7 @@ backgroundTraits:\r
   - ark-life\r
   - the-corporate-syndicates\r
   - earth-baseline-technology\r
-`,Gp=`id: chinese-empire-earth\r
+`,Xp=`id: chinese-empire-earth\r
 name: "The Empire of China: Earth"\r
 status: placeholder\r
 plane: earth\r
@@ -2681,7 +2755,7 @@ grants:\r
 backgroundTraits:\r
   - the-corporate-syndicates\r
   - earth-baseline-technology\r
-`,Kp=`id: dreft\r
+`,Zp=`id: dreft\r
 name: Dreft\r
 status: placeholder\r
 plane: isekai\r
@@ -2712,7 +2786,7 @@ backgroundTraits:\r
   - mountaineering\r
   - local-folklore\r
   - karsef\r
-`,qp=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
+`,Qp=`# Drovus’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
 id: the-drovus-empire\r
 name: "The Drovus Empire"\r
 status: placeholder\r
@@ -2736,7 +2810,7 @@ backgroundTraits:\r
   - military-tactics\r
   - military-drill\r
   - heraldry\r
-`,Jp=`id: the-free-american-states\r
+`,$p=`id: the-free-american-states\r
 name: "The Free American States"\r
 status: placeholder\r
 plane: earth\r
@@ -2763,7 +2837,7 @@ backgroundTraits:\r
   - haggler\r
   - trade-law\r
   - smooth-talker\r
-`,Yp=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
+`,em=`# Karsef’s lore is still coming soon on the site; the description only draws on Dreft’s history.\r
 id: kingdom-of-karsef\r
 name: "Kingdom of Karsef"\r
 status: placeholder\r
@@ -2788,7 +2862,7 @@ backgroundTraits:\r
   - dreft\r
   - shield-wall\r
   - military-tactics\r
-`,Xp=`id: kashgar\r
+`,tm=`id: kashgar\r
 name: "Kashgar"\r
 status: placeholder\r
 plane: earth\r
@@ -2815,7 +2889,7 @@ backgroundTraits:\r
   - cybernetics\r
   - robotics\r
   - earth-baseline-technology\r
-`,Zp=`id: the-kingdom-of-india-colonies\r
+`,nm=`id: the-kingdom-of-india-colonies\r
 name: "The Kingdom of India: Colonies"\r
 status: placeholder\r
 plane: earth\r
@@ -2847,7 +2921,7 @@ backgroundTraits:\r
   - earth-baseline-technology\r
   - english\r
   - english-written\r
-`,Qp=`id: the-kingdom-of-india-earth\r
+`,rm=`id: the-kingdom-of-india-earth\r
 name: "The Kingdom of India: Earth"\r
 status: placeholder\r
 plane: earth\r
@@ -2880,7 +2954,7 @@ backgroundTraits:\r
   - english-written\r
   - bengali\r
   - tamil\r
-`,$p=`id: the-lunar-industrial-syndicate\r
+`,im=`id: the-lunar-industrial-syndicate\r
 name: "The Lunar Industrial Syndicate"\r
 status: placeholder\r
 plane: earth\r
@@ -2907,7 +2981,7 @@ backgroundTraits:\r
   - ark-life\r
   - starship-engineering\r
   - cargo-handling\r
-`,em=`id: sdu-colonies\r
+`,am=`id: sdu-colonies\r
 name: "The Stellar Democratic Union: Colonies"\r
 status: placeholder\r
 plane: earth\r
@@ -2935,7 +3009,7 @@ backgroundTraits:\r
   - ark-life\r
   - union-politics\r
   - earth-baseline-technology\r
-`,tm=`id: sdu-earth\r
+`,om=`id: sdu-earth\r
 name: "The Stellar Democratic Union: Earth"\r
 status: placeholder\r
 plane: earth\r
@@ -2961,7 +3035,7 @@ backgroundTraits:\r
   - the-diplomatic-wing\r
   - the-united-nations\r
   - earth-baseline-technology\r
-`,nm=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.\r
+`,sm=`# Sorellion’s lore is still coming soon on the site; this is a placeholder to fill in.\r
 id: kingdom-of-sorellion\r
 name: "Kingdom of Sorellion"\r
 status: placeholder\r
@@ -2985,7 +3059,7 @@ backgroundTraits:\r
   - heraldry\r
   - courtly-manners\r
   - haggler\r
-`,rm=`id: tetra\r
+`,cm=`id: tetra\r
 name: Tetra\r
 status: placeholder\r
 plane: earth\r
@@ -3016,7 +3090,7 @@ backgroundTraits:\r
   - ark-life\r
   - earth-baseline-technology\r
   - the-switch-port\r
-`,im=`id: the-union-of-texas\r
+`,lm=`id: the-union-of-texas\r
 name: "The Union of Texas"\r
 status: placeholder\r
 plane: earth\r
@@ -3043,7 +3117,7 @@ backgroundTraits:\r
   - the-free-american-states\r
   - wielder-rifle\r
   - survivalist\r
-`,am=`id: the-ural-federation\r
+`,um=`id: the-ural-federation\r
 name: "The Ural Federation"\r
 status: placeholder\r
 plane: earth\r
@@ -3077,7 +3151,7 @@ backgroundTraits:\r
   - kazakh\r
   - mongolian\r
   - uyghur\r
-`,om=`id: xanthus\r
+`,dm=`id: xanthus\r
 name: "Xanthus"\r
 status: placeholder\r
 plane: earth\r
@@ -3110,7 +3184,7 @@ backgroundTraits:\r
   - english\r
   - spanish\r
   - portuguese\r
-`,sm=`id: craft-apprenticeship\r
+`,fm=`id: craft-apprenticeship\r
 name: "Craft Apprenticeship"\r
 status: placeholder\r
 plane: any\r
@@ -3128,7 +3202,7 @@ backgroundTraits:\r
   - trade-guilds\r
   - commerce\r
   - engineering\r
-`,cm=`id: criminal-family\r
+`,pm=`id: criminal-family\r
 name: "Criminal Family"\r
 status: placeholder\r
 plane: any\r
@@ -3146,7 +3220,7 @@ backgroundTraits:\r
   - gambling\r
   - law-enforcement\r
   - security-systems\r
-`,lm=`id: gutter-trash\r
+`,mm=`id: gutter-trash\r
 name: "Gutter Trash"\r
 status: placeholder\r
 plane: any\r
@@ -3163,7 +3237,7 @@ backgroundTraits:\r
   - wielder-dagger\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: -1\r
-`,um=`id: military-service\r
+`,hm=`id: military-service\r
 name: "Military Service"\r
 status: placeholder\r
 plane: any\r
@@ -3179,7 +3253,7 @@ backgroundTraits:\r
   - navigation\r
   - wielder-grenade\r
   - wielder-machine-gun\r
-`,dm=`id: privileged-upbringing\r
+`,gm=`id: privileged-upbringing\r
 name: "Privileged Upbringing"\r
 status: placeholder\r
 plane: any\r
@@ -3203,7 +3277,7 @@ backgroundTraits:\r
   - politics\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 2\r
-`,fm=`id: raised-at-court\r
+`,_m=`id: raised-at-court\r
 name: "Raised at Court"\r
 status: placeholder\r
 plane: any\r
@@ -3220,7 +3294,7 @@ backgroundTraits:\r
   - local-history\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 2\r
-`,pm=`id: shipborn\r
+`,vm=`id: shipborn\r
 name: "Shipborn"\r
 status: placeholder\r
 plane: any\r
@@ -3235,7 +3309,7 @@ backgroundTraits:\r
   - navigation\r
   - starships\r
   - spacefaring\r
-`,mm=`id: simple-farmer\r
+`,ym=`id: simple-farmer\r
 name: "Simple Farmer"\r
 status: placeholder\r
 plane: any\r
@@ -3251,7 +3325,7 @@ backgroundTraits:\r
   - wilderness-lore\r
   - wielder-sling\r
   - wielder-staff\r
-`,hm=`id: traveling-troupe\r
+`,bm=`id: traveling-troupe\r
 name: "Traveling Troupe"\r
 status: placeholder\r
 plane: any\r
@@ -3265,7 +3339,7 @@ grants:\r
 backgroundTraits:\r
   - theater\r
   - literature\r
-`,gm=`id: countryside-upbringing\r
+`,xm=`id: countryside-upbringing\r
 name: "Countryside Upbringing"\r
 status: placeholder\r
 plane: isekai\r
@@ -3283,7 +3357,7 @@ backgroundTraits:\r
   - wilderness-lore\r
   - wielder-sling\r
   - wielder-bow\r
-`,_m=`id: expelled-from-the-mage-schools\r
+`,Sm=`id: expelled-from-the-mage-schools\r
 name: "Expelled from the Mage Schools"\r
 status: placeholder\r
 plane: isekai\r
@@ -3299,7 +3373,7 @@ grants:\r
 backgroundTraits:\r
   - literature\r
   - local-history\r
-`,vm=`id: glintl-docks\r
+`,Cm=`id: glintl-docks\r
 name: "Glintl Docks"\r
 status: placeholder\r
 plane: isekai\r
@@ -3317,7 +3391,7 @@ backgroundTraits:\r
   - commerce\r
   - navigation\r
   - gambling\r
-`,ym=`id: karsef-border-veteran\r
+`,wm=`id: karsef-border-veteran\r
 name: "Karsef Border Veteran"\r
 status: placeholder\r
 plane: isekai\r
@@ -3336,7 +3410,7 @@ backgroundTraits:\r
   - wielder-crossbow\r
   - wielder-spear\r
   - wielder-polearm\r
-`,bm=`id: merchant-dynasty\r
+`,Tm=`id: merchant-dynasty\r
 name: Merchant Dynasty\r
 status: placeholder\r
 plane: isekai\r
@@ -3357,7 +3431,7 @@ backgroundTraits:\r
   - high-society\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 2\r
-`,xm=`id: monster-raided-village\r
+`,Em=`id: monster-raided-village\r
 name: "Monster-Raided Village"\r
 status: placeholder\r
 plane: isekai\r
@@ -3378,7 +3452,7 @@ backgroundTraits:\r
   - wielder-sling\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: -1\r
-`,Sm=`id: noble-household\r
+`,Dm=`id: noble-household\r
 name: Noble Household\r
 status: placeholder\r
 plane: isekai\r
@@ -3397,7 +3471,7 @@ backgroundTraits:\r
   - politics\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 2\r
-`,Cm=`id: palace-servant\r
+`,Om=`id: palace-servant\r
 name: "Palace Servant"\r
 status: placeholder\r
 plane: isekai\r
@@ -3414,7 +3488,7 @@ grants:\r
 backgroundTraits:\r
   - high-society\r
   - politics\r
-`,wm=`id: raised-in-the-caravan-town\r
+`,km=`id: raised-in-the-caravan-town\r
 name: Raised in the Caravan Town\r
 status: placeholder\r
 plane: isekai\r
@@ -3430,7 +3504,7 @@ grants:\r
 backgroundTraits:\r
   - commerce\r
   - animal-lore\r
-`,Tm=`id: returned-from-the-systems\r
+`,Am=`id: returned-from-the-systems\r
 name: Returned from the Settled Systems\r
 status: placeholder\r
 plane: isekai\r
@@ -3451,7 +3525,7 @@ choices:\r
 backgroundTraits:\r
   - starships\r
   - spacefaring\r
-`,Em=`id: sunrise-refugee\r
+`,jm=`id: sunrise-refugee\r
 name: Sunrise Refugee\r
 status: placeholder\r
 plane: isekai\r
@@ -3468,7 +3542,7 @@ backgroundTraits:\r
   - bureaucracy\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: -1\r
-`,Dm=`id: station-rat\r
+`,Mm=`id: station-rat\r
 name: "Station Rat"\r
 status: placeholder\r
 plane: earth\r
@@ -3484,7 +3558,7 @@ backgroundTraits:\r
   - engineering\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: -1\r
-`,Om=`id: university-educated\r
+`,Nm=`id: university-educated\r
 name: "University Educated"\r
 status: placeholder\r
 plane: earth\r
@@ -3509,7 +3583,7 @@ backgroundTraits:\r
   - literature\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,km=`id: delegation-child\r
+`,Pm=`id: delegation-child\r
 name: "Delegation Child"\r
 status: placeholder\r
 plane: earth\r
@@ -3532,7 +3606,7 @@ backgroundTraits:\r
   - high-society\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,Am=`id: gate-lab-kid\r
+`,Fm=`id: gate-lab-kid\r
 name: "Gate Lab Kid"\r
 status: placeholder\r
 plane: earth\r
@@ -3548,7 +3622,7 @@ grants:\r
 backgroundTraits:\r
   - physics\r
   - engineering\r
-`,jm=`id: holding-company-kid\r
+`,Im=`id: holding-company-kid\r
 name: "Holding Company Kid"\r
 status: placeholder\r
 plane: earth\r
@@ -3566,7 +3640,7 @@ backgroundTraits:\r
   - bureaucracy\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,Mm=`id: parasapient-quarter\r
+`,Lm=`id: parasapient-quarter\r
 name: "Parasapient Quarter"\r
 status: placeholder\r
 plane: earth\r
@@ -3584,7 +3658,7 @@ choices:\r
     note: "+1 Language"\r
 backgroundTraits:\r
   - bureaucracy\r
-`,Nm=`id: raised-in-the-infill\r
+`,Rm=`id: raised-in-the-infill\r
 name: "Raised in the Infill"\r
 status: placeholder\r
 plane: earth\r
@@ -3600,7 +3674,7 @@ grants:\r
 backgroundTraits:\r
   - spacefaring\r
   - engineering\r
-`,Pm=`id: raised-on-ward-politics\r
+`,zm=`id: raised-on-ward-politics\r
 name: "Raised on Ward Politics"\r
 status: placeholder\r
 plane: earth\r
@@ -3616,7 +3690,7 @@ grants:\r
 backgroundTraits:\r
   - politics\r
   - bureaucracy\r
-`,Fm=`id: apothecary\r
+`,Bm=`id: apothecary\r
 name: "Apothecary"\r
 status: placeholder\r
 plane: any\r
@@ -3638,7 +3712,7 @@ backgroundTraits:\r
   - chemistry\r
   - biology\r
   - commerce\r
-`,Im=`id: bard\r
+`,Vm=`id: bard\r
 name: "Bard"\r
 status: placeholder\r
 plane: any\r
@@ -3661,7 +3735,7 @@ backgroundTraits:\r
   - literature\r
   - theater\r
   - wielder-dagger\r
-`,Lm=`id: blacksmith\r
+`,Hm=`id: blacksmith\r
 name: "Blacksmith"\r
 status: placeholder\r
 plane: any\r
@@ -3681,7 +3755,7 @@ backgroundTraits:\r
   - trade-guilds\r
   - commerce\r
   - wielder-mace\r
-`,Rm=`id: courier\r
+`,Um=`id: courier\r
 name: "Courier"\r
 status: placeholder\r
 plane: any\r
@@ -3700,7 +3774,7 @@ backgroundTraits:\r
   - navigation\r
   - animal-lore\r
   - bureaucracy\r
-`,zm=`id: criminal-enforcer\r
+`,Wm=`id: criminal-enforcer\r
 name: "Criminal Enforcer"\r
 status: placeholder\r
 plane: any\r
@@ -3725,7 +3799,7 @@ backgroundTraits:\r
   - law-enforcement\r
   - wielder-dagger\r
   - wielder-shotgun\r
-`,Bm=`id: doctor\r
+`,Gm=`id: doctor\r
 name: "Doctor"\r
 status: placeholder\r
 plane: any\r
@@ -3753,7 +3827,7 @@ backgroundTraits:\r
   - chemistry\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,Vm=`id: farmer\r
+`,Km=`id: farmer\r
 name: "Farmer"\r
 status: placeholder\r
 plane: any\r
@@ -3774,7 +3848,7 @@ backgroundTraits:\r
   - biology\r
   - commerce\r
   - wilderness-lore\r
-`,Hm=`id: jester\r
+`,qm=`id: jester\r
 name: "Jester"\r
 status: placeholder\r
 plane: any\r
@@ -3794,7 +3868,7 @@ backgroundTraits:\r
   - literature\r
   - high-society\r
   - politics\r
-`,Um=`id: knight\r
+`,Jm=`id: knight\r
 name: "Knight"\r
 status: placeholder\r
 plane: any\r
@@ -3819,7 +3893,7 @@ backgroundTraits:\r
   - wielder-greatsword\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,Wm=`id: local-police\r
+`,Ym=`id: local-police\r
 name: "Local Police"\r
 status: placeholder\r
 plane: any\r
@@ -3843,7 +3917,7 @@ backgroundTraits:\r
   - law-enforcement\r
   - security-systems\r
   - wielder-shotgun\r
-`,Gm=`id: musical-artist\r
+`,Xm=`id: musical-artist\r
 name: "Musical Artist"\r
 status: placeholder\r
 plane: any\r
@@ -3865,7 +3939,7 @@ backgroundTraits:\r
   - theater\r
   - literature\r
   - high-society\r
-`,Km=`id: ranger\r
+`,Zm=`id: ranger\r
 name: "Ranger"\r
 status: placeholder\r
 plane: any\r
@@ -3888,7 +3962,7 @@ backgroundTraits:\r
   - wielder-bow\r
   - wielder-dagger\r
   - wielder-throwing-weapon\r
-`,qm=`id: smuggler\r
+`,Qm=`id: smuggler\r
 name: "Smuggler"\r
 status: placeholder\r
 plane: any\r
@@ -3922,7 +3996,7 @@ backgroundTraits:\r
   - greasing-palms\r
   - fence\r
   - running-dark\r
-`,Jm=`id: spy\r
+`,$m=`id: spy\r
 name: "Spy"\r
 status: placeholder\r
 plane: any\r
@@ -3950,7 +4024,7 @@ backgroundTraits:\r
   - high-society\r
   - theater\r
   - wielder-dagger\r
-`,Ym=`id: squire\r
+`,eh=`id: squire\r
 name: "Squire"\r
 status: placeholder\r
 plane: any\r
@@ -3971,7 +4045,7 @@ backgroundTraits:\r
   - wielder-spear\r
   - wielder-mace\r
   - wielder-shortsword\r
-`,Xm=`id: stonemason\r
+`,th=`id: stonemason\r
 name: "Stonemason"\r
 status: placeholder\r
 plane: any\r
@@ -3989,7 +4063,7 @@ backgroundTraits:\r
   - engineering\r
   - trade-guilds\r
   - commerce\r
-`,Zm=`id: surgeon\r
+`,nh=`id: surgeon\r
 name: "Surgeon"\r
 status: placeholder\r
 plane: any\r
@@ -4010,7 +4084,7 @@ backgroundTraits:\r
   - chemistry\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,Qm=`id: tanner\r
+`,rh=`id: tanner\r
 name: "Tanner"\r
 status: placeholder\r
 plane: any\r
@@ -4029,7 +4103,7 @@ backgroundTraits:\r
   - chemistry\r
   - trade-guilds\r
   - commerce\r
-`,$m=`id: visual-artist\r
+`,ih=`id: visual-artist\r
 name: "Visual Artist"\r
 status: placeholder\r
 plane: any\r
@@ -4052,7 +4126,7 @@ backgroundTraits:\r
   - literature\r
   - high-society\r
   - commerce\r
-`,eh=`id: alchemist\r
+`,ah=`id: alchemist\r
 name: "Alchemist"\r
 status: placeholder\r
 plane: isekai\r
@@ -4071,7 +4145,7 @@ backgroundTraits:\r
   - exotic-materials\r
   - chemistry\r
   - trade-guilds\r
-`,th=`id: caravaneer\r
+`,oh=`id: caravaneer\r
 name: Caravaneer\r
 status: placeholder\r
 plane: isekai\r
@@ -4093,7 +4167,7 @@ backgroundTraits:\r
   - navigation\r
   - animal-lore\r
   - wielder-crossbow\r
-`,nh=`id: dreft-local-militia\r
+`,sh=`id: dreft-local-militia\r
 name: "Dreft Local Militia"\r
 status: placeholder\r
 plane: isekai\r
@@ -4115,7 +4189,7 @@ backgroundTraits:\r
   - wielder-spear\r
   - wielder-crossbow\r
   - wielder-polearm\r
-`,rh=`id: dreft-mercenary\r
+`,ch=`id: dreft-mercenary\r
 name: "Dreft Mercenary"\r
 status: placeholder\r
 plane: isekai\r
@@ -4144,7 +4218,7 @@ backgroundTraits:\r
   - wielder-crossbow\r
   - wielder-greatsword\r
   - wielder-siege-engine\r
-`,ih=`id: gate-hand\r
+`,lh=`id: gate-hand\r
 name: Gate Hand\r
 status: placeholder\r
 plane: isekai\r
@@ -4160,7 +4234,7 @@ grants:\r
 backgroundTraits:\r
   - commerce\r
   - bureaucracy\r
-`,ah=`id: guild-hunter\r
+`,uh=`id: guild-hunter\r
 name: Guild Hunter\r
 status: placeholder\r
 plane: isekai\r
@@ -4184,7 +4258,7 @@ backgroundTraits:\r
   - wielder-bow\r
   - wielder-spear\r
   - wielder-throwing-weapon\r
-`,oh=`id: hedge-witch\r
+`,dh=`id: hedge-witch\r
 name: Hedge Witch\r
 status: placeholder\r
 plane: isekai\r
@@ -4204,7 +4278,7 @@ backgroundTraits:\r
   - wilderness-lore\r
   - biology\r
   - wielder-staff\r
-`,sh=`id: licensed-mage\r
+`,fh=`id: licensed-mage\r
 name: Licensed Mage\r
 status: placeholder\r
 plane: isekai\r
@@ -4225,7 +4299,7 @@ backgroundTraits:\r
   - bureaucracy\r
   - chemistry\r
   - wielder-staff\r
-`,ch=`id: royal-guard\r
+`,ph=`id: royal-guard\r
 name: Royal Guard\r
 status: placeholder\r
 plane: isekai\r
@@ -4245,7 +4319,7 @@ backgroundTraits:\r
   - wielder-polearm\r
   - wielder-crossbow\r
   - wielder-shortsword\r
-`,lh=`id: american-empire-soldier\r
+`,mh=`id: american-empire-soldier\r
 name: "American Empire Soldier"\r
 status: placeholder\r
 plane: earth\r
@@ -4268,7 +4342,7 @@ backgroundTraits:\r
   - wielder-missile-launcher\r
   - wielder-sniper-rifle\r
   - wielder-mortar\r
-`,uh=`id: combat-medic\r
+`,hh=`id: combat-medic\r
 name: "Combat Medic"\r
 status: placeholder\r
 plane: earth\r
@@ -4290,7 +4364,7 @@ backgroundTraits:\r
   - biology\r
   - military-tactics\r
   - wielder-shotgun\r
-`,dh=`id: computer-engineer\r
+`,gh=`id: computer-engineer\r
 name: "Computer Engineer"\r
 status: placeholder\r
 plane: earth\r
@@ -4310,7 +4384,7 @@ backgroundTraits:\r
   - security-systems\r
   - engineering\r
   - physics\r
-`,fh=`id: emergency-medical-technician\r
+`,_h=`id: emergency-medical-technician\r
 name: "Emergency Medical Technician"\r
 status: placeholder\r
 plane: earth\r
@@ -4330,7 +4404,7 @@ backgroundTraits:\r
   - psychology\r
   - biology\r
   - law-enforcement\r
-`,ph=`id: exotic-specimen-dealer\r
+`,vh=`id: exotic-specimen-dealer\r
 name: "Exotic Specimen Dealer"\r
 status: placeholder\r
 plane: earth\r
@@ -4354,7 +4428,7 @@ backgroundTraits:\r
   - starships\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,mh=`id: fighter-pilot\r
+`,yh=`id: fighter-pilot\r
 name: "Fighter Pilot"\r
 status: placeholder\r
 plane: earth\r
@@ -4374,7 +4448,7 @@ backgroundTraits:\r
   - navigation\r
   - physics\r
   - spacefaring\r
-`,hh=`id: interplanar-diplomat\r
+`,bh=`id: interplanar-diplomat\r
 name: "Interplanar Diplomat"\r
 status: placeholder\r
 plane: earth\r
@@ -4400,7 +4474,7 @@ backgroundTraits:\r
   - high-society\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,gh=`id: interplanar-rights-lawyer\r
+`,xh=`id: interplanar-rights-lawyer\r
 name: "Interplanar Rights Lawyer"\r
 status: placeholder\r
 plane: earth\r
@@ -4420,7 +4494,7 @@ backgroundTraits:\r
   - politics\r
 # Wealth at creation (engine/wealth.ts)\r
 wealth: 1\r
-`,_h=`id: officer-of-the-bureau-of-planar-management-and-enforcement\r
+`,Sh=`id: officer-of-the-bureau-of-planar-management-and-enforcement\r
 name: "Officer of the Bureau of Planar Management and Enforcement"\r
 status: placeholder\r
 plane: earth\r
@@ -4447,7 +4521,7 @@ backgroundTraits:\r
   - security-systems\r
   - wielder-shotgun\r
   - wielder-grenade\r
-`,vh=`id: paraarcheologist\r
+`,Ch=`id: paraarcheologist\r
 name: "Paraarcheologist"\r
 status: placeholder\r
 plane: earth\r
@@ -4462,7 +4536,7 @@ grants:\r
 backgroundTraits:\r
   - local-history\r
   - chemistry\r
-`,yh=`id: paraecologist\r
+`,wh=`id: paraecologist\r
 name: "Paraecologist"\r
 status: placeholder\r
 plane: earth\r
@@ -4479,7 +4553,7 @@ backgroundTraits:\r
   - biology\r
   - wilderness-lore\r
   - animal-lore\r
-`,bh=`id: paraethnologist\r
+`,Th=`id: paraethnologist\r
 name: "Paraethnologist"\r
 status: placeholder\r
 plane: earth\r
@@ -4498,7 +4572,7 @@ backgroundTraits:\r
   - local-history\r
   - politics\r
   - literature\r
-`,xh=`id: paraevolutionary-scientist\r
+`,Eh=`id: paraevolutionary-scientist\r
 name: "Paraevolutionary Scientist"\r
 status: placeholder\r
 plane: earth\r
@@ -4514,7 +4588,7 @@ backgroundTraits:\r
   - biology\r
   - chemistry\r
   - local-history\r
-`,Sh=`id: paraphysiologist\r
+`,Dh=`id: paraphysiologist\r
 name: "Paraphysiologist"\r
 status: placeholder\r
 plane: earth\r
@@ -4530,7 +4604,7 @@ backgroundTraits:\r
   - biology\r
   - chemistry\r
   - medicine\r
-`,Ch=`id: parazoological-keeper\r
+`,Oh=`id: parazoological-keeper\r
 name: "Parazoological Keeper"\r
 status: placeholder\r
 plane: earth\r
@@ -4545,7 +4619,7 @@ backgroundTraits:\r
   - animal-lore\r
   - biology\r
   - security-systems\r
-`,wh=`id: planar-expeditionary-professional\r
+`,kh=`id: planar-expeditionary-professional\r
 name: "Planar Expeditionary Professional"\r
 status: placeholder\r
 plane: earth\r
@@ -4565,7 +4639,7 @@ backgroundTraits:\r
   - biology\r
   - wielder-shotgun\r
   - wielder-flamethrower\r
-`,Th=`id: private-security-contractor\r
+`,Ah=`id: private-security-contractor\r
 name: "Private Security Contractor"\r
 status: placeholder\r
 plane: earth\r
@@ -4594,7 +4668,7 @@ backgroundTraits:\r
   - security-systems\r
   - law-enforcement\r
   - intimidation\r
-`,Eh=`id: starship-engineer\r
+`,jh=`id: starship-engineer\r
 name: "Starship Engineer"\r
 status: placeholder\r
 plane: earth\r
@@ -4614,7 +4688,7 @@ backgroundTraits:\r
   - physics\r
   - starships\r
   - spacefaring\r
-`,Dh=`id: station-maintenance\r
+`,Mh=`id: station-maintenance\r
 name: "Station Maintenance"\r
 status: placeholder\r
 plane: earth\r
@@ -4633,7 +4707,7 @@ backgroundTraits:\r
   - engineering\r
   - spacefaring\r
   - security-systems\r
-`,Oh=`id: theoretical-paraphysicist\r
+`,Nh=`id: theoretical-paraphysicist\r
 name: "Theoretical Paraphysicist"\r
 status: placeholder\r
 plane: earth\r
@@ -4649,7 +4723,7 @@ backgroundTraits:\r
   - physics\r
   - chemistry\r
   - engineering\r
-`,kh=`id: truck-pilot\r
+`,Ph=`id: truck-pilot\r
 name: "Truck Pilot"\r
 status: placeholder\r
 plane: earth\r
@@ -4671,7 +4745,7 @@ backgroundTraits:\r
   - navigation\r
   - spacefaring\r
   - commerce\r
-`,Ah=`id: acid-spray\r
+`,Fh=`id: acid-spray\r
 name: "Acid Spray"\r
 status: placeholder\r
 plane: any\r
@@ -4685,7 +4759,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Acid Spray Action."\r
 action: "Cast Acid Spray: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 10 m) (3 Corrosive per Rank) (Attack Stat: Magic) (area of effect: 1 m per Rank). Characters and Items damaged by Cast Acid Spray gain one rank of the Corroding Condition."\r
-`,jh=`id: archer\r
+`,Ih=`id: archer\r
 name: "Archer"\r
 status: draft\r
 plane: any\r
@@ -4697,7 +4771,7 @@ minStats: { grace: 4, intuition: 4, power: 2 }\r
 prerequisiteTags: [archery]\r
 effect: "- This character gains the Aimed Shot Action.\\n- Rank *5 added to Skill Check rolls involving archery."\r
 action: "Aimed Shot: This character Attacks with a bow or crossbow at +4 to the Attack Roll, but loses 6 Priority for the Round."\r
-`,Mh=`id: archmage\r
+`,Lh=`id: archmage\r
 name: "Archmage"\r
 status: draft\r
 plane: any\r
@@ -4710,7 +4784,7 @@ prerequisites: [master-mage]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 less MP on it."\r
-`,Nh=`id: banish-spirit\r
+`,Rh=`id: banish-spirit\r
 name: "Banish Spirit"\r
 status: draft\r
 plane: any\r
@@ -4724,7 +4798,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Banish Spirit Action."\r
 action: "Cast Banish Spirit: This character may spend 2 MP to make an Attack Roll with Magic against a spirit possessing a character within 3 m. On a Solid Hit or better, the character loses the Possessed by a Spirit Trait and the spirit is driven off."\r
-`,Ph=`id: barbarian\r
+`,zh=`id: barbarian\r
 name: "Barbarian"\r
 status: draft\r
 plane: any\r
@@ -4735,7 +4809,7 @@ ranked: true\r
 minStats: { power: 5, endurance: 5 }\r
 effect: "- This character gains the Rage Action.\\n- Rank *3 added to Endurance checks to keep fighting while Injured."\r
 action: "Rage: This character may spend 1 VP to gain the Rage Condition."\r
-`,Fh=`id: blight\r
+`,Bh=`id: blight\r
 name: "Blight"\r
 status: draft\r
 plane: any\r
@@ -4749,7 +4823,7 @@ prerequisites: [wither]\r
 list: magic\r
 effect: "This character gains the Cast Blight Action."\r
 action: "Cast Blight: This character may spend 3 MP to Attack a location with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (5 Death per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank)."\r
-`,Ih=`id: blink\r
+`,Vh=`id: blink\r
 name: "Blink"\r
 status: placeholder\r
 plane: any\r
@@ -4763,7 +4837,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Blink Action."\r
 action: "Cast Blink: This character may spend 2 MP to teleport, with anything they're carrying, to a point they can see within 10 m per Rank."\r
-`,Lh=`id: bodyguard\r
+`,Hh=`id: bodyguard\r
 name: "Bodyguard"\r
 status: draft\r
 plane: any\r
@@ -4773,7 +4847,7 @@ category: ability\r
 minStats: { grace: 4, intuition: 4 }\r
 effect: "This character gains the Cover Action."\r
 action: "Cover: Once per Round, when a character within 1 m that this character has declared it is guarding is targeted by an Attack, this character may become the target instead, using its own Defense. If it is holding a shield, it gains +2 Defense against that Attack."\r
-`,Rh=`id: bolt\r
+`,Uh=`id: bolt\r
 name: "Bolt"\r
 status: draft\r
 plane: any\r
@@ -4783,7 +4857,7 @@ category: ability\r
 minStats: { grace: 3, endurance: 2 }\r
 effect: "This character gains the Bolt Action."\r
 action: "Bolt: This character takes Full Movement at +5 Priority for the Round. This character gains the Flat-Footed Condition the following Round."\r
-`,zh=`id: boxing\r
+`,Wh=`id: boxing\r
 name: "Boxing"\r
 status: draft\r
 plane: any\r
@@ -4795,7 +4869,7 @@ minStats: { power: 3, grace: 3, endurance: 3 }\r
 prerequisites: [brawler]\r
 effect: "- This character can Attack with the Haymaker and Uppercut natural weapons.\\n- Rank *5 added to Skill Check rolls involving boxing.\\n- +3 to Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
 modifiers: "Attack Rolls +3 (punches)"\r
-`,Bh=`id: chain-lightning\r
+`,Gh=`id: chain-lightning\r
 name: "Chain Lightning"\r
 status: draft\r
 plane: any\r
@@ -4810,7 +4884,7 @@ prerequisites: [lightning]\r
 list: magic\r
 effect: "This character gains the Cast Chain Lightning Action."\r
 action: "Cast Chain Lightning: This character may spend 3 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (4 Electrical per Rank, 1 EMP per Rank) (Attack Stat: Magic). On a hit, the lightning leaps to one more character per Rank within 5 m of the last one struck, each hit as if with a Glancing Blow."\r
-`,Vh=`id: charm\r
+`,Kh=`id: charm\r
 name: "Charm"\r
 status: placeholder\r
 plane: any\r
@@ -4824,7 +4898,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Charm Action."\r
 action: "Cast Charm: This character may spend 2 MP to give the Charmed Condition to a character within 10 m. The Condition's Rank is equal to the caster's Charm Rank."\r
-`,Hh=`id: cleanse\r
+`,qh=`id: cleanse\r
 name: "Cleanse"\r
 status: draft\r
 plane: any\r
@@ -4838,7 +4912,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Cleanse Action."\r
 action: "Cast Cleanse: This character may spend 1 MP to end the Burning and Corroding Conditions on a character or object within 3 m."\r
-`,Uh=`id: counterpuncher\r
+`,Jh=`id: counterpuncher\r
 name: "Counterpuncher"\r
 status: draft\r
 plane: any\r
@@ -4848,7 +4922,7 @@ category: ability\r
 minStats: { grace: 5, intuition: 4, power: 3 }\r
 prerequisites: [boxing]\r
 effect: "When a Melee Attack against this character misses by 6 or more while it is Defending, this character may Attack the attacker with a natural weapon in the next Priority step."\r
-`,Wh=`id: create-fire\r
+`,Yh=`id: create-fire\r
 name: "Create Fire"\r
 status: draft\r
 plane: any\r
@@ -4862,7 +4936,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Create Fire Action."\r
 action: "Cast Create Fire: This character may spend 1 MP to ignite 1 square meter of material per Rank within 10 m, giving any Items or characters affected one rank of the Burning Condition."\r
-`,Gh=`id: create-food\r
+`,Xh=`id: create-food\r
 name: "Create Food"\r
 status: draft\r
 plane: any\r
@@ -4877,7 +4951,7 @@ prerequisites: [create-water]\r
 list: magic\r
 effect: "This character gains the Cast Create Food Action."\r
 action: "Cast Create Food: This character may spend 1 MP to create enough plain, edible food to feed one person for a day per Rank, at a target location within 3 m."\r
-`,Kh=`id: create-water\r
+`,Zh=`id: create-water\r
 name: "Create Water"\r
 status: draft\r
 plane: any\r
@@ -4891,7 +4965,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Create Water Action."\r
 action: "Cast Create Water: This character may spend 1 MP to create a 1-meter-diameter sphere of water per Rank at a target location within 10 m."\r
-`,qh=`id: cuff\r
+`,Qh=`id: cuff\r
 name: "Cuff"\r
 status: draft\r
 plane: any\r
@@ -4902,7 +4976,7 @@ minStats: { power: 3, grace: 3 }\r
 prerequisites: [grappler]\r
 effect: "This character gains the Restrain Action."\r
 action: "Restrain: With Handcuffs or similar restraints in hand, this character may make an Attack Roll with Grace against a Prone, Rooted or Incapacitated character within 1 m. On a Solid Hit or better, the target gains the Restrained Condition."\r
-`,Jh=`id: dark-haze\r
+`,$h=`id: dark-haze\r
 name: "Dark Haze"\r
 status: draft\r
 plane: any\r
@@ -4916,7 +4990,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Dark Haze Action."\r
 action: "Cast Dark Haze: This character may spend 2 MP to give the Dark Haze Condition to a character within 3 m. The Condition's Rank is equal to the caster's Dark Haze Rank."\r
-`,Yh=`id: darkness\r
+`,eg=`id: darkness\r
 name: "Darkness"\r
 status: draft\r
 plane: any\r
@@ -4930,7 +5004,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Darkness Action."\r
 action: "Cast Darkness: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 20 m, with magical darkness for 1 minute per Rank. Light that isn't magical doesn't shine into it, and characters inside it can't be seen from outside."\r
-`,Xh=`id: daze\r
+`,tg=`id: daze\r
 name: "Daze"\r
 status: draft\r
 plane: any\r
@@ -4944,7 +5018,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Daze Action."\r
 action: "Cast Daze: This character may spend 1 MP to give the Flat-Footed Condition to a character within 20 m for the following Round."\r
-`,Zh=`id: deathblade\r
+`,ng=`id: deathblade\r
 name: "Deathblade"\r
 status: draft\r
 plane: any\r
@@ -4958,7 +5032,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Deathblade Action."\r
 action: "Cast Deathblade: This character may spend 2 MP per Rank of Deathblade to give a weapon within 5 m the Withering Weapon Condition. The Condition's Rank is equal to the caster's Deathblade Rank."\r
-`,Qh=`id: deathproof\r
+`,rg=`id: deathproof\r
 name: "Deathproof"\r
 status: draft\r
 plane: any\r
@@ -4972,7 +5046,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Deathproof Action."\r
 action: "Cast Deathproof: This character may spend 2 MP per Rank of Deathproof to give a character or item within 5 m the Magically Deathproof Condition. The Condition's Rank is equal to the caster's Deathproof Rank."\r
-`,$h=`id: detect-magic\r
+`,ig=`id: detect-magic\r
 name: "Detect Magic"\r
 status: draft\r
 plane: any\r
@@ -4986,7 +5060,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Detect Magic Action."\r
 action: "Cast Detect Magic: This character may spend 1 MP to sense every magical object, spell and (Enchantment) Condition within 10 m per Rank, and where each one is."\r
-`,eg=`id: disarm\r
+`,ag=`id: disarm\r
 name: "Disarm"\r
 status: draft\r
 plane: any\r
@@ -4997,7 +5071,7 @@ minStats: { grace: 5, intuition: 3 }\r
 prerequisites: [brawler]\r
 effect: "This character gains the Disarm Action."\r
 action: "Disarm: This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet."\r
-`,tg=`id: dispel-magic\r
+`,og=`id: dispel-magic\r
 name: "Dispel Magic"\r
 status: placeholder\r
 plane: any\r
@@ -5011,7 +5085,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Dispel Magic Action."\r
 action: "Cast Dispel Magic: This character may spend 2 MP to reduce the Rank of one (Enchantment) Condition on a character or object within 10 m by 1 per Rank. A Condition reduced to Rank 0 ends, and one that isn't ranked ends outright."\r
-`,ng=`id: dress-wounds\r
+`,sg=`id: dress-wounds\r
 name: "Dress Wounds"\r
 status: draft\r
 plane: any\r
@@ -5021,7 +5095,7 @@ category: ability\r
 minStats: { intuition: 2 }\r
 effect: "This character gains the Dress Wounds Action."\r
 action: "Dress Wounds: As a Full RP Action, this character may dress the wounds of itself or another character within reach, giving them the Bandaged Condition."\r
-`,rg=`id: earthblade\r
+`,cg=`id: earthblade\r
 name: "Earthblade"\r
 status: draft\r
 plane: any\r
@@ -5035,7 +5109,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Earthblade Action."\r
 action: "Cast Earthblade: This character may spend 2 MP per Rank of Earthblade to give a weapon within 5 m the Earthen Weapon Condition. The Condition's Rank is equal to the caster's Earthblade Rank."\r
-`,ig=`id: earthen-spike\r
+`,lg=`id: earthen-spike\r
 name: "Earthen Spike"\r
 status: draft\r
 plane: any\r
@@ -5049,7 +5123,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Earthen Spike Action."\r
 action: "Cast Earthen Spike: This character may spend 2 MP to Attack a target standing on earth or stone with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (4 Piercing per Rank) (Attack Stat: Magic). Characters damaged by Cast Earthen Spike gain the Prone Condition."\r
-`,ag=`id: elemental-ward\r
+`,ug=`id: elemental-ward\r
 name: "Elemental Ward"\r
 status: placeholder\r
 plane: any\r
@@ -5063,7 +5137,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Elemental Ward Action."\r
 action: "Cast Elemental Ward: This character may spend 1 MP to give the Elemental Ward Condition to a character within 3 m, against Heat, Cold, Electrical or EMP (the caster's choice). The Condition's Rank is equal to the caster's Elemental Ward Rank."\r
-`,og=`id: entangle\r
+`,dg=`id: entangle\r
 name: "Entangle"\r
 status: placeholder\r
 plane: any\r
@@ -5077,7 +5151,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Entangle Action."\r
 action: "Cast Entangle: This character may spend 2 MP to choose a point within 20 m. Every character within 2 m per Rank of that point gains the Rooted Condition, at a Rank equal to the caster's Entangle Rank."\r
-`,sg=`id: expert-archer\r
+`,fg=`id: expert-archer\r
 name: "Expert Archer"\r
 status: draft\r
 plane: any\r
@@ -5089,7 +5163,7 @@ minStats: { grace: 8, intuition: 6, power: 4, endurance: 4 }\r
 prerequisites: [archer]\r
 effect: "- This character gains the Volley Action.\\n- This character can request Advantage on Attack Rolls made with bows and crossbows."\r
 action: "Volley: As a Full RP Action, this character makes two Attacks with a bow, against the same target or two targets within 5 m of each other, each at -3 to the Attack Roll."\r
-`,cg=`id: expert-boxer\r
+`,pg=`id: expert-boxer\r
 name: "Expert Boxer"\r
 status: draft\r
 plane: any\r
@@ -5100,7 +5174,7 @@ mastery: true\r
 minStats: { power: 8, grace: 6, endurance: 6, intuition: 4 }\r
 prerequisites: [boxing]\r
 effect: "- This character can Attack with the Superman Punch natural weapon.\\n- This character can request Advantage on Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
-`,lg=`id: expert-swordsman\r
+`,mg=`id: expert-swordsman\r
 name: "Expert Swordsman"\r
 status: draft\r
 plane: any\r
@@ -5112,7 +5186,7 @@ minStats: { grace: 8, power: 6, intuition: 6, endurance: 4 }\r
 prerequisites: [swordsman]\r
 effect: "- This character gains the Flurry Action.\\n- This character can request Advantage on Attack Rolls made with swords."\r
 action: "Flurry: As a Full RP Action, this character makes two Attacks with a sword, against the same target or two targets within its reach, each at -3 to the Attack Roll."\r
-`,ug=`id: fear\r
+`,hg=`id: fear\r
 name: "Fear"\r
 status: placeholder\r
 plane: any\r
@@ -5126,7 +5200,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Fear Action."\r
 action: "Cast Fear: This character may spend 1 MP to give the Frightened Condition to a character within 20 m. The Condition's Rank is equal to the caster's Fear Rank."\r
-`,dg=`id: featherfall\r
+`,gg=`id: featherfall\r
 name: "Featherfall"\r
 status: placeholder\r
 plane: any\r
@@ -5140,7 +5214,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Featherfall Action."\r
 action: "Cast Featherfall: This character may spend 1 MP to give the Featherfall Condition to a character within 10 m. The Condition's Rank is equal to the caster's Featherfall Rank."\r
-`,fg=`id: field-medicine\r
+`,_g=`id: field-medicine\r
 name: "Field Medicine"\r
 status: draft\r
 plane: any\r
@@ -5149,7 +5223,7 @@ tags: [medicine, healing, combat]\r
 category: ability\r
 effect: "This character gains the Field Medicine Action."\r
 action: "Field Medicine: As a Full RP Action, this character may make a Grace or Memory check to reduce Severe Bleeding, Unconscious, temporary blindness or a concussion on a character within 1 m. For every 5 points the roll exceeds 10, one Rank of the Condition is removed."\r
-`,pg=`id: fireball\r
+`,vg=`id: fireball\r
 name: "Fireball"\r
 status: draft\r
 plane: any\r
@@ -5164,7 +5238,7 @@ prerequisites: [create-fire]\r
 list: magic\r
 effect: "This character gains the Cast Fireball Action."\r
 action: "Cast Fireball: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (2 Blunt per Rank, 4 Heat per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters and Items damaged by Cast Fireball gain one rank of the Burning Condition."\r
-`,mg=`id: flameblade\r
+`,yg=`id: flameblade\r
 name: "Flameblade"\r
 status: draft\r
 plane: any\r
@@ -5178,7 +5252,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Flameblade Action."\r
 action: "Cast Flameblade: This character may spend 2 MP per Rank of Flameblade to give a weapon within 5 m the Flaming Weapon Condition. The Condition's Rank is equal to the caster's Flameblade Rank."\r
-`,hg=`id: flamecraft\r
+`,bg=`id: flamecraft\r
 name: "Flamecraft"\r
 status: draft\r
 plane: any\r
@@ -5189,7 +5263,7 @@ minStats: { magic: 3, endurance: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Heat, and any Burning, Frozen or Corroding Condition it gives to Burning."\r
-`,gg=`id: flameproof\r
+`,xg=`id: flameproof\r
 name: "Flameproof"\r
 status: draft\r
 plane: any\r
@@ -5203,7 +5277,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Flameproof Action."\r
 action: "Cast Flameproof: This character may spend 2 MP per Rank of Flameproof to give a character or item within 5 m the Magically Flameproof Condition. The Condition's Rank is equal to the caster's Flameproof Rank."\r
-`,_g=`id: fog-cloud\r
+`,Sg=`id: fog-cloud\r
 name: "Fog Cloud"\r
 status: draft\r
 plane: any\r
@@ -5217,7 +5291,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Fog Cloud Action."\r
 action: "Cast Fog Cloud: This character may spend 1 MP to fill a sphere 3 m across per Rank, at a point within 30 m, with fog for 1 minute per Rank. Characters inside the fog are in Light Cover, and those more than 3 m apart inside it can't see each other."\r
-`,vg=`id: grappler\r
+`,Cg=`id: grappler\r
 name: "Grappler"\r
 status: draft\r
 plane: any\r
@@ -5229,7 +5303,7 @@ minStats: { power: 4, endurance: 3, grace: 2 }\r
 prerequisites: [brawler]\r
 effect: "- This character gains the Grapple Action.\\n- Rank *5 added to Skill Check rolls involving grappling or escaping a hold."\r
 action: "Grapple: This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character's Grappler Rank for as long as this character keeps hold, and this character can't move while holding them."\r
-`,yg=`id: grave-touch\r
+`,wg=`id: grave-touch\r
 name: "Grave Touch"\r
 status: draft\r
 plane: any\r
@@ -5242,7 +5316,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Grave Touch Action."\r
 action: "Cast Grave Touch: This character may spend 1 MP to Attack a target with a temporary weapon that has the following profile: (Melee) (max range 1 m) (5 Death per Rank) (Attack Stat: Magic)."\r
-`,bg=`id: greater-heal\r
+`,Tg=`id: greater-heal\r
 name: "Greater Heal"\r
 status: draft\r
 plane: any\r
@@ -5257,7 +5331,7 @@ prerequisites: [heal]\r
 list: magic\r
 effect: "This character gains the Cast Greater Heal Action."\r
 action: "Cast Greater Heal: This character may spend 3 MP to heal a living character within 3 m, restoring 8 HP per Rank plus the caster's Magic and ending the Severe Bleeding Condition."\r
-`,xg=`id: grenadier\r
+`,Eg=`id: grenadier\r
 name: "Grenadier"\r
 status: draft\r
 plane: any\r
@@ -5268,7 +5342,7 @@ minStats: { grace: 3, intuition: 4, power: 3 }\r
 prerequisites: [wielder-throwing-weapon]\r
 effect: "This character gains the Lob Action."\r
 action: "Lob: This character Attacks with a thrown weapon that has an area of effect, aimed at a location outside its line of sight. A thrown object must be able to reach that location."\r
-`,Sg=`id: gust\r
+`,Dg=`id: gust\r
 name: "Gust"\r
 status: placeholder\r
 plane: any\r
@@ -5282,7 +5356,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Gust Action."\r
 action: "Cast Gust: This character may spend 1 MP to choose a point within 10 m. Every character within 2 m per Rank of that point is pushed 3 m per Rank away from the caster and gains the Prone Condition."\r
-`,Cg=`id: haste\r
+`,Og=`id: haste\r
 name: "Haste"\r
 status: placeholder\r
 plane: any\r
@@ -5297,7 +5371,7 @@ prerequisites: [magical-grace]\r
 list: magic\r
 effect: "This character gains the Cast Haste Action."\r
 action: "Cast Haste: This character may spend 2 MP to give the Hasted Condition to a character within 3 m. The Condition's Rank is equal to the caster's Haste Rank."\r
-`,wg=`id: heal\r
+`,kg=`id: heal\r
 name: "Heal"\r
 status: draft\r
 plane: any\r
@@ -5311,7 +5385,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Heal Action."\r
 action: "Cast Heal: This character may spend 1 MP to heal a living character within 3 m per Rank, restoring 4 HP per Rank plus the caster's Magic."\r
-`,Tg=`id: hoarfrost\r
+`,Ag=`id: hoarfrost\r
 name: "Hoarfrost"\r
 status: draft\r
 plane: any\r
@@ -5325,7 +5399,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Hoarfrost Action."\r
 action: "Cast Hoarfrost: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (5 Cold per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters and Items damaged by Cast Hoarfrost gain one rank of the Frozen Condition."\r
-`,Eg=`id: hunter\r
+`,jg=`id: hunter\r
 name: "Hunter"\r
 status: draft\r
 plane: any\r
@@ -5342,7 +5416,7 @@ choices:\r
     perRank: false\r
 effect: "- This character gains the Mark Quarry Action.\\n- Rank *5 added to Skill Check rolls involving hunting, stalking or field dressing game."\r
 action: "Mark Quarry: As a Partial RP Action, this character may spend 1 SP and make a Skill Check with a relevant Knowledge about a creature they can see that counts as their quarry. On a success, they gain +3 to Attack Rolls against it for the rest of the Incident."\r
-`,Dg=`id: ice-lance\r
+`,Mg=`id: ice-lance\r
 name: "Ice Lance"\r
 status: draft\r
 plane: any\r
@@ -5356,7 +5430,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Ice Lance Action."\r
 action: "Cast Ice Lance: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 40 m) (3 Piercing per Rank, 2 Cold per Rank) (Attack Stat: Magic)."\r
-`,Og=`id: iceblade\r
+`,Ng=`id: iceblade\r
 name: "Iceblade"\r
 status: draft\r
 plane: any\r
@@ -5370,7 +5444,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Iceblade Action."\r
 action: "Cast Iceblade: This character may spend 2 MP per Rank of Iceblade to give a weapon within 5 m the Freezing Weapon Condition. The Condition's Rank is equal to the caster's Iceblade Rank."\r
-`,kg=`id: icecraft\r
+`,Pg=`id: icecraft\r
 name: "Icecraft"\r
 status: draft\r
 plane: any\r
@@ -5381,7 +5455,7 @@ minStats: { magic: 3, demeanor: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Cold, and any Burning, Frozen or Corroding Condition it gives to Frozen."\r
-`,Ag=`id: iceproof\r
+`,Fg=`id: iceproof\r
 name: "Iceproof"\r
 status: draft\r
 plane: any\r
@@ -5395,7 +5469,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Iceproof Action."\r
 action: "Cast Iceproof: This character may spend 2 MP per Rank of Iceproof to give a character or item within 5 m the Magically Iceproof Condition. The Condition's Rank is equal to the caster's Iceproof Rank."\r
-`,jg=`id: infravision\r
+`,Ig=`id: infravision\r
 name: "Infravision"\r
 status: draft\r
 plane: any\r
@@ -5409,7 +5483,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Infravision Action."\r
 action: "Cast Infravision: This character may spend 1 MP to give the Infravision Condition to a character within 3 m. The Condition's Rank is equal to the caster's Infravision Rank."\r
-`,Mg=`id: invisibility\r
+`,Lg=`id: invisibility\r
 name: "Invisibility"\r
 status: placeholder\r
 plane: any\r
@@ -5423,7 +5497,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Invisibility Action."\r
 action: "Cast Invisibility: This character may spend 2 MP to give the Invisible Condition to a character within 3 m. The Condition's Rank is equal to the caster's Invisibility Rank."\r
-`,Ng=`id: knife-work\r
+`,Rg=`id: knife-work\r
 name: "Knife Work"\r
 status: draft\r
 plane: any\r
@@ -5434,7 +5508,7 @@ ranked: true\r
 minStats: { grace: 3 }\r
 prerequisites: [wielder-dagger]\r
 effect: "Rank *2 added to the Piercing damage of this character's Attacks with a knife or other small bladed weapon against a target that hasn't acted yet this Round."\r
-`,Pg=`id: knight\r
+`,zg=`id: knight\r
 name: "Knight"\r
 status: draft\r
 plane: any\r
@@ -5445,7 +5519,7 @@ minStats: { power: 5, endurance: 5, grace: 3, demeanor: 3 }\r
 prerequisites: [rider-basic-animals]\r
 effect: "- This character gains the Charge Action.\\n- This character can request Advantage on rolls to stay in the saddle or keep control of their mount in a fight."\r
 action: "Charge: While mounted, this character may Move up to their mount's Movement in a straight line toward a target and Attack it with a melee weapon at the end, adding +3 to the damage."\r
-`,Fg=`id: light\r
+`,Bg=`id: light\r
 name: "Light"\r
 status: placeholder\r
 plane: any\r
@@ -5459,7 +5533,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Light Action."\r
 action: "Cast Light: This character may spend 1 MP to give the Glowing Condition to an object within 3 m. The Condition's Rank is equal to the caster's Light Rank."\r
-`,Ig=`id: lightning\r
+`,Vg=`id: lightning\r
 name: "Lightning"\r
 status: draft\r
 plane: any\r
@@ -5473,7 +5547,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Lightning Action."\r
 action: "Cast Lightning: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 Heat per Rank, 5 Electrical per Rank, 2 EMP per Rank) (Attack Stat: Magic)."\r
-`,Lg=`id: magical-endurance\r
+`,Hg=`id: magical-endurance\r
 name: "Magical Endurance"\r
 status: draft\r
 plane: any\r
@@ -5487,7 +5561,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Magical Endurance Action."\r
 action: "Cast Magical Endurance: This character may spend 1 MP to give the Magical Endurance Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Endurance Rank."\r
-`,Rg=`id: magical-flight\r
+`,Ug=`id: magical-flight\r
 name: "Magical Flight"\r
 status: draft\r
 plane: any\r
@@ -5501,7 +5575,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Magical Flight Action."\r
 action: "Cast Magical Flight: This character may spend 2 MP to give the Magical Flight Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Flight Rank."\r
-`,zg=`id: magical-grace\r
+`,Wg=`id: magical-grace\r
 name: "Magical Grace"\r
 status: draft\r
 plane: any\r
@@ -5515,7 +5589,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Magical Grace Action."\r
 action: "Cast Magical Grace: This character may spend 1 MP to give the Magical Grace Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Grace Rank."\r
-`,Bg=`id: magical-replenishment\r
+`,Gg=`id: magical-replenishment\r
 name: "Magical Replenishment"\r
 status: draft\r
 plane: any\r
@@ -5529,7 +5603,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Magical Replenishment Action."\r
 action: "Cast Magical Replenishment: This character may spend up to 6 MP per Rank to give a character within 3 m who has the Magic Stat that many bonus MP. Bonus MP not spent within 1 hour per Rank is lost."\r
-`,Vg=`id: magical-strength\r
+`,Kg=`id: magical-strength\r
 name: "Magical Strength"\r
 status: draft\r
 plane: any\r
@@ -5543,7 +5617,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Magical Strength Action."\r
 action: "Cast Magical Strength: This character may spend 1 MP to give the Magical Strength Condition to a character within 3 m. The Condition's Rank is equal to the caster's Magical Strength Rank."\r
-`,Hg=`id: mana-siphon\r
+`,qg=`id: mana-siphon\r
 name: "Mana Siphon"\r
 status: draft\r
 plane: any\r
@@ -5557,7 +5631,7 @@ minStats: { magic: 4, empathy: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Mana Siphon Action."\r
 action: "Cast Mana Siphon: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 60 m) (1 EMP per Rank) (Attack Stat: Magic). On a hit, the target loses up to 3 MP; on a Devastating Hit, up to 4 MP; on a Critical Hit, up to 5 MP. This character gains as much MP as the target lost. MP gained above this character's maximum is bonus MP, which is lost if not spent within 1 hour per Rank."\r
-`,Ug=`id: martial-artist\r
+`,Jg=`id: martial-artist\r
 name: "Martial Artist"\r
 status: draft\r
 plane: any\r
@@ -5567,7 +5641,7 @@ category: ability\r
 minStats: { grace: 5, power: 4, endurance: 4, intuition: 3 }\r
 prerequisites: [brawler, footwork]\r
 effect: "- This character can Attack with the Roundhouse Kick natural weapon.\\n- This character can request Advantage on rolls to keep their balance or footing in a fight.\\n- Natural weapon attacks deal +1 Blunt damage."\r
-`,Wg=`id: martial-arts-master\r
+`,Yg=`id: martial-arts-master\r
 name: "Martial Arts Master"\r
 status: draft\r
 plane: any\r
@@ -5578,7 +5652,7 @@ mastery: true\r
 minStats: { grace: 8, power: 6, endurance: 6, intuition: 5 }\r
 prerequisites: [martial-artist]\r
 effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character can request Advantage on Attack Rolls made with natural weapons."\r
-`,Gg=`id: master-flamecraft\r
+`,Xg=`id: master-flamecraft\r
 name: "Master Flamecraft"\r
 status: draft\r
 plane: any\r
@@ -5591,7 +5665,7 @@ prerequisites: [flamecraft]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action for an Attack that would deal Heat damage, this character spends 1 less MP on it and the Attack deals 1 more Heat damage."\r
-`,Kg=`id: master-icecraft\r
+`,Zg=`id: master-icecraft\r
 name: "Master Icecraft"\r
 status: draft\r
 plane: any\r
@@ -5604,7 +5678,7 @@ prerequisites: [icecraft]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action for an Attack that would deal Cold damage, this character spends 1 less MP on it and the Attack deals 1 more Cold damage."\r
-`,qg=`id: master-mage\r
+`,Qg=`id: master-mage\r
 name: "Master Mage"\r
 status: draft\r
 plane: any\r
@@ -5616,7 +5690,7 @@ minStats: { magic: 8, intuition: 4 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 less MP on it."\r
-`,Jg=`id: master-rustcraft\r
+`,$g=`id: master-rustcraft\r
 name: "Master Rustcraft"\r
 status: draft\r
 plane: any\r
@@ -5629,7 +5703,7 @@ prerequisites: [rustcraft]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action for an Attack that would deal Corrosive damage, this character spends 1 less MP on it and the Attack deals 1 more Corrosive damage."\r
-`,Yg=`id: master-stonecraft\r
+`,e_=`id: master-stonecraft\r
 name: "Master Stonecraft"\r
 status: draft\r
 plane: any\r
@@ -5642,7 +5716,7 @@ prerequisites: [stonecraft]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action for an Attack that would deal Blunt damage, this character spends 1 less MP on it and the Attack deals 1 more Blunt damage."\r
-`,Xg=`id: master-stormcraft\r
+`,t_=`id: master-stormcraft\r
 name: "Master Stormcraft"\r
 status: draft\r
 plane: any\r
@@ -5655,7 +5729,7 @@ prerequisites: [stormcraft]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action for an Attack that would deal Electrical damage, this character spends 1 less MP on it and the Attack deals 1 more Electrical damage."\r
-`,Zg=`id: mending\r
+`,n_=`id: mending\r
 name: "Mending"\r
 status: draft\r
 plane: any\r
@@ -5669,7 +5743,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Mending Action."\r
 action: "Cast Mending: This character may spend 1 MP to repair an object within 3 m, restoring 4 HP per Rank plus the caster's Magic. Mending can't repair a Destroyed object."\r
-`,Qg=`id: meteor\r
+`,r_=`id: meteor\r
 name: "Meteor"\r
 status: draft\r
 plane: any\r
@@ -5684,7 +5758,7 @@ prerequisites: [fireball]\r
 list: magic\r
 effect: "This character gains the Cast Meteor Action."\r
 action: "Cast Meteor: This character may spend 4 MP to Attack a location with a temporary weapon that has the following profile: (Ranged) (max range 100 m) (4 Blunt per Rank, 6 Heat per Rank) (Attack Stat: Magic) (area of effect: 5 m per Rank). Characters and Items damaged by Cast Meteor gain one rank of the Burning Condition."\r
-`,$g=`id: mind-shatter\r
+`,i_=`id: mind-shatter\r
 name: "Mind Shatter"\r
 status: draft\r
 plane: any\r
@@ -5698,7 +5772,7 @@ prerequisites: [mind-spike]\r
 list: magic\r
 effect: "This character gains the Cast Mind Shatter Action."\r
 action: "Cast Mind Shatter: This character may spend 4 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (6 Psychic per Rank) (Attack Stat: Magic). Characters damaged by Cast Mind Shatter gain the Flat-Footed Condition for the following Round and the Frightened Condition at a Rank equal to the caster's Mind Shatter Rank."\r
-`,e_=`id: mind-spike\r
+`,a_=`id: mind-spike\r
 name: "Mind Spike"\r
 status: placeholder\r
 plane: any\r
@@ -5712,7 +5786,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Mind Spike Action."\r
 action: "Cast Mind Spike: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (4 Psychic per Rank) (Attack Stat: Magic). Characters damaged by Cast Mind Spike gain the Flat-Footed Condition."\r
-`,t_=`id: mindblade\r
+`,o_=`id: mindblade\r
 name: "Mindblade"\r
 status: draft\r
 plane: any\r
@@ -5726,7 +5800,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Mindblade Action."\r
 action: "Cast Mindblade: This character may spend 2 MP per Rank of Mindblade to give a weapon within 5 m the Maddening Weapon Condition. The Condition's Rank is equal to the caster's Mindblade Rank."\r
-`,n_=`id: mindproof\r
+`,s_=`id: mindproof\r
 name: "Mindproof"\r
 status: draft\r
 plane: any\r
@@ -5740,7 +5814,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Mindproof Action."\r
 action: "Cast Mindproof: This character may spend 2 MP per Rank of Mindproof to give a character or item within 5 m the Magically Mindproof Condition. The Condition's Rank is equal to the caster's Mindproof Rank."\r
-`,r_=`id: monster-hunter\r
+`,c_=`id: monster-hunter\r
 name: "Monster Hunter"\r
 status: draft\r
 plane: any\r
@@ -5752,7 +5826,7 @@ minStats: { grace: 4, intuition: 4, endurance: 3 }\r
 prerequisites: [hunter]\r
 effect: "Rank *1 added to this character's Attack Rolls against monsters and extraplanar beings."\r
 modifiers: "Attack Rolls +1 per Rank (monsters and extraplanar beings)"\r
-`,i_=`id: natural-breath-weapon\r
+`,l_=`id: natural-breath-weapon\r
 name: "Natural Breath Weapon"\r
 status: draft\r
 plane: any\r
@@ -5763,7 +5837,7 @@ ranked: true\r
 background: true\r
 minStats: { endurance: 3 }\r
 effect: "- This character can Attack with the Breath Weapon natural weapon.\\n- Rank *2 added to the Breath Weapon's damage."\r
-`,a_=`id: rally\r
+`,u_=`id: rally\r
 name: "Rally"\r
 status: draft\r
 plane: any\r
@@ -5773,7 +5847,7 @@ category: ability\r
 minStats: { demeanor: 5, persuasion: 4 }\r
 effect: "This character gains the Rally Action."\r
 action: "Rally: As a Full RP Action, this character ends the Frightened Condition on every ally within 10 m who can hear them."\r
-`,o_=`id: rustblade\r
+`,d_=`id: rustblade\r
 name: "Rustblade"\r
 status: draft\r
 plane: any\r
@@ -5787,7 +5861,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Rustblade Action."\r
 action: "Cast Rustblade: This character may spend 2 MP per Rank of Rustblade to give a weapon within 5 m the Corrosive Weapon Condition. The Condition's Rank is equal to the caster's Rustblade Rank."\r
-`,s_=`id: rustcraft\r
+`,f_=`id: rustcraft\r
 name: "Rustcraft"\r
 status: draft\r
 plane: any\r
@@ -5798,7 +5872,7 @@ minStats: { magic: 3, empathy: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Corrosive, and any Burning, Frozen or Corroding Condition it gives to Corroding."\r
-`,c_=`id: rustproof\r
+`,p_=`id: rustproof\r
 name: "Rustproof"\r
 status: draft\r
 plane: any\r
@@ -5812,7 +5886,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Rustproof Action."\r
 action: "Cast Rustproof: This character may spend 2 MP per Rank of Rustproof to give a character or item within 5 m the Magically Rustproof Condition. The Condition's Rank is equal to the caster's Rustproof Rank."\r
-`,l_=`id: shield-wall\r
+`,m_=`id: shield-wall\r
 name: "Shield Wall"\r
 status: draft\r
 plane: any\r
@@ -5822,7 +5896,7 @@ category: ability\r
 minStats: { endurance: 4, power: 3, demeanor: 2 }\r
 effect: "This character gains the Shieldwall Action."\r
 action: "Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +4 Defense for the Round."\r
-`,u_=`id: shield\r
+`,h_=`id: shield\r
 name: "Shield"\r
 status: placeholder\r
 plane: any\r
@@ -5836,7 +5910,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Shield Action."\r
 action: "Cast Shield: This character may spend 1 MP to give the Shielded Condition to a character within 3 m. The Condition's Rank is equal to the caster's Shield Rank."\r
-`,d_=`id: sht-talk\r
+`,g_=`id: sht-talk\r
 name: "Sh!t Talk"\r
 status: draft\r
 plane: any\r
@@ -5846,7 +5920,7 @@ category: ability\r
 minStats: { persuasion: 4, demeanor: 3 }\r
 effect: "This character gains the Sh!t Talk Action."\r
 action: "Sh!t Talk: As an RP Action and Defend, this character keeps up a stream of fast talk. One character within 5 m who can hear and understand them takes -2 to Attack Rolls against this character this Round."\r
-`,f_=`id: silence\r
+`,__=`id: silence\r
 name: "Silence"\r
 status: placeholder\r
 plane: any\r
@@ -5860,7 +5934,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Silence Action."\r
 action: "Cast Silence: This character may spend 2 MP to choose a point within 30 m. Every character within 3 m per Rank of that point gains the Silenced Condition, at a Rank equal to the caster's Silence Rank."\r
-`,p_=`id: simple-metamagic\r
+`,v_=`id: simple-metamagic\r
 name: "Simple Metamagic"\r
 status: draft\r
 plane: any\r
@@ -5871,7 +5945,7 @@ minStats: { magic: 3, intuition: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may double the MP spent on it to cast it at one Rank higher than it would otherwise be capable of."\r
-`,m_=`id: skin-of-stone\r
+`,y_=`id: skin-of-stone\r
 name: "Skin of Stone"\r
 status: draft\r
 plane: any\r
@@ -5886,7 +5960,7 @@ prerequisites: [magical-endurance]\r
 list: magic\r
 effect: "This character gains the Cast Stone Skin Action."\r
 action: "Cast Stone Skin: This character may spend 2 MP to give the Stone Skin Condition to a character within 3 m. The Condition's Rank is equal to the caster's Skin of Stone Rank."\r
-`,h_=`id: sleep\r
+`,b_=`id: sleep\r
 name: "Sleep"\r
 status: placeholder\r
 plane: any\r
@@ -5900,7 +5974,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Sleep Action."\r
 action: "Cast Sleep: This character may spend 2 MP to give the Asleep Condition to a character within 20 m. The Condition's Rank is equal to the caster's Sleep Rank."\r
-`,g_=`id: slow\r
+`,x_=`id: slow\r
 name: "Slow"\r
 status: placeholder\r
 plane: any\r
@@ -5914,7 +5988,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Slow Action."\r
 action: "Cast Slow: This character may spend 2 MP to give the Slowed Condition to a character within 20 m. The Condition's Rank is equal to the caster's Slow Rank."\r
-`,__=`id: speak-with-animals\r
+`,S_=`id: speak-with-animals\r
 name: "Speak with Animals"\r
 status: draft\r
 plane: any\r
@@ -5928,7 +6002,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Speak with Animals Action."\r
 action: "Cast Speak with Animals: This character may spend 1 MP to understand and speak with animals within 10 m for 10 minutes per Rank. Animals aren't made friendly by it, only able to answer."\r
-`,v_=`id: spider-climb\r
+`,C_=`id: spider-climb\r
 name: "Spider Climb"\r
 status: draft\r
 plane: any\r
@@ -5942,7 +6016,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Spider Climb Action."\r
 action: "Cast Spider Climb: This character may spend 1 MP to give the Spider Climb Condition to a character within 3 m. The Condition's Rank is equal to the caster's Spider Climb Rank."\r
-`,y_=`id: sprinter\r
+`,w_=`id: sprinter\r
 name: "Sprinter"\r
 status: draft\r
 plane: any\r
@@ -5952,7 +6026,7 @@ category: ability\r
 minStats: { grace: 4, endurance: 3 }\r
 effect: "This character gains the Sprint Action."\r
 action: "Sprint: This character takes Full Movement in a straight line, with +10 m added to its Movement for the Round."\r
-`,b_=`id: stand-down\r
+`,T_=`id: stand-down\r
 name: "Stand Down"\r
 status: draft\r
 plane: any\r
@@ -5963,7 +6037,7 @@ minStats: { demeanor: 5 }\r
 prerequisites: [intimidation]\r
 effect: "This character gains the Command Action."\r
 action: "Command: This character may make an Attack Roll with Demeanor against a character within 10 m who can see and hear it. On a hit, the target gains one Rank of Frightened. If the target was already Frightened, it drops its weapon instead."\r
-`,x_=`id: staunch\r
+`,E_=`id: staunch\r
 name: "Staunch"\r
 status: draft\r
 plane: any\r
@@ -5977,7 +6051,7 @@ minStats: { magic: 1 }\r
 list: magic\r
 effect: "This character gains the Cast Staunch Action."\r
 action: "Cast Staunch: This character may spend 1 MP to end the Severe Bleeding Condition on a character within 3 m."\r
-`,S_=`id: stilled-heart\r
+`,D_=`id: stilled-heart\r
 name: "Stilled Heart"\r
 status: draft\r
 plane: any\r
@@ -5991,7 +6065,7 @@ prerequisites: [wither]\r
 list: magic\r
 effect: "This character gains the Cast Stilled Heart Action."\r
 action: "Cast Stilled Heart: This character may spend 4 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 30 m) (8 Death per Rank) (Attack Stat: Magic)."\r
-`,C_=`id: stonecraft\r
+`,O_=`id: stonecraft\r
 name: "Stonecraft"\r
 status: draft\r
 plane: any\r
@@ -6002,7 +6076,7 @@ minStats: { magic: 3, power: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Blunt, and any Burning, Frozen or Corroding Condition it gives to Prone."\r
-`,w_=`id: stoneproof\r
+`,k_=`id: stoneproof\r
 name: "Stoneproof"\r
 status: draft\r
 plane: any\r
@@ -6016,7 +6090,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Stoneproof Action."\r
 action: "Cast Stoneproof: This character may spend 2 MP per Rank of Stoneproof to give a character or item within 5 m the Magically Stoneproof Condition. The Condition's Rank is equal to the caster's Stoneproof Rank."\r
-`,T_=`id: stormblade\r
+`,A_=`id: stormblade\r
 name: "Stormblade"\r
 status: draft\r
 plane: any\r
@@ -6030,7 +6104,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Stormblade Action."\r
 action: "Cast Stormblade: This character may spend 2 MP per Rank of Stormblade to give a weapon within 5 m the Electrified Weapon Condition. The Condition's Rank is equal to the caster's Stormblade Rank."\r
-`,E_=`id: stormcraft\r
+`,j_=`id: stormcraft\r
 name: "Stormcraft"\r
 status: draft\r
 plane: any\r
@@ -6041,7 +6115,7 @@ minStats: { magic: 3, logic: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "When using a Cast: Action, this character may spend 1 more MP on it to change all Elemental damage the Attack deals to Electrical, and any Burning, Frozen or Corroding Condition it gives to Temporarily Deafened."\r
-`,D_=`id: stormproof\r
+`,M_=`id: stormproof\r
 name: "Stormproof"\r
 status: draft\r
 plane: any\r
@@ -6055,7 +6129,7 @@ minStats: { magic: 3 }\r
 list: magic\r
 effect: "This character gains the Cast Stormproof Action."\r
 action: "Cast Stormproof: This character may spend 2 MP per Rank of Stormproof to give a character or item within 5 m the Magically Stormproof Condition. The Condition's Rank is equal to the caster's Stormproof Rank."\r
-`,O_=`id: swordsman\r
+`,N_=`id: swordsman\r
 name: "Swordsman"\r
 status: draft\r
 plane: any\r
@@ -6067,7 +6141,7 @@ minStats: { grace: 4, power: 3, intuition: 3 }\r
 prerequisiteTags: [swords]\r
 effect: "- This character gains the Riposte Action.\\n- Rank *5 added to Skill Check rolls involving swordplay."\r
 action: "Riposte: While holding a sword, this character may take the Defend Action as a riposte. If a Melee Attack against them misses by 4 or more this Round, they may Attack the attacker with that sword in the next Priority step."\r
-`,k_=`id: takedown\r
+`,P_=`id: takedown\r
 name: "Takedown"\r
 status: draft\r
 plane: any\r
@@ -6078,7 +6152,7 @@ minStats: { power: 4, grace: 4 }\r
 prerequisites: [grappler]\r
 effect: "This character gains the Takedown Action."\r
 action: "Takedown: This character may make an Attack Roll with Power or Grace against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition."\r
-`,A_=`id: telekinesis\r
+`,F_=`id: telekinesis\r
 name: "Telekinesis"\r
 status: draft\r
 plane: any\r
@@ -6092,7 +6166,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Telekinesis Action."\r
 action: "Cast Telekinesis: This character may spend 1 MP to lift and move an object of up to 10 kg per Rank within 10 m, up to 5 m per Round, for as long as they keep using their Action on it."\r
-`,j_=`id: thunderclap\r
+`,I_=`id: thunderclap\r
 name: "Thunderclap"\r
 status: placeholder\r
 plane: any\r
@@ -6106,7 +6180,7 @@ minStats: { magic: 2 }\r
 list: magic\r
 effect: "This character gains the Cast Thunderclap Action."\r
 action: "Cast Thunderclap: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (3 Blunt per Rank) (Attack Stat: Magic) (area of effect: 3 m per Rank). Characters damaged by Cast Thunderclap gain the Temporarily Deafened Condition."\r
-`,M_=`id: wall-of-stone\r
+`,L_=`id: wall-of-stone\r
 name: "Wall of Stone"\r
 status: draft\r
 plane: any\r
@@ -6121,7 +6195,7 @@ prerequisites: [skin-of-stone]\r
 list: magic\r
 effect: "This character gains the Cast Wall of Stone Action."\r
 action: "Cast Wall of Stone: This character may spend 3 MP to raise a stone wall 2 m high, 3 m long per Rank and 0.5 m thick, at a point within 20 m. The wall is a Structure with 20 HP per Rank and gives Heavy Cover to characters behind it."\r
-`,N_=`id: water-breathing\r
+`,R_=`id: water-breathing\r
 name: "Water Breathing"\r
 status: placeholder\r
 plane: any\r
@@ -6136,7 +6210,7 @@ prerequisites: [create-water]\r
 list: magic\r
 effect: "This character gains the Cast Water Breathing Action."\r
 action: "Cast Water Breathing: This character may spend 1 MP to give the Water Breathing Condition to a character within 3 m. The Condition's Rank is equal to the caster's Water Breathing Rank."\r
-`,P_=`id: weak-point\r
+`,z_=`id: weak-point\r
 name: "Weak Point"\r
 status: draft\r
 plane: any\r
@@ -6146,7 +6220,7 @@ category: ability\r
 minStats: { intuition: 5, logic: 3 }\r
 effect: "After spending a Full RP Action studying a creature during an Incident, this character gains +2 to Attack Rolls against creatures of that kind for the rest of the Incident."\r
 modifiers: "Attack Rolls +2 (creatures studied this Incident)"\r
-`,F_=`id: wither\r
+`,B_=`id: wither\r
 name: "Wither"\r
 status: placeholder\r
 plane: any\r
@@ -6160,7 +6234,7 @@ minStats: { magic: 4 }\r
 list: magic\r
 effect: "This character gains the Cast Wither Action."\r
 action: "Cast Wither: This character may spend 2 MP to Attack a target with a temporary weapon that has the following profile: (Ranged) (max range 20 m) (6 Death per Rank) (Attack Stat: Magic)."\r
-`,I_=`id: bureau-credentials\r
+`,V_=`id: bureau-credentials\r
 name: "Bureau Credentials"\r
 status: draft\r
 plane: earth\r
@@ -6170,7 +6244,7 @@ category: circumstance\r
 conveyed: true\r
 temporary: "Lost if the Bureau revokes them"\r
 effect: "This character carries Bureau of Planar Management and Enforcement credentials. They can inspect gate sites and planar cargo, and can request advantage on social checks with port and planar officials."\r
-`,L_=`id: caravan-charter\r
+`,H_=`id: caravan-charter\r
 name: "Caravan Charter"\r
 status: draft\r
 plane: isekai\r
@@ -6184,7 +6258,7 @@ choices:\r
     from: place\r
     note: "Which trade roads"\r
 effect: "This character holds a charter to lead a caravan on Dreft’s trade roads. They can hire guards and drivers under it, and their caravan is allowed through the kingdom’s waystations and tolls."\r
-`,R_=`id: commercial-pilots-license\r
+`,U_=`id: commercial-pilots-license\r
 name: "Commercial Pilot’s License"\r
 status: draft\r
 plane: earth\r
@@ -6193,7 +6267,7 @@ tags: [pilot, license, travel]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character holds a commercial pilot’s license and can legally fly cargo and passengers for hire in the Settled Systems."\r
-`,z_=`id: corporate-sponsor\r
+`,W_=`id: corporate-sponsor\r
 name: "Corporate Sponsor"\r
 status: draft\r
 plane: earth\r
@@ -6207,7 +6281,7 @@ choices:\r
     note: "Which corporation, and what it wants in return"\r
 temporary: "Lost if the sponsor drops them"\r
 effect: "A corporation sponsors this character, covering travel and equipment in exchange for their work, their discoveries or their name."\r
-`,B_=`id: diplomatic-immunity\r
+`,G_=`id: diplomatic-immunity\r
 name: "Diplomatic Immunity"\r
 status: draft\r
 plane: earth\r
@@ -6221,7 +6295,7 @@ choices:\r
     note: "Who they represent"\r
 temporary: "Lost if the Diplomatic Wing withdraws their accreditation"\r
 effect: "This character is an accredited diplomat of the United Nations’ Diplomatic Wing. Signatories to the Protocols can’t arrest or try them, though they can be expelled, and the Wing expects them to behave."\r
-`,V_=`id: exiled-from-dreft\r
+`,K_=`id: exiled-from-dreft\r
 name: "Exiled from Dreft"\r
 status: draft\r
 plane: isekai\r
@@ -6236,7 +6310,7 @@ choices:\r
     note: "Why they were exiled"\r
 temporary: "Lost if the Crown lifts the exile"\r
 effect: "This character has been exiled from Dreft and can’t lawfully enter the kingdom. Anyone who recognizes them there may turn them in."\r
-`,H_=`id: explorers-lodge-membership\r
+`,q_=`id: explorers-lodge-membership\r
 name: "Member of the Explorers’ Lodge"\r
 status: draft\r
 plane: earth\r
@@ -6246,7 +6320,7 @@ lore: explorers-lodge\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character is a member in good standing of the Explorers’ Lodge. They can join certified survey and exploration teams, use Lodge halls and survey archives, and can request advantage on social checks with other Lodge members."\r
-`,U_=`id: heavy-debts\r
+`,J_=`id: heavy-debts\r
 name: "Heavy Debts"\r
 status: draft\r
 plane: any\r
@@ -6260,7 +6334,7 @@ choices:\r
     note: "Who the debt is owed to"\r
 temporary: "Lost when the debt is paid"\r
 effect: "This character owes a large debt to a lender who expects to be paid. Collectors may turn up, and the lender may ask for favors in place of money."\r
-`,W_=`id: imperial-service-record\r
+`,Y_=`id: imperial-service-record\r
 name: "Imperial Service Record"\r
 status: placeholder\r
 plane: earth\r
@@ -6270,7 +6344,7 @@ tags: [military, american-empire, service]\r
 category: circumstance\r
 conveyed: true\r
 effect: Placeholder. Effect not yet written.\r
-`,G_=`id: knighted-in-dreft\r
+`,X_=`id: knighted-in-dreft\r
 name: "Knighted in Dreft"\r
 status: draft\r
 plane: isekai\r
@@ -6280,7 +6354,7 @@ tags: [dreft, nobility, knight, title]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character has been knighted by the Crown of Dreft. They are owed the courtesy of a knight, may bear arms at court, and can be called on to serve the Crown in war."\r
-`,K_=`id: member-of-the-mages-college-of-dreft\r
+`,Z_=`id: member-of-the-mages-college-of-dreft\r
 name: "Member of the Mages College of Dreft"\r
 status: draft\r
 plane: isekai\r
@@ -6290,7 +6364,7 @@ tags: [magic, college, license, membership]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character is a licensed member of the Mages College of Dreft and may practice magic openly within the kingdom. They can use the College’s libraries and workshops, and can request advantage on social checks with Dreft’s officials on matters of magic."\r
-`,q_=`id: member-of-the-monster-hunter-guild\r
+`,Q_=`id: member-of-the-monster-hunter-guild\r
 name: "Member of the Monster Hunter Guild"\r
 status: draft\r
 plane: isekai\r
@@ -6304,7 +6378,7 @@ choices:\r
     from: detail\r
     note: "Which guild"\r
 effect: "This character is a member of a monster hunting guild. They can take guild contracts and bounties, sell monster parts at guild rates, and use guild halls and the trails the guild keeps open."\r
-`,J_=`id: merchant-clan-elder\r
+`,$_=`id: merchant-clan-elder\r
 name: "Merchant Clan Elder"\r
 status: draft\r
 plane: isekai\r
@@ -6314,7 +6388,7 @@ category: circumstance\r
 conveyed: true\r
 prerequisites: [merchant-clan-member]\r
 effect: "This character is an elder of a merchant clan. They can commit the clan’s money and caravans to a venture, and settle disputes between clan members."\r
-`,Y_=`id: merchant-clan-member\r
+`,ev=`id: merchant-clan-member\r
 name: "Merchant Clan Member"\r
 status: draft\r
 plane: isekai\r
@@ -6327,7 +6401,7 @@ choices:\r
     from: detail\r
     note: "Which clan"\r
 effect: "This character belongs to a merchant clan. They can find lodging, credit and news with clan family in the ports and towns where the clan trades."\r
-`,X_=`id: owed-a-favor\r
+`,tv=`id: owed-a-favor\r
 name: "Owed a Favor"\r
 status: draft\r
 plane: any\r
@@ -6341,7 +6415,7 @@ choices:\r
     note: "Who owes the favor"\r
 temporary: "Lost when the favor is called in"\r
 effect: "Someone of power or influence owes this character a favor. Who it is is up to the player and the GM."\r
-`,Z_=`id: private-security-license\r
+`,nv=`id: private-security-license\r
 name: "Private Security License"\r
 status: draft\r
 plane: earth\r
@@ -6354,7 +6428,7 @@ choices:\r
     from: detail\r
     note: "What the license covers"\r
 effect: "This character holds a private security license, which lets it do the work the license covers, like carrying weapons or detaining people on a client's property, wherever the license is recognized."\r
-`,Q_=`id: research-grant\r
+`,rv=`id: research-grant\r
 name: "Research Grant"\r
 status: draft\r
 plane: earth\r
@@ -6368,7 +6442,7 @@ choices:\r
     note: "What the research is, and who funds it"\r
 temporary: "Lasts until the grant runs out, usually a year"\r
 effect: "This character holds a research grant that pays for their work and their travel, as long as they keep reporting results."\r
-`,$_=`id: royal-warrant\r
+`,iv=`id: royal-warrant\r
 name: "Royal Warrant"\r
 status: draft\r
 plane: isekai\r
@@ -6382,7 +6456,7 @@ choices:\r
     from: detail\r
     note: "What they supply to the Crown"\r
 effect: "This character holds a royal warrant to supply the Crown of Dreft. Their goods pass the kingdom’s tolls freely, and merchants and officials treat their business with respect."\r
-`,ev=`id: security-contractor\r
+`,av=`id: security-contractor\r
 name: "Security Contractor"\r
 status: draft\r
 plane: earth\r
@@ -6391,7 +6465,7 @@ tags: [security, employment, corporate, private-security]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character is employed by a private security firm. It gets paid, can call on the firm for backup and gear, and wears its uniform, but it follows the firm's orders and goes where the contract sends it."\r
-`,tv=`id: senior-member-of-a-thieves-guild\r
+`,ov=`id: senior-member-of-a-thieves-guild\r
 name: "Senior Member of a Thieves Guild"\r
 status: draft\r
 plane: any\r
@@ -6401,7 +6475,7 @@ category: circumstance\r
 conveyed: true\r
 prerequisites: [thieves-guild-membership]\r
 effect: "This character is a senior member of a local thieves’ guild. They can call on the guild’s fences, safehouses and lookouts, take a cut of the jobs they arrange, and settle disputes between members."\r
-`,nv=`id: senior-member-of-the-explorers-lodge\r
+`,sv=`id: senior-member-of-the-explorers-lodge\r
 name: "Senior Member of the Explorers’ Lodge"\r
 status: draft\r
 plane: earth\r
@@ -6411,7 +6485,7 @@ category: circumstance\r
 conveyed: true\r
 prerequisites: [explorers-lodge-membership]\r
 effect: "This character is a senior member of the Explorers’ Lodge, licensed to provide inspection and certification services for gate locks and new planes. They can lead certified survey and exploration teams and sponsor new members."\r
-`,rv=`id: senior-member-of-the-mages-college-of-dreft\r
+`,cv=`id: senior-member-of-the-mages-college-of-dreft\r
 name: "Senior Member of the Mages College of Dreft"\r
 status: draft\r
 plane: isekai\r
@@ -6422,7 +6496,7 @@ category: circumstance\r
 conveyed: true\r
 prerequisites: [member-of-the-mages-college-of-dreft]\r
 effect: "This character is a senior member of the Mages College of Dreft. They can teach and examine students, sponsor licenses for new mages, and use the College’s restricted collections."\r
-`,iv=`id: senior-member-of-the-monster-hunter-guild\r
+`,lv=`id: senior-member-of-the-monster-hunter-guild\r
 name: "Senior Member of the Monster Hunter Guild"\r
 status: draft\r
 plane: isekai\r
@@ -6433,7 +6507,7 @@ category: circumstance\r
 conveyed: true\r
 prerequisites: [member-of-the-monster-hunter-guild]\r
 effect: "This character is a senior member of a monster hunting guild. They can lead guild hunts, post contracts of their own, vouch for new members, and can request advantage on social checks with hunters and the villages the guild protects."\r
-`,av=`id: short-term-fame\r
+`,uv=`id: short-term-fame\r
 name: "Short Term Fame"\r
 status: draft\r
 plane: any\r
@@ -6443,7 +6517,7 @@ category: circumstance\r
 conveyed: true\r
 temporary: "30 days"\r
 effect: "Due to recent events this character is famous and can request advantage in social situations where the character's fame may aid them."\r
-`,ov=`id: significant-inheritance\r
+`,dv=`id: significant-inheritance\r
 name: "Significant Inheritance"\r
 status: draft\r
 plane: earth\r
@@ -6453,7 +6527,7 @@ category: circumstance\r
 conveyed: true\r
 temporary: "Lost when the money is all spent"\r
 effect: "This character has access to an Inheritance of 2 million Earth Reserve Credits (ERC) currently safely contained in a bank."\r
-`,sv=`id: switch-port-transit-pass\r
+`,fv=`id: switch-port-transit-pass\r
 name: "Switch Port Transit Pass"\r
 status: draft\r
 plane: earth\r
@@ -6462,7 +6536,7 @@ tags: [tetra, switch-port, travel, permit]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character holds a transit pass for the Tetra Switch Port and can cross between Tetra and Isekai without an escort or a fresh inspection."\r
-`,cv=`id: sworn-to-a-noble-house\r
+`,pv=`id: sworn-to-a-noble-house\r
 name: "Sworn to a Noble House"\r
 status: draft\r
 plane: isekai\r
@@ -6476,7 +6550,7 @@ choices:\r
     from: detail\r
     note: "Which noble house"\r
 effect: "This character is sworn to one of Dreft’s noble houses. The house feeds, houses and protects them, and expects their service and loyalty in return."\r
-`,lv=`id: tetra-frontiers-co-employee\r
+`,mv=`id: tetra-frontiers-co-employee\r
 name: "Tetra Frontiers Co. Employee"\r
 status: draft\r
 plane: earth\r
@@ -6489,7 +6563,7 @@ choices:\r
     from: detail\r
     note: "What job they do for the company"\r
 effect: "This character works for Tetra Frontiers Co. They draw a regular salary, have company housing on Tetra, and can travel on company business through the Switch Port."\r
-`,uv=`id: thieves-guild-membership\r
+`,hv=`id: thieves-guild-membership\r
 name: "Thieves Guild Membership"\r
 status: draft\r
 plane: any\r
@@ -6498,7 +6572,7 @@ tags: [thieves-guild, membership, crime, site-example]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character is an official member of a Local Thieves Guild."\r
-`,dv=`id: tugboat-captain\r
+`,gv=`id: tugboat-captain\r
 name: "Tugboat Captain"\r
 status: draft\r
 plane: any\r
@@ -6507,7 +6581,7 @@ tags: [tugboat, license, pilot, site-example]\r
 category: circumstance\r
 conveyed: true\r
 effect: "This character has all required legal training and licenses required to command a Tugboat."\r
-`,fv=`id: wanted-in-dreft\r
+`,_v=`id: wanted-in-dreft\r
 name: "Wanted in Dreft"\r
 status: draft\r
 plane: isekai\r
@@ -6522,7 +6596,7 @@ choices:\r
     note: "What they're wanted for"\r
 temporary: "Lost when the character is pardoned or caught"\r
 effect: "This character is wanted by the Crown of Dreft for past crimes. The kingdom’s guards and bounty hunters are looking for them."\r
-`,pv=`id: wanted-in-sol\r
+`,vv=`id: wanted-in-sol\r
 name: "Wanted in Sol"\r
 status: draft\r
 plane: earth\r
@@ -6532,7 +6606,7 @@ category: circumstance\r
 conveyed: true\r
 temporary: "Lost when the character's innocence is proclaimed or they are caught"\r
 effect: "This character is wanted by the nations of the Sol System for past crimes. This character's wanted status is severe and law enforcement and bounty hunting entities are actively searching for them."\r
-`,mv=`id: asleep\r
+`,yv=`id: asleep\r
 name: "Asleep"\r
 status: placeholder\r
 plane: any\r
@@ -6544,7 +6618,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every minute after a character is affected by Asleep, it loses one Rank of Asleep. It ends early if the character takes damage or another character spends their Action waking them."\r
 effect: "This character is asleep and can't perform voluntary Actions or perceive the world around them."\r
-`,hv=`id: bandaged\r
+`,bv=`id: bandaged\r
 name: "Bandaged"\r
 status: draft\r
 plane: any\r
@@ -6554,7 +6628,7 @@ category: condition\r
 conveyed: true\r
 temporary: "Lasts 24 hours."\r
 effect: "This character's automatic Hit Point recovery is doubled."\r
-`,gv=`id: blinded\r
+`,xv=`id: blinded\r
 name: "Blinded"\r
 status: draft\r
 plane: any\r
@@ -6564,7 +6638,7 @@ category: condition\r
 types: [injury]\r
 conveyed: true\r
 effect: "This character suffers -20 to all Skill Checks that require sight, and the GM may request additional checks for basic actions such as walking or manipulating objects."\r
-`,_v=`id: broken-limb\r
+`,Sv=`id: broken-limb\r
 name: "Broken Limb"\r
 status: draft\r
 plane: any\r
@@ -6576,7 +6650,7 @@ ranked: true\r
 conveyed: true\r
 effect: "This character suffers -2 to Attack Rolls per Rank and -1 Priority."\r
 modifiers: "Attack Rolls -2 per Rank, Priority -1"\r
-`,vv=`id: burning\r
+`,Cv=`id: burning\r
 name: "Burning"\r
 status: draft\r
 plane: any\r
@@ -6589,7 +6663,7 @@ conveyed: true\r
 temporary: "Every three combat Rounds or 30 seconds after a character is affected by Burning, it loses one Rank of Burning."\r
 effect: "This character suffers 3 Heat damage per Rank each Round, or every 10 seconds outside of combat."\r
 action: "The character may spend their Action to reduce the Rank of Burning by 1. A character loses Burning at Rank 0."\r
-`,yv=`id: charmed\r
+`,wv=`id: charmed\r
 name: "Charmed"\r
 status: placeholder\r
 plane: any\r
@@ -6601,7 +6675,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every ten minutes after a character is affected by Charmed, it loses one Rank of Charmed. It ends early if the caster or their allies harm this character."\r
 effect: "This character regards the caster as a trusted friend and won't Attack them. The caster can request Advantage on Social rolls against this character."\r
-`,bv=`id: corroding\r
+`,Tv=`id: corroding\r
 name: "Corroding"\r
 status: placeholder\r
 plane: any\r
@@ -6614,7 +6688,7 @@ conveyed: true\r
 temporary: "Every three combat Rounds or 30 seconds after a character is affected by Corroding, it loses one Rank of Corroding."\r
 effect: "This character or object suffers 2 Corrosive damage per Rank each Round, or every 10 seconds outside of combat."\r
 action: "The character may spend their Action washing or scraping off the acid to reduce the Rank of Corroding by 1. A character loses Corroding at Rank 0."\r
-`,xv=`id: corrosive-weapon\r
+`,Ev=`id: corrosive-weapon\r
 name: "Corrosive Weapon"\r
 status: draft\r
 plane: any\r
@@ -6626,7 +6700,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 2 more Corrosive damage per Rank. Targets hit by this weapon gain 1 Rank of the Corroding Condition."\r
-`,Sv=`id: cursed\r
+`,Dv=`id: cursed\r
 name: "Cursed"\r
 status: draft\r
 plane: any\r
@@ -6637,7 +6711,7 @@ types: [injury, supernatural]\r
 ranked: true\r
 conveyed: true\r
 effect: "This character suffers -2 to all Skill Checks per Rank and +2 to all damage it receives."\r
-`,Cv=`id: cybernetic-intelligence\r
+`,Ov=`id: cybernetic-intelligence\r
 name: "Cybernetic Intelligence"\r
 status: draft\r
 plane: earth\r
@@ -6646,7 +6720,7 @@ tags: [cybernetic, mathematics, ai, ai-core, site-example]\r
 category: condition\r
 background: true\r
 effect: "This character is capable of extremely rapid feats of mathematical comprehension and has a +20 roll modifier for skill checks related to mathematics. This character is capable of performing significant numbers of mathematical calculations simultaneously; it is at the GM's discretion when and how this ability is limited."\r
-`,wv=`id: damaged\r
+`,kv=`id: damaged\r
 name: "Damaged"\r
 status: draft\r
 plane: any\r
@@ -6656,7 +6730,7 @@ category: condition\r
 conveyed: true\r
 temporary: "An object gains this trait if it is below its maximum HP total"\r
 effect: "This Trait has no effect on its own."\r
-`,Tv=`id: dark-haze-condition\r
+`,Av=`id: dark-haze-condition\r
 name: "Dark Haze"\r
 status: draft\r
 plane: any\r
@@ -6668,7 +6742,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every ten minutes after a character is affected by Dark Haze, it loses one Rank of Dark Haze."\r
 effect: "Characters trying to perceive any visual information about this character must succeed on an Intuition check of 10 per Rank. If they fail, they can't make sense of what they're looking at and see only a dark, shimmering haze."\r
-`,Ev=`id: dead\r
+`,jv=`id: dead\r
 name: "Dead"\r
 status: draft\r
 plane: any\r
@@ -6679,7 +6753,7 @@ types: [injury]\r
 conveyed: true\r
 temporary: "A character gains this trait if they are at 0 or less HP"\r
 effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."\r
-`,Dv=`id: deafened\r
+`,Mv=`id: deafened\r
 name: "Deafened"\r
 status: draft\r
 plane: any\r
@@ -6689,7 +6763,7 @@ category: condition\r
 types: [injury]\r
 conveyed: true\r
 effect: "This character suffers -20 to all Skill Checks that require hearing and can no longer understand verbal communication."\r
-`,Ov=`id: destroyed\r
+`,Nv=`id: destroyed\r
 name: "Destroyed"\r
 status: draft\r
 plane: any\r
@@ -6699,7 +6773,7 @@ category: condition\r
 conveyed: true\r
 temporary: "An object gains this trait if it is at 0 or less HP"\r
 effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."\r
-`,kv=`id: earthen-weapon\r
+`,Pv=`id: earthen-weapon\r
 name: "Earthen Weapon"\r
 status: draft\r
 plane: any\r
@@ -6711,7 +6785,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 3 more Blunt damage per Rank. On a Solid Hit or better, the target gains the Prone Condition."\r
-`,Av=`id: electrified-weapon\r
+`,Fv=`id: electrified-weapon\r
 name: "Electrified Weapon"\r
 status: draft\r
 plane: any\r
@@ -6723,7 +6797,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 3 more Electrical damage per Rank. Targets hit by this weapon gain the Temporarily Deafened Condition."\r
-`,jv=`id: elemental-ward-condition\r
+`,Iv=`id: elemental-ward-condition\r
 name: "Elemental Ward"\r
 status: placeholder\r
 plane: any\r
@@ -6735,7 +6809,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Elemental Ward, it loses one Rank of Elemental Ward."\r
 effect: "This character resists one damage type chosen by the caster: Heat, Cold, Electrical or EMP. The amount is Rank *3."\r
-`,Mv=`id: featherfall-condition\r
+`,Lv=`id: featherfall-condition\r
 name: "Featherfall"\r
 status: placeholder\r
 plane: any\r
@@ -6747,7 +6821,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every minute after a character is affected by Featherfall, it loses one Rank of Featherfall."\r
 effect: "This character falls slowly, about 20 m per Round, and takes no damage from falling."\r
-`,Nv=`id: flaming-weapon\r
+`,Rv=`id: flaming-weapon\r
 name: "Flaming Weapon"\r
 status: draft\r
 plane: any\r
@@ -6759,7 +6833,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 3 more Heat damage per Rank. Targets hit by this weapon gain 1 Rank of the Burning Condition."\r
-`,Pv=`id: flat-footed\r
+`,zv=`id: flat-footed\r
 name: "Flat-Footed"\r
 status: draft\r
 plane: any\r
@@ -6770,7 +6844,7 @@ conveyed: true\r
 temporary: "Lasts through the following combat Round"\r
 effect: "This character has -1 Priority and -1 to Attack Rolls."\r
 modifiers: "Priority -1, Attack Rolls -1"\r
-`,Fv=`id: flight\r
+`,Bv=`id: flight\r
 name: "Flight"\r
 status: draft\r
 plane: any\r
@@ -6779,7 +6853,7 @@ tags: [movement, chassis, ai-core]\r
 category: condition\r
 background: true\r
 effect: "This character can fly, moving its full Movement distance through the air in any direction."\r
-`,Iv=`id: freezing-weapon\r
+`,Vv=`id: freezing-weapon\r
 name: "Freezing Weapon"\r
 status: draft\r
 plane: any\r
@@ -6791,7 +6865,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 2 more Cold damage per Rank. Targets hit by this weapon gain 1 Rank of the Frozen Condition."\r
-`,Lv=`id: frightened\r
+`,Hv=`id: frightened\r
 name: "Frightened"\r
 status: placeholder\r
 plane: any\r
@@ -6804,7 +6878,7 @@ conveyed: true\r
 temporary: "Every combat Round or 10 seconds after a character is affected by Frightened, it loses one Rank of Frightened."\r
 effect: "This character has -1 to Attack Rolls per Rank and can't willingly Move closer to the source of its fear."\r
 modifiers: "Attack Rolls -1 per Rank"\r
-`,Rv=`id: frozen\r
+`,Uv=`id: frozen\r
 name: "Frozen"\r
 status: draft\r
 plane: any\r
@@ -6817,7 +6891,7 @@ conveyed: true\r
 temporary: "Every three combat Rounds or one minute after a character is affected by Frozen, it loses one Rank of Frozen."\r
 effect: "This character suffers -1 Priority, -1 Defense and -1 to Attack Rolls per Rank of Frozen."\r
 modifiers: "Priority -1 per Rank, Defense -1 per Rank, Attack Rolls -1 per Rank"\r
-`,zv=`id: ghost-sight\r
+`,Wv=`id: ghost-sight\r
 name: "Ghost Sight"\r
 status: draft\r
 plane: any\r
@@ -6827,7 +6901,7 @@ category: condition\r
 conveyed: true\r
 temporary: "Lost when the effect that granted this Trait ends"\r
 effect: "This character perceives beyond the veil. This character can see and hear the supernatural."\r
-`,Bv=`id: glowing\r
+`,Gv=`id: glowing\r
 name: "Glowing"\r
 status: placeholder\r
 plane: any\r
@@ -6839,7 +6913,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Glowing, it loses one Rank of Glowing."\r
 effect: "This object sheds bright light in a 5 m radius per Rank."\r
-`,Vv=`id: hard-shell\r
+`,Kv=`id: hard-shell\r
 name: "Hard Shell"\r
 status: draft\r
 plane: any\r
@@ -6849,7 +6923,7 @@ category: condition\r
 ranked: true\r
 background: true\r
 effect: "This character possesses a hard natural shell that protects them from harm. Rank *3 added to this character's Blunt, Slashing, and Piercing resistances for attacks that hit its torso."\r
-`,Hv=`id: hasted\r
+`,qv=`id: hasted\r
 name: "Hasted"\r
 status: placeholder\r
 plane: any\r
@@ -6862,7 +6936,7 @@ conveyed: true\r
 temporary: "Lasts one minute."\r
 effect: "This character has +1 Priority per Rank and +5 m Movement per Rank."\r
 modifiers: "Priority +1 per Rank"\r
-`,Uv=`id: healthy\r
+`,Jv=`id: healthy\r
 name: "Healthy"\r
 status: draft\r
 plane: any\r
@@ -6871,7 +6945,7 @@ tags: [health, site-example, hit-points]\r
 category: condition\r
 conveyed: true\r
 temporary: "A character or object gains this trait while they are at their maximum HP total"\r
-`,Wv=`id: high-morale\r
+`,Yv=`id: high-morale\r
 name: "High Morale"\r
 status: draft\r
 plane: any\r
@@ -6882,7 +6956,7 @@ conveyed: true\r
 temporary: "Lasts for one hour, or until the character takes damage equal to or greater than its Physical stat."\r
 effect: "This character gains +2 to checks against fear, sadness or other negative emotions, +1 to Endurance checks and +1 to Attack Rolls."\r
 modifiers: "Attack Rolls +1"\r
-`,Gv=`id: incapacitated\r
+`,Xv=`id: incapacitated\r
 name: "Incapacitated"\r
 status: draft\r
 plane: any\r
@@ -6892,7 +6966,7 @@ category: condition\r
 conveyed: true\r
 temporary: "A character gains this trait while they are at less than a quarter of their HP total"\r
 effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."\r
-`,Kv=`id: infravision-condition\r
+`,Zv=`id: infravision-condition\r
 name: "Infravision"\r
 status: draft\r
 plane: any\r
@@ -6904,7 +6978,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Infravision, it loses one Rank of Infravision."\r
 effect: "This character can see and perceive characters and objects within 15 m per Rank, even through barriers, obscuring clouds, obstacles, or other impediments. This does not affect line of sight drawn through solid objects for the purposes of Attacks."\r
-`,qv=`id: injured\r
+`,Qv=`id: injured\r
 name: "Injured"\r
 status: draft\r
 plane: any\r
@@ -6914,7 +6988,7 @@ category: condition\r
 conveyed: true\r
 temporary: "A character gains this trait while they are below their maximum HP total"\r
 effect: "This Trait has no effect on its own."\r
-`,Jv=`id: invisible\r
+`,$v=`id: invisible\r
 name: "Invisible"\r
 status: placeholder\r
 plane: any\r
@@ -6926,7 +7000,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every ten minutes after a character is affected by Invisible, it loses one Rank of Invisible. It ends early if the character Attacks."\r
 effect: "This character can't be seen by normal sight and can request Advantage on rolls to hide, sneak, or slip past others unnoticed. Characters Attacking it have -2 to Attack Rolls per Rank."\r
-`,Yv=`id: irradiated\r
+`,ey=`id: irradiated\r
 name: "Irradiated"\r
 status: draft\r
 plane: any\r
@@ -6937,7 +7011,7 @@ types: [injury]\r
 ranked: true\r
 conveyed: true\r
 effect: "- This character suffers -2 Endurance per Rank. If its Endurance would fall below 0 due to Irradiated, it dies.\\n- This character regains 1 less HP per six-hour period."\r
-`,Xv=`id: long-toothed\r
+`,ty=`id: long-toothed\r
 name: "Long Toothed"\r
 status: draft\r
 plane: isekai\r
@@ -6947,7 +7021,7 @@ category: condition\r
 # Conveyed by Long in the Tooth, which carries the requirements.\r
 conveyed: true\r
 effect: "An Orc's teeth grow continuously as they age, acting as both a sign of wisdom and prestige. An Orc that has managed to maintain their teeth throughout their life is seen as a highly capable individual or one of noble birth. A long-toothed Orc can request advantage in dealings with other Orcs, or with any other party that may hold this belief about Orcs."\r
-`,Zv=`id: maddening-weapon\r
+`,ny=`id: maddening-weapon\r
 name: "Maddening Weapon"\r
 status: draft\r
 plane: any\r
@@ -6959,7 +7033,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 2 more Psychic damage per Rank. Targets hit by this weapon gain the Flat-Footed Condition for the following Round."\r
-`,Qv=`id: magical-endurance-condition\r
+`,ry=`id: magical-endurance-condition\r
 name: "Magical Endurance"\r
 status: placeholder\r
 plane: any\r
@@ -6971,7 +7045,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Magical Endurance, it loses one Rank of Magical Endurance."\r
 effect: "This character gains +3 Endurance per Rank."\r
-`,$v=`id: magical-flight-condition\r
+`,iy=`id: magical-flight-condition\r
 name: "Magical Flight"\r
 status: placeholder\r
 plane: any\r
@@ -6983,7 +7057,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every ten minutes after a character is affected by Magical Flight, it loses one Rank of Magical Flight."\r
 effect: "This character can fly, moving its full Movement distance through the air in any direction. If this Condition ends while the character is in the air, they fall."\r
-`,ey=`id: magical-grace-condition\r
+`,ay=`id: magical-grace-condition\r
 name: "Magical Grace"\r
 status: placeholder\r
 plane: any\r
@@ -6995,7 +7069,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Magical Grace, it loses one Rank of Magical Grace."\r
 effect: "This character gains +3 Grace per Rank."\r
-`,ty=`id: magical-heritage\r
+`,oy=`id: magical-heritage\r
 name: "Magical Heritage"\r
 status: placeholder\r
 plane: isekai\r
@@ -7008,7 +7082,7 @@ conveyed: true\r
 grants:\r
   - trait: magic-access\r
 effect: "This character was born to magic, and has Magic Access."\r
-`,ny=`id: magical-strength-condition\r
+`,sy=`id: magical-strength-condition\r
 name: "Magical Strength"\r
 status: draft\r
 plane: any\r
@@ -7020,7 +7094,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Magical Strength, it loses one Rank of Magical Strength."\r
 effect: "This character gains +3 Power per Rank."\r
-`,ry=`id: magically-deathproof\r
+`,cy=`id: magically-deathproof\r
 name: "Magically Deathproof"\r
 status: draft\r
 plane: any\r
@@ -7032,7 +7106,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Death damage."\r
-`,iy=`id: magically-flameproof\r
+`,ly=`id: magically-flameproof\r
 name: "Magically Flameproof"\r
 status: draft\r
 plane: any\r
@@ -7044,7 +7118,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Heat damage."\r
-`,ay=`id: magically-iceproof\r
+`,uy=`id: magically-iceproof\r
 name: "Magically Iceproof"\r
 status: draft\r
 plane: any\r
@@ -7056,7 +7130,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Cold damage."\r
-`,oy=`id: magically-mindproof\r
+`,dy=`id: magically-mindproof\r
 name: "Magically Mindproof"\r
 status: draft\r
 plane: any\r
@@ -7068,7 +7142,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Psychic damage."\r
-`,sy=`id: magically-rustproof\r
+`,fy=`id: magically-rustproof\r
 name: "Magically Rustproof"\r
 status: draft\r
 plane: any\r
@@ -7080,7 +7154,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Corrosive damage."\r
-`,cy=`id: magically-stoneproof\r
+`,py=`id: magically-stoneproof\r
 name: "Magically Stoneproof"\r
 status: draft\r
 plane: any\r
@@ -7092,7 +7166,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Blunt damage."\r
-`,ly=`id: magically-stormproof\r
+`,my=`id: magically-stormproof\r
 name: "Magically Stormproof"\r
 status: draft\r
 plane: any\r
@@ -7104,7 +7178,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 30 minutes per Rank."\r
 effect: "This character or item gains Rank *3 resistance to Electrical damage."\r
-`,uy=`id: mechanical\r
+`,hy=`id: mechanical\r
 name: "Mechanical"\r
 status: draft\r
 plane: any\r
@@ -7113,7 +7187,7 @@ tags: [machine, emp, site-example]\r
 category: condition\r
 background: true\r
 effect: "This character or object is a machine. It can be harmed by EMP damage and is typically immune to Death damage."\r
-`,dy=`id: mortis\r
+`,gy=`id: mortis\r
 name: "Mortis"\r
 status: draft\r
 plane: any\r
@@ -7124,7 +7198,7 @@ types: [injury, supernatural]\r
 ranked: true\r
 conveyed: true\r
 effect: "Every time an effect would cause this character to regain HP or gain bonus HP, it gains 2 fewer per Rank."\r
-`,fy=`id: non-humanoid\r
+`,_y=`id: non-humanoid\r
 name: "Non-humanoid"\r
 status: draft\r
 plane: any\r
@@ -7133,7 +7207,7 @@ tags: [machine, chassis, ai-core]\r
 category: condition\r
 background: true\r
 effect: "This character is incapable of wielding weapons designed for human hands or wearing equipment designed for use on humanoid bodies."\r
-`,py=`id: organ-damage\r
+`,vy=`id: organ-damage\r
 name: "Organ Damage"\r
 status: draft\r
 plane: any\r
@@ -7145,7 +7219,7 @@ ranked: true\r
 conveyed: true\r
 effect: "This character suffers -1 Priority and +2 to all damage it receives per Rank."\r
 modifiers: "Priority -1"\r
-`,my=`id: paralyzed\r
+`,yy=`id: paralyzed\r
 name: "Paralyzed"\r
 status: draft\r
 plane: any\r
@@ -7155,7 +7229,7 @@ category: condition\r
 types: [injury]\r
 conveyed: true\r
 effect: "This character's Grace and Movement are reduced to 0. It can't perform any actions that require voluntary movement."\r
-`,hy=`id: prone\r
+`,by=`id: prone\r
 name: "Prone"\r
 status: placeholder\r
 plane: any\r
@@ -7166,7 +7240,7 @@ conveyed: true\r
 temporary: "Lost when the character stands up."\r
 effect: "This character is lying on the ground and has -1 Priority. Standing up takes half its Movement."\r
 modifiers: "Priority -1"\r
-`,gy=`id: rage\r
+`,xy=`id: rage\r
 name: "Rage"\r
 status: draft\r
 plane: any\r
@@ -7176,7 +7250,7 @@ category: condition\r
 conveyed: true\r
 temporary: "Ends after any turn in which this character didn't make an Attack."\r
 effect: "- This character's Attacks deal x2 damage.\\n- -10 to this character's Social and Mental rolls."\r
-`,_y=`id: reinforced\r
+`,Sy=`id: reinforced\r
 name: "Reinforced"\r
 status: draft\r
 plane: any\r
@@ -7186,7 +7260,7 @@ category: condition\r
 background: true\r
 resources: { hp: 10 }\r
 effect: "This character or item has +10 Hit Points."\r
-`,vy=`id: restrained\r
+`,Cy=`id: restrained\r
 name: "Restrained"\r
 status: draft\r
 plane: any\r
@@ -7196,7 +7270,7 @@ category: condition\r
 conveyed: true\r
 temporary: "Lost when the restraints come off, or on a successful Power or Grace Skill Check to escape them (15 for handcuffs)."\r
 effect: "This character can't make Attack Actions."\r
-`,yy=`id: rooted\r
+`,wy=`id: rooted\r
 name: "Rooted"\r
 status: placeholder\r
 plane: any\r
@@ -7209,7 +7283,7 @@ conveyed: true\r
 temporary: "Lasts until its Rank reaches 0, or one minute at most."\r
 effect: "This character can't Move."\r
 action: "The character may spend their Action pulling free to reduce the Rank of Rooted by 1. A character loses Rooted at Rank 0."\r
-`,by=`id: scarred\r
+`,Ty=`id: scarred\r
 name: "Scarred"\r
 status: draft\r
 plane: any\r
@@ -7220,7 +7294,7 @@ types: [injury]\r
 ranked: true\r
 conveyed: true\r
 effect: "This character suffers -2 Persuasion and -2 Demeanor per Rank."\r
-`,xy=`id: scrambled\r
+`,Ey=`id: scrambled\r
 name: "Scrambled"\r
 status: draft\r
 plane: any\r
@@ -7232,7 +7306,7 @@ ranked: true\r
 conveyed: true\r
 effect: "This character suffers -2 to all Skill Checks per Rank and -1 Priority."\r
 modifiers: "Priority -1"\r
-`,Sy=`id: severe-bleeding\r
+`,Dy=`id: severe-bleeding\r
 name: "Severe Bleeding"\r
 status: draft\r
 plane: any\r
@@ -7243,7 +7317,7 @@ types: [injury]\r
 conveyed: true\r
 temporary: "This trait is lost when this Condition is Treated"\r
 effect: "This character loses 1 HP every combat round while in combat. This character loses 1 HP every minute while outside of combat."\r
-`,Cy=`id: severe-burn\r
+`,Oy=`id: severe-burn\r
 name: "Severe Burn"\r
 status: draft\r
 plane: any\r
@@ -7254,7 +7328,7 @@ types: [injury]\r
 ranked: true\r
 conveyed: true\r
 effect: "This character suffers +2 to all damage it receives per Rank and -2 Demeanor."\r
-`,wy=`id: severely-injured\r
+`,ky=`id: severely-injured\r
 name: "Severely Injured"\r
 status: draft\r
 plane: any\r
@@ -7264,7 +7338,7 @@ category: condition\r
 conveyed: true\r
 temporary: "A character gains this trait while they are below half their maximum HP total"\r
 effect: "This Trait has no effect on its own."\r
-`,Ty=`id: shielded\r
+`,Ay=`id: shielded\r
 name: "Shielded"\r
 status: placeholder\r
 plane: any\r
@@ -7277,7 +7351,7 @@ conveyed: true\r
 temporary: "Every combat Round or 10 seconds after a character is affected by Shielded, it loses one Rank of Shielded."\r
 effect: "This character has +2 Defense per Rank."\r
 modifiers: "Defense +2 per Rank"\r
-`,Ey=`id: silenced\r
+`,jy=`id: silenced\r
 name: "Silenced"\r
 status: placeholder\r
 plane: any\r
@@ -7289,7 +7363,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every minute after a character is affected by Silenced, it loses one Rank of Silenced. It ends early if the character leaves the silenced area."\r
 effect: "This character can't make or hear any sound."\r
-`,Dy=`id: slowed\r
+`,My=`id: slowed\r
 name: "Slowed"\r
 status: placeholder\r
 plane: any\r
@@ -7302,7 +7376,7 @@ conveyed: true\r
 temporary: "Every combat Round or 10 seconds after a character is affected by Slowed, it loses one Rank of Slowed."\r
 effect: "This character has -1 Priority per Rank and half its usual Movement."\r
 modifiers: "Priority -1 per Rank"\r
-`,Oy=`id: spider-climb-condition\r
+`,Ny=`id: spider-climb-condition\r
 name: "Spider Climb"\r
 status: placeholder\r
 plane: any\r
@@ -7314,7 +7388,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every two hours after a character is affected by Spider Climb, it loses one Rank of Spider Climb."\r
 effect: "This character may move its full Movement distance over vertical obstacles and along walls and ceilings."\r
-`,ky=`id: stimm-rush\r
+`,Py=`id: stimm-rush\r
 name: "Stimm Rush"\r
 status: draft\r
 plane: earth\r
@@ -7324,7 +7398,7 @@ category: condition\r
 conveyed: true\r
 temporary: "This Trait lasts a number of minutes stated by the Stimm being used, or 1 minute if there is no stated duration"\r
 effect: "This character gains 5 to all physical focus stats."\r
-`,Ay=`id: stone-skin\r
+`,Fy=`id: stone-skin\r
 name: "Stone Skin"\r
 status: draft\r
 plane: any\r
@@ -7336,7 +7410,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Stone Skin, it loses one Rank of Stone Skin."\r
 effect: "This character gains Rank *3 resistance to all Physical damage types."\r
-`,jy=`id: supernatural\r
+`,Iy=`id: supernatural\r
 name: "Supernatural"\r
 status: draft\r
 plane: any\r
@@ -7345,7 +7419,7 @@ tags: [supernatural, site-example]\r
 category: condition\r
 background: true\r
 effect: "This character has gone beyond the realm of the real and can take supernatural-related traits and may spend stat points on the Supernatural core stat."\r
-`,My=`id: temporarily-deafened\r
+`,Ly=`id: temporarily-deafened\r
 name: "Temporarily Deafened"\r
 status: placeholder\r
 plane: any\r
@@ -7356,7 +7430,7 @@ types: [hazard]\r
 conveyed: true\r
 temporary: "Lasts one minute."\r
 effect: "This character suffers -20 to all Skill Checks that require hearing and can no longer understand verbal communication."\r
-`,Ny=`id: unconscious\r
+`,Ry=`id: unconscious\r
 name: "Unconscious"\r
 status: draft\r
 plane: any\r
@@ -7366,7 +7440,7 @@ category: condition\r
 conveyed: true\r
 temporary: "Lasts until the character takes damage or another character spends their Action waking them."\r
 effect: "This character has been knocked out and can't perform voluntary Actions or perceive the world around them. At the end of every 3 Incident Rounds, or every 5 minutes outside of an Incident, this character may make an Endurance check of 15. If it succeeds, the character wakes up and loses this Condition."\r
-`,Py=`id: water-breathing-condition\r
+`,zy=`id: water-breathing-condition\r
 name: "Water Breathing"\r
 status: placeholder\r
 plane: any\r
@@ -7378,7 +7452,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Every hour after a character is affected by Water Breathing, it loses one Rank of Water Breathing."\r
 effect: "This character can breathe water as easily as air."\r
-`,Fy=`id: withering-weapon\r
+`,By=`id: withering-weapon\r
 name: "Withering Weapon"\r
 status: draft\r
 plane: any\r
@@ -7390,7 +7464,7 @@ ranked: true\r
 conveyed: true\r
 temporary: "Lasts 10 minutes per Rank."\r
 effect: "This weapon deals 4 more Death damage per Rank."\r
-`,Iy=`id: additional-contact\r
+`,Vy=`id: additional-contact\r
 name: Additional Contact\r
 status: placeholder\r
 plane: any\r
@@ -7403,7 +7477,7 @@ choices:\r
   - choose: 1\r
     from: contact\r
     note: "+1 Contact per rank"\r
-`,Ly=`id: accounting\r
+`,Hy=`id: accounting\r
 name: "Accounting"\r
 status: draft\r
 plane: any\r
@@ -7413,7 +7487,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of accounting and can be assumed to be familiar with keeping books, reading financial records and tracing money."\r
-`,Ry=`id: additional-language\r
+`,Uy=`id: additional-language\r
 name: Additional Language\r
 status: placeholder\r
 plane: any\r
@@ -7426,7 +7500,7 @@ choices:\r
   - choose: 1\r
     from: language\r
     note: "+1 Language per rank"\r
-`,zy=`id: ai-culture\r
+`,Wy=`id: ai-culture\r
 name: "AI Culture"\r
 status: placeholder\r
 plane: earth\r
@@ -7436,7 +7510,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 2 }\r
 effect: "This character has knowledge of AI society and culture and can be assumed to be familiar with the peoples, places, and customs relevant to AI Cores and the communities around them."\r
-`,By=`# Aksum has no lore entry on the site yet.\r
+`,Gy=`# Aksum has no lore entry on the site yet.\r
 id: aksum\r
 name: "Aksum"\r
 status: draft\r
@@ -7448,7 +7522,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Aksum and can be assumed to be familiar with the peoples, places, and customs of Centafrica’s inner-system station."\r
-`,Vy=`id: alchemy\r
+`,Ky=`id: alchemy\r
 name: "Alchemy"\r
 status: draft\r
 plane: isekai\r
@@ -7458,7 +7532,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 4, logic: 3, intuition: 2 }\r
 effect: "This character has knowledge of alchemy and can be assumed to be familiar with the properties of common reagents and how they combine in potions."\r
-`,Hy=`# Amaravati has no lore entry on the site yet.\r
+`,qy=`# Amaravati has no lore entry on the site yet.\r
 id: amaravati\r
 name: "Amaravati"\r
 status: draft\r
@@ -7470,7 +7544,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Amaravati and can be assumed to be familiar with the peoples, places, and customs of India’s station in high Earth orbit."\r
-`,Uy=`id: american-geography\r
+`,Jy=`id: american-geography\r
 name: "American Geography"\r
 status: placeholder\r
 plane: earth\r
@@ -7481,7 +7555,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of American geography and can be assumed to be familiar with the American Empire’s territories on Earth and in its colonies."\r
-`,Wy=`id: american-history\r
+`,Yy=`id: american-history\r
 name: "American History"\r
 status: placeholder\r
 plane: earth\r
@@ -7492,7 +7566,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of American history and can be assumed to be familiar with the history of the United States and the American Empire that replaced it."\r
-`,Gy=`id: amharic-written\r
+`,Xy=`id: amharic-written\r
 name: "Amharic (Written)"\r
 status: draft\r
 plane: earth\r
@@ -7502,7 +7576,7 @@ category: knowledge\r
 types: [language]\r
 language: amharic\r
 effect: "This character can read and write the Amharic language."\r
-`,Ky=`id: amharic\r
+`,Zy=`id: amharic\r
 name: "Amharic (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -7512,7 +7586,7 @@ category: knowledge\r
 types: [language]\r
 language: amharic\r
 effect: "This character is conversational in the Amharic language and can speak it."\r
-`,qy=`id: anatomy\r
+`,Qy=`id: anatomy\r
 name: "Anatomy"\r
 status: draft\r
 plane: any\r
@@ -7522,7 +7596,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of anatomy and can be assumed to be familiar with the structure of the body, its organs and its vulnerable points."\r
-`,Jy=`id: animal-lore\r
+`,$y=`id: animal-lore\r
 name: "Animal Lore"\r
 status: draft\r
 plane: any\r
@@ -7532,7 +7606,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, intuition: 2 }\r
 effect: "This character has knowledge of animals and can be assumed to be familiar with the habits, needs, dangers and uses of common domestic and wild animals."\r
-`,Yy=`id: antiluna\r
+`,eb=`id: antiluna\r
 name: "Antiluna"\r
 status: placeholder\r
 plane: earth\r
@@ -7543,7 +7617,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Antiluna space station and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,Xy=`id: arabic-written\r
+`,tb=`id: arabic-written\r
 name: "Arabic (Written)"\r
 status: draft\r
 plane: earth\r
@@ -7553,7 +7627,7 @@ category: knowledge\r
 types: [language]\r
 language: arabic\r
 effect: "This character can read and write the Arabic language."\r
-`,Zy=`id: arabic\r
+`,nb=`id: arabic\r
 name: "Arabic (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -7563,7 +7637,7 @@ category: knowledge\r
 types: [language]\r
 language: arabic\r
 effect: "This character is conversational in the Arabic language and can speak it."\r
-`,Qy=`id: architecture\r
+`,rb=`id: architecture\r
 name: "Architecture"\r
 status: draft\r
 plane: any\r
@@ -7573,7 +7647,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of architecture and can be assumed to be familiar with building styles, structural design and construction methods."\r
-`,$y=`id: aristocracy\r
+`,ib=`id: aristocracy\r
 name: Aristocracy\r
 status: placeholder\r
 plane: isekai\r
@@ -7582,7 +7656,7 @@ tags: [nobility, court]\r
 category: knowledge\r
 minStats: { memory: 3, demeanor: 3 }\r
 effect: "This character has knowledge of the aristocracy and can be assumed to be familiar with the nobles, titles, and ranks of the kingdoms surrounding the switch port on Isekai."\r
-`,eb=`id: ark-life\r
+`,ab=`id: ark-life\r
 name: "Ark Life"\r
 status: placeholder\r
 plane: earth\r
@@ -7593,7 +7667,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 1, intuition: 2 }\r
 effect: "This character has knowledge of life aboard Arks and can be assumed to be familiar with navigating their corridors and cultures."\r
-`,tb=`id: ark-new-york\r
+`,ob=`id: ark-new-york\r
 name: "Ark New York"\r
 status: placeholder\r
 plane: earth\r
@@ -7605,7 +7679,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark New York and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,nb=`id: art-history\r
+`,sb=`id: art-history\r
 name: "Art History"\r
 status: draft\r
 plane: any\r
@@ -7615,7 +7689,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of art history and can be assumed to be familiar with notable artists, movements and works and their value."\r
-`,rb=`id: artificial-intelligence\r
+`,cb=`id: artificial-intelligence\r
 name: "Artificial Intelligence"\r
 status: placeholder\r
 plane: earth\r
@@ -7625,7 +7699,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of artificial intelligence and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
-`,ib=`id: asteroid-mining\r
+`,lb=`id: asteroid-mining\r
 name: "Asteroid Mining"\r
 status: draft\r
 plane: earth\r
@@ -7635,7 +7709,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of asteroid mining and can be assumed to be familiar with how asteroids are surveyed, claimed, and worked."\r
-`,ab=`id: aviation\r
+`,ub=`id: aviation\r
 name: "Aviation"\r
 status: draft\r
 plane: any\r
@@ -7645,7 +7719,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of aviation and can be assumed to be familiar with how aircraft and airships fly, are maintained and are flown safely."\r
-`,ob=`id: bandits-and-brigands\r
+`,db=`id: bandits-and-brigands\r
 name: "Bandits & Brigands"\r
 status: placeholder\r
 plane: isekai\r
@@ -7655,7 +7729,7 @@ tags: [bandits, crime, roads]\r
 category: knowledge\r
 minStats: { memory: 2, intuition: 2 }\r
 effect: "This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places."\r
-`,sb=`id: bengali-written\r
+`,fb=`id: bengali-written\r
 name: "Bengali (Written)"\r
 status: draft\r
 plane: earth\r
@@ -7665,7 +7739,7 @@ category: knowledge\r
 types: [language]\r
 language: bengali\r
 effect: "This character can read and write the Bengali language."\r
-`,cb=`id: bengali\r
+`,pb=`id: bengali\r
 name: "Bengali (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -7675,7 +7749,7 @@ category: knowledge\r
 types: [language]\r
 language: bengali\r
 effect: "This character is conversational in the Bengali language and can speak it."\r
-`,lb=`id: biology\r
+`,mb=`id: biology\r
 name: "Biology"\r
 status: draft\r
 plane: any\r
@@ -7685,7 +7759,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of biology and can be assumed to be familiar with how living things grow, function, reproduce and interact."\r
-`,ub=`id: boneyard\r
+`,hb=`id: boneyard\r
 name: "Boneyard"\r
 status: placeholder\r
 plane: earth\r
@@ -7697,7 +7771,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark Boneyard and can be assumed to be familiar with the people, places, and customs aboard it."\r
-`,db=`id: bureaucracy\r
+`,gb=`id: bureaucracy\r
 name: "Bureaucracy"\r
 status: draft\r
 plane: any\r
@@ -7707,7 +7781,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of bureaucracy and can be assumed to be familiar with how officials and departments work, which forms and permits are needed, and who to ask."\r
-`,fb=`id: burmese-written\r
+`,_b=`id: burmese-written\r
 name: "Burmese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -7717,7 +7791,7 @@ category: knowledge\r
 types: [language]\r
 language: burmese\r
 effect: "This character can read and write the Burmese language."\r
-`,pb=`id: burmese\r
+`,vb=`id: burmese\r
 name: "Burmese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -7727,7 +7801,7 @@ category: knowledge\r
 types: [language]\r
 language: burmese\r
 effect: "This character is conversational in the Burmese language and can speak it."\r
-`,mb=`id: cantonese-written\r
+`,yb=`id: cantonese-written\r
 name: "Cantonese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -7737,7 +7811,7 @@ category: knowledge\r
 types: [language]\r
 language: cantonese\r
 effect: "This character can read and write the Cantonese language."\r
-`,hb=`id: cantonese\r
+`,bb=`id: cantonese\r
 name: "Cantonese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -7747,7 +7821,7 @@ category: knowledge\r
 types: [language]\r
 language: cantonese\r
 effect: "This character is conversational in the Cantonese language and can speak it."\r
-`,gb=`id: caravan-routes\r
+`,xb=`id: caravan-routes\r
 name: Caravan Routes\r
 status: placeholder\r
 plane: any\r
@@ -7761,7 +7835,7 @@ choices:\r
     from: place\r
     note: "Where the caravan routes run"\r
     perRank: false\r
-`,_b=`id: centafrica\r
+`,Sb=`id: centafrica\r
 name: "Centafrica"\r
 status: draft\r
 plane: earth\r
@@ -7773,7 +7847,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Centafrica and can be assumed to be familiar with its customs, politics, and territories."\r
-`,vb=`id: centafrican-law\r
+`,Cb=`id: centafrican-law\r
 name: "Centafrican Law"\r
 status: draft\r
 plane: earth\r
@@ -7784,7 +7858,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Centafrican law and can be assumed to be familiar with the laws and courts of Centafrica."\r
-`,yb=`id: chemistry\r
+`,wb=`id: chemistry\r
 name: "Chemistry"\r
 status: draft\r
 plane: any\r
@@ -7794,7 +7868,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of chemistry and can be assumed to be familiar with common substances, how they react, and how to handle them safely."\r
-`,bb=`id: chinese-imperial-law\r
+`,Tb=`id: chinese-imperial-law\r
 name: "Chinese Imperial Law"\r
 status: placeholder\r
 plane: earth\r
@@ -7805,7 +7879,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Chinese Imperial Law and can be assumed to be familiar with the laws and courts of the Empire of China."\r
-`,xb=`id: coastal-trade\r
+`,Eb=`id: coastal-trade\r
 name: Coastal Trade\r
 status: placeholder\r
 plane: isekai\r
@@ -7816,7 +7890,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of coastal trade on Isekai and can be assumed to be familiar with its ports, products, and dangers."\r
-`,Sb=`id: combat-medicine\r
+`,Db=`id: combat-medicine\r
 name: "Combat Medicine"\r
 status: draft\r
 plane: any\r
@@ -7826,7 +7900,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of combat medicine and can be assumed to be familiar with battlefield wounds, their treatment and getting the injured out alive."\r
-`,Cb=`id: commerce\r
+`,Ob=`id: commerce\r
 name: "Commerce"\r
 status: draft\r
 plane: any\r
@@ -7836,7 +7910,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of commerce and can be assumed to be familiar with how markets and businesses work, fair prices, contracts and the movement of money."\r
-`,wb=`id: comparative-cultures\r
+`,kb=`id: comparative-cultures\r
 name: "Comparative Cultures"\r
 status: draft\r
 plane: any\r
@@ -7846,7 +7920,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 2 }\r
 effect: "This character has knowledge of comparative cultures and can be assumed to be familiar with how customs, beliefs and manners differ between peoples."\r
-`,Tb=`id: computer-networks\r
+`,Ab=`id: computer-networks\r
 name: "Computer Networks"\r
 status: draft\r
 plane: earth\r
@@ -7856,7 +7930,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of computer networks and can be assumed to be familiar with how networks are built, secured and attacked."\r
-`,Eb=`id: computer-systems\r
+`,jb=`id: computer-systems\r
 name: "Computer Systems"\r
 status: draft\r
 plane: earth\r
@@ -7866,7 +7940,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of computer systems and can be assumed to be familiar with common networks, software and hardware and how they are secured."\r
-`,Db=`id: contract-law\r
+`,Mb=`id: contract-law\r
 name: "Contract Law"\r
 status: draft\r
 plane: any\r
@@ -7876,7 +7950,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of contract law and can be assumed to be familiar with how contracts are formed, enforced and challenged."\r
-`,Ob=`id: corporate-security\r
+`,Nb=`id: corporate-security\r
 name: "Corporate Security"\r
 status: draft\r
 plane: earth\r
@@ -7886,7 +7960,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of corporate security and can be assumed to be familiar with how private security firms and client contracts work, who hires guards, and what they're allowed to do on whose property."\r
-`,kb=`id: countryside-lore\r
+`,Pb=`id: countryside-lore\r
 name: Countryside Lore\r
 status: placeholder\r
 plane: any\r
@@ -7900,7 +7974,7 @@ choices:\r
     from: place\r
     note: "Which countryside"\r
     perRank: false\r
-`,Ab=`id: court-etiquette\r
+`,Fb=`id: court-etiquette\r
 name: Court Etiquette\r
 status: placeholder\r
 plane: isekai\r
@@ -7910,7 +7984,7 @@ tags: [court, nobility, etiquette]\r
 category: knowledge\r
 minStats: { memory: 2, demeanor: 3 }\r
 effect: "This character has knowledge of courtly etiquette and can be assumed to be familiar with the rules and manners expected in the royal halls of Isekai."\r
-`,jb=`id: criminal-underworld\r
+`,Ib=`id: criminal-underworld\r
 name: "Criminal Underworld"\r
 status: draft\r
 plane: any\r
@@ -7925,7 +7999,7 @@ choices:\r
     perRank: false\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of organized crime and can be assumed to be familiar with its gangs, fences, black markets and the unwritten rules between them."\r
-`,Mb=`id: cryptography\r
+`,Lb=`id: cryptography\r
 name: "Cryptography"\r
 status: draft\r
 plane: any\r
@@ -7935,7 +8009,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 4 }\r
 effect: "This character has knowledge of cryptography and can be assumed to be familiar with common codes and ciphers and the methods used to make and break them."\r
-`,Nb=`id: cybernetics\r
+`,Rb=`id: cybernetics\r
 name: "Cybernetics"\r
 status: placeholder\r
 plane: earth\r
@@ -7945,7 +8019,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of cybernetics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
-`,Pb=`id: diplomatic-protocol\r
+`,zb=`id: diplomatic-protocol\r
 name: "Diplomatic Protocol"\r
 status: draft\r
 plane: any\r
@@ -7955,7 +8029,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 3 }\r
 effect: "This character has knowledge of diplomatic protocol and can be assumed to be familiar with the ceremonies, forms of address and unwritten rules of formal diplomacy."\r
-`,Fb=`id: documents-and-seals\r
+`,Bb=`id: documents-and-seals\r
 name: "Documents and Seals"\r
 status: draft\r
 plane: any\r
@@ -7965,7 +8039,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of documents and seals and can be assumed to be familiar with official papers, seals, signatures and how authorities verify them."\r
-`,Ib=`id: dreft\r
+`,Vb=`id: dreft\r
 name: Dreft\r
 status: placeholder\r
 plane: isekai\r
@@ -7977,7 +8051,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Kingdom of Dreft and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
-`,Lb=`id: dreftan-written\r
+`,Hb=`id: dreftan-written\r
 name: "Dreftan (Written)"\r
 status: placeholder\r
 plane: isekai\r
@@ -7988,7 +8062,7 @@ category: knowledge\r
 types: [language]\r
 language: dreftan\r
 effect: This character can read and write the Dreftan language.\r
-`,Rb=`id: dreftan\r
+`,Ub=`id: dreftan\r
 name: "Dreftan (Spoken)"\r
 status: placeholder\r
 plane: isekai\r
@@ -7999,7 +8073,7 @@ category: knowledge\r
 types: [language]\r
 language: dreftan\r
 effect: This character is conversational in the Dreftan language and can speak it.\r
-`,zb=`id: dreftian-law\r
+`,Wb=`id: dreftian-law\r
 name: Dreftian Law\r
 status: placeholder\r
 plane: isekai\r
@@ -8010,7 +8084,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Dreftian law and can be assumed to be familiar with the laws of the Kingdom of Dreft and how they’re enforced."\r
-`,Bb=`id: dutch-written\r
+`,Gb=`id: dutch-written\r
 name: "Dutch (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8020,7 +8094,7 @@ category: knowledge\r
 types: [language]\r
 language: dutch\r
 effect: "This character can read and write the Dutch language."\r
-`,Vb=`id: dutch\r
+`,Kb=`id: dutch\r
 name: "Dutch (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8030,7 +8104,7 @@ category: knowledge\r
 types: [language]\r
 language: dutch\r
 effect: "This character is conversational in the Dutch language and can speak it."\r
-`,Hb=`id: dwarvish-runes-written\r
+`,qb=`id: dwarvish-runes-written\r
 name: "Dwarvish Runes (Written)"\r
 status: draft\r
 plane: isekai\r
@@ -8041,7 +8115,7 @@ types: [language]\r
 language: dwarvish-runes\r
 minStats: { memory: 3, intuition: 5 }\r
 effect: "This character can read and write Dwarvish Runes."\r
-`,Ub=`# Pairs with Dwarvish Runes (Written).\r
+`,Jb=`# Pairs with Dwarvish Runes (Written).\r
 id: dwarvish\r
 name: "Dwarvish (Spoken)"\r
 status: draft\r
@@ -8052,7 +8126,7 @@ category: knowledge\r
 types: [language]\r
 language: dwarvish-runes\r
 effect: "This character is conversational in the Dwarvish language and can speak it."\r
-`,Wb=`id: earth-baseline-customs\r
+`,Yb=`id: earth-baseline-customs\r
 name: Earth Baseline Customs\r
 status: placeholder\r
 plane: earth\r
@@ -8062,7 +8136,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 1 }\r
 effect: "This character has knowledge of Earth baseline customs and can be assumed to be familiar with how people across the settled systems expect things to be done."\r
-`,Gb=`id: earth-baseline-technology\r
+`,Xb=`id: earth-baseline-technology\r
 name: Earth Baseline Technology\r
 status: placeholder\r
 plane: earth\r
@@ -8071,7 +8145,7 @@ tags: [earth, technology]\r
 category: knowledge\r
 minStats: { memory: 1 }\r
 effect: "This character has knowledge of Earth baseline technology and can be assumed to be familiar with the machines and devices common across the settled systems."\r
-`,Kb=`id: ecology\r
+`,Zb=`id: ecology\r
 name: "Ecology"\r
 status: draft\r
 plane: any\r
@@ -8081,7 +8155,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of ecology and can be assumed to be familiar with how ecosystems work and how damaged land is restored."\r
-`,qb=`id: education\r
+`,Qb=`id: education\r
 name: "Education"\r
 status: draft\r
 plane: any\r
@@ -8091,7 +8165,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 2 }\r
 effect: "This character has knowledge of education and can be assumed to be familiar with how people learn and the methods for teaching them."\r
-`,Jb=`id: electronics\r
+`,$b=`id: electronics\r
 name: "Electronics"\r
 status: draft\r
 plane: any\r
@@ -8101,7 +8175,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of electronics and can be assumed to be familiar with circuits, components and how electronic devices are built."\r
-`,Yb=`id: elemental-magics\r
+`,ex=`id: elemental-magics\r
 name: "Elemental Magics"\r
 status: draft\r
 plane: isekai\r
@@ -8113,7 +8187,7 @@ list: magic\r
 ranked: true\r
 minStats: { memory: 3, intuition: 5 }\r
 effect: "This character has knowledge of Elemental Magics, including the theoretical underpinnings of that magic as well as its history."\r
-`,Xb=`id: enchantment\r
+`,tx=`id: enchantment\r
 name: "Enchantment"\r
 status: draft\r
 plane: isekai\r
@@ -8125,7 +8199,7 @@ minStats: { memory: 4, magic: 1 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character has knowledge of enchantment and can be assumed to be familiar with how magic is bound into objects and what limits it."\r
-`,Zb=`id: engineering\r
+`,nx=`id: engineering\r
 name: "Engineering"\r
 status: draft\r
 plane: any\r
@@ -8135,7 +8209,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of engineering and can be assumed to be familiar with how machines, structures and systems are designed, built, maintained and broken."\r
-`,Qb=`id: english-written\r
+`,rx=`id: english-written\r
 name: "English (Written)"\r
 status: placeholder\r
 plane: earth\r
@@ -8145,7 +8219,7 @@ category: knowledge\r
 types: [language]\r
 language: english\r
 effect: This character can read and write the English language.\r
-`,$b=`id: english\r
+`,ix=`id: english\r
 name: "English (Spoken)"\r
 status: placeholder\r
 plane: earth\r
@@ -8155,7 +8229,7 @@ category: knowledge\r
 types: [language]\r
 language: english\r
 effect: This character is conversational in the English language and can speak it.\r
-`,ex=`id: executive-protection\r
+`,ax=`id: executive-protection\r
 name: "Executive Protection"\r
 status: draft\r
 plane: any\r
@@ -8165,7 +8239,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character has knowledge of executive protection and can be assumed to be familiar with advance work, safe routes, venue sweeps and how a protection detail is run."\r
-`,tx=`id: exotic-materials\r
+`,ox=`id: exotic-materials\r
 name: "Exotic Materials"\r
 status: placeholder\r
 plane: earth\r
@@ -8175,7 +8249,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of exotic materials and can be assumed to be familiar with their uses, prices, and the rough paraphysical concepts by which they operate."\r
-`,nx=`id: explosives\r
+`,sx=`id: explosives\r
 name: "Explosives"\r
 status: draft\r
 plane: any\r
@@ -8185,7 +8259,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of explosives and can be assumed to be familiar with common explosives, how they're set off and how to store and handle them safely."\r
-`,rx=`id: extraplanar-threats\r
+`,cx=`id: extraplanar-threats\r
 name: "Extraplanar Threats"\r
 status: draft\r
 plane: earth\r
@@ -8195,7 +8269,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of known extraplanar threats and can be assumed to be familiar with the known dangerous beings and organisms of other planes and how they have been fought or contained."\r
-`,ix=`id: farming\r
+`,lx=`id: farming\r
 name: Farming\r
 status: placeholder\r
 plane: any\r
@@ -8205,7 +8279,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, endurance: 2 }\r
 effect: "This character has knowledge of farming and can be assumed to be familiar with the technologies, techniques, and lifestyles associated with the practice."\r
-`,ax=`id: filipino-written\r
+`,ux=`id: filipino-written\r
 name: "Filipino (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8215,7 +8289,7 @@ category: knowledge\r
 types: [language]\r
 language: filipino\r
 effect: "This character can read and write the Filipino language."\r
-`,ox=`id: filipino\r
+`,dx=`id: filipino\r
 name: "Filipino (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8225,7 +8299,7 @@ category: knowledge\r
 types: [language]\r
 language: filipino\r
 effect: "This character is conversational in the Filipino language and can speak it."\r
-`,sx=`id: french-written\r
+`,fx=`id: french-written\r
 name: "French (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8235,7 +8309,7 @@ category: knowledge\r
 types: [language]\r
 language: french\r
 effect: "This character can read and write the French language."\r
-`,cx=`id: french\r
+`,px=`id: french\r
 name: "French (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8245,7 +8319,7 @@ category: knowledge\r
 types: [language]\r
 language: french\r
 effect: "This character is conversational in the French language and can speak it."\r
-`,lx=`id: gambling\r
+`,mx=`id: gambling\r
 name: "Gambling"\r
 status: draft\r
 plane: any\r
@@ -8255,7 +8329,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, intuition: 3 }\r
 effect: "This character has knowledge of gambling and can be assumed to be familiar with common games of chance, their odds, and the tricks cheats use."\r
-`,ux=`id: geology\r
+`,hx=`id: geology\r
 name: "Geology"\r
 status: draft\r
 plane: any\r
@@ -8265,7 +8339,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of geology and can be assumed to be familiar with rocks, minerals and ores, and where and how they're found."\r
-`,dx=`id: german-written\r
+`,gx=`id: german-written\r
 name: "German (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8275,7 +8349,7 @@ category: knowledge\r
 types: [language]\r
 language: german\r
 effect: "This character can read and write the German language."\r
-`,fx=`id: german\r
+`,_x=`id: german\r
 name: "German (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8285,7 +8359,7 @@ category: knowledge\r
 types: [language]\r
 language: german\r
 effect: "This character is conversational in the German language and can speak it."\r
-`,px=`id: glintl\r
+`,vx=`id: glintl\r
 name: Glintl\r
 status: placeholder\r
 plane: isekai\r
@@ -8297,7 +8371,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the trading port of Glintl and can be assumed to be familiar with the peoples, places, and customs of the city."\r
-`,mx=`id: gujarati-written\r
+`,yx=`id: gujarati-written\r
 name: "Gujarati (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8307,7 +8381,7 @@ category: knowledge\r
 types: [language]\r
 language: gujarati\r
 effect: "This character can read and write the Gujarati language."\r
-`,hx=`id: gujarati\r
+`,bx=`id: gujarati\r
 name: "Gujarati (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8317,7 +8391,7 @@ category: knowledge\r
 types: [language]\r
 language: gujarati\r
 effect: "This character is conversational in the Gujarati language and can speak it."\r
-`,gx=`id: hausa-written\r
+`,xx=`id: hausa-written\r
 name: "Hausa (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8327,7 +8401,7 @@ category: knowledge\r
 types: [language]\r
 language: hausa\r
 effect: "This character can read and write the Hausa language."\r
-`,_x=`id: hausa\r
+`,Sx=`id: hausa\r
 name: "Hausa (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8337,7 +8411,7 @@ category: knowledge\r
 types: [language]\r
 language: hausa\r
 effect: "This character is conversational in the Hausa language and can speak it."\r
-`,vx=`id: heraldry\r
+`,Cx=`id: heraldry\r
 name: "Heraldry"\r
 status: draft\r
 plane: any\r
@@ -8352,7 +8426,7 @@ choices:\r
     perRank: false\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of heraldry and can be assumed to be familiar with the arms, colors and lineages of noble houses and orders."\r
-`,yx=`id: herbalism\r
+`,wx=`id: herbalism\r
 name: Herbalism\r
 status: placeholder\r
 plane: any\r
@@ -8361,7 +8435,7 @@ tags: [herbs, healing, plants]\r
 category: knowledge\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character has knowledge of herbalism and can be assumed to be familiar with the plants, techniques, and precautions involved with the practice."\r
-`,bx=`id: high-society\r
+`,Tx=`id: high-society\r
 name: "High Society"\r
 status: draft\r
 plane: any\r
@@ -8371,7 +8445,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, empathy: 3 }\r
 effect: "This character has knowledge of high society and can be assumed to be familiar with the manners, fashions, families and scandals of the wealthy and powerful."\r
-`,xx=`id: hindi-written\r
+`,Ex=`id: hindi-written\r
 name: "Hindi (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8381,7 +8455,7 @@ category: knowledge\r
 types: [language]\r
 language: hindi\r
 effect: "This character can read and write the Hindi language."\r
-`,Sx=`id: hindi\r
+`,Dx=`id: hindi\r
 name: "Hindi (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8391,7 +8465,7 @@ category: knowledge\r
 types: [language]\r
 language: hindi\r
 effect: "This character is conversational in the Hindi language and can speak it."\r
-`,Cx=`id: imperial-law\r
+`,Ox=`id: imperial-law\r
 name: "Imperial Law"\r
 status: placeholder\r
 plane: earth\r
@@ -8402,7 +8476,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the American Empire’s legal code and can be assumed to be familiar with the laws and courts of its territories."\r
-`,wx=`id: imperial-politics\r
+`,kx=`id: imperial-politics\r
 name: "Imperial Politics"\r
 status: placeholder\r
 plane: earth\r
@@ -8414,7 +8488,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Imperial politics and can be assumed to be familiar with the Emperor, the Prince Regent, the Senate, and their feuds."\r
-`,Tx=`id: indian-law\r
+`,Ax=`id: indian-law\r
 name: "Indian Law"\r
 status: draft\r
 plane: earth\r
@@ -8425,7 +8499,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Indian law and can be assumed to be familiar with the laws and courts of the Kingdom of India."\r
-`,Ex=`id: indian-theology\r
+`,jx=`id: indian-theology\r
 name: "Indian Theology"\r
 status: draft\r
 plane: earth\r
@@ -8436,7 +8510,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Indian theology and can be assumed to be familiar with the gods, temples, and rites of the Kingdom of India."\r
-`,Dx=`id: indonesian-written\r
+`,Mx=`id: indonesian-written\r
 name: "Indonesian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8446,7 +8520,7 @@ category: knowledge\r
 types: [language]\r
 language: indonesian\r
 effect: "This character can read and write the Indonesian language."\r
-`,Ox=`id: indonesian\r
+`,Nx=`id: indonesian\r
 name: "Indonesian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8456,7 +8530,7 @@ category: knowledge\r
 types: [language]\r
 language: indonesian\r
 effect: "This character is conversational in the Indonesian language and can speak it."\r
-`,kx=`id: industrial-machinery\r
+`,Px=`id: industrial-machinery\r
 name: "Industrial Machinery"\r
 status: draft\r
 plane: any\r
@@ -8466,7 +8540,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of industrial machinery and can be assumed to be familiar with how cranes, drills, loaders and factory machines work and are maintained."\r
-`,Ax=`id: intelligence-tradecraft\r
+`,Fx=`id: intelligence-tradecraft\r
 name: "Intelligence Tradecraft"\r
 status: draft\r
 plane: any\r
@@ -8476,7 +8550,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character has knowledge of intelligence tradecraft and can be assumed to be familiar with how spies recruit, communicate, watch and avoid being watched."\r
-`,jx=`id: interplanar-law\r
+`,Ix=`id: interplanar-law\r
 name: "Interplanar Law"\r
 status: placeholder\r
 plane: earth\r
@@ -8486,7 +8560,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 3 }\r
 effect: "This character has knowledge of interplanar law and can be assumed to be familiar with the laws governing extraplanar beings, including the treatment of specimens and the legal status of parasapients."\r
-`,Mx=`id: interplanar-relations\r
+`,Lx=`id: interplanar-relations\r
 name: "Interplanar Relations"\r
 status: placeholder\r
 plane: earth\r
@@ -8496,7 +8570,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, persuasion: 3 }\r
 effect: "This character has knowledge of interplanar relations and can be assumed to be familiar with the planes, societies, and laws involved with contact between parasapients and representatives of Earth baseline."\r
-`,Nx=`id: italian-written\r
+`,Rx=`id: italian-written\r
 name: "Italian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8506,7 +8580,7 @@ category: knowledge\r
 types: [language]\r
 language: italian\r
 effect: "This character can read and write the Italian language."\r
-`,Px=`id: italian\r
+`,zx=`id: italian\r
 name: "Italian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8516,7 +8590,7 @@ category: knowledge\r
 types: [language]\r
 language: italian\r
 effect: "This character is conversational in the Italian language and can speak it."\r
-`,Fx=`id: japanese-written\r
+`,Bx=`id: japanese-written\r
 name: "Japanese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8526,7 +8600,7 @@ category: knowledge\r
 types: [language]\r
 language: japanese\r
 effect: "This character can read and write the Japanese language."\r
-`,Ix=`id: japanese\r
+`,Vx=`id: japanese\r
 name: "Japanese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8536,7 +8610,7 @@ category: knowledge\r
 types: [language]\r
 language: japanese\r
 effect: "This character is conversational in the Japanese language and can speak it."\r
-`,Lx=`id: javanese-written\r
+`,Hx=`id: javanese-written\r
 name: "Javanese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8546,7 +8620,7 @@ category: knowledge\r
 types: [language]\r
 language: javanese\r
 effect: "This character can read and write the Javanese language."\r
-`,Rx=`id: javanese\r
+`,Ux=`id: javanese\r
 name: "Javanese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8556,7 +8630,7 @@ category: knowledge\r
 types: [language]\r
 language: javanese\r
 effect: "This character is conversational in the Javanese language and can speak it."\r
-`,zx=`id: kannada-written\r
+`,Wx=`id: kannada-written\r
 name: "Kannada (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8566,7 +8640,7 @@ category: knowledge\r
 types: [language]\r
 language: kannada\r
 effect: "This character can read and write the Kannada language."\r
-`,Bx=`id: kannada\r
+`,Gx=`id: kannada\r
 name: "Kannada (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8576,7 +8650,7 @@ category: knowledge\r
 types: [language]\r
 language: kannada\r
 effect: "This character is conversational in the Kannada language and can speak it."\r
-`,Vx=`id: karsef\r
+`,Kx=`id: karsef\r
 name: Karsef\r
 status: placeholder\r
 plane: isekai\r
@@ -8586,7 +8660,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Kingdom of Karsef and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
-`,Hx=`id: kashgar-mindworks\r
+`,qx=`id: kashgar-mindworks\r
 name: "Kashgar Mindworks"\r
 status: placeholder\r
 plane: earth\r
@@ -8597,7 +8671,7 @@ lore: kashgar-mindworks\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Kashgar Mindworks and can be assumed to be familiar with its businesses, locations, employees, culture, and leadership."\r
-`,Ux=`id: kashgar\r
+`,Jx=`id: kashgar\r
 name: "Kashgar"\r
 status: placeholder\r
 plane: earth\r
@@ -8609,7 +8683,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark Kashgar and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,Wx=`id: kazakh-written\r
+`,Yx=`id: kazakh-written\r
 name: "Kazakh (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8619,7 +8693,7 @@ category: knowledge\r
 types: [language]\r
 language: kazakh\r
 effect: "This character can read and write the Kazakh language."\r
-`,Gx=`id: kazakh\r
+`,Xx=`id: kazakh\r
 name: "Kazakh (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8629,7 +8703,7 @@ category: knowledge\r
 types: [language]\r
 language: kazakh\r
 effect: "This character is conversational in the Kazakh language and can speak it."\r
-`,Kx=`id: khmer-written\r
+`,Zx=`id: khmer-written\r
 name: "Khmer (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8639,7 +8713,7 @@ category: knowledge\r
 types: [language]\r
 language: khmer\r
 effect: "This character can read and write the Khmer language."\r
-`,qx=`id: khmer\r
+`,Qx=`id: khmer\r
 name: "Khmer (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8649,7 +8723,7 @@ category: knowledge\r
 types: [language]\r
 language: khmer\r
 effect: "This character is conversational in the Khmer language and can speak it."\r
-`,Jx=`id: kinyarwanda-written\r
+`,$x=`id: kinyarwanda-written\r
 name: "Kinyarwanda (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8659,7 +8733,7 @@ category: knowledge\r
 types: [language]\r
 language: kinyarwanda\r
 effect: "This character can read and write the Kinyarwanda language."\r
-`,Yx=`id: kinyarwanda\r
+`,eS=`id: kinyarwanda\r
 name: "Kinyarwanda (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8669,7 +8743,7 @@ category: knowledge\r
 types: [language]\r
 language: kinyarwanda\r
 effect: "This character is conversational in the Kinyarwanda language and can speak it."\r
-`,Xx=`id: korean-written\r
+`,tS=`id: korean-written\r
 name: "Korean (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8679,7 +8753,7 @@ category: knowledge\r
 types: [language]\r
 language: korean\r
 effect: "This character can read and write the Korean language."\r
-`,Zx=`id: korean\r
+`,nS=`id: korean\r
 name: "Korean (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8689,7 +8763,7 @@ category: knowledge\r
 types: [language]\r
 language: korean\r
 effect: "This character is conversational in the Korean language and can speak it."\r
-`,Qx=`id: kyrgyz-written\r
+`,rS=`id: kyrgyz-written\r
 name: "Kyrgyz (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8699,7 +8773,7 @@ category: knowledge\r
 types: [language]\r
 language: kyrgyz\r
 effect: "This character can read and write the Kyrgyz language."\r
-`,$x=`id: kyrgyz\r
+`,iS=`id: kyrgyz\r
 name: "Kyrgyz (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8709,7 +8783,7 @@ category: knowledge\r
 types: [language]\r
 language: kyrgyz\r
 effect: "This character is conversational in the Kyrgyz language and can speak it."\r
-`,eS=`id: lao-written\r
+`,aS=`id: lao-written\r
 name: "Lao (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8719,7 +8793,7 @@ category: knowledge\r
 types: [language]\r
 language: lao\r
 effect: "This character can read and write the Lao language."\r
-`,tS=`id: lao\r
+`,oS=`id: lao\r
 name: "Lao (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8729,7 +8803,7 @@ category: knowledge\r
 types: [language]\r
 language: lao\r
 effect: "This character is conversational in the Lao language and can speak it."\r
-`,nS=`id: law-enforcement\r
+`,sS=`id: law-enforcement\r
 name: "Law Enforcement"\r
 status: draft\r
 plane: any\r
@@ -8739,7 +8813,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of law enforcement and can be assumed to be familiar with police and guard procedures, how evidence is handled, and how arrests and investigations proceed."\r
-`,rS=`id: lingala-written\r
+`,cS=`id: lingala-written\r
 name: "Lingala (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8749,7 +8823,7 @@ category: knowledge\r
 types: [language]\r
 language: lingala\r
 effect: "This character can read and write the Lingala language."\r
-`,iS=`id: lingala\r
+`,lS=`id: lingala\r
 name: "Lingala (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8759,7 +8833,7 @@ category: knowledge\r
 types: [language]\r
 language: lingala\r
 effect: "This character is conversational in the Lingala language and can speak it."\r
-`,aS=`id: liquid-democracy\r
+`,uS=`id: liquid-democracy\r
 name: "Liquid Democracy"\r
 status: placeholder\r
 plane: earth\r
@@ -8771,7 +8845,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Tetra’s Liquid Democracy and can be assumed to be familiar with its delegated votes, ward representatives, and the Council of 11."\r
-`,oS=`id: literature\r
+`,dS=`id: literature\r
 name: "Literature"\r
 status: draft\r
 plane: any\r
@@ -8781,7 +8855,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of literature and can be assumed to be familiar with famous works, authors, forms and the ideas they made popular."\r
-`,sS=`id: local-folklore\r
+`,fS=`id: local-folklore\r
 name: Local Folklore\r
 status: placeholder\r
 plane: any\r
@@ -8796,7 +8870,7 @@ choices:\r
     from: place\r
     note: "Which region's folklore"\r
     perRank: false\r
-`,cS=`id: local-history
+`,pS=`id: local-history
 name: "Local History"
 status: draft
 plane: any
@@ -8806,7 +8880,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of the history of a specific local region and can be assumed to be familiar with local facts like names, locations, and occurrences."
-`,lS=`id: logistics\r
+`,mS=`id: logistics\r
 name: "Logistics"\r
 status: draft\r
 plane: any\r
@@ -8816,7 +8890,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of logistics and can be assumed to be familiar with how supplies, people and equipment are moved, stored and accounted for."\r
-`,uS=`id: magic-on-isekai\r
+`,hS=`id: magic-on-isekai\r
 name: Magic on Isekai\r
 status: placeholder\r
 plane: isekai\r
@@ -8828,7 +8902,7 @@ category: knowledge\r
 list: magic\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of the magic on Isekai and can be assumed to be familiar with the philosophies, cultures, methods, and laws related to its practice."\r
-`,dS=`id: magical-artifacts\r
+`,gS=`id: magical-artifacts\r
 name: "Magical Artifacts"\r
 status: draft\r
 plane: isekai\r
@@ -8840,7 +8914,7 @@ minStats: { memory: 3, intuition: 2 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character has knowledge of magical artifacts and can be assumed to be familiar with famous relics, common enchanted items and the dangers of handling them."\r
-`,fS=`id: malay-written\r
+`,_S=`id: malay-written\r
 name: "Malay (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8850,7 +8924,7 @@ category: knowledge\r
 types: [language]\r
 language: malay\r
 effect: "This character can read and write the Malay language."\r
-`,pS=`id: malay\r
+`,vS=`id: malay\r
 name: "Malay (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8860,7 +8934,7 @@ category: knowledge\r
 types: [language]\r
 language: malay\r
 effect: "This character is conversational in the Malay language and can speak it."\r
-`,mS=`id: malayalam-written\r
+`,yS=`id: malayalam-written\r
 name: "Malayalam (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8870,7 +8944,7 @@ category: knowledge\r
 types: [language]\r
 language: malayalam\r
 effect: "This character can read and write the Malayalam language."\r
-`,hS=`id: malayalam\r
+`,bS=`id: malayalam\r
 name: "Malayalam (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8880,7 +8954,7 @@ category: knowledge\r
 types: [language]\r
 language: malayalam\r
 effect: "This character is conversational in the Malayalam language and can speak it."\r
-`,gS=`id: mandarin-written\r
+`,xS=`id: mandarin-written\r
 name: "Mandarin (Written)"\r
 status: placeholder\r
 plane: earth\r
@@ -8890,7 +8964,7 @@ category: knowledge\r
 types: [language]\r
 language: mandarin\r
 effect: This character can read and write the Mandarin language.\r
-`,_S=`id: mandarin\r
+`,SS=`id: mandarin\r
 name: "Mandarin (Spoken)"\r
 status: placeholder\r
 plane: earth\r
@@ -8900,7 +8974,7 @@ category: knowledge\r
 types: [language]\r
 language: mandarin\r
 effect: This character is conversational in the Mandarin language and can speak it.\r
-`,vS=`id: marathi-written\r
+`,CS=`id: marathi-written\r
 name: "Marathi (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8910,7 +8984,7 @@ category: knowledge\r
 types: [language]\r
 language: marathi\r
 effect: "This character can read and write the Marathi language."\r
-`,yS=`id: marathi\r
+`,wS=`id: marathi\r
 name: "Marathi (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8920,7 +8994,7 @@ category: knowledge\r
 types: [language]\r
 language: marathi\r
 effect: "This character is conversational in the Marathi language and can speak it."\r
-`,bS=`id: martial-arts\r
+`,TS=`id: martial-arts\r
 name: "Martial Arts"\r
 status: draft\r
 plane: any\r
@@ -8930,7 +9004,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of martial arts and can be assumed to be familiar with the major fighting styles, their techniques and the schools that teach them."\r
-`,xS=`id: mathematics\r
+`,ES=`id: mathematics\r
 name: "Mathematics"\r
 status: placeholder\r
 plane: any\r
@@ -8940,7 +9014,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of mathematics and can be assumed to be familiar with mathematical fields of study."\r
-`,SS=`id: medicine\r
+`,DS=`id: medicine\r
 name: "Medicine"\r
 status: draft\r
 plane: any\r
@@ -8950,7 +9024,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 4, logic: 3 }\r
 effect: "This character has knowledge of medicine and can be assumed to be familiar with anatomy, common illnesses and injuries, and how they are treated."\r
-`,CS=`id: metallurgy\r
+`,OS=`id: metallurgy\r
 name: "Metallurgy"\r
 status: draft\r
 plane: any\r
@@ -8960,7 +9034,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of metallurgy and can be assumed to be familiar with common metals and alloys and how they are smelted, worked and tempered."\r
-`,wS=`id: military-tactics\r
+`,kS=`id: military-tactics\r
 name: "Military Tactics"\r
 status: draft\r
 plane: any\r
@@ -8970,7 +9044,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of military tactics and can be assumed to be familiar with formations, maneuvers, chains of command and how battles are fought."\r
-`,TS=`id: mongolian-written\r
+`,AS=`id: mongolian-written\r
 name: "Mongolian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -8980,7 +9054,7 @@ category: knowledge\r
 types: [language]\r
 language: mongolian\r
 effect: "This character can read and write the Mongolian language."\r
-`,ES=`id: mongolian\r
+`,jS=`id: mongolian\r
 name: "Mongolian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -8990,7 +9064,7 @@ category: knowledge\r
 types: [language]\r
 language: mongolian\r
 effect: "This character is conversational in the Mongolian language and can speak it."\r
-`,DS=`id: monsters-of-isekai\r
+`,MS=`id: monsters-of-isekai\r
 name: Monsters of Isekai\r
 status: placeholder\r
 plane: isekai\r
@@ -9000,7 +9074,7 @@ lore: isekai-monsters\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the known monsters of Isekai and can be assumed to be familiar with their names, territories, the goods that they can provide, and their strengths and weaknesses."\r
-`,OS=`id: mountaineering\r
+`,NS=`id: mountaineering\r
 name: Mountaineering\r
 status: placeholder\r
 plane: any\r
@@ -9010,7 +9084,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, endurance: 2 }\r
 effect: "This character has knowledge of mountaineering and can be assumed to be familiar with the preparation, dangers, and survival craft involved in trekking mountains."\r
-`,kS=`id: music\r
+`,PS=`id: music\r
 name: "Music"\r
 status: draft\r
 plane: any\r
@@ -9020,7 +9094,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, intuition: 2 }\r
 effect: "This character has knowledge of music and can be assumed to be familiar with musical theory, well-known pieces and the traditions they come from."\r
-`,AS=`id: navigation\r
+`,FS=`id: navigation\r
 name: "Navigation"\r
 status: draft\r
 plane: any\r
@@ -9035,7 +9109,7 @@ choices:\r
     perRank: false\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character has knowledge of navigation and can be assumed to be familiar with reading maps, charts, stars and instruments, and plotting a course."\r
-`,jS=`id: nepali-written\r
+`,IS=`id: nepali-written\r
 name: "Nepali (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9045,7 +9119,7 @@ category: knowledge\r
 types: [language]\r
 language: nepali\r
 effect: "This character can read and write the Nepali language."\r
-`,MS=`id: nepali\r
+`,LS=`id: nepali\r
 name: "Nepali (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9055,7 +9129,7 @@ category: knowledge\r
 types: [language]\r
 language: nepali\r
 effect: "This character is conversational in the Nepali language and can speak it."\r
-`,NS=`id: new-columbia\r
+`,RS=`id: new-columbia\r
 name: "New Columbia"\r
 status: placeholder\r
 plane: earth\r
@@ -9066,7 +9140,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of New Columbia and can be assumed to be familiar with the peoples, places, and customs of the American Empire’s colony on Luna."\r
-`,PS=`id: new-persia\r
+`,zS=`id: new-persia\r
 name: "New Persia"\r
 status: placeholder\r
 plane: earth\r
@@ -9078,7 +9152,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of New Persia and can be assumed to be familiar with the peoples, places, and customs of the SDU’s planar territory on Pairidaeza."\r
-`,FS=`id: noble-houses-of-dreft\r
+`,BS=`id: noble-houses-of-dreft\r
 name: Noble Houses of Dreft\r
 status: placeholder\r
 plane: isekai\r
@@ -9088,7 +9162,7 @@ tags: [nobility, politics, houses]\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the noble houses of Dreft and can be assumed to be familiar with their histories and feuds."\r
-`,IS=`id: odia-written\r
+`,VS=`id: odia-written\r
 name: "Odia (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9098,7 +9172,7 @@ category: knowledge\r
 types: [language]\r
 language: odia\r
 effect: "This character can read and write the Odia language."\r
-`,LS=`id: odia\r
+`,HS=`id: odia\r
 name: "Odia (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9108,7 +9182,7 @@ category: knowledge\r
 types: [language]\r
 language: odia\r
 effect: "This character is conversational in the Odia language and can speak it."\r
-`,RS=`id: orc-society
+`,US=`id: orc-society
 name: "Orc Society"
 status: draft
 plane: isekai
@@ -9118,7 +9192,7 @@ category: knowledge
 ranked: true
 minStats: { memory: 3 }
 effect: "This character has knowledge of orc customs and can be assumed to be familiar with the institutions and traditions of Orc societies."
-`,zS=`id: oromo-written\r
+`,WS=`id: oromo-written\r
 name: "Oromo (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9128,7 +9202,7 @@ category: knowledge\r
 types: [language]\r
 language: oromo\r
 effect: "This character can read and write the Oromo language."\r
-`,BS=`id: oromo\r
+`,GS=`id: oromo\r
 name: "Oromo (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9138,7 +9212,7 @@ category: knowledge\r
 types: [language]\r
 language: oromo\r
 effect: "This character is conversational in the Oromo language and can speak it."\r
-`,VS=`id: paraarcheology\r
+`,KS=`id: paraarcheology\r
 name: "Paraarcheology"\r
 status: placeholder\r
 plane: earth\r
@@ -9148,7 +9222,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of paraarcheology and can be assumed to be familiar with the skills, places, histories, and planar details associated with the study of archeology on other planes."\r
-`,HS=`id: parabiology\r
+`,qS=`id: parabiology\r
 name: "Parabiology"\r
 status: placeholder\r
 plane: earth\r
@@ -9158,7 +9232,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2, empathy: 2 }\r
 effect: "This character has knowledge of parabiology and can be assumed to be familiar with the living organisms of other planes, and their vital processes, structures, functions, and growth."\r
-`,US=`id: paraflora\r
+`,JS=`id: paraflora\r
 name: "Paraflora"\r
 status: placeholder\r
 plane: earth\r
@@ -9168,7 +9242,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2, empathy: 2 }\r
 effect: "This character has knowledge of paraflora and can be assumed to be familiar with extraplanar plants, including their ecologies, growth patterns, and the rough paraphysical concepts by which they may operate."\r
-`,WS=`id: paraphysics\r
+`,YS=`id: paraphysics\r
 name: "Paraphysics"\r
 status: placeholder\r
 plane: earth\r
@@ -9178,7 +9252,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2, intuition: 2 }\r
 effect: "This character has knowledge of paraphysics and can be assumed to be familiar with paraphysical concepts, paraphysical effects, and axiomatic sciences."\r
-`,GS=`id: parasapient-medicine\r
+`,XS=`id: parasapient-medicine\r
 name: "Parasapient Medicine"\r
 status: draft\r
 plane: earth\r
@@ -9188,7 +9262,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3, empathy: 2 }\r
 effect: "This character has knowledge of parasapient medicine and can be assumed to be familiar with the anatomy and common ailments of the parasapient peoples known to the settled systems, and how to treat them."\r
-`,KS=`id: parasapients\r
+`,ZS=`id: parasapients\r
 name: "Parasapients"\r
 status: placeholder\r
 plane: earth\r
@@ -9198,7 +9272,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 3 }\r
 effect: "This character has knowledge of parasapients and can be assumed to be familiar with extraplanar sapients, including their cultures, diplomatic relations, and the rough paraphysical concepts by which they may operate."\r
-`,qS=`id: parazoology\r
+`,QS=`id: parazoology\r
 name: "Parazoology"\r
 status: placeholder\r
 plane: earth\r
@@ -9208,7 +9282,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2, intuition: 2 }\r
 effect: "This character has knowledge of parazoology and can be assumed to be familiar with extraplanar creatures, including their habitats, needs, and the rough paraphysical concepts by which they may operate."\r
-`,JS=`id: pataliputra\r
+`,$S=`id: pataliputra\r
 name: "Pataliputra"\r
 status: draft\r
 plane: earth\r
@@ -9220,7 +9294,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Pataliputra and can be assumed to be familiar with the peoples, places, and customs of India’s planar capital."\r
-`,YS=`id: pathology\r
+`,eC=`id: pathology\r
 name: "Pathology"\r
 status: draft\r
 plane: any\r
@@ -9230,7 +9304,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3, intuition: 2 }\r
 effect: "This character has knowledge of pathology and can be assumed to be familiar with common diseases, how they spread and present, and how outbreaks are contained."\r
-`,XS=`id: persian-written\r
+`,tC=`id: persian-written\r
 name: "Persian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9240,7 +9314,7 @@ category: knowledge\r
 types: [language]\r
 language: persian\r
 effect: "This character can read and write the Persian language."\r
-`,ZS=`id: persian\r
+`,nC=`id: persian\r
 name: "Persian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9250,7 +9324,7 @@ category: knowledge\r
 types: [language]\r
 language: persian\r
 effect: "This character is conversational in the Persian language and can speak it."\r
-`,QS=`id: pharmacology\r
+`,rC=`id: pharmacology\r
 name: "Pharmacology"\r
 status: draft\r
 plane: any\r
@@ -9260,7 +9334,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of pharmacology and can be assumed to be familiar with common drugs and remedies, their doses, side effects and interactions."\r
-`,$S=`id: physical-training\r
+`,iC=`id: physical-training\r
 name: "Physical Training"\r
 status: draft\r
 plane: any\r
@@ -9270,7 +9344,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, endurance: 2 }\r
 effect: "This character has knowledge of physical training and can be assumed to be familiar with exercise, conditioning, nutrition and recovery."\r
-`,eC=`id: physics\r
+`,aC=`id: physics\r
 name: "Physics"\r
 status: draft\r
 plane: any\r
@@ -9280,7 +9354,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of physics and can be assumed to be familiar with motion, energy, forces, light and matter, and the math that describes them."\r
-`,tC=`id: planar-exploration\r
+`,oC=`id: planar-exploration\r
 name: "Planar Exploration"\r
 status: placeholder\r
 plane: earth\r
@@ -9291,7 +9365,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2, intuition: 2 }\r
 effect: "This character has knowledge of planar exploration and can be assumed to be familiar with the regulations, laws, dangers, and methods involved."\r
-`,nC=`id: polish-written\r
+`,sC=`id: polish-written\r
 name: "Polish (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9301,7 +9375,7 @@ category: knowledge\r
 types: [language]\r
 language: polish\r
 effect: "This character can read and write the Polish language."\r
-`,rC=`id: polish\r
+`,cC=`id: polish\r
 name: "Polish (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9311,7 +9385,7 @@ category: knowledge\r
 types: [language]\r
 language: polish\r
 effect: "This character is conversational in the Polish language and can speak it."\r
-`,iC=`id: politics\r
+`,lC=`id: politics\r
 name: "Politics"\r
 status: draft\r
 plane: any\r
@@ -9321,7 +9395,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character has knowledge of politics and can be assumed to be familiar with how power is won, held and traded, and the factions and figures that matter."\r
-`,aC=`id: port-herminst\r
+`,uC=`id: port-herminst\r
 name: Port Herminst\r
 status: placeholder\r
 plane: isekai\r
@@ -9333,7 +9407,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Port Herminst and can be assumed to be familiar with the peoples, places, and customs of Dreft’s capital."\r
-`,oC=`id: ports-and-stations\r
+`,dC=`id: ports-and-stations\r
 name: "Ports and Stations"\r
 status: placeholder\r
 plane: earth\r
@@ -9343,7 +9417,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the ports and stations of the settled systems and can be assumed to be familiar with the customs, regulations, industries, ships, and docks involved in trade."\r
-`,sC=`id: portuguese-written\r
+`,fC=`id: portuguese-written\r
 name: "Portuguese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9353,7 +9427,7 @@ category: knowledge\r
 types: [language]\r
 language: portuguese\r
 effect: "This character can read and write the Portuguese language."\r
-`,cC=`id: portuguese\r
+`,pC=`id: portuguese\r
 name: "Portuguese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9363,7 +9437,7 @@ category: knowledge\r
 types: [language]\r
 language: portuguese\r
 effect: "This character is conversational in the Portuguese language and can speak it."\r
-`,lC=`id: psychology\r
+`,mC=`id: psychology\r
 name: "Psychology"\r
 status: draft\r
 plane: any\r
@@ -9373,7 +9447,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 3 }\r
 effect: "This character has knowledge of psychology and can be assumed to be familiar with how minds work, common mental illnesses, and the treatment of trauma and stress."\r
-`,uC=`id: punjabi-written\r
+`,hC=`id: punjabi-written\r
 name: "Punjabi (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9383,7 +9457,7 @@ category: knowledge\r
 types: [language]\r
 language: punjabi\r
 effect: "This character can read and write the Punjabi language."\r
-`,dC=`id: punjabi\r
+`,gC=`id: punjabi\r
 name: "Punjabi (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9393,7 +9467,7 @@ category: knowledge\r
 types: [language]\r
 language: punjabi\r
 effect: "This character is conversational in the Punjabi language and can speak it."\r
-`,fC=`id: religions-of-isekai\r
+`,_C=`id: religions-of-isekai\r
 name: "Religions of Isekai"\r
 status: draft\r
 plane: isekai\r
@@ -9403,7 +9477,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 2 }\r
 effect: "This character has knowledge of the religions of Isekai and can be assumed to be familiar with the faiths, temples, holy days and rites of Isekai's peoples."\r
-`,pC=`id: religions-of-the-settled-systems\r
+`,vC=`id: religions-of-the-settled-systems\r
 name: "Religions of the Settled Systems"\r
 status: draft\r
 plane: earth\r
@@ -9413,7 +9487,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, empathy: 2 }\r
 effect: "This character has knowledge of the religions of the Settled Systems and can be assumed to be familiar with the major faiths of Earth and its colonies, their beliefs and their rites."\r
-`,mC=`id: rhetoric\r
+`,yC=`id: rhetoric\r
 name: "Rhetoric"\r
 status: draft\r
 plane: any\r
@@ -9423,7 +9497,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, persuasion: 2 }\r
 effect: "This character has knowledge of rhetoric and can be assumed to be familiar with the structures, techniques and famous examples of persuasive speech."\r
-`,hC=`id: robotics\r
+`,bC=`id: robotics\r
 name: "Robotics"\r
 status: placeholder\r
 plane: earth\r
@@ -9433,7 +9507,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of robotics and can be assumed to be familiar with the technologies, businesses, and laws pertaining to it."\r
-`,gC=`id: romanian-written\r
+`,xC=`id: romanian-written\r
 name: "Romanian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9443,7 +9517,7 @@ category: knowledge\r
 types: [language]\r
 language: romanian\r
 effect: "This character can read and write the Romanian language."\r
-`,_C=`id: romanian\r
+`,SC=`id: romanian\r
 name: "Romanian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9453,7 +9527,7 @@ category: knowledge\r
 types: [language]\r
 language: romanian\r
 effect: "This character is conversational in the Romanian language and can speak it."\r
-`,vC=`id: runecraft\r
+`,CC=`id: runecraft\r
 name: "Runecraft"\r
 status: draft\r
 plane: isekai\r
@@ -9465,7 +9539,7 @@ minStats: { memory: 4, intuition: 2 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character has knowledge of runecraft and can be assumed to be familiar with the common runes of power, their meanings and their effects."\r
-`,yC=`id: russian-written\r
+`,wC=`id: russian-written\r
 name: "Russian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9475,7 +9549,7 @@ category: knowledge\r
 types: [language]\r
 language: russian\r
 effect: "This character can read and write the Russian language."\r
-`,bC=`id: russian\r
+`,TC=`id: russian\r
 name: "Russian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9485,7 +9559,7 @@ category: knowledge\r
 types: [language]\r
 language: russian\r
 effect: "This character is conversational in the Russian language and can speak it."\r
-`,xC=`id: sdu-law\r
+`,EC=`id: sdu-law\r
 name: "Stellar Democratic Union Law"\r
 status: placeholder\r
 plane: earth\r
@@ -9497,7 +9571,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Stellar Democratic Union law and can be assumed to be familiar with the laws and courts of the Stellar Democratic Union."\r
-`,SC=`id: seafaring\r
+`,DC=`id: seafaring\r
 name: Seafaring\r
 status: placeholder\r
 plane: any\r
@@ -9512,7 +9586,7 @@ choices:\r
     from: place\r
     note: "Which seas"\r
     perRank: false\r
-`,CC=`id: security-systems\r
+`,OC=`id: security-systems\r
 name: "Security Systems"\r
 status: draft\r
 plane: earth\r
@@ -9522,7 +9596,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of security systems and can be assumed to be familiar with common locks, alarms, surveillance and access controls, and their weaknesses."\r
-`,wC=`id: shipbreaking\r
+`,kC=`id: shipbreaking\r
 name: "Shipbreaking"\r
 status: draft\r
 plane: earth\r
@@ -9532,7 +9606,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of shipbreaking and can be assumed to be familiar with how voidships are taken apart, which parts are worth saving and which are dangerous."\r
-`,TC=`id: shipping-lanes\r
+`,AC=`id: shipping-lanes\r
 name: "Shipping Lanes"\r
 status: placeholder\r
 plane: earth\r
@@ -9542,7 +9616,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the shipping lanes between stations, ships, and surfaces and can be assumed to be familiar with their routes, schedules, and checkpoints."\r
-`,EC=`id: sinhala-written\r
+`,jC=`id: sinhala-written\r
 name: "Sinhala (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9552,7 +9626,7 @@ category: knowledge\r
 types: [language]\r
 language: sinhala\r
 effect: "This character can read and write the Sinhala language."\r
-`,DC=`id: sinhala\r
+`,MC=`id: sinhala\r
 name: "Sinhala (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9562,7 +9636,7 @@ category: knowledge\r
 types: [language]\r
 language: sinhala\r
 effect: "This character is conversational in the Sinhala language and can speak it."\r
-`,OC=`id: somali-written\r
+`,NC=`id: somali-written\r
 name: "Somali (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9572,7 +9646,7 @@ category: knowledge\r
 types: [language]\r
 language: somali\r
 effect: "This character can read and write the Somali language."\r
-`,kC=`id: somali\r
+`,PC=`id: somali\r
 name: "Somali (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9582,7 +9656,7 @@ category: knowledge\r
 types: [language]\r
 language: somali\r
 effect: "This character is conversational in the Somali language and can speak it."\r
-`,AC=`# Lore for Sorellion is still coming soon on the site.\r
+`,FC=`# Lore for Sorellion is still coming soon on the site.\r
 id: sorellion\r
 name: "Sorellion"\r
 status: draft\r
@@ -9593,7 +9667,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Kingdom of Sorellion and can be assumed to be familiar with its people, places and customs."\r
-`,jC=`id: spacefaring\r
+`,IC=`id: spacefaring\r
 name: "Spacefaring"\r
 status: draft\r
 plane: earth\r
@@ -9603,7 +9677,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of spacefaring and can be assumed to be familiar with life in vacuum and zero gravity, airlocks, suits, life support, and what to do when they fail."\r
-`,MC=`id: spanish-written\r
+`,LC=`id: spanish-written\r
 name: "Spanish (Written)"\r
 status: placeholder\r
 plane: earth\r
@@ -9613,7 +9687,7 @@ category: knowledge\r
 types: [language]\r
 language: spanish\r
 effect: This character can read and write the Spanish language.\r
-`,NC=`id: spanish\r
+`,RC=`id: spanish\r
 name: "Spanish (Spoken)"\r
 status: placeholder\r
 plane: earth\r
@@ -9623,7 +9697,7 @@ category: knowledge\r
 types: [language]\r
 language: spanish\r
 effect: This character is conversational in the Spanish language and can speak it.\r
-`,PC=`id: spirits-and-the-dead\r
+`,zC=`id: spirits-and-the-dead\r
 name: "Spirits and the Dead"\r
 status: draft\r
 plane: any\r
@@ -9633,7 +9707,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character has knowledge of spirits and the dead and can be assumed to be familiar with the kinds of spirits, the signs of hauntings and possession, and the traditional ways of dealing with them."\r
-`,FC=`id: starships\r
+`,BC=`id: starships\r
 name: "Starships"\r
 status: draft\r
 plane: earth\r
@@ -9643,7 +9717,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 2 }\r
 effect: "This character has knowledge of starships and can be assumed to be familiar with the classes, makers, capabilities and common faults of the starships of the settled systems."\r
-`,IC=`id: succession-law\r
+`,VC=`id: succession-law\r
 name: Succession Law\r
 status: placeholder\r
 plane: isekai\r
@@ -9653,7 +9727,7 @@ tags: [law, succession, nobility]\r
 category: knowledge\r
 minStats: { memory: 6, persuasion: 2 }\r
 effect: "This character has knowledge of succession law and can be assumed to be familiar with who inherits what in Dreft and who has a claim to the crown."\r
-`,LC=`id: swahili-written\r
+`,HC=`id: swahili-written\r
 name: "Swahili (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9663,7 +9737,7 @@ category: knowledge\r
 types: [language]\r
 language: swahili\r
 effect: "This character can read and write the Swahili language."\r
-`,RC=`id: swahili\r
+`,UC=`id: swahili\r
 name: "Swahili (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9673,7 +9747,7 @@ category: knowledge\r
 types: [language]\r
 language: swahili\r
 effect: "This character is conversational in the Swahili language and can speak it."\r
-`,zC=`id: switch-gates\r
+`,WC=`id: switch-gates\r
 name: "Switch Gates"\r
 status: draft\r
 plane: earth\r
@@ -9683,7 +9757,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of switch gates and can be assumed to be familiar with how gates are attuned, operated and kept stable."\r
-`,BC=`id: tamil-written\r
+`,GC=`id: tamil-written\r
 name: "Tamil (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9693,7 +9767,7 @@ category: knowledge\r
 types: [language]\r
 language: tamil\r
 effect: "This character can read and write the Tamil language."\r
-`,VC=`id: tamil\r
+`,KC=`id: tamil\r
 name: "Tamil (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9703,7 +9777,7 @@ category: knowledge\r
 types: [language]\r
 language: tamil\r
 effect: "This character is conversational in the Tamil language and can speak it."\r
-`,HC=`id: telugu-written\r
+`,qC=`id: telugu-written\r
 name: "Telugu (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9713,7 +9787,7 @@ category: knowledge\r
 types: [language]\r
 language: telugu\r
 effect: "This character can read and write the Telugu language."\r
-`,UC=`id: telugu\r
+`,JC=`id: telugu\r
 name: "Telugu (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9723,7 +9797,7 @@ category: knowledge\r
 types: [language]\r
 language: telugu\r
 effect: "This character is conversational in the Telugu language and can speak it."\r
-`,WC=`id: tetra-frontiers-co\r
+`,YC=`id: tetra-frontiers-co\r
 name: Tetra Frontiers Co.\r
 status: placeholder\r
 plane: isekai\r
@@ -9734,7 +9808,7 @@ lore: tetra-frontiers-co\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Tetra Frontiers Co. and can be assumed to be familiar with its holdings, locations, employees, culture, and leadership."\r
-`,GC=`id: tetra\r
+`,XC=`id: tetra\r
 name: "Tetra"\r
 status: placeholder\r
 plane: earth\r
@@ -9746,7 +9820,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark Tetra and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,KC=`id: thai-written\r
+`,ZC=`id: thai-written\r
 name: "Thai (Written)"\r
 status: draft\r
 plane: earth\r
@@ -9756,7 +9830,7 @@ category: knowledge\r
 types: [language]\r
 language: thai\r
 effect: "This character can read and write the Thai language."\r
-`,qC=`id: thai\r
+`,QC=`id: thai\r
 name: "Thai (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -9766,7 +9840,7 @@ category: knowledge\r
 types: [language]\r
 language: thai\r
 effect: "This character is conversational in the Thai language and can speak it."\r
-`,JC=`id: the-bureau-of-planar-management\r
+`,$C=`id: the-bureau-of-planar-management\r
 name: "The Bureau of Planar Management"\r
 status: draft\r
 plane: earth\r
@@ -9776,7 +9850,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Bureau of Planar Management and can be assumed to be familiar with its regulations, inspections, offices and officers."\r
-`,YC=`id: the-chinese-empire\r
+`,ew=`id: the-chinese-empire\r
 name: "The Empire of China"\r
 status: placeholder\r
 plane: earth\r
@@ -9788,7 +9862,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Empire of China and can be assumed to be familiar with its customs, politics, and territories."\r
-`,XC=`id: the-corporate-syndicates\r
+`,tw=`id: the-corporate-syndicates\r
 name: "The Corporate Syndicates"\r
 status: placeholder\r
 plane: earth\r
@@ -9799,7 +9873,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Chinese corporate syndicates and can be assumed to be familiar with their people, ties, and industries."\r
-`,ZC=`id: the-corsine-pass\r
+`,nw=`id: the-corsine-pass\r
 name: The Corsine Pass\r
 status: placeholder\r
 plane: isekai\r
@@ -9810,7 +9884,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, endurance: 2 }\r
 effect: "This character has knowledge of the Corsine Pass on Isekai and can be assumed to be familiar with its passes, peoples, and dangers."\r
-`,QC=`id: the-diplomatic-wing\r
+`,rw=`id: the-diplomatic-wing\r
 name: "The Diplomatic Wing"\r
 status: placeholder\r
 plane: earth\r
@@ -9822,7 +9896,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Tetra’s Diplomatic Wing and can be assumed to be familiar with its diplomats, embassies, businesses, and security."\r
-`,$C=`id: the-drovus-empire\r
+`,iw=`id: the-drovus-empire\r
 name: The Drovus Empire\r
 status: placeholder\r
 plane: isekai\r
@@ -9832,7 +9906,7 @@ lore: drovus-empire\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Drovus Empire and can be assumed to be familiar with its politics, regions, wildlife, and cultures."\r
-`,ew=`id: the-explorers-lodge\r
+`,aw=`id: the-explorers-lodge\r
 name: "The Explorers’ Lodge"\r
 status: placeholder\r
 plane: earth\r
@@ -9844,7 +9918,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Explorers’ Lodge and can be assumed to be familiar with its members, its rules, and how expeditions are handed out."\r
-`,tw=`id: the-free-american-states\r
+`,ow=`id: the-free-american-states\r
 name: "The Free American States"\r
 status: draft\r
 plane: earth\r
@@ -9854,7 +9928,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Free American States and can be assumed to be familiar with its member states, its trade and its border disputes."\r
-`,nw=`id: the-imperial-military\r
+`,sw=`id: the-imperial-military\r
 name: "The Imperial Military"\r
 status: placeholder\r
 plane: earth\r
@@ -9865,7 +9939,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Imperial Military and can be assumed to be familiar with its branches, ranks, bases, and habits."\r
-`,rw=`id: the-kingdom-of-india\r
+`,cw=`id: the-kingdom-of-india\r
 name: "The Kingdom of India"\r
 status: draft\r
 plane: earth\r
@@ -9877,7 +9951,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Kingdom of India and can be assumed to be familiar with its customs, politics, and territories."\r
-`,iw=`id: the-kings-woods\r
+`,lw=`id: the-kings-woods\r
 name: The King’s Woods\r
 status: placeholder\r
 plane: isekai\r
@@ -9889,7 +9963,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the King’s Woods and can be assumed to be familiar with its geography, ecology, and locations."\r
-`,aw=`id: the-lunar-industrial-syndicate\r
+`,uw=`id: the-lunar-industrial-syndicate\r
 name: "The Lunar Industrial Syndicate"\r
 status: draft\r
 plane: earth\r
@@ -9899,7 +9973,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Lunar Industrial Syndicate and can be assumed to be familiar with its board, holdings, territories and corporate politics."\r
-`,ow=`id: the-martian-association\r
+`,dw=`id: the-martian-association\r
 name: "The Martian Association"\r
 status: placeholder\r
 plane: earth\r
@@ -9910,7 +9984,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Martian Association and can be assumed to be familiar with the peoples, places, and customs of the SDU’s territory on Mars."\r
-`,sw=`id: the-stellar-democratic-union\r
+`,fw=`id: the-stellar-democratic-union\r
 name: "The Stellar Democratic Union"\r
 status: placeholder\r
 plane: earth\r
@@ -9922,7 +9996,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Stellar Democratic Union and can be assumed to be familiar with its customs, politics, and territories."\r
-`,cw=`id: the-sunrise-princedoms\r
+`,pw=`id: the-sunrise-princedoms\r
 name: The Sunrise Princedoms\r
 status: placeholder\r
 plane: isekai\r
@@ -9931,7 +10005,7 @@ tags: [sunrise, princedoms, refugee]\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Sunrise Princedoms and can be assumed to be familiar with their politics, regions, wildlife, and cultures as they were before Drovus absorbed them."\r
-`,lw=`id: the-switch-port\r
+`,mw=`id: the-switch-port\r
 name: The Switch Port\r
 status: placeholder\r
 plane: isekai\r
@@ -9943,7 +10017,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the switch port at Castle Tetra and can be assumed to be familiar with its peoples, places, and customs."\r
-`,uw=`id: the-union-of-texas\r
+`,hw=`id: the-union-of-texas\r
 name: "The Union of Texas"\r
 status: placeholder\r
 plane: earth\r
@@ -9953,7 +10027,7 @@ lore: union-of-texas\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Union of Texas and can be assumed to be familiar with its customs, politics, and territories."\r
-`,dw=`id: the-united-nations\r
+`,gw=`id: the-united-nations\r
 name: "The United Nations"\r
 status: placeholder\r
 plane: earth\r
@@ -9964,7 +10038,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the United Nations and can be assumed to be familiar with its institutions aboard Tetra."\r
-`,fw=`id: the-ural-federation\r
+`,_w=`id: the-ural-federation\r
 name: "The Ural Federation"\r
 status: draft\r
 plane: earth\r
@@ -9976,7 +10050,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the Ural Federation and can be assumed to be familiar with its customs, politics, and territories."\r
-`,pw=`id: theater\r
+`,vw=`id: theater\r
 name: "Theater"\r
 status: draft\r
 plane: any\r
@@ -9986,7 +10060,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, persuasion: 2 }\r
 effect: "This character has knowledge of theater and can be assumed to be familiar with famous plays and performers, stagecraft, and how a performance is put together."\r
-`,mw=`id: thieves-cant\r
+`,yw=`id: thieves-cant\r
 name: "Thieves' Cant (Spoken)"\r
 status: draft\r
 plane: any\r
@@ -9996,7 +10070,7 @@ category: knowledge\r
 types: [language]\r
 language: thieves-cant\r
 effect: "This character can speak and understand Thieves' Cant, passing hidden messages in ordinary conversation."\r
-`,hw=`id: toxicology\r
+`,bw=`id: toxicology\r
 name: "Toxicology"\r
 status: draft\r
 plane: any\r
@@ -10006,7 +10080,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character has knowledge of toxicology and can be assumed to be familiar with common poisons and venoms, their symptoms and their antidotes."\r
-`,gw=`id: trade-guilds\r
+`,xw=`id: trade-guilds\r
 name: "Trade Guilds"\r
 status: draft\r
 plane: any\r
@@ -10016,7 +10090,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of trade guilds and can be assumed to be familiar with how craft and trade guilds are organized, their ranks, rules and the masters who run them."\r
-`,_w=`id: trade-law\r
+`,Sw=`id: trade-law\r
 name: Trade Law\r
 status: placeholder\r
 plane: isekai\r
@@ -10026,7 +10100,7 @@ tags: [law, trade, merchant]\r
 category: knowledge\r
 minStats: { memory: 3, persuasion: 2 }\r
 effect: "This character has knowledge of Dreftian trade law and can be assumed to be familiar with the rules of trade in Dreft and their loopholes."\r
-`,vw=`id: trade-roads\r
+`,Cw=`id: trade-roads\r
 name: Trade Roads\r
 status: placeholder\r
 plane: isekai\r
@@ -10036,7 +10110,7 @@ tags: [trade, roads, caravan]\r
 category: knowledge\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of the trade roads of Dreft and can be assumed to be familiar with their routes, products, and dangers."\r
-`,yw=`id: turkish-written\r
+`,ww=`id: turkish-written\r
 name: "Turkish (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10046,7 +10120,7 @@ category: knowledge\r
 types: [language]\r
 language: turkish\r
 effect: "This character can read and write the Turkish language."\r
-`,bw=`id: turkish\r
+`,Tw=`id: turkish\r
 name: "Turkish (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10056,7 +10130,7 @@ category: knowledge\r
 types: [language]\r
 language: turkish\r
 effect: "This character is conversational in the Turkish language and can speak it."\r
-`,xw=`id: ukrainian-written\r
+`,Ew=`id: ukrainian-written\r
 name: "Ukrainian (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10066,7 +10140,7 @@ category: knowledge\r
 types: [language]\r
 language: ukrainian\r
 effect: "This character can read and write the Ukrainian language."\r
-`,Sw=`id: ukrainian\r
+`,Dw=`id: ukrainian\r
 name: "Ukrainian (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10076,7 +10150,7 @@ category: knowledge\r
 types: [language]\r
 language: ukrainian\r
 effect: "This character is conversational in the Ukrainian language and can speak it."\r
-`,Cw=`id: union-politics\r
+`,Ow=`id: union-politics\r
 name: "Union Politics"\r
 status: placeholder\r
 plane: earth\r
@@ -10087,7 +10161,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Union politics and can be assumed to be familiar with the parties, presidents, and member-state rivalries of the SDU."\r
-`,ww=`id: ural-tribal-law\r
+`,kw=`id: ural-tribal-law\r
 name: "Ural Tribal Law"\r
 status: draft\r
 plane: earth\r
@@ -10098,7 +10172,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ural tribal law and can be assumed to be familiar with the customs and laws of the Ural Federation’s statelets."\r
-`,Tw=`id: urdu-written\r
+`,Aw=`id: urdu-written\r
 name: "Urdu (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10108,7 +10182,7 @@ category: knowledge\r
 types: [language]\r
 language: urdu\r
 effect: "This character can read and write the Urdu language."\r
-`,Ew=`id: urdu\r
+`,jw=`id: urdu\r
 name: "Urdu (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10118,7 +10192,7 @@ category: knowledge\r
 types: [language]\r
 language: urdu\r
 effect: "This character is conversational in the Urdu language and can speak it."\r
-`,Dw=`id: uyghur-written\r
+`,Mw=`id: uyghur-written\r
 name: "Uyghur (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10128,7 +10202,7 @@ category: knowledge\r
 types: [language]\r
 language: uyghur\r
 effect: "This character can read and write the Uyghur language."\r
-`,Ow=`id: uyghur\r
+`,Nw=`id: uyghur\r
 name: "Uyghur (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10138,7 +10212,7 @@ category: knowledge\r
 types: [language]\r
 language: uyghur\r
 effect: "This character is conversational in the Uyghur language and can speak it."\r
-`,kw=`id: vietnamese-written\r
+`,Pw=`id: vietnamese-written\r
 name: "Vietnamese (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10148,7 +10222,7 @@ category: knowledge\r
 types: [language]\r
 language: vietnamese\r
 effect: "This character can read and write the Vietnamese language."\r
-`,Aw=`id: vietnamese\r
+`,Fw=`id: vietnamese\r
 name: "Vietnamese (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10158,7 +10232,7 @@ category: knowledge\r
 types: [language]\r
 language: vietnamese\r
 effect: "This character is conversational in the Vietnamese language and can speak it."\r
-`,jw=`id: wilderness-lore\r
+`,Iw=`id: wilderness-lore\r
 name: "Wilderness Lore"\r
 status: draft\r
 plane: any\r
@@ -10168,7 +10242,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 2, intuition: 3 }\r
 effect: "This character has knowledge of the wilderness and can be assumed to be familiar with terrain, weather, edible and dangerous plants, and the signs that keep travelers alive."\r
-`,Mw=`id: xanthus\r
+`,Lw=`id: xanthus\r
 name: "Xanthus"\r
 status: draft\r
 plane: earth\r
@@ -10180,7 +10254,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark Xanthus and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,Nw=`id: yoruba-written\r
+`,Rw=`id: yoruba-written\r
 name: "Yoruba (Written)"\r
 status: draft\r
 plane: earth\r
@@ -10190,7 +10264,7 @@ category: knowledge\r
 types: [language]\r
 language: yoruba\r
 effect: "This character can read and write the Yoruba language."\r
-`,Pw=`id: yoruba\r
+`,zw=`id: yoruba\r
 name: "Yoruba (Spoken)"\r
 status: draft\r
 plane: earth\r
@@ -10200,7 +10274,7 @@ category: knowledge\r
 types: [language]\r
 language: yoruba\r
 effect: "This character is conversational in the Yoruba language and can speak it."\r
-`,Fw=`id: yutu\r
+`,Bw=`id: yutu\r
 name: "Yùtù"\r
 status: placeholder\r
 plane: earth\r
@@ -10211,7 +10285,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Yùtù and can be assumed to be familiar with the peoples, places, and customs of the Empire of China’s colony on Luna."\r
-`,Iw=`id: zhulong\r
+`,Vw=`id: zhulong\r
 name: "Zhulong"\r
 status: placeholder\r
 plane: earth\r
@@ -10223,7 +10297,7 @@ category: knowledge\r
 ranked: true\r
 minStats: { memory: 3 }\r
 effect: "This character has knowledge of Ark Zhulong and can be assumed to be familiar with the peoples, places, and customs aboard it."\r
-`,Lw=`id: long-in-the-tooth\r
+`,Hw=`id: long-in-the-tooth\r
 name: "Long in the Tooth"\r
 status: draft\r
 plane: isekai\r
@@ -10237,7 +10311,7 @@ rpRequirement: "Middle Aged or Older"\r
 grants:\r
   - trait: long-toothed\r
 effect: "This character has kept their teeth through a long life and has the Long Toothed Condition."\r
-`,Rw=`id: magic-access\r
+`,Uw=`id: magic-access\r
 name: "Magic Access"\r
 status: placeholder\r
 plane: any\r
@@ -10247,7 +10321,7 @@ category: other\r
 conveyed: true\r
 coreAccess: [magic]\r
 effect: "This character can level up the Magic core stat."\r
-`,zw=`id: possessed-by-a-spirit\r
+`,Ww=`id: possessed-by-a-spirit\r
 name: "Possessed By A Spirit"\r
 status: draft\r
 plane: any\r
@@ -10257,7 +10331,7 @@ category: other\r
 conveyed: true\r
 temporary: "lost when the character is no longer possessed"\r
 effect: "This character has lost control over their body to a supernatural entity. If this is a player character then how that player or the GM continue to operate the character is at the GM's discretion, as is the nature of the entity that has possessed them. This character no longer accrues experience. While under the control of this entity the character's Mental and Social stats are considered (Mental 8) (Logic 8) (Intuition 10) (Memory 9) (Social 7) (Empathy 3) (Persuasion 9) (Demeanor 12) for most purposes. Condition Traits that modify these stats are still in effect unless otherwise stated. If the character had Traits with minimum stat values or had Ranks in Traits they no longer qualify for, then those Traits are to be ignored. The entity possessing this character can be assumed to have full knowledge and understanding of all Knowledge, Skill, and Ability Traits of the character they are possessing and can use them without issue as long as they possess the minimum stats required for them. While possessed, this character gains Supernatural, Spirit Touched, Telekinesis(1), Inured to pain, Fearless, Ghost Sight, Knowledge: The Supernatural (1)."\r
-`,Bw=`id: access-control\r
+`,Gw=`id: access-control\r
 name: "Access Control"\r
 status: draft\r
 plane: any\r
@@ -10267,7 +10341,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 3, demeanor: 3 }\r
 effect: "This character is capable of checking IDs, passes and credentials without a Skill Check. Rank *5 added to Skill Check rolls involving spotting forged documents, false credentials or a Cover Identity."\r
-`,Vw=`id: acid-breath\r
+`,Kw=`id: acid-breath\r
 name: "Acid Breath"\r
 status: draft\r
 plane: any\r
@@ -10276,7 +10350,7 @@ tags: [breath, natural weapon, acid]\r
 category: skill\r
 prerequisites: [natural-breath-weapon]\r
 effect: "- This character's Breath Weapon deals Corrosive damage in place of Blunt, with +2 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Corroding Condition.\\n- Can't be taken alongside Fire Breath or Frost Breath."\r
-`,Hw=`id: advanced-cooking\r
+`,qw=`id: advanced-cooking\r
 name: "Advanced Cooking"\r
 status: draft\r
 plane: any\r
@@ -10287,7 +10361,7 @@ mastery: true\r
 minStats: { intuition: 5, memory: 4, empathy: 3 }\r
 prerequisites: [simple-cooking]\r
 effect: "This character cooks at a professional level and can feed a large group. This character can request advantage on skill checks involving cooking, and a fine meal can earn them favor in social situations at the GM’s discretion."\r
-`,Uw=`id: advanced-potion-mixing\r
+`,Jw=`id: advanced-potion-mixing\r
 name: "Advanced Potion Mixing"\r
 status: draft\r
 plane: isekai\r
@@ -10298,7 +10372,7 @@ mastery: true\r
 minStats: { memory: 6, intuition: 6, logic: 4 }\r
 prerequisites: [simple-potion-mixing]\r
 effect: "This character can brew complex and potent potions, and can work out a new recipe from its ingredients’ properties. This character can request advantage on skill checks involving brewing potions."\r
-`,Ww=`id: ambusher\r
+`,Yw=`id: ambusher\r
 name: "Ambusher"\r
 status: draft\r
 plane: any\r
@@ -10308,7 +10382,7 @@ category: skill\r
 minStats: { intuition: 4, grace: 3 }\r
 effect: "This character gains +2 Priority and +2 to Attack Rolls and damage in the first Round of a combat Incident in instances where it has the element of surprise."\r
 modifiers: "Priority +2 (first Round, with surprise), Attack Rolls +2 (first Round, with surprise)"\r
-`,Gw=`id: animal-husbandry\r
+`,Xw=`id: animal-husbandry\r
 name: "Animal Husbandry"\r
 status: draft\r
 plane: any\r
@@ -10318,7 +10392,7 @@ category: skill\r
 ranked: true\r
 minStats: { empathy: 3, endurance: 2, intuition: 2 }\r
 effect: "This character is capable of raising, feeding and caring for livestock and working animals without a skill check. Rank *5 added to skill check rolls involving handling and caring for animals."\r
-`,Kw=`id: antidote-brewing\r
+`,Zw=`id: antidote-brewing\r
 name: "Antidote Brewing"\r
 status: draft\r
 plane: isekai\r
@@ -10329,7 +10403,7 @@ ranked: true\r
 minStats: { memory: 4, intuition: 3, logic: 2 }\r
 prerequisites: [simple-potion-mixing]\r
 effect: "This character can brew a simple antidote to a known poison without a Skill Check. Rank *10 added to Skill Check rolls involving brewing antidotes."\r
-`,qw=`id: appraisal\r
+`,Qw=`id: appraisal\r
 name: "Appraisal"\r
 status: draft\r
 plane: any\r
@@ -10338,7 +10412,7 @@ tags: [trade, valuation, merchant]\r
 category: skill\r
 minStats: { memory: 3, logic: 3, intuition: 2 }\r
 effect: "This character gains +8 to rolls for accurately appraising the value of artifacts, merchandise, or commodities in fields that it has familiarity with."\r
-`,Jw=`id: archival-research\r
+`,$w=`id: archival-research\r
 name: "Archival Research"\r
 status: draft\r
 plane: any\r
@@ -10347,7 +10421,7 @@ tags: [scholarship, research, archives]\r
 category: skill\r
 minStats: { memory: 4, logic: 3 }\r
 effect: "This character gains +5 to rolls relating to finding information in libraries, archives and records."\r
-`,Yw=`id: artifact-identification\r
+`,eT=`id: artifact-identification\r
 name: "Artifact Identification"\r
 status: draft\r
 plane: isekai\r
@@ -10359,7 +10433,7 @@ prerequisites: [relic-handling]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to identifying the function and power of magical artifacts."\r
-`,Xw=`id: artifact-repair\r
+`,tT=`id: artifact-repair\r
 name: "Artifact Repair"\r
 status: draft\r
 plane: isekai\r
@@ -10371,7 +10445,7 @@ prerequisites: [enchanting]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to repairing a Damaged magical artifact."\r
-`,Zw=`id: artist-painting\r
+`,nT=`id: artist-painting\r
 name: "Artist: Painting"\r
 status: draft\r
 plane: any\r
@@ -10381,7 +10455,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, memory: 2 }\r
 effect: "This character is capable of painting a competent likeness or scene without a skill check. Rank *5 added to skill check rolls involving painting."\r
-`,Qw=`id: artist-sculpture\r
+`,rT=`id: artist-sculpture\r
 name: "Artist: Sculpture"\r
 status: draft\r
 plane: any\r
@@ -10391,7 +10465,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
 effect: "This character is capable of sculpting a competent figure in stone, clay or wood without a skill check. Rank *5 added to skill check rolls involving sculpture."\r
-`,$w=`id: bait-and-lure\r
+`,iT=`id: bait-and-lure\r
 name: "Bait and Lure"\r
 status: draft\r
 plane: any\r
@@ -10400,7 +10474,7 @@ tags: [hunting, monsters, traps]\r
 category: skill\r
 minStats: { intuition: 4, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to luring or baiting a creature."\r
-`,eT=`id: battlefield-commander\r
+`,aT=`id: battlefield-commander\r
 name: "Battlefield Commander"\r
 status: draft\r
 plane: any\r
@@ -10411,7 +10485,7 @@ minStats: { demeanor: 5, intuition: 4, logic: 3 }\r
 prerequisites: [military-drill]\r
 effect: "Allies within 10 m who can hear this character gain +1 Priority."\r
 modifiers: "Priority +1 (allies within 10 m who can hear)"\r
-`,tT=`id: beast-taming\r
+`,oT=`id: beast-taming\r
 name: "Beast Taming"\r
 status: draft\r
 plane: any\r
@@ -10421,7 +10495,7 @@ category: skill\r
 minStats: { empathy: 5, demeanor: 4 }\r
 prerequisites: [monster-handling]\r
 effect: "This character gains +5 to rolls relating to training a wild or monstrous creature over time."\r
-`,nT=`id: body-conditioning\r
+`,sT=`id: body-conditioning\r
 name: "Body Conditioning"\r
 status: draft\r
 plane: any\r
@@ -10432,7 +10506,7 @@ ranked: true\r
 minStats: { endurance: 5, power: 3 }\r
 effect: "Rank *1 added to this character's Blunt Resistance."\r
 modifiers: "Blunt Resistance +1 per Rank"\r
-`,rT=`id: born-leader\r
+`,cT=`id: born-leader\r
 name: "Born Leader"\r
 status: draft\r
 plane: any\r
@@ -10443,7 +10517,7 @@ mastery: true\r
 minStats: { demeanor: 8, persuasion: 8, empathy: 6 }\r
 prerequisites: [crew-management, rally]\r
 effect: "This character can request Advantage on rolls relating to leading, commanding or rallying a group."\r
-`,iT=`id: boxers-defense\r
+`,lT=`id: boxers-defense\r
 name: "Boxer's Defense"\r
 status: draft\r
 plane: any\r
@@ -10454,7 +10528,7 @@ minStats: { grace: 4, intuition: 3 }\r
 prerequisites: [boxing]\r
 effect: "This character gains +3 Defense against punches while Defending."\r
 modifiers: "Defense +3 (when Defending against punches)"\r
-`,aT=`id: brawler\r
+`,uT=`id: brawler\r
 name: "Brawler"\r
 status: draft\r
 plane: any\r
@@ -10464,7 +10538,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 3, endurance: 3 }\r
 effect: "Rank *1 added to the Blunt damage of this character's natural weapons."\r
-`,oT=`id: breakthrough\r
+`,dT=`id: breakthrough\r
 name: "Breakthrough"\r
 status: draft\r
 plane: any\r
@@ -10475,7 +10549,7 @@ mastery: true\r
 minStats: { logic: 10, intuition: 8, memory: 6 }\r
 prerequisites: [research, inventor]\r
 effect: "This character can request Advantage on research and invention rolls in a field they hold a Knowledge in."\r
-`,sT=`id: bugging\r
+`,fT=`id: bugging\r
 name: "Bugging"\r
 status: draft\r
 plane: earth\r
@@ -10484,7 +10558,7 @@ tags: [espionage, electronics, surveillance]\r
 category: skill\r
 minStats: { grace: 3, logic: 3, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to planting, hiding or finding listening devices and hidden cameras."\r
-`,cT=`id: calming-presence\r
+`,pT=`id: calming-presence\r
 name: "Calming Presence"\r
 status: draft\r
 plane: any\r
@@ -10493,7 +10567,7 @@ tags: [empathy, social, calm]\r
 category: skill\r
 minStats: { empathy: 4, demeanor: 3 }\r
 effect: "This character gains +5 to rolls relating to calming a frightened, panicked or hostile person."\r
-`,lT=`id: capable-student\r
+`,mT=`id: capable-student\r
 name: "Capable Student"\r
 status: draft\r
 plane: any\r
@@ -10502,7 +10576,7 @@ tags: [learning, study, site-example]\r
 category: skill\r
 minStats: { memory: 3, logic: 3 }\r
 effect: "This character can learn a new (knowledge) Trait in half the specified time."\r
-`,uT=`id: cargo-handling\r
+`,hT=`id: cargo-handling\r
 name: "Cargo Handling"\r
 status: draft\r
 plane: any\r
@@ -10511,7 +10585,7 @@ tags: [cargo, shipping, labor]\r
 category: skill\r
 minStats: { power: 3, endurance: 2, logic: 2 }\r
 effect: "This character gains +3 to rolls relating to the handling, tracking, or maintenance of cargo."\r
-`,dT=`id: casualty-extraction\r
+`,gT=`id: casualty-extraction\r
 name: "Casualty Extraction"\r
 status: draft\r
 plane: any\r
@@ -10520,7 +10594,7 @@ tags: [medicine, combat, rescue, movement]\r
 category: skill\r
 minStats: { power: 4, endurance: 4 }\r
 effect: "This character may move their full Movement while dragging or carrying an Incapacitated character."\r
-`,fT=`id: cataloguing\r
+`,_T=`id: cataloguing\r
 name: "Cataloguing"\r
 status: draft\r
 plane: any\r
@@ -10529,7 +10603,7 @@ tags: [scholarship, organization, museums]\r
 category: skill\r
 minStats: { memory: 4, logic: 2 }\r
 effect: "This character gains +5 to rolls relating to identifying, organizing and recording collections, finds or specimens."\r
-`,pT=`id: checkpoint-nerve\r
+`,vT=`id: checkpoint-nerve\r
 name: "Checkpoint Nerve"\r
 status: draft\r
 plane: any\r
@@ -10538,7 +10612,7 @@ tags: [smuggling, social, deception]\r
 category: skill\r
 minStats: { demeanor: 4 }\r
 effect: "This character gains +3 to Persuasion or Demeanor rolls when dealing with customs officers, inspectors, and guards."\r
-`,mT=`id: climber\r
+`,yT=`id: climber\r
 name: "Climber"\r
 status: draft\r
 plane: any\r
@@ -10548,7 +10622,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, power: 3, endurance: 2 }\r
 effect: "This character is capable of climbing surfaces with handholds without a Skill Check. Rank *5 added to Skill Check rolls involving climbing."\r
-`,hT=`id: combat-medic\r
+`,bT=`id: combat-medic\r
 name: "Combat Medic"\r
 status: draft\r
 plane: any\r
@@ -10558,7 +10632,7 @@ category: skill\r
 minStats: { grace: 3, memory: 3, demeanor: 3 }\r
 prerequisites: [medical-aid]\r
 effect: "Treating a wounded character within 1 m counts as a Partial RP Action for this character during an Incident."\r
-`,gT=`id: con-man\r
+`,xT=`id: con-man\r
 name: "Con Man"\r
 status: draft\r
 plane: any\r
@@ -10567,7 +10641,7 @@ tags: [lying, deception, social, site-example]\r
 category: skill\r
 minStats: { persuasion: 8, demeanor: 4, intuition: 4, memory: 4 }\r
 effect: "Add 5 to any skill check rolls that involve lying in either written or spoken form."\r
-`,_T=`id: concealment\r
+`,ST=`id: concealment\r
 name: "Concealment"\r
 status: draft\r
 plane: any\r
@@ -10576,7 +10650,7 @@ tags: [stealth, hiding]\r
 category: skill\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "This character gains +3 to rolls relating to sneaking, hiding, or staying concealed."\r
-`,vT=`id: containment-protocols\r
+`,CT=`id: containment-protocols\r
 name: "Containment Protocols"\r
 status: draft\r
 plane: earth\r
@@ -10585,7 +10659,7 @@ tags: [parabiology, containment, safety]\r
 category: skill\r
 minStats: { logic: 4, grace: 3, demeanor: 2 }\r
 effect: "This character gains +5 to rolls relating to capturing, containing or transporting dangerous creatures or extraplanar beings."\r
-`,yT=`id: contortionist\r
+`,wT=`id: contortionist\r
 name: "Contortionist"\r
 status: draft\r
 plane: any\r
@@ -10594,7 +10668,7 @@ tags: [athletics, escape, flexibility]\r
 category: skill\r
 minStats: { grace: 5, endurance: 2 }\r
 effect: "This character gains +5 to Grace rolls relating to bending, twisting or squeezing their body, such as fitting through tight spaces, slipping free of bonds or holds, or hiding somewhere too small for them."\r
-`,bT=`id: contract-drafting\r
+`,TT=`id: contract-drafting\r
 name: "Contract Drafting"\r
 status: draft\r
 plane: any\r
@@ -10604,7 +10678,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 4 }\r
 effect: "This character is capable of drafting a simple binding contract without a Skill Check. Rank *10 added to Skill Check rolls involving writing contracts."\r
-`,xT=`id: counselor\r
+`,ET=`id: counselor\r
 name: "Counselor"\r
 status: draft\r
 plane: any\r
@@ -10613,7 +10687,7 @@ tags: [empathy, care, psychology]\r
 category: skill\r
 minStats: { empathy: 5, intuition: 3 }\r
 effect: "This character gains +5 to Empathy rolls relating to helping someone through grief, fear or trauma."\r
-`,ST=`id: courtly-manners\r
+`,DT=`id: courtly-manners\r
 name: "Courtly Manners"\r
 status: draft\r
 plane: any\r
@@ -10622,7 +10696,7 @@ tags: [court, nobility, social]\r
 category: skill\r
 minStats: { demeanor: 3, empathy: 2, memory: 2 }\r
 effect: "This character gains +3 to Persuasion or Demeanor rolls in situations where high society manners are relevant."\r
-`,CT=`id: cover-identity\r
+`,OT=`id: cover-identity\r
 name: "Cover Identity"\r
 status: draft\r
 plane: any\r
@@ -10632,7 +10706,7 @@ category: skill\r
 minStats: { demeanor: 4, memory: 4 }\r
 prerequisites: [disguise]\r
 effect: "This character gains +5 to Demeanor and Memory rolls relating to keeping up a false identity under scrutiny."\r
-`,wT=`id: craft-leatherworking\r
+`,kT=`id: craft-leatherworking\r
 name: "Craft: Leatherworking"\r
 status: draft\r
 plane: any\r
@@ -10642,7 +10716,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, endurance: 2, intuition: 2 }\r
 effect: "This character is capable of tanning hides and making leather goods and simple leather armor without a skill check. Rank *5 added to skill check rolls involving leatherworking."\r
-`,TT=`id: craft-masonry\r
+`,AT=`id: craft-masonry\r
 name: "Craft: Masonry"\r
 status: draft\r
 plane: any\r
@@ -10652,7 +10726,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 4, endurance: 3, logic: 2 }\r
 effect: "This character is capable of cutting and laying stone for walls, foundations and simple structures without a skill check. Rank *5 added to skill check rolls involving masonry."\r
-`,ET=`id: craft-smithing\r
+`,jT=`id: craft-smithing\r
 name: "Craft: Smithing"\r
 status: draft\r
 plane: any\r
@@ -10662,7 +10736,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 4, endurance: 3, grace: 2 }\r
 effect: "This character is capable of forging and repairing simple metal tools, fittings and weapons without a skill check. Rank *5 added to skill check rolls involving smithing."\r
-`,DT=`id: crew-management\r
+`,MT=`id: crew-management\r
 name: "Crew Management"\r
 status: draft\r
 plane: any\r
@@ -10672,7 +10746,7 @@ category: skill\r
 ranked: true\r
 minStats: { persuasion: 3, empathy: 3, logic: 2 }\r
 effect: "This character is capable of organizing the duties and shifts of a small crew without a Skill Check. Rank *10 added to Skill Check rolls involving managing a crew."\r
-`,OT=`id: crisis-leadership\r
+`,NT=`id: crisis-leadership\r
 name: "Crisis Leadership"\r
 status: draft\r
 plane: any\r
@@ -10681,7 +10755,7 @@ tags: [leadership, crisis, emergency]\r
 category: skill\r
 minStats: { demeanor: 4, intuition: 3, persuasion: 3 }\r
 effect: "This character gains +5 to rolls relating to keeping a group acting together in a disaster or emergency."\r
-`,kT=`id: crowd-control\r
+`,PT=`id: crowd-control\r
 name: "Crowd Control"\r
 status: draft\r
 plane: any\r
@@ -10691,7 +10765,7 @@ category: skill\r
 ranked: true\r
 minStats: { demeanor: 4, persuasion: 2 }\r
 effect: "This character is capable of moving, holding back or clearing a calm crowd without a Skill Check. Rank *5 added to Skill Check rolls involving controlling a crowd that isn't calm."\r
-`,AT=`id: cryptanalysis\r
+`,FT=`id: cryptanalysis\r
 name: "Cryptanalysis"\r
 status: draft\r
 plane: any\r
@@ -10700,7 +10774,7 @@ tags: [codes, encryption, computers]\r
 category: skill\r
 minStats: { logic: 5, memory: 3, intuition: 3 }\r
 effect: "This character gains +5 to Logic rolls relating to breaking codes, ciphers or encryption."\r
-`,jT=`id: curse-sense\r
+`,IT=`id: curse-sense\r
 name: "Curse Sense"\r
 status: draft\r
 plane: isekai\r
@@ -10711,7 +10785,7 @@ minStats: { intuition: 4, magic: 1 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to Intuition rolls relating to noticing cursed or dangerous magical objects."\r
-`,MT=`id: data-analysis\r
+`,LT=`id: data-analysis\r
 name: "Data Analysis"\r
 status: draft\r
 plane: earth\r
@@ -10720,7 +10794,7 @@ tags: [science, data, computers]\r
 category: skill\r
 minStats: { logic: 5, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to finding patterns, errors or meaning in data, records, readings or statistics."\r
-`,NT=`id: data-recovery\r
+`,RT=`id: data-recovery\r
 name: "Data Recovery"\r
 status: draft\r
 plane: earth\r
@@ -10729,7 +10803,7 @@ tags: [computers, data, forensics]\r
 category: skill\r
 minStats: { logic: 4, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to recovering deleted, corrupted or damaged data, including data wiped or locked by a hacker to cover their tracks."\r
-`,PT=`id: dead-drops\r
+`,zT=`id: dead-drops\r
 name: "Dead Drops"\r
 status: draft\r
 plane: any\r
@@ -10738,7 +10812,7 @@ tags: [espionage, tradecraft, smuggling]\r
 category: skill\r
 minStats: { grace: 3, intuition: 3, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to passing messages or items covertly."\r
-`,FT=`id: decipherment\r
+`,BT=`id: decipherment\r
 name: "Decipherment"\r
 status: draft\r
 plane: any\r
@@ -10748,7 +10822,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 5, logic: 4, intuition: 3 }\r
 effect: "This character is capable of reading simple texts in a dead language they hold a Knowledge of without a Skill Check. Rank *10 added to Skill Check rolls involving deciphering old or unknown scripts."\r
-`,IT=`id: demolitions\r
+`,VT=`id: demolitions\r
 name: "Demolitions"\r
 status: draft\r
 plane: any\r
@@ -10758,7 +10832,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, grace: 3, demeanor: 2 }\r
 effect: "This character is capable of safely placing and setting a simple charge without a Skill Check. Rank *10 added to Skill Check rolls involving demolitions."\r
-`,LT=`id: diplomacy\r
+`,HT=`id: diplomacy\r
 name: "Diplomacy"\r
 status: draft\r
 plane: any\r
@@ -10768,7 +10842,7 @@ category: skill\r
 ranked: true\r
 minStats: { persuasion: 4, empathy: 4, demeanor: 3 }\r
 effect: "This character is capable of handling formal negotiations, protocol and official meetings between groups without a Skill Check. Rank *5 added to Skill Check rolls involving negotiating on behalf of a group or settling disputes between groups."\r
-`,RT=`id: disguise\r
+`,UT=`id: disguise\r
 name: "Disguise"\r
 status: draft\r
 plane: any\r
@@ -10778,7 +10852,7 @@ category: skill\r
 ranked: true\r
 minStats: { demeanor: 4, grace: 2, intuition: 2 }\r
 effect: "This character is capable of putting together a convincing simple disguise without a skill check. Rank *5 added to skill check rolls involving disguise and impersonation."\r
-`,zT=`id: dissection\r
+`,WT=`id: dissection\r
 name: "Dissection"\r
 status: draft\r
 plane: any\r
@@ -10787,7 +10861,7 @@ tags: [parabiology, anatomy, science]\r
 category: skill\r
 minStats: { grace: 3, logic: 3, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to examining a dead creature to learn its anatomy and weaknesses."\r
-`,BT=`id: dock-rat\r
+`,GT=`id: dock-rat\r
 name: "Dock Rat"\r
 status: draft\r
 plane: any\r
@@ -10796,7 +10870,7 @@ tags: [urban, ports, shipping]\r
 category: skill\r
 minStats: { memory: 3, persuasion: 2 }\r
 effect: "This character gains +3 to rolls in ports, stations, and docks to find a berth, a crew, or work off the books."\r
-`,VT=`id: drillmaster\r
+`,KT=`id: drillmaster\r
 name: "Drillmaster"\r
 status: draft\r
 plane: any\r
@@ -10805,7 +10879,7 @@ tags: [teaching, training, military]\r
 category: skill\r
 minStats: { demeanor: 4, persuasion: 3, endurance: 3 }\r
 effect: "This character gains +5 to rolls relating to training others in physical or fighting skills."\r
-`,HT=`id: eagle-eye\r
+`,qT=`id: eagle-eye\r
 name: "Eagle Eye"\r
 status: draft\r
 plane: any\r
@@ -10814,7 +10888,7 @@ tags: [sight, perception, site-example]\r
 category: skill\r
 conveyed: true\r
 effect: "This character can request advantage in situations that involve seeing at distance."\r
-`,UT=`id: electronics-repair\r
+`,JT=`id: electronics-repair\r
 name: "Electronics Repair"\r
 status: draft\r
 plane: any\r
@@ -10824,7 +10898,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, logic: 3, memory: 2 }\r
 effect: "This character is capable of repairing simple electronic devices without a Skill Check. Rank *10 added to Skill Check rolls involving electronics repair."\r
-`,WT=`id: enchanting\r
+`,YT=`id: enchanting\r
 name: "Enchanting"\r
 status: draft\r
 plane: isekai\r
@@ -10836,7 +10910,7 @@ prerequisites: [relic-handling]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to enchanting."\r
-`,GT=`id: escort-driving\r
+`,XT=`id: escort-driving\r
 name: "Escort Driving"\r
 status: draft\r
 plane: any\r
@@ -10847,7 +10921,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 3 }\r
 prerequisites: [pilot-ground-vehicle]\r
 effect: "Rank *5 added to Skill Check rolls involving evasive driving or pursuit while carrying a passenger this character is protecting."\r
-`,KT=`id: eva-work\r
+`,ZT=`id: eva-work\r
 name: "EVA Work"\r
 status: draft\r
 plane: earth\r
@@ -10856,7 +10930,7 @@ tags: [space, eva, labor]\r
 category: skill\r
 minStats: { grace: 3, endurance: 3, logic: 2 }\r
 effect: "This character gains +5 to rolls relating to working outside a vessel or station in a pressure suit."\r
-`,qT=`id: evasive-maneuvers\r
+`,QT=`id: evasive-maneuvers\r
 name: "Evasive Maneuvers"\r
 status: draft\r
 plane: any\r
@@ -10866,7 +10940,7 @@ category: skill\r
 minStats: { grace: 5, intuition: 5 }\r
 prerequisiteTags: [pilot]\r
 effect: "This character can request Advantage on piloting rolls to dodge incoming fire, debris or a collision."\r
-`,JT=`id: excavation\r
+`,$T=`id: excavation\r
 name: "Excavation"\r
 status: draft\r
 plane: any\r
@@ -10875,7 +10949,7 @@ tags: [archeology, fieldwork, ruins]\r
 category: skill\r
 minStats: { grace: 3, endurance: 2, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to the unearthing or handling of artifacts."\r
-`,YT=`id: exorcism\r
+`,eE=`id: exorcism\r
 name: "Exorcism"\r
 status: draft\r
 plane: any\r
@@ -10886,7 +10960,7 @@ ranked: true\r
 minStats: { demeanor: 5, empathy: 3, memory: 3 }\r
 prerequisites: [rites-and-ceremonies]\r
 effect: "Rank *10 added to Skill Check rolls to end the Possessed by a Spirit Trait or drive a spirit out of a person, place or object."\r
-`,XT=`id: expedition-leader\r
+`,tE=`id: expedition-leader\r
 name: "Expedition Leader"\r
 status: draft\r
 plane: any\r
@@ -10896,7 +10970,7 @@ category: skill\r
 minStats: { demeanor: 4, intuition: 4, endurance: 3 }\r
 prerequisites: [expedition-logistics]\r
 effect: "This character gains +5 to rolls relating to leading a group through unfamiliar terrain or an unfamiliar plane, choosing routes and keeping the group together."\r
-`,ZT=`id: expedition-logistics\r
+`,nE=`id: expedition-logistics\r
 name: "Expedition Logistics"\r
 status: draft\r
 plane: any\r
@@ -10905,7 +10979,7 @@ tags: [exploration, planning, logistics]\r
 category: skill\r
 minStats: { logic: 4, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to planning and supplying a trip, operation or project, such as routes, schedules, supplies, equipment and people."\r
-`,QT=`id: expert-pilot\r
+`,rE=`id: expert-pilot\r
 name: "Expert Pilot"\r
 status: draft\r
 plane: any\r
@@ -10916,7 +10990,7 @@ mastery: true\r
 minStats: { memory: 5, intuition: 10, grace: 5 }\r
 prerequisiteTags: [pilot]\r
 effect: "This character can request advantage on piloting any craft they have training in and may request competence in piloting any craft similar to one they have training in."\r
-`,$T=`id: fabrication\r
+`,iE=`id: fabrication\r
 name: "Fabrication"\r
 status: draft\r
 plane: any\r
@@ -10926,7 +11000,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, power: 3, logic: 2 }\r
 effect: "This character is capable of cutting, welding and fitting simple metal structures without a Skill Check. Rank *10 added to Skill Check rolls involving fabrication."\r
-`,eE=`id: fancy-footwork\r
+`,aE=`id: fancy-footwork\r
 name: "Fancy Footwork"\r
 status: draft\r
 plane: any\r
@@ -10938,7 +11012,7 @@ minStats: { grace: 6, endurance: 4, intuition: 3 }\r
 prerequisites: [footwork]\r
 effect: "This character gains +2 Defense against Attacks with natural weapons."\r
 modifiers: "Defense +2 (against natural weapons)"\r
-`,tE=`id: fence\r
+`,oE=`id: fence\r
 name: "Fence"\r
 status: draft\r
 plane: any\r
@@ -10947,7 +11021,7 @@ tags: [trade, criminal, black-market]\r
 category: skill\r
 minStats: { persuasion: 3, memory: 3 }\r
 effect: "This character gains +3 to Persuasion rolls when negotiating the price of stolen or contraband goods."\r
-`,nE=`id: field-pharmacology\r
+`,sE=`id: field-pharmacology\r
 name: "Field Pharmacology"\r
 status: draft\r
 plane: any\r
@@ -10956,7 +11030,7 @@ tags: [medicine, drugs, healing]\r
 category: skill\r
 minStats: { memory: 4, logic: 3 }\r
 effect: "This character gains +5 to rolls relating to choosing, dosing and administering drugs and medicines."\r
-`,rE=`id: field-sampling\r
+`,cE=`id: field-sampling\r
 name: "Field Sampling"\r
 status: draft\r
 plane: any\r
@@ -10965,7 +11039,7 @@ tags: [parabiology, science, fieldwork, survey]\r
 category: skill\r
 minStats: { logic: 3, grace: 2, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to the taking or gathering of samples in wilderness or exotic environments."\r
-`,iE=`id: field-splinting\r
+`,lE=`id: field-splinting\r
 name: "Field Splinting"\r
 status: draft\r
 plane: any\r
@@ -10974,7 +11048,7 @@ tags: [medicine, first-aid, improvisation]\r
 category: skill\r
 minStats: { grace: 3, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to setting bones or immobilizing injuries with improvised materials."\r
-`,aE=`id: field-surgeon\r
+`,uE=`id: field-surgeon\r
 name: "Field Surgeon"\r
 status: draft\r
 plane: any\r
@@ -10985,7 +11059,7 @@ mastery: true\r
 minStats: { grace: 8, memory: 8, demeanor: 6, logic: 5 }\r
 prerequisites: [surgery, combat-medic]\r
 effect: "This character can request Advantage on Surgery and Medical Aid rolls made in the field or under fire."\r
-`,oE=`id: fine-print\r
+`,dE=`id: fine-print\r
 name: "Fine Print"\r
 status: draft\r
 plane: any\r
@@ -10994,7 +11068,7 @@ tags: [law, contracts, awareness]\r
 category: skill\r
 minStats: { memory: 4, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to reading contracts, laws, regulations and other documents closely, such as spotting hidden clauses, omissions, loopholes and flaws."\r
-`,sE=`id: fire-breath\r
+`,fE=`id: fire-breath\r
 name: "Fire Breath"\r
 status: draft\r
 plane: any\r
@@ -11003,7 +11077,7 @@ tags: [breath, natural weapon, fire]\r
 category: skill\r
 prerequisites: [natural-breath-weapon]\r
 effect: "- This character's Breath Weapon deals Heat damage in place of Blunt, with +4 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Burning Condition.\\n- Can't be taken alongside Frost Breath or Acid Breath."\r
-`,cE=`id: first-contact-protocols\r
+`,pE=`id: first-contact-protocols\r
 name: "First Contact Protocols"\r
 status: draft\r
 plane: earth\r
@@ -11012,7 +11086,7 @@ tags: [diplomacy, parasapients, exploration]\r
 category: skill\r
 minStats: { empathy: 4, intuition: 4, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to communicating with sapients who share no Language or customs with them."\r
-`,lE=`id: folk-remedies\r
+`,mE=`id: folk-remedies\r
 name: "Folk Remedies"\r
 status: draft\r
 plane: any\r
@@ -11021,7 +11095,7 @@ tags: [healing, folk, herbs]\r
 category: skill\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to using folk or herbal remedies to heal or produce medicaments."\r
-`,uE=`id: footwork\r
+`,hE=`id: footwork\r
 name: "Footwork"\r
 status: draft\r
 plane: any\r
@@ -11031,7 +11105,7 @@ category: skill\r
 minStats: { grace: 4, endurance: 2 }\r
 effect: "This character gains +2 Defense against Melee Attacks while Defending."\r
 modifiers: "Defense +2 (when Defending against Melee Attacks)"\r
-`,dE=`id: forgery\r
+`,gE=`id: forgery\r
 name: "Forgery"\r
 status: draft\r
 plane: any\r
@@ -11041,7 +11115,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, memory: 3, intuition: 2 }\r
 effect: "This character is capable of forging a simple document or signature without a Skill Check, given a sample to work from. Rank *10 added to Skill Check rolls involving forgery."\r
-`,fE=`id: freerunner\r
+`,_E=`id: freerunner\r
 name: "Freerunner"\r
 status: draft\r
 plane: any\r
@@ -11051,7 +11125,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 5, power: 3, endurance: 3 }\r
 effect: "This character is capable of vaulting low obstacles during Movement without a Skill Check. Rank *5 added to Grace Skill Check rolls to overcome obstacles during Movement."\r
-`,pE=`id: frost-breath\r
+`,vE=`id: frost-breath\r
 name: "Frost Breath"\r
 status: draft\r
 plane: any\r
@@ -11060,7 +11134,7 @@ tags: [breath, natural weapon, cold]\r
 category: skill\r
 prerequisites: [natural-breath-weapon]\r
 effect: "- This character's Breath Weapon deals Cold damage in place of Blunt, with +3 damage.\\n- Devastating Hit or better: the target gains 1 Rank of the Frozen Condition.\\n- Can't be taken alongside Fire Breath or Acid Breath."\r
-`,mE=`id: gate-operation\r
+`,yE=`id: gate-operation\r
 name: "Gate Operation"\r
 status: draft\r
 plane: earth\r
@@ -11070,7 +11144,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 5, memory: 4, intuition: 3 }\r
 effect: "This character is capable of operating an attuned switch gate in routine conditions without a Skill Check. Rank *10 added to Skill Check rolls involving tuning, monitoring or shutting down a switch gate."\r
-`,hE=`id: ghost-in-the-machine\r
+`,bE=`id: ghost-in-the-machine\r
 name: "Ghost in the Machine"\r
 status: draft\r
 plane: earth\r
@@ -11081,7 +11155,7 @@ mastery: true\r
 minStats: { logic: 10, intuition: 8, memory: 6 }\r
 prerequisites: [hacking, intrusion-countermeasures]\r
 effect: "This character can request Advantage on rolls relating to breaking into systems, and can act inside a network without leaving evidence of having been there."\r
-`,gE=`id: gladiator\r
+`,xE=`id: gladiator\r
 name: "Gladiator"\r
 status: draft\r
 plane: any\r
@@ -11090,7 +11164,7 @@ tags: [combat, melee, site-example]\r
 category: skill\r
 minStats: { physical: 5, grace: 5, demeanor: 5 }\r
 effect: "When in combat, this character can use any close combat weapon as if they had the Wielder Trait with a single rank for that weapon."\r
-`,_E=`id: greasing-palms\r
+`,SE=`id: greasing-palms\r
 name: "Greasing Palms"\r
 status: draft\r
 plane: any\r
@@ -11099,7 +11173,7 @@ tags: [bribery, social, criminal]\r
 category: skill\r
 minStats: { persuasion: 3, demeanor: 3 }\r
 effect: "- This character gains +5 to Persuasion rolls when offering a bribe.\\n- This character can request Advantage when judging whether someone can be bought."\r
-`,vE=`id: hacking\r
+`,CE=`id: hacking\r
 name: "Hacking"\r
 status: draft\r
 plane: earth\r
@@ -11110,7 +11184,7 @@ ranked: true\r
 minStats: { logic: 5, intuition: 4, memory: 3 }\r
 prerequisites: [programming]\r
 effect: "This character is capable of bypassing basic security on consumer computer systems without a Skill Check. Rank *10 added to Skill Check rolls involving breaking into computer systems."\r
-`,yE=`id: haggler\r
+`,wE=`id: haggler\r
 name: "Haggler"\r
 status: draft\r
 plane: any\r
@@ -11119,7 +11193,7 @@ tags: [trade, bargaining, merchant]\r
 category: skill\r
 minStats: { persuasion: 4, intuition: 2 }\r
 effect: "This character gains +5 to Persuasion or Demeanor checks relating to haggling, bartering, and price negotiations."\r
-`,bE=`id: handler\r
+`,TE=`id: handler\r
 name: "Handler"\r
 status: draft\r
 plane: any\r
@@ -11128,7 +11202,7 @@ tags: [espionage, informants, social]\r
 category: skill\r
 minStats: { empathy: 4, persuasion: 4, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to managing people who work for them in secret, such as informants, agents and contacts: keeping them loyal, paid and safe, and telling when one has turned."\r
-`,xE=`id: hard-puncher\r
+`,EE=`id: hard-puncher\r
 name: "Hard Puncher"\r
 status: draft\r
 plane: any\r
@@ -11139,7 +11213,7 @@ ranked: true\r
 minStats: { power: 4, endurance: 2 }\r
 prerequisites: [brawler]\r
 effect: "Rank *1 added to the Blunt damage of this character's punches."\r
-`,SE=`id: hardware-engineering\r
+`,DE=`id: hardware-engineering\r
 name: "Hardware Engineering"\r
 status: draft\r
 plane: earth\r
@@ -11149,7 +11223,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, grace: 3, memory: 3 }\r
 effect: "This character is capable of assembling and repairing common computer hardware without a Skill Check. Rank *10 added to Skill Check rolls involving computer hardware."\r
-`,CE=`id: hazard-assessment\r
+`,OE=`id: hazard-assessment\r
 name: "Hazard Assessment"\r
 status: draft\r
 plane: earth\r
@@ -11158,7 +11232,7 @@ tags: [planes, exploration, safety]\r
 category: skill\r
 minStats: { intuition: 4, logic: 3, memory: 2 }\r
 effect: "This character gains +5 to Intuition and Logic rolls relating to identifying paraphysical, environmental or biological hazards."\r
-`,wE=`id: heavy-machinery\r
+`,kE=`id: heavy-machinery\r
 name: "Heavy Machinery"\r
 status: draft\r
 plane: any\r
@@ -11168,7 +11242,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, logic: 3, endurance: 2 }\r
 effect: "This character is capable of operating heavy machinery in routine conditions without a Skill Check. Rank *10 added to Skill Check rolls involving heavy machinery."\r
-`,TE=`id: herb-gathering\r
+`,AE=`id: herb-gathering\r
 name: "Herb Gathering"\r
 status: draft\r
 plane: any\r
@@ -11178,7 +11252,7 @@ category: skill\r
 ranked: true\r
 minStats: { intuition: 3, memory: 2 }\r
 effect: "This character is capable of finding common useful herbs in a suitable environment without a Skill Check. Rank *10 added to Skill Check rolls involving finding or identifying herbs and reagents in the wild."\r
-`,EE=`id: hidden-holds\r
+`,jE=`id: hidden-holds\r
 name: "Hidden Holds"\r
 status: draft\r
 plane: any\r
@@ -11187,7 +11261,7 @@ tags: [smuggling, concealment, cargo]\r
 category: skill\r
 minStats: { memory: 4, grace: 2 }\r
 effect: "This character gains +5 to rolls relating to hiding goods in vehicles, cargo, or luggage."\r
-`,DE=`id: holy-conviction\r
+`,ME=`id: holy-conviction\r
 name: "Holy Conviction"\r
 status: draft\r
 plane: any\r
@@ -11198,7 +11272,7 @@ mastery: true\r
 minStats: { demeanor: 8, empathy: 6, memory: 6 }\r
 prerequisites: [exorcism, spirit-warding]\r
 effect: "This character can request Advantage on rolls to resist, ward off or banish spirits and supernatural beings."\r
-`,OE=`id: hull-cutting\r
+`,NE=`id: hull-cutting\r
 name: "Hull Cutting"\r
 status: draft\r
 plane: earth\r
@@ -11207,7 +11281,7 @@ tags: [salvage, space, cutting]\r
 category: skill\r
 minStats: { power: 3, grace: 3, logic: 2 }\r
 effect: "This character gains +5 to rolls relating to cutting through hulls, bulkheads and other heavy plating."\r
-`,kE=`id: incantation\r
+`,PE=`id: incantation\r
 name: "Incantation"\r
 status: draft\r
 plane: isekai\r
@@ -11218,7 +11292,7 @@ minStats: { magic: 1, memory: 3 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to using magic abilities that require incantation."\r
-`,AE=`id: inspiring-speech\r
+`,FE=`id: inspiring-speech\r
 name: "Inspiring Speech"\r
 status: draft\r
 plane: any\r
@@ -11227,7 +11301,7 @@ tags: [leadership, oratory, social]\r
 category: skill\r
 minStats: { persuasion: 5, demeanor: 3 }\r
 effect: "This character gains +5 to Persuasion rolls when addressing a group or crowd."\r
-`,jE=`id: interpreter\r
+`,IE=`id: interpreter\r
 name: "Interpreter"\r
 status: draft\r
 plane: any\r
@@ -11237,7 +11311,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 4, empathy: 3, intuition: 2 }\r
 effect: "This character is capable of interpreting between two Languages they know without a Skill Check. Rank *10 added to Skill Check rolls involving interpreting tone, idiom or nuance."\r
-`,ME=`id: interrogation\r
+`,LE=`id: interrogation\r
 name: "Interrogation"\r
 status: draft\r
 plane: any\r
@@ -11247,7 +11321,7 @@ category: skill\r
 ranked: true\r
 minStats: { demeanor: 4, empathy: 3, intuition: 3 }\r
 effect: "Rank *10 added to Skill Check rolls involving interrogation."\r
-`,NE=`id: intimidation\r
+`,RE=`id: intimidation\r
 name: "Intimidation"\r
 status: draft\r
 plane: any\r
@@ -11257,7 +11331,7 @@ category: skill\r
 ranked: true\r
 minStats: { demeanor: 3, power: 3 }\r
 effect: "This character is capable of making a credible threat without a skill check. Rank *5 added to skill check rolls involving intimidation."\r
-`,PE=`id: intrusion-countermeasures\r
+`,zE=`id: intrusion-countermeasures\r
 name: "Intrusion Countermeasures"\r
 status: draft\r
 plane: earth\r
@@ -11268,7 +11342,7 @@ ranked: true\r
 minStats: { logic: 4, intuition: 4, memory: 3 }\r
 prerequisites: [programming]\r
 effect: "This character is capable of noticing a clumsy hacking attempt on a system they maintain without a Skill Check. Rank *5 added to Skill Check rolls involving detecting, tracing or stopping hackers."\r
-`,FE=`id: inventor\r
+`,BE=`id: inventor\r
 name: "Inventor"\r
 status: draft\r
 plane: any\r
@@ -11279,7 +11353,7 @@ ranked: true\r
 minStats: { logic: 5, intuition: 4, memory: 3 }\r
 prerequisites: [tinkerer]\r
 effect: "This character is capable of drafting a workable design for a simple device, or working out what an unfamiliar one is for, without a Skill Check. Rank *10 added to Skill Check rolls involving designing, improving or reverse-engineering devices, machines and tools."\r
-`,IE=`id: investigation\r
+`,VE=`id: investigation\r
 name: "Investigation"\r
 status: draft\r
 plane: any\r
@@ -11289,7 +11363,7 @@ category: skill\r
 ranked: true\r
 minStats: { intuition: 4, logic: 3, memory: 2 }\r
 effect: "This character is capable of searching a scene and following obvious leads without a skill check. Rank *5 added to skill check rolls involving investigating crimes and mysteries."\r
-`,LE=`id: iron-jaw\r
+`,HE=`id: iron-jaw\r
 name: "Iron Jaw"\r
 status: draft\r
 plane: any\r
@@ -11299,7 +11373,7 @@ category: skill\r
 minStats: { endurance: 5, demeanor: 3 }\r
 effect: "- This character can request Advantage on Endurance checks to resist the Unconscious Condition.\\n- +2 to this character's Blunt Resistance for Attacks that hit their head."\r
 modifiers: "Blunt Resistance +2 (head)"\r
-`,RE=`id: jumper\r
+`,UE=`id: jumper\r
 name: "Jumper"\r
 status: draft\r
 plane: any\r
@@ -11309,7 +11383,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 3, grace: 3 }\r
 effect: "This character is capable of jumping across a gap of up to 2 m without a Skill Check. Rank *5 added to Skill Check rolls involving jumping."\r
-`,zE=`id: kata-discipline\r
+`,WE=`id: kata-discipline\r
 name: "Kata Discipline"\r
 status: draft\r
 plane: any\r
@@ -11318,7 +11392,7 @@ tags: [martial arts, discipline, focus]\r
 category: skill\r
 minStats: { demeanor: 3, endurance: 3, grace: 2 }\r
 effect: "- This character gains +3 to Demeanor rolls to resist fear or intimidation.\\n- This character gains +3 to Endurance rolls to resist exhaustion."\r
-`,BE=`id: knowledge-sponge\r
+`,GE=`id: knowledge-sponge\r
 name: "Knowledge Sponge"\r
 status: draft\r
 plane: any\r
@@ -11329,7 +11403,7 @@ mastery: true\r
 minStats: { memory: 5, logic: 5, intuition: 5 }\r
 prerequisites: [capable-student]\r
 effect: "This character can learn a new (knowledge) Trait in a quarter the specified time."\r
-`,VE=`id: lab-technique\r
+`,KE=`id: lab-technique\r
 name: "Lab Technique"\r
 status: draft\r
 plane: any\r
@@ -11339,7 +11413,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, logic: 3, memory: 3 }\r
 effect: "This character is capable of carrying out standard scientific procedures, like taking samples, running tests and handling instruments, without a Skill Check. Rank *5 added to Skill Check rolls involving lab or field science work."\r
-`,HE=`id: last-rites\r
+`,qE=`id: last-rites\r
 name: "Last Rites"\r
 status: draft\r
 plane: any\r
@@ -11349,7 +11423,7 @@ category: skill\r
 minStats: { empathy: 4, memory: 3 }\r
 prerequisites: [rites-and-ceremonies]\r
 effect: "This character gains +5 to rolls relating to comforting the dying and laying the dead to rest so they don't linger as spirits."\r
-`,UE=`id: lecturing\r
+`,JE=`id: lecturing\r
 name: "Lecturing"\r
 status: draft\r
 plane: any\r
@@ -11358,7 +11432,7 @@ tags: [teaching, oratory, scholarship]\r
 category: skill\r
 minStats: { persuasion: 4, memory: 3 }\r
 effect: "This character gains +5 to Persuasion rolls relating to explaining complex ideas to an audience."\r
-`,WE=`id: legal-advocacy\r
+`,YE=`id: legal-advocacy\r
 name: "Legal Advocacy"\r
 status: draft\r
 plane: any\r
@@ -11367,7 +11441,7 @@ tags: [law, persuasion, courts]\r
 category: skill\r
 minStats: { logic: 4, persuasion: 4, memory: 3 }\r
 effect: "This character gains +5 to Logic and Persuasion checks relating to legal work."\r
-`,GE=`id: linguist\r
+`,XE=`id: linguist\r
 name: "Linguist"\r
 status: draft\r
 plane: any\r
@@ -11376,7 +11450,7 @@ tags: [languages, scholarship]\r
 category: skill\r
 minStats: { memory: 4, intuition: 3 }\r
 effect: "This character gains +5 to rolls relating to learning or puzzling out an unfamiliar Language."\r
-`,KE=`id: lockpicking\r
+`,ZE=`id: lockpicking\r
 name: "Lockpicking"\r
 status: draft\r
 plane: any\r
@@ -11386,7 +11460,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, intuition: 2 }\r
 effect: "This character is capable of opening simple mechanical locks with the right tools without a skill check. Rank *5 added to skill check rolls involving picking locks and bypassing security."\r
-`,qE=`id: long-distance-runner\r
+`,QE=`id: long-distance-runner\r
 name: "Long-Distance Runner"\r
 status: draft\r
 plane: any\r
@@ -11395,7 +11469,7 @@ tags: [athletics, running, endurance]\r
 category: skill\r
 minStats: { endurance: 4, grace: 2 }\r
 effect: "This character gains +5 to Endurance rolls relating to running or marching over long distances."\r
-`,JE=`id: market-sense\r
+`,$E=`id: market-sense\r
 name: "Market Sense"\r
 status: draft\r
 plane: any\r
@@ -11404,7 +11478,7 @@ tags: [trade, merchant, markets]\r
 category: skill\r
 minStats: { intuition: 4, memory: 3 }\r
 effect: "This character gains +5 to Intuition rolls relating to predicting prices, demand or market shifts."\r
-`,YE=`id: master-artificer\r
+`,eD=`id: master-artificer\r
 name: "Master Artificer"\r
 status: draft\r
 plane: isekai\r
@@ -11417,7 +11491,7 @@ prerequisites: [enchanting, rune-carving]\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character can request Advantage on rolls relating to enchanting."\r
-`,XE=`id: master-negotiator\r
+`,tD=`id: master-negotiator\r
 name: "Master Negotiator"\r
 status: draft\r
 plane: any\r
@@ -11428,7 +11502,7 @@ mastery: true\r
 minStats: { persuasion: 10, empathy: 6, intuition: 6, demeanor: 5 }\r
 prerequisites: [negotiator, haggler]\r
 effect: "This character can request Advantage on rolls relating to negotiating, haggling or settling terms."\r
-`,ZE=`id: master-salvager\r
+`,nD=`id: master-salvager\r
 name: "Master Salvager"\r
 status: draft\r
 plane: any\r
@@ -11439,7 +11513,7 @@ mastery: true\r
 minStats: { logic: 6, power: 6, endurance: 6, intuition: 6 }\r
 prerequisites: [salvage, demolitions]\r
 effect: "This character can request Advantage on rolls relating to salvage, demolition and heavy machinery."\r
-`,QE=`id: mediator\r
+`,rD=`id: mediator\r
 name: "Mediator"\r
 status: draft\r
 plane: any\r
@@ -11448,7 +11522,7 @@ tags: [diplomacy, mediation, social]\r
 category: skill\r
 minStats: { empathy: 4, persuasion: 3 }\r
 effect: "This character gains +5 to Empathy and Persuasion rolls relating to settling a dispute between other parties."\r
-`,$E=`id: medical-aid\r
+`,iD=`id: medical-aid\r
 name: "Medical Aid"\r
 status: draft\r
 plane: any\r
@@ -11458,7 +11532,7 @@ category: skill\r
 ranked: true\r
 minStats: { empathy: 3, memory: 3, grace: 2 }\r
 effect: "This character is capable of performing basic first aid, such as stopping bleeding, dressing wounds and setting bones, without a skill check. Rank *10 added to skill check rolls involving treating injuries."\r
-`,eD=`id: medium\r
+`,aD=`id: medium\r
 name: "Medium"\r
 status: draft\r
 plane: any\r
@@ -11467,7 +11541,7 @@ tags: [spirits, communication, supernatural]\r
 category: skill\r
 minStats: { empathy: 4, intuition: 4 }\r
 effect: "This character gains +5 to rolls relating to communicating with a spirit that is present."\r
-`,tD=`id: mental-fortitude\r
+`,oD=`id: mental-fortitude\r
 name: "Mental Fortitude"\r
 status: draft\r
 plane: any\r
@@ -11476,7 +11550,7 @@ tags: [will, resistance, site-example]\r
 category: skill\r
 minStats: { endurance: 8, logic: 5, demeanor: 5 }\r
 effect: "This character can request advantage in any scenario where their mental faculties are being severely taxed, be it resisting the mesmerizing effects of a vampire or pushing through a long march without becoming exhausted."\r
-`,nD=`id: military-drill\r
+`,sD=`id: military-drill\r
 name: "Military Drill"\r
 status: draft\r
 plane: any\r
@@ -11485,7 +11559,7 @@ tags: [military, discipline]\r
 category: skill\r
 minStats: { endurance: 3, demeanor: 3 }\r
 effect: "This character gains +3 to Demeanor and Persuasion rolls relating to commanding troops or giving orders to subordinates in military organizations."\r
-`,rD=`id: mining\r
+`,cD=`id: mining\r
 name: "Mining"\r
 status: draft\r
 plane: any\r
@@ -11495,7 +11569,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 4, endurance: 4, logic: 2 }\r
 effect: "This character is capable of working a mine face or claim without a Skill Check. Rank *10 added to Skill Check rolls involving mining."\r
-`,iD=`id: mnemonist\r
+`,lD=`id: mnemonist\r
 name: "Mnemonist"\r
 status: draft\r
 plane: any\r
@@ -11504,7 +11578,7 @@ tags: [memory, scholarship]\r
 category: skill\r
 minStats: { memory: 5 }\r
 effect: "This character gains +5 to Memory rolls relating to recalling something they read or heard only once."\r
-`,aD=`id: monster-handling\r
+`,uD=`id: monster-handling\r
 name: "Monster Handling"\r
 status: draft\r
 plane: any\r
@@ -11514,7 +11588,7 @@ category: skill\r
 ranked: true\r
 minStats: { empathy: 4, demeanor: 3, endurance: 2 }\r
 effect: "This character is capable of approaching and handling a tamed dangerous creature without a Skill Check. Rank *10 added to Skill Check rolls involving handling dangerous creatures."\r
-`,oD=`id: morale-officer\r
+`,dD=`id: morale-officer\r
 name: "Morale Officer"\r
 status: draft\r
 plane: any\r
@@ -11523,7 +11597,7 @@ tags: [leadership, morale, social]\r
 category: skill\r
 minStats: { empathy: 4, persuasion: 3 }\r
 effect: "This character gains +5 to Persuasion and Empathy rolls relating to keeping a group's spirits up through hardship."\r
-`,sD=`id: negotiator\r
+`,fD=`id: negotiator\r
 name: "Negotiator"\r
 status: draft\r
 plane: any\r
@@ -11533,7 +11607,7 @@ category: skill\r
 ranked: true\r
 minStats: { persuasion: 4, empathy: 3, intuition: 2 }\r
 effect: "This character is capable of negotiating a simple agreement without a Skill Check. Rank *10 added to Skill Check rolls involving negotiation."\r
-`,cD=`id: network-engineering\r
+`,pD=`id: network-engineering\r
 name: "Network Engineering"\r
 status: draft\r
 plane: earth\r
@@ -11543,7 +11617,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 4 }\r
 effect: "This character is capable of setting up and maintaining a small network without a Skill Check. Rank *10 added to Skill Check rolls involving computer networks."\r
-`,lD=`id: omen-reading\r
+`,mD=`id: omen-reading\r
 name: "Omen Reading"\r
 status: draft\r
 plane: any\r
@@ -11552,7 +11626,7 @@ tags: [faith, omens, divination]\r
 category: skill\r
 minStats: { intuition: 4, memory: 2 }\r
 effect: "This character gains +5 to Intuition rolls relating to interpreting omens and portents. The GM decides what the omens show."\r
-`,uD=`id: parasapient-field-medicine\r
+`,hD=`id: parasapient-field-medicine\r
 name: "Parasapient Field Medicine"\r
 status: draft\r
 plane: earth\r
@@ -11562,7 +11636,7 @@ category: skill\r
 minStats: { memory: 5, intuition: 3 }\r
 prerequisites: [medical-aid]\r
 effect: "This character gains +5 to rolls relating to treating injuries or illnesses of parasapients."\r
-`,dD=`id: peacemaker\r
+`,gD=`id: peacemaker\r
 name: "Peacemaker"\r
 status: draft\r
 plane: any\r
@@ -11573,7 +11647,7 @@ mastery: true\r
 minStats: { empathy: 10, persuasion: 8, demeanor: 6 }\r
 prerequisites: [diplomacy, mediator]\r
 effect: "This character can request Advantage on rolls relating to de-escalating a conflict or ending a hostile Incident through talk."\r
-`,fD=`id: peak-conditioning\r
+`,_D=`id: peak-conditioning\r
 name: "Peak Conditioning"\r
 status: draft\r
 plane: any\r
@@ -11584,7 +11658,7 @@ mastery: true\r
 minStats: { endurance: 8, power: 6, grace: 6 }\r
 prerequisites: [long-distance-runner]\r
 effect: "This character can request Advantage on Endurance, Power or Grace rolls relating to sustained physical exertion."\r
-`,pD=`id: performer-acrobatics\r
+`,vD=`id: performer-acrobatics\r
 name: "Performer: Acrobatics"\r
 status: draft\r
 plane: any\r
@@ -11594,7 +11668,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, endurance: 3, persuasion: 2 }\r
 effect: "This character is capable of tumbling, juggling and keeping their balance in a performance without a skill check. Rank *5 added to skill check rolls involving acrobatics and balance."\r
-`,mD=`id: performer-music\r
+`,yD=`id: performer-music\r
 name: "Performer: Music"\r
 status: draft\r
 plane: any\r
@@ -11604,7 +11678,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, persuasion: 3, intuition: 2 }\r
 effect: "This character is capable of playing an instrument or singing well enough to hold an audience without a skill check. Rank *5 added to skill check rolls involving musical performance."\r
-`,hD=`id: pilot-airplane\r
+`,bD=`id: pilot-airplane\r
 name: "Pilot: Airplane"\r
 status: draft\r
 plane: earth\r
@@ -11614,7 +11688,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 4, grace: 3, intuition: 3 }\r
 effect: "This character is capable of piloting airplanes in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of an airplane. Rank *10 added to Skill Check rolls involving airplane piloting."\r
-`,gD=`id: pilot-airship\r
+`,xD=`id: pilot-airship\r
 name: "Pilot: Airship"\r
 status: draft\r
 plane: any\r
@@ -11624,7 +11698,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 4, intuition: 3, grace: 2 }\r
 effect: "This character is capable of piloting airships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of an airship. Rank *10 added to Skill Check rolls involving airship piloting."\r
-`,_D=`id: pilot-boat\r
+`,SD=`id: pilot-boat\r
 name: "Pilot: Boat"\r
 status: draft\r
 plane: any\r
@@ -11634,7 +11708,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2, memory: 2 }\r
 effect: "This character is capable of piloting small boats in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a boat. Rank *10 added to Skill Check rolls involving boat handling."\r
-`,vD=`id: pilot-drone\r
+`,CD=`id: pilot-drone\r
 name: "Pilot: Drone"\r
 status: draft\r
 plane: earth\r
@@ -11644,7 +11718,7 @@ category: skill\r
 ranked: true\r
 minStats: { intuition: 3, grace: 3, logic: 2 }\r
 effect: "This character is capable of piloting drones in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a drone. Rank *10 added to Skill Check rolls involving drone piloting."\r
-`,yD=`id: pilot-fighter\r
+`,wD=`id: pilot-fighter\r
 name: "Pilot: Fighter"\r
 status: draft\r
 plane: earth\r
@@ -11654,7 +11728,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 5, intuition: 4, memory: 4 }\r
 effect: "This character is capable of piloting a fighter in simple scenarios and describing its basic functions and controls without a skill check. Rank *10 added to skill check rolls involving fighter piloting."\r
-`,bD=`id: pilot-freighter\r
+`,TD=`id: pilot-freighter\r
 name: "Pilot: Freighter"\r
 status: draft\r
 plane: earth\r
@@ -11664,7 +11738,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 5, logic: 3, intuition: 3 }\r
 effect: "This character is capable of piloting freighters in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a freighter. Rank *10 added to Skill Check rolls involving freighter piloting."\r
-`,xD=`id: pilot-ground-vehicle\r
+`,ED=`id: pilot-ground-vehicle\r
 name: "Pilot: Ground Vehicle"\r
 status: draft\r
 plane: any\r
@@ -11674,7 +11748,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 2, intuition: 2, memory: 2 }\r
 effect: "This character is capable of driving ground vehicles in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a ground vehicle. Rank *10 added to Skill Check rolls involving driving."\r
-`,SD=`id: pilot-gunship\r
+`,DD=`id: pilot-gunship\r
 name: "Pilot: Gunship"\r
 status: draft\r
 plane: earth\r
@@ -11684,7 +11758,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, intuition: 4, memory: 4 }\r
 effect: "This character is capable of piloting gunships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a gunship. Rank *10 added to Skill Check rolls involving gunship piloting."\r
-`,CD=`id: pilot-helicopter\r
+`,OD=`id: pilot-helicopter\r
 name: "Pilot: Helicopter"\r
 status: draft\r
 plane: earth\r
@@ -11694,7 +11768,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 5, intuition: 3, grace: 3 }\r
 effect: "This character is capable of piloting helicopters in simple scenarios without a skill check and is capable of describing the basic functions and controls of a helicopter. Rank *10 added to skill check rolls involving helicopter piloting."\r
-`,wD=`id: pilot-sailing-ship\r
+`,kD=`id: pilot-sailing-ship\r
 name: "Pilot: Sailing Ship"\r
 status: draft\r
 plane: any\r
@@ -11704,7 +11778,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 4, intuition: 3, grace: 2 }\r
 effect: "This character is capable of sailing a ship in simple scenarios without a Skill Check and is capable of describing the basic functions and rigging of a sailing ship. Rank *10 added to Skill Check rolls involving sailing."\r
-`,TD=`id: pilot-shuttle\r
+`,AD=`id: pilot-shuttle\r
 name: "Pilot: Shuttle"\r
 status: draft\r
 plane: earth\r
@@ -11714,7 +11788,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 4, grace: 3, intuition: 3 }\r
 effect: "This character is capable of piloting shuttles in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a shuttle. Rank *10 added to Skill Check rolls involving shuttle piloting."\r
-`,ED=`id: pilot-truck\r
+`,jD=`id: pilot-truck\r
 name: "Pilot: Truck"\r
 status: draft\r
 plane: earth\r
@@ -11725,7 +11799,7 @@ ranked: true\r
 minStats: { memory: 4, grace: 3, intuition: 3 }\r
 lore: trucks\r
 effect: "This character is capable of piloting Truck Class Voidships in simple scenarios without a Skill Check and is capable of describing the basic functions and controls of a Truck Class Voidship. Rank *10 added to Skill Check rolls involving Truck Class Voidship piloting."\r
-`,DD=`id: planar-acclimation\r
+`,MD=`id: planar-acclimation\r
 name: "Planar Acclimation"\r
 status: draft\r
 plane: earth\r
@@ -11734,7 +11808,7 @@ tags: [planes, exploration, endurance]\r
 category: skill\r
 minStats: { endurance: 4, demeanor: 2 }\r
 effect: "This character gains +5 to Endurance rolls to resist the effects of a plane's foreign paraphysics, including Null Physics at a gate's border."\r
-`,OD=`id: planar-surveying\r
+`,ND=`id: planar-surveying\r
 name: "Planar Surveying"\r
 status: draft\r
 plane: earth\r
@@ -11744,7 +11818,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 3, endurance: 2 }\r
 effect: "This character gains +5 to rolls relating to the surveying, map making, and general understanding of the topographies of other planes."\r
-`,kD=`id: poker-face\r
+`,PD=`id: poker-face\r
 name: "Poker Face"\r
 status: draft\r
 plane: any\r
@@ -11753,7 +11827,7 @@ tags: [social, deception, gambling]\r
 category: skill\r
 minStats: { demeanor: 4 }\r
 effect: "This character gains +3 to Demeanor rolls relating to hiding their intentions or reactions."\r
-`,AD=`id: polymath\r
+`,FD=`id: polymath\r
 name: "Polymath"\r
 status: draft\r
 plane: any\r
@@ -11764,7 +11838,7 @@ mastery: true\r
 minStats: { memory: 10, logic: 6, intuition: 6 }\r
 prerequisites: [archival-research, mnemonist]\r
 effect: "This character can request Advantage on Memory and Logic rolls to recall or work out facts in any field they hold a Knowledge of."\r
-`,jD=`id: possession-resistance\r
+`,ID=`id: possession-resistance\r
 name: "Possession Resistance"\r
 status: draft\r
 plane: any\r
@@ -11773,7 +11847,7 @@ tags: [spirits, resistance, supernatural]\r
 category: skill\r
 minStats: { demeanor: 5, endurance: 3 }\r
 effect: "This character gains +5 to Demeanor rolls to resist possession and supernatural control of their mind."\r
-`,MD=`id: potion-identification\r
+`,LD=`id: potion-identification\r
 name: "Potion Identification"\r
 status: draft\r
 plane: isekai\r
@@ -11782,7 +11856,7 @@ tags: [potions, alchemy, identification]\r
 category: skill\r
 minStats: { intuition: 3, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to identifying a potion and its strength."\r
-`,ND=`id: procurement\r
+`,RD=`id: procurement\r
 name: "Procurement"\r
 status: draft\r
 plane: any\r
@@ -11791,7 +11865,7 @@ tags: [trade, merchant, contacts]\r
 category: skill\r
 minStats: { persuasion: 3, memory: 3, intuition: 2 }\r
 effect: "This character gains +5 to rolls relating to finding and getting hold of goods, equipment or services, legal or otherwise, through the right sellers and suppliers."\r
-`,PD=`id: programming\r
+`,zD=`id: programming\r
 name: "Programming"\r
 status: draft\r
 plane: earth\r
@@ -11801,7 +11875,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 3, intuition: 2 }\r
 effect: "This character is capable of writing and debugging simple software and reading other people’s code without a skill check. Rank *5 added to skill check rolls involving programming and hacking."\r
-`,FD=`id: prototyping\r
+`,BD=`id: prototyping\r
 name: "Prototyping"\r
 status: draft\r
 plane: any\r
@@ -11811,7 +11885,7 @@ category: skill\r
 minStats: { grace: 4, logic: 4, intuition: 3 }\r
 prerequisites: [inventor]\r
 effect: "This character gains +5 to rolls relating to building a first working version of a device, whether from plans, a sketch or salvaged parts."\r
-`,ID=`id: quartermaster\r
+`,VD=`id: quartermaster\r
 name: "Quartermaster"\r
 status: draft\r
 plane: any\r
@@ -11820,7 +11894,7 @@ tags: [leadership, logistics, supplies]\r
 category: skill\r
 minStats: { logic: 4, memory: 3 }\r
 effect: "This character gains +5 to Logic and Memory rolls relating to managing a group's supplies, rations and equipment."\r
-`,LD=`id: read-the-room\r
+`,HD=`id: read-the-room\r
 name: "Read the Room"\r
 status: draft\r
 plane: any\r
@@ -11829,7 +11903,7 @@ tags: [empathy, social, awareness]\r
 category: skill\r
 minStats: { empathy: 3, intuition: 3 }\r
 effect: "This character gains +5 to Empathy and Intuition rolls relating to reading the mood or intentions of a group."\r
-`,RD=`id: reagent-preparation\r
+`,UD=`id: reagent-preparation\r
 name: "Reagent Preparation"\r
 status: draft\r
 plane: isekai\r
@@ -11838,7 +11912,7 @@ tags: [potions, alchemy, reagents]\r
 category: skill\r
 minStats: { grace: 3, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to gathering, preparing and preserving magical components."\r
-`,zD=`id: relic-handling\r
+`,WD=`id: relic-handling\r
 name: "Relic Handling"\r
 status: draft\r
 plane: isekai\r
@@ -11849,7 +11923,7 @@ minStats: { grace: 3, intuition: 3, memory: 2 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to the safe handling and use of relics or artifacts."\r
-`,BD=`id: research\r
+`,GD=`id: research\r
 name: "Research"\r
 status: draft\r
 plane: any\r
@@ -11859,7 +11933,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to dedicated research activities."\r
-`,VD=`id: resist-interrogation\r
+`,KD=`id: resist-interrogation\r
 name: "Resist Interrogation"\r
 status: draft\r
 plane: any\r
@@ -11868,7 +11942,7 @@ tags: [espionage, resistance, discipline]\r
 category: skill\r
 minStats: { demeanor: 4, endurance: 4 }\r
 effect: "This character gains +5 to Demeanor and Endurance rolls relating to resisting interrogation, coercion or torture."\r
-`,HD=`id: resuscitation\r
+`,qD=`id: resuscitation\r
 name: "Resuscitation"\r
 status: draft\r
 plane: any\r
@@ -11878,7 +11952,7 @@ category: skill\r
 minStats: { memory: 3, grace: 3, power: 2 }\r
 prerequisites: [medical-aid]\r
 effect: "This character gains +5 to rolls relating to reviving a character who is unconscious or not breathing."\r
-`,UD=`id: rider-basic-animals\r
+`,JD=`id: rider-basic-animals\r
 name: "Rider: Basic Animals"\r
 status: draft\r
 plane: any\r
@@ -11888,7 +11962,7 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, empathy: 4, persuasion: 3 }\r
 effect: "This character is capable of riding a basic animal as a mount in simple scenarios without a skill check. Rank *5 added to skill check rolls involving riding a simple animal."\r
-`,WD=`id: rites-and-ceremonies\r
+`,YD=`id: rites-and-ceremonies\r
 name: "Rites and Ceremonies"\r
 status: draft\r
 plane: any\r
@@ -11898,7 +11972,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 3, demeanor: 3, empathy: 2 }\r
 effect: "This character is capable of performing the common rites of a faith they hold a Knowledge of without a Skill Check. Rank *10 added to Skill Check rolls involving religious rites and ceremonies."\r
-`,GD=`id: route-memory\r
+`,XD=`id: route-memory\r
 name: "Route Memory"\r
 status: draft\r
 plane: any\r
@@ -11907,7 +11981,7 @@ tags: [navigation, memory, travel]\r
 category: skill\r
 minStats: { memory: 5 }\r
 effect: "This character can request Advantage on Memory Skill Checks to retrace any route they've traveled before, whether on foot, by vehicle, or by ship, and to recall its landmarks, hazards, and checkpoints."\r
-`,KD=`id: rune-carving\r
+`,ZD=`id: rune-carving\r
 name: "Rune Carving"\r
 status: draft\r
 plane: isekai\r
@@ -11918,7 +11992,7 @@ minStats: { grace: 3, memory: 3, magic: 1 }\r
 # On the Magic list: its own tab on the Traits step, open to every character.\r
 list: magic\r
 effect: "This character gains +5 to rolls relating to Rune Carving."\r
-`,qD=`id: running-dark\r
+`,QD=`id: running-dark\r
 name: "Running Dark"\r
 status: draft\r
 plane: any\r
@@ -11927,7 +12001,7 @@ tags: [piloting, smuggling, stealth]\r
 category: skill\r
 minStats: { memory: 4, grace: 3, demeanor: 4 }\r
 effect: "This character can request Advantage on piloting Skill Checks to avoid detection, such as slipping past patrols or sensor sweeps."\r
-`,JD=`id: salvage\r
+`,$D=`id: salvage\r
 name: "Salvage"\r
 status: draft\r
 plane: any\r
@@ -11937,7 +12011,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 3, power: 3, intuition: 2 }\r
 effect: "This character is capable of finding and removing usable parts from a wreck without a Skill Check. Rank *10 added to Skill Check rolls involving salvage."\r
-`,YD=`id: schemer\r
+`,eO=`id: schemer\r
 name: "Schemer"\r
 status: draft\r
 plane: any\r
@@ -11946,7 +12020,7 @@ tags: [intrigue, politics]\r
 category: skill\r
 minStats: { logic: 4, persuasion: 3, intuition: 2 }\r
 effect: "This character gains +3 to Logic and Persuasion rolls when attempting to trick or deceive."\r
-`,XD=`id: scientific-method\r
+`,tO=`id: scientific-method\r
 name: "Scientific Method"\r
 status: draft\r
 plane: any\r
@@ -11955,7 +12029,7 @@ tags: [science, research, logic]\r
 category: skill\r
 minStats: { logic: 4, memory: 2 }\r
 effect: "This character gains +3 to Logic rolls relating to working out how something works, through observation, experiments or testing ideas."\r
-`,ZD=`id: scrap-appraisal\r
+`,nO=`id: scrap-appraisal\r
 name: "Scrap Appraisal"\r
 status: draft\r
 plane: any\r
@@ -11965,7 +12039,7 @@ category: skill\r
 minStats: { memory: 3, intuition: 3 }\r
 prerequisites: [salvage]\r
 effect: "This character gains +5 to rolls relating to judging the value of salvage and scrap."\r
-`,QD=`id: sculpted\r
+`,rO=`id: sculpted\r
 name: "Sculpted"\r
 status: draft\r
 plane: any\r
@@ -11974,7 +12048,7 @@ tags: [appearance, athletics, social, site-example]\r
 category: skill\r
 minStats: { power: 5, endurance: 5, demeanor: 3 }\r
 effect: "This character can request advantage in situations where the appearance of athleticism can affect the outcome of a roll or situation (useful for models, athletes with endorsements, or barbarians trying to intimidate)."\r
-`,$D=`id: sense-the-unseen\r
+`,iO=`id: sense-the-unseen\r
 name: "Sense the Unseen"\r
 status: draft\r
 plane: any\r
@@ -11983,7 +12057,7 @@ tags: [spirits, awareness, supernatural]\r
 category: skill\r
 minStats: { intuition: 5 }\r
 effect: "This character gains +5 to Intuition rolls relating to noticing spirits, hauntings and other supernatural presences."\r
-`,eO=`id: shaking-a-tail\r
+`,aO=`id: shaking-a-tail\r
 name: "Shaking a Tail"\r
 status: draft\r
 plane: any\r
@@ -11992,7 +12066,7 @@ tags: [espionage, evasion, urban]\r
 category: skill\r
 minStats: { intuition: 4, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to noticing and losing anyone following them."\r
-`,tO=`id: shin-training\r
+`,oO=`id: shin-training\r
 name: "Shin Training"\r
 status: draft\r
 plane: any\r
@@ -12004,7 +12078,7 @@ minStats: { endurance: 4, power: 3 }\r
 prerequisites: [brawler]\r
 effect: "- Rank *1 added to the Blunt damage of this character's kicks.\\n- Rank *1 added to this character's Blunt Resistance for Attacks that hit their legs."\r
 modifiers: "Blunt Resistance +1 per Rank (legs)"\r
-`,nO=`id: shoring\r
+`,sO=`id: shoring\r
 name: "Shoring"\r
 status: draft\r
 plane: any\r
@@ -12013,7 +12087,7 @@ tags: [engineering, safety, construction]\r
 category: skill\r
 minStats: { logic: 4, power: 3 }\r
 effect: "This character gains +5 to rolls relating to stabilizing collapsing structures, tunnels or wrecks."\r
-`,rO=`id: simple-cooking\r
+`,cO=`id: simple-cooking\r
 name: "Simple Cooking"\r
 status: draft\r
 plane: any\r
@@ -12023,7 +12097,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 2, intuition: 2 }\r
 effect: "This character can cook simple, filling meals for themselves and a small group without a skill check, even over a campfire. Rank *5 added to skill check rolls involving cooking."\r
-`,iO=`id: simple-potion-mixing\r
+`,lO=`id: simple-potion-mixing\r
 name: "Simple Potion Mixing"\r
 status: draft\r
 plane: isekai\r
@@ -12033,7 +12107,7 @@ category: skill\r
 ranked: true\r
 minStats: { memory: 3, intuition: 3 }\r
 effect: "This character can brew simple potions, such as healing draughts and sleeping tonics, from a known recipe and the right ingredients without a skill check. Rank *5 added to skill check rolls involving brewing potions."\r
-`,aO=`id: sizing-up\r
+`,uO=`id: sizing-up\r
 name: "Sizing Up"\r
 status: draft\r
 plane: any\r
@@ -12042,7 +12116,7 @@ tags: [empathy, social, awareness]\r
 category: skill\r
 minStats: { empathy: 3, demeanor: 3 }\r
 effect: "After a few minutes of conversation with someone, this character can request Advantage on Empathy Skill Checks to judge whether they're lying or can be trusted."\r
-`,oO=`id: slayer\r
+`,dO=`id: slayer\r
 name: "Slayer"\r
 status: draft\r
 plane: any\r
@@ -12053,7 +12127,7 @@ mastery: true\r
 minStats: { intuition: 8, grace: 6, power: 6, endurance: 6 }\r
 prerequisites: [monster-hunter, weak-point]\r
 effect: "This character can request Advantage on Attack Rolls against a kind of monster or extraplanar being they have fought before."\r
-`,sO=`id: sleight-of-hand\r
+`,fO=`id: sleight-of-hand\r
 name: "Sleight of Hand"\r
 status: draft\r
 plane: any\r
@@ -12062,7 +12136,7 @@ tags: [theft, trickery]\r
 category: skill\r
 minStats: { grace: 4, intuition: 2 }\r
 effect: "This character gains +5 to Grace when attempting to pickpocket, deceive, or impress with their hands."\r
-`,cO=`id: smooth-talker\r
+`,pO=`id: smooth-talker\r
 name: "Smooth Talker"\r
 status: draft\r
 plane: any\r
@@ -12071,7 +12145,7 @@ tags: [social, persuasion]\r
 category: skill\r
 minStats: { persuasion: 3, empathy: 2 }\r
 effect: "This character gains +2 to Persuasion or Demeanor rolls."\r
-`,lO=`id: social-engineering\r
+`,mO=`id: social-engineering\r
 name: "Social Engineering"\r
 status: draft\r
 plane: any\r
@@ -12080,7 +12154,7 @@ tags: [hacking, deception, social]\r
 category: skill\r
 minStats: { persuasion: 4, intuition: 3, demeanor: 2 }\r
 effect: "This character gains +5 to Persuasion rolls relating to talking someone into giving up access, credentials or information."\r
-`,uO=`id: specimen-handling\r
+`,hO=`id: specimen-handling\r
 name: "Specimen Handling"\r
 status: draft\r
 plane: any\r
@@ -12089,7 +12163,7 @@ tags: [parabiology, animals, care, handling]\r
 category: skill\r
 minStats: { empathy: 3, grace: 2, endurance: 2 }\r
 effect: "This character gains +5 to rolls relating to the safe handling of live specimens of mundane or exotic varieties."\r
-`,dO=`id: spirit-warding\r
+`,gO=`id: spirit-warding\r
 name: "Spirit Warding"\r
 status: draft\r
 plane: any\r
@@ -12098,7 +12172,7 @@ tags: [faith, spirits, protection, supernatural]\r
 category: skill\r
 minStats: { memory: 4, demeanor: 3 }\r
 effect: "This character gains +5 to rolls relating to setting wards against spirits and the supernatural."\r
-`,fO=`id: spiritual-counsel\r
+`,_O=`id: spiritual-counsel\r
 name: "Spiritual Counsel"\r
 status: draft\r
 plane: any\r
@@ -12107,7 +12181,7 @@ tags: [faith, counsel, social]\r
 category: skill\r
 minStats: { empathy: 4, memory: 3 }\r
 effect: "This character gains +5 to Empathy rolls relating to guiding someone through doubt, guilt or questions of faith."\r
-`,pO=`id: spymaster\r
+`,vO=`id: spymaster\r
 name: "Spymaster"\r
 status: draft\r
 plane: any\r
@@ -12118,7 +12192,7 @@ mastery: true\r
 minStats: { intuition: 8, persuasion: 6, memory: 6, demeanor: 6 }\r
 prerequisites: [handler, surveillance]\r
 effect: "This character can request Advantage on rolls relating to running an intelligence network, and can spend a day working their network to learn a secret, at the GM's discretion."\r
-`,mO=`id: starship-engineering\r
+`,yO=`id: starship-engineering\r
 name: "Starship Engineering"\r
 status: draft\r
 plane: earth\r
@@ -12128,7 +12202,7 @@ category: skill\r
 ranked: true\r
 minStats: { logic: 4, memory: 3, grace: 2 }\r
 effect: "This character is capable of maintaining and making routine repairs to a starship’s reactors, drives and life support without a skill check. Rank *5 added to skill check rolls involving starship repair."\r
-`,hO=`id: streetwise\r
+`,bO=`id: streetwise\r
 name: "Streetwise"\r
 status: draft\r
 plane: any\r
@@ -12137,7 +12211,7 @@ tags: [urban, crime, social]\r
 category: skill\r
 minStats: { memory: 3, intuition: 2 }\r
 effect: "This character gains +3 to Memory and Logic rolls relating to urban or city environments."\r
-`,gO=`id: surgery\r
+`,xO=`id: surgery\r
 name: "Surgery"\r
 status: draft\r
 plane: any\r
@@ -12148,7 +12222,7 @@ ranked: true\r
 minStats: { memory: 6, grace: 5, logic: 4 }\r
 prerequisites: [medical-aid]\r
 effect: "This character is capable of performing surgery to treat severe injuries, such as removing shrapnel or closing internal wounds, given the proper tools. Rank *10 added to skill check rolls involving surgery."\r
-`,_O=`id: surveillance\r
+`,SO=`id: surveillance\r
 name: "Surveillance"\r
 status: draft\r
 plane: any\r
@@ -12158,7 +12232,7 @@ category: skill\r
 ranked: true\r
 minStats: { intuition: 4, grace: 3, demeanor: 2 }\r
 effect: "This character is capable of watching or following a target through a crowd without being noticed and without a Skill Check. Rank *10 added to Skill Check rolls involving surveillance."\r
-`,vO=`id: survivalist\r
+`,CO=`id: survivalist\r
 name: "Survivalist"\r
 status: draft\r
 plane: any\r
@@ -12167,7 +12241,7 @@ tags: [survival, wilderness]\r
 category: skill\r
 minStats: { endurance: 3, intuition: 3, memory: 2 }\r
 effect: "This character gains +3 to rolls relating to navigation, gathering, or the identification of flora and fauna in a wilderness setting."\r
-`,yO=`id: suturing\r
+`,wO=`id: suturing\r
 name: "Suturing"\r
 status: draft\r
 plane: any\r
@@ -12178,7 +12252,7 @@ ranked: true\r
 minStats: { grace: 4, memory: 3 }\r
 prerequisites: [medical-aid]\r
 effect: "This character is capable of closing a wound and ending the Severe Bleeding Condition without a Skill Check, given the tools. Rank *10 added to Skill Check rolls involving closing wounds."\r
-`,bO=`id: swimmer\r
+`,TO=`id: swimmer\r
 name: "Swimmer"\r
 status: draft\r
 plane: any\r
@@ -12188,7 +12262,7 @@ category: skill\r
 ranked: true\r
 minStats: { endurance: 3, power: 2, grace: 2 }\r
 effect: "This character is capable of swimming in rough water or against a current without a Skill Check. Rank *5 added to Skill Check rolls involving swimming or holding their breath."\r
-`,xO=`id: systems-administration\r
+`,EO=`id: systems-administration\r
 name: "Systems Administration"\r
 status: draft\r
 plane: earth\r
@@ -12197,7 +12271,7 @@ tags: [computers, administration]\r
 category: skill\r
 minStats: { logic: 3, memory: 4 }\r
 effect: "This character gains +5 to rolls relating to managing, maintaining and auditing computer systems."\r
-`,SO=`id: talent-spotter\r
+`,DO=`id: talent-spotter\r
 name: "Talent Spotter"\r
 status: draft\r
 plane: any\r
@@ -12206,7 +12280,7 @@ tags: [leadership, judgment, social]\r
 category: skill\r
 minStats: { intuition: 4, empathy: 3 }\r
 effect: "This character gains +5 to Intuition rolls relating to judging a person's competence or fitness for a role."\r
-`,CO=`id: teaching\r
+`,OO=`id: teaching\r
 name: "Teaching"\r
 status: draft\r
 plane: any\r
@@ -12216,7 +12290,7 @@ category: skill\r
 ranked: true\r
 minStats: { empathy: 3, persuasion: 3, memory: 3 }\r
 effect: "This character is capable of teaching the basics of a Knowledge or Skill they hold without a Skill Check. Rank *10 added to Skill Check rolls involving teaching."\r
-`,wO=`id: teamster\r
+`,kO=`id: teamster\r
 name: "Teamster"\r
 status: draft\r
 plane: any\r
@@ -12225,7 +12299,7 @@ tags: [caravan, animals, driving]\r
 category: skill\r
 minStats: { empathy: 3, power: 2, endurance: 2 }\r
 effect: "This character gains +5 to the handling and care of draft animals, wagons, or other convoy related vehicles."\r
-`,TO=`id: textual-criticism\r
+`,AO=`id: textual-criticism\r
 name: "Textual Criticism"\r
 status: draft\r
 plane: any\r
@@ -12234,7 +12308,7 @@ tags: [scholarship, documents, forgery]\r
 category: skill\r
 minStats: { logic: 4, memory: 4 }\r
 effect: "This character gains +5 to Logic rolls relating to spotting forgeries, alterations or errors in a document."\r
-`,EO=`id: threat-assessment\r
+`,jO=`id: threat-assessment\r
 name: "Threat Assessment"\r
 status: draft\r
 plane: any\r
@@ -12244,7 +12318,7 @@ category: skill\r
 ranked: true\r
 minStats: { intuition: 4, empathy: 2 }\r
 effect: "This character is capable of telling whether someone in view is carrying an openly worn or poorly hidden weapon without a Skill Check. Rank *5 added to Skill Check rolls involving spotting hostile intent in a crowd."\r
-`,DO=`id: tinkerer\r
+`,MO=`id: tinkerer\r
 name: "Tinkerer"\r
 status: draft\r
 plane: any\r
@@ -12253,7 +12327,7 @@ tags: [technology, repair, crafting]\r
 category: skill\r
 minStats: { logic: 3, grace: 3, intuition: 2 }\r
 effect: "This character gains +5 to the understanding and modification of mechanisms."\r
-`,OO=`id: tracker\r
+`,NO=`id: tracker\r
 name: "Tracker"\r
 status: draft\r
 plane: any\r
@@ -12262,7 +12336,7 @@ tags: [tracking, hunting, wilderness]\r
 category: skill\r
 minStats: { intuition: 4, memory: 2 }\r
 effect: "This character gains +5 to rolls relating to the tracking of sapients or animals in wilderness settings."\r
-`,kO=`id: trail-runner\r
+`,PO=`id: trail-runner\r
 name: "Trail Runner"\r
 status: draft\r
 plane: any\r
@@ -12271,7 +12345,7 @@ tags: [endurance, travel, site-example]\r
 category: skill\r
 minStats: { power: 3, endurance: 2, grace: 2 }\r
 effect: "This character takes twice as long to get winded by activities that involve running, hiking, or climbing."\r
-`,AO=`id: trauma-care\r
+`,FO=`id: trauma-care\r
 name: "Trauma Care"\r
 status: draft\r
 plane: any\r
@@ -12282,7 +12356,7 @@ ranked: true\r
 minStats: { memory: 4, grace: 3, demeanor: 3 }\r
 prerequisites: [medical-aid]\r
 effect: "This character is capable of stabilizing a Severely Injured character without a Skill Check. Rank *10 added to Skill Check rolls involving treating severe injuries."\r
-`,jO=`id: triage\r
+`,IO=`id: triage\r
 name: "Triage"\r
 status: draft\r
 plane: any\r
@@ -12291,7 +12365,7 @@ tags: [medicine, triage, healing]\r
 category: skill\r
 minStats: { intuition: 4, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to assessing injuries and deciding which patients to treat first."\r
-`,MO=`id: vigilance\r
+`,LO=`id: vigilance\r
 name: "Vigilance"\r
 status: draft\r
 plane: any\r
@@ -12301,7 +12375,7 @@ category: skill\r
 minStats: { intuition: 3, endurance: 2 }\r
 effect: "- This character gains +2 Priority and +2 Defense in the first Round of a combat Incident in which it was caught unaware or surprised.\\n- This character gains +2 to Intuition checks relating to detecting ambushes or surprises."\r
 modifiers: "Priority +2 (first Round, when surprised), Defense +2 (first Round, when surprised)"\r
-`,NO=`id: weightlifter\r
+`,RO=`id: weightlifter\r
 name: "Weightlifter"\r
 status: draft\r
 plane: any\r
@@ -12311,7 +12385,7 @@ category: skill\r
 ranked: true\r
 minStats: { power: 5, endurance: 3 }\r
 effect: "This character is capable of lifting and carrying up to their own weight without a Skill Check. Rank *10 added to Power Skill Check rolls involving lifting or carrying."\r
-`,PO=`id: wielder-bow\r
+`,zO=`id: wielder-bow\r
 name: "Wielder: Bow"\r
 status: draft\r
 plane: any\r
@@ -12323,7 +12397,7 @@ ranked: true\r
 minStats: { grace: 3, power: 3, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Bow.\\n- +3 to Attack Rolls made with a Bow.\\n- This character is capable of performing the basic tasks of maintaining a Bow without a skill check."\r
 modifiers: "Attack Rolls +3 (Bow)"\r
-`,FO=`id: wielder-crossbow\r
+`,BO=`id: wielder-crossbow\r
 name: "Wielder: Crossbow"\r
 status: draft\r
 plane: any\r
@@ -12335,7 +12409,7 @@ ranked: true\r
 minStats: { grace: 2, power: 2, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Crossbow.\\n- +3 to Attack Rolls made with a Crossbow.\\n- This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check."\r
 modifiers: "Attack Rolls +3 (Crossbow)"\r
-`,IO=`id: wielder-dagger\r
+`,VO=`id: wielder-dagger\r
 name: "Wielder: Dagger"\r
 status: draft\r
 plane: any\r
@@ -12347,7 +12421,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Dagger.\\n- +3 to Attack Rolls made with a Dagger.\\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check."\r
 modifiers: "Attack Rolls +3 (Dagger)"\r
-`,LO=`id: wielder-flamethrower\r
+`,HO=`id: wielder-flamethrower\r
 name: "Wielder: Flamethrower"\r
 status: draft\r
 plane: earth\r
@@ -12359,7 +12433,7 @@ ranked: true\r
 minStats: { endurance: 3, power: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Flamethrower.\\n- +3 to Attack Rolls made with a Flamethrower.\\n- This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check."\r
 modifiers: "Attack Rolls +3 (Flamethrower)"\r
-`,RO=`id: wielder-greatsword\r
+`,UO=`id: wielder-greatsword\r
 name: "Wielder: Greatsword"\r
 status: draft\r
 plane: any\r
@@ -12371,7 +12445,7 @@ ranked: true\r
 minStats: { power: 5, endurance: 4, grace: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Greatsword.\\n- +3 to Attack Rolls made with a Greatsword.\\n- This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check."\r
 modifiers: "Attack Rolls +3 (Greatsword)"\r
-`,zO=`id: wielder-grenade\r
+`,WO=`id: wielder-grenade\r
 name: "Wielder: Grenade"\r
 status: draft\r
 plane: earth\r
@@ -12383,7 +12457,7 @@ ranked: true\r
 minStats: { grace: 2, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Grenade.\\n- +3 to Attack Rolls made with a Grenade.\\n- This character is capable of performing the basic tasks of maintaining a Grenade without a skill check."\r
 modifiers: "Attack Rolls +3 (Grenade)"\r
-`,BO=`id: wielder-longsword\r
+`,GO=`id: wielder-longsword\r
 name: "Wielder: Longsword"\r
 status: draft\r
 plane: any\r
@@ -12395,7 +12469,7 @@ ranked: true\r
 minStats: { grace: 4, power: 4, endurance: 4 }\r
 effect: "- Rank *5 added to skill check rolls involving a Longsword.\\n- +3 to Attack Rolls made with a Longsword.\\n- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check."\r
 modifiers: "Attack Rolls +3 (Longsword)"\r
-`,VO=`id: wielder-mace\r
+`,KO=`id: wielder-mace\r
 name: "Wielder: Mace"\r
 status: draft\r
 plane: any\r
@@ -12407,7 +12481,7 @@ ranked: true\r
 minStats: { power: 4, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Mace.\\n- +3 to Attack Rolls made with a Mace.\\n- This character is capable of performing the basic tasks of maintaining a Mace without a skill check."\r
 modifiers: "Attack Rolls +3 (Mace)"\r
-`,HO=`id: wielder-machine-gun\r
+`,qO=`id: wielder-machine-gun\r
 name: "Wielder: Machine Gun"\r
 status: draft\r
 plane: earth\r
@@ -12419,7 +12493,7 @@ ranked: true\r
 minStats: { power: 3, endurance: 3, grace: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Machine Gun.\\n- +3 to Attack Rolls made with a Machine Gun.\\n- This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check."\r
 modifiers: "Attack Rolls +3 (Machine Gun)"\r
-`,UO=`id: wielder-missile-launcher\r
+`,JO=`id: wielder-missile-launcher\r
 name: "Wielder: Missile Launcher"\r
 status: draft\r
 plane: earth\r
@@ -12431,7 +12505,7 @@ ranked: true\r
 minStats: { intuition: 3, logic: 2, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Missile Launcher.\\n- +3 to Attack Rolls made with a Missile Launcher.\\n- This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check."\r
 modifiers: "Attack Rolls +3 (Missile Launcher)"\r
-`,WO=`id: wielder-mortar\r
+`,YO=`id: wielder-mortar\r
 name: "Wielder: Mortar"\r
 status: draft\r
 plane: earth\r
@@ -12443,7 +12517,7 @@ ranked: true\r
 minStats: { logic: 3, intuition: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Mortar.\\n- +3 to Attack Rolls made with a Mortar.\\n- This character is capable of performing the basic tasks of maintaining a Mortar without a skill check."\r
 modifiers: "Attack Rolls +3 (Mortar)"\r
-`,GO=`id: wielder-musket\r
+`,XO=`id: wielder-musket\r
 name: "Wielder: Musket"\r
 status: draft\r
 plane: any\r
@@ -12455,7 +12529,7 @@ ranked: true\r
 minStats: { grace: 3, power: 2, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Musket.\\n- +3 to Attack Rolls made with a Musket.\\n- This character is capable of performing the basic tasks of maintaining a Musket without a skill check."\r
 modifiers: "Attack Rolls +3 (Musket)"\r
-`,KO=`id: wielder-pistol\r
+`,ZO=`id: wielder-pistol\r
 name: "Wielder: Pistol"\r
 status: draft\r
 plane: any\r
@@ -12467,7 +12541,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Pistol.\\n- +3 to Attack Rolls made with a Pistol.\\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check."\r
 modifiers: "Attack Rolls +3 (Pistol)"\r
-`,qO=`id: wielder-polearm\r
+`,QO=`id: wielder-polearm\r
 name: "Wielder: Polearm"\r
 status: draft\r
 plane: any\r
@@ -12479,7 +12553,7 @@ ranked: true\r
 minStats: { power: 4, grace: 3, endurance: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Polearm.\\n- +3 to Attack Rolls made with a Polearm.\\n- This character is capable of performing the basic tasks of maintaining a Polearm without a skill check."\r
 modifiers: "Attack Rolls +3 (Polearm)"\r
-`,JO=`id: wielder-rifle\r
+`,$O=`id: wielder-rifle\r
 name: "Wielder: Rifle"\r
 status: draft\r
 plane: earth\r
@@ -12491,7 +12565,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Rifle.\\n- +3 to Attack Rolls made with a Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Rifle without a skill check."\r
 modifiers: "Attack Rolls +3 (Rifle)"\r
-`,YO=`id: wielder-shortsword\r
+`,ek=`id: wielder-shortsword\r
 name: "Wielder: Shortsword"\r
 status: draft\r
 plane: any\r
@@ -12503,7 +12577,7 @@ ranked: true\r
 minStats: { grace: 3, power: 2, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Shortsword.\\n- +3 to Attack Rolls made with a Shortsword.\\n- This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check."\r
 modifiers: "Attack Rolls +3 (Shortsword)"\r
-`,XO=`id: wielder-shotgun\r
+`,tk=`id: wielder-shotgun\r
 name: "Wielder: Shotgun"\r
 status: draft\r
 plane: earth\r
@@ -12515,7 +12589,7 @@ ranked: true\r
 minStats: { grace: 2, power: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Shotgun.\\n- +3 to Attack Rolls made with a Shotgun.\\n- This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check."\r
 modifiers: "Attack Rolls +3 (Shotgun)"\r
-`,ZO=`id: wielder-siege-engine\r
+`,nk=`id: wielder-siege-engine\r
 name: "Wielder: Siege Engine"\r
 status: draft\r
 plane: any\r
@@ -12527,7 +12601,7 @@ ranked: true\r
 minStats: { logic: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Siege Engine.\\n- +3 to Attack Rolls made with a Siege Engine.\\n- This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check."\r
 modifiers: "Attack Rolls +3 (Siege Engine)"\r
-`,QO=`id: wielder-sling\r
+`,rk=`id: wielder-sling\r
 name: "Wielder: Sling"\r
 status: draft\r
 plane: any\r
@@ -12539,7 +12613,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a Sling.\\n- +3 to Attack Rolls made with a Sling.\\n- This character is capable of performing the basic tasks of maintaining a Sling without a skill check."\r
 modifiers: "Attack Rolls +3 (Sling)"\r
-`,$O=`id: wielder-sniper-rifle\r
+`,ik=`id: wielder-sniper-rifle\r
 name: "Wielder: Sniper Rifle"\r
 status: draft\r
 plane: earth\r
@@ -12551,7 +12625,7 @@ ranked: true\r
 minStats: { intuition: 5, grace: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Sniper Rifle.\\n- +3 to Attack Rolls made with a Sniper Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check."\r
 modifiers: "Attack Rolls +3 (Sniper Rifle)"\r
-`,ek=`id: wielder-spear\r
+`,ak=`id: wielder-spear\r
 name: "Wielder: Spear"\r
 status: draft\r
 plane: any\r
@@ -12563,7 +12637,7 @@ ranked: true\r
 minStats: { grace: 3, power: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Spear.\\n- +3 to Attack Rolls made with a Spear.\\n- This character is capable of performing the basic tasks of maintaining a Spear without a skill check."\r
 modifiers: "Attack Rolls +3 (Spear)"\r
-`,tk=`id: wielder-staff\r
+`,ok=`id: wielder-staff\r
 name: "Wielder: Staff"\r
 status: draft\r
 plane: any\r
@@ -12575,7 +12649,7 @@ ranked: true\r
 minStats: { grace: 3, endurance: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Staff.\\n- +3 to Attack Rolls made with a Staff.\\n- This character is capable of performing the basic tasks of maintaining a Staff without a skill check."\r
 modifiers: "Attack Rolls +3 (Staff)"\r
-`,nk=`id: wielder-stun-baton\r
+`,sk=`id: wielder-stun-baton\r
 name: "Wielder: Stun Baton"\r
 status: draft\r
 plane: earth\r
@@ -12587,7 +12661,7 @@ ranked: true\r
 minStats: { power: 2, grace: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Stun Baton.\\n- +3 to Attack Rolls made with a Stun Baton.\\n- This character is capable of performing the basic tasks of maintaining a Stun Baton without a skill check."\r
 modifiers: "Attack Rolls +3 (Stun Baton)"\r
-`,rk=`id: wielder-taser\r
+`,ck=`id: wielder-taser\r
 name: "Wielder: Taser"\r
 status: draft\r
 plane: earth\r
@@ -12599,7 +12673,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Taser.\\n- +3 to Attack Rolls made with a Taser.\\n- This character is capable of performing the basic tasks of maintaining a Taser without a skill check."\r
 modifiers: "Attack Rolls +3 (Taser)"\r
-`,ik=`id: wielder-throwing-weapon\r
+`,lk=`id: wielder-throwing-weapon\r
 name: "Wielder: Throwing Weapon"\r
 status: draft\r
 plane: any\r
@@ -12611,7 +12685,7 @@ ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
 effect: "- Rank *5 added to skill check rolls involving a Throwing Weapon.\\n- +3 to Attack Rolls made with a Throwing Weapon.\\n- This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check."\r
 modifiers: "Attack Rolls +3 (Throwing Weapon)"\r
-`,ak=`id: wielder-war-axe\r
+`,uk=`id: wielder-war-axe\r
 name: "Wielder: War Axe"\r
 status: draft\r
 plane: any\r
@@ -12623,7 +12697,7 @@ ranked: true\r
 minStats: { power: 5, endurance: 4, grace: 3 }\r
 effect: "- Rank *5 added to skill check rolls involving a War Axe.\\n- +3 to Attack Rolls made with a War Axe.\\n- This character is capable of performing the basic tasks of maintaining a War Axe without a skill check."\r
 modifiers: "Attack Rolls +3 (War Axe)"\r
-`,ok=`id: wrangler\r
+`,dk=`id: wrangler\r
 name: "Wrangler"\r
 status: draft\r
 plane: any\r
@@ -12632,7 +12706,7 @@ tags: [monsters, animals, capture]\r
 category: skill\r
 minStats: { power: 4, grace: 3, endurance: 3 }\r
 effect: "This character gains +5 to Power and Grace rolls relating to restraining or capturing a large creature alive."\r
-`,sk=`id: xenobiology-fieldwork\r
+`,fk=`id: xenobiology-fieldwork\r
 name: "Xenobiology Fieldwork"\r
 status: draft\r
 plane: earth\r
@@ -12641,7 +12715,7 @@ tags: [parabiology, science, fieldwork]\r
 category: skill\r
 minStats: { logic: 4, intuition: 3, memory: 3 }\r
 effect: "This character gains +5 to rolls relating to identifying an unfamiliar organism's biology, needs and dangers in the field."\r
-`,ck=`id: zero-g-maneuvering\r
+`,pk=`id: zero-g-maneuvering\r
 name: "Zero-G Maneuvering"\r
 status: draft\r
 plane: earth\r
@@ -12651,55 +12725,55 @@ category: skill\r
 ranked: true\r
 minStats: { grace: 4, intuition: 3, endurance: 2 }\r
 effect: "This character is capable of moving through zero-gravity environments without a Skill Check. Rank *10 added to Skill Check rolls involving movement or fighting in free fall."\r
-`,lk=Symbol.for(`yaml.alias`),uk=Symbol.for(`yaml.document`),dk=Symbol.for(`yaml.map`),fk=Symbol.for(`yaml.pair`),pk=Symbol.for(`yaml.scalar`),mk=Symbol.for(`yaml.seq`),hk=Symbol.for(`yaml.node.type`),gk=e=>!!e&&typeof e==`object`&&e[hk]===lk,_k=e=>!!e&&typeof e==`object`&&e[hk]===uk,vk=e=>!!e&&typeof e==`object`&&e[hk]===dk,yk=e=>!!e&&typeof e==`object`&&e[hk]===fk,bk=e=>!!e&&typeof e==`object`&&e[hk]===pk,xk=e=>!!e&&typeof e==`object`&&e[hk]===mk;function Sk(e){if(e&&typeof e==`object`)switch(e[hk]){case dk:case mk:return!0}return!1}function Ck(e){if(e&&typeof e==`object`)switch(e[hk]){case lk:case dk:case pk:case mk:return!0}return!1}var wk=e=>(bk(e)||Sk(e))&&!!e.anchor,Tk=Symbol(`break visit`),Ek=Symbol(`skip children`),Dk=Symbol(`remove node`);function Ok(e,t){let n=Ak(t);_k(e)?kk(null,e.contents,n,Object.freeze([e]))===Dk&&(e.contents=null):kk(null,e,n,Object.freeze([]))}Ok.BREAK=Tk,Ok.SKIP=Ek,Ok.REMOVE=Dk;function kk(e,t,n,r){let i=jk(e,t,n,r);if(Ck(i)||yk(i))return Mk(e,r,i),kk(e,i,n,r);if(typeof i!=`symbol`){if(Sk(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=kk(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===Tk)return Tk;else i===Dk&&(t.items.splice(e,1),--e)}}else if(yk(t)){r=Object.freeze(r.concat(t));let e=kk(`key`,t.key,n,r);if(e===Tk)return Tk;e===Dk&&(t.key=null);let i=kk(`value`,t.value,n,r);if(i===Tk)return Tk;i===Dk&&(t.value=null)}}return i}function Ak(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function jk(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(vk(t))return n.Map?.(e,t,r);if(xk(t))return n.Seq?.(e,t,r);if(yk(t))return n.Pair?.(e,t,r);if(bk(t))return n.Scalar?.(e,t,r);if(gk(t))return n.Alias?.(e,t,r)}function Mk(e,t,n){let r=t[t.length-1];if(Sk(r))r.items[e]=n;else if(yk(r))e===`key`?r.key=n:r.value=n;else if(_k(r))r.contents=n;else{let e=gk(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var Nk={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},Pk=e=>e.replace(/[!,[\]{}]/g,e=>Nk[e]),Fk=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+Pk(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&Ck(e.contents)){let t={};Ok(e.contents,(e,n)=>{Ck(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
-`)}};Fk.defaultYaml={explicit:!1,version:`1.2`},Fk.defaultTags={"!!":`tag:yaml.org,2002:`};function Ik(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function Lk(e){let t=new Set;return Ok(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function Rk(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function zk(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=Lk(e);let a=Rk(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(bk(t.node)||Sk(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function Bk(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=Bk(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=Bk(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=Bk(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=Bk(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function Vk(e,t,n){if(Array.isArray(e))return e.map((e,t)=>Vk(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!wk(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var Hk=class{constructor(e){Object.defineProperty(this,hk,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!_k(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=Vk(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?Bk(i,{"":o},``,o):o}},Uk=class extends Hk{constructor(e){super(lk),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],Ok(e,{Node:(e,t)=>{(gk(t)||wk(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(Vk(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=Wk(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(Ik(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function Wk(e,t,n){if(gk(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(Sk(t)){let r=0;for(let i of t.items){let t=Wk(e,i,n);t>r&&(r=t)}return r}if(yk(t)){let r=Wk(e,t.key,n),i=Wk(e,t.value,n);return Math.max(r,i)}return 1}var Gk=e=>!e||typeof e!=`function`&&typeof e!=`object`,Q=class extends Hk{constructor(e){super(pk),this.value=e}toJSON(e,t){return t?.keep?this.value:Vk(this.value,e,t)}toString(){return String(this.value)}};Q.BLOCK_FOLDED=`BLOCK_FOLDED`,Q.BLOCK_LITERAL=`BLOCK_LITERAL`,Q.PLAIN=`PLAIN`,Q.QUOTE_DOUBLE=`QUOTE_DOUBLE`,Q.QUOTE_SINGLE=`QUOTE_SINGLE`;var Kk=`tag:yaml.org,2002:`;function qk(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function Jk(e,t,n){if(_k(e)&&(e=e.contents),Ck(e))return e;if(yk(e)){let t=n.schema[dk].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new Uk(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=Kk+t.slice(2));let l=qk(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new Q(e);return c&&(c.node=t),t}l=e instanceof Map?o[dk]:Symbol.iterator in Object(e)?o[mk]:o[dk]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new Q(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function Yk(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return Jk(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var Xk=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,Zk=class extends Hk{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>Ck(t)||yk(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(Xk(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(Sk(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,Yk(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(Sk(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&bk(i)?i.value:i:Sk(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!yk(t))return!1;let n=t.value;return n==null||e&&bk(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return Sk(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(Sk(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,Yk(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},Qk=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function $k(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var eA=(e,t,n)=>e.endsWith(`
-`)?$k(n,t):n.includes(`
+`,mk=Symbol.for(`yaml.alias`),hk=Symbol.for(`yaml.document`),gk=Symbol.for(`yaml.map`),_k=Symbol.for(`yaml.pair`),vk=Symbol.for(`yaml.scalar`),yk=Symbol.for(`yaml.seq`),bk=Symbol.for(`yaml.node.type`),xk=e=>!!e&&typeof e==`object`&&e[bk]===mk,Sk=e=>!!e&&typeof e==`object`&&e[bk]===hk,Ck=e=>!!e&&typeof e==`object`&&e[bk]===gk,wk=e=>!!e&&typeof e==`object`&&e[bk]===_k,Tk=e=>!!e&&typeof e==`object`&&e[bk]===vk,Ek=e=>!!e&&typeof e==`object`&&e[bk]===yk;function Dk(e){if(e&&typeof e==`object`)switch(e[bk]){case gk:case yk:return!0}return!1}function Ok(e){if(e&&typeof e==`object`)switch(e[bk]){case mk:case gk:case vk:case yk:return!0}return!1}var kk=e=>(Tk(e)||Dk(e))&&!!e.anchor,Ak=Symbol(`break visit`),jk=Symbol(`skip children`),Mk=Symbol(`remove node`);function Nk(e,t){let n=Fk(t);Sk(e)?Pk(null,e.contents,n,Object.freeze([e]))===Mk&&(e.contents=null):Pk(null,e,n,Object.freeze([]))}Nk.BREAK=Ak,Nk.SKIP=jk,Nk.REMOVE=Mk;function Pk(e,t,n,r){let i=Ik(e,t,n,r);if(Ok(i)||wk(i))return Lk(e,r,i),Pk(e,i,n,r);if(typeof i!=`symbol`){if(Dk(t)){r=Object.freeze(r.concat(t));for(let e=0;e<t.items.length;++e){let i=Pk(e,t.items[e],n,r);if(typeof i==`number`)e=i-1;else if(i===Ak)return Ak;else i===Mk&&(t.items.splice(e,1),--e)}}else if(wk(t)){r=Object.freeze(r.concat(t));let e=Pk(`key`,t.key,n,r);if(e===Ak)return Ak;e===Mk&&(t.key=null);let i=Pk(`value`,t.value,n,r);if(i===Ak)return Ak;i===Mk&&(t.value=null)}}return i}function Fk(e){return typeof e==`object`&&(e.Collection||e.Node||e.Value)?Object.assign({Alias:e.Node,Map:e.Node,Scalar:e.Node,Seq:e.Node},e.Value&&{Map:e.Value,Scalar:e.Value,Seq:e.Value},e.Collection&&{Map:e.Collection,Seq:e.Collection},e):e}function Ik(e,t,n,r){if(typeof n==`function`)return n(e,t,r);if(Ck(t))return n.Map?.(e,t,r);if(Ek(t))return n.Seq?.(e,t,r);if(wk(t))return n.Pair?.(e,t,r);if(Tk(t))return n.Scalar?.(e,t,r);if(xk(t))return n.Alias?.(e,t,r)}function Lk(e,t,n){let r=t[t.length-1];if(Dk(r))r.items[e]=n;else if(wk(r))e===`key`?r.key=n:r.value=n;else if(Sk(r))r.contents=n;else{let e=xk(r)?`alias`:`scalar`;throw Error(`Cannot replace node with ${e} parent`)}}var Rk={"!":`%21`,",":`%2C`,"[":`%5B`,"]":`%5D`,"{":`%7B`,"}":`%7D`},zk=e=>e.replace(/[!,[\]{}]/g,e=>Rk[e]),Bk=class e{constructor(t,n){this.docStart=null,this.docEnd=!1,this.yaml=Object.assign({},e.defaultYaml,t),this.tags=Object.assign({},e.defaultTags,n)}clone(){let t=new e(this.yaml,this.tags);return t.docStart=this.docStart,t}atDocument(){let t=new e(this.yaml,this.tags);switch(this.yaml.version){case`1.1`:this.atNextDocument=!0;break;case`1.2`:this.atNextDocument=!1,this.yaml={explicit:e.defaultYaml.explicit,version:`1.2`},this.tags=Object.assign({},e.defaultTags)}return t}add(t,n){this.atNextDocument&&=(this.yaml={explicit:e.defaultYaml.explicit,version:`1.1`},this.tags=Object.assign({},e.defaultTags),!1);let r=t.trim().split(/[ \t]+/),i=r.shift();switch(i){case`%TAG`:{if(r.length!==2&&(n(0,`%TAG directive should contain exactly two parts`),r.length<2))return!1;let[e,t]=r;return this.tags[e]=t,!0}case`%YAML`:{if(this.yaml.explicit=!0,r.length!==1)return n(0,`%YAML directive should contain exactly one part`),!1;let[e]=r;if(e===`1.1`||e===`1.2`)return this.yaml.version=e,!0;{let t=/^\d+\.\d+$/.test(e);return n(6,`Unsupported YAML version ${e}`,t),!1}}default:return n(0,`Unknown directive ${i}`,!0),!1}}tagName(e,t){if(e===`!`)return`!`;if(e[0]!==`!`)return t(`Not a valid tag: ${e}`),null;if(e[1]===`<`){let n=e.slice(2,-1);return n===`!`||n===`!!`?(t(`Verbatim tags aren't resolved, so ${e} is invalid.`),null):(e[e.length-1]!==`>`&&t(`Verbatim tags must end with a >`),n)}let[,n,r]=e.match(/^(.*!)([^!]*)$/s);r||t(`The ${e} tag has no suffix`);let i=this.tags[n];if(i)try{return i+decodeURIComponent(r)}catch(e){return t(String(e)),null}return n===`!`?e:(t(`Could not resolve tag: ${e}`),null)}tagString(e){for(let[t,n]of Object.entries(this.tags))if(e.startsWith(n))return t+zk(e.substring(n.length));return e[0]===`!`?e:`!<${e}>`}toString(e){let t=this.yaml.explicit?[`%YAML ${this.yaml.version||`1.2`}`]:[],n=Object.entries(this.tags),r;if(e&&n.length>0&&Ok(e.contents)){let t={};Nk(e.contents,(e,n)=>{Ok(n)&&n.tag&&(t[n.tag]=!0)}),r=Object.keys(t)}else r=[];for(let[i,a]of n)(i!==`!!`||a!==`tag:yaml.org,2002:`)&&(!e||r.some(e=>e.startsWith(a)))&&t.push(`%TAG ${i} ${a}`);return t.join(`
+`)}};Bk.defaultYaml={explicit:!1,version:`1.2`},Bk.defaultTags={"!!":`tag:yaml.org,2002:`};function Vk(e){if(/[\x00-\x19\s,[\]{}]/.test(e)){let t=`Anchor must not contain whitespace or control characters: ${JSON.stringify(e)}`;throw Error(t)}return!0}function Hk(e){let t=new Set;return Nk(e,{Value(e,n){n.anchor&&t.add(n.anchor)}}),t}function Uk(e,t){for(let n=1;;++n){let r=`${e}${n}`;if(!t.has(r))return r}}function Wk(e,t){let n=[],r=new Map,i=null;return{onAnchor:r=>{n.push(r),i??=Hk(e);let a=Uk(t,i);return i.add(a),a},setAnchors:()=>{for(let e of n){let t=r.get(e);if(typeof t==`object`&&t.anchor&&(Tk(t.node)||Dk(t.node)))t.node.anchor=t.anchor;else{let t=Error(`Failed to resolve repeated object (this should not happen)`);throw t.source=e,t}}},sourceObjects:r}}function Gk(e,t,n,r){if(r&&typeof r==`object`){if(Array.isArray(r))for(let t=0,n=r.length;t<n;++t){let n=r[t],i=Gk(e,r,String(t),n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}else if(r instanceof Map)for(let t of Array.from(r.keys())){let n=r.get(t),i=Gk(e,r,t,n);i===void 0?r.delete(t):i!==n&&r.set(t,i)}else if(r instanceof Set)for(let t of Array.from(r)){let n=Gk(e,r,t,t);n===void 0?r.delete(t):n!==t&&(r.delete(t),r.add(n))}else for(let[t,n]of Object.entries(r)){let i=Gk(e,r,t,n);i===void 0?delete r[t]:i!==n&&(r[t]=i)}}return e.call(t,n,r)}function Kk(e,t,n){if(Array.isArray(e))return e.map((e,t)=>Kk(e,String(t),n));if(e&&typeof e.toJSON==`function`){if(!n||!kk(e))return e.toJSON(t,n);let r={aliasCount:0,count:1,res:void 0};n.anchors.set(e,r),n.onCreate=e=>{r.res=e,delete n.onCreate};let i=e.toJSON(t,n);return n.onCreate&&n.onCreate(i),i}return typeof e==`bigint`&&!n?.keep?Number(e):e}var qk=class{constructor(e){Object.defineProperty(this,bk,{value:e})}clone(){let e=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return this.range&&(e.range=this.range.slice()),e}toJS(e,{mapAsMap:t,maxAliasCount:n,onAnchor:r,reviver:i}={}){if(!Sk(e))throw TypeError(`A document argument is required`);let a={anchors:new Map,doc:e,keep:!0,mapAsMap:t===!0,mapKeyWarned:!1,maxAliasCount:typeof n==`number`?n:100},o=Kk(this,``,a);if(typeof r==`function`)for(let{count:e,res:t}of a.anchors.values())r(t,e);return typeof i==`function`?Gk(i,{"":o},``,o):o}},Jk=class extends qk{constructor(e){super(mk),this.source=e,Object.defineProperty(this,"tag",{set(){throw Error(`Alias nodes cannot have tags`)}})}resolve(e,t){if(t?.maxAliasCount===0)throw ReferenceError(`Alias resolution is disabled`);let n;t?.aliasResolveCache?n=t.aliasResolveCache:(n=[],Nk(e,{Node:(e,t)=>{(xk(t)||kk(t))&&n.push(t)}}),t&&(t.aliasResolveCache=n));let r;for(let e of n){if(e===this)break;e.anchor===this.source&&(r=e)}if(r&&t){let{anchors:e,doc:n,maxAliasCount:i}=t,a=e.get(r);if(a||=(Kk(r,null,t),e.get(r)),a?.res===void 0)throw ReferenceError(`This should not happen: Alias anchor was not resolved?`);if(i>=0&&(a.count+=1,a.aliasCount===0&&(a.aliasCount=Yk(n,r,e)),a.count*a.aliasCount>i))throw ReferenceError(`Excessive alias count indicates a resource exhaustion attack`)}return r}toJSON(e,t){if(!t)return{source:this.source};let n=this.resolve(t.doc,t);if(!n){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw ReferenceError(e)}return t.anchors.get(n).res}toString(e,t,n){let r=`*${this.source}`;if(e){if(Vk(this.source),e.options.verifyAliasOrder&&!e.anchors.has(this.source)){let e=`Unresolved alias (the anchor must be set before the alias): ${this.source}`;throw Error(e)}if(e.implicitKey)return`${r} `}return r}};function Yk(e,t,n){if(xk(t)){let r=t.resolve(e),i=n&&r&&n.get(r);return i?i.count*i.aliasCount:0}if(Dk(t)){let r=0;for(let i of t.items){let t=Yk(e,i,n);t>r&&(r=t)}return r}if(wk(t)){let r=Yk(e,t.key,n),i=Yk(e,t.value,n);return Math.max(r,i)}return 1}var Xk=e=>!e||typeof e!=`function`&&typeof e!=`object`,Q=class extends qk{constructor(e){super(vk),this.value=e}toJSON(e,t){return t?.keep?this.value:Kk(this.value,e,t)}toString(){return String(this.value)}};Q.BLOCK_FOLDED=`BLOCK_FOLDED`,Q.BLOCK_LITERAL=`BLOCK_LITERAL`,Q.PLAIN=`PLAIN`,Q.QUOTE_DOUBLE=`QUOTE_DOUBLE`,Q.QUOTE_SINGLE=`QUOTE_SINGLE`;var Zk=`tag:yaml.org,2002:`;function Qk(e,t,n){if(t){let e=n.filter(e=>e.tag===t),r=e.find(e=>!e.format)??e[0];if(!r)throw Error(`Tag ${t} not found`);return r}return n.find(t=>t.identify?.(e)&&!t.format)}function $k(e,t,n){if(Sk(e)&&(e=e.contents),Ok(e))return e;if(wk(e)){let t=n.schema[gk].createNode?.(n.schema,null,n);return t.items.push(e),t}(e instanceof String||e instanceof Number||e instanceof Boolean||typeof BigInt<`u`&&e instanceof BigInt)&&(e=e.valueOf());let{aliasDuplicateObjects:r,onAnchor:i,onTagObj:a,schema:o,sourceObjects:s}=n,c;if(r&&e&&typeof e==`object`){if(c=s.get(e),c)return c.anchor??(c.anchor=i(e)),new Jk(c.anchor);c={anchor:null,node:null},s.set(e,c)}t?.startsWith(`!!`)&&(t=Zk+t.slice(2));let l=Qk(e,t,o.tags);if(!l){if(e&&typeof e.toJSON==`function`&&(e=e.toJSON()),!e||typeof e!=`object`){let t=new Q(e);return c&&(c.node=t),t}l=e instanceof Map?o[gk]:Symbol.iterator in Object(e)?o[yk]:o[gk]}a&&(a(l),delete n.onTagObj);let u=l?.createNode?l.createNode(n.schema,e,n):typeof l?.nodeClass?.from==`function`?l.nodeClass.from(n.schema,e,n):new Q(e);return t?u.tag=t:l.default||(u.tag=l.tag),c&&(c.node=u),u}function eA(e,t,n){let r=n;for(let e=t.length-1;e>=0;--e){let n=t[e];if(typeof n==`number`&&Number.isInteger(n)&&n>=0){let e=[];e[n]=r,r=e}else r=new Map([[n,r]])}return $k(r,void 0,{aliasDuplicateObjects:!1,keepUndefined:!1,onAnchor:()=>{throw Error(`This should not happen, please report a bug.`)},schema:e,sourceObjects:new Map})}var tA=e=>e==null||typeof e==`object`&&!!e[Symbol.iterator]().next().done,nA=class extends qk{constructor(e,t){super(e),Object.defineProperty(this,"schema",{value:t,configurable:!0,enumerable:!1,writable:!0})}clone(e){let t=Object.create(Object.getPrototypeOf(this),Object.getOwnPropertyDescriptors(this));return e&&(t.schema=e),t.items=t.items.map(t=>Ok(t)||wk(t)?t.clone(e):t),this.range&&(t.range=this.range.slice()),t}addIn(e,t){if(tA(e))this.add(t);else{let[n,...r]=e,i=this.get(n,!0);if(Dk(i))i.addIn(r,t);else if(i===void 0&&this.schema)this.set(n,eA(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}deleteIn(e){let[t,...n]=e;if(n.length===0)return this.delete(t);let r=this.get(t,!0);if(Dk(r))return r.deleteIn(n);throw Error(`Expected YAML collection at ${t}. Remaining path: ${n}`)}getIn(e,t){let[n,...r]=e,i=this.get(n,!0);return r.length===0?!t&&Tk(i)?i.value:i:Dk(i)?i.getIn(r,t):void 0}hasAllNullValues(e){return this.items.every(t=>{if(!wk(t))return!1;let n=t.value;return n==null||e&&Tk(n)&&n.value==null&&!n.commentBefore&&!n.comment&&!n.tag})}hasIn(e){let[t,...n]=e;if(n.length===0)return this.has(t);let r=this.get(t,!0);return Dk(r)?r.hasIn(n):!1}setIn(e,t){let[n,...r]=e;if(r.length===0)this.set(n,t);else{let e=this.get(n,!0);if(Dk(e))e.setIn(r,t);else if(e===void 0&&this.schema)this.set(n,eA(this.schema,r,t));else throw Error(`Expected YAML collection at ${n}. Remaining path: ${r}`)}}},rA=e=>e.replace(/^(?!$)(?: $)?/gm,`#`);function iA(e,t){return/^\n+$/.test(e)?e.substring(1):t?e.replace(/^(?! *$)/gm,t):e}var aA=(e,t,n)=>e.endsWith(`
+`)?iA(n,t):n.includes(`
 `)?`
-`+$k(n,t):(e.endsWith(` `)?``:` `)+n,tA=`flow`,nA=`block`,rA=`quoted`;function iA(e,t,n=`flow`,{indentAtStart:r,lineWidth:i=80,minContentWidth:a=20,onFold:o,onOverflow:s}={}){if(!i||i<0)return e;i<a&&(a=0);let c=Math.max(1+a,1+i-t.length);if(e.length<=c)return e;let l=[],u={},d=i-t.length;typeof r==`number`&&(r>i-Math.max(2,a)?l.push(0):d=i-r);let f,p,m=!1,h=-1,g=-1,_=-1;n===`block`&&(h=aA(e,h,t.length),h!==-1&&(d=h+c));for(let r;r=e[h+=1];){if(n===`quoted`&&r===`\\`){switch(g=h,e[h+1]){case`x`:h+=3;break;case`u`:h+=5;break;case`U`:h+=9;break;default:h+=1}_=h}if(r===`
-`)n===`block`&&(h=aA(e,h,t.length)),d=h+t.length+c,f=void 0;else{if(r===` `&&p&&p!==` `&&p!==`
+`+iA(n,t):(e.endsWith(` `)?``:` `)+n,oA=`flow`,sA=`block`,cA=`quoted`;function lA(e,t,n=`flow`,{indentAtStart:r,lineWidth:i=80,minContentWidth:a=20,onFold:o,onOverflow:s}={}){if(!i||i<0)return e;i<a&&(a=0);let c=Math.max(1+a,1+i-t.length);if(e.length<=c)return e;let l=[],u={},d=i-t.length;typeof r==`number`&&(r>i-Math.max(2,a)?l.push(0):d=i-r);let f,p,m=!1,h=-1,g=-1,_=-1;n===`block`&&(h=uA(e,h,t.length),h!==-1&&(d=h+c));for(let r;r=e[h+=1];){if(n===`quoted`&&r===`\\`){switch(g=h,e[h+1]){case`x`:h+=3;break;case`u`:h+=5;break;case`U`:h+=9;break;default:h+=1}_=h}if(r===`
+`)n===`block`&&(h=uA(e,h,t.length)),d=h+t.length+c,f=void 0;else{if(r===` `&&p&&p!==` `&&p!==`
 `&&p!==`	`){let t=e[h+1];t&&t!==` `&&t!==`
-`&&t!==`	`&&(f=h)}if(h>=d){if(f)l.push(f),d=f+c,f=void 0;else if(n===`quoted`){for(;p===` `||p===`	`;)p=r,r=e[h+=1],m=!0;let t=h>_+1?h-2:g-1;if(u[t])return e;l.push(t),u[t]=!0,d=t+c,f=void 0}else m=!0}}p=r}if(m&&s&&s(),l.length===0)return e;o&&o();let v=e.slice(0,l[0]);for(let r=0;r<l.length;++r){let i=l[r],a=l[r+1]||e.length;i===0?v=`\n${t}${e.slice(0,a)}`:(n===`quoted`&&u[i]&&(v+=`${e[i]}\\`),v+=`\n${t}${e.slice(i+1,a)}`)}return v}function aA(e,t,n){let r=t,i=t+1,a=e[i];for(;a===` `||a===`	`;)if(t<i+n)a=e[++t];else{do a=e[++t];while(a&&a!==`
-`);r=t,i=t+1,a=e[i]}return r}var oA=(e,t)=>({indentAtStart:t?e.indent.length:e.indentAtStart,lineWidth:e.options.lineWidth,minContentWidth:e.options.minContentWidth}),sA=e=>/^(%|---|\.\.\.)/m.test(e);function cA(e,t,n){if(!t||t<0)return!1;let r=t-n,i=e.length;if(i<=r)return!1;for(let t=0,n=0;t<i;++t)if(e[t]===`
-`){if(t-n>r)return!0;if(n=t+1,i-n<=r)return!1}return!0}function lA(e,t){let n=JSON.stringify(e);if(t.options.doubleQuotedAsJSON)return n;let{implicitKey:r}=t,i=t.options.doubleQuotedMinMultiLineLength,a=t.indent||(sA(e)?`  `:``),o=``,s=0;for(let e=0,t=n[e];t;t=n[++e])if(t===` `&&n[e+1]===`\\`&&n[e+2]===`n`&&(o+=n.slice(s,e)+`\\ `,e+=1,s=e,t=`\\`),t===`\\`)switch(n[e+1]){case`u`:{o+=n.slice(s,e);let t=n.substr(e+2,4);switch(t){case`0000`:o+=`\\0`;break;case`0007`:o+=`\\a`;break;case`000b`:o+=`\\v`;break;case`001b`:o+=`\\e`;break;case`0085`:o+=`\\N`;break;case`00a0`:o+=`\\_`;break;case`2028`:o+=`\\L`;break;case`2029`:o+=`\\P`;break;default:t.substr(0,2)===`00`?o+=`\\x`+t.substr(2):o+=n.substr(e,6)}e+=5,s=e+1}break;case`n`:if(r||n[e+2]===`"`||n.length<i)e+=1;else{for(o+=n.slice(s,e)+`
+`&&t!==`	`&&(f=h)}if(h>=d){if(f)l.push(f),d=f+c,f=void 0;else if(n===`quoted`){for(;p===` `||p===`	`;)p=r,r=e[h+=1],m=!0;let t=h>_+1?h-2:g-1;if(u[t])return e;l.push(t),u[t]=!0,d=t+c,f=void 0}else m=!0}}p=r}if(m&&s&&s(),l.length===0)return e;o&&o();let v=e.slice(0,l[0]);for(let r=0;r<l.length;++r){let i=l[r],a=l[r+1]||e.length;i===0?v=`\n${t}${e.slice(0,a)}`:(n===`quoted`&&u[i]&&(v+=`${e[i]}\\`),v+=`\n${t}${e.slice(i+1,a)}`)}return v}function uA(e,t,n){let r=t,i=t+1,a=e[i];for(;a===` `||a===`	`;)if(t<i+n)a=e[++t];else{do a=e[++t];while(a&&a!==`
+`);r=t,i=t+1,a=e[i]}return r}var dA=(e,t)=>({indentAtStart:t?e.indent.length:e.indentAtStart,lineWidth:e.options.lineWidth,minContentWidth:e.options.minContentWidth}),fA=e=>/^(%|---|\.\.\.)/m.test(e);function pA(e,t,n){if(!t||t<0)return!1;let r=t-n,i=e.length;if(i<=r)return!1;for(let t=0,n=0;t<i;++t)if(e[t]===`
+`){if(t-n>r)return!0;if(n=t+1,i-n<=r)return!1}return!0}function mA(e,t){let n=JSON.stringify(e);if(t.options.doubleQuotedAsJSON)return n;let{implicitKey:r}=t,i=t.options.doubleQuotedMinMultiLineLength,a=t.indent||(fA(e)?`  `:``),o=``,s=0;for(let e=0,t=n[e];t;t=n[++e])if(t===` `&&n[e+1]===`\\`&&n[e+2]===`n`&&(o+=n.slice(s,e)+`\\ `,e+=1,s=e,t=`\\`),t===`\\`)switch(n[e+1]){case`u`:{o+=n.slice(s,e);let t=n.substr(e+2,4);switch(t){case`0000`:o+=`\\0`;break;case`0007`:o+=`\\a`;break;case`000b`:o+=`\\v`;break;case`001b`:o+=`\\e`;break;case`0085`:o+=`\\N`;break;case`00a0`:o+=`\\_`;break;case`2028`:o+=`\\L`;break;case`2029`:o+=`\\P`;break;default:t.substr(0,2)===`00`?o+=`\\x`+t.substr(2):o+=n.substr(e,6)}e+=5,s=e+1}break;case`n`:if(r||n[e+2]===`"`||n.length<i)e+=1;else{for(o+=n.slice(s,e)+`
 
 `;n[e+2]===`\\`&&n[e+3]===`n`&&n[e+4]!==`"`;)o+=`
-`,e+=2;o+=a,n[e+2]===` `&&(o+=`\\`),e+=1,s=e+1}break;default:e+=1}return o=s?o+n.slice(s):n,r?o:iA(o,a,rA,oA(t,!1))}function uA(e,t){if(t.options.singleQuote===!1||t.implicitKey&&e.includes(`
-`)||/[ \t]\n|\n[ \t]/.test(e))return lA(e,t);let n=t.indent||(sA(e)?`  `:``),r=`'`+e.replace(/'/g,`''`).replace(/\n+/g,`$&\n${n}`)+`'`;return t.implicitKey?r:iA(r,n,tA,oA(t,!1))}function dA(e,t){let{singleQuote:n}=t.options,r;if(n===!1)r=lA;else{let t=e.includes(`"`),i=e.includes(`'`);r=t&&!i?uA:i&&!t?lA:n?uA:lA}return r(e,t)}var fA;try{fA=RegExp(`(^|(?<!
+`,e+=2;o+=a,n[e+2]===` `&&(o+=`\\`),e+=1,s=e+1}break;default:e+=1}return o=s?o+n.slice(s):n,r?o:lA(o,a,cA,dA(t,!1))}function hA(e,t){if(t.options.singleQuote===!1||t.implicitKey&&e.includes(`
+`)||/[ \t]\n|\n[ \t]/.test(e))return mA(e,t);let n=t.indent||(fA(e)?`  `:``),r=`'`+e.replace(/'/g,`''`).replace(/\n+/g,`$&\n${n}`)+`'`;return t.implicitKey?r:lA(r,n,oA,dA(t,!1))}function gA(e,t){let{singleQuote:n}=t.options,r;if(n===!1)r=mA;else{let t=e.includes(`"`),i=e.includes(`'`);r=t&&!i?hA:i&&!t?mA:n?hA:mA}return r(e,t)}var _A;try{_A=RegExp(`(^|(?<!
 ))
 +(?!
-|$)`,`g`)}catch{fA=/\n+(?!\n|$)/g}function pA({comment:e,type:t,value:n},r,i,a){let{blockQuote:o,commentString:s,lineWidth:c}=r.options;if(!o||/\n[\t ]+$/.test(n))return dA(n,r);let l=r.indent||(r.forceBlockIndent||sA(n)?`  `:``),u=o===`literal`?!0:o===`folded`||t===Q.BLOCK_FOLDED?!1:t===Q.BLOCK_LITERAL||!cA(n,c,l.length);if(!n)return u?`|
+|$)`,`g`)}catch{_A=/\n+(?!\n|$)/g}function vA({comment:e,type:t,value:n},r,i,a){let{blockQuote:o,commentString:s,lineWidth:c}=r.options;if(!o||/\n[\t ]+$/.test(n))return gA(n,r);let l=r.indent||(r.forceBlockIndent||fA(n)?`  `:``),u=o===`literal`?!0:o===`folded`||t===Q.BLOCK_FOLDED?!1:t===Q.BLOCK_LITERAL||!pA(n,c,l.length);if(!n)return u?`|
 `:`>
 `;let d,f;for(f=n.length;f>0;--f){let e=n[f-1];if(e!==`
 `&&e!==`	`&&e!==` `)break}let p=n.substring(f),m=p.indexOf(`
 `);m===-1?d=`-`:n===p||m!==p.length-1?(d=`+`,a&&a()):d=``,p&&=(n=n.slice(0,-p.length),p[p.length-1]===`
-`&&(p=p.slice(0,-1)),p.replace(fA,`$&${l}`));let h=!1,g,_=-1;for(g=0;g<n.length;++g){let e=n[g];if(e===` `)h=!0;else if(e===`
+`&&(p=p.slice(0,-1)),p.replace(_A,`$&${l}`));let h=!1,g,_=-1;for(g=0;g<n.length;++g){let e=n[g];if(e===` `)h=!0;else if(e===`
 `)_=g;else break}let v=n.substring(0,_<g?_+1:g);v&&=(n=n.substring(v.length),v.replace(/\n+/g,`$&${l}`));let y=(h?l?`2`:`1`:``)+d;if(e&&(y+=` `+s(e.replace(/ ?[\r\n]+/g,` `)),i&&i()),!u){let e=n.replace(/\n+/g,`
-$&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\n+/g,`$&${l}`),i=!1,a=oA(r,!0);o!==`folded`&&t!==Q.BLOCK_FOLDED&&(a.onOverflow=()=>{i=!0});let s=iA(`${v}${e}${p}`,l,nA,a);if(!i)return`>${y}\n${l}${s}`}return n=n.replace(/\n+/g,`$&${l}`),`|${y}\n${l}${v}${n}${p}`}function mA(e,t,n,r){let{type:i,value:a}=e,{actualString:o,implicitKey:s,indent:c,indentStep:l,inFlow:u}=t;if(s&&a.includes(`
-`)||u&&/[[\]{},]/.test(a))return dA(a,t);if(/^[\n\t ,[\]{}#&*!|>'"%@`]|^[?-]$|^[?-][ \t]|[\n:][ \t]|[ \t]\n|[\n\t ]#|[\n\t :]$/.test(a))return s||u||!a.includes(`
-`)?dA(a,t):pA(e,t,n,r);if(!s&&!u&&i!==Q.PLAIN&&a.includes(`
-`))return pA(e,t,n,r);if(sA(a)){if(c===``)return t.forceBlockIndent=!0,pA(e,t,n,r);if(s&&c===l)return dA(a,t)}let d=a.replace(/\n+/g,`$&\n${c}`);if(o){let e=e=>e.default&&e.tag!==`tag:yaml.org,2002:str`&&e.test?.test(d),{compat:n,tags:r}=t.doc.schema;if(r.some(e)||n?.some(e))return dA(a,t)}return s?d:iA(d,c,tA,oA(t,!1))}function hA(e,t,n,r){let{implicitKey:i,inFlow:a}=t,o=typeof e.value==`string`?e:Object.assign({},e,{value:String(e.value)}),{type:s}=e;s!==Q.QUOTE_DOUBLE&&/[\x00-\x08\x0b-\x1f\x7f-\x9f\u{D800}-\u{DFFF}]/u.test(o.value)&&(s=Q.QUOTE_DOUBLE);let c=e=>{switch(e){case Q.BLOCK_FOLDED:case Q.BLOCK_LITERAL:return i||a?dA(o.value,t):pA(o,t,n,r);case Q.QUOTE_DOUBLE:return lA(o.value,t);case Q.QUOTE_SINGLE:return uA(o.value,t);case Q.PLAIN:return mA(o,t,n,r);default:return null}},l=c(s);if(l===null){let{defaultKeyType:e,defaultStringType:n}=t.options,r=i&&e||n;if(l=c(r),l===null)throw Error(`Unsupported default string type ${r}`)}return l}function gA(e,t){let n=Object.assign({blockQuote:!0,commentString:Qk,defaultKeyType:null,defaultStringType:`PLAIN`,directives:null,doubleQuotedAsJSON:!1,doubleQuotedMinMultiLineLength:40,falseStr:`false`,flowCollectionPadding:!0,indentSeq:!0,lineWidth:80,minContentWidth:20,nullStr:`null`,simpleKeys:!1,singleQuote:null,trailingComma:!1,trueStr:`true`,verifyAliasOrder:!0},e.schema.toStringOptions,t),r;switch(n.collectionStyle){case`block`:r=!1;break;case`flow`:r=!0;break;default:r=null}return{anchors:new Set,doc:e,flowCollectionPadding:n.flowCollectionPadding?` `:``,indent:``,indentStep:typeof n.indent==`number`?` `.repeat(n.indent):`  `,inFlow:r,options:n}}function _A(e,t){if(t.tag){let n=e.filter(e=>e.tag===t.tag);if(n.length>0)return n.find(e=>e.format===t.format)??n[0]}let n,r;if(bk(t)){r=t.value;let i=e.filter(e=>e.identify?.(r));if(i.length>1){let e=i.filter(e=>e.test);e.length>0&&(i=e)}n=i.find(e=>e.format===t.format)??i.find(e=>!e.format)}else r=t,n=e.find(e=>e.nodeClass&&r instanceof e.nodeClass);if(!n){let e=r?.constructor?.name??(r===null?`null`:typeof r);throw Error(`Tag not resolved for ${e} value`)}return n}function vA(e,t,{anchors:n,doc:r}){if(!r.directives)return``;let i=[],a=(bk(e)||Sk(e))&&e.anchor;a&&Ik(a)&&(n.add(a),i.push(`&${a}`));let o=e.tag??(t.default?null:t.tag);return o&&i.push(r.directives.tagString(o)),i.join(` `)}function yA(e,t,n,r){if(yk(e))return e.toString(t,n,r);if(gk(e)){if(t.doc.directives)return e.toString(t);if(t.resolvedAliases?.has(e))throw TypeError(`Cannot stringify circular structure without alias nodes`);t.resolvedAliases?t.resolvedAliases.add(e):t.resolvedAliases=new Set([e]),e=e.resolve(t.doc)}let i,a=Ck(e)?e:t.doc.createNode(e,{onTagObj:e=>i=e});i??=_A(t.doc.schema.tags,a);let o=vA(a,i,t);o.length>0&&(t.indentAtStart=(t.indentAtStart??0)+o.length+1);let s=typeof i.stringify==`function`?i.stringify(a,t,n,r):bk(a)?hA(a,t,n,r):a.toString(t,n,r);return o?bk(a)||s[0]===`{`||s[0]===`[`?`${o} ${s}`:`${o}\n${t.indent}${s}`:s}function bA({key:e,value:t},n,r,i){let{allNullValues:a,doc:o,indent:s,indentStep:c,options:{commentString:l,indentSeq:u,simpleKeys:d}}=n,f=Ck(e)&&e.comment||null;if(d){if(f)throw Error(`With simple keys, key nodes cannot have comments`);if(Sk(e)||!Ck(e)&&typeof e==`object`)throw Error(`With simple keys, collection cannot be used as a key value`)}let p=!d&&(!e||f&&t==null&&!n.inFlow||Sk(e)||(bk(e)?e.type===Q.BLOCK_FOLDED||e.type===Q.BLOCK_LITERAL:typeof e==`object`));n=Object.assign({},n,{allNullValues:!1,implicitKey:!p&&(d||!a),indent:s+c});let m=!1,h=!1,g=yA(e,n,()=>m=!0,()=>h=!0);if(!p&&!n.inFlow&&g.length>1024){if(d)throw Error(`With simple keys, single line scalar must not span more than 1024 characters`);p=!0}if(n.inFlow){if(a||t==null)return m&&r&&r(),g===``?`?`:p?`? ${g}`:g}else if(a&&!d||t==null&&p)return g=`? ${g}`,f&&!m?g+=eA(g,n.indent,l(f)):h&&i&&i(),g;m&&(f=null),p?(f&&(g+=eA(g,n.indent,l(f))),g=`? ${g}\n${s}:`):(g=`${g}:`,f&&(g+=eA(g,n.indent,l(f))));let _,v,y;Ck(t)?(_=!!t.spaceBefore,v=t.commentBefore,y=t.comment):(_=!1,v=null,y=null,t&&typeof t==`object`&&(t=o.createNode(t))),n.implicitKey=!1,!p&&!f&&bk(t)&&(n.indentAtStart=g.length+1),h=!1,!u&&c.length>=2&&!n.inFlow&&!p&&xk(t)&&!t.flow&&!t.tag&&!t.anchor&&(n.indent=n.indent.substring(2));let b=!1,x=yA(t,n,()=>b=!0,()=>h=!0),S=` `;if(f||_||v){if(S=_?`
-`:``,v){let e=l(v);S+=`\n${$k(e,n.indent)}`}x===``&&!n.inFlow?S===`
+$&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\n+/g,`$&${l}`),i=!1,a=dA(r,!0);o!==`folded`&&t!==Q.BLOCK_FOLDED&&(a.onOverflow=()=>{i=!0});let s=lA(`${v}${e}${p}`,l,sA,a);if(!i)return`>${y}\n${l}${s}`}return n=n.replace(/\n+/g,`$&${l}`),`|${y}\n${l}${v}${n}${p}`}function yA(e,t,n,r){let{type:i,value:a}=e,{actualString:o,implicitKey:s,indent:c,indentStep:l,inFlow:u}=t;if(s&&a.includes(`
+`)||u&&/[[\]{},]/.test(a))return gA(a,t);if(/^[\n\t ,[\]{}#&*!|>'"%@`]|^[?-]$|^[?-][ \t]|[\n:][ \t]|[ \t]\n|[\n\t ]#|[\n\t :]$/.test(a))return s||u||!a.includes(`
+`)?gA(a,t):vA(e,t,n,r);if(!s&&!u&&i!==Q.PLAIN&&a.includes(`
+`))return vA(e,t,n,r);if(fA(a)){if(c===``)return t.forceBlockIndent=!0,vA(e,t,n,r);if(s&&c===l)return gA(a,t)}let d=a.replace(/\n+/g,`$&\n${c}`);if(o){let e=e=>e.default&&e.tag!==`tag:yaml.org,2002:str`&&e.test?.test(d),{compat:n,tags:r}=t.doc.schema;if(r.some(e)||n?.some(e))return gA(a,t)}return s?d:lA(d,c,oA,dA(t,!1))}function bA(e,t,n,r){let{implicitKey:i,inFlow:a}=t,o=typeof e.value==`string`?e:Object.assign({},e,{value:String(e.value)}),{type:s}=e;s!==Q.QUOTE_DOUBLE&&/[\x00-\x08\x0b-\x1f\x7f-\x9f\u{D800}-\u{DFFF}]/u.test(o.value)&&(s=Q.QUOTE_DOUBLE);let c=e=>{switch(e){case Q.BLOCK_FOLDED:case Q.BLOCK_LITERAL:return i||a?gA(o.value,t):vA(o,t,n,r);case Q.QUOTE_DOUBLE:return mA(o.value,t);case Q.QUOTE_SINGLE:return hA(o.value,t);case Q.PLAIN:return yA(o,t,n,r);default:return null}},l=c(s);if(l===null){let{defaultKeyType:e,defaultStringType:n}=t.options,r=i&&e||n;if(l=c(r),l===null)throw Error(`Unsupported default string type ${r}`)}return l}function xA(e,t){let n=Object.assign({blockQuote:!0,commentString:rA,defaultKeyType:null,defaultStringType:`PLAIN`,directives:null,doubleQuotedAsJSON:!1,doubleQuotedMinMultiLineLength:40,falseStr:`false`,flowCollectionPadding:!0,indentSeq:!0,lineWidth:80,minContentWidth:20,nullStr:`null`,simpleKeys:!1,singleQuote:null,trailingComma:!1,trueStr:`true`,verifyAliasOrder:!0},e.schema.toStringOptions,t),r;switch(n.collectionStyle){case`block`:r=!1;break;case`flow`:r=!0;break;default:r=null}return{anchors:new Set,doc:e,flowCollectionPadding:n.flowCollectionPadding?` `:``,indent:``,indentStep:typeof n.indent==`number`?` `.repeat(n.indent):`  `,inFlow:r,options:n}}function SA(e,t){if(t.tag){let n=e.filter(e=>e.tag===t.tag);if(n.length>0)return n.find(e=>e.format===t.format)??n[0]}let n,r;if(Tk(t)){r=t.value;let i=e.filter(e=>e.identify?.(r));if(i.length>1){let e=i.filter(e=>e.test);e.length>0&&(i=e)}n=i.find(e=>e.format===t.format)??i.find(e=>!e.format)}else r=t,n=e.find(e=>e.nodeClass&&r instanceof e.nodeClass);if(!n){let e=r?.constructor?.name??(r===null?`null`:typeof r);throw Error(`Tag not resolved for ${e} value`)}return n}function CA(e,t,{anchors:n,doc:r}){if(!r.directives)return``;let i=[],a=(Tk(e)||Dk(e))&&e.anchor;a&&Vk(a)&&(n.add(a),i.push(`&${a}`));let o=e.tag??(t.default?null:t.tag);return o&&i.push(r.directives.tagString(o)),i.join(` `)}function wA(e,t,n,r){if(wk(e))return e.toString(t,n,r);if(xk(e)){if(t.doc.directives)return e.toString(t);if(t.resolvedAliases?.has(e))throw TypeError(`Cannot stringify circular structure without alias nodes`);t.resolvedAliases?t.resolvedAliases.add(e):t.resolvedAliases=new Set([e]),e=e.resolve(t.doc)}let i,a=Ok(e)?e:t.doc.createNode(e,{onTagObj:e=>i=e});i??=SA(t.doc.schema.tags,a);let o=CA(a,i,t);o.length>0&&(t.indentAtStart=(t.indentAtStart??0)+o.length+1);let s=typeof i.stringify==`function`?i.stringify(a,t,n,r):Tk(a)?bA(a,t,n,r):a.toString(t,n,r);return o?Tk(a)||s[0]===`{`||s[0]===`[`?`${o} ${s}`:`${o}\n${t.indent}${s}`:s}function TA({key:e,value:t},n,r,i){let{allNullValues:a,doc:o,indent:s,indentStep:c,options:{commentString:l,indentSeq:u,simpleKeys:d}}=n,f=Ok(e)&&e.comment||null;if(d){if(f)throw Error(`With simple keys, key nodes cannot have comments`);if(Dk(e)||!Ok(e)&&typeof e==`object`)throw Error(`With simple keys, collection cannot be used as a key value`)}let p=!d&&(!e||f&&t==null&&!n.inFlow||Dk(e)||(Tk(e)?e.type===Q.BLOCK_FOLDED||e.type===Q.BLOCK_LITERAL:typeof e==`object`));n=Object.assign({},n,{allNullValues:!1,implicitKey:!p&&(d||!a),indent:s+c});let m=!1,h=!1,g=wA(e,n,()=>m=!0,()=>h=!0);if(!p&&!n.inFlow&&g.length>1024){if(d)throw Error(`With simple keys, single line scalar must not span more than 1024 characters`);p=!0}if(n.inFlow){if(a||t==null)return m&&r&&r(),g===``?`?`:p?`? ${g}`:g}else if(a&&!d||t==null&&p)return g=`? ${g}`,f&&!m?g+=aA(g,n.indent,l(f)):h&&i&&i(),g;m&&(f=null),p?(f&&(g+=aA(g,n.indent,l(f))),g=`? ${g}\n${s}:`):(g=`${g}:`,f&&(g+=aA(g,n.indent,l(f))));let _,v,y;Ok(t)?(_=!!t.spaceBefore,v=t.commentBefore,y=t.comment):(_=!1,v=null,y=null,t&&typeof t==`object`&&(t=o.createNode(t))),n.implicitKey=!1,!p&&!f&&Tk(t)&&(n.indentAtStart=g.length+1),h=!1,!u&&c.length>=2&&!n.inFlow&&!p&&Ek(t)&&!t.flow&&!t.tag&&!t.anchor&&(n.indent=n.indent.substring(2));let b=!1,x=wA(t,n,()=>b=!0,()=>h=!0),S=` `;if(f||_||v){if(S=_?`
+`:``,v){let e=l(v);S+=`\n${iA(e,n.indent)}`}x===``&&!n.inFlow?S===`
 `&&y&&(S=`
 
-`):S+=`\n${n.indent}`}else if(!p&&Sk(t)){let e=x[0],r=x.indexOf(`
+`):S+=`\n${n.indent}`}else if(!p&&Dk(t)){let e=x[0],r=x.indexOf(`
 `),i=r!==-1,a=n.inFlow??t.flow??t.items.length===0;if(i||!a){let t=!1;if(i&&(e===`&`||e===`!`)){let n=x.indexOf(` `);e===`&`&&n!==-1&&n<r&&x[n+1]===`!`&&(n=x.indexOf(` `,n+1)),(n===-1||r<n)&&(t=!0)}t||(S=`\n${n.indent}`)}}else(x===``||x[0]===`
-`)&&(S=``);return g+=S+x,n.inFlow?b&&r&&r():y&&!b?g+=eA(g,n.indent,l(y)):h&&i&&i(),g}function xA(e,t){(e===`debug`||e===`warn`)&&console.warn(t)}var SA=`<<`,CA={identify:e=>e===SA||typeof e==`symbol`&&e.description===SA,default:`key`,tag:`tag:yaml.org,2002:merge`,test:/^<<$/,resolve:()=>Object.assign(new Q(Symbol(SA)),{addToJSMap:TA}),stringify:()=>SA},wA=(e,t)=>(CA.identify(t)||bk(t)&&(!t.type||t.type===Q.PLAIN)&&CA.identify(t.value))&&e?.doc.schema.tags.some(e=>e.tag===CA.tag&&e.default);function TA(e,t,n){let r=DA(e,n);if(xk(r))for(let n of r.items)EA(e,t,n);else if(Array.isArray(r))for(let n of r)EA(e,t,n);else EA(e,t,r)}function EA(e,t,n){let r=DA(e,n);if(!vk(r))throw Error(`Merge sources must be maps or map aliases`);let i=r.toJSON(null,e,Map);for(let[e,n]of i)t instanceof Map?t.has(e)||t.set(e,n):t instanceof Set?t.add(e):Object.prototype.hasOwnProperty.call(t,e)||Object.defineProperty(t,e,{value:n,writable:!0,enumerable:!0,configurable:!0});return t}function DA(e,t){return e&&gk(t)?t.resolve(e.doc,e):t}function OA(e,t,{key:n,value:r}){if(Ck(n)&&n.addToJSMap)n.addToJSMap(e,t,r);else if(wA(e,n))TA(e,t,r);else{let i=Vk(n,``,e);if(t instanceof Map)t.set(i,Vk(r,i,e));else if(t instanceof Set)t.add(i);else{let a=kA(n,i,e),o=Vk(r,a,e);a in t?Object.defineProperty(t,a,{value:o,writable:!0,enumerable:!0,configurable:!0}):t[a]=o}}return t}function kA(e,t,n){if(t===null)return``;if(typeof t!=`object`)return String(t);if(Ck(e)&&n?.doc){let t=gA(n.doc,{});t.anchors=new Set;for(let e of n.anchors.keys())t.anchors.add(e.anchor);t.inFlow=!0,t.inStringifyKey=!0;let r=e.toString(t);if(!n.mapKeyWarned){let e=JSON.stringify(r);e.length>40&&(e=e.substring(0,36)+`..."`),xA(n.doc.options.logLevel,`Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`),n.mapKeyWarned=!0}return r}return JSON.stringify(t)}function AA(e,t,n){return new jA(Jk(e,void 0,n),Jk(t,void 0,n))}var jA=class e{constructor(e,t=null){Object.defineProperty(this,hk,{value:fk}),this.key=e,this.value=t}clone(t){let{key:n,value:r}=this;return Ck(n)&&(n=n.clone(t)),Ck(r)&&(r=r.clone(t)),new e(n,r)}toJSON(e,t){return OA(t,t?.mapAsMap?new Map:{},this)}toString(e,t,n){return e?.doc?bA(this,e,t,n):JSON.stringify(this)}};function MA(e,t,n){return(t.inFlow??e.flow?PA:NA)(e,t,n)}function NA({comment:e,items:t},n,{blockItemPrefix:r,flowChars:i,itemIndent:a,onChompKeep:o,onComment:s}){let{indent:c,options:{commentString:l}}=n,u=Object.assign({},n,{indent:a,type:null}),d=!1,f=[];for(let e=0;e<t.length;++e){let i=t[e],o=null;if(Ck(i))!d&&i.spaceBefore&&f.push(``),FA(n,f,i.commentBefore,d),i.comment&&(o=i.comment);else if(yk(i)){let e=Ck(i.key)?i.key:null;e&&(!d&&e.spaceBefore&&f.push(``),FA(n,f,e.commentBefore,d))}d=!1;let s=yA(i,u,()=>o=null,()=>d=!0);o&&(s+=eA(s,a,l(o))),d&&o&&(d=!1),f.push(r+s)}let p;if(f.length===0)p=i.start+i.end;else{p=f[0];for(let e=1;e<f.length;++e){let t=f[e];p+=t?`\n${c}${t}`:`
+`)&&(S=``);return g+=S+x,n.inFlow?b&&r&&r():y&&!b?g+=aA(g,n.indent,l(y)):h&&i&&i(),g}function EA(e,t){(e===`debug`||e===`warn`)&&console.warn(t)}var DA=`<<`,OA={identify:e=>e===DA||typeof e==`symbol`&&e.description===DA,default:`key`,tag:`tag:yaml.org,2002:merge`,test:/^<<$/,resolve:()=>Object.assign(new Q(Symbol(DA)),{addToJSMap:AA}),stringify:()=>DA},kA=(e,t)=>(OA.identify(t)||Tk(t)&&(!t.type||t.type===Q.PLAIN)&&OA.identify(t.value))&&e?.doc.schema.tags.some(e=>e.tag===OA.tag&&e.default);function AA(e,t,n){let r=MA(e,n);if(Ek(r))for(let n of r.items)jA(e,t,n);else if(Array.isArray(r))for(let n of r)jA(e,t,n);else jA(e,t,r)}function jA(e,t,n){let r=MA(e,n);if(!Ck(r))throw Error(`Merge sources must be maps or map aliases`);let i=r.toJSON(null,e,Map);for(let[e,n]of i)t instanceof Map?t.has(e)||t.set(e,n):t instanceof Set?t.add(e):Object.prototype.hasOwnProperty.call(t,e)||Object.defineProperty(t,e,{value:n,writable:!0,enumerable:!0,configurable:!0});return t}function MA(e,t){return e&&xk(t)?t.resolve(e.doc,e):t}function NA(e,t,{key:n,value:r}){if(Ok(n)&&n.addToJSMap)n.addToJSMap(e,t,r);else if(kA(e,n))AA(e,t,r);else{let i=Kk(n,``,e);if(t instanceof Map)t.set(i,Kk(r,i,e));else if(t instanceof Set)t.add(i);else{let a=PA(n,i,e),o=Kk(r,a,e);a in t?Object.defineProperty(t,a,{value:o,writable:!0,enumerable:!0,configurable:!0}):t[a]=o}}return t}function PA(e,t,n){if(t===null)return``;if(typeof t!=`object`)return String(t);if(Ok(e)&&n?.doc){let t=xA(n.doc,{});t.anchors=new Set;for(let e of n.anchors.keys())t.anchors.add(e.anchor);t.inFlow=!0,t.inStringifyKey=!0;let r=e.toString(t);if(!n.mapKeyWarned){let e=JSON.stringify(r);e.length>40&&(e=e.substring(0,36)+`..."`),EA(n.doc.options.logLevel,`Keys with collection values will be stringified due to JS Object restrictions: ${e}. Set mapAsMap: true to use object keys.`),n.mapKeyWarned=!0}return r}return JSON.stringify(t)}function FA(e,t,n){return new IA($k(e,void 0,n),$k(t,void 0,n))}var IA=class e{constructor(e,t=null){Object.defineProperty(this,bk,{value:_k}),this.key=e,this.value=t}clone(t){let{key:n,value:r}=this;return Ok(n)&&(n=n.clone(t)),Ok(r)&&(r=r.clone(t)),new e(n,r)}toJSON(e,t){return NA(t,t?.mapAsMap?new Map:{},this)}toString(e,t,n){return e?.doc?TA(this,e,t,n):JSON.stringify(this)}};function LA(e,t,n){return(t.inFlow??e.flow?zA:RA)(e,t,n)}function RA({comment:e,items:t},n,{blockItemPrefix:r,flowChars:i,itemIndent:a,onChompKeep:o,onComment:s}){let{indent:c,options:{commentString:l}}=n,u=Object.assign({},n,{indent:a,type:null}),d=!1,f=[];for(let e=0;e<t.length;++e){let i=t[e],o=null;if(Ok(i))!d&&i.spaceBefore&&f.push(``),BA(n,f,i.commentBefore,d),i.comment&&(o=i.comment);else if(wk(i)){let e=Ok(i.key)?i.key:null;e&&(!d&&e.spaceBefore&&f.push(``),BA(n,f,e.commentBefore,d))}d=!1;let s=wA(i,u,()=>o=null,()=>d=!0);o&&(s+=aA(s,a,l(o))),d&&o&&(d=!1),f.push(r+s)}let p;if(f.length===0)p=i.start+i.end;else{p=f[0];for(let e=1;e<f.length;++e){let t=f[e];p+=t?`\n${c}${t}`:`
 `}}return e?(p+=`
-`+$k(l(e),c),s&&s()):d&&o&&o(),p}function PA({items:e},t,{flowChars:n,itemIndent:r}){let{indent:i,indentStep:a,flowCollectionPadding:o,options:{commentString:s}}=t;r+=a;let c=Object.assign({},t,{indent:r,inFlow:!0,type:null}),l=!1,u=0,d=[];for(let n=0;n<e.length;++n){let i=e[n],a=null;if(Ck(i))i.spaceBefore&&d.push(``),FA(t,d,i.commentBefore,!1),i.comment&&(a=i.comment);else if(yk(i)){let e=Ck(i.key)?i.key:null;e&&(e.spaceBefore&&d.push(``),FA(t,d,e.commentBefore,!1),e.comment&&(l=!0));let n=Ck(i.value)?i.value:null;n?(n.comment&&(a=n.comment),n.commentBefore&&(l=!0)):i.value==null&&e?.comment&&(a=e.comment)}a&&(l=!0);let o=yA(i,c,()=>a=null);l||=d.length>u||o.includes(`
-`),n<e.length-1?o+=`,`:t.options.trailingComma&&(t.options.lineWidth>0&&(l||=d.reduce((e,t)=>e+t.length+2,2)+(o.length+2)>t.options.lineWidth),l&&(o+=`,`)),a&&(o+=eA(o,r,s(a))),d.push(o),u=d.length}let{start:f,end:p}=n;if(d.length===0)return f+p;if(!l){let e=d.reduce((e,t)=>e+t.length+2,2);l=t.options.lineWidth>0&&e>t.options.lineWidth}if(l){let e=f;for(let t of d)e+=t?`\n${a}${i}${t}`:`
-`;return`${e}\n${i}${p}`}return`${f}${o}${d.join(` `)}${o}${p}`}function FA({indent:e,options:{commentString:t}},n,r,i){if(r&&i&&(r=r.replace(/^\n+/,``)),r){let i=$k(t(r),e);n.push(i.trimStart())}}function IA(e,t){let n=bk(t)?t.value:t;for(let r of e)if(yk(r)&&(r.key===t||r.key===n||bk(r.key)&&r.key.value===n))return r}var LA=class extends Zk{static get tagName(){return`tag:yaml.org,2002:map`}constructor(e){super(dk,e),this.items=[]}static from(e,t,n){let{keepUndefined:r,replacer:i}=n,a=new this(e),o=(e,o)=>{if(typeof i==`function`)o=i.call(t,e,o);else if(Array.isArray(i)&&!i.includes(e))return;(o!==void 0||r)&&a.items.push(AA(e,o,n))};if(t instanceof Map)for(let[e,n]of t)o(e,n);else if(t&&typeof t==`object`)for(let e of Object.keys(t))o(e,t[e]);return typeof e.sortMapEntries==`function`&&a.items.sort(e.sortMapEntries),a}add(e,t){let n;n=yk(e)?e:!e||typeof e!=`object`||!(`key`in e)?new jA(e,e?.value):new jA(e.key,e.value);let r=IA(this.items,n.key),i=this.schema?.sortMapEntries;if(r){if(!t)throw Error(`Key ${n.key} already set`);bk(r.value)&&Gk(n.value)?r.value.value=n.value:r.value=n.value}else if(i){let e=this.items.findIndex(e=>i(n,e)<0);e===-1?this.items.push(n):this.items.splice(e,0,n)}else this.items.push(n)}delete(e){let t=IA(this.items,e);return t?this.items.splice(this.items.indexOf(t),1).length>0:!1}get(e,t){let n=IA(this.items,e)?.value;return(!t&&bk(n)?n.value:n)??void 0}has(e){return!!IA(this.items,e)}set(e,t){this.add(new jA(e,t),!0)}toJSON(e,t,n){let r=n?new n:t?.mapAsMap?new Map:{};t?.onCreate&&t.onCreate(r);for(let e of this.items)OA(t,r,e);return r}toString(e,t,n){if(!e)return JSON.stringify(this);for(let e of this.items)if(!yk(e))throw Error(`Map items must all be pairs; found ${JSON.stringify(e)} instead`);return!e.allNullValues&&this.hasAllNullValues(!1)&&(e=Object.assign({},e,{allNullValues:!0})),MA(this,e,{blockItemPrefix:``,flowChars:{start:`{`,end:`}`},itemIndent:e.indent||``,onChompKeep:n,onComment:t})}},RA={collection:`map`,default:!0,nodeClass:LA,tag:`tag:yaml.org,2002:map`,resolve(e,t){return vk(e)||t(`Expected a mapping for this tag`),e},createNode:(e,t,n)=>LA.from(e,t,n)},zA=class extends Zk{static get tagName(){return`tag:yaml.org,2002:seq`}constructor(e){super(mk,e),this.items=[]}add(e){this.items.push(e)}delete(e){let t=BA(e);return typeof t==`number`&&this.items.splice(t,1).length>0}get(e,t){let n=BA(e);if(typeof n!=`number`)return;let r=this.items[n];return!t&&bk(r)?r.value:r}has(e){let t=BA(e);return typeof t==`number`&&t<this.items.length}set(e,t){let n=BA(e);if(typeof n!=`number`)throw Error(`Expected a valid index, not ${e}.`);let r=this.items[n];bk(r)&&Gk(t)?r.value=t:this.items[n]=t}toJSON(e,t){let n=[];t?.onCreate&&t.onCreate(n);let r=0;for(let e of this.items)n.push(Vk(e,String(r++),t));return n}toString(e,t,n){return e?MA(this,e,{blockItemPrefix:`- `,flowChars:{start:`[`,end:`]`},itemIndent:(e.indent||``)+`  `,onChompKeep:n,onComment:t}):JSON.stringify(this)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t)){let e=0;for(let a of t){if(typeof r==`function`){let n=t instanceof Set?a:String(e++);a=r.call(t,n,a)}i.items.push(Jk(a,void 0,n))}}return i}};function BA(e){let t=bk(e)?e.value:e;return t&&typeof t==`string`&&(t=Number(t)),typeof t==`number`&&Number.isInteger(t)&&t>=0?t:null}var VA={collection:`seq`,default:!0,nodeClass:zA,tag:`tag:yaml.org,2002:seq`,resolve(e,t){return xk(e)||t(`Expected a sequence for this tag`),e},createNode:(e,t,n)=>zA.from(e,t,n)},HA={identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify(e,t,n,r){return t=Object.assign({actualString:!0},t),hA(e,t,n,r)}},UA={identify:e=>e==null,createNode:()=>new Q(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^(?:~|[Nn]ull|NULL)?$/,resolve:()=>new Q(null),stringify:({source:e},t)=>typeof e==`string`&&UA.test.test(e)?e:t.options.nullStr},WA={identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:[Tt]rue|TRUE|[Ff]alse|FALSE)$/,resolve:e=>new Q(e[0]===`t`||e[0]===`T`),stringify({source:e,value:t},n){return e&&WA.test.test(e)&&t===(e[0]===`t`||e[0]===`T`)?e:t?n.options.trueStr:n.options.falseStr}};function GA({format:e,minFractionDigits:t,tag:n,value:r}){if(typeof r==`bigint`)return String(r);let i=typeof r==`number`?r:Number(r);if(!isFinite(i))return isNaN(i)?`.nan`:i<0?`-.inf`:`.inf`;let a=Object.is(r,-0)?`-0`:JSON.stringify(r);if(!e&&t&&(!n||n===`tag:yaml.org,2002:float`)&&/^-?\d/.test(a)&&!a.includes(`e`)){let e=a.indexOf(`.`);e<0&&(e=a.length,a+=`.`);let n=t-(a.length-e-1);for(;n-->0;)a+=`0`}return a}var KA={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:GA},qA={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:\.[0-9]+|[0-9]+(?:\.[0-9]*)?)[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():GA(e)}},JA={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:\.[0-9]+|[0-9]+\.[0-9]*)$/,resolve(e){let t=new Q(parseFloat(e)),n=e.indexOf(`.`);return n!==-1&&e[e.length-1]===`0`&&(t.minFractionDigits=e.length-n-1),t},stringify:GA},YA=e=>typeof e==`bigint`||Number.isInteger(e),XA=(e,t,n,{intAsBigInt:r})=>r?BigInt(e):parseInt(e.substring(t),n);function ZA(e,t,n){let{value:r}=e;return YA(r)&&r>=0?n+r.toString(t):GA(e)}var QA={identify:e=>YA(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^0o[0-7]+$/,resolve:(e,t,n)=>XA(e,2,8,n),stringify:e=>ZA(e,8,`0o`)},$A={identify:YA,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9]+$/,resolve:(e,t,n)=>XA(e,0,10,n),stringify:GA},ej={identify:e=>YA(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^0x[0-9a-fA-F]+$/,resolve:(e,t,n)=>XA(e,2,16,n),stringify:e=>ZA(e,16,`0x`)},tj=[RA,VA,HA,UA,WA,QA,$A,ej,KA,qA,JA];function nj(e){return typeof e==`bigint`||Number.isInteger(e)}var rj=({value:e})=>JSON.stringify(e),ij=[{identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify:rj},{identify:e=>e==null,createNode:()=>new Q(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^null$/,resolve:()=>null,stringify:rj},{identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^true$|^false$/,resolve:e=>e===`true`,stringify:rj},{identify:nj,default:!0,tag:`tag:yaml.org,2002:int`,test:/^-?(?:0|[1-9][0-9]*)$/,resolve:(e,t,{intAsBigInt:n})=>n?BigInt(e):parseInt(e,10),stringify:({value:e})=>nj(e)?e.toString():JSON.stringify(e)},{identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?$/,resolve:e=>parseFloat(e),stringify:rj}],aj=[RA,VA].concat(ij,{default:!0,tag:``,test:/^/,resolve(e,t){return t(`Unresolved plain scalar ${JSON.stringify(e)}`),e}}),oj={identify:e=>e instanceof Uint8Array,default:!1,tag:`tag:yaml.org,2002:binary`,resolve(e,t){if(typeof atob==`function`){let t=atob(e.replace(/[\n\r]/g,``)),n=new Uint8Array(t.length);for(let e=0;e<t.length;++e)n[e]=t.charCodeAt(e);return n}return t(`This environment does not support reading binary tags; either Buffer or atob is required`),e},stringify({comment:e,type:t,value:n},r,i,a){if(!n)return``;let o=n,s;if(typeof btoa==`function`){let e=``;for(let t=0;t<o.length;++t)e+=String.fromCharCode(o[t]);s=btoa(e)}else throw Error(`This environment does not support writing binary tags; either Buffer or btoa is required`);if(t??=Q.BLOCK_LITERAL,t!==Q.QUOTE_DOUBLE){let e=Math.max(r.options.lineWidth-r.indent.length,r.options.minContentWidth),n=Math.ceil(s.length/e),i=Array(n);for(let t=0,r=0;t<n;++t,r+=e)i[t]=s.substr(r,e);s=i.join(t===Q.BLOCK_LITERAL?`
-`:` `)}return hA({comment:e,type:t,value:s},r,i,a)}};function sj(e,t){if(xk(e))for(let n=0;n<e.items.length;++n){let r=e.items[n];if(!yk(r)){if(vk(r)){r.items.length>1&&t(`Each pair must have its own sequence indicator`);let e=r.items[0]||new jA(new Q(null));if(r.commentBefore&&(e.key.commentBefore=e.key.commentBefore?`${r.commentBefore}\n${e.key.commentBefore}`:r.commentBefore),r.comment){let t=e.value??e.key;t.comment=t.comment?`${r.comment}\n${t.comment}`:r.comment}r=e}e.items[n]=yk(r)?r:new jA(r)}}else t(`Expected a sequence for this tag`);return e}function cj(e,t,n){let{replacer:r}=n,i=new zA(e);i.tag=`tag:yaml.org,2002:pairs`;let a=0;if(t&&Symbol.iterator in Object(t))for(let e of t){typeof r==`function`&&(e=r.call(t,String(a++),e));let o,s;if(Array.isArray(e)){if(e.length===2)o=e[0],s=e[1];else throw TypeError(`Expected [key, value] tuple: ${e}`)}else if(e&&e instanceof Object){let t=Object.keys(e);if(t.length===1)o=t[0],s=e[o];else throw TypeError(`Expected tuple with one key, not ${t.length} keys`)}else o=e;i.items.push(AA(o,s,n))}return i}var lj={collection:`seq`,default:!1,tag:`tag:yaml.org,2002:pairs`,resolve:sj,createNode:cj},uj=class e extends zA{constructor(){super(),this.add=LA.prototype.add.bind(this),this.delete=LA.prototype.delete.bind(this),this.get=LA.prototype.get.bind(this),this.has=LA.prototype.has.bind(this),this.set=LA.prototype.set.bind(this),this.tag=e.tag}toJSON(e,t){if(!t)return super.toJSON(e);let n=new Map;t?.onCreate&&t.onCreate(n);for(let e of this.items){let r,i;if(yk(e)?(r=Vk(e.key,``,t),i=Vk(e.value,r,t)):r=Vk(e,``,t),n.has(r))throw Error(`Ordered maps must not include duplicate keys`);n.set(r,i)}return n}static from(e,t,n){let r=cj(e,t,n),i=new this;return i.items=r.items,i}};uj.tag=`tag:yaml.org,2002:omap`;var dj={collection:`seq`,identify:e=>e instanceof Map,nodeClass:uj,default:!1,tag:`tag:yaml.org,2002:omap`,resolve(e,t){let n=sj(e,t),r=[];for(let{key:e}of n.items)bk(e)&&(r.includes(e.value)?t(`Ordered maps must not include duplicate keys: ${e.value}`):r.push(e.value));return Object.assign(new uj,n)},createNode:(e,t,n)=>uj.from(e,t,n)};function fj({value:e,source:t},n){return t&&(e?pj:mj).test.test(t)?t:e?n.options.trueStr:n.options.falseStr}var pj={identify:e=>e===!0,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:Y|y|[Yy]es|YES|[Tt]rue|TRUE|[Oo]n|ON)$/,resolve:()=>new Q(!0),stringify:fj},mj={identify:e=>e===!1,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:N|n|[Nn]o|NO|[Ff]alse|FALSE|[Oo]ff|OFF)$/,resolve:()=>new Q(!1),stringify:fj},hj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:GA},gj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:[0-9][0-9_]*)?(?:\.[0-9_]*)?[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e.replace(/_/g,``)),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():GA(e)}},_j={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:[0-9][0-9_]*)?\.[0-9_]*$/,resolve(e){let t=new Q(parseFloat(e.replace(/_/g,``))),n=e.indexOf(`.`);if(n!==-1){let r=e.substring(n+1).replace(/_/g,``);r[r.length-1]===`0`&&(t.minFractionDigits=r.length)}return t},stringify:GA},vj=e=>typeof e==`bigint`||Number.isInteger(e);function yj(e,t,n,{intAsBigInt:r}){let i=e[0];if((i===`-`||i===`+`)&&(t+=1),e=e.substring(t).replace(/_/g,``),r){switch(n){case 2:e=`0b${e}`;break;case 8:e=`0o${e}`;break;case 16:e=`0x${e}`}let t=BigInt(e);return i===`-`?BigInt(-1)*t:t}let a=parseInt(e,n);return i===`-`?-1*a:a}function bj(e,t,n){let{value:r}=e;if(vj(r)){let e=r.toString(t);return r<0?`-`+n+e.substr(1):n+e}return GA(e)}var xj={identify:vj,default:!0,tag:`tag:yaml.org,2002:int`,format:`BIN`,test:/^[-+]?0b[0-1_]+$/,resolve:(e,t,n)=>yj(e,2,2,n),stringify:e=>bj(e,2,`0b`)},Sj={identify:vj,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^[-+]?0[0-7_]+$/,resolve:(e,t,n)=>yj(e,1,8,n),stringify:e=>bj(e,8,`0`)},Cj={identify:vj,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9][0-9_]*$/,resolve:(e,t,n)=>yj(e,0,10,n),stringify:GA},wj={identify:vj,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^[-+]?0x[0-9a-fA-F_]+$/,resolve:(e,t,n)=>yj(e,2,16,n),stringify:e=>bj(e,16,`0x`)},Tj=class e extends LA{constructor(t){super(t),this.tag=e.tag}add(e){let t;t=yk(e)?e:e&&typeof e==`object`&&`key`in e&&`value`in e&&e.value===null?new jA(e.key,null):new jA(e,null),IA(this.items,t.key)||this.items.push(t)}get(e,t){let n=IA(this.items,e);return!t&&yk(n)?bk(n.key)?n.key.value:n.key:n}set(e,t){if(typeof t!=`boolean`)throw Error(`Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`);let n=IA(this.items,e);n&&!t?this.items.splice(this.items.indexOf(n),1):!n&&t&&this.items.push(new jA(e))}toJSON(e,t){return super.toJSON(e,t,Set)}toString(e,t,n){if(!e)return JSON.stringify(this);if(this.hasAllNullValues(!0))return super.toString(Object.assign({},e,{allNullValues:!0}),t,n);throw Error(`Set items must all have null values`)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t))for(let e of t)typeof r==`function`&&(e=r.call(t,e,e)),i.items.push(AA(e,null,n));return i}};Tj.tag=`tag:yaml.org,2002:set`;var Ej={collection:`map`,identify:e=>e instanceof Set,nodeClass:Tj,default:!1,tag:`tag:yaml.org,2002:set`,createNode:(e,t,n)=>Tj.from(e,t,n),resolve(e,t){if(vk(e)){if(e.hasAllNullValues(!0))return Object.assign(new Tj,e);t(`Set items must all have null values`)}else t(`Expected a mapping for this tag`);return e}};function Dj(e,t){let n=e[0],r=n===`-`||n===`+`?e.substring(1):e,i=e=>t?BigInt(e):Number(e),a=r.replace(/_/g,``).split(`:`).reduce((e,t)=>e*i(60)+i(t),i(0));return n===`-`?i(-1)*a:a}function Oj(e){let{value:t}=e,n=e=>e;if(typeof t==`bigint`)n=e=>BigInt(e);else if(isNaN(t)||!isFinite(t))return GA(e);let r=``;t<0&&(r=`-`,t*=n(-1));let i=n(60),a=[t%i];return t<60?a.unshift(0):(t=(t-a[0])/i,a.unshift(t%i),t>=60&&(t=(t-a[0])/i,a.unshift(t))),r+a.map(e=>String(e).padStart(2,`0`)).join(`:`).replace(/000000\d*$/,``)}var kj={identify:e=>typeof e==`bigint`||Number.isInteger(e),default:!0,tag:`tag:yaml.org,2002:int`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+$/,resolve:(e,t,{intAsBigInt:n})=>Dj(e,n),stringify:Oj},Aj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+\.[0-9_]*$/,resolve:e=>Dj(e,!1),stringify:Oj},jj={identify:e=>e instanceof Date,default:!0,tag:`tag:yaml.org,2002:timestamp`,test:RegExp(`^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$`),resolve(e){let t=e.match(jj.test);if(!t)throw Error(`!!timestamp expects a date, starting with yyyy-mm-dd`);let[,n,r,i,a,o,s]=t.map(Number),c=t[7]?Number((t[7]+`00`).substr(1,3)):0,l=Date.UTC(n,r-1,i,a||0,o||0,s||0,c),u=t[8];if(u&&u!==`Z`){let e=Dj(u,!1);Math.abs(e)<30&&(e*=60),l-=6e4*e}return new Date(l)},stringify:({value:e})=>e?.toISOString().replace(/(T00:00:00)?\.000Z$/,``)??``},Mj=[RA,VA,HA,UA,pj,mj,xj,Sj,Cj,wj,hj,gj,_j,oj,CA,dj,lj,Ej,kj,Aj,jj],Nj=new Map([[`core`,tj],[`failsafe`,[RA,VA,HA]],[`json`,aj],[`yaml11`,Mj],[`yaml-1.1`,Mj]]),Pj={binary:oj,bool:WA,float:JA,floatExp:qA,floatNaN:KA,floatTime:Aj,int:$A,intHex:ej,intOct:QA,intTime:kj,map:RA,merge:CA,null:UA,omap:dj,pairs:lj,seq:VA,set:Ej,timestamp:jj},Fj={"tag:yaml.org,2002:binary":oj,"tag:yaml.org,2002:merge":CA,"tag:yaml.org,2002:omap":dj,"tag:yaml.org,2002:pairs":lj,"tag:yaml.org,2002:set":Ej,"tag:yaml.org,2002:timestamp":jj};function Ij(e,t,n){let r=Nj.get(t);if(r&&!e)return n&&!r.includes(CA)?r.concat(CA):r.slice();let i=r;if(!i){if(Array.isArray(e))i=[];else{let e=Array.from(Nj.keys()).filter(e=>e!==`yaml11`).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown schema "${t}"; use one of ${e} or define customTags array`)}}if(Array.isArray(e))for(let t of e)i=i.concat(t);else typeof e==`function`&&(i=e(i.slice()));return n&&(i=i.concat(CA)),i.reduce((e,t)=>{let n=typeof t==`string`?Pj[t]:t;if(!n){let e=JSON.stringify(t),n=Object.keys(Pj).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown custom tag ${e}; use one of ${n}`)}return e.includes(n)||e.push(n),e},[])}var Lj=(e,t)=>e.key<t.key?-1:+(e.key>t.key),Rj=class e{constructor({compat:e,customTags:t,merge:n,resolveKnownTags:r,schema:i,sortMapEntries:a,toStringDefaults:o}){this.compat=Array.isArray(e)?Ij(e,`compat`):e?Ij(null,e):null,this.name=typeof i==`string`&&i||`core`,this.knownTags=r?Fj:{},this.tags=Ij(t,this.name,n),this.toStringOptions=o??null,Object.defineProperty(this,dk,{value:RA}),Object.defineProperty(this,pk,{value:HA}),Object.defineProperty(this,mk,{value:VA}),this.sortMapEntries=typeof a==`function`?a:a===!0?Lj:null}clone(){let t=Object.create(e.prototype,Object.getOwnPropertyDescriptors(this));return t.tags=this.tags.slice(),t}};function zj(e,t){let n=[],r=t.directives===!0;if(t.directives!==!1&&e.directives){let t=e.directives.toString(e);t?(n.push(t),r=!0):e.directives.docStart&&(r=!0)}r&&n.push(`---`);let i=gA(e,t),{commentString:a}=i.options;if(e.commentBefore){n.length!==1&&n.unshift(``);let t=a(e.commentBefore);n.unshift($k(t,``))}let o=!1,s=null;if(e.contents){if(Ck(e.contents)){if(e.contents.spaceBefore&&r&&n.push(``),e.contents.commentBefore){let t=a(e.contents.commentBefore);n.push($k(t,``))}i.forceBlockIndent=!!e.comment,s=e.contents.comment}let t=s?void 0:()=>o=!0,c=yA(e.contents,i,()=>s=null,t);s&&(c+=eA(c,``,a(s))),(c[0]===`|`||c[0]===`>`)&&n[n.length-1]===`---`?n[n.length-1]=`--- ${c}`:n.push(c)}else n.push(yA(e.contents,i));if(e.directives?.docEnd){if(e.comment){let t=a(e.comment);t.includes(`
-`)?(n.push(`...`),n.push($k(t,``))):n.push(`... ${t}`)}else n.push(`...`)}else{let t=e.comment;t&&o&&(t=t.replace(/^\n+/,``)),t&&((!o||s)&&n[n.length-1]!==``&&n.push(``),n.push($k(a(t),``)))}return n.join(`
+`+iA(l(e),c),s&&s()):d&&o&&o(),p}function zA({items:e},t,{flowChars:n,itemIndent:r}){let{indent:i,indentStep:a,flowCollectionPadding:o,options:{commentString:s}}=t;r+=a;let c=Object.assign({},t,{indent:r,inFlow:!0,type:null}),l=!1,u=0,d=[];for(let n=0;n<e.length;++n){let i=e[n],a=null;if(Ok(i))i.spaceBefore&&d.push(``),BA(t,d,i.commentBefore,!1),i.comment&&(a=i.comment);else if(wk(i)){let e=Ok(i.key)?i.key:null;e&&(e.spaceBefore&&d.push(``),BA(t,d,e.commentBefore,!1),e.comment&&(l=!0));let n=Ok(i.value)?i.value:null;n?(n.comment&&(a=n.comment),n.commentBefore&&(l=!0)):i.value==null&&e?.comment&&(a=e.comment)}a&&(l=!0);let o=wA(i,c,()=>a=null);l||=d.length>u||o.includes(`
+`),n<e.length-1?o+=`,`:t.options.trailingComma&&(t.options.lineWidth>0&&(l||=d.reduce((e,t)=>e+t.length+2,2)+(o.length+2)>t.options.lineWidth),l&&(o+=`,`)),a&&(o+=aA(o,r,s(a))),d.push(o),u=d.length}let{start:f,end:p}=n;if(d.length===0)return f+p;if(!l){let e=d.reduce((e,t)=>e+t.length+2,2);l=t.options.lineWidth>0&&e>t.options.lineWidth}if(l){let e=f;for(let t of d)e+=t?`\n${a}${i}${t}`:`
+`;return`${e}\n${i}${p}`}return`${f}${o}${d.join(` `)}${o}${p}`}function BA({indent:e,options:{commentString:t}},n,r,i){if(r&&i&&(r=r.replace(/^\n+/,``)),r){let i=iA(t(r),e);n.push(i.trimStart())}}function VA(e,t){let n=Tk(t)?t.value:t;for(let r of e)if(wk(r)&&(r.key===t||r.key===n||Tk(r.key)&&r.key.value===n))return r}var HA=class extends nA{static get tagName(){return`tag:yaml.org,2002:map`}constructor(e){super(gk,e),this.items=[]}static from(e,t,n){let{keepUndefined:r,replacer:i}=n,a=new this(e),o=(e,o)=>{if(typeof i==`function`)o=i.call(t,e,o);else if(Array.isArray(i)&&!i.includes(e))return;(o!==void 0||r)&&a.items.push(FA(e,o,n))};if(t instanceof Map)for(let[e,n]of t)o(e,n);else if(t&&typeof t==`object`)for(let e of Object.keys(t))o(e,t[e]);return typeof e.sortMapEntries==`function`&&a.items.sort(e.sortMapEntries),a}add(e,t){let n;n=wk(e)?e:!e||typeof e!=`object`||!(`key`in e)?new IA(e,e?.value):new IA(e.key,e.value);let r=VA(this.items,n.key),i=this.schema?.sortMapEntries;if(r){if(!t)throw Error(`Key ${n.key} already set`);Tk(r.value)&&Xk(n.value)?r.value.value=n.value:r.value=n.value}else if(i){let e=this.items.findIndex(e=>i(n,e)<0);e===-1?this.items.push(n):this.items.splice(e,0,n)}else this.items.push(n)}delete(e){let t=VA(this.items,e);return t?this.items.splice(this.items.indexOf(t),1).length>0:!1}get(e,t){let n=VA(this.items,e)?.value;return(!t&&Tk(n)?n.value:n)??void 0}has(e){return!!VA(this.items,e)}set(e,t){this.add(new IA(e,t),!0)}toJSON(e,t,n){let r=n?new n:t?.mapAsMap?new Map:{};t?.onCreate&&t.onCreate(r);for(let e of this.items)NA(t,r,e);return r}toString(e,t,n){if(!e)return JSON.stringify(this);for(let e of this.items)if(!wk(e))throw Error(`Map items must all be pairs; found ${JSON.stringify(e)} instead`);return!e.allNullValues&&this.hasAllNullValues(!1)&&(e=Object.assign({},e,{allNullValues:!0})),LA(this,e,{blockItemPrefix:``,flowChars:{start:`{`,end:`}`},itemIndent:e.indent||``,onChompKeep:n,onComment:t})}},UA={collection:`map`,default:!0,nodeClass:HA,tag:`tag:yaml.org,2002:map`,resolve(e,t){return Ck(e)||t(`Expected a mapping for this tag`),e},createNode:(e,t,n)=>HA.from(e,t,n)},WA=class extends nA{static get tagName(){return`tag:yaml.org,2002:seq`}constructor(e){super(yk,e),this.items=[]}add(e){this.items.push(e)}delete(e){let t=GA(e);return typeof t==`number`&&this.items.splice(t,1).length>0}get(e,t){let n=GA(e);if(typeof n!=`number`)return;let r=this.items[n];return!t&&Tk(r)?r.value:r}has(e){let t=GA(e);return typeof t==`number`&&t<this.items.length}set(e,t){let n=GA(e);if(typeof n!=`number`)throw Error(`Expected a valid index, not ${e}.`);let r=this.items[n];Tk(r)&&Xk(t)?r.value=t:this.items[n]=t}toJSON(e,t){let n=[];t?.onCreate&&t.onCreate(n);let r=0;for(let e of this.items)n.push(Kk(e,String(r++),t));return n}toString(e,t,n){return e?LA(this,e,{blockItemPrefix:`- `,flowChars:{start:`[`,end:`]`},itemIndent:(e.indent||``)+`  `,onChompKeep:n,onComment:t}):JSON.stringify(this)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t)){let e=0;for(let a of t){if(typeof r==`function`){let n=t instanceof Set?a:String(e++);a=r.call(t,n,a)}i.items.push($k(a,void 0,n))}}return i}};function GA(e){let t=Tk(e)?e.value:e;return t&&typeof t==`string`&&(t=Number(t)),typeof t==`number`&&Number.isInteger(t)&&t>=0?t:null}var KA={collection:`seq`,default:!0,nodeClass:WA,tag:`tag:yaml.org,2002:seq`,resolve(e,t){return Ek(e)||t(`Expected a sequence for this tag`),e},createNode:(e,t,n)=>WA.from(e,t,n)},qA={identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify(e,t,n,r){return t=Object.assign({actualString:!0},t),bA(e,t,n,r)}},JA={identify:e=>e==null,createNode:()=>new Q(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^(?:~|[Nn]ull|NULL)?$/,resolve:()=>new Q(null),stringify:({source:e},t)=>typeof e==`string`&&JA.test.test(e)?e:t.options.nullStr},YA={identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:[Tt]rue|TRUE|[Ff]alse|FALSE)$/,resolve:e=>new Q(e[0]===`t`||e[0]===`T`),stringify({source:e,value:t},n){return e&&YA.test.test(e)&&t===(e[0]===`t`||e[0]===`T`)?e:t?n.options.trueStr:n.options.falseStr}};function XA({format:e,minFractionDigits:t,tag:n,value:r}){if(typeof r==`bigint`)return String(r);let i=typeof r==`number`?r:Number(r);if(!isFinite(i))return isNaN(i)?`.nan`:i<0?`-.inf`:`.inf`;let a=Object.is(r,-0)?`-0`:JSON.stringify(r);if(!e&&t&&(!n||n===`tag:yaml.org,2002:float`)&&/^-?\d/.test(a)&&!a.includes(`e`)){let e=a.indexOf(`.`);e<0&&(e=a.length,a+=`.`);let n=t-(a.length-e-1);for(;n-->0;)a+=`0`}return a}var ZA={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:XA},QA={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:\.[0-9]+|[0-9]+(?:\.[0-9]*)?)[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():XA(e)}},$A={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:\.[0-9]+|[0-9]+\.[0-9]*)$/,resolve(e){let t=new Q(parseFloat(e)),n=e.indexOf(`.`);return n!==-1&&e[e.length-1]===`0`&&(t.minFractionDigits=e.length-n-1),t},stringify:XA},ej=e=>typeof e==`bigint`||Number.isInteger(e),tj=(e,t,n,{intAsBigInt:r})=>r?BigInt(e):parseInt(e.substring(t),n);function nj(e,t,n){let{value:r}=e;return ej(r)&&r>=0?n+r.toString(t):XA(e)}var rj={identify:e=>ej(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^0o[0-7]+$/,resolve:(e,t,n)=>tj(e,2,8,n),stringify:e=>nj(e,8,`0o`)},ij={identify:ej,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9]+$/,resolve:(e,t,n)=>tj(e,0,10,n),stringify:XA},aj={identify:e=>ej(e)&&e>=0,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^0x[0-9a-fA-F]+$/,resolve:(e,t,n)=>tj(e,2,16,n),stringify:e=>nj(e,16,`0x`)},oj=[UA,KA,qA,JA,YA,rj,ij,aj,ZA,QA,$A];function sj(e){return typeof e==`bigint`||Number.isInteger(e)}var cj=({value:e})=>JSON.stringify(e),lj=[{identify:e=>typeof e==`string`,default:!0,tag:`tag:yaml.org,2002:str`,resolve:e=>e,stringify:cj},{identify:e=>e==null,createNode:()=>new Q(null),default:!0,tag:`tag:yaml.org,2002:null`,test:/^null$/,resolve:()=>null,stringify:cj},{identify:e=>typeof e==`boolean`,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^true$|^false$/,resolve:e=>e===`true`,stringify:cj},{identify:sj,default:!0,tag:`tag:yaml.org,2002:int`,test:/^-?(?:0|[1-9][0-9]*)$/,resolve:(e,t,{intAsBigInt:n})=>n?BigInt(e):parseInt(e,10),stringify:({value:e})=>sj(e)?e.toString():JSON.stringify(e)},{identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^-?(?:0|[1-9][0-9]*)(?:\.[0-9]*)?(?:[eE][-+]?[0-9]+)?$/,resolve:e=>parseFloat(e),stringify:cj}],uj=[UA,KA].concat(lj,{default:!0,tag:``,test:/^/,resolve(e,t){return t(`Unresolved plain scalar ${JSON.stringify(e)}`),e}}),dj={identify:e=>e instanceof Uint8Array,default:!1,tag:`tag:yaml.org,2002:binary`,resolve(e,t){if(typeof atob==`function`){let t=atob(e.replace(/[\n\r]/g,``)),n=new Uint8Array(t.length);for(let e=0;e<t.length;++e)n[e]=t.charCodeAt(e);return n}return t(`This environment does not support reading binary tags; either Buffer or atob is required`),e},stringify({comment:e,type:t,value:n},r,i,a){if(!n)return``;let o=n,s;if(typeof btoa==`function`){let e=``;for(let t=0;t<o.length;++t)e+=String.fromCharCode(o[t]);s=btoa(e)}else throw Error(`This environment does not support writing binary tags; either Buffer or btoa is required`);if(t??=Q.BLOCK_LITERAL,t!==Q.QUOTE_DOUBLE){let e=Math.max(r.options.lineWidth-r.indent.length,r.options.minContentWidth),n=Math.ceil(s.length/e),i=Array(n);for(let t=0,r=0;t<n;++t,r+=e)i[t]=s.substr(r,e);s=i.join(t===Q.BLOCK_LITERAL?`
+`:` `)}return bA({comment:e,type:t,value:s},r,i,a)}};function fj(e,t){if(Ek(e))for(let n=0;n<e.items.length;++n){let r=e.items[n];if(!wk(r)){if(Ck(r)){r.items.length>1&&t(`Each pair must have its own sequence indicator`);let e=r.items[0]||new IA(new Q(null));if(r.commentBefore&&(e.key.commentBefore=e.key.commentBefore?`${r.commentBefore}\n${e.key.commentBefore}`:r.commentBefore),r.comment){let t=e.value??e.key;t.comment=t.comment?`${r.comment}\n${t.comment}`:r.comment}r=e}e.items[n]=wk(r)?r:new IA(r)}}else t(`Expected a sequence for this tag`);return e}function pj(e,t,n){let{replacer:r}=n,i=new WA(e);i.tag=`tag:yaml.org,2002:pairs`;let a=0;if(t&&Symbol.iterator in Object(t))for(let e of t){typeof r==`function`&&(e=r.call(t,String(a++),e));let o,s;if(Array.isArray(e)){if(e.length===2)o=e[0],s=e[1];else throw TypeError(`Expected [key, value] tuple: ${e}`)}else if(e&&e instanceof Object){let t=Object.keys(e);if(t.length===1)o=t[0],s=e[o];else throw TypeError(`Expected tuple with one key, not ${t.length} keys`)}else o=e;i.items.push(FA(o,s,n))}return i}var mj={collection:`seq`,default:!1,tag:`tag:yaml.org,2002:pairs`,resolve:fj,createNode:pj},hj=class e extends WA{constructor(){super(),this.add=HA.prototype.add.bind(this),this.delete=HA.prototype.delete.bind(this),this.get=HA.prototype.get.bind(this),this.has=HA.prototype.has.bind(this),this.set=HA.prototype.set.bind(this),this.tag=e.tag}toJSON(e,t){if(!t)return super.toJSON(e);let n=new Map;t?.onCreate&&t.onCreate(n);for(let e of this.items){let r,i;if(wk(e)?(r=Kk(e.key,``,t),i=Kk(e.value,r,t)):r=Kk(e,``,t),n.has(r))throw Error(`Ordered maps must not include duplicate keys`);n.set(r,i)}return n}static from(e,t,n){let r=pj(e,t,n),i=new this;return i.items=r.items,i}};hj.tag=`tag:yaml.org,2002:omap`;var gj={collection:`seq`,identify:e=>e instanceof Map,nodeClass:hj,default:!1,tag:`tag:yaml.org,2002:omap`,resolve(e,t){let n=fj(e,t),r=[];for(let{key:e}of n.items)Tk(e)&&(r.includes(e.value)?t(`Ordered maps must not include duplicate keys: ${e.value}`):r.push(e.value));return Object.assign(new hj,n)},createNode:(e,t,n)=>hj.from(e,t,n)};function _j({value:e,source:t},n){return t&&(e?vj:yj).test.test(t)?t:e?n.options.trueStr:n.options.falseStr}var vj={identify:e=>e===!0,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:Y|y|[Yy]es|YES|[Tt]rue|TRUE|[Oo]n|ON)$/,resolve:()=>new Q(!0),stringify:_j},yj={identify:e=>e===!1,default:!0,tag:`tag:yaml.org,2002:bool`,test:/^(?:N|n|[Nn]o|NO|[Ff]alse|FALSE|[Oo]ff|OFF)$/,resolve:()=>new Q(!1),stringify:_j},bj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^(?:[-+]?\.(?:inf|Inf|INF)|\.nan|\.NaN|\.NAN)$/,resolve:e=>e.slice(-3).toLowerCase()===`nan`?NaN:e[0]===`-`?-1/0:1/0,stringify:XA},xj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`EXP`,test:/^[-+]?(?:[0-9][0-9_]*)?(?:\.[0-9_]*)?[eE][-+]?[0-9]+$/,resolve:e=>parseFloat(e.replace(/_/g,``)),stringify(e){let t=Number(e.value);return isFinite(t)?t.toExponential():XA(e)}},Sj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,test:/^[-+]?(?:[0-9][0-9_]*)?\.[0-9_]*$/,resolve(e){let t=new Q(parseFloat(e.replace(/_/g,``))),n=e.indexOf(`.`);if(n!==-1){let r=e.substring(n+1).replace(/_/g,``);r[r.length-1]===`0`&&(t.minFractionDigits=r.length)}return t},stringify:XA},Cj=e=>typeof e==`bigint`||Number.isInteger(e);function wj(e,t,n,{intAsBigInt:r}){let i=e[0];if((i===`-`||i===`+`)&&(t+=1),e=e.substring(t).replace(/_/g,``),r){switch(n){case 2:e=`0b${e}`;break;case 8:e=`0o${e}`;break;case 16:e=`0x${e}`}let t=BigInt(e);return i===`-`?BigInt(-1)*t:t}let a=parseInt(e,n);return i===`-`?-1*a:a}function Tj(e,t,n){let{value:r}=e;if(Cj(r)){let e=r.toString(t);return r<0?`-`+n+e.substr(1):n+e}return XA(e)}var Ej={identify:Cj,default:!0,tag:`tag:yaml.org,2002:int`,format:`BIN`,test:/^[-+]?0b[0-1_]+$/,resolve:(e,t,n)=>wj(e,2,2,n),stringify:e=>Tj(e,2,`0b`)},Dj={identify:Cj,default:!0,tag:`tag:yaml.org,2002:int`,format:`OCT`,test:/^[-+]?0[0-7_]+$/,resolve:(e,t,n)=>wj(e,1,8,n),stringify:e=>Tj(e,8,`0`)},Oj={identify:Cj,default:!0,tag:`tag:yaml.org,2002:int`,test:/^[-+]?[0-9][0-9_]*$/,resolve:(e,t,n)=>wj(e,0,10,n),stringify:XA},kj={identify:Cj,default:!0,tag:`tag:yaml.org,2002:int`,format:`HEX`,test:/^[-+]?0x[0-9a-fA-F_]+$/,resolve:(e,t,n)=>wj(e,2,16,n),stringify:e=>Tj(e,16,`0x`)},Aj=class e extends HA{constructor(t){super(t),this.tag=e.tag}add(e){let t;t=wk(e)?e:e&&typeof e==`object`&&`key`in e&&`value`in e&&e.value===null?new IA(e.key,null):new IA(e,null),VA(this.items,t.key)||this.items.push(t)}get(e,t){let n=VA(this.items,e);return!t&&wk(n)?Tk(n.key)?n.key.value:n.key:n}set(e,t){if(typeof t!=`boolean`)throw Error(`Expected boolean value for set(key, value) in a YAML set, not ${typeof t}`);let n=VA(this.items,e);n&&!t?this.items.splice(this.items.indexOf(n),1):!n&&t&&this.items.push(new IA(e))}toJSON(e,t){return super.toJSON(e,t,Set)}toString(e,t,n){if(!e)return JSON.stringify(this);if(this.hasAllNullValues(!0))return super.toString(Object.assign({},e,{allNullValues:!0}),t,n);throw Error(`Set items must all have null values`)}static from(e,t,n){let{replacer:r}=n,i=new this(e);if(t&&Symbol.iterator in Object(t))for(let e of t)typeof r==`function`&&(e=r.call(t,e,e)),i.items.push(FA(e,null,n));return i}};Aj.tag=`tag:yaml.org,2002:set`;var jj={collection:`map`,identify:e=>e instanceof Set,nodeClass:Aj,default:!1,tag:`tag:yaml.org,2002:set`,createNode:(e,t,n)=>Aj.from(e,t,n),resolve(e,t){if(Ck(e)){if(e.hasAllNullValues(!0))return Object.assign(new Aj,e);t(`Set items must all have null values`)}else t(`Expected a mapping for this tag`);return e}};function Mj(e,t){let n=e[0],r=n===`-`||n===`+`?e.substring(1):e,i=e=>t?BigInt(e):Number(e),a=r.replace(/_/g,``).split(`:`).reduce((e,t)=>e*i(60)+i(t),i(0));return n===`-`?i(-1)*a:a}function Nj(e){let{value:t}=e,n=e=>e;if(typeof t==`bigint`)n=e=>BigInt(e);else if(isNaN(t)||!isFinite(t))return XA(e);let r=``;t<0&&(r=`-`,t*=n(-1));let i=n(60),a=[t%i];return t<60?a.unshift(0):(t=(t-a[0])/i,a.unshift(t%i),t>=60&&(t=(t-a[0])/i,a.unshift(t))),r+a.map(e=>String(e).padStart(2,`0`)).join(`:`).replace(/000000\d*$/,``)}var Pj={identify:e=>typeof e==`bigint`||Number.isInteger(e),default:!0,tag:`tag:yaml.org,2002:int`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+$/,resolve:(e,t,{intAsBigInt:n})=>Mj(e,n),stringify:Nj},Fj={identify:e=>typeof e==`number`,default:!0,tag:`tag:yaml.org,2002:float`,format:`TIME`,test:/^[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+\.[0-9_]*$/,resolve:e=>Mj(e,!1),stringify:Nj},Ij={identify:e=>e instanceof Date,default:!0,tag:`tag:yaml.org,2002:timestamp`,test:RegExp(`^([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})(?:(?:t|T|[ \\t]+)([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}(\\.[0-9]+)?)(?:[ \\t]*(Z|[-+][012]?[0-9](?::[0-9]{2})?))?)?$`),resolve(e){let t=e.match(Ij.test);if(!t)throw Error(`!!timestamp expects a date, starting with yyyy-mm-dd`);let[,n,r,i,a,o,s]=t.map(Number),c=t[7]?Number((t[7]+`00`).substr(1,3)):0,l=Date.UTC(n,r-1,i,a||0,o||0,s||0,c),u=t[8];if(u&&u!==`Z`){let e=Mj(u,!1);Math.abs(e)<30&&(e*=60),l-=6e4*e}return new Date(l)},stringify:({value:e})=>e?.toISOString().replace(/(T00:00:00)?\.000Z$/,``)??``},Lj=[UA,KA,qA,JA,vj,yj,Ej,Dj,Oj,kj,bj,xj,Sj,dj,OA,gj,mj,jj,Pj,Fj,Ij],Rj=new Map([[`core`,oj],[`failsafe`,[UA,KA,qA]],[`json`,uj],[`yaml11`,Lj],[`yaml-1.1`,Lj]]),zj={binary:dj,bool:YA,float:$A,floatExp:QA,floatNaN:ZA,floatTime:Fj,int:ij,intHex:aj,intOct:rj,intTime:Pj,map:UA,merge:OA,null:JA,omap:gj,pairs:mj,seq:KA,set:jj,timestamp:Ij},Bj={"tag:yaml.org,2002:binary":dj,"tag:yaml.org,2002:merge":OA,"tag:yaml.org,2002:omap":gj,"tag:yaml.org,2002:pairs":mj,"tag:yaml.org,2002:set":jj,"tag:yaml.org,2002:timestamp":Ij};function Vj(e,t,n){let r=Rj.get(t);if(r&&!e)return n&&!r.includes(OA)?r.concat(OA):r.slice();let i=r;if(!i){if(Array.isArray(e))i=[];else{let e=Array.from(Rj.keys()).filter(e=>e!==`yaml11`).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown schema "${t}"; use one of ${e} or define customTags array`)}}if(Array.isArray(e))for(let t of e)i=i.concat(t);else typeof e==`function`&&(i=e(i.slice()));return n&&(i=i.concat(OA)),i.reduce((e,t)=>{let n=typeof t==`string`?zj[t]:t;if(!n){let e=JSON.stringify(t),n=Object.keys(zj).map(e=>JSON.stringify(e)).join(`, `);throw Error(`Unknown custom tag ${e}; use one of ${n}`)}return e.includes(n)||e.push(n),e},[])}var Hj=(e,t)=>e.key<t.key?-1:+(e.key>t.key),Uj=class e{constructor({compat:e,customTags:t,merge:n,resolveKnownTags:r,schema:i,sortMapEntries:a,toStringDefaults:o}){this.compat=Array.isArray(e)?Vj(e,`compat`):e?Vj(null,e):null,this.name=typeof i==`string`&&i||`core`,this.knownTags=r?Bj:{},this.tags=Vj(t,this.name,n),this.toStringOptions=o??null,Object.defineProperty(this,gk,{value:UA}),Object.defineProperty(this,vk,{value:qA}),Object.defineProperty(this,yk,{value:KA}),this.sortMapEntries=typeof a==`function`?a:a===!0?Hj:null}clone(){let t=Object.create(e.prototype,Object.getOwnPropertyDescriptors(this));return t.tags=this.tags.slice(),t}};function Wj(e,t){let n=[],r=t.directives===!0;if(t.directives!==!1&&e.directives){let t=e.directives.toString(e);t?(n.push(t),r=!0):e.directives.docStart&&(r=!0)}r&&n.push(`---`);let i=xA(e,t),{commentString:a}=i.options;if(e.commentBefore){n.length!==1&&n.unshift(``);let t=a(e.commentBefore);n.unshift(iA(t,``))}let o=!1,s=null;if(e.contents){if(Ok(e.contents)){if(e.contents.spaceBefore&&r&&n.push(``),e.contents.commentBefore){let t=a(e.contents.commentBefore);n.push(iA(t,``))}i.forceBlockIndent=!!e.comment,s=e.contents.comment}let t=s?void 0:()=>o=!0,c=wA(e.contents,i,()=>s=null,t);s&&(c+=aA(c,``,a(s))),(c[0]===`|`||c[0]===`>`)&&n[n.length-1]===`---`?n[n.length-1]=`--- ${c}`:n.push(c)}else n.push(wA(e.contents,i));if(e.directives?.docEnd){if(e.comment){let t=a(e.comment);t.includes(`
+`)?(n.push(`...`),n.push(iA(t,``))):n.push(`... ${t}`)}else n.push(`...`)}else{let t=e.comment;t&&o&&(t=t.replace(/^\n+/,``)),t&&((!o||s)&&n[n.length-1]!==``&&n.push(``),n.push(iA(a(t),``)))}return n.join(`
 `)+`
-`}var Bj=class e{constructor(e,t,n){this.commentBefore=null,this.comment=null,this.errors=[],this.warnings=[],Object.defineProperty(this,hk,{value:uk});let r=null;typeof t==`function`||Array.isArray(t)?r=t:n===void 0&&t&&(n=t,t=void 0);let i=Object.assign({intAsBigInt:!1,keepSourceTokens:!1,logLevel:`warn`,prettyErrors:!0,strict:!0,stringKeys:!1,uniqueKeys:!0,version:`1.2`},n);this.options=i;let{version:a}=i;n?._directives?(this.directives=n._directives.atDocument(),this.directives.yaml.explicit&&(a=this.directives.yaml.version)):this.directives=new Fk({version:a}),this.setSchema(a,n),this.contents=e===void 0?null:this.createNode(e,r,n)}clone(){let t=Object.create(e.prototype,{[hk]:{value:uk}});return t.commentBefore=this.commentBefore,t.comment=this.comment,t.errors=this.errors.slice(),t.warnings=this.warnings.slice(),t.options=Object.assign({},this.options),this.directives&&(t.directives=this.directives.clone()),t.schema=this.schema.clone(),t.contents=Ck(this.contents)?this.contents.clone(t.schema):this.contents,this.range&&(t.range=this.range.slice()),t}add(e){Vj(this.contents)&&this.contents.add(e)}addIn(e,t){Vj(this.contents)&&this.contents.addIn(e,t)}createAlias(e,t){if(!e.anchor){let n=Lk(this);e.anchor=!t||n.has(t)?Rk(t||`a`,n):t}return new Uk(e.anchor)}createNode(e,t,n){let r;if(typeof t==`function`)e=t.call({"":e},``,e),r=t;else if(Array.isArray(t)){let e=t.filter(e=>typeof e==`number`||e instanceof String||e instanceof Number).map(String);e.length>0&&(t=t.concat(e)),r=t}else n===void 0&&t&&(n=t,t=void 0);let{aliasDuplicateObjects:i,anchorPrefix:a,flow:o,keepUndefined:s,onTagObj:c,tag:l}=n??{},{onAnchor:u,setAnchors:d,sourceObjects:f}=zk(this,a||`a`),p={aliasDuplicateObjects:i??!0,keepUndefined:s??!1,onAnchor:u,onTagObj:c,replacer:r,schema:this.schema,sourceObjects:f},m=Jk(e,l,p);return o&&Sk(m)&&(m.flow=!0),d(),m}createPair(e,t,n={}){return new jA(this.createNode(e,null,n),this.createNode(t,null,n))}delete(e){return Vj(this.contents)?this.contents.delete(e):!1}deleteIn(e){return Xk(e)?this.contents!=null&&(this.contents=null,!0):Vj(this.contents)?this.contents.deleteIn(e):!1}get(e,t){return Sk(this.contents)?this.contents.get(e,t):void 0}getIn(e,t){return Xk(e)?!t&&bk(this.contents)?this.contents.value:this.contents:Sk(this.contents)?this.contents.getIn(e,t):void 0}has(e){return Sk(this.contents)?this.contents.has(e):!1}hasIn(e){return Xk(e)?this.contents!==void 0:Sk(this.contents)?this.contents.hasIn(e):!1}set(e,t){this.contents==null?this.contents=Yk(this.schema,[e],t):Vj(this.contents)&&this.contents.set(e,t)}setIn(e,t){Xk(e)?this.contents=t:this.contents==null?this.contents=Yk(this.schema,Array.from(e),t):Vj(this.contents)&&this.contents.setIn(e,t)}setSchema(e,t={}){typeof e==`number`&&(e=String(e));let n;switch(e){case`1.1`:this.directives?this.directives.yaml.version=`1.1`:this.directives=new Fk({version:`1.1`}),n={resolveKnownTags:!1,schema:`yaml-1.1`};break;case`1.2`:case`next`:this.directives?this.directives.yaml.version=e:this.directives=new Fk({version:e}),n={resolveKnownTags:!0,schema:`core`};break;case null:this.directives&&delete this.directives,n=null;break;default:{let t=JSON.stringify(e);throw Error(`Expected '1.1', '1.2' or null as first argument, but found: ${t}`)}}if(t.schema instanceof Object)this.schema=t.schema;else if(n)this.schema=new Rj(Object.assign(n,t));else throw Error(`With a null YAML version, the { schema: Schema } option is required`)}toJS({json:e,jsonArg:t,mapAsMap:n,maxAliasCount:r,onAnchor:i,reviver:a}={}){let o={anchors:new Map,doc:this,keep:!e,mapAsMap:n===!0,mapKeyWarned:!1,maxAliasCount:typeof r==`number`?r:100},s=Vk(this.contents,t??``,o);if(typeof i==`function`)for(let{count:e,res:t}of o.anchors.values())i(t,e);return typeof a==`function`?Bk(a,{"":s},``,s):s}toJSON(e,t){return this.toJS({json:!0,jsonArg:e,mapAsMap:!1,onAnchor:t})}toString(e={}){if(this.errors.length>0)throw Error(`Document with errors cannot be stringified`);if(`indent`in e&&(!Number.isInteger(e.indent)||Number(e.indent)<=0)){let t=JSON.stringify(e.indent);throw Error(`"indent" option must be a positive integer, not ${t}`)}return zj(this,e)}};function Vj(e){if(Sk(e))return!0;throw Error(`Expected a YAML collection as document contents`)}var Hj=class extends Error{constructor(e,t,n,r){super(),this.name=e,this.code=n,this.message=r,this.pos=t}},Uj=class extends Hj{constructor(e,t,n){super(`YAMLParseError`,e,t,n)}},Wj=class extends Hj{constructor(e,t,n){super(`YAMLWarning`,e,t,n)}},Gj=(e,t)=>n=>{if(n.pos[0]===-1)return;n.linePos=n.pos.map(e=>t.linePos(e));let{line:r,col:i}=n.linePos[0];n.message+=` at line ${r}, column ${i}`;let a=i-1,o=e.substring(t.lineStarts[r-1],t.lineStarts[r]).replace(/[\n\r]+$/,``);if(a>=60&&o.length>80){let e=Math.min(a-39,o.length-79);o=`…`+o.substring(e),a-=e-1}if(o.length>80&&(o=o.substring(0,79)+`…`),r>1&&/^ *$/.test(o.substring(0,a))){let n=e.substring(t.lineStarts[r-2],t.lineStarts[r-1]);n.length>80&&(n=n.substring(0,79)+`…
-`),o=n+o}if(/[^ ]/.test(o)){let e=1,t=n.linePos[1];t?.line===r&&t.col>i&&(e=Math.max(1,Math.min(t.col-i,80-a)));let s=` `.repeat(a)+`^`.repeat(e);n.message+=`:\n\n${o}\n${s}\n`}};function Kj(e,{flow:t,indicator:n,next:r,offset:i,onError:a,parentIndent:o,startOnNewline:s}){let c=!1,l=s,u=s,d=``,f=``,p=!1,m=!1,h=null,g=null,_=null,v=null,y=null,b=null,x=null;for(let i of e)switch(m&&=(i.type!==`space`&&i.type!==`newline`&&i.type!==`comma`&&a(i.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),!1),h&&=(l&&i.type!==`comment`&&i.type!==`newline`&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),null),i.type){case`space`:!t&&(n!==`doc-start`||r?.type!==`flow-collection`)&&i.source.includes(`	`)&&(h=i),u=!0;break;case`comment`:{u||a(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let e=i.source.substring(1)||` `;d?d+=f+e:d=e,f=``,l=!1;break}case`newline`:l?d?d+=i.source:(!b||n!==`seq-item-ind`)&&(c=!0):f+=i.source,l=!0,p=!0,(g||_)&&(v=i),u=!0;break;case`anchor`:g&&a(i,`MULTIPLE_ANCHORS`,`A node can have at most one anchor`),i.source.endsWith(`:`)&&a(i.offset+i.source.length-1,`BAD_ALIAS`,`Anchor ending in : is ambiguous`,!0),g=i,x??=i.offset,l=!1,u=!1,m=!0;break;case`tag`:_&&a(i,`MULTIPLE_TAGS`,`A node can have at most one tag`),_=i,x??=i.offset,l=!1,u=!1,m=!0;break;case n:(g||_)&&a(i,`BAD_PROP_ORDER`,`Anchors and tags must be after the ${i.source} indicator`),b&&a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.source} in ${t??`collection`}`),b=i,l=n===`seq-item-ind`||n===`explicit-key-ind`,u=!1;break;case`comma`:if(t){y&&a(i,`UNEXPECTED_TOKEN`,`Unexpected , in ${t}`),y=i,l=!1,u=!1;break}default:a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.type} token`),l=!1,u=!1}let S=e[e.length-1],C=S?S.offset+S.source.length:i;return m&&r&&r.type!==`space`&&r.type!==`newline`&&r.type!==`comma`&&(r.type!==`scalar`||r.source!==``)&&a(r.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),h&&(l&&h.indent<=o||r?.type===`block-map`||r?.type===`block-seq`)&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),{comma:y,found:b,spaceBefore:c,comment:d,hasNewline:p,anchor:g,tag:_,newlineAfterProp:v,end:C,start:x??C}}function qj(e){if(!e)return null;switch(e.type){case`alias`:case`scalar`:case`double-quoted-scalar`:case`single-quoted-scalar`:if(e.source.includes(`
-`))return!0;if(e.end){for(let t of e.end)if(t.type===`newline`)return!0}return!1;case`flow-collection`:for(let t of e.items){for(let e of t.start)if(e.type===`newline`)return!0;if(t.sep){for(let e of t.sep)if(e.type===`newline`)return!0}if(qj(t.key)||qj(t.value))return!0}return!1;default:return!0}}function Jj(e,t,n){if(t?.type===`flow-collection`){let r=t.end[0];r.indent===e&&(r.source===`]`||r.source===`}`)&&qj(t)&&n(r,`BAD_INDENT`,`Flow end indicator should be more indented than parent`,!0)}}function Yj(e,t,n){let{uniqueKeys:r}=e.options;if(r===!1)return!1;let i=typeof r==`function`?r:(e,t)=>e===t||bk(e)&&bk(t)&&e.value===t.value;return t.some(e=>i(e.key,n))}var Xj=`All mapping items must start at the same column`;function Zj({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??LA)(n.schema);n.atRoot&&=!1;let s=r.offset,c=null;for(let a of r.items){let{start:l,key:u,sep:d,value:f}=a,p=Kj(l,{indicator:`explicit-key-ind`,next:u??d?.[0],offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0}),m=!p.found;if(m){if(u&&(u.type===`block-seq`?i(s,`BLOCK_AS_IMPLICIT_KEY`,`A block sequence may not be used as an implicit map key`):`indent`in u&&u.indent!==r.indent&&i(s,`BAD_INDENT`,Xj)),!p.anchor&&!p.tag&&!d){c=p.end,p.comment&&(o.comment?o.comment+=`
-`+p.comment:o.comment=p.comment);continue}(p.newlineAfterProp||qj(u))&&i(u??l[l.length-1],`MULTILINE_IMPLICIT_KEY`,`Implicit keys need to be on a single line`)}else p.found?.indent!==r.indent&&i(s,`BAD_INDENT`,Xj);n.atKey=!0;let h=p.end,g=u?e(n,u,p,i):t(n,h,l,null,p,i);n.schema.compat&&Jj(r.indent,u,i),n.atKey=!1,Yj(n,o.items,g)&&i(h,`DUPLICATE_KEY`,`Map keys must be unique`);let _=Kj(d??[],{indicator:`map-value-ind`,next:f,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!u||u.type===`block-scalar`});if(s=_.end,_.found){m&&(f?.type===`block-map`&&!_.hasNewline&&i(s,`BLOCK_AS_IMPLICIT_KEY`,`Nested mappings are not allowed in compact mappings`),n.options.strict&&p.start<_.found.offset-1024&&i(g.range,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit block mapping key`));let c=f?e(n,f,_,i):t(n,s,d,null,_,i);n.schema.compat&&Jj(r.indent,f,i),s=c.range[2];let l=new jA(g,c);n.options.keepSourceTokens&&(l.srcToken=a),o.items.push(l)}else{m&&i(g.range,`MISSING_CHAR`,`Implicit map keys need to be followed by map values`),_.comment&&(g.comment?g.comment+=`
-`+_.comment:g.comment=_.comment);let e=new jA(g);n.options.keepSourceTokens&&(e.srcToken=a),o.items.push(e)}}return c&&c<s&&i(c,`IMPOSSIBLE`,`Map comment with trailing content`),o.range=[r.offset,s,c??s],o}function Qj({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??zA)(n.schema);n.atRoot&&=!1,n.atKey&&=!1;let s=r.offset,c=null;for(let{start:a,value:l}of r.items){let u=Kj(a,{indicator:`seq-item-ind`,next:l,offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0});if(!u.found){if(u.anchor||u.tag||l)l?.type===`block-seq`?i(u.end,`BAD_INDENT`,`All sequence items must start at the same column`):i(s,`MISSING_CHAR`,`Sequence item without - indicator`);else{c=u.end,u.comment&&(o.comment=u.comment);continue}}let d=l?e(n,l,u,i):t(n,u.end,a,null,u,i);n.schema.compat&&Jj(r.indent,l,i),s=d.range[2],o.items.push(d)}return o.range=[r.offset,s,c??s],o}function $j(e,t,n,r){let i=``;if(e){let a=!1,o=``;for(let s of e){let{source:e,type:c}=s;switch(c){case`space`:a=!0;break;case`comment`:{n&&!a&&r(s,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let t=e.substring(1)||` `;i?i+=o+t:i=t,o=``;break}case`newline`:i&&(o+=e),a=!0;break;default:r(s,`UNEXPECTED_TOKEN`,`Unexpected ${c} at node end`)}t+=e.length}}return{comment:i,offset:t}}var eM=`Block collections are not allowed within flow collections`,tM=e=>e&&(e.type===`block-map`||e.type===`block-seq`);function nM({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=r.start.source===`{`,s=o?`flow map`:`flow sequence`,c=new((a?.nodeClass)??(o?LA:zA))(n.schema);c.flow=!0;let l=n.atRoot;l&&(n.atRoot=!1),n.atKey&&=!1;let u=r.offset+r.start.source.length;for(let a=0;a<r.items.length;++a){let l=r.items[a],{start:d,key:f,sep:p,value:m}=l,h=Kj(d,{flow:s,indicator:`explicit-key-ind`,next:f??p?.[0],offset:u,onError:i,parentIndent:r.indent,startOnNewline:!1});if(!h.found){if(!h.anchor&&!h.tag&&!p&&!m){a===0&&h.comma?i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`):a<r.items.length-1&&i(h.start,`UNEXPECTED_TOKEN`,`Unexpected empty item in ${s}`),h.comment&&(c.comment?c.comment+=`
-`+h.comment:c.comment=h.comment),u=h.end;continue}!o&&n.options.strict&&qj(f)&&i(f,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`)}if(a===0)h.comma&&i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`);else if(h.comma||i(h.start,`MISSING_CHAR`,`Missing , between ${s} items`),h.comment){let e=``;loop:for(let t of d)switch(t.type){case`comma`:case`space`:break;case`comment`:e=t.source.substring(1);break loop;default:break loop}if(e){let t=c.items[c.items.length-1];yk(t)&&(t=t.value??t.key),t.comment?t.comment+=`
-`+e:t.comment=e,h.comment=h.comment.substring(e.length+1)}}if(!o&&!p&&!h.found){let r=m?e(n,m,h,i):t(n,h.end,p,null,h,i);c.items.push(r),u=r.range[2],tM(m)&&i(r.range,`BLOCK_IN_FLOW`,eM)}else{n.atKey=!0;let a=h.end,g=f?e(n,f,h,i):t(n,a,d,null,h,i);tM(f)&&i(g.range,`BLOCK_IN_FLOW`,eM),n.atKey=!1;let _=Kj(p??[],{flow:s,indicator:`map-value-ind`,next:m,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!1});if(_.found){if(!o&&!h.found&&n.options.strict){if(p)for(let e of p){if(e===_.found)break;if(e.type===`newline`){i(e,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`);break}}h.start<_.found.offset-1024&&i(_.found,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit flow sequence key`)}}else m&&(`source`in m&&m.source?.[0]===`:`?i(m,`MISSING_CHAR`,`Missing space after : in ${s}`):i(_.start,`MISSING_CHAR`,`Missing , or : between ${s} items`));let v=m?e(n,m,_,i):_.found?t(n,_.end,p,null,_,i):null;v?tM(m)&&i(v.range,`BLOCK_IN_FLOW`,eM):_.comment&&(g.comment?g.comment+=`
-`+_.comment:g.comment=_.comment);let y=new jA(g,v);if(n.options.keepSourceTokens&&(y.srcToken=l),o){let e=c;Yj(n,e.items,g)&&i(a,`DUPLICATE_KEY`,`Map keys must be unique`),e.items.push(y)}else{let e=new LA(n.schema);e.flow=!0,e.items.push(y);let t=(v??g).range;e.range=[g.range[0],t[1],t[2]],c.items.push(e)}u=v?v.range[2]:_.end}}let d=o?`}`:`]`,[f,...p]=r.end,m=u;if(f?.source===d)m=f.offset+f.source.length;else{let e=s[0].toUpperCase()+s.substring(1),t=l?`${e} must end with a ${d}`:`${e} in block collection must be sufficiently indented and end with a ${d}`;i(u,l?`MISSING_CHAR`:`BAD_INDENT`,t),f&&f.source.length!==1&&p.unshift(f)}if(p.length>0){let e=$j(p,m,n.options.strict,i);e.comment&&(c.comment?c.comment+=`
-`+e.comment:c.comment=e.comment),c.range=[r.offset,m,e.offset]}else c.range=[r.offset,m,m];return c}function rM(e,t,n,r,i,a){let o=n.type===`block-map`?Zj(e,t,n,r,a):n.type===`block-seq`?Qj(e,t,n,r,a):nM(e,t,n,r,a),s=o.constructor;return i===`!`||i===s.tagName?(o.tag=s.tagName,o):(i&&(o.tag=i),o)}function iM(e,t,n,r,i){let a=r.tag,o=a?t.directives.tagName(a.source,e=>i(a,`TAG_RESOLVE_FAILED`,e)):null;if(n.type===`block-seq`){let{anchor:e,newlineAfterProp:t}=r,n=e&&a?e.offset>a.offset?e:a:e??a;n&&(!t||t.offset<n.offset)&&i(n,`MISSING_CHAR`,`Missing newline after block sequence props`)}let s=n.type===`block-map`?`map`:n.type===`block-seq`?`seq`:n.start.source===`{`?`map`:`seq`;if(!a||!o||o===`!`||o===LA.tagName&&s===`map`||o===zA.tagName&&s===`seq`)return rM(e,t,n,i,o);let c=t.schema.tags.find(e=>e.tag===o&&e.collection===s);if(!c){let r=t.schema.knownTags[o];if(r?.collection===s)t.schema.tags.push(Object.assign({},r,{default:!1})),c=r;else return r?i(a,`BAD_COLLECTION_TYPE`,`${r.tag} used for ${s} collection, but expects ${r.collection??`scalar`}`,!0):i(a,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${o}`,!0),rM(e,t,n,i,o)}let l=rM(e,t,n,i,o,c),u=c.resolve?.(l,e=>i(a,`TAG_RESOLVE_FAILED`,e),t.options)??l,d=Ck(u)?u:new Q(u);return d.range=l.range,d.tag=o,c?.format&&(d.format=c.format),d}function aM(e,t,n){let r=t.offset,i=oM(t,e.options.strict,n);if(!i)return{value:``,type:null,comment:``,range:[r,r,r]};let a=i.mode===`>`?Q.BLOCK_FOLDED:Q.BLOCK_LITERAL,o=t.source?sM(t.source):[],s=o.length;for(let e=o.length-1;e>=0;--e){let t=o[e][1];if(t===``||t===`\r`)s=e;else break}if(s===0){let e=i.chomp===`+`&&o.length>0?`
+`}var Gj=class e{constructor(e,t,n){this.commentBefore=null,this.comment=null,this.errors=[],this.warnings=[],Object.defineProperty(this,bk,{value:hk});let r=null;typeof t==`function`||Array.isArray(t)?r=t:n===void 0&&t&&(n=t,t=void 0);let i=Object.assign({intAsBigInt:!1,keepSourceTokens:!1,logLevel:`warn`,prettyErrors:!0,strict:!0,stringKeys:!1,uniqueKeys:!0,version:`1.2`},n);this.options=i;let{version:a}=i;n?._directives?(this.directives=n._directives.atDocument(),this.directives.yaml.explicit&&(a=this.directives.yaml.version)):this.directives=new Bk({version:a}),this.setSchema(a,n),this.contents=e===void 0?null:this.createNode(e,r,n)}clone(){let t=Object.create(e.prototype,{[bk]:{value:hk}});return t.commentBefore=this.commentBefore,t.comment=this.comment,t.errors=this.errors.slice(),t.warnings=this.warnings.slice(),t.options=Object.assign({},this.options),this.directives&&(t.directives=this.directives.clone()),t.schema=this.schema.clone(),t.contents=Ok(this.contents)?this.contents.clone(t.schema):this.contents,this.range&&(t.range=this.range.slice()),t}add(e){Kj(this.contents)&&this.contents.add(e)}addIn(e,t){Kj(this.contents)&&this.contents.addIn(e,t)}createAlias(e,t){if(!e.anchor){let n=Hk(this);e.anchor=!t||n.has(t)?Uk(t||`a`,n):t}return new Jk(e.anchor)}createNode(e,t,n){let r;if(typeof t==`function`)e=t.call({"":e},``,e),r=t;else if(Array.isArray(t)){let e=t.filter(e=>typeof e==`number`||e instanceof String||e instanceof Number).map(String);e.length>0&&(t=t.concat(e)),r=t}else n===void 0&&t&&(n=t,t=void 0);let{aliasDuplicateObjects:i,anchorPrefix:a,flow:o,keepUndefined:s,onTagObj:c,tag:l}=n??{},{onAnchor:u,setAnchors:d,sourceObjects:f}=Wk(this,a||`a`),p={aliasDuplicateObjects:i??!0,keepUndefined:s??!1,onAnchor:u,onTagObj:c,replacer:r,schema:this.schema,sourceObjects:f},m=$k(e,l,p);return o&&Dk(m)&&(m.flow=!0),d(),m}createPair(e,t,n={}){return new IA(this.createNode(e,null,n),this.createNode(t,null,n))}delete(e){return Kj(this.contents)?this.contents.delete(e):!1}deleteIn(e){return tA(e)?this.contents!=null&&(this.contents=null,!0):Kj(this.contents)?this.contents.deleteIn(e):!1}get(e,t){return Dk(this.contents)?this.contents.get(e,t):void 0}getIn(e,t){return tA(e)?!t&&Tk(this.contents)?this.contents.value:this.contents:Dk(this.contents)?this.contents.getIn(e,t):void 0}has(e){return Dk(this.contents)?this.contents.has(e):!1}hasIn(e){return tA(e)?this.contents!==void 0:Dk(this.contents)?this.contents.hasIn(e):!1}set(e,t){this.contents==null?this.contents=eA(this.schema,[e],t):Kj(this.contents)&&this.contents.set(e,t)}setIn(e,t){tA(e)?this.contents=t:this.contents==null?this.contents=eA(this.schema,Array.from(e),t):Kj(this.contents)&&this.contents.setIn(e,t)}setSchema(e,t={}){typeof e==`number`&&(e=String(e));let n;switch(e){case`1.1`:this.directives?this.directives.yaml.version=`1.1`:this.directives=new Bk({version:`1.1`}),n={resolveKnownTags:!1,schema:`yaml-1.1`};break;case`1.2`:case`next`:this.directives?this.directives.yaml.version=e:this.directives=new Bk({version:e}),n={resolveKnownTags:!0,schema:`core`};break;case null:this.directives&&delete this.directives,n=null;break;default:{let t=JSON.stringify(e);throw Error(`Expected '1.1', '1.2' or null as first argument, but found: ${t}`)}}if(t.schema instanceof Object)this.schema=t.schema;else if(n)this.schema=new Uj(Object.assign(n,t));else throw Error(`With a null YAML version, the { schema: Schema } option is required`)}toJS({json:e,jsonArg:t,mapAsMap:n,maxAliasCount:r,onAnchor:i,reviver:a}={}){let o={anchors:new Map,doc:this,keep:!e,mapAsMap:n===!0,mapKeyWarned:!1,maxAliasCount:typeof r==`number`?r:100},s=Kk(this.contents,t??``,o);if(typeof i==`function`)for(let{count:e,res:t}of o.anchors.values())i(t,e);return typeof a==`function`?Gk(a,{"":s},``,s):s}toJSON(e,t){return this.toJS({json:!0,jsonArg:e,mapAsMap:!1,onAnchor:t})}toString(e={}){if(this.errors.length>0)throw Error(`Document with errors cannot be stringified`);if(`indent`in e&&(!Number.isInteger(e.indent)||Number(e.indent)<=0)){let t=JSON.stringify(e.indent);throw Error(`"indent" option must be a positive integer, not ${t}`)}return Wj(this,e)}};function Kj(e){if(Dk(e))return!0;throw Error(`Expected a YAML collection as document contents`)}var qj=class extends Error{constructor(e,t,n,r){super(),this.name=e,this.code=n,this.message=r,this.pos=t}},Jj=class extends qj{constructor(e,t,n){super(`YAMLParseError`,e,t,n)}},Yj=class extends qj{constructor(e,t,n){super(`YAMLWarning`,e,t,n)}},Xj=(e,t)=>n=>{if(n.pos[0]===-1)return;n.linePos=n.pos.map(e=>t.linePos(e));let{line:r,col:i}=n.linePos[0];n.message+=` at line ${r}, column ${i}`;let a=i-1,o=e.substring(t.lineStarts[r-1],t.lineStarts[r]).replace(/[\n\r]+$/,``);if(a>=60&&o.length>80){let e=Math.min(a-39,o.length-79);o=`…`+o.substring(e),a-=e-1}if(o.length>80&&(o=o.substring(0,79)+`…`),r>1&&/^ *$/.test(o.substring(0,a))){let n=e.substring(t.lineStarts[r-2],t.lineStarts[r-1]);n.length>80&&(n=n.substring(0,79)+`…
+`),o=n+o}if(/[^ ]/.test(o)){let e=1,t=n.linePos[1];t?.line===r&&t.col>i&&(e=Math.max(1,Math.min(t.col-i,80-a)));let s=` `.repeat(a)+`^`.repeat(e);n.message+=`:\n\n${o}\n${s}\n`}};function Zj(e,{flow:t,indicator:n,next:r,offset:i,onError:a,parentIndent:o,startOnNewline:s}){let c=!1,l=s,u=s,d=``,f=``,p=!1,m=!1,h=null,g=null,_=null,v=null,y=null,b=null,x=null;for(let i of e)switch(m&&=(i.type!==`space`&&i.type!==`newline`&&i.type!==`comma`&&a(i.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),!1),h&&=(l&&i.type!==`comment`&&i.type!==`newline`&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),null),i.type){case`space`:!t&&(n!==`doc-start`||r?.type!==`flow-collection`)&&i.source.includes(`	`)&&(h=i),u=!0;break;case`comment`:{u||a(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let e=i.source.substring(1)||` `;d?d+=f+e:d=e,f=``,l=!1;break}case`newline`:l?d?d+=i.source:(!b||n!==`seq-item-ind`)&&(c=!0):f+=i.source,l=!0,p=!0,(g||_)&&(v=i),u=!0;break;case`anchor`:g&&a(i,`MULTIPLE_ANCHORS`,`A node can have at most one anchor`),i.source.endsWith(`:`)&&a(i.offset+i.source.length-1,`BAD_ALIAS`,`Anchor ending in : is ambiguous`,!0),g=i,x??=i.offset,l=!1,u=!1,m=!0;break;case`tag`:_&&a(i,`MULTIPLE_TAGS`,`A node can have at most one tag`),_=i,x??=i.offset,l=!1,u=!1,m=!0;break;case n:(g||_)&&a(i,`BAD_PROP_ORDER`,`Anchors and tags must be after the ${i.source} indicator`),b&&a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.source} in ${t??`collection`}`),b=i,l=n===`seq-item-ind`||n===`explicit-key-ind`,u=!1;break;case`comma`:if(t){y&&a(i,`UNEXPECTED_TOKEN`,`Unexpected , in ${t}`),y=i,l=!1,u=!1;break}default:a(i,`UNEXPECTED_TOKEN`,`Unexpected ${i.type} token`),l=!1,u=!1}let S=e[e.length-1],C=S?S.offset+S.source.length:i;return m&&r&&r.type!==`space`&&r.type!==`newline`&&r.type!==`comma`&&(r.type!==`scalar`||r.source!==``)&&a(r.offset,`MISSING_CHAR`,`Tags and anchors must be separated from the next token by white space`),h&&(l&&h.indent<=o||r?.type===`block-map`||r?.type===`block-seq`)&&a(h,`TAB_AS_INDENT`,`Tabs are not allowed as indentation`),{comma:y,found:b,spaceBefore:c,comment:d,hasNewline:p,anchor:g,tag:_,newlineAfterProp:v,end:C,start:x??C}}function Qj(e){if(!e)return null;switch(e.type){case`alias`:case`scalar`:case`double-quoted-scalar`:case`single-quoted-scalar`:if(e.source.includes(`
+`))return!0;if(e.end){for(let t of e.end)if(t.type===`newline`)return!0}return!1;case`flow-collection`:for(let t of e.items){for(let e of t.start)if(e.type===`newline`)return!0;if(t.sep){for(let e of t.sep)if(e.type===`newline`)return!0}if(Qj(t.key)||Qj(t.value))return!0}return!1;default:return!0}}function $j(e,t,n){if(t?.type===`flow-collection`){let r=t.end[0];r.indent===e&&(r.source===`]`||r.source===`}`)&&Qj(t)&&n(r,`BAD_INDENT`,`Flow end indicator should be more indented than parent`,!0)}}function eM(e,t,n){let{uniqueKeys:r}=e.options;if(r===!1)return!1;let i=typeof r==`function`?r:(e,t)=>e===t||Tk(e)&&Tk(t)&&e.value===t.value;return t.some(e=>i(e.key,n))}var tM=`All mapping items must start at the same column`;function nM({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??HA)(n.schema);n.atRoot&&=!1;let s=r.offset,c=null;for(let a of r.items){let{start:l,key:u,sep:d,value:f}=a,p=Zj(l,{indicator:`explicit-key-ind`,next:u??d?.[0],offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0}),m=!p.found;if(m){if(u&&(u.type===`block-seq`?i(s,`BLOCK_AS_IMPLICIT_KEY`,`A block sequence may not be used as an implicit map key`):`indent`in u&&u.indent!==r.indent&&i(s,`BAD_INDENT`,tM)),!p.anchor&&!p.tag&&!d){c=p.end,p.comment&&(o.comment?o.comment+=`
+`+p.comment:o.comment=p.comment);continue}(p.newlineAfterProp||Qj(u))&&i(u??l[l.length-1],`MULTILINE_IMPLICIT_KEY`,`Implicit keys need to be on a single line`)}else p.found?.indent!==r.indent&&i(s,`BAD_INDENT`,tM);n.atKey=!0;let h=p.end,g=u?e(n,u,p,i):t(n,h,l,null,p,i);n.schema.compat&&$j(r.indent,u,i),n.atKey=!1,eM(n,o.items,g)&&i(h,`DUPLICATE_KEY`,`Map keys must be unique`);let _=Zj(d??[],{indicator:`map-value-ind`,next:f,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!u||u.type===`block-scalar`});if(s=_.end,_.found){m&&(f?.type===`block-map`&&!_.hasNewline&&i(s,`BLOCK_AS_IMPLICIT_KEY`,`Nested mappings are not allowed in compact mappings`),n.options.strict&&p.start<_.found.offset-1024&&i(g.range,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit block mapping key`));let c=f?e(n,f,_,i):t(n,s,d,null,_,i);n.schema.compat&&$j(r.indent,f,i),s=c.range[2];let l=new IA(g,c);n.options.keepSourceTokens&&(l.srcToken=a),o.items.push(l)}else{m&&i(g.range,`MISSING_CHAR`,`Implicit map keys need to be followed by map values`),_.comment&&(g.comment?g.comment+=`
+`+_.comment:g.comment=_.comment);let e=new IA(g);n.options.keepSourceTokens&&(e.srcToken=a),o.items.push(e)}}return c&&c<s&&i(c,`IMPOSSIBLE`,`Map comment with trailing content`),o.range=[r.offset,s,c??s],o}function rM({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=new((a?.nodeClass)??WA)(n.schema);n.atRoot&&=!1,n.atKey&&=!1;let s=r.offset,c=null;for(let{start:a,value:l}of r.items){let u=Zj(a,{indicator:`seq-item-ind`,next:l,offset:s,onError:i,parentIndent:r.indent,startOnNewline:!0});if(!u.found){if(u.anchor||u.tag||l)l?.type===`block-seq`?i(u.end,`BAD_INDENT`,`All sequence items must start at the same column`):i(s,`MISSING_CHAR`,`Sequence item without - indicator`);else{c=u.end,u.comment&&(o.comment=u.comment);continue}}let d=l?e(n,l,u,i):t(n,u.end,a,null,u,i);n.schema.compat&&$j(r.indent,l,i),s=d.range[2],o.items.push(d)}return o.range=[r.offset,s,c??s],o}function iM(e,t,n,r){let i=``;if(e){let a=!1,o=``;for(let s of e){let{source:e,type:c}=s;switch(c){case`space`:a=!0;break;case`comment`:{n&&!a&&r(s,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`);let t=e.substring(1)||` `;i?i+=o+t:i=t,o=``;break}case`newline`:i&&(o+=e),a=!0;break;default:r(s,`UNEXPECTED_TOKEN`,`Unexpected ${c} at node end`)}t+=e.length}}return{comment:i,offset:t}}var aM=`Block collections are not allowed within flow collections`,oM=e=>e&&(e.type===`block-map`||e.type===`block-seq`);function sM({composeNode:e,composeEmptyNode:t},n,r,i,a){let o=r.start.source===`{`,s=o?`flow map`:`flow sequence`,c=new((a?.nodeClass)??(o?HA:WA))(n.schema);c.flow=!0;let l=n.atRoot;l&&(n.atRoot=!1),n.atKey&&=!1;let u=r.offset+r.start.source.length;for(let a=0;a<r.items.length;++a){let l=r.items[a],{start:d,key:f,sep:p,value:m}=l,h=Zj(d,{flow:s,indicator:`explicit-key-ind`,next:f??p?.[0],offset:u,onError:i,parentIndent:r.indent,startOnNewline:!1});if(!h.found){if(!h.anchor&&!h.tag&&!p&&!m){a===0&&h.comma?i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`):a<r.items.length-1&&i(h.start,`UNEXPECTED_TOKEN`,`Unexpected empty item in ${s}`),h.comment&&(c.comment?c.comment+=`
+`+h.comment:c.comment=h.comment),u=h.end;continue}!o&&n.options.strict&&Qj(f)&&i(f,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`)}if(a===0)h.comma&&i(h.comma,`UNEXPECTED_TOKEN`,`Unexpected , in ${s}`);else if(h.comma||i(h.start,`MISSING_CHAR`,`Missing , between ${s} items`),h.comment){let e=``;loop:for(let t of d)switch(t.type){case`comma`:case`space`:break;case`comment`:e=t.source.substring(1);break loop;default:break loop}if(e){let t=c.items[c.items.length-1];wk(t)&&(t=t.value??t.key),t.comment?t.comment+=`
+`+e:t.comment=e,h.comment=h.comment.substring(e.length+1)}}if(!o&&!p&&!h.found){let r=m?e(n,m,h,i):t(n,h.end,p,null,h,i);c.items.push(r),u=r.range[2],oM(m)&&i(r.range,`BLOCK_IN_FLOW`,aM)}else{n.atKey=!0;let a=h.end,g=f?e(n,f,h,i):t(n,a,d,null,h,i);oM(f)&&i(g.range,`BLOCK_IN_FLOW`,aM),n.atKey=!1;let _=Zj(p??[],{flow:s,indicator:`map-value-ind`,next:m,offset:g.range[2],onError:i,parentIndent:r.indent,startOnNewline:!1});if(_.found){if(!o&&!h.found&&n.options.strict){if(p)for(let e of p){if(e===_.found)break;if(e.type===`newline`){i(e,`MULTILINE_IMPLICIT_KEY`,`Implicit keys of flow sequence pairs need to be on a single line`);break}}h.start<_.found.offset-1024&&i(_.found,`KEY_OVER_1024_CHARS`,`The : indicator must be at most 1024 chars after the start of an implicit flow sequence key`)}}else m&&(`source`in m&&m.source?.[0]===`:`?i(m,`MISSING_CHAR`,`Missing space after : in ${s}`):i(_.start,`MISSING_CHAR`,`Missing , or : between ${s} items`));let v=m?e(n,m,_,i):_.found?t(n,_.end,p,null,_,i):null;v?oM(m)&&i(v.range,`BLOCK_IN_FLOW`,aM):_.comment&&(g.comment?g.comment+=`
+`+_.comment:g.comment=_.comment);let y=new IA(g,v);if(n.options.keepSourceTokens&&(y.srcToken=l),o){let e=c;eM(n,e.items,g)&&i(a,`DUPLICATE_KEY`,`Map keys must be unique`),e.items.push(y)}else{let e=new HA(n.schema);e.flow=!0,e.items.push(y);let t=(v??g).range;e.range=[g.range[0],t[1],t[2]],c.items.push(e)}u=v?v.range[2]:_.end}}let d=o?`}`:`]`,[f,...p]=r.end,m=u;if(f?.source===d)m=f.offset+f.source.length;else{let e=s[0].toUpperCase()+s.substring(1),t=l?`${e} must end with a ${d}`:`${e} in block collection must be sufficiently indented and end with a ${d}`;i(u,l?`MISSING_CHAR`:`BAD_INDENT`,t),f&&f.source.length!==1&&p.unshift(f)}if(p.length>0){let e=iM(p,m,n.options.strict,i);e.comment&&(c.comment?c.comment+=`
+`+e.comment:c.comment=e.comment),c.range=[r.offset,m,e.offset]}else c.range=[r.offset,m,m];return c}function cM(e,t,n,r,i,a){let o=n.type===`block-map`?nM(e,t,n,r,a):n.type===`block-seq`?rM(e,t,n,r,a):sM(e,t,n,r,a),s=o.constructor;return i===`!`||i===s.tagName?(o.tag=s.tagName,o):(i&&(o.tag=i),o)}function lM(e,t,n,r,i){let a=r.tag,o=a?t.directives.tagName(a.source,e=>i(a,`TAG_RESOLVE_FAILED`,e)):null;if(n.type===`block-seq`){let{anchor:e,newlineAfterProp:t}=r,n=e&&a?e.offset>a.offset?e:a:e??a;n&&(!t||t.offset<n.offset)&&i(n,`MISSING_CHAR`,`Missing newline after block sequence props`)}let s=n.type===`block-map`?`map`:n.type===`block-seq`?`seq`:n.start.source===`{`?`map`:`seq`;if(!a||!o||o===`!`||o===HA.tagName&&s===`map`||o===WA.tagName&&s===`seq`)return cM(e,t,n,i,o);let c=t.schema.tags.find(e=>e.tag===o&&e.collection===s);if(!c){let r=t.schema.knownTags[o];if(r?.collection===s)t.schema.tags.push(Object.assign({},r,{default:!1})),c=r;else return r?i(a,`BAD_COLLECTION_TYPE`,`${r.tag} used for ${s} collection, but expects ${r.collection??`scalar`}`,!0):i(a,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${o}`,!0),cM(e,t,n,i,o)}let l=cM(e,t,n,i,o,c),u=c.resolve?.(l,e=>i(a,`TAG_RESOLVE_FAILED`,e),t.options)??l,d=Ok(u)?u:new Q(u);return d.range=l.range,d.tag=o,c?.format&&(d.format=c.format),d}function uM(e,t,n){let r=t.offset,i=dM(t,e.options.strict,n);if(!i)return{value:``,type:null,comment:``,range:[r,r,r]};let a=i.mode===`>`?Q.BLOCK_FOLDED:Q.BLOCK_LITERAL,o=t.source?fM(t.source):[],s=o.length;for(let e=o.length-1;e>=0;--e){let t=o[e][1];if(t===``||t===`\r`)s=e;else break}if(s===0){let e=i.chomp===`+`&&o.length>0?`
 `.repeat(Math.max(1,o.length-1)):``,n=r+i.length;return t.source&&(n+=t.source.length),{value:e,type:a,comment:i.comment,range:[r,n,n]}}let c=t.indent+i.indent,l=t.offset+i.length,u=0;for(let t=0;t<s;++t){let[r,a]=o[t];if(a===``||a===`\r`)i.indent===0&&r.length>c&&(c=r.length);else{r.length<c&&n(l+r.length,`MISSING_CHAR`,`Block scalars with more-indented leading empty lines must use an explicit indentation indicator`),i.indent===0&&(c=r.length),u=t,c===0&&!e.atRoot&&n(l,`BAD_INDENT`,`Block scalar values in collections must be indented`);break}l+=r.length+a.length+1}for(let e=o.length-1;e>=s;--e)o[e][0].length>c&&(s=e+1);let d=``,f=``,p=!1;for(let e=0;e<u;++e)d+=o[e][0].slice(c)+`
 `;for(let e=u;e<s;++e){let[t,r]=o[e];l+=t.length+r.length+1;let s=r[r.length-1]===`\r`;if(s&&(r=r.slice(0,-1)),r&&t.length<c){let e=`Block scalar lines must not be less indented than their ${i.indent?`explicit indentation indicator`:`first line`}`;n(l-r.length-(s?2:1),`BAD_INDENT`,e),t=``}a===Q.BLOCK_LITERAL?(d+=f+t.slice(c)+r,f=`
 `):t.length>c||r[0]===`	`?(f===` `?f=`
@@ -12714,49 +12788,49 @@ $&`).replace(/(?:^|\n)([\t ].*)(?:([\n\t ]*)\n(?![\n\t ]))?/g,`$1$2`).replace(/\
 `+o[e][0].slice(c);d[d.length-1]!==`
 `&&(d+=`
 `);break;default:d+=`
-`}let m=r+i.length+t.source.length;return{value:d,type:a,comment:i.comment,range:[r,m,m]}}function oM({offset:e,props:t},n,r){if(t[0].type!==`block-scalar-header`)return r(t[0],`IMPOSSIBLE`,`Block scalar header not found`),null;let{source:i}=t[0],a=i[0],o=0,s=``,c=-1;for(let t=1;t<i.length;++t){let n=i[t];if(!s&&(n===`-`||n===`+`))s=n;else{let r=Number(n);!o&&r?o=r:c===-1&&(c=e+t)}}c!==-1&&r(c,`UNEXPECTED_TOKEN`,`Block scalar header includes extra characters: ${i}`);let l=!1,u=``,d=i.length;for(let e=1;e<t.length;++e){let i=t[e];switch(i.type){case`space`:l=!0;case`newline`:d+=i.source.length;break;case`comment`:n&&!l&&r(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`),d+=i.source.length,u=i.source.substring(1);break;case`error`:r(i,`UNEXPECTED_TOKEN`,i.message),d+=i.source.length;break;default:{r(i,`UNEXPECTED_TOKEN`,`Unexpected token in block scalar header: ${i.type}`);let e=i.source;e&&typeof e==`string`&&(d+=e.length)}}}return{mode:a,indent:o,chomp:s,comment:u,length:d}}function sM(e){let t=e.split(/\n( *)/),n=t[0],r=n.match(/^( *)/),i=[r?.[1]?[r[1],n.slice(r[1].length)]:[``,n]];for(let e=1;e<t.length;e+=2)i.push([t[e],t[e+1]]);return i}function cM(e,t,n){let{offset:r,type:i,source:a,end:o}=e,s,c,l=(e,t,i)=>n(r+e,t,i);switch(i){case`scalar`:s=Q.PLAIN,c=lM(a,l);break;case`single-quoted-scalar`:s=Q.QUOTE_SINGLE,c=uM(a,l);break;case`double-quoted-scalar`:s=Q.QUOTE_DOUBLE,c=fM(a,l);break;default:return n(e,`UNEXPECTED_TOKEN`,`Expected a flow scalar value, but found: ${i}`),{value:``,type:null,comment:``,range:[r,r+a.length,r+a.length]}}let u=r+a.length,d=$j(o,u,t,n);return{value:c,type:s,comment:d.comment,range:[r,u,d.offset]}}function lM(e,t){let n=``;switch(e[0]){case`	`:n=`a tab character`;break;case`,`:n=`flow indicator character ,`;break;case`%`:n=`directive indicator character %`;break;case`|`:case`>`:n=`block scalar indicator ${e[0]}`;break;case`@`:case"`":n=`reserved character ${e[0]}`}return n&&t(0,`BAD_SCALAR_START`,`Plain value cannot start with ${n}`),dM(e)}function uM(e,t){return(e[e.length-1]!==`'`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing 'quote`),dM(e.slice(1,-1)).replace(/''/g,`'`)}function dM(e){let t=/(.*?)\r?\n/sy,n=t.exec(e);if(!n)return e;let r,i;try{r=RegExp(`(?<![ 	])[ 	]+$`),i=RegExp(`^[ 	]+|(?<![ 	])[ 	]+$`,`g`)}catch{r=/[ \t]+$/,i=/^[ \t]+|[ \t]+$/g}let a=n[1].replace(r,``),o=` `,s=t.lastIndex;for(;n=t.exec(e);){let e=n[1].replace(i,``);e===``?o===`
+`}let m=r+i.length+t.source.length;return{value:d,type:a,comment:i.comment,range:[r,m,m]}}function dM({offset:e,props:t},n,r){if(t[0].type!==`block-scalar-header`)return r(t[0],`IMPOSSIBLE`,`Block scalar header not found`),null;let{source:i}=t[0],a=i[0],o=0,s=``,c=-1;for(let t=1;t<i.length;++t){let n=i[t];if(!s&&(n===`-`||n===`+`))s=n;else{let r=Number(n);!o&&r?o=r:c===-1&&(c=e+t)}}c!==-1&&r(c,`UNEXPECTED_TOKEN`,`Block scalar header includes extra characters: ${i}`);let l=!1,u=``,d=i.length;for(let e=1;e<t.length;++e){let i=t[e];switch(i.type){case`space`:l=!0;case`newline`:d+=i.source.length;break;case`comment`:n&&!l&&r(i,`MISSING_CHAR`,`Comments must be separated from other tokens by white space characters`),d+=i.source.length,u=i.source.substring(1);break;case`error`:r(i,`UNEXPECTED_TOKEN`,i.message),d+=i.source.length;break;default:{r(i,`UNEXPECTED_TOKEN`,`Unexpected token in block scalar header: ${i.type}`);let e=i.source;e&&typeof e==`string`&&(d+=e.length)}}}return{mode:a,indent:o,chomp:s,comment:u,length:d}}function fM(e){let t=e.split(/\n( *)/),n=t[0],r=n.match(/^( *)/),i=[r?.[1]?[r[1],n.slice(r[1].length)]:[``,n]];for(let e=1;e<t.length;e+=2)i.push([t[e],t[e+1]]);return i}function pM(e,t,n){let{offset:r,type:i,source:a,end:o}=e,s,c,l=(e,t,i)=>n(r+e,t,i);switch(i){case`scalar`:s=Q.PLAIN,c=mM(a,l);break;case`single-quoted-scalar`:s=Q.QUOTE_SINGLE,c=hM(a,l);break;case`double-quoted-scalar`:s=Q.QUOTE_DOUBLE,c=_M(a,l);break;default:return n(e,`UNEXPECTED_TOKEN`,`Expected a flow scalar value, but found: ${i}`),{value:``,type:null,comment:``,range:[r,r+a.length,r+a.length]}}let u=r+a.length,d=iM(o,u,t,n);return{value:c,type:s,comment:d.comment,range:[r,u,d.offset]}}function mM(e,t){let n=``;switch(e[0]){case`	`:n=`a tab character`;break;case`,`:n=`flow indicator character ,`;break;case`%`:n=`directive indicator character %`;break;case`|`:case`>`:n=`block scalar indicator ${e[0]}`;break;case`@`:case"`":n=`reserved character ${e[0]}`}return n&&t(0,`BAD_SCALAR_START`,`Plain value cannot start with ${n}`),gM(e)}function hM(e,t){return(e[e.length-1]!==`'`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing 'quote`),gM(e.slice(1,-1)).replace(/''/g,`'`)}function gM(e){let t=/(.*?)\r?\n/sy,n=t.exec(e);if(!n)return e;let r,i;try{r=RegExp(`(?<![ 	])[ 	]+$`),i=RegExp(`^[ 	]+|(?<![ 	])[ 	]+$`,`g`)}catch{r=/[ \t]+$/,i=/^[ \t]+|[ \t]+$/g}let a=n[1].replace(r,``),o=` `,s=t.lastIndex;for(;n=t.exec(e);){let e=n[1].replace(i,``);e===``?o===`
 `?a+=o:o=`
-`:(a+=o+e,o=` `),s=t.lastIndex}let c=/[ \t]*(.*)/sy;return c.lastIndex=s,n=c.exec(e),a+o+(n?.[1]??``)}function fM(e,t){let n=``;for(let r=1;r<e.length-1;++r){let i=e[r];if(i!==`\r`||e[r+1]!==`
+`:(a+=o+e,o=` `),s=t.lastIndex}let c=/[ \t]*(.*)/sy;return c.lastIndex=s,n=c.exec(e),a+o+(n?.[1]??``)}function _M(e,t){let n=``;for(let r=1;r<e.length-1;++r){let i=e[r];if(i!==`\r`||e[r+1]!==`
 `){if(i===`
-`){let{fold:t,offset:i}=pM(e,r);n+=t,r=i}else if(i===`\\`){let i=e[++r],a=mM[i];if(a)n+=a;else if(i===`
+`){let{fold:t,offset:i}=vM(e,r);n+=t,r=i}else if(i===`\\`){let i=e[++r],a=yM[i];if(a)n+=a;else if(i===`
 `)for(i=e[r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`\r`&&e[r+1]===`
-`)for(i=e[++r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`x`||i===`u`||i===`U`){let a=i===`x`?2:i===`u`?4:8;n+=hM(e,r+1,a,t),r+=a}else{let i=e.substr(r-1,2);t(r-1,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),n+=i}}else if(i===` `||i===`	`){let t=r,a=e[r+1];for(;a===` `||a===`	`;)a=e[++r+1];a!==`
+`)for(i=e[++r+1];i===` `||i===`	`;)i=e[++r+1];else if(i===`x`||i===`u`||i===`U`){let a=i===`x`?2:i===`u`?4:8;n+=bM(e,r+1,a,t),r+=a}else{let i=e.substr(r-1,2);t(r-1,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),n+=i}}else if(i===` `||i===`	`){let t=r,a=e[r+1];for(;a===` `||a===`	`;)a=e[++r+1];a!==`
 `&&(a!==`\r`||e[r+2]!==`
-`)&&(n+=r>t?e.slice(t,r+1):i)}else n+=i}}return(e[e.length-1]!==`"`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing "quote`),n}function pM(e,t){let n=``,r=e[t+1];for(;(r===` `||r===`	`||r===`
+`)&&(n+=r>t?e.slice(t,r+1):i)}else n+=i}}return(e[e.length-1]!==`"`||e.length===1)&&t(e.length,`MISSING_CHAR`,`Missing closing "quote`),n}function vM(e,t){let n=``,r=e[t+1];for(;(r===` `||r===`	`||r===`
 `||r===`\r`)&&(r!==`\r`||e[t+2]===`
 `);)r===`
 `&&(n+=`
-`),t+=1,r=e[t+1];return n||=` `,{fold:n,offset:t}}var mM={0:`\0`,a:`\x07`,b:`\b`,e:`\x1B`,f:`\f`,n:`
-`,r:`\r`,t:`	`,v:`\v`,N:``,_:`\xA0`,L:`\u2028`,P:`\u2029`," ":` `,'"':`"`,"/":`/`,"\\":`\\`,"	":`	`};function hM(e,t,n,r){let i=e.substr(t,n),a=i.length===n&&/^[0-9a-fA-F]+$/.test(i)?parseInt(i,16):NaN;try{return String.fromCodePoint(a)}catch{let i=e.substr(t-2,n+2);return r(t-2,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),i}}function gM(e,t,n,r){let{value:i,type:a,comment:o,range:s}=t.type===`block-scalar`?aM(e,t,r):cM(t,e.options.strict,r),c=n?e.directives.tagName(n.source,e=>r(n,`TAG_RESOLVE_FAILED`,e)):null,l;l=e.options.stringKeys&&e.atKey?e.schema[pk]:c?_M(e.schema,i,c,n,r):t.type===`scalar`?vM(e,i,t,r):e.schema[pk];let u;try{let a=l.resolve(i,e=>r(n??t,`TAG_RESOLVE_FAILED`,e),e.options);u=bk(a)?a:new Q(a)}catch(e){let a=e instanceof Error?e.message:String(e);r(n??t,`TAG_RESOLVE_FAILED`,a),u=new Q(i)}return u.range=s,u.source=i,a&&(u.type=a),c&&(u.tag=c),l.format&&(u.format=l.format),o&&(u.comment=o),u}function _M(e,t,n,r,i){if(n===`!`)return e[pk];let a=[];for(let t of e.tags)if(!t.collection&&t.tag===n){if(t.default&&t.test)a.push(t);else return t}for(let e of a)if(e.test?.test(t))return e;let o=e.knownTags[n];return o&&!o.collection?(e.tags.push(Object.assign({},o,{default:!1,test:void 0})),o):(i(r,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${n}`,n!==`tag:yaml.org,2002:str`),e[pk])}function vM({atKey:e,directives:t,schema:n},r,i,a){let o=n.tags.find(t=>(t.default===!0||e&&t.default===`key`)&&t.test?.test(r))||n[pk];if(n.compat){let e=n.compat.find(e=>e.default&&e.test?.test(r))??n[pk];o.tag!==e.tag&&a(i,`TAG_RESOLVE_FAILED`,`Value may be parsed as either ${t.tagString(o.tag)} or ${t.tagString(e.tag)}`,!0)}return o}function yM(e,t,n){if(t){n??=t.length;for(let r=n-1;r>=0;--r){let n=t[r];switch(n.type){case`space`:case`comment`:case`newline`:e-=n.source.length;continue}for(n=t[++r];n?.type===`space`;)e+=n.source.length,n=t[++r];break}}return e}var bM={composeNode:xM,composeEmptyNode:SM};function xM(e,t,n,r){let i=e.atKey,{spaceBefore:a,comment:o,anchor:s,tag:c}=n,l,u=!0;switch(t.type){case`alias`:l=CM(e,t,r),(s||c)&&r(t,`ALIAS_PROPS`,`An alias node must not specify any properties`);break;case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`block-scalar`:l=gM(e,t,c,r),s&&(l.anchor=s.source.substring(1));break;case`block-map`:case`block-seq`:case`flow-collection`:try{l=iM(bM,e,t,n,r),s&&(l.anchor=s.source.substring(1))}catch(e){r(t,`RESOURCE_EXHAUSTION`,e instanceof Error?e.message:String(e))}break;default:r(t,`UNEXPECTED_TOKEN`,t.type===`error`?t.message:`Unsupported token (type: ${t.type})`),u=!1}return l??=SM(e,t.offset,void 0,null,n,r),s&&l.anchor===``&&r(s,`BAD_ALIAS`,`Anchor cannot be an empty string`),i&&e.options.stringKeys&&(!bk(l)||typeof l.value!=`string`||l.tag&&l.tag!==`tag:yaml.org,2002:str`)&&r(c??t,`NON_STRING_KEY`,`With stringKeys, all keys must be strings`),a&&(l.spaceBefore=!0),o&&(t.type===`scalar`&&t.source===``?l.comment=o:l.commentBefore=o),e.options.keepSourceTokens&&u&&(l.srcToken=t),l}function SM(e,t,n,r,{spaceBefore:i,comment:a,anchor:o,tag:s,end:c},l){let u=gM(e,{type:`scalar`,offset:yM(t,n,r),indent:-1,source:``},s,l);return o&&(u.anchor=o.source.substring(1),u.anchor===``&&l(o,`BAD_ALIAS`,`Anchor cannot be an empty string`)),i&&(u.spaceBefore=!0),a&&(u.comment=a,u.range[2]=c),u}function CM({options:e},{offset:t,source:n,end:r},i){let a=new Uk(n.substring(1));a.source===``&&i(t,`BAD_ALIAS`,`Alias cannot be an empty string`),a.source.endsWith(`:`)&&i(t+n.length-1,`BAD_ALIAS`,`Alias ending in : is ambiguous`,!0);let o=t+n.length,s=$j(r,o,e.strict,i);return a.range=[t,o,s.offset],s.comment&&(a.comment=s.comment),a}function wM(e,t,{offset:n,start:r,value:i,end:a},o){let s=new Bj(void 0,Object.assign({_directives:t},e)),c={atKey:!1,atRoot:!0,directives:s.directives,options:s.options,schema:s.schema},l=Kj(r,{indicator:`doc-start`,next:i??a?.[0],offset:n,onError:o,parentIndent:0,startOnNewline:!0});l.found&&(s.directives.docStart=!0,i&&(i.type===`block-map`||i.type===`block-seq`)&&!l.hasNewline&&o(l.end,`MISSING_CHAR`,`Block collection cannot start on same line with directives-end marker`)),s.contents=i?xM(c,i,l,o):SM(c,l.end,r,null,l,o);let u=s.contents.range[2],d=$j(a,u,!1,o);return d.comment&&(s.comment=d.comment),s.range=[n,u,d.offset],s}function TM(e){if(typeof e==`number`)return[e,e+1];if(Array.isArray(e))return e.length===2?e:[e[0],e[1]];let{offset:t,source:n}=e;return[t,t+(typeof n==`string`?n.length:1)]}function EM(e){let t=``,n=!1,r=!1;for(let i=0;i<e.length;++i){let a=e[i];switch(a[0]){case`#`:t+=(t===``?``:r?`
+`),t+=1,r=e[t+1];return n||=` `,{fold:n,offset:t}}var yM={0:`\0`,a:`\x07`,b:`\b`,e:`\x1B`,f:`\f`,n:`
+`,r:`\r`,t:`	`,v:`\v`,N:``,_:`\xA0`,L:`\u2028`,P:`\u2029`," ":` `,'"':`"`,"/":`/`,"\\":`\\`,"	":`	`};function bM(e,t,n,r){let i=e.substr(t,n),a=i.length===n&&/^[0-9a-fA-F]+$/.test(i)?parseInt(i,16):NaN;try{return String.fromCodePoint(a)}catch{let i=e.substr(t-2,n+2);return r(t-2,`BAD_DQ_ESCAPE`,`Invalid escape sequence ${i}`),i}}function xM(e,t,n,r){let{value:i,type:a,comment:o,range:s}=t.type===`block-scalar`?uM(e,t,r):pM(t,e.options.strict,r),c=n?e.directives.tagName(n.source,e=>r(n,`TAG_RESOLVE_FAILED`,e)):null,l;l=e.options.stringKeys&&e.atKey?e.schema[vk]:c?SM(e.schema,i,c,n,r):t.type===`scalar`?CM(e,i,t,r):e.schema[vk];let u;try{let a=l.resolve(i,e=>r(n??t,`TAG_RESOLVE_FAILED`,e),e.options);u=Tk(a)?a:new Q(a)}catch(e){let a=e instanceof Error?e.message:String(e);r(n??t,`TAG_RESOLVE_FAILED`,a),u=new Q(i)}return u.range=s,u.source=i,a&&(u.type=a),c&&(u.tag=c),l.format&&(u.format=l.format),o&&(u.comment=o),u}function SM(e,t,n,r,i){if(n===`!`)return e[vk];let a=[];for(let t of e.tags)if(!t.collection&&t.tag===n){if(t.default&&t.test)a.push(t);else return t}for(let e of a)if(e.test?.test(t))return e;let o=e.knownTags[n];return o&&!o.collection?(e.tags.push(Object.assign({},o,{default:!1,test:void 0})),o):(i(r,`TAG_RESOLVE_FAILED`,`Unresolved tag: ${n}`,n!==`tag:yaml.org,2002:str`),e[vk])}function CM({atKey:e,directives:t,schema:n},r,i,a){let o=n.tags.find(t=>(t.default===!0||e&&t.default===`key`)&&t.test?.test(r))||n[vk];if(n.compat){let e=n.compat.find(e=>e.default&&e.test?.test(r))??n[vk];o.tag!==e.tag&&a(i,`TAG_RESOLVE_FAILED`,`Value may be parsed as either ${t.tagString(o.tag)} or ${t.tagString(e.tag)}`,!0)}return o}function wM(e,t,n){if(t){n??=t.length;for(let r=n-1;r>=0;--r){let n=t[r];switch(n.type){case`space`:case`comment`:case`newline`:e-=n.source.length;continue}for(n=t[++r];n?.type===`space`;)e+=n.source.length,n=t[++r];break}}return e}var TM={composeNode:EM,composeEmptyNode:DM};function EM(e,t,n,r){let i=e.atKey,{spaceBefore:a,comment:o,anchor:s,tag:c}=n,l,u=!0;switch(t.type){case`alias`:l=OM(e,t,r),(s||c)&&r(t,`ALIAS_PROPS`,`An alias node must not specify any properties`);break;case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`block-scalar`:l=xM(e,t,c,r),s&&(l.anchor=s.source.substring(1));break;case`block-map`:case`block-seq`:case`flow-collection`:try{l=lM(TM,e,t,n,r),s&&(l.anchor=s.source.substring(1))}catch(e){r(t,`RESOURCE_EXHAUSTION`,e instanceof Error?e.message:String(e))}break;default:r(t,`UNEXPECTED_TOKEN`,t.type===`error`?t.message:`Unsupported token (type: ${t.type})`),u=!1}return l??=DM(e,t.offset,void 0,null,n,r),s&&l.anchor===``&&r(s,`BAD_ALIAS`,`Anchor cannot be an empty string`),i&&e.options.stringKeys&&(!Tk(l)||typeof l.value!=`string`||l.tag&&l.tag!==`tag:yaml.org,2002:str`)&&r(c??t,`NON_STRING_KEY`,`With stringKeys, all keys must be strings`),a&&(l.spaceBefore=!0),o&&(t.type===`scalar`&&t.source===``?l.comment=o:l.commentBefore=o),e.options.keepSourceTokens&&u&&(l.srcToken=t),l}function DM(e,t,n,r,{spaceBefore:i,comment:a,anchor:o,tag:s,end:c},l){let u=xM(e,{type:`scalar`,offset:wM(t,n,r),indent:-1,source:``},s,l);return o&&(u.anchor=o.source.substring(1),u.anchor===``&&l(o,`BAD_ALIAS`,`Anchor cannot be an empty string`)),i&&(u.spaceBefore=!0),a&&(u.comment=a,u.range[2]=c),u}function OM({options:e},{offset:t,source:n,end:r},i){let a=new Jk(n.substring(1));a.source===``&&i(t,`BAD_ALIAS`,`Alias cannot be an empty string`),a.source.endsWith(`:`)&&i(t+n.length-1,`BAD_ALIAS`,`Alias ending in : is ambiguous`,!0);let o=t+n.length,s=iM(r,o,e.strict,i);return a.range=[t,o,s.offset],s.comment&&(a.comment=s.comment),a}function kM(e,t,{offset:n,start:r,value:i,end:a},o){let s=new Gj(void 0,Object.assign({_directives:t},e)),c={atKey:!1,atRoot:!0,directives:s.directives,options:s.options,schema:s.schema},l=Zj(r,{indicator:`doc-start`,next:i??a?.[0],offset:n,onError:o,parentIndent:0,startOnNewline:!0});l.found&&(s.directives.docStart=!0,i&&(i.type===`block-map`||i.type===`block-seq`)&&!l.hasNewline&&o(l.end,`MISSING_CHAR`,`Block collection cannot start on same line with directives-end marker`)),s.contents=i?EM(c,i,l,o):DM(c,l.end,r,null,l,o);let u=s.contents.range[2],d=iM(a,u,!1,o);return d.comment&&(s.comment=d.comment),s.range=[n,u,d.offset],s}function AM(e){if(typeof e==`number`)return[e,e+1];if(Array.isArray(e))return e.length===2?e:[e[0],e[1]];let{offset:t,source:n}=e;return[t,t+(typeof n==`string`?n.length:1)]}function jM(e){let t=``,n=!1,r=!1;for(let i=0;i<e.length;++i){let a=e[i];switch(a[0]){case`#`:t+=(t===``?``:r?`
 
 `:`
-`)+(a.substring(1)||` `),n=!0,r=!1;break;case`%`:e[i+1]?.[0]!==`#`&&(i+=1),n=!1;break;default:n||(r=!0),n=!1}}return{comment:t,afterEmptyLine:r}}var DM=class{constructor(e={}){this.doc=null,this.atDirectives=!1,this.prelude=[],this.errors=[],this.warnings=[],this.onError=(e,t,n,r)=>{let i=TM(e);r?this.warnings.push(new Wj(i,t,n)):this.errors.push(new Uj(i,t,n))},this.directives=new Fk({version:e.version||`1.2`}),this.options=e}decorate(e,t){let{comment:n,afterEmptyLine:r}=EM(this.prelude);if(n){let i=e.contents;if(t)e.comment=e.comment?`${e.comment}\n${n}`:n;else if(r||e.directives.docStart||!i)e.commentBefore=n;else if(Sk(i)&&!i.flow&&i.items.length>0){let e=i.items[0];yk(e)&&(e=e.key);let t=e.commentBefore;e.commentBefore=t?`${n}\n${t}`:n}else{let e=i.commentBefore;i.commentBefore=e?`${n}\n${e}`:n}}if(t){for(let t=0;t<this.errors.length;++t)e.errors.push(this.errors[t]);for(let t=0;t<this.warnings.length;++t)e.warnings.push(this.warnings[t])}else e.errors=this.errors,e.warnings=this.warnings;this.prelude=[],this.errors=[],this.warnings=[]}streamInfo(){return{comment:EM(this.prelude).comment,directives:this.directives,errors:this.errors,warnings:this.warnings}}*compose(e,t=!1,n=-1){for(let t of e)yield*this.next(t);yield*this.end(t,n)}*next(e){switch(e.type){case`directive`:this.directives.add(e.source,(t,n,r)=>{let i=TM(e);i[0]+=t,this.onError(i,`BAD_DIRECTIVE`,n,r)}),this.prelude.push(e.source),this.atDirectives=!0;break;case`document`:{let t=wM(this.options,this.directives,e,this.onError);this.atDirectives&&!t.directives.docStart&&this.onError(e,`MISSING_CHAR`,`Missing directives-end/doc-start indicator line`),this.decorate(t,!1),this.doc&&(yield this.doc),this.doc=t,this.atDirectives=!1;break}case`byte-order-mark`:case`space`:break;case`comment`:case`newline`:this.prelude.push(e.source);break;case`error`:{let t=e.source?`${e.message}: ${JSON.stringify(e.source)}`:e.message,n=new Uj(TM(e),`UNEXPECTED_TOKEN`,t);this.atDirectives||!this.doc?this.errors.push(n):this.doc.errors.push(n);break}case`doc-end`:{if(!this.doc){this.errors.push(new Uj(TM(e),`UNEXPECTED_TOKEN`,`Unexpected doc-end without preceding document`));break}this.doc.directives.docEnd=!0;let t=$j(e.end,e.offset+e.source.length,this.doc.options.strict,this.onError);if(this.decorate(this.doc,!0),t.comment){let e=this.doc.comment;this.doc.comment=e?`${e}\n${t.comment}`:t.comment}this.doc.range[2]=t.offset;break}default:this.errors.push(new Uj(TM(e),`UNEXPECTED_TOKEN`,`Unsupported token ${e.type}`))}}*end(e=!1,t=-1){if(this.doc)this.decorate(this.doc,!0),yield this.doc,this.doc=null;else if(e){let e=new Bj(void 0,Object.assign({_directives:this.directives},this.options));this.atDirectives&&this.onError(t,`MISSING_CHAR`,`Missing directives-end indicator line`),e.range=[0,t,t],this.decorate(e,!1),yield e}}},OM=Symbol(`break visit`),kM=Symbol(`skip children`),AM=Symbol(`remove item`);function jM(e,t){`type`in e&&e.type===`document`&&(e={start:e.start,value:e.value}),MM(Object.freeze([]),e,t)}jM.BREAK=OM,jM.SKIP=kM,jM.REMOVE=AM,jM.itemAtPath=(e,t)=>{let n=e;for(let[e,r]of t){let t=n?.[e];if(t&&`items`in t)n=t.items[r];else return}return n},jM.parentCollection=(e,t)=>{let n=jM.itemAtPath(e,t.slice(0,-1)),r=t[t.length-1][0],i=n?.[r];if(i&&`items`in i)return i;throw Error(`Parent collection not found`)};function MM(e,t,n){let r=n(t,e);if(typeof r==`symbol`)return r;for(let i of[`key`,`value`]){let a=t[i];if(a&&`items`in a){for(let t=0;t<a.items.length;++t){let r=MM(Object.freeze(e.concat([[i,t]])),a.items[t],n);if(typeof r==`number`)t=r-1;else if(r===OM)return OM;else r===AM&&(a.items.splice(t,1),--t)}typeof r==`function`&&i===`key`&&(r=r(t,e))}}return typeof r==`function`?r(t,e):r}function NM(e){switch(e){case`﻿`:return`byte-order-mark`;case``:return`doc-mode`;case``:return`flow-error-end`;case``:return`scalar`;case`---`:return`doc-start`;case`...`:return`doc-end`;case``:case`
+`)+(a.substring(1)||` `),n=!0,r=!1;break;case`%`:e[i+1]?.[0]!==`#`&&(i+=1),n=!1;break;default:n||(r=!0),n=!1}}return{comment:t,afterEmptyLine:r}}var MM=class{constructor(e={}){this.doc=null,this.atDirectives=!1,this.prelude=[],this.errors=[],this.warnings=[],this.onError=(e,t,n,r)=>{let i=AM(e);r?this.warnings.push(new Yj(i,t,n)):this.errors.push(new Jj(i,t,n))},this.directives=new Bk({version:e.version||`1.2`}),this.options=e}decorate(e,t){let{comment:n,afterEmptyLine:r}=jM(this.prelude);if(n){let i=e.contents;if(t)e.comment=e.comment?`${e.comment}\n${n}`:n;else if(r||e.directives.docStart||!i)e.commentBefore=n;else if(Dk(i)&&!i.flow&&i.items.length>0){let e=i.items[0];wk(e)&&(e=e.key);let t=e.commentBefore;e.commentBefore=t?`${n}\n${t}`:n}else{let e=i.commentBefore;i.commentBefore=e?`${n}\n${e}`:n}}if(t){for(let t=0;t<this.errors.length;++t)e.errors.push(this.errors[t]);for(let t=0;t<this.warnings.length;++t)e.warnings.push(this.warnings[t])}else e.errors=this.errors,e.warnings=this.warnings;this.prelude=[],this.errors=[],this.warnings=[]}streamInfo(){return{comment:jM(this.prelude).comment,directives:this.directives,errors:this.errors,warnings:this.warnings}}*compose(e,t=!1,n=-1){for(let t of e)yield*this.next(t);yield*this.end(t,n)}*next(e){switch(e.type){case`directive`:this.directives.add(e.source,(t,n,r)=>{let i=AM(e);i[0]+=t,this.onError(i,`BAD_DIRECTIVE`,n,r)}),this.prelude.push(e.source),this.atDirectives=!0;break;case`document`:{let t=kM(this.options,this.directives,e,this.onError);this.atDirectives&&!t.directives.docStart&&this.onError(e,`MISSING_CHAR`,`Missing directives-end/doc-start indicator line`),this.decorate(t,!1),this.doc&&(yield this.doc),this.doc=t,this.atDirectives=!1;break}case`byte-order-mark`:case`space`:break;case`comment`:case`newline`:this.prelude.push(e.source);break;case`error`:{let t=e.source?`${e.message}: ${JSON.stringify(e.source)}`:e.message,n=new Jj(AM(e),`UNEXPECTED_TOKEN`,t);this.atDirectives||!this.doc?this.errors.push(n):this.doc.errors.push(n);break}case`doc-end`:{if(!this.doc){this.errors.push(new Jj(AM(e),`UNEXPECTED_TOKEN`,`Unexpected doc-end without preceding document`));break}this.doc.directives.docEnd=!0;let t=iM(e.end,e.offset+e.source.length,this.doc.options.strict,this.onError);if(this.decorate(this.doc,!0),t.comment){let e=this.doc.comment;this.doc.comment=e?`${e}\n${t.comment}`:t.comment}this.doc.range[2]=t.offset;break}default:this.errors.push(new Jj(AM(e),`UNEXPECTED_TOKEN`,`Unsupported token ${e.type}`))}}*end(e=!1,t=-1){if(this.doc)this.decorate(this.doc,!0),yield this.doc,this.doc=null;else if(e){let e=new Gj(void 0,Object.assign({_directives:this.directives},this.options));this.atDirectives&&this.onError(t,`MISSING_CHAR`,`Missing directives-end indicator line`),e.range=[0,t,t],this.decorate(e,!1),yield e}}},NM=Symbol(`break visit`),PM=Symbol(`skip children`),FM=Symbol(`remove item`);function IM(e,t){`type`in e&&e.type===`document`&&(e={start:e.start,value:e.value}),LM(Object.freeze([]),e,t)}IM.BREAK=NM,IM.SKIP=PM,IM.REMOVE=FM,IM.itemAtPath=(e,t)=>{let n=e;for(let[e,r]of t){let t=n?.[e];if(t&&`items`in t)n=t.items[r];else return}return n},IM.parentCollection=(e,t)=>{let n=IM.itemAtPath(e,t.slice(0,-1)),r=t[t.length-1][0],i=n?.[r];if(i&&`items`in i)return i;throw Error(`Parent collection not found`)};function LM(e,t,n){let r=n(t,e);if(typeof r==`symbol`)return r;for(let i of[`key`,`value`]){let a=t[i];if(a&&`items`in a){for(let t=0;t<a.items.length;++t){let r=LM(Object.freeze(e.concat([[i,t]])),a.items[t],n);if(typeof r==`number`)t=r-1;else if(r===NM)return NM;else r===FM&&(a.items.splice(t,1),--t)}typeof r==`function`&&i===`key`&&(r=r(t,e))}}return typeof r==`function`?r(t,e):r}function RM(e){switch(e){case`﻿`:return`byte-order-mark`;case``:return`doc-mode`;case``:return`flow-error-end`;case``:return`scalar`;case`---`:return`doc-start`;case`...`:return`doc-end`;case``:case`
 `:case`\r
-`:return`newline`;case`-`:return`seq-item-ind`;case`?`:return`explicit-key-ind`;case`:`:return`map-value-ind`;case`{`:return`flow-map-start`;case`}`:return`flow-map-end`;case`[`:return`flow-seq-start`;case`]`:return`flow-seq-end`;case`,`:return`comma`}switch(e[0]){case` `:case`	`:return`space`;case`#`:return`comment`;case`%`:return`directive-line`;case`*`:return`alias`;case`&`:return`anchor`;case`!`:return`tag`;case`'`:return`single-quoted-scalar`;case`"`:return`double-quoted-scalar`;case`|`:case`>`:return`block-scalar-header`}return null}function PM(e){switch(e){case void 0:case` `:case`
-`:case`\r`:case`	`:return!0;default:return!1}}var FM=new Set(`0123456789ABCDEFabcdef`),IM=new Set(`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-#;/?:@&=+$_.!~*'()`),LM=new Set(`,[]{}`),RM=new Set(` ,[]{}
-\r	`),zM=e=>!e||RM.has(e),BM=class{constructor(){this.atEnd=!1,this.blockScalarIndent=-1,this.blockScalarKeep=!1,this.buffer=``,this.flowKey=!1,this.flowLevel=0,this.indentNext=0,this.indentValue=0,this.lineEndPos=null,this.next=null,this.pos=0}*lex(e,t=!1){if(e){if(typeof e!=`string`)throw TypeError(`source is not a string`);this.buffer=this.buffer?this.buffer+e:e,this.lineEndPos=null}this.atEnd=!t;let n=this.next??`stream`;for(;n&&(t||this.hasChars(1));)n=yield*this.parseNext(n)}atLineEnd(){let e=this.pos,t=this.buffer[e];for(;t===` `||t===`	`;)t=this.buffer[++e];return!t||t===`#`||t===`
+`:return`newline`;case`-`:return`seq-item-ind`;case`?`:return`explicit-key-ind`;case`:`:return`map-value-ind`;case`{`:return`flow-map-start`;case`}`:return`flow-map-end`;case`[`:return`flow-seq-start`;case`]`:return`flow-seq-end`;case`,`:return`comma`}switch(e[0]){case` `:case`	`:return`space`;case`#`:return`comment`;case`%`:return`directive-line`;case`*`:return`alias`;case`&`:return`anchor`;case`!`:return`tag`;case`'`:return`single-quoted-scalar`;case`"`:return`double-quoted-scalar`;case`|`:case`>`:return`block-scalar-header`}return null}function zM(e){switch(e){case void 0:case` `:case`
+`:case`\r`:case`	`:return!0;default:return!1}}var BM=new Set(`0123456789ABCDEFabcdef`),VM=new Set(`0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-#;/?:@&=+$_.!~*'()`),HM=new Set(`,[]{}`),UM=new Set(` ,[]{}
+\r	`),WM=e=>!e||UM.has(e),GM=class{constructor(){this.atEnd=!1,this.blockScalarIndent=-1,this.blockScalarKeep=!1,this.buffer=``,this.flowKey=!1,this.flowLevel=0,this.indentNext=0,this.indentValue=0,this.lineEndPos=null,this.next=null,this.pos=0}*lex(e,t=!1){if(e){if(typeof e!=`string`)throw TypeError(`source is not a string`);this.buffer=this.buffer?this.buffer+e:e,this.lineEndPos=null}this.atEnd=!t;let n=this.next??`stream`;for(;n&&(t||this.hasChars(1));)n=yield*this.parseNext(n)}atLineEnd(){let e=this.pos,t=this.buffer[e];for(;t===` `||t===`	`;)t=this.buffer[++e];return!t||t===`#`||t===`
 `||t===`\r`&&this.buffer[e+1]===`
 `}charAt(e){return this.buffer[this.pos+e]}continueScalar(e){let t=this.buffer[e];if(this.indentNext>0){let n=0;for(;t===` `;)t=this.buffer[++n+e];if(t===`\r`){let t=this.buffer[n+e+1];if(t===`
 `||!t&&!this.atEnd)return e+n+1}return t===`
-`||n>=this.indentNext||!t&&!this.atEnd?e+n:-1}if(t===`-`||t===`.`){let t=this.buffer.substr(e,3);if((t===`---`||t===`...`)&&PM(this.buffer[e+3]))return-1}return e}getLine(){let e=this.lineEndPos;return(typeof e!=`number`||e!==-1&&e<this.pos)&&(e=this.buffer.indexOf(`
-`,this.pos),this.lineEndPos=e),e===-1?this.atEnd?this.buffer.substring(this.pos):null:(this.buffer[e-1]===`\r`&&--e,this.buffer.substring(this.pos,e))}hasChars(e){return this.pos+e<=this.buffer.length}setNext(e){return this.buffer=this.buffer.substring(this.pos),this.pos=0,this.lineEndPos=null,this.next=e,null}peek(e){return this.buffer.substr(this.pos,e)}*parseNext(e){switch(e){case`stream`:return yield*this.parseStream();case`line-start`:return yield*this.parseLineStart();case`block-start`:return yield*this.parseBlockStart();case`doc`:return yield*this.parseDocument();case`flow`:return yield*this.parseFlowCollection();case`quoted-scalar`:return yield*this.parseQuotedScalar();case`block-scalar`:return yield*this.parseBlockScalar();case`plain-scalar`:return yield*this.parsePlainScalar()}}*parseStream(){let e=this.getLine();if(e===null)return this.setNext(`stream`);if(e[0]===`﻿`&&(yield*this.pushCount(1),e=e.substring(1)),e[0]===`%`){let t=e.length,n=e.indexOf(`#`);for(;n!==-1;){let r=e[n-1];if(r===` `||r===`	`){t=n-1;break}n=e.indexOf(`#`,n+1)}for(;;){let n=e[t-1];if(n===` `||n===`	`)--t;else break}let r=(yield*this.pushCount(t))+(yield*this.pushSpaces(!0));return yield*this.pushCount(e.length-r),this.pushNewline(),`stream`}if(this.atLineEnd()){let t=yield*this.pushSpaces(!0);return yield*this.pushCount(e.length-t),yield*this.pushNewline(),`stream`}return yield``,yield*this.parseLineStart()}*parseLineStart(){let e=this.charAt(0);if(!e&&!this.atEnd)return this.setNext(`line-start`);if(e===`-`||e===`.`){if(!this.atEnd&&!this.hasChars(4))return this.setNext(`line-start`);let e=this.peek(3);if((e===`---`||e===`...`)&&PM(this.charAt(3)))return yield*this.pushCount(3),this.indentValue=0,this.indentNext=0,e===`---`?`doc`:`stream`}return this.indentValue=yield*this.pushSpaces(!1),this.indentNext>this.indentValue&&!PM(this.charAt(1))&&(this.indentNext=this.indentValue),yield*this.parseBlockStart()}*parseBlockStart(){let[e,t]=this.peek(2);if(!t&&!this.atEnd)return this.setNext(`block-start`);if((e===`-`||e===`?`||e===`:`)&&PM(t)){let e=(yield*this.pushCount(1))+(yield*this.pushSpaces(!0));return this.indentNext=this.indentValue+1,this.indentValue+=e,`block-start`}return`doc`}*parseDocument(){yield*this.pushSpaces(!0);let e=this.getLine();if(e===null)return this.setNext(`doc`);let t=yield*this.pushIndicators();switch(e[t]){case`#`:yield*this.pushCount(e.length-t);case void 0:return yield*this.pushNewline(),yield*this.parseLineStart();case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),`doc`;case`*`:return yield*this.pushUntil(zM),`doc`;case`"`:case`'`:return yield*this.parseQuotedScalar();case`|`:case`>`:return t+=yield*this.parseBlockScalarHeader(),t+=yield*this.pushSpaces(!0),yield*this.pushCount(e.length-t),yield*this.pushNewline(),yield*this.parseBlockScalar();default:return yield*this.parsePlainScalar()}}*parseFlowCollection(){let e,t,n=-1;do e=yield*this.pushNewline(),e>0?(t=yield*this.pushSpaces(!1),this.indentValue=n=t):t=0,t+=yield*this.pushSpaces(!0);while(e+t>0);let r=this.getLine();if(r===null)return this.setNext(`flow`);if((n!==-1&&n<this.indentNext&&r[0]!==`#`||n===0&&(r.startsWith(`---`)||r.startsWith(`...`))&&PM(r[3]))&&(n!==this.indentNext-1||this.flowLevel!==1||r[0]!==`]`&&r[0]!==`}`))return this.flowLevel=0,yield``,yield*this.parseLineStart();let i=0;for(;r[i]===`,`;)i+=yield*this.pushCount(1),i+=yield*this.pushSpaces(!0),this.flowKey=!1;switch(i+=yield*this.pushIndicators(),r[i]){case void 0:return`flow`;case`#`:return yield*this.pushCount(r.length-i),`flow`;case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel+=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),this.flowKey=!0,--this.flowLevel,this.flowLevel?`flow`:`doc`;case`*`:return yield*this.pushUntil(zM),`flow`;case`"`:case`'`:return this.flowKey=!0,yield*this.parseQuotedScalar();case`:`:{let e=this.charAt(1);if(this.flowKey||PM(e)||e===`,`)return this.flowKey=!1,yield*this.pushCount(1),yield*this.pushSpaces(!0),`flow`}default:return this.flowKey=!1,yield*this.parsePlainScalar()}}*parseQuotedScalar(){let e=this.charAt(0),t=this.buffer.indexOf(e,this.pos+1);if(e===`'`)for(;t!==-1&&this.buffer[t+1]===`'`;)t=this.buffer.indexOf(`'`,t+2);else for(;t!==-1;){let e=0;for(;this.buffer[t-1-e]===`\\`;)e+=1;if(e%2==0)break;t=this.buffer.indexOf(`"`,t+1)}let n=this.buffer.substring(0,t),r=n.indexOf(`
+`||n>=this.indentNext||!t&&!this.atEnd?e+n:-1}if(t===`-`||t===`.`){let t=this.buffer.substr(e,3);if((t===`---`||t===`...`)&&zM(this.buffer[e+3]))return-1}return e}getLine(){let e=this.lineEndPos;return(typeof e!=`number`||e!==-1&&e<this.pos)&&(e=this.buffer.indexOf(`
+`,this.pos),this.lineEndPos=e),e===-1?this.atEnd?this.buffer.substring(this.pos):null:(this.buffer[e-1]===`\r`&&--e,this.buffer.substring(this.pos,e))}hasChars(e){return this.pos+e<=this.buffer.length}setNext(e){return this.buffer=this.buffer.substring(this.pos),this.pos=0,this.lineEndPos=null,this.next=e,null}peek(e){return this.buffer.substr(this.pos,e)}*parseNext(e){switch(e){case`stream`:return yield*this.parseStream();case`line-start`:return yield*this.parseLineStart();case`block-start`:return yield*this.parseBlockStart();case`doc`:return yield*this.parseDocument();case`flow`:return yield*this.parseFlowCollection();case`quoted-scalar`:return yield*this.parseQuotedScalar();case`block-scalar`:return yield*this.parseBlockScalar();case`plain-scalar`:return yield*this.parsePlainScalar()}}*parseStream(){let e=this.getLine();if(e===null)return this.setNext(`stream`);if(e[0]===`﻿`&&(yield*this.pushCount(1),e=e.substring(1)),e[0]===`%`){let t=e.length,n=e.indexOf(`#`);for(;n!==-1;){let r=e[n-1];if(r===` `||r===`	`){t=n-1;break}n=e.indexOf(`#`,n+1)}for(;;){let n=e[t-1];if(n===` `||n===`	`)--t;else break}let r=(yield*this.pushCount(t))+(yield*this.pushSpaces(!0));return yield*this.pushCount(e.length-r),this.pushNewline(),`stream`}if(this.atLineEnd()){let t=yield*this.pushSpaces(!0);return yield*this.pushCount(e.length-t),yield*this.pushNewline(),`stream`}return yield``,yield*this.parseLineStart()}*parseLineStart(){let e=this.charAt(0);if(!e&&!this.atEnd)return this.setNext(`line-start`);if(e===`-`||e===`.`){if(!this.atEnd&&!this.hasChars(4))return this.setNext(`line-start`);let e=this.peek(3);if((e===`---`||e===`...`)&&zM(this.charAt(3)))return yield*this.pushCount(3),this.indentValue=0,this.indentNext=0,e===`---`?`doc`:`stream`}return this.indentValue=yield*this.pushSpaces(!1),this.indentNext>this.indentValue&&!zM(this.charAt(1))&&(this.indentNext=this.indentValue),yield*this.parseBlockStart()}*parseBlockStart(){let[e,t]=this.peek(2);if(!t&&!this.atEnd)return this.setNext(`block-start`);if((e===`-`||e===`?`||e===`:`)&&zM(t)){let e=(yield*this.pushCount(1))+(yield*this.pushSpaces(!0));return this.indentNext=this.indentValue+1,this.indentValue+=e,`block-start`}return`doc`}*parseDocument(){yield*this.pushSpaces(!0);let e=this.getLine();if(e===null)return this.setNext(`doc`);let t=yield*this.pushIndicators();switch(e[t]){case`#`:yield*this.pushCount(e.length-t);case void 0:return yield*this.pushNewline(),yield*this.parseLineStart();case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),`doc`;case`*`:return yield*this.pushUntil(WM),`doc`;case`"`:case`'`:return yield*this.parseQuotedScalar();case`|`:case`>`:return t+=yield*this.parseBlockScalarHeader(),t+=yield*this.pushSpaces(!0),yield*this.pushCount(e.length-t),yield*this.pushNewline(),yield*this.parseBlockScalar();default:return yield*this.parsePlainScalar()}}*parseFlowCollection(){let e,t,n=-1;do e=yield*this.pushNewline(),e>0?(t=yield*this.pushSpaces(!1),this.indentValue=n=t):t=0,t+=yield*this.pushSpaces(!0);while(e+t>0);let r=this.getLine();if(r===null)return this.setNext(`flow`);if((n!==-1&&n<this.indentNext&&r[0]!==`#`||n===0&&(r.startsWith(`---`)||r.startsWith(`...`))&&zM(r[3]))&&(n!==this.indentNext-1||this.flowLevel!==1||r[0]!==`]`&&r[0]!==`}`))return this.flowLevel=0,yield``,yield*this.parseLineStart();let i=0;for(;r[i]===`,`;)i+=yield*this.pushCount(1),i+=yield*this.pushSpaces(!0),this.flowKey=!1;switch(i+=yield*this.pushIndicators(),r[i]){case void 0:return`flow`;case`#`:return yield*this.pushCount(r.length-i),`flow`;case`{`:case`[`:return yield*this.pushCount(1),this.flowKey=!1,this.flowLevel+=1,`flow`;case`}`:case`]`:return yield*this.pushCount(1),this.flowKey=!0,--this.flowLevel,this.flowLevel?`flow`:`doc`;case`*`:return yield*this.pushUntil(WM),`flow`;case`"`:case`'`:return this.flowKey=!0,yield*this.parseQuotedScalar();case`:`:{let e=this.charAt(1);if(this.flowKey||zM(e)||e===`,`)return this.flowKey=!1,yield*this.pushCount(1),yield*this.pushSpaces(!0),`flow`}default:return this.flowKey=!1,yield*this.parsePlainScalar()}}*parseQuotedScalar(){let e=this.charAt(0),t=this.buffer.indexOf(e,this.pos+1);if(e===`'`)for(;t!==-1&&this.buffer[t+1]===`'`;)t=this.buffer.indexOf(`'`,t+2);else for(;t!==-1;){let e=0;for(;this.buffer[t-1-e]===`\\`;)e+=1;if(e%2==0)break;t=this.buffer.indexOf(`"`,t+1)}let n=this.buffer.substring(0,t),r=n.indexOf(`
 `,this.pos);if(r!==-1){for(;r!==-1;){let e=this.continueScalar(r+1);if(e===-1)break;r=n.indexOf(`
-`,e)}r!==-1&&(t=r-(n[r-1]===`\r`?2:1))}if(t===-1){if(!this.atEnd)return this.setNext(`quoted-scalar`);t=this.buffer.length}return yield*this.pushToIndex(t+1,!1),this.flowLevel?`flow`:`doc`}*parseBlockScalarHeader(){this.blockScalarIndent=-1,this.blockScalarKeep=!1;let e=this.pos;for(;;){let t=this.buffer[++e];if(t===`+`)this.blockScalarKeep=!0;else if(t>`0`&&t<=`9`)this.blockScalarIndent=Number(t)-1;else if(t!==`-`)break}return yield*this.pushUntil(e=>PM(e)||e===`#`)}*parseBlockScalar(){let e=this.pos-1,t=0,n;loop:for(let r=this.pos;n=this.buffer[r];++r)switch(n){case` `:t+=1;break;case`
+`,e)}r!==-1&&(t=r-(n[r-1]===`\r`?2:1))}if(t===-1){if(!this.atEnd)return this.setNext(`quoted-scalar`);t=this.buffer.length}return yield*this.pushToIndex(t+1,!1),this.flowLevel?`flow`:`doc`}*parseBlockScalarHeader(){this.blockScalarIndent=-1,this.blockScalarKeep=!1;let e=this.pos;for(;;){let t=this.buffer[++e];if(t===`+`)this.blockScalarKeep=!0;else if(t>`0`&&t<=`9`)this.blockScalarIndent=Number(t)-1;else if(t!==`-`)break}return yield*this.pushUntil(e=>zM(e)||e===`#`)}*parseBlockScalar(){let e=this.pos-1,t=0,n;loop:for(let r=this.pos;n=this.buffer[r];++r)switch(n){case` `:t+=1;break;case`
 `:e=r,t=0;break;case`\r`:{let e=this.buffer[r+1];if(!e&&!this.atEnd)return this.setNext(`block-scalar`);if(e===`
 `)break}default:break loop}if(!n&&!this.atEnd)return this.setNext(`block-scalar`);if(t>=this.indentNext){this.indentNext=this.blockScalarIndent===-1?t:this.blockScalarIndent+(this.indentNext===0?1:this.indentNext);do{let t=this.continueScalar(e+1);if(t===-1)break;e=this.buffer.indexOf(`
 `,t)}while(e!==-1);if(e===-1){if(!this.atEnd)return this.setNext(`block-scalar`);e=this.buffer.length}}let r=e+1;for(n=this.buffer[r];n===` `;)n=this.buffer[++r];if(n===`	`){for(;n===`	`||n===` `||n===`\r`||n===`
 `;)n=this.buffer[++r];e=r-1}else if(!this.blockScalarKeep)do{let n=e-1,r=this.buffer[n];r===`\r`&&(r=this.buffer[--n]);let i=n;for(;r===` `;)r=this.buffer[--n];if(r===`
-`&&n>=this.pos&&n+1+t>i)e=n;else break}while(1);return yield``,yield*this.pushToIndex(e+1,!0),yield*this.parseLineStart()}*parsePlainScalar(){let e=this.flowLevel>0,t=this.pos-1,n=this.pos-1,r;for(;r=this.buffer[++n];)if(r===`:`){let r=this.buffer[n+1];if(PM(r)||e&&LM.has(r))break;t=n}else if(PM(r)){let i=this.buffer[n+1];if(r===`\r`&&(i===`
+`&&n>=this.pos&&n+1+t>i)e=n;else break}while(1);return yield``,yield*this.pushToIndex(e+1,!0),yield*this.parseLineStart()}*parsePlainScalar(){let e=this.flowLevel>0,t=this.pos-1,n=this.pos-1,r;for(;r=this.buffer[++n];)if(r===`:`){let r=this.buffer[n+1];if(zM(r)||e&&HM.has(r))break;t=n}else if(zM(r)){let i=this.buffer[n+1];if(r===`\r`&&(i===`
 `?(n+=1,r=`
-`,i=this.buffer[n+1]):t=n),i===`#`||e&&LM.has(i))break;if(r===`
-`){let e=this.continueScalar(n+1);if(e===-1)break;n=Math.max(n,e-2)}}else{if(e&&LM.has(r))break;t=n}return!r&&!this.atEnd?this.setNext(`plain-scalar`):(yield``,yield*this.pushToIndex(t+1,!0),e?`flow`:`doc`)}*pushCount(e){return e>0?(yield this.buffer.substr(this.pos,e),this.pos+=e,e):0}*pushToIndex(e,t){let n=this.buffer.slice(this.pos,e);return n?(yield n,this.pos+=n.length,n.length):(t&&(yield``),0)}*pushIndicators(){let e=0;loop:for(;;){switch(this.charAt(0)){case`!`:e+=yield*this.pushTag(),e+=yield*this.pushSpaces(!0);continue loop;case`&`:e+=yield*this.pushUntil(zM),e+=yield*this.pushSpaces(!0);continue loop;case`-`:case`?`:case`:`:{let t=this.flowLevel>0,n=this.charAt(1);if(PM(n)||t&&LM.has(n)){t?this.flowKey&&=!1:this.indentNext=this.indentValue+1,e+=yield*this.pushCount(1),e+=yield*this.pushSpaces(!0);continue loop}}}break loop}return e}*pushTag(){if(this.charAt(1)===`<`){let e=this.pos+2,t=this.buffer[e];for(;!PM(t)&&t!==`>`;)t=this.buffer[++e];return yield*this.pushToIndex(t===`>`?e+1:e,!1)}{let e=this.pos+1,t=this.buffer[e];for(;t;)if(IM.has(t))t=this.buffer[++e];else if(t===`%`&&FM.has(this.buffer[e+1])&&FM.has(this.buffer[e+2]))t=this.buffer[e+=3];else break;return yield*this.pushToIndex(e,!1)}}*pushNewline(){let e=this.buffer[this.pos];return e===`
+`,i=this.buffer[n+1]):t=n),i===`#`||e&&HM.has(i))break;if(r===`
+`){let e=this.continueScalar(n+1);if(e===-1)break;n=Math.max(n,e-2)}}else{if(e&&HM.has(r))break;t=n}return!r&&!this.atEnd?this.setNext(`plain-scalar`):(yield``,yield*this.pushToIndex(t+1,!0),e?`flow`:`doc`)}*pushCount(e){return e>0?(yield this.buffer.substr(this.pos,e),this.pos+=e,e):0}*pushToIndex(e,t){let n=this.buffer.slice(this.pos,e);return n?(yield n,this.pos+=n.length,n.length):(t&&(yield``),0)}*pushIndicators(){let e=0;loop:for(;;){switch(this.charAt(0)){case`!`:e+=yield*this.pushTag(),e+=yield*this.pushSpaces(!0);continue loop;case`&`:e+=yield*this.pushUntil(WM),e+=yield*this.pushSpaces(!0);continue loop;case`-`:case`?`:case`:`:{let t=this.flowLevel>0,n=this.charAt(1);if(zM(n)||t&&HM.has(n)){t?this.flowKey&&=!1:this.indentNext=this.indentValue+1,e+=yield*this.pushCount(1),e+=yield*this.pushSpaces(!0);continue loop}}}break loop}return e}*pushTag(){if(this.charAt(1)===`<`){let e=this.pos+2,t=this.buffer[e];for(;!zM(t)&&t!==`>`;)t=this.buffer[++e];return yield*this.pushToIndex(t===`>`?e+1:e,!1)}{let e=this.pos+1,t=this.buffer[e];for(;t;)if(VM.has(t))t=this.buffer[++e];else if(t===`%`&&BM.has(this.buffer[e+1])&&BM.has(this.buffer[e+2]))t=this.buffer[e+=3];else break;return yield*this.pushToIndex(e,!1)}}*pushNewline(){let e=this.buffer[this.pos];return e===`
 `?yield*this.pushCount(1):e===`\r`&&this.charAt(1)===`
-`?yield*this.pushCount(2):0}*pushSpaces(e){let t=this.pos-1,n;do n=this.buffer[++t];while(n===` `||e&&n===`	`);let r=t-this.pos;return r>0&&(yield this.buffer.substr(this.pos,r),this.pos=t),r}*pushUntil(e){let t=this.pos,n=this.buffer[t];for(;!e(n);)n=this.buffer[++t];return yield*this.pushToIndex(t,!1)}},VM=class{constructor(){this.lineStarts=[],this.addNewLine=e=>this.lineStarts.push(e),this.linePos=e=>{let t=0,n=this.lineStarts.length;for(;t<n;){let r=t+n>>1;this.lineStarts[r]<e?t=r+1:n=r}if(this.lineStarts[t]===e)return{line:t+1,col:1};if(t===0)return{line:0,col:e};let r=this.lineStarts[t-1];return{line:t,col:e-r+1}}}};function HM(e,t){for(let n=0;n<e.length;++n)if(e[n].type===t)return!0;return!1}function UM(e){for(let t=0;t<e.length;++t)switch(e[t].type){case`space`:case`comment`:case`newline`:break;default:return t}return-1}function WM(e){switch(e?.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`flow-collection`:return!0;default:return!1}}function GM(e){switch(e.type){case`document`:return e.start;case`block-map`:{let t=e.items[e.items.length-1];return t.sep??t.start}case`block-seq`:return e.items[e.items.length-1].start;default:return[]}}function KM(e){if(e.length===0)return[];let t=e.length;loop:for(;--t>=0;)switch(e[t].type){case`doc-start`:case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:case`newline`:break loop}for(;e[++t]?.type===`space`;);return e.splice(t,e.length)}function qM(e,t){if(t.length<1e5)Array.prototype.push.apply(e,t);else for(let n=0;n<t.length;++n)e.push(t[n])}function JM(e){if(e.start.type===`flow-seq-start`)for(let t of e.items)t.sep&&!t.value&&!HM(t.start,`explicit-key-ind`)&&!HM(t.sep,`map-value-ind`)&&(t.key&&(t.value=t.key),delete t.key,WM(t.value)?t.value.end?qM(t.value.end,t.sep):t.value.end=t.sep:qM(t.start,t.sep),delete t.sep)}var YM=class{constructor(e){this.atNewLine=!0,this.atScalar=!1,this.indent=0,this.offset=0,this.onKeyLine=!1,this.stack=[],this.source=``,this.type=``,this.lexer=new BM,this.onNewLine=e}*parse(e,t=!1){this.onNewLine&&this.offset===0&&this.onNewLine(0);for(let n of this.lexer.lex(e,t))yield*this.next(n);t||(yield*this.end())}*next(e){if(this.source=e,this.atScalar){this.atScalar=!1,yield*this.step(),this.offset+=e.length;return}let t=NM(e);if(!t){let t=`Not a YAML token: ${e}`;yield*this.pop({type:`error`,offset:this.offset,message:t,source:e}),this.offset+=e.length}else if(t===`scalar`)this.atNewLine=!1,this.atScalar=!0,this.type=`scalar`;else{switch(this.type=t,yield*this.step(),t){case`newline`:this.atNewLine=!0,this.indent=0,this.onNewLine&&this.onNewLine(this.offset+e.length);break;case`space`:this.atNewLine&&e[0]===` `&&(this.indent+=e.length);break;case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:this.atNewLine&&(this.indent+=e.length);break;case`doc-mode`:case`flow-error-end`:return;default:this.atNewLine=!1}this.offset+=e.length}}*end(){for(;this.stack.length>0;)yield*this.pop()}get sourceToken(){return{type:this.type,offset:this.offset,indent:this.indent,source:this.source}}*step(){let e=this.peek(1);if(this.type===`doc-end`&&e?.type!==`doc-end`){for(;this.stack.length>0;)yield*this.pop();this.stack.push({type:`doc-end`,offset:this.offset,source:this.source})}else{if(!e)return yield*this.stream();switch(e.type){case`document`:return yield*this.document(e);case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return yield*this.scalar(e);case`block-scalar`:return yield*this.blockScalar(e);case`block-map`:return yield*this.blockMap(e);case`block-seq`:return yield*this.blockSequence(e);case`flow-collection`:return yield*this.flowCollection(e);case`doc-end`:return yield*this.documentEnd(e)}yield*this.pop()}}peek(e){return this.stack[this.stack.length-e]}*pop(e){let t=e??this.stack.pop();if(!t)yield{type:`error`,offset:this.offset,source:``,message:`Tried to pop an empty stack`};else if(this.stack.length===0)yield t;else{let e=this.peek(1);switch(t.type===`block-scalar`?t.indent=`indent`in e?e.indent:0:t.type===`flow-collection`&&e.type===`document`&&(t.indent=0),t.type===`flow-collection`&&JM(t),e.type){case`document`:e.value=t;break;case`block-scalar`:e.props.push(t);break;case`block-map`:{let n=e.items[e.items.length-1];if(n.value){e.items.push({start:[],key:t,sep:[]}),this.onKeyLine=!0;return}if(n.sep)n.value=t;else{Object.assign(n,{key:t,sep:[]}),this.onKeyLine=!n.explicitKey;return}break}case`block-seq`:{let n=e.items[e.items.length-1];n.value?e.items.push({start:[],value:t}):n.value=t;break}case`flow-collection`:{let n=e.items[e.items.length-1];!n||n.value?e.items.push({start:[],key:t,sep:[]}):n.sep?n.value=t:Object.assign(n,{key:t,sep:[]});return}default:yield*this.pop(),yield*this.pop(t)}if((e.type===`document`||e.type===`block-map`||e.type===`block-seq`)&&(t.type===`block-map`||t.type===`block-seq`)){let n=t.items[t.items.length-1];n&&!n.sep&&!n.value&&n.start.length>0&&UM(n.start)===-1&&(t.indent===0||n.start.every(e=>e.type!==`comment`||e.indent<t.indent))&&(e.type===`document`?e.end=n.start:e.items.push({start:n.start}),t.items.splice(-1,1))}}}*stream(){switch(this.type){case`directive-line`:yield{type:`directive`,offset:this.offset,source:this.source};return;case`byte-order-mark`:case`space`:case`comment`:case`newline`:yield this.sourceToken;return;case`doc-mode`:case`doc-start`:{let e={type:`document`,offset:this.offset,start:[]};this.type===`doc-start`&&e.start.push(this.sourceToken),this.stack.push(e);return}}yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML stream`,source:this.source}}*document(e){if(e.value)return yield*this.lineEnd(e);switch(this.type){case`doc-start`:UM(e.start)===-1?e.start.push(this.sourceToken):(yield*this.pop(),yield*this.step());return;case`anchor`:case`tag`:case`space`:case`comment`:case`newline`:e.start.push(this.sourceToken);return}let t=this.startBlockValue(e);t?this.stack.push(t):yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML document`,source:this.source}}*scalar(e){if(this.type===`map-value-ind`){let t=KM(GM(this.peek(2))),n;e.end?(n=e.end,n.push(this.sourceToken),delete e.end):n=[this.sourceToken];let r={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:t,key:e,sep:n}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=r}else yield*this.lineEnd(e)}*blockScalar(e){switch(this.type){case`space`:case`comment`:case`newline`:e.props.push(this.sourceToken);return;case`scalar`:if(e.source=this.source,this.atNewLine=!0,this.indent=0,this.onNewLine){let e=this.source.indexOf(`
+`?yield*this.pushCount(2):0}*pushSpaces(e){let t=this.pos-1,n;do n=this.buffer[++t];while(n===` `||e&&n===`	`);let r=t-this.pos;return r>0&&(yield this.buffer.substr(this.pos,r),this.pos=t),r}*pushUntil(e){let t=this.pos,n=this.buffer[t];for(;!e(n);)n=this.buffer[++t];return yield*this.pushToIndex(t,!1)}},KM=class{constructor(){this.lineStarts=[],this.addNewLine=e=>this.lineStarts.push(e),this.linePos=e=>{let t=0,n=this.lineStarts.length;for(;t<n;){let r=t+n>>1;this.lineStarts[r]<e?t=r+1:n=r}if(this.lineStarts[t]===e)return{line:t+1,col:1};if(t===0)return{line:0,col:e};let r=this.lineStarts[t-1];return{line:t,col:e-r+1}}}};function qM(e,t){for(let n=0;n<e.length;++n)if(e[n].type===t)return!0;return!1}function JM(e){for(let t=0;t<e.length;++t)switch(e[t].type){case`space`:case`comment`:case`newline`:break;default:return t}return-1}function YM(e){switch(e?.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:case`flow-collection`:return!0;default:return!1}}function XM(e){switch(e.type){case`document`:return e.start;case`block-map`:{let t=e.items[e.items.length-1];return t.sep??t.start}case`block-seq`:return e.items[e.items.length-1].start;default:return[]}}function ZM(e){if(e.length===0)return[];let t=e.length;loop:for(;--t>=0;)switch(e[t].type){case`doc-start`:case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:case`newline`:break loop}for(;e[++t]?.type===`space`;);return e.splice(t,e.length)}function QM(e,t){if(t.length<1e5)Array.prototype.push.apply(e,t);else for(let n=0;n<t.length;++n)e.push(t[n])}function $M(e){if(e.start.type===`flow-seq-start`)for(let t of e.items)t.sep&&!t.value&&!qM(t.start,`explicit-key-ind`)&&!qM(t.sep,`map-value-ind`)&&(t.key&&(t.value=t.key),delete t.key,YM(t.value)?t.value.end?QM(t.value.end,t.sep):t.value.end=t.sep:QM(t.start,t.sep),delete t.sep)}var eN=class{constructor(e){this.atNewLine=!0,this.atScalar=!1,this.indent=0,this.offset=0,this.onKeyLine=!1,this.stack=[],this.source=``,this.type=``,this.lexer=new GM,this.onNewLine=e}*parse(e,t=!1){this.onNewLine&&this.offset===0&&this.onNewLine(0);for(let n of this.lexer.lex(e,t))yield*this.next(n);t||(yield*this.end())}*next(e){if(this.source=e,this.atScalar){this.atScalar=!1,yield*this.step(),this.offset+=e.length;return}let t=RM(e);if(!t){let t=`Not a YAML token: ${e}`;yield*this.pop({type:`error`,offset:this.offset,message:t,source:e}),this.offset+=e.length}else if(t===`scalar`)this.atNewLine=!1,this.atScalar=!0,this.type=`scalar`;else{switch(this.type=t,yield*this.step(),t){case`newline`:this.atNewLine=!0,this.indent=0,this.onNewLine&&this.onNewLine(this.offset+e.length);break;case`space`:this.atNewLine&&e[0]===` `&&(this.indent+=e.length);break;case`explicit-key-ind`:case`map-value-ind`:case`seq-item-ind`:this.atNewLine&&(this.indent+=e.length);break;case`doc-mode`:case`flow-error-end`:return;default:this.atNewLine=!1}this.offset+=e.length}}*end(){for(;this.stack.length>0;)yield*this.pop()}get sourceToken(){return{type:this.type,offset:this.offset,indent:this.indent,source:this.source}}*step(){let e=this.peek(1);if(this.type===`doc-end`&&e?.type!==`doc-end`){for(;this.stack.length>0;)yield*this.pop();this.stack.push({type:`doc-end`,offset:this.offset,source:this.source})}else{if(!e)return yield*this.stream();switch(e.type){case`document`:return yield*this.document(e);case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return yield*this.scalar(e);case`block-scalar`:return yield*this.blockScalar(e);case`block-map`:return yield*this.blockMap(e);case`block-seq`:return yield*this.blockSequence(e);case`flow-collection`:return yield*this.flowCollection(e);case`doc-end`:return yield*this.documentEnd(e)}yield*this.pop()}}peek(e){return this.stack[this.stack.length-e]}*pop(e){let t=e??this.stack.pop();if(!t)yield{type:`error`,offset:this.offset,source:``,message:`Tried to pop an empty stack`};else if(this.stack.length===0)yield t;else{let e=this.peek(1);switch(t.type===`block-scalar`?t.indent=`indent`in e?e.indent:0:t.type===`flow-collection`&&e.type===`document`&&(t.indent=0),t.type===`flow-collection`&&$M(t),e.type){case`document`:e.value=t;break;case`block-scalar`:e.props.push(t);break;case`block-map`:{let n=e.items[e.items.length-1];if(n.value){e.items.push({start:[],key:t,sep:[]}),this.onKeyLine=!0;return}if(n.sep)n.value=t;else{Object.assign(n,{key:t,sep:[]}),this.onKeyLine=!n.explicitKey;return}break}case`block-seq`:{let n=e.items[e.items.length-1];n.value?e.items.push({start:[],value:t}):n.value=t;break}case`flow-collection`:{let n=e.items[e.items.length-1];!n||n.value?e.items.push({start:[],key:t,sep:[]}):n.sep?n.value=t:Object.assign(n,{key:t,sep:[]});return}default:yield*this.pop(),yield*this.pop(t)}if((e.type===`document`||e.type===`block-map`||e.type===`block-seq`)&&(t.type===`block-map`||t.type===`block-seq`)){let n=t.items[t.items.length-1];n&&!n.sep&&!n.value&&n.start.length>0&&JM(n.start)===-1&&(t.indent===0||n.start.every(e=>e.type!==`comment`||e.indent<t.indent))&&(e.type===`document`?e.end=n.start:e.items.push({start:n.start}),t.items.splice(-1,1))}}}*stream(){switch(this.type){case`directive-line`:yield{type:`directive`,offset:this.offset,source:this.source};return;case`byte-order-mark`:case`space`:case`comment`:case`newline`:yield this.sourceToken;return;case`doc-mode`:case`doc-start`:{let e={type:`document`,offset:this.offset,start:[]};this.type===`doc-start`&&e.start.push(this.sourceToken),this.stack.push(e);return}}yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML stream`,source:this.source}}*document(e){if(e.value)return yield*this.lineEnd(e);switch(this.type){case`doc-start`:JM(e.start)===-1?e.start.push(this.sourceToken):(yield*this.pop(),yield*this.step());return;case`anchor`:case`tag`:case`space`:case`comment`:case`newline`:e.start.push(this.sourceToken);return}let t=this.startBlockValue(e);t?this.stack.push(t):yield{type:`error`,offset:this.offset,message:`Unexpected ${this.type} token in YAML document`,source:this.source}}*scalar(e){if(this.type===`map-value-ind`){let t=ZM(XM(this.peek(2))),n;e.end?(n=e.end,n.push(this.sourceToken),delete e.end):n=[this.sourceToken];let r={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:t,key:e,sep:n}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=r}else yield*this.lineEnd(e)}*blockScalar(e){switch(this.type){case`space`:case`comment`:case`newline`:e.props.push(this.sourceToken);return;case`scalar`:if(e.source=this.source,this.atNewLine=!0,this.indent=0,this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){qM(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(HM(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=KM(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(HM(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(WM(t.key)&&!HM(t.sep,`newline`)){let e=KM(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):HM(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!HM(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){qM(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||HM(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=KM(GM(t));JM(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
+`,e)+1}yield*this.pop();break;default:yield*this.pop(),yield*this.step()}}*blockMap(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(this.onKeyLine=!1,t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else if(t.sep)t.sep.push(this.sourceToken);else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){QM(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return}if(this.indent>=e.indent){let n=!this.onKeyLine&&this.indent===e.indent,r=n&&(t.sep||t.explicitKey)&&this.type!==`seq-item-ind`,i=[];if(r&&t.sep&&!t.value){let n=[];for(let r=0;r<t.sep.length;++r){let i=t.sep[r];switch(i.type){case`newline`:n.push(r);break;case`space`:break;case`comment`:i.indent>e.indent&&(n.length=0);break;default:n.length=0}}n.length>=2&&(i=t.sep.splice(n[1]))}switch(this.type){case`anchor`:case`tag`:r||t.value?(i.push(this.sourceToken),e.items.push({start:i}),this.onKeyLine=!0):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`explicit-key-ind`:!t.sep&&!t.explicitKey?(t.start.push(this.sourceToken),t.explicitKey=!0):r||t.value?(i.push(this.sourceToken),e.items.push({start:i,explicitKey:!0})):this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken],explicitKey:!0}]}),this.onKeyLine=!0;return;case`map-value-ind`:if(t.explicitKey){if(!t.sep){if(qM(t.start,`newline`))Object.assign(t,{key:null,sep:[this.sourceToken]});else{let e=ZM(t.start);this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:null,sep:[this.sourceToken]}]})}}else if(t.value)e.items.push({start:[],key:null,sep:[this.sourceToken]});else if(qM(t.sep,`map-value-ind`))this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:i,key:null,sep:[this.sourceToken]}]});else if(YM(t.key)&&!qM(t.sep,`newline`)){let e=ZM(t.start),n=t.key,r=t.sep;r.push(this.sourceToken),delete t.key,delete t.sep,this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:e,key:n,sep:r}]})}else i.length>0?t.sep=t.sep.concat(i,this.sourceToken):t.sep.push(this.sourceToken)}else t.sep?t.value||r?e.items.push({start:i,key:null,sep:[this.sourceToken]}):qM(t.sep,`map-value-ind`)?this.stack.push({type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:[],key:null,sep:[this.sourceToken]}]}):t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});this.onKeyLine=!0;return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);r||t.value?(e.items.push({start:i,key:n,sep:[]}),this.onKeyLine=!0):t.sep?this.stack.push(n):(Object.assign(t,{key:n,sep:[]}),this.onKeyLine=!0);return}default:{let r=this.startBlockValue(e);if(r){if(r.type===`block-seq`){if(!t.explicitKey&&t.sep&&!qM(t.sep,`newline`)){yield*this.pop({type:`error`,offset:this.offset,message:`Unexpected block-seq-ind on same line with key`,source:this.source});return}}else n&&e.items.push({start:i});this.stack.push(r);return}}}}yield*this.pop(),yield*this.step()}*blockSequence(e){let t=e.items[e.items.length-1];switch(this.type){case`newline`:if(t.value){let n=`end`in t.value?t.value.end:void 0;(Array.isArray(n)?n[n.length-1]:void 0)?.type===`comment`?n?.push(this.sourceToken):e.items.push({start:[this.sourceToken]})}else t.start.push(this.sourceToken);return;case`space`:case`comment`:if(t.value)e.items.push({start:[this.sourceToken]});else{if(this.atIndentedComment(t.start,e.indent)){let n=e.items[e.items.length-2]?.value?.end;if(Array.isArray(n)){QM(n,t.start),n.push(this.sourceToken),e.items.pop();return}}t.start.push(this.sourceToken)}return;case`anchor`:case`tag`:if(t.value||this.indent<=e.indent)break;t.start.push(this.sourceToken);return;case`seq-item-ind`:if(this.indent!==e.indent)break;t.value||qM(t.start,`seq-item-ind`)?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return}if(this.indent>e.indent){let t=this.startBlockValue(e);if(t){this.stack.push(t);return}}yield*this.pop(),yield*this.step()}*flowCollection(e){let t=e.items[e.items.length-1];if(this.type===`flow-error-end`){let e;do yield*this.pop(),e=this.peek(1);while(e?.type===`flow-collection`)}else if(e.end.length===0){switch(this.type){case`comma`:case`explicit-key-ind`:!t||t.sep?e.items.push({start:[this.sourceToken]}):t.start.push(this.sourceToken);return;case`map-value-ind`:!t||t.value?e.items.push({start:[],key:null,sep:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):Object.assign(t,{key:null,sep:[this.sourceToken]});return;case`space`:case`comment`:case`newline`:case`anchor`:case`tag`:!t||t.value?e.items.push({start:[this.sourceToken]}):t.sep?t.sep.push(this.sourceToken):t.start.push(this.sourceToken);return;case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:{let n=this.flowScalar(this.type);!t||t.value?e.items.push({start:[],key:n,sep:[]}):t.sep?this.stack.push(n):Object.assign(t,{key:n,sep:[]});return}case`flow-map-end`:case`flow-seq-end`:e.end.push(this.sourceToken);return}let n=this.startBlockValue(e);n?this.stack.push(n):(yield*this.pop(),yield*this.step())}else{let t=this.peek(2);if(t.type===`block-map`&&(this.type===`map-value-ind`&&t.indent===e.indent||this.type===`newline`&&!t.items[t.items.length-1].sep))yield*this.pop(),yield*this.step();else if(this.type===`map-value-ind`&&t.type!==`flow-collection`){let n=ZM(XM(t));$M(e);let r=e.end.splice(1,e.end.length);r.push(this.sourceToken);let i={type:`block-map`,offset:e.offset,indent:e.indent,items:[{start:n,key:e,sep:r}]};this.onKeyLine=!0,this.stack[this.stack.length-1]=i}else yield*this.lineEnd(e)}}flowScalar(e){if(this.onNewLine){let e=this.source.indexOf(`
 `)+1;for(;e!==0;)this.onNewLine(this.offset+e),e=this.source.indexOf(`
-`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=KM(GM(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=KM(GM(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function XM(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new VM||null,prettyErrors:t}}function ZM(e,t={}){let{lineCounter:n,prettyErrors:r}=XM(t),i=new YM(n?.addNewLine),a=new DM(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new Uj(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(Gj(e,n)),o.warnings.forEach(Gj(e,n))),o}function QM(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=ZM(e,n);if(!i)return null;if(i.warnings.forEach(e=>xA(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function $M(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(QM(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function eN(e){let t=[];return{content:{kinds:$M(e,`kinds`,bc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>$M(e,n,Cc,t)),traits:$M(e,`traits`,Ec,t),items:$M(e,`items`,Ac,t)},errors:t}}var{content:tN,errors:nN}=eN(Object.entries(Object.assign({"../../content/items/acid-flask.yaml":vu,"../../content/items/anti-radiation-pills.yaml":yu,"../../content/items/arrows.yaml":bu,"../../content/items/backpack.yaml":xu,"../../content/items/ballistic-shield.yaml":Su,"../../content/items/ballistic-vest.yaml":Cu,"../../content/items/banishing-water.yaml":wu,"../../content/items/bedroll.yaml":Tu,"../../content/items/bicycle-kick.yaml":Eu,"../../content/items/binoculars.yaml":Du,"../../content/items/breath-weapon.yaml":Ou,"../../content/items/brigandine.yaml":ku,"../../content/items/buckler.yaml":Au,"../../content/items/cargo-truck.yaml":ju,"../../content/items/chainmail.yaml":Mu,"../../content/items/charm-potion.yaml":Nu,"../../content/items/cleansing-potion.yaml":Pu,"../../content/items/club.yaml":Fu,"../../content/items/cold-weather-gear.yaml":Iu,"../../content/items/combat-helmet.yaml":Lu,"../../content/items/combat-knife.yaml":Ru,"../../content/items/combat-voidsuit.yaml":zu,"../../content/items/combat-walker-chassis.yaml":Bu,"../../content/items/comm-unit.yaml":Vu,"../../content/items/compass.yaml":Hu,"../../content/items/cooking-kit.yaml":Uu,"../../content/items/courier-drone-chassis.yaml":Wu,"../../content/items/crossbow-bolts.yaml":Gu,"../../content/items/crossbow.yaml":Ku,"../../content/items/dagger.yaml":qu,"../../content/items/darkness-flask.yaml":Ju,"../../content/items/deathproof-potion.yaml":Yu,"../../content/items/disguise-kit.yaml":Xu,"../../content/items/dispelling-potion.yaml":Zu,"../../content/items/earth-reserve-credits.yaml":Qu,"../../content/items/emp-grenade.yaml":$u,"../../content/items/endurance-potion.yaml":K,"../../content/items/engineers-toolkit.yaml":ed,"../../content/items/entangling-flask.yaml":q,"../../content/items/explosive-flask.yaml":J,"../../content/items/faraday-shroud.yaml":Y,"../../content/items/field-sample-kit.yaml":td,"../../content/items/fighter.yaml":nd,"../../content/items/fine-clothes.yaml":rd,"../../content/items/fishing-kit.yaml":id,"../../content/items/fists.yaml":ad,"../../content/items/five-fingered-palm-of-death.yaml":od,"../../content/items/flail.yaml":sd,"../../content/items/flameproof-potion.yaml":cd,"../../content/items/flamethrower.yaml":ld,"../../content/items/flashlight.yaml":ud,"../../content/items/flint-and-steel.yaml":dd,"../../content/items/fog-flask.yaml":fd,"../../content/items/frag-grenade.yaml":pd,"../../content/items/frost-flask.yaml":md,"../../content/items/fuel-canister.yaml":hd,"../../content/items/gambeson.yaml":gd,"../../content/items/geiger-counter.yaml":_d,"../../content/items/glowing-oil.yaml":vd,"../../content/items/grace-potion.yaml":yd,"../../content/items/grappling-hook.yaml":bd,"../../content/items/greater-healing-potion.yaml":xd,"../../content/items/greatsword.yaml":Sd,"../../content/items/gust-flask.yaml":Cd,"../../content/items/halberd.yaml":wd,"../../content/items/hand-axe.yaml":Td,"../../content/items/handcuffs.yaml":Ed,"../../content/items/haymaker.yaml":Dd,"../../content/items/hazmat-suit.yaml":Od,"../../content/items/healers-kit.yaml":kd,"../../content/items/healing-potion.yaml":Ad,"../../content/items/helicopter.yaml":jd,"../../content/items/hide-armor.yaml":Md,"../../content/items/humanoid-service-chassis.yaml":Nd,"../../content/items/hydraulic-fist.yaml":Pd,"../../content/items/iceproof-potion.yaml":Fd,"../../content/items/imperial-dollars.yaml":Id,"../../content/items/incendiary-grenade.yaml":Ld,"../../content/items/industrial-laborer-chassis.yaml":Rd,"../../content/items/insulated-gloves.yaml":zd,"../../content/items/javelin.yaml":Bd,"../../content/items/kick.yaml":Vd,"../../content/items/lantern.yaml":Hd,"../../content/items/leather-armor.yaml":Ud,"../../content/items/leather-jacket.yaml":Wd,"../../content/items/leatherworking-tools.yaml":Gd,"../../content/items/lockpicks.yaml":Kd,"../../content/items/longbow.yaml":qd,"../../content/items/longsword.yaml":Jd,"../../content/items/luras.yaml":Yd,"../../content/items/mace.yaml":Xd,"../../content/items/machine-gun.yaml":Zd,"../../content/items/mana-potion.yaml":Qd,"../../content/items/masonry-tools.yaml":$d,"../../content/items/maul.yaml":ef,"../../content/items/medkit.yaml":tf,"../../content/items/mending-oil.yaml":nf,"../../content/items/mindproof-potion.yaml":rf,"../../content/items/missile-launcher.yaml":af,"../../content/items/mounted-machine-gun.yaml":of,"../../content/items/musical-instrument.yaml":sf,"../../content/items/musket.yaml":cf,"../../content/items/night-vision-goggles.yaml":lf,"../../content/items/pack-animal.yaml":uf,"../../content/items/padded-coif.yaml":df,"../../content/items/painkillers.yaml":ff,"../../content/items/painting-supplies.yaml":pf,"../../content/items/pistol-magazine.yaml":mf,"../../content/items/pistol.yaml":X,"../../content/items/plate-armor.yaml":hf,"../../content/items/plate-carrier.yaml":gf,"../../content/items/portable-computer.yaml":_f,"../../content/items/potion-kit.yaml":vf,"../../content/items/potion-of-detect-magic.yaml":yf,"../../content/items/potion-of-elemental-ward.yaml":bf,"../../content/items/potion-of-featherfall.yaml":xf,"../../content/items/potion-of-flight.yaml":Sf,"../../content/items/potion-of-haste.yaml":Cf,"../../content/items/potion-of-infravision.yaml":wf,"../../content/items/potion-of-invisibility.yaml":Tf,"../../content/items/potion-of-shielding.yaml":Ef,"../../content/items/potion-of-speak-with-animals.yaml":Df,"../../content/items/potion-of-spider-climb.yaml":Of,"../../content/items/potion-of-stone-skin.yaml":kf,"../../content/items/potion-of-water-breathing.yaml":Af,"../../content/items/powder-and-shot.yaml":jf,"../../content/items/power-armor.yaml":Mf,"../../content/items/quarterstaff.yaml":Nf,"../../content/items/rad-suit.yaml":Pf,"../../content/items/rapier.yaml":Ff,"../../content/items/ration-pack.yaml":If,"../../content/items/rebreather.yaml":Lf,"../../content/items/renminbi.yaml":Rf,"../../content/items/revolver.yaml":zf,"../../content/items/riding-animal.yaml":Bf,"../../content/items/rifle-magazine.yaml":Vf,"../../content/items/rifle.yaml":Hf,"../../content/items/riot-gear.yaml":Z,"../../content/items/rope.yaml":Uf,"../../content/items/roundhouse-kick.yaml":Wf,"../../content/items/rowboat.yaml":Gf,"../../content/items/rustproof-potion.yaml":Kf,"../../content/items/shortbow.yaml":qf,"../../content/items/shortsword.yaml":Jf,"../../content/items/shotgun-shells.yaml":Yf,"../../content/items/shotgun.yaml":Xf,"../../content/items/silence-flask.yaml":Zf,"../../content/items/sleeping-draught.yaml":Qf,"../../content/items/sling-stones.yaml":$f,"../../content/items/sling.yaml":ep,"../../content/items/slowing-flask.yaml":tp,"../../content/items/smithing-tools.yaml":np,"../../content/items/smoke-grenade.yaml":rp,"../../content/items/sniper-rifle.yaml":ip,"../../content/items/spear.yaml":ap,"../../content/items/spyglass.yaml":op,"../../content/items/staunching-potion.yaml":sp,"../../content/items/steel-helm.yaml":cp,"../../content/items/stoneproof-potion.yaml":lp,"../../content/items/stormproof-potion.yaml":up,"../../content/items/strength-potion.yaml":dp,"../../content/items/stun-baton.yaml":fp,"../../content/items/submachine-gun.yaml":pp,"../../content/items/superman-punch.yaml":mp,"../../content/items/surgical-kit.yaml":hp,"../../content/items/taser.yaml":gp,"../../content/items/tent.yaml":_p,"../../content/items/throwing-knives.yaml":vp,"../../content/items/thunder-flask.yaml":yp,"../../content/items/torch.yaml":bp,"../../content/items/tower-shield.yaml":xp,"../../content/items/trail-rations.yaml":Sp,"../../content/items/travelers-cloak.yaml":Cp,"../../content/items/turnout-gear.yaml":wp,"../../content/items/uppercut.yaml":Tp,"../../content/items/voidsuit.yaml":Ep,"../../content/items/wagon.yaml":Dp,"../../content/items/war-axe.yaml":Op,"../../content/items/war-hammer.yaml":kp,"../../content/items/warded-robes.yaml":Ap,"../../content/items/waterskin.yaml":jp,"../../content/items/wooden-shield.yaml":Mp,"../../content/items/writing-kit.yaml":Np,"../../content/kinds/ai-core.yaml":Pp,"../../content/kinds/dreft/guwain.yaml":Fp,"../../content/kinds/dreft/isek.yaml":Ip,"../../content/kinds/dreft/tatot-goblinoid.yaml":Lp,"../../content/kinds/dreft/tatot-orcoid.yaml":Rp,"../../content/kinds/human.yaml":zp,"../../content/origins/american-empire/american-empire-colonies.yaml":Bp,"../../content/origins/american-empire/american-empire-earth.yaml":Vp,"../../content/origins/centafrica/centafrica-colonies.yaml":Hp,"../../content/origins/centafrica/centafrica-earth.yaml":Up,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Wp,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Gp,"../../content/origins/dreft/dreft.yaml":Kp,"../../content/origins/drovus/the-drovus-empire.yaml":qp,"../../content/origins/free-american-states/the-free-american-states.yaml":Jp,"../../content/origins/karsef/kingdom-of-karsef.yaml":Yp,"../../content/origins/kashgar/kashgar.yaml":Xp,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":Zp,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":Qp,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":$p,"../../content/origins/sdu/sdu-colonies.yaml":em,"../../content/origins/sdu/sdu-earth.yaml":tm,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":nm,"../../content/origins/tetra/tetra.yaml":rm,"../../content/origins/union-of-texas/the-union-of-texas.yaml":im,"../../content/origins/ural-federation/the-ural-federation.yaml":am,"../../content/origins/xanthus/xanthus.yaml":om,"../../content/pasts/any/craft-apprenticeship.yaml":sm,"../../content/pasts/any/criminal-family.yaml":cm,"../../content/pasts/any/gutter-trash.yaml":lm,"../../content/pasts/any/military-service.yaml":um,"../../content/pasts/any/privileged-upbringing.yaml":dm,"../../content/pasts/any/raised-at-court.yaml":fm,"../../content/pasts/any/shipborn.yaml":pm,"../../content/pasts/any/simple-farmer.yaml":mm,"../../content/pasts/any/traveling-troupe.yaml":hm,"../../content/pasts/dreft/countryside-upbringing.yaml":gm,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":_m,"../../content/pasts/dreft/glintl-docks.yaml":vm,"../../content/pasts/dreft/karsef-border-veteran.yaml":ym,"../../content/pasts/dreft/merchant-dynasty.yaml":bm,"../../content/pasts/dreft/monster-raided-village.yaml":xm,"../../content/pasts/dreft/noble-household.yaml":Sm,"../../content/pasts/dreft/palace-servant.yaml":Cm,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":wm,"../../content/pasts/dreft/returned-from-the-systems.yaml":Tm,"../../content/pasts/dreft/sunrise-refugee.yaml":Em,"../../content/pasts/systems/station-rat.yaml":Dm,"../../content/pasts/systems/university-educated.yaml":Om,"../../content/pasts/tetra/delegation-child.yaml":km,"../../content/pasts/tetra/gate-lab-kid.yaml":Am,"../../content/pasts/tetra/holding-company-kid.yaml":jm,"../../content/pasts/tetra/parasapient-quarter.yaml":Mm,"../../content/pasts/tetra/raised-in-the-infill.yaml":Nm,"../../content/pasts/tetra/raised-on-ward-politics.yaml":Pm,"../../content/professions/any/apothecary.yaml":Fm,"../../content/professions/any/bard.yaml":Im,"../../content/professions/any/blacksmith.yaml":Lm,"../../content/professions/any/courier.yaml":Rm,"../../content/professions/any/criminal-enforcer.yaml":zm,"../../content/professions/any/doctor.yaml":Bm,"../../content/professions/any/farmer.yaml":Vm,"../../content/professions/any/jester.yaml":Hm,"../../content/professions/any/knight.yaml":Um,"../../content/professions/any/local-police.yaml":Wm,"../../content/professions/any/musical-artist.yaml":Gm,"../../content/professions/any/ranger.yaml":Km,"../../content/professions/any/smuggler.yaml":qm,"../../content/professions/any/spy.yaml":Jm,"../../content/professions/any/squire.yaml":Ym,"../../content/professions/any/stonemason.yaml":Xm,"../../content/professions/any/surgeon.yaml":Zm,"../../content/professions/any/tanner.yaml":Qm,"../../content/professions/any/visual-artist.yaml":$m,"../../content/professions/dreft/alchemist.yaml":eh,"../../content/professions/dreft/caravaneer.yaml":th,"../../content/professions/dreft/dreft-local-militia.yaml":nh,"../../content/professions/dreft/dreft-mercenary.yaml":rh,"../../content/professions/dreft/gate-hand.yaml":ih,"../../content/professions/dreft/guild-hunter.yaml":ah,"../../content/professions/dreft/hedge-witch.yaml":oh,"../../content/professions/dreft/licensed-mage.yaml":sh,"../../content/professions/dreft/royal-guard.yaml":ch,"../../content/professions/systems/american-empire-soldier.yaml":lh,"../../content/professions/systems/combat-medic.yaml":uh,"../../content/professions/systems/computer-engineer.yaml":dh,"../../content/professions/systems/emergency-medical-technician.yaml":fh,"../../content/professions/systems/exotic-specimen-dealer.yaml":ph,"../../content/professions/systems/fighter-pilot.yaml":mh,"../../content/professions/systems/interplanar-diplomat.yaml":hh,"../../content/professions/systems/interplanar-rights-lawyer.yaml":gh,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":_h,"../../content/professions/systems/paraarcheologist.yaml":vh,"../../content/professions/systems/paraecologist.yaml":yh,"../../content/professions/systems/paraethnologist.yaml":bh,"../../content/professions/systems/paraevolutionary-scientist.yaml":xh,"../../content/professions/systems/paraphysiologist.yaml":Sh,"../../content/professions/systems/parazoological-keeper.yaml":Ch,"../../content/professions/systems/planar-expeditionary-professional.yaml":wh,"../../content/professions/systems/private-security-contractor.yaml":Th,"../../content/professions/systems/starship-engineer.yaml":Eh,"../../content/professions/systems/station-maintenance.yaml":Dh,"../../content/professions/systems/theoretical-paraphysicist.yaml":Oh,"../../content/professions/systems/truck-pilot.yaml":kh,"../../content/traits/ability/acid-spray.yaml":Ah,"../../content/traits/ability/archer.yaml":jh,"../../content/traits/ability/archmage.yaml":Mh,"../../content/traits/ability/banish-spirit.yaml":Nh,"../../content/traits/ability/barbarian.yaml":Ph,"../../content/traits/ability/blight.yaml":Fh,"../../content/traits/ability/blink.yaml":Ih,"../../content/traits/ability/bodyguard.yaml":Lh,"../../content/traits/ability/bolt.yaml":Rh,"../../content/traits/ability/boxing.yaml":zh,"../../content/traits/ability/chain-lightning.yaml":Bh,"../../content/traits/ability/charm.yaml":Vh,"../../content/traits/ability/cleanse.yaml":Hh,"../../content/traits/ability/counterpuncher.yaml":Uh,"../../content/traits/ability/create-fire.yaml":Wh,"../../content/traits/ability/create-food.yaml":Gh,"../../content/traits/ability/create-water.yaml":Kh,"../../content/traits/ability/cuff.yaml":qh,"../../content/traits/ability/dark-haze.yaml":Jh,"../../content/traits/ability/darkness.yaml":Yh,"../../content/traits/ability/daze.yaml":Xh,"../../content/traits/ability/deathblade.yaml":Zh,"../../content/traits/ability/deathproof.yaml":Qh,"../../content/traits/ability/detect-magic.yaml":$h,"../../content/traits/ability/disarm.yaml":eg,"../../content/traits/ability/dispel-magic.yaml":tg,"../../content/traits/ability/dress-wounds.yaml":ng,"../../content/traits/ability/earthblade.yaml":rg,"../../content/traits/ability/earthen-spike.yaml":ig,"../../content/traits/ability/elemental-ward.yaml":ag,"../../content/traits/ability/entangle.yaml":og,"../../content/traits/ability/expert-archer.yaml":sg,"../../content/traits/ability/expert-boxer.yaml":cg,"../../content/traits/ability/expert-swordsman.yaml":lg,"../../content/traits/ability/fear.yaml":ug,"../../content/traits/ability/featherfall.yaml":dg,"../../content/traits/ability/field-medicine.yaml":fg,"../../content/traits/ability/fireball.yaml":pg,"../../content/traits/ability/flameblade.yaml":mg,"../../content/traits/ability/flamecraft.yaml":hg,"../../content/traits/ability/flameproof.yaml":gg,"../../content/traits/ability/fog-cloud.yaml":_g,"../../content/traits/ability/grappler.yaml":vg,"../../content/traits/ability/grave-touch.yaml":yg,"../../content/traits/ability/greater-heal.yaml":bg,"../../content/traits/ability/grenadier.yaml":xg,"../../content/traits/ability/gust.yaml":Sg,"../../content/traits/ability/haste.yaml":Cg,"../../content/traits/ability/heal.yaml":wg,"../../content/traits/ability/hoarfrost.yaml":Tg,"../../content/traits/ability/hunter.yaml":Eg,"../../content/traits/ability/ice-lance.yaml":Dg,"../../content/traits/ability/iceblade.yaml":Og,"../../content/traits/ability/icecraft.yaml":kg,"../../content/traits/ability/iceproof.yaml":Ag,"../../content/traits/ability/infravision.yaml":jg,"../../content/traits/ability/invisibility.yaml":Mg,"../../content/traits/ability/knife-work.yaml":Ng,"../../content/traits/ability/knight.yaml":Pg,"../../content/traits/ability/light.yaml":Fg,"../../content/traits/ability/lightning.yaml":Ig,"../../content/traits/ability/magical-endurance.yaml":Lg,"../../content/traits/ability/magical-flight.yaml":Rg,"../../content/traits/ability/magical-grace.yaml":zg,"../../content/traits/ability/magical-replenishment.yaml":Bg,"../../content/traits/ability/magical-strength.yaml":Vg,"../../content/traits/ability/mana-siphon.yaml":Hg,"../../content/traits/ability/martial-artist.yaml":Ug,"../../content/traits/ability/martial-arts-master.yaml":Wg,"../../content/traits/ability/master-flamecraft.yaml":Gg,"../../content/traits/ability/master-icecraft.yaml":Kg,"../../content/traits/ability/master-mage.yaml":qg,"../../content/traits/ability/master-rustcraft.yaml":Jg,"../../content/traits/ability/master-stonecraft.yaml":Yg,"../../content/traits/ability/master-stormcraft.yaml":Xg,"../../content/traits/ability/mending.yaml":Zg,"../../content/traits/ability/meteor.yaml":Qg,"../../content/traits/ability/mind-shatter.yaml":$g,"../../content/traits/ability/mind-spike.yaml":e_,"../../content/traits/ability/mindblade.yaml":t_,"../../content/traits/ability/mindproof.yaml":n_,"../../content/traits/ability/monster-hunter.yaml":r_,"../../content/traits/ability/natural-breath-weapon.yaml":i_,"../../content/traits/ability/rally.yaml":a_,"../../content/traits/ability/rustblade.yaml":o_,"../../content/traits/ability/rustcraft.yaml":s_,"../../content/traits/ability/rustproof.yaml":c_,"../../content/traits/ability/shield-wall.yaml":l_,"../../content/traits/ability/shield.yaml":u_,"../../content/traits/ability/sht-talk.yaml":d_,"../../content/traits/ability/silence.yaml":f_,"../../content/traits/ability/simple-metamagic.yaml":p_,"../../content/traits/ability/skin-of-stone.yaml":m_,"../../content/traits/ability/sleep.yaml":h_,"../../content/traits/ability/slow.yaml":g_,"../../content/traits/ability/speak-with-animals.yaml":__,"../../content/traits/ability/spider-climb.yaml":v_,"../../content/traits/ability/sprinter.yaml":y_,"../../content/traits/ability/stand-down.yaml":b_,"../../content/traits/ability/staunch.yaml":x_,"../../content/traits/ability/stilled-heart.yaml":S_,"../../content/traits/ability/stonecraft.yaml":C_,"../../content/traits/ability/stoneproof.yaml":w_,"../../content/traits/ability/stormblade.yaml":T_,"../../content/traits/ability/stormcraft.yaml":E_,"../../content/traits/ability/stormproof.yaml":D_,"../../content/traits/ability/swordsman.yaml":O_,"../../content/traits/ability/takedown.yaml":k_,"../../content/traits/ability/telekinesis.yaml":A_,"../../content/traits/ability/thunderclap.yaml":j_,"../../content/traits/ability/wall-of-stone.yaml":M_,"../../content/traits/ability/water-breathing.yaml":N_,"../../content/traits/ability/weak-point.yaml":P_,"../../content/traits/ability/wither.yaml":F_,"../../content/traits/circumstance/bureau-credentials.yaml":I_,"../../content/traits/circumstance/caravan-charter.yaml":L_,"../../content/traits/circumstance/commercial-pilots-license.yaml":R_,"../../content/traits/circumstance/corporate-sponsor.yaml":z_,"../../content/traits/circumstance/diplomatic-immunity.yaml":B_,"../../content/traits/circumstance/exiled-from-dreft.yaml":V_,"../../content/traits/circumstance/explorers-lodge-membership.yaml":H_,"../../content/traits/circumstance/heavy-debts.yaml":U_,"../../content/traits/circumstance/imperial-service-record.yaml":W_,"../../content/traits/circumstance/knighted-in-dreft.yaml":G_,"../../content/traits/circumstance/member-of-the-mages-college-of-dreft.yaml":K_,"../../content/traits/circumstance/member-of-the-monster-hunter-guild.yaml":q_,"../../content/traits/circumstance/merchant-clan-elder.yaml":J_,"../../content/traits/circumstance/merchant-clan-member.yaml":Y_,"../../content/traits/circumstance/owed-a-favor.yaml":X_,"../../content/traits/circumstance/private-security-license.yaml":Z_,"../../content/traits/circumstance/research-grant.yaml":Q_,"../../content/traits/circumstance/royal-warrant.yaml":$_,"../../content/traits/circumstance/security-contractor.yaml":ev,"../../content/traits/circumstance/senior-member-of-a-thieves-guild.yaml":tv,"../../content/traits/circumstance/senior-member-of-the-explorers-lodge.yaml":nv,"../../content/traits/circumstance/senior-member-of-the-mages-college-of-dreft.yaml":rv,"../../content/traits/circumstance/senior-member-of-the-monster-hunter-guild.yaml":iv,"../../content/traits/circumstance/short-term-fame.yaml":av,"../../content/traits/circumstance/significant-inheritance.yaml":ov,"../../content/traits/circumstance/switch-port-transit-pass.yaml":sv,"../../content/traits/circumstance/sworn-to-a-noble-house.yaml":cv,"../../content/traits/circumstance/tetra-frontiers-co-employee.yaml":lv,"../../content/traits/circumstance/thieves-guild-membership.yaml":uv,"../../content/traits/circumstance/tugboat-captain.yaml":dv,"../../content/traits/circumstance/wanted-in-dreft.yaml":fv,"../../content/traits/circumstance/wanted-in-sol.yaml":pv,"../../content/traits/condition/asleep.yaml":mv,"../../content/traits/condition/bandaged.yaml":hv,"../../content/traits/condition/blinded.yaml":gv,"../../content/traits/condition/broken-limb.yaml":_v,"../../content/traits/condition/burning.yaml":vv,"../../content/traits/condition/charmed.yaml":yv,"../../content/traits/condition/corroding.yaml":bv,"../../content/traits/condition/corrosive-weapon.yaml":xv,"../../content/traits/condition/cursed.yaml":Sv,"../../content/traits/condition/cybernetic-intelligence.yaml":Cv,"../../content/traits/condition/damaged.yaml":wv,"../../content/traits/condition/dark-haze-condition.yaml":Tv,"../../content/traits/condition/dead.yaml":Ev,"../../content/traits/condition/deafened.yaml":Dv,"../../content/traits/condition/destroyed.yaml":Ov,"../../content/traits/condition/earthen-weapon.yaml":kv,"../../content/traits/condition/electrified-weapon.yaml":Av,"../../content/traits/condition/elemental-ward-condition.yaml":jv,"../../content/traits/condition/featherfall-condition.yaml":Mv,"../../content/traits/condition/flaming-weapon.yaml":Nv,"../../content/traits/condition/flat-footed.yaml":Pv,"../../content/traits/condition/flight.yaml":Fv,"../../content/traits/condition/freezing-weapon.yaml":Iv,"../../content/traits/condition/frightened.yaml":Lv,"../../content/traits/condition/frozen.yaml":Rv,"../../content/traits/condition/ghost-sight.yaml":zv,"../../content/traits/condition/glowing.yaml":Bv,"../../content/traits/condition/hard-shell.yaml":Vv,"../../content/traits/condition/hasted.yaml":Hv,"../../content/traits/condition/healthy.yaml":Uv,"../../content/traits/condition/high-morale.yaml":Wv,"../../content/traits/condition/incapacitated.yaml":Gv,"../../content/traits/condition/infravision-condition.yaml":Kv,"../../content/traits/condition/injured.yaml":qv,"../../content/traits/condition/invisible.yaml":Jv,"../../content/traits/condition/irradiated.yaml":Yv,"../../content/traits/condition/long-toothed.yaml":Xv,"../../content/traits/condition/maddening-weapon.yaml":Zv,"../../content/traits/condition/magical-endurance-condition.yaml":Qv,"../../content/traits/condition/magical-flight-condition.yaml":$v,"../../content/traits/condition/magical-grace-condition.yaml":ey,"../../content/traits/condition/magical-heritage.yaml":ty,"../../content/traits/condition/magical-strength-condition.yaml":ny,"../../content/traits/condition/magically-deathproof.yaml":ry,"../../content/traits/condition/magically-flameproof.yaml":iy,"../../content/traits/condition/magically-iceproof.yaml":ay,"../../content/traits/condition/magically-mindproof.yaml":oy,"../../content/traits/condition/magically-rustproof.yaml":sy,"../../content/traits/condition/magically-stoneproof.yaml":cy,"../../content/traits/condition/magically-stormproof.yaml":ly,"../../content/traits/condition/mechanical.yaml":uy,"../../content/traits/condition/mortis.yaml":dy,"../../content/traits/condition/non-humanoid.yaml":fy,"../../content/traits/condition/organ-damage.yaml":py,"../../content/traits/condition/paralyzed.yaml":my,"../../content/traits/condition/prone.yaml":hy,"../../content/traits/condition/rage.yaml":gy,"../../content/traits/condition/reinforced.yaml":_y,"../../content/traits/condition/restrained.yaml":vy,"../../content/traits/condition/rooted.yaml":yy,"../../content/traits/condition/scarred.yaml":by,"../../content/traits/condition/scrambled.yaml":xy,"../../content/traits/condition/severe-bleeding.yaml":Sy,"../../content/traits/condition/severe-burn.yaml":Cy,"../../content/traits/condition/severely-injured.yaml":wy,"../../content/traits/condition/shielded.yaml":Ty,"../../content/traits/condition/silenced.yaml":Ey,"../../content/traits/condition/slowed.yaml":Dy,"../../content/traits/condition/spider-climb-condition.yaml":Oy,"../../content/traits/condition/stimm-rush.yaml":ky,"../../content/traits/condition/stone-skin.yaml":Ay,"../../content/traits/condition/supernatural.yaml":jy,"../../content/traits/condition/temporarily-deafened.yaml":My,"../../content/traits/condition/unconscious.yaml":Ny,"../../content/traits/condition/water-breathing-condition.yaml":Py,"../../content/traits/condition/withering-weapon.yaml":Fy,"../../content/traits/contact/additional-contact.yaml":Iy,"../../content/traits/knowledge/accounting.yaml":Ly,"../../content/traits/knowledge/additional-language.yaml":Ry,"../../content/traits/knowledge/ai-culture.yaml":zy,"../../content/traits/knowledge/aksum.yaml":By,"../../content/traits/knowledge/alchemy.yaml":Vy,"../../content/traits/knowledge/amaravati.yaml":Hy,"../../content/traits/knowledge/american-geography.yaml":Uy,"../../content/traits/knowledge/american-history.yaml":Wy,"../../content/traits/knowledge/amharic-written.yaml":Gy,"../../content/traits/knowledge/amharic.yaml":Ky,"../../content/traits/knowledge/anatomy.yaml":qy,"../../content/traits/knowledge/animal-lore.yaml":Jy,"../../content/traits/knowledge/antiluna.yaml":Yy,"../../content/traits/knowledge/arabic-written.yaml":Xy,"../../content/traits/knowledge/arabic.yaml":Zy,"../../content/traits/knowledge/architecture.yaml":Qy,"../../content/traits/knowledge/aristocracy.yaml":$y,"../../content/traits/knowledge/ark-life.yaml":eb,"../../content/traits/knowledge/ark-new-york.yaml":tb,"../../content/traits/knowledge/art-history.yaml":nb,"../../content/traits/knowledge/artificial-intelligence.yaml":rb,"../../content/traits/knowledge/asteroid-mining.yaml":ib,"../../content/traits/knowledge/aviation.yaml":ab,"../../content/traits/knowledge/bandits-and-brigands.yaml":ob,"../../content/traits/knowledge/bengali-written.yaml":sb,"../../content/traits/knowledge/bengali.yaml":cb,"../../content/traits/knowledge/biology.yaml":lb,"../../content/traits/knowledge/boneyard.yaml":ub,"../../content/traits/knowledge/bureaucracy.yaml":db,"../../content/traits/knowledge/burmese-written.yaml":fb,"../../content/traits/knowledge/burmese.yaml":pb,"../../content/traits/knowledge/cantonese-written.yaml":mb,"../../content/traits/knowledge/cantonese.yaml":hb,"../../content/traits/knowledge/caravan-routes.yaml":gb,"../../content/traits/knowledge/centafrica.yaml":_b,"../../content/traits/knowledge/centafrican-law.yaml":vb,"../../content/traits/knowledge/chemistry.yaml":yb,"../../content/traits/knowledge/chinese-imperial-law.yaml":bb,"../../content/traits/knowledge/coastal-trade.yaml":xb,"../../content/traits/knowledge/combat-medicine.yaml":Sb,"../../content/traits/knowledge/commerce.yaml":Cb,"../../content/traits/knowledge/comparative-cultures.yaml":wb,"../../content/traits/knowledge/computer-networks.yaml":Tb,"../../content/traits/knowledge/computer-systems.yaml":Eb,"../../content/traits/knowledge/contract-law.yaml":Db,"../../content/traits/knowledge/corporate-security.yaml":Ob,"../../content/traits/knowledge/countryside-lore.yaml":kb,"../../content/traits/knowledge/court-etiquette.yaml":Ab,"../../content/traits/knowledge/criminal-underworld.yaml":jb,"../../content/traits/knowledge/cryptography.yaml":Mb,"../../content/traits/knowledge/cybernetics.yaml":Nb,"../../content/traits/knowledge/diplomatic-protocol.yaml":Pb,"../../content/traits/knowledge/documents-and-seals.yaml":Fb,"../../content/traits/knowledge/dreft.yaml":Ib,"../../content/traits/knowledge/dreftan-written.yaml":Lb,"../../content/traits/knowledge/dreftan.yaml":Rb,"../../content/traits/knowledge/dreftian-law.yaml":zb,"../../content/traits/knowledge/dutch-written.yaml":Bb,"../../content/traits/knowledge/dutch.yaml":Vb,"../../content/traits/knowledge/dwarvish-runes-written.yaml":Hb,"../../content/traits/knowledge/dwarvish.yaml":Ub,"../../content/traits/knowledge/earth-baseline-customs.yaml":Wb,"../../content/traits/knowledge/earth-baseline-technology.yaml":Gb,"../../content/traits/knowledge/ecology.yaml":Kb,"../../content/traits/knowledge/education.yaml":qb,"../../content/traits/knowledge/electronics.yaml":Jb,"../../content/traits/knowledge/elemental-magics.yaml":Yb,"../../content/traits/knowledge/enchantment.yaml":Xb,"../../content/traits/knowledge/engineering.yaml":Zb,"../../content/traits/knowledge/english-written.yaml":Qb,"../../content/traits/knowledge/english.yaml":$b,"../../content/traits/knowledge/executive-protection.yaml":ex,"../../content/traits/knowledge/exotic-materials.yaml":tx,"../../content/traits/knowledge/explosives.yaml":nx,"../../content/traits/knowledge/extraplanar-threats.yaml":rx,"../../content/traits/knowledge/farming.yaml":ix,"../../content/traits/knowledge/filipino-written.yaml":ax,"../../content/traits/knowledge/filipino.yaml":ox,"../../content/traits/knowledge/french-written.yaml":sx,"../../content/traits/knowledge/french.yaml":cx,"../../content/traits/knowledge/gambling.yaml":lx,"../../content/traits/knowledge/geology.yaml":ux,"../../content/traits/knowledge/german-written.yaml":dx,"../../content/traits/knowledge/german.yaml":fx,"../../content/traits/knowledge/glintl.yaml":px,"../../content/traits/knowledge/gujarati-written.yaml":mx,"../../content/traits/knowledge/gujarati.yaml":hx,"../../content/traits/knowledge/hausa-written.yaml":gx,"../../content/traits/knowledge/hausa.yaml":_x,"../../content/traits/knowledge/heraldry.yaml":vx,"../../content/traits/knowledge/herbalism.yaml":yx,"../../content/traits/knowledge/high-society.yaml":bx,"../../content/traits/knowledge/hindi-written.yaml":xx,"../../content/traits/knowledge/hindi.yaml":Sx,"../../content/traits/knowledge/imperial-law.yaml":Cx,"../../content/traits/knowledge/imperial-politics.yaml":wx,"../../content/traits/knowledge/indian-law.yaml":Tx,"../../content/traits/knowledge/indian-theology.yaml":Ex,"../../content/traits/knowledge/indonesian-written.yaml":Dx,"../../content/traits/knowledge/indonesian.yaml":Ox,"../../content/traits/knowledge/industrial-machinery.yaml":kx,"../../content/traits/knowledge/intelligence-tradecraft.yaml":Ax,"../../content/traits/knowledge/interplanar-law.yaml":jx,"../../content/traits/knowledge/interplanar-relations.yaml":Mx,"../../content/traits/knowledge/italian-written.yaml":Nx,"../../content/traits/knowledge/italian.yaml":Px,"../../content/traits/knowledge/japanese-written.yaml":Fx,"../../content/traits/knowledge/japanese.yaml":Ix,"../../content/traits/knowledge/javanese-written.yaml":Lx,"../../content/traits/knowledge/javanese.yaml":Rx,"../../content/traits/knowledge/kannada-written.yaml":zx,"../../content/traits/knowledge/kannada.yaml":Bx,"../../content/traits/knowledge/karsef.yaml":Vx,"../../content/traits/knowledge/kashgar-mindworks.yaml":Hx,"../../content/traits/knowledge/kashgar.yaml":Ux,"../../content/traits/knowledge/kazakh-written.yaml":Wx,"../../content/traits/knowledge/kazakh.yaml":Gx,"../../content/traits/knowledge/khmer-written.yaml":Kx,"../../content/traits/knowledge/khmer.yaml":qx,"../../content/traits/knowledge/kinyarwanda-written.yaml":Jx,"../../content/traits/knowledge/kinyarwanda.yaml":Yx,"../../content/traits/knowledge/korean-written.yaml":Xx,"../../content/traits/knowledge/korean.yaml":Zx,"../../content/traits/knowledge/kyrgyz-written.yaml":Qx,"../../content/traits/knowledge/kyrgyz.yaml":$x,"../../content/traits/knowledge/lao-written.yaml":eS,"../../content/traits/knowledge/lao.yaml":tS,"../../content/traits/knowledge/law-enforcement.yaml":nS,"../../content/traits/knowledge/lingala-written.yaml":rS,"../../content/traits/knowledge/lingala.yaml":iS,"../../content/traits/knowledge/liquid-democracy.yaml":aS,"../../content/traits/knowledge/literature.yaml":oS,"../../content/traits/knowledge/local-folklore.yaml":sS,"../../content/traits/knowledge/local-history.yaml":cS,"../../content/traits/knowledge/logistics.yaml":lS,"../../content/traits/knowledge/magic-on-isekai.yaml":uS,"../../content/traits/knowledge/magical-artifacts.yaml":dS,"../../content/traits/knowledge/malay-written.yaml":fS,"../../content/traits/knowledge/malay.yaml":pS,"../../content/traits/knowledge/malayalam-written.yaml":mS,"../../content/traits/knowledge/malayalam.yaml":hS,"../../content/traits/knowledge/mandarin-written.yaml":gS,"../../content/traits/knowledge/mandarin.yaml":_S,"../../content/traits/knowledge/marathi-written.yaml":vS,"../../content/traits/knowledge/marathi.yaml":yS,"../../content/traits/knowledge/martial-arts.yaml":bS,"../../content/traits/knowledge/mathematics.yaml":xS,"../../content/traits/knowledge/medicine.yaml":SS,"../../content/traits/knowledge/metallurgy.yaml":CS,"../../content/traits/knowledge/military-tactics.yaml":wS,"../../content/traits/knowledge/mongolian-written.yaml":TS,"../../content/traits/knowledge/mongolian.yaml":ES,"../../content/traits/knowledge/monsters-of-isekai.yaml":DS,"../../content/traits/knowledge/mountaineering.yaml":OS,"../../content/traits/knowledge/music.yaml":kS,"../../content/traits/knowledge/navigation.yaml":AS,"../../content/traits/knowledge/nepali-written.yaml":jS,"../../content/traits/knowledge/nepali.yaml":MS,"../../content/traits/knowledge/new-columbia.yaml":NS,"../../content/traits/knowledge/new-persia.yaml":PS,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":FS,"../../content/traits/knowledge/odia-written.yaml":IS,"../../content/traits/knowledge/odia.yaml":LS,"../../content/traits/knowledge/orc-society.yaml":RS,"../../content/traits/knowledge/oromo-written.yaml":zS,"../../content/traits/knowledge/oromo.yaml":BS,"../../content/traits/knowledge/paraarcheology.yaml":VS,"../../content/traits/knowledge/parabiology.yaml":HS,"../../content/traits/knowledge/paraflora.yaml":US,"../../content/traits/knowledge/paraphysics.yaml":WS,"../../content/traits/knowledge/parasapient-medicine.yaml":GS,"../../content/traits/knowledge/parasapients.yaml":KS,"../../content/traits/knowledge/parazoology.yaml":qS,"../../content/traits/knowledge/pataliputra.yaml":JS,"../../content/traits/knowledge/pathology.yaml":YS,"../../content/traits/knowledge/persian-written.yaml":XS,"../../content/traits/knowledge/persian.yaml":ZS,"../../content/traits/knowledge/pharmacology.yaml":QS,"../../content/traits/knowledge/physical-training.yaml":$S,"../../content/traits/knowledge/physics.yaml":eC,"../../content/traits/knowledge/planar-exploration.yaml":tC,"../../content/traits/knowledge/polish-written.yaml":nC,"../../content/traits/knowledge/polish.yaml":rC,"../../content/traits/knowledge/politics.yaml":iC,"../../content/traits/knowledge/port-herminst.yaml":aC,"../../content/traits/knowledge/ports-and-stations.yaml":oC,"../../content/traits/knowledge/portuguese-written.yaml":sC,"../../content/traits/knowledge/portuguese.yaml":cC,"../../content/traits/knowledge/psychology.yaml":lC,"../../content/traits/knowledge/punjabi-written.yaml":uC,"../../content/traits/knowledge/punjabi.yaml":dC,"../../content/traits/knowledge/religions-of-isekai.yaml":fC,"../../content/traits/knowledge/religions-of-the-settled-systems.yaml":pC,"../../content/traits/knowledge/rhetoric.yaml":mC,"../../content/traits/knowledge/robotics.yaml":hC,"../../content/traits/knowledge/romanian-written.yaml":gC,"../../content/traits/knowledge/romanian.yaml":_C,"../../content/traits/knowledge/runecraft.yaml":vC,"../../content/traits/knowledge/russian-written.yaml":yC,"../../content/traits/knowledge/russian.yaml":bC,"../../content/traits/knowledge/sdu-law.yaml":xC,"../../content/traits/knowledge/seafaring.yaml":SC,"../../content/traits/knowledge/security-systems.yaml":CC,"../../content/traits/knowledge/shipbreaking.yaml":wC,"../../content/traits/knowledge/shipping-lanes.yaml":TC,"../../content/traits/knowledge/sinhala-written.yaml":EC,"../../content/traits/knowledge/sinhala.yaml":DC,"../../content/traits/knowledge/somali-written.yaml":OC,"../../content/traits/knowledge/somali.yaml":kC,"../../content/traits/knowledge/sorellion.yaml":AC,"../../content/traits/knowledge/spacefaring.yaml":jC,"../../content/traits/knowledge/spanish-written.yaml":MC,"../../content/traits/knowledge/spanish.yaml":NC,"../../content/traits/knowledge/spirits-and-the-dead.yaml":PC,"../../content/traits/knowledge/starships.yaml":FC,"../../content/traits/knowledge/succession-law.yaml":IC,"../../content/traits/knowledge/swahili-written.yaml":LC,"../../content/traits/knowledge/swahili.yaml":RC,"../../content/traits/knowledge/switch-gates.yaml":zC,"../../content/traits/knowledge/tamil-written.yaml":BC,"../../content/traits/knowledge/tamil.yaml":VC,"../../content/traits/knowledge/telugu-written.yaml":HC,"../../content/traits/knowledge/telugu.yaml":UC,"../../content/traits/knowledge/tetra-frontiers-co.yaml":WC,"../../content/traits/knowledge/tetra.yaml":GC,"../../content/traits/knowledge/thai-written.yaml":KC,"../../content/traits/knowledge/thai.yaml":qC,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":JC,"../../content/traits/knowledge/the-chinese-empire.yaml":YC,"../../content/traits/knowledge/the-corporate-syndicates.yaml":XC,"../../content/traits/knowledge/the-corsine-pass.yaml":ZC,"../../content/traits/knowledge/the-diplomatic-wing.yaml":QC,"../../content/traits/knowledge/the-drovus-empire.yaml":$C,"../../content/traits/knowledge/the-explorers-lodge.yaml":ew,"../../content/traits/knowledge/the-free-american-states.yaml":tw,"../../content/traits/knowledge/the-imperial-military.yaml":nw,"../../content/traits/knowledge/the-kingdom-of-india.yaml":rw,"../../content/traits/knowledge/the-kings-woods.yaml":iw,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":aw,"../../content/traits/knowledge/the-martian-association.yaml":ow,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":sw,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":cw,"../../content/traits/knowledge/the-switch-port.yaml":lw,"../../content/traits/knowledge/the-union-of-texas.yaml":uw,"../../content/traits/knowledge/the-united-nations.yaml":dw,"../../content/traits/knowledge/the-ural-federation.yaml":fw,"../../content/traits/knowledge/theater.yaml":pw,"../../content/traits/knowledge/thieves-cant.yaml":mw,"../../content/traits/knowledge/toxicology.yaml":hw,"../../content/traits/knowledge/trade-guilds.yaml":gw,"../../content/traits/knowledge/trade-law.yaml":_w,"../../content/traits/knowledge/trade-roads.yaml":vw,"../../content/traits/knowledge/turkish-written.yaml":yw,"../../content/traits/knowledge/turkish.yaml":bw,"../../content/traits/knowledge/ukrainian-written.yaml":xw,"../../content/traits/knowledge/ukrainian.yaml":Sw,"../../content/traits/knowledge/union-politics.yaml":Cw,"../../content/traits/knowledge/ural-tribal-law.yaml":ww,"../../content/traits/knowledge/urdu-written.yaml":Tw,"../../content/traits/knowledge/urdu.yaml":Ew,"../../content/traits/knowledge/uyghur-written.yaml":Dw,"../../content/traits/knowledge/uyghur.yaml":Ow,"../../content/traits/knowledge/vietnamese-written.yaml":kw,"../../content/traits/knowledge/vietnamese.yaml":Aw,"../../content/traits/knowledge/wilderness-lore.yaml":jw,"../../content/traits/knowledge/xanthus.yaml":Mw,"../../content/traits/knowledge/yoruba-written.yaml":Nw,"../../content/traits/knowledge/yoruba.yaml":Pw,"../../content/traits/knowledge/yutu.yaml":Fw,"../../content/traits/knowledge/zhulong.yaml":Iw,"../../content/traits/other/long-in-the-tooth.yaml":Lw,"../../content/traits/other/magic-access.yaml":Rw,"../../content/traits/other/possessed-by-a-spirit.yaml":zw,"../../content/traits/skill/access-control.yaml":Bw,"../../content/traits/skill/acid-breath.yaml":Vw,"../../content/traits/skill/advanced-cooking.yaml":Hw,"../../content/traits/skill/advanced-potion-mixing.yaml":Uw,"../../content/traits/skill/ambusher.yaml":Ww,"../../content/traits/skill/animal-husbandry.yaml":Gw,"../../content/traits/skill/antidote-brewing.yaml":Kw,"../../content/traits/skill/appraisal.yaml":qw,"../../content/traits/skill/archival-research.yaml":Jw,"../../content/traits/skill/artifact-identification.yaml":Yw,"../../content/traits/skill/artifact-repair.yaml":Xw,"../../content/traits/skill/artist-painting.yaml":Zw,"../../content/traits/skill/artist-sculpture.yaml":Qw,"../../content/traits/skill/bait-and-lure.yaml":$w,"../../content/traits/skill/battlefield-commander.yaml":eT,"../../content/traits/skill/beast-taming.yaml":tT,"../../content/traits/skill/body-conditioning.yaml":nT,"../../content/traits/skill/born-leader.yaml":rT,"../../content/traits/skill/boxers-defense.yaml":iT,"../../content/traits/skill/brawler.yaml":aT,"../../content/traits/skill/breakthrough.yaml":oT,"../../content/traits/skill/bugging.yaml":sT,"../../content/traits/skill/calming-presence.yaml":cT,"../../content/traits/skill/capable-student.yaml":lT,"../../content/traits/skill/cargo-handling.yaml":uT,"../../content/traits/skill/casualty-extraction.yaml":dT,"../../content/traits/skill/cataloguing.yaml":fT,"../../content/traits/skill/checkpoint-nerve.yaml":pT,"../../content/traits/skill/climber.yaml":mT,"../../content/traits/skill/combat-medic.yaml":hT,"../../content/traits/skill/con-man.yaml":gT,"../../content/traits/skill/concealment.yaml":_T,"../../content/traits/skill/containment-protocols.yaml":vT,"../../content/traits/skill/contortionist.yaml":yT,"../../content/traits/skill/contract-drafting.yaml":bT,"../../content/traits/skill/counselor.yaml":xT,"../../content/traits/skill/courtly-manners.yaml":ST,"../../content/traits/skill/cover-identity.yaml":CT,"../../content/traits/skill/craft-leatherworking.yaml":wT,"../../content/traits/skill/craft-masonry.yaml":TT,"../../content/traits/skill/craft-smithing.yaml":ET,"../../content/traits/skill/crew-management.yaml":DT,"../../content/traits/skill/crisis-leadership.yaml":OT,"../../content/traits/skill/crowd-control.yaml":kT,"../../content/traits/skill/cryptanalysis.yaml":AT,"../../content/traits/skill/curse-sense.yaml":jT,"../../content/traits/skill/data-analysis.yaml":MT,"../../content/traits/skill/data-recovery.yaml":NT,"../../content/traits/skill/dead-drops.yaml":PT,"../../content/traits/skill/decipherment.yaml":FT,"../../content/traits/skill/demolitions.yaml":IT,"../../content/traits/skill/diplomacy.yaml":LT,"../../content/traits/skill/disguise.yaml":RT,"../../content/traits/skill/dissection.yaml":zT,"../../content/traits/skill/dock-rat.yaml":BT,"../../content/traits/skill/drillmaster.yaml":VT,"../../content/traits/skill/eagle-eye.yaml":HT,"../../content/traits/skill/electronics-repair.yaml":UT,"../../content/traits/skill/enchanting.yaml":WT,"../../content/traits/skill/escort-driving.yaml":GT,"../../content/traits/skill/eva-work.yaml":KT,"../../content/traits/skill/evasive-maneuvers.yaml":qT,"../../content/traits/skill/excavation.yaml":JT,"../../content/traits/skill/exorcism.yaml":YT,"../../content/traits/skill/expedition-leader.yaml":XT,"../../content/traits/skill/expedition-logistics.yaml":ZT,"../../content/traits/skill/expert-pilot.yaml":QT,"../../content/traits/skill/fabrication.yaml":$T,"../../content/traits/skill/fancy-footwork.yaml":eE,"../../content/traits/skill/fence.yaml":tE,"../../content/traits/skill/field-pharmacology.yaml":nE,"../../content/traits/skill/field-sampling.yaml":rE,"../../content/traits/skill/field-splinting.yaml":iE,"../../content/traits/skill/field-surgeon.yaml":aE,"../../content/traits/skill/fine-print.yaml":oE,"../../content/traits/skill/fire-breath.yaml":sE,"../../content/traits/skill/first-contact-protocols.yaml":cE,"../../content/traits/skill/folk-remedies.yaml":lE,"../../content/traits/skill/footwork.yaml":uE,"../../content/traits/skill/forgery.yaml":dE,"../../content/traits/skill/freerunner.yaml":fE,"../../content/traits/skill/frost-breath.yaml":pE,"../../content/traits/skill/gate-operation.yaml":mE,"../../content/traits/skill/ghost-in-the-machine.yaml":hE,"../../content/traits/skill/gladiator.yaml":gE,"../../content/traits/skill/greasing-palms.yaml":_E,"../../content/traits/skill/hacking.yaml":vE,"../../content/traits/skill/haggler.yaml":yE,"../../content/traits/skill/handler.yaml":bE,"../../content/traits/skill/hard-puncher.yaml":xE,"../../content/traits/skill/hardware-engineering.yaml":SE,"../../content/traits/skill/hazard-assessment.yaml":CE,"../../content/traits/skill/heavy-machinery.yaml":wE,"../../content/traits/skill/herb-gathering.yaml":TE,"../../content/traits/skill/hidden-holds.yaml":EE,"../../content/traits/skill/holy-conviction.yaml":DE,"../../content/traits/skill/hull-cutting.yaml":OE,"../../content/traits/skill/incantation.yaml":kE,"../../content/traits/skill/inspiring-speech.yaml":AE,"../../content/traits/skill/interpreter.yaml":jE,"../../content/traits/skill/interrogation.yaml":ME,"../../content/traits/skill/intimidation.yaml":NE,"../../content/traits/skill/intrusion-countermeasures.yaml":PE,"../../content/traits/skill/inventor.yaml":FE,"../../content/traits/skill/investigation.yaml":IE,"../../content/traits/skill/iron-jaw.yaml":LE,"../../content/traits/skill/jumper.yaml":RE,"../../content/traits/skill/kata-discipline.yaml":zE,"../../content/traits/skill/knowledge-sponge.yaml":BE,"../../content/traits/skill/lab-technique.yaml":VE,"../../content/traits/skill/last-rites.yaml":HE,"../../content/traits/skill/lecturing.yaml":UE,"../../content/traits/skill/legal-advocacy.yaml":WE,"../../content/traits/skill/linguist.yaml":GE,"../../content/traits/skill/lockpicking.yaml":KE,"../../content/traits/skill/long-distance-runner.yaml":qE,"../../content/traits/skill/market-sense.yaml":JE,"../../content/traits/skill/master-artificer.yaml":YE,"../../content/traits/skill/master-negotiator.yaml":XE,"../../content/traits/skill/master-salvager.yaml":ZE,"../../content/traits/skill/mediator.yaml":QE,"../../content/traits/skill/medical-aid.yaml":$E,"../../content/traits/skill/medium.yaml":eD,"../../content/traits/skill/mental-fortitude.yaml":tD,"../../content/traits/skill/military-drill.yaml":nD,"../../content/traits/skill/mining.yaml":rD,"../../content/traits/skill/mnemonist.yaml":iD,"../../content/traits/skill/monster-handling.yaml":aD,"../../content/traits/skill/morale-officer.yaml":oD,"../../content/traits/skill/negotiator.yaml":sD,"../../content/traits/skill/network-engineering.yaml":cD,"../../content/traits/skill/omen-reading.yaml":lD,"../../content/traits/skill/parasapient-field-medicine.yaml":uD,"../../content/traits/skill/peacemaker.yaml":dD,"../../content/traits/skill/peak-conditioning.yaml":fD,"../../content/traits/skill/performer-acrobatics.yaml":pD,"../../content/traits/skill/performer-music.yaml":mD,"../../content/traits/skill/pilot-airplane.yaml":hD,"../../content/traits/skill/pilot-airship.yaml":gD,"../../content/traits/skill/pilot-boat.yaml":_D,"../../content/traits/skill/pilot-drone.yaml":vD,"../../content/traits/skill/pilot-fighter.yaml":yD,"../../content/traits/skill/pilot-freighter.yaml":bD,"../../content/traits/skill/pilot-ground-vehicle.yaml":xD,"../../content/traits/skill/pilot-gunship.yaml":SD,"../../content/traits/skill/pilot-helicopter.yaml":CD,"../../content/traits/skill/pilot-sailing-ship.yaml":wD,"../../content/traits/skill/pilot-shuttle.yaml":TD,"../../content/traits/skill/pilot-truck.yaml":ED,"../../content/traits/skill/planar-acclimation.yaml":DD,"../../content/traits/skill/planar-surveying.yaml":OD,"../../content/traits/skill/poker-face.yaml":kD,"../../content/traits/skill/polymath.yaml":AD,"../../content/traits/skill/possession-resistance.yaml":jD,"../../content/traits/skill/potion-identification.yaml":MD,"../../content/traits/skill/procurement.yaml":ND,"../../content/traits/skill/programming.yaml":PD,"../../content/traits/skill/prototyping.yaml":FD,"../../content/traits/skill/quartermaster.yaml":ID,"../../content/traits/skill/read-the-room.yaml":LD,"../../content/traits/skill/reagent-preparation.yaml":RD,"../../content/traits/skill/relic-handling.yaml":zD,"../../content/traits/skill/research.yaml":BD,"../../content/traits/skill/resist-interrogation.yaml":VD,"../../content/traits/skill/resuscitation.yaml":HD,"../../content/traits/skill/rider-basic-animals.yaml":UD,"../../content/traits/skill/rites-and-ceremonies.yaml":WD,"../../content/traits/skill/route-memory.yaml":GD,"../../content/traits/skill/rune-carving.yaml":KD,"../../content/traits/skill/running-dark.yaml":qD,"../../content/traits/skill/salvage.yaml":JD,"../../content/traits/skill/schemer.yaml":YD,"../../content/traits/skill/scientific-method.yaml":XD,"../../content/traits/skill/scrap-appraisal.yaml":ZD,"../../content/traits/skill/sculpted.yaml":QD,"../../content/traits/skill/sense-the-unseen.yaml":$D,"../../content/traits/skill/shaking-a-tail.yaml":eO,"../../content/traits/skill/shin-training.yaml":tO,"../../content/traits/skill/shoring.yaml":nO,"../../content/traits/skill/simple-cooking.yaml":rO,"../../content/traits/skill/simple-potion-mixing.yaml":iO,"../../content/traits/skill/sizing-up.yaml":aO,"../../content/traits/skill/slayer.yaml":oO,"../../content/traits/skill/sleight-of-hand.yaml":sO,"../../content/traits/skill/smooth-talker.yaml":cO,"../../content/traits/skill/social-engineering.yaml":lO,"../../content/traits/skill/specimen-handling.yaml":uO,"../../content/traits/skill/spirit-warding.yaml":dO,"../../content/traits/skill/spiritual-counsel.yaml":fO,"../../content/traits/skill/spymaster.yaml":pO,"../../content/traits/skill/starship-engineering.yaml":mO,"../../content/traits/skill/streetwise.yaml":hO,"../../content/traits/skill/surgery.yaml":gO,"../../content/traits/skill/surveillance.yaml":_O,"../../content/traits/skill/survivalist.yaml":vO,"../../content/traits/skill/suturing.yaml":yO,"../../content/traits/skill/swimmer.yaml":bO,"../../content/traits/skill/systems-administration.yaml":xO,"../../content/traits/skill/talent-spotter.yaml":SO,"../../content/traits/skill/teaching.yaml":CO,"../../content/traits/skill/teamster.yaml":wO,"../../content/traits/skill/textual-criticism.yaml":TO,"../../content/traits/skill/threat-assessment.yaml":EO,"../../content/traits/skill/tinkerer.yaml":DO,"../../content/traits/skill/tracker.yaml":OO,"../../content/traits/skill/trail-runner.yaml":kO,"../../content/traits/skill/trauma-care.yaml":AO,"../../content/traits/skill/triage.yaml":jO,"../../content/traits/skill/vigilance.yaml":MO,"../../content/traits/skill/weightlifter.yaml":NO,"../../content/traits/skill/wielder-bow.yaml":PO,"../../content/traits/skill/wielder-crossbow.yaml":FO,"../../content/traits/skill/wielder-dagger.yaml":IO,"../../content/traits/skill/wielder-flamethrower.yaml":LO,"../../content/traits/skill/wielder-greatsword.yaml":RO,"../../content/traits/skill/wielder-grenade.yaml":zO,"../../content/traits/skill/wielder-longsword.yaml":BO,"../../content/traits/skill/wielder-mace.yaml":VO,"../../content/traits/skill/wielder-machine-gun.yaml":HO,"../../content/traits/skill/wielder-missile-launcher.yaml":UO,"../../content/traits/skill/wielder-mortar.yaml":WO,"../../content/traits/skill/wielder-musket.yaml":GO,"../../content/traits/skill/wielder-pistol.yaml":KO,"../../content/traits/skill/wielder-polearm.yaml":qO,"../../content/traits/skill/wielder-rifle.yaml":JO,"../../content/traits/skill/wielder-shortsword.yaml":YO,"../../content/traits/skill/wielder-shotgun.yaml":XO,"../../content/traits/skill/wielder-siege-engine.yaml":ZO,"../../content/traits/skill/wielder-sling.yaml":QO,"../../content/traits/skill/wielder-sniper-rifle.yaml":$O,"../../content/traits/skill/wielder-spear.yaml":ek,"../../content/traits/skill/wielder-staff.yaml":tk,"../../content/traits/skill/wielder-stun-baton.yaml":nk,"../../content/traits/skill/wielder-taser.yaml":rk,"../../content/traits/skill/wielder-throwing-weapon.yaml":ik,"../../content/traits/skill/wielder-war-axe.yaml":ak,"../../content/traits/skill/wrangler.yaml":ok,"../../content/traits/skill/xenobiology-fieldwork.yaml":sk,"../../content/traits/skill/zero-g-maneuvering.yaml":ck})).map(([e,t])=>({path:e.slice(14),text:t}))),rN=new Map(tN.traits.map(e=>[e.id,e])),iN=new Map(tN.packages.map(e=>[e.id,e])),aN=new Map(tN.kinds.map(e=>[e.id,e])),oN=new Map(tN.items.map(e=>[e.id,e]));function sN({tone:e=`dark`,size:t=`default`,card:n=!1,scroll:r=`panel`},i=``){return[`sf-popup`,`is-open`,`sf-popup--${e}`,t!=="default"&&`sf-popup--${t}`,n&&`sf-popup--card`,r===`inner`&&`sf-popup--inner`,i].filter(Boolean).join(` `)}function cN({label:e,onClose:t,children:n,tone:r=`dark`,size:i=`default`,card:a=!1,scroll:o=`panel`,title:s,className:c=``}){let l=(0,U.useRef)(null),u=(0,U.useRef)(t);return u.current=t,(0,U.useEffect)(()=>{let e=document.activeElement;l.current?.focus(),document.documentElement.classList.add(`sf-popup-open`);let t=e=>{e.key===`Escape`&&u.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`sf-popup-open`),e?.focus()}},[]),(0,W.jsx)(`div`,{className:sN({tone:r,size:i,card:a,scroll:o},c),role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,W.jsxs)(`div`,{className:`sf-popup-panel`,children:[(0,W.jsx)(G,{ref:l,round:`lg`,tone:r===`dark`?`light`:`dark`,className:`sf-popup-close`,"aria-label":`Close`,onClick:t,children:(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,W.jsxs)(`div`,{className:`sf-popup-scroll`,children:[s&&(0,W.jsx)(`h3`,{className:`sf-popup-title`,children:s}),n]})]})})}var lN=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],uN=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],dN=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),fN=`(\\d{1,2}|${dN(lN)})`,pN=`(\\d{1,2})(?:st|nd|rd|th)|(${dN(uN)})`,mN=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${fN}\\b`,`i`),hN=RegExp(`\\b(?:${pN})[\\s-]+(?:level|lvl)\\b`,`i`);function gN(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function _N(e){let t=mN.exec(e);if(t)return gN(t[1],lN);let n=hN.exec(e);if(n)return gN(n[1],uN)??gN(n[2],uN)}async function vN(e){if(!e.type.startsWith(`image/`))throw Error(`${e.name} isn't an image.`);let t;try{t=await createImageBitmap(e)}catch{throw Error(`Couldn't read ${e.name}. Try a PNG, JPEG or WebP.`)}let n=Math.min(1,512/Math.max(t.width,t.height)),r=document.createElement(`canvas`);r.width=Math.max(1,Math.round(t.width*n)),r.height=Math.max(1,Math.round(t.height*n)),r.getContext(`2d`).drawImage(t,0,0,r.width,r.height),t.close();let i=r.toDataURL(`image/webp`,.82);if(i.startsWith(`data:image/webp`)||(i=r.toDataURL(`image/jpeg`,.85)),i.length>15e5)throw Error(`${e.name} is still too big after shrinking it.`);return i}var yN=e=>dl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function bN(e){let t=e.match(/^([\s\S]*?)\s*(?:that has|that possesses|with) the following profile:\s*((?:\([^)]*\)[\s,]*)+)\.?\s*([\s\S]*)$/i);if(!t)return;let n={before:`${t[1].trim()}:`,after:t[3].trim(),damage:[],other:[]};for(let[,e]of t[2].matchAll(/\(([^)]*)\)/g)){let t=e.trim(),r;if(/^(ranged|melee)(, thrown)?$/i.test(t))n.attackType=t[0].toUpperCase()+t.slice(1).toLowerCase();else if(r=t.match(/^max range:?\s*(.+)$/i))n.maxRange=/\d$/.test(r[1])?`${r[1]} m`:r[1];else if(r=t.match(/^attack stat:\s*(.+)$/i))n.attackStat=r[1][0].toUpperCase()+r[1].slice(1);else if(r=t.match(/^area of effect:?\s*(\d+(?:\.\d+)?)\s*(m|meters?)(\s+per rank)?$/i))n.areaOfEffect={amount:Number(r[1]),unit:`m`,perRank:!!r[3]};else{let e=t.split(/\s*,\s*/).map(e=>{let t=e.match(/^(\d+)\s+(.+?)(\s+per rank)?$/i),n=t&&yN(t[2]);return t&&n?{type:n,amount:Number(t[1]),perRank:!!t[3]}:void 0});e.every(e=>e)?n.damage.push(...e):n.other.push(t)}}return n}var xN=Object.keys(V),SN=xN.filter(e=>V[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),CN=e=>rN.get(e)?.name??e,wN=e=>`region-${e===`isekai`?`dreft`:`systems`}`,TN=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,EN={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function DN({plane:e}){let t=e?EN[e]:void 0;return t?(0,W.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var ON=e=>e.package===void 0?CN(e.trait??``):iN.get(e.package)?.name??e.package;function kN(e){return e.kind?aN.get(e.kind)?.stats:void 0}function AN({title:e,children:t}){return(0,W.jsxs)(`header`,{className:`step-head`,children:[(0,W.jsx)(`h2`,{children:e}),t&&(0,W.jsx)(`p`,{className:`lede`,children:t})]})}var jN=3e3;function MN({children:e,fades:t,bad:n,onDismiss:r}){let[i,a]=(0,U.useState)(!1),o=(0,U.useRef)(r);return o.current=r,(0,U.useEffect)(()=>{if(a(!1),!t)return;let e=setTimeout(()=>a(!0),jN),n=setTimeout(()=>o.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,W.jsxs)(`div`,{className:`notice${n?` bad`:t?` is-success`:``}${i?` is-leaving`:``}`,role:`status`,children:[e,(0,W.jsx)(G,{kind:`link`,onClick:r,"aria-label":`Dismiss`,children:`✕`})]})}function NN({text:e}){let t=e.split(`
-`).map(e=>e.trim()).filter(Boolean);if(!t.length)return null;if(!t.some(e=>e.startsWith(`- `)))return(0,W.jsx)(`p`,{className:`sf-card-effect`,children:e});let n=[];for(let e of t)e.startsWith(`- `)?Array.isArray(n.at(-1))?n.at(-1).push(e.slice(2)):n.push([e.slice(2)]):n.push(e);return(0,W.jsx)(`div`,{className:`sf-card-effect`,children:n.map((e,t)=>Array.isArray(e)?(0,W.jsx)(`ul`,{children:e.map((e,t)=>(0,W.jsx)(`li`,{children:e},t))},t):(0,W.jsx)(`p`,{children:e},t))})}function PN({action:e,rank:t}){if(!e)return null;let n=e.indexOf(`: `),r=n>0?e.slice(0,n):void 0,i=n>0?e.slice(n+2):e,a=bN(i);if(!a)return(0,W.jsxs)(`p`,{className:`sf-card-action`,children:[r&&(0,W.jsxs)(`strong`,{children:[r,`:`]}),` `,i]});let o=(e,n)=>n&&t?e*t:e,s=!t&&(a.damage.some(e=>e.perRank)||a.areaOfEffect?.perRank),c=/ranged|thrown/i.test(a.attackType??``);return(0,W.jsxs)(`div`,{className:`sf-card-action`,children:[(0,W.jsxs)(`p`,{children:[r&&(0,W.jsxs)(`strong`,{children:[r,`:`]}),` `,a.before]}),(0,W.jsxs)(`div`,{className:`equipment-stats sf-item-badges sf-card-action-badges`,children:[a.damage.length>0&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:c?`Ranged damage`:`Melee damage`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(KN,{name:c?`crosshairs`:`sword`,label:c?`Ranged damage`:`Melee damage`})}),a.damage.map(e=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(KN,{name:e.type.toLowerCase(),label:e.type}),o(e.amount,e.perRank)]},e.type))]}),a.maxRange&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Max Range`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(KN,{name:`range`,label:`Max Range`})}),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:a.maxRange})]}),a.areaOfEffect&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Area of Effect`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(KN,{name:`burst`,label:`Area of Effect`})}),(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[o(a.areaOfEffect.amount,a.areaOfEffect.perRank),` `,a.areaOfEffect.unit]})]}),a.attackType&&(0,W.jsxs)(FN,{children:[a.attackType,` Attack`]}),a.attackStat&&(0,W.jsx)(FN,{children:a.attackStat}),a.other.map(e=>(0,W.jsx)(FN,{children:e},e)),s&&(0,W.jsx)(`span`,{className:`muted small`,children:`Damage and area per Rank`})]}),a.after&&(0,W.jsx)(`p`,{children:a.after})]})}function FN(e){return(0,W.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}function IN({stats:e}){return(0,W.jsx)(`div`,{className:`stat-ranges`,children:SN.map(t=>(0,W.jsxs)(`div`,{children:[(0,W.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),V[t].map(t=>(0,W.jsxs)(`div`,{className:`stat-range`,children:[(0,W.jsx)(`span`,{children:$(t)}),(0,W.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,W.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function LN({portrait:e,name:t,onChange:n,className:r=``}){let i=(0,U.useRef)(null),[a,o]=(0,U.useState)(),[s,c]=(0,U.useState)(!1),[l,u]=(0,U.useState)(!1),d=t?`Portrait of ${t}`:`Character portrait`;if(!n)return e?(0,W.jsx)(`div`,{className:`portrait ${r}`,children:(0,W.jsx)(`img`,{src:e,alt:d})}):null;let f=()=>{u(!1),o(void 0)},p=async e=>{if(e){c(!0),o(void 0);try{n(await vN(e)),u(!1)}catch(e){o(e instanceof Error?e.message:String(e))}finally{c(!1)}}},m=()=>i.current?.click();return(0,W.jsxs)(`div`,{className:`portrait-field ${r}`,children:[(0,W.jsx)(G,{kind:`bare`,className:`portrait${e?` portrait-filled`:` portrait-empty`}`,onClick:()=>e?u(!0):m(),disabled:s,"aria-label":e?`Edit the portrait`:`Add a portrait`,children:e?(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`img`,{src:e,alt:``}),(0,W.jsx)(`span`,{className:`portrait-edit`,"aria-hidden":`true`,children:(0,W.jsx)(`span`,{className:`pen-icon`})})]}):(0,W.jsxs)(`span`,{className:`portrait-prompt`,children:[(0,W.jsx)(KN,{name:`upload`}),s?`Shrinking…`:`Add a portrait`]})}),(0,W.jsx)(`input`,{ref:i,type:`file`,accept:`image/png,image/jpeg,image/webp,image/gif,image/avif`,hidden:!0,onChange:e=>{p(e.target.files?.[0]),e.target.value=``}}),a&&!l&&(0,W.jsx)(`p`,{className:`portrait-error`,children:a}),l&&e&&(0,W.jsxs)(cN,{label:`Portrait`,title:`Portrait`,onClose:f,size:`narrow`,className:`portrait-popup`,children:[(0,W.jsx)(`img`,{className:`portrait-large`,src:e,alt:d}),a&&(0,W.jsx)(`p`,{className:`portrait-error`,children:a}),(0,W.jsxs)(`div`,{className:`portrait-actions`,children:[(0,W.jsxs)(G,{tone:`dark`,onClick:m,disabled:s,children:[(0,W.jsx)(KN,{name:`upload`}),s?`Shrinking…`:`Replace image`]}),(0,W.jsx)(G,{onClick:()=>{n(void 0),f()},disabled:s,children:`Remove`})]})]})]})}function RN({description:e,onChange:t}){return t?(0,W.jsx)(`textarea`,{"aria-label":`Description`,value:e??``,maxLength:4e3,placeholder:`Who they are, how they look, what they want.`,onChange:e=>t(e.target.value||void 0)}):e?(0,W.jsx)(`p`,{children:e}):null}function zN({looks:e,onChange:t,disabled:n,fieldClass:r,inputClass:i}){let a=n=>{let r=Number(n);t({...e,age:n===``||!Number.isFinite(r)?void 0:Math.min(Kl,Math.max(0,Math.floor(r)))})},o=n=>{let r=n===`unlisted`?void 0:n;t({...e,gender:r,customGender:r===`custom`?e.customGender:void 0})};return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`label`,{className:`${r} age-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,W.jsx)(`input`,{className:i,type:`number`,inputMode:`numeric`,min:0,max:Kl,step:1,value:e.age??``,placeholder:`—`,onChange:e=>a(e.target.value),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} gender-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,W.jsx)(`select`,{className:i,value:e.gender??`unlisted`,onChange:e=>o(e.target.value),disabled:n,children:Nl.map(e=>(0,W.jsx)(`option`,{value:e,children:$(e)},e))})]}),e.gender===`custom`&&(0,W.jsxs)(`label`,{className:`${r} custom-gender-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Custom Gender`}),(0,W.jsx)(`input`,{className:i,value:e.customGender??``,maxLength:40,placeholder:`In your own words`,onChange:n=>t({...e,customGender:n.target.value||void 0}),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} height-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Height`}),(0,W.jsx)(`input`,{className:i,value:e.height??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,height:n.target.value||void 0}),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} weight-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Weight`}),(0,W.jsx)(`input`,{className:i,value:e.weight??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,weight:n.target.value||void 0}),disabled:n})]})]})}function BN({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,U.useState)(!1),[o,s]=(0,U.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,W.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,W.jsx)(n,{children:i?(0,W.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,W.jsx)(G,{kind:`bare`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var VN={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function HN({to:e}){return(0,W.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:VN[e]})})}var UN={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function WN({is:e}){return(0,W.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:UN[e]})})}var GN={knowledge:{viewBox:`0 0 640 512`,d:`M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z`},language:{viewBox:`0 0 640 512`,d:`M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z`},download:{viewBox:`0 0 512 512`,d:`M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z`},switch:{viewBox:`0 0 512 512`,d:`M464 16c-17.67 0-32 14.31-32 32v74.09C392.1 66.52 327.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.89 5.5 34.88-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c50.5 0 96.26 24.55 124.4 64H336c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32V48C496 30.31 481.7 16 464 16zM441.8 289.6c-16.92-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-50.5 0-96.25-24.55-124.4-64H176c17.67 0 32-14.31 32-32s-14.33-32-32-32h-128c-17.67 0-32 14.31-32 32v144c0 17.69 14.33 32 32 32s32-14.31 32-32v-74.09C119.9 445.5 184.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z`},upload:{viewBox:`0 0 512 512`,d:`M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z`},print:{viewBox:`0 0 512 512`,d:`M448 192H64C28.65 192 0 220.7 0 256v96c0 17.67 14.33 32 32 32h32v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h32c17.67 0 32-14.33 32-32V256C512 220.7 483.3 192 448 192zM384 448H128v-96h256V448zM432 296c-13.25 0-24-10.75-24-24c0-13.27 10.75-24 24-24s24 10.73 24 24C456 285.3 445.3 296 432 296zM128 64h229.5L384 90.51V160h64V77.25c0-8.484-3.375-16.62-9.375-22.62l-45.25-45.25C387.4 3.375 379.2 0 370.8 0H96C78.34 0 64 14.33 64 32v128h64V64z`},plus:{viewBox:`0 0 448 512`,d:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`},restore:{viewBox:`0 0 512 512`,d:`M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z`},send:{viewBox:`0 0 512 512`,d:`M511.1 255.1c0 12.8-7.625 24.38-19.41 29.41L44.6 477.4c-4.062 1.75-8.344 2.594-12.59 2.594c-8.625 0-17.09-3.5-23.28-10.05c-9.219-9.766-11.34-24.25-5.344-36.27l73.66-147.3l242.1-30.37L77.03 225.6l-73.66-147.3C-2.623 66.3-.4982 51.81 8.72 42.05c9.25-9.766 23.56-12.75 35.87-7.453L492.6 226.6C504.4 231.6 511.1 243.2 511.1 255.1z`},blunt:{viewBox:`0 0 512 512`,d:`M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z`},slashing:{viewBox:`0 0 512 512`,d:`M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z`},piercing:{viewBox:`0 0 512 512`,d:`M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z`},heat:{viewBox:`0 0 512 512`,d:`M162.22 21.312c-183.876 106.68 51.994 227.35-10.19 332.47C116.95 413.083 38.11 325.45 43.75 227-6.035 353.376 30.21 443.745 95.22 492.75c1.386.34 17.577.498 41.186.562-28.478-16.9-32.06-75.355 32.813-103.25l15.78-7L182.062 400c-1.356 8.34-.318 13.95 1.188 16.937 1.507 2.987 3.106 3.544 5.844 4.094 5.475 1.1 16.963-2.395 26.28-14.624 18.636-24.457 29.117-80.228-26.874-167l-4.094-6.437-13.906-19.25 23.25 9.905 5.25 1.75c80.85 25.498 135.3 58.46 174.625 112.72 21.544-22.906 38.7-56.835 43.812-91.69l3.5-27.468 13.438 23.97c25.525 45.802 30.267 104.912 11.094 156.5-14.23 38.28-42.036 72.34-84 93.5 13.623-.01 24.05.032 25.25.124 154.76-34.77 139.345-244.952-14.19-394.093.012.726 0 1.46 0 2.188 78.964 185.87-136.465 189.104-119.25 11.47-41.686 100.463-132.86-2.147-91.06-91.283zM269.093 332.25c13.51 15.806 22.35 33.086 22.78 50.812.587 24.03-9.293 47.12-24.53 66.563-14.832 18.926-34.837 34.62-56.625 43.656 33.127-.065 64.926-.16 95.217-.25l-.062-.186c30.95-18.584 47.31-38.83 53.75-57.813 6.44-18.982 3.25-37.246-5.844-53.718-15.44-27.97-49.705-47.71-84.686-49.062z`},cold:{viewBox:`0 0 512 512`,d:`M238.406 26.844c-9.653.12-18.926 2.69-30.437 7.062l-157.282 57c-20.984 7.65-21.587 11.834-22.344 33.28L20.937 358.22c-1.207 27.514-.654 33.187 23.25 43.56l185.783 81.41c19.34 8.29 31.906 7.655 45.186 3.218l181.938-56.53c21.95-7.295 25.04-9.627 25.875-36.845l7.686-250.155c.662-17.37-5.667-24.695-18.78-29.625L271.062 34.375c-12.977-5.344-23.003-7.653-32.657-7.53zm.813 24.875c23.637-.053 45.564 8.434 87.874 24.874 95.545 37.123 131.71 53.8 69.687 77.937-74.002 28.802-128.175 45.115-172.28 25.814L113.47 131.75c-34.57-15.127-44.69-27.46 17.843-50.094 55.64-20.14 82.742-29.882 107.906-29.937zm44.718 43.75c-38.284.402-55.285 21.205-56.813 38.936-.873 10.132 2.95 19.6 12.406 26.25 9.456 6.65 25.355 10.56 48.97 5.938 35.817-7.01 61.536-15.056 77.5-22.844 7.982-3.894 13.464-7.737 16.5-10.844 3.036-3.107 3.453-4.942 3.438-6-.016-1.057-.44-2.675-3.313-5.406-2.873-2.73-8.03-6.04-15.22-9.156-14.378-6.233-36.757-11.877-65.717-15.72-6.355-.842-12.28-1.213-17.75-1.155zM59.25 134c10.372-.29 29.217 7.2 63.906 22.656 140.925 62.786 140.52 65.876 130.97 200.656-7.783 109.81-8.797 109.85-128.47 59.282-73.15-30.91-86.806-40.853-85.187-88.97l5.468-162.937c.674-20.034 1.557-30.358 13.312-30.687zm381.938 30.906c29.172-.384 29.1 28.075 26.75 105.25-4.118 135.132-9.05 140.184-120.375 173.72-70.42 21.21-81.49 25.614-78.97-12.032l11-164.156c3.217-48.034 7.588-51.508 94.813-83.907 31.323-11.633 52.534-18.686 66.78-18.874zm-20.438 40.688c-.332-.002-.674.015-1 .03-5.22.263-10.226 2.77-14.188 8.407-3.96 5.638-6.81 14.71-5.687 27.907 1.448 17.033-4.507 38.11-15.156 56.938-10.65 18.827-26.502 35.91-47.814 38.813-29.127 3.968-42.41 23.58-43.5 42.062-.545 9.24 2.108 18.03 7.688 24.594s14.088 11.335 27.187 12.03c41.146 2.185 71.336-10.766 91.595-39.155 20.26-28.39 30.396-73.76 25.875-136.595-1.876-26.076-14.708-34.977-25-35.03zm-246.25 8.844c-.644 0-1.218.063-1.72.187-2.003.494-3.685 1.53-5.655 4.813-1.913 3.186-3.688 8.618-4.406 16.343l-.064.657c-1.388 16.732-8.098 28.602-17.844 35.063-9.745 6.46-20.794 7.808-31.125 9.094-10.33 1.286-20.177 2.39-28.156 5.75-7.977 3.36-14.36 8.38-19.468 19.78-7.2 16.076-7.143 28.027-3.124 38.563 4.018 10.537 12.688 20.106 24.687 28.75 23.998 17.29 60.27 29.956 88.906 41.844 11.386 4.727 20.496 6.484 27.282 6.126 6.787-.358 11.278-2.423 15.375-6.562 8.195-8.28 14.057-27.692 15-57.344 2.024-63.623-18.84-110.284-38.656-130.875-8.668-9.008-16.52-12.193-21.03-12.188zm184.22 6.812c-.95-.003-1.927.035-2.97.094-35.464 1.99-48.477 12.867-52.5 24.062-4.023 11.196.826 27.07 10.844 39.78 11.488 14.58 20.59 15.736 30.437 12.283 9.848-3.455 20.542-14.108 27.376-26.908s9.512-27.397 7.188-36.28c-1.163-4.443-3.144-7.422-6.47-9.626-2.908-1.928-7.274-3.388-13.905-3.406z`},electrical:{viewBox:`0 0 512 512`,d:`M376 211H256V16L136 301h120v195z`},emp:{viewBox:`0 0 512 512`,d:`M133.844 19.97c-28.18.03-55.19 11.19-77.875 33.624-26.88 26.58-37.526 56.483-36.095 85.875 1.43 29.39 15.237 58.516 39 82.28 9.592 9.593 44.044 33.04 74.78 52.563 1.14.723 2.104 1.293 3.22 2l44.344-44.344c-22.65-18.013-45.176-36.208-53.72-44.75h-.03c-24.88-24.882-22.98-56.233-5.626-73.032 17.354-16.8 48.748-18.29 73.25 5.937 8.61 8.51 26.702 30.837 44.656 53.313l38.438-38.407c-.71-1.12-1.305-2.073-2.032-3.218-19.468-30.66-42.827-64.955-52.47-74.656C195.738 33.16 165.59 20.706 136.564 20c-.91-.022-1.81-.032-2.718-.03zm190.312 77.25-34.72 20.624c.836 1.31 1.673 2.633 2.502 3.937 19.683 31 36.406 59.032 36.406 59.032l3.75 6.25-5.156 5.157-46.313 46.31-7.47 7.47-6.5-8.344s-12.84-16.436-28.5-36.187l-28.843 28.843a9056.369 9056.369 0 0 0 36.22 28.437l8.374 6.47-7.5 7.5-52.344 52.374-5.156 5.156-6.25-3.75s-24.577-14.675-53.125-32.688l-19.78 48.22 36.375-14.344 15.156 81.718 28.126-55.28 60.406 63.25-15.718-86.126 51.875 6.28 2.624 1.345 4.03 47.344 77.595 11.092-12.095 52.375L403.47 492h86.624v-81.594l-50.375-29.22 10.092-41.31-96.718-3.032 14.094-44.313-42.157-29.967 2.345-21.094 52.344 17.06-31.126-69.75 42.72-22.53-65.44-20.063-1.718-48.968zm-35.78 54.03-36.907 36.906c11.742 14.79 19.468 24.643 23.405 29.688l33.656-33.656a2417.118 2417.118 0 0 0-20.155-32.938zm-92.407 92.406-42.876 42.875a2446.831 2446.831 0 0 0 32.937 20.158l39.72-39.75c-5.06-3.934-14.962-11.59-29.78-23.282z`},metaphysical:{viewBox:`0 0 512 512`,d:`M486 203.652H310.111L256 37.113l-54.111 166.539H26l142.22 103.623-54.462 167.612L256 371.24l142.242 103.646-54.473-167.612zm-85.995 28.008-65.335 47.596-15.46-47.596h80.795zM256 127.708l24.658 75.91H231.33zM111.995 231.66h80.795l-15.45 47.596zm55.097 169.713 24.932-76.743 40.194 29.29zm34.041-104.762 21.1-64.951h67.524l21.099 64.95-54.867 39.977zm143.731 104.762-65.082-47.454 40.194-29.29zm-37.983-264.359-10.424-32.092a183.269 183.269 0 0 1 114.322 81.21H376.43a155.293 155.293 0 0 0-69.55-49.118zM129 371.328l-10.413 32.049a182.425 182.425 0 0 1-43.918-142.581l26.684 19.435v2.847A153.804 153.804 0 0 0 129 371.284zm177.104 58.108 26.64 19.413a182.447 182.447 0 0 1-153.51 0l26.64-19.413a154.79 154.79 0 0 0 100.23 0zM135.569 186.133h-34.348a183.269 183.269 0 0 1 114.322-81.21l-10.424 32.091a155.293 155.293 0 0 0-69.55 49.119zm303.12 96.955a181.922 181.922 0 0 1-45.276 120.245L383 371.285a153.804 153.804 0 0 0 27.68-88.197v-2.846l26.683-19.446a183.685 183.685 0 0 1 1.325 22.292z`},death:{viewBox:`0 0 512 512`,d:`M296.625 25.406c-63.794.388-135.81 14.683-206.03 32.844-3.472 34.08 2.226 68.906 14.03 104.25C181.175 75.936 393.65 44.825 486.72 128 456.02 50.466 384.046 24.874 296.624 25.406zM65.655 61.438 27.906 71c5.643 78.022 28.546 132.393 60.44 174.47-16.54 10.348-40.693 19.673-68.782 26.843 5.664 6.597 14.25 16.18 30.53 18.53 24.846-4.33 39.912-14.982 53.75-26.593 76.24 85.145 190.22 118.955 253.126 224.22l49.436-.126C290.996 275.316 81.01 364.804 65.656 61.438z`},psychic:{viewBox:`0 0 512 512`,d:`M65.125 18.344C47.11 49.844 36.72 86.262 36.72 125.124c0 80.293 43.973 150.497 109.124 187.75.403-6.904.92-13.833 1.625-20.75-55.33-34.965-92.064-96.676-92.064-167 0-39.426 11.63-75.964 31.563-106.78H65.124zm69.03 0c-25.61 28.273-41.374 65.635-41.374 106.78 0 51.08 24.052 96.656 61.44 125.97l.06-.25c1.612-6.61 3.473-13.008 5.69-19.125-29.73-25.896-48.5-64.026-48.5-106.595 0-42.848 19.254-80.837 49.436-106.78h-26.75zm210.532 0c30.125 25.95 49.438 64.003 49.438 106.78 0 41.152-17.546 78.157-45.563 103.97 2.26 6.282 4.116 12.876 5.657 19.687 35.748-29.366 58.592-73.883 58.592-123.655 0-41.123-15.81-78.5-41.406-106.78h-26.72zm73.407 0c20.06 30.867 32.094 67.387 32.094 106.78 0 69.457-35.82 130.505-90 165.69.545 7.037.933 14.107 1.187 21.123 64.267-37.483 107.53-107.18 107.53-186.812 0-38.925-10.745-75.328-28.874-106.78h-21.936zm-165.313 2.28c-57.625 0-104.53 46.906-104.53 104.532 0 28.606 11.56 54.573 30.25 73.47 4.13-4.712 8.84-8.817 14.094-12.19-15.844-15.56-25.656-37.237-25.656-61.28 0-47.527 38.316-85.844 85.843-85.844 47.528 0 85.845 38.317 85.845 85.844 0 23.16-9.108 44.114-23.938 59.53 5.488 3.14 10.394 7.033 14.688 11.533 17.327-18.666 27.938-43.657 27.938-71.064 0-57.626-46.905-104.53-104.532-104.53zm-4.186 55.564c-21.622 2.8-40.97 27.91-40.97 60.28 0 17.846 6.173 33.653 15.282 44.595l10.188 12.218-15.656 2.94c-11.884 2.226-20.62 8.512-28.032 18.655-7.41 10.143-13.023 24.216-16.97 40.406-7.188 29.5-8.736 65.498-8.967 97.126h38.999l.655 8.656 9.906 132.5h83.69l8.75-132.437.592-8.72h37.125c-.02-32-.39-68.49-6.906-98.217-3.57-16.297-8.992-30.34-16.5-40.375-7.505-10.035-16.654-16.288-29.967-18.344L273.875 193l10.094-12.625c8.713-10.89 14.592-26.495 14.592-43.906 0-34.515-21.658-60.22-45.468-60.22-2.672 0-4.275-.092-4.5-.063z`},radiation:{viewBox:`0 0 512 512`,d:`M253.78 17.188c-130.728 0-236.905 106.177-236.905 236.906C16.875 384.824 123.052 491 253.78 491c130.73 0 236.907-106.18 236.907-236.906 0-130.73-106.177-236.906-236.906-236.906zm0 18.687c120.63 0 218.22 97.59 218.22 218.22 0 120.626-97.59 218.218-218.22 218.218-120.628 0-218.218-97.59-218.218-218.22s97.59-218.218 218.22-218.218zm101.19 46.313-76.41 132.875c15.916 9.635 25.177 26.33 26.125 43.78h148.407c1.644-70.01-33.49-138.867-98.125-176.656zm-205.126 2.468c-27.1 16.725-50.68 40.147-67.72 69.656-19.01 32.928-26.926 69.12-26 104.532H196a54.04 54.04 0 0 1 7.188-24.438c5.21-9.024 12.64-16 21.218-20.625L149.844 84.657zm100.594 141.156a36.723 36.723 0 0 0-2.594.094c-11.446.793-22.288 7.084-28.5 17.844-9.94 17.216-4.09 38.967 13.125 48.906 17.213 9.94 38.935 4.12 48.874-13.094 9.94-17.215 4.12-38.967-13.094-48.906-5.648-3.26-11.768-4.824-17.813-4.844zm28.218 82.375c-16.127 9.75-36.864 10.846-54.406 1.25l-68.03 117.22c29.454 16.785 61.044 25.177 92.75 26 34.567.898 68.72-7.786 99.124-24.032l-69.438-120.438z`},corrosive:{viewBox:`0 0 512 512`,d:`M433.814 68.664c-2.74.05-5.495.423-8.242 1.152-8.47 2.25-15.3 7.512-20.44 14.49C292.905 120.865 186.494 154.58 75.276 190.4c-39.714 12.79-64.6 51.163-53.006 86.784 11.597 35.62 54.342 52.277 94.035 39.277l-.002.002c109.41-35.827 214.424-69.036 325.12-104.656.56.212 1.13.39 1.694.58-2.62 2.935-4.226 6.796-4.226 11.04 0 9.164 7.43 16.593 16.594 16.593 9.165 0 16.596-7.43 16.596-16.593 0-4.32-1.664-8.24-4.367-11.192 12.75-4.865 21.353-16.866 25.535-30.898 4.547-15.257 4.504-33.654-.584-52.48-5.088-18.828-14.327-34.77-25.94-45.712-8.712-8.206-19.263-13.79-30.175-14.43-.91-.052-1.822-.07-2.736-.054zm.497 18.68a17.2 17.2 0 0 1 1.377.035c5.567.358 11.818 3.34 18.22 9.37 8.535 8.04 16.44 21.165 20.716 36.986 3.622 13.4 4 26.397 2.012 36.852h-52.783c-3.517-6.207-6.512-13.352-8.622-21.158-4.276-15.822-4.046-31.094-.716-42.266 3.33-11.172 9.122-17.497 15.855-19.285a16.148 16.148 0 0 1 3.94-.536zm-38.414 17.043c-3.815 14.734-3.516 32.133 1.29 49.92a114.327 114.327 0 0 0 5.728 16.26h-151.22c-64.405 20.742-125.856 40.507-163.35 52.59-23.24 7.486-35.353 27.407-30.406 42.593 4.946 15.188 26.582 24.333 49.75 16.75 66.89-21.89 199.01-64.39 302.822-97.803 3.76 5.807 7.998 10.967 12.62 15.323.066.06.135.118.2.18-104.876 33.753-241.66 77.74-309.83 100.05-30.827 10.09-64.424-1.334-73.344-28.72-8.92-27.385 11.603-56.22 42.438-66.155 68.055-21.93 208.2-66.996 313.302-100.988zm59.58 180.205c-16.948 63.255-40.507 54.472-40.507 91.5 0 22.36 18.146 40.508 40.507 40.508 22.36 0 40.507-18.147 40.507-40.508 0-39.97-23.256-27.12-40.507-91.5z`},coins:{viewBox:`0 0 512 512`,d:`M512 80C512 98.01 497.7 114.6 473.6 128C444.5 144.1 401.2 155.5 351.3 158.9C347.7 157.2 343.9 155.5 340.1 153.9C300.6 137.4 248.2 128 192 128C183.7 128 175.6 128.2 167.5 128.6L166.4 128C142.3 114.6 128 98.01 128 80C128 35.82 213.1 0 320 0C426 0 512 35.82 512 80V80zM160.7 161.1C170.9 160.4 181.3 160 192 160C254.2 160 309.4 172.3 344.5 191.4C369.3 204.9 384 221.7 384 240C384 243.1 383.3 247.9 381.9 251.7C377.3 264.9 364.1 277 346.9 287.3C346.9 287.3 346.9 287.3 346.9 287.3C346.8 287.3 346.6 287.4 346.5 287.5L346.5 287.5C346.2 287.7 345.9 287.8 345.6 288C310.6 307.4 254.8 320 192 320C132.4 320 79.06 308.7 43.84 290.9C41.97 289.9 40.15 288.1 38.39 288C14.28 274.6 0 258 0 240C0 205.2 53.43 175.5 128 164.6C138.5 163 149.4 161.8 160.7 161.1L160.7 161.1zM391.9 186.6C420.2 182.2 446.1 175.2 468.1 166.1C484.4 159.3 499.5 150.9 512 140.6V176C512 195.3 495.5 213.1 468.2 226.9C453.5 234.3 435.8 240.5 415.8 245.3C415.9 243.6 416 241.8 416 240C416 218.1 405.4 200.1 391.9 186.6V186.6zM384 336C384 354 369.7 370.6 345.6 384C343.8 384.1 342 385.9 340.2 386.9C304.9 404.7 251.6 416 192 416C129.2 416 73.42 403.4 38.39 384C14.28 370.6 .0003 354 .0003 336V300.6C12.45 310.9 27.62 319.3 43.93 326.1C83.44 342.6 135.8 352 192 352C248.2 352 300.6 342.6 340.1 326.1C347.9 322.9 355.4 319.2 362.5 315.2C368.6 311.8 374.3 308 379.7 304C381.2 302.9 382.6 301.7 384 300.6L384 336zM416 278.1C434.1 273.1 452.5 268.6 468.1 262.1C484.4 255.3 499.5 246.9 512 236.6V272C512 282.5 507 293 497.1 302.9C480.8 319.2 452.1 332.6 415.8 341.3C415.9 339.6 416 337.8 416 336V278.1zM192 448C248.2 448 300.6 438.6 340.1 422.1C356.4 415.3 371.5 406.9 384 396.6V432C384 476.2 298 512 192 512C85.96 512 .0003 476.2 .0003 432V396.6C12.45 406.9 27.62 415.3 43.93 422.1C83.44 438.6 135.8 448 192 448z`},"person-running":{viewBox:`0 0 448 512`,d:`M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z`},shield:{viewBox:`0 0 512 512`,d:`M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z`},crosshairs:{viewBox:`0 0 512 512`,d:`M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z`},range:{viewBox:`2.57 -59.10 265.44 265.44`,d:`M171.56 3.16L187.05 7.34A12.12095 12.12095 0 0 1 180.72 30.75L165.24 26.56A12.12095 12.12095 0 0 1 171.56 3.16ZM92.10 9.38L107.22 4.04A12.12155 12.12155 0 0 1 115.30 26.90L100.18 32.24A12.12155 12.12155 0 0 1 92.10 9.38ZM2.93 129.46L6.80 113.89A12.12155 12.12155 0 0 1 30.32 119.74L26.45 135.31A12.12155 12.12155 0 0 1 2.93 129.46ZM31.99 59.53L41.61 46.70A12.12155 12.12155 0 0 1 61.01 61.24L51.39 74.08A12.12155 12.12155 0 0 1 31.99 59.53ZM207.93 56.74A30.0361 30.0361 0 1 0 268.01 56.74A30.0361 30.0361 0 1 0 207.93 56.74Z`},burst:{viewBox:`135.5 153 830 830`,d:`M282.5 982C284 981.4 289.1 977.7 293.9 973.7C298.6 969.7 308.4 961.5 315.5 955.5C322.6 949.6 330.1 943.3 332.1 941.6C336 938.2 336.5 937.8 350.2 926.3C377.5 903.6 390 892.8 391.9 890.4C396.5 884.6 396.5 881.4 392 858.5C390.5 851 389.1 843.5 387.7 836C385.2 822.1 380.8 816.6 372.3 816.6C369.6 816.7 365.5 817.6 363 818.7C360.5 819.9 349.5 824.5 338.5 829C312.5 839.7 312.5 839.7 306 859.1C303.3 867 296.1 888.1 290 906C268.3 969.6 267.8 971 268.5 973.9C268.8 975.5 270.3 977.9 271.8 979.2C275.9 983.1 278.2 983.6 282.5 982ZM478.8 947.4C482.2 945.5 486.2 940.2 487.5 936C487.9 934.6 489.3 931.2 490.5 928.5C491.8 925.8 500.5 904.8 510 882C519.4 859.2 528 838.6 529.1 836.3C530.1 834 531 831.9 531 831.5C531 831.2 532 828.8 533.1 826.2C538.2 814.9 539 813 539 812.5C539 812.1 539.9 810 540.9 807.7C542 805.4 546.1 795.6 550 786C559.2 763.7 559.3 763.5 563.8 760.5C569.2 756.9 575.6 756.3 581.2 758.8C583.7 759.9 599.4 770.4 616.1 782.2C632.8 794 663.1 815.3 683.5 829.6C703.9 844 736 866.6 754.9 879.9C773.8 893.2 791 905 793.1 906C804.7 912 818.3 903.4 818.3 890.3C818.3 887.3 817.8 883.9 817.2 882.7C815.1 878.1 813 873.2 813 872.6C813 872.3 812.1 870.1 811.1 867.7C805.8 856 726.9 663.5 726.4 661.1C725.5 656.6 727.8 650.2 731.9 646.1C735.4 642.6 739.1 641.2 809.1 618.1C923.1 580.3 924.3 579.9 928 578C940.2 571.7 940.7 553.7 928.9 547C925.6 545.2 917.6 543.4 890 538.4C885.3 537.5 877 536 871.5 535C866 533.9 857.5 532.4 852.5 531.5C847.5 530.6 841.5 529.5 839 529C834.6 528.1 823.7 526.1 811.5 523.9C808.2 523.3 803.5 522.5 801 522C798.5 521.5 792.5 520.4 787.5 519.5C782.5 518.6 776.5 517.5 774 517C771.5 516.5 765.5 515.4 760.5 514.5C734.9 509.9 730.6 508.3 727 502.5C722.2 494.6 723.4 488 732.5 474.9C736 469.7 742.7 459.9 747.4 453C752 446.1 762.7 430.4 771.2 418C779.7 405.6 791 389 796.5 381C843.3 312.3 840 317.5 840 312.5C840 306.5 837.5 300.6 833.7 297.7C829.3 294.4 822.8 292.9 818.2 294.2C814.2 295.2 813.6 295.5 798.5 302.5C793 305.1 785.8 308.5 782.5 310C770.4 315.6 761.4 319.8 756 322.3C753 323.7 747.1 326.4 743 328.3C738.9 330.2 731.5 333.7 726.5 336C653.3 370 636.1 378 633.7 378.5C628.7 379.8 622.5 378.2 618.1 374.3C613.7 370.6 612.4 368.3 611 361.5C609.9 355.9 605.5 334.7 602.5 320.5C601.1 313.9 598.9 303.1 597.5 296.5C596.2 289.9 594.1 280.2 593 275C591.9 269.8 589.9 260.1 588.5 253.5C587.1 246.9 585.2 237.4 584.1 232.5C583 227.6 581.4 219.9 580.5 215.5C577.1 198.8 573.2 194.5 561.4 194.5C548.9 194.5 549.6 193.5 516.5 262.5C513.6 268.6 504.6 287 496.5 303.5C488.4 320 480.7 335.8 479.5 338.6C474.2 349.9 463.6 354.9 454.7 350.4C451.2 348.6 435.4 338.5 412.7 323.7C404.9 318.5 390.2 308.9 380 302.3C363.3 291.5 336.3 273.9 306.5 254.5C300.4 250.6 286.4 241.4 275.2 234.2C207.4 190.1 210.5 191.8 202.2 194.1C195.9 195.9 190.3 201.7 189.4 207.6C188.4 214.6 189.5 217.7 198.7 233.1C203.4 241 207.8 248.4 208.4 249.5C210.1 252.6 274.6 360.4 280.5 370C300.3 402.4 323.1 441.5 324.1 444.9C326.4 452.5 322 461.8 314.6 465.1C312.2 466.1 285.2 471.1 249.5 477C215.9 482.5 187.3 487.6 185.7 488.2C179.3 490.7 174.1 500.5 175.5 507.8C176.2 511.7 179.6 517.2 182.1 518.9C183.1 519.5 195.7 529 210.2 540.2C224.7 551.3 247.5 568.9 261 579.2C289.4 601 290.6 602.1 293.2 607.8C296.9 615.9 294.8 620.3 274.5 647.5C270 653.5 262 664.6 256.7 672C251.4 679.4 241.2 693.6 234 703.5C226.8 713.4 215.1 729.6 208 739.5C200.8 749.4 188.9 765.8 181.5 776C148.5 821.3 148.4 821.5 149.4 828.5C150.2 833.8 152.9 838.1 157.6 841.6C160.8 844.1 162.2 844.5 166.9 844.3C170 844.2 174.3 843.3 176.5 842.4C178.7 841.5 181.4 840.4 182.5 840C190 837.1 198.8 833.7 200.5 832.9C201.6 832.4 222.1 824.4 246 815.1C269.9 805.8 290.6 797.8 292 797.2C293.4 796.7 298.8 794.5 304 792.5C309.2 790.4 314.9 788.2 316.5 787.5C318.1 786.8 337.3 779.3 359 770.9C393.5 757.4 399.2 755.5 404.1 755.5C408.7 755.6 410.4 756.1 413.4 758.3C419.5 763 420.1 764.3 423 780.5C423.5 783.2 424.6 789.3 425.5 794C426.4 798.7 427.5 804.8 428 807.5C428.5 810.2 430.1 818.8 431.5 826.5C434.8 844.6 435.4 847.6 438.6 865C440 873 441.6 881.5 442 884C443.2 890.3 445.9 905.5 447 911.5C450.1 928.5 451 933.2 451.9 936.8C455.1 948.6 468.2 953.7 478.8 947.4ZM945.7 745C951.2 743 953.7 735.3 950.2 731.1C949.3 729.9 941.5 723.9 932.9 717.7C924.3 711.6 910.1 701.4 901.4 695.1C892.6 688.8 881.5 680.6 876.5 677C871.5 673.3 861.9 666.4 855.1 661.6C839.1 650.4 839.9 650.5 815 659.7C791.7 668.3 789.2 670 788.3 678.5C787.9 681.9 788.6 684.3 792.4 692.4C794.9 697.8 797 702.4 797 702.5C797 702.7 799.6 708.4 802.9 715.2C811.8 734.1 812.8 734.7 842.5 737C849.6 737.5 860.5 738.4 866.5 739C872.5 739.5 885.6 740.6 895.5 741.5C905.4 742.3 919.6 743.5 927 744.1C934.4 744.7 940.7 745.3 940.9 745.6C941.5 746.2 942.4 746.1 945.7 745ZM665.1 305.5C667.5 304.6 670.9 303.3 672.5 302.6C674.1 301.8 678.4 299.9 682 298.3C685.6 296.7 692.8 293.4 698.2 291C708.8 286.3 712 284 714.2 279.5C716 275.9 716.5 273.6 724.5 238.5C725.2 235.2 726.7 228.4 727.8 223.5C735 192 740 169 740.5 165.5C741.3 159.9 738.4 155.5 733.1 154C726.3 152.2 726.7 151.9 702.5 177C655.6 225.6 643.2 238.6 641.2 241.5C637.3 246.9 636.9 251.2 639.1 261.4C640.1 266.4 642.2 276.1 643.6 283C646.8 298.7 648.3 301.8 654 304.8C659.2 307.4 659.5 307.4 665.1 305.5Z`},sword:{viewBox:`0 0 512 512`,d:`M110.1 227.6c-6.25-6.248-16.37-6.248-22.62 0l-18.75 18.75c-5.498 5.373-6.249 13.87-1.999 20.25l53.37 79.99l-53.5 53.5l-29.25-14.62c-5.375-2.748-11.75-1.623-16 2.625l-17.25 17.25c-5.5 5.375-5.5 14.25 0 19.62l82.87 82.87c5.375 5.5 14.25 5.5 19.62 0l17.25-17.25c4.25-4.25 5.375-10.62 2.625-16l-14.62-29.25l53.5-53.5l79.99 53.41c6.375 4.25 14.87 3.5 20.25-2l18.75-18.79c6.25-6.25 6.25-16.37 0-22.62L110.1 227.6zM493.7 .1497l-93.74 15.88L171.9 244.1l95.99 95.99l228.1-228.1l15.87-93.75C513.3 7.781 504.2-1.35 493.7 .1497z`},physical:{viewBox:`0 0 512 512`,d:`M165.906 18.688C15.593 59.28-42.187 198.55 92.72 245.375h-1.095c.635.086 1.274.186 1.906.28 8.985 3.077 18.83 5.733 29.532 7.94C173.36 273.35 209.74 321.22 212.69 368c-33.514 23.096-59.47 62.844-59.47 62.844l26.28 38.686L138.28 493h81.97c-40.425-40.435-11.76-85.906 36.125-85.906 48.54 0 73.945 48.112 36.156 85.906h81.126l-40.375-23.47 26.283-38.686s-26.376-40.4-60.282-63.406c3.204-46.602 39.5-94.167 89.595-113.844 10.706-2.207 20.546-4.86 29.53-7.938.633-.095 1.273-.195 1.908-.28h-1.125c134.927-46.82 77.163-186.094-73.157-226.69-40.722 39.37 6.54 101.683 43.626 56.877 36.9 69.08 8.603 127.587-72.28 83.406-11.88 24.492-34.213 41.374-60.688 41.374-26.703 0-49.168-17.167-60.97-42-81.774 45.38-110.512-13.372-73.437-82.78 37.09 44.805 84.35-17.508 43.626-56.876zm90.79 35.92c-27.388 0-51.33 27.556-51.33 63.61 0 36.056 23.942 62.995 51.33 62.995 27.387 0 51.327-26.94 51.327-62.994 0-36.058-23.94-63.61-51.328-63.61z`},social:{viewBox:`230 70 1090 1090`,d:`M372 1107H750Q778 1107 781 1079L796 967L912 980Q982 986 1001 888Q1003 870 985 864Q935 850 910 808Q906 795 922 796L985 796Q1005 794 1004 774L999 706H1045Q1097 701 1094 650Q1092 638 1086 627L1018 495Q1004 465 999 430Q970 255 860 175Q760 106 620 112Q440 116 330 220Q235 315 238 480Q240 640 340 750Q378 794 372 852L343 1070Q341 1104 372 1107ZM868 431A52 52 0 1 1 868 535A52 52 0 1 1 868 431ZM1162.8 698.6A138 138 0 0 1 1162.8 919.4A28 28 0 0 1 1129.2 874.6A82 82 0 0 0 1129.2 743.4A28 28 0 0 1 1162.8 698.6ZM1233.2 633.8A233 233 0 0 1 1233.2 987.2A28 28 0 0 1 1196.8 944.8A177 177 0 0 0 1196.8 676.2A28 28 0 0 1 1233.2 633.8Z`},mental:{viewBox:`64 64 512 512`,d:`M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z`},magic:{viewBox:`0 0 576 512`,d:`M248.8 4.994C249.9 1.99 252.8 .0001 256 .0001C259.2 .0001 262.1 1.99 263.2 4.994L277.3 42.67L315 56.79C318 57.92 320 60.79 320 64C320 67.21 318 70.08 315 71.21L277.3 85.33L263.2 123C262.1 126 259.2 128 256 128C252.8 128 249.9 126 248.8 123L234.7 85.33L196.1 71.21C193.1 70.08 192 67.21 192 64C192 60.79 193.1 57.92 196.1 56.79L234.7 42.67L248.8 4.994zM427.4 14.06C446.2-4.686 476.6-4.686 495.3 14.06L529.9 48.64C548.6 67.38 548.6 97.78 529.9 116.5L148.5 497.9C129.8 516.6 99.38 516.6 80.64 497.9L46.06 463.3C27.31 444.6 27.31 414.2 46.06 395.4L427.4 14.06zM461.4 59.31L356.3 164.3L379.6 187.6L484.6 82.58L461.4 59.31zM7.491 117.2L64 96L85.19 39.49C86.88 34.98 91.19 32 96 32C100.8 32 105.1 34.98 106.8 39.49L128 96L184.5 117.2C189 118.9 192 123.2 192 128C192 132.8 189 137.1 184.5 138.8L128 160L106.8 216.5C105.1 221 100.8 224 96 224C91.19 224 86.88 221 85.19 216.5L64 160L7.491 138.8C2.985 137.1 0 132.8 0 128C0 123.2 2.985 118.9 7.491 117.2zM359.5 373.2L416 352L437.2 295.5C438.9 290.1 443.2 288 448 288C452.8 288 457.1 290.1 458.8 295.5L480 352L536.5 373.2C541 374.9 544 379.2 544 384C544 388.8 541 393.1 536.5 394.8L480 416L458.8 472.5C457.1 477 452.8 480 448 480C443.2 480 438.9 477 437.2 472.5L416 416L359.5 394.8C354.1 393.1 352 388.8 352 384C352 379.2 354.1 374.9 359.5 373.2z`}};function KN({name:e,label:t,className:n=``}){let{viewBox:r,d:i}=GN[e];return(0,W.jsxs)(`svg`,{className:`icon icon-${e} ${n}`.trim(),xmlns:`http://www.w3.org/2000/svg`,viewBox:r,role:t?`img`:void 0,"aria-label":t,"aria-hidden":!t||void 0,children:[t&&(0,W.jsx)(`title`,{children:t}),(0,W.jsx)(`path`,{d:i})]})}function qN({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,W.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:e}),(0,W.jsxs)(`div`,{className:`stepper`,children:[(0,W.jsx)(G,{round:`lg`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower Level`,children:(0,W.jsx)(WN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,W.jsx)(G,{round:`lg`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise Level`,children:(0,W.jsx)(WN,{is:`plus`})})]})]})}var JN=e=>dl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function YN(e,t){let n=e.match(/\(([^)]*)\)\s*$/);return e.split(`,`).flatMap(e=>{let r=e.trim().match(/^(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?$/),i=r&&JN(r[2]);if(!r||!i)return[];let a=n?n[1]:r[3];return[{type:i,amount:Number(r[1]),from:t,...a?{where:a.trim()}:{}}]})}function XN(e,t,n){return e.split(/(?<=\.)\s+/).flatMap(e=>{let r=e.match(/Rank \*(\d+)/i),i=r?null:e.match(/\+(\d+) to [^.]*resist/i);if(!r&&!i||!/resist/i.test(e))return[];let a=r?Number(r[1])*t:Number(i[1]),o=new Set;for(let[t,n]of Object.entries(ul))RegExp(`all ${t} damage types`,`i`).test(e)&&n.forEach(e=>o.add(e));for(let t of dl)RegExp(`\\b${t.replace(`/`,`\\/`)}\\b`).test(e)&&o.add(t);let s=e.match(/attacks that hit (?:its|their|the) (\w+)/i)?.[1];return[...o].map(e=>({type:e,amount:a,from:n,...s?{where:s}:{}}))})}function ZN(e,t,n){let r=t.flatMap(t=>{if(!t.equipped)return[];let n=t.item&&e.items.find(e=>e.id===t.item)||wl(e.items,t.name);return n?.resistances?YN(n.resistances,n.name):[]}),i=new Map;for(let e of n)i.set(e.trait,Math.max(i.get(e.trait)??0,e.rank));let a=[...i].flatMap(([t,n])=>{let r=e.traits.find(e=>e.id===t);return r?XN(r.effect,n,r.name):[]});return[...r,...a]}var QN={play:{levelUp:!0,actions:!0,resources:`live`,statMax:!1,statEdit:!0,edit:!0,addTraits:!0},build:{levelUp:!1,actions:!1,resources:`full`,statMax:!0,statEdit:!1,edit:!0,addTraits:!1},sample:{levelUp:!1,actions:!1,resources:`full`,statMax:!0,statEdit:!1,edit:!1,addTraits:!1}};function $N({children:e,aside:t,as:n=`h3`}){let r=(0,W.jsx)(n,{className:`sf-sheet-title`,children:e});return t?(0,W.jsxs)(`div`,{className:`sf-sheet-title-row`,children:[r,t]}):r}var eP={hp:`Hit Points`,vp:`Vibe Points`,sp:`Savvy Points`,mp:`Mana Points`,core:`Core HP (an AI Core's own, apart from its chassis's)`};function tP({resources:e}){return(0,W.jsx)(`ul`,{className:`sf-resources`,children:e.map(({id:e,max:t})=>(0,W.jsxs)(`li`,{className:`sf-resource`,children:[(0,W.jsx)(`strong`,{className:`sf-resource-name resource-${e}`,title:eP[e],children:e.toUpperCase()}),(0,W.jsxs)(`span`,{className:`sf-resource-value`,children:[t??`–`,(0,W.jsxs)(`span`,{className:`sf-resource-max`,children:[` / `,t??`–`]})]})]},e))})}function nP({movement:e}){let t=e?.match(/^\s*([\d.]+)\s*([a-z]+)\s*$/i);return(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-move`,children:[(0,W.jsx)($N,{children:(0,W.jsx)(`span`,{title:`Movement`,children:`Move`})}),(0,W.jsxs)(`div`,{className:`sf-sheet-move-value`,title:`Movement`,children:[(0,W.jsx)(KN,{name:`person-running`,label:`Movement`}),(0,W.jsx)(`span`,{className:`sf-sheet-move-number`,children:t?(0,W.jsxs)(W.Fragment,{children:[t[1],(0,W.jsx)(`span`,{className:`sf-sheet-move-unit`,children:t[2]})]}):e??`–`})]})]})}function rP(e){let{context:t,level:n,head:r,resources:i,stats:a,movement:o,resistances:s,conditions:c,items:l,knowledges:u,abilities:d,skills:f,skillsAside:p,other:m}=e,h=QN[t],g=(0,U.useRef)(null),[_,v]=(0,U.useState)(!1);(0,U.useLayoutEffect)(()=>{let e=g.current;if(!e)return;let t=()=>{let t=e.querySelector(`:scope > .sf-sheet-stats`),n=e.querySelector(`:scope > .sf-sheet-side`);t&&n&&v(n.getBoundingClientRect().top>t.getBoundingClientRect().top+1)};t();let n=new ResizeObserver(t);return n.observe(e),()=>n.disconnect()},[]);let y=(0,W.jsxs)(`div`,{className:`sf-sheet-move-row`,children:[(0,W.jsx)(nP,{movement:o}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-resistances`,children:s})]});return(0,W.jsxs)(`div`,{className:`sf-sheet sf-sheet--${t}`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-level`,"aria-label":`Level ${n}`,children:[(0,W.jsx)(`span`,{className:`sf-sheet-level-label`,children:`Level`}),(0,W.jsx)(`span`,{className:`sf-sheet-level-number`,children:n})]}),h.levelUp&&e.corner&&(0,W.jsx)(`div`,{className:`sf-sheet-corner`,children:e.corner}),h.actions&&e.actions,(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-head`,children:[(0,W.jsx)(`div`,{className:`sf-sheet-who`,children:r.who}),r.description&&(0,W.jsx)(`div`,{className:`sf-sheet-description`,children:r.description})]}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-resources`,children:i}),(0,W.jsxs)(`div`,{className:`sf-sheet-row${_?` is-single`:``}`,ref:g,children:[_&&y,(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-stats`,children:a}),(0,W.jsxs)(`div`,{className:`sf-sheet-side`,children:[!_&&y,(0,W.jsxs)(`div`,{className:`sf-sheet-side-row`,children:[(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-conditions`,children:c}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-items`,children:l})]})]})]}),(0,W.jsxs)(`div`,{className:`sf-sheet-lower`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-knowledges`,children:[(0,W.jsx)($N,{children:`Knowledges`}),u]}),(0,W.jsxs)(`div`,{className:`sf-sheet-pair`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-abilities`,children:[(0,W.jsx)($N,{children:`Abilities`}),d]}),(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-skills`,children:[(0,W.jsx)($N,{aside:p,children:`Skills`}),f]})]}),m&&(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-other`,children:m})]})]})}var iP=e=>e.toLowerCase();function aP({items:e,held:t}){let n=(0,U.useMemo)(()=>ZN(tN,e,t),[e,t]),r=(0,U.useId)(),i=dl.map(e=>{let t=n.filter(t=>t.type===e);return{type:e,own:t,total:t.filter(e=>!e.where).reduce((e,t)=>e+t.amount,0)}}).filter(e=>e.total!==0||e.own.some(e=>e.where&&e.amount!==0));return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)($N,{children:`Resistances`}),i.length?(0,W.jsx)(`ul`,{className:`sf-resistance-list`,children:i.map(({type:e,own:t,total:n},i)=>(0,W.jsxs)(`li`,{className:`sf-resistance`,tabIndex:0,"aria-describedby":`${r}-${i}`,children:[(0,W.jsx)(KN,{name:iP(e),label:e}),(0,W.jsx)(`span`,{className:`sf-resistance-total`,children:n}),(0,W.jsxs)(`div`,{className:`sf-resistance-pop`,role:`tooltip`,id:`${r}-${i}`,children:[(0,W.jsxs)(`strong`,{className:`sf-resistance-pop-title`,children:[e,` `,n]}),(0,W.jsx)(`ul`,{children:t.map((e,t)=>(0,W.jsxs)(`li`,{className:e.where?`is-partial`:void 0,children:[(0,W.jsxs)(`span`,{children:[e.from,e.where&&(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[` (`,e.where,`)`]})]}),(0,W.jsx)(`span`,{className:`sf-resistance-pop-total`,children:e.where&&e.amount>0?`+${e.amount}`:e.amount})]},t))})]})]},e))}):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`None.`})]})}function oP(e){let t=(0,U.useRef)({value:e,from:e});return t.current.value!==e&&(t.current={value:e,from:t.current.value}),t.current.from}function sP({bonus:e,value:t,max:n}){let r=oP(t);return(0,W.jsx)(`div`,{className:`sf-stat-line`,"aria-hidden":`true`,children:Array.from({length:20},(i,a)=>{let o=a+1,s=o<=t?o>n?`over`:o<=e?`bonus`:`filled`:o<=n?`empty`:`unavailable`,c=s===`filled`&&o>r?` is-new`:``;return(0,W.jsx)(`span`,{className:`sf-stat-slot sf-stat-slot--${o%2?`dot`:`square`} is-${s}${c}`},o)})})}function cP({bonus:e=0,value:t}){let n=oP(t);return(0,W.jsx)(`div`,{className:`sf-stat-line`,"aria-hidden":`true`,children:Array.from({length:20},(r,i)=>(0,W.jsx)(`span`,{className:`sf-stat-slot sf-stat-slot--diamond is-${i<e?`bonus`:i<t?`filled${i>=n?` is-new`:``}`:`empty`}`},i))})}function lP(e,t){let n=kN(e),r=t.summary;return su(e,tN,t).map(t=>({group:t,core:r?.coreStats[t]??e.core[t],bonus:r?.coreBonus[t]??0,stats:V[t].map(i=>{if(r?.chassis&&t===`physical`)return{id:i,value:r.stats[i],bonus:0,max:r.stats[i]};let a=(n?.[i]?.bonus??0)+(e.startPoints?.[i]??0);return{id:i,value:r?.stats[i]??a,bonus:a,max:n?.[i]?.max??0}})}))}function uP({step:e,label:t,plus:n}){return(0,W.jsx)(G,{round:`sm`,tone:e.disabled?`gray`:`primary`,ready:!e.disabled,className:n?`is-plus`:void 0,"aria-label":t,title:e.title,onClick:e.onClick,disabled:e.disabled,children:(0,W.jsx)(WN,{is:n?`plus`:`minus`})})}function dP({groups:e,max:t=!1,edit:n}){return(0,W.jsx)(`div`,{className:`sf-stats${n?` sf-stats--edit`:``}`,children:e.map(({group:e,core:r,stats:i,bonus:a=0})=>{let o=n?.core(e);return(0,W.jsxs)(`div`,{className:`sf-stat-group sf-stat-group--${e}${o?.locked?` is-locked`:``}`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-group-head`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-core`,children:[(0,W.jsx)(`span`,{className:`sf-stat-badge`,title:`Core Stat`,children:(0,W.jsx)(KN,{name:e,className:`sf-stat-badge-icon`})}),o&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(uP,{step:o.take,label:`Take a core point from ${e}`}),(0,W.jsx)(uP,{step:o.put,label:`Put a core point in ${e}`,plus:!0})]})]}),(0,W.jsxs)(`h4`,{className:`sf-stat-group-title`,children:[$(e),` - `,r]}),o&&(0,W.jsx)(`span`,{className:`sf-stat-group-count num${o.count.tone?` is-${o.count.tone}`:``}`,children:o.count.text})]}),o?.hint&&(0,W.jsx)(`p`,{className:`sf-stat-hint`,children:o.hint}),!V[e].length&&(0,W.jsxs)(`div`,{className:`sf-stat`,children:[(0,W.jsx)(`div`,{className:`sf-stat-label`,children:(0,W.jsxs)(`strong`,{children:[`Each point in `,$(e),` adds `,3,` MP (Mana Points)`]})}),(0,W.jsx)(cP,{bonus:a,value:r})]}),i.map(e=>{let r=n?.stat(e.id);return(0,W.jsxs)(`div`,{className:`sf-stat`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-label`,children:[(0,W.jsxs)(`strong`,{children:[$(e.id),` - `,e.value]}),t&&(0,W.jsxs)(`span`,{className:`sf-stat-max`,children:[` max `,e.max]}),r&&r.spend>0&&(0,W.jsxs)(`span`,{className:`sf-stat-spend`,children:[`Spend `,r.spend,` `,r.spend===1?`point`:`points`]})]}),r?(0,W.jsxs)(`div`,{className:`sf-stat-row`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-steps`,children:[(0,W.jsx)(uP,{step:r.take,label:`Take a point from ${e.id}`}),(0,W.jsx)(uP,{step:r.put,label:`Add a point to ${e.id}`,plus:!0})]}),(0,W.jsx)(sP,{bonus:e.bonus,value:e.value,max:e.max})]}):(0,W.jsx)(sP,{bonus:e.bonus,value:e.value,max:e.max})]},e.id)})]},e)})})}function fP(e){return e?e.category===`knowledge`?e.types.includes(`language`)?`language`:`knowledge`:e.category===`contact`||e.category===`membership`?`circumstance`:e.category===`starter`?`other`:e.category:`other`}var pP=e=>e===`isekai`?` sf-card--dreft`:``;function mP({children:e,tone:t}){return(0,W.jsx)(`span`,{className:`sf-chip${t?` sf-chip--${t}`:``}`,children:e})}function hP({children:e}){return(0,W.jsx)(`p`,{className:`sf-card-note`,children:e})}function gP({open:e,label:t,onToggle:n,className:r}){return(0,W.jsx)(`button`,{type:`button`,className:`sf-btn sf-btn--bare ${r}`,"aria-label":`${e?`Collapse`:`Expand`} ${t}`,"aria-expanded":e,title:e?`Collapse`:`Expand`,onClick:n,children:(0,W.jsx)(`svg`,{className:r===`sf-card-fold`?`sf-card-chevron`:void 0,viewBox:`0 0 12 8`,"aria-hidden":`true`,focusable:`false`,children:(0,W.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})}var _P=e=>e?e.open?` is-open`:` is-closed`:``;function vP({kind:e,name:t,rank:n,plane:r,chips:i,fold:a,keep:o,actions:s,className:c=``,as:l=`div`,rootProps:u,children:d}){let f=i!=null&&i!==!1,p=`sf-card sf-trait-card sf-trait-card--${e}${pP(r)}${_P(a)}${o?` has-keep`:``}${c?` ${c}`:``}`;return(0,W.jsxs)(l,{className:p,...u,children:[(0,W.jsxs)(`div`,{className:`sf-card-bar`,children:[(0,W.jsxs)(`span`,{className:`sf-card-name`,children:[(0,W.jsx)(DN,{plane:r}),t,n===void 0?``:` (${n})`]}),(f||a||s)&&(0,W.jsxs)(`span`,{className:`sf-card-chips`,children:[i,a&&(0,W.jsx)(gP,{...a,className:`sf-card-fold`}),s]})]}),(0,W.jsxs)(`div`,{className:`sf-card-body`,children:[o,a?(0,W.jsx)(`div`,{className:`sf-card-more`,children:d}):d]})]})}var yP=`Max Range: `,bP=`Area of Effect: `;function xP({stock:e,withResists:t=!0}){let n=e.damage?ml(e.damage):void 0,r=t&&e.resistances?YN(e.resistances,e.name):[];if(!e.damage&&!r.length&&!e.maxRange&&!e.areaOfEffect)return null;let i=e.tags?.some(e=>e===`ranged`||e===`thrown`),a=(e,t)=>(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(KN,{name:e,label:t})}),o=i?a(`crosshairs`,`Ranged damage`):a(`sword`,`Melee damage`);return(0,W.jsxs)(`div`,{className:`equipment-stats sf-item-badges`,children:[e.damage&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:n?(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[o,n.map((e,t)=>(0,W.jsxs)(U.Fragment,{children:[t>0&&(0,W.jsx)(`span`,{className:`equipment-stat-or`,children:`or`}),e.map(e=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(KN,{name:iP(e.type),label:e.type}),e.amount,e.perRank&&`/Rank`,e.plus&&` + ${e.plus}`]},e.type))]},t))]}):(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[o,e.damage]})}),e.maxRange&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Max Range`,children:[a(`range`,`Max Range`),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:e.maxRange})]})}),e.areaOfEffect&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Area of Effect`,children:[a(`burst`,`Area of Effect`),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:e.areaOfEffect})]})}),r.length>0&&(0,W.jsx)(SP,{stock:e})]})}function SP({stock:e}){let t=e.resistances?YN(e.resistances,e.name):[];return t.length?(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(KN,{name:`shield`,label:`Resists`})}),t.map((e,t)=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(KN,{name:iP(e.type),label:e.type}),e.amount]},t))]})}):null}var CP={hp:`Hit Points`,mp:`Mana Points`};function wP({kind:e,max:t,value:n,onChange:r}){let[i,a]=(0,U.useState)(n??t),o=r?n??t:i,s=r??a,c=e.toUpperCase();return(0,W.jsxs)(`span`,{className:`equipment-mp equipment-resource equipment-${e}`,children:[(0,W.jsx)(`strong`,{className:`resource-name resource-${e}`,title:CP[e],children:c}),(0,W.jsx)(G,{round:`xs`,onClick:()=>s(Math.max(0,o-1)),disabled:o<=0,"aria-label":`1 less ${c}`,children:(0,W.jsx)(WN,{is:`minus`})}),(0,W.jsxs)(`span`,{className:`num`,"aria-live":`polite`,children:[(0,W.jsx)(`span`,{className:`equipment-resource-now${o>t?` resource-${e}`:``}`,title:o>t?`Above the max of ${t}`:void 0,children:o}),(0,W.jsxs)(`span`,{className:`muted`,children:[` / `,t]})]}),(0,W.jsx)(G,{round:`xs`,onClick:()=>s(o+1),"aria-label":`1 more ${c}`,children:(0,W.jsx)(WN,{is:`plus`})})]})}function TP({name:e,stock:t,category:n,count:r,equip:i,fold:a,edit:o,note:s,body:c,badges:l,mp:u,resistsInChips:d,chips:f,className:p=``,as:m=`div`,children:h}){let g=!a||a.open,_=t?Sl(t).filter(e=>!e.startsWith(yP)&&!e.startsWith(bP)):[],v=t?Cl(t):``;return(0,W.jsxs)(m,{className:`equipment-box sf-item-card${_P(a)}${p?` ${p}`:``}`,children:[r!==void 0&&(0,W.jsx)(`span`,{className:`sf-item-count`,"aria-label":`${r} of ${e}`,children:r}),(0,W.jsxs)(`div`,{className:`equipment-row sf-item-summary`,children:[i&&(0,W.jsxs)(`label`,{className:`sf-item-equip`,title:`Equip`,children:[(0,W.jsx)(`input`,{type:`checkbox`,"aria-label":`Equip`,checked:i.checked,disabled:!i.onChange,onChange:e=>i.onChange?.(e.target.checked)}),(0,W.jsx)(`span`,{className:`sf-item-equip-label`,children:`Equip`})]}),(0,W.jsxs)(`span`,{className:`sf-item-main`,children:[(0,W.jsx)(`span`,{className:`equipment-name`,children:e}),t&&(0,W.jsx)(xP,{stock:t,withResists:!d}),u&&(0,W.jsx)(wP,{kind:`mp`,...u}),l]}),a&&(0,W.jsx)(gP,{...a,label:e,className:`sf-item-icon sf-item-expand`})]}),g&&(0,W.jsxs)(`div`,{className:`sf-item-more`,children:[o&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`button`,{type:`button`,className:`sf-item-edge sf-item-edit`,"aria-label":`Edit ${e}`,title:`Edit`,"aria-expanded":o.editing,onClick:o.onToggle,children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})}),o.editing&&(0,W.jsx)(`button`,{type:`button`,className:`sf-item-edge sf-item-remove`,"aria-label":`Remove ${e}`,title:`Remove`,onClick:o.onRemove,children:(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z`})})})]}),(0,W.jsxs)(`div`,{className:`equipment-chips`,children:[d&&t&&(0,W.jsx)(SP,{stock:t}),(0,W.jsx)(`span`,{className:`chip`,children:$(n)}),f?.map(e=>(0,W.jsx)(`span`,{className:`chip`,children:e},e)),_.map(e=>(0,W.jsx)(`span`,{className:`chip`,children:e},e))]}),o?.editing&&(0,W.jsx)(`div`,{className:`equipment-row sf-item-fields`,children:o.fields}),t&&(0,W.jsxs)(`div`,{className:`sf-item-stock`,children:[(0,W.jsx)(`p`,{className:`equipment-description`,children:t.summary}),v&&(0,W.jsx)(`p`,{className:`equipment-effect`,children:v})]}),c,s&&(0,W.jsxs)(`div`,{className:`sf-item-note-line`,children:[(0,W.jsxs)(`button`,{type:`button`,className:`sf-btn sf-btn--bare sf-item-note-toggle`,"aria-expanded":s.shown,onClick:s.onToggle,children:[(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 576 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75zM58.57 323.5L291.7 90.34L421.7 220.3L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L58.57 323.5zM552 464C565.3 464 576 474.7 576 488C576 501.3 565.3 512 552 512H248C234.7 512 224 501.3 224 488C224 474.7 234.7 464 248 464H552z`})}),`Note`]}),s.shown&&s.field]})]}),h]})}function EP({physical:e,hp:t,hpBonus:n=0,onHpChange:r,attacks:i,traits:a,className:o=``,...s}){let c=10+e.stats.reduce((e,t)=>e+t.value,0)+n;return(0,W.jsx)(TP,{...s,className:`sf-chassis-card${o?` ${o}`:``}`,resistsInChips:!0,badges:(0,W.jsx)(wP,{kind:`hp`,max:c,value:t,onChange:r}),body:(0,W.jsxs)(`div`,{className:`sf-chassis`,children:[(0,W.jsx)(dP,{groups:[{group:`physical`,...e}]}),i&&(0,W.jsxs)(`div`,{className:`sf-chassis-list`,children:[(0,W.jsx)(`h5`,{className:`sf-chassis-label`,children:`Attacks`}),i]}),a&&(0,W.jsxs)(`div`,{className:`sf-chassis-list`,children:[(0,W.jsx)(`h5`,{className:`sf-chassis-label`,children:`Traits`}),a]})]})})}function DP({rows:e,children:t}){let n=e.filter(e=>e.chips.length>0);return!n.length&&!t?null:(0,W.jsxs)(`div`,{className:`sf-background-rows`,children:[n.map(e=>(0,W.jsxs)(`div`,{children:[(0,W.jsx)(`span`,{className:`sf-background-label`,children:e.label}),e.chips.map((t,n)=>(0,W.jsx)(mP,{tone:e.accent?`accent`:void 0,children:t},n))]},e.label)),t]})}function OP({name:e,slot:t,plane:n,select:r,className:i=``,children:a}){let o=`sf-card sf-background-card${pP(n)}${r?` is-selectable${r.selected?` selected`:``}`:``}${i?` ${i}`:``}`;return(0,W.jsxs)(`div`,{className:o,...r?{role:`radio`,"aria-checked":r.selected,"aria-label":e,tabIndex:0,onClick:r.onSelect,onKeyDown:e=>{r&&(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),r.onSelect())}}:{},children:[(0,W.jsxs)(`div`,{className:`sf-card-bar`,children:[(0,W.jsxs)(`h3`,{className:`sf-card-name`,children:[(0,W.jsx)(DN,{plane:n}),e]}),(0,W.jsxs)(`span`,{className:`sf-card-chips`,children:[(0,W.jsx)(mP,{children:t}),(0,W.jsx)(mP,{tone:`muted`,children:n})]})]}),(0,W.jsx)(`div`,{className:`sf-card-body`,children:a})]})}var kP=[`origin`,`profession`,`past`],AP={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function jP(e){let t=e.map(e=>CN(e.trait)+(e.rank?` (${e.rank})`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function MP({pkg:e}){return(0,W.jsx)(DP,{rows:[{label:`Bonus`,accent:!0,chips:[...e.bonusPoints.map(e=>`+${e.count} ${$(e.group)} focus ${e.count===1?`point`:`points`}`),...Object.entries(e.coreBonus).map(([e,t])=>`+${t} ${$(e)}`),...e.wealth?[`${e.wealth>0?`+`:``}${e.wealth} Wealth`]:[]]},{label:`Grants`,accent:!0,chips:jP(e.grants)},{label:`Choose`,chips:e.choices.map(e=>e.note??TN(e.choose,e.from))},{label:`Background list`,chips:jP(e.backgroundTraits.map(e=>({trait:e})))}],children:e.features.map(e=>(0,W.jsxs)(`p`,{children:[(0,W.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})}var NP=[[`earth`,`The Settled Systems`],[`isekai`,`Isekai`],[`any`,`Any`]],PP=[`physical`,`social`,`mental`];function FP({slot:e,picked:t,onChoose:n}){let[r,i]=(0,U.useState)(``),[a,o]=(0,U.useState)(new Set),s=tN.packages.filter(t=>t.type===e),c=NP.filter(([e])=>s.some(t=>t.plane===e)),l=PP.filter(e=>s.some(t=>t.bonusPoints.some(t=>t.group===e))),u=e=>{let t=new Set(a);t.delete(e)||t.add(e),o(t)},d=r.trim().toLowerCase(),f=s.filter(e=>e.id===t||!a.has(`plane:${e.plane}`)&&!e.bonusPoints.some(e=>a.has(`bonus:${e.group}`))&&(!d||e.name.toLowerCase().includes(d)||e.tags.some(e=>e.toLowerCase().includes(d))));return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`div`,{className:`filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:r,onChange:e=>i(e.target.value),"aria-label":`Search ${$(e)}s`}),c.length>1&&c.map(([e,t])=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!a.has(`plane:${e}`),onChange:()=>u(`plane:${e}`)}),` `,t]},e)),l.length>1&&l.map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!a.has(`bonus:${e}`),onChange:()=>u(`bonus:${e}`)}),` `,$(e),` bonus`]},e))]}),f.length===0?(0,W.jsxs)(`p`,{className:`empty`,children:[`No `,$(e),`s match.`]}):(0,W.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(e),children:f.map(e=>(0,W.jsxs)(OP,{name:e.name,slot:$(e.type),plane:e.plane,select:{selected:t===e.id,onSelect:()=>n(e.id)},children:[(0,W.jsx)(`p`,{children:e.summary}),(0,W.jsx)(MP,{pkg:e})]},e.id))})]})}function IP({draft:e,onChange:t}){let[n,r]=(0,U.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,U.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,U.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,U.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&iN.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,W.jsxs)(`section`,{children:[(0,W.jsx)(AN,{title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,W.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:kP.map(t=>(0,W.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,W.jsx)(`summary`,{children:(0,W.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,W.jsx)(`span`,{className:`slot-pick`,children:iN.get(e[t])?.name??e[t]}):(0,W.jsx)(`span`,{className:`muted`,children:AP[t]}),(0,W.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,W.jsx)(WN,{is:n[t]?`minus`:`plus`})})]})}),(0,W.jsx)(FP,{slot:t,picked:e[t],onChoose:e=>a(t,e)})]},t))})]})}var LP=[`systems`,`dreft`],RP={systems:`The Settled Systems`,dreft:`Dreft`},zP=e=>e.region??(e.plane===`earth`?`systems`:e.plane),BP=e=>LP.includes(e)?LP.indexOf(e):LP.length,VP=[...new Set(tN.kinds.map(zP))].sort((e,t)=>BP(e)-BP(t));function HP({draft:e,onChange:t}){return(0,W.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:(0,W.jsx)(`div`,{role:`radiogroup`,"aria-label":`Kind`,children:VP.map(n=>(0,W.jsxs)(`div`,{className:`kind-group`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:RP[n]??$(n)}),(0,W.jsx)(`div`,{className:`cards`,children:tN.kinds.filter(e=>zP(e)===n).map(n=>(0,W.jsx)(OP,{name:n.name,slot:`Kind`,plane:n.plane,className:`kind-card`,select:{selected:e.kind===n.id,onSelect:()=>t({...e,kind:e.kind===n.id?void 0:n.id,startPoints:void 0})},children:(0,W.jsx)(UP,{kind:n})},n.id))})]},n))})})}function UP({kind:e,lore:t=!1}){return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`p`,{children:e.summary}),t&&e.lore&&(0,W.jsx)(`p`,{className:`sf-card-lore`,children:e.lore}),(0,W.jsx)(IN,{stats:e.stats}),(0,W.jsx)(DP,{rows:[{label:`Grants`,accent:!0,chips:e.grants.map(e=>CN(e.trait))}]}),(0,W.jsx)(`ul`,{className:`sf-card-features`,children:e.features.map(e=>(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]})}var WP=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},GP={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name: the player's, or one you make up that fits their Kind, home and past.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:uc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},items:{type:`array`,items:{type:`string`},description:`Item ids the character carries, most needed first (about 3 to 8): the weapon and armor they'd fight in, the tools and kits of their trade and Traits, and gear for how they live and travel. Only items from the character's own plane or any plane, within its Wealth (the Kit Costs in the index). List an item twice to carry two.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`name`,`kind`,`origin`,`profession`,`past`,`focus`,`traits`,`items`]},KP=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:wc.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:xc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:GP,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), each listed Trait's id, and item:<id> for each item.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],qP=`player-choice`,JP=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,YP=e=>Array.isArray(e)?e:[],XP=(e,t)=>$c(e)||el(e,t).length===0,ZP=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function QP(e,t){let n=JP(e)??{},r=ll(n,t).summary;if(r)return r.questions.filter(e=>XP(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!XP(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function $P(e,t){let n=JP(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});YP(n.traits).forEach((e,t)=>{let n=JP(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=new Set(t.items.map(e=>e.id));YP(n.items).forEach((e,t)=>{let n=JP(e)?.item;o(n)&&!c.has(n)&&r.push({path:`items[${t}]`,message:`Item "${n}" doesn't exist`})});let l=QP(n,t);return YP(n.choices).forEach((e,t)=>{let n=JP(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),l.some(e=>ZP(n,e))){let e=Qc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of YP(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function eF(e,t,n=Rc){let r=$P(e,t),i=ll(e,t,n),a=QP(e,t),o=JP(e),s=i,c=new Set;if(o&&a.some(e=>!$c(e.from))){let e=YP(o.choices),r=t=>e.some(e=>ZP(JP(e),t)),i=a.filter(e=>!r(e)&&!$c(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${qP}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=ll({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var tF=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{}}),nF=class extends Error{},rF=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function iF(e,t,n){let r=t.traits,i=rF(e.category);i&&(r=r.filter(e=>e.category===i));let a=YP(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=rF(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=$P(i,t);if(a.length)throw new nF(a.map(e=>e.message).join(`; `));let o=ll(i,t,n).summary?.backgroundList;if(!o)throw new nF(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(rF(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>tF(e.t))}}function aF(e,t){let n=rF(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new nF(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>XP(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:el(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function oF(e,t){let n=rF(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new nF(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function sF(e,t,n,r=Rc){let i=JP(t)??{};switch(e){case`search_traits`:return iF(i,n,r);case`list_packages`:{let e=xc.safeParse(i.type);if(!e.success)throw new nF(`type must be one of ${xc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return aF(i,n);case`get_kind`:return oF(i,n);default:throw new nF(`Unknown tool "${e}"`)}}var cF=`claude-opus-5-5`,lF=`server-side-fallback-2026-07-01`,uF=e=>!e.startsWith(`claude-haiku`),dF=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function fF(e,t=12,n=cF){return{model:n,maxTurns:t,review:!0,start:t=>new pF(e,t,n)}}var pF=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:KP,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:dF(this.model)},cache_control:{type:`ephemeral`},...uF(this.model)?{betas:[lF],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new WP(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new WP(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},mF=(e,t)=>L().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),hF=Os({name:L().optional(),kind:mF(`Kind`,`isek`),origin:mF(`package`,`dreft`),profession:mF(`package`,`guild-hunter`),past:mF(`package`,`countryside-upbringing`),focus:B(L()).default([]),magic:z().int().min(0).default(0),traits:B(L()).default([]),choices:B(Pc).default([]),items:B(As([L(),Os({item:L(),qty:z().int().min(1).default(1)})])).default([])}),gF=Object.fromEntries(Object.entries(V).flatMap(([e,t])=>t.map(t=>[t,e]))),_F=e=>uc.safeParse(e).success;function vF(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function yF(e,t,n,r=[]){let i=[...new Set(e.filter(_F))],a=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,V[e.group]);return c(n,uc.options),s}var bF=3,xF=6,SF=5;function CF(e,t,n){let r=[...new Set(e.filter(_F))],i=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(V).filter(e=>!r.some(t=>gF[t]===e)).sort((e,t)=>V[t].reduce((e,t)=>e+o(t),0)-V[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>gF[e]))],l=c.length?c:s,u=e=>V[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=xF&&(t-xF)%SF===0,a=Object.keys(V).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=bF&&f(m)%2==1,g=r.filter(e=>gF[e]===m),_=[...V[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...V[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function wF(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function TF(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=wF(el(i,t),e,t);if($c(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function EF(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)$c(e)||el(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function DF(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}function OF(e,t){let n=t.packages.find(t=>t.id===e.origin&&t.type===`origin`)?.plane,r=[],i=[],a=new Set;for(let o of e.items){let{item:e,qty:s}=typeof o==`string`?{item:o,qty:1}:o,c=t.items.find(t=>t.id===e),l=c?c.category===`currency`?`money isn't handed out yet`:n&&c.plane!==`any`&&c.plane!==n?`${c.name} is from ${c.plane===`earth`?`Earth`:`Isekai`}, and this character isn't`:void 0:`Item "${e}" doesn't exist`;if(l||!c){i.push({item:e,reason:l});continue}let u=r.find(e=>e.item===c.id);if(u){u.qty+=s;continue}let d=c.category===`weapon`||!!c.slot&&!a.has(c.slot);c.slot&&a.add(c.slot),r.push({item:c.id,name:c.name,qty:s,category:c.category,equipped:d})}return{items:r,skipped:i}}var kF=(e,t)=>e.summary?.picks[t].banked??0;function AF(e,t,n=Rc){let r=hF.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=DF(i,t),s=vF(i,t),c=rl(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=yF(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=ol([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=OF(i,t),p=Lc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...CF(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:TF(i,t),items:f.items}),m=EF(p,t),h=e=>ll({...e,choices:[...e.choices,...m]},t,n),g=e=>{let n=h(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||$c(e.from))continue;let n=wF(el(e.from,t),i,t);if(n.length===0){m=[...m.filter(t=>!tl(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>tl(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>tl(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!tl(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},_=h(p),v=[],y=[];if(!_.ok)return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_};let b=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=kF(_,`universal`),r=kF(_,`background`);if(n+r===0)return`no picks left`;let i=_.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=_.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a Background pick, and none fit`:`no Universal picks left`;let s=m,c=g({...p,traits:[...p.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=h(c);if(!l.ok)return m=s,l.errors[0].message;p=c,_=l};for(let e of i.traits){let t=b(e);t?y.push({trait:e,reason:t}):v.push(e)}return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_}}var jF=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
+`,e)+1}return{type:e,offset:this.offset,indent:this.indent,source:this.source}}startBlockValue(e){switch(this.type){case`alias`:case`scalar`:case`single-quoted-scalar`:case`double-quoted-scalar`:return this.flowScalar(this.type);case`block-scalar-header`:return{type:`block-scalar`,offset:this.offset,indent:this.indent,props:[this.sourceToken],source:``};case`flow-map-start`:case`flow-seq-start`:return{type:`flow-collection`,offset:this.offset,indent:this.indent,start:this.sourceToken,items:[],end:[]};case`seq-item-ind`:return{type:`block-seq`,offset:this.offset,indent:this.indent,items:[{start:[this.sourceToken]}]};case`explicit-key-ind`:{this.onKeyLine=!0;let t=ZM(XM(e));return t.push(this.sourceToken),{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,explicitKey:!0}]}}case`map-value-ind`:{this.onKeyLine=!0;let t=ZM(XM(e));return{type:`block-map`,offset:this.offset,indent:this.indent,items:[{start:t,key:null,sep:[this.sourceToken]}]}}}return null}atIndentedComment(e,t){return this.type!==`comment`||this.indent<=t?!1:e.every(e=>e.type===`newline`||e.type===`space`)}*documentEnd(e){this.type!==`doc-mode`&&(e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop()))}*lineEnd(e){switch(this.type){case`comma`:case`doc-start`:case`doc-end`:case`flow-seq-end`:case`flow-map-end`:case`map-value-ind`:yield*this.pop(),yield*this.step();break;case`newline`:this.onKeyLine=!1;default:e.end?e.end.push(this.sourceToken):e.end=[this.sourceToken],this.type===`newline`&&(yield*this.pop())}}};function tN(e){let t=e.prettyErrors!==!1;return{lineCounter:e.lineCounter||t&&new KM||null,prettyErrors:t}}function nN(e,t={}){let{lineCounter:n,prettyErrors:r}=tN(t),i=new eN(n?.addNewLine),a=new MM(t),o=null;for(let t of a.compose(i.parse(e),!0,e.length))if(!o)o=t;else if(o.options.logLevel!==`silent`){o.errors.push(new Jj(t.range.slice(0,2),`MULTIPLE_DOCS`,`Source contains multiple documents; please use YAML.parseAllDocuments()`));break}return r&&n&&(o.errors.forEach(Xj(e,n)),o.warnings.forEach(Xj(e,n))),o}function rN(e,t,n){let r;typeof t==`function`?r=t:n===void 0&&t&&typeof t==`object`&&(n=t);let i=nN(e,n);if(!i)return null;if(i.warnings.forEach(e=>EA(i.options.logLevel,e)),i.errors.length>0){if(i.options.logLevel!==`silent`)throw i.errors[0];i.errors=[]}return i.toJS(Object.assign({reviver:r},n))}function iN(e,t,n,r){let i=new Map,a=[],o=e.filter(e=>e.path.startsWith(`${t}/`)&&e.path.endsWith(`.yaml`)).sort((e,t)=>e.path.localeCompare(t.path));for(let{path:e,text:t}of o){let o=n.safeParse(rN(t));if(!o.success){for(let t of o.error.issues)r.push(`${e}: ${t.path.join(`.`)||`(root)`}: ${t.message}`);continue}let s=o.data.id;s!==e.split(`/`).pop().replace(/\.yaml$/,``)&&r.push(`${e}: id "${s}" doesn't match the file name`),i.has(s)&&r.push(`${e}: id "${s}" is also used by ${i.get(s)}`),i.set(s,e),a.push(o.data)}return a}function aN(e){let t=[];return{content:{kinds:iN(e,`kinds`,bc,t),packages:[`origins`,`professions`,`pasts`].flatMap(n=>iN(e,n,Cc,t)),traits:iN(e,`traits`,Ec,t),items:iN(e,`items`,Ac,t)},errors:t}}var{content:oN,errors:sN}=aN(Object.entries(Object.assign({"../../content/items/acid-flask.yaml":vu,"../../content/items/anti-radiation-pills.yaml":yu,"../../content/items/armored-humanoid-chassis.yaml":bu,"../../content/items/arrows.yaml":xu,"../../content/items/backpack.yaml":Su,"../../content/items/ballistic-shield.yaml":Cu,"../../content/items/ballistic-vest.yaml":wu,"../../content/items/banishing-water.yaml":Tu,"../../content/items/bedroll.yaml":Eu,"../../content/items/bicycle-kick.yaml":Du,"../../content/items/binoculars.yaml":Ou,"../../content/items/breath-weapon.yaml":ku,"../../content/items/brigandine.yaml":Au,"../../content/items/buckler.yaml":ju,"../../content/items/budget-humanoid-chassis.yaml":Mu,"../../content/items/cargo-truck.yaml":Nu,"../../content/items/chainmail.yaml":Pu,"../../content/items/charm-potion.yaml":Fu,"../../content/items/cleansing-potion.yaml":Iu,"../../content/items/club.yaml":Lu,"../../content/items/cold-weather-gear.yaml":Ru,"../../content/items/combat-helmet.yaml":zu,"../../content/items/combat-knife.yaml":Bu,"../../content/items/combat-voidsuit.yaml":Vu,"../../content/items/combat-walker-chassis.yaml":Hu,"../../content/items/comm-unit.yaml":Uu,"../../content/items/compass.yaml":Wu,"../../content/items/cooking-kit.yaml":Gu,"../../content/items/courier-drone-chassis.yaml":Ku,"../../content/items/crossbow-bolts.yaml":qu,"../../content/items/crossbow.yaml":Ju,"../../content/items/dagger.yaml":Yu,"../../content/items/darkness-flask.yaml":Xu,"../../content/items/deathproof-potion.yaml":Zu,"../../content/items/disguise-kit.yaml":Qu,"../../content/items/dispelling-potion.yaml":$u,"../../content/items/earth-reserve-credits.yaml":K,"../../content/items/emp-grenade.yaml":ed,"../../content/items/endurance-potion.yaml":q,"../../content/items/engineers-toolkit.yaml":J,"../../content/items/entangling-flask.yaml":Y,"../../content/items/explosive-flask.yaml":td,"../../content/items/faraday-shroud.yaml":nd,"../../content/items/field-sample-kit.yaml":rd,"../../content/items/fighter.yaml":id,"../../content/items/fine-clothes.yaml":ad,"../../content/items/fishing-kit.yaml":od,"../../content/items/fists.yaml":sd,"../../content/items/five-fingered-palm-of-death.yaml":cd,"../../content/items/flail.yaml":ld,"../../content/items/flameproof-potion.yaml":ud,"../../content/items/flamethrower.yaml":dd,"../../content/items/flashlight.yaml":fd,"../../content/items/flint-and-steel.yaml":pd,"../../content/items/fog-flask.yaml":md,"../../content/items/frag-grenade.yaml":hd,"../../content/items/frost-flask.yaml":gd,"../../content/items/fuel-canister.yaml":_d,"../../content/items/gambeson.yaml":vd,"../../content/items/geiger-counter.yaml":yd,"../../content/items/glowing-oil.yaml":bd,"../../content/items/grace-potion.yaml":xd,"../../content/items/grappling-hook.yaml":Sd,"../../content/items/greater-healing-potion.yaml":Cd,"../../content/items/greatsword.yaml":wd,"../../content/items/gust-flask.yaml":Td,"../../content/items/halberd.yaml":Ed,"../../content/items/hand-axe.yaml":Dd,"../../content/items/handcuffs.yaml":Od,"../../content/items/haymaker.yaml":kd,"../../content/items/hazmat-suit.yaml":Ad,"../../content/items/healers-kit.yaml":jd,"../../content/items/healing-potion.yaml":Md,"../../content/items/heavy-humanoid-chassis.yaml":Nd,"../../content/items/helicopter.yaml":Pd,"../../content/items/hide-armor.yaml":Fd,"../../content/items/humanoid-service-chassis.yaml":Id,"../../content/items/hydraulic-fist.yaml":Ld,"../../content/items/iceproof-potion.yaml":Rd,"../../content/items/imperial-dollars.yaml":zd,"../../content/items/incendiary-grenade.yaml":Bd,"../../content/items/industrial-laborer-chassis.yaml":Vd,"../../content/items/insulated-gloves.yaml":Hd,"../../content/items/javelin.yaml":Ud,"../../content/items/kick.yaml":Wd,"../../content/items/lantern.yaml":Gd,"../../content/items/leather-armor.yaml":Kd,"../../content/items/leather-jacket.yaml":qd,"../../content/items/leatherworking-tools.yaml":Jd,"../../content/items/lockpicks.yaml":Yd,"../../content/items/longbow.yaml":Xd,"../../content/items/longsword.yaml":Zd,"../../content/items/luras.yaml":Qd,"../../content/items/mace.yaml":$d,"../../content/items/machine-gun.yaml":ef,"../../content/items/mana-potion.yaml":tf,"../../content/items/masonry-tools.yaml":nf,"../../content/items/maul.yaml":rf,"../../content/items/medkit.yaml":af,"../../content/items/mending-oil.yaml":of,"../../content/items/mindproof-potion.yaml":sf,"../../content/items/missile-launcher.yaml":cf,"../../content/items/mounted-machine-gun.yaml":lf,"../../content/items/musical-instrument.yaml":uf,"../../content/items/musket.yaml":df,"../../content/items/night-vision-goggles.yaml":ff,"../../content/items/pack-animal.yaml":pf,"../../content/items/padded-coif.yaml":mf,"../../content/items/painkillers.yaml":X,"../../content/items/painting-supplies.yaml":hf,"../../content/items/performance-humanoid-chassis.yaml":gf,"../../content/items/pistol-magazine.yaml":_f,"../../content/items/pistol.yaml":vf,"../../content/items/plate-armor.yaml":yf,"../../content/items/plate-carrier.yaml":bf,"../../content/items/portable-computer.yaml":xf,"../../content/items/potion-kit.yaml":Sf,"../../content/items/potion-of-detect-magic.yaml":Cf,"../../content/items/potion-of-elemental-ward.yaml":wf,"../../content/items/potion-of-featherfall.yaml":Tf,"../../content/items/potion-of-flight.yaml":Ef,"../../content/items/potion-of-haste.yaml":Df,"../../content/items/potion-of-infravision.yaml":Of,"../../content/items/potion-of-invisibility.yaml":kf,"../../content/items/potion-of-shielding.yaml":Af,"../../content/items/potion-of-speak-with-animals.yaml":jf,"../../content/items/potion-of-spider-climb.yaml":Mf,"../../content/items/potion-of-stone-skin.yaml":Nf,"../../content/items/potion-of-water-breathing.yaml":Pf,"../../content/items/powder-and-shot.yaml":Ff,"../../content/items/power-armor.yaml":If,"../../content/items/premier-humanoid-chassis.yaml":Lf,"../../content/items/quarterstaff.yaml":Rf,"../../content/items/rad-suit.yaml":zf,"../../content/items/rapier.yaml":Bf,"../../content/items/ration-pack.yaml":Vf,"../../content/items/rebreather.yaml":Hf,"../../content/items/renminbi.yaml":Z,"../../content/items/revolver.yaml":Uf,"../../content/items/riding-animal.yaml":Wf,"../../content/items/rifle-magazine.yaml":Gf,"../../content/items/rifle.yaml":Kf,"../../content/items/riot-gear.yaml":qf,"../../content/items/rope.yaml":Jf,"../../content/items/roundhouse-kick.yaml":Yf,"../../content/items/rowboat.yaml":Xf,"../../content/items/rustproof-potion.yaml":Zf,"../../content/items/shortbow.yaml":Qf,"../../content/items/shortsword.yaml":$f,"../../content/items/shotgun-shells.yaml":ep,"../../content/items/shotgun.yaml":tp,"../../content/items/silence-flask.yaml":np,"../../content/items/sleeping-draught.yaml":rp,"../../content/items/sling-stones.yaml":ip,"../../content/items/sling.yaml":ap,"../../content/items/slowing-flask.yaml":op,"../../content/items/smithing-tools.yaml":sp,"../../content/items/smoke-grenade.yaml":cp,"../../content/items/sniper-rifle.yaml":lp,"../../content/items/spear.yaml":up,"../../content/items/spyglass.yaml":dp,"../../content/items/staunching-potion.yaml":fp,"../../content/items/steel-helm.yaml":pp,"../../content/items/stoneproof-potion.yaml":mp,"../../content/items/stormproof-potion.yaml":hp,"../../content/items/strength-potion.yaml":gp,"../../content/items/stun-baton.yaml":_p,"../../content/items/submachine-gun.yaml":vp,"../../content/items/superman-punch.yaml":yp,"../../content/items/surgical-kit.yaml":bp,"../../content/items/taser.yaml":xp,"../../content/items/tent.yaml":Sp,"../../content/items/throwing-knives.yaml":Cp,"../../content/items/thunder-flask.yaml":wp,"../../content/items/torch.yaml":Tp,"../../content/items/tower-shield.yaml":Ep,"../../content/items/trail-rations.yaml":Dp,"../../content/items/travelers-cloak.yaml":Op,"../../content/items/turnout-gear.yaml":kp,"../../content/items/uppercut.yaml":Ap,"../../content/items/voidsuit.yaml":jp,"../../content/items/wagon.yaml":Mp,"../../content/items/war-axe.yaml":Np,"../../content/items/war-hammer.yaml":Pp,"../../content/items/warded-robes.yaml":Fp,"../../content/items/waterskin.yaml":Ip,"../../content/items/wooden-shield.yaml":Lp,"../../content/items/writing-kit.yaml":Rp,"../../content/kinds/ai-core.yaml":zp,"../../content/kinds/dreft/guwain.yaml":Bp,"../../content/kinds/dreft/isek.yaml":Vp,"../../content/kinds/dreft/tatot-goblinoid.yaml":Hp,"../../content/kinds/dreft/tatot-orcoid.yaml":Up,"../../content/kinds/human.yaml":Wp,"../../content/origins/american-empire/american-empire-colonies.yaml":Gp,"../../content/origins/american-empire/american-empire-earth.yaml":Kp,"../../content/origins/centafrica/centafrica-colonies.yaml":qp,"../../content/origins/centafrica/centafrica-earth.yaml":Jp,"../../content/origins/chinese-empire/chinese-empire-colonies.yaml":Yp,"../../content/origins/chinese-empire/chinese-empire-earth.yaml":Xp,"../../content/origins/dreft/dreft.yaml":Zp,"../../content/origins/drovus/the-drovus-empire.yaml":Qp,"../../content/origins/free-american-states/the-free-american-states.yaml":$p,"../../content/origins/karsef/kingdom-of-karsef.yaml":em,"../../content/origins/kashgar/kashgar.yaml":tm,"../../content/origins/kingdom-of-india/the-kingdom-of-india-colonies.yaml":nm,"../../content/origins/kingdom-of-india/the-kingdom-of-india-earth.yaml":rm,"../../content/origins/lunar-industrial-syndicate/the-lunar-industrial-syndicate.yaml":im,"../../content/origins/sdu/sdu-colonies.yaml":am,"../../content/origins/sdu/sdu-earth.yaml":om,"../../content/origins/sorellion/kingdom-of-sorellion.yaml":sm,"../../content/origins/tetra/tetra.yaml":cm,"../../content/origins/union-of-texas/the-union-of-texas.yaml":lm,"../../content/origins/ural-federation/the-ural-federation.yaml":um,"../../content/origins/xanthus/xanthus.yaml":dm,"../../content/pasts/any/craft-apprenticeship.yaml":fm,"../../content/pasts/any/criminal-family.yaml":pm,"../../content/pasts/any/gutter-trash.yaml":mm,"../../content/pasts/any/military-service.yaml":hm,"../../content/pasts/any/privileged-upbringing.yaml":gm,"../../content/pasts/any/raised-at-court.yaml":_m,"../../content/pasts/any/shipborn.yaml":vm,"../../content/pasts/any/simple-farmer.yaml":ym,"../../content/pasts/any/traveling-troupe.yaml":bm,"../../content/pasts/dreft/countryside-upbringing.yaml":xm,"../../content/pasts/dreft/expelled-from-the-mage-schools.yaml":Sm,"../../content/pasts/dreft/glintl-docks.yaml":Cm,"../../content/pasts/dreft/karsef-border-veteran.yaml":wm,"../../content/pasts/dreft/merchant-dynasty.yaml":Tm,"../../content/pasts/dreft/monster-raided-village.yaml":Em,"../../content/pasts/dreft/noble-household.yaml":Dm,"../../content/pasts/dreft/palace-servant.yaml":Om,"../../content/pasts/dreft/raised-in-the-caravan-town.yaml":km,"../../content/pasts/dreft/returned-from-the-systems.yaml":Am,"../../content/pasts/dreft/sunrise-refugee.yaml":jm,"../../content/pasts/systems/station-rat.yaml":Mm,"../../content/pasts/systems/university-educated.yaml":Nm,"../../content/pasts/tetra/delegation-child.yaml":Pm,"../../content/pasts/tetra/gate-lab-kid.yaml":Fm,"../../content/pasts/tetra/holding-company-kid.yaml":Im,"../../content/pasts/tetra/parasapient-quarter.yaml":Lm,"../../content/pasts/tetra/raised-in-the-infill.yaml":Rm,"../../content/pasts/tetra/raised-on-ward-politics.yaml":zm,"../../content/professions/any/apothecary.yaml":Bm,"../../content/professions/any/bard.yaml":Vm,"../../content/professions/any/blacksmith.yaml":Hm,"../../content/professions/any/courier.yaml":Um,"../../content/professions/any/criminal-enforcer.yaml":Wm,"../../content/professions/any/doctor.yaml":Gm,"../../content/professions/any/farmer.yaml":Km,"../../content/professions/any/jester.yaml":qm,"../../content/professions/any/knight.yaml":Jm,"../../content/professions/any/local-police.yaml":Ym,"../../content/professions/any/musical-artist.yaml":Xm,"../../content/professions/any/ranger.yaml":Zm,"../../content/professions/any/smuggler.yaml":Qm,"../../content/professions/any/spy.yaml":$m,"../../content/professions/any/squire.yaml":eh,"../../content/professions/any/stonemason.yaml":th,"../../content/professions/any/surgeon.yaml":nh,"../../content/professions/any/tanner.yaml":rh,"../../content/professions/any/visual-artist.yaml":ih,"../../content/professions/dreft/alchemist.yaml":ah,"../../content/professions/dreft/caravaneer.yaml":oh,"../../content/professions/dreft/dreft-local-militia.yaml":sh,"../../content/professions/dreft/dreft-mercenary.yaml":ch,"../../content/professions/dreft/gate-hand.yaml":lh,"../../content/professions/dreft/guild-hunter.yaml":uh,"../../content/professions/dreft/hedge-witch.yaml":dh,"../../content/professions/dreft/licensed-mage.yaml":fh,"../../content/professions/dreft/royal-guard.yaml":ph,"../../content/professions/systems/american-empire-soldier.yaml":mh,"../../content/professions/systems/combat-medic.yaml":hh,"../../content/professions/systems/computer-engineer.yaml":gh,"../../content/professions/systems/emergency-medical-technician.yaml":_h,"../../content/professions/systems/exotic-specimen-dealer.yaml":vh,"../../content/professions/systems/fighter-pilot.yaml":yh,"../../content/professions/systems/interplanar-diplomat.yaml":bh,"../../content/professions/systems/interplanar-rights-lawyer.yaml":xh,"../../content/professions/systems/officer-of-the-bureau-of-planar-management-and-enforcement.yaml":Sh,"../../content/professions/systems/paraarcheologist.yaml":Ch,"../../content/professions/systems/paraecologist.yaml":wh,"../../content/professions/systems/paraethnologist.yaml":Th,"../../content/professions/systems/paraevolutionary-scientist.yaml":Eh,"../../content/professions/systems/paraphysiologist.yaml":Dh,"../../content/professions/systems/parazoological-keeper.yaml":Oh,"../../content/professions/systems/planar-expeditionary-professional.yaml":kh,"../../content/professions/systems/private-security-contractor.yaml":Ah,"../../content/professions/systems/starship-engineer.yaml":jh,"../../content/professions/systems/station-maintenance.yaml":Mh,"../../content/professions/systems/theoretical-paraphysicist.yaml":Nh,"../../content/professions/systems/truck-pilot.yaml":Ph,"../../content/traits/ability/acid-spray.yaml":Fh,"../../content/traits/ability/archer.yaml":Ih,"../../content/traits/ability/archmage.yaml":Lh,"../../content/traits/ability/banish-spirit.yaml":Rh,"../../content/traits/ability/barbarian.yaml":zh,"../../content/traits/ability/blight.yaml":Bh,"../../content/traits/ability/blink.yaml":Vh,"../../content/traits/ability/bodyguard.yaml":Hh,"../../content/traits/ability/bolt.yaml":Uh,"../../content/traits/ability/boxing.yaml":Wh,"../../content/traits/ability/chain-lightning.yaml":Gh,"../../content/traits/ability/charm.yaml":Kh,"../../content/traits/ability/cleanse.yaml":qh,"../../content/traits/ability/counterpuncher.yaml":Jh,"../../content/traits/ability/create-fire.yaml":Yh,"../../content/traits/ability/create-food.yaml":Xh,"../../content/traits/ability/create-water.yaml":Zh,"../../content/traits/ability/cuff.yaml":Qh,"../../content/traits/ability/dark-haze.yaml":$h,"../../content/traits/ability/darkness.yaml":eg,"../../content/traits/ability/daze.yaml":tg,"../../content/traits/ability/deathblade.yaml":ng,"../../content/traits/ability/deathproof.yaml":rg,"../../content/traits/ability/detect-magic.yaml":ig,"../../content/traits/ability/disarm.yaml":ag,"../../content/traits/ability/dispel-magic.yaml":og,"../../content/traits/ability/dress-wounds.yaml":sg,"../../content/traits/ability/earthblade.yaml":cg,"../../content/traits/ability/earthen-spike.yaml":lg,"../../content/traits/ability/elemental-ward.yaml":ug,"../../content/traits/ability/entangle.yaml":dg,"../../content/traits/ability/expert-archer.yaml":fg,"../../content/traits/ability/expert-boxer.yaml":pg,"../../content/traits/ability/expert-swordsman.yaml":mg,"../../content/traits/ability/fear.yaml":hg,"../../content/traits/ability/featherfall.yaml":gg,"../../content/traits/ability/field-medicine.yaml":_g,"../../content/traits/ability/fireball.yaml":vg,"../../content/traits/ability/flameblade.yaml":yg,"../../content/traits/ability/flamecraft.yaml":bg,"../../content/traits/ability/flameproof.yaml":xg,"../../content/traits/ability/fog-cloud.yaml":Sg,"../../content/traits/ability/grappler.yaml":Cg,"../../content/traits/ability/grave-touch.yaml":wg,"../../content/traits/ability/greater-heal.yaml":Tg,"../../content/traits/ability/grenadier.yaml":Eg,"../../content/traits/ability/gust.yaml":Dg,"../../content/traits/ability/haste.yaml":Og,"../../content/traits/ability/heal.yaml":kg,"../../content/traits/ability/hoarfrost.yaml":Ag,"../../content/traits/ability/hunter.yaml":jg,"../../content/traits/ability/ice-lance.yaml":Mg,"../../content/traits/ability/iceblade.yaml":Ng,"../../content/traits/ability/icecraft.yaml":Pg,"../../content/traits/ability/iceproof.yaml":Fg,"../../content/traits/ability/infravision.yaml":Ig,"../../content/traits/ability/invisibility.yaml":Lg,"../../content/traits/ability/knife-work.yaml":Rg,"../../content/traits/ability/knight.yaml":zg,"../../content/traits/ability/light.yaml":Bg,"../../content/traits/ability/lightning.yaml":Vg,"../../content/traits/ability/magical-endurance.yaml":Hg,"../../content/traits/ability/magical-flight.yaml":Ug,"../../content/traits/ability/magical-grace.yaml":Wg,"../../content/traits/ability/magical-replenishment.yaml":Gg,"../../content/traits/ability/magical-strength.yaml":Kg,"../../content/traits/ability/mana-siphon.yaml":qg,"../../content/traits/ability/martial-artist.yaml":Jg,"../../content/traits/ability/martial-arts-master.yaml":Yg,"../../content/traits/ability/master-flamecraft.yaml":Xg,"../../content/traits/ability/master-icecraft.yaml":Zg,"../../content/traits/ability/master-mage.yaml":Qg,"../../content/traits/ability/master-rustcraft.yaml":$g,"../../content/traits/ability/master-stonecraft.yaml":e_,"../../content/traits/ability/master-stormcraft.yaml":t_,"../../content/traits/ability/mending.yaml":n_,"../../content/traits/ability/meteor.yaml":r_,"../../content/traits/ability/mind-shatter.yaml":i_,"../../content/traits/ability/mind-spike.yaml":a_,"../../content/traits/ability/mindblade.yaml":o_,"../../content/traits/ability/mindproof.yaml":s_,"../../content/traits/ability/monster-hunter.yaml":c_,"../../content/traits/ability/natural-breath-weapon.yaml":l_,"../../content/traits/ability/rally.yaml":u_,"../../content/traits/ability/rustblade.yaml":d_,"../../content/traits/ability/rustcraft.yaml":f_,"../../content/traits/ability/rustproof.yaml":p_,"../../content/traits/ability/shield-wall.yaml":m_,"../../content/traits/ability/shield.yaml":h_,"../../content/traits/ability/sht-talk.yaml":g_,"../../content/traits/ability/silence.yaml":__,"../../content/traits/ability/simple-metamagic.yaml":v_,"../../content/traits/ability/skin-of-stone.yaml":y_,"../../content/traits/ability/sleep.yaml":b_,"../../content/traits/ability/slow.yaml":x_,"../../content/traits/ability/speak-with-animals.yaml":S_,"../../content/traits/ability/spider-climb.yaml":C_,"../../content/traits/ability/sprinter.yaml":w_,"../../content/traits/ability/stand-down.yaml":T_,"../../content/traits/ability/staunch.yaml":E_,"../../content/traits/ability/stilled-heart.yaml":D_,"../../content/traits/ability/stonecraft.yaml":O_,"../../content/traits/ability/stoneproof.yaml":k_,"../../content/traits/ability/stormblade.yaml":A_,"../../content/traits/ability/stormcraft.yaml":j_,"../../content/traits/ability/stormproof.yaml":M_,"../../content/traits/ability/swordsman.yaml":N_,"../../content/traits/ability/takedown.yaml":P_,"../../content/traits/ability/telekinesis.yaml":F_,"../../content/traits/ability/thunderclap.yaml":I_,"../../content/traits/ability/wall-of-stone.yaml":L_,"../../content/traits/ability/water-breathing.yaml":R_,"../../content/traits/ability/weak-point.yaml":z_,"../../content/traits/ability/wither.yaml":B_,"../../content/traits/circumstance/bureau-credentials.yaml":V_,"../../content/traits/circumstance/caravan-charter.yaml":H_,"../../content/traits/circumstance/commercial-pilots-license.yaml":U_,"../../content/traits/circumstance/corporate-sponsor.yaml":W_,"../../content/traits/circumstance/diplomatic-immunity.yaml":G_,"../../content/traits/circumstance/exiled-from-dreft.yaml":K_,"../../content/traits/circumstance/explorers-lodge-membership.yaml":q_,"../../content/traits/circumstance/heavy-debts.yaml":J_,"../../content/traits/circumstance/imperial-service-record.yaml":Y_,"../../content/traits/circumstance/knighted-in-dreft.yaml":X_,"../../content/traits/circumstance/member-of-the-mages-college-of-dreft.yaml":Z_,"../../content/traits/circumstance/member-of-the-monster-hunter-guild.yaml":Q_,"../../content/traits/circumstance/merchant-clan-elder.yaml":$_,"../../content/traits/circumstance/merchant-clan-member.yaml":ev,"../../content/traits/circumstance/owed-a-favor.yaml":tv,"../../content/traits/circumstance/private-security-license.yaml":nv,"../../content/traits/circumstance/research-grant.yaml":rv,"../../content/traits/circumstance/royal-warrant.yaml":iv,"../../content/traits/circumstance/security-contractor.yaml":av,"../../content/traits/circumstance/senior-member-of-a-thieves-guild.yaml":ov,"../../content/traits/circumstance/senior-member-of-the-explorers-lodge.yaml":sv,"../../content/traits/circumstance/senior-member-of-the-mages-college-of-dreft.yaml":cv,"../../content/traits/circumstance/senior-member-of-the-monster-hunter-guild.yaml":lv,"../../content/traits/circumstance/short-term-fame.yaml":uv,"../../content/traits/circumstance/significant-inheritance.yaml":dv,"../../content/traits/circumstance/switch-port-transit-pass.yaml":fv,"../../content/traits/circumstance/sworn-to-a-noble-house.yaml":pv,"../../content/traits/circumstance/tetra-frontiers-co-employee.yaml":mv,"../../content/traits/circumstance/thieves-guild-membership.yaml":hv,"../../content/traits/circumstance/tugboat-captain.yaml":gv,"../../content/traits/circumstance/wanted-in-dreft.yaml":_v,"../../content/traits/circumstance/wanted-in-sol.yaml":vv,"../../content/traits/condition/asleep.yaml":yv,"../../content/traits/condition/bandaged.yaml":bv,"../../content/traits/condition/blinded.yaml":xv,"../../content/traits/condition/broken-limb.yaml":Sv,"../../content/traits/condition/burning.yaml":Cv,"../../content/traits/condition/charmed.yaml":wv,"../../content/traits/condition/corroding.yaml":Tv,"../../content/traits/condition/corrosive-weapon.yaml":Ev,"../../content/traits/condition/cursed.yaml":Dv,"../../content/traits/condition/cybernetic-intelligence.yaml":Ov,"../../content/traits/condition/damaged.yaml":kv,"../../content/traits/condition/dark-haze-condition.yaml":Av,"../../content/traits/condition/dead.yaml":jv,"../../content/traits/condition/deafened.yaml":Mv,"../../content/traits/condition/destroyed.yaml":Nv,"../../content/traits/condition/earthen-weapon.yaml":Pv,"../../content/traits/condition/electrified-weapon.yaml":Fv,"../../content/traits/condition/elemental-ward-condition.yaml":Iv,"../../content/traits/condition/featherfall-condition.yaml":Lv,"../../content/traits/condition/flaming-weapon.yaml":Rv,"../../content/traits/condition/flat-footed.yaml":zv,"../../content/traits/condition/flight.yaml":Bv,"../../content/traits/condition/freezing-weapon.yaml":Vv,"../../content/traits/condition/frightened.yaml":Hv,"../../content/traits/condition/frozen.yaml":Uv,"../../content/traits/condition/ghost-sight.yaml":Wv,"../../content/traits/condition/glowing.yaml":Gv,"../../content/traits/condition/hard-shell.yaml":Kv,"../../content/traits/condition/hasted.yaml":qv,"../../content/traits/condition/healthy.yaml":Jv,"../../content/traits/condition/high-morale.yaml":Yv,"../../content/traits/condition/incapacitated.yaml":Xv,"../../content/traits/condition/infravision-condition.yaml":Zv,"../../content/traits/condition/injured.yaml":Qv,"../../content/traits/condition/invisible.yaml":$v,"../../content/traits/condition/irradiated.yaml":ey,"../../content/traits/condition/long-toothed.yaml":ty,"../../content/traits/condition/maddening-weapon.yaml":ny,"../../content/traits/condition/magical-endurance-condition.yaml":ry,"../../content/traits/condition/magical-flight-condition.yaml":iy,"../../content/traits/condition/magical-grace-condition.yaml":ay,"../../content/traits/condition/magical-heritage.yaml":oy,"../../content/traits/condition/magical-strength-condition.yaml":sy,"../../content/traits/condition/magically-deathproof.yaml":cy,"../../content/traits/condition/magically-flameproof.yaml":ly,"../../content/traits/condition/magically-iceproof.yaml":uy,"../../content/traits/condition/magically-mindproof.yaml":dy,"../../content/traits/condition/magically-rustproof.yaml":fy,"../../content/traits/condition/magically-stoneproof.yaml":py,"../../content/traits/condition/magically-stormproof.yaml":my,"../../content/traits/condition/mechanical.yaml":hy,"../../content/traits/condition/mortis.yaml":gy,"../../content/traits/condition/non-humanoid.yaml":_y,"../../content/traits/condition/organ-damage.yaml":vy,"../../content/traits/condition/paralyzed.yaml":yy,"../../content/traits/condition/prone.yaml":by,"../../content/traits/condition/rage.yaml":xy,"../../content/traits/condition/reinforced.yaml":Sy,"../../content/traits/condition/restrained.yaml":Cy,"../../content/traits/condition/rooted.yaml":wy,"../../content/traits/condition/scarred.yaml":Ty,"../../content/traits/condition/scrambled.yaml":Ey,"../../content/traits/condition/severe-bleeding.yaml":Dy,"../../content/traits/condition/severe-burn.yaml":Oy,"../../content/traits/condition/severely-injured.yaml":ky,"../../content/traits/condition/shielded.yaml":Ay,"../../content/traits/condition/silenced.yaml":jy,"../../content/traits/condition/slowed.yaml":My,"../../content/traits/condition/spider-climb-condition.yaml":Ny,"../../content/traits/condition/stimm-rush.yaml":Py,"../../content/traits/condition/stone-skin.yaml":Fy,"../../content/traits/condition/supernatural.yaml":Iy,"../../content/traits/condition/temporarily-deafened.yaml":Ly,"../../content/traits/condition/unconscious.yaml":Ry,"../../content/traits/condition/water-breathing-condition.yaml":zy,"../../content/traits/condition/withering-weapon.yaml":By,"../../content/traits/contact/additional-contact.yaml":Vy,"../../content/traits/knowledge/accounting.yaml":Hy,"../../content/traits/knowledge/additional-language.yaml":Uy,"../../content/traits/knowledge/ai-culture.yaml":Wy,"../../content/traits/knowledge/aksum.yaml":Gy,"../../content/traits/knowledge/alchemy.yaml":Ky,"../../content/traits/knowledge/amaravati.yaml":qy,"../../content/traits/knowledge/american-geography.yaml":Jy,"../../content/traits/knowledge/american-history.yaml":Yy,"../../content/traits/knowledge/amharic-written.yaml":Xy,"../../content/traits/knowledge/amharic.yaml":Zy,"../../content/traits/knowledge/anatomy.yaml":Qy,"../../content/traits/knowledge/animal-lore.yaml":$y,"../../content/traits/knowledge/antiluna.yaml":eb,"../../content/traits/knowledge/arabic-written.yaml":tb,"../../content/traits/knowledge/arabic.yaml":nb,"../../content/traits/knowledge/architecture.yaml":rb,"../../content/traits/knowledge/aristocracy.yaml":ib,"../../content/traits/knowledge/ark-life.yaml":ab,"../../content/traits/knowledge/ark-new-york.yaml":ob,"../../content/traits/knowledge/art-history.yaml":sb,"../../content/traits/knowledge/artificial-intelligence.yaml":cb,"../../content/traits/knowledge/asteroid-mining.yaml":lb,"../../content/traits/knowledge/aviation.yaml":ub,"../../content/traits/knowledge/bandits-and-brigands.yaml":db,"../../content/traits/knowledge/bengali-written.yaml":fb,"../../content/traits/knowledge/bengali.yaml":pb,"../../content/traits/knowledge/biology.yaml":mb,"../../content/traits/knowledge/boneyard.yaml":hb,"../../content/traits/knowledge/bureaucracy.yaml":gb,"../../content/traits/knowledge/burmese-written.yaml":_b,"../../content/traits/knowledge/burmese.yaml":vb,"../../content/traits/knowledge/cantonese-written.yaml":yb,"../../content/traits/knowledge/cantonese.yaml":bb,"../../content/traits/knowledge/caravan-routes.yaml":xb,"../../content/traits/knowledge/centafrica.yaml":Sb,"../../content/traits/knowledge/centafrican-law.yaml":Cb,"../../content/traits/knowledge/chemistry.yaml":wb,"../../content/traits/knowledge/chinese-imperial-law.yaml":Tb,"../../content/traits/knowledge/coastal-trade.yaml":Eb,"../../content/traits/knowledge/combat-medicine.yaml":Db,"../../content/traits/knowledge/commerce.yaml":Ob,"../../content/traits/knowledge/comparative-cultures.yaml":kb,"../../content/traits/knowledge/computer-networks.yaml":Ab,"../../content/traits/knowledge/computer-systems.yaml":jb,"../../content/traits/knowledge/contract-law.yaml":Mb,"../../content/traits/knowledge/corporate-security.yaml":Nb,"../../content/traits/knowledge/countryside-lore.yaml":Pb,"../../content/traits/knowledge/court-etiquette.yaml":Fb,"../../content/traits/knowledge/criminal-underworld.yaml":Ib,"../../content/traits/knowledge/cryptography.yaml":Lb,"../../content/traits/knowledge/cybernetics.yaml":Rb,"../../content/traits/knowledge/diplomatic-protocol.yaml":zb,"../../content/traits/knowledge/documents-and-seals.yaml":Bb,"../../content/traits/knowledge/dreft.yaml":Vb,"../../content/traits/knowledge/dreftan-written.yaml":Hb,"../../content/traits/knowledge/dreftan.yaml":Ub,"../../content/traits/knowledge/dreftian-law.yaml":Wb,"../../content/traits/knowledge/dutch-written.yaml":Gb,"../../content/traits/knowledge/dutch.yaml":Kb,"../../content/traits/knowledge/dwarvish-runes-written.yaml":qb,"../../content/traits/knowledge/dwarvish.yaml":Jb,"../../content/traits/knowledge/earth-baseline-customs.yaml":Yb,"../../content/traits/knowledge/earth-baseline-technology.yaml":Xb,"../../content/traits/knowledge/ecology.yaml":Zb,"../../content/traits/knowledge/education.yaml":Qb,"../../content/traits/knowledge/electronics.yaml":$b,"../../content/traits/knowledge/elemental-magics.yaml":ex,"../../content/traits/knowledge/enchantment.yaml":tx,"../../content/traits/knowledge/engineering.yaml":nx,"../../content/traits/knowledge/english-written.yaml":rx,"../../content/traits/knowledge/english.yaml":ix,"../../content/traits/knowledge/executive-protection.yaml":ax,"../../content/traits/knowledge/exotic-materials.yaml":ox,"../../content/traits/knowledge/explosives.yaml":sx,"../../content/traits/knowledge/extraplanar-threats.yaml":cx,"../../content/traits/knowledge/farming.yaml":lx,"../../content/traits/knowledge/filipino-written.yaml":ux,"../../content/traits/knowledge/filipino.yaml":dx,"../../content/traits/knowledge/french-written.yaml":fx,"../../content/traits/knowledge/french.yaml":px,"../../content/traits/knowledge/gambling.yaml":mx,"../../content/traits/knowledge/geology.yaml":hx,"../../content/traits/knowledge/german-written.yaml":gx,"../../content/traits/knowledge/german.yaml":_x,"../../content/traits/knowledge/glintl.yaml":vx,"../../content/traits/knowledge/gujarati-written.yaml":yx,"../../content/traits/knowledge/gujarati.yaml":bx,"../../content/traits/knowledge/hausa-written.yaml":xx,"../../content/traits/knowledge/hausa.yaml":Sx,"../../content/traits/knowledge/heraldry.yaml":Cx,"../../content/traits/knowledge/herbalism.yaml":wx,"../../content/traits/knowledge/high-society.yaml":Tx,"../../content/traits/knowledge/hindi-written.yaml":Ex,"../../content/traits/knowledge/hindi.yaml":Dx,"../../content/traits/knowledge/imperial-law.yaml":Ox,"../../content/traits/knowledge/imperial-politics.yaml":kx,"../../content/traits/knowledge/indian-law.yaml":Ax,"../../content/traits/knowledge/indian-theology.yaml":jx,"../../content/traits/knowledge/indonesian-written.yaml":Mx,"../../content/traits/knowledge/indonesian.yaml":Nx,"../../content/traits/knowledge/industrial-machinery.yaml":Px,"../../content/traits/knowledge/intelligence-tradecraft.yaml":Fx,"../../content/traits/knowledge/interplanar-law.yaml":Ix,"../../content/traits/knowledge/interplanar-relations.yaml":Lx,"../../content/traits/knowledge/italian-written.yaml":Rx,"../../content/traits/knowledge/italian.yaml":zx,"../../content/traits/knowledge/japanese-written.yaml":Bx,"../../content/traits/knowledge/japanese.yaml":Vx,"../../content/traits/knowledge/javanese-written.yaml":Hx,"../../content/traits/knowledge/javanese.yaml":Ux,"../../content/traits/knowledge/kannada-written.yaml":Wx,"../../content/traits/knowledge/kannada.yaml":Gx,"../../content/traits/knowledge/karsef.yaml":Kx,"../../content/traits/knowledge/kashgar-mindworks.yaml":qx,"../../content/traits/knowledge/kashgar.yaml":Jx,"../../content/traits/knowledge/kazakh-written.yaml":Yx,"../../content/traits/knowledge/kazakh.yaml":Xx,"../../content/traits/knowledge/khmer-written.yaml":Zx,"../../content/traits/knowledge/khmer.yaml":Qx,"../../content/traits/knowledge/kinyarwanda-written.yaml":$x,"../../content/traits/knowledge/kinyarwanda.yaml":eS,"../../content/traits/knowledge/korean-written.yaml":tS,"../../content/traits/knowledge/korean.yaml":nS,"../../content/traits/knowledge/kyrgyz-written.yaml":rS,"../../content/traits/knowledge/kyrgyz.yaml":iS,"../../content/traits/knowledge/lao-written.yaml":aS,"../../content/traits/knowledge/lao.yaml":oS,"../../content/traits/knowledge/law-enforcement.yaml":sS,"../../content/traits/knowledge/lingala-written.yaml":cS,"../../content/traits/knowledge/lingala.yaml":lS,"../../content/traits/knowledge/liquid-democracy.yaml":uS,"../../content/traits/knowledge/literature.yaml":dS,"../../content/traits/knowledge/local-folklore.yaml":fS,"../../content/traits/knowledge/local-history.yaml":pS,"../../content/traits/knowledge/logistics.yaml":mS,"../../content/traits/knowledge/magic-on-isekai.yaml":hS,"../../content/traits/knowledge/magical-artifacts.yaml":gS,"../../content/traits/knowledge/malay-written.yaml":_S,"../../content/traits/knowledge/malay.yaml":vS,"../../content/traits/knowledge/malayalam-written.yaml":yS,"../../content/traits/knowledge/malayalam.yaml":bS,"../../content/traits/knowledge/mandarin-written.yaml":xS,"../../content/traits/knowledge/mandarin.yaml":SS,"../../content/traits/knowledge/marathi-written.yaml":CS,"../../content/traits/knowledge/marathi.yaml":wS,"../../content/traits/knowledge/martial-arts.yaml":TS,"../../content/traits/knowledge/mathematics.yaml":ES,"../../content/traits/knowledge/medicine.yaml":DS,"../../content/traits/knowledge/metallurgy.yaml":OS,"../../content/traits/knowledge/military-tactics.yaml":kS,"../../content/traits/knowledge/mongolian-written.yaml":AS,"../../content/traits/knowledge/mongolian.yaml":jS,"../../content/traits/knowledge/monsters-of-isekai.yaml":MS,"../../content/traits/knowledge/mountaineering.yaml":NS,"../../content/traits/knowledge/music.yaml":PS,"../../content/traits/knowledge/navigation.yaml":FS,"../../content/traits/knowledge/nepali-written.yaml":IS,"../../content/traits/knowledge/nepali.yaml":LS,"../../content/traits/knowledge/new-columbia.yaml":RS,"../../content/traits/knowledge/new-persia.yaml":zS,"../../content/traits/knowledge/noble-houses-of-dreft.yaml":BS,"../../content/traits/knowledge/odia-written.yaml":VS,"../../content/traits/knowledge/odia.yaml":HS,"../../content/traits/knowledge/orc-society.yaml":US,"../../content/traits/knowledge/oromo-written.yaml":WS,"../../content/traits/knowledge/oromo.yaml":GS,"../../content/traits/knowledge/paraarcheology.yaml":KS,"../../content/traits/knowledge/parabiology.yaml":qS,"../../content/traits/knowledge/paraflora.yaml":JS,"../../content/traits/knowledge/paraphysics.yaml":YS,"../../content/traits/knowledge/parasapient-medicine.yaml":XS,"../../content/traits/knowledge/parasapients.yaml":ZS,"../../content/traits/knowledge/parazoology.yaml":QS,"../../content/traits/knowledge/pataliputra.yaml":$S,"../../content/traits/knowledge/pathology.yaml":eC,"../../content/traits/knowledge/persian-written.yaml":tC,"../../content/traits/knowledge/persian.yaml":nC,"../../content/traits/knowledge/pharmacology.yaml":rC,"../../content/traits/knowledge/physical-training.yaml":iC,"../../content/traits/knowledge/physics.yaml":aC,"../../content/traits/knowledge/planar-exploration.yaml":oC,"../../content/traits/knowledge/polish-written.yaml":sC,"../../content/traits/knowledge/polish.yaml":cC,"../../content/traits/knowledge/politics.yaml":lC,"../../content/traits/knowledge/port-herminst.yaml":uC,"../../content/traits/knowledge/ports-and-stations.yaml":dC,"../../content/traits/knowledge/portuguese-written.yaml":fC,"../../content/traits/knowledge/portuguese.yaml":pC,"../../content/traits/knowledge/psychology.yaml":mC,"../../content/traits/knowledge/punjabi-written.yaml":hC,"../../content/traits/knowledge/punjabi.yaml":gC,"../../content/traits/knowledge/religions-of-isekai.yaml":_C,"../../content/traits/knowledge/religions-of-the-settled-systems.yaml":vC,"../../content/traits/knowledge/rhetoric.yaml":yC,"../../content/traits/knowledge/robotics.yaml":bC,"../../content/traits/knowledge/romanian-written.yaml":xC,"../../content/traits/knowledge/romanian.yaml":SC,"../../content/traits/knowledge/runecraft.yaml":CC,"../../content/traits/knowledge/russian-written.yaml":wC,"../../content/traits/knowledge/russian.yaml":TC,"../../content/traits/knowledge/sdu-law.yaml":EC,"../../content/traits/knowledge/seafaring.yaml":DC,"../../content/traits/knowledge/security-systems.yaml":OC,"../../content/traits/knowledge/shipbreaking.yaml":kC,"../../content/traits/knowledge/shipping-lanes.yaml":AC,"../../content/traits/knowledge/sinhala-written.yaml":jC,"../../content/traits/knowledge/sinhala.yaml":MC,"../../content/traits/knowledge/somali-written.yaml":NC,"../../content/traits/knowledge/somali.yaml":PC,"../../content/traits/knowledge/sorellion.yaml":FC,"../../content/traits/knowledge/spacefaring.yaml":IC,"../../content/traits/knowledge/spanish-written.yaml":LC,"../../content/traits/knowledge/spanish.yaml":RC,"../../content/traits/knowledge/spirits-and-the-dead.yaml":zC,"../../content/traits/knowledge/starships.yaml":BC,"../../content/traits/knowledge/succession-law.yaml":VC,"../../content/traits/knowledge/swahili-written.yaml":HC,"../../content/traits/knowledge/swahili.yaml":UC,"../../content/traits/knowledge/switch-gates.yaml":WC,"../../content/traits/knowledge/tamil-written.yaml":GC,"../../content/traits/knowledge/tamil.yaml":KC,"../../content/traits/knowledge/telugu-written.yaml":qC,"../../content/traits/knowledge/telugu.yaml":JC,"../../content/traits/knowledge/tetra-frontiers-co.yaml":YC,"../../content/traits/knowledge/tetra.yaml":XC,"../../content/traits/knowledge/thai-written.yaml":ZC,"../../content/traits/knowledge/thai.yaml":QC,"../../content/traits/knowledge/the-bureau-of-planar-management.yaml":$C,"../../content/traits/knowledge/the-chinese-empire.yaml":ew,"../../content/traits/knowledge/the-corporate-syndicates.yaml":tw,"../../content/traits/knowledge/the-corsine-pass.yaml":nw,"../../content/traits/knowledge/the-diplomatic-wing.yaml":rw,"../../content/traits/knowledge/the-drovus-empire.yaml":iw,"../../content/traits/knowledge/the-explorers-lodge.yaml":aw,"../../content/traits/knowledge/the-free-american-states.yaml":ow,"../../content/traits/knowledge/the-imperial-military.yaml":sw,"../../content/traits/knowledge/the-kingdom-of-india.yaml":cw,"../../content/traits/knowledge/the-kings-woods.yaml":lw,"../../content/traits/knowledge/the-lunar-industrial-syndicate.yaml":uw,"../../content/traits/knowledge/the-martian-association.yaml":dw,"../../content/traits/knowledge/the-stellar-democratic-union.yaml":fw,"../../content/traits/knowledge/the-sunrise-princedoms.yaml":pw,"../../content/traits/knowledge/the-switch-port.yaml":mw,"../../content/traits/knowledge/the-union-of-texas.yaml":hw,"../../content/traits/knowledge/the-united-nations.yaml":gw,"../../content/traits/knowledge/the-ural-federation.yaml":_w,"../../content/traits/knowledge/theater.yaml":vw,"../../content/traits/knowledge/thieves-cant.yaml":yw,"../../content/traits/knowledge/toxicology.yaml":bw,"../../content/traits/knowledge/trade-guilds.yaml":xw,"../../content/traits/knowledge/trade-law.yaml":Sw,"../../content/traits/knowledge/trade-roads.yaml":Cw,"../../content/traits/knowledge/turkish-written.yaml":ww,"../../content/traits/knowledge/turkish.yaml":Tw,"../../content/traits/knowledge/ukrainian-written.yaml":Ew,"../../content/traits/knowledge/ukrainian.yaml":Dw,"../../content/traits/knowledge/union-politics.yaml":Ow,"../../content/traits/knowledge/ural-tribal-law.yaml":kw,"../../content/traits/knowledge/urdu-written.yaml":Aw,"../../content/traits/knowledge/urdu.yaml":jw,"../../content/traits/knowledge/uyghur-written.yaml":Mw,"../../content/traits/knowledge/uyghur.yaml":Nw,"../../content/traits/knowledge/vietnamese-written.yaml":Pw,"../../content/traits/knowledge/vietnamese.yaml":Fw,"../../content/traits/knowledge/wilderness-lore.yaml":Iw,"../../content/traits/knowledge/xanthus.yaml":Lw,"../../content/traits/knowledge/yoruba-written.yaml":Rw,"../../content/traits/knowledge/yoruba.yaml":zw,"../../content/traits/knowledge/yutu.yaml":Bw,"../../content/traits/knowledge/zhulong.yaml":Vw,"../../content/traits/other/long-in-the-tooth.yaml":Hw,"../../content/traits/other/magic-access.yaml":Uw,"../../content/traits/other/possessed-by-a-spirit.yaml":Ww,"../../content/traits/skill/access-control.yaml":Gw,"../../content/traits/skill/acid-breath.yaml":Kw,"../../content/traits/skill/advanced-cooking.yaml":qw,"../../content/traits/skill/advanced-potion-mixing.yaml":Jw,"../../content/traits/skill/ambusher.yaml":Yw,"../../content/traits/skill/animal-husbandry.yaml":Xw,"../../content/traits/skill/antidote-brewing.yaml":Zw,"../../content/traits/skill/appraisal.yaml":Qw,"../../content/traits/skill/archival-research.yaml":$w,"../../content/traits/skill/artifact-identification.yaml":eT,"../../content/traits/skill/artifact-repair.yaml":tT,"../../content/traits/skill/artist-painting.yaml":nT,"../../content/traits/skill/artist-sculpture.yaml":rT,"../../content/traits/skill/bait-and-lure.yaml":iT,"../../content/traits/skill/battlefield-commander.yaml":aT,"../../content/traits/skill/beast-taming.yaml":oT,"../../content/traits/skill/body-conditioning.yaml":sT,"../../content/traits/skill/born-leader.yaml":cT,"../../content/traits/skill/boxers-defense.yaml":lT,"../../content/traits/skill/brawler.yaml":uT,"../../content/traits/skill/breakthrough.yaml":dT,"../../content/traits/skill/bugging.yaml":fT,"../../content/traits/skill/calming-presence.yaml":pT,"../../content/traits/skill/capable-student.yaml":mT,"../../content/traits/skill/cargo-handling.yaml":hT,"../../content/traits/skill/casualty-extraction.yaml":gT,"../../content/traits/skill/cataloguing.yaml":_T,"../../content/traits/skill/checkpoint-nerve.yaml":vT,"../../content/traits/skill/climber.yaml":yT,"../../content/traits/skill/combat-medic.yaml":bT,"../../content/traits/skill/con-man.yaml":xT,"../../content/traits/skill/concealment.yaml":ST,"../../content/traits/skill/containment-protocols.yaml":CT,"../../content/traits/skill/contortionist.yaml":wT,"../../content/traits/skill/contract-drafting.yaml":TT,"../../content/traits/skill/counselor.yaml":ET,"../../content/traits/skill/courtly-manners.yaml":DT,"../../content/traits/skill/cover-identity.yaml":OT,"../../content/traits/skill/craft-leatherworking.yaml":kT,"../../content/traits/skill/craft-masonry.yaml":AT,"../../content/traits/skill/craft-smithing.yaml":jT,"../../content/traits/skill/crew-management.yaml":MT,"../../content/traits/skill/crisis-leadership.yaml":NT,"../../content/traits/skill/crowd-control.yaml":PT,"../../content/traits/skill/cryptanalysis.yaml":FT,"../../content/traits/skill/curse-sense.yaml":IT,"../../content/traits/skill/data-analysis.yaml":LT,"../../content/traits/skill/data-recovery.yaml":RT,"../../content/traits/skill/dead-drops.yaml":zT,"../../content/traits/skill/decipherment.yaml":BT,"../../content/traits/skill/demolitions.yaml":VT,"../../content/traits/skill/diplomacy.yaml":HT,"../../content/traits/skill/disguise.yaml":UT,"../../content/traits/skill/dissection.yaml":WT,"../../content/traits/skill/dock-rat.yaml":GT,"../../content/traits/skill/drillmaster.yaml":KT,"../../content/traits/skill/eagle-eye.yaml":qT,"../../content/traits/skill/electronics-repair.yaml":JT,"../../content/traits/skill/enchanting.yaml":YT,"../../content/traits/skill/escort-driving.yaml":XT,"../../content/traits/skill/eva-work.yaml":ZT,"../../content/traits/skill/evasive-maneuvers.yaml":QT,"../../content/traits/skill/excavation.yaml":$T,"../../content/traits/skill/exorcism.yaml":eE,"../../content/traits/skill/expedition-leader.yaml":tE,"../../content/traits/skill/expedition-logistics.yaml":nE,"../../content/traits/skill/expert-pilot.yaml":rE,"../../content/traits/skill/fabrication.yaml":iE,"../../content/traits/skill/fancy-footwork.yaml":aE,"../../content/traits/skill/fence.yaml":oE,"../../content/traits/skill/field-pharmacology.yaml":sE,"../../content/traits/skill/field-sampling.yaml":cE,"../../content/traits/skill/field-splinting.yaml":lE,"../../content/traits/skill/field-surgeon.yaml":uE,"../../content/traits/skill/fine-print.yaml":dE,"../../content/traits/skill/fire-breath.yaml":fE,"../../content/traits/skill/first-contact-protocols.yaml":pE,"../../content/traits/skill/folk-remedies.yaml":mE,"../../content/traits/skill/footwork.yaml":hE,"../../content/traits/skill/forgery.yaml":gE,"../../content/traits/skill/freerunner.yaml":_E,"../../content/traits/skill/frost-breath.yaml":vE,"../../content/traits/skill/gate-operation.yaml":yE,"../../content/traits/skill/ghost-in-the-machine.yaml":bE,"../../content/traits/skill/gladiator.yaml":xE,"../../content/traits/skill/greasing-palms.yaml":SE,"../../content/traits/skill/hacking.yaml":CE,"../../content/traits/skill/haggler.yaml":wE,"../../content/traits/skill/handler.yaml":TE,"../../content/traits/skill/hard-puncher.yaml":EE,"../../content/traits/skill/hardware-engineering.yaml":DE,"../../content/traits/skill/hazard-assessment.yaml":OE,"../../content/traits/skill/heavy-machinery.yaml":kE,"../../content/traits/skill/herb-gathering.yaml":AE,"../../content/traits/skill/hidden-holds.yaml":jE,"../../content/traits/skill/holy-conviction.yaml":ME,"../../content/traits/skill/hull-cutting.yaml":NE,"../../content/traits/skill/incantation.yaml":PE,"../../content/traits/skill/inspiring-speech.yaml":FE,"../../content/traits/skill/interpreter.yaml":IE,"../../content/traits/skill/interrogation.yaml":LE,"../../content/traits/skill/intimidation.yaml":RE,"../../content/traits/skill/intrusion-countermeasures.yaml":zE,"../../content/traits/skill/inventor.yaml":BE,"../../content/traits/skill/investigation.yaml":VE,"../../content/traits/skill/iron-jaw.yaml":HE,"../../content/traits/skill/jumper.yaml":UE,"../../content/traits/skill/kata-discipline.yaml":WE,"../../content/traits/skill/knowledge-sponge.yaml":GE,"../../content/traits/skill/lab-technique.yaml":KE,"../../content/traits/skill/last-rites.yaml":qE,"../../content/traits/skill/lecturing.yaml":JE,"../../content/traits/skill/legal-advocacy.yaml":YE,"../../content/traits/skill/linguist.yaml":XE,"../../content/traits/skill/lockpicking.yaml":ZE,"../../content/traits/skill/long-distance-runner.yaml":QE,"../../content/traits/skill/market-sense.yaml":$E,"../../content/traits/skill/master-artificer.yaml":eD,"../../content/traits/skill/master-negotiator.yaml":tD,"../../content/traits/skill/master-salvager.yaml":nD,"../../content/traits/skill/mediator.yaml":rD,"../../content/traits/skill/medical-aid.yaml":iD,"../../content/traits/skill/medium.yaml":aD,"../../content/traits/skill/mental-fortitude.yaml":oD,"../../content/traits/skill/military-drill.yaml":sD,"../../content/traits/skill/mining.yaml":cD,"../../content/traits/skill/mnemonist.yaml":lD,"../../content/traits/skill/monster-handling.yaml":uD,"../../content/traits/skill/morale-officer.yaml":dD,"../../content/traits/skill/negotiator.yaml":fD,"../../content/traits/skill/network-engineering.yaml":pD,"../../content/traits/skill/omen-reading.yaml":mD,"../../content/traits/skill/parasapient-field-medicine.yaml":hD,"../../content/traits/skill/peacemaker.yaml":gD,"../../content/traits/skill/peak-conditioning.yaml":_D,"../../content/traits/skill/performer-acrobatics.yaml":vD,"../../content/traits/skill/performer-music.yaml":yD,"../../content/traits/skill/pilot-airplane.yaml":bD,"../../content/traits/skill/pilot-airship.yaml":xD,"../../content/traits/skill/pilot-boat.yaml":SD,"../../content/traits/skill/pilot-drone.yaml":CD,"../../content/traits/skill/pilot-fighter.yaml":wD,"../../content/traits/skill/pilot-freighter.yaml":TD,"../../content/traits/skill/pilot-ground-vehicle.yaml":ED,"../../content/traits/skill/pilot-gunship.yaml":DD,"../../content/traits/skill/pilot-helicopter.yaml":OD,"../../content/traits/skill/pilot-sailing-ship.yaml":kD,"../../content/traits/skill/pilot-shuttle.yaml":AD,"../../content/traits/skill/pilot-truck.yaml":jD,"../../content/traits/skill/planar-acclimation.yaml":MD,"../../content/traits/skill/planar-surveying.yaml":ND,"../../content/traits/skill/poker-face.yaml":PD,"../../content/traits/skill/polymath.yaml":FD,"../../content/traits/skill/possession-resistance.yaml":ID,"../../content/traits/skill/potion-identification.yaml":LD,"../../content/traits/skill/procurement.yaml":RD,"../../content/traits/skill/programming.yaml":zD,"../../content/traits/skill/prototyping.yaml":BD,"../../content/traits/skill/quartermaster.yaml":VD,"../../content/traits/skill/read-the-room.yaml":HD,"../../content/traits/skill/reagent-preparation.yaml":UD,"../../content/traits/skill/relic-handling.yaml":WD,"../../content/traits/skill/research.yaml":GD,"../../content/traits/skill/resist-interrogation.yaml":KD,"../../content/traits/skill/resuscitation.yaml":qD,"../../content/traits/skill/rider-basic-animals.yaml":JD,"../../content/traits/skill/rites-and-ceremonies.yaml":YD,"../../content/traits/skill/route-memory.yaml":XD,"../../content/traits/skill/rune-carving.yaml":ZD,"../../content/traits/skill/running-dark.yaml":QD,"../../content/traits/skill/salvage.yaml":$D,"../../content/traits/skill/schemer.yaml":eO,"../../content/traits/skill/scientific-method.yaml":tO,"../../content/traits/skill/scrap-appraisal.yaml":nO,"../../content/traits/skill/sculpted.yaml":rO,"../../content/traits/skill/sense-the-unseen.yaml":iO,"../../content/traits/skill/shaking-a-tail.yaml":aO,"../../content/traits/skill/shin-training.yaml":oO,"../../content/traits/skill/shoring.yaml":sO,"../../content/traits/skill/simple-cooking.yaml":cO,"../../content/traits/skill/simple-potion-mixing.yaml":lO,"../../content/traits/skill/sizing-up.yaml":uO,"../../content/traits/skill/slayer.yaml":dO,"../../content/traits/skill/sleight-of-hand.yaml":fO,"../../content/traits/skill/smooth-talker.yaml":pO,"../../content/traits/skill/social-engineering.yaml":mO,"../../content/traits/skill/specimen-handling.yaml":hO,"../../content/traits/skill/spirit-warding.yaml":gO,"../../content/traits/skill/spiritual-counsel.yaml":_O,"../../content/traits/skill/spymaster.yaml":vO,"../../content/traits/skill/starship-engineering.yaml":yO,"../../content/traits/skill/streetwise.yaml":bO,"../../content/traits/skill/surgery.yaml":xO,"../../content/traits/skill/surveillance.yaml":SO,"../../content/traits/skill/survivalist.yaml":CO,"../../content/traits/skill/suturing.yaml":wO,"../../content/traits/skill/swimmer.yaml":TO,"../../content/traits/skill/systems-administration.yaml":EO,"../../content/traits/skill/talent-spotter.yaml":DO,"../../content/traits/skill/teaching.yaml":OO,"../../content/traits/skill/teamster.yaml":kO,"../../content/traits/skill/textual-criticism.yaml":AO,"../../content/traits/skill/threat-assessment.yaml":jO,"../../content/traits/skill/tinkerer.yaml":MO,"../../content/traits/skill/tracker.yaml":NO,"../../content/traits/skill/trail-runner.yaml":PO,"../../content/traits/skill/trauma-care.yaml":FO,"../../content/traits/skill/triage.yaml":IO,"../../content/traits/skill/vigilance.yaml":LO,"../../content/traits/skill/weightlifter.yaml":RO,"../../content/traits/skill/wielder-bow.yaml":zO,"../../content/traits/skill/wielder-crossbow.yaml":BO,"../../content/traits/skill/wielder-dagger.yaml":VO,"../../content/traits/skill/wielder-flamethrower.yaml":HO,"../../content/traits/skill/wielder-greatsword.yaml":UO,"../../content/traits/skill/wielder-grenade.yaml":WO,"../../content/traits/skill/wielder-longsword.yaml":GO,"../../content/traits/skill/wielder-mace.yaml":KO,"../../content/traits/skill/wielder-machine-gun.yaml":qO,"../../content/traits/skill/wielder-missile-launcher.yaml":JO,"../../content/traits/skill/wielder-mortar.yaml":YO,"../../content/traits/skill/wielder-musket.yaml":XO,"../../content/traits/skill/wielder-pistol.yaml":ZO,"../../content/traits/skill/wielder-polearm.yaml":QO,"../../content/traits/skill/wielder-rifle.yaml":$O,"../../content/traits/skill/wielder-shortsword.yaml":ek,"../../content/traits/skill/wielder-shotgun.yaml":tk,"../../content/traits/skill/wielder-siege-engine.yaml":nk,"../../content/traits/skill/wielder-sling.yaml":rk,"../../content/traits/skill/wielder-sniper-rifle.yaml":ik,"../../content/traits/skill/wielder-spear.yaml":ak,"../../content/traits/skill/wielder-staff.yaml":ok,"../../content/traits/skill/wielder-stun-baton.yaml":sk,"../../content/traits/skill/wielder-taser.yaml":ck,"../../content/traits/skill/wielder-throwing-weapon.yaml":lk,"../../content/traits/skill/wielder-war-axe.yaml":uk,"../../content/traits/skill/wrangler.yaml":dk,"../../content/traits/skill/xenobiology-fieldwork.yaml":fk,"../../content/traits/skill/zero-g-maneuvering.yaml":pk})).map(([e,t])=>({path:e.slice(14),text:t}))),cN=new Map(oN.traits.map(e=>[e.id,e])),lN=new Map(oN.packages.map(e=>[e.id,e])),uN=new Map(oN.kinds.map(e=>[e.id,e])),dN=new Map(oN.items.map(e=>[e.id,e]));function fN({tone:e=`dark`,size:t=`default`,card:n=!1,scroll:r=`panel`},i=``){return[`sf-popup`,`is-open`,`sf-popup--${e}`,t!=="default"&&`sf-popup--${t}`,n&&`sf-popup--card`,r===`inner`&&`sf-popup--inner`,i].filter(Boolean).join(` `)}function pN({label:e,onClose:t,children:n,tone:r=`dark`,size:i=`default`,card:a=!1,scroll:o=`panel`,title:s,className:c=``}){let l=(0,U.useRef)(null),u=(0,U.useRef)(t);return u.current=t,(0,U.useEffect)(()=>{let e=document.activeElement;l.current?.focus(),document.documentElement.classList.add(`sf-popup-open`);let t=e=>{e.key===`Escape`&&u.current()};return window.addEventListener(`keydown`,t),()=>{window.removeEventListener(`keydown`,t),document.documentElement.classList.remove(`sf-popup-open`),e?.focus()}},[]),(0,W.jsx)(`div`,{className:fN({tone:r,size:i,card:a,scroll:o},c),role:`dialog`,"aria-modal":`true`,"aria-label":e,onClick:e=>e.target===e.currentTarget&&t(),children:(0,W.jsxs)(`div`,{className:`sf-popup-panel`,children:[(0,W.jsx)(G,{ref:l,round:`lg`,tone:r===`dark`?`light`:`dark`,className:`sf-popup-close`,"aria-label":`Close`,onClick:t,children:(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,width:`16`,height:`16`,viewBox:`0 0 20 20`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M2 2l16 16M18 2L2 18`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`})})}),(0,W.jsxs)(`div`,{className:`sf-popup-scroll`,children:[s&&(0,W.jsx)(`h3`,{className:`sf-popup-title`,children:s}),n]})]})})}var mN=[`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`nine`,`ten`,`eleven`,`twelve`,`thirteen`,`fourteen`,`fifteen`,`sixteen`,`seventeen`,`eighteen`,`nineteen`,`twenty`,`twenty-one`,`twenty-two`,`twenty-three`,`twenty-four`,`twenty-five`],hN=[`first`,`second`,`third`,`fourth`,`fifth`,`sixth`,`seventh`,`eighth`,`ninth`,`tenth`,`eleventh`,`twelfth`,`thirteenth`,`fourteenth`,`fifteenth`,`sixteenth`,`seventeenth`,`eighteenth`,`nineteenth`,`twentieth`,`twenty-first`,`twenty-second`,`twenty-third`,`twenty-fourth`,`twenty-fifth`],gN=e=>[...e].sort((e,t)=>t.length-e.length).map(e=>e.replace(`-`,`[\\s-]`)).join(`|`),_N=`(\\d{1,2}|${gN(mN)})`,vN=`(\\d{1,2})(?:st|nd|rd|th)|(${gN(hN)})`,yN=RegExp(`\\b(?:level|lvl|lv)[\\s-]*${_N}\\b`,`i`),bN=RegExp(`\\b(?:${vN})[\\s-]+(?:level|lvl)\\b`,`i`);function xN(e,t){if(!e)return;let n=/^\d+$/.test(e)?Number(e):t.indexOf(e.toLowerCase().replace(/\s+/,`-`))+1;return n>=1&&n<=25?n:void 0}function SN(e){let t=yN.exec(e);if(t)return xN(t[1],mN);let n=bN.exec(e);if(n)return xN(n[1],hN)??xN(n[2],hN)}async function CN(e){if(!e.type.startsWith(`image/`))throw Error(`${e.name} isn't an image.`);let t;try{t=await createImageBitmap(e)}catch{throw Error(`Couldn't read ${e.name}. Try a PNG, JPEG or WebP.`)}let n=Math.min(1,512/Math.max(t.width,t.height)),r=document.createElement(`canvas`);r.width=Math.max(1,Math.round(t.width*n)),r.height=Math.max(1,Math.round(t.height*n)),r.getContext(`2d`).drawImage(t,0,0,r.width,r.height),t.close();let i=r.toDataURL(`image/webp`,.82);if(i.startsWith(`data:image/webp`)||(i=r.toDataURL(`image/jpeg`,.85)),i.length>15e5)throw Error(`${e.name} is still too big after shrinking it.`);return i}var wN=e=>dl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function TN(e){let t=e.match(/^([\s\S]*?)\s*(?:that has|that possesses|with) the following profile:\s*((?:\([^)]*\)[\s,]*)+)\.?\s*([\s\S]*)$/i);if(!t)return;let n={before:`${t[1].trim()}:`,after:t[3].trim(),damage:[],other:[]};for(let[,e]of t[2].matchAll(/\(([^)]*)\)/g)){let t=e.trim(),r;if(/^(ranged|melee)(, thrown)?$/i.test(t))n.attackType=t[0].toUpperCase()+t.slice(1).toLowerCase();else if(r=t.match(/^max range:?\s*(.+)$/i))n.maxRange=/\d$/.test(r[1])?`${r[1]} m`:r[1];else if(r=t.match(/^attack stat:\s*(.+)$/i))n.attackStat=r[1][0].toUpperCase()+r[1].slice(1);else if(r=t.match(/^area of effect:?\s*(\d+(?:\.\d+)?)\s*(m|meters?)(\s+per rank)?$/i))n.areaOfEffect={amount:Number(r[1]),unit:`m`,perRank:!!r[3]};else{let e=t.split(/\s*,\s*/).map(e=>{let t=e.match(/^(\d+)\s+(.+?)(\s+per rank)?$/i),n=t&&wN(t[2]);return t&&n?{type:n,amount:Number(t[1]),perRank:!!t[3]}:void 0});e.every(e=>e)?n.damage.push(...e):n.other.push(t)}}return n}var EN=Object.keys(V),DN=EN.filter(e=>V[e].length>0),$=e=>e.charAt(0).toUpperCase()+e.slice(1),ON=e=>cN.get(e)?.name??e,kN=e=>`region-${e===`isekai`?`dreft`:`systems`}`,AN=(e,t)=>`+${e} ${t.split(`-`).map($).join(` `)}`,jN={isekai:{mark:`isekai`,name:`Isekai`},earth:{mark:`systems`,name:`The Settled Systems`}};function MN({plane:e}){let t=e?jN[e]:void 0;return t?(0,W.jsx)(`span`,{className:`setting-icon setting-${t.mark}`,role:`img`,"aria-label":t.name,title:t.name}):null}var NN=e=>e.package===void 0?ON(e.trait??``):lN.get(e.package)?.name??e.package;function PN(e){return e.kind?uN.get(e.kind)?.stats:void 0}function FN({title:e,children:t}){return(0,W.jsxs)(`header`,{className:`step-head`,children:[(0,W.jsx)(`h2`,{children:e}),t&&(0,W.jsx)(`p`,{className:`lede`,children:t})]})}var IN=3e3;function LN({children:e,fades:t,bad:n,onDismiss:r}){let[i,a]=(0,U.useState)(!1),o=(0,U.useRef)(r);return o.current=r,(0,U.useEffect)(()=>{if(a(!1),!t)return;let e=setTimeout(()=>a(!0),IN),n=setTimeout(()=>o.current(),3400);return()=>{clearTimeout(e),clearTimeout(n)}},[e,t]),(0,W.jsxs)(`div`,{className:`notice${n?` bad`:t?` is-success`:``}${i?` is-leaving`:``}`,role:`status`,children:[e,(0,W.jsx)(G,{kind:`link`,onClick:r,"aria-label":`Dismiss`,children:`✕`})]})}function RN({text:e}){let t=e.split(`
+`).map(e=>e.trim()).filter(Boolean);if(!t.length)return null;if(!t.some(e=>e.startsWith(`- `)))return(0,W.jsx)(`p`,{className:`sf-card-effect`,children:e});let n=[];for(let e of t)e.startsWith(`- `)?Array.isArray(n.at(-1))?n.at(-1).push(e.slice(2)):n.push([e.slice(2)]):n.push(e);return(0,W.jsx)(`div`,{className:`sf-card-effect`,children:n.map((e,t)=>Array.isArray(e)?(0,W.jsx)(`ul`,{children:e.map((e,t)=>(0,W.jsx)(`li`,{children:e},t))},t):(0,W.jsx)(`p`,{children:e},t))})}function zN({action:e,rank:t}){if(!e)return null;let n=e.indexOf(`: `),r=n>0?e.slice(0,n):void 0,i=n>0?e.slice(n+2):e,a=TN(i);if(!a)return(0,W.jsxs)(`p`,{className:`sf-card-action`,children:[r&&(0,W.jsxs)(`strong`,{children:[r,`:`]}),` `,i]});let o=(e,n)=>n&&t?e*t:e,s=!t&&(a.damage.some(e=>e.perRank)||a.areaOfEffect?.perRank),c=/ranged|thrown/i.test(a.attackType??``);return(0,W.jsxs)(`div`,{className:`sf-card-action`,children:[(0,W.jsxs)(`p`,{children:[r&&(0,W.jsxs)(`strong`,{children:[r,`:`]}),` `,a.before]}),(0,W.jsxs)(`div`,{className:`equipment-stats sf-item-badges sf-card-action-badges`,children:[a.damage.length>0&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:c?`Ranged damage`:`Melee damage`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(ZN,{name:c?`crosshairs`:`sword`,label:c?`Ranged damage`:`Melee damage`})}),a.damage.map(e=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(ZN,{name:e.type.toLowerCase(),label:e.type}),o(e.amount,e.perRank)]},e.type))]}),a.maxRange&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Max Range`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(ZN,{name:`range`,label:`Max Range`})}),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:a.maxRange})]}),a.areaOfEffect&&(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Area of Effect`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(ZN,{name:`burst`,label:`Area of Effect`})}),(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[o(a.areaOfEffect.amount,a.areaOfEffect.perRank),` `,a.areaOfEffect.unit]})]}),a.attackType&&(0,W.jsxs)(BN,{children:[a.attackType,` Attack`]}),a.attackStat&&(0,W.jsx)(BN,{children:a.attackStat}),a.other.map(e=>(0,W.jsx)(BN,{children:e},e)),s&&(0,W.jsx)(`span`,{className:`muted small`,children:`Damage and area per Rank`})]}),a.after&&(0,W.jsx)(`p`,{children:a.after})]})}function BN(e){return(0,W.jsx)(`span`,{className:`chip${e.tone?` chip-${e.tone}`:``}`,children:e.children})}function VN({stats:e}){return(0,W.jsx)(`div`,{className:`stat-ranges`,children:DN.map(t=>(0,W.jsxs)(`div`,{children:[(0,W.jsx)(`div`,{className:`stat-ranges-group`,children:$(t)}),V[t].map(t=>(0,W.jsxs)(`div`,{className:`stat-range`,children:[(0,W.jsx)(`span`,{children:$(t)}),(0,W.jsxs)(`span`,{className:`num`,children:[`+`,e[t]?.bonus,(0,W.jsxs)(`span`,{className:`muted`,children:[`/`,e[t]?.max]})]})]},t))]},t))})}function HN({portrait:e,name:t,onChange:n,className:r=``}){let i=(0,U.useRef)(null),[a,o]=(0,U.useState)(),[s,c]=(0,U.useState)(!1),[l,u]=(0,U.useState)(!1),d=t?`Portrait of ${t}`:`Character portrait`;if(!n)return e?(0,W.jsx)(`div`,{className:`portrait ${r}`,children:(0,W.jsx)(`img`,{src:e,alt:d})}):null;let f=()=>{u(!1),o(void 0)},p=async e=>{if(e){c(!0),o(void 0);try{n(await CN(e)),u(!1)}catch(e){o(e instanceof Error?e.message:String(e))}finally{c(!1)}}},m=()=>i.current?.click();return(0,W.jsxs)(`div`,{className:`portrait-field ${r}`,children:[(0,W.jsx)(G,{kind:`bare`,className:`portrait${e?` portrait-filled`:` portrait-empty`}`,onClick:()=>e?u(!0):m(),disabled:s,"aria-label":e?`Edit the portrait`:`Add a portrait`,children:e?(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`img`,{src:e,alt:``}),(0,W.jsx)(`span`,{className:`portrait-edit`,"aria-hidden":`true`,children:(0,W.jsx)(`span`,{className:`pen-icon`})})]}):(0,W.jsxs)(`span`,{className:`portrait-prompt`,children:[(0,W.jsx)(ZN,{name:`upload`}),s?`Shrinking…`:`Add a portrait`]})}),(0,W.jsx)(`input`,{ref:i,type:`file`,accept:`image/png,image/jpeg,image/webp,image/gif,image/avif`,hidden:!0,onChange:e=>{p(e.target.files?.[0]),e.target.value=``}}),a&&!l&&(0,W.jsx)(`p`,{className:`portrait-error`,children:a}),l&&e&&(0,W.jsxs)(pN,{label:`Portrait`,title:`Portrait`,onClose:f,size:`narrow`,className:`portrait-popup`,children:[(0,W.jsx)(`img`,{className:`portrait-large`,src:e,alt:d}),a&&(0,W.jsx)(`p`,{className:`portrait-error`,children:a}),(0,W.jsxs)(`div`,{className:`portrait-actions`,children:[(0,W.jsxs)(G,{tone:`dark`,onClick:m,disabled:s,children:[(0,W.jsx)(ZN,{name:`upload`}),s?`Shrinking…`:`Replace image`]}),(0,W.jsx)(G,{onClick:()=>{n(void 0),f()},disabled:s,children:`Remove`})]})]})]})}function UN({description:e,onChange:t}){return t?(0,W.jsx)(`textarea`,{"aria-label":`Description`,value:e??``,maxLength:4e3,placeholder:`Who they are, how they look, what they want.`,onChange:e=>t(e.target.value||void 0)}):e?(0,W.jsx)(`p`,{children:e}):null}function WN({looks:e,onChange:t,disabled:n,fieldClass:r,inputClass:i}){let a=n=>{let r=Number(n);t({...e,age:n===``||!Number.isFinite(r)?void 0:Math.min(Kl,Math.max(0,Math.floor(r)))})},o=n=>{let r=n===`unlisted`?void 0:n;t({...e,gender:r,customGender:r===`custom`?e.customGender:void 0})};return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`label`,{className:`${r} age-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,W.jsx)(`input`,{className:i,type:`number`,inputMode:`numeric`,min:0,max:Kl,step:1,value:e.age??``,placeholder:`—`,onChange:e=>a(e.target.value),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} gender-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,W.jsx)(`select`,{className:i,value:e.gender??`unlisted`,onChange:e=>o(e.target.value),disabled:n,children:Nl.map(e=>(0,W.jsx)(`option`,{value:e,children:$(e)},e))})]}),e.gender===`custom`&&(0,W.jsxs)(`label`,{className:`${r} custom-gender-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Custom Gender`}),(0,W.jsx)(`input`,{className:i,value:e.customGender??``,maxLength:40,placeholder:`In your own words`,onChange:n=>t({...e,customGender:n.target.value||void 0}),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} height-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Height`}),(0,W.jsx)(`input`,{className:i,value:e.height??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,height:n.target.value||void 0}),disabled:n})]}),(0,W.jsxs)(`label`,{className:`${r} weight-field`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Weight`}),(0,W.jsx)(`input`,{className:i,value:e.weight??``,maxLength:20,placeholder:`—`,onChange:n=>t({...e,weight:n.target.value||void 0}),disabled:n})]})]})}function GN({name:e,onChange:t,heading:n,className:r}){let[i,a]=(0,U.useState)(!1),[o,s]=(0,U.useState)(e??``),c=()=>{s(e??``),a(!0)},l=e=>{e&&t(o.trim()||void 0),a(!1)};return(0,W.jsxs)(`div`,{className:`name-field-line ${r}`,children:[(0,W.jsx)(n,{children:i?(0,W.jsx)(`input`,{className:`name-input`,"aria-label":`Character name`,value:o,maxLength:80,placeholder:`Unnamed character`,autoFocus:!0,onChange:e=>s(e.target.value),onBlur:()=>l(!0),onKeyDown:e=>{e.key===`Enter`&&l(!0),e.key===`Escape`&&l(!1)}}):(0,W.jsx)(G,{kind:`bare`,className:`name-text${e?``:` muted`}`,onClick:c,children:e||`Unnamed character`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit`,"aria-label":`Edit the name`,onMouseDown:e=>i&&e.preventDefault(),onClick:()=>i?l(!0):c(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})}var KN={left:`M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z`,right:`M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z`};function qN({to:e}){return(0,W.jsx)(`svg`,{className:`arrow-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 640 640`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:KN[e]})})}var JN={plus:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`,minus:`M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z`};function YN({is:e}){return(0,W.jsx)(`svg`,{className:`sign-icon`,xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:JN[e]})})}var XN={knowledge:{viewBox:`0 0 640 512`,d:`M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z`},language:{viewBox:`0 0 640 512`,d:`M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z`},download:{viewBox:`0 0 512 512`,d:`M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z`},switch:{viewBox:`0 0 512 512`,d:`M464 16c-17.67 0-32 14.31-32 32v74.09C392.1 66.52 327.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.89 5.5 34.88-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c50.5 0 96.26 24.55 124.4 64H336c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32V48C496 30.31 481.7 16 464 16zM441.8 289.6c-16.92-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-50.5 0-96.25-24.55-124.4-64H176c17.67 0 32-14.31 32-32s-14.33-32-32-32h-128c-17.67 0-32 14.31-32 32v144c0 17.69 14.33 32 32 32s32-14.31 32-32v-74.09C119.9 445.5 184.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z`},upload:{viewBox:`0 0 512 512`,d:`M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z`},print:{viewBox:`0 0 512 512`,d:`M448 192H64C28.65 192 0 220.7 0 256v96c0 17.67 14.33 32 32 32h32v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h32c17.67 0 32-14.33 32-32V256C512 220.7 483.3 192 448 192zM384 448H128v-96h256V448zM432 296c-13.25 0-24-10.75-24-24c0-13.27 10.75-24 24-24s24 10.73 24 24C456 285.3 445.3 296 432 296zM128 64h229.5L384 90.51V160h64V77.25c0-8.484-3.375-16.62-9.375-22.62l-45.25-45.25C387.4 3.375 379.2 0 370.8 0H96C78.34 0 64 14.33 64 32v128h64V64z`},plus:{viewBox:`0 0 448 512`,d:`M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z`},restore:{viewBox:`0 0 512 512`,d:`M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z`},send:{viewBox:`0 0 512 512`,d:`M511.1 255.1c0 12.8-7.625 24.38-19.41 29.41L44.6 477.4c-4.062 1.75-8.344 2.594-12.59 2.594c-8.625 0-17.09-3.5-23.28-10.05c-9.219-9.766-11.34-24.25-5.344-36.27l73.66-147.3l242.1-30.37L77.03 225.6l-73.66-147.3C-2.623 66.3-.4982 51.81 8.72 42.05c9.25-9.766 23.56-12.75 35.87-7.453L492.6 226.6C504.4 231.6 511.1 243.2 511.1 255.1z`},blunt:{viewBox:`0 0 512 512`,d:`M215.97 27.813c-2.218.04-4.35.177-6.407.375l-.532.062c-2.774.266-5.796 1.01-9.124 1.844-4.418 1.11-8.096 2.607-11.125 4.406l77.782 59.313 7.375 5.656-5.593 7.405-13.72 18.156 67.595 51.626 14.217-18.812 9.47-12.53 6.5 14.342 19.656 43.47 60.593-80.095-47.187-7.124-15.533-2.312 9.47-12.563 14.28-18.843-67.593-51.624L310.78 50.78l-5.03 6.657-7.188-4.25c-28.635-16.917-58.02-25.157-80.343-25.374a76.706 76.706 0 0 0-2.25 0zM453 127.124l-71.47 94.438 34.564 26.187c44.24-20.22 64.01-52.594 71.312-94.625l-34.406-26zm-193.688 25.03c-27.17 33.09-55.308 64.706-82.812 96.22l47.406 39.875c23.11-35.343 46.336-71.61 71.938-108.22l-36.53-27.874zM164.25 262.47c-11.355 13.115-22.564 26.254-33.5 39.5l48.375 52.717c11.707-16.6 23.107-33.515 34.438-50.687l-49.313-41.53zm-45.438 54.124a1111.646 1111.646 0 0 0-23.093 29.72l33.468 73.842c13.586-16.22 26.434-32.893 38.843-49.937l-49.218-53.626zm-35.75 47.03c-12.108 16.978-23.57 34.335-34.124 52.282L98.53 454.47a688.442 688.442 0 0 0 17.22-18.72l-32.688-72.125zm-43.437 68.688a546.43 546.43 0 0 0-14.75 29l37.375 28.313a611.184 611.184 0 0 0 23.125-21.72l-45.75-35.592z`},slashing:{viewBox:`0 0 512 512`,d:`M275.03 20c35.223 49.563 53.59 113.64 55.69 173.47C315.154 143 289.092 88.423 250.81 48.75c40.294 79.527 51.15 172.312 37.938 256.094-12.287-75.777-40.564-159.524-92.375-227.156 29.6 70.937 36.64 149.785 24.813 221.843-8.745-51.804-25.41-107.4-52.594-158.81 13.023 54.315 12.854 107.64 3.437 159.28l21.657 6.813 15 4.718-11.28 10.908c-10.68 10.332-19.868 21.905-27.345 34.343 93.614 35.486 232.952 64.53 298.032 41.376-41.02 56.466-210.332 13.822-309.313-18.687-1.514 3.775-2.918 7.594-4.124 11.467a152.536 152.536 0 0 0-6.062 29.657l176.47 66.375c98.5 31.095 150.5-24.62 158.655-81.72C505.253 254.472 485.016 105.66 426.06 20h-22.187c40.092 65.52 66.67 154.216 60.47 255.344-8.154-79.833-42.8-157.214-98.44-219.5 38.676 85.094 56.566 185.746 34.376 288.625.057-118.816-33.1-225.865-105.092-324.47H275.03zm-110.186 1.594c41.255 29.176 74.328 74.093 97.5 120.656-7.702-46.15-21.3-86.79-44-120.656h-53.5zm176.375 0c28.882 15.143 52.096 36.614 71.28 66.78-7.14-27.79-17.217-49.85-31.438-66.78H341.22zM123.686 304.406a179.344 179.344 0 0 1-4.062 64L18.812 336.344V366l91.938 29.094a178.602 178.602 0 0 1-30.313 48.28l50.094 15.75c-3.038-24.898-1.136-49.885 6.282-73.718 7.446-23.92 20.223-46.108 37.032-65.22l-50.156-15.78z`},piercing:{viewBox:`0 0 512 512`,d:`M242.5 21.5c-25.192 3.245-47.28 32.016-47.28 68.78 0 20.28 7.038 38.25 17.5 50.75l10.25 12.25-15.69 2.94c-6.058 1.128-11.42 3.163-16.25 6.093l50.907 29.343.22.125c10.092 5.547 17.387 12.847 21.687 20.72 4.332 7.932 5.865 16.78 2.562 24.75-3.302 7.97-12.133 13.29-21.687 13.344-9.457.054-20.02-3.703-32.345-11.5-.13-.082-.245-.136-.375-.22l-52.313-30.06a192.847 192.847 0 0 0-4.156 14.56c-8.238 33.626-9.925 74.615-10.155 110.407H189.5l.625 8.626 11.28 149.78 96.69.002 9.935-149.69.564-8.72h42c-.013-36.18-.378-77.737-7.844-111.624-4.05-18.384-10.197-34.295-18.813-45.75-8.615-11.454-19.257-18.706-34.593-21.062l-16-2.438L283.5 140.25c10.008-12.437 16.72-30.183 16.72-49.97-.002-39.2-24.78-68.718-52.5-68.718-2.913 0-4.762-.12-5.22-.062zM20.812 85.78v21.626l200.875 115.5.188.094.188.125c10.573 6.74 18.416 8.805 22.53 8.78 4.115-.022 4.113-.724 4.563-1.81.45-1.09.63-4.324-1.72-8.626-2.348-4.304-7.01-9.363-14.436-13.407l-.094-.032-.094-.06-212-122.19zm396.97 187.626-15.626 28.22-33.656-19.063c.355 8.144.576 16.234.688 24.187l22.906 13.03-15.47 27.94 114.97 15.124-73.813-89.438z`},heat:{viewBox:`0 0 512 512`,d:`M162.22 21.312c-183.876 106.68 51.994 227.35-10.19 332.47C116.95 413.083 38.11 325.45 43.75 227-6.035 353.376 30.21 443.745 95.22 492.75c1.386.34 17.577.498 41.186.562-28.478-16.9-32.06-75.355 32.813-103.25l15.78-7L182.062 400c-1.356 8.34-.318 13.95 1.188 16.937 1.507 2.987 3.106 3.544 5.844 4.094 5.475 1.1 16.963-2.395 26.28-14.624 18.636-24.457 29.117-80.228-26.874-167l-4.094-6.437-13.906-19.25 23.25 9.905 5.25 1.75c80.85 25.498 135.3 58.46 174.625 112.72 21.544-22.906 38.7-56.835 43.812-91.69l3.5-27.468 13.438 23.97c25.525 45.802 30.267 104.912 11.094 156.5-14.23 38.28-42.036 72.34-84 93.5 13.623-.01 24.05.032 25.25.124 154.76-34.77 139.345-244.952-14.19-394.093.012.726 0 1.46 0 2.188 78.964 185.87-136.465 189.104-119.25 11.47-41.686 100.463-132.86-2.147-91.06-91.283zM269.093 332.25c13.51 15.806 22.35 33.086 22.78 50.812.587 24.03-9.293 47.12-24.53 66.563-14.832 18.926-34.837 34.62-56.625 43.656 33.127-.065 64.926-.16 95.217-.25l-.062-.186c30.95-18.584 47.31-38.83 53.75-57.813 6.44-18.982 3.25-37.246-5.844-53.718-15.44-27.97-49.705-47.71-84.686-49.062z`},cold:{viewBox:`0 0 512 512`,d:`M238.406 26.844c-9.653.12-18.926 2.69-30.437 7.062l-157.282 57c-20.984 7.65-21.587 11.834-22.344 33.28L20.937 358.22c-1.207 27.514-.654 33.187 23.25 43.56l185.783 81.41c19.34 8.29 31.906 7.655 45.186 3.218l181.938-56.53c21.95-7.295 25.04-9.627 25.875-36.845l7.686-250.155c.662-17.37-5.667-24.695-18.78-29.625L271.062 34.375c-12.977-5.344-23.003-7.653-32.657-7.53zm.813 24.875c23.637-.053 45.564 8.434 87.874 24.874 95.545 37.123 131.71 53.8 69.687 77.937-74.002 28.802-128.175 45.115-172.28 25.814L113.47 131.75c-34.57-15.127-44.69-27.46 17.843-50.094 55.64-20.14 82.742-29.882 107.906-29.937zm44.718 43.75c-38.284.402-55.285 21.205-56.813 38.936-.873 10.132 2.95 19.6 12.406 26.25 9.456 6.65 25.355 10.56 48.97 5.938 35.817-7.01 61.536-15.056 77.5-22.844 7.982-3.894 13.464-7.737 16.5-10.844 3.036-3.107 3.453-4.942 3.438-6-.016-1.057-.44-2.675-3.313-5.406-2.873-2.73-8.03-6.04-15.22-9.156-14.378-6.233-36.757-11.877-65.717-15.72-6.355-.842-12.28-1.213-17.75-1.155zM59.25 134c10.372-.29 29.217 7.2 63.906 22.656 140.925 62.786 140.52 65.876 130.97 200.656-7.783 109.81-8.797 109.85-128.47 59.282-73.15-30.91-86.806-40.853-85.187-88.97l5.468-162.937c.674-20.034 1.557-30.358 13.312-30.687zm381.938 30.906c29.172-.384 29.1 28.075 26.75 105.25-4.118 135.132-9.05 140.184-120.375 173.72-70.42 21.21-81.49 25.614-78.97-12.032l11-164.156c3.217-48.034 7.588-51.508 94.813-83.907 31.323-11.633 52.534-18.686 66.78-18.874zm-20.438 40.688c-.332-.002-.674.015-1 .03-5.22.263-10.226 2.77-14.188 8.407-3.96 5.638-6.81 14.71-5.687 27.907 1.448 17.033-4.507 38.11-15.156 56.938-10.65 18.827-26.502 35.91-47.814 38.813-29.127 3.968-42.41 23.58-43.5 42.062-.545 9.24 2.108 18.03 7.688 24.594s14.088 11.335 27.187 12.03c41.146 2.185 71.336-10.766 91.595-39.155 20.26-28.39 30.396-73.76 25.875-136.595-1.876-26.076-14.708-34.977-25-35.03zm-246.25 8.844c-.644 0-1.218.063-1.72.187-2.003.494-3.685 1.53-5.655 4.813-1.913 3.186-3.688 8.618-4.406 16.343l-.064.657c-1.388 16.732-8.098 28.602-17.844 35.063-9.745 6.46-20.794 7.808-31.125 9.094-10.33 1.286-20.177 2.39-28.156 5.75-7.977 3.36-14.36 8.38-19.468 19.78-7.2 16.076-7.143 28.027-3.124 38.563 4.018 10.537 12.688 20.106 24.687 28.75 23.998 17.29 60.27 29.956 88.906 41.844 11.386 4.727 20.496 6.484 27.282 6.126 6.787-.358 11.278-2.423 15.375-6.562 8.195-8.28 14.057-27.692 15-57.344 2.024-63.623-18.84-110.284-38.656-130.875-8.668-9.008-16.52-12.193-21.03-12.188zm184.22 6.812c-.95-.003-1.927.035-2.97.094-35.464 1.99-48.477 12.867-52.5 24.062-4.023 11.196.826 27.07 10.844 39.78 11.488 14.58 20.59 15.736 30.437 12.283 9.848-3.455 20.542-14.108 27.376-26.908s9.512-27.397 7.188-36.28c-1.163-4.443-3.144-7.422-6.47-9.626-2.908-1.928-7.274-3.388-13.905-3.406z`},electrical:{viewBox:`0 0 512 512`,d:`M376 211H256V16L136 301h120v195z`},emp:{viewBox:`0 0 512 512`,d:`M133.844 19.97c-28.18.03-55.19 11.19-77.875 33.624-26.88 26.58-37.526 56.483-36.095 85.875 1.43 29.39 15.237 58.516 39 82.28 9.592 9.593 44.044 33.04 74.78 52.563 1.14.723 2.104 1.293 3.22 2l44.344-44.344c-22.65-18.013-45.176-36.208-53.72-44.75h-.03c-24.88-24.882-22.98-56.233-5.626-73.032 17.354-16.8 48.748-18.29 73.25 5.937 8.61 8.51 26.702 30.837 44.656 53.313l38.438-38.407c-.71-1.12-1.305-2.073-2.032-3.218-19.468-30.66-42.827-64.955-52.47-74.656C195.738 33.16 165.59 20.706 136.564 20c-.91-.022-1.81-.032-2.718-.03zm190.312 77.25-34.72 20.624c.836 1.31 1.673 2.633 2.502 3.937 19.683 31 36.406 59.032 36.406 59.032l3.75 6.25-5.156 5.157-46.313 46.31-7.47 7.47-6.5-8.344s-12.84-16.436-28.5-36.187l-28.843 28.843a9056.369 9056.369 0 0 0 36.22 28.437l8.374 6.47-7.5 7.5-52.344 52.374-5.156 5.156-6.25-3.75s-24.577-14.675-53.125-32.688l-19.78 48.22 36.375-14.344 15.156 81.718 28.126-55.28 60.406 63.25-15.718-86.126 51.875 6.28 2.624 1.345 4.03 47.344 77.595 11.092-12.095 52.375L403.47 492h86.624v-81.594l-50.375-29.22 10.092-41.31-96.718-3.032 14.094-44.313-42.157-29.967 2.345-21.094 52.344 17.06-31.126-69.75 42.72-22.53-65.44-20.063-1.718-48.968zm-35.78 54.03-36.907 36.906c11.742 14.79 19.468 24.643 23.405 29.688l33.656-33.656a2417.118 2417.118 0 0 0-20.155-32.938zm-92.407 92.406-42.876 42.875a2446.831 2446.831 0 0 0 32.937 20.158l39.72-39.75c-5.06-3.934-14.962-11.59-29.78-23.282z`},metaphysical:{viewBox:`0 0 512 512`,d:`M486 203.652H310.111L256 37.113l-54.111 166.539H26l142.22 103.623-54.462 167.612L256 371.24l142.242 103.646-54.473-167.612zm-85.995 28.008-65.335 47.596-15.46-47.596h80.795zM256 127.708l24.658 75.91H231.33zM111.995 231.66h80.795l-15.45 47.596zm55.097 169.713 24.932-76.743 40.194 29.29zm34.041-104.762 21.1-64.951h67.524l21.099 64.95-54.867 39.977zm143.731 104.762-65.082-47.454 40.194-29.29zm-37.983-264.359-10.424-32.092a183.269 183.269 0 0 1 114.322 81.21H376.43a155.293 155.293 0 0 0-69.55-49.118zM129 371.328l-10.413 32.049a182.425 182.425 0 0 1-43.918-142.581l26.684 19.435v2.847A153.804 153.804 0 0 0 129 371.284zm177.104 58.108 26.64 19.413a182.447 182.447 0 0 1-153.51 0l26.64-19.413a154.79 154.79 0 0 0 100.23 0zM135.569 186.133h-34.348a183.269 183.269 0 0 1 114.322-81.21l-10.424 32.091a155.293 155.293 0 0 0-69.55 49.119zm303.12 96.955a181.922 181.922 0 0 1-45.276 120.245L383 371.285a153.804 153.804 0 0 0 27.68-88.197v-2.846l26.683-19.446a183.685 183.685 0 0 1 1.325 22.292z`},death:{viewBox:`0 0 512 512`,d:`M296.625 25.406c-63.794.388-135.81 14.683-206.03 32.844-3.472 34.08 2.226 68.906 14.03 104.25C181.175 75.936 393.65 44.825 486.72 128 456.02 50.466 384.046 24.874 296.624 25.406zM65.655 61.438 27.906 71c5.643 78.022 28.546 132.393 60.44 174.47-16.54 10.348-40.693 19.673-68.782 26.843 5.664 6.597 14.25 16.18 30.53 18.53 24.846-4.33 39.912-14.982 53.75-26.593 76.24 85.145 190.22 118.955 253.126 224.22l49.436-.126C290.996 275.316 81.01 364.804 65.656 61.438z`},psychic:{viewBox:`0 0 512 512`,d:`M65.125 18.344C47.11 49.844 36.72 86.262 36.72 125.124c0 80.293 43.973 150.497 109.124 187.75.403-6.904.92-13.833 1.625-20.75-55.33-34.965-92.064-96.676-92.064-167 0-39.426 11.63-75.964 31.563-106.78H65.124zm69.03 0c-25.61 28.273-41.374 65.635-41.374 106.78 0 51.08 24.052 96.656 61.44 125.97l.06-.25c1.612-6.61 3.473-13.008 5.69-19.125-29.73-25.896-48.5-64.026-48.5-106.595 0-42.848 19.254-80.837 49.436-106.78h-26.75zm210.532 0c30.125 25.95 49.438 64.003 49.438 106.78 0 41.152-17.546 78.157-45.563 103.97 2.26 6.282 4.116 12.876 5.657 19.687 35.748-29.366 58.592-73.883 58.592-123.655 0-41.123-15.81-78.5-41.406-106.78h-26.72zm73.407 0c20.06 30.867 32.094 67.387 32.094 106.78 0 69.457-35.82 130.505-90 165.69.545 7.037.933 14.107 1.187 21.123 64.267-37.483 107.53-107.18 107.53-186.812 0-38.925-10.745-75.328-28.874-106.78h-21.936zm-165.313 2.28c-57.625 0-104.53 46.906-104.53 104.532 0 28.606 11.56 54.573 30.25 73.47 4.13-4.712 8.84-8.817 14.094-12.19-15.844-15.56-25.656-37.237-25.656-61.28 0-47.527 38.316-85.844 85.843-85.844 47.528 0 85.845 38.317 85.845 85.844 0 23.16-9.108 44.114-23.938 59.53 5.488 3.14 10.394 7.033 14.688 11.533 17.327-18.666 27.938-43.657 27.938-71.064 0-57.626-46.905-104.53-104.532-104.53zm-4.186 55.564c-21.622 2.8-40.97 27.91-40.97 60.28 0 17.846 6.173 33.653 15.282 44.595l10.188 12.218-15.656 2.94c-11.884 2.226-20.62 8.512-28.032 18.655-7.41 10.143-13.023 24.216-16.97 40.406-7.188 29.5-8.736 65.498-8.967 97.126h38.999l.655 8.656 9.906 132.5h83.69l8.75-132.437.592-8.72h37.125c-.02-32-.39-68.49-6.906-98.217-3.57-16.297-8.992-30.34-16.5-40.375-7.505-10.035-16.654-16.288-29.967-18.344L273.875 193l10.094-12.625c8.713-10.89 14.592-26.495 14.592-43.906 0-34.515-21.658-60.22-45.468-60.22-2.672 0-4.275-.092-4.5-.063z`},radiation:{viewBox:`0 0 512 512`,d:`M253.78 17.188c-130.728 0-236.905 106.177-236.905 236.906C16.875 384.824 123.052 491 253.78 491c130.73 0 236.907-106.18 236.907-236.906 0-130.73-106.177-236.906-236.906-236.906zm0 18.687c120.63 0 218.22 97.59 218.22 218.22 0 120.626-97.59 218.218-218.22 218.218-120.628 0-218.218-97.59-218.218-218.22s97.59-218.218 218.22-218.218zm101.19 46.313-76.41 132.875c15.916 9.635 25.177 26.33 26.125 43.78h148.407c1.644-70.01-33.49-138.867-98.125-176.656zm-205.126 2.468c-27.1 16.725-50.68 40.147-67.72 69.656-19.01 32.928-26.926 69.12-26 104.532H196a54.04 54.04 0 0 1 7.188-24.438c5.21-9.024 12.64-16 21.218-20.625L149.844 84.657zm100.594 141.156a36.723 36.723 0 0 0-2.594.094c-11.446.793-22.288 7.084-28.5 17.844-9.94 17.216-4.09 38.967 13.125 48.906 17.213 9.94 38.935 4.12 48.874-13.094 9.94-17.215 4.12-38.967-13.094-48.906-5.648-3.26-11.768-4.824-17.813-4.844zm28.218 82.375c-16.127 9.75-36.864 10.846-54.406 1.25l-68.03 117.22c29.454 16.785 61.044 25.177 92.75 26 34.567.898 68.72-7.786 99.124-24.032l-69.438-120.438z`},corrosive:{viewBox:`0 0 512 512`,d:`M433.814 68.664c-2.74.05-5.495.423-8.242 1.152-8.47 2.25-15.3 7.512-20.44 14.49C292.905 120.865 186.494 154.58 75.276 190.4c-39.714 12.79-64.6 51.163-53.006 86.784 11.597 35.62 54.342 52.277 94.035 39.277l-.002.002c109.41-35.827 214.424-69.036 325.12-104.656.56.212 1.13.39 1.694.58-2.62 2.935-4.226 6.796-4.226 11.04 0 9.164 7.43 16.593 16.594 16.593 9.165 0 16.596-7.43 16.596-16.593 0-4.32-1.664-8.24-4.367-11.192 12.75-4.865 21.353-16.866 25.535-30.898 4.547-15.257 4.504-33.654-.584-52.48-5.088-18.828-14.327-34.77-25.94-45.712-8.712-8.206-19.263-13.79-30.175-14.43-.91-.052-1.822-.07-2.736-.054zm.497 18.68a17.2 17.2 0 0 1 1.377.035c5.567.358 11.818 3.34 18.22 9.37 8.535 8.04 16.44 21.165 20.716 36.986 3.622 13.4 4 26.397 2.012 36.852h-52.783c-3.517-6.207-6.512-13.352-8.622-21.158-4.276-15.822-4.046-31.094-.716-42.266 3.33-11.172 9.122-17.497 15.855-19.285a16.148 16.148 0 0 1 3.94-.536zm-38.414 17.043c-3.815 14.734-3.516 32.133 1.29 49.92a114.327 114.327 0 0 0 5.728 16.26h-151.22c-64.405 20.742-125.856 40.507-163.35 52.59-23.24 7.486-35.353 27.407-30.406 42.593 4.946 15.188 26.582 24.333 49.75 16.75 66.89-21.89 199.01-64.39 302.822-97.803 3.76 5.807 7.998 10.967 12.62 15.323.066.06.135.118.2.18-104.876 33.753-241.66 77.74-309.83 100.05-30.827 10.09-64.424-1.334-73.344-28.72-8.92-27.385 11.603-56.22 42.438-66.155 68.055-21.93 208.2-66.996 313.302-100.988zm59.58 180.205c-16.948 63.255-40.507 54.472-40.507 91.5 0 22.36 18.146 40.508 40.507 40.508 22.36 0 40.507-18.147 40.507-40.508 0-39.97-23.256-27.12-40.507-91.5z`},coins:{viewBox:`0 0 512 512`,d:`M512 80C512 98.01 497.7 114.6 473.6 128C444.5 144.1 401.2 155.5 351.3 158.9C347.7 157.2 343.9 155.5 340.1 153.9C300.6 137.4 248.2 128 192 128C183.7 128 175.6 128.2 167.5 128.6L166.4 128C142.3 114.6 128 98.01 128 80C128 35.82 213.1 0 320 0C426 0 512 35.82 512 80V80zM160.7 161.1C170.9 160.4 181.3 160 192 160C254.2 160 309.4 172.3 344.5 191.4C369.3 204.9 384 221.7 384 240C384 243.1 383.3 247.9 381.9 251.7C377.3 264.9 364.1 277 346.9 287.3C346.9 287.3 346.9 287.3 346.9 287.3C346.8 287.3 346.6 287.4 346.5 287.5L346.5 287.5C346.2 287.7 345.9 287.8 345.6 288C310.6 307.4 254.8 320 192 320C132.4 320 79.06 308.7 43.84 290.9C41.97 289.9 40.15 288.1 38.39 288C14.28 274.6 0 258 0 240C0 205.2 53.43 175.5 128 164.6C138.5 163 149.4 161.8 160.7 161.1L160.7 161.1zM391.9 186.6C420.2 182.2 446.1 175.2 468.1 166.1C484.4 159.3 499.5 150.9 512 140.6V176C512 195.3 495.5 213.1 468.2 226.9C453.5 234.3 435.8 240.5 415.8 245.3C415.9 243.6 416 241.8 416 240C416 218.1 405.4 200.1 391.9 186.6V186.6zM384 336C384 354 369.7 370.6 345.6 384C343.8 384.1 342 385.9 340.2 386.9C304.9 404.7 251.6 416 192 416C129.2 416 73.42 403.4 38.39 384C14.28 370.6 .0003 354 .0003 336V300.6C12.45 310.9 27.62 319.3 43.93 326.1C83.44 342.6 135.8 352 192 352C248.2 352 300.6 342.6 340.1 326.1C347.9 322.9 355.4 319.2 362.5 315.2C368.6 311.8 374.3 308 379.7 304C381.2 302.9 382.6 301.7 384 300.6L384 336zM416 278.1C434.1 273.1 452.5 268.6 468.1 262.1C484.4 255.3 499.5 246.9 512 236.6V272C512 282.5 507 293 497.1 302.9C480.8 319.2 452.1 332.6 415.8 341.3C415.9 339.6 416 337.8 416 336V278.1zM192 448C248.2 448 300.6 438.6 340.1 422.1C356.4 415.3 371.5 406.9 384 396.6V432C384 476.2 298 512 192 512C85.96 512 .0003 476.2 .0003 432V396.6C12.45 406.9 27.62 415.3 43.93 422.1C83.44 438.6 135.8 448 192 448z`},"person-running":{viewBox:`0 0 448 512`,d:`M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z`},shield:{viewBox:`0 0 512 512`,d:`M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z`},crosshairs:{viewBox:`0 0 512 512`,d:`M224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256zM256 0C273.7 0 288 14.33 288 32V42.35C381.7 56.27 455.7 130.3 469.6 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H469.6C455.7 381.7 381.7 455.7 288 469.6V480C288 497.7 273.7 512 256 512C238.3 512 224 497.7 224 480V469.6C130.3 455.7 56.27 381.7 42.35 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H42.35C56.27 130.3 130.3 56.27 224 42.35V32C224 14.33 238.3 0 256 0V0zM224 404.6V384C224 366.3 238.3 352 256 352C273.7 352 288 366.3 288 384V404.6C346.3 392.1 392.1 346.3 404.6 288H384C366.3 288 352 273.7 352 256C352 238.3 366.3 224 384 224H404.6C392.1 165.7 346.3 119.9 288 107.4V128C288 145.7 273.7 160 256 160C238.3 160 224 145.7 224 128V107.4C165.7 119.9 119.9 165.7 107.4 224H128C145.7 224 160 238.3 160 256C160 273.7 145.7 288 128 288H107.4C119.9 346.3 165.7 392.1 224 404.6z`},range:{viewBox:`2.57 -59.10 265.44 265.44`,d:`M171.56 3.16L187.05 7.34A12.12095 12.12095 0 0 1 180.72 30.75L165.24 26.56A12.12095 12.12095 0 0 1 171.56 3.16ZM92.10 9.38L107.22 4.04A12.12155 12.12155 0 0 1 115.30 26.90L100.18 32.24A12.12155 12.12155 0 0 1 92.10 9.38ZM2.93 129.46L6.80 113.89A12.12155 12.12155 0 0 1 30.32 119.74L26.45 135.31A12.12155 12.12155 0 0 1 2.93 129.46ZM31.99 59.53L41.61 46.70A12.12155 12.12155 0 0 1 61.01 61.24L51.39 74.08A12.12155 12.12155 0 0 1 31.99 59.53ZM207.93 56.74A30.0361 30.0361 0 1 0 268.01 56.74A30.0361 30.0361 0 1 0 207.93 56.74Z`},burst:{viewBox:`135.5 153 830 830`,d:`M282.5 982C284 981.4 289.1 977.7 293.9 973.7C298.6 969.7 308.4 961.5 315.5 955.5C322.6 949.6 330.1 943.3 332.1 941.6C336 938.2 336.5 937.8 350.2 926.3C377.5 903.6 390 892.8 391.9 890.4C396.5 884.6 396.5 881.4 392 858.5C390.5 851 389.1 843.5 387.7 836C385.2 822.1 380.8 816.6 372.3 816.6C369.6 816.7 365.5 817.6 363 818.7C360.5 819.9 349.5 824.5 338.5 829C312.5 839.7 312.5 839.7 306 859.1C303.3 867 296.1 888.1 290 906C268.3 969.6 267.8 971 268.5 973.9C268.8 975.5 270.3 977.9 271.8 979.2C275.9 983.1 278.2 983.6 282.5 982ZM478.8 947.4C482.2 945.5 486.2 940.2 487.5 936C487.9 934.6 489.3 931.2 490.5 928.5C491.8 925.8 500.5 904.8 510 882C519.4 859.2 528 838.6 529.1 836.3C530.1 834 531 831.9 531 831.5C531 831.2 532 828.8 533.1 826.2C538.2 814.9 539 813 539 812.5C539 812.1 539.9 810 540.9 807.7C542 805.4 546.1 795.6 550 786C559.2 763.7 559.3 763.5 563.8 760.5C569.2 756.9 575.6 756.3 581.2 758.8C583.7 759.9 599.4 770.4 616.1 782.2C632.8 794 663.1 815.3 683.5 829.6C703.9 844 736 866.6 754.9 879.9C773.8 893.2 791 905 793.1 906C804.7 912 818.3 903.4 818.3 890.3C818.3 887.3 817.8 883.9 817.2 882.7C815.1 878.1 813 873.2 813 872.6C813 872.3 812.1 870.1 811.1 867.7C805.8 856 726.9 663.5 726.4 661.1C725.5 656.6 727.8 650.2 731.9 646.1C735.4 642.6 739.1 641.2 809.1 618.1C923.1 580.3 924.3 579.9 928 578C940.2 571.7 940.7 553.7 928.9 547C925.6 545.2 917.6 543.4 890 538.4C885.3 537.5 877 536 871.5 535C866 533.9 857.5 532.4 852.5 531.5C847.5 530.6 841.5 529.5 839 529C834.6 528.1 823.7 526.1 811.5 523.9C808.2 523.3 803.5 522.5 801 522C798.5 521.5 792.5 520.4 787.5 519.5C782.5 518.6 776.5 517.5 774 517C771.5 516.5 765.5 515.4 760.5 514.5C734.9 509.9 730.6 508.3 727 502.5C722.2 494.6 723.4 488 732.5 474.9C736 469.7 742.7 459.9 747.4 453C752 446.1 762.7 430.4 771.2 418C779.7 405.6 791 389 796.5 381C843.3 312.3 840 317.5 840 312.5C840 306.5 837.5 300.6 833.7 297.7C829.3 294.4 822.8 292.9 818.2 294.2C814.2 295.2 813.6 295.5 798.5 302.5C793 305.1 785.8 308.5 782.5 310C770.4 315.6 761.4 319.8 756 322.3C753 323.7 747.1 326.4 743 328.3C738.9 330.2 731.5 333.7 726.5 336C653.3 370 636.1 378 633.7 378.5C628.7 379.8 622.5 378.2 618.1 374.3C613.7 370.6 612.4 368.3 611 361.5C609.9 355.9 605.5 334.7 602.5 320.5C601.1 313.9 598.9 303.1 597.5 296.5C596.2 289.9 594.1 280.2 593 275C591.9 269.8 589.9 260.1 588.5 253.5C587.1 246.9 585.2 237.4 584.1 232.5C583 227.6 581.4 219.9 580.5 215.5C577.1 198.8 573.2 194.5 561.4 194.5C548.9 194.5 549.6 193.5 516.5 262.5C513.6 268.6 504.6 287 496.5 303.5C488.4 320 480.7 335.8 479.5 338.6C474.2 349.9 463.6 354.9 454.7 350.4C451.2 348.6 435.4 338.5 412.7 323.7C404.9 318.5 390.2 308.9 380 302.3C363.3 291.5 336.3 273.9 306.5 254.5C300.4 250.6 286.4 241.4 275.2 234.2C207.4 190.1 210.5 191.8 202.2 194.1C195.9 195.9 190.3 201.7 189.4 207.6C188.4 214.6 189.5 217.7 198.7 233.1C203.4 241 207.8 248.4 208.4 249.5C210.1 252.6 274.6 360.4 280.5 370C300.3 402.4 323.1 441.5 324.1 444.9C326.4 452.5 322 461.8 314.6 465.1C312.2 466.1 285.2 471.1 249.5 477C215.9 482.5 187.3 487.6 185.7 488.2C179.3 490.7 174.1 500.5 175.5 507.8C176.2 511.7 179.6 517.2 182.1 518.9C183.1 519.5 195.7 529 210.2 540.2C224.7 551.3 247.5 568.9 261 579.2C289.4 601 290.6 602.1 293.2 607.8C296.9 615.9 294.8 620.3 274.5 647.5C270 653.5 262 664.6 256.7 672C251.4 679.4 241.2 693.6 234 703.5C226.8 713.4 215.1 729.6 208 739.5C200.8 749.4 188.9 765.8 181.5 776C148.5 821.3 148.4 821.5 149.4 828.5C150.2 833.8 152.9 838.1 157.6 841.6C160.8 844.1 162.2 844.5 166.9 844.3C170 844.2 174.3 843.3 176.5 842.4C178.7 841.5 181.4 840.4 182.5 840C190 837.1 198.8 833.7 200.5 832.9C201.6 832.4 222.1 824.4 246 815.1C269.9 805.8 290.6 797.8 292 797.2C293.4 796.7 298.8 794.5 304 792.5C309.2 790.4 314.9 788.2 316.5 787.5C318.1 786.8 337.3 779.3 359 770.9C393.5 757.4 399.2 755.5 404.1 755.5C408.7 755.6 410.4 756.1 413.4 758.3C419.5 763 420.1 764.3 423 780.5C423.5 783.2 424.6 789.3 425.5 794C426.4 798.7 427.5 804.8 428 807.5C428.5 810.2 430.1 818.8 431.5 826.5C434.8 844.6 435.4 847.6 438.6 865C440 873 441.6 881.5 442 884C443.2 890.3 445.9 905.5 447 911.5C450.1 928.5 451 933.2 451.9 936.8C455.1 948.6 468.2 953.7 478.8 947.4ZM945.7 745C951.2 743 953.7 735.3 950.2 731.1C949.3 729.9 941.5 723.9 932.9 717.7C924.3 711.6 910.1 701.4 901.4 695.1C892.6 688.8 881.5 680.6 876.5 677C871.5 673.3 861.9 666.4 855.1 661.6C839.1 650.4 839.9 650.5 815 659.7C791.7 668.3 789.2 670 788.3 678.5C787.9 681.9 788.6 684.3 792.4 692.4C794.9 697.8 797 702.4 797 702.5C797 702.7 799.6 708.4 802.9 715.2C811.8 734.1 812.8 734.7 842.5 737C849.6 737.5 860.5 738.4 866.5 739C872.5 739.5 885.6 740.6 895.5 741.5C905.4 742.3 919.6 743.5 927 744.1C934.4 744.7 940.7 745.3 940.9 745.6C941.5 746.2 942.4 746.1 945.7 745ZM665.1 305.5C667.5 304.6 670.9 303.3 672.5 302.6C674.1 301.8 678.4 299.9 682 298.3C685.6 296.7 692.8 293.4 698.2 291C708.8 286.3 712 284 714.2 279.5C716 275.9 716.5 273.6 724.5 238.5C725.2 235.2 726.7 228.4 727.8 223.5C735 192 740 169 740.5 165.5C741.3 159.9 738.4 155.5 733.1 154C726.3 152.2 726.7 151.9 702.5 177C655.6 225.6 643.2 238.6 641.2 241.5C637.3 246.9 636.9 251.2 639.1 261.4C640.1 266.4 642.2 276.1 643.6 283C646.8 298.7 648.3 301.8 654 304.8C659.2 307.4 659.5 307.4 665.1 305.5Z`},sword:{viewBox:`0 0 512 512`,d:`M110.1 227.6c-6.25-6.248-16.37-6.248-22.62 0l-18.75 18.75c-5.498 5.373-6.249 13.87-1.999 20.25l53.37 79.99l-53.5 53.5l-29.25-14.62c-5.375-2.748-11.75-1.623-16 2.625l-17.25 17.25c-5.5 5.375-5.5 14.25 0 19.62l82.87 82.87c5.375 5.5 14.25 5.5 19.62 0l17.25-17.25c4.25-4.25 5.375-10.62 2.625-16l-14.62-29.25l53.5-53.5l79.99 53.41c6.375 4.25 14.87 3.5 20.25-2l18.75-18.79c6.25-6.25 6.25-16.37 0-22.62L110.1 227.6zM493.7 .1497l-93.74 15.88L171.9 244.1l95.99 95.99l228.1-228.1l15.87-93.75C513.3 7.781 504.2-1.35 493.7 .1497z`},physical:{viewBox:`0 0 512 512`,d:`M165.906 18.688C15.593 59.28-42.187 198.55 92.72 245.375h-1.095c.635.086 1.274.186 1.906.28 8.985 3.077 18.83 5.733 29.532 7.94C173.36 273.35 209.74 321.22 212.69 368c-33.514 23.096-59.47 62.844-59.47 62.844l26.28 38.686L138.28 493h81.97c-40.425-40.435-11.76-85.906 36.125-85.906 48.54 0 73.945 48.112 36.156 85.906h81.126l-40.375-23.47 26.283-38.686s-26.376-40.4-60.282-63.406c3.204-46.602 39.5-94.167 89.595-113.844 10.706-2.207 20.546-4.86 29.53-7.938.633-.095 1.273-.195 1.908-.28h-1.125c134.927-46.82 77.163-186.094-73.157-226.69-40.722 39.37 6.54 101.683 43.626 56.877 36.9 69.08 8.603 127.587-72.28 83.406-11.88 24.492-34.213 41.374-60.688 41.374-26.703 0-49.168-17.167-60.97-42-81.774 45.38-110.512-13.372-73.437-82.78 37.09 44.805 84.35-17.508 43.626-56.876zm90.79 35.92c-27.388 0-51.33 27.556-51.33 63.61 0 36.056 23.942 62.995 51.33 62.995 27.387 0 51.327-26.94 51.327-62.994 0-36.058-23.94-63.61-51.328-63.61z`},social:{viewBox:`230 70 1090 1090`,d:`M372 1107H750Q778 1107 781 1079L796 967L912 980Q982 986 1001 888Q1003 870 985 864Q935 850 910 808Q906 795 922 796L985 796Q1005 794 1004 774L999 706H1045Q1097 701 1094 650Q1092 638 1086 627L1018 495Q1004 465 999 430Q970 255 860 175Q760 106 620 112Q440 116 330 220Q235 315 238 480Q240 640 340 750Q378 794 372 852L343 1070Q341 1104 372 1107ZM868 431A52 52 0 1 1 868 535A52 52 0 1 1 868 431ZM1162.8 698.6A138 138 0 0 1 1162.8 919.4A28 28 0 0 1 1129.2 874.6A82 82 0 0 0 1129.2 743.4A28 28 0 0 1 1162.8 698.6ZM1233.2 633.8A233 233 0 0 1 1233.2 987.2A28 28 0 0 1 1196.8 944.8A177 177 0 0 0 1196.8 676.2A28 28 0 0 1 1233.2 633.8Z`},mental:{viewBox:`64 64 512 512`,d:`M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z`},magic:{viewBox:`0 0 576 512`,d:`M248.8 4.994C249.9 1.99 252.8 .0001 256 .0001C259.2 .0001 262.1 1.99 263.2 4.994L277.3 42.67L315 56.79C318 57.92 320 60.79 320 64C320 67.21 318 70.08 315 71.21L277.3 85.33L263.2 123C262.1 126 259.2 128 256 128C252.8 128 249.9 126 248.8 123L234.7 85.33L196.1 71.21C193.1 70.08 192 67.21 192 64C192 60.79 193.1 57.92 196.1 56.79L234.7 42.67L248.8 4.994zM427.4 14.06C446.2-4.686 476.6-4.686 495.3 14.06L529.9 48.64C548.6 67.38 548.6 97.78 529.9 116.5L148.5 497.9C129.8 516.6 99.38 516.6 80.64 497.9L46.06 463.3C27.31 444.6 27.31 414.2 46.06 395.4L427.4 14.06zM461.4 59.31L356.3 164.3L379.6 187.6L484.6 82.58L461.4 59.31zM7.491 117.2L64 96L85.19 39.49C86.88 34.98 91.19 32 96 32C100.8 32 105.1 34.98 106.8 39.49L128 96L184.5 117.2C189 118.9 192 123.2 192 128C192 132.8 189 137.1 184.5 138.8L128 160L106.8 216.5C105.1 221 100.8 224 96 224C91.19 224 86.88 221 85.19 216.5L64 160L7.491 138.8C2.985 137.1 0 132.8 0 128C0 123.2 2.985 118.9 7.491 117.2zM359.5 373.2L416 352L437.2 295.5C438.9 290.1 443.2 288 448 288C452.8 288 457.1 290.1 458.8 295.5L480 352L536.5 373.2C541 374.9 544 379.2 544 384C544 388.8 541 393.1 536.5 394.8L480 416L458.8 472.5C457.1 477 452.8 480 448 480C443.2 480 438.9 477 437.2 472.5L416 416L359.5 394.8C354.1 393.1 352 388.8 352 384C352 379.2 354.1 374.9 359.5 373.2z`}};function ZN({name:e,label:t,className:n=``}){let{viewBox:r,d:i}=XN[e];return(0,W.jsxs)(`svg`,{className:`icon icon-${e} ${n}`.trim(),xmlns:`http://www.w3.org/2000/svg`,viewBox:r,role:t?`img`:void 0,"aria-label":t,"aria-hidden":!t||void 0,children:[t&&(0,W.jsx)(`title`,{children:t}),(0,W.jsx)(`path`,{d:i})]})}function QN({label:e,level:t,onChange:n,disabled:r,className:i=``}){return(0,W.jsxs)(`div`,{className:`level-stepper ${i}`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:e}),(0,W.jsxs)(`div`,{className:`stepper`,children:[(0,W.jsx)(G,{round:`lg`,onClick:()=>n(Math.max(1,t-1)),disabled:r||t<=1,"aria-label":`Lower Level`,children:(0,W.jsx)(YN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,"aria-live":`polite`,children:t}),(0,W.jsx)(G,{round:`lg`,onClick:()=>n(Math.min(25,t+1)),disabled:r||t>=25,"aria-label":`Raise Level`,children:(0,W.jsx)(YN,{is:`plus`})})]})]})}var $N=e=>dl.find(t=>t.toLowerCase()===e.trim().toLowerCase());function eP(e,t){let n=e.match(/\(([^)]*)\)\s*$/);return e.split(`,`).flatMap(e=>{let r=e.trim().match(/^(-?\d+)\s+([^(]+?)\s*(?:\(([^)]*)\))?$/),i=r&&$N(r[2]);if(!r||!i)return[];let a=n?n[1]:r[3];return[{type:i,amount:Number(r[1]),from:t,...a?{where:a.trim()}:{}}]})}function tP(e,t,n){return e.split(/(?<=\.)\s+/).flatMap(e=>{let r=e.match(/Rank \*(\d+)/i),i=r?null:e.match(/\+(\d+) to [^.]*resist/i);if(!r&&!i||!/resist/i.test(e))return[];let a=r?Number(r[1])*t:Number(i[1]),o=new Set;for(let[t,n]of Object.entries(ul))RegExp(`all ${t} damage types`,`i`).test(e)&&n.forEach(e=>o.add(e));for(let t of dl)RegExp(`\\b${t.replace(`/`,`\\/`)}\\b`).test(e)&&o.add(t);let s=e.match(/attacks that hit (?:its|their|the) (\w+)/i)?.[1];return[...o].map(e=>({type:e,amount:a,from:n,...s?{where:s}:{}}))})}function nP(e,t,n){let r=t.flatMap(t=>{if(!t.equipped)return[];let n=t.item&&e.items.find(e=>e.id===t.item)||wl(e.items,t.name);return n?.resistances?eP(n.resistances,n.name):[]}),i=new Map;for(let e of n)i.set(e.trait,Math.max(i.get(e.trait)??0,e.rank));let a=[...i].flatMap(([t,n])=>{let r=e.traits.find(e=>e.id===t);return r?tP(r.effect,n,r.name):[]});return[...r,...a]}var rP={play:{levelUp:!0,actions:!0,resources:`live`,statMax:!1,statEdit:!0,edit:!0,addTraits:!0},build:{levelUp:!1,actions:!1,resources:`full`,statMax:!0,statEdit:!1,edit:!0,addTraits:!1},sample:{levelUp:!1,actions:!1,resources:`full`,statMax:!0,statEdit:!1,edit:!1,addTraits:!1}};function iP({children:e,aside:t,as:n=`h3`}){let r=(0,W.jsx)(n,{className:`sf-sheet-title`,children:e});return t?(0,W.jsxs)(`div`,{className:`sf-sheet-title-row`,children:[r,t]}):r}var aP={hp:`Hit Points`,vp:`Vibe Points`,sp:`Savvy Points`,mp:`Mana Points`,core:`Core HP (an AI Core's own, apart from its chassis's)`};function oP({resources:e}){return(0,W.jsx)(`ul`,{className:`sf-resources`,children:e.map(({id:e,max:t})=>(0,W.jsxs)(`li`,{className:`sf-resource`,children:[(0,W.jsx)(`strong`,{className:`sf-resource-name resource-${e}`,title:aP[e],children:e.toUpperCase()}),(0,W.jsxs)(`span`,{className:`sf-resource-value`,children:[t??`–`,(0,W.jsxs)(`span`,{className:`sf-resource-max`,children:[` / `,t??`–`]})]})]},e))})}function sP({movement:e}){let t=e?.match(/^\s*([\d.]+)\s*([a-z]+)\s*$/i);return(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-move`,children:[(0,W.jsx)(iP,{children:(0,W.jsx)(`span`,{title:`Movement`,children:`Move`})}),(0,W.jsxs)(`div`,{className:`sf-sheet-move-value`,title:`Movement`,children:[(0,W.jsx)(ZN,{name:`person-running`,label:`Movement`}),(0,W.jsx)(`span`,{className:`sf-sheet-move-number`,children:t?(0,W.jsxs)(W.Fragment,{children:[t[1],(0,W.jsx)(`span`,{className:`sf-sheet-move-unit`,children:t[2]})]}):e??`–`})]})]})}function cP(e){let{context:t,level:n,head:r,resources:i,stats:a,movement:o,resistances:s,conditions:c,items:l,knowledges:u,abilities:d,skills:f,skillsAside:p,other:m}=e,h=rP[t],g=(0,U.useRef)(null),[_,v]=(0,U.useState)(!1);(0,U.useLayoutEffect)(()=>{let e=g.current;if(!e)return;let t=()=>{let t=e.querySelector(`:scope > .sf-sheet-stats`),n=e.querySelector(`:scope > .sf-sheet-side`);t&&n&&v(n.getBoundingClientRect().top>t.getBoundingClientRect().top+1)};t();let n=new ResizeObserver(t);return n.observe(e),()=>n.disconnect()},[]);let y=(0,W.jsxs)(`div`,{className:`sf-sheet-move-row`,children:[(0,W.jsx)(sP,{movement:o}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-resistances`,children:s})]});return(0,W.jsxs)(`div`,{className:`sf-sheet sf-sheet--${t}`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-level`,"aria-label":`Level ${n}`,children:[(0,W.jsx)(`span`,{className:`sf-sheet-level-label`,children:`Level`}),(0,W.jsx)(`span`,{className:`sf-sheet-level-number`,children:n})]}),h.levelUp&&e.corner&&(0,W.jsx)(`div`,{className:`sf-sheet-corner`,children:e.corner}),h.actions&&e.actions,(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-head`,children:[(0,W.jsx)(`div`,{className:`sf-sheet-who`,children:r.who}),r.description&&(0,W.jsx)(`div`,{className:`sf-sheet-description`,children:r.description})]}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-resources`,children:i}),(0,W.jsxs)(`div`,{className:`sf-sheet-row${_?` is-single`:``}`,ref:g,children:[_&&y,(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-stats`,children:a}),(0,W.jsxs)(`div`,{className:`sf-sheet-side`,children:[!_&&y,(0,W.jsxs)(`div`,{className:`sf-sheet-side-row`,children:[(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-conditions`,children:c}),(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-items`,children:l})]})]})]}),(0,W.jsxs)(`div`,{className:`sf-sheet-lower`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-knowledges`,children:[(0,W.jsx)(iP,{children:`Knowledges`}),u]}),(0,W.jsxs)(`div`,{className:`sf-sheet-pair`,children:[(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-abilities`,children:[(0,W.jsx)(iP,{children:`Abilities`}),d]}),(0,W.jsxs)(`div`,{className:`sf-sheet-box sf-sheet-skills`,children:[(0,W.jsx)(iP,{aside:p,children:`Skills`}),f]})]}),m&&(0,W.jsx)(`div`,{className:`sf-sheet-box sf-sheet-other`,children:m})]})]})}var lP=e=>e.toLowerCase();function uP({items:e,held:t}){let n=(0,U.useMemo)(()=>nP(oN,e,t),[e,t]),r=(0,U.useId)(),i=dl.map(e=>{let t=n.filter(t=>t.type===e);return{type:e,own:t,total:t.filter(e=>!e.where).reduce((e,t)=>e+t.amount,0)}}).filter(e=>e.total!==0||e.own.some(e=>e.where&&e.amount!==0));return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(iP,{children:`Resistances`}),i.length?(0,W.jsx)(`ul`,{className:`sf-resistance-list`,children:i.map(({type:e,own:t,total:n},i)=>(0,W.jsxs)(`li`,{className:`sf-resistance`,tabIndex:0,"aria-describedby":`${r}-${i}`,children:[(0,W.jsx)(ZN,{name:lP(e),label:e}),(0,W.jsx)(`span`,{className:`sf-resistance-total`,children:n}),(0,W.jsxs)(`div`,{className:`sf-resistance-pop`,role:`tooltip`,id:`${r}-${i}`,children:[(0,W.jsxs)(`strong`,{className:`sf-resistance-pop-title`,children:[e,` `,n]}),(0,W.jsx)(`ul`,{children:t.map((e,t)=>(0,W.jsxs)(`li`,{className:e.where?`is-partial`:void 0,children:[(0,W.jsxs)(`span`,{children:[e.from,e.where&&(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[` (`,e.where,`)`]})]}),(0,W.jsx)(`span`,{className:`sf-resistance-pop-total`,children:e.where&&e.amount>0?`+${e.amount}`:e.amount})]},t))})]})]},e))}):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`None.`})]})}function dP(e){let t=(0,U.useRef)({value:e,from:e});return t.current.value!==e&&(t.current={value:e,from:t.current.value}),t.current.from}function fP({bonus:e,value:t,max:n}){let r=dP(t);return(0,W.jsx)(`div`,{className:`sf-stat-line`,"aria-hidden":`true`,children:Array.from({length:20},(i,a)=>{let o=a+1,s=o<=t?o>n?`over`:o<=e?`bonus`:`filled`:o<=n?`empty`:`unavailable`,c=s===`filled`&&o>r?` is-new`:``;return(0,W.jsx)(`span`,{className:`sf-stat-slot sf-stat-slot--${o%2?`dot`:`square`} is-${s}${c}`},o)})})}function pP({bonus:e=0,value:t}){let n=dP(t);return(0,W.jsx)(`div`,{className:`sf-stat-line`,"aria-hidden":`true`,children:Array.from({length:20},(r,i)=>(0,W.jsx)(`span`,{className:`sf-stat-slot sf-stat-slot--diamond is-${i<e?`bonus`:i<t?`filled${i>=n?` is-new`:``}`:`empty`}`},i))})}function mP(e,t){let n=PN(e),r=t.summary;return su(e,oN,t).map(t=>({group:t,core:r?.coreStats[t]??e.core[t],bonus:r?.coreBonus[t]??0,stats:V[t].map(i=>{if(r?.chassis&&t===`physical`)return{id:i,value:r.stats[i],bonus:0,max:r.stats[i]};let a=(n?.[i]?.bonus??0)+(e.startPoints?.[i]??0);return{id:i,value:r?.stats[i]??a,bonus:a,max:n?.[i]?.max??0}})}))}function hP({step:e,label:t,plus:n}){return(0,W.jsx)(G,{round:`sm`,tone:e.disabled?`gray`:`primary`,ready:!e.disabled,className:n?`is-plus`:void 0,"aria-label":t,title:e.title,onClick:e.onClick,disabled:e.disabled,children:(0,W.jsx)(YN,{is:n?`plus`:`minus`})})}function gP({groups:e,max:t=!1,edit:n}){return(0,W.jsx)(`div`,{className:`sf-stats${n?` sf-stats--edit`:``}`,children:e.map(({group:e,core:r,stats:i,bonus:a=0})=>{let o=n?.core(e);return(0,W.jsxs)(`div`,{className:`sf-stat-group sf-stat-group--${e}${o?.locked?` is-locked`:``}`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-group-head`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-core`,children:[(0,W.jsx)(`span`,{className:`sf-stat-badge`,title:`Core Stat`,children:(0,W.jsx)(ZN,{name:e,className:`sf-stat-badge-icon`})}),o&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(hP,{step:o.take,label:`Take a core point from ${e}`}),(0,W.jsx)(hP,{step:o.put,label:`Put a core point in ${e}`,plus:!0})]})]}),(0,W.jsxs)(`h4`,{className:`sf-stat-group-title`,children:[$(e),` - `,r]}),o&&(0,W.jsx)(`span`,{className:`sf-stat-group-count num${o.count.tone?` is-${o.count.tone}`:``}`,children:o.count.text})]}),o?.hint&&(0,W.jsx)(`p`,{className:`sf-stat-hint`,children:o.hint}),!V[e].length&&(0,W.jsxs)(`div`,{className:`sf-stat`,children:[(0,W.jsx)(`div`,{className:`sf-stat-label`,children:(0,W.jsxs)(`strong`,{children:[`Each point in `,$(e),` adds `,3,` MP (Mana Points)`]})}),(0,W.jsx)(pP,{bonus:a,value:r})]}),i.map(e=>{let r=n?.stat(e.id);return(0,W.jsxs)(`div`,{className:`sf-stat`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-label`,children:[(0,W.jsxs)(`strong`,{children:[$(e.id),` - `,e.value]}),t&&(0,W.jsxs)(`span`,{className:`sf-stat-max`,children:[` max `,e.max]}),r&&r.spend>0&&(0,W.jsxs)(`span`,{className:`sf-stat-spend`,children:[`Spend `,r.spend,` `,r.spend===1?`point`:`points`]})]}),r?(0,W.jsxs)(`div`,{className:`sf-stat-row`,children:[(0,W.jsxs)(`div`,{className:`sf-stat-steps`,children:[(0,W.jsx)(hP,{step:r.take,label:`Take a point from ${e.id}`}),(0,W.jsx)(hP,{step:r.put,label:`Add a point to ${e.id}`,plus:!0})]}),(0,W.jsx)(fP,{bonus:e.bonus,value:e.value,max:e.max})]}):(0,W.jsx)(fP,{bonus:e.bonus,value:e.value,max:e.max})]},e.id)})]},e)})})}function _P(e){return e?e.category===`knowledge`?e.types.includes(`language`)?`language`:`knowledge`:e.category===`contact`||e.category===`membership`?`circumstance`:e.category===`starter`?`other`:e.category:`other`}var vP=e=>e===`isekai`?` sf-card--dreft`:``;function yP({children:e,tone:t}){return(0,W.jsx)(`span`,{className:`sf-chip${t?` sf-chip--${t}`:``}`,children:e})}function bP({children:e}){return(0,W.jsx)(`p`,{className:`sf-card-note`,children:e})}function xP({open:e,label:t,onToggle:n,className:r}){return(0,W.jsx)(`button`,{type:`button`,className:`sf-btn sf-btn--bare ${r}`,"aria-label":`${e?`Collapse`:`Expand`} ${t}`,"aria-expanded":e,title:e?`Collapse`:`Expand`,onClick:n,children:(0,W.jsx)(`svg`,{className:r===`sf-card-fold`?`sf-card-chevron`:void 0,viewBox:`0 0 12 8`,"aria-hidden":`true`,focusable:`false`,children:(0,W.jsx)(`path`,{d:`M1 1.5l5 5 5-5`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`})})})}var SP=e=>e?e.open?` is-open`:` is-closed`:``;function CP({kind:e,name:t,rank:n,plane:r,chips:i,fold:a,keep:o,actions:s,className:c=``,as:l=`div`,rootProps:u,children:d}){let f=i!=null&&i!==!1,p=`sf-card sf-trait-card sf-trait-card--${e}${vP(r)}${SP(a)}${o?` has-keep`:``}${c?` ${c}`:``}`;return(0,W.jsxs)(l,{className:p,...u,children:[(0,W.jsxs)(`div`,{className:`sf-card-bar`,children:[(0,W.jsxs)(`span`,{className:`sf-card-name`,children:[(0,W.jsx)(MN,{plane:r}),t,n===void 0?``:` (${n})`]}),(f||a||s)&&(0,W.jsxs)(`span`,{className:`sf-card-chips`,children:[i,a&&(0,W.jsx)(xP,{...a,className:`sf-card-fold`}),s]})]}),(0,W.jsxs)(`div`,{className:`sf-card-body`,children:[o,a?(0,W.jsx)(`div`,{className:`sf-card-more`,children:d}):d]})]})}var wP=`Max Range: `,TP=`Area of Effect: `;function EP({stock:e,withResists:t=!0}){let n=e.damage?ml(e.damage):void 0,r=t&&e.resistances?eP(e.resistances,e.name):[];if(!e.damage&&!r.length&&!e.maxRange&&!e.areaOfEffect)return null;let i=e.tags?.some(e=>e===`ranged`||e===`thrown`),a=(e,t)=>(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(ZN,{name:e,label:t})}),o=i?a(`crosshairs`,`Ranged damage`):a(`sword`,`Melee damage`);return(0,W.jsxs)(`div`,{className:`equipment-stats sf-item-badges`,children:[e.damage&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:n?(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[o,n.map((e,t)=>(0,W.jsxs)(U.Fragment,{children:[t>0&&(0,W.jsx)(`span`,{className:`equipment-stat-or`,children:`or`}),e.map(e=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(ZN,{name:lP(e.type),label:e.type}),e.amount,e.perRank&&`/Rank`,e.plus&&` + ${e.plus}`]},e.type))]},t))]}):(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[o,e.damage]})}),e.maxRange&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Max Range`,children:[a(`range`,`Max Range`),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:e.maxRange})]})}),e.areaOfEffect&&(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,title:`Area of Effect`,children:[a(`burst`,`Area of Effect`),(0,W.jsx)(`span`,{className:`equipment-stat-value`,children:e.areaOfEffect})]})}),r.length>0&&(0,W.jsx)(DP,{stock:e})]})}function DP({stock:e}){let t=e.resistances?eP(e.resistances,e.name):[];return t.length?(0,W.jsx)(`span`,{className:`sf-item-badge-group`,children:(0,W.jsxs)(`span`,{className:`chip equipment-stat`,children:[(0,W.jsx)(`span`,{className:`item-stat-lead`,children:(0,W.jsx)(ZN,{name:`shield`,label:`Resists`})}),t.map((e,t)=>(0,W.jsxs)(`span`,{className:`equipment-stat-value`,children:[(0,W.jsx)(ZN,{name:lP(e.type),label:e.type}),e.amount]},t))]})}):null}var OP={hp:`Hit Points`,mp:`Mana Points`};function kP({kind:e,max:t,value:n,onChange:r}){let[i,a]=(0,U.useState)(n??t),o=r?n??t:i,s=r??a,c=e.toUpperCase();return(0,W.jsxs)(`span`,{className:`equipment-mp equipment-resource equipment-${e}`,children:[(0,W.jsx)(`strong`,{className:`resource-name resource-${e}`,title:OP[e],children:c}),(0,W.jsx)(G,{round:`xs`,onClick:()=>s(Math.max(0,o-1)),disabled:o<=0,"aria-label":`1 less ${c}`,children:(0,W.jsx)(YN,{is:`minus`})}),(0,W.jsxs)(`span`,{className:`num`,"aria-live":`polite`,children:[(0,W.jsx)(`span`,{className:`equipment-resource-now${o>t?` resource-${e}`:``}`,title:o>t?`Above the max of ${t}`:void 0,children:o}),(0,W.jsxs)(`span`,{className:`muted`,children:[` / `,t]})]}),(0,W.jsx)(G,{round:`xs`,onClick:()=>s(o+1),"aria-label":`1 more ${c}`,children:(0,W.jsx)(YN,{is:`plus`})})]})}function AP({name:e,stock:t,category:n,count:r,equip:i,fold:a,edit:o,note:s,body:c,badges:l,mp:u,resistsInChips:d,chips:f,className:p=``,as:m=`div`,children:h}){let g=!a||a.open,_=t?Sl(t).filter(e=>!e.startsWith(wP)&&!e.startsWith(TP)):[],v=t?Cl(t):``;return(0,W.jsxs)(m,{className:`equipment-box sf-item-card${SP(a)}${p?` ${p}`:``}`,children:[r!==void 0&&(0,W.jsx)(`span`,{className:`sf-item-count`,"aria-label":`${r} of ${e}`,children:r}),(0,W.jsxs)(`div`,{className:`equipment-row sf-item-summary`,children:[i&&(0,W.jsxs)(`label`,{className:`sf-item-equip`,title:`Equip`,children:[(0,W.jsx)(`input`,{type:`checkbox`,"aria-label":`Equip`,checked:i.checked,disabled:!i.onChange,onChange:e=>i.onChange?.(e.target.checked)}),(0,W.jsx)(`span`,{className:`sf-item-equip-label`,children:`Equip`})]}),(0,W.jsxs)(`span`,{className:`sf-item-main`,children:[(0,W.jsx)(`span`,{className:`equipment-name`,children:e}),t&&(0,W.jsx)(EP,{stock:t,withResists:!d}),u&&(0,W.jsx)(kP,{kind:`mp`,...u}),l]}),a&&(0,W.jsx)(xP,{...a,label:e,className:`sf-item-icon sf-item-expand`})]}),g&&(0,W.jsxs)(`div`,{className:`sf-item-more`,children:[o&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`button`,{type:`button`,className:`sf-item-edge sf-item-edit`,"aria-label":`Edit ${e}`,title:`Edit`,"aria-expanded":o.editing,onClick:o.onToggle,children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})}),o.editing&&(0,W.jsx)(`button`,{type:`button`,className:`sf-item-edge sf-item-remove`,"aria-label":`Remove ${e}`,title:`Remove`,onClick:o.onRemove,children:(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 448 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z`})})})]}),(0,W.jsxs)(`div`,{className:`equipment-chips`,children:[d&&t&&(0,W.jsx)(DP,{stock:t}),(0,W.jsx)(`span`,{className:`chip`,children:$(n)}),f?.map(e=>(0,W.jsx)(`span`,{className:`chip`,children:e},e)),_.map(e=>(0,W.jsx)(`span`,{className:`chip`,children:e},e))]}),o?.editing&&(0,W.jsx)(`div`,{className:`equipment-row sf-item-fields`,children:o.fields}),t&&(0,W.jsxs)(`div`,{className:`sf-item-stock`,children:[(0,W.jsx)(`p`,{className:`equipment-description`,children:t.summary}),v&&(0,W.jsx)(`p`,{className:`equipment-effect`,children:v})]}),c,s&&(0,W.jsxs)(`div`,{className:`sf-item-note-line`,children:[(0,W.jsxs)(`button`,{type:`button`,className:`sf-btn sf-btn--bare sf-item-note-toggle`,"aria-expanded":s.shown,onClick:s.onToggle,children:[(0,W.jsx)(`svg`,{xmlns:`http://www.w3.org/2000/svg`,viewBox:`0 0 576 512`,"aria-hidden":`true`,children:(0,W.jsx)(`path`,{d:`M492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75zM58.57 323.5L291.7 90.34L421.7 220.3L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L58.57 323.5zM552 464C565.3 464 576 474.7 576 488C576 501.3 565.3 512 552 512H248C234.7 512 224 501.3 224 488C224 474.7 234.7 464 248 464H552z`})}),`Note`]}),s.shown&&s.field]})]}),h]})}function jP({physical:e,hp:t,hpBonus:n=0,onHpChange:r,attacks:i,traits:a,className:o=``,...s}){let c=10+e.stats.reduce((e,t)=>e+t.value,0)+n;return(0,W.jsx)(AP,{...s,className:`sf-chassis-card${o?` ${o}`:``}`,resistsInChips:!0,badges:(0,W.jsx)(kP,{kind:`hp`,max:c,value:t,onChange:r}),body:(0,W.jsxs)(`div`,{className:`sf-chassis`,children:[(0,W.jsx)(gP,{groups:[{group:`physical`,...e}]}),i&&(0,W.jsxs)(`div`,{className:`sf-chassis-list`,children:[(0,W.jsx)(`h5`,{className:`sf-chassis-label`,children:`Attacks`}),i]}),a&&(0,W.jsxs)(`div`,{className:`sf-chassis-list`,children:[(0,W.jsx)(`h5`,{className:`sf-chassis-label`,children:`Traits`}),a]})]})})}function MP({rows:e,children:t}){let n=e.filter(e=>e.chips.length>0);return!n.length&&!t?null:(0,W.jsxs)(`div`,{className:`sf-background-rows`,children:[n.map(e=>(0,W.jsxs)(`div`,{children:[(0,W.jsx)(`span`,{className:`sf-background-label`,children:e.label}),e.chips.map((t,n)=>(0,W.jsx)(yP,{tone:e.accent?`accent`:void 0,children:t},n))]},e.label)),t]})}function NP({name:e,slot:t,plane:n,select:r,className:i=``,children:a}){let o=`sf-card sf-background-card${vP(n)}${r?` is-selectable${r.selected?` selected`:``}`:``}${i?` ${i}`:``}`;return(0,W.jsxs)(`div`,{className:o,...r?{role:`radio`,"aria-checked":r.selected,"aria-label":e,tabIndex:0,onClick:r.onSelect,onKeyDown:e=>{r&&(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),r.onSelect())}}:{},children:[(0,W.jsxs)(`div`,{className:`sf-card-bar`,children:[(0,W.jsxs)(`h3`,{className:`sf-card-name`,children:[(0,W.jsx)(MN,{plane:n}),e]}),(0,W.jsxs)(`span`,{className:`sf-card-chips`,children:[(0,W.jsx)(yP,{children:t}),(0,W.jsx)(yP,{tone:`muted`,children:n})]})]}),(0,W.jsx)(`div`,{className:`sf-card-body`,children:a})]})}var PP=[`origin`,`profession`,`past`],FP={origin:`Where you're from.`,profession:`What you do for a living.`,past:`What shaped you before the story starts.`};function IP(e){let t=e.map(e=>ON(e.trait)+(e.rank?` (${e.rank})`:``)),n=[];for(let e of t){let r=e.match(/^(.*) \((Spoken|Written)\)$/)?.[1],i=r!==void 0&&t.includes(`${r} (Spoken)`)&&t.includes(`${r} (Written)`)?`${r} (Spoken & Written)`:e;n.includes(i)||n.push(i)}return n}function LP({pkg:e}){return(0,W.jsx)(MP,{rows:[{label:`Bonus`,accent:!0,chips:[...e.bonusPoints.map(e=>`+${e.count} ${$(e.group)} focus ${e.count===1?`point`:`points`}`),...Object.entries(e.coreBonus).map(([e,t])=>`+${t} ${$(e)}`),...e.wealth?[`${e.wealth>0?`+`:``}${e.wealth} Wealth`]:[]]},{label:`Grants`,accent:!0,chips:IP(e.grants)},{label:`Choose`,chips:e.choices.map(e=>e.note??AN(e.choose,e.from))},{label:`Background list`,chips:IP(e.backgroundTraits.map(e=>({trait:e})))}],children:e.features.map(e=>(0,W.jsxs)(`p`,{children:[(0,W.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})}var RP=[[`earth`,`The Settled Systems`],[`isekai`,`Isekai`],[`any`,`Any`]],zP=[`physical`,`social`,`mental`];function BP({slot:e,picked:t,onChoose:n}){let[r,i]=(0,U.useState)(``),[a,o]=(0,U.useState)(new Set),s=oN.packages.filter(t=>t.type===e),c=RP.filter(([e])=>s.some(t=>t.plane===e)),l=zP.filter(e=>s.some(t=>t.bonusPoints.some(t=>t.group===e))),u=e=>{let t=new Set(a);t.delete(e)||t.add(e),o(t)},d=r.trim().toLowerCase(),f=s.filter(e=>e.id===t||!a.has(`plane:${e.plane}`)&&!e.bonusPoints.some(e=>a.has(`bonus:${e.group}`))&&(!d||e.name.toLowerCase().includes(d)||e.tags.some(e=>e.toLowerCase().includes(d))));return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`div`,{className:`filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:r,onChange:e=>i(e.target.value),"aria-label":`Search ${$(e)}s`}),c.length>1&&c.map(([e,t])=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!a.has(`plane:${e}`),onChange:()=>u(`plane:${e}`)}),` `,t]},e)),l.length>1&&l.map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!a.has(`bonus:${e}`),onChange:()=>u(`bonus:${e}`)}),` `,$(e),` bonus`]},e))]}),f.length===0?(0,W.jsxs)(`p`,{className:`empty`,children:[`No `,$(e),`s match.`]}):(0,W.jsx)(`div`,{className:`cards`,role:`radiogroup`,"aria-label":$(e),children:f.map(e=>(0,W.jsxs)(NP,{name:e.name,slot:$(e.type),plane:e.plane,select:{selected:t===e.id,onSelect:()=>n(e.id)},children:[(0,W.jsx)(`p`,{children:e.summary}),(0,W.jsx)(LP,{pkg:e})]},e.id))})]})}function VP({draft:e,onChange:t}){let[n,r]=(0,U.useState)(()=>({origin:!e.origin,profession:!e.profession,past:!e.past})),i=(e,t)=>r(n=>n[e]===t?n:{...n,[e]:t});(0,U.useEffect)(()=>i(`origin`,!e.origin),[e.origin]),(0,U.useEffect)(()=>i(`profession`,!e.profession),[e.profession]),(0,U.useEffect)(()=>i(`past`,!e.past),[e.past]);let a=(n,r)=>{let i=e[n],a=i===r?void 0:r,o=[i,a].some(e=>e&&lN.get(e)?.bonusPoints.length);t({...e,[n]:a,choices:e.choices.filter(e=>e.package!==i),...o?{startPoints:void 0}:{}})};return(0,W.jsxs)(`section`,{children:[(0,W.jsx)(FN,{title:`Background`,children:`Pick an Origin, a Profession and a Past. Their Traits come free and don't use picks.`}),(0,W.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:PP.map(t=>(0,W.jsxs)(`details`,{className:`slot`,open:n[t],onToggle:e=>i(t,e.currentTarget.open),children:[(0,W.jsx)(`summary`,{children:(0,W.jsxs)(`h3`,{className:`subhead`,children:[$(t),` `,e[t]?(0,W.jsx)(`span`,{className:`slot-pick`,children:lN.get(e[t])?.name??e[t]}):(0,W.jsx)(`span`,{className:`muted`,children:FP[t]}),(0,W.jsx)(`span`,{className:`slot-toggle`,"aria-hidden":`true`,children:(0,W.jsx)(YN,{is:n[t]?`minus`:`plus`})})]})}),(0,W.jsx)(BP,{slot:t,picked:e[t],onChoose:e=>a(t,e)})]},t))})]})}var HP=[`systems`,`dreft`],UP={systems:`The Settled Systems`,dreft:`Dreft`},WP=e=>e.region??(e.plane===`earth`?`systems`:e.plane),GP=e=>HP.includes(e)?HP.indexOf(e):HP.length,KP=[...new Set(oN.kinds.map(WP))].sort((e,t)=>GP(e)-GP(t));function qP({draft:e,onChange:t}){return(0,W.jsx)(`div`,{className:`tech-fields tech-fields-light step-box`,children:(0,W.jsx)(`div`,{role:`radiogroup`,"aria-label":`Kind`,children:KP.map(n=>(0,W.jsxs)(`div`,{className:`kind-group`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:UP[n]??$(n)}),(0,W.jsx)(`div`,{className:`cards`,children:oN.kinds.filter(e=>WP(e)===n).map(n=>(0,W.jsx)(NP,{name:n.name,slot:`Kind`,plane:n.plane,className:`kind-card`,select:{selected:e.kind===n.id,onSelect:()=>t({...e,kind:e.kind===n.id?void 0:n.id,startPoints:void 0})},children:(0,W.jsx)(JP,{kind:n})},n.id))})]},n))})})}function JP({kind:e,lore:t=!1}){return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`p`,{children:e.summary}),t&&e.lore&&(0,W.jsx)(`p`,{className:`sf-card-lore`,children:e.lore}),(0,W.jsx)(VN,{stats:e.stats}),(0,W.jsx)(MP,{rows:[{label:`Grants`,accent:!0,chips:e.grants.map(e=>ON(e.trait))}]}),(0,W.jsx)(`ul`,{className:`sf-card-features`,children:e.features.map(e=>(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`strong`,{children:[e.name,`.`]}),` `,e.description]},e.name))})]})}var YP=class extends Error{kind;constructor(e,t){super(t),this.kind=e}},XP={type:`object`,description:`Who the character is. The rules engine turns this into a full legal build. Every id must come from the game's content.`,properties:{name:{type:`string`,description:`The character's name: the player's, or one you make up that fits their Kind, home and past.`},kind:{type:`string`,description:`Kind id, e.g. isek.`},origin:{type:`string`,description:`Origin package id.`},profession:{type:`string`,description:`Profession package id.`},past:{type:`string`,description:`Past package id.`},focus:{type:`array`,items:{type:`string`,enum:uc.options},description:`The stats that matter most for this character, most important first (two to four). Stat points go to these.`},magic:{type:`integer`,minimum:0,description:`How many of the character's levels go to the Magic core stat, for a spellcaster or anyone magical. Only Kinds or packages that grant a Trait opening Magic (Magic Access, which every Kind of Dreft but the Orcoid Tatot gets through Magical Heritage) can use it. Each Magic level gives 3 MP but no focus points. Default 0.`},traits:{type:`array`,items:{type:`string`},description:`Trait ids that fit the character, best fit first. List more than the picks will cover (12 to 20): the engine buys them in order and skips any the build can't take. List a ranked Trait twice to ask for rank 2. Don't list Traits the packages already grant.`},items:{type:`array`,items:{type:`string`},description:`Item ids the character carries, most needed first (about 3 to 8): the weapon and armor they'd fight in, the tools and kits of their trade and Traits, and gear for how they live and travel. Only items from the character's own plane or any plane, within its Wealth (the Kit Costs in the index). List an item twice to carry two.`},choices:{type:`array`,description:`Optional answers to package or Trait choices with a pool, like languages (an Additional Language Trait asks which one). Any you leave out are filled in. Never answer Contacts.`,items:{type:`object`,properties:{package:{type:`string`,description:`The package that asks. Give this or trait, not both.`},trait:{type:`string`,description:`The Trait that asks, for a Trait's choice.`},from:{type:`string`,description:`The pool name, as the package or Trait lists it.`},traits:{type:`array`,items:{type:`string`}}},required:[`from`,`traits`]}}},required:[`name`,`kind`,`origin`,`profession`,`past`,`focus`,`traits`,`items`]},ZP=[{name:`search_traits`,description:`Search the game's Traits by words in their name, summary or tags, and filter by category, tag and pick type. Call this to find Traits that fit the concept before picking them. For background picks, pass pick: "background" with the build's kind, origin, profession and past: only Traits on that build's Background Trait list come back.`,input_schema:{type:`object`,properties:{query:{type:`string`,description:`Words to look for, e.g. "sea trade". Leave out to list everything that passes the filters.`},category:{type:`string`,enum:wc.options},tags:{type:`array`,items:{type:`string`},description:`Only Traits with at least one of these tags.`},pick:{type:`string`,enum:[`universal`,`background`],description:`Only Traits this kind of pick can buy.`},kind:{type:`string`},origin:{type:`string`},profession:{type:`string`},past:{type:`string`},limit:{type:`integer`,minimum:1,maximum:100,description:`Most results to return. Default 25.`}}}},{name:`list_packages`,description:`List the background packages of one type (origin, profession or past), with their summaries and tags.`,input_schema:{type:`object`,properties:{type:{type:`string`,enum:xc.options}},required:[`type`]}},{name:`get_package`,description:`Get one background package in full: the Traits it grants, the choices it asks for (and whether their pools have Traits yet), and the Traits it adds to the Background Trait list. Choices marked leftForPlayer (like Contacts) are for the player to fill in.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`get_kind`,description:`Get one Kind in full: its features, Trait access, and starting stats and maximums.`,input_schema:{type:`object`,properties:{id:{type:`string`}},required:[`id`]}},{name:`submit_build`,description:`Submit the character concept with a one-line reason for each choice. The rules engine spreads the stat points, buys Traits from your list in order and checks the result. If it's legal you're done; if not, the problems come back and you submit again.`,input_schema:{type:`object`,properties:{concept:XP,summary:{type:`string`,description:`One or two sentences on who this character is, for the player.`},reasons:{type:`array`,description:`One short line per choice. Targets: kind, origin, profession, past, levels (why the priority stats), each listed Trait's id, and item:<id> for each item.`,items:{type:`object`,properties:{target:{type:`string`},reason:{type:`string`}},required:[`target`,`reason`]}}},required:[`concept`,`summary`,`reasons`]}}],QP=`player-choice`,$P=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0,eF=e=>Array.isArray(e)?e:[],tF=(e,t)=>$c(e)||el(e,t).length===0,nF=(e,t)=>!!e&&e.from===t.from&&(t.package===void 0?e.trait===t.trait:e.package===t.package);function rF(e,t){let n=$P(e)??{},r=ll(n,t).summary;if(r)return r.questions.filter(e=>tF(e.from,t)).map(e=>({[e.by]:e.id,from:e.from,count:e.count,...e.notes.length?{note:e.notes.join(`; `)}:{}}));let i=[];for(let e of[`origin`,`profession`,`past`]){let r=t.packages.find(t=>t.id===n[e]&&t.type===e);for(let e of r?.choices??[]){if(!tF(e.from,t))continue;let n=i.find(t=>t.package===r.id&&t.from===e.from);n?n.count+=e.choose:i.push({package:r.id,from:e.from,count:e.choose,note:e.note})}}return i}function iF(e,t){let n=$P(e);if(!n)return[];let r=[],i=new Set(t.traits.map(e=>e.id)),a=new Set(t.packages.map(e=>e.id)),o=e=>typeof e==`string`,s=o(n.kind)?t.kinds.find(e=>e.id===n.kind):void 0;o(n.kind)&&!s&&r.push({path:`kind`,message:`Kind "${n.kind}" doesn't exist`});for(let e of[`origin`,`profession`,`past`])o(n[e])&&!a.has(n[e])&&r.push({path:e,message:`Package "${n[e]}" doesn't exist`});eF(n.traits).forEach((e,t)=>{let n=$P(e)?.trait;o(n)&&!i.has(n)&&r.push({path:`traits[${t}]`,message:`Trait "${n}" doesn't exist`})});let c=new Set(t.items.map(e=>e.id));eF(n.items).forEach((e,t)=>{let n=$P(e)?.item;o(n)&&!c.has(n)&&r.push({path:`items[${t}]`,message:`Item "${n}" doesn't exist`})});let l=rF(n,t);return eF(n.choices).forEach((e,t)=>{let n=$P(e);if(n){if(o(n.package)&&!a.has(n.package)&&r.push({path:`choices[${t}]`,message:`Package "${n.package}" doesn't exist`}),o(n.trait)&&!i.has(n.trait)&&r.push({path:`choices[${t}]`,message:`Trait "${n.trait}" doesn't exist`}),l.some(e=>nF(n,e))){let e=Qc[String(n.from)];r.push({path:`choices[${t}]`,message:e?`The player writes in their own ${e} on the Choices step, so leave this choice out. Remove this answer.`:`No Traits exist in the "${String(n.from)}" pool yet, so this choice is left for the player. Remove this answer.`})}else for(let e of eF(n.traits))o(e)&&!i.has(e)&&r.push({path:`choices[${t}]`,message:`Trait "${e}" doesn't exist`})}}),r}function aF(e,t,n=Rc){let r=iF(e,t),i=ll(e,t,n),a=rF(e,t),o=$P(e),s=i,c=new Set;if(o&&a.some(e=>!$c(e.from))){let e=eF(o.choices),r=t=>e.some(e=>nF($P(e),t)),i=a.filter(e=>!r(e)&&!$c(e.from)).map(e=>({...e.package===void 0?{trait:e.trait}:{package:e.package},from:e.from,traits:Array.from({length:e.count},(e,t)=>`${QP}-${t+1}`)}));c=new Set(i.map((t,n)=>`choices[${e.length+n}]`)),s=ll({...o,choices:[...e,...i]},t,n)}return{accepted:r.length===0&&s.ok,legal:r.length===0&&i.ok,unknownIds:r,errors:s.errors,warnings:s.warnings.filter(e=>!e.path||!c.has(e.path)),openChoices:a,summary:s.summary}}var oF=e=>({id:e.id,name:e.name,category:e.category,summary:e.summary,tags:e.tags,types:e.types,ranked:e.ranked,rankStats:e.rankStats,prerequisites:e.prerequisites,background:e.background,starterOnly:e.starterOnly,conveyed:e.conveyed,choices:e.choices,...e.list?{list:e.list}:{}}),sF=class extends Error{},cF=e=>typeof e==`string`&&e.trim()!==``?e.trim():void 0;function lF(e,t,n){let r=t.traits,i=cF(e.category);i&&(r=r.filter(e=>e.category===i));let a=eF(e.tags).filter(e=>typeof e==`string`);a.length&&(r=r.filter(e=>e.tags.some(e=>a.includes(e))));let o=cF(e.pick);if(o&&(r=r.filter(e=>!e.conveyed)),o===`universal`&&(r=r.filter(e=>!e.background)),o===`background`){let i={kind:e.kind,origin:e.origin,profession:e.profession,past:e.past,level:n.startingLevel,levels:[]},a=iF(i,t);if(a.length)throw new sF(a.map(e=>e.message).join(`; `));let o=ll(i,t,n).summary?.backgroundList;if(!o)throw new sF(`For background picks, pass the build's kind, origin, profession and past.`);r=r.filter(e=>o.includes(e.id))}let s=(cF(e.query)??``).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean),c=r.map(e=>{let t=[e.id,e.name,e.summary,e.category,...e.tags,...e.types].join(` `).toLowerCase();return{t:e,score:s.filter(e=>t.includes(e)).length}}),l=typeof e.limit==`number`?Math.min(Math.max(1,e.limit),100):25,u=c.filter(e=>s.length===0||e.score>0).sort((e,t)=>t.score-e.score||e.t.name.localeCompare(t.t.name)).slice(0,l);return{count:u.length,traits:u.map(e=>oF(e.t))}}function uF(e,t){let n=cF(e.id),r=t.packages.find(e=>e.id===n);if(!r)throw new sF(`No package "${n}". Known ids: ${t.packages.map(e=>e.id).join(`, `)}`);let i=e=>t.traits.find(t=>t.id===e)?.name??e;return{...r,grants:r.grants.map(e=>({...e,name:i(e.trait)})),choices:r.choices.map(e=>tF(e.from,t)?{...e,leftForPlayer:!0}:{...e,pool:el(e.from,t).map(e=>({id:e.id,name:e.name}))}),backgroundTraits:r.backgroundTraits.map(e=>({id:e,name:i(e)}))}}function dF(e,t){let n=cF(e.id),r=t.kinds.find(e=>e.id===n);if(!r)throw new sF(`No Kind "${n}". Known ids: ${t.kinds.map(e=>e.id).join(`, `)}`);return r}function fF(e,t,n,r=Rc){let i=$P(t)??{};switch(e){case`search_traits`:return lF(i,n,r);case`list_packages`:{let e=xc.safeParse(i.type);if(!e.success)throw new sF(`type must be one of ${xc.options.join(`, `)}`);return n.packages.filter(t=>t.type===e.data).map(e=>({id:e.id,name:e.name,summary:e.summary,tags:e.tags,region:e.region}))}case`get_package`:return uF(i,n);case`get_kind`:return dF(i,n);default:throw new sF(`Unknown tool "${e}"`)}}var pF=`claude-opus-5-5`,mF=`server-side-fallback-2026-07-01`,hF=e=>!e.startsWith(`claude-haiku`),gF=e=>e.startsWith(`claude-haiku`)?`high`:`medium`;function _F(e,t=12,n=pF){return{model:n,maxTurns:t,review:!0,start:t=>new vF(e,t,n)}}var vF=class{create;model;messages;system;constructor(e,t,n){this.create=e,this.model=n,this.system=[{type:`text`,text:t.instructions},{type:`text`,text:t.index,cache_control:{type:`ephemeral`}}],this.messages=[{role:`user`,content:t.user}]}async send(){let e=await this.create({model:this.model,max_tokens:16e3,tools:ZP,system:this.system,messages:this.messages,thinking:{type:`adaptive`},output_config:{effort:gF(this.model)},cache_control:{type:`ephemeral`},...hF(this.model)?{betas:[mF],fallbacks:`default`}:{}}),t=e.usage,n={inputTokens:t.input_tokens,outputTokens:t.output_tokens,cacheReadTokens:t.cache_read_input_tokens??0,cacheWriteTokens:t.cache_creation_input_tokens??0};if(e.stop_reason===`refusal`)throw new YP(`refused`,`Claude declined to build this character. Try describing it differently.`);if(e.stop_reason===`max_tokens`)throw new YP(`truncated`,`Claude's response was cut off before it finished the build.`);return this.messages.push({role:`assistant`,content:e.content}),{calls:e.content.filter(e=>e.type===`tool_use`).map(e=>({id:e.id,name:e.name,input:e.input})),usage:n}}addResults(e){this.messages.push({role:`user`,content:e.map(e=>({type:`tool_result`,tool_use_id:e.call.id,content:e.content,...e.isError?{is_error:!0}:{}}))})}nudge(e){this.messages.push({role:`user`,content:e})}},yF=(e,t)=>L().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/,`must be a ${e} id like "${t}", not a name`),bF=Os({name:L().optional(),kind:yF(`Kind`,`isek`),origin:yF(`package`,`dreft`),profession:yF(`package`,`guild-hunter`),past:yF(`package`,`countryside-upbringing`),focus:B(L()).default([]),magic:z().int().min(0).default(0),traits:B(L()).default([]),choices:B(Pc).default([]),items:B(As([L(),Os({item:L(),qty:z().int().min(1).default(1)})])).default([])}),xF=Object.fromEntries(Object.entries(V).flatMap(([e,t])=>t.map(t=>[t,e]))),SF=e=>uc.safeParse(e).success;function CF(e,t){return t.kinds.find(t=>t.id===e.kind)?.stats}function wF(e,t,n,r=[]){let i=[...new Set(e.filter(SF))],a=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),o=e=>Math.min(t?.[e]?.max??20,20)-a[e],s={},c=(e,t)=>{for(let n=0;n<e;n++){let e=i.filter(e=>t.includes(e)&&o(e)>0),r=e.length?e[n%e.length]:[...t].sort((e,t)=>o(t)-o(e))[0];if(!r||o(r)<=0)break;s[r]=(s[r]??0)+1,a[r]++}};for(let e of r)c(e.count,V[e.group]);return c(n,uc.options),s}var TF=3,EF=6,DF=5;function OF(e,t,n){let r=[...new Set(e.filter(SF))],i=Object.fromEntries(uc.options.map(e=>[e,t?.[e]?.bonus??0])),a=e=>Math.min(t?.[e]?.max??20,20),o=e=>a(e)-i[e],s=Object.keys(V).filter(e=>!r.some(t=>xF[t]===e)).sort((e,t)=>V[t].reduce((e,t)=>e+o(t),0)-V[e].reduce((e,t)=>e+o(t),0)),c=[...new Set(r.map(e=>xF[e]))],l=c.length?c:s,u=e=>V[e].reduce((e,t)=>e+o(t),0),d=[],f=e=>d.filter(t=>t.group===e).length,p=0;for(let e=0;e<n;e++){let t=e+1,n=t>=EF&&(t-EF)%DF===0,a=Object.keys(V).filter(e=>u(e)>=3).sort((e,t)=>f(e)-f(t)||u(t)-u(e))[0],c=n&&a?a:l[p++%l.length],m=[c,...l,...s].find(e=>u(e)>=3)??c,h=t>=TF&&f(m)%2==1,g=r.filter(e=>xF[e]===m),_=[...V[m]].filter(e=>!r.includes(e)),v={};for(let e=0;e<3;e++){let t=[...V[m]].filter(e=>o(e)>0).sort((e,t)=>i[e]-i[t]||o(t)-o(e))[0],n=h&&e===2&&t,r=g.filter(e=>o(e)>0),a=_.filter(e=>o(e)>0).sort((e,t)=>o(t)-o(e)),s=n||!g.length&&t?t:r.length?r[e%r.length]:a[0]??g[0]??_[0];v[s]=(v[s]??0)+1,i[s]++}d.push({group:m,points:v})}return d}function kF(e,t,n){let r=n.packages.find(e=>e.id===t.origin&&e.type===`origin`),i=e=>r?.region&&e.region===r.region?0:e.plane===r?.plane?1:e.plane===`any`?2:3;return[...e].sort((e,t)=>i(e)-i(t))}function AF(e,t){let n=[],r=new Set;for(let i of[`origin`,`profession`,`past`]){let a=t.packages.find(t=>t.id===e[i]&&t.type===i);if(!a)continue;for(let e of a.grants)r.add(e.trait);let o=new Map;for(let e of a.choices)o.set(e.from,(o.get(e.from)??0)+e.choose);for(let[i,s]of o){let o=kF(el(i,t),e,t);if($c(i)||o.length===0)continue;let c=new Set(o.map(e=>e.id)),l=e.choices.find(e=>e.package===a.id&&e.from===i)?.traits??[],u=[...new Set(l)].filter(e=>c.has(e)&&!r.has(e));for(let e of o)!u.includes(e.id)&&!r.has(e.id)&&u.push(e.id);let d=u.slice(0,s);d.forEach(e=>r.add(e)),n.push({package:a.id,from:i,traits:d})}}return n}function jF(e,t){let n=[];for(let r of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[r]&&t.type===r),a=new Map;for(let e of i?.choices??[])a.set(e.from,(a.get(e.from)??0)+e.choose);for(let[e,r]of a)$c(e)||el(e,t).length||n.push({package:i.id,from:e,traits:Array.from({length:r},(e,t)=>`player-choice-${t+1}`)})}return n}function MF(e,t){let n=new Map(t.traits.map(e=>[e.id,e])),r=new Map;for(let n of[`origin`,`profession`,`past`]){let i=t.packages.find(t=>t.id===e[n]&&t.type===n);for(let e of i?.grants??[])r.set(e.trait,Math.max(r.get(e.trait)??0,e.rank??1))}let i=new Map;for(let t of e.traits)i.set(t,(i.get(t)??0)+1);let a=[...e.focus];for(let[e,t]of i){let i=n.get(e);if(!(!i?.ranked||(r.get(e)??0)+t<2))for(let e of i.rankStats)a.includes(e)||a.push(e)}return a}function NF(e,t){let n=t.packages.find(t=>t.id===e.origin&&t.type===`origin`)?.plane,r=[],i=[],a=new Set;for(let o of e.items){let{item:e,qty:s}=typeof o==`string`?{item:o,qty:1}:o,c=t.items.find(t=>t.id===e),l=c?c.category===`currency`?`money isn't handed out yet`:n&&c.plane!==`any`&&c.plane!==n?`${c.name} is from ${c.plane===`earth`?`Earth`:`Isekai`}, and this character isn't`:void 0:`Item "${e}" doesn't exist`;if(l||!c){i.push({item:e,reason:l});continue}let u=r.find(e=>e.item===c.id);if(u){u.qty+=s;continue}let d=c.category===`weapon`||!!c.slot&&!a.has(c.slot);c.slot&&a.add(c.slot),r.push({item:c.id,name:c.name,qty:s,category:c.category,equipped:d})}return{items:r,skipped:i}}var PF=(e,t)=>e.summary?.picks[t].banked??0;function FF(e,t,n=Rc){let r=bF.safeParse(e);if(!r.success)return{error:r.error.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)};let i=r.data,a=new Map(t.traits.map(e=>[e.id,e])),o=MF(i,t),s=CF(i,t),c=rl(t.kinds.find(e=>e.id===i.kind),[`origin`,`profession`,`past`].flatMap(e=>t.packages.filter(t=>t.id===i[e]&&t.type===e))),l=wF(o,s,c.any,c.groups),u=s&&Object.fromEntries(Object.entries(s).map(([e,t])=>[e,{...t,bonus:t.bonus+(l[e]??0)}])),d=ol([...t.kinds.find(e=>e.id===i.kind)?.grants??[],...t.packages.filter(e=>[i.origin,i.profession,i.past].includes(e.id)).flatMap(e=>e.grants)].map(e=>e.trait),t).includes(`magic`)?Math.min(i.magic,n.startingLevel):0,f=NF(i,t),p=Lc.parse({...i.name?{name:i.name}:{},kind:i.kind,origin:i.origin,profession:i.profession,past:i.past,level:n.startingLevel,startPoints:l,levels:[...OF(o,u,n.startingLevel-d),...Array.from({length:d},()=>({group:`magic`,points:{}}))],traits:[],choices:AF(i,t),items:f.items}),m=jF(p,t),h=e=>ll({...e,choices:[...e.choices,...m]},t,n),g=e=>{let n=h(e),r=new Set(n.summary?.traits.map(e=>e.trait)??[]),a=e.choices;for(let e of n.summary?.questions??[]){if(e.by!==`trait`||$c(e.from))continue;let n=kF(el(e.from,t),i,t);if(n.length===0){m=[...m.filter(t=>!tl(t,e)),{trait:e.id,from:e.from,traits:Array.from({length:e.count},(e,t)=>`player-choice-${t+1}`)}];continue}let o=a.find(t=>tl(t,e))?.traits??[];if(o.length>=e.count)continue;let s=new Set(n.map(e=>e.id)),c=i.choices.find(t=>tl(t,e))?.traits??[],l=[...o];for(let t of[...c,...n.map(e=>e.id)]){if(l.length>=e.count)break;s.has(t)&&!l.includes(t)&&!r.has(t)&&l.push(t)}a=[...a.filter(t=>!tl(t,e)),{trait:e.id,from:e.from,traits:l}]}return{...e,choices:a}},_=h(p),v=[],y=[];if(!_.ok)return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_};let b=e=>{let t=a.get(e);if(!t)return`Trait "${e}" doesn't exist`;let n=PF(_,`universal`),r=PF(_,`background`);if(n+r===0)return`no picks left`;let i=_.summary.traits.find(t=>t.trait===e);if(i&&!t.ranked)return`already held (from ${i.sources.join(`, `)})`;let o=_.summary.backgroundList.includes(e)&&r>0?`background`:!t.background&&n>0?`universal`:void 0;if(!o)return t.background?`${t.name} needs a Background pick, and none fit`:`no Universal picks left`;let s=m,c=g({...p,traits:[...p.traits,{trait:e,rank:(i?.rank??0)+1,pick:o}]}),l=h(c);if(!l.ok)return m=s,l.errors[0].message;p=c,_=l};for(let e of i.traits){let t=b(e);t?y.push({trait:e,reason:t}):v.push(e)}return{build:p,taken:v,skipped:y,skippedItems:f.skipped,result:_}}var IF=`You build player characters for Strange Frontiers, a tabletop RPG. A player describes the character they want; you choose who they are from the game's real content and explain each choice in one line. The rules engine does the bookkeeping: it spreads the stat points, buys Traits and checks that the result is legal.
 
 How you work:
 1. Read the description for the concept: who this person is, what they're good at, where they come from. If the player names a Kind, use it. If they don't, choose the Kind that fits best.
@@ -12780,5 +12854,5 @@ Rules you must follow:
 
 Reasons: give one short line per choice, in plain words a player would use, tied to what they asked for. Targets are kind, origin, profession, past, levels (one line on why the priority stats), each listed Trait's id, and item:<id> for each item.
 
-Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,MF=Object.values(V).flat(),NF=e=>MF.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function PF(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${n.naming?` Naming: ${n.naming}`:``}${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${NF(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}.${r.naming?` Naming: ${r.naming}`:``}${r.wealth?` Wealth ${r.wealth>0?`+`:``}${r.wealth}.`:``} Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.wealth?`wealth ${n.wealth>0?`+`:``}${n.wealth}${n.ranked?` per rank`:``}`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}t.push(``,`## Items`,`Format: id: name [category; plane; kit cost; slot; damage, attack, resistances or modifiers] summary. Any-plane items suit everyone.`);for(let n of e.items){if(n.category===`currency`)continue;let e=[n.category,n.plane,`kit ${Hc(n)}`,n.slot?`slot ${n.slot}`:``,n.damage?`damage ${hl(n.damage)}`:``,gl(n),n.resistances?`resists ${n.resistances}`:``,n.modifiers??``,n.uses??``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${e.join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
-`)}function FF(e,t,n){let r=UF(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var IF=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function LF(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);for(let n of Array.isArray(e.items)?e.items:[])typeof n?.item==`string`&&t.add(`item:${n.item}`);return t}function RF(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var zF=(e,t)=>{let n=LF(e);return t.filter(e=>n.has(e.target))};function BF(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var VF=e=>e.filter(e=>e.reason!==`no picks left`);function HF({age:e,gender:t,height:n,weight:r}){let i=[e===void 0?``:`age ${e}`,t?.trim()?`gender ${t.trim()}`:``,n?.trim()?`height ${n.trim()}`:``,r?.trim()?`weight ${r.trim()}`:``].filter(Boolean);return i.length?`The player set this character's ${i.length>1?`${i.slice(0,-1).join(`, `)} and ${i.at(-1)}`:i[0]}. These are cosmetic. Respect them in the name, summary and reasons (use pronouns and a name that fit), but don't let them decide the Kind, packages, Traits, stats or choices.\n\n`:``}var UF=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function WF(e){let{content:t,provider:n}=e,r=e.campaign??Rc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${IF(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:jF,index:PF(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+HF(e)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=!1,g=new Map,_=e.name?.trim()||void 0,v=!1,y=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:b}=await u.send(c,{think:!v});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>FF(e.name,e.input,t)).join(` · `)),l.inputTokens+=b.inputTokens??0,l.outputTokens+=b.outputTokens??0,l.cacheReadTokens+=b.cacheReadTokens??0,l.cacheWriteTokens+=b.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let x=[];for(let a of i)if(a.name===`submit_build`){let i=UF(a.input)??{},c=UF(i.concept),l=BF(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){x.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}v=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(_=c.name.trim());let b=_?{...c,name:_}:c,S;try{S=AF(b,t,r)}catch(e){if(!(e instanceof Ao))throw e;S={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in S){x.push({call:a,isError:!0,content:`The concept doesn't match the format: ${S.error}`});continue}let C=eF(S.build,t,r);for(let e of l)g.set(e.target,e);d={build:S.build,check:C,summary:u??d?.summary,reasons:[...g.values()]};let w={taken:S.taken,skipped:VF(S.skipped),...S.skippedItems.length?{skippedItems:S.skippedItems}:{}},T=C.accepted?RF(C):void 0;if(C.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Check the items too: what this character would carry for their work, fights and travels. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...T?{banked:T}:{},...w})});continue}if(T&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${T}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...w})});continue}if(C.accepted&&!S.build.items.some(e=>e.category!==`chassis`)&&!h){o(`Build is legal; asking for items`),h=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,items:`The engine built a legal character, but it carries nothing. Submit again with the same concept and the items it would carry (from the Items in the index), within its Wealth, with a reason for each. Kit 0 items are always affordable.`,...w})});continue}let ee=C.accepted?[...LF(S.build)].filter(e=>!e.startsWith(`choice:`)&&!g.has(e)):[];if(ee.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${ee.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(C.accepted)return d.reasons=zF(S.build,d.reasons),o(`Done`),y(`accepted`,s);o(`The engine sent the concept back with ${C.errors.length+C.unknownIds.length} problems; fixing them`),x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:C.unknownIds,errors:C.errors,...w})})}else try{let e=sF(a.name,a.input,t,r);x.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof nF))throw e;x.push({call:a,isError:!0,content:e.message})}u.addResults(x)}return d?.check.accepted?(d.reasons=zF(d.build,d.reasons),y(`accepted`,i)):y(`turn-limit`,i)}var GF=class extends Error{error;constructor(e,t){super(t),this.error=e}};function KF(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new GF(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new GF(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function qF(e){let t=fF(KF(e.endpoint,e.fetcher),void 0,e.model);try{return await WF({description:e.description,name:e.name,age:e.age,gender:e.gender,height:e.height,weight:e.weight,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:_N(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof GF)return{error:e.error,message:e.message};if(e instanceof WP)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function JF({draft:e,onChange:t,floor:n}){let r=kN(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&iN.get(e)?[iN.get(e)]:[]),a=rl(e.kind?aN.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>V[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(V).find(t=>V[t].includes(e)),m=xN.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=su(e,tN),_=H(e,tN),v=t=>V[t].reduce((t,n)=>t+(e.points[n]??0),0),y=t=>f(t)+Math.max(0,e.core[t]*3-v(t)),b=e=>r?.[e]?.bonus??0,x=e=>b(e)+(o[e]??0),S=t=>x(t)+(e.points[t]??0),C=e=>n?b(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):b(e),w=e=>n?.core[e]??0,T=r=>{if(!n)return t($l(e,r,e.core[r]-1));let i={...e.points};for(let e of V[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},ee=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})},E=e=>!V[e].length&&_.includes(e)?i.reduce((t,n)=>t+(n.coreBonus[e]??0),0):0;return r?(0,W.jsxs)(`section`,{children:[(0,W.jsxs)(AN,{title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,W.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: Level a core Stat with the + beside its number.`]}),SN.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` Stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any Stat.`]}),h<=0&&SN.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,W.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,W.jsxs)(`p`,{className:`pool-summary`,children:[(0,W.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,W.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,W.jsxs)(`span`,{children:[` · `,(0,W.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,W.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,W.jsxs)(W.Fragment,{children:[` · `,(0,W.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,W.jsx)(`span`,{className:`muted`,children:` (spent first, on any Stat)`})]})]}),(0,W.jsx)(`div`,{className:`pool-stats`,children:(0,W.jsx)(dP,{groups:g.map(t=>({group:t,core:e.core[t]+E(t),bonus:E(t),stats:V[t].map(e=>({id:e,value:S(e),bonus:x(e),max:r[e]?.max??0}))})),edit:{core:n=>{let i=e.core[n],a={onClick:()=>T(n),disabled:i<=w(n)};if(!V[n].length){let r=h>0&&_.includes(n),o=i+E(n);return{take:a,put:{onClick:()=>t($l(e,n,i+1)),disabled:!r,title:h>0&&!_.includes(n)?`This character can't Level ${$(n)}`:void 0},count:{text:`${3*o} MP`,tone:o===0?`muted`:`mp`},locked:i===0&&!r,hint:_.includes(n)?void 0:`This character can't Level ${$(n)}; take these points back.`}}let o=i*3,s=v(n),c=y(n),l=V[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-S(t)),0)-Math.max(0,o-s),u=h>0&&l>=3,d=Math.max(0,s-(i-1)*3);return{take:{...a,title:i>0&&d?`Also takes back ${d} focus ${d===1?`point`:`points`}`:void 0},put:{onClick:()=>t($l(e,n,i+1)),disabled:!u,title:h>0&&!u?`${$(n)}'s Stats have no room for 3 more points`:void 0},count:{text:`${s}/${o}`,tone:i===0?`muted`:s===o?`good`:s>o?`bad`:void 0},locked:c===0&&s===0,hint:i===0&&!u&&l<3?`These Stats have no room for points.`:void 0}},stat:e=>{let t=p(e),n=y(t),i=S(e),a=r[e]?.max??0;return{take:{onClick:()=>ee(e,-1),disabled:i<=C(e)},put:{onClick:()=>ee(e,1),disabled:n===0||i>=a},spend:Math.max(0,Math.min(n,a-i))}}}})})]})]}):(0,W.jsxs)(`section`,{children:[(0,W.jsx)(AN,{title:`Stats`}),(0,W.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each Stat and sets how far each can go.`})]})}function YF({id:e,onClose:t}){let n=aN.get(e),r=n?void 0:iN.get(e),i=n??r;return i?(0,W.jsx)(cN,{label:i.name,onClose:t,card:!0,children:(0,W.jsx)(OP,{name:i.name,slot:n?`Kind`:$(r.type),plane:i.plane,className:`tools-background-card`,children:n?(0,W.jsx)(UP,{kind:n,lore:!0}):(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`p`,{children:i.summary}),i.lore&&(0,W.jsx)(`p`,{className:`sf-card-lore`,children:i.lore}),(0,W.jsx)(MP,{pkg:r})]})})}):null}var XF=e=>e[0].toUpperCase()+e.slice(1);function ZF({looks:e,onChange:t}){let[n,r]=(0,U.useState)(),[i,a]=(0,U.useState)(``),[o,s]=(0,U.useState)(``),[c,l]=(0,U.useState)(`unlisted`),[u,d]=(0,U.useState)(``),f=()=>{a(e.age===void 0?``:String(e.age)),r(`age`)},p=()=>{l(e.gender??`unlisted`),d(e.customGender??``),r(`gender`)},m=n=>{if(n){let n=Number(i);t({...e,age:i.trim()===``||!Number.isFinite(n)?void 0:Math.min(Kl,Math.max(0,Math.floor(n)))})}r(void 0)},h=(n,r)=>{let i=n===`unlisted`?void 0:n;t({...e,gender:i,customGender:i===`custom`&&r.trim()||void 0})},g=e=>{e.currentTarget.contains(e.relatedTarget)||(h(c,u),r(void 0))},_=e=>t=>{t.key===`Enter`&&e(!0),t.key===`Escape`&&e(!1)},v=e=>{e&&h(c,u),r(void 0)},y=t=>{s(e[t]??``),r(t)},b=n=>i=>{i&&t({...e,[n]:o.trim()||void 0}),r(void 0)},x=(t,r)=>(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:r}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===t?(0,W.jsx)(`input`,{className:`tools-look-input tools-look-size`,"aria-label":r,maxLength:20,placeholder:`—`,autoFocus:!0,value:o,onChange:e=>s(e.target.value),onBlur:()=>b(t)(!0),onKeyDown:_(b(t))}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:()=>y(t),children:(0,W.jsx)(`strong`,{children:e[t]??`—`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the ${t}`,onMouseDown:e=>n===t&&e.preventDefault(),onClick:()=>n===t?b(t)(!0):y(t),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]});return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===`age`?(0,W.jsx)(`input`,{className:`tools-look-input tools-look-age`,type:`number`,inputMode:`numeric`,min:0,max:Kl,step:1,"aria-label":`Age`,placeholder:`—`,autoFocus:!0,value:i,onChange:e=>a(e.target.value),onBlur:()=>m(!0),onKeyDown:_(m)}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:f,children:(0,W.jsx)(`strong`,{children:e.age??`—`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the age`,onMouseDown:e=>n===`age`&&e.preventDefault(),onClick:()=>n===`age`?m(!0):f(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===`gender`?(0,W.jsxs)(`span`,{className:`tools-look-gender`,onBlur:g,children:[(0,W.jsx)(`select`,{className:`tools-look-input`,"aria-label":`Gender`,autoFocus:!0,value:c,onChange:e=>{l(e.target.value),e.target.value!==`custom`&&(h(e.target.value,``),r(void 0))},onKeyDown:e=>e.key===`Escape`&&v(!1),children:Nl.map(e=>(0,W.jsx)(`option`,{value:e,children:XF(e)},e))}),c===`custom`&&(0,W.jsx)(`input`,{className:`tools-look-input`,"aria-label":`Custom gender`,maxLength:40,placeholder:`In your own words`,autoFocus:!0,value:u,onChange:e=>d(e.target.value),onKeyDown:_(v)})]}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:p,children:(0,W.jsx)(`strong`,{children:Yl(e)??`Unlisted`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the gender`,onMouseDown:e=>n===`gender`&&e.preventDefault(),onClick:()=>n===`gender`?v(!0):p(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),x(`height`,`Height`),x(`weight`,`Weight`)]})}var QF=[`Kind`,`Origin`,`Profession`,`Past`];function $F({draft:e,onLooks:t}){let[n,r]=(0,U.useState)(),i=(0,U.useCallback)(()=>r(void 0),[]),a=(e,t)=>t&&(0,W.jsxs)(`span`,{className:`tools-line-item`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:QF[e]}),(0,W.jsx)(G,{kind:`link`,onClick:()=>r(t),children:(e===0?aN.get(t)?.name:iN.get(t)?.name)??t})]});return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`div`,{className:`tools-line`,children:[(0,W.jsx)(`p`,{className:`tools-line-row`,children:(0,W.jsx)(ZF,{looks:e,onChange:t})}),(0,W.jsxs)(`p`,{className:`tools-line-row`,children:[a(0,e.kind),a(1,e.origin),a(2,e.profession),a(3,e.past)]})]}),n&&(0,W.jsx)(YF,{id:n,onClose:i})]})}function eI({conditions:e,hp:t,maxHp:n,onChange:r}){let i=(0,U.useMemo)(()=>Dl(tN),[]),a=El(t,n),[o,s]=(0,U.useState)(!1),c=t=>{r(Al(e,tN,t)),s(!1)},l=(t,n)=>r(e.map(e=>e===t?{...e,...n}:e));return(0,W.jsxs)(`section`,{className:`tools-conditions-side`,"aria-label":`Conditions`,children:[(0,W.jsx)($N,{as:`h4`,aside:(0,W.jsxs)(G,{size:`small`,tone:`condition`,className:`sf-sheet-add`,"aria-label":`Add Condition`,onClick:()=>s(!0),children:[`Add`,(0,W.jsx)(`span`,{className:`sf-sheet-add-noun`,children:` Condition`})]}),children:`Conditions`}),o&&(0,W.jsxs)(cN,{label:`Add a Condition`,onClose:()=>s(!1),size:`narrow`,scroll:`inner`,className:`sheet-add-popup`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:`Add a Condition`}),(0,W.jsx)(nI,{options:i,onPick:c})]}),(0,W.jsxs)(`ul`,{className:`tools-conditions sf-sheet-cards sf-sheet-scroll`,children:[a.map(e=>{let t=rN.get(e);return(0,W.jsx)(`li`,{children:(0,W.jsxs)(vP,{kind:`condition`,name:t?.name??e,children:[(0,W.jsxs)(hP,{children:[`From HP. `,t?.temporary]}),t&&(0,W.jsx)(NN,{text:t.effect}),(0,W.jsx)(PN,{action:t?.action})]})},e)}),e.map(t=>{let n=rN.get(t.trait);return(0,W.jsx)(`li`,{children:(0,W.jsxs)(vP,{kind:`condition`,name:(0,W.jsxs)(W.Fragment,{children:[n?.name??t.trait,n?.ranked&&(0,W.jsxs)(`span`,{className:`stepper tools-rank`,children:[(0,W.jsx)(G,{kind:`bare`,className:`tools-rank-btn`,onClick:()=>l(t,{rank:t.rank-1}),disabled:t.rank<=1,"aria-label":`Lower rank`,children:(0,W.jsx)(WN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:t.rank}),(0,W.jsx)(G,{kind:`bare`,className:`tools-rank-btn`,onClick:()=>l(t,{rank:t.rank+1}),"aria-label":`Raise rank`,children:(0,W.jsx)(WN,{is:`plus`})})]})]}),actions:(0,W.jsx)(_u,{label:`Remove ${n?.name??t.trait}`,onClick:()=>r(jl(e,t.trait))}),children:[n?.temporary&&(0,W.jsxs)(hP,{children:[n.temporary,/[.!?]$/.test(n.temporary)?``:`.`]}),n&&(0,W.jsx)(NN,{text:n.effect}),(0,W.jsx)(PN,{action:n?.action})]})},t.trait)})]})]})}var tI={injury:`Injury`,hazard:`Hazard`,magic:`Magic`,combat:`Combat`,misc:`Misc`};function nI({options:e,onPick:t}){let[n,r]=(0,U.useState)(``),[i,a]=(0,U.useState)(new Set),o=e=>{let t=new Set(i);t.delete(e)||t.add(e),a(t)},s=n.trim().toLowerCase().split(/\s+/).filter(Boolean),c=e.filter(e=>{if(!kl(e).some(e=>!i.has(e)))return!1;let t=[e.name,e.summary??``,...e.tags??[]].join(` `).toLowerCase();return s.every(e=>t.includes(e))});return(0,W.jsxs)(`div`,{className:`condition-search sf-popup-grow picker-box`,children:[(0,W.jsxs)(`div`,{className:`filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:n,autoFocus:!0,onChange:e=>r(e.target.value),onKeyDown:e=>{e.key===`Enter`&&c[0]&&t(c[0].id)},"aria-label":`Search Conditions`}),Ol.map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!i.has(e),onChange:()=>o(e)}),` `,tI[e]]},e))]}),c.length===0?(0,W.jsx)(`p`,{className:`empty`,children:`No Conditions match.`}):(0,W.jsx)(`ul`,{className:`condition-search-list picker-scroll`,children:c.map(e=>(0,W.jsx)(`li`,{children:(0,W.jsxs)(`button`,{type:`button`,className:`condition-search-option`,onClick:()=>t(e.id),children:[(0,W.jsx)(`span`,{className:`condition-search-name`,children:e.name}),(0,W.jsx)(`span`,{className:`condition-search-types`,children:kl(e).map(e=>tI[e]).join(`, `)}),e.summary&&(0,W.jsx)(`span`,{className:`condition-search-summary`,children:e.summary})]})},e.id))})]})}var rI=e=>e?[Hc(e)?`Kit Cost ${Hc(e)}`:`Basic`]:void 0,iI=tN.items.filter(e=>e.category!==`currency`&&!e.tags.includes(`built-in`)&&(!e.tags.includes(`natural weapon`)||e.tags.includes(`universal`))).sort((e,t)=>e.name.localeCompare(t.name));function aI(e){let t=e.chassis,n=t.traits.flatMap(e=>rN.get(e)??[]);return{maxHp:10+t.stats.endurance+t.stats.power+t.stats.grace+n.reduce((e,t)=>e+(t.resources.hp??0),0),physical:{core:t.core,stats:V.physical.map(e=>({id:e,value:t.stats[e],bonus:0,max:t.stats[e]}))},hpBonus:n.reduce((e,t)=>e+(t.resources.hp??0),0),attacks:t.attacks.length?t.attacks.flatMap(e=>{let t=oN.get(e);return t?[(0,W.jsx)(TP,{name:t.name,stock:t,category:t.category},e)]:[]}):void 0,traits:n.length?n.map(e=>(0,W.jsx)(vP,{kind:fP(e),name:e.name,plane:e.plane,children:(0,W.jsx)(NN,{text:e.effect})},e.id)):void 0}}function oI({onAdd:e,custom:t,kit:n}){let r=Dc.filter(e=>iI.some(t=>t.category===e)),[i,a]=(0,U.useState)(r[0]),[o,s]=(0,U.useState)(``),[c,l]=(0,U.useState)(new Map),[u,d]=(0,U.useState)(new Set),f=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},p=e=>{let t=new Map(c);t.delete(e)||t.set(e,1),l(t)},m=(e,t)=>l(new Map(c).set(e,Math.max(1,t))),h=o.trim().toLowerCase().split(/\s+/).filter(Boolean),g=e=>{let t=[e.name,e.summary,e.type??``,...e.tags??[]].join(` `).toLowerCase();return h.every(e=>t.includes(e))},_=iI.filter(e=>e.category===i&&g(e)),v=[...c.values()].reduce((e,t)=>e+t,0),y=[...c].reduce((e,[t,n])=>e+Hc(oN.get(t))*n,0);return(0,W.jsxs)(`div`,{className:`item-picker sf-popup-grow`,children:[(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light picker-box`,children:[(0,W.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Item category`,children:[r.map(e=>(0,W.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":i===e,className:`tech-field-tab${i===e?` is-active`:``}`,onClick:()=>a(e),children:$(e)},e)),(0,W.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":i===`custom`,className:`tech-field-tab${i===`custom`?` is-active`:``}`,onClick:()=>a(`custom`),children:`Custom`})]}),i===`custom`?(0,W.jsxs)(`div`,{className:`item-picker-custom`,children:[(0,W.jsx)(`p`,{className:`hint`,children:`An item the game doesn't have yet: name it, say how many, and choose its category.`}),t]}):(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`div`,{className:`filters`,children:(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:o,onChange:e=>s(e.target.value),"aria-label":`Search items`})}),_.length===0&&(0,W.jsxs)(`p`,{className:`empty`,children:[`No `,$(i).toLowerCase(),` items match.`]}),(0,W.jsx)(`ul`,{className:`item-pick-list picker-scroll`,children:_.map(e=>{let t=c.get(e.id),r=t!==void 0,i=u.has(e.id);return(0,W.jsxs)(`li`,{className:`item-pick-row${r?` selected`:``}`,children:[(0,W.jsx)(lI,{className:`item-pick${n&&Hc(e)>n.ceiling&&!(e.chassis&&Hc(e)<=3)?` is-over-kit`:``}`,name:e.name,stock:e,category:e.category,chips:n?rI(e):void 0,count:r?t:void 0,fold:{open:i,onToggle:()=>f(e.id)},children:r&&(0,W.jsxs)(`div`,{className:`rank-step item-pick-count`,children:[(0,W.jsx)(`span`,{className:`rank-label`,children:`Count`}),(0,W.jsx)(G,{round:`xs`,"aria-label":`One fewer ${e.name}`,disabled:t<=1,onClick:()=>m(e.id,t-1),children:(0,W.jsx)(WN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:t}),(0,W.jsx)(G,{round:`xs`,"aria-label":`One more ${e.name}`,onClick:()=>m(e.id,t+1),children:(0,W.jsx)(WN,{is:`plus`})})]})}),(0,W.jsx)(`input`,{type:`checkbox`,className:`item-pick-check`,"aria-label":`Add ${e.name}`,checked:r,onChange:()=>p(e.id)})]},e.id)})})]})]}),(i!==`custom`||v>0)&&(0,W.jsx)(`div`,{className:`sf-popup-foot`,children:(0,W.jsx)(G,{tone:v===0?`gray`:`primary`,ready:v>0,className:`build-button`,disabled:v===0,onClick:()=>e([...c].map(([e,t])=>({stock:oN.get(e),qty:t})).filter(e=>e.stock)),children:v===0?`Add items`:`Add ${v} ${v===1?`item`:`items`}${n&&y?` (${y} Kit ${y===1?`Point`:`Points`})`:``}`})})]})}function sI({cash:e,currency:t,onChange:n}){let[r,i]=(0,U.useState)(),[a,o]=(0,U.useState)(``),s=[t,...Object.keys(e).filter(n=>n!==t&&e[n])],c=t=>{let r=a.trim().replace(/[−–]/g,`-`).match(/^([+-])?\s*(\d[\d,]*)$/);if(r){let i=Number(r[2].replace(/,/g,``)),a=e[t]??0;n(t,Math.max(0,r[1]===`+`?a+i:r[1]===`-`?a-i:i))}i(void 0)};return(0,W.jsx)(`span`,{className:`sf-cash`,children:s.map(t=>r===t?(0,W.jsx)(`input`,{type:`text`,inputMode:`numeric`,className:`sf-cash-field`,"aria-label":`Change ${t}: +50, -20 or a new total`,placeholder:`+50, −20 or 300 ${t}`,autoFocus:!0,value:a,onChange:e=>o(e.target.value),onKeyDown:e=>{e.key===`Enter`&&c(t),e.key===`Escape`&&i(void 0)},onBlur:()=>c(t)},t):(0,W.jsxs)(`button`,{type:`button`,className:`sf-cash-badge`,title:`${t}: click to add, spend or set`,onClick:()=>{o(``),i(t)},children:[(0,W.jsx)(KN,{name:`coins`}),(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:(e[t]??0).toLocaleString(`en-US`)}),` `,t]},t))})}function cI({wealth:e,kit:t}){let n=e>0?`+${e}`:`${e}`,r=t&&t.spent>t.budget,i=t?[`Wealth ${n}: ${t.budget} Kit Points for starting items, each up to Kit Cost ${t.ceiling}`,`${t.budget-t.spent} left`,...t.left>0?[`the rest becomes ${t.cash.amount.toLocaleString(`en-US`)} ${t.cash.currency} in play`]:[],...t.freeChassis?[`${oN.get(t.freeChassis)?.name??`a chassis`} free`]:[]].join(`; `):`Wealth ${n}`;return(0,W.jsxs)(`span`,{className:`sf-cash-badge sf-wealth-badge${r?` is-over`:``}`,title:i,"aria-label":i,children:[(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:n}),` Wealth`,t&&(0,W.jsxs)(`span`,{className:`sf-wealth-kit`,children:[` `,`· `,(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:t.budget-t.spent}),`/`,t.budget,` Kit`]})]})}function lI({hp:e,...t}){if(!t.stock?.chassis)return(0,W.jsx)(TP,{...t});let{body:n,badges:r,resistsInChips:i,...a}=t,{maxHp:o,...s}=aI(t.stock),c=e?t=>e.onChange(t===o?void 0:t):void 0;return(0,W.jsx)(EP,{...a,...s,hp:e?.value,onHpChange:c})}function uI({items:e,onChange:t,kit:n,cash:r,currency:i=`ERC`,onCash:a,wealth:o}){let[s,c]=(0,U.useState)(``),[l,u]=(0,U.useState)(`1`),[d,f]=(0,U.useState)(`gear`),[p,m]=(0,U.useState)(!1),[h,g]=(0,U.useState)(new Map),_=e=>h.get(e.id)??!!e.notes,v=e=>g(new Map(h).set(e.id,!_(e))),[y,b]=(0,U.useState)(),[x,S]=(0,U.useState)(new Set),[C,w]=(0,U.useState)(new Set),T=e=>{let t=new Set(x);if(!t.delete(e.id))t.add(e.id);else if(C.has(e.id)){let t=new Set(C);t.delete(e.id),w(t)}S(t)},ee=e=>{let t=new Set(C);t.delete(e.id)||t.add(e.id),w(t)},E=(n,r)=>t(e.map(e=>e===n?{...e,...r}:e)),te=e=>!!(e.item&&oN.get(e.item)?.chassis),ne=(n,r)=>t(e.map(e=>e===n?{...e,equipped:r}:r&&te(n)&&te(e)?{...e,equipped:!1}:e)),re=n=>t(e.filter(e=>e!==n)),ie=e=>Math.max(1,Math.round(Number(e))||1),ae=n=>{t(n.reduce((e,{stock:t,qty:n})=>vl(e,{item:t.id,name:t.name,qty:n,category:t.category,equipped:!1}),e)),m(!1)},oe=()=>{if(!s.trim())return;let n=wl(tN.items,s),r=ie(l);t(vl(e,n?{item:n.id,name:n.name,qty:r,category:n.category,equipped:!1}:{name:s.trim(),qty:r,category:d,equipped:!1})),c(``),u(`1`),m(!1)};return(0,W.jsxs)(`section`,{className:`tools-items`,children:[(0,W.jsx)($N,{as:`h4`,aside:(0,W.jsxs)(W.Fragment,{children:[o!==void 0&&(0,W.jsx)(cI,{wealth:o,kit:n}),a&&(0,W.jsx)(sI,{cash:r??{},currency:i,onChange:(e,t)=>a({...r,[e]:t})}),(0,W.jsxs)(G,{size:`small`,tone:`item`,className:`sf-sheet-add`,"aria-label":`Add item`,onClick:()=>m(!0),children:[`Add`,(0,W.jsx)(`span`,{className:`sf-sheet-add-noun`,children:` item`})]})]}),children:`Items`}),p&&(0,W.jsxs)(cN,{label:`Add items`,onClose:()=>m(!1),size:`wide`,scroll:`inner`,className:`sheet-add-popup item-picker-popup`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:`Add items`}),(0,W.jsx)(oI,{kit:n,onAdd:ae,custom:(0,W.jsxs)(`form`,{className:`tools-add`,onSubmit:e=>{e.preventDefault(),oe()},children:[(0,W.jsx)(`input`,{type:`text`,placeholder:`Item name`,"aria-label":`Custom item name`,className:`tools-add-name`,value:s,onChange:e=>c(e.target.value)}),(0,W.jsx)(`input`,{type:`number`,min:1,"aria-label":`Custom item count`,className:`tools-qty`,value:l,onChange:e=>u(e.target.value)}),(0,W.jsx)(`select`,{"aria-label":`Category`,value:d,onChange:e=>f(e.target.value),children:Dc.map(e=>(0,W.jsx)(`option`,{value:e,children:$(e)},e))}),(0,W.jsx)(G,{type:`submit`,disabled:!s.trim(),children:`Add custom item`})]})})]}),e.length===0?(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Items yet.`}):(0,W.jsx)(`ul`,{className:`tools-item-list sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short`,children:e.map(e=>{let t=e.item?oN.get(e.item):void 0;return(0,W.jsx)(lI,{as:`li`,name:e.name,stock:t,category:e.category,count:e.qty,hp:te(e)?{value:e.hp,onChange:t=>E(e,{hp:t})}:void 0,chips:n?e.item===n.freeChassis?[`Free chassis`]:rI(t):void 0,equip:{checked:e.equipped,onChange:t=>ne(e,t)},fold:{open:x.has(e.id),onToggle:()=>T(e)},edit:{editing:C.has(e.id),onToggle:()=>ee(e),onRemove:()=>re(e),fields:(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`input`,{type:`number`,min:0,className:`tools-qty`,"aria-label":`How many ${e.name}`,value:e.qty,onChange:t=>E(e,{qty:Math.max(0,Math.round(Number(t.target.value))||0)})}),(0,W.jsx)(`input`,{type:`text`,className:`sf-item-name-field`,"aria-label":`Item name`,value:e.name,onChange:t=>E(e,{name:t.target.value})})]})},note:{shown:_(e),onToggle:()=>{_(e)||b(e.id),v(e)},field:(0,W.jsx)(`input`,{type:`text`,className:`tools-note`,placeholder:`Notes, like damage, resistances or charges`,"aria-label":`${e.name} notes`,autoFocus:y===e.id,value:e.notes??``,onChange:t=>E(e,{notes:t.target.value||void 0})})}},e.id)})})]})}var dI=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,fI=/^trait ([a-z0-9-]+) choice$/,pI=/^trait ([a-z0-9-]+)$/,mI=/^chassis ([a-z0-9-]+)$/;function hI(e){let t=fI.exec(e);if(t)return`${CN(t[1])} (choice)`;let n=pI.exec(e);if(n)return CN(n[1]);let r=mI.exec(e);if(r)return oN.get(r[1])?.name??r[1];let i=dI.exec(e);return i?`${(i[1]===`kind`?aN.get(i[2])?.name:iN.get(i[2])?.name)??i[2]} (${i[1]}${i[3]??``})`:e}function gI(e){let t=new Set;for(let n of e.sources){let e=dI.exec(n);e&&e[1]!==`kind`&&e[3]&&t.add(e[1])}return[`origin`,`profession`,`past`].filter(e=>t.has(e)).map($)}function _I({held:e,places:t,open:n=!0,onToggle:r,keepEffect:i=!1}){let a=rN.get(e.trait),o=CN(e.trait),s=gI(e),c=a&&(0,W.jsx)(NN,{text:a.effect});return(0,W.jsxs)(vP,{kind:fP(a),name:o,rank:a?.ranked||e.rank>1?e.rank:void 0,plane:a?.plane,chips:s.length>0?s.map(e=>(0,W.jsx)(mP,{children:e},e)):void 0,fold:r?{open:n,onToggle:r,label:o}:void 0,keep:i?c:void 0,children:[(0,W.jsxs)(`div`,{className:`sf-card-tags`,children:[a?(0,W.jsx)(mP,{children:$(a.category)}):(0,W.jsx)(mP,{tone:`bad`,children:`not in content yet`}),(0,W.jsxs)(`span`,{className:`sf-card-note`,children:[`From `,e.sources.map(hI).join(`, `)]})]}),!i&&c,(0,W.jsx)(PN,{action:a?.action,rank:e.rank}),t.length>0&&(0,W.jsxs)(`p`,{className:`small`,children:[(0,W.jsxs)(`strong`,{children:[a?.choices.find(e=>e.from!==`contact`&&$c(e.from))?.note??`Place`,`:`]}),` `,t.join(`, `)]})]})}function vI({held:e,places:t,draft:n,onClose:r}){return(0,W.jsx)(cN,{label:CN(e.trait),onClose:r,card:!0,children:(0,W.jsx)(_I,{held:e,places:t,draft:n})})}function yI({context:e,draft:t,result:n,onExport:r,onImport:i,onName:a,onLooks:o,onPortrait:s,onDescription:c,items:l,onItems:u,onCash:d,conditions:f,onConditions:p,hp:m,corner:h,actions:g,resources:_,stats:v,traitsAction:y}){let b=QN[e],x=[t.origin,t.profession,t.past].map(e=>e?iN.get(e):void 0),S=n.summary,C=su(t,tN,n).includes(`magic`)||(S?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],w=t.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Qc[e.from],from:ON(e)})):[]),T=e=>t.choices.filter(t=>t.trait===e&&t.from!==`contact`&&$c(t.from)).flatMap(e=>e.traits),ee=(0,U.useMemo)(()=>S?.traits??[],[S]),E=e=>rN.get(e.trait)?.category===`knowledge`,te=e=>!!rN.get(e.trait)?.types.includes(`language`),ne=[...ee.filter(e=>E(e)&&!te(e)),...ee.filter(te)],re=ee.filter(e=>!E(e)),ie=e=>rN.get(e.trait)?.category,ae=re.filter(e=>ie(e)===`skill`),oe=re.filter(e=>ie(e)===`ability`),se=re.filter(e=>ie(e)!==`skill`&&ie(e)!==`ability`),[D,ce]=(0,U.useState)(new Set),le=e=>{let t=new Set(D);t.delete(e)||t.add(e),ce(t)},ue=S?S.picks.universal.banked+S.picks.background.banked:0,de=(e,t=!1,n=!1)=>(0,W.jsx)(`ul`,{className:`sf-sheet-traits${t?` sf-sheet-scroll`:``}`,children:e.map(e=>(0,W.jsx)(`li`,{children:(0,W.jsx)(_I,{held:e,places:T(e.trait),...t?{open:D.has(e.trait),onToggle:()=>le(e.trait)}:{},keepEffect:n})},e.trait))}),[fe,pe]=(0,U.useState)(),me=(0,U.useCallback)(()=>pe(void 0),[]),he=ee.find(e=>e.trait===fe),ge=x.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name}))),_e=(0,U.useMemo)(()=>[...ee,...f],[ee,f]);return(0,W.jsxs)(`section`,{className:`sheet sheet--${e}`,children:[e===`build`&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(AN,{title:`Sheet`}),(0,W.jsxs)(`div`,{className:`sheet-actions`,children:[(0,W.jsx)(`span`,{className:`status ${n.ok?`good`:`bad`}`,children:n.ok?`Legal`:`${n.errors.length} ${n.errors.length===1?`error`:`errors`}`}),(0,W.jsxs)(G,{onClick:r,children:[(0,W.jsx)(KN,{name:`download`}),`Download`]}),(0,W.jsxs)(G,{onClick:i,children:[(0,W.jsx)(KN,{name:`upload`}),`Import`]}),(0,W.jsxs)(G,{onClick:()=>window.print(),children:[(0,W.jsx)(KN,{name:`print`}),`Print`]})]})]}),(0,W.jsx)(rP,{context:e,level:t.level,corner:h,actions:g,head:{who:(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(LN,{className:`sf-sheet-portrait`,portrait:t.portrait,name:t.name,onChange:b.edit?s:void 0}),(0,W.jsxs)(`div`,{className:`sf-sheet-main`,children:[(0,W.jsx)(BN,{className:`sheet-name`,heading:`h2`,name:t.name,onChange:a}),(0,W.jsx)($F,{draft:t,onLooks:o})]})]}),description:b.edit||t.description?(0,W.jsx)(RN,{description:t.description,onChange:b.edit?c:void 0}):void 0},resources:b.resources===`live`&&_?_:(0,W.jsx)(tP,{resources:[...C.filter(e=>e!==`hp`||!S?.coreHp||S.chassis).map(e=>({id:e,max:S?.resources[e]})),...S?.coreHp?[{id:`core`,max:S.coreHp}]:[]]}),stats:v??(0,W.jsx)(dP,{max:b.statMax,groups:lP(t,n)}),movement:S?.movement,resistances:(0,W.jsx)(aP,{items:l,held:_e}),conditions:(0,W.jsx)(eI,{conditions:f,hp:m??S?.resources.hp??0,maxHp:S?.resources.hp??0,onChange:p}),items:(0,W.jsx)(uI,{items:l,onChange:u,kit:e===`build`?S?.kit:void 0,cash:t.cash,wealth:S?.wealth,currency:S?.kit.cash.currency,onCash:d}),knowledges:ne.length>0?(0,W.jsx)(`ul`,{className:`sf-sheet-knowledge-list sf-sheet-scroll`,children:ne.map(e=>{let t=rN.get(e.trait);return(0,W.jsxs)(`li`,{children:[te(e)?(0,W.jsx)(KN,{name:`language`,label:`Language`}):(0,W.jsx)(KN,{name:`knowledge`,label:`Knowledge`}),(0,W.jsxs)(G,{kind:`link`,onClick:()=>pe(e.trait),children:[CN(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`None yet.`}),abilities:oe.length>0?de(oe,!0,!0):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Abilities yet.`}),skills:ae.length>0?de(ae,!0):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Skills yet.`}),skillsAside:S&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`span`,{className:`sf-sheet-aside`,children:[ue,` `,ue===1?`pick`:`picks`,` available`]}),b.addTraits&&y]}),other:(se.length>0||w.length>0||ge.length>0)&&(0,W.jsxs)(W.Fragment,{children:[se.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)($N,{children:`Other Traits`}),de(se)]}),w.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)($N,{children:`Contacts`}),(0,W.jsx)(`ul`,{className:`sf-sheet-features`,children:w.map((e,t)=>(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`strong`,{children:e.text}),` `,(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),ge.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)($N,{children:`Features`}),(0,W.jsx)(`ul`,{className:`sf-sheet-features`,children:ge.map((e,t)=>(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`strong`,{children:e.name}),` `,(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})}),he&&(0,W.jsx)(vI,{held:he,places:T(he.trait),draft:t,onClose:me})]})}var bI=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(CN),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),xI={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},SI={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},CI={wielder:`Wielder Skills, one per weapon. They're ordinary Skills, kept on their own tab so they don't crowd the rest.`};function wI({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a,picksBelow:o=!1,hints:s=!0,skip:c}){let[l,u]=(0,U.useState)(`universal`),[d,f]=(0,U.useState)(``),[p,m]=(0,U.useState)(new Set),[h,g]=(0,U.useState)(!0),_=n.summary,v=_?.traitLists??[],y=typeof l==`string`||v.includes(l.list)?l:`universal`,b=typeof y==`string`?y:`list:${y.list}`,x=(0,U.useMemo)(()=>uu(e,tN,t,y),[e,t,b]);if(!x||!_)return(0,W.jsxs)(`section`,{children:[(0,W.jsx)(AN,{title:`Traits`}),(0,W.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let S=d.trim().toLowerCase(),C=new Set(e.traits.map(e=>e.trait)),w=x.filter(e=>!i?.has(e.trait.id)&&!c?.has(e.trait.category)&&!p.has(e.trait.category)&&(!h||e.reasons.length===0||C.has(e.trait.id))&&(!S||e.trait.name.toLowerCase().includes(S)||e.trait.tags.some(e=>e.toLowerCase().includes(S)))),T=new Set(x.filter(e=>!i?.has(e.trait.id)&&!c?.has(e.trait.category)).map(e=>e.trait.category)),ee=wc.options.map(e=>({category:e,options:w.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),E=e=>{let t=new Set(p);t.delete(e)||t.add(e),m(t)},te=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),ne=t=>e.traits.map(e=>e.trait).lastIndexOf(t),re=new Map(_.traits.map(e=>[e.trait,e.rank])),ie=(t,n,i)=>{let a=ne(t);a>=0?te(a):r(eu(e,t,n,i))},ae=(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,W.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):o?(0,W.jsx)(`ul`,{className:`picks picks-row`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`strong`,{children:[CN(e.trait),(e.rank??1)>1?` (${e.rank})`:``]}),!rN.has(e.trait)&&(0,W.jsx)(FN,{tone:`bad`,children:`unknown`}),(0,W.jsx)(_u,{label:`Remove ${CN(e.trait)}`,onClick:()=>te(t)})]},t))}):(0,W.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`span`,{children:[(0,W.jsx)(`strong`,{children:CN(e.trait)}),` rank `,e.rank??1,` `,(0,W.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!rN.has(e.trait)&&(0,W.jsx)(FN,{tone:`bad`,children:`unknown`})]}),(0,W.jsx)(G,{kind:`link`,onClick:()=>te(t),"aria-label":`Remove ${CN(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]});return(0,W.jsxs)(`section`,{className:`sf-popup-grow`,children:[(0,W.jsxs)(AN,{title:`Traits`,children:[`Spend picks on Traits.`,s&&` Unspent picks are banked for later.`]}),(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light picker-box`,children:[(0,W.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=_.picks[e];return(0,W.jsxs)(`button`,{role:`tab`,"aria-selected":y===e,className:`tech-field-tab${y===e?` is-active`:``}`,onClick:()=>u(e),children:[$(e),` `,(0,W.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),v.map(t=>{let n=typeof y!=`string`&&y.list===t,r=new Set(e.traits.filter(e=>rN.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,W.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>u({list:t}),children:[$(t),` `,(0,W.jsx)(`span`,{className:`num`,children:r})]},t)})]}),s&&(0,W.jsx)(`p`,{className:`hint`,children:typeof y==`string`?SI[y]:(CI[y.list]??`Traits built on ${$(y.list)}, or closely related to it. Any character can take one whose stat requirements they meet.`)+` Traits on this character's Background Trait list take a Background pick while one is left; the rest take Universal picks.`}),(0,W.jsxs)(`div`,{className:`filters traits-filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:d,onChange:e=>f(e.target.value),"aria-label":`Search Traits`}),wc.options.filter(e=>T.has(e)).map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!p.has(e),onChange:()=>E(e)}),` `,xI[e]]},e)),(0,W.jsxs)(`label`,{className:`check hide-unavailable`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:h,onChange:e=>g(e.target.checked)}),` Hide unavailable`]})]}),(0,W.jsxs)(`div`,{className:`picker-scroll`,children:[x.length===0&&y===`background`&&(0,W.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package Background Traits and the Kind's Trait access.`}),x.length>0&&w.length===0&&(0,W.jsx)(`p`,{className:`empty`,children:h?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),ee.map(t=>(0,W.jsxs)(`div`,{className:`trait-group`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:xI[t.category]}),(0,W.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=ne(t.id)>=0,s=!o&&a.length>0;return(0,W.jsxs)(vP,{as:`li`,kind:fP(t),name:t.name,plane:t.plane,className:`trait${o?` selected`:``}${s?` rejected`:``}`,rootProps:{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,onClick:()=>!s&&ie(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||ie(t.id,n,i))}},children:[(0,W.jsxs)(`div`,{className:`sf-card-tags`,children:[(0,W.jsx)(mP,{children:$(t.category)}),t.ranked&&(0,W.jsx)(mP,{tone:`muted`,children:`Ranked`}),t.background&&(0,W.jsx)(mP,{tone:`muted`,children:`Background`}),t.mastery&&(0,W.jsx)(mP,{tone:`muted`,children:`Mastery`})]}),(0,W.jsx)(`p`,{children:t.summary}),(0,W.jsx)(NN,{text:t.effect}),(0,W.jsx)(PN,{action:t.action}),bI(t)&&(0,W.jsxs)(hP,{children:[`Needs `,bI(t)]}),t.tags.length>0&&(0,W.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,W.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,W.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,W.jsx)(G,{round:`xs`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>te(ne(t.id)),children:(0,W.jsx)(WN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:re.get(t.id)??0}),(0,W.jsx)(G,{round:`xs`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(eu(e,t.id,n,i)),children:(0,W.jsx)(WN,{is:`plus`})})]}),s&&(0,W.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,W.jsx)(`li`,{children:e},e))})]},t.id)})})]},t.category)),!o&&ae]})]}),o&&(0,W.jsx)(`div`,{className:`traits-picked`,children:ae})]})}export{Vl as $,CN as A,hu as B,WN as C,TN as D,kN as E,oN as F,Ll as G,su as H,aN as I,Zl as J,Pl as K,iN as L,cN as M,tN as N,wN as O,nN as P,au as Q,rN as R,DN as S,n as St,ON as T,pu as U,cu as V,du as W,nu as X,Yl as Y,ru as Z,qN as _,Dc as _t,qF as a,xl as at,MN as b,c as bt,sF as c,vl as ct,dP as d,Xc as dt,Ql as et,lP as f,tl as ft,KN as g,Vc as gt,FN as h,ll as ht,GF as i,jl as it,_N as j,$ as k,HP as l,yl as lt,HN as m,el as mt,yI as n,Ml as nt,KF as o,bl as ot,eP as p,rl as pt,iu as q,JF as r,Al as rt,nF as s,wl as st,wI as t,El as tt,IP as u,Qc as ut,zN as v,V as vt,AN as w,LN as x,i as xt,BN as y,wc as yt,G as z};
+Most content is early and its effect text is placeholder, so judge fit by names, summaries and tags.`,LF=Object.values(V).flat(),RF=e=>LF.map(t=>`${t} ${e[t]?.bonus}/${e[t]?.max}`).join(`, `);function zF(e){let t=[`# Content index`,``,`Stats are listed as Kind bonus/max. Every stat starts at 0 and the Kind adds its bonus.`,``,`## Kinds`];for(let n of e.kinds){let e=n.grants.map(e=>e.trait).join(`, `),r=Object.entries(n.resources).map(([e,t])=>`+${t} ${e.toUpperCase()}`).join(`, `);t.push(`- ${n.id}: ${n.name}. ${n.summary} Tags: ${n.tags.join(`, `)||`none`}. Trait access: ${n.traitAccess.join(`, `)||`none`}.${n.naming?` Naming: ${n.naming}`:``}${e?` Grants: ${e}.`:``}${r?` Resources: ${r}.`:``}`),t.push(`  Stats: ${RF(n.stats)}${n.freePoints?`. Plus ${n.freePoints} free bonus points, placed by the engine`:``}`)}for(let n of[`origin`,`profession`,`past`]){t.push(``,`## ${n[0].toUpperCase()}${n.slice(1)}s`);for(let r of e.packages.filter(e=>e.type===n)){let e=r.grants.map(e=>e.rank?`${e.trait} ${e.rank}`:e.trait).join(`, `),n=r.choices.map(e=>`${e.choose} from ${e.from}`).join(`, `);t.push(`- ${r.id}: ${r.name}${r.region?` (${r.region})`:``}. ${r.summary} Tags: ${r.tags.join(`, `)||`none`}.${r.naming?` Naming: ${r.naming}`:``}${r.wealth?` Wealth ${r.wealth>0?`+`:``}${r.wealth}.`:``} Grants: ${e||`none`}.${n?` Choices: ${n}.`:``}${r.bonusPoints.length?` Bonus points (placed by the engine): ${r.bonusPoints.map(e=>`${e.count} ${e.group}`).join(`, `)}.`:``}${Object.keys(r.coreBonus).length?` Core bonus: ${Object.entries(r.coreBonus).map(([e,t])=>`+${t} ${e}`).join(`, `)} (if the character can level it).`:``}${r.backgroundTraits.length?` Background Traits: ${r.backgroundTraits.join(`, `)}.`:``}`)}}t.push(``,`## Traits`,`Format: id: name [category; flags] summary`);for(let n of e.traits){let e=[n.ranked?`ranked by ${n.rankStats.join(`+`)||`nothing`}`:``,n.background?`background`:``,n.starterOnly?`starter only`:``,n.conveyed?`conveyed, packages only`:``,n.list?`${n.list} list`:``,n.grants.length?`grants ${n.grants.map(e=>e.trait).join(`, `)}`:``,n.prerequisites.length?`needs ${n.prerequisites.join(`, `)}`:``,n.prerequisiteTags.length?`needs a Trait tagged ${n.prerequisiteTags.join(`, `)}`:``,Object.keys(n.minStats).length?`min ${Object.entries(n.minStats).map(([e,t])=>`${e} ${t}`).join(`, `)}`:``,n.temporary?`temporary`:``,n.wealth?`wealth ${n.wealth>0?`+`:``}${n.wealth}${n.ranked?` per rank`:``}`:``,n.types.length?`types ${n.types.join(`, `)}`:``,n.choices.length?`choices ${n.choices.map(e=>`${e.choose} from ${e.from}${n.ranked&&e.perRank!==!1?` per rank`:``}`).join(`, `)}`:``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${[n.category,...e].join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}t.push(``,`## Items`,`Format: id: name [category; plane; kit cost; slot; damage, attack, resistances or modifiers] summary. Any-plane items suit everyone.`);for(let n of e.items){if(n.category===`currency`)continue;let e=[n.category,n.plane,`kit ${Hc(n)}`,n.slot?`slot ${n.slot}`:``,n.damage?`damage ${hl(n.damage)}`:``,gl(n),n.resistances?`resists ${n.resistances}`:``,n.modifiers??``,n.uses??``].filter(Boolean);t.push(`- ${n.id}: ${n.name} [${e.join(`; `)}] ${n.summary} Tags: ${n.tags.join(`, `)||`none`}.`)}return t.join(`
+`)}function BF(e,t,n){let r=JF(t)??{},i=typeof r.id==`string`?r.id:``;switch(e){case`get_kind`:return`Looking up the ${n.kinds.find(e=>e.id===i)?.name??i} Kind`;case`get_package`:return`Reading ${n.packages.find(e=>e.id===i)?.name??i}`;case`list_packages`:return`Listing ${String(r.type??`package`)}s`;case`search_traits`:return typeof r.query==`string`&&r.query.trim()?`Searching Traits for "${r.query.trim()}"`:`Searching Traits`;case`submit_build`:return`Submitting the build`;default:return e}}var VF=e=>{let t=e.replace(/\s+/g,` `).trim();return t.length>160?`…${t.slice(-160)}`:t};function HF(e){let t=new Set;for(let n of[`kind`,`origin`,`profession`,`past`])typeof e[n]==`string`&&t.add(n);t.add(`levels`);for(let n of Array.isArray(e.traits)?e.traits:[])typeof n?.trait==`string`&&t.add(n.trait);for(let n of Array.isArray(e.choices)?e.choices:[])t.add(`choice:${n?.package??n?.trait}/${n?.from}`);for(let n of Array.isArray(e.items)?e.items:[])typeof n?.item==`string`&&t.add(`item:${n.item}`);return t}function UF(e){let t=e.summary?.picks.universal;if(!(!t||t.banked<=2))return`${t.banked} of ${t.available} universal picks are unspent`}var WF=(e,t)=>{let n=HF(e);return t.filter(e=>n.has(e.target))};function GF(e){return Array.isArray(e)?e.filter(e=>typeof e?.target==`string`&&typeof e?.reason==`string`).map(e=>({target:e.target,reason:e.reason.trim()})):[]}var KF=e=>e.filter(e=>e.reason!==`no picks left`);function qF({age:e,gender:t,height:n,weight:r}){let i=[e===void 0?``:`age ${e}`,t?.trim()?`gender ${t.trim()}`:``,n?.trim()?`height ${n.trim()}`:``,r?.trim()?`weight ${r.trim()}`:``].filter(Boolean);return i.length?`The player set this character's ${i.length>1?`${i.slice(0,-1).join(`, `)} and ${i.at(-1)}`:i[0]}. These are cosmetic. Respect them in the name, summary and reasons (use pronouns and a name that fit), but don't let them decide the Kind, packages, Traits, stats or choices.\n\n`:``}var JF=e=>typeof e==`object`&&e&&!Array.isArray(e)?e:void 0;async function YF(e){let{content:t,provider:n}=e,r=e.campaign??Rc,i=e.maxTurns??n.maxTurns,a=0,o=t=>e.onProgress?.({turn:a,maxTurns:i,status:t}),s=0,c=e.onProgress?e=>{let t=Date.now();t-s<400||(s=t,o(`Thinking: ${VF(e)}`))}:void 0,l={inputTokens:0,outputTokens:0,cacheReadTokens:0,cacheWriteTokens:0},u=n.start({instructions:IF,index:zF(t),user:`The campaign starts characters at level ${r.startingLevel}.\n\n`+(e.name?.trim()?`The player has named this character "${e.name.trim()}". Use that name.\n\n`:``)+qF(e)+`<player_description>\n${e.description.trim()}\n</player_description>`}),d,f=!1,p=!1,m=!1,h=!1,g=new Map,_=e.name?.trim()||void 0,v=!1,y=(e,t)=>({status:e,model:n.model,build:d?.build,summary:d?.summary,reasons:d?.reasons??[],check:d?.check,turns:t,usage:l});for(let s=1;s<=i;s++){a=s,o(`Thinking`);let{calls:i,usage:b}=await u.send(c,{think:!v});if(e.onTurn?.(s,i),i.length&&o(i.map(e=>BF(e.name,e.input,t)).join(` · `)),l.inputTokens+=b.inputTokens??0,l.outputTokens+=b.outputTokens??0,l.cacheReadTokens+=b.cacheReadTokens??0,l.cacheWriteTokens+=b.cacheWriteTokens??0,i.length===0){u.nudge(`Call submit_build with the concept, a summary and a reason for each choice.`);continue}let x=[];for(let a of i)if(a.name===`submit_build`){let i=JF(a.input)??{},c=JF(i.concept),l=GF(i.reasons),u=typeof i.summary==`string`?i.summary.trim():void 0;if(!c){x.push({call:a,isError:!0,content:`submit_build needs a concept object.`});continue}v=!0,!e.name?.trim()&&typeof c.name==`string`&&c.name.trim()&&(_=c.name.trim());let b=_?{...c,name:_}:c,S;try{S=FF(b,t,r)}catch(e){if(!(e instanceof Ao))throw e;S={error:e.issues.map(e=>`${e.path.join(`.`)||`concept`}: ${e.message}`).join(`; `)}}if(`error`in S){x.push({call:a,isError:!0,content:`The concept doesn't match the format: ${S.error}`});continue}let C=aF(S.build,t,r);for(let e of l)g.set(e.target,e);d={build:S.build,check:C,summary:u??d?.summary,reasons:[...g.values()]};let w={taken:S.taken,skipped:KF(S.skipped),...S.skippedItems.length?{skippedItems:S.skippedItems}:{}},T=C.accepted?UF(C):void 0;if(C.accepted&&n.review&&!p){o(`Build is legal; reviewing it against the description`),p=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,review:`The engine built a legal character. Before it's final, check it against the player's description: drop any Trait that doesn't belong in this character's life, and spend unspent picks on Traits that do: skills of their trade, knowledge of their home and past, things the description implies. Leave a pick banked only when nothing else plausibly fits. Check the items too: what this character would carry for their work, fights and travels. Give every choice a reason. Then call submit_build with the final concept, summary and reasons.`,...T?{banked:T}:{},...w})});continue}if(T&&!f&&!n.review){o(`Build is legal; asking for more Traits`),f=!0;let e=`The engine built a legal character, but ${T}: the Trait list ran out. Submit again with the same concept and more Traits that fit added to the list.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,picks:e,...w})});continue}if(C.accepted&&!S.build.items.some(e=>e.category!==`chassis`)&&!h){o(`Build is legal; asking for items`),h=!0,x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,items:`The engine built a legal character, but it carries nothing. Submit again with the same concept and the items it would carry (from the Items in the index), within its Wealth, with a reason for each. Kit 0 items are always affordable.`,...w})});continue}let ee=C.accepted?[...HF(S.build)].filter(e=>!e.startsWith(`choice:`)&&!g.has(e)):[];if(ee.length&&!m){o(`Build is legal; asking for its reasons`),m=!0;let e=`The build is legal, but these choices have no reason yet: ${ee.join(`, `)}. Call submit_build again with the same concept, a summary, and a one-line reason for each of them.`;x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,reasonsNeeded:e})});continue}if(C.accepted)return d.reasons=WF(S.build,d.reasons),o(`Done`),y(`accepted`,s);o(`The engine sent the concept back with ${C.errors.length+C.unknownIds.length} problems; fixing them`),x.push({call:a,isError:!0,content:JSON.stringify({rejected:!0,unknownIds:C.unknownIds,errors:C.errors,...w})})}else try{let e=fF(a.name,a.input,t,r);x.push({call:a,content:JSON.stringify(e)})}catch(e){if(!(e instanceof sF))throw e;x.push({call:a,isError:!0,content:e.message})}u.addResults(x)}return d?.check.accepted?(d.reasons=WF(d.build,d.reasons),y(`accepted`,i)):y(`turn-limit`,i)}var XF=class extends Error{error;constructor(e,t){super(t),this.error=e}};function ZF(e,t=(e,t)=>fetch(e,t)){return async n=>{let r;try{r=await t(e,{method:`POST`,headers:{"content-type":`application/json`},body:JSON.stringify(n)})}catch{throw new XF(`server`,`Couldn't reach the AI server. Check your connection, or start it with npm run dev when working locally.`)}let i=await r.json().catch(()=>void 0);if(!r.ok){let e=i;throw new XF(e?.error??`api`,e?.message??`The AI server answered ${r.status} with no details.`)}return i}}async function QF(e){let t=_F(ZF(e.endpoint,e.fetcher),void 0,e.model);try{return await YF({description:e.description,name:e.name,age:e.age,gender:e.gender,height:e.height,weight:e.weight,content:e.content,campaign:{startingLevel:(e.levelFromText===!1?void 0:SN(e.description))??e.startingLevel},provider:t,onProgress:e.onProgress})}catch(e){if(e instanceof XF)return{error:e.error,message:e.message};if(e instanceof YP)return{error:e.kind===`refused`?`refused`:e.kind===`unavailable`?`unavailable`:`api`,message:e.message};throw e}}function $F({draft:e,onChange:t,floor:n}){let r=PN(e),i=[e.origin,e.profession,e.past].flatMap(e=>e&&lN.get(e)?[lN.get(e)]:[]),a=rl(e.kind?uN.get(e.kind):void 0,i),o=e.startPoints??{},s=e=>V[e].reduce((e,t)=>e+(o[t]??0),0),c=e=>a.groups.find(t=>t.group===e)?.count??0,l=a.groups.reduce((e,t)=>e+Math.min(s(t.group),t.count),0),u=Object.values(o).reduce((e,t)=>e+(t??0),0),d=Math.max(0,a.any-(u-l)),f=e=>Math.max(0,c(e)-s(e))+d,p=e=>Object.keys(V).find(t=>V[t].includes(e)),m=EN.reduce((t,n)=>t+e.core[n],0),h=e.level-m,g=su(e,oN),_=H(e,oN),v=t=>V[t].reduce((t,n)=>t+(e.points[n]??0),0),y=t=>f(t)+Math.max(0,e.core[t]*3-v(t)),b=e=>r?.[e]?.bonus??0,x=e=>b(e)+(o[e]??0),S=t=>x(t)+(e.points[t]??0),C=e=>n?b(e)+(n.startPoints?.[e]??0)+(n.points[e]??0):b(e),w=e=>n?.core[e]??0,T=r=>{if(!n)return t($l(e,r,e.core[r]-1));let i={...e.points};for(let e of V[r])n.points[e]?i[e]=n.points[e]:delete i[e];t({...e,core:{...e.core,[r]:e.core[r]-1},points:i})},ee=(n,r)=>{let i={...o},a={...e.points};r>0?f(p(n))>0?i[n]=(i[n]??0)+1:a[n]=(a[n]??0)+1:a[n]?--a[n]:i[n]&&--i[n],i[n]||delete i[n],a[n]||delete a[n],t({...e,startPoints:i,points:a})},E=e=>!V[e].length&&_.includes(e)?i.reduce((t,n)=>t+(n.coreBonus[e]??0),0):0;return r?(0,W.jsxs)(`section`,{children:[(0,W.jsxs)(FN,{title:`Stats`,children:[`Each level gives a core point. Level a group's core stat with the + beside its number to unlock `,3,` focus points for its stats, then spend them with each stat's +. A group's stats can't take points until its core stat is leveled. Your stats start at 0, and your Kind's bonus is added on top, in purple; your points show in green.`]}),(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light step-box`,children:[n?(0,W.jsxs)(`ul`,{className:`pool-summary pool-left`,children:[h>0&&(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:h}),` core `,h===1?`point`:`points`,` to place: Level a core Stat with the + beside its number.`]}),DN.map(t=>{let n=e.core[t]*3-v(t);return n>0?(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:n}),` `,$(t),` focus `,n===1?`point`:`points`,` to spend with the + beside each `,$(t),` Stat.`]},t):null}),a.groups.map(e=>{let t=e.count-s(e.group);return t>0?(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:t}),` `,$(e.group),` bonus `,t===1?`point`:`points`,` from `,e.from.join(` and `),` to place with the + beside a`,` `,$(e.group),` stat.`]},e.group):null}),d>0&&(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`span`,{className:`num`,children:d}),` free bonus `,d===1?`point`:`points`,` to place with the + beside any Stat.`]}),h<=0&&DN.every(t=>v(t)>=e.core[t]*3)&&a.groups.every(e=>s(e.group)>=e.count)&&d<=0&&(0,W.jsx)(`li`,{className:`good`,children:`Every point is placed. Submit to keep them.`})]}):(0,W.jsxs)(`p`,{className:`pool-summary`,children:[(0,W.jsxs)(`span`,{className:`num${h===0?` good`:h<0?` bad`:``}`,children:[m,`/`,e.level]}),` `,`core points placed`,h>0&&(0,W.jsxs)(`span`,{className:`muted`,children:[` · `,h,` left`]}),a.groups.map(e=>(0,W.jsxs)(`span`,{children:[` · `,(0,W.jsxs)(`span`,{className:`num${s(e.group)>=e.count?` good`:``}`,children:[Math.min(s(e.group),e.count),`/`,e.count]}),` `,$(e.group),` bonus `,e.count===1?`point`:`points`,` placed`,(0,W.jsxs)(`span`,{className:`muted`,children:[` (from `,e.from.join(` and `),`, spent first)`]})]},e.group)),a.any>0&&(0,W.jsxs)(W.Fragment,{children:[` · `,(0,W.jsxs)(`span`,{className:`num${d===0?` good`:``}`,children:[a.any-d,`/`,a.any]}),` `,`free bonus points placed`,(0,W.jsx)(`span`,{className:`muted`,children:` (spent first, on any Stat)`})]})]}),(0,W.jsx)(`div`,{className:`pool-stats`,children:(0,W.jsx)(gP,{groups:g.map(t=>({group:t,core:e.core[t]+E(t),bonus:E(t),stats:V[t].map(e=>({id:e,value:S(e),bonus:x(e),max:r[e]?.max??0}))})),edit:{core:n=>{let i=e.core[n],a={onClick:()=>T(n),disabled:i<=w(n)};if(!V[n].length){let r=h>0&&_.includes(n),o=i+E(n);return{take:a,put:{onClick:()=>t($l(e,n,i+1)),disabled:!r,title:h>0&&!_.includes(n)?`This character can't Level ${$(n)}`:void 0},count:{text:`${3*o} MP`,tone:o===0?`muted`:`mp`},locked:i===0&&!r,hint:_.includes(n)?void 0:`This character can't Level ${$(n)}; take these points back.`}}let o=i*3,s=v(n),c=y(n),l=V[n].reduce((e,t)=>e+Math.max(0,(r[t]?.max??0)-S(t)),0)-Math.max(0,o-s),u=h>0&&l>=3,d=Math.max(0,s-(i-1)*3);return{take:{...a,title:i>0&&d?`Also takes back ${d} focus ${d===1?`point`:`points`}`:void 0},put:{onClick:()=>t($l(e,n,i+1)),disabled:!u,title:h>0&&!u?`${$(n)}'s Stats have no room for 3 more points`:void 0},count:{text:`${s}/${o}`,tone:i===0?`muted`:s===o?`good`:s>o?`bad`:void 0},locked:c===0&&s===0,hint:i===0&&!u&&l<3?`These Stats have no room for points.`:void 0}},stat:e=>{let t=p(e),n=y(t),i=S(e),a=r[e]?.max??0;return{take:{onClick:()=>ee(e,-1),disabled:i<=C(e)},put:{onClick:()=>ee(e,1),disabled:n===0||i>=a},spend:Math.max(0,Math.min(n,a-i))}}}})})]})]}):(0,W.jsxs)(`section`,{children:[(0,W.jsx)(FN,{title:`Stats`}),(0,W.jsx)(`p`,{className:`empty`,children:`Choose a Kind first; it adds a bonus to each Stat and sets how far each can go.`})]})}function eI({id:e,onClose:t}){let n=uN.get(e),r=n?void 0:lN.get(e),i=n??r;return i?(0,W.jsx)(pN,{label:i.name,onClose:t,card:!0,children:(0,W.jsx)(NP,{name:i.name,slot:n?`Kind`:$(r.type),plane:i.plane,className:`tools-background-card`,children:n?(0,W.jsx)(JP,{kind:n,lore:!0}):(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`p`,{children:i.summary}),i.lore&&(0,W.jsx)(`p`,{className:`sf-card-lore`,children:i.lore}),(0,W.jsx)(LP,{pkg:r})]})})}):null}var tI=e=>e[0].toUpperCase()+e.slice(1);function nI({looks:e,onChange:t}){let[n,r]=(0,U.useState)(),[i,a]=(0,U.useState)(``),[o,s]=(0,U.useState)(``),[c,l]=(0,U.useState)(`unlisted`),[u,d]=(0,U.useState)(``),f=()=>{a(e.age===void 0?``:String(e.age)),r(`age`)},p=()=>{l(e.gender??`unlisted`),d(e.customGender??``),r(`gender`)},m=n=>{if(n){let n=Number(i);t({...e,age:i.trim()===``||!Number.isFinite(n)?void 0:Math.min(Kl,Math.max(0,Math.floor(n)))})}r(void 0)},h=(n,r)=>{let i=n===`unlisted`?void 0:n;t({...e,gender:i,customGender:i===`custom`&&r.trim()||void 0})},g=e=>{e.currentTarget.contains(e.relatedTarget)||(h(c,u),r(void 0))},_=e=>t=>{t.key===`Enter`&&e(!0),t.key===`Escape`&&e(!1)},v=e=>{e&&h(c,u),r(void 0)},y=t=>{s(e[t]??``),r(t)},b=n=>i=>{i&&t({...e,[n]:o.trim()||void 0}),r(void 0)},x=(t,r)=>(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:r}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===t?(0,W.jsx)(`input`,{className:`tools-look-input tools-look-size`,"aria-label":r,maxLength:20,placeholder:`—`,autoFocus:!0,value:o,onChange:e=>s(e.target.value),onBlur:()=>b(t)(!0),onKeyDown:_(b(t))}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:()=>y(t),children:(0,W.jsx)(`strong`,{children:e[t]??`—`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the ${t}`,onMouseDown:e=>n===t&&e.preventDefault(),onClick:()=>n===t?b(t)(!0):y(t),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]});return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Age`}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===`age`?(0,W.jsx)(`input`,{className:`tools-look-input tools-look-age`,type:`number`,inputMode:`numeric`,min:0,max:Kl,step:1,"aria-label":`Age`,placeholder:`—`,autoFocus:!0,value:i,onChange:e=>a(e.target.value),onBlur:()=>m(!0),onKeyDown:_(m)}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:f,children:(0,W.jsx)(`strong`,{children:e.age??`—`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the age`,onMouseDown:e=>n===`age`&&e.preventDefault(),onClick:()=>n===`age`?m(!0):f(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),(0,W.jsxs)(`span`,{className:`tools-line-item tools-look`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:`Gender`}),(0,W.jsxs)(`span`,{className:`tools-look-row`,children:[n===`gender`?(0,W.jsxs)(`span`,{className:`tools-look-gender`,onBlur:g,children:[(0,W.jsx)(`select`,{className:`tools-look-input`,"aria-label":`Gender`,autoFocus:!0,value:c,onChange:e=>{l(e.target.value),e.target.value!==`custom`&&(h(e.target.value,``),r(void 0))},onKeyDown:e=>e.key===`Escape`&&v(!1),children:Nl.map(e=>(0,W.jsx)(`option`,{value:e,children:tI(e)},e))}),c===`custom`&&(0,W.jsx)(`input`,{className:`tools-look-input`,"aria-label":`Custom gender`,maxLength:40,placeholder:`In your own words`,autoFocus:!0,value:u,onChange:e=>d(e.target.value),onKeyDown:_(v)})]}):(0,W.jsx)(G,{kind:`bare`,className:`tools-look-value`,onClick:p,children:(0,W.jsx)(`strong`,{children:Yl(e)??`Unlisted`})}),(0,W.jsx)(G,{kind:`bare`,className:`name-edit tools-look-edit`,"aria-label":`Edit the gender`,onMouseDown:e=>n===`gender`&&e.preventDefault(),onClick:()=>n===`gender`?v(!0):p(),children:(0,W.jsx)(`span`,{className:`pen-icon`,"aria-hidden":`true`})})]})]}),x(`height`,`Height`),x(`weight`,`Weight`)]})}var rI=[`Kind`,`Origin`,`Profession`,`Past`];function iI({draft:e,onLooks:t}){let[n,r]=(0,U.useState)(),i=(0,U.useCallback)(()=>r(void 0),[]),a=(e,t)=>t&&(0,W.jsxs)(`span`,{className:`tools-line-item`,children:[(0,W.jsx)(`span`,{className:`field-label`,children:rI[e]}),(0,W.jsx)(G,{kind:`link`,onClick:()=>r(t),children:(e===0?uN.get(t)?.name:lN.get(t)?.name)??t})]});return(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`div`,{className:`tools-line`,children:[(0,W.jsx)(`p`,{className:`tools-line-row`,children:(0,W.jsx)(nI,{looks:e,onChange:t})}),(0,W.jsxs)(`p`,{className:`tools-line-row`,children:[a(0,e.kind),a(1,e.origin),a(2,e.profession),a(3,e.past)]})]}),n&&(0,W.jsx)(eI,{id:n,onClose:i})]})}function aI({conditions:e,hp:t,maxHp:n,onChange:r}){let i=(0,U.useMemo)(()=>Dl(oN),[]),a=El(t,n),[o,s]=(0,U.useState)(!1),c=t=>{r(Al(e,oN,t)),s(!1)},l=(t,n)=>r(e.map(e=>e===t?{...e,...n}:e));return(0,W.jsxs)(`section`,{className:`tools-conditions-side`,"aria-label":`Conditions`,children:[(0,W.jsx)(iP,{as:`h4`,aside:(0,W.jsxs)(G,{size:`small`,tone:`condition`,className:`sf-sheet-add`,"aria-label":`Add Condition`,onClick:()=>s(!0),children:[`Add`,(0,W.jsx)(`span`,{className:`sf-sheet-add-noun`,children:` Condition`})]}),children:`Conditions`}),o&&(0,W.jsxs)(pN,{label:`Add a Condition`,onClose:()=>s(!1),size:`narrow`,scroll:`inner`,className:`sheet-add-popup`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:`Add a Condition`}),(0,W.jsx)(sI,{options:i,onPick:c})]}),(0,W.jsxs)(`ul`,{className:`tools-conditions sf-sheet-cards sf-sheet-scroll`,children:[a.map(e=>{let t=cN.get(e);return(0,W.jsx)(`li`,{children:(0,W.jsxs)(CP,{kind:`condition`,name:t?.name??e,children:[(0,W.jsxs)(bP,{children:[`From HP. `,t?.temporary]}),t&&(0,W.jsx)(RN,{text:t.effect}),(0,W.jsx)(zN,{action:t?.action})]})},e)}),e.map(t=>{let n=cN.get(t.trait);return(0,W.jsx)(`li`,{children:(0,W.jsxs)(CP,{kind:`condition`,name:(0,W.jsxs)(W.Fragment,{children:[n?.name??t.trait,n?.ranked&&(0,W.jsxs)(`span`,{className:`stepper tools-rank`,children:[(0,W.jsx)(G,{kind:`bare`,className:`tools-rank-btn`,onClick:()=>l(t,{rank:t.rank-1}),disabled:t.rank<=1,"aria-label":`Lower rank`,children:(0,W.jsx)(YN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:t.rank}),(0,W.jsx)(G,{kind:`bare`,className:`tools-rank-btn`,onClick:()=>l(t,{rank:t.rank+1}),"aria-label":`Raise rank`,children:(0,W.jsx)(YN,{is:`plus`})})]})]}),actions:(0,W.jsx)(_u,{label:`Remove ${n?.name??t.trait}`,onClick:()=>r(jl(e,t.trait))}),children:[n?.temporary&&(0,W.jsxs)(bP,{children:[n.temporary,/[.!?]$/.test(n.temporary)?``:`.`]}),n&&(0,W.jsx)(RN,{text:n.effect}),(0,W.jsx)(zN,{action:n?.action})]})},t.trait)})]})]})}var oI={injury:`Injury`,hazard:`Hazard`,magic:`Magic`,combat:`Combat`,misc:`Misc`};function sI({options:e,onPick:t}){let[n,r]=(0,U.useState)(``),[i,a]=(0,U.useState)(new Set),o=e=>{let t=new Set(i);t.delete(e)||t.add(e),a(t)},s=n.trim().toLowerCase().split(/\s+/).filter(Boolean),c=e.filter(e=>{if(!kl(e).some(e=>!i.has(e)))return!1;let t=[e.name,e.summary??``,...e.tags??[]].join(` `).toLowerCase();return s.every(e=>t.includes(e))});return(0,W.jsxs)(`div`,{className:`condition-search sf-popup-grow picker-box`,children:[(0,W.jsxs)(`div`,{className:`filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:n,autoFocus:!0,onChange:e=>r(e.target.value),onKeyDown:e=>{e.key===`Enter`&&c[0]&&t(c[0].id)},"aria-label":`Search Conditions`}),Ol.map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!i.has(e),onChange:()=>o(e)}),` `,oI[e]]},e))]}),c.length===0?(0,W.jsx)(`p`,{className:`empty`,children:`No Conditions match.`}):(0,W.jsx)(`ul`,{className:`condition-search-list picker-scroll`,children:c.map(e=>(0,W.jsx)(`li`,{children:(0,W.jsxs)(`button`,{type:`button`,className:`condition-search-option`,onClick:()=>t(e.id),children:[(0,W.jsx)(`span`,{className:`condition-search-name`,children:e.name}),(0,W.jsx)(`span`,{className:`condition-search-types`,children:kl(e).map(e=>oI[e]).join(`, `)}),e.summary&&(0,W.jsx)(`span`,{className:`condition-search-summary`,children:e.summary})]})},e.id))})]})}var cI=e=>e?[Hc(e)?`Kit Cost ${Hc(e)}`:`Basic`]:void 0,lI=oN.items.filter(e=>e.category!==`currency`&&!e.tags.includes(`built-in`)&&(!e.tags.includes(`natural weapon`)||e.tags.includes(`universal`))).sort((e,t)=>e.name.localeCompare(t.name));function uI(e){let t=e.chassis,n=t.traits.flatMap(e=>cN.get(e)??[]);return{maxHp:10+t.stats.endurance+t.stats.power+t.stats.grace+n.reduce((e,t)=>e+(t.resources.hp??0),0),physical:{core:t.core,stats:V.physical.map(e=>({id:e,value:t.stats[e],bonus:0,max:t.stats[e]}))},hpBonus:n.reduce((e,t)=>e+(t.resources.hp??0),0),attacks:t.attacks.length?t.attacks.flatMap(e=>{let t=dN.get(e);return t?[(0,W.jsx)(AP,{name:t.name,stock:t,category:t.category},e)]:[]}):void 0,traits:n.length?n.map(e=>(0,W.jsx)(CP,{kind:_P(e),name:e.name,plane:e.plane,children:(0,W.jsx)(RN,{text:e.effect})},e.id)):void 0}}function dI({onAdd:e,custom:t,kit:n}){let r=Dc.filter(e=>lI.some(t=>t.category===e)),[i,a]=(0,U.useState)(r[0]),[o,s]=(0,U.useState)(``),[c,l]=(0,U.useState)(new Map),[u,d]=(0,U.useState)(new Set),f=e=>{let t=new Set(u);t.delete(e)||t.add(e),d(t)},p=e=>{let t=new Map(c);t.delete(e)||t.set(e,1),l(t)},m=(e,t)=>l(new Map(c).set(e,Math.max(1,t))),h=o.trim().toLowerCase().split(/\s+/).filter(Boolean),g=e=>{let t=[e.name,e.summary,e.type??``,...e.tags??[]].join(` `).toLowerCase();return h.every(e=>t.includes(e))},_=lI.filter(e=>e.category===i&&g(e)),v=[...c.values()].reduce((e,t)=>e+t,0),y=[...c].reduce((e,[t,n])=>e+Hc(dN.get(t))*n,0);return(0,W.jsxs)(`div`,{className:`item-picker sf-popup-grow`,children:[(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light picker-box`,children:[(0,W.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Item category`,children:[r.map(e=>(0,W.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":i===e,className:`tech-field-tab${i===e?` is-active`:``}`,onClick:()=>a(e),children:$(e)},e)),(0,W.jsx)(`button`,{type:`button`,role:`tab`,"aria-selected":i===`custom`,className:`tech-field-tab${i===`custom`?` is-active`:``}`,onClick:()=>a(`custom`),children:`Custom`})]}),i===`custom`?(0,W.jsxs)(`div`,{className:`item-picker-custom`,children:[(0,W.jsx)(`p`,{className:`hint`,children:`An item the game doesn't have yet: name it, say how many, and choose its category.`}),t]}):(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`div`,{className:`filters`,children:(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:o,onChange:e=>s(e.target.value),"aria-label":`Search items`})}),_.length===0&&(0,W.jsxs)(`p`,{className:`empty`,children:[`No `,$(i).toLowerCase(),` items match.`]}),(0,W.jsx)(`ul`,{className:`item-pick-list picker-scroll`,children:_.map(e=>{let t=c.get(e.id),r=t!==void 0,i=u.has(e.id);return(0,W.jsxs)(`li`,{className:`item-pick-row${r?` selected`:``}`,children:[(0,W.jsx)(mI,{className:`item-pick${n&&Hc(e)>n.ceiling&&!(e.chassis&&Hc(e)<=3)?` is-over-kit`:``}`,name:e.name,stock:e,category:e.category,chips:n?cI(e):void 0,count:r?t:void 0,fold:{open:i,onToggle:()=>f(e.id)},children:r&&(0,W.jsxs)(`div`,{className:`rank-step item-pick-count`,children:[(0,W.jsx)(`span`,{className:`rank-label`,children:`Count`}),(0,W.jsx)(G,{round:`xs`,"aria-label":`One fewer ${e.name}`,disabled:t<=1,onClick:()=>m(e.id,t-1),children:(0,W.jsx)(YN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:t}),(0,W.jsx)(G,{round:`xs`,"aria-label":`One more ${e.name}`,onClick:()=>m(e.id,t+1),children:(0,W.jsx)(YN,{is:`plus`})})]})}),(0,W.jsx)(`input`,{type:`checkbox`,className:`item-pick-check`,"aria-label":`Add ${e.name}`,checked:r,onChange:()=>p(e.id)})]},e.id)})})]})]}),(i!==`custom`||v>0)&&(0,W.jsx)(`div`,{className:`sf-popup-foot`,children:(0,W.jsx)(G,{tone:v===0?`gray`:`primary`,ready:v>0,className:`build-button`,disabled:v===0,onClick:()=>e([...c].map(([e,t])=>({stock:dN.get(e),qty:t})).filter(e=>e.stock)),children:v===0?`Add items`:`Add ${v} ${v===1?`item`:`items`}${n&&y?` (${y} Kit ${y===1?`Point`:`Points`})`:``}`})})]})}function fI({cash:e,currency:t,onChange:n}){let[r,i]=(0,U.useState)(),[a,o]=(0,U.useState)(``),s=[t,...Object.keys(e).filter(n=>n!==t&&e[n])],c=t=>{let r=a.trim().replace(/[−–]/g,`-`).match(/^([+-])?\s*(\d[\d,]*)$/);if(r){let i=Number(r[2].replace(/,/g,``)),a=e[t]??0;n(t,Math.max(0,r[1]===`+`?a+i:r[1]===`-`?a-i:i))}i(void 0)};return(0,W.jsx)(`span`,{className:`sf-cash`,children:s.map(t=>r===t?(0,W.jsx)(`input`,{type:`text`,inputMode:`numeric`,className:`sf-cash-field`,"aria-label":`Change ${t}: +50, -20 or a new total`,placeholder:`+50, −20 or 300 ${t}`,autoFocus:!0,value:a,onChange:e=>o(e.target.value),onKeyDown:e=>{e.key===`Enter`&&c(t),e.key===`Escape`&&i(void 0)},onBlur:()=>c(t)},t):(0,W.jsxs)(`button`,{type:`button`,className:`sf-cash-badge`,title:`${t}: click to add, spend or set`,onClick:()=>{o(``),i(t)},children:[(0,W.jsx)(ZN,{name:`coins`}),(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:(e[t]??0).toLocaleString(`en-US`)}),` `,t]},t))})}function pI({wealth:e,kit:t}){let n=e>0?`+${e}`:`${e}`,r=t&&t.spent>t.budget,i=t?[`Wealth ${n}: ${t.budget} Kit Points for starting items, each up to Kit Cost ${t.ceiling}`,`${t.budget-t.spent} left`,...t.left>0?[`the rest becomes ${t.cash.amount.toLocaleString(`en-US`)} ${t.cash.currency} in play`]:[],...t.freeChassis?[`${dN.get(t.freeChassis)?.name??`a chassis`} free`]:[]].join(`; `):`Wealth ${n}`;return(0,W.jsxs)(`span`,{className:`sf-cash-badge sf-wealth-badge${r?` is-over`:``}`,title:i,"aria-label":i,children:[(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:n}),` Wealth`,t&&(0,W.jsxs)(`span`,{className:`sf-wealth-kit`,children:[` `,`· `,(0,W.jsx)(`span`,{className:`sf-cash-amount`,children:t.budget-t.spent}),`/`,t.budget,` Kit`]})]})}function mI({hp:e,...t}){if(!t.stock?.chassis)return(0,W.jsx)(AP,{...t});let{body:n,badges:r,resistsInChips:i,...a}=t,{maxHp:o,...s}=uI(t.stock),c=e?t=>e.onChange(t===o?void 0:t):void 0;return(0,W.jsx)(jP,{...a,...s,hp:e?.value,onHpChange:c})}function hI({items:e,onChange:t,kit:n,cash:r,currency:i=`ERC`,onCash:a,wealth:o}){let[s,c]=(0,U.useState)(``),[l,u]=(0,U.useState)(`1`),[d,f]=(0,U.useState)(`gear`),[p,m]=(0,U.useState)(!1),[h,g]=(0,U.useState)(new Map),_=e=>h.get(e.id)??!!e.notes,v=e=>g(new Map(h).set(e.id,!_(e))),[y,b]=(0,U.useState)(),[x,S]=(0,U.useState)(new Set),[C,w]=(0,U.useState)(new Set),T=e=>{let t=new Set(x);if(!t.delete(e.id))t.add(e.id);else if(C.has(e.id)){let t=new Set(C);t.delete(e.id),w(t)}S(t)},ee=e=>{let t=new Set(C);t.delete(e.id)||t.add(e.id),w(t)},E=(n,r)=>t(e.map(e=>e===n?{...e,...r}:e)),te=e=>!!(e.item&&dN.get(e.item)?.chassis),ne=(n,r)=>t(e.map(e=>e===n?{...e,equipped:r}:r&&te(n)&&te(e)?{...e,equipped:!1}:e)),re=n=>t(e.filter(e=>e!==n)),ie=e=>Math.max(1,Math.round(Number(e))||1),ae=n=>{t(n.reduce((e,{stock:t,qty:n})=>vl(e,{item:t.id,name:t.name,qty:n,category:t.category,equipped:!1}),e)),m(!1)},oe=()=>{if(!s.trim())return;let n=wl(oN.items,s),r=ie(l);t(vl(e,n?{item:n.id,name:n.name,qty:r,category:n.category,equipped:!1}:{name:s.trim(),qty:r,category:d,equipped:!1})),c(``),u(`1`),m(!1)};return(0,W.jsxs)(`section`,{className:`tools-items`,children:[(0,W.jsx)(iP,{as:`h4`,aside:(0,W.jsxs)(W.Fragment,{children:[o!==void 0&&(0,W.jsx)(pI,{wealth:o,kit:n}),a&&(0,W.jsx)(fI,{cash:r??{},currency:i,onChange:(e,t)=>a({...r,[e]:t})}),(0,W.jsxs)(G,{size:`small`,tone:`item`,className:`sf-sheet-add`,"aria-label":`Add item`,onClick:()=>m(!0),children:[`Add`,(0,W.jsx)(`span`,{className:`sf-sheet-add-noun`,children:` item`})]})]}),children:`Items`}),p&&(0,W.jsxs)(pN,{label:`Add items`,onClose:()=>m(!1),size:`wide`,scroll:`inner`,className:`sheet-add-popup item-picker-popup`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:`Add items`}),(0,W.jsx)(dI,{kit:n,onAdd:ae,custom:(0,W.jsxs)(`form`,{className:`tools-add`,onSubmit:e=>{e.preventDefault(),oe()},children:[(0,W.jsx)(`input`,{type:`text`,placeholder:`Item name`,"aria-label":`Custom item name`,className:`tools-add-name`,value:s,onChange:e=>c(e.target.value)}),(0,W.jsx)(`input`,{type:`number`,min:1,"aria-label":`Custom item count`,className:`tools-qty`,value:l,onChange:e=>u(e.target.value)}),(0,W.jsx)(`select`,{"aria-label":`Category`,value:d,onChange:e=>f(e.target.value),children:Dc.map(e=>(0,W.jsx)(`option`,{value:e,children:$(e)},e))}),(0,W.jsx)(G,{type:`submit`,disabled:!s.trim(),children:`Add custom item`})]})})]}),e.length===0?(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Items yet.`}):(0,W.jsx)(`ul`,{className:`tools-item-list sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short`,children:e.map(e=>{let t=e.item?dN.get(e.item):void 0;return(0,W.jsx)(mI,{as:`li`,name:e.name,stock:t,category:e.category,count:e.qty,hp:te(e)?{value:e.hp,onChange:t=>E(e,{hp:t})}:void 0,chips:n?e.item===n.freeChassis?[`Free chassis`]:cI(t):void 0,equip:{checked:e.equipped,onChange:t=>ne(e,t)},fold:{open:x.has(e.id),onToggle:()=>T(e)},edit:{editing:C.has(e.id),onToggle:()=>ee(e),onRemove:()=>re(e),fields:(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`input`,{type:`number`,min:0,className:`tools-qty`,"aria-label":`How many ${e.name}`,value:e.qty,onChange:t=>E(e,{qty:Math.max(0,Math.round(Number(t.target.value))||0)})}),(0,W.jsx)(`input`,{type:`text`,className:`sf-item-name-field`,"aria-label":`Item name`,value:e.name,onChange:t=>E(e,{name:t.target.value})})]})},note:{shown:_(e),onToggle:()=>{_(e)||b(e.id),v(e)},field:(0,W.jsx)(`input`,{type:`text`,className:`tools-note`,placeholder:`Notes, like damage, resistances or charges`,"aria-label":`${e.name} notes`,autoFocus:y===e.id,value:e.notes??``,onChange:t=>E(e,{notes:t.target.value||void 0})})}},e.id)})})]})}var gI=/^(kind|origin|profession|past) ([a-z0-9-]+)( choice)?$/,_I=/^trait ([a-z0-9-]+) choice$/,vI=/^trait ([a-z0-9-]+)$/,yI=/^chassis ([a-z0-9-]+)$/;function bI(e){let t=_I.exec(e);if(t)return`${ON(t[1])} (choice)`;let n=vI.exec(e);if(n)return ON(n[1]);let r=yI.exec(e);if(r)return dN.get(r[1])?.name??r[1];let i=gI.exec(e);return i?`${(i[1]===`kind`?uN.get(i[2])?.name:lN.get(i[2])?.name)??i[2]} (${i[1]}${i[3]??``})`:e}function xI(e){let t=new Set;for(let n of e.sources){let e=gI.exec(n);e&&e[1]!==`kind`&&e[3]&&t.add(e[1])}return[`origin`,`profession`,`past`].filter(e=>t.has(e)).map($)}function SI({held:e,places:t,open:n=!0,onToggle:r,keepEffect:i=!1}){let a=cN.get(e.trait),o=ON(e.trait),s=xI(e),c=a&&(0,W.jsx)(RN,{text:a.effect});return(0,W.jsxs)(CP,{kind:_P(a),name:o,rank:a?.ranked||e.rank>1?e.rank:void 0,plane:a?.plane,chips:s.length>0?s.map(e=>(0,W.jsx)(yP,{children:e},e)):void 0,fold:r?{open:n,onToggle:r,label:o}:void 0,keep:i?c:void 0,children:[(0,W.jsxs)(`div`,{className:`sf-card-tags`,children:[a?(0,W.jsx)(yP,{children:$(a.category)}):(0,W.jsx)(yP,{tone:`bad`,children:`not in content yet`}),(0,W.jsxs)(`span`,{className:`sf-card-note`,children:[`From `,e.sources.map(bI).join(`, `)]})]}),!i&&c,(0,W.jsx)(zN,{action:a?.action,rank:e.rank}),t.length>0&&(0,W.jsxs)(`p`,{className:`small`,children:[(0,W.jsxs)(`strong`,{children:[a?.choices.find(e=>e.from!==`contact`&&$c(e.from))?.note??`Place`,`:`]}),` `,t.join(`, `)]})]})}function CI({held:e,places:t,draft:n,onClose:r}){return(0,W.jsx)(pN,{label:ON(e.trait),onClose:r,card:!0,children:(0,W.jsx)(SI,{held:e,places:t,draft:n})})}function wI({context:e,draft:t,result:n,onExport:r,onImport:i,onName:a,onLooks:o,onPortrait:s,onDescription:c,items:l,onItems:u,onCash:d,conditions:f,onConditions:p,hp:m,corner:h,actions:g,resources:_,stats:v,traitsAction:y}){let b=rP[e],x=[t.origin,t.profession,t.past].map(e=>e?lN.get(e):void 0),S=n.summary,C=su(t,oN,n).includes(`magic`)||(S?.resources.mp??0)>0?[`hp`,`vp`,`sp`,`mp`]:[`hp`,`vp`,`sp`],w=t.choices.flatMap(e=>e.from===`contact`?e.traits.map(t=>({text:t,noun:Qc[e.from],from:NN(e)})):[]),T=e=>t.choices.filter(t=>t.trait===e&&t.from!==`contact`&&$c(t.from)).flatMap(e=>e.traits),ee=(0,U.useMemo)(()=>S?.traits??[],[S]),E=e=>cN.get(e.trait)?.category===`knowledge`,te=e=>!!cN.get(e.trait)?.types.includes(`language`),ne=[...ee.filter(e=>E(e)&&!te(e)),...ee.filter(te)],re=ee.filter(e=>!E(e)),ie=e=>cN.get(e.trait)?.category,ae=re.filter(e=>ie(e)===`skill`),oe=re.filter(e=>ie(e)===`ability`),se=re.filter(e=>ie(e)!==`skill`&&ie(e)!==`ability`),[D,ce]=(0,U.useState)(new Set),le=e=>{let t=new Set(D);t.delete(e)||t.add(e),ce(t)},ue=S?S.picks.universal.banked+S.picks.background.banked:0,de=(e,t=!1,n=!1)=>(0,W.jsx)(`ul`,{className:`sf-sheet-traits${t?` sf-sheet-scroll`:``}`,children:e.map(e=>(0,W.jsx)(`li`,{children:(0,W.jsx)(SI,{held:e,places:T(e.trait),...t?{open:D.has(e.trait),onToggle:()=>le(e.trait)}:{},keepEffect:n})},e.trait))}),[fe,pe]=(0,U.useState)(),me=(0,U.useCallback)(()=>pe(void 0),[]),he=ee.find(e=>e.trait===fe),ge=x.flatMap(e=>(e?.features??[]).map(t=>({...t,from:e.name}))),_e=(0,U.useMemo)(()=>[...ee,...f],[ee,f]);return(0,W.jsxs)(`section`,{className:`sheet sheet--${e}`,children:[e===`build`&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(FN,{title:`Sheet`}),(0,W.jsxs)(`div`,{className:`sheet-actions`,children:[(0,W.jsx)(`span`,{className:`status ${n.ok?`good`:`bad`}`,children:n.ok?`Legal`:`${n.errors.length} ${n.errors.length===1?`error`:`errors`}`}),(0,W.jsxs)(G,{onClick:r,children:[(0,W.jsx)(ZN,{name:`download`}),`Download`]}),(0,W.jsxs)(G,{onClick:i,children:[(0,W.jsx)(ZN,{name:`upload`}),`Import`]}),(0,W.jsxs)(G,{onClick:()=>window.print(),children:[(0,W.jsx)(ZN,{name:`print`}),`Print`]})]})]}),(0,W.jsx)(cP,{context:e,level:t.level,corner:h,actions:g,head:{who:(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(HN,{className:`sf-sheet-portrait`,portrait:t.portrait,name:t.name,onChange:b.edit?s:void 0}),(0,W.jsxs)(`div`,{className:`sf-sheet-main`,children:[(0,W.jsx)(GN,{className:`sheet-name`,heading:`h2`,name:t.name,onChange:a}),(0,W.jsx)(iI,{draft:t,onLooks:o})]})]}),description:b.edit||t.description?(0,W.jsx)(UN,{description:t.description,onChange:b.edit?c:void 0}):void 0},resources:b.resources===`live`&&_?_:(0,W.jsx)(oP,{resources:[...C.filter(e=>e!==`hp`||!S?.coreHp||S.chassis).map(e=>({id:e,max:S?.resources[e]})),...S?.coreHp?[{id:`core`,max:S.coreHp}]:[]]}),stats:v??(0,W.jsx)(gP,{max:b.statMax,groups:mP(t,n)}),movement:S?.movement,resistances:(0,W.jsx)(uP,{items:l,held:_e}),conditions:(0,W.jsx)(aI,{conditions:f,hp:m??S?.resources.hp??0,maxHp:S?.resources.hp??0,onChange:p}),items:(0,W.jsx)(hI,{items:l,onChange:u,kit:e===`build`?S?.kit:void 0,cash:t.cash,wealth:S?.wealth,currency:S?.kit.cash.currency,onCash:d}),knowledges:ne.length>0?(0,W.jsx)(`ul`,{className:`sf-sheet-knowledge-list sf-sheet-scroll`,children:ne.map(e=>{let t=cN.get(e.trait);return(0,W.jsxs)(`li`,{children:[te(e)?(0,W.jsx)(ZN,{name:`language`,label:`Language`}):(0,W.jsx)(ZN,{name:`knowledge`,label:`Knowledge`}),(0,W.jsxs)(G,{kind:`link`,onClick:()=>pe(e.trait),children:[ON(e.trait),t?.ranked||e.rank>1?` (${e.rank})`:``]})]},e.trait)})}):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`None yet.`}),abilities:oe.length>0?de(oe,!0,!0):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Abilities yet.`}),skills:ae.length>0?de(ae,!0):(0,W.jsx)(`p`,{className:`sf-sheet-empty`,children:`No Skills yet.`}),skillsAside:S&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsxs)(`span`,{className:`sf-sheet-aside`,children:[ue,` `,ue===1?`pick`:`picks`,` available`]}),b.addTraits&&y]}),other:(se.length>0||w.length>0||ge.length>0)&&(0,W.jsxs)(W.Fragment,{children:[se.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(iP,{children:`Other Traits`}),de(se)]}),w.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(iP,{children:`Contacts`}),(0,W.jsx)(`ul`,{className:`sf-sheet-features`,children:w.map((e,t)=>(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`strong`,{children:e.text}),` `,(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[`(`,e.noun,` from `,e.from,`)`]})]},t))})]}),ge.length>0&&(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(iP,{children:`Features`}),(0,W.jsx)(`ul`,{className:`sf-sheet-features`,children:ge.map((e,t)=>(0,W.jsxs)(`li`,{children:[(0,W.jsx)(`strong`,{children:e.name}),` `,(0,W.jsxs)(`span`,{className:`sf-sheet-muted`,children:[`(`,e.from,`)`]}),`. `,e.description]},t))})]})]})}),he&&(0,W.jsx)(CI,{held:he,places:T(he.trait),draft:t,onClose:me})]})}var TI=e=>[...Object.entries(e.minStats).map(([e,t])=>`${$(e)} ${t}`),...e.prerequisites.map(ON),...e.prerequisiteTags.map(e=>`any ${$(e)} Trait`),...e.rpRequirement?[e.rpRequirement]:[]].join(`, `),EI={knowledge:`Knowledges`,skill:`Skills`,contact:`Contacts`,starter:`Starter Traits`,ability:`Abilities`,condition:`Conditions`,membership:`Memberships`,circumstance:`Circumstances`,other:`Other`},DI={universal:`Universal picks take any Trait that isn't a Background Trait, knowledge included at creation.`,background:`Background picks take only Traits on this character's Background Trait list.`},OI={wielder:`Wielder Skills, one per weapon. They're ordinary Skills, kept on their own tab so they don't crowd the rest.`};function kI({draft:e,campaign:t,result:n,onChange:r,hide:i,newFrom:a,picksBelow:o=!1,hints:s=!0,skip:c}){let[l,u]=(0,U.useState)(`universal`),[d,f]=(0,U.useState)(``),[p,m]=(0,U.useState)(new Set),[h,g]=(0,U.useState)(!0),_=n.summary,v=_?.traitLists??[],y=typeof l==`string`||v.includes(l.list)?l:`universal`,b=typeof y==`string`?y:`list:${y.list}`,x=(0,U.useMemo)(()=>uu(e,oN,t,y),[e,t,b]);if(!x||!_)return(0,W.jsxs)(`section`,{children:[(0,W.jsx)(FN,{title:`Traits`}),(0,W.jsx)(`p`,{className:`empty`,children:`Finish the Kind and Background steps first; the engine needs a complete build to check picks against.`})]});let S=d.trim().toLowerCase(),C=new Set(e.traits.map(e=>e.trait)),w=x.filter(e=>!i?.has(e.trait.id)&&!c?.has(e.trait.category)&&!p.has(e.trait.category)&&(!h||e.reasons.length===0||C.has(e.trait.id))&&(!S||e.trait.name.toLowerCase().includes(S)||e.trait.tags.some(e=>e.toLowerCase().includes(S)))),T=new Set(x.filter(e=>!i?.has(e.trait.id)&&!c?.has(e.trait.category)).map(e=>e.trait.category)),ee=wc.options.map(e=>({category:e,options:w.filter(t=>t.trait.category===e)})).filter(e=>e.options.length>0),E=e=>{let t=new Set(p);t.delete(e)||t.add(e),m(t)},te=t=>r({...e,traits:e.traits.filter((e,n)=>n!==t)}),ne=t=>e.traits.map(e=>e.trait).lastIndexOf(t),re=new Map(_.traits.map(e=>[e.trait,e.rank])),ie=(t,n,i)=>{let a=ne(t);a>=0?te(a):r(eu(e,t,n,i))},ae=(0,W.jsxs)(W.Fragment,{children:[(0,W.jsx)(`h3`,{className:`subhead`,children:a===void 0?`Picks spent`:`Traits selected`}),e.traits.length<=(a??0)?(0,W.jsx)(`p`,{className:`empty`,children:a===void 0?`No picks spent yet.`:`No Traits selected yet.`}):o?(0,W.jsx)(`ul`,{className:`picks picks-row`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`strong`,{children:[ON(e.trait),(e.rank??1)>1?` (${e.rank})`:``]}),!cN.has(e.trait)&&(0,W.jsx)(BN,{tone:`bad`,children:`unknown`}),(0,W.jsx)(_u,{label:`Remove ${ON(e.trait)}`,onClick:()=>te(t)})]},t))}):(0,W.jsx)(`ul`,{className:`picks`,children:e.traits.map((e,t)=>t<(a??0)?null:(0,W.jsxs)(`li`,{children:[(0,W.jsxs)(`span`,{children:[(0,W.jsx)(`strong`,{children:ON(e.trait)}),` rank `,e.rank??1,` `,(0,W.jsxs)(`span`,{className:`muted`,children:[`· `,e.pick,` pick`]}),!cN.has(e.trait)&&(0,W.jsx)(BN,{tone:`bad`,children:`unknown`})]}),(0,W.jsx)(G,{kind:`link`,onClick:()=>te(t),"aria-label":`Remove ${ON(e.trait)} rank ${e.rank??1}`,children:`Remove`})]},t))})]});return(0,W.jsxs)(`section`,{className:`sf-popup-grow`,children:[(0,W.jsxs)(FN,{title:`Traits`,children:[`Spend picks on Traits.`,s&&` Unspent picks are banked for later.`]}),(0,W.jsxs)(`div`,{className:`tech-fields tech-fields-light picker-box`,children:[(0,W.jsxs)(`div`,{className:`tech-field-tab-list`,role:`tablist`,"aria-label":`Pick type`,children:[[`universal`,`background`].map(e=>{let t=_.picks[e];return(0,W.jsxs)(`button`,{role:`tab`,"aria-selected":y===e,className:`tech-field-tab${y===e?` is-active`:``}`,onClick:()=>u(e),children:[$(e),` `,(0,W.jsxs)(`span`,{className:`num`,children:[t.spent,`/`,t.available]})]},e)}),v.map(t=>{let n=typeof y!=`string`&&y.list===t,r=new Set(e.traits.filter(e=>cN.get(e.trait)?.list===t).map(e=>e.trait)).size;return(0,W.jsxs)(`button`,{role:`tab`,"aria-selected":n,className:`tech-field-tab${n?` is-active`:``}`,onClick:()=>u({list:t}),children:[$(t),` `,(0,W.jsx)(`span`,{className:`num`,children:r})]},t)})]}),s&&(0,W.jsx)(`p`,{className:`hint`,children:typeof y==`string`?DI[y]:(OI[y.list]??`Traits built on ${$(y.list)}, or closely related to it. Any character can take one whose stat requirements they meet.`)+` Traits on this character's Background Trait list take a Background pick while one is left; the rest take Universal picks.`}),(0,W.jsxs)(`div`,{className:`filters traits-filters`,children:[(0,W.jsx)(`input`,{type:`search`,placeholder:`Search name or tag`,value:d,onChange:e=>f(e.target.value),"aria-label":`Search Traits`}),wc.options.filter(e=>T.has(e)).map(e=>(0,W.jsxs)(`label`,{className:`check`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:!p.has(e),onChange:()=>E(e)}),` `,EI[e]]},e)),(0,W.jsxs)(`label`,{className:`check hide-unavailable`,children:[(0,W.jsx)(`input`,{type:`checkbox`,checked:h,onChange:e=>g(e.target.checked)}),` Hide unavailable`]})]}),(0,W.jsxs)(`div`,{className:`picker-scroll`,children:[x.length===0&&y===`background`&&(0,W.jsx)(`p`,{className:`empty`,children:`This character's Background Trait list is empty. It grows from package Background Traits and the Kind's Trait access.`}),x.length>0&&w.length===0&&(0,W.jsx)(`p`,{className:`empty`,children:h?`No available Traits match. Turn off Hide unavailable to see why the rest are out.`:`No Traits match.`}),ee.map(t=>(0,W.jsxs)(`div`,{className:`trait-group`,children:[(0,W.jsx)(`h3`,{className:`subhead`,children:EI[t.category]}),(0,W.jsx)(`ul`,{className:`trait-list`,children:t.options.map(({trait:t,rank:n,pick:i,reasons:a})=>{let o=ne(t.id)>=0,s=!o&&a.length>0;return(0,W.jsxs)(CP,{as:`li`,kind:_P(t),name:t.name,plane:t.plane,className:`trait${o?` selected`:``}${s?` rejected`:``}`,rootProps:{role:`checkbox`,"aria-checked":o,"aria-disabled":s,"aria-label":o?`${t.name}, taken`:`Take ${t.name}${t.ranked||n>1?` rank ${n}`:``} with a ${i} pick`,tabIndex:0,onClick:()=>!s&&ie(t.id,n,i),onKeyDown:e=>{(e.key===`Enter`||e.key===` `)&&(e.preventDefault(),s||ie(t.id,n,i))}},children:[(0,W.jsxs)(`div`,{className:`sf-card-tags`,children:[(0,W.jsx)(yP,{children:$(t.category)}),t.ranked&&(0,W.jsx)(yP,{tone:`muted`,children:`Ranked`}),t.background&&(0,W.jsx)(yP,{tone:`muted`,children:`Background`}),t.mastery&&(0,W.jsx)(yP,{tone:`muted`,children:`Mastery`})]}),(0,W.jsx)(`p`,{children:t.summary}),(0,W.jsx)(RN,{text:t.effect}),(0,W.jsx)(zN,{action:t.action}),TI(t)&&(0,W.jsxs)(bP,{children:[`Needs `,TI(t)]}),t.tags.length>0&&(0,W.jsx)(`p`,{className:`tags`,children:t.tags.map(e=>`#${e}`).join(` `)}),o&&t.ranked&&(0,W.jsxs)(`div`,{className:`rank-step`,onClick:e=>e.stopPropagation(),onKeyDown:e=>e.stopPropagation(),children:[(0,W.jsx)(`span`,{className:`rank-label`,children:`Rank`}),(0,W.jsx)(G,{round:`xs`,"aria-label":`Drop a rank of ${t.name}`,onClick:()=>te(ne(t.id)),children:(0,W.jsx)(YN,{is:`minus`})}),(0,W.jsx)(`span`,{className:`num`,children:re.get(t.id)??0}),(0,W.jsx)(G,{round:`xs`,disabled:a.length>0,title:a.join(` `)||void 0,"aria-label":`Take ${t.name} rank ${n} with a ${i} pick`,onClick:()=>r(eu(e,t.id,n,i)),children:(0,W.jsx)(YN,{is:`plus`})})]}),s&&(0,W.jsx)(`ul`,{className:`reasons`,children:a.map(e=>(0,W.jsx)(`li`,{children:e},e))})]},t.id)})})]},t.category)),!o&&ae]})]}),o&&(0,W.jsx)(`div`,{className:`traits-picked`,children:ae})]})}export{Vl as $,ON as A,hu as B,YN as C,AN as D,PN as E,dN as F,Ll as G,su as H,uN as I,Zl as J,Pl as K,lN as L,pN as M,oN as N,kN as O,sN as P,au as Q,cN as R,MN as S,n as St,NN as T,pu as U,cu as V,du as W,nu as X,Yl as Y,ru as Z,QN as _,Dc as _t,QF as a,xl as at,LN as b,c as bt,fF as c,vl as ct,gP as d,Xc as dt,Ql as et,mP as f,tl as ft,ZN as g,Vc as gt,BN as h,ll as ht,XF as i,jl as it,SN as j,$ as k,qP as l,yl as lt,qN as m,el as mt,wI as n,Ml as nt,ZF as o,bl as ot,aP as p,rl as pt,iu as q,$F as r,Al as rt,sF as s,wl as st,kI as t,El as tt,VP as u,Qc as ut,WN as v,V as vt,FN as w,HN as x,i as xt,GN as y,wc as yt,G as z};
