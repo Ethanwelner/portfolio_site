@@ -238,6 +238,65 @@ $sf_button_rows = array(
 		array( 'Building 0:12', array( 'tone' => 'primary', 'disabled' => true, 'attrs' => array( 'aria-busy' => 'true' ) ), 'busy: working, at full strength' ),
 	),
 );
+// Strange Frontiers' colors: name, CSS value (a token or a hex), where it shows.
+$sf_color_groups = array(
+	'Strange Frontiers (css/tokens.css)' => array(
+		array( 'Frontiers Green', '--frontiers-green', '#2dfc64', 'Primary buttons, focus rings and the core stat badges' ),
+		array( 'Lore', '--frontiers-lore', '#884ddc', 'Lore links and headings on light backgrounds' ),
+		array( 'Lore on Black', '--frontiers-lore-on-black', '#a67bf0', 'Lore on dark backgrounds, and the sheet’s glow (clears 4.5:1 on black)' ),
+		array( 'Dreft', '--frontiers-dreft', '#1c372b', 'Isekai’s cards: Dreft’s green bar and edge' ),
+	),
+	'Resources and stat groups (css/tokens.css)' => array(
+		array( 'HP', '--frontiers-hp', '#e2574c', 'Hit Points, and the Physical stats' ),
+		array( 'VP', '--frontiers-vp', '#9b7bff', 'Vibe Points, and the Social stats' ),
+		array( 'SP', '--frontiers-sp', '#f2c94c', 'Savvy Points, and the Mental stats' ),
+		array( 'MP', '--frontiers-mp', '#4aa8ff', 'Mana Points, and the Magic stats' ),
+	),
+	'Sheets and Trait cards (dark grays)' => array(
+		array( 'Card', '--portfolio-black', '#1f2122', 'A card’s background' ),
+		array( 'Card Edge', '--card-edge', '#161819', 'A Trait or Background card’s 1px edge' ),
+		array( 'Panel', '--panel', '#292b2c', 'The sheet’s boxes and the dark popup' ),
+		array( 'Panel Box', '--panel-box', '#343638', 'The sheet’s frame' ),
+		array( 'Text', '--panel-text', '#e7e8e9', 'Text on the dark grays' ),
+		array( 'Soft Text', '--panel-soft', '#b2b3b4', 'Labels and secondary text on the dark grays' ),
+	),
+	'Conditions' => array(
+		array( 'Condition Bar', null, '#b7b4b4', 'A Condition card’s bar, and the condition button' ),
+		array( 'Condition Edge', null, '#626466', 'A Condition card’s edge' ),
+	),
+	'Item cards (olives)' => array(
+		array( 'Item Field', null, '#25241e', 'Fields and chips inside an Item card' ),
+		array( 'Item Edge', null, '#6d6a5a', 'An Item card’s edge and its chips’ borders' ),
+		array( 'Item Muted', null, '#a29d82', 'Item labels, and the selected outline' ),
+		array( 'Item Accent', null, '#b5ae86', 'The item button, icon badges and checked boxes' ),
+		array( 'Item Text', null, '#d6d1b4', 'Chip text, and the hovered count buttons' ),
+	),
+	'Shared with the portfolio (css/tokens.css)' => array(
+		array( 'Gray', '--portfolio-gray', '#505254', 'The default button and chips' ),
+		array( 'Medium Gray', '--portfolio-medium-gray', '#949798', 'Rules and quiet borders' ),
+		array( 'Light Gray', '--portfolio-light-gray', '#e9eaeb', 'Muted chips, and edges on light sheets' ),
+		array( 'Near White', '--portfolio-near-white', '#f9fafb', 'The light button and light sheet frames' ),
+		array( 'White', '--portfolio-white', '#ffffff', 'Text on dark buttons, and light panels' ),
+		array( 'Red', '--portfolio-red', '#eb0844', 'The danger button, bad chips and damage' ),
+		array( 'Green', '--portfolio-green', '#47b767', 'A picked card’s ring and check' ),
+	),
+);
+$sf_color_table = function () use ( $sf_color_groups ) {
+	foreach ( $sf_color_groups as $group => $colors ) {
+		echo '<p class="sf-library-label">' . sf_card_e( $group ) . '</p><div class="sf-library-colors">';
+		foreach ( $colors as $c ) {
+			$fill = $c[1] ? 'var(' . $c[1] . ', ' . $c[2] . ')' : $c[2];
+			echo '<div class="sf-library-color">'
+				. '<span class="sf-library-swatch" style="background-color: ' . sf_card_e( $fill ) . '"></span>'
+				. '<strong>' . sf_card_e( $c[0] ) . '</strong>'
+				. '<code>' . sf_card_e( $c[2] ) . '</code>'
+				. ( $c[1] ? '<code>' . sf_card_e( $c[1] ) . '</code>' : '' )
+				. '<span class="sf-library-note">' . sf_card_e( $c[3] ) . '</span>'
+				. '</div>';
+		}
+		echo '</div>';
+	}
+};
 $sf_button_table = function () use ( $sf_button_rows ) {
 	foreach ( $sf_button_rows as $group => $rows ) {
 		echo '<p class="sf-library-label">' . $group . '</p><div class="sf-library-buttons">';
@@ -457,6 +516,10 @@ $sf_list = function ( $items ) {
 			.sf-library-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-stat-box { padding: 24px; background-color: #292b2c; border-radius: 12px; }
 			.sf-library-sheet { margin-top: 64px; }
+			.sf-library-colors { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr)); align-items: start; gap: 24px 16px; margin-bottom: 32px; }
+			.sf-library-color { display: flex; flex-direction: column; gap: 2px; font-size: .875rem; }
+			.sf-library-color code { font-size: .75rem; color: inherit; opacity: .8; }
+			.sf-library-swatch { display: block; height: 64px; margin-bottom: 6px; border: 1px solid rgb(127 127 127 / 35%); border-radius: 8px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 		</style>
 	</head>
@@ -473,6 +536,18 @@ $sf_list = function ( $items ) {
 				<p class="copy">The popup too: <code>php/rpg/components/popup.php</code> draws the creator’s markup (the backdrop, the panel and the X on its corner), and <code>css/sf-popup.css</code> is a copy of the creator’s <code>src/app/popup.css</code>.</p>
 				<p class="copy">So does the character sheet’s layout: <code>php/rpg/components/sheet.php</code> draws the creator’s markup, and <code>css/sf-sheet.css</code> is a copy of the creator’s <code>src/app/sheet.css</code>. Player Tools’ sheet is the reference, and each sheet’s context sets what it draws.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
+			</div>
+		</div>
+
+		<!-- Colors -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Colors</strong></h5><div class="line"></div></div>
+				<p class="copy">The colors the components use. The named ones are tokens in <code>css/tokens.css</code>, and the rest are set in the component stylesheets (and the creator’s copies of them).</p>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<?php $sf_color_table(); ?>
+				</div>
 			</div>
 		</div>
 
