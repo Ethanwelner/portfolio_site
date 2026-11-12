@@ -503,7 +503,8 @@
 				"+1 Contact"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Modern Ranged",
 				"Crime",
 				"Stealth",
 				"Trade",
@@ -528,7 +529,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Hand-to-Hand",
+				"Close Combat",
 				"Police",
 				"Crime",
 				"Stealth",

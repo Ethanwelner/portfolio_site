@@ -303,7 +303,9 @@
 				"+1 Language"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
 				"Nobility",
 				"Wilderness",
 				"Isekai",
@@ -352,7 +354,8 @@
 				"+1 Language"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Military",
 				"Nobility",
 				"Isekai",
@@ -404,7 +407,8 @@
 				"+1 Contact"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Trade",
 				"Wilderness",
 				"Travel"
@@ -427,7 +431,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Military",
 				"Wilderness",
 				"Dreft"
@@ -452,7 +457,9 @@
 				"+1 Contact"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Hand-to-Hand",
+				"Close Combat",
+				"Archaic Ranged",
 				"Military",
 				"Social",
 				"Trade",
@@ -506,7 +513,8 @@
 				"+1 Contact"
 			],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Trade",
 				"Parabiology",
 				"Wilderness"
@@ -531,7 +539,7 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
 				"Science",
 				"Medicine",
 				"Wilderness",
@@ -559,7 +567,7 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
 				"Law",
 				"Science",
 				"Scholarship",
@@ -583,7 +591,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Military",
 				"Security",
 				"Law",
@@ -608,7 +617,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Hand-to-Hand",
+				"Close Combat",
 				"Labor",
 				"Seafaring",
 				"Travel",
@@ -634,7 +644,7 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Archaic Ranged",
 				"Scholarship",
 				"Wilderness",
 				"Farming"
@@ -701,7 +711,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Military",
 				"Wilderness",
 				"Travel",
@@ -750,7 +761,8 @@
 			],
 			"choices": [],
 			"backgroundKeywords": [
-				"Combat",
+				"Close Combat",
+				"Archaic Ranged",
 				"Parabiology",
 				"Wilderness"
 			]
