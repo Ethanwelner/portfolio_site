@@ -26,7 +26,7 @@
 				"Magical Heritage"
 			],
 			"choices": [],
-			"backgroundList": [],
+			"backgroundKeywords": [],
 			"stats": {
 				"endurance": {
 					"bonus": 2,
@@ -92,7 +92,7 @@
 				"Magical Heritage"
 			],
 			"choices": [],
-			"backgroundList": [],
+			"backgroundKeywords": [],
 			"stats": {
 				"endurance": {
 					"bonus": 1,
@@ -156,7 +156,7 @@
 				"Magical Heritage"
 			],
 			"choices": [],
-			"backgroundList": [],
+			"backgroundKeywords": [],
 			"stats": {
 				"endurance": {
 					"bonus": 1,
@@ -216,7 +216,7 @@
 			"bonus": [],
 			"grants": [],
 			"choices": [],
-			"backgroundList": [],
+			"backgroundKeywords": [],
 			"stats": {
 				"endurance": {
 					"bonus": 2,
@@ -275,18 +275,14 @@
 				"Dreftan (Spoken)"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Port Herminst",
-				"Glintl",
-				"The Switch Port",
-				"The King’s Woods",
-				"The Corsine Pass",
-				"Seafaring",
-				"Coastal Trade",
+			"backgroundKeywords": [
+				"Nobility",
+				"Wilderness",
 				"Farming",
-				"Mountaineering",
-				"Local Folklore",
-				"Karsef"
+				"Seafaring",
+				"Travel",
+				"Dreft",
+				"Isekai"
 			]
 		},
 		{
@@ -306,12 +302,14 @@
 			"choices": [
 				"+1 Language"
 			],
-			"backgroundList": [
-				"The Corsine Pass",
-				"Mountaineering",
-				"Dreft",
-				"Shield Wall",
-				"Military Tactics"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Nobility",
+				"Wilderness",
+				"Isekai",
+				"Karsef"
 			]
 		},
 		{
@@ -331,11 +329,11 @@
 			"choices": [
 				"+1 Language"
 			],
-			"backgroundList": [
-				"Dreft",
-				"Heraldry",
-				"Courtly Manners",
-				"Haggler"
+			"backgroundKeywords": [
+				"Nobility",
+				"Trade",
+				"Isekai",
+				"Sorellion"
 			]
 		},
 		{
@@ -355,11 +353,13 @@
 			"choices": [
 				"+1 Language"
 			],
-			"backgroundList": [
-				"The Sunrise Princedoms",
-				"Military Tactics",
-				"Military Drill",
-				"Heraldry"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Nobility",
+				"Isekai",
+				"Drovus"
 			]
 		}
 	],
@@ -380,12 +380,12 @@
 				"Herbalism"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Advanced Potion Mixing",
-				"Appraisal",
-				"Exotic Materials",
-				"Chemistry",
-				"Trade Guilds"
+			"backgroundKeywords": [
+				"Trade",
+				"Science",
+				"Scholarship",
+				"Alchemy",
+				"Dreft"
 			]
 		},
 		{
@@ -406,11 +406,12 @@
 			"choices": [
 				"+1 Contact"
 			],
-			"backgroundList": [
-				"Commerce",
-				"Navigation",
-				"Animal Lore",
-				"Wielder: Crossbow"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Trade",
+				"Wilderness",
+				"Travel"
 			]
 		},
 		{
@@ -429,16 +430,12 @@
 				"Countryside Lore"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Wielder: War Axe",
-				"Wielder: Longsword",
-				"Tracker",
-				"Military Tactics",
-				"Weapons",
-				"Wilderness Lore",
-				"Wielder: Spear",
-				"Wielder: Crossbow",
-				"Wielder: Polearm"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Wilderness",
+				"Dreft"
 			]
 		},
 		{
@@ -459,19 +456,16 @@
 			"choices": [
 				"+1 Contact"
 			],
-			"backgroundList": [
-				"Wielder: War Axe",
-				"Wielder: Musket",
-				"Survivalist",
-				"Intimidation",
-				"Military Tactics",
-				"Weapons",
-				"Gambling",
-				"Commerce",
-				"Wielder: Polearm",
-				"Wielder: Crossbow",
-				"Wielder: Greatsword",
-				"Wielder: Siege Engine"
+			"backgroundKeywords": [
+				"Hand-to-Hand",
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Social",
+				"Trade",
+				"Wilderness",
+				"Performance",
+				"Dreft"
 			]
 		},
 		{
@@ -490,9 +484,14 @@
 				"Earth Baseline Customs"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Commerce",
-				"Bureaucracy"
+			"backgroundKeywords": [
+				"Law",
+				"Diplomacy",
+				"Trade",
+				"Corporate",
+				"Dreft",
+				"Isekai",
+				"Switch Port"
 			]
 		},
 		{
@@ -513,14 +512,12 @@
 			"choices": [
 				"+1 Contact"
 			],
-			"backgroundList": [
-				"Animal Lore",
-				"Wilderness Lore",
-				"Weapons",
-				"Trade Guilds",
-				"Wielder: Bow",
-				"Wielder: Spear",
-				"Wielder: Throwing Weapon"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Trade",
+				"Parabiology",
+				"Wilderness"
 			]
 		},
 		{
@@ -541,11 +538,14 @@
 				"Herbalism"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Animal Lore",
-				"Wilderness Lore",
-				"Biology",
-				"Wielder: Staff"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Science",
+				"Medicine",
+				"Wilderness",
+				"Faith",
+				"Magic",
+				"Alchemy"
 			]
 		},
 		{
@@ -566,12 +566,12 @@
 				"Dreftian Law"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Local History",
-				"Literature",
-				"Bureaucracy",
-				"Chemistry",
-				"Wielder: Staff"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Law",
+				"Science",
+				"Scholarship",
+				"Magic"
 			]
 		},
 		{
@@ -590,14 +590,39 @@
 				"Aristocracy"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Weapons",
-				"Law Enforcement",
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Security",
+				"Law",
 				"Politics",
-				"High Society",
-				"Wielder: Polearm",
-				"Wielder: Crossbow",
-				"Wielder: Shortsword"
+				"Nobility"
+			]
+		},
+		{
+			"id": "sailor",
+			"slot": "Profession",
+			"name": "Sailor",
+			"plane": "isekai",
+			"summary": "Works the merchant ships and fishing boats out of Glintl and Port Herminst, and knows every tavern on the coast.",
+			"lore": "",
+			"features": [],
+			"bonus": [],
+			"grants": [
+				"Pilot: Sailing Ship",
+				"Rigging",
+				"Seafaring",
+				"Swimmer"
+			],
+			"choices": [],
+			"backgroundKeywords": [
+				"Hand-to-Hand",
+				"Close Combat",
+				"Labor",
+				"Seafaring",
+				"Travel",
+				"Athletics"
 			]
 		}
 	],
@@ -618,11 +643,11 @@
 				"Teamster"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Animal Lore",
-				"Wilderness Lore",
-				"Wielder: Sling",
-				"Wielder: Bow"
+			"backgroundKeywords": [
+				"Archaic Ranged",
+				"Scholarship",
+				"Wilderness",
+				"Farming"
 			]
 		},
 		{
@@ -640,9 +665,9 @@
 				"Concealment"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Literature",
-				"Local History"
+			"backgroundKeywords": [
+				"Scholarship",
+				"Magic"
 			]
 		},
 		{
@@ -661,10 +686,12 @@
 				"Haggler"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Commerce",
-				"Navigation",
-				"Gambling"
+			"backgroundKeywords": [
+				"Trade",
+				"Seafaring",
+				"Travel",
+				"Performance",
+				"Guwain"
 			]
 		},
 		{
@@ -683,12 +710,13 @@
 				"Karsef"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Weapons",
-				"Wilderness Lore",
-				"Wielder: Crossbow",
-				"Wielder: Spear",
-				"Wielder: Polearm"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Military",
+				"Wilderness",
+				"Travel",
+				"Karsef"
 			]
 		},
 		{
@@ -708,9 +736,12 @@
 			"choices": [
 				"+1 Language"
 			],
-			"backgroundList": [
-				"Commerce",
-				"High Society"
+			"backgroundKeywords": [
+				"Law",
+				"Leadership",
+				"Social",
+				"Trade",
+				"Travel"
 			]
 		},
 		{
@@ -729,12 +760,11 @@
 				"The King’s Woods"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Animal Lore",
-				"Wilderness Lore",
-				"Weapons",
-				"Wielder: Spear",
-				"Wielder: Sling"
+			"backgroundKeywords": [
+				"Close Combat",
+				"Archaic Ranged",
+				"Parabiology",
+				"Wilderness"
 			]
 		},
 		{
@@ -753,10 +783,12 @@
 				"Succession Law"
 			],
 			"choices": [],
-			"backgroundList": [
-				"High Society",
-				"Local History",
-				"Politics"
+			"backgroundKeywords": [
+				"Law",
+				"Politics",
+				"Nobility",
+				"Social",
+				"Scholarship"
 			]
 		},
 		{
@@ -775,9 +807,11 @@
 				"Port Herminst"
 			],
 			"choices": [],
-			"backgroundList": [
-				"High Society",
-				"Politics"
+			"backgroundKeywords": [
+				"Law",
+				"Politics",
+				"Nobility",
+				"Social"
 			]
 		},
 		{
@@ -796,9 +830,12 @@
 				"Earth Baseline Customs"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Commerce",
-				"Animal Lore"
+			"backgroundKeywords": [
+				"Diplomacy",
+				"Trade",
+				"Wilderness",
+				"Travel",
+				"Switch Port"
 			]
 		},
 		{
@@ -818,9 +855,10 @@
 				"+1 Contact",
 				"+1 Language"
 			],
-			"backgroundList": [
-				"Starships",
-				"Spacefaring"
+			"backgroundKeywords": [
+				"Engineering",
+				"Space",
+				"Earth"
 			]
 		},
 		{
@@ -839,8 +877,11 @@
 				"The Sunrise Princedoms"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Bureaucracy"
+			"backgroundKeywords": [
+				"Law",
+				"Wilderness",
+				"Travel",
+				"Drovus"
 			]
 		}
 	]

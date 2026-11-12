@@ -25,6 +25,8 @@ function names(ids, ranks = {}) {
   return out;
 }
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
+// A Background Keyword as the creator shows it: "american-empire" reads "American Empire"
+const keyword = (k) => ({ sdu: 'SDU', un: 'UN', 'hand-to-hand': 'Hand-to-Hand' })[k] || k.split('-').map(cap).join(' ');
 function pkg(p, slot) {
   const ranks = {}; (p.grants || []).forEach((g) => { if (g.rank) ranks[g.trait] = g.rank; });
   const bonus = [
@@ -37,7 +39,7 @@ function pkg(p, slot) {
     features: (p.features || []).map((f) => ({ name: f.name, description: f.description })),
     bonus, grants: names((p.grants || []).map((g) => g.trait), ranks),
     choices: (p.choices || []).map((c) => c.note || `Choose ${c.choose} ${c.from}`),
-    backgroundList: names(p.backgroundTraits || []),
+    backgroundKeywords: (p.backgroundKeywords || []).map(keyword),
     ...(p.stats ? { stats: p.stats } : {}),
   };
 }
