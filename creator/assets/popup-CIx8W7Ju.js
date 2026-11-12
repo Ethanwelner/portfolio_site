@@ -1450,7 +1450,7 @@ value: 220000
 currency: "ERC"
 chassis:
   core: 4
-  stats: { endurance: 3, power: 2, grace: 7 }
+  stats: { endurance: 4, power: 2, grace: 6 }
   traits: [mechanical]
 `,_f=`id: pistol-magazine\r
 name: "Pistol Magazine"\r
