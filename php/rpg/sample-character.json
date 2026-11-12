@@ -458,7 +458,7 @@
 			"bonus": [],
 			"grants": [],
 			"choices": [],
-			"backgroundList": []
+			"backgroundKeywords": []
 		},
 		{
 			"id": "american-empire-earth",
@@ -478,12 +478,10 @@
 				"English (Spoken & Written)"
 			],
 			"choices": [],
-			"backgroundList": [
-				"The Imperial Military",
-				"Imperial Politics",
-				"The Union of Texas",
-				"Earth Baseline Technology",
-				"Spanish (Spoken & Written)"
+			"backgroundKeywords": [
+				"Diplomacy",
+				"Earth",
+				"American Empire"
 			]
 		},
 		{
@@ -504,24 +502,14 @@
 			"choices": [
 				"+1 Contact"
 			],
-			"backgroundList": [
-				"Streetwise",
-				"Appraisal",
-				"Cargo Handling",
-				"Lockpicking",
-				"Thieves' Cant (Spoken)",
-				"Navigation",
-				"Starships",
-				"Security Systems",
-				"Gambling",
-				"Commerce",
-				"Wielder: Shotgun",
-				"Wielder: Dagger",
-				"Hidden Holds",
-				"Checkpoint Nerve",
-				"Greasing Palms",
-				"Fence",
-				"Running Dark"
+			"backgroundKeywords": [
+				"Combat",
+				"Crime",
+				"Stealth",
+				"Trade",
+				"Engineering",
+				"Piloting",
+				"Travel"
 			]
 		},
 		{
@@ -539,10 +527,12 @@
 				"Concealment"
 			],
 			"choices": [],
-			"backgroundList": [
-				"Gambling",
-				"Law Enforcement",
-				"Wielder: Dagger"
+			"backgroundKeywords": [
+				"Combat",
+				"Police",
+				"Crime",
+				"Stealth",
+				"Social"
 			]
 		}
 	]

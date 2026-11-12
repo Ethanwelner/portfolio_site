@@ -441,7 +441,7 @@ document.addEventListener('click', function (e) {
 	 * Takes a background as the creator exports it (sample-character.json,
 	 * dreftian-backgrounds.json): id, slot (Kind | Origin | Profession |
 	 * Past), name, plane, summary, features, bonus, grants, choices,
-	 * backgroundList, lore, and a Kind's stats as bonus / maximum.
+	 * backgroundKeywords, lore, and a Kind's stats as bonus / maximum.
 	 * $bonusNote is added to each Bonus, like Edwin's ", placed in Grace".
 	 */
 	function sf_card_background( $b, $bonusNote = '' ) {
@@ -493,7 +493,7 @@ document.addEventListener('click', function (e) {
 			$rows  = $row( 'Bonus', array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() ), true );
 			$rows .= $row( 'Grants', $b['grants'] ?? array(), true );
 			$rows .= $row( 'Choose', $b['choices'] ?? array(), false );
-			$rows .= $row( 'Background list', $b['backgroundList'] ?? array(), false );
+			$rows .= $row( 'Background Keywords', $b['backgroundKeywords'] ?? array(), false );
 			foreach ( $features as $f ) {
 				$rows .= '<p><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</p>';
 			}
