@@ -181,6 +181,11 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			}
 			$body .= '<div class="sf-card-tags">' . $tags . '</div>';
 		}
+		if ( ! empty( $t['needs'] ) ) {
+			// Under the badges, over the effect: each requirement in its own parens: "(Memory 2) (Intuition 2)"
+			$needs = array_map( fn( $r ) => '(' . trim( $r ) . ')', explode( ',', $t['needs'] ) );
+			$body .= '<p class="sf-card-note">' . sf_card_e( implode( ' ', $needs ) ) . '</p>';
+		}
 		if ( ! $keep ) {
 			$body .= $effect;
 		}
@@ -195,9 +200,6 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 				$body .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $grant ) . '</span>';
 			}
 			$body .= '</div>';
-		}
-		if ( ! empty( $t['needs'] ) ) {
-			$body .= '<p class="sf-card-note">Needs ' . sf_card_e( $t['needs'] ) . '</p>';
 		}
 
 		$name = sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] ) . ( isset( $t['rank'] ) ? ' (' . (int) $t['rank'] . ')' : '' );
