@@ -2867,7 +2867,7 @@ name: "The Lunar Industrial Syndicate"
 status: placeholder
 plane: earth
 region: lunar-industrial-syndicate
-summary: "You grew up a “citizen shareholder” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its investors first."
+summary: "You grew up a “Citizen” of the Eighth Lunar Industrial Syndicate, on Earth, Luna or one of its outposts, in a nation run for its shareholders first."
 naming: "Names in English."
 tags: [lunar-industrial-syndicate, earth, luna, corporate]
 backgroundKeywords: [corporate, space, travel, earth, luna]
@@ -9919,7 +9919,7 @@ effect: "This character has knowledge of the King’s Woods and can be assumed t
 name: "The Lunar Industrial Syndicate"
 status: draft
 plane: earth
-summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with investors and citizen shareholders."
+summary: "The Eighth Lunar Industrial Syndicate: a business cartel grown into a nation, with shareholders and Citizens."
 tags: [lunar-industrial-syndicate, luna, corporate]
 backgroundKeywords: [corporate, luna]
 category: knowledge
