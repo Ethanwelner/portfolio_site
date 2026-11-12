@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/12/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>The Union of Texas has a history, from the 2054 secession of the Alliance of States through the Invasion of Georgia, the South Dakota war and the Eight Coups to Commander General Mortimer Cross’s rule. Eight coups since 2100, not five.</li>
 						<li>The American Empire’s history now runs from the 2046 riots to the 2194 move aboard the Ark “New York”, adding the proclamation of the Empire, the Drone Wars in Latin America, the division of Mexico, the Second AI Panic, the boom years, the first switch-gate catastrophe, its interstellar colonies and the present day.</li>
 						<li>The Kingdom of India is a technocratic monarchy led by Prince Raja Jagadeeshwara Raya IV.</li>
 						<li>The Eighth Lunar Industrial Syndicate’s people are its “Citizens,” and its owners are shareholders, in the lore and the Character Creator.</li>
