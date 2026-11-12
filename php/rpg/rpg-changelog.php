@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/12/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Additional Contact is now a Skill, and Contacts are no longer a category of Trait, so Choose Traits loses its Contacts checkbox.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/11/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Mechanics, Character Creator and Player Tools: Background Traits come from Background Keywords instead of a fixed list. Each Origin, Profession and Past has keywords for what it’s about, like Modern Ranged, Security, Police, Investigation or Dreft, every Trait has keywords for what it covers, and a Background pick can buy any Trait that shares one. Fighting is split into Hand-to-Hand, Close Combat, Archaic Ranged and Modern Ranged, so a background only opens the Wielder Skills for its kind of weapons. Every Trait that was on a Background list still is, and most characters now have a couple hundred Background options instead of a couple dozen. Background cards show their keywords in place of their Background list.</li>
