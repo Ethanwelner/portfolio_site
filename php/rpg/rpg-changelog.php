@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/12/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: Additional Language is gone. Every Language is already its own Knowledge to pick, so a Trait that only asked which Language to take was an extra step.</li>
 						<li>Character Creator and Player Tools: Additional Contact is now a Skill, and Contacts are no longer a category of Trait, so Choose Traits loses its Contacts checkbox.</li>
 					</ul>
 				</article>
