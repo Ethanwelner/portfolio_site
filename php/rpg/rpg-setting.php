@@ -441,7 +441,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>1/a/384 - “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>” is discovered by <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Third Lunar Industrial Syndicate'); ?>.</li>
+							<li>1/a/384: “<?php echo sf_lore_link('paraloka', 'Paraloka'); ?>” is discovered by <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Third Lunar Industrial Syndicate'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -541,7 +541,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>65/t/137 - “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.</li>
+							<li>65/t/137: “<?php echo sf_lore_link('saturdays-furnace', 'Saturday’s Furnace'); ?>” is discovered by New York University.</li>
 						</ul>
 					</div>
 					<div>
@@ -559,7 +559,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>76/f/55 - “<?php echo sf_lore_link('gastown', 'Gastown'); ?>” is discovered by <?php echo sf_lore_link('kingdom-of-india', 'the Kingdom of India'); ?>.</li>
+							<li>76/f/55: “<?php echo sf_lore_link('gastown', 'Gastown'); ?>” is discovered by <?php echo sf_lore_link('kingdom-of-india', 'the Kingdom of India'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -568,7 +568,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>295/c/29 - “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>” is discovered by the Indian Institute of Science, Bengaluru.</li>
+							<li>295/c/29: “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>” is discovered by the Indian Institute of Science, Bengaluru.</li>
 						</ul>
 					</div>
 					<div>
@@ -577,7 +577,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>380/c/12 - “<?php echo sf_lore_link('the-lost-world', 'The Lost World'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
+							<li>380/c/12: “<?php echo sf_lore_link('the-lost-world', 'The Lost World'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -586,7 +586,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>513/y/11 - “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
+							<li>513/y/11: “<?php echo sf_lore_link('leviathan', 'Leviathan'); ?>” is discovered by <?php echo sf_lore_link('holy-oak-discovery-services', 'Holy Oak Discovery Services, LLC'); ?>.</li>
 						</ul>
 					</div>
 					<div>
@@ -595,7 +595,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>419/f/05 - “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
+							<li>419/f/05: “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
 							<li>First experimental <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz field generators'); ?> are tested.</li>
 						</ul>
 					</div>
@@ -677,7 +677,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>516/a/198 - “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is discovered by <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?></li>
+							<li>516/a/198: “<?php echo sf_lore_link('isekai', 'Isekai'); ?>” is discovered by <?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?></li>
 						</ul>
 					</div>
 					<div>
