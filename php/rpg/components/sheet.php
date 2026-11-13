@@ -15,7 +15,8 @@
 //   resources  HP, VP, SP and MP
 //   stats      the stat block (components/stats.php)
 //   side       Movement and the resistances, over the Conditions and Items
-//   lower      the Knowledges, then the Abilities beside the Skills, then
+//   lower      the Knowledges beside the Languages, then the Abilities
+//              beside the Skills, then
 //              any other Traits, contacts and features
 //
 // The layout fills each box with the HTML it's handed. Each sheet's
@@ -46,7 +47,7 @@
 //   'resistances'  => (the resistances' title and list, or a function of
 //                      the copy, 'a' or 'b', for their popovers' ids),
 //   'conditions'   => …, 'items' => …,
-//   'knowledges'   => …, 'abilities' => …, 'skills' => …,
+//   'knowledges'   => …, 'languages' => …, 'abilities' => …, 'skills' => …,
 //   'skills_aside' => (along the Skills title's line: the picks left),
 //   'other'        => (other Traits, contacts and features, if any),
 // ), array( 'class' => 'sample-sheet' ) );
@@ -83,7 +84,15 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 	// A box's ruled title, with anything along its line after the rule. A
 	// title row keeps its spacing even with nothing along it ($row), as the
 	// Conditions' and Items' do with their Add buttons in the creator.
-	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false ) {
+	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false, $icon = '' ) {
+		// $icon: 'knowledge' or 'language', the section's kind as an icon
+		// before its name, like its cards', or 'backpack' for the Items
+		if ( 'backpack' === $icon ) {
+			$text = '<span class="sf-sheet-title-label"><svg class="icon icon-backpack sf-sheet-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M320 320H128c-17.62 0-32 14.38-32 32v32h256v-32C352 334.4 337.6 320 320 320zM96 512h256v-96H96V512zM320 80h-8V56C312 25.12 286.9 0 256 0H192C161.1 0 136 25.12 136 56V80H128c-70.75 0-128 57.25-128 128V448c0 35.38 28.62 64 64 64v-160c0-35.25 28.75-64 64-64h192c35.25 0 64 28.75 64 64v160c35.38 0 64-28.62 64-64V208C448 137.2 390.8 80 320 80zM184 56C184 51.62 187.6 48 192 48h64c4.375 0 8 3.625 8 8V80h-80V56zM320 200c0 4.375-3.625 8-8 8h-176C131.6 208 128 204.4 128 200v-16C128 179.6 131.6 176 136 176h176C316.4 176 320 179.6 320 184V200z"/></svg>' . $text . '</span>';
+		} elseif ( $icon ) {
+			require_once __DIR__ . '/cards.php';
+			$text = '<span class="sf-sheet-title-label">' . sf_card_kind_icon( $icon, 'sf-sheet-title-icon' ) . $text . '</span>';
+		}
 		$title = '<' . $tag . ' class="sf-sheet-title">' . $text . '</' . $tag . '>';
 		if ( '' === $aside && ! $row ) {
 			return $title;
@@ -152,7 +161,10 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 		echo '</div></div></div>';
 
 		echo '<div class="sf-sheet-lower">';
-		echo '<div class="sf-sheet-box sf-sheet-knowledges">' . sf_sheet_title( 'Knowledges' ) . $s['knowledges'] . '</div>';
+		echo '<div class="sf-sheet-pair sf-sheet-pair--lists">';
+		echo '<div class="sf-sheet-box sf-sheet-knowledges">' . sf_sheet_title( 'Knowledges', '', 'h3', false, 'knowledge' ) . $s['knowledges'] . '</div>';
+		echo '<div class="sf-sheet-box sf-sheet-languages">' . sf_sheet_title( 'Languages', '', 'h3', false, 'language' ) . $s['languages'] . '</div>';
+		echo '</div>';
 		echo '<div class="sf-sheet-pair">';
 		echo '<div class="sf-sheet-box sf-sheet-abilities">' . sf_sheet_title( 'Abilities' ) . $s['abilities'] . '</div>';
 		echo '<div class="sf-sheet-box sf-sheet-skills">' . sf_sheet_title( 'Skills', $s['skills_aside'] ?? '' ) . $s['skills'] . '</div>';

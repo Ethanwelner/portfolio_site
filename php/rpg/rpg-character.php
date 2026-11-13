@@ -112,8 +112,6 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 <?php
 require_once __DIR__ . '/components/stats.php';
 
-// Each Knowledge's type as an icon in place of a "Knowledge:" or "Language:" label
-$sf_knowledge_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Knowledge" focusable="false"><title>Knowledge</title><path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"/></svg>';
 // A Knowledge's or background card's link, opening it in the lore popup
 $sf_sheet_link = function ( $key ) use ( $sf_sample, $sf_e ) {
 	foreach ( array_merge( $sf_sample['background'], $sf_sample['traits'] ) as $x ) {
@@ -123,10 +121,11 @@ $sf_sheet_link = function ( $key ) use ( $sf_sample, $sf_e ) {
 	}
 	return '';
 };
-// Knowledges, then Languages, as on the creator's sheet; the rest are cards
-$sf_knowledges = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' === $t['category'] && ! $t['language']; } );
-$sf_languages  = array_filter( $sf_sample['traits'], function ( $t ) { return $t['language']; } );
-$sf_cards      = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' !== $t['category']; } );
+// Knowledges and Languages, each in its own box as on the creator's sheet;
+// the rest are cards
+$sf_knowledges = array_filter( $sf_sample['traits'], function ( $t ) { return 'Knowledge' === $t['category']; } );
+$sf_languages  = array_filter( $sf_sample['traits'], function ( $t ) { return 'Language' === $t['category']; } );
+$sf_cards      = array_filter( $sf_sample['traits'], function ( $t ) { return ! in_array( $t['category'], array( 'Knowledge', 'Language' ), true ); } );
 // Where a Trait came from, in words: "a background pick"
 $sf_from = function ( $t ) {
 	return str_replace( array( 'universal pick', 'background pick' ), array( 'a universal pick', 'a background pick' ), $t['from'] );
@@ -150,14 +149,13 @@ $sf_card = function ( $t, $fold = '', $keep = false ) use ( $sf_from ) {
 		'keep'   => $keep,
 	) );
 };
-$sf_language_icon = '<svg class="sheet-type-icon" viewBox="0 0 640 512" role="img" aria-label="Language" focusable="false"><title>Language</title><path d="M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z"/></svg>';
 ?>
 <!-- Edwin's sheet in the shared layout (php/rpg/components/sheet.php), in
      its sample context: everything a sheet shows in play, with nothing to
      change. The level's blob on the corner, the portrait, name and
      description, HP, VP and SP at full, then the stats beside Movement, the
-     resistances, Conditions and Items, then the Knowledges, Abilities and
-     Skills. -->
+     resistances, Conditions and Items, then the Knowledges, Languages,
+     Abilities and Skills. -->
 <?php
 require_once __DIR__ . '/components/sheet.php';
 
@@ -208,7 +206,7 @@ $sf_sheet_items = array(
 	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
 	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
 );
-$sf_items = sf_sheet_title( 'Items', '', 'h4', true ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
+$sf_items = sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
 	. sf_sheet_capture( function () use ( $sf_sheet_items ) {
 		foreach ( $sf_sheet_items as $item ) {
 			echo '<li>';
@@ -217,15 +215,17 @@ $sf_items = sf_sheet_title( 'Items', '', 'h4', true ) . '<ul class="sf-sheet-car
 		}
 	} ) . '</ul>';
 
-// Knowledges, then Languages, each a link opening its card
-$sf_knowledge_list = '<ul class="sf-sheet-knowledge-list sf-sheet-scroll">';
-foreach ( $sf_knowledges as $t ) {
-	$sf_knowledge_list .= '<li>' . $sf_knowledge_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n";
-}
-foreach ( $sf_languages as $t ) {
-	$sf_knowledge_list .= '<li>' . $sf_language_icon . ' ' . $sf_sheet_link( $t['id'] ) . "</li>\n";
-}
-$sf_knowledge_list .= '</ul>';
+// Knowledges and Languages, each a link opening its card
+$sf_link_list = function ( $list ) use ( $sf_sheet_link ) {
+	if ( ! $list ) {
+		return '<p class="sf-sheet-empty">None yet.</p>';
+	}
+	$html = '<ul class="sf-sheet-knowledge-list sf-sheet-scroll">';
+	foreach ( $list as $t ) {
+		$html .= '<li>' . $sf_sheet_link( $t['id'] ) . "</li>\n";
+	}
+	return $html . '</ul>';
+};
 
 // Cards in the layout's card grid: Abilities closed to their name and
 // effect, Skills to their name, each opening from its chevron
@@ -272,7 +272,8 @@ sf_sheet_layout(
 		'resistances'  => $sf_resistances,
 		'conditions'   => $sf_conditions,
 		'items'        => $sf_items,
-		'knowledges'   => $sf_knowledge_list,
+		'knowledges'   => $sf_link_list( $sf_knowledges ),
+		'languages'    => $sf_link_list( $sf_languages ),
 		'abilities'    => $sf_abilities ? $sf_trait_cards( $sf_abilities, 'closed', true ) : '<p class="sf-sheet-empty">No Abilities yet.</p>',
 		'skills'       => $sf_skills ? $sf_trait_cards( $sf_skills, 'closed' ) : '<p class="sf-sheet-empty">No Skills yet.</p>',
 		'skills_aside' => '<span class="sf-sheet-aside">' . $sf_picks . ( 1 === $sf_picks ? ' pick' : ' picks' ) . ' available</span>',
@@ -292,7 +293,7 @@ sf_sheet_layout(
 			<div class="lore-body">
 				<?php
 				sf_card_trait( array(
-					'kind'   => $t['language'] ? 'language' : 'knowledge',
+					'kind'   => strtolower( $t['category'] ),
 					'name'   => $t['name'],
 					'effect' => $t['effect'],
 					'from'   => $sf_from( $t ),

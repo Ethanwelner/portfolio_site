@@ -694,7 +694,7 @@ options: max (true: each stat's maximum beside its number). The creator adds edi
 		<div class="sf-library-band">
 			<div class="container">
 				<div class="line-container"><h5><strong>Sheet Layout</strong></h5><div class="line"></div></div>
-				<pre class="sf-library-api">sf_sheet_layout( array( 'context' =&gt; 'sample', 'level' =&gt; 6, 'who' =&gt; …, 'description' =&gt; …, 'resources' =&gt; sf_sheet_full_resources( array( 'hp' =&gt; 17, … ) ), 'stats' =&gt; …, 'movement' =&gt; '10 m', 'resistances' =&gt; …, 'conditions' =&gt; …, 'items' =&gt; …, 'knowledges' =&gt; …, 'abilities' =&gt; …, 'skills' =&gt; …, 'skills_aside' =&gt; …, 'other' =&gt; … ), array( 'class' =&gt; 'sample-sheet' ) );
+				<pre class="sf-library-api">sf_sheet_layout( array( 'context' =&gt; 'sample', 'level' =&gt; 6, 'who' =&gt; …, 'description' =&gt; …, 'resources' =&gt; sf_sheet_full_resources( array( 'hp' =&gt; 17, … ) ), 'stats' =&gt; …, 'movement' =&gt; '10 m', 'resistances' =&gt; …, 'conditions' =&gt; …, 'items' =&gt; …, 'knowledges' =&gt; …, 'languages' =&gt; …, 'abilities' =&gt; …, 'skills' =&gt; …, 'skills_aside' =&gt; …, 'other' =&gt; … ), array( 'class' =&gt; 'sample-sheet' ) );
 Each slot is HTML (sf_sheet_capture() turns a component that echoes into it). sf_sheet_title( $text, $aside ) draws a box's ruled title.
 context: play | build | sample. Only sample is drawn on the site; the creator draws play and build.</pre>
 				<p class="sf-library-label">Each context’s rules</p>
@@ -723,8 +723,9 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 							'movement'     => '10 m',
 							'resistances'  => sf_sheet_title( 'Resistances' ) . $sf_slot( 'resistances' ),
 							'conditions'   => sf_sheet_title( 'Conditions', '', 'h4', true ) . $sf_slot( 'conditions: Condition cards' ),
-							'items'        => sf_sheet_title( 'Items', '', 'h4', true ) . $sf_slot( 'items: item cards' ),
+							'items'        => sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . $sf_slot( 'items: item cards' ),
 							'knowledges'   => $sf_slot( 'knowledges: the list of links' ),
+							'languages'    => $sf_slot( 'languages: the list of links' ),
 							'abilities'    => $sf_slot( 'abilities: Trait cards' ),
 							'skills'       => $sf_slot( 'skills: Trait cards' ),
 							'skills_aside' => '<span class="sf-sheet-aside">skills_aside</span>',

@@ -136,9 +136,8 @@
                   </div>
                   <p class="copy">Languages confer the ability for the learner to speak or read/write in that language. Most Languages will be granted by a character's Background package, but Languages can also be temporarily granted by devices like universal translators or magic amulets. Languages can also be learned in the same fashion as Knowledge Traits. Languages function as both Knowledge and an Ability in that they describe a character's ability to understand and use a language. A Language Trait will typically describe how the character can use that language, such as English (Spoken).</p>
                   <?php sf_card_trait( array(
-                  	'kind' => 'knowledge',
-                  	'name' => 'English (Spoken) - Language',
-                  	'flags' => array( 'Language' ),
+                  	'kind' => 'language',
+                  	'name' => 'English (Spoken)',
                   	'effect' => 'This character can speak and understand English conversationally.',
                   	'needs' => 'Memory 2, Intuition 2',
                   ) ); ?>
@@ -276,23 +275,20 @@ This character gains the following Temporary Traits and will lose them if they c
                 </div>
                 <div class="trait-card-grid">
                   <?php sf_card_trait( array(
-                  	'kind' => 'knowledge',
-                  	'name' => 'English (Spoken) - Language',
-                  	'flags' => array( 'Language' ),
+                  	'kind' => 'language',
+                  	'name' => 'English (Spoken)',
                   	'effect' => 'This character can speak and understand English conversationally.',
                   	'needs' => 'Memory 2, Intuition 2',
                   ) ); ?>
                   <?php sf_card_trait( array(
-                  	'kind' => 'knowledge',
-                  	'name' => 'Mandarin (Spoken) (Written) - Language',
-                  	'flags' => array( 'Language' ),
+                  	'kind' => 'language',
+                  	'name' => 'Mandarin (Spoken) (Written)',
                   	'effect' => 'This character can speak and understand Mandarin conversationally and can read and write it.',
                   	'needs' => 'Memory 2, Intuition 2',
                   ) ); ?>
                   <?php sf_card_trait( array(
-                  	'kind' => 'knowledge',
-                  	'name' => 'Dwarvish Runes (Written) - Language',
-                  	'flags' => array( 'Language' ),
+                  	'kind' => 'language',
+                  	'name' => 'Dwarvish Runes (Written)',
                   	'effect' => 'This character can read and write Dwarvish Runes.',
                   	'needs' => 'Memory 3, Intuition 5',
                   ) ); ?>

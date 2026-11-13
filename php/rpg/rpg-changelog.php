@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/13/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Languages are now their own category of Trait instead of a kind of Knowledge. Choose Traits lists them under Languages, with their own checkbox, and the character sheet, in the Character Creator, Player Tools and the sample sheet, gives them a box of their own beside the Knowledges.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/12/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The Union of Texas has a history, from the 2054 secession of the Alliance of States through the Invasion of Georgia, the South Dakota war and the Eight Coups to Commander General Mortimer Cross’s rule. Eight coups since 2100, not five.</li>
