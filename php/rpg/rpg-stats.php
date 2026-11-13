@@ -327,11 +327,9 @@
 								<li><strong>Healthy - Conveyed - Condition</strong><br>
 								Temporary (A character or object gains this Trait while they are at their maximum HP total)</li>
 								<li><strong>Injured - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait while they are below their maximum HP total)<br>
-								This Trait has no effect on its own.</li>
+								Temporary (A character gains this Trait while they are below their maximum HP total)</li>
 								<li><strong>Severely Injured - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait while they are below half their maximum HP total)<br>
-								This Trait has no effect on its own.</li>
+								Temporary (A character gains this Trait while they are below half their maximum HP total)</li>
 								<li><strong>Incapacitated - Conveyed - Condition</strong><br>
 								Temporary (A character gains this Trait while they are below a quarter of their maximum HP total)<br>
 								This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
@@ -340,8 +338,7 @@
 								This character is dead and cannot perform voluntary actions.<br>
 								This character cannot be healed by any means unless otherwise stated.</li>
 								<li><strong>Damaged - Conveyed - Condition</strong><br>
-								Temporary (An object gains this Trait if it is below its maximum HP total)<br>
-								This Trait has no effect on its own.</li>
+								Temporary (An object gains this Trait if it is below its maximum HP total)</li>
 								<li><strong>Destroyed - Conveyed - Condition</strong><br>
 								Temporary (An object gains this Trait if it is at 0 or less HP)<br>
 								This object has been destroyed and no longer functions in any intended capacity.<br>

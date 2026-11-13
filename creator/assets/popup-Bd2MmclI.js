@@ -6601,7 +6601,6 @@ tags: [objects, damage, site-example, hit-points]
 category: condition
 conveyed: true
 temporary: "An object gains this trait if it is below its maximum HP total"
-effect: "This Trait has no effect on its own."
 `,X_=`id: dark-haze-condition
 name: "Dark Haze"
 status: draft
@@ -6881,7 +6880,6 @@ tags: [health, injury, site-example, hit-points]
 category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below their maximum HP total"
-effect: "This Trait has no effect on its own."
 `,xv=`id: invisible
 name: "Invisible"
 status: placeholder
@@ -7242,7 +7240,6 @@ tags: [health, injury, site-example, hit-points]
 category: condition
 conveyed: true
 temporary: "A character gains this trait while they are below half their maximum HP total"
-effect: "This Trait has no effect on its own."
 `,$v=`id: shielded
 name: "Shielded"
 status: placeholder
@@ -7354,7 +7351,6 @@ tags: [encumbrance]
 category: condition
 conveyed: true
 temporary: "A character has this Trait while their equipped items weigh half their carry weight or less"
-effect: "This Trait has no effect on its own."
 `,ly=`id: water-breathing-condition
 name: "Water Breathing"
 status: placeholder

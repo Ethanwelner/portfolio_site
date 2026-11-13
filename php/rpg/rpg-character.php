@@ -205,7 +205,7 @@ $sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true, 'condition' ) . '
 	// Unencumbered, from his equipped items' 2.9 kg (the Leather Jacket and
 	// Pistol) against the 30 kg carry weight of Physical 1
 	. sf_sheet_capture( function () {
-		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Unencumbered', 'effect' => 'This Trait has no effect on its own.', 'from' => 'carried weight. A character has this Trait while their equipped items weigh half their carry weight or less' ) );
+		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Unencumbered', 'effect' => '', 'from' => 'carried weight. A character has this Trait while their equipped items weigh half their carry weight or less' ) );
 	} ) . '</li></ul>';
 
 // The item cards, as the creator's inventory draws them: the count on its
