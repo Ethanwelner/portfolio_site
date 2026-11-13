@@ -3,29 +3,29 @@
     "file": "assets/popup-BHBwsRlD.css",
     "src": "_popup-BHBwsRlD.css"
   },
-  "_popup-CriZFXzk.js": {
-    "file": "assets/popup-CriZFXzk.js",
+  "_popup-C5f3xDQz.js": {
+    "file": "assets/popup-C5f3xDQz.js",
     "name": "popup",
     "css": [
       "assets/popup-BHBwsRlD.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-j4sB4fBf.js",
+    "file": "assets/main-KtASeUq-.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-CriZFXzk.js"
+      "_popup-C5f3xDQz.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-CKu02ueY.js",
+    "file": "assets/main-5r6IFW6L.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-CriZFXzk.js"
+      "_popup-C5f3xDQz.js"
     ],
     "css": [
       "assets/main-eipnF_ix.css"

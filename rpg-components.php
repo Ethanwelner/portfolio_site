@@ -176,12 +176,13 @@ $sf_items[] = array(
 );
 
 // The same Item card as each interface draws it: a catalog's (always open),
-// a character sheet's (count, read-only Equip, closed to its line), and the
-// sheet's open
+// a character sheet's (read-only Equip, closed to its line), and the sheet's
+// open. Only a counted item (a consumable) gets a count, like the Healing
+// Potion further down: a Pistol is one of a kind.
 $sf_item_modes = array(
 	array( 'Catalog (no options)', array() ),
-	array( 'Sheet: count, equip “on”, fold “closed”', array( 'count' => 1, 'equip' => 'on', 'fold' => 'closed' ) ),
-	array( 'Sheet: count, equip “off”, fold “open”', array( 'count' => 2, 'equip' => 'off', 'fold' => 'open' ) ),
+	array( 'Sheet: equip “on”, fold “closed”', array( 'equip' => 'on', 'fold' => 'closed' ) ),
+	array( 'Sheet: equip “off”, fold “open”', array( 'equip' => 'off', 'fold' => 'open' ) ),
 );
 $sf_pistol = array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.' );
 
@@ -324,7 +325,7 @@ $sf_used_in = array(
 		'php/rpg/items.php: sf_equipment_card(), the Item Types and Example Items',
 		'php/rpg/magic-items.php: sf_magic_item_card(), Artifacts, Enchantments and Potions',
 		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Attacks and Items (Murk Legs)',
-		'php/rpg/rpg-character.php: the sample sheet’s Items (count, read-only Equip, closed)',
+		'php/rpg/rpg-character.php: the sample sheet’s Items (read-only Equip, closed)',
 	),
 	'chassis'    => array(
 		'Nowhere yet: the AI Core chassis system is new. The creator’s ChassisCard (src/app/components/cards.tsx) is ready for the Character Creator and Player Tools.',
@@ -530,7 +531,7 @@ $sf_list = function ( $items ) {
 				<div class="copy stinger black mb-3">Component Library</div>
 				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
 				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis and Background. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
-				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count, an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
+				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count (a consumable’s only), an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
 				<p class="copy">The popup too: <code>php/rpg/components/popup.php</code> draws the creator’s markup (the backdrop, the panel and the X on its corner), and <code>css/sf-popup.css</code> is a copy of the creator’s <code>src/app/popup.css</code>.</p>
