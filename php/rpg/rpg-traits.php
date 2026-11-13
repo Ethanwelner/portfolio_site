@@ -528,7 +528,7 @@ This character loses 1 HP every minute while outside of combat.',
                   	'kind' => 'condition',
                   	'name' => 'Dead',
                   	'flags' => array( 'Conveyed' ),
-                  	'temporary' => 'A character gains this Trait if they are at 0 or less HP',
+                  	'temporary' => 'This character is at 0 HP or less',
                   	'effect' => 'This character is dead and cannot perform voluntary actions.
 This character cannot be healed by any means unless otherwise stated.',
                   ) ); ?>

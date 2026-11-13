@@ -325,22 +325,22 @@
 							</p>
 							<ul class="copy">
 								<li><strong>Healthy - Conveyed - Condition</strong><br>
-								Temporary (A character or object gains this Trait while they are at their maximum HP total)</li>
+								Temporary (This character is at their maximum HP)</li>
 								<li><strong>Injured - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait while they are below their maximum HP total)</li>
+								Temporary (This character is below their maximum HP)</li>
 								<li><strong>Severely Injured - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait while they are below half their maximum HP total)</li>
+								Temporary (This character is below half their maximum HP)</li>
 								<li><strong>Incapacitated - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait while they are below a quarter of their maximum HP total)<br>
+								Temporary (This character is below a quarter of their maximum HP)<br>
 								This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them.</li>
 								<li><strong>Dead - Conveyed - Condition</strong><br>
-								Temporary (A character gains this Trait if they are at 0 or less HP)<br>
+								Temporary (This character is at 0 HP or less)<br>
 								This character is dead and cannot perform voluntary actions.<br>
 								This character cannot be healed by any means unless otherwise stated.</li>
 								<li><strong>Damaged - Conveyed - Condition</strong><br>
-								Temporary (An object gains this Trait if it is below its maximum HP total)</li>
+								Temporary (This object is below its maximum HP)</li>
 								<li><strong>Destroyed - Conveyed - Condition</strong><br>
-								Temporary (An object gains this Trait if it is at 0 or less HP)<br>
+								Temporary (This object is at 0 HP or less)<br>
 								This object has been destroyed and no longer functions in any intended capacity.<br>
 								This object cannot be repaired by any means unless otherwise stated.</li>
 							</ul>

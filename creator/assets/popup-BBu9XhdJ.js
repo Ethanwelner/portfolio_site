@@ -6600,7 +6600,7 @@ summary: "An object below its full HP."
 tags: [objects, damage, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "An object gains this trait if it is below its maximum HP total"
+temporary: "This object is below its maximum HP"
 `,X_=`id: dark-haze-condition
 name: "Dark Haze"
 status: draft
@@ -6622,7 +6622,7 @@ tags: [injury, death, site-example]
 category: condition
 types: [injury]
 conveyed: true
-temporary: "A character gains this trait if they are at 0 or less HP"
+temporary: "This character is at 0 HP or less"
 effect: "This character is dead and cannot perform voluntary actions. This character cannot be healed by any means unless otherwise stated."
 `,Q_=`id: deafened
 name: "Deafened"
@@ -6642,7 +6642,7 @@ summary: "An object at 0 HP or less, no longer working."
 tags: [objects, damage, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "An object gains this trait if it is at 0 or less HP"
+temporary: "This object is at 0 HP or less"
 effect: "This object has been destroyed and no longer functions in any intended capacity. This object cannot be repaired by any means unless otherwise stated."
 `,ev=`id: earthen-weapon
 name: "Earthen Weapon"
@@ -6688,7 +6688,7 @@ summary: "Carrying more than their carry weight."
 tags: [encumbrance, combat]
 category: condition
 conveyed: true
-temporary: "A character has this Trait while their equipped items weigh more than their carry weight, up to double it"
+temporary: "This character is over their carry weight, up to double it"
 effect: "This character's Movement is halved, and they have -1 Priority."
 modifiers: "Movement halved, Priority -1"
 `,iv=`id: featherfall-condition
@@ -6826,7 +6826,7 @@ summary: "At full HP."
 tags: [health, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "A character or object gains this trait while they are at their maximum HP total"
+temporary: "This character is at their maximum HP"
 `,gv=`id: heavily-encumbered
 name: "Heavily Encumbered"
 status: draft
@@ -6835,7 +6835,7 @@ summary: "Carrying more than double their carry weight."
 tags: [encumbrance, combat]
 category: condition
 conveyed: true
-temporary: "A character has this Trait while their equipped items weigh more than double their carry weight"
+temporary: "This character is over double their carry weight"
 effect: "This character can't move, and has -1 Priority."
 modifiers: "Movement 0, Priority -1"
 `,_v=`id: high-morale
@@ -6857,7 +6857,7 @@ summary: "Too badly hurt to act or perceive."
 tags: [health, injury, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "A character gains this trait while they are at less than a quarter of their HP total"
+temporary: "This character is below a quarter of their maximum HP"
 effect: "This character has been incapacitated by their injuries and can no longer perform voluntary actions or perceive the world around them."
 `,yv=`id: infravision-condition
 name: "Infravision"
@@ -6879,7 +6879,7 @@ summary: "Below full HP."
 tags: [health, injury, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "A character gains this trait while they are below their maximum HP total"
+temporary: "This character is below their maximum HP"
 `,xv=`id: invisible
 name: "Invisible"
 status: placeholder
@@ -6911,7 +6911,7 @@ summary: "Carrying more than half their carry weight."
 tags: [encumbrance, combat]
 category: condition
 conveyed: true
-temporary: "A character has this Trait while their equipped items weigh more than half their carry weight, up to all of it"
+temporary: "This character is over half their carry weight, up to all of it"
 effect: "This character has -1 Priority."
 modifiers: "Priority -1"
 `,wv=`id: long-toothed
@@ -7239,7 +7239,7 @@ summary: "Below half HP."
 tags: [health, injury, site-example, hit-points]
 category: condition
 conveyed: true
-temporary: "A character gains this trait while they are below half their maximum HP total"
+temporary: "This character is below half their maximum HP"
 `,$v=`id: shielded
 name: "Shielded"
 status: placeholder
@@ -7350,7 +7350,7 @@ summary: "Carrying half their carry weight or less."
 tags: [encumbrance]
 category: condition
 conveyed: true
-temporary: "A character has this Trait while their equipped items weigh half their carry weight or less"
+temporary: "This character is at half their carry weight or less"
 `,ly=`id: water-breathing-condition
 name: "Water Breathing"
 status: placeholder
