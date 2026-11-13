@@ -1981,7 +1981,8 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
             font-weight: 600;
         }
 
-        .sf-sheet-description {
+        .sf-sheet-description-field {
+            flex: 1;
             min-height: 160px;
             padding: 9.6px 12px;
             background-color: var(--portfolio-black);

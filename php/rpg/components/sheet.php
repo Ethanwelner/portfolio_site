@@ -11,7 +11,8 @@
 // copy the stylesheet over.
 //
 //   level      the blob on the corner, and what sits on its corner
-//   head       the portrait and name, then the description
+//   head       the portrait and name, and the description in a box of its
+//              own beside them
 //   resources  HP, VP, SP and MP
 //   stats      the stat block (components/stats.php)
 //   side       Movement and the resistances, over the Conditions and Items
@@ -153,9 +154,10 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 			echo $s['actions'];
 		}
 
-		echo '<div class="sf-sheet-box sf-sheet-head"><div class="sf-sheet-who">' . $s['who'] . '</div>';
+		// The portrait and name in one box, the description in another beside it
+		echo '<div class="sf-sheet-head-row"><div class="sf-sheet-box sf-sheet-head"><div class="sf-sheet-who">' . $s['who'] . '</div></div>';
 		if ( ! empty( $s['description'] ) ) {
-			echo '<div class="sf-sheet-description">' . $s['description'] . '</div>';
+			echo '<div class="sf-sheet-box sf-sheet-description"><div class="sf-sheet-description-field">' . $s['description'] . '</div></div>';
 		}
 		echo '</div>';
 
