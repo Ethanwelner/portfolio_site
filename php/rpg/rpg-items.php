@@ -33,28 +33,6 @@
 					<div class="tab-panel-cols">
 						<div class="content-stack content-stack-xs">
 							<div class="line-container">
-								<h5><strong>Exclusivity</strong></h5>
-								<div class="line"></div>
-							</div>
-							<p class="copy">
-								Some Items have exclusive functionalities that cannot be duplicated, whether because you can’t easily wear two pairs of shoes, only have one set of eyes to be cyberized, or a magic amulet gets… jealous. These Items will typically be labeled exclusive and will list one or more Items or categories of Item. If a character has an Item equipped, they cannot equip another that shares a type with the listed exclusion. It is at the GM's discretion whether or not an Item is exclusive with another, and exceptions can sometimes occur.
-								<br><br>
-								Ex. (exclusive: Footwear)
-							</p>
-						</div>
-						<div class="content-stack content-stack-xs">
-							<div class="line-container">
-								<h5><strong>Uses</strong></h5>
-								<div class="line"></div>
-							</div>
-							<p class="copy">
-								Many Items have a limited number of Uses before becoming defunct or literally ceasing to exist. If an Item has a limited number of Uses, the number and nature of that limitation will be in its description.
-								<br><br>
-								Ex. (candy bar: Uses 1: when consumed)
-							</p>
-						</div>
-						<div class="content-stack content-stack-xs">
-							<div class="line-container">
 								<h5><strong>Weight and Carry Weight</strong></h5>
 								<div class="line"></div>
 							</div>
@@ -74,6 +52,28 @@
 							</table>
 							<p class="copy">
 								Ex. (Physical 2: a 40 kg carry weight. Chainmail, a Longsword and a Wooden Shield weigh 18.5 kg: Unencumbered)
+							</p>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Uses</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Many Items have a limited number of Uses before becoming defunct or literally ceasing to exist. If an Item has a limited number of Uses, the number and nature of that limitation will be in its description.
+								<br><br>
+								Ex. (candy bar: Uses 1: when consumed)
+							</p>
+						</div>
+						<div class="content-stack content-stack-xs">
+							<div class="line-container">
+								<h5><strong>Exclusivity</strong></h5>
+								<div class="line"></div>
+							</div>
+							<p class="copy">
+								Some Items have exclusive functionalities that cannot be duplicated, whether because you can’t easily wear two pairs of shoes, only have one set of eyes to be cyberized, or a magic amulet gets… jealous. These Items will typically be labeled exclusive and will list one or more Items or categories of Item. If a character has an Item equipped, they cannot equip another that shares a type with the listed exclusion. It is at the GM's discretion whether or not an Item is exclusive with another, and exceptions can sometimes occur.
+								<br><br>
+								Ex. (exclusive: Footwear)
 							</p>
 						</div>
 						<div class="content-stack content-stack-xs">
