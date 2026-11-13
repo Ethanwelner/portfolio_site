@@ -66,9 +66,16 @@
 				<div class="line"></div>
 			</div>
 			<div class="text-cols">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
+				<ul class="copy mb-0">
+					<li><strong>2052:</strong> Kashgar was founded as mankind’s first deep-space station.</li>
+					<li><strong>2080:</strong> The station was fully commandeered by its resident AI Cores during the Second AI Panic.</li>
+					<li><strong>2082:</strong> Kashgar was recognized as a city-state in the same UN session that passed the AI Personhood Acts.</li>
+					<li><strong>2082–Present day:</strong> The station was heavily built up over the following 150 years.</li>
+					<li><strong>2083–2130:</strong> Attacked multiple times in acts of human supremacist terrorism, the station was heavily armed and armored.</li>
+					<li><strong>2083–2130:</strong> Even so, the station was a sitting duck, with only maneuvering thrusters to protect it from long-distance attack.</li>
+					<li><strong>2130:</strong> <?php echo sf_lore_link('aether-sails', 'Aether Sails'); ?> were installed, allowing the station to traverse the Sol System and making it a much harder target.</li>
+					<li><strong>2168:</strong> The installation of <?php echo sf_lore_link('lorentz-field-generator', 'LFGs'); ?> was finished, making the now-colossal floating city humanity’s first <?php echo sf_lore_link('arks', 'Ark'); ?>.</li>
+				</ul>
 			</div>
 		</div>
 	</div>

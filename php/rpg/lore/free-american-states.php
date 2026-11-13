@@ -62,9 +62,9 @@
 					<li>Iowa</li>
 					<li>Indiana</li>
 					<li>Georgia</li>
-					<li>The Carolinas (former North and South)</li>
-					<li>The Virginias (former West and non)</li>
-					<li>Floridia (former Florida, Cuba, The Bahamas)</li>
+					<li>Carolina (former North and South Carolina)</li>
+					<li>Virginia (former Virginia and West Virginia)</li>
+					<li>Floridia (former Florida, Cuba, the Bahamas, Turks and Caicos, Haiti, the Dominican Republic, and the Lesser Antilles)</li>
 					<li>Alaska</li>
 					<li>Hawaii</li>
 				</ul>
@@ -76,9 +76,25 @@
 				<div class="line"></div>
 			</div>
 			<div class="text-cols">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
+				<ul class="copy mb-0">
+					<li><strong>2072:</strong> The American Empire’s siege of the newly formed Alliance of States never sat well with the American public; everyone knew at least one person who had friends and family among the besieged. As the nationalistic fervor of the Drone Wars wound to a close and the project turned toward integrating the newly conquered territories into the Empire, the government of Florida took a stand and became the first state to secede in nearly two decades. It was not the last. By year’s end, it had been joined by Georgia, Alaska, and Hawaii.</li>
+					<li><strong>2073:</strong> With the floodgates open, an additional 20 states officially seceded from the Empire, taking territory, property, military equipment, and, most importantly, their citizens with them.</li>
+					<li><strong>2074–2077:</strong> In light of the secession crisis, the Empire lifted its siege of the Alliance of States. Three of the newly independent states elected to join the Alliance, but the rest opted to forge their own path as independent nations.</li>
+					<li><strong>2080:</strong> The Second AI Panic devastated the automated military infrastructure of the newly independent republics, leaving them vulnerable to their neighbors.</li>
+					<li><strong>2081:</strong> North and South Carolina merged to form Carolina.</li>
+					<li><strong>2083–2085:</strong> The Alliance of States launched the Invasion of Georgia. The invasion stalled as reinforcements flooded into Georgia from neighboring Free States, the first major instance of the republics acting in concert.</li>
+					<li><strong>2086:</strong> With the signing of the I-75 Convention, Georgia surrendered all territory west of the I-75 interstate highway to the Alliance, and a ceasefire was declared.</li>
+					<li><strong>2087:</strong> The Non-Aligned Free American States signed an economic free-trade agreement with open membership for all former American Empire nations.</li>
+					<li><strong>2088:</strong> Virginia and West Virginia merged to form Virginia.</li>
+					<li><strong>2090:</strong> Florida absorbed the failing state of Cuba, rechristening itself Floridia.</li>
+					<li><strong>2093:</strong> Floridia annexed the Bahamas and the Turks and Caicos Islands.</li>
+					<li><strong>2094–2104:</strong> The Alliance of States invaded South Dakota and seized the water resources of Lake Oahe. Insurgent forces funded and supplied by the American Empire took root in the Black Hills and spent the next decade bleeding the invaders dry.</li>
+					<li><strong>2105:</strong> South Dakota secured a negotiated withdrawal of Texan forces but lost all territory south of the Oahe Dam, including its capital, Pierre.</li>
+					<li><strong>2110:</strong> Floridia annexed Haiti and the Dominican Republic.</li>
+					<li><strong>2120–2135:</strong> Floridia annexed the island nations of the Lesser Antilles.</li>
+					<li><strong>2145:</strong> The short-lived Second Invasion of Georgia was launched. The rampant corruption and profiteering within the Union military was exposed as its initial assaults were marred by poorly equipped troops, dysfunctional vehicles, and ghost soldiers. The advance toward the capital of Athens stalled, then quickly reversed, with Union troops retreating back behind the I-75 line, chased by a combined Georgian and Floridian force.</li>
+					<li><strong>2148:</strong> The Non-Aligned Free American States collectively signed the Articles of American Security, enshrining collective defense of the bloc against foreign aggression.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
