@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/13/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Mechanics, Character Creator and Player Tools: carry weight and encumbrance. A character carries 20 kg plus 10 kg per Physical, and their equipped Items’ weight gives one of four new Conditions: Unencumbered, Lightly Encumbered (-1 Priority), Encumbered (Movement halved, -1 Priority) or Heavily Encumbered (can’t move, -1 Priority). The sheet shows the equipped weight against the carry weight beside Wealth, and the Condition with the others.</li>
 						<li>The Stellar Democratic Union has a History, from Canada joining the European Union in 2038 through the waves of full accession, Brazil’s sale to the Lunar Syndicate and the building of Tetra, to its interstellar colonies.</li>
 						<li>The Stellar Democratic Union’s Earth Territories list each former nation, Brazil is no longer one of them, and a new Associate Members list holds Switzerland, the other associate states, and the Boneyard.</li>
 						<li>Centafrica’s Earth Territories are listed as former nations.</li>
