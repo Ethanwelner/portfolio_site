@@ -205,13 +205,13 @@ $sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true, 'condition' ) . '
 
 // The item cards, as the creator's inventory draws them: the count on its
 // left edge, Equip (read-only here), the name and its badges, and the
-// chevron that opens it to its category, value and the like, then its
+// chevron that opens it to its category, value, weight and the like, then its
 // description
 $sf_sheet_items = array(
-	array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
-	array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
-	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
-	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
+	array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'weight' => 2, 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
+	array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'weight' => 0.9, 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
+	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'weight' => 3, 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
+	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'weight' => 0.2, 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
 );
 $sf_items = sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
 	. sf_sheet_capture( function () use ( $sf_sheet_items ) {
