@@ -55,7 +55,7 @@ $sf_traits = array(
 	array(
 		'kind'   => 'ability',
 		'name'   => 'Dark Haze',
-		'flags'  => array( 'Ranked' ),
+		'rank'   => 1,
 		'types'  => array( 'Illusion' ),
 		'effect' => 'This character gains the Cast Dark Haze Action.',
 		'action' => 'Cast Dark Haze: This character may spend 2 MP to give the Dark Haze Condition to a character within 3 m. The Condition’s Rank is equal to the caster’s Dark Haze Rank.',
@@ -64,7 +64,8 @@ $sf_traits = array(
 	array(
 		'kind'      => 'condition',
 		'name'      => 'Stone Skin',
-		'flags'     => array( 'Conveyed', 'Ranked' ),
+		'rank'      => 1,
+		'flags'     => array( 'Conveyed' ),
 		'types'     => array( 'Enchantment' ),
 		'temporary' => 'Every hour after a character is affected by Stone Skin, it loses one Rank of Stone Skin.',
 		'effect'    => 'This character gains Rank *3 resistance to all Physical damage types.',
