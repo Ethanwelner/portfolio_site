@@ -144,7 +144,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 *            too.)
 	 * chips      Optional. Chips in the bar, like where a sheet's Trait was
 	 *            chosen from (Origin, Profession, Past).
-	 * flags      Optional. Muted chips after the category: Ranked, Mastery,
+	 * flags      Optional. Muted chips after the category: Mastery,
 	 *            Background, Conveyed, Permanent...
 	 * types      Optional. Its magic types, muted in parentheses: (Illusion).
 	 * effect     What it does. Lines starting "- " become bullets.

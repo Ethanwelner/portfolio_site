@@ -1,6 +1,6 @@
 {
-  "_popup-BKiqtj-H.js": {
-    "file": "assets/popup-BKiqtj-H.js",
+  "_popup-D32CmaAX.js": {
+    "file": "assets/popup-D32CmaAX.js",
     "name": "popup",
     "css": [
       "assets/popup-DpYbfLLR.css"
@@ -11,21 +11,21 @@
     "src": "_popup-DpYbfLLR.css"
   },
   "src/app/main.tsx": {
-    "file": "assets/main-DlxlNHgJ.js",
+    "file": "assets/main-8EipuOoZ.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-BKiqtj-H.js"
+      "_popup-D32CmaAX.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-DhOdOtyl.js",
+    "file": "assets/main--kfv7DDX.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-BKiqtj-H.js"
+      "_popup-D32CmaAX.js"
     ],
     "css": [
       "assets/main-eipnF_ix.css"
