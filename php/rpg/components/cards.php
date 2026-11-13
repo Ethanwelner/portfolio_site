@@ -268,7 +268,8 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * description  Optional. In italics.
 	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
-	 * count        Optional. How many, in a circle on its left edge.
+	 * count        Optional. How many of a counted item (a consumable), in a
+	 *              circle on its left edge. One-of-a-kind items have none.
 	 * equip        Optional. 'on' or 'off': its Equip box, read-only.
 	 * fold         Optional. 'open' or 'closed': it opens from the chevron.
 	 * body         Optional. A function that draws more of the card, under

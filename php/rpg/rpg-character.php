@@ -217,7 +217,7 @@ $sf_items = sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . '<ul class="
 	. sf_sheet_capture( function () use ( $sf_sheet_items ) {
 		foreach ( $sf_sheet_items as $item ) {
 			echo '<li>';
-			sf_card_item( $item + array( 'count' => 1, 'fold' => 'closed' ) );
+			sf_card_item( $item + array( 'fold' => 'closed' ) );
 			echo '</li>';
 		}
 	} ) . '</ul>';

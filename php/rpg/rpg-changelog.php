@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/13/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Character Creator and Player Tools: consumables are counted, and come in bundles: adding Arrows adds a quiver of 20, and the sheet counts single arrows (Crossbow Bolts, Sling Stones and Powder and Shot come 20 to a bundle, Shotgun Shells 25, Painkillers 6, Anti-Radiation Pills 4). Wealth pays Kit Cost per bundle. Everything else is one of a kind with no count, so two Daggers are two items, each with its own Equip box. Saved characters convert when they load.</li>
 						<li>Wielder Traits are now Wield Traits, like Wield: Longsword, in the rules, the Character Creator and Player Tools.</li>
 						<li>Languages are now their own category of Trait instead of a kind of Knowledge. Choose Traits lists them under Languages, with their own checkbox, and the character sheet, in the Character Creator, Player Tools and the sample sheet, gives them a box of their own beside the Knowledges.</li>
 					</ul>
