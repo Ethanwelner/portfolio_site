@@ -84,7 +84,13 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 	// A box's ruled title, with anything along its line after the rule. A
 	// title row keeps its spacing even with nothing along it ($row), as the
 	// Conditions' and Items' do with their Add buttons in the creator.
-	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false ) {
+	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false, $icon = '' ) {
+		// $icon: 'knowledge' or 'language', the section's kind as an icon
+		// before its name, like its cards'
+		if ( $icon ) {
+			require_once __DIR__ . '/cards.php';
+			$text = '<span class="sf-sheet-title-label">' . sf_card_kind_icon( $icon, 'sf-sheet-title-icon' ) . $text . '</span>';
+		}
 		$title = '<' . $tag . ' class="sf-sheet-title">' . $text . '</' . $tag . '>';
 		if ( '' === $aside && ! $row ) {
 			return $title;
@@ -154,8 +160,8 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 
 		echo '<div class="sf-sheet-lower">';
 		echo '<div class="sf-sheet-pair sf-sheet-pair--lists">';
-		echo '<div class="sf-sheet-box sf-sheet-knowledges">' . sf_sheet_title( 'Knowledges' ) . $s['knowledges'] . '</div>';
-		echo '<div class="sf-sheet-box sf-sheet-languages">' . sf_sheet_title( 'Languages' ) . $s['languages'] . '</div>';
+		echo '<div class="sf-sheet-box sf-sheet-knowledges">' . sf_sheet_title( 'Knowledges', '', 'h3', false, 'knowledge' ) . $s['knowledges'] . '</div>';
+		echo '<div class="sf-sheet-box sf-sheet-languages">' . sf_sheet_title( 'Languages', '', 'h3', false, 'language' ) . $s['languages'] . '</div>';
 		echo '</div>';
 		echo '<div class="sf-sheet-pair">';
 		echo '<div class="sf-sheet-box sf-sheet-abilities">' . sf_sheet_title( 'Abilities' ) . $s['abilities'] . '</div>';
