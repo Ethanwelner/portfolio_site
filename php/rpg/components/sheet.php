@@ -87,9 +87,11 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false, $icon = '' ) {
 		// $icon: 'knowledge', 'language', 'skill', 'ability' or 'condition', the
 		// section's kind as an icon before its name, like its cards'; or
-		// 'backpack' for the Items, 'shield' for the Resistances
+		// 'backpack' for the Items, 'shield' for the Resistances,
+		// 'person-running' for Movement
 		$own = array(
 			'backpack' => array( '0 0 448 512', 'M320 320H128c-17.62 0-32 14.38-32 32v32h256v-32C352 334.4 337.6 320 320 320zM96 512h256v-96H96V512zM320 80h-8V56C312 25.12 286.9 0 256 0H192C161.1 0 136 25.12 136 56V80H128c-70.75 0-128 57.25-128 128V448c0 35.38 28.62 64 64 64v-160c0-35.25 28.75-64 64-64h192c35.25 0 64 28.75 64 64v160c35.38 0 64-28.62 64-64V208C448 137.2 390.8 80 320 80zM184 56C184 51.62 187.6 48 192 48h64c4.375 0 8 3.625 8 8V80h-80V56zM320 200c0 4.375-3.625 8-8 8h-176C131.6 208 128 204.4 128 200v-16C128 179.6 131.6 176 136 176h176C316.4 176 320 179.6 320 184V200z' ),
+			'person-running' => array( '0 0 448 512', 'M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z' ),
 			'shield'   => array( '0 0 512 512', 'M466.5 83.71l-192-80C269.6 1.67 261.3 0 256 0C250.7 0 242.5 1.67 237.6 3.702l-192 80C27.7 91.1 16 108.6 16 127.1c0 257.2 189.2 384 239.1 384c51.1 0 240-128.2 240-384C496 108.6 484.3 91.1 466.5 83.71zM256 446.5l.0234-381.1c.0059-.0234 0 0 0 0l175.9 73.17C427.8 319.7 319 417.1 256 446.5z' ),
 		);
 		if ( isset( $own[ $icon ] ) ) {
@@ -117,15 +119,15 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 		return $html . '</ul>';
 	}
 
-	// Movement, from the Kind: a running figure (the creator's
-	// person-running icon), then the number running into its unit, "10m"
+	// Movement, from the Kind: the number running into its unit, "10m",
+	// under a title led by a running figure (the creator's person-running)
 	function sf_sheet_move_box( $movement ) {
 		$value = sf_sheet_e( $movement );
 		if ( preg_match( '/^\s*([\d.]+)\s*([a-z]+)\s*$/i', (string) $movement, $m ) ) {
 			$value = sf_sheet_e( $m[1] ) . '<span class="sf-sheet-move-unit">' . sf_sheet_e( $m[2] ) . '</span>';
 		}
-		return '<div class="sf-sheet-box sf-sheet-move">' . sf_sheet_title( '<span title="Movement">Move</span>' )
-			. '<div class="sf-sheet-move-value" title="Movement"><svg viewBox="0 0 448 512" role="img" aria-label="Movement" focusable="false"><title>Movement</title><path d="M400 224h-44l-26.12-53.25c-12.5-25.5-35.38-44.25-61.75-51L197 98.63C189.5 96.84 181.1 95.97 174.5 95.97c-20.88 0-41.33 6.81-58.26 19.78L76.5 146.3C68.31 152.5 64.01 162 64.01 171.6c0 17.11 13.67 32.02 32.02 32.02c6.808 0 13.67-2.158 19.47-6.616l39.63-30.38c5.92-4.488 13.01-6.787 19.53-6.787c2.017 0 3.981 .2196 5.841 .6623l14.62 4.25l-37.5 87.5C154.1 260.3 152.5 268.8 152.5 277.2c0 22.09 11.49 43.52 31.51 55.29l85 50.13l-27.5 87.75c-.9875 3.174-1.458 6.388-1.458 9.55c0 13.65 8.757 26.31 22.46 30.58C265.6 511.5 268.9 512 272 512c13.62 0 26.25-8.75 30.5-22.5l31.75-101c1.211-4.278 1.796-8.625 1.796-12.93c0-16.57-8.661-32.51-23.55-41.44l-61.13-36.12l31.25-78.38l20.25 41.5C310.9 277.4 327.9 288 345.1 288H400c17.62 0 32-14.38 32-32C432 238.3 417.6 224 400 224zM288 96c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48S261.5 96 288 96zM129.8 317.5L114.9 352H48c-17.62 0-32 14.38-32 32s14.38 32 32 32h77.5c19.25 0 36.5-11.5 44-29.12l8.875-20.5l-10.75-6.25C150.4 349.9 137.6 334.8 129.8 317.5z"/></svg>'
+		return '<div class="sf-sheet-box sf-sheet-move">' . sf_sheet_title( '<span title="Movement">Move</span>', '', 'h3', false, 'person-running' )
+			. '<div class="sf-sheet-move-value" title="Movement">'
 			. '<span class="sf-sheet-move-number">' . $value . '</span></div></div>';
 	}
 
