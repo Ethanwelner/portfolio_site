@@ -86,8 +86,10 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 	// Conditions' and Items' do with their Add buttons in the creator.
 	function sf_sheet_title( $text, $aside = '', $tag = 'h3', $row = false, $icon = '' ) {
 		// $icon: 'knowledge' or 'language', the section's kind as an icon
-		// before its name, like its cards'
-		if ( $icon ) {
+		// before its name, like its cards', or 'backpack' for the Items
+		if ( 'backpack' === $icon ) {
+			$text = '<span class="sf-sheet-title-label"><svg class="icon icon-backpack sf-sheet-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M320 320H128c-17.62 0-32 14.38-32 32v32h256v-32C352 334.4 337.6 320 320 320zM96 512h256v-96H96V512zM320 80h-8V56C312 25.12 286.9 0 256 0H192C161.1 0 136 25.12 136 56V80H128c-70.75 0-128 57.25-128 128V448c0 35.38 28.62 64 64 64v-160c0-35.25 28.75-64 64-64h192c35.25 0 64 28.75 64 64v160c35.38 0 64-28.62 64-64V208C448 137.2 390.8 80 320 80zM184 56C184 51.62 187.6 48 192 48h64c4.375 0 8 3.625 8 8V80h-80V56zM320 200c0 4.375-3.625 8-8 8h-176C131.6 208 128 204.4 128 200v-16C128 179.6 131.6 176 136 176h176C316.4 176 320 179.6 320 184V200z"/></svg>' . $text . '</span>';
+		} elseif ( $icon ) {
 			require_once __DIR__ . '/cards.php';
 			$text = '<span class="sf-sheet-title-label">' . sf_card_kind_icon( $icon, 'sf-sheet-title-icon' ) . $text . '</span>';
 		}

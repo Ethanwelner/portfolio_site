@@ -723,7 +723,7 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 							'movement'     => '10 m',
 							'resistances'  => sf_sheet_title( 'Resistances' ) . $sf_slot( 'resistances' ),
 							'conditions'   => sf_sheet_title( 'Conditions', '', 'h4', true ) . $sf_slot( 'conditions: Condition cards' ),
-							'items'        => sf_sheet_title( 'Items', '', 'h4', true ) . $sf_slot( 'items: item cards' ),
+							'items'        => sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . $sf_slot( 'items: item cards' ),
 							'knowledges'   => $sf_slot( 'knowledges: the list of links' ),
 							'languages'    => $sf_slot( 'languages: the list of links' ),
 							'abilities'    => $sf_slot( 'abilities: Trait cards' ),

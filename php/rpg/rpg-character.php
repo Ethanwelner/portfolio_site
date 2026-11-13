@@ -206,7 +206,7 @@ $sf_sheet_items = array(
 	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
 	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
 );
-$sf_items = sf_sheet_title( 'Items', '', 'h4', true ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
+$sf_items = sf_sheet_title( 'Items', '', 'h4', true, 'backpack' ) . '<ul class="sf-sheet-cards sf-sheet-scroll sf-sheet-scroll--short">'
 	. sf_sheet_capture( function () use ( $sf_sheet_items ) {
 		foreach ( $sf_sheet_items as $item ) {
 			echo '<li>';
