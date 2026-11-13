@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/13/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Wielder Traits are now Wield Traits, like Wield: Longsword, in the rules, the Character Creator and Player Tools.</li>
 						<li>Languages are now their own category of Trait instead of a kind of Knowledge. Choose Traits lists them under Languages, with their own checkbox, and the character sheet, in the Character Creator, Player Tools and the sample sheet, gives them a box of their own beside the Knowledges.</li>
 					</ul>
 				</article>

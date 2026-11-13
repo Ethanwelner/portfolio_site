@@ -112,10 +112,10 @@ $sf_folding = array(
 	),
 	array(
 		'kind'   => 'skill',
-		'name'   => 'Wielder: Dagger',
+		'name'   => 'Wield: Dagger',
 		'rank'   => 1,
-		'effect' => $sf_trait( 'Wielder: Dagger (1)' )['effect'],
-		'from'   => $sf_trait( 'Wielder: Dagger (1)' )['from'],
+		'effect' => $sf_trait( 'Wield: Dagger (1)' )['effect'],
+		'from'   => $sf_trait( 'Wield: Dagger (1)' )['from'],
 		'fold'   => 'open',
 	),
 	array(
