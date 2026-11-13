@@ -83,7 +83,7 @@
 					<li><strong>2120:</strong> This boost in wealth, as well as the immense pressure exerted on the stateless corporate entities that comprised the Syndicate, resulted in the purchase of the former territory of Bolivia and the Syndicate’s formal admission into the UN.</li>
 					<li><strong>2122–2130:</strong> Over the next decade, Brazil and Paraguay, both in significant economic decline, would collectively blackmail the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
 					<li><strong>2132:</strong> Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
-					<li>Present day – To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
+					<li><strong>Present day:</strong> To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
 				</ul>
 			</div>
 		</div>

@@ -12,6 +12,10 @@
 					<ul class="copy changelog-list mb-0">
 						<li>The Union of Texas has a history, from the 2054 secession of the Alliance of States through the Invasion of Georgia, the South Dakota war and the Eight Coups to Commander General Mortimer Cross’s rule. Eight coups since 2100, not five.</li>
 						<li>The American Empire’s history now runs from the 2046 riots to the 2194 move aboard the Ark “New York”, adding the proclamation of the Empire, the Drone Wars in Latin America, the division of Mexico, the Second AI Panic, the boom years, the first switch-gate catastrophe, its interstellar colonies and the present day.</li>
+						<li>The Non-Aligned Free American States have a history, from Florida’s 2072 secession through the Invasion of Georgia, the South Dakota war and Floridia’s annexations in the Caribbean to the 2148 Articles of American Security. The Carolinas are now Carolina, the Virginias are Virginia, and Floridia also takes in Turks and Caicos, Haiti, the Dominican Republic and the Lesser Antilles.</li>
+						<li>The Union of Texas’s history adds the failed Second Invasion of Georgia in 2145.</li>
+						<li>The American Empire’s siege of the Alliance of States is a siege, not a standoff.</li>
+						<li>Kashgar has a history, from humanity’s first deep-space station in 2052 to the first Ark in 2168.</li>
 						<li>The Kingdom of India is a technocratic monarchy led by Prince Raja Jagadeeshwara Raya IV.</li>
 						<li>The Eighth Lunar Industrial Syndicate’s people are its “Citizens,” and its owners are shareholders, in the lore and the Character Creator.</li>
 						<li>Character Creator and Player Tools: Additional Language is gone. Every Language is already its own Knowledge to pick, so a Trait that only asked which Language to take was an extra step.</li>
