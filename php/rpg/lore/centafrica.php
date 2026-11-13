@@ -53,20 +53,20 @@
 			<div class="text-cols">
 				<h6>Earth Territories</h6>
 				<ul class="copy">
-					<li>Democratic Republic of the Congo</li>
-					<li>Kenya</li>
-					<li>Angola</li>
-					<li>Burundi</li>
-					<li>Central African Republic</li>
-					<li>Republic of the Congo</li>
-					<li>Rwanda</li>
-					<li>South Sudan</li>
-					<li>Tanzania</li>
-					<li>Uganda</li>
-					<li>Zambia</li>
-					<li>Ethiopia</li>
-					<li>Somalia</li>
-					<li>Nigeria</li>
+					<li>Former Democratic Republic of the Congo</li>
+					<li>Former Kenya</li>
+					<li>Former Angola</li>
+					<li>Former Burundi</li>
+					<li>Former Central African Republic</li>
+					<li>Former Republic of the Congo</li>
+					<li>Former Rwanda</li>
+					<li>Former South Sudan</li>
+					<li>Former Tanzania</li>
+					<li>Former Uganda</li>
+					<li>Former Zambia</li>
+					<li>Former Ethiopia</li>
+					<li>Former Somalia</li>
+					<li>Former Nigeria</li>
 				</ul>
 				<h6>Stellar Territories</h6>
 				<ul class="copy mb-0">
