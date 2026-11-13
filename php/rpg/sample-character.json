@@ -216,7 +216,7 @@
 		},
 		{
 			"id": "wielder-dagger",
-			"name": "Wielder: Dagger (1)",
+			"name": "Wield: Dagger (1)",
 			"category": "Skill",
 			"plane": "any",
 			"summary": "Fighting with, and maintaining, daggers and knives.",
@@ -289,7 +289,7 @@
 		},
 		{
 			"id": "wielder-pistol",
-			"name": "Wielder: Pistol (1)",
+			"name": "Wield: Pistol (1)",
 			"category": "Skill",
 			"plane": "any",
 			"summary": "Fighting with, and maintaining, a pistol.",

@@ -136,7 +136,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * kind       knowledge | language | skill | ability | condition |
 	 *            circumstance | other. A condition gets the gray bar.
 	 * name       The Trait's name.
-	 * rank       Optional. Shown after the name, like "Local History (1)".
+	 * rank       Optional. Shown after the name in a rounded square.
 	 * plane      Optional. 'isekai' for Dreft's green and Isekai's mark,
 	 *            'earth' for The Settled Systems' mark. (region 'dreft' works
 	 *            too.)
@@ -223,7 +223,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			$body .= '</div>';
 		}
 
-		$name = sf_card_kind_icon( $kind ) . sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] ) . ( isset( $t['rank'] ) ? ' (' . (int) $t['rank'] . ')' : '' );
+		// The Rank in a rounded square after the name (.sf-card-rank)
+		$rank = isset( $t['rank'] ) ? '<span class="sf-card-rank" title="Rank ' . (int) $t['rank'] . '" aria-label="Rank ' . (int) $t['rank'] . '">' . (int) $t['rank'] . '</span>' : '';
+		$name = sf_card_kind_icon( $kind ) . sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] ) . $rank;
 		echo '<div class="' . $classes . '">';
 		echo '<div class="sf-card-bar"><span class="sf-card-name">' . $name . '</span>' . ( $chips ? '<span class="sf-card-chips">' . $chips . '</span>' : '' ) . '</div>';
 		echo '<div class="sf-card-body">' . ( $keep ? $effect : '' ) . ( $fold ? '<div class="sf-card-more">' . $body . '</div>' : $body ) . '</div>';

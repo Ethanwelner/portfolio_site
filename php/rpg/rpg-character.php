@@ -134,14 +134,21 @@ $sf_from = function ( $t ) {
 $sf_abilities = array_filter( $sf_cards, function ( $t ) { return 'Ability' === $t['category']; } );
 $sf_skills    = array_filter( $sf_cards, function ( $t ) { return 'Skill' === $t['category']; } );
 $sf_other     = array_filter( $sf_cards, function ( $t ) { return ! in_array( $t['category'], array( 'Ability', 'Skill' ), true ); } );
+// A sample Trait's name and Rank apart: the creator exports "Wield: Dagger
+// (1)", and the card shows the Rank in its own square
+$sf_name_rank = function ( $t ) {
+	if ( preg_match( '/^(.*) \((\d+)\)$/', $t['name'], $m ) ) {
+		return array( 'name' => $m[1], 'rank' => (int) $m[2] );
+	}
+	return array( 'name' => $t['name'] );
+};
 // A sample Trait as a trait card (php/rpg/components/cards.php), folding
 // as the creator's sheet does: Abilities closed to their name and effect,
 // Skills closed to their name
 require_once __DIR__ . '/components/cards.php';
-$sf_card = function ( $t, $fold = '', $keep = false ) use ( $sf_from ) {
-	sf_card_trait( array(
+$sf_card = function ( $t, $fold = '', $keep = false ) use ( $sf_from, $sf_name_rank ) {
+	sf_card_trait( $sf_name_rank( $t ) + array(
 		'kind'   => strtolower( $t['category'] ),
-		'name'   => $t['name'],
 		'effect' => $t['effect'],
 		'action' => $t['action'] ?? '',
 		'from'   => $sf_from( $t ),
@@ -292,9 +299,8 @@ sf_sheet_layout(
 			<h4 class="lore-title"><?php echo $sf_e( $t['name'] ); ?></h4>
 			<div class="lore-body">
 				<?php
-				sf_card_trait( array(
+				sf_card_trait( $sf_name_rank( $t ) + array(
 					'kind'   => strtolower( $t['category'] ),
-					'name'   => $t['name'],
 					'effect' => $t['effect'],
 					'from'   => $sf_from( $t ),
 				) );
