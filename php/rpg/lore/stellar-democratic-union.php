@@ -119,26 +119,26 @@
 			</div>
 			<div class="text-cols">
 				<ul class="copy mb-0">
-					<li>2038 – Canada joined the European Union as an associate member.</li>
-					<li>2040 – Australia joined the European Union as an associate member.</li>
-					<li>2046 – Muscovy joined the European Union.</li>
-					<li>2049 – The United States officially pulled out of NATO shortly before launching its southward invasions into Latin America.</li>
-					<li>2052 – Fearing an expansionist China and abandoned by its longtime ally the United States, Japan officially applied for associate membership in the EU.</li>
-					<li>2058 – The First Democratic Union Military was officially established, with its global headquarters in Stuttgart.</li>
-					<li>2065 – Corean reunification was finalized, and Corea officially applied for associate membership in the European Union.</li>
-					<li>2079 – Brazil applied for associate membership in the European Union.</li>
-					<li>2084 – The European Union was reorganized into a tiered global Union of Democratic States and officially renamed the Democratic Union.</li>
-					<li>2090 – The first wave of full accessions into the Democratic Union was finalized, with the core European states of Germany, France, Spain, Britain, Ireland, Scotland, Italy, and Poland, as well as Japan, Australia, Canada, and the Pacific Island states of Fiji, Samoa, Tonga, Vanuatu, the Solomon Islands, and Papua New Guinea, ceding sovereignty to the new supranational nation-state. Slovenia, Croatia, Slovakia, Bulgaria, Malta, and Cyprus remained associate members.</li>
-					<li>2096 – New Persia applied for associate membership in the Democratic Union.</li>
-					<li>2100 – The second wave of full accessions into the Democratic Union was finalized, with the Netherlands, Belgium, Luxembourg, Austria, Portugal, Denmark, Greenland, Sweden, Finland, Norway, Iceland, and Corea ceding sovereignty to the Democratic Union. Switzerland remained the notable holdout as a long-standing associate member.</li>
-					<li>2105 – The Western Balkan states joined the Democratic Union as associate members.</li>
-					<li>2110 – The third wave of full accessions into the Democratic Union was finalized, with Czechia, Hungary, Romania, Greece, the Baltic states, Ukraine, Muscovy, Belarus, and New Zealand joining. With the accession of the Martian Association, the Democratic Union was officially renamed the Stellar Democratic Union.</li>
-					<li>2122–2130 – Brazil, in significant economic decline, left the SDU after negotiating its sale to <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Lunar Syndicate'); ?>, becoming one of the Syndicate’s Earth territories.</li>
-					<li>2139 – The Institute for Cultural and Linguistic Studies in Persepolis discovered <?php echo sf_lore_link('pairidaeza', '210/c/18 - “<i>Pairidaeza</i>,”'); ?> later settled as New Persia.</li>
-					<li>2140 – Alarmed by the Lunar Syndicate’s purchase of their neighbors, Argentina, Chile, and Uruguay joined the SDU as associate members.</li>
-					<li>2150 – In the fourth wave of full accessions, Turkey joined the SDU, while Georgia, South Africa, Namibia, and Botswana joined as associate members.</li>
-					<li>2163–2172 – Under SDU President <?php echo sf_lore_link('ichiha-ushida', 'Ichiha Ushida'); ?>, construction began on <?php echo sf_lore_link('tetra', 'Tetra'); ?>, the Ark meant to house both the UN Headquarters and the SDU’s capital.</li>
-					<li>2190–Present day – The SDU joined <?php echo sf_lore_link('first-interstellar-expansion', 'the first wave of interstellar expansion'); ?>, establishing a presence at <?php echo sf_lore_link('alpha-centauri', 'Alpha Centauri'); ?>, <?php echo sf_lore_link('wolf-359', 'Wolf 359'); ?>, <?php echo sf_lore_link('epsilon-eridani', 'Epsilon Eridani'); ?>, and <?php echo sf_lore_link('gliese-887', 'Gliese 887'); ?>.</li>
+					<li><strong>2038:</strong> Canada joined the European Union as an associate member.</li>
+					<li><strong>2040:</strong> Australia joined the European Union as an associate member.</li>
+					<li><strong>2046:</strong> Muscovy joined the European Union.</li>
+					<li><strong>2048:</strong> The United States officially pulled out of NATO shortly before launching its southward invasions into Latin America.</li>
+					<li><strong>2052:</strong> Fearing an expansionist China and abandoned by its longtime ally the United States, Japan officially applied for associate membership in the EU.</li>
+					<li><strong>2058:</strong> The First Democratic Union Military was officially established, with its global headquarters in Stuttgart.</li>
+					<li><strong>2065:</strong> Corean reunification was finalized, and Corea officially applied for associate membership in the European Union.</li>
+					<li><strong>2079:</strong> Brazil applied for associate membership in the European Union.</li>
+					<li><strong>2084:</strong> The European Union was reorganized into a tiered global Union of Democratic States and officially renamed the Democratic Union.</li>
+					<li><strong>2090:</strong> The first wave of full accessions into the Democratic Union was finalized, with the core European states of Germany, France, Spain, Britain, Ireland, Scotland, Italy, and Poland, as well as Japan, Australia, Canada, and the Pacific Island states of Fiji, Samoa, Tonga, Vanuatu, the Solomon Islands, and Papua New Guinea, ceding sovereignty to the new supranational nation-state. Slovenia, Croatia, Slovakia, Bulgaria, Malta, and Cyprus remained associate members.</li>
+					<li><strong>2096:</strong> New Persia applied for associate membership in the Democratic Union.</li>
+					<li><strong>2100:</strong> The second wave of full accessions into the Democratic Union was finalized, with the Netherlands, Belgium, Luxembourg, Austria, Portugal, Denmark, Greenland, Sweden, Finland, Norway, Iceland, and Corea ceding sovereignty to the Democratic Union. Switzerland remained the notable holdout as a long-standing associate member.</li>
+					<li><strong>2105:</strong> The Western Balkan states joined the Democratic Union as associate members.</li>
+					<li><strong>2110:</strong> The third wave of full accessions into the Democratic Union was finalized, with Czechia, Hungary, Romania, Greece, the Baltic states, Ukraine, Muscovy, Belarus, and New Zealand joining. With the accession of the Martian Association, the Democratic Union was officially renamed the Stellar Democratic Union.</li>
+					<li><strong>2122–2130:</strong> Brazil, in significant economic decline, left the SDU after negotiating its sale to <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Lunar Syndicate'); ?>, becoming one of the Syndicate’s Earth territories.</li>
+					<li><strong>2139:</strong> The Institute for Cultural and Linguistic Studies in Persepolis discovered <?php echo sf_lore_link('pairidaeza', '210/c/18 - “<i>Pairidaeza</i>,”'); ?> later settled as New Persia.</li>
+					<li><strong>2140:</strong> Alarmed by the Lunar Syndicate’s purchase of their neighbors, Argentina, Chile, and Uruguay joined the SDU as associate members.</li>
+					<li><strong>2150:</strong> In the fourth wave of full accessions, Turkey joined the SDU, while Georgia, South Africa, Namibia, and Botswana joined as associate members.</li>
+					<li><strong>2163–2172:</strong> Under SDU President <?php echo sf_lore_link('ichiha-ushida', 'Ichiha Ushida'); ?>, construction began on <?php echo sf_lore_link('tetra', 'Tetra'); ?>, the Ark meant to house both the UN Headquarters and the SDU’s capital.</li>
+					<li><strong>2190–Present day:</strong> The SDU joined <?php echo sf_lore_link('first-interstellar-expansion', 'the first wave of interstellar expansion'); ?>, establishing a presence at <?php echo sf_lore_link('alpha-centauri', 'Alpha Centauri'); ?>, <?php echo sf_lore_link('wolf-359', 'Wolf 359'); ?>, <?php echo sf_lore_link('epsilon-eridani', 'Epsilon Eridani'); ?>, and <?php echo sf_lore_link('gliese-887', 'Gliese 887'); ?>.</li>
 				</ul>
 			</div>
 		</div>
