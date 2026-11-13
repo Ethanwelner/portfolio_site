@@ -200,12 +200,12 @@ $sf_stats = sf_sheet_capture( function () use ( $sf_stat ) {
 // Healthy, from full HP, and Unencumbered, from carried weight
 $sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true, 'condition' ) . '<ul class="sf-sheet-cards sf-sheet-scroll"><li>'
 	. sf_sheet_capture( function () {
-		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => '', 'from' => 'HP. A character or object gains this Trait while they are at their maximum HP total' ) );
+		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Healthy', 'effect' => '', 'temporary' => 'This character is at their maximum HP' ) );
 	} ) . '</li><li>'
 	// Unencumbered, from his equipped items' 2.9 kg (the Leather Jacket and
 	// Pistol) against the 30 kg carry weight of Physical 1
 	. sf_sheet_capture( function () {
-		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Unencumbered', 'effect' => 'This Trait has no effect on its own.', 'from' => 'carried weight. A character has this Trait while their equipped items weigh half their carry weight or less' ) );
+		sf_card_trait( array( 'kind' => 'condition', 'name' => 'Unencumbered', 'effect' => '', 'temporary' => 'This character is at half their carry weight or less' ) );
 	} ) . '</li></ul>';
 
 // The item cards, as the creator's inventory draws them: the count on its
