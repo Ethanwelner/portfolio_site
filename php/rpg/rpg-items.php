@@ -59,14 +59,19 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								Every Item a character can carry has a weight in kilograms. A bundle, like a quiver of 20 Arrows, lists its weight per bundle. A character’s carry weight is 20 kg plus 10 kg per point of their Physical core stat; an AI Core’s comes from its chassis. Only equipped Items count against it, and what they weigh gives the character one of four Conditions:
+								A character has a limit to the weight of Items it can lug around, and that’s measured with Item weight and carry weight. Every Item a character can carry has a weight in kilograms. A bundle, like a quiver of 20 Arrows or a stack of MREs, lists its weight per bundle. A character’s carry weight is 20 kg plus 10 kg per point of their Physical core stat; an AI Core’s comes from its chassis. Only equipped Items count against it, and what they weigh gives the character one of the four Conditions below.
 							</p>
-							<ul class="copy mb-0">
-								<li><strong>Unencumbered</strong>: half their carry weight or less. No effect.</li>
-								<li><strong>Lightly Encumbered</strong>: more than half, up to all of it. -1 Priority.</li>
-								<li><strong>Encumbered</strong>: more than their carry weight, up to double it. Movement is halved, and -1 Priority.</li>
-								<li><strong>Heavily Encumbered</strong>: more than double their carry weight. The character can’t move, and has -1 Priority.</li>
-							</ul>
+							<table class="copy sf-table">
+								<thead>
+									<tr><th>Condition</th><th>Equipped Weight</th><th>Effect</th></tr>
+								</thead>
+								<tbody>
+									<tr><td>Unencumbered</td><td>Half their carry weight or less</td><td>No effect</td></tr>
+									<tr><td>Lightly Encumbered</td><td>More than half, up to all of it</td><td>-1 Priority</td></tr>
+									<tr><td>Encumbered</td><td>More than their carry weight, up to double it</td><td>Movement halved, -1 Priority</td></tr>
+									<tr><td>Heavily Encumbered</td><td>More than double their carry weight</td><td>Can’t move, -1 Priority</td></tr>
+								</tbody>
+							</table>
 							<p class="copy">
 								Ex. (Physical 2: a 40 kg carry weight. Chainmail, a Longsword and a Wooden Shield weigh 18.5 kg: Unencumbered)
 							</p>
