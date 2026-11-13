@@ -15,7 +15,8 @@
 //   resources  HP, VP, SP and MP
 //   stats      the stat block (components/stats.php)
 //   side       Movement and the resistances, over the Conditions and Items
-//   lower      the Knowledges, then the Abilities beside the Skills, then
+//   lower      the Knowledges beside the Languages, then the Abilities
+//              beside the Skills, then
 //              any other Traits, contacts and features
 //
 // The layout fills each box with the HTML it's handed. Each sheet's
@@ -46,7 +47,7 @@
 //   'resistances'  => (the resistances' title and list, or a function of
 //                      the copy, 'a' or 'b', for their popovers' ids),
 //   'conditions'   => …, 'items' => …,
-//   'knowledges'   => …, 'abilities' => …, 'skills' => …,
+//   'knowledges'   => …, 'languages' => …, 'abilities' => …, 'skills' => …,
 //   'skills_aside' => (along the Skills title's line: the picks left),
 //   'other'        => (other Traits, contacts and features, if any),
 // ), array( 'class' => 'sample-sheet' ) );
@@ -152,7 +153,10 @@ if ( ! function_exists( 'sf_sheet_layout' ) ) {
 		echo '</div></div></div>';
 
 		echo '<div class="sf-sheet-lower">';
+		echo '<div class="sf-sheet-pair sf-sheet-pair--lists">';
 		echo '<div class="sf-sheet-box sf-sheet-knowledges">' . sf_sheet_title( 'Knowledges' ) . $s['knowledges'] . '</div>';
+		echo '<div class="sf-sheet-box sf-sheet-languages">' . sf_sheet_title( 'Languages' ) . $s['languages'] . '</div>';
+		echo '</div>';
 		echo '<div class="sf-sheet-pair">';
 		echo '<div class="sf-sheet-box sf-sheet-abilities">' . sf_sheet_title( 'Abilities' ) . $s['abilities'] . '</div>';
 		echo '<div class="sf-sheet-box sf-sheet-skills">' . sf_sheet_title( 'Skills', $s['skills_aside'] ?? '' ) . $s['skills'] . '</div>';

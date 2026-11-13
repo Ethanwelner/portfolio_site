@@ -58,12 +58,18 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	}
 
 	// A Trait card's kind as an icon before its name, in place of a category
-	// chip, as the creator's (Icon in ui.tsx): so far a Knowledge's mortarboard
+	// chip, as the creator's (KIND_ICON in cards.tsx): so far a Knowledge's
+	// mortarboard or a Language's speech bubbles
 	function sf_card_kind_icon( $kind ) {
-		if ( 'knowledge' !== $kind ) {
+		$icons = array(
+			'knowledge' => array( 'Knowledge', 'M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z' ),
+			'language'  => array( 'Language', 'M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z' ),
+		);
+		if ( ! isset( $icons[ $kind ] ) ) {
 			return '';
 		}
-		return '<svg class="icon icon-knowledge sf-card-kind-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" role="img" aria-label="Knowledge"><title>Knowledge</title><path d="M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z"/></svg>';
+		list( $label, $d ) = $icons[ $kind ];
+		return '<svg class="icon icon-' . $kind . ' sf-card-kind-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" role="img" aria-label="' . $label . '"><title>' . $label . '</title><path d="' . $d . '"/></svg>';
 	}
 
 	// The Isekai plane (old callers say region 'dreft')
@@ -175,11 +181,11 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 				$body .= '<p class="sf-card-note">' . sf_card_e( $note ) . '</p>';
 			}
 		} else {
-			// The category (a Language is a Knowledge), its flags and magic
+			// The category, its flags and magic
 			// types, then where it came from, on one line
-			// A Knowledge says so with the icon in its bar (sf_card_kind_icon)
-			$title = 'language' === $kind ? 'Knowledge' : ucfirst( $kind );
-			$tags  = 'knowledge' === $kind ? '' : '<span class="sf-chip">' . $title . '</span>';
+			// A Knowledge or Language says so with the icon in its bar
+			// (sf_card_kind_icon)
+			$tags = sf_card_kind_icon( $kind ) ? '' : '<span class="sf-chip">' . ucfirst( $kind ) . '</span>';
 			foreach ( $t['flags'] ?? array() as $flag ) {
 				$tags .= '<span class="sf-chip sf-chip--muted">' . sf_card_e( $flag ) . '</span>';
 			}
