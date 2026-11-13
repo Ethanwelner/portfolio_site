@@ -245,6 +245,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * name         The Item's name.
 	 * category     Weapon, Armor, Gear, Artifact...
 	 * value        Optional. Its value, with currency (ERC or Luras).
+	 * weight       Optional. Its weight in kilograms, like 0.9: "0.9 kg".
 	 * attack       Optional. How it Attacks: Melee, Ranged, Thrown.
 	 * stat         Optional. Its Attack Stat: Power, Grace...
 	 * reload       Optional. Its reload: Partial, Full...
@@ -330,6 +331,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		$chips = array( $i['category'] ?? '' );
 		if ( isset( $i['value'] ) ) {
 			$chips[] = number_format( $i['value'] ) . ' ' . $i['currency'];
+		}
+		if ( isset( $i['weight'] ) ) {
+			$chips[] = $i['weight'] . ' kg';
 		}
 		$chips[] = empty( $i['attack'] ) ? '' : $i['attack'] . ' Attack';
 		$chips[] = $i['stat'] ?? '';
