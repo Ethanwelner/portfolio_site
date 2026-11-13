@@ -59,14 +59,16 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 
 	// A Trait card's kind as an icon before its name, in place of a category
 	// chip, as the creator's (KIND_ICON in cards.tsx): so far a Knowledge's
-	// mortarboard, a Language's speech bubbles or a Skill's pencil and
-	// wrench. The sheet's Knowledges and
-	// Languages titles use them too, with their own class.
+	// mortarboard, a Language's speech bubbles, a Skill's pencil and wrench,
+	// an Ability's weightlifter or a Condition's figure in its viewfinder. The sheet's section titles
+	// use them too, with their own class (sf_sheet_title).
 	function sf_card_kind_icon( $kind, $class = 'sf-card-kind-icon' ) {
 		$icons = array(
 			'knowledge' => array( 'Knowledge', '0 0 640 512', 'M623.1 136.9l-282.7-101.2c-13.73-4.91-28.7-4.91-42.43 0L16.05 136.9C6.438 140.4 0 149.6 0 160s6.438 19.65 16.05 23.09L76.07 204.6c-11.89 15.8-20.26 34.16-24.55 53.95C40.05 263.4 32 274.8 32 288c0 9.953 4.814 18.49 11.94 24.36l-24.83 149C17.48 471.1 25 480 34.89 480H93.11c9.887 0 17.41-8.879 15.78-18.63l-24.83-149C91.19 306.5 96 297.1 96 288c0-10.29-5.174-19.03-12.72-24.89c4.252-17.76 12.88-33.82 24.94-47.03l190.6 68.23c13.73 4.91 28.7 4.91 42.43 0l282.7-101.2C633.6 179.6 640 170.4 640 160S633.6 140.4 623.1 136.9zM351.1 314.4C341.7 318.1 330.9 320 320 320c-10.92 0-21.69-1.867-32-5.555L142.8 262.5L128 405.3C128 446.6 213.1 480 320 480c105.1 0 192-33.4 192-74.67l-14.78-142.9L351.1 314.4z' ),
 			'language'  => array( 'Language', '0 0 640 512', 'M416 256V63.1C416 28.75 387.3 0 352 0H64C28.75 0 0 28.75 0 63.1v192C0 291.2 28.75 320 64 320l32 .0106v54.25c0 7.998 9.125 12.62 15.5 7.875l82.75-62.12L352 319.9C387.3 320 416 291.2 416 256zM576 128H448v128c0 52.87-43.13 95.99-96 95.99l-96 .0013v31.98c0 35.25 28.75 63.1 63.1 63.1l125.8-.0073l82.75 62.12C534.9 514.8 544 510.2 544 502.2v-54.24h32c35.25 0 64-28.75 64-63.1V191.1C640 156.7 611.3 128 576 128z' ),
 			'skill'     => array( 'Skill', '0 0 512 512', 'M7.6 45.6L134.1 85.9L47.9 172.1ZM115.7 138.2L151.1 102.8L407.1 358.8L371.7 394.2ZM64.8 189.1L100.2 153.7L356.2 409.7L320.8 445.1ZM424 375.8L436.1 387.8A61 61 0 0 1 349.8 474.1L337.8 462ZM262 187L300 150L300 75L372 5L432 16L378 70L378 132L437 130L490 82L507 128L434 212L322 246ZM208.4 359.5L162.7 405.2A65 65 0 1 1 102.1 347L149 300.1ZM131.1 411.8A33 33 0 1 0 65.1 411.8A33 33 0 1 0 131.1 411.8Z' ),
+			'ability'   => array( 'Ability', '0 0 512 512', 'M256 6A56 56 0 1 1 256 118A56 56 0 1 1 256 6ZM150 222V198A56 56 0 0 1 206 142H306A56 56 0 0 1 362 198V222ZM38 256H474A22 22 0 0 1 496 278V278A22 22 0 0 1 474 300H38A22 22 0 0 1 16 278V278A22 22 0 0 1 38 256ZM196 334H316V478A22 22 0 0 1 272 478V384A16 16 0 0 0 240 384V478A22 22 0 0 1 196 478ZM66 160H96A20 20 0 0 1 116 180V376A20 20 0 0 1 96 396H66A20 20 0 0 1 46 376V180A20 20 0 0 1 66 160ZM416 160H446A20 20 0 0 1 466 180V376A20 20 0 0 1 446 396H416A20 20 0 0 1 396 376V180A20 20 0 0 1 416 160Z' ),
+			'condition' => array( 'Condition', '0 0 512 512', 'M0 0H122.0A28.0 28.0 0 0 1 122.0 56H56V122.0A28.0 28.0 0 0 1 0 122.0ZM512 0V122.0A28.0 28.0 0 0 1 456 122.0V56H390.0A28.0 28.0 0 0 1 390.0 0ZM0 512V390.0A28.0 28.0 0 0 1 56 390.0V456H122.0A28.0 28.0 0 0 1 122.0 512ZM512 512H390.0A28.0 28.0 0 0 1 390.0 456H456V390.0A28.0 28.0 0 0 1 512 390.0ZM256 52A54 54 0 1 1 256 160A54 54 0 1 1 256 52ZM126 180H386A34 34 0 0 1 420 214V214A34 34 0 0 1 386 248H126A34 34 0 0 1 92 214V214A34 34 0 0 1 126 180ZM316 248V436A22 22 0 0 1 272 436V348A16 16 0 0 0 240 348V436A22 22 0 0 1 196 436V248Z' ),
 		);
 		if ( ! isset( $icons[ $kind ] ) ) {
 			return '';
@@ -136,7 +138,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * kind       knowledge | language | skill | ability | condition |
 	 *            circumstance | other. A condition gets the gray bar.
 	 * name       The Trait's name.
-	 * rank       Optional. Shown after the name in a rounded square.
+	 * rank       Optional. In a rounded square before the name.
 	 * plane      Optional. 'isekai' for Dreft's green and Isekai's mark,
 	 *            'earth' for The Settled Systems' mark. (region 'dreft' works
 	 *            too.)
@@ -223,9 +225,10 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 			$body .= '</div>';
 		}
 
-		// The Rank in a rounded square after the name (.sf-card-rank)
+		// The Rank in a rounded square, between the kind's icon and the name
+		// (.sf-card-rank)
 		$rank = isset( $t['rank'] ) ? '<span class="sf-card-rank" title="Rank ' . (int) $t['rank'] . '" aria-label="Rank ' . (int) $t['rank'] . '">' . (int) $t['rank'] . '</span>' : '';
-		$name = sf_card_kind_icon( $kind ) . sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] ) . $rank;
+		$name = sf_card_kind_icon( $kind ) . $rank . sf_card_setting_icon( $plane ) . sf_card_e( $t['name'] );
 		echo '<div class="' . $classes . '">';
 		echo '<div class="sf-card-bar"><span class="sf-card-name">' . $name . '</span>' . ( $chips ? '<span class="sf-card-chips">' . $chips . '</span>' : '' ) . '</div>';
 		echo '<div class="sf-card-body">' . ( $keep ? $effect : '' ) . ( $fold ? '<div class="sf-card-more">' . $body . '</div>' : $body ) . '</div>';
