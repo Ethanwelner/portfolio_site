@@ -26,6 +26,10 @@ return array(
 	'tool_turns_per_visitor_per_hour' => 120,
 	'questions_per_day' => 300,
 
+	// Game Master tables (game-table-api.php): how many tables one visitor
+	// can make a day.
+	'tables_per_visitor_per_day' => 3,
+
 	// Where the limits are tracked. Also outside the web root.
 	// 'data_dir' => '/home/you/sf-creator-data',
 );
