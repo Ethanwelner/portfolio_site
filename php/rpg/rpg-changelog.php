@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/14/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: a character made above level 1 has had a lifetime to gather things, so its starting kit is bought with more Wealth: +1 at levels 5 to 9, +2 at 10 to 14, +3 at 15 to 19 and +4 at 20. Kit Points and the dearest item a character can start with both grow with it, so a level 20 character of Wealth 0 gets 11 Kit Points and items up to Kit Cost 5. Its Wealth rating on the sheet doesn’t change.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/13/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Centafrica has a History, from the 0.2 Kiloyear Event and the Nation of Congo through the Central African Federation’s wars of Pan-African conquest to the Treaty of Harare in 2178 and the half century of peace since.</li>
