@@ -3,29 +3,29 @@
     "file": "assets/popup-BQ6d8vOh.css",
     "src": "_popup-BQ6d8vOh.css"
   },
-  "_popup-C1LrV1aA.js": {
-    "file": "assets/popup-C1LrV1aA.js",
+  "_popup-Bm-bmINa.js": {
+    "file": "assets/popup-Bm-bmINa.js",
     "name": "popup",
     "css": [
       "assets/popup-BQ6d8vOh.css"
     ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-DFg9FefI.js",
+    "file": "assets/main-Cj55zLsM.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-C1LrV1aA.js"
+      "_popup-Bm-bmINa.js"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-CcSx0VFD.js",
+    "file": "assets/main-DGb7bimX.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-C1LrV1aA.js"
+      "_popup-Bm-bmINa.js"
     ],
     "css": [
       "assets/main-eipnF_ix.css"
