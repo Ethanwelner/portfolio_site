@@ -520,13 +520,12 @@ document.addEventListener('click', function (e) {
 		}
 		echo '</div></div>';
 	}
-	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
-	// the card's key color (silver for The Settled Systems, Dreft's green for
-	// Isekai), around a dark field with a large quarter-circle cut out of its
-	// top left corner and a four-pointed star in the cut-out (the gunmetal
-	// stops short of it). The field holds a faint starfield and an
-	// eight-point compass. The same
-	// markup as the creator's KindCard (cards.tsx).
+	// ---- The Kind card: a thin solid gray band around a dark field with a
+	// faint starfield and an eight-point compass. A small quarter-circle is
+	// cut out of the field's top left corner, holding a four-pointed star in
+	// the card's key color (silver for The Settled Systems, green for Isekai),
+	// and the band stops short of it. The same markup as the creator's
+	// KindCard (cards.tsx).
 
 	// A four-pointed star
 	function sf_card_kind_star( $cx, $cy, $r ) {
@@ -606,17 +605,8 @@ document.addEventListener('click', function (e) {
 		}
 		echo '</linearGradient></defs></svg>';
 		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem() . '</div>';
-		// One corner piece, drawn top left and turned by CSS for the others:
-		// at the top left the line follows the field's cut-out with the star
-		// in it, and at the other three it rounds off
-		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
-			$star = 'tl' === $where;
-			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H30A24 24 0 0 1 6 30V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
-				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13, 13, 7.5 ) . '"/>' : '' )
-				. '</svg>';
-		}
-		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
+		// The star in the field's cut-out at the top left
+		echo '<svg class="sf-kind-corner sf-kind-corner--tl" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13, 13, 7.5 ) . '"/></svg>';
 
 		echo '<div class="sf-kind-content">';
 		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
