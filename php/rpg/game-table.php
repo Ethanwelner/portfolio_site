@@ -9,14 +9,20 @@
 // player's sheet stays in Player Tools: it sends the table a copy whenever
 // the character changes, and the Game Master tools show that copy.
 //
+// A table also keeps a log: its chat, the players' rolls, and who joined and
+// left, with the time of each, the last 500 entries.
+//
 // game-table-api.php answers one action per POST:
-//   create  { name }                           → { code, name, gmKey }
-//   gm      { code, gmKey, known }              → { table, seats }
-//   join    { code, name, sheet }               → { seatId, playerKey, table }
-//   sync    { code, seatId, playerKey, sheet? } → { table, version }
-//   leave   { code, seatId, playerKey }         → { ok }
+//   create  { name }                                  → { code, name, gmKey }
+//   gm      { code, gmKey, known, since }              → { table, seats, log }
+//   join    { code, name, sheet }                      → { seatId, playerKey, table }
+//   sync    { code, seatId, playerKey, sheet?, since } → { table, version, log }
+//   leave   { code, seatId, playerKey }                → { ok }
+//   say     { code, gmKey | seatId + playerKey, text } → { entry }
+//   roll    { code, gmKey | seatId + playerKey, value } → { entry }
 // `known` maps each seat id to the sheet version the Game Master already has,
-// so only changed sheets come back.
+// so only changed sheets come back; `since` is the last log entry's id the
+// page has, so only newer entries come back (the latest 200 when it's 0).
 
 require_once __DIR__ . '/claude-proxy.php';
 
@@ -31,6 +37,13 @@ const TBL_CHARACTER_MAX = 80;
 // Join codes skip letters and digits that look alike (0 and O, 1 and I).
 const TBL_CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const TBL_CODE_LENGTH = 6;
+const TBL_LOG_KEEP = 500;
+const TBL_LOG_PAGE = 200;
+const TBL_MESSAGE_MAX = 1000;
+// Chat and rolls one person can post a minute
+const TBL_POSTS_PER_MINUTE = 30;
+// A player's check-in only records them as here this often
+const TBL_SEEN_EVERY = 15;
 
 function tbl_db($config) {
 	$dir = $config['data_dir'];
@@ -64,6 +77,17 @@ function tbl_db($config) {
 		)');
 		$db->exec('CREATE INDEX IF NOT EXISTS seats_code ON seats (code)');
 		$db->exec('CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT NOT NULL)');
+		$db->exec('CREATE TABLE IF NOT EXISTS log (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			code TEXT NOT NULL REFERENCES tables(code) ON DELETE CASCADE,
+			at INTEGER NOT NULL,
+			seat TEXT,
+			author TEXT NOT NULL,
+			kind TEXT NOT NULL,
+			text TEXT NOT NULL,
+			value INTEGER
+		)');
+		$db->exec('CREATE INDEX IF NOT EXISTS log_code ON log (code, id)');
 		return $db;
 	} catch (PDOException $e) {
 		sf_fail(500, 'server', 'Tables can\'t be opened right now.');
@@ -191,6 +215,89 @@ function tbl_public($table) {
 	return array('code' => $table['code'], 'name' => $table['name']);
 }
 
+// ---- The log ----
+
+function tbl_entry($row) {
+	$entry = array(
+		'id' => (int) $row['id'],
+		'at' => (int) $row['at'],
+		'kind' => $row['kind'],
+		'author' => $row['author'],
+		'seat' => $row['seat'],
+		'text' => $row['text'],
+	);
+	if ($row['value'] !== null) {
+		$entry['value'] = (int) $row['value'];
+	}
+	return $entry;
+}
+
+// Adds an entry, keeping the table's last 500. $seat is the player's seat id,
+// 'gm' for the Game Master, or null for the table's own notes (joins, leaves).
+function tbl_log($db, $code, $seat, $author, $kind, $text, $value = null) {
+	$db->prepare('INSERT INTO log (code, at, seat, author, kind, text, value) VALUES (?, ?, ?, ?, ?, ?, ?)')
+		->execute(array($code, time(), $seat, $author, $kind, $text, $value));
+	$id = (int) $db->lastInsertId();
+	// Ids count across every table, so the table's 500th-newest is looked up
+	$db->prepare('DELETE FROM log WHERE code = ? AND id < (SELECT MIN(id) FROM (SELECT id FROM log WHERE code = ? ORDER BY id DESC LIMIT ' . TBL_LOG_KEEP . '))')
+		->execute(array($code, $code));
+	$get = $db->prepare('SELECT * FROM log WHERE id = ?');
+	$get->execute(array($id));
+	return tbl_entry($get->fetch());
+}
+
+// The entries after $since, oldest first; the latest 200 when $since is 0.
+function tbl_log_since($db, $code, $since) {
+	$since = max(0, (int) $since);
+	if ($since === 0) {
+		$get = $db->prepare('SELECT * FROM (SELECT * FROM log WHERE code = ? ORDER BY id DESC LIMIT ' . TBL_LOG_PAGE . ') ORDER BY id');
+		$get->execute(array($code));
+	} else {
+		$get = $db->prepare('SELECT * FROM log WHERE code = ? AND id > ? ORDER BY id LIMIT ' . TBL_LOG_PAGE);
+		$get->execute(array($code, $since));
+	}
+	return array_map('tbl_entry', $get->fetchAll());
+}
+
+// Who's posting: the Game Master (with the GM key) or a player (with their
+// seat), held to 30 posts a minute.
+function tbl_poster($db, $body) {
+	if (isset($body['gmKey'])) {
+		$table = tbl_gm_table($db, $body);
+		$poster = array($table, 'gm', 'Game Master');
+	} else {
+		list($table, $seat) = tbl_player_seat($db, $body);
+		$poster = array($table, $seat['id'], $seat['name']);
+	}
+	$recent = $db->prepare('SELECT COUNT(*) FROM log WHERE code = ? AND seat = ? AND at > ?');
+	$recent->execute(array($table['code'], $poster[1], time() - 60));
+	if ((int) $recent->fetchColumn() >= TBL_POSTS_PER_MINUTE) {
+		sf_fail(429, 'rate-limit', 'That\'s a lot of messages in a minute. Wait a moment and try again.');
+	}
+	return $poster;
+}
+
+function tbl_say($db, $body) {
+	$text = trim(is_string($body['text'] ?? null) ? $body['text'] : '');
+	if ($text === '') {
+		sf_fail(400, 'bad-request', 'Write something to send.');
+	}
+	list($table, $seat, $author) = tbl_poster($db, $body);
+	tbl_touch($db, $table['code']);
+	return array('entry' => tbl_log($db, $table['code'], $seat, $author, 'chat', mb_substr($text, 0, TBL_MESSAGE_MAX)));
+}
+
+// A d20 roll, made in the roller's browser and reported here.
+function tbl_roll($db, $body) {
+	$value = $body['value'] ?? null;
+	if (! is_int($value) || $value < 1 || $value > 20) {
+		sf_fail(400, 'bad-request', 'A roll is a whole number from 1 to 20.');
+	}
+	list($table, $seat, $author) = tbl_poster($db, $body);
+	tbl_touch($db, $table['code']);
+	return array('entry' => tbl_log($db, $table['code'], $seat, $author, 'roll', 'rolled a d20: ' . $value, $value));
+}
+
 function tbl_create($db, $body, $config) {
 	tbl_expire($db);
 	if ((int) $db->query('SELECT COUNT(*) FROM tables')->fetchColumn() >= TBL_MAX_TABLES) {
@@ -232,7 +339,7 @@ function tbl_gm($db, $body) {
 		}
 		$seats[] = $out;
 	}
-	return array('table' => tbl_public($table), 'now' => time(), 'seats' => $seats);
+	return array('table' => tbl_public($table), 'now' => time(), 'seats' => $seats, 'log' => tbl_log_since($db, $table['code'], $body['since'] ?? 0));
 }
 
 // A character joins a table. One that's already seated under the same name
@@ -249,6 +356,7 @@ function tbl_join($db, $body) {
 	if ($seatId !== false) {
 		$db->prepare('UPDATE seats SET key_hash = ?, sheet = COALESCE(?, sheet), version = version + 1, seen = ? WHERE id = ?')
 			->execute(array(tbl_hash($playerKey), $sheet, $now, $seatId));
+		tbl_log($db, $table['code'], null, $name, 'join', $name . ' rejoined the table.');
 	} else {
 		$count = $db->prepare('SELECT COUNT(*) FROM seats WHERE code = ?');
 		$count->execute(array($table['code']));
@@ -258,13 +366,15 @@ function tbl_join($db, $body) {
 		$seatId = bin2hex(random_bytes(8));
 		$db->prepare('INSERT INTO seats (id, code, key_hash, name, sheet, version, joined, seen) VALUES (?, ?, ?, ?, ?, 1, ?, ?)')
 			->execute(array($seatId, $table['code'], tbl_hash($playerKey), $name, $sheet, $now, $now));
+		tbl_log($db, $table['code'], null, $name, 'join', $name . ' joined the table.');
 	}
 	tbl_touch($db, $table['code']);
 	return array('seatId' => $seatId, 'playerKey' => $playerKey, 'table' => tbl_public($table));
 }
 
-// Player Tools checks in: with a new copy of the sheet when the character
-// changed, or without one to say it's still there.
+// Player Tools checks in every few seconds: with a new copy of the sheet when
+// the character changed, or without one to say it's still there, getting the
+// log's new entries. Being here is only recorded every 15 seconds.
 function tbl_sync($db, $body) {
 	list($table, $seat) = tbl_player_seat($db, $body);
 	$sheet = tbl_sheet($body);
@@ -276,15 +386,21 @@ function tbl_sync($db, $body) {
 		$db->prepare('UPDATE seats SET sheet = ?, name = ?, version = ?, seen = ? WHERE id = ?')
 			->execute(array($sheet, $name, $version, $now, $seat['id']));
 	} else {
-		$db->prepare('UPDATE seats SET seen = ? WHERE id = ?')->execute(array($now, $seat['id']));
+		if ($now - (int) $seat['seen'] >= TBL_SEEN_EVERY) {
+			$db->prepare('UPDATE seats SET seen = ? WHERE id = ?')->execute(array($now, $seat['id']));
+			tbl_touch($db, $table['code']);
+		}
 	}
-	tbl_touch($db, $table['code']);
-	return array('table' => tbl_public($table), 'version' => $version);
+	if ($sheet !== null) {
+		tbl_touch($db, $table['code']);
+	}
+	return array('table' => tbl_public($table), 'version' => $version, 'log' => tbl_log_since($db, $table['code'], $body['since'] ?? 0));
 }
 
 function tbl_leave($db, $body) {
 	list($table, $seat) = tbl_player_seat($db, $body);
 	$db->prepare('DELETE FROM seats WHERE id = ?')->execute(array($seat['id']));
+	tbl_log($db, $table['code'], null, $seat['name'], 'leave', $seat['name'] . ' left the table.');
 	return array('ok' => true);
 }
 
@@ -305,7 +421,7 @@ function tbl_handle() {
 	if (! is_array($body) || isset($body[0])) {
 		sf_fail(400, 'bad-request', 'Send one action as a JSON object.');
 	}
-	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave');
+	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave', 'say' => 'tbl_say', 'roll' => 'tbl_roll');
 	$action = $actions[$body['action'] ?? ''] ?? null;
 	if (! $action) {
 		sf_fail(400, 'bad-request', 'Unknown action.');

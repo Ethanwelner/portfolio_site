@@ -10,7 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/14/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Game Master Tools are here. A Game Master makes a table and gives the players its join code; they join from Player Tools, and the Game Master follows every character’s sheet as they play, kept up to date as it changes.</li>
+						<li>Game Master Tools are here. A Game Master makes a table and gives the players its join code; they join from Player Tools, and the Game Master follows every character’s sheet as they play, kept up to date as it changes. The table has its own chat, where everyone’s d20 rolls show up with the time they were made.</li>
 						<li>Character Creator: a character made above level 1 has had a lifetime to gather things, so its starting kit is bought with more Wealth: +1 at levels 5 to 9, +2 at 10 to 14, +3 at 15 to 19 and +4 at 20. Kit Points and the dearest item a character can start with both grow with it, so a level 20 character of Wealth 0 gets 11 Kit Points and items up to Kit Cost 5. Its Wealth rating on the sheet doesn’t change.</li>
 					</ul>
 				</article>

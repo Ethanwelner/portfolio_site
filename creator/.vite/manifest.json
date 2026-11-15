@@ -17,18 +17,18 @@
     "file": "assets/popup-CKz-mM1t.css",
     "src": "_popup-CKz-mM1t.css"
   },
-  "_styles-BirtbVYu.css": {
-    "file": "assets/styles-BirtbVYu.css",
-    "src": "_styles-BirtbVYu.css"
+  "_styles-CIow7KyP.css": {
+    "file": "assets/styles-CIow7KyP.css",
+    "src": "_styles-CIow7KyP.css"
   },
-  "_styles-Ux-4aL0-.js": {
-    "file": "assets/styles-Ux-4aL0-.js",
+  "_styles-DcK_lAo0.js": {
+    "file": "assets/styles-DcK_lAo0.js",
     "name": "styles",
     "imports": [
       "_popup-CFgsMYNo.js"
     ],
     "css": [
-      "assets/styles-BirtbVYu.css"
+      "assets/styles-CIow7KyP.css"
     ]
   },
   "src/app/main.tsx": {
@@ -42,27 +42,27 @@
     ]
   },
   "src/gm/main.tsx": {
-    "file": "assets/main-1j1x74Nb.js",
+    "file": "assets/main-CBLV_FUi.js",
     "name": "main",
     "src": "src/gm/main.tsx",
     "isEntry": true,
     "imports": [
       "_popup-CFgsMYNo.js",
-      "_styles-Ux-4aL0-.js"
+      "_styles-DcK_lAo0.js"
     ],
     "css": [
       "assets/main-CZUuLiKq.css"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-Jcc6B_U1.js",
+    "file": "assets/main-Dg_ntFi-.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
       "_popup-CFgsMYNo.js",
       "_TraitsStep-DLjKRlnr.js",
-      "_styles-Ux-4aL0-.js"
+      "_styles-DcK_lAo0.js"
     ]
   }
 }
