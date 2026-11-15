@@ -11,6 +11,7 @@ require_once 'php/rpg/components/buttons.php';
 require_once 'php/rpg/components/stats.php';
 require_once 'php/rpg/components/sheet.php';
 require_once 'php/rpg/components/npc-sheet.php';
+require_once 'php/rpg/components/ornate-card.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -497,6 +498,11 @@ $sf_list = function ( $items ) {
 		<?php include 'php/head-loads.php'; ?>
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
+		<!-- Ornate card (a test): its stylesheet and title face, on this page only -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;display=swap">
+		<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-ornate-card.css'); ?>"/>
 		<style>
 			.sf-library-band { padding: 48px 0; }
 			.sf-library-stage { padding: 16px 24px 24px; background-color: var(--portfolio-white); border: 1px solid var(--portfolio-light-gray); border-radius: 8px; transition: background-color 200ms, border-color 200ms; }
@@ -663,6 +669,24 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 					<p class="sf-library-label">Edwin’s Kind, Origin, Profession and Past, then a Dreftian Kind and Profession</p>
 					<div class="sf-library-backgrounds">
 						<?php foreach ( $sf_backgrounds as $b ) { sf_card_background( $b, 'Origin' === $b['slot'] && 'earth' === $b['plane'] ? ', placed in Grace' : '' ); } ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Ornate card (a test) -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Ornate Card (Test)</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_card_ornate( $background );
+takes a Kind as sf_card_background() does: a gunmetal border, a dark panel with a faint engraved emblem, and a gold filigree frame (four corner pieces joined by straight edges, so it grows with its text)</pre>
+				<p class="copy">A test of a gilded look for Kind cards, in <code>php/rpg/components/ornate-card.php</code> and <code>css/sf-ornate-card.css</code>. Nothing uses it yet, and it isn’t in the creator.</p>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">A Dreftian Kind with its Stats, Grants and features, then Edwin’s Kind, with less on it</p>
+					<div class="sf-library-ornate">
+						<?php sf_card_ornate( $sf_dreft['kinds'][0] ); ?>
+						<?php sf_card_ornate( $sf_sample['background'][0] ); ?>
 					</div>
 				</div>
 			</div>

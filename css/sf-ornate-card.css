@@ -1,0 +1,200 @@
+/* Ornate card (a test): php/rpg/components/ornate-card.php. A gunmetal
+   border, a dark panel, and a gold filigree frame: four corner pieces (one
+   SVG, turned) joined by straight gold edges, so the card grows with its
+   text. */
+
+.sf-ornate-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.sf-ornate-card {
+    --ornate-gold: linear-gradient(90deg, #8f6a24, #e8c977 25%, #fbeeb8 50%, #d8ad4c 75%, #8f6a24);
+    --ornate-gold-v: linear-gradient(180deg, #8f6a24, #e8c977 25%, #fbeeb8 50%, #d8ad4c 75%, #8f6a24);
+    --ornate-text: #ddd6c6;
+    --ornate-muted: #a59d8c;
+    --ornate-label: #c9a352;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    aspect-ratio: 5 / 7;
+    padding: 10px;
+    border-radius: 20px;
+    background:
+        linear-gradient(145deg, rgb(255 255 255 / 18%), transparent 30%, transparent 70%, rgb(255 255 255 / 10%)),
+        linear-gradient(160deg, #6a6d72, #3b3d41 45%, #2c2e31 60%, #55585d);
+    box-shadow: 0 0 0 1px #1a1b1d, inset 0 1px 0 rgb(255 255 255 / 25%), 0 18px 40px rgb(0 0 0 / 45%);
+    color: var(--ornate-text);
+}
+
+.sf-ornate-panel {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse at 50% 42%, #2a2b2e 0%, #18191b 55%, #0d0e0f 100%);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 70%), inset 0 0 24px rgb(0 0 0 / 60%);
+}
+
+/* The engraved emblem: barely lighter than the panel */
+.sf-ornate-emblem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 92%;
+    transform: translate(-50%, -50%);
+    color: rgb(255 255 255 / 5.5%);
+    pointer-events: none;
+}
+
+.sf-ornate-corner {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 60%));
+}
+.sf-ornate-corner--tl { top: 0; left: 0; }
+.sf-ornate-corner--tr { top: 0; right: 0; transform: scaleX(-1); }
+.sf-ornate-corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.sf-ornate-corner--br { bottom: 0; right: 0; transform: scale(-1); }
+.sf-ornate-star-back { opacity: .75; }
+
+/* The straight edges between the corners: the 2px line at 18px and the
+   1px line at 25px, matching the corner pieces */
+.sf-ornate-edge { position: absolute; pointer-events: none; }
+.sf-ornate-edge--top, .sf-ornate-edge--bottom {
+    left: 100px;
+    right: 100px;
+    height: 9px;
+    background: var(--ornate-gold) 0 0 / 100% 2px no-repeat, var(--ornate-gold) 0 7px / 100% 1px no-repeat;
+}
+.sf-ornate-edge--top { top: 17px; }
+.sf-ornate-edge--bottom { bottom: 17px; transform: scaleY(-1); }
+.sf-ornate-edge--left, .sf-ornate-edge--right {
+    top: 100px;
+    bottom: 100px;
+    width: 9px;
+    background: var(--ornate-gold-v) 0 0 / 2px 100% no-repeat, var(--ornate-gold-v) 7px 0 / 1px 100% no-repeat;
+}
+.sf-ornate-edge--left { left: 17px; }
+.sf-ornate-edge--right { right: 17px; transform: scaleX(-1); }
+
+.sf-ornate-content {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 44px 44px 40px;
+    container-type: inline-size;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.sf-ornate-name {
+    margin: 0;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #fff3c4 10%, #e3bd62 50%, #9c7329 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 1px 0 rgb(0 0 0 / 80%));
+}
+
+/* A star between two gold lines that fade out */
+.sf-ornate-rule {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px auto 14px;
+    max-width: 220px;
+}
+.sf-ornate-rule::before, .sf-ornate-rule::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a352);
+}
+.sf-ornate-rule::after { transform: scaleX(-1); }
+.sf-ornate-rule svg { width: 16px; height: 16px; }
+
+.sf-ornate-summary {
+    margin: 0 0 16px;
+    font-style: italic;
+    text-align: center;
+    color: var(--ornate-text);
+}
+
+.sf-ornate-label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: .6875rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ornate-label);
+}
+
+.sf-ornate-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 12px 0;
+    border-block: 1px solid rgb(201 163 82 / 35%);
+    font-size: .75rem;
+}
+/* On a narrow card, the groups stack */
+@container (max-width: 280px) {
+    .sf-ornate-stats { grid-template-columns: 1fr; max-width: 180px; margin-inline: auto; }
+}
+.sf-ornate-stat { display: flex; justify-content: space-between; gap: 4px; }
+.sf-ornate-num { font-variant-numeric: tabular-nums; color: #f1e2b4; }
+.sf-ornate-num span { color: var(--ornate-muted); }
+
+.sf-ornate-grants { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 14px; }
+.sf-ornate-grants .sf-ornate-label { margin: 0 4px 0 0; }
+.sf-ornate-chip {
+    padding: 1px 10px;
+    border: 1px solid #b08532;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgb(232 201 119 / 18%), rgb(143 106 36 / 12%));
+    font-size: .75rem;
+    color: #f1e2b4;
+}
+
+.sf-ornate-features { margin: 0 0 18px; padding: 0; list-style: none; }
+.sf-ornate-features li { margin-bottom: 8px; }
+.sf-ornate-features strong { color: #ecd28e; }
+
+.sf-ornate-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto 0 0;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ornate-label);
+}
+.sf-ornate-foot span { font-size: .625rem; }
+
+/* Dreft's cards keep their green: a hint of it in the panel */
+.sf-ornate-card--dreft .sf-ornate-panel {
+    background: radial-gradient(ellipse at 50% 42%, #24302a 0%, #161c19 55%, #0c0f0d 100%);
+}
+
+@media (max-width: 480px) {
+    .sf-ornate-content { padding: 40px 34px 36px; }
+}
+
+.sf-library-ornate { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }
