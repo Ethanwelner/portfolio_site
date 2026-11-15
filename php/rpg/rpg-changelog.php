@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/15/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Nations: The Ural Federation and Xanthus now have full histories, from the Russian Federation’s collapse to the Ural Federation’s present borders, and from Xanthus’s days as a Centafrican mining colony to its refusals of the Stellar Democratic Union. The Ural Federation’s territories and languages are filled out, and every other nation’s history is revised, with new entries for China, India, the Lunar Syndicate, the Free American States, Kashgar and Dreft.</li>
 						<li>Character Creator: Humans now hold two new Traits, Cyberization and Gene Hacking. They don’t open a new stat: they let a Human take Traits with the Cyberization or Gene Hacking keyword, for cybernetic implants and genetic body modification, once those Traits are written.</li>
 					</ul>
 				</article>

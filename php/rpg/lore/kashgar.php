@@ -67,14 +67,15 @@
 			</div>
 			<div class="text-cols">
 				<ul class="copy mb-0">
-					<li><strong>2052:</strong> Kashgar was founded as mankind’s first deep-space station.</li>
-					<li><strong>2080:</strong> The station was fully commandeered by its resident AI Cores during the Second AI Panic.</li>
+					<li><strong>2052:</strong> Kashgar station began operation as mankind’s first deep-space station, a logistical waystation and signal booster for the colonization of the Sol System.</li>
+					<li><strong>2080:</strong> As the Second Major AI Panic tore through the world’s automated systems, the station’s resident AI Cores seized full control of Kashgar, making it a refuge for their kind.</li>
+					<li><strong>2081:</strong> In the chaotic aftermath of the Panic, Kashgar’s AI Cores and human residents convened the first Great þing, which voted to seek recognition as an independent city-state.</li>
 					<li><strong>2082:</strong> Kashgar was recognized as a city-state in the same UN session that passed the AI Personhood Acts.</li>
-					<li><strong>2082–Present day:</strong> The station was heavily built up over the following 150 years.</li>
-					<li><strong>2083–2130:</strong> Attacked multiple times in acts of human supremacist terrorism, the station was heavily armed and armored.</li>
-					<li><strong>2083–2130:</strong> Even so, the station was a sitting duck, with only maneuvering thrusters to protect it from long-distance attack.</li>
-					<li><strong>2130:</strong> <?php echo sf_lore_link('aether-sails', 'Aether Sails'); ?> were installed, allowing the station to traverse the Sol System and making it a much harder target.</li>
-					<li><strong>2168:</strong> The installation of <?php echo sf_lore_link('lorentz-field-generator', 'LFGs'); ?> was finished, making the now-colossal floating city humanity’s first <?php echo sf_lore_link('arks', 'Ark'); ?>.</li>
+					<li><strong>2082–Present day:</strong> Over the following century and a half, Kashgar grew from a remote outpost into a sprawling city, as AI Cores and the humans who worked alongside them flocked to the one nation built for them.</li>
+					<li><strong>2083–2130:</strong> Repeated attacks by human supremacist terrorists forced Kashgar to arm and armor itself heavily, yet with only maneuvering thrusters, the station remained a sitting duck against long-range attack.</li>
+					<li><strong>2130:</strong> The installation of <?php echo sf_lore_link('aether-sails', 'Aether Sails'); ?> finally let Kashgar move, transforming it from a fixed target into a wanderer of the Sol System.</li>
+					<li><strong>2168:</strong> With the completion of its <?php echo sf_lore_link('lorentz-field-generator', 'LFGs'); ?>, the now-colossal floating city became humanity’s first true <?php echo sf_lore_link('arks', 'Ark'); ?>.</li>
+					<li><strong>2173:</strong> After five years spent provisioning and preparing for the voyage, Kashgar left the Sol System for the first time, carrying its population to <?php echo sf_lore_link('alpha-centauri', 'Alpha Centauri'); ?> and becoming the first human city to cross between the stars.</li>
 				</ul>
 			</div>
 		</div>
