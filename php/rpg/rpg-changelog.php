@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/15/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Character Creator: Humans now hold two new Traits, Cyberization and Gene Hacking. They don’t open a new stat: they let a Human take Traits with the Cyberization or Gene Hacking keyword, for cybernetic implants and genetic body modification, once those Traits are written.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/14/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Game Master Tools are here. A Game Master makes a table and gives the players its join code; they join from Player Tools, and the Game Master follows every character’s sheet as they play, kept up to date as it changes. The table has its own chat, where everyone’s d20 rolls show up with the time they were made.</li>
