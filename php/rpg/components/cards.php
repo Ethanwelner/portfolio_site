@@ -513,19 +513,14 @@ document.addEventListener('click', function (e) {
 		if ( $rows ) {
 			echo '<div class="sf-background-rows">' . $rows . '</div>';
 		}
-
-		$lore = $b['lore'] ?? '';
-		if ( $lore && function_exists( 'sf_lore_link' ) ) {
-			echo '<p class="sf-card-note">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
-		}
 		echo '</div></div>';
 	}
 	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
 	// the card's key color (silver for The Settled Systems, Dreft's green for
 	// Isekai), around a dark field with a large quarter-circle cut out of its
 	// top left corner and a four-pointed star in the cut-out (the gunmetal
-	// stops short of it). The field holds a faint starfield and an
-	// eight-point compass. The same
+	// stops short of it). The field holds a faded sun at the bottom whose
+	// rays light a column of planets from below. The same
 	// markup as the creator's KindCard (cards.tsx).
 
 	// A four-pointed star
@@ -533,6 +528,25 @@ document.addEventListener('click', function (e) {
 		$s = $r * 0.22;
 		return 'M' . $cx . ' ' . ( $cy - $r ) . 'L' . ( $cx + $s ) . ' ' . ( $cy - $s ) . 'L' . ( $cx + $r ) . ' ' . $cy . 'L' . ( $cx + $s ) . ' ' . ( $cy + $s ) . 'L' . $cx . ' ' . ( $cy + $r ) . 'L' . ( $cx - $s ) . ' ' . ( $cy + $s ) . 'L' . ( $cx - $r ) . ' ' . $cy . 'L' . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z';
 	}
+
+	// The sky: a faded sun at the bottom with rays fanning
+	// out from it, and a column of planets above it, each the field's own
+	// color, lit along its bottom edge, measured in the field's width (cqw).
+	// The same list as the creator's KIND_PLANETS: [its center, as a CSS top;
+	// its width, cqw; the crescent's thickness at the bottom, px].
+	function sf_card_kind_sky() {
+		$html = '<div class="sf-kind-sky"><span class="sf-kind-rays"></span><span class="sf-kind-sun"></span>';
+		foreach ( array( array( 'calc(100% - 163cqw)', 112, 4 ), array( 'calc(100% - 90.5cqw)', 13, 2 ), array( 'calc(100% - 62cqw)', 24, 3 ), array( 'calc(100% - 35.5cqw)', 9, 2 ) ) as $p ) {
+			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . ';width:' . $p[1] . 'cqw;--lit:' . $p[2] . 'px"></span>';
+		}
+		return $html . '</div>';
+	}
+
+	// The other card backgrounds, kept as options (sf_card_kind()'s
+	// $background, like the creator's KindCard): 'compass', the first one,
+	// an eight-point compass over a faint starfield, 'planet', a dark
+	// planet's disc under a dense starfield, and 'orbits', a solar system's
+	// rings over the faint starfield, the default. 'sun' is above.
 
 	// The compass: eight long diamonds meeting at the middle, each split
 	// down its length into a light and a dark face. The four cardinal ones
@@ -556,11 +570,14 @@ document.addEventListener('click', function (e) {
 		return '<svg class="sf-kind-emblem" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><circle class="sf-kind-rose-ring" cx="150" cy="150" r="142" stroke-width="4"/><g transform="rotate(15 150 150)">' . $rose . '</g></svg>';
 	}
 
-	// The starfield: one fixed sky (top %, left %, opacity, delay in
-	// seconds), shifted by the Kind's id so cards side by side differ. The
-	// same lists as the creator's KIND_DOTS and KIND_TWINKLES.
-	function sf_card_kind_stars( $seed ) {
-		$dots     = array( array(32.4,15.1,0.54,0.5),array(53.6,36.6,0.28,3.6),array(3.7,43.4,0.28,0.6),array(42.5,82.7,0.31,1.6),array(62.7,94.8,0.51,2.8),array(97.6,4.7,0.64,2.0),array(14.4,11.8,0.39,5.7),array(18.1,58.2,0.54,2.6),array(54.8,6.3,0.28,1.4),array(68.0,42.8,0.39,4.1),array(45.3,30.0,0.61,4.9),array(24.4,57.4,0.49,6.1),array(72.9,28.8,0.69,0.8),array(41.8,75.7,0.32,3.4),array(3.9,66.8,0.59,4.0),array(87.5,31.4,0.56,4.2),array(58.0,45.6,0.63,6.6),array(47.4,66.4,0.28,4.9),array(64.7,99.3,0.62,2.0),array(38.6,66.9,0.26,3.2),array(16.8,11.7,0.28,5.4),array(12.9,24.8,0.43,6.1),array(8.1,44.9,0.5,6.2),array(81.9,86.4,0.38,2.9),array(35.9,88.4,0.68,1.1),array(17.6,23.2,0.36,3.4),array(58.9,26.3,0.25,2.9),array(36.9,56.6,0.68,4.8),array(51.5,61.8,0.55,0.4),array(90.0,78.0,0.64,5.6),array(39.2,39.9,0.3,4.4),array(6.2,6.7,0.34,1.1),array(34.0,5.3,0.25,1.1),array(10.1,36.4,0.26,6.1),array(61.4,14.9,0.36,2.4),array(36.4,12.3,0.63,7.0),array(46.6,48.4,0.29,0.7),array(34.3,26.5,0.62,1.1),array(2.3,95.1,0.49,1.0),array(54.3,2.7,0.49,6.8),array(86.3,69.6,0.37,2.6),array(16.7,77.2,0.49,5.5),array(33.0,22.3,0.62,6.9),array(85.3,80.6,0.62,5.2),array(22.7,51.8,0.41,0.2),array(2.8,27.9,0.37,4.8) );
+	// The starfields: one fixed sky each (top %, left %, opacity, delay in
+	// seconds), shifted by the Kind's id so cards side by side differ: a
+	// faint one for the compass, a dense one for the planet. The same lists
+	// as the creator's KIND_DOTS_FAINT, KIND_DOTS_DENSE and KIND_TWINKLES.
+	function sf_card_kind_stars( $seed, $dense = false ) {
+		$dots     = $dense
+			? array( array(16.6,36.4,0.43,4.8),array(18.4,96.8,0.28,2.1),array(53.8,78.7,0.34,4.7),array(48.6,55.1,0.88,4.1),array(58.4,25.4,0.31,4.3),array(37.2,78.9,0.39,5.3),array(67.7,67.4,0.59,4.5),array(67.1,47.5,0.42,0.5),array(10.5,99.5,0.34,4.0),array(99.7,72.0,0.48,4.7),array(64.5,41.3,0.25,3.9),array(10.2,5.8,0.48,7.0),array(40.9,19.7,0.4,3.2),array(50.8,56.3,0.42,0.5),array(75.0,34.5,0.35,0.0),array(39.5,97.1,0.4,6.7),array(2.3,59.6,0.37,0.0),array(47.8,2.2,0.84,6.2),array(3.9,20.8,0.39,4.0),array(3.5,11.2,0.53,4.0),array(94.2,19.6,0.77,4.4),array(1.1,52.8,0.66,6.6),array(49.7,37.5,0.29,5.7),array(55.7,81.4,0.25,0.3),array(35.2,77.5,0.62,4.3),array(68.1,5.2,0.29,6.1),array(28.5,33.6,0.25,3.1),array(52.6,90.4,0.26,4.5),array(50.0,91.9,0.34,2.4),array(85.9,90.0,0.35,1.6),array(49.4,3.5,0.45,3.4),array(36.6,97.9,0.36,6.8),array(43.9,17.5,0.88,4.6),array(14.1,70.7,0.32,1.3),array(67.3,32.2,0.45,5.3),array(90.4,5.5,0.44,2.0),array(46.7,37.0,0.69,2.9),array(33.0,56.7,0.27,0.6),array(16.5,32.9,0.65,4.5),array(62.2,62.3,0.74,2.3),array(58.2,46.2,0.32,3.5),array(82.4,95.1,0.25,1.2),array(5.9,41.7,0.28,1.7),array(43.5,15.3,0.3,1.8),array(9.9,84.7,0.38,5.5),array(90.0,63.0,0.4,4.3),array(71.9,39.9,0.47,5.4),array(47.0,39.4,0.23,4.9),array(31.8,27.2,0.74,2.9),array(87.8,43.6,0.45,1.2),array(49.0,92.0,0.26,6.0),array(10.7,17.9,0.84,2.4),array(55.5,11.1,0.33,3.4),array(92.3,8.9,0.22,5.5),array(72.6,61.9,0.38,1.3),array(85.5,55.7,0.38,5.6),array(95.8,0.3,0.26,2.6),array(10.3,2.7,0.28,0.5),array(63.0,20.1,0.36,2.3),array(91.9,17.5,0.38,2.1),array(24.0,66.4,0.38,3.7),array(51.8,42.2,0.9,3.1),array(86.0,50.8,0.47,2.8),array(96.4,41.1,0.41,0.7),array(15.5,23.4,0.23,3.7),array(30.3,64.3,0.53,1.2),array(63.6,37.1,0.81,5.3),array(4.7,23.4,0.23,0.8),array(21.5,92.5,0.2,1.2),array(39.3,98.5,0.82,6.4),array(63.2,96.8,0.34,5.0),array(80.4,19.2,0.8,2.2),array(79.3,37.4,0.41,1.9),array(1.7,24.7,0.49,6.6),array(20.0,50.3,0.21,1.8),array(65.6,98.6,0.24,0.4),array(37.1,53.1,0.35,6.5),array(21.5,21.8,0.45,4.0),array(43.9,28.7,0.35,0.1),array(90.7,67.6,0.23,6.6),array(59.8,96.3,0.32,3.0),array(37.7,67.1,0.36,1.1),array(54.6,90.1,0.4,6.2),array(18.3,69.7,0.71,4.0),array(74.4,43.9,0.4,2.9),array(64.8,73.2,0.8,1.7),array(0.6,62.8,0.23,1.4),array(40.1,39.3,0.41,3.8),array(70.7,28.8,0.77,0.2),array(57.8,90.4,0.32,0.7),array(47.8,84.6,0.48,0.8),array(34.6,16.5,0.88,6.9),array(93.3,31.0,0.26,5.6),array(24.7,58.0,0.68,6.9),array(16.9,93.2,0.32,0.9),array(20.9,60.3,0.23,1.7),array(43.0,55.0,0.26,1.2),array(46.8,33.4,0.85,5.0),array(2.2,6.9,0.25,5.2),array(14.8,18.4,0.25,4.6),array(94.2,46.5,0.28,3.6),array(24.8,52.9,0.28,5.4),array(20.2,80.8,0.58,7.0),array(95.4,73.8,0.38,5.3),array(67.2,92.6,0.9,3.0),array(26.9,44.5,0.41,2.5),array(78.6,94.7,0.25,1.8),array(42.3,19.9,0.22,0.3),array(52.6,17.1,0.37,6.3),array(24.8,93.6,0.22,6.9),array(8.7,95.9,0.56,5.4),array(29.3,98.8,0.74,1.5),array(85.9,13.0,0.79,2.5),array(12.7,39.9,0.27,1.7),array(64.4,18.2,0.26,1.2),array(41.7,13.9,0.42,1.3),array(10.3,47.5,0.42,1.0),array(82.2,28.4,0.73,4.7),array(80.0,61.0,0.31,1.0),array(36.7,16.0,0.32,0.1),array(78.7,37.8,0.32,4.6),array(36.5,12.2,0.21,5.4),array(27.2,45.0,0.41,2.7),array(70.5,95.1,0.32,4.8),array(66.7,67.5,0.42,6.8),array(86.4,41.8,0.33,3.6),array(48.7,69.8,0.7,1.5),array(25.4,43.8,0.29,3.7),array(40.9,51.8,0.3,6.4),array(99.9,79.5,0.42,1.3),array(16.6,83.0,0.28,1.3),array(78.2,91.7,0.75,4.7),array(91.5,59.2,0.21,2.0),array(32.3,85.6,0.23,5.7),array(48.5,19.5,0.25,1.2),array(30.5,99.8,0.3,5.8),array(18.3,16.6,0.45,4.0),array(12.2,1.5,0.27,3.8),array(71.8,67.8,0.22,5.0),array(53.2,94.3,0.44,4.3),array(22.6,34.8,0.67,4.0),array(89.9,12.7,0.38,6.1),array(45.4,14.6,0.42,1.2),array(32.5,1.0,0.22,1.0),array(27.1,39.2,0.41,1.5),array(44.7,83.8,0.22,5.7),array(57.2,66.1,0.87,6.1),array(98.4,5.9,0.28,6.9),array(82.2,23.5,0.22,6.5),array(54.8,97.7,0.27,5.4),array(1.4,56.0,0.81,1.4),array(11.2,19.5,0.41,4.5),array(10.2,18.0,0.42,3.9),array(21.5,2.8,0.26,4.5),array(85.3,26.8,0.3,4.7),array(0.3,88.4,0.62,3.4),array(14.4,44.3,0.32,1.5),array(77.9,38.8,0.6,5.9),array(20.4,57.8,0.3,4.2),array(12.5,40.5,0.31,0.7) )
+			: array( array(32.4,15.1,0.54,0.5),array(53.6,36.6,0.28,3.6),array(3.7,43.4,0.28,0.6),array(42.5,82.7,0.31,1.6),array(62.7,94.8,0.51,2.8),array(97.6,4.7,0.64,2.0),array(14.4,11.8,0.39,5.7),array(18.1,58.2,0.54,2.6),array(54.8,6.3,0.28,1.4),array(68.0,42.8,0.39,4.1),array(45.3,30.0,0.61,4.9),array(24.4,57.4,0.49,6.1),array(72.9,28.8,0.69,0.8),array(41.8,75.7,0.32,3.4),array(3.9,66.8,0.59,4.0),array(87.5,31.4,0.56,4.2),array(58.0,45.6,0.63,6.6),array(47.4,66.4,0.28,4.9),array(64.7,99.3,0.62,2.0),array(38.6,66.9,0.26,3.2),array(16.8,11.7,0.28,5.4),array(12.9,24.8,0.43,6.1),array(8.1,44.9,0.5,6.2),array(81.9,86.4,0.38,2.9),array(35.9,88.4,0.68,1.1),array(17.6,23.2,0.36,3.4),array(58.9,26.3,0.25,2.9),array(36.9,56.6,0.68,4.8),array(51.5,61.8,0.55,0.4),array(90.0,78.0,0.64,5.6),array(39.2,39.9,0.3,4.4),array(6.2,6.7,0.34,1.1),array(34.0,5.3,0.25,1.1),array(10.1,36.4,0.26,6.1),array(61.4,14.9,0.36,2.4),array(36.4,12.3,0.63,7.0),array(46.6,48.4,0.29,0.7),array(34.3,26.5,0.62,1.1),array(2.3,95.1,0.49,1.0),array(54.3,2.7,0.49,6.8),array(86.3,69.6,0.37,2.6),array(16.7,77.2,0.49,5.5),array(33.0,22.3,0.62,6.9),array(85.3,80.6,0.62,5.2),array(22.7,51.8,0.41,0.2),array(2.8,27.9,0.37,4.8) );
 		$twinkles = array( array(88.3,45.6,11.2),array(91.0,88.2,4.4),array(26.5,27.1,2.4),array(25.2,60.4,10.8) );
 		$sum = 0;
 		foreach ( str_split( $seed ) as $ch ) {
@@ -572,7 +589,7 @@ document.addEventListener('click', function (e) {
 		$inner = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v - 8 + $d, 84 ) + 8 ); };
 		$html  = '<div class="sf-kind-stars">';
 		foreach ( $dots as $i => $x ) {
-			$html .= '<span class="sf-kind-dot' . ( 0 === $i % 5 ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . ';animation-delay:' . $x[3] . 's"></span>';
+			$html .= '<span class="sf-kind-dot' . ( 0 === $i % ( $dense ? 7 : 5 ) ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . ';animation-delay:' . $x[3] . 's"></span>';
 		}
 		foreach ( $twinkles as $x ) {
 			$html .= '<span class="sf-kind-twinkle" style="top:' . $inner( $x[0], $dy ) . '%;left:' . $inner( $x[1], $dx ) . '%;animation-delay:' . $x[2] . 's"></span>';
@@ -580,14 +597,38 @@ document.addEventListener('click', function (e) {
 		return $html . '</div>';
 	}
 
+	// 'orbits': an abstract solar system over the faint starfield, its sun in
+	// the middle of the field, evenly spaced rings running out past the
+	// card's edges and a few planets riding them. One SVG twice the field's
+	// width (cqw): 100 units are the field's width. The same numbers as the
+	// creator's KIND_ORBIT_GAP, KIND_ORBIT_RINGS and KIND_ORBIT_PLANETS (ring,
+	// angle in degrees from the right, radius). Each planet circles the sun
+	// in a year of 12s × ring^1.5.
+	function sf_card_kind_orbits() {
+		$gap = 9;
+		$svg = '<svg class="sf-kind-orbits" viewBox="0 0 200 200" aria-hidden="true" focusable="false">';
+		for ( $i = 1; $i <= 11; $i++ ) {
+			$svg .= '<circle class="sf-kind-orbit" cx="100" cy="100" r="' . ( $gap * $i ) . '"/>';
+		}
+		$svg .= '<circle class="sf-kind-orbit-sun" cx="100" cy="100" r="3"/>';
+		foreach ( array( array( 2, 200, 1.1 ), array( 3, 110, 1.3 ), array( 5, 300, 1.6 ), array( 6, 160, 1.2 ), array( 8, 35, 1.8 ), array( 10, 220, 1.4 ) ) as $p ) {
+			$a    = deg2rad( $p[1] );
+			$d    = $gap * $p[0];
+			$svg .= '<g class="sf-kind-orbit-turn" style="animation-duration:' . round( 12 * pow( $p[0], 1.5 ) ) . 's"><circle class="sf-kind-orbit-planet" cx="' . sprintf( '%.2f', 100 + $d * cos( $a ) ) . '" cy="' . sprintf( '%.2f', 100 - $d * sin( $a ) ) . '" r="' . $p[2] . '"/></g>';
+		}
+		return $svg . '</svg>';
+	}
+
 	/**
 	 * A Kind's card: its name and summary, each focus stat's bonus and
 	 * maximum, the Traits every character of the Kind holds, its features,
 	 * a link to its lore entry, then "Kind ✦" and its setting at the foot.
 	 * Takes a Kind as the creator exports it (sample-character.json,
-	 * dreftian-backgrounds.json).
+	 * dreftian-backgrounds.json), and what's drawn behind the content:
+	 * 'orbits' (the solar system, the default), 'sun', 'compass' or
+	 * 'planet'.
 	 */
-	function sf_card_kind( $b ) {
+	function sf_card_kind( $b, $background = 'orbits' ) {
 		static $n = 0;
 		$n++;
 		$plane    = strtolower( $b['plane'] );
@@ -599,13 +640,19 @@ document.addEventListener('click', function (e) {
 			'green'  => array( '#47b767', '#47b767', '#47b767', '#47b767', '#47b767' ),
 		);
 
-		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
+		echo '<article class="sf-kind-card sf-kind-card--bg-' . $background . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
 		echo '<svg class="sf-kind-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="' . $gradient . '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">';
 		foreach ( array( 0, 0.35, 0.6, 0.85, 1 ) as $i => $offset ) {
 			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
 		}
 		echo '</linearGradient></defs></svg>';
-		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem() . '</div>';
+		$backgrounds = array(
+			'sun'     => sf_card_kind_sky(),
+			'compass' => sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem(),
+			'planet'  => sf_card_kind_stars( $b['id'] ?? $b['name'], true ) . '<span class="sf-kind-globe"></span>',
+			'orbits'  => sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_orbits(),
+		);
+		echo '<div class="sf-kind-field" aria-hidden="true">' . ( $backgrounds[ $background ] ?? $backgrounds['orbits'] ) . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
 		// at the top left the line follows the field's cut-out with the star
 		// in it, and at the other three it rounds off
@@ -621,14 +668,6 @@ document.addEventListener('click', function (e) {
 		echo '<div class="sf-kind-content">';
 		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
-		// Its lore entry shares the first word of its id (tatot-orcoid is Tatot)
-		$lore = $b['lore'] ?? '';
-		if ( ! $lore && function_exists( 'sf_lore_titles' ) && isset( sf_lore_titles()[ strtok( $b['id'] ?? '', '-' ) ] ) ) {
-			$lore = strtok( $b['id'], '-' );
-		}
-		if ( $lore && function_exists( 'sf_lore_link' ) ) {
-			echo '<p class="sf-kind-lore">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
-		}
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
 			foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
