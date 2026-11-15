@@ -48,7 +48,8 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 	// middle, each split down its length into a light and a dark face. The
 	// four cardinal ones are as wide as they are far from the middle at
 	// their widest, so they close over the middle, and the four smaller
-	// intercardinal ones come out from under them.
+	// intercardinal ones come out from under them. The whole rose is turned
+	// 15° off north.
 	function sf_card_ornate_emblem() {
 		$c       = 150;
 		$diamond = function ( $deg, $len, $at, $width ) use ( $c ) {
@@ -70,7 +71,7 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 			}
 		}
 		return '<svg class="sf-ornate-emblem" viewBox="0 0 300 300" aria-hidden="true" focusable="false">'
-			. '<circle class="sf-ornate-rose-ring" cx="150" cy="150" r="142" stroke-width="8"/>' . $rose . '</svg>';
+			. '<circle class="sf-ornate-rose-ring" cx="150" cy="150" r="142" stroke-width="8"/><g transform="rotate(15 150 150)">' . $rose . '</g></svg>';
 	}
 
 	// A faint starfield for the field, like the site's night sky: small dots
