@@ -11,11 +11,11 @@
    or a light section. */
 
 .sf-npc {
-    --npc-frame: var(--panel-box, #343638);
-    --npc-box: var(--panel, #292b2c);
-    --npc-edge: var(--card-border, #5c5e60);
-    --npc-text: var(--panel-text, #e7e8e9);
-    --npc-soft: var(--panel-soft, #b2b3b4);
+    --npc-frame: var(--panel-box, var(--sf-gray-600));
+    --npc-box: var(--panel, var(--sf-gray-700));
+    --npc-edge: var(--card-border, var(--sf-gray-400));
+    --npc-text: var(--panel-text, var(--sf-gray-100));
+    --npc-soft: var(--panel-soft, var(--sf-gray-200));
     --npc-rule: rgb(255 255 255 / 18%);
     display: flex;
     flex-direction: column;
@@ -79,10 +79,10 @@
     font-size: 1.125rem;
 }
 
-.sf-npc-resource-name--hp { color: var(--frontiers-hp); }
-.sf-npc-resource-name--vp { color: var(--frontiers-vp); }
-.sf-npc-resource-name--sp { color: var(--frontiers-sp); }
-.sf-npc-resource-name--mp { color: var(--frontiers-mp); }
+.sf-npc-resource-name--hp { color: var(--sf-red-500); }
+.sf-npc-resource-name--vp { color: var(--sf-purple-500); }
+.sf-npc-resource-name--sp { color: var(--sf-yellow-400); }
+.sf-npc-resource-name--mp { color: var(--sf-blue-400); }
 
 .sf-npc-value {
     font-variant-numeric: tabular-nums;
@@ -106,13 +106,13 @@
 }
 
 .sf-npc-group {
-    --stat-color: var(--frontiers-green, #4ed37b);
+    --stat-color: var(--sf-neon-500);
 }
 
-.sf-npc-group--physical { --stat-color: var(--frontiers-hp); }
-.sf-npc-group--social { --stat-color: var(--frontiers-vp); }
-.sf-npc-group--mental { --stat-color: var(--frontiers-sp); }
-.sf-npc-group--magic { --stat-color: var(--frontiers-mp); }
+.sf-npc-group--physical { --stat-color: var(--sf-red-500); }
+.sf-npc-group--social { --stat-color: var(--sf-purple-500); }
+.sf-npc-group--mental { --stat-color: var(--sf-yellow-400); }
+.sf-npc-group--magic { --stat-color: var(--sf-blue-400); }
 
 /* The core Stat's icon in a circle of its color's dark shade, its name,
    then its number in the color */
@@ -143,7 +143,7 @@
     height: 2.25rem;
     border-radius: 50%;
     background-color: color-mix(in srgb, var(--stat-color) 50%, black);
-    color: #ffffff;
+    color: var(--sf-gray-0);
 }
 
 .sf-npc .sf-npc-badge-icon {
@@ -223,11 +223,11 @@
 /* Printed, it goes light, with dark text */
 @media print {
     .sf-npc {
-        --npc-frame: var(--portfolio-near-white, #f6f6f6);
-        --npc-box: var(--portfolio-white, #ffffff);
-        --npc-edge: var(--portfolio-light-gray, #d9d9d9);
-        --npc-text: var(--portfolio-black, #1e1f20);
-        --npc-soft: var(--portfolio-gray, #626466);
+        --npc-frame: var(--sf-gray-50);
+        --npc-box: var(--sf-gray-0);
+        --npc-edge: var(--sf-gray-100);
+        --npc-text: var(--sf-gray-800);
+        --npc-soft: var(--sf-gray-500);
         --npc-rule: rgb(0 0 0 / 15%);
         box-shadow: none;
     }

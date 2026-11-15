@@ -3,31 +3,76 @@
    ======================================== */
 
 :root {
-    --portfolio-white: #ffffff;
-    --portfolio-near-white: #f9fafb;
-    --portfolio-black: #1f2122;
-    --portfolio-red: #eb0844;
-    --portfolio-yellow: #FCB10F;
-    --portfolio-blue: #244479;
-    --portfolio-green: #47B767;
-    --portfolio-gray: #505254;
-    --portfolio-medium-gray: #949798;
+    /* Strange Frontiers color sheet (rpg-components.php shows it): numbered
+       scales, higher numbers darker. Every step is a color already in use; new
+       colors need Ethan's OK. Card Edge (gray-900) is the darkest a component goes. */
+    --sf-gray-0: #ffffff;    /* White */
+    --sf-gray-50: #f9fafb;   /* Near White */
+    --sf-gray-100: #e7e8e9;  /* Text */
+    --sf-gray-150: #d3d4d5;  /* light card edge */
+    --sf-gray-200: #b2b3b4;  /* Soft Text, Condition Bar */
+    --sf-gray-300: #949798;  /* Medium Gray */
+    --sf-gray-350: #888a8c;  /* empty stat pips */
+    --sf-gray-400: #626466;  /* Condition Edge */
+    --sf-gray-500: #505254;  /* Gray */
+    --sf-gray-600: #343638;  /* Panel Box */
+    --sf-gray-700: #292b2c;  /* Panel */
+    --sf-gray-800: #1f2122;  /* Card */
+    --sf-gray-900: #161819;  /* Card Edge */
+
+    /* Isekai greens */
+    --sf-green-300: #6fd18a; /* good, on the dark panel */
+    --sf-green-500: #47b767; /* Green */
+    --sf-green-600: #2e8a4a; /* good, on light */
+    --sf-green-700: #327749; /* Dreft Mid */
+    --sf-green-900: #1c372b; /* Dreft */
+
+    /* Frontiers Green, the neon accent */
+    --sf-neon-500: #2dfc64;
+
+    /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
+       SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
+    --sf-red-500: #e2574c;     /* HP */
+    --sf-crimson-300: #ff5c86; /* bad, on dark */
+    --sf-crimson-500: #eb0844; /* danger, damage */
+    --sf-crimson-700: #b8063a; /* bad, on light */
+    --sf-purple-400: #a67bf0;  /* Lore on Black: #884ddc is 3.18:1 on #1f2122; this clears 4.5:1 */
+    --sf-purple-500: #9b7bff;  /* VP */
+    --sf-purple-700: #884ddc;  /* Lore */
+    --sf-yellow-400: #f2c94c;  /* SP */
+    --sf-yellow-600: #fcb10f;
+    --sf-blue-400: #4aa8ff;    /* MP */
+    --sf-blue-800: #244479;
+
+    /* Item cards */
+    --sf-olive-100: #d6d1b4; /* Item Text */
+    --sf-olive-300: #b5ae86; /* Item Accent */
+    --sf-olive-400: #a29d82; /* Item Muted */
+    --sf-olive-600: #6d6a5a; /* Item Edge */
+    --sf-olive-900: #25241e; /* Item Field */
+
+    /* The older names, kept as aliases */
+    --portfolio-white: var(--sf-gray-0);
+    --portfolio-near-white: var(--sf-gray-50);
+    --portfolio-black: var(--sf-gray-800);
+    --portfolio-red: var(--sf-crimson-500);
+    --portfolio-yellow: var(--sf-yellow-600);
+    --portfolio-blue: var(--sf-blue-800);
+    --portfolio-green: var(--sf-green-500);
+    --portfolio-gray: var(--sf-gray-500);
+    --portfolio-medium-gray: var(--sf-gray-300);
+    /* The portfolio keeps its own light gray; Strange Frontiers uses gray-100 */
     --portfolio-light-gray: #e9eaeb;
 
     --portfolio-radius: 8px;
 
-    /* Strange Frontiers (css/rpg.css and the Character Creator) */
-    --frontiers-green: #2dfc64;
-    --frontiers-lore: #884ddc;
-    /* #884ddc is 3.18:1 on #1f2122; this lighter purple clears 4.5:1. */
-    --frontiers-lore-on-black: #a67bf0;
-    --frontiers-dreft: #1c372b;
-    /* Between Dreft and Green: an Isekai Kind card's frame line */
-    --frontiers-dreft-mid: #327749;
-    /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
-       SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
-    --frontiers-hp: #e2574c;
-    --frontiers-vp: #9b7bff;
-    --frontiers-sp: #f2c94c;
-    --frontiers-mp: #4aa8ff;
+    --frontiers-green: var(--sf-neon-500);
+    --frontiers-lore: var(--sf-purple-700);
+    --frontiers-lore-on-black: var(--sf-purple-400);
+    --frontiers-dreft: var(--sf-green-900);
+    --frontiers-dreft-mid: var(--sf-green-700);
+    --frontiers-hp: var(--sf-red-500);
+    --frontiers-vp: var(--sf-purple-500);
+    --frontiers-sp: var(--sf-yellow-400);
+    --frontiers-mp: var(--sf-blue-400);
 }
