@@ -64,9 +64,9 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-.sf-ornate-rose-light { fill: #3a3c40; }
-.sf-ornate-rose-dark { fill: #25272a; }
-.sf-ornate-rose-ring { fill: none; stroke: #2c2e31; }
+.sf-ornate-rose-light { fill: #46494e; }
+.sf-ornate-rose-dark { fill: #34363a; }
+.sf-ornate-rose-ring { fill: none; stroke: #34363a; }
 
 .sf-ornate-corner {
     position: absolute;
