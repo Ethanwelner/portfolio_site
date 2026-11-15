@@ -595,8 +595,8 @@ document.addEventListener('click', function (e) {
 		$key      = $isekai ? 'green' : 'silver';
 		$gradient = 'sf-kind-' . $key . '-' . $n;
 		$stops    = array(
-			'silver' => array( '#b2b3b4', '#949798', '#626466', '#b2b3b4', '#949798' ),
-			'green'  => array( '#47b767', '#47b767', '#1c372b', '#47b767', '#1c372b' ),
+			'silver' => array( '#949798', '#949798', '#626466', '#626466', '#626466' ),
+			'green'  => array( '#47b767', '#47b767', '#47b767', '#47b767', '#47b767' ),
 		);
 
 		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
@@ -632,7 +632,7 @@ document.addEventListener('click', function (e) {
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
 			foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
-				echo '<div><div class="sf-kind-label">' . $group . '</div>';
+				echo '<div><div class="sf-kind-label sf-kind-label--' . strtolower( $group ) . '">' . $group . '</div>';
 				foreach ( $stats as $s ) {
 					$x = $b['stats'][ $s ] ?? array( 'bonus' => 0, 'max' => 0 );
 					echo '<div class="sf-kind-stat"><abbr title="' . ucfirst( $s ) . '">' . ucfirst( substr( $s, 0, 3 ) ) . '</abbr><span class="sf-kind-num">+' . (int) $x['bonus'] . '<span>/' . (int) $x['max'] . '</span></span></div>';
