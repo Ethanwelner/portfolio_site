@@ -46,7 +46,9 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 
 	// The compass behind the text: eight long diamonds meeting at the
 	// middle, each split down its length into a light and a dark face. The
-	// four smaller intercardinal ones lie under the four cardinal ones.
+	// four cardinal ones are as wide as they are far from the middle at
+	// their widest, so they close over the middle, and the four smaller
+	// intercardinal ones come out from under them.
 	function sf_card_ornate_emblem() {
 		$c       = 150;
 		$diamond = function ( $deg, $len, $at, $width ) use ( $c ) {
@@ -61,7 +63,7 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 				. '<path class="sf-ornate-rose-dark" d="M' . $c . ' ' . $c . 'L' . $right . 'L' . $tip . 'Z"/>';
 		};
 		$rose = '';
-		foreach ( array( array( 45, 92, 20, 12 ), array( 0, 132, 28, 17 ) ) as $winds ) {
+		foreach ( array( array( 45, 96, 46, 13 ), array( 0, 132, 24, 24 ) ) as $winds ) {
 			list( $offset, $len, $at, $width ) = $winds;
 			for ( $i = 0; $i < 4; $i++ ) {
 				$rose .= $diamond( $offset + $i * 90, $len, $at, $width );
