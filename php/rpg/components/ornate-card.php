@@ -1,6 +1,7 @@
 <?php
 // Ornate card (a test): a Kind's Background card in a gilded frame, a
-// thin gunmetal border running in to a gold line, a star in each
+// thin gunmetal border running in to a line in the card's key color
+// (silver for The Settled Systems, green for Isekai), a star in each
 // corner and a compass behind the text. Only the
 // component library (rpg-components.php) draws it for now; styled by
 // css/sf-ornate-card.css. It takes a background as sf_card_background()
@@ -8,17 +9,25 @@
 require_once __DIR__ . '/cards.php';
 
 if ( ! function_exists( 'sf_card_ornate' ) ) {
-	// The gold gradient the frame's strokes and stars use, written once per page
+	// The key color's gradient for the frame's strokes and stars, written
+	// once per page: silver for The Settled Systems, Dreft's green for Isekai
 	function sf_card_ornate_defs() {
 		static $done = false;
 		if ( $done ) {
 			return '';
 		}
-		$done = true;
-		return '<svg class="sf-ornate-defs" aria-hidden="true" focusable="false"><defs>'
-			. '<linearGradient id="sf-ornate-gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">'
-			. '<stop offset="0" stop-color="#fbeeb8"/><stop offset=".35" stop-color="#d8ad4c"/><stop offset=".6" stop-color="#8f6a24"/><stop offset=".85" stop-color="#e8c977"/><stop offset="1" stop-color="#b08532"/>'
-			. '</linearGradient></defs></svg>';
+		$done  = true;
+		$stops = array(
+			'silver' => array( '#ffffff', '#c3c8cf', '#7b8189', '#e3e6ea', '#9aa0a8' ),
+			'green'  => array( '#d4f2e0', '#6fb38d', '#2c5a44', '#a6dcbc', '#4f8f6d' ),
+		);
+		$html = '<svg class="sf-ornate-defs" aria-hidden="true" focusable="false"><defs>';
+		foreach ( $stops as $key => $c ) {
+			$html .= '<linearGradient id="sf-ornate-' . $key . '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">'
+				. '<stop offset="0" stop-color="' . $c[0] . '"/><stop offset=".35" stop-color="' . $c[1] . '"/><stop offset=".6" stop-color="' . $c[2] . '"/><stop offset=".85" stop-color="' . $c[3] . '"/><stop offset="1" stop-color="' . $c[4] . '"/>'
+				. '</linearGradient>';
+		}
+		return $html . '</defs></svg>';
 	}
 
 	// A four-pointed star with a smaller one turned 45° behind it
@@ -31,14 +40,14 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 	}
 
 	// One corner of the frame, drawn top left; CSS turns it for the others.
-	// The gold line runs 14px in from the card's edge and steps in around
+	// The key-colored line runs 14px in from the card's edge and steps in around
 	// the corner's star on a 24px arc. The star sits halfway between the card's rounded corner and
 	// the arc.
-	function sf_card_ornate_corner( $where ) {
+	function sf_card_ornate_corner( $where, $key ) {
 		return '<svg class="sf-ornate-corner sf-ornate-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-			. '<g fill="none" stroke="url(#sf-ornate-gold)" stroke-linecap="round">'
+			. '<g fill="none" stroke="url(#sf-ornate-' . $key . ')" stroke-linecap="round">'
 			. '<path stroke-width="2" d="M100 14H38A24 24 0 0 1 14 38V100"/>'
-			. '</g><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 18.5, 18.5, 11 ) . '</g></svg>';
+			. '</g><g fill="url(#sf-ornate-' . $key . ')">' . sf_card_ornate_star( 18.5, 18.5, 11 ) . '</g></svg>';
 	}
 
 	// The compass behind the text: eight long diamonds meeting at the
@@ -106,17 +115,18 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 	 */
 	function sf_card_ornate( $b ) {
 		$plane = strtolower( $b['plane'] );
+		$key   = 'isekai' === $plane ? 'green' : 'silver';
 		echo sf_card_ornate_defs();
 		echo '<article class="sf-ornate-card' . ( 'isekai' === $plane ? ' sf-ornate-card--dreft' : '' ) . '"><div class="sf-ornate-panel">';
 		echo '<div class="sf-ornate-field" aria-hidden="true">' . sf_card_ornate_stars( $b['name'] ) . sf_card_ornate_emblem() . '</div>';
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
-			echo sf_card_ornate_corner( $where );
+			echo sf_card_ornate_corner( $where, $key );
 		}
 		echo '<span class="sf-ornate-edge sf-ornate-edge--top"></span><span class="sf-ornate-edge sf-ornate-edge--right"></span><span class="sf-ornate-edge sf-ornate-edge--bottom"></span><span class="sf-ornate-edge sf-ornate-edge--left"></span>';
 
 		echo '<div class="sf-ornate-content">';
 		echo '<h3 class="sf-ornate-name">' . sf_card_e( $b['name'] ) . '</h3>';
-		echo '<div class="sf-ornate-rule" aria-hidden="true"><svg viewBox="0 0 20 20"><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 10, 10, 9 ) . '</g></svg></div>';
+		echo '<div class="sf-ornate-rule" aria-hidden="true"><svg viewBox="0 0 20 20"><g fill="url(#sf-ornate-' . $key . ')">' . sf_card_ornate_star( 10, 10, 9 ) . '</g></svg></div>';
 		echo '<p class="sf-ornate-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 
 		if ( ! empty( $b['stats'] ) ) {

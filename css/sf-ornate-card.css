@@ -1,16 +1,25 @@
 /* Ornate card (a test): php/rpg/components/ornate-card.php. A gunmetal
-   border running in to the first gold line, a dark field inside it, and a gold filigree frame: four corner pieces (one
-   SVG, turned) joined by straight gold edges, so the card grows with its
+   border running in to a line in the card's key color (silver, or green
+   for Isekai), a dark field inside it, and the frame: four corner pieces (one
+   SVG, turned) joined by straight edges, so the card grows with its
    text. */
 
 .sf-ornate-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .sf-ornate-card {
-    --ornate-gold: linear-gradient(90deg, #8f6a24, #e8c977 25%, #fbeeb8 50%, #d8ad4c 75%, #8f6a24);
-    --ornate-gold-v: linear-gradient(180deg, #8f6a24, #e8c977 25%, #fbeeb8 50%, #d8ad4c 75%, #8f6a24);
-    --ornate-text: #ddd6c6;
-    --ornate-muted: #a59d8c;
-    --ornate-label: #c9a352;
+    /* The key color: silver for The Settled Systems (and anything else),
+       Dreft's green for Isekai (sf-ornate-card--dreft, below) */
+    --key-hi: #ffffff;
+    --key-light: #c3c8cf;
+    --key-mid: #7b8189;
+    --key-label: #b4bac2;
+    --key-soft: #e6e9ed;
+    --key-line: rgb(180 186 194 / 35%);
+    --key-name: linear-gradient(180deg, #ffffff 10%, #c9ced5 50%, #7b8189 90%);
+    --ornate-key: linear-gradient(90deg, var(--key-mid), var(--key-light) 25%, var(--key-hi) 50%, var(--key-light) 75%, var(--key-mid));
+    --ornate-key-v: linear-gradient(180deg, var(--key-mid), var(--key-light) 25%, var(--key-hi) 50%, var(--key-light) 75%, var(--key-mid));
+    --ornate-text: #d9dcdf;
+    --ornate-muted: #9a9fa6;
     display: flex;
     flex-direction: column;
     max-width: 400px;
@@ -31,7 +40,7 @@
     flex-direction: column;
 }
 
-/* The dark field inside the first gold line: the silver runs in to it,
+/* The dark field inside the key-colored line: the silver runs in to it,
    under each corner's star, and the field's corners step in around the
    stars on the same 24px arcs as the line */
 .sf-ornate-field {
@@ -118,14 +127,14 @@
 .sf-ornate-corner--br { bottom: 0; right: 0; transform: scale(-1); }
 .sf-ornate-star-back { opacity: .75; }
 
-/* The straight edges between the corners: the 2px gold line 14px in from
+/* The straight edges between the corners: the 2px key-colored line 14px in from
    the card's edge, matching the corner pieces */
 .sf-ornate-edge { position: absolute; pointer-events: none; }
 .sf-ornate-edge--top, .sf-ornate-edge--bottom {
     left: 100px;
     right: 100px;
     height: 2px;
-    background: var(--ornate-gold);
+    background: var(--ornate-key);
 }
 .sf-ornate-edge--top { top: 13px; }
 .sf-ornate-edge--bottom { bottom: 13px; }
@@ -133,7 +142,7 @@
     top: 100px;
     bottom: 100px;
     width: 2px;
-    background: var(--ornate-gold-v);
+    background: var(--ornate-key-v);
 }
 .sf-ornate-edge--left { left: 13px; }
 .sf-ornate-edge--right { right: 13px; }
@@ -158,14 +167,14 @@
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
-    background: linear-gradient(180deg, #fff3c4 10%, #e3bd62 50%, #9c7329 90%);
+    background: var(--key-name);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     filter: drop-shadow(0 1px 0 rgb(0 0 0 / 80%));
 }
 
-/* A star between two gold lines that fade out */
+/* A star between two key-colored lines that fade out */
 .sf-ornate-rule {
     display: flex;
     align-items: center;
@@ -177,7 +186,7 @@
     content: "";
     flex: 1;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #c9a352);
+    background: linear-gradient(90deg, transparent, var(--key-label));
 }
 .sf-ornate-rule::after { transform: scaleX(-1); }
 .sf-ornate-rule svg { width: 16px; height: 16px; }
@@ -197,7 +206,7 @@
     font-weight: 400;
     letter-spacing: .08em;
     text-transform: uppercase;
-    color: var(--ornate-label);
+    color: var(--key-label);
 }
 
 .sf-ornate-stats {
@@ -206,7 +215,7 @@
     gap: 12px;
     margin-bottom: 16px;
     padding: 12px 0;
-    border-block: 1px solid rgb(201 163 82 / 35%);
+    border-block: 1px solid var(--key-line);
     font-size: .75rem;
 }
 /* On a narrow card, the groups stack */
@@ -214,23 +223,23 @@
     .sf-ornate-stats { grid-template-columns: 1fr; max-width: 180px; margin-inline: auto; }
 }
 .sf-ornate-stat { display: flex; justify-content: space-between; gap: 4px; }
-.sf-ornate-num { font-variant-numeric: tabular-nums; color: #f1e2b4; }
+.sf-ornate-num { font-variant-numeric: tabular-nums; color: var(--key-soft); }
 .sf-ornate-num span { color: var(--ornate-muted); }
 
 .sf-ornate-grants { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 14px; }
 .sf-ornate-grants .sf-ornate-label { margin: 0 4px 0 0; }
 .sf-ornate-chip {
     padding: 1px 10px;
-    border: 1px solid #b08532;
+    border: 1px solid var(--key-mid);
     border-radius: 999px;
-    background: linear-gradient(180deg, rgb(232 201 119 / 18%), rgb(143 106 36 / 12%));
+    background: linear-gradient(180deg, color-mix(in srgb, var(--key-light) 18%, transparent), color-mix(in srgb, var(--key-mid) 12%, transparent));
     font-size: .75rem;
-    color: #f1e2b4;
+    color: var(--key-soft);
 }
 
 .sf-ornate-features { margin: 0 0 18px; padding: 0; list-style: none; }
 .sf-ornate-features li { margin-bottom: 8px; }
-.sf-ornate-features strong { color: #ecd28e; }
+.sf-ornate-features strong { color: var(--key-soft); }
 
 .sf-ornate-foot {
     display: flex;
@@ -244,11 +253,21 @@
     letter-spacing: .1em;
     text-transform: uppercase;
     white-space: nowrap;
-    color: var(--ornate-label);
+    color: var(--key-label);
 }
 .sf-ornate-foot span { font-size: .625rem; }
 
-/* Dreft's cards keep their green: a hint of it in the field */
+/* Isekai's cards key on Dreft's green (--frontiers-dreft, #1c372b, lifted
+   so it reads on the dark field), with a hint of it in the field */
+.sf-ornate-card--dreft {
+    --key-hi: #d4f2e0;
+    --key-light: #8fcfaa;
+    --key-mid: #4f8f6d;
+    --key-label: #7fbf98;
+    --key-soft: #c9ead6;
+    --key-line: rgb(127 191 152 / 35%);
+    --key-name: linear-gradient(180deg, #e2f7ea 10%, #8fcfaa 50%, #2f6249 90%);
+}
 .sf-ornate-card--dreft .sf-ornate-field {
     background: radial-gradient(ellipse at 50% 42%, #24302a 0%, #161c19 55%, #0c0f0d 100%);
 }
