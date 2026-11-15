@@ -134,7 +134,7 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 				echo '<div><div class="sf-ornate-label">' . $group . '</div>';
 				foreach ( $stats as $s ) {
 					$x = $b['stats'][ $s ];
-					echo '<div class="sf-ornate-stat"><span>' . ucfirst( $s ) . '</span><span class="sf-ornate-num">+' . (int) $x['bonus'] . '<span>/' . (int) $x['max'] . '</span></span></div>';
+					echo '<div class="sf-ornate-stat"><abbr title="' . ucfirst( $s ) . '">' . ucfirst( substr( $s, 0, 3 ) ) . '</abbr><span class="sf-ornate-num">+' . (int) $x['bonus'] . '<span>/' . (int) $x['max'] . '</span></span></div>';
 				}
 				echo '</div>';
 			}
