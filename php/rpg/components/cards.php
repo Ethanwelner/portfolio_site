@@ -612,8 +612,8 @@ document.addEventListener('click', function (e) {
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			$star = 'tl' === $where;
 			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H70A64 64 0 0 1 6 70V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
-				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 26, 26, 19 ) . '"/>' : '' )
+				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H42A36 36 0 0 1 6 42V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
+				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 17, 17, 11 ) . '"/>' : '' )
 				. '</svg>';
 		}
 		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
