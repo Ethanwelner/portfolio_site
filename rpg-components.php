@@ -527,6 +527,8 @@ $sf_list = function ( $items ) {
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
 		<style>
+			/* The page in Light Edge (gray-150) */
+			body.white-bg { background-color: var(--sf-gray-150); }
 			.sf-library-band { padding: 48px 0; }
 			.sf-library-stage { padding: 16px 24px 24px; background-color: var(--portfolio-white); border: 1px solid var(--portfolio-light-gray); border-radius: 8px; transition: background-color 200ms, border-color 200ms; }
 			.sf-library-stage.is-dark { background-color: var(--portfolio-black); border-color: #4a4c4d; color: var(--portfolio-white); }
