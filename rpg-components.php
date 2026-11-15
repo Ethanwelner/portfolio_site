@@ -266,6 +266,7 @@ $sf_color_groups = array(
 		array( '600', '#2e8a4a', 'Good on Light', 'Good values on light (--good-on-light)' ),
 		array( '700', '#327749', 'Dreft Mid', 'An Isekai Kind card’s frame line (--frontiers-dreft-mid)' ),
 		array( '900', '#1c372b', 'Dreft', 'Dreft’s bar and edge (--frontiers-dreft)' ),
+		array( '950', '#0f1f17', 'Deep Dreft', 'An Isekai Kind card’s field' ),
 	) ),
 	'neon'    => array( 'Frontiers Green, the accent.', array(
 		array( '500', '#2dfc64', 'Frontiers Green', 'Primary buttons, focus rings, core stat badges (--frontiers-green)' ),
