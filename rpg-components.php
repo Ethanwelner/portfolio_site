@@ -685,9 +685,10 @@ optional and options: everything sf_card_item() takes (resistances for its armor
 		<div class="sf-library-band">
 			<div class="container">
 				<div class="line-container"><h5><strong>Kind Card</strong></h5><div class="line"></div></div>
-				<pre class="sf-library-api">sf_card_kind( $kind );
+				<pre class="sf-library-api">sf_card_kind( $kind, $background = 'sun' );
 takes a Kind as the creator exports it: sample-character.json, dreftian-backgrounds.json (sf_card_background() sends a Kind here too)
-a thin solid gray border running in to a line in its key color (silver for The Settled Systems, green for Isekai), around a dark field with a faded sun at the bottom and a column of planets lit by it; the field has a large cut-out at its top left corner holding a star, and the gray band stops short of it; the frame is four corner pieces joined by straight edges, so it grows with its text</pre>
+a thin solid gray border running in to a line in its key color (silver for The Settled Systems, green for Isekai), around a dark field with a faded sun at the bottom and a column of planets lit by it; the field has a large cut-out at its top left corner holding a star, and the gray band stops short of it; the frame is four corner pieces joined by straight edges, so it grows with its text
+$background is what's drawn behind the content: 'sun' (the default), 'compass' (an eight-point compass over a faint starfield) or 'planet' (a dark planet's disc under a dense starfield); the creator's KindCard takes the same as its background prop</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['kind'] ); ?>
 				<div class="sf-library-stage is-dark">
@@ -695,6 +696,10 @@ a thin solid gray border running in to a line in its key color (silver for The S
 					<p class="sf-library-label">Edwin’s Human, then a Dreftian Kind</p>
 					<div class="sf-library-kinds">
 						<?php foreach ( $sf_kinds as $k ) { sf_card_kind( $k ); } ?>
+					</div>
+					<p class="sf-library-label">Backgrounds: sun (the default), compass and planet</p>
+					<div class="sf-library-kinds">
+						<?php foreach ( array( 'sun', 'compass', 'planet' ) as $bg ) { sf_card_kind( $sf_kinds[0], $bg ); } ?>
 					</div>
 				</div>
 			</div>
