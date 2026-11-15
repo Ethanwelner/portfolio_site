@@ -206,7 +206,7 @@
     margin-bottom: 16px;
     padding: 12px 0;
     border-block: 1px solid var(--key-line);
-    font-size: .9375rem;
+    font-size: 1rem;
 }
 /* On a narrow card, the groups stack */
 @container (max-width: 280px) {
@@ -216,7 +216,7 @@
     .sf-ornate-stats { grid-template-columns: 1fr; max-width: 180px; margin-inline: auto; }
 }
 .sf-ornate-stat { display: flex; justify-content: space-between; gap: 4px; }
-.sf-ornate-stat abbr { text-decoration: none; cursor: help; }
+.sf-ornate-stat abbr { font-family: 'bebas_neueregular', sans-serif; letter-spacing: .06em; text-decoration: none; cursor: help; }
 .sf-ornate-num { font-variant-numeric: tabular-nums; color: var(--key-soft); }
 .sf-ornate-num span { color: var(--ornate-muted); }
 
