@@ -632,7 +632,7 @@ document.addEventListener('click', function (e) {
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
 			foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
-				echo '<div class="sf-kind-group sf-kind-group--' . strtolower( $group ) . '"><div class="sf-kind-label">' . $group . '</div>';
+				echo '<div><div class="sf-kind-label sf-kind-label--' . strtolower( $group ) . '">' . $group . '</div>';
 				foreach ( $stats as $s ) {
 					$x = $b['stats'][ $s ] ?? array( 'bonus' => 0, 'max' => 0 );
 					echo '<div class="sf-kind-stat"><abbr title="' . ucfirst( $s ) . '">' . ucfirst( substr( $s, 0, 3 ) ) . '</abbr><span class="sf-kind-num">+' . (int) $x['bonus'] . '<span>/' . (int) $x['max'] . '</span></span></div>';
