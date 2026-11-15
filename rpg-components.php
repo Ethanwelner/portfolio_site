@@ -242,61 +242,83 @@ $sf_button_rows = array(
 		array( 'Building 0:12', array( 'tone' => 'primary', 'disabled' => true, 'attrs' => array( 'aria-busy' => 'true' ) ), 'busy: working, at full strength' ),
 	),
 );
-// Strange Frontiers' colors: name, CSS value (a token or a hex), where it shows.
+// Strange Frontiers' color sheet (css/tokens.css): family => note and steps.
+// Each step: number, hex, name, where it shows. Its token is --sf-<family>-<step>.
 $sf_color_groups = array(
-	'Strange Frontiers (css/tokens.css)' => array(
-		array( 'Frontiers Green', '--frontiers-green', '#2dfc64', 'Primary buttons, focus rings and the core stat badges' ),
-		array( 'Lore', '--frontiers-lore', '#884ddc', 'Lore links and headings on light backgrounds' ),
-		array( 'Lore on Black', '--frontiers-lore-on-black', '#a67bf0', 'Lore on dark backgrounds, and the sheet’s glow (clears 4.5:1 on black)' ),
-		array( 'Dreft', '--frontiers-dreft', '#1c372b', 'Isekai’s cards: Dreft’s green bar and edge' ),
-		array( 'Dreft Mid', '--frontiers-dreft-mid', '#327749', 'Between Dreft and Green: an Isekai Kind card’s frame line' ),
-	),
-	'Resources and stat groups (css/tokens.css)' => array(
-		array( 'HP', '--frontiers-hp', '#e2574c', 'Hit Points, and the Physical stats' ),
-		array( 'VP', '--frontiers-vp', '#9b7bff', 'Vibe Points, and the Social stats' ),
-		array( 'SP', '--frontiers-sp', '#f2c94c', 'Savvy Points, and the Mental stats' ),
-		array( 'MP', '--frontiers-mp', '#4aa8ff', 'Mana Points, and the Magic stats' ),
-	),
-	'Sheets and Trait cards (dark grays)' => array(
-		array( 'Card', '--portfolio-black', '#1f2122', 'A card’s background' ),
-		array( 'Card Edge', '--card-edge', '#161819', 'A Trait or Background card’s 1px edge' ),
-		array( 'Panel', '--panel', '#292b2c', 'The sheet’s boxes and the dark popup' ),
-		array( 'Panel Box', '--panel-box', '#343638', 'The sheet’s frame' ),
-		array( 'Text', '--panel-text', '#e7e8e9', 'Text on the dark grays' ),
-		array( 'Soft Text', '--panel-soft', '#b2b3b4', 'Labels and secondary text on the dark grays' ),
-	),
-	'Conditions' => array(
-		array( 'Condition Bar', null, '#b7b4b4', 'A Condition card’s bar, and the condition button' ),
-		array( 'Condition Edge', null, '#626466', 'A Condition card’s edge' ),
-	),
-	'Item cards (olives)' => array(
-		array( 'Item Field', null, '#25241e', 'Fields and chips inside an Item card' ),
-		array( 'Item Edge', null, '#6d6a5a', 'An Item card’s edge and its chips’ borders' ),
-		array( 'Item Muted', null, '#a29d82', 'Item labels, and the selected outline' ),
-		array( 'Item Accent', null, '#b5ae86', 'The item button, icon badges and checked boxes' ),
-		array( 'Item Text', null, '#d6d1b4', 'Chip text, and the hovered count buttons' ),
-	),
-	'Shared with the portfolio (css/tokens.css)' => array(
-		array( 'Gray', '--portfolio-gray', '#505254', 'The default button and chips' ),
-		array( 'Medium Gray', '--portfolio-medium-gray', '#949798', 'Rules and quiet borders' ),
-		array( 'Light Gray', '--portfolio-light-gray', '#e9eaeb', 'Muted chips, and edges on light sheets' ),
-		array( 'Near White', '--portfolio-near-white', '#f9fafb', 'The light button and light sheet frames' ),
-		array( 'White', '--portfolio-white', '#ffffff', 'Text on dark buttons, and light panels' ),
-		array( 'Red', '--portfolio-red', '#eb0844', 'The danger button, bad chips and damage' ),
-		array( 'Green', '--portfolio-green', '#47b767', 'A picked card’s ring and check' ),
-	),
+	'gray'    => array( 'Grays. Card Edge is the darkest a component goes.', array(
+		array( '0', '#ffffff', 'White', 'Text on dark buttons, light panels (--portfolio-white)' ),
+		array( '50', '#f9fafb', 'Near White', 'The light button, light sheet frames (--portfolio-near-white)' ),
+		array( '100', '#e7e8e9', 'Text', 'Text on the dark grays, muted chips, light cards (--panel-text)' ),
+		array( '150', '#d3d4d5', 'Light Edge', 'Creator cards on light, builder hints' ),
+		array( '200', '#b2b3b4', 'Soft Text', 'Labels, secondary text, the Condition bar (--panel-soft)' ),
+		array( '300', '#949798', 'Medium Gray', 'Rules and quiet borders (--portfolio-medium-gray)' ),
+		array( '350', '#888a8c', 'Open Slot', 'Empty stat pips' ),
+		array( '400', '#626466', 'Condition Edge', 'Condition cards, builder edges, accent chips' ),
+		array( '500', '#505254', 'Gray', 'The default button and chips (--portfolio-gray)' ),
+		array( '600', '#343638', 'Panel Box', 'The sheet’s frame (--panel-box)' ),
+		array( '700', '#292b2c', 'Panel', 'The sheet’s boxes and the dark popup (--panel)' ),
+		array( '800', '#1f2122', 'Card', 'A card’s background (--portfolio-black)' ),
+		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
+	) ),
+	'green'   => array( 'Isekai greens.', array(
+		array( '300', '#6fd18a', 'Good', 'Good values on the dark panel (--panel-good)' ),
+		array( '500', '#47b767', 'Green', 'A picked card’s ring and check (--portfolio-green)' ),
+		array( '600', '#2e8a4a', 'Good on Light', 'Good values on light (--good-on-light)' ),
+		array( '700', '#327749', 'Dreft Mid', 'An Isekai Kind card’s frame line (--frontiers-dreft-mid)' ),
+		array( '900', '#1c372b', 'Dreft', 'Dreft’s bar and edge (--frontiers-dreft)' ),
+	) ),
+	'neon'    => array( 'Frontiers Green, the accent.', array(
+		array( '500', '#2dfc64', 'Frontiers Green', 'Primary buttons, focus rings, core stat badges (--frontiers-green)' ),
+	) ),
+	'red'     => array( 'Hit Points.', array(
+		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
+	) ),
+	'crimson' => array( 'Danger.', array(
+		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),
+		array( '500', '#eb0844', 'Red', 'The danger button, bad chips and damage (--portfolio-red)' ),
+		array( '700', '#b8063a', 'Bad on Light', 'Reasons a pick is blocked' ),
+	) ),
+	'purple'  => array( 'Vibe Points and Lore.', array(
+		array( '400', '#a67bf0', 'Lore on Black', 'Lore on dark backgrounds and the sheet’s glow (--frontiers-lore-on-black)' ),
+		array( '500', '#9b7bff', 'VP', 'Vibe Points and the Social stats (--frontiers-vp)' ),
+		array( '700', '#884ddc', 'Lore', 'Lore links and headings on light (--frontiers-lore)' ),
+	) ),
+	'yellow'  => array( 'Savvy Points.', array(
+		array( '400', '#f2c94c', 'SP', 'Savvy Points and the Mental stats (--frontiers-sp)' ),
+		array( '600', '#fcb10f', 'Yellow', 'The portfolio’s yellow (--portfolio-yellow)' ),
+	) ),
+	'blue'    => array( 'Mana Points.', array(
+		array( '400', '#4aa8ff', 'MP', 'Mana Points and the Magic stats (--frontiers-mp)' ),
+		array( '800', '#244479', 'Blue', 'The portfolio’s blue (--portfolio-blue)' ),
+	) ),
+	'olive'   => array( 'Item cards.', array(
+		array( '100', '#d6d1b4', 'Item Text', 'Chip text, hovered count buttons' ),
+		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes' ),
+		array( '400', '#a29d82', 'Item Muted', 'Item labels, the selected outline' ),
+		array( '600', '#6d6a5a', 'Item Edge', 'An Item card’s edge and its chips’ borders' ),
+		array( '900', '#25241e', 'Item Field', 'Fields and chips inside an Item card' ),
+	) ),
 );
 $sf_color_table = function () use ( $sf_color_groups ) {
-	foreach ( $sf_color_groups as $group => $colors ) {
-		echo '<p class="sf-library-label">' . sf_card_e( $group ) . '</p><div class="sf-library-colors">';
-		foreach ( $colors as $c ) {
-			$fill = $c[1] ? 'var(' . $c[1] . ', ' . $c[2] . ')' : $c[2];
+	foreach ( $sf_color_groups as $family => $group ) {
+		list( $about, $steps ) = $group;
+		echo '<p class="sf-library-label">' . sf_card_e( $family ) . '<span class="sf-library-note">' . sf_card_e( $about ) . '</span></p><div class="sf-library-scale">';
+		foreach ( $steps as $c ) {
+			$token = '--sf-' . $family . '-' . $c[0];
+			// An older name in parentheses at the end of the note shows as its own line
+			$note  = $c[3];
+			$alias = '';
+			if ( preg_match( '/^(.*?)\s*\((--[a-z-]+)\)$/', $note, $m ) ) {
+				$note  = $m[1];
+				$alias = $m[2];
+			}
 			echo '<div class="sf-library-color">'
-				. '<span class="sf-library-swatch" style="background-color: ' . sf_card_e( $fill ) . '"></span>'
-				. '<strong>' . sf_card_e( $c[0] ) . '</strong>'
-				. '<code>' . sf_card_e( $c[2] ) . '</code>'
-				. ( $c[1] ? '<code>' . sf_card_e( $c[1] ) . '</code>' : '' )
-				. '<span class="sf-library-note">' . sf_card_e( $c[3] ) . '</span>'
+				. '<span class="sf-library-swatch" style="background-color: var(' . sf_card_e( $token ) . ')"></span>'
+				. '<strong>' . sf_card_e( $family . '-' . $c[0] ) . '</strong>'
+				. '<span>' . sf_card_e( $c[2] ) . '</span>'
+				. '<code>' . sf_card_e( $c[1] ) . '</code>'
+				. '<span class="sf-library-note">' . sf_card_e( $note ) . '</span>'
+				. ( $alias ? '<code>' . sf_card_e( $alias ) . '</code>' : '' )
 				. '</div>';
 		}
 		echo '</div>';
@@ -523,10 +545,11 @@ $sf_list = function ( $items ) {
 			.sf-library-note { font-size: .75rem; opacity: .7; }
 			.sf-library-chassis { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(480px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); align-items: start; gap: 16px; }
-			.sf-library-stat-box { padding: 24px; background-color: #292b2c; border-radius: 12px; }
+			.sf-library-stat-box { padding: 24px; background-color: var(--sf-gray-700); border-radius: 12px; }
 			.sf-library-sheet { margin-top: 64px; }
-			.sf-library-colors { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr)); align-items: start; gap: 24px 16px; margin-bottom: 32px; }
-			.sf-library-color { display: flex; flex-direction: column; gap: 2px; font-size: .875rem; }
+			.sf-library-scale { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 12px; margin-bottom: 32px; }
+			.sf-library-color { display: flex; flex-direction: column; gap: 2px; width: 128px; font-size: .875rem; }
+			.sf-library-label .sf-library-note { margin-left: 6px; text-transform: none; letter-spacing: 0; font-weight: 400; }
 			.sf-library-color code { font-size: .75rem; color: inherit; opacity: .8; }
 			.sf-library-swatch { display: block; height: 64px; margin-bottom: 6px; border: 1px solid rgb(127 127 127 / 35%); border-radius: 8px; }
 			.sf-library-kinds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }
@@ -553,7 +576,7 @@ $sf_list = function ( $items ) {
 		<div class="sf-library-band">
 			<div class="container">
 				<div class="line-container"><h5><strong>Colors</strong></h5><div class="line"></div></div>
-				<p class="copy">The colors the components use. The named ones are tokens in <code>css/tokens.css</code>, and the rest are set in the component stylesheets (and the creator’s copies of them).</p>
+				<p class="copy">The color sheet: every color the components use, as numbered scales in <code>css/tokens.css</code>. Higher numbers are darker, and each step’s token is <code>--sf-&lt;family&gt;-&lt;step&gt;</code> (gray-500 is <code>--sf-gray-500</code>). The older names in parentheses still work as aliases. Shadows, scrims and rules are black or white with transparency.</p>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
 					<?php $sf_color_table(); ?>
