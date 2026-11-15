@@ -76,14 +76,17 @@
 			<div class="text-cols">
 				<ul class="copy mb-0">
 					<li><strong>2034–2085:</strong> Founded as a series of disparate research and mining concerns, much of the economic and civilian infrastructure of Luna was, over time, bought out by its most dominant local player, Port Luna.</li>
-					<li><strong>2085:</strong> Uninterested in politics, the industrial conglomerates operated as a de facto corporate state, with no citizens, only temporary residents on work visas.</li>
-					<li><strong>2085–2110:</strong> As a fractious coalition of corporate boards, the industrial syndicate was unable to govern effectively, repeatedly collapsing due to infighting.</li>
-					<li><strong>2085–2110:</strong> Despite this, its nature as a high-paying set of work camps for the extremely cash-flush space industry ensured a steadily rising population and an ever-expanding territorial footprint.</li>
+					<li><strong>2060:</strong> Luna’s corporations established <?php echo sf_lore_link('stellar-metals', 'Stellar Metals'); ?> Station and the <?php echo sf_lore_link('ten-twenty-holding-corporation', '10/20 Holding Corporation'); ?> Headquarters in deep space, their first holdings beyond the Moon.</li>
+					<li><strong>2085:</strong> Uninterested in politics, the conglomerates ran Luna as a de facto corporate state: no citizens, no elections, only temporary residents on work visas.</li>
+					<li><strong>2085–2110:</strong> A fractious coalition of corporate boards, the Syndicate repeatedly fractured as member companies rose and fell, each time reconstituting under a new charter and a new number. Yet as a set of high-paying work camps for the cash-flush space industry, it kept growing in population and territory regardless.</li>
 					<li><strong>2118:</strong> After the discovery of <?php echo sf_lore_link('the-gift', 'The Gift'); ?> and the Lunar Hostage Crisis, the Third Lunar Syndicate’s fortunes were buttressed by the immense wealth suddenly afforded by the mining of <?php echo sf_lore_link('st-245-e6', 'St-245/E6'); ?>, as well as the licensing and production of <?php echo sf_lore_link('switch-gates', 'switch gates'); ?>.</li>
-					<li><strong>2120:</strong> This boost in wealth, as well as the immense pressure exerted on the stateless corporate entities that comprised the Syndicate, resulted in the purchase of the former territory of Bolivia and the Syndicate’s formal admission into the UN.</li>
-					<li><strong>2122–2130:</strong> Over the next decade, Brazil and Paraguay, both in significant economic decline, would collectively blackmail the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
+					<li><strong>2120:</strong> Flush with new wealth and under immense pressure to legitimize itself, the Syndicate purchased the former territory of Bolivia outright, a move that won it formal admission to the UN as a sovereign state.</li>
+					<li><strong>2122–2130:</strong> Over the next decade, Brazil and Paraguay, both in significant economic decline, collectively blackmailed the Syndicate into favorable purchase agreements as well, officially becoming additional Earth territories of the Lunar state.</li>
 					<li><strong>2132:</strong> Suddenly saddled with a massive increase in population, as well as powerful new board members, the Lunar Syndicate was forced into adopting a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
-					<li><strong>Present day:</strong> To this day, the Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
+					<li><strong>2140:</strong> The Syndicate’s purchases of its South American neighbors alarmed Argentina, Chile, and Uruguay into seeking the protection of the SDU.</li>
+					<li><strong>2141–2190:</strong> As rising firms displaced old ones and market share shifted between its member companies, the Syndicate’s board was rechartered several more times, culminating in the Eighth Lunar Industrial Syndicate.</li>
+					<li><strong>2150–2160:</strong> Campo Clavius, the Tycho Mine Complex, and Luna Orbita were built up into the industrial heart of the Syndicate.</li>
+					<li><strong>Present day:</strong> The Lunar Syndicate continues to grow as extraterritorial business holdings are adopted officially into the “state” when territoriality would be profitable or advantageous, resulting in a proto-empire spanning multiple star systems and planes of reality.</li>
 				</ul>
 			</div>
 		</div>
