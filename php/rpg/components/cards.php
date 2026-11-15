@@ -524,14 +524,27 @@ document.addEventListener('click', function (e) {
 	// the card's key color (silver for The Settled Systems, Dreft's green for
 	// Isekai), around a dark field with a large quarter-circle cut out of its
 	// top left corner and a four-pointed star in the cut-out (the gunmetal
-	// stops short of it). The field holds a dense starfield over the curve
-	// of a dark planet in the lower part of the card, its rim a faded silver. The same
+	// stops short of it). The field holds a starfield, and a faded sun at
+	// the bottom whose rays light a column of planets from below. The same
 	// markup as the creator's KindCard (cards.tsx).
 
 	// A four-pointed star
 	function sf_card_kind_star( $cx, $cy, $r ) {
 		$s = $r * 0.22;
 		return 'M' . $cx . ' ' . ( $cy - $r ) . 'L' . ( $cx + $s ) . ' ' . ( $cy - $s ) . 'L' . ( $cx + $r ) . ' ' . $cy . 'L' . ( $cx + $s ) . ' ' . ( $cy + $s ) . 'L' . $cx . ' ' . ( $cy + $r ) . 'L' . ( $cx - $s ) . ' ' . ( $cy + $s ) . 'L' . ( $cx - $r ) . ' ' . $cy . 'L' . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z';
+	}
+
+	// The sky behind the stars: a faded sun at the bottom with rays fanning
+	// out from it, and a column of planets above it, each the field's own
+	// color, lit along its bottom edge. The same list as the creator's
+	// KIND_PLANETS: [center, % of the field's height; width, % of its width;
+	// the crescent's thickness at the bottom, px].
+	function sf_card_kind_sky() {
+		$html = '<div class="sf-kind-sky"><span class="sf-kind-rays"></span><span class="sf-kind-sun"></span>';
+		foreach ( array( array( -6, 112, 4 ), array( 30, 16, 2 ), array( 50, 30, 3 ), array( 70, 11, 2 ) ) as $p ) {
+			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . '%;width:' . $p[1] . '%;--lit:' . $p[2] . 'px"></span>';
+		}
+		return $html . '</div>';
 	}
 
 	// The starfield: one fixed sky (top %, left %, opacity, delay in
@@ -583,7 +596,7 @@ document.addEventListener('click', function (e) {
 			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
 		}
 		echo '</linearGradient></defs></svg>';
-		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . '<span class="sf-kind-planet"></span></div>';
+		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_sky() . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
 		// at the top left the line follows the field's cut-out with the star
 		// in it, and at the other three it rounds off
