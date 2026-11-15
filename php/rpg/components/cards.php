@@ -536,13 +536,13 @@ document.addEventListener('click', function (e) {
 
 	// The sky behind the stars: a faded sun at the bottom with rays fanning
 	// out from it, and a column of planets above it, each the field's own
-	// color, lit along its bottom edge. The same list as the creator's
-	// KIND_PLANETS: [center, % of the field's height; width, % of its width;
-	// the crescent's thickness at the bottom, px].
+	// color, lit along its bottom edge, measured in the field's width (cqw).
+	// The same list as the creator's KIND_PLANETS: [its center, as a CSS top;
+	// its width, cqw; the crescent's thickness at the bottom, px].
 	function sf_card_kind_sky() {
 		$html = '<div class="sf-kind-sky"><span class="sf-kind-rays"></span><span class="sf-kind-sun"></span>';
-		foreach ( array( array( -6, 112, 4 ), array( 30, 16, 2 ), array( 50, 30, 3 ), array( 70, 11, 2 ) ) as $p ) {
-			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . '%;width:' . $p[1] . '%;--lit:' . $p[2] . 'px"></span>';
+		foreach ( array( array( '-44cqw', 112, 4 ), array( 'calc(100% - 78.5cqw)', 13, 2 ), array( 'calc(100% - 54cqw)', 24, 3 ), array( 'calc(100% - 31.5cqw)', 9, 2 ) ) as $p ) {
+			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . ';width:' . $p[1] . 'cqw;--lit:' . $p[2] . 'px"></span>';
 		}
 		return $html . '</div>';
 	}
