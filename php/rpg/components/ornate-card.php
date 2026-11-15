@@ -30,24 +30,23 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 		return $html . '</defs></svg>';
 	}
 
-	// A four-pointed star with a smaller one turned 45° behind it
+	// A four-pointed star
 	function sf_card_ornate_star( $cx, $cy, $r ) {
 		$s = $r * 0.22;
-		$d = $r * 0.55;
-		$big   = "M$cx " . ( $cy - $r ) . " L" . ( $cx + $s ) . ' ' . ( $cy - $s ) . " L" . ( $cx + $r ) . " $cy L" . ( $cx + $s ) . ' ' . ( $cy + $s ) . " L$cx " . ( $cy + $r ) . " L" . ( $cx - $s ) . ' ' . ( $cy + $s ) . " L" . ( $cx - $r ) . " $cy L" . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z';
-		$small = 'M' . ( $cx - $d ) . ' ' . ( $cy - $d ) . " L$cx " . ( $cy - $s ) . ' L' . ( $cx + $d ) . ' ' . ( $cy - $d ) . " L" . ( $cx + $s ) . " $cy L" . ( $cx + $d ) . ' ' . ( $cy + $d ) . " L$cx " . ( $cy + $s ) . ' L' . ( $cx - $d ) . ' ' . ( $cy + $d ) . " L" . ( $cx - $s ) . " $cy Z";
-		return '<path class="sf-ornate-star-back" d="' . $small . '"/><path d="' . $big . '"/>';
+		return '<path d="M' . $cx . ' ' . ( $cy - $r ) . 'L' . ( $cx + $s ) . ' ' . ( $cy - $s ) . 'L' . ( $cx + $r ) . ' ' . $cy . 'L' . ( $cx + $s ) . ' ' . ( $cy + $s ) . 'L' . $cx . ' ' . ( $cy + $r ) . 'L' . ( $cx - $s ) . ' ' . ( $cy + $s ) . 'L' . ( $cx - $r ) . ' ' . $cy . 'L' . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z"/>';
 	}
 
 	// One corner of the frame, drawn top left; CSS turns it for the others.
-	// The key-colored line runs 14px in from the card's edge and steps in around
-	// the corner's star on a 24px arc. The star sits halfway between the card's rounded corner and
-	// the arc.
+	// The key-colored line runs 10px in from the card's edge. At the top left
+	// it steps in around a star on an 18px arc, the star halfway between the
+	// card's rounded corner and the arc; the other three corners are simply
+	// rounded.
 	function sf_card_ornate_corner( $where, $key ) {
+		$star = 'tl' === $where;
 		return '<svg class="sf-ornate-corner sf-ornate-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-			. '<g fill="none" stroke="url(#sf-ornate-' . $key . ')" stroke-linecap="round">'
-			. '<path stroke-width="2" d="M100 14H38A24 24 0 0 1 14 38V100"/>'
-			. '</g><g fill="url(#sf-ornate-' . $key . ')">' . sf_card_ornate_star( 18.5, 18.5, 11 ) . '</g></svg>';
+			. '<path fill="none" stroke="url(#sf-ornate-' . $key . ')" stroke-width="2" d="' . ( $star ? 'M100 10H28A18 18 0 0 1 10 28V100' : 'M100 10H16A6 6 0 0 0 10 16V100' ) . '"/>'
+			. ( $star ? '<g fill="url(#sf-ornate-' . $key . ')">' . sf_card_ornate_star( 13.5, 13.5, 8 ) . '</g>' : '' )
+			. '</svg>';
 	}
 
 	// The compass behind the text: eight long diamonds meeting at the
