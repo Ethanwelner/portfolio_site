@@ -551,7 +551,7 @@ document.addEventListener('click', function (e) {
 	// $background, like the creator's KindCard): 'compass', the first one,
 	// an eight-point compass over a faint starfield, 'planet', a dark
 	// planet's disc under a dense starfield, and 'orbits', a solar system's
-	// rings over the faint starfield. 'sun', above, is the default.
+	// rings over the faint starfield, the default. 'sun' is above.
 
 	// The compass: eight long diamonds meeting at the middle, each split
 	// down its length into a light and a dark face. The four cardinal ones
@@ -629,10 +629,10 @@ document.addEventListener('click', function (e) {
 	 * a link to its lore entry, then "Kind ✦" and its setting at the foot.
 	 * Takes a Kind as the creator exports it (sample-character.json,
 	 * dreftian-backgrounds.json), and what's drawn behind the content:
-	 * 'sun' (the sun and planets, the default), 'compass', 'planet' or
-	 * 'orbits'.
+	 * 'orbits' (the solar system, the default), 'sun', 'compass' or
+	 * 'planet'.
 	 */
-	function sf_card_kind( $b, $background = 'sun' ) {
+	function sf_card_kind( $b, $background = 'orbits' ) {
 		static $n = 0;
 		$n++;
 		$plane    = strtolower( $b['plane'] );
@@ -656,7 +656,7 @@ document.addEventListener('click', function (e) {
 			'planet'  => sf_card_kind_stars( $b['id'] ?? $b['name'], true ) . '<span class="sf-kind-globe"></span>',
 			'orbits'  => sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_orbits(),
 		);
-		echo '<div class="sf-kind-field" aria-hidden="true">' . ( $backgrounds[ $background ] ?? $backgrounds['sun'] ) . '</div>';
+		echo '<div class="sf-kind-field" aria-hidden="true">' . ( $backgrounds[ $background ] ?? $backgrounds['orbits'] ) . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
 		// at the top left the line follows the field's cut-out with the star
 		// in it, and at the other three it rounds off
