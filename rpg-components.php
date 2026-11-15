@@ -265,6 +265,7 @@ $sf_color_groups = array(
 		array( '500', '#47b767', 'Green', 'A picked card’s ring and check (--portfolio-green)' ),
 		array( '600', '#2e8a4a', 'Good on Light', 'Good values on light (--good-on-light)' ),
 		array( '700', '#327749', 'Dreft Mid', 'An Isekai Kind card’s frame line (--frontiers-dreft-mid)' ),
+		array( '850', '#26382d', 'Dreft Shade', 'An Isekai Kind card’s solar system: its orbits, sun and planets' ),
 		array( '900', '#1c372b', 'Dreft', 'Dreft’s bar and edge (--frontiers-dreft)' ),
 	) ),
 	'neon'    => array( 'Frontiers Green, the accent.', array(
@@ -527,6 +528,8 @@ $sf_list = function ( $items ) {
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
 		<style>
+			/* The page in Light Edge (gray-150) */
+			body.white-bg { background-color: var(--sf-gray-150); }
 			.sf-library-band { padding: 48px 0; }
 			.sf-library-stage { padding: 16px 24px 24px; background-color: var(--portfolio-white); border: 1px solid var(--portfolio-light-gray); border-radius: 8px; transition: background-color 200ms, border-color 200ms; }
 			.sf-library-stage.is-dark { background-color: var(--portfolio-black); border-color: #4a4c4d; color: var(--portfolio-white); }
