@@ -513,11 +513,6 @@ document.addEventListener('click', function (e) {
 		if ( $rows ) {
 			echo '<div class="sf-background-rows">' . $rows . '</div>';
 		}
-
-		$lore = $b['lore'] ?? '';
-		if ( $lore && function_exists( 'sf_lore_link' ) ) {
-			echo '<p class="sf-card-note">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
-		}
 		echo '</div></div>';
 	}
 	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
@@ -672,14 +667,6 @@ document.addEventListener('click', function (e) {
 		echo '<div class="sf-kind-content">';
 		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
-		// Its lore entry shares the first word of its id (tatot-orcoid is Tatot)
-		$lore = $b['lore'] ?? '';
-		if ( ! $lore && function_exists( 'sf_lore_titles' ) && isset( sf_lore_titles()[ strtok( $b['id'] ?? '', '-' ) ] ) ) {
-			$lore = strtok( $b['id'], '-' );
-		}
-		if ( $lore && function_exists( 'sf_lore_link' ) ) {
-			echo '<p class="sf-kind-lore">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
-		}
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
 			foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
