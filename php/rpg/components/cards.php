@@ -612,7 +612,7 @@ document.addEventListener('click', function (e) {
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			$star = 'tl' === $where;
 			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H30A24 24 0 0 1 6 30V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
+				. '<path fill="none" stroke="currentColor" stroke-width="2" d="' . ( $star ? 'M100 6H30A24 24 0 0 1 6 30V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
 				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13, 13, 7.5 ) . '"/>' : '' )
 				. '</svg>';
 		}

@@ -249,6 +249,7 @@ $sf_color_groups = array(
 		array( 'Lore', '--frontiers-lore', '#884ddc', 'Lore links and headings on light backgrounds' ),
 		array( 'Lore on Black', '--frontiers-lore-on-black', '#a67bf0', 'Lore on dark backgrounds, and the sheet’s glow (clears 4.5:1 on black)' ),
 		array( 'Dreft', '--frontiers-dreft', '#1c372b', 'Isekai’s cards: Dreft’s green bar and edge' ),
+		array( 'Dreft Mid', '--frontiers-dreft-mid', '#327749', 'Between Dreft and Green: an Isekai Kind card’s frame line' ),
 	),
 	'Resources and stat groups (css/tokens.css)' => array(
 		array( 'HP', '--frontiers-hp', '#e2574c', 'Hit Points, and the Physical stats' ),
