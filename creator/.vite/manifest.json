@@ -1,34 +1,68 @@
 {
-  "_popup-D7Ayysur.js": {
-    "file": "assets/popup-D7Ayysur.js",
-    "name": "popup",
-    "css": [
-      "assets/popup-LkqnFPrJ.css"
+  "_TraitsStep-DLjKRlnr.js": {
+    "file": "assets/TraitsStep-DLjKRlnr.js",
+    "name": "TraitsStep",
+    "imports": [
+      "_popup-CFgsMYNo.js"
     ]
   },
-  "_popup-LkqnFPrJ.css": {
-    "file": "assets/popup-LkqnFPrJ.css",
-    "src": "_popup-LkqnFPrJ.css"
+  "_popup-CFgsMYNo.js": {
+    "file": "assets/popup-CFgsMYNo.js",
+    "name": "popup",
+    "css": [
+      "assets/popup-CKz-mM1t.css"
+    ]
+  },
+  "_popup-CKz-mM1t.css": {
+    "file": "assets/popup-CKz-mM1t.css",
+    "src": "_popup-CKz-mM1t.css"
+  },
+  "_styles-BirtbVYu.css": {
+    "file": "assets/styles-BirtbVYu.css",
+    "src": "_styles-BirtbVYu.css"
+  },
+  "_styles-Ux-4aL0-.js": {
+    "file": "assets/styles-Ux-4aL0-.js",
+    "name": "styles",
+    "imports": [
+      "_popup-CFgsMYNo.js"
+    ],
+    "css": [
+      "assets/styles-BirtbVYu.css"
+    ]
   },
   "src/app/main.tsx": {
-    "file": "assets/main-CwQtKlXz.js",
+    "file": "assets/main-BNpMUwEQ.js",
     "name": "main",
     "src": "src/app/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-D7Ayysur.js"
+      "_popup-CFgsMYNo.js",
+      "_TraitsStep-DLjKRlnr.js"
+    ]
+  },
+  "src/gm/main.tsx": {
+    "file": "assets/main-1j1x74Nb.js",
+    "name": "main",
+    "src": "src/gm/main.tsx",
+    "isEntry": true,
+    "imports": [
+      "_popup-CFgsMYNo.js",
+      "_styles-Ux-4aL0-.js"
+    ],
+    "css": [
+      "assets/main-CZUuLiKq.css"
     ]
   },
   "src/tools/main.tsx": {
-    "file": "assets/main-DVFtyBaZ.js",
+    "file": "assets/main-Jcc6B_U1.js",
     "name": "main",
     "src": "src/tools/main.tsx",
     "isEntry": true,
     "imports": [
-      "_popup-D7Ayysur.js"
-    ],
-    "css": [
-      "assets/main-YrGf_INg.css"
+      "_popup-CFgsMYNo.js",
+      "_TraitsStep-DLjKRlnr.js",
+      "_styles-Ux-4aL0-.js"
     ]
   }
 }

@@ -1,12 +1,12 @@
-<!-- Slides between personal.php, the Character Creator and Game Tools (css/page-slide.css) -->
+<!-- Slides between personal.php, the Character Creator, Player Tools and the Game Master Tools (css/page-slide.css) -->
 <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/page-slide.css'); ?>"/>
 <script>
 	(function () {
 		var root = document.documentElement;
-		// The pages in nav order: personal.php, then the Character Creator, then Game Tools.
+		// The pages in nav order: personal.php, then the Character Creator, Player Tools and the Game Master Tools.
 		var place = function (url) {
 			var path = new URL(url, location.href).pathname;
-			return /\/creator\.php$/.test(path) ? 1 : /\/game-tools\.php$/.test(path) ? 2 : 0;
+			return /\/creator\.php$/.test(path) ? 1 : /\/game-tools\.php$/.test(path) ? 2 : /\/game-master\.php$/.test(path) ? 3 : 0;
 		};
 
 		// Leaving: hide personal.php's second set of chrome before the page is captured.
