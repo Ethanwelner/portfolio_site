@@ -525,7 +525,7 @@ document.addEventListener('click', function (e) {
 	// Isekai), around a dark field with a large quarter-circle cut out of its
 	// top left corner and a four-pointed star in the cut-out (the gunmetal
 	// stops short of it). The field holds a dense starfield over the curve
-	// of a dark planet low on the card, its rim lit in the key color. The same
+	// of a dark planet in the lower part of the card, its rim a faded silver. The same
 	// markup as the creator's KindCard (cards.tsx).
 
 	// A four-pointed star
