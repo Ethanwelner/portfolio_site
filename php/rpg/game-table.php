@@ -21,6 +21,12 @@
 //   say     { code, gmKey | seatId + playerKey, text } → { entry }
 //   roll    { code, gmKey | seatId + playerKey, value } → { entry }
 //   change  { code, gmKey, seatId, op, trait, rank, name } → { change, entry }
+//   kick    { code, gmKey, seatId }                     → { entry }
+//   rename  { code, gmKey, name }                       → { table, entry }
+//   close   { code, gmKey }                             → { ok }
+// Kicking removes a player's seat (the character stays theirs, in their
+// Player Tools); closing deletes the table, its seats, log and changes.
+//
 // A change is the Game Master adding a Trait to a player's character or
 // taking one away. It waits for the player's Player Tools, which gets it
 // with its next check-in, applies it to the character and says so with the
@@ -345,6 +351,40 @@ function tbl_change($db, $body) {
 	return array('change' => $change, 'entry' => $entry);
 }
 
+// The Game Master removes a player from the table. Their character stays in
+// their Player Tools, which finds the seat gone at its next check-in.
+function tbl_kick($db, $body) {
+	$table = tbl_gm_table($db, $body);
+	$get = $db->prepare('SELECT * FROM seats WHERE id = ? AND code = ?');
+	$get->execute(array((string) ($body['seatId'] ?? ''), $table['code']));
+	$seat = $get->fetch();
+	if (! $seat) {
+		sf_fail(404, 'no-seat', 'That player isn\'t at the table anymore.');
+	}
+	$db->prepare('DELETE FROM seats WHERE id = ?')->execute(array($seat['id']));
+	tbl_touch($db, $table['code']);
+	return array('entry' => tbl_log($db, $table['code'], null, $seat['name'], 'leave', 'The Game Master removed ' . $seat['name'] . ' from the table.'));
+}
+
+function tbl_rename($db, $body) {
+	$table = tbl_gm_table($db, $body);
+	$name = tbl_text($body['name'] ?? '', TBL_NAME_MAX, '');
+	if ($name === '') {
+		sf_fail(400, 'bad-request', 'A table needs a name.');
+	}
+	$db->prepare('UPDATE tables SET name = ? WHERE code = ?')->execute(array($name, $table['code']));
+	tbl_touch($db, $table['code']);
+	$table['name'] = $name;
+	return array('table' => tbl_public($table), 'entry' => tbl_log($db, $table['code'], 'gm', 'Game Master', 'change', 'The Game Master renamed the table ' . $name . '.'));
+}
+
+// The Game Master closes the table: it goes, with its seats, log and changes.
+function tbl_close($db, $body) {
+	$table = tbl_gm_table($db, $body);
+	$db->prepare('DELETE FROM tables WHERE code = ?')->execute(array($table['code']));
+	return array('ok' => true);
+}
+
 // A d20 roll, made in the roller's browser and reported here.
 function tbl_roll($db, $body) {
 	$value = $body['value'] ?? null;
@@ -489,7 +529,7 @@ function tbl_handle() {
 	if (! is_array($body) || isset($body[0])) {
 		sf_fail(400, 'bad-request', 'Send one action as a JSON object.');
 	}
-	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave', 'say' => 'tbl_say', 'roll' => 'tbl_roll', 'change' => 'tbl_change');
+	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave', 'say' => 'tbl_say', 'roll' => 'tbl_roll', 'change' => 'tbl_change', 'kick' => 'tbl_kick', 'rename' => 'tbl_rename', 'close' => 'tbl_close');
 	$action = $actions[$body['action'] ?? ''] ?? null;
 	if (! $action) {
 		sf_fail(400, 'bad-request', 'Unknown action.');
