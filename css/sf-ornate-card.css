@@ -262,6 +262,9 @@
     --key-line: rgb(127 191 152 / 35%);
     --key-name: linear-gradient(180deg, #e2f7ea 10%, #8fcfaa 50%, #2f6249 90%);
 }
+.sf-ornate-card--dreft .sf-ornate-rose-light { fill: #2d3d34; }
+.sf-ornate-card--dreft .sf-ornate-rose-dark { fill: #222d27; }
+.sf-ornate-card--dreft .sf-ornate-rose-ring { stroke: #222d27; }
 .sf-ornate-card--dreft .sf-ornate-field {
     background: radial-gradient(ellipse at 50% 42%, #24302a 0%, #161c19 55%, #0c0f0d 100%);
 }
