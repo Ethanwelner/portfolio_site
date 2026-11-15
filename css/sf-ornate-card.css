@@ -149,7 +149,7 @@
 }
 
 .sf-ornate-name {
-    margin: 0;
+    margin: 0 0 8px;
     font-family: 'bebas_neueregular', sans-serif;
     font-size: 2.5rem;
     font-weight: 400;
@@ -163,23 +163,6 @@
     color: transparent;
     filter: drop-shadow(0 1px 0 rgb(0 0 0 / 80%));
 }
-
-/* A star between two key-colored lines that fade out */
-.sf-ornate-rule {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 10px auto 14px;
-    max-width: 220px;
-}
-.sf-ornate-rule::before, .sf-ornate-rule::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--key-label));
-}
-.sf-ornate-rule::after { transform: scaleX(-1); }
-.sf-ornate-rule svg { width: 16px; height: 16px; }
 
 .sf-ornate-summary {
     margin: 0 0 16px;

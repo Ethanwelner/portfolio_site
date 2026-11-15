@@ -125,7 +125,6 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 
 		echo '<div class="sf-ornate-content">';
 		echo '<h3 class="sf-ornate-name">' . sf_card_e( $b['name'] ) . '</h3>';
-		echo '<div class="sf-ornate-rule" aria-hidden="true"><svg viewBox="0 0 20 20"><g fill="url(#sf-ornate-' . $key . ')">' . sf_card_ornate_star( 10, 10, 9 ) . '</g></svg></div>';
 		echo '<p class="sf-ornate-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 
 		if ( ! empty( $b['stats'] ) ) {
