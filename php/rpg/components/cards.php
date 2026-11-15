@@ -524,8 +524,8 @@ document.addEventListener('click', function (e) {
 	// the card's key color (silver for The Settled Systems, Dreft's green for
 	// Isekai), around a dark field with a large quarter-circle cut out of its
 	// top left corner and a four-pointed star in the cut-out (the gunmetal
-	// stops short of it). The field holds a starfield, and a faded sun at
-	// the bottom whose rays light a column of planets from below. The same
+	// stops short of it). The field holds a faded sun at the bottom whose
+	// rays light a column of planets from below. The same
 	// markup as the creator's KindCard (cards.tsx).
 
 	// A four-pointed star
@@ -534,39 +534,15 @@ document.addEventListener('click', function (e) {
 		return 'M' . $cx . ' ' . ( $cy - $r ) . 'L' . ( $cx + $s ) . ' ' . ( $cy - $s ) . 'L' . ( $cx + $r ) . ' ' . $cy . 'L' . ( $cx + $s ) . ' ' . ( $cy + $s ) . 'L' . $cx . ' ' . ( $cy + $r ) . 'L' . ( $cx - $s ) . ' ' . ( $cy + $s ) . 'L' . ( $cx - $r ) . ' ' . $cy . 'L' . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z';
 	}
 
-	// The sky behind the stars: a faded sun at the bottom with rays fanning
+	// The sky: a faded sun at the bottom with rays fanning
 	// out from it, and a column of planets above it, each the field's own
 	// color, lit along its bottom edge, measured in the field's width (cqw).
 	// The same list as the creator's KIND_PLANETS: [its center, as a CSS top;
 	// its width, cqw; the crescent's thickness at the bottom, px].
 	function sf_card_kind_sky() {
 		$html = '<div class="sf-kind-sky"><span class="sf-kind-rays"></span><span class="sf-kind-sun"></span>';
-		foreach ( array( array( '-44cqw', 112, 4 ), array( 'calc(100% - 78.5cqw)', 13, 2 ), array( 'calc(100% - 54cqw)', 24, 3 ), array( 'calc(100% - 31.5cqw)', 9, 2 ) ) as $p ) {
+		foreach ( array( array( 'calc(100% - 147cqw)', 112, 4 ), array( 'calc(100% - 78.5cqw)', 13, 2 ), array( 'calc(100% - 54cqw)', 24, 3 ), array( 'calc(100% - 31.5cqw)', 9, 2 ) ) as $p ) {
 			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . ';width:' . $p[1] . 'cqw;--lit:' . $p[2] . 'px"></span>';
-		}
-		return $html . '</div>';
-	}
-
-	// The starfield: one fixed sky (top %, left %, opacity, delay in
-	// seconds), shifted by the Kind's id so cards side by side differ. The
-	// same lists as the creator's KIND_DOTS and KIND_TWINKLES.
-	function sf_card_kind_stars( $seed ) {
-		$dots     = array( array(16.6,36.4,0.43,4.8),array(18.4,96.8,0.28,2.1),array(53.8,78.7,0.34,4.7),array(48.6,55.1,0.88,4.1),array(58.4,25.4,0.31,4.3),array(37.2,78.9,0.39,5.3),array(67.7,67.4,0.59,4.5),array(67.1,47.5,0.42,0.5),array(10.5,99.5,0.34,4.0),array(99.7,72.0,0.48,4.7),array(64.5,41.3,0.25,3.9),array(10.2,5.8,0.48,7.0),array(40.9,19.7,0.4,3.2),array(50.8,56.3,0.42,0.5),array(75.0,34.5,0.35,0.0),array(39.5,97.1,0.4,6.7),array(2.3,59.6,0.37,0.0),array(47.8,2.2,0.84,6.2),array(3.9,20.8,0.39,4.0),array(3.5,11.2,0.53,4.0),array(94.2,19.6,0.77,4.4),array(1.1,52.8,0.66,6.6),array(49.7,37.5,0.29,5.7),array(55.7,81.4,0.25,0.3),array(35.2,77.5,0.62,4.3),array(68.1,5.2,0.29,6.1),array(28.5,33.6,0.25,3.1),array(52.6,90.4,0.26,4.5),array(50.0,91.9,0.34,2.4),array(85.9,90.0,0.35,1.6),array(49.4,3.5,0.45,3.4),array(36.6,97.9,0.36,6.8),array(43.9,17.5,0.88,4.6),array(14.1,70.7,0.32,1.3),array(67.3,32.2,0.45,5.3),array(90.4,5.5,0.44,2.0),array(46.7,37.0,0.69,2.9),array(33.0,56.7,0.27,0.6),array(16.5,32.9,0.65,4.5),array(62.2,62.3,0.74,2.3),array(58.2,46.2,0.32,3.5),array(82.4,95.1,0.25,1.2),array(5.9,41.7,0.28,1.7),array(43.5,15.3,0.3,1.8),array(9.9,84.7,0.38,5.5),array(90.0,63.0,0.4,4.3),array(71.9,39.9,0.47,5.4),array(47.0,39.4,0.23,4.9),array(31.8,27.2,0.74,2.9),array(87.8,43.6,0.45,1.2),array(49.0,92.0,0.26,6.0),array(10.7,17.9,0.84,2.4),array(55.5,11.1,0.33,3.4),array(92.3,8.9,0.22,5.5),array(72.6,61.9,0.38,1.3),array(85.5,55.7,0.38,5.6),array(95.8,0.3,0.26,2.6),array(10.3,2.7,0.28,0.5),array(63.0,20.1,0.36,2.3),array(91.9,17.5,0.38,2.1),array(24.0,66.4,0.38,3.7),array(51.8,42.2,0.9,3.1),array(86.0,50.8,0.47,2.8),array(96.4,41.1,0.41,0.7),array(15.5,23.4,0.23,3.7),array(30.3,64.3,0.53,1.2),array(63.6,37.1,0.81,5.3),array(4.7,23.4,0.23,0.8),array(21.5,92.5,0.2,1.2),array(39.3,98.5,0.82,6.4),array(63.2,96.8,0.34,5.0),array(80.4,19.2,0.8,2.2),array(79.3,37.4,0.41,1.9),array(1.7,24.7,0.49,6.6),array(20.0,50.3,0.21,1.8),array(65.6,98.6,0.24,0.4),array(37.1,53.1,0.35,6.5),array(21.5,21.8,0.45,4.0),array(43.9,28.7,0.35,0.1),array(90.7,67.6,0.23,6.6),array(59.8,96.3,0.32,3.0),array(37.7,67.1,0.36,1.1),array(54.6,90.1,0.4,6.2),array(18.3,69.7,0.71,4.0),array(74.4,43.9,0.4,2.9),array(64.8,73.2,0.8,1.7),array(0.6,62.8,0.23,1.4),array(40.1,39.3,0.41,3.8),array(70.7,28.8,0.77,0.2),array(57.8,90.4,0.32,0.7),array(47.8,84.6,0.48,0.8),array(34.6,16.5,0.88,6.9),array(93.3,31.0,0.26,5.6),array(24.7,58.0,0.68,6.9),array(16.9,93.2,0.32,0.9),array(20.9,60.3,0.23,1.7),array(43.0,55.0,0.26,1.2),array(46.8,33.4,0.85,5.0),array(2.2,6.9,0.25,5.2),array(14.8,18.4,0.25,4.6),array(94.2,46.5,0.28,3.6),array(24.8,52.9,0.28,5.4),array(20.2,80.8,0.58,7.0),array(95.4,73.8,0.38,5.3),array(67.2,92.6,0.9,3.0),array(26.9,44.5,0.41,2.5),array(78.6,94.7,0.25,1.8),array(42.3,19.9,0.22,0.3),array(52.6,17.1,0.37,6.3),array(24.8,93.6,0.22,6.9),array(8.7,95.9,0.56,5.4),array(29.3,98.8,0.74,1.5),array(85.9,13.0,0.79,2.5),array(12.7,39.9,0.27,1.7),array(64.4,18.2,0.26,1.2),array(41.7,13.9,0.42,1.3),array(10.3,47.5,0.42,1.0),array(82.2,28.4,0.73,4.7),array(80.0,61.0,0.31,1.0),array(36.7,16.0,0.32,0.1),array(78.7,37.8,0.32,4.6),array(36.5,12.2,0.21,5.4),array(27.2,45.0,0.41,2.7),array(70.5,95.1,0.32,4.8),array(66.7,67.5,0.42,6.8),array(86.4,41.8,0.33,3.6),array(48.7,69.8,0.7,1.5),array(25.4,43.8,0.29,3.7),array(40.9,51.8,0.3,6.4),array(99.9,79.5,0.42,1.3),array(16.6,83.0,0.28,1.3),array(78.2,91.7,0.75,4.7),array(91.5,59.2,0.21,2.0),array(32.3,85.6,0.23,5.7),array(48.5,19.5,0.25,1.2),array(30.5,99.8,0.3,5.8),array(18.3,16.6,0.45,4.0),array(12.2,1.5,0.27,3.8),array(71.8,67.8,0.22,5.0),array(53.2,94.3,0.44,4.3),array(22.6,34.8,0.67,4.0),array(89.9,12.7,0.38,6.1),array(45.4,14.6,0.42,1.2),array(32.5,1.0,0.22,1.0),array(27.1,39.2,0.41,1.5),array(44.7,83.8,0.22,5.7),array(57.2,66.1,0.87,6.1),array(98.4,5.9,0.28,6.9),array(82.2,23.5,0.22,6.5),array(54.8,97.7,0.27,5.4),array(1.4,56.0,0.81,1.4),array(11.2,19.5,0.41,4.5),array(10.2,18.0,0.42,3.9),array(21.5,2.8,0.26,4.5),array(85.3,26.8,0.3,4.7),array(0.3,88.4,0.62,3.4),array(14.4,44.3,0.32,1.5),array(77.9,38.8,0.6,5.9),array(20.4,57.8,0.3,4.2),array(12.5,40.5,0.31,0.7) );
-		$twinkles = array( array(88.3,45.6,11.2),array(91.0,88.2,4.4),array(26.5,27.1,2.4),array(25.2,60.4,10.8) );
-		$sum = 0;
-		foreach ( str_split( $seed ) as $ch ) {
-			$sum += ord( $ch );
-		}
-		$dy    = ( $sum * 13 ) % 100;
-		$dx    = ( $sum * 29 ) % 100;
-		$wrap  = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v + $d, 100 ) ); };
-		$inner = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v - 8 + $d, 84 ) + 8 ); };
-		$html  = '<div class="sf-kind-stars">';
-		foreach ( $dots as $i => $x ) {
-			$html .= '<span class="sf-kind-dot' . ( 0 === $i % 7 ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . ';animation-delay:' . $x[3] . 's"></span>';
-		}
-		foreach ( $twinkles as $x ) {
-			$html .= '<span class="sf-kind-twinkle" style="top:' . $inner( $x[0], $dy ) . '%;left:' . $inner( $x[1], $dx ) . '%;animation-delay:' . $x[2] . 's"></span>';
 		}
 		return $html . '</div>';
 	}
@@ -596,7 +572,7 @@ document.addEventListener('click', function (e) {
 			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
 		}
 		echo '</linearGradient></defs></svg>';
-		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_sky() . '</div>';
+		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_sky() . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
 		// at the top left the line follows the field's cut-out with the star
 		// in it, and at the other three it rounds off
