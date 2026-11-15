@@ -11,7 +11,6 @@ require_once 'php/rpg/components/buttons.php';
 require_once 'php/rpg/components/stats.php';
 require_once 'php/rpg/components/sheet.php';
 require_once 'php/rpg/components/npc-sheet.php';
-require_once 'php/rpg/components/ornate-card.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -190,18 +189,11 @@ $sf_pistol = array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 
 
 // Background cards: Edwin's four, then a Dreftian Kind with its Stats and a
 // Dreftian Profession
-$sf_backgrounds = $sf_sample['background'];
-$sf_backgrounds[] = $sf_dreft['kinds'][0];
+$sf_backgrounds = array_values( array_filter( $sf_sample['background'], function ( $b ) { return 'Kind' !== $b['slot']; } ) );
 $sf_backgrounds[] = $sf_dreft['professions'][0];
 
-// Edwin's Kind with its Stats and Grants for the ornate card:
-// sample-character.json predates them, so they come from the creator's
-// content/kinds/human.yaml (+1 to each focus stat, 15 at most; Cyberization
-// and Gene Hacking)
-$sf_human_kind = array_merge( $sf_sample['background'][0], array(
-	'stats'  => array_fill_keys( array( 'endurance', 'power', 'grace', 'empathy', 'persuasion', 'demeanor', 'logic', 'intuition', 'memory' ), array( 'bonus' => 1, 'max' => 15 ) ),
-	'grants' => array( 'Cyberization', 'Gene Hacking' ),
-) );
+// Kind cards: Edwin's Human (The Settled Systems), then a Dreftian Kind (Isekai)
+$sf_kinds = array( $sf_sample['background'][0], $sf_dreft['kinds'][0] );
 
 // Button icons, as the creator draws them (src/app/components/ui.tsx)
 $sf_icon = function ( $name ) {
@@ -340,6 +332,10 @@ $sf_used_in = array(
 	),
 	'chassis'    => array(
 		'Nowhere yet: the AI Core chassis system is new. The creator’s ChassisCard (src/app/components/cards.tsx) is ready for the Character Creator and Player Tools.',
+	),
+	'kind'       => array(
+		'php/rpg/background-card.php: sf_background_card(), for a Kind beside the sample sheet, in its popups and in Building a Dreftian',
+		'The Character Creator’s Character step (picking a Kind) and Player Tools’ Kind popup (src/app/components/cards.tsx: KindCard)',
 	),
 	'background' => array(
 		'php/rpg/background-card.php: sf_background_card(), beside the sample sheet, in its popups and in Building a Dreftian',
@@ -507,8 +503,6 @@ $sf_list = function ( $items ) {
 		<?php include 'php/head-loads.php'; ?>
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
-		<!-- Ornate card (a test): its stylesheet, on this page only -->
-		<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-ornate-card.css'); ?>"/>
 		<style>
 			.sf-library-band { padding: 48px 0; }
 			.sf-library-stage { padding: 16px 24px 24px; background-color: var(--portfolio-white); border: 1px solid var(--portfolio-light-gray); border-radius: 8px; transition: background-color 200ms, border-color 200ms; }
@@ -534,6 +528,7 @@ $sf_list = function ( $items ) {
 			.sf-library-color { display: flex; flex-direction: column; gap: 2px; font-size: .875rem; }
 			.sf-library-color code { font-size: .75rem; color: inherit; opacity: .8; }
 			.sf-library-swatch { display: block; height: 64px; margin-bottom: 6px; border: 1px solid rgb(127 127 127 / 35%); border-radius: 8px; }
+			.sf-library-kinds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 		</style>
 	</head>
@@ -542,8 +537,8 @@ $sf_list = function ( $items ) {
 			<div class="container">
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
-				<p class="copy">There’s one button component and one card per kind of card: Trait, Item and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
-				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis and Background. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">There’s one button component and one card per kind of card: Trait, Item, Kind and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
+				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis, Kind and Background. A Kind gets a framed card of its own: a key-colored line inside a gunmetal border around a starfield and compass. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count (a consumable’s only), an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
@@ -662,6 +657,25 @@ optional and options: everything sf_card_item() takes (resistances for its armor
 			</div>
 		</div>
 
+		<!-- Kind cards -->
+		<div class="sf-library-band">
+			<div class="container">
+				<div class="line-container"><h5><strong>Kind Card</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_card_kind( $kind );
+takes a Kind as the creator exports it: sample-character.json, dreftian-backgrounds.json (sf_card_background() sends a Kind here too)
+a thin gunmetal border running in to a line in its key color (silver for The Settled Systems, green for Isekai), with a star in its top left corner, around a dark starfield with a compass; the frame is four corner pieces joined by straight edges, so it grows with its text</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['kind'] ); ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Edwin’s Human, then a Dreftian Kind</p>
+					<div class="sf-library-kinds">
+						<?php foreach ( $sf_kinds as $k ) { sf_card_kind( $k ); } ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Background cards -->
 		<div class="sf-library-band">
 			<div class="container">
@@ -672,27 +686,9 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 				<?php $sf_list( $sf_used_in['background'] ); ?>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">Edwin’s Kind, Origin, Profession and Past, then a Dreftian Kind and Profession</p>
+					<p class="sf-library-label">Edwin’s Origin, Profession and Past, then a Dreftian Profession (Kinds have their own card, above)</p>
 					<div class="sf-library-backgrounds">
 						<?php foreach ( $sf_backgrounds as $b ) { sf_card_background( $b, 'Origin' === $b['slot'] && 'earth' === $b['plane'] ? ', placed in Grace' : '' ); } ?>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Ornate card (a test) -->
-		<div class="sf-library-band">
-			<div class="container">
-				<div class="line-container"><h5><strong>Ornate Card (Test)</strong></h5><div class="line"></div></div>
-				<pre class="sf-library-api">sf_card_ornate( $background );
-takes a Kind as sf_card_background() does: a thin gunmetal border that runs in to a line in its key color (silver for The Settled Systems, green for Isekai), with a star in its top left corner, and a dark starfield with a compass (eight points in one ring); the frame is four corner pieces joined by straight edges, so it grows with its text</pre>
-				<p class="copy">A test of a framed look for Kind cards, in <code>php/rpg/components/ornate-card.php</code> and <code>css/sf-ornate-card.css</code>. Nothing uses it yet, and it isn’t in the creator.</p>
-				<div class="sf-library-stage is-dark">
-					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">An Isekai Kind (Guwain) and a Settled Systems one (Edwin’s Human, its Stats and Grants from the creator)</p>
-					<div class="sf-library-ornate">
-						<?php sf_card_ornate( $sf_dreft['kinds'][0] ); ?>
-						<?php sf_card_ornate( $sf_human_kind ); ?>
 					</div>
 				</div>
 			</div>
