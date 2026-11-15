@@ -151,11 +151,11 @@
 
 .sf-ornate-name {
     margin: 0;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 1.875rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    line-height: 1.1;
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+    line-height: 1;
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(180deg, #fff3c4 10%, #e3bd62 50%, #9c7329 90%);
@@ -192,10 +192,10 @@
 .sf-ornate-label {
     display: block;
     margin-bottom: 4px;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: .6875rem;
-    font-weight: 700;
-    letter-spacing: .12em;
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--ornate-label);
 }
@@ -238,10 +238,10 @@
     justify-content: center;
     gap: 10px;
     margin: auto 0 0;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: .75rem;
-    font-weight: 700;
-    letter-spacing: .16em;
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .1em;
     text-transform: uppercase;
     white-space: nowrap;
     color: var(--ornate-label);
@@ -254,8 +254,8 @@
 }
 
 @media (max-width: 480px) {
-    .sf-ornate-content { padding: 36px 26px 58px; }
-    .sf-ornate-foot { gap: 6px; font-size: .625rem; letter-spacing: .08em; }
+    .sf-ornate-content { padding: 36px 26px 36px; }
+    .sf-ornate-foot { gap: 6px; font-size: .875rem; letter-spacing: .06em; }
 }
 
 .sf-library-ornate { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }

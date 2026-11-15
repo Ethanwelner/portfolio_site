@@ -498,10 +498,7 @@ $sf_list = function ( $items ) {
 		<?php include 'php/head-loads.php'; ?>
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
-		<!-- Ornate card (a test): its stylesheet and title face, on this page only -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;display=swap">
+		<!-- Ornate card (a test): its stylesheet, on this page only -->
 		<link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/sf-ornate-card.css'); ?>"/>
 		<style>
 			.sf-library-band { padding: 48px 0; }
