@@ -14,12 +14,18 @@
 //
 // game-table-api.php answers one action per POST:
 //   create  { name }                                  → { code, name, gmKey }
-//   gm      { code, gmKey, known, since }              → { table, seats, log }
+//   gm      { code, gmKey, known, since }              → { table, seats (with pending), log }
 //   join    { code, name, sheet }                      → { seatId, playerKey, table }
-//   sync    { code, seatId, playerKey, sheet?, since } → { table, version, log }
+//   sync    { code, seatId, playerKey, sheet?, since, ack? } → { table, version, log, changes }
 //   leave   { code, seatId, playerKey }                → { ok }
 //   say     { code, gmKey | seatId + playerKey, text } → { entry }
 //   roll    { code, gmKey | seatId + playerKey, value } → { entry }
+//   change  { code, gmKey, seatId, op, trait, rank, name } → { change, entry }
+// A change is the Game Master adding a Trait to a player's character or
+// taking one away. It waits for the player's Player Tools, which gets it
+// with its next check-in, applies it to the character and says so with the
+// check-in after (`ack`: the last change's id it applied). The Game Master
+// sees each seat's changes still waiting (`pending`).
 // `known` maps each seat id to the sheet version the Game Master already has,
 // so only changed sheets come back; `since` is the last log entry's id the
 // page has, so only newer entries come back (the latest 200 when it's 0).
@@ -44,6 +50,8 @@ const TBL_MESSAGE_MAX = 1000;
 const TBL_POSTS_PER_MINUTE = 30;
 // A player's check-in only records them as here this often
 const TBL_SEEN_EVERY = 15;
+// Game Master changes waiting for one player
+const TBL_MAX_PENDING = 50;
 
 function tbl_db($config) {
 	$dir = $config['data_dir'];
@@ -88,6 +96,15 @@ function tbl_db($config) {
 			value INTEGER
 		)');
 		$db->exec('CREATE INDEX IF NOT EXISTS log_code ON log (code, id)');
+		$db->exec('CREATE TABLE IF NOT EXISTS changes (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			seat TEXT NOT NULL REFERENCES seats(id) ON DELETE CASCADE,
+			at INTEGER NOT NULL,
+			op TEXT NOT NULL,
+			trait TEXT NOT NULL,
+			rank INTEGER NOT NULL DEFAULT 1
+		)');
+		$db->exec('CREATE INDEX IF NOT EXISTS changes_seat ON changes (seat, id)');
 		return $db;
 	} catch (PDOException $e) {
 		sf_fail(500, 'server', 'Tables can\'t be opened right now.');
@@ -287,6 +304,47 @@ function tbl_say($db, $body) {
 	return array('entry' => tbl_log($db, $table['code'], $seat, $author, 'chat', mb_substr($text, 0, TBL_MESSAGE_MAX)));
 }
 
+function tbl_change_out($row) {
+	return array('id' => (int) $row['id'], 'op' => $row['op'], 'trait' => $row['trait'], 'rank' => (int) $row['rank']);
+}
+
+function tbl_pending($db, $seatId) {
+	$get = $db->prepare('SELECT * FROM changes WHERE seat = ? ORDER BY id');
+	$get->execute(array($seatId));
+	return array_map('tbl_change_out', $get->fetchAll());
+}
+
+// The Game Master adds a Trait to a player's character, at a rank, or takes
+// one away. `name` is the Trait's name, for the log.
+function tbl_change($db, $body) {
+	$table = tbl_gm_table($db, $body);
+	$get = $db->prepare('SELECT * FROM seats WHERE id = ? AND code = ?');
+	$get->execute(array((string) ($body['seatId'] ?? ''), $table['code']));
+	$seat = $get->fetch();
+	if (! $seat) {
+		sf_fail(404, 'no-seat', 'That player isn\'t at the table anymore.');
+	}
+	$op = $body['op'] ?? '';
+	$trait = (string) ($body['trait'] ?? '');
+	$rank = $body['rank'] ?? 1;
+	if (($op !== 'add' && $op !== 'remove') || ! preg_match('/^[a-z0-9-]{1,80}$/', $trait) || ! is_int($rank) || $rank < 1 || $rank > 20) {
+		sf_fail(400, 'bad-request', 'A change adds or removes one Trait, at a rank from 1 to 20.');
+	}
+	$count = $db->prepare('SELECT COUNT(*) FROM changes WHERE seat = ?');
+	$count->execute(array($seat['id']));
+	if ((int) $count->fetchColumn() >= TBL_MAX_PENDING) {
+		sf_fail(429, 'rate-limit', $seat['name'] . ' has ' . TBL_MAX_PENDING . ' changes waiting already. They go through when their Player Tools is open.');
+	}
+	$db->prepare('INSERT INTO changes (seat, at, op, trait, rank) VALUES (?, ?, ?, ?, ?)')
+		->execute(array($seat['id'], time(), $op, $trait, $rank));
+	$change = tbl_change_out(array('id' => $db->lastInsertId(), 'op' => $op, 'trait' => $trait, 'rank' => $rank));
+	$name = tbl_text($body['name'] ?? '', 80, $trait) . ($op === 'add' && $rank > 1 ? ' (' . $rank . ')' : '');
+	$text = $op === 'add' ? 'The Game Master gave ' . $seat['name'] . ' ' . $name . '.' : 'The Game Master took ' . $name . ' from ' . $seat['name'] . '.';
+	$entry = tbl_log($db, $table['code'], 'gm', 'Game Master', 'change', $text);
+	tbl_touch($db, $table['code']);
+	return array('change' => $change, 'entry' => $entry);
+}
+
 // A d20 roll, made in the roller's browser and reported here.
 function tbl_roll($db, $body) {
 	$value = $body['value'] ?? null;
@@ -333,6 +391,7 @@ function tbl_gm($db, $body) {
 			'version' => (int) $seat['version'],
 			'joined' => (int) $seat['joined'],
 			'seen' => (int) $seat['seen'],
+			'pending' => tbl_pending($db, $seat['id']),
 		);
 		if ((int) ($known[$seat['id']] ?? -1) !== (int) $seat['version'] && $seat['sheet'] !== null) {
 			$out['sheet'] = json_decode($seat['sheet']);
@@ -377,6 +436,10 @@ function tbl_join($db, $body) {
 // log's new entries. Being here is only recorded every 15 seconds.
 function tbl_sync($db, $body) {
 	list($table, $seat) = tbl_player_seat($db, $body);
+	// The changes Player Tools has applied are done
+	if (is_int($body['ack'] ?? null)) {
+		$db->prepare('DELETE FROM changes WHERE seat = ? AND id <= ?')->execute(array($seat['id'], $body['ack']));
+	}
 	$sheet = tbl_sheet($body);
 	$now = time();
 	$version = (int) $seat['version'];
@@ -394,7 +457,12 @@ function tbl_sync($db, $body) {
 	if ($sheet !== null) {
 		tbl_touch($db, $table['code']);
 	}
-	return array('table' => tbl_public($table), 'version' => $version, 'log' => tbl_log_since($db, $table['code'], $body['since'] ?? 0));
+	return array(
+		'table' => tbl_public($table),
+		'version' => $version,
+		'log' => tbl_log_since($db, $table['code'], $body['since'] ?? 0),
+		'changes' => tbl_pending($db, $seat['id']),
+	);
 }
 
 function tbl_leave($db, $body) {
@@ -421,7 +489,7 @@ function tbl_handle() {
 	if (! is_array($body) || isset($body[0])) {
 		sf_fail(400, 'bad-request', 'Send one action as a JSON object.');
 	}
-	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave', 'say' => 'tbl_say', 'roll' => 'tbl_roll');
+	$actions = array('create' => 'tbl_create', 'gm' => 'tbl_gm', 'join' => 'tbl_join', 'sync' => 'tbl_sync', 'leave' => 'tbl_leave', 'say' => 'tbl_say', 'roll' => 'tbl_roll', 'change' => 'tbl_change');
 	$action = $actions[$body['action'] ?? ''] ?? null;
 	if (! $action) {
 		sf_fail(400, 'bad-request', 'Unknown action.');
