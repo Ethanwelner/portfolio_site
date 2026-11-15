@@ -554,9 +554,29 @@ $sf_list = function ( $items ) {
 			.sf-library-swatch { display: block; height: 64px; margin-bottom: 6px; border: 1px solid rgb(127 127 127 / 35%); border-radius: 8px; }
 			.sf-library-kinds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
+			/* The section nav: Strange Frontiers' subpage nav (css/rpg.css's .rpg-links), fixed at the top left in a gutter the page keeps clear for it; on narrow screens it's hidden */
+			.sf-library-nav.rpg-links { position: fixed; top: 48px; left: 32px; z-index: 10; }
+			@media (min-width: 1200px) { body:has(.sf-library-nav) { padding-left: 176px; } }
+			@media (max-width: 1199px) { .sf-library-nav.rpg-links { display: none; } }
+			html { scroll-padding-top: 24px; }
 		</style>
 	</head>
 	<body class="white-bg">
+		<!-- The section nav, as on Strange Frontiers' subpages (php/rpg/rpg-links.php): the dot moves to the section in view -->
+		<nav class="rpg-links black sf-library-nav" aria-label="Components">
+			<span class="rpg-links-dot" aria-hidden="true"></span>
+			<a href="#lib-colors"><badge class="badge">Colors</badge></a>
+			<a href="#lib-button"><badge class="badge">Button</badge></a>
+			<a href="#lib-trait-card"><badge class="badge">Trait</badge></a>
+			<a href="#lib-item-card"><badge class="badge">Item</badge></a>
+			<a href="#lib-chassis-card"><badge class="badge">Chassis</badge></a>
+			<a href="#lib-kind-card"><badge class="badge">Kind</badge></a>
+			<a href="#lib-background-card"><badge class="badge">Background</badge></a>
+			<a href="#lib-stat-block"><badge class="badge">Stats</badge></a>
+			<a href="#lib-sheet-layout"><badge class="badge">Sheet</badge></a>
+			<a href="#lib-popup"><badge class="badge">Popup</badge></a>
+			<a href="#lib-npc-and-monster-sheet"><badge class="badge">NPC Sheet</badge></a>
+		</nav>
 		<div class="sf-library-band">
 			<div class="container">
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
@@ -573,7 +593,7 @@ $sf_list = function ( $items ) {
 		</div>
 
 		<!-- Colors -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-colors">
 			<div class="container">
 				<div class="line-container"><h5><strong>Colors</strong></h5><div class="line"></div></div>
 				<p class="copy">The color sheet: every color the components use, as numbered scales in <code>css/tokens.css</code>. Higher numbers are darker, and each step’s token is <code>--sf-&lt;family&gt;-&lt;step&gt;</code> (gray-500 is <code>--sf-gray-500</code>). The older names in parentheses still work as aliases. Shadows, scrims and rules are black or white with transparency.</p>
@@ -585,7 +605,7 @@ $sf_list = function ( $items ) {
 		</div>
 
 		<!-- Buttons -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-button">
 			<div class="container">
 				<div class="line-container"><h5><strong>Button</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_button( 'Build it', array( 'tone' =&gt; 'primary', 'ready' =&gt; true ) );
@@ -605,7 +625,7 @@ states: ready, waiting, disabled, aria-busy; also: class, href, attrs</pre>
 		</div>
 
 		<!-- Trait cards -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-trait-card">
 			<div class="container">
 				<div class="line-container"><h5><strong>Trait Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_trait( array( 'kind' =&gt; 'ability', 'name' =&gt; 'Rally', 'effect' =&gt; '…', 'action' =&gt; 'Rally: …', 'needs' =&gt; 'Demeanor 5, Persuasion 4' ) );
@@ -629,7 +649,7 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 		</div>
 
 		<!-- Item cards -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-item-card">
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
@@ -657,7 +677,7 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 		</div>
 
 		<!-- Chassis cards -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-chassis-card">
 			<div class="container">
 				<div class="line-container"><h5><strong>Chassis Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_chassis( array( 'name' =&gt; 'Industrial Laborer Chassis', 'value' =&gt; 85000, 'currency' =&gt; 'ERC', 'resistances' =&gt; '2 Blunt, 2 Slashing', 'physical' =&gt; array( 'core' =&gt; 4, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 0, 'max' =&gt; 5 ), … ) ), 'traits' =&gt; array( array( 'kind' =&gt; 'condition', 'name' =&gt; 'Mechanical', 'effect' =&gt; '…' ), … ) ) );
@@ -682,7 +702,7 @@ optional and options: everything sf_card_item() takes (resistances for its armor
 		</div>
 
 		<!-- Kind cards -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-kind-card">
 			<div class="container">
 				<div class="line-container"><h5><strong>Kind Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_kind( $kind, $background = 'orbits' );
@@ -706,7 +726,7 @@ $background is what's drawn behind the content: 'orbits' (the default), 'sun' (a
 		</div>
 
 		<!-- Background cards -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-background-card">
 			<div class="container">
 				<div class="line-container"><h5><strong>Background Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_background( $background, ', placed in Grace' );
@@ -724,7 +744,7 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 		</div>
 
 		<!-- Stat block -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-stat-block">
 			<div class="container">
 				<div class="line-container"><h5><strong>Stat Block</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_stat_block( array( array( 'group' =&gt; 'physical', 'core' =&gt; 3, 'stats' =&gt; array( array( 'name' =&gt; 'Endurance', 'value' =&gt; 5, 'bonus' =&gt; 1, 'max' =&gt; 15 ), … ) ), … ), array( 'max' =&gt; true ) );
@@ -748,7 +768,7 @@ options: max (true: each stat's maximum beside its number). The creator adds edi
 		</div>
 
 		<!-- Sheet layout -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-sheet-layout">
 			<div class="container">
 				<div class="line-container"><h5><strong>Sheet Layout</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_sheet_layout( array( 'context' =&gt; 'sample', 'level' =&gt; 6, 'who' =&gt; …, 'description' =&gt; …, 'resources' =&gt; sf_sheet_full_resources( array( 'hp' =&gt; 17, … ) ), 'stats' =&gt; …, 'movement' =&gt; '10 m', 'resistances' =&gt; …, 'conditions' =&gt; …, 'items' =&gt; …, 'knowledges' =&gt; …, 'languages' =&gt; …, 'abilities' =&gt; …, 'skills' =&gt; …, 'skills_aside' =&gt; …, 'other' =&gt; … ), array( 'class' =&gt; 'sample-sheet' ) );
@@ -796,7 +816,7 @@ context: play | build | sample. Only sample is drawn on the site; the creator dr
 		</div>
 
 		<!-- Popup -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-popup">
 			<div class="container">
 				<div class="line-container"><h5><strong>Popup</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_popup_shell( array( 'tone' =&gt; 'dark', 'size' =&gt; 'narrow' ) );
@@ -813,7 +833,7 @@ options: tone (light: the white panel, a dark X; dark: the creator's gray, a lig
 		</div>
 
 		<!-- NPC and monster sheet -->
-		<div class="sf-library-band">
+		<div class="sf-library-band" id="lib-npc-and-monster-sheet">
 			<div class="container">
 				<div class="line-container"><h5><strong>NPC and Monster Sheet</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_npc_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'description' =&gt; …, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, …, 'Magic' =&gt; 2 ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( … ), 'items' =&gt; array( … ) ), array( 'fold' =&gt; 'closed' ) );
@@ -859,6 +879,34 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 		<?php include 'php/rpg/lore-modal.php'; ?>
 		<?php include 'php/javascript-loads.php'; ?>
 		<script>
+		// The section nav: light up the section whose top has passed the
+		// activation line (the last one once the page is at the bottom) and
+		// move the dot beside it, as php/javascript-loads.php does for the
+		// Strange Frontiers subpages
+		(function () {
+			var nav = document.querySelector('.sf-library-nav');
+			if (!nav) return;
+			var dot = nav.querySelector('.rpg-links-dot');
+			var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+			var frame = 0;
+			function update() {
+				frame = 0;
+				var current = links[0];
+				links.forEach(function (a) {
+					var section = document.getElementById(a.hash.slice(1));
+					if (section && section.getBoundingClientRect().top <= 160) current = a;
+				});
+				if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = links[links.length - 1];
+				links.forEach(function (a) { a.classList.toggle('is-active', a === current); });
+				dot.style.top = (current.offsetTop + current.offsetHeight / 2 - dot.offsetHeight / 2) + 'px';
+				dot.style.left = (current.offsetLeft + current.offsetWidth + 8) + 'px';
+				dot.classList.add('is-ready');
+			}
+			window.addEventListener('scroll', function () { if (!frame) frame = requestAnimationFrame(update); }, { passive: true });
+			window.addEventListener('resize', function () { if (!frame) frame = requestAnimationFrame(update); });
+			update();
+		})();
+
 		// Light and Dark: set the box's background, and press the one chosen
 		document.addEventListener('click', function (e) {
 			var button = e.target.closest('[data-sf-theme]');
