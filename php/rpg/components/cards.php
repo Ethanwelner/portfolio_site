@@ -541,7 +541,7 @@ document.addEventListener('click', function (e) {
 	// its width, cqw; the crescent's thickness at the bottom, px].
 	function sf_card_kind_sky() {
 		$html = '<div class="sf-kind-sky"><span class="sf-kind-rays"></span><span class="sf-kind-sun"></span>';
-		foreach ( array( array( 'calc(100% - 147cqw)', 112, 4 ), array( 'calc(100% - 78.5cqw)', 13, 2 ), array( 'calc(100% - 54cqw)', 24, 3 ), array( 'calc(100% - 31.5cqw)', 9, 2 ) ) as $p ) {
+		foreach ( array( array( 'calc(100% - 163cqw)', 112, 4 ), array( 'calc(100% - 90.5cqw)', 13, 2 ), array( 'calc(100% - 62cqw)', 24, 3 ), array( 'calc(100% - 35.5cqw)', 9, 2 ) ) as $p ) {
 			$html .= '<span class="sf-kind-planet" style="top:' . $p[0] . ';width:' . $p[1] . 'cqw;--lit:' . $p[2] . 'px"></span>';
 		}
 		return $html . '</div>';
