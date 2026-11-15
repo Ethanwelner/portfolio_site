@@ -1,6 +1,6 @@
 <?php
 // Ornate card (a test): a Kind's Background card in a gilded frame, a
-// gunmetal border running in to a gold filigree line, a star in each
+// thin gunmetal border running in to a gold line, a star in each
 // corner and a compass behind the text. Only the
 // component library (rpg-components.php) draws it for now; styled by
 // css/sf-ornate-card.css. It takes a background as sf_card_background()
@@ -31,17 +31,17 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 	}
 
 	// One corner of the frame, drawn top left; CSS turns it for the others.
-	// The gold line steps in around the corner's star, and a curl grows from
-	// each side of the step.
+	// The gold line runs 14px in from the card's edge and steps in around
+	// the corner's star on a 24px arc, with a curl growing from each side of
+	// the step. The star sits halfway between the card's rounded corner and
+	// the arc.
 	function sf_card_ornate_corner( $where ) {
 		return '<svg class="sf-ornate-corner sf-ornate-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
 			. '<g fill="none" stroke="url(#sf-ornate-gold)" stroke-linecap="round">'
-			. '<path stroke-width="2" d="M100 18H46A28 28 0 0 1 18 46V100"/>'
-			. '<path stroke-width="1" d="M100 25H58C52 25 50 30 54 33C57 35 61 32 59 29"/>'
-			. '<path stroke-width="1" d="M25 100V58C25 52 30 50 33 54C35 57 32 61 29 59"/>'
-			. '<path stroke-width="1.25" d="M37.8 37.8C46 46 58 44 62 37C64.5 32.5 60 29.5 57 32.5"/>'
-			. '<path stroke-width="1.25" d="M37.8 37.8C46 46 44 58 37 62C32.5 64.5 29.5 60 32.5 57"/>'
-			. '</g><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 17, 17, 13 ) . '<circle cx="37.8" cy="37.8" r="2.2"/></g></svg>';
+			. '<path stroke-width="2" d="M100 14H38A24 24 0 0 1 14 38V100"/>'
+			. '<path stroke-width="1.25" d="M31 31C39 39 51 37 55 30C57.5 25.5 53 22.5 50 25.5"/>'
+			. '<path stroke-width="1.25" d="M31 31C39 39 37 51 30 55C25.5 57.5 22.5 53 25.5 50"/>'
+			. '</g><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 18.5, 18.5, 11 ) . '<circle cx="31" cy="31" r="2.2"/></g></svg>';
 	}
 
 	// The compass behind the text: eight long diamonds meeting at the
