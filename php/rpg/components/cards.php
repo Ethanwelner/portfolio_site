@@ -595,8 +595,8 @@ document.addEventListener('click', function (e) {
 		$key      = $isekai ? 'green' : 'silver';
 		$gradient = 'sf-kind-' . $key . '-' . $n;
 		$stops    = array(
-			'silver' => array( '#b2b3b4', '#949798', '#626466', '#b2b3b4', '#949798' ),
-			'green'  => array( '#47b767', '#47b767', '#1c372b', '#47b767', '#1c372b' ),
+			'silver' => array( '#949798', '#949798', '#626466', '#626466', '#626466' ),
+			'green'  => array( '#47b767', '#47b767', '#1c372b', '#1c372b', '#1c372b' ),
 		);
 
 		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
