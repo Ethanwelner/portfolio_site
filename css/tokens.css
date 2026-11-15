@@ -22,6 +22,8 @@
     /* #884ddc is 3.18:1 on #1f2122; this lighter purple clears 4.5:1. */
     --frontiers-lore-on-black: #a67bf0;
     --frontiers-dreft: #1c372b;
+    /* Between Dreft and Green: an Isekai Kind card's frame line */
+    --frontiers-dreft-mid: #327749;
     /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
        SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
     --frontiers-hp: #e2574c;
