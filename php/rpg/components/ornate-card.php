@@ -73,6 +73,34 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 			. '<circle class="sf-ornate-rose-ring" cx="150" cy="150" r="142" stroke-width="8"/>' . $rose . '</svg>';
 	}
 
+	// A faint starfield for the field, like the site's night sky: small dots
+	// that pulse slowly and a few four-pointed twinkles. Placed from the
+	// card's name, so a card's sky stays the same between visits.
+	function sf_card_ornate_stars( $seed ) {
+		mt_srand( crc32( $seed ) );
+		$html = '<div class="sf-ornate-stars">';
+		for ( $i = 0; $i < 46; $i++ ) {
+			$html .= sprintf(
+				'<span class="sf-ornate-dot%s" style="top:%.1f%%;left:%.1f%%;opacity:%.2f;animation-delay:%.1fs"></span>',
+				0 === $i % 5 ? ' is-big' : '',
+				mt_rand( 0, 1000 ) / 10,
+				mt_rand( 0, 1000 ) / 10,
+				mt_rand( 25, 70 ) / 100,
+				mt_rand( 0, 70 ) / 10
+			);
+		}
+		for ( $i = 0; $i < 4; $i++ ) {
+			$html .= sprintf(
+				'<span class="sf-ornate-twinkle" style="top:%.1f%%;left:%.1f%%;animation-delay:%.1fs"></span>',
+				mt_rand( 80, 920 ) / 10,
+				mt_rand( 80, 920 ) / 10,
+				mt_rand( 0, 120 ) / 10
+			);
+		}
+		mt_srand();
+		return $html . '</div>';
+	}
+
 	/**
 	 * An ornate Kind card: the frame, its name and summary, each stat's
 	 * bonus and maximum, the Traits it grants and its features, then its
@@ -82,7 +110,7 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 		$plane = strtolower( $b['plane'] );
 		echo sf_card_ornate_defs();
 		echo '<article class="sf-ornate-card' . ( 'isekai' === $plane ? ' sf-ornate-card--dreft' : '' ) . '"><div class="sf-ornate-panel">';
-		echo '<div class="sf-ornate-field" aria-hidden="true">' . sf_card_ornate_emblem() . '</div>';
+		echo '<div class="sf-ornate-field" aria-hidden="true">' . sf_card_ornate_stars( $b['name'] ) . sf_card_ornate_emblem() . '</div>';
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			echo sf_card_ornate_corner( $where );
 		}

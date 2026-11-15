@@ -64,9 +64,47 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-.sf-ornate-rose-light { fill: #46494e; }
-.sf-ornate-rose-dark { fill: #34363a; }
-.sf-ornate-rose-ring { fill: none; stroke: #34363a; }
+.sf-ornate-rose-light { fill: #34363a; }
+.sf-ornate-rose-dark { fill: #28292c; }
+.sf-ornate-rose-ring { fill: none; stroke: #28292c; }
+
+/* The starfield, after the site's night sky (css/rpg-night.css): dots that
+   pulse slowly and a few four-pointed twinkles that flare now and then */
+.sf-ornate-stars { position: absolute; inset: 0; pointer-events: none; }
+.sf-ornate-dot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #fff;
+    animation: sf-ornate-pulse 6s ease-in-out infinite;
+}
+.sf-ornate-dot.is-big { width: 2px; height: 2px; }
+.sf-ornate-twinkle {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+    transform: scale(.35);
+    animation: sf-ornate-flare 12s ease-out infinite;
+}
+.sf-ornate-twinkle::before, .sf-ornate-twinkle::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#fff4, #fffc, #fff4);
+}
+.sf-ornate-twinkle::before { top: -100%; left: 45%; width: 10%; height: 300%; }
+.sf-ornate-twinkle::after { top: 45%; left: -100%; width: 300%; height: 10%; }
+@keyframes sf-ornate-pulse { 50% { opacity: .15; } }
+@keyframes sf-ornate-flare {
+    0%, 100% { transform: scale(.35) rotate(0deg); opacity: .5; }
+    6% { transform: scale(1) rotate(45deg); opacity: 1; }
+    12% { transform: scale(.35) rotate(90deg); opacity: .5; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sf-ornate-dot, .sf-ornate-twinkle { animation: none; }
+}
 
 .sf-ornate-corner {
     position: absolute;
