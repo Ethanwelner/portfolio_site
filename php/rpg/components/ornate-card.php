@@ -1,7 +1,7 @@
 <?php
 // Ornate card (a test): a Kind's Background card in a gilded frame, a
-// gunmetal border around a dark panel with a gold filigree line, a star in
-// each corner and a faint engraved emblem behind the text. Only the
+// gunmetal border running in to a gold filigree line, a star in each
+// corner and a faint engraved compass rose behind the text. Only the
 // component library (rpg-components.php) draws it for now; styled by
 // css/sf-ornate-card.css. It takes a background as sf_card_background()
 // does.
@@ -44,22 +44,35 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 			. '</g><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 17, 17, 13 ) . '<circle cx="37.8" cy="37.8" r="2.2"/></g></svg>';
 	}
 
-	// The faint emblem behind the text: three engraved rings with tick
-	// marks around a long four-pointed star
+	// The faint emblem behind the text: a compass rose. Sixteen points in
+	// three lengths (the four cardinal points longest), each split down its
+	// middle into a light and a dark face, inside a ring of degree ticks.
 	function sf_card_ornate_emblem() {
+		$c     = 150;
+		$pt    = function ( $deg, $r ) use ( $c ) {
+			$a = deg2rad( $deg - 90 );
+			return sprintf( '%.1f %.1f', $c + cos( $a ) * $r, $c + sin( $a ) * $r );
+		};
+		$light = '';
+		$dark  = '';
+		// Shortest first, so the longer points lie over them
+		foreach ( array( array( 8, 45, 22.5, 64, 9, 11.25 ), array( 4, 90, 45, 94, 15, 22.5 ), array( 4, 90, 0, 132, 22, 45 ) ) as $winds ) {
+			list( $count, $step, $offset, $len, $base, $half ) = $winds;
+			for ( $i = 0; $i < $count; $i++ ) {
+				$deg = $offset + $i * $step;
+				$tip    = $pt( $deg, $len );
+				$light .= 'M' . $c . ' ' . $c . 'L' . $tip . 'L' . $pt( $deg - $half, $base ) . 'Z';
+				$dark  .= 'M' . $c . ' ' . $c . 'L' . $tip . 'L' . $pt( $deg + $half, $base ) . 'Z';
+			}
+		}
 		$ticks = '';
-		for ( $i = 0; $i < 48; $i++ ) {
-			$a = deg2rad( $i * 7.5 );
-			$r1 = 0 === $i % 4 ? 128 : 134;
-			$ticks .= sprintf( 'M%.1f %.1fL%.1f %.1f', 150 + cos( $a ) * $r1, 150 + sin( $a ) * $r1, 150 + cos( $a ) * 140, 150 + sin( $a ) * 140 );
+		for ( $i = 0; $i < 72; $i++ ) {
+			$ticks .= 'M' . $pt( $i * 5, 0 === $i % 9 ? 128 : ( 0 === $i % 3 ? 133 : 136 ) ) . 'L' . $pt( $i * 5, 140 );
 		}
 		return '<svg class="sf-ornate-emblem" viewBox="0 0 300 300" aria-hidden="true" focusable="false">'
-			. '<g fill="none" stroke="currentColor">'
-			. '<circle cx="150" cy="150" r="146" stroke-width="1.5"/><circle cx="150" cy="150" r="140"/><path d="' . $ticks . '"/>'
-			. '<circle cx="150" cy="150" r="104" stroke-width="6" stroke-opacity=".5"/><circle cx="150" cy="150" r="96"/>'
-			. '<circle cx="150" cy="150" r="58" stroke-width="1.5"/>'
-			. '<path d="M150 10L162 138L290 150L162 162L150 290L138 162L10 150L138 138Z" stroke-width="1.5"/>'
-			. '</g></svg>';
+			. '<g class="sf-ornate-rose-lines"><circle cx="150" cy="150" r="146" stroke-width="1.5"/><circle cx="150" cy="150" r="140"/><path d="' . $ticks . '"/><circle cx="150" cy="150" r="104"/></g>'
+			. '<path class="sf-ornate-rose-dark" d="' . $dark . '"/><path class="sf-ornate-rose-light" d="' . $light . '"/>'
+			. '<circle class="sf-ornate-rose-lines" cx="150" cy="150" r="5"/></svg>';
 	}
 
 	/**
@@ -71,7 +84,7 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 		$plane = strtolower( $b['plane'] );
 		echo sf_card_ornate_defs();
 		echo '<article class="sf-ornate-card' . ( 'isekai' === $plane ? ' sf-ornate-card--dreft' : '' ) . '"><div class="sf-ornate-panel">';
-		echo sf_card_ornate_emblem();
+		echo '<div class="sf-ornate-field" aria-hidden="true">' . sf_card_ornate_emblem() . '</div>';
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			echo sf_card_ornate_corner( $where );
 		}
