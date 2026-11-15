@@ -595,8 +595,8 @@ document.addEventListener('click', function (e) {
 		$key      = $isekai ? 'green' : 'silver';
 		$gradient = 'sf-kind-' . $key . '-' . $n;
 		$stops    = array(
-			'silver' => array( '#ffffff', '#c3c8cf', '#7b8189', '#e3e6ea', '#9aa0a8' ),
-			'green'  => array( '#d4f2e0', '#6fb38d', '#2c5a44', '#a6dcbc', '#4f8f6d' ),
+			'silver' => array( '#b9bec5', '#8d939b', '#5d636b', '#a3a8af', '#757b83' ),
+			'green'  => array( '#8fbfa3', '#57906f', '#2a5040', '#77a88b', '#41735a' ),
 		);
 
 		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
@@ -612,8 +612,8 @@ document.addEventListener('click', function (e) {
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			$star = 'tl' === $where;
 			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H42A36 36 0 0 1 6 42V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
-				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 17, 17, 11 ) . '"/>' : '' )
+				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H30A24 24 0 0 1 6 30V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
+				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13, 13, 7.5 ) . '"/>' : '' )
 				. '</svg>';
 		}
 		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
@@ -644,7 +644,7 @@ document.addEventListener('click', function (e) {
 		if ( ! empty( $b['grants'] ) ) {
 			echo '<div class="sf-kind-grants"><span class="sf-kind-label">Grants</span>';
 			foreach ( $b['grants'] as $g ) {
-				echo '<span class="sf-kind-chip">' . sf_card_e( $g ) . '</span>';
+				echo '<span class="sf-chip sf-chip--accent">' . sf_card_e( $g ) . '</span>';
 			}
 			echo '</div>';
 		}
