@@ -549,8 +549,9 @@ document.addEventListener('click', function (e) {
 
 	// The other card backgrounds, kept as options (sf_card_kind()'s
 	// $background, like the creator's KindCard): 'compass', the first one,
-	// an eight-point compass over a faint starfield, and 'planet', a dark
-	// planet's disc under a dense starfield. 'sun', above, is the default.
+	// an eight-point compass over a faint starfield, 'planet', a dark
+	// planet's disc under a dense starfield, and 'orbits', a solar system's
+	// rings over the faint starfield. 'sun', above, is the default.
 
 	// The compass: eight long diamonds meeting at the middle, each split
 	// down its length into a light and a dark face. The four cardinal ones
@@ -601,13 +602,35 @@ document.addEventListener('click', function (e) {
 		return $html . '</div>';
 	}
 
+	// 'orbits': an abstract solar system over the faint starfield, its sun in
+	// the middle of the field, evenly spaced rings running out past the
+	// card's edges and a few planets riding them. One SVG twice the field's
+	// width (cqw): 100 units are the field's width. The same numbers as the
+	// creator's KIND_ORBIT_GAP, KIND_ORBIT_RINGS and KIND_ORBIT_PLANETS (ring,
+	// angle in degrees from the right, radius).
+	function sf_card_kind_orbits() {
+		$gap = 9;
+		$svg = '<svg class="sf-kind-orbits" viewBox="0 0 200 200" aria-hidden="true" focusable="false">';
+		for ( $i = 1; $i <= 11; $i++ ) {
+			$svg .= '<circle class="sf-kind-orbit" cx="100" cy="100" r="' . ( $gap * $i ) . '"/>';
+		}
+		$svg .= '<circle class="sf-kind-orbit-sun" cx="100" cy="100" r="3"/>';
+		foreach ( array( array( 2, 200, 1.1 ), array( 3, 110, 1.3 ), array( 5, 300, 1.6 ), array( 6, 160, 1.2 ), array( 8, 35, 1.8 ), array( 10, 220, 1.4 ) ) as $p ) {
+			$a    = deg2rad( $p[1] );
+			$d    = $gap * $p[0];
+			$svg .= '<circle class="sf-kind-orbit-planet" cx="' . sprintf( '%.2f', 100 + $d * cos( $a ) ) . '" cy="' . sprintf( '%.2f', 100 - $d * sin( $a ) ) . '" r="' . $p[2] . '"/>';
+		}
+		return $svg . '</svg>';
+	}
+
 	/**
 	 * A Kind's card: its name and summary, each focus stat's bonus and
 	 * maximum, the Traits every character of the Kind holds, its features,
 	 * a link to its lore entry, then "Kind ✦" and its setting at the foot.
 	 * Takes a Kind as the creator exports it (sample-character.json,
 	 * dreftian-backgrounds.json), and what's drawn behind the content:
-	 * 'sun' (the sun and planets, the default), 'compass' or 'planet'.
+	 * 'sun' (the sun and planets, the default), 'compass', 'planet' or
+	 * 'orbits'.
 	 */
 	function sf_card_kind( $b, $background = 'sun' ) {
 		static $n = 0;
@@ -631,6 +654,7 @@ document.addEventListener('click', function (e) {
 			'sun'     => sf_card_kind_sky(),
 			'compass' => sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem(),
 			'planet'  => sf_card_kind_stars( $b['id'] ?? $b['name'], true ) . '<span class="sf-kind-globe"></span>',
+			'orbits'  => sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_orbits(),
 		);
 		echo '<div class="sf-kind-field" aria-hidden="true">' . ( $backgrounds[ $background ] ?? $backgrounds['sun'] ) . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
