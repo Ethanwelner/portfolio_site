@@ -603,7 +603,7 @@ document.addEventListener('click', function (e) {
 	// width (cqw): 100 units are the field's width. The same numbers as the
 	// creator's KIND_ORBIT_GAP, KIND_ORBIT_RINGS and KIND_ORBIT_PLANETS (ring,
 	// angle in degrees from the right, radius). Each planet circles the sun
-	// in a year of 12s × ring^1.5.
+	// in a year of 24s × ring^1.5.
 	function sf_card_kind_orbits() {
 		$gap = 9;
 		$svg = '<svg class="sf-kind-orbits" viewBox="0 0 200 200" aria-hidden="true" focusable="false">';
@@ -614,7 +614,7 @@ document.addEventListener('click', function (e) {
 		foreach ( array( array( 2, 200, 1.1 ), array( 3, 110, 1.3 ), array( 5, 300, 1.6 ), array( 6, 160, 1.2 ), array( 8, 35, 1.8 ), array( 10, 220, 1.4 ) ) as $p ) {
 			$a    = deg2rad( $p[1] );
 			$d    = $gap * $p[0];
-			$svg .= '<g class="sf-kind-orbit-turn" style="animation-duration:' . round( 12 * pow( $p[0], 1.5 ) ) . 's"><circle class="sf-kind-orbit-planet" cx="' . sprintf( '%.2f', 100 + $d * cos( $a ) ) . '" cy="' . sprintf( '%.2f', 100 - $d * sin( $a ) ) . '" r="' . $p[2] . '"/></g>';
+			$svg .= '<g class="sf-kind-orbit-turn" style="animation-duration:' . round( 24 * pow( $p[0], 1.5 ) ) . 's"><circle class="sf-kind-orbit-planet" cx="' . sprintf( '%.2f', 100 + $d * cos( $a ) ) . '" cy="' . sprintf( '%.2f', 100 - $d * sin( $a ) ) . '" r="' . $p[2] . '"/></g>';
 		}
 		return $svg . '</svg>';
 	}
