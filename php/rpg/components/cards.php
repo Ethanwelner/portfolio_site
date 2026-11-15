@@ -522,8 +522,10 @@ document.addEventListener('click', function (e) {
 	}
 	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
 	// the card's key color (silver for The Settled Systems, Dreft's green for
-	// Isekai), with a four-pointed star in the top left corner, around a dark
-	// field with a faint starfield and an eight-point compass. The same
+	// Isekai), around a dark field with a large quarter-circle cut out of its
+	// top left corner and a four-pointed star in the cut-out (the gunmetal
+	// stops short of it). The field holds a faint starfield and an
+	// eight-point compass. The same
 	// markup as the creator's KindCard (cards.tsx).
 
 	// A four-pointed star
@@ -593,11 +595,11 @@ document.addEventListener('click', function (e) {
 		$key      = $isekai ? 'green' : 'silver';
 		$gradient = 'sf-kind-' . $key . '-' . $n;
 		$stops    = array(
-			'silver' => array( '#ffffff', '#c3c8cf', '#7b8189', '#e3e6ea', '#9aa0a8' ),
-			'green'  => array( '#d4f2e0', '#6fb38d', '#2c5a44', '#a6dcbc', '#4f8f6d' ),
+			'silver' => array( '#b2b3b4', '#949798', '#626466', '#b2b3b4', '#949798' ),
+			'green'  => array( '#47b767', '#47b767', '#1c372b', '#47b767', '#1c372b' ),
 		);
 
-		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel">';
+		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
 		echo '<svg class="sf-kind-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="' . $gradient . '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">';
 		foreach ( array( 0, 0.35, 0.6, 0.85, 1 ) as $i => $offset ) {
 			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
@@ -605,13 +607,13 @@ document.addEventListener('click', function (e) {
 		echo '</linearGradient></defs></svg>';
 		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem() . '</div>';
 		// One corner piece, drawn top left and turned by CSS for the others:
-		// the line steps in around the star at the top left, and rounds off
-		// at the other three
+		// at the top left the line follows the field's cut-out with the star
+		// in it, and at the other three it rounds off
 		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
 			$star = 'tl' === $where;
 			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
-				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 10H28A18 18 0 0 1 10 28V100' : 'M100 10H16A6 6 0 0 0 10 16V100' ) . '"/>'
-				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13.5, 13.5, 8 ) . '"/>' : '' )
+				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 6H30A24 24 0 0 1 6 30V100' : 'M100 6H12A6 6 0 0 0 6 12V100' ) . '"/>'
+				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13, 13, 7.5 ) . '"/>' : '' )
 				. '</svg>';
 		}
 		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
@@ -642,7 +644,7 @@ document.addEventListener('click', function (e) {
 		if ( ! empty( $b['grants'] ) ) {
 			echo '<div class="sf-kind-grants"><span class="sf-kind-label">Grants</span>';
 			foreach ( $b['grants'] as $g ) {
-				echo '<span class="sf-kind-chip">' . sf_card_e( $g ) . '</span>';
+				echo '<span class="sf-chip sf-chip--accent">' . sf_card_e( $g ) . '</span>';
 			}
 			echo '</div>';
 		}
