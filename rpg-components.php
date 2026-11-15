@@ -194,6 +194,13 @@ $sf_backgrounds = $sf_sample['background'];
 $sf_backgrounds[] = $sf_dreft['kinds'][0];
 $sf_backgrounds[] = $sf_dreft['professions'][0];
 
+// Edwin's Kind with its Stats for the ornate card: sample-character.json
+// predates Kinds' stat bonuses, so they come from the creator's
+// content/kinds/human.yaml (+1 to each focus stat, 15 at most)
+$sf_human_kind = $sf_sample['background'][0] + array(
+	'stats' => array_fill_keys( array( 'endurance', 'power', 'grace', 'empathy', 'persuasion', 'demeanor', 'logic', 'intuition', 'memory' ), array( 'bonus' => 1, 'max' => 15 ) ),
+);
+
 // Button icons, as the creator draws them (src/app/components/ui.tsx)
 $sf_icon = function ( $name ) {
 	$icons = array(
@@ -680,10 +687,10 @@ takes a Kind as sf_card_background() does: a thin gunmetal border that runs in t
 				<p class="copy">A test of a framed look for Kind cards, in <code>php/rpg/components/ornate-card.php</code> and <code>css/sf-ornate-card.css</code>. Nothing uses it yet, and it isn’t in the creator.</p>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">A Dreftian Kind with its Stats, Grants and features, then Edwin’s Kind, with less on it</p>
+					<p class="sf-library-label">An Isekai Kind (Guwain) and a Settled Systems one (Edwin’s Human, its Stats from the creator)</p>
 					<div class="sf-library-ornate">
 						<?php sf_card_ornate( $sf_dreft['kinds'][0] ); ?>
-						<?php sf_card_ornate( $sf_sample['background'][0] ); ?>
+						<?php sf_card_ornate( $sf_human_kind ); ?>
 					</div>
 				</div>
 			</div>
