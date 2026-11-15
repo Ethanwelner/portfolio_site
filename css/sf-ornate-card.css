@@ -55,19 +55,18 @@
     overflow: hidden;
 }
 
-/* The engraved compass rose: barely lighter than the field */
+/* The compass: solid tones a step up from the field */
 .sf-ornate-emblem {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 94%;
     transform: translate(-50%, -50%);
-    color: #fff;
     pointer-events: none;
 }
-.sf-ornate-rose-light { fill: rgb(255 255 255 / 7%); }
-.sf-ornate-rose-dark { fill: rgb(255 255 255 / 2.5%); }
-.sf-ornate-rose-lines { fill: none; stroke: rgb(255 255 255 / 7%); }
+.sf-ornate-rose-light { fill: #3a3c40; }
+.sf-ornate-rose-dark { fill: #25272a; }
+.sf-ornate-rose-ring { fill: none; stroke: #2c2e31; }
 
 .sf-ornate-corner {
     position: absolute;

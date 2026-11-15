@@ -679,7 +679,7 @@ takes a background as the creator exports it: sample-character.json, dreftian-ba
 			<div class="container">
 				<div class="line-container"><h5><strong>Ornate Card (Test)</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_ornate( $background );
-takes a Kind as sf_card_background() does: a gunmetal border that runs in to the first gold line (under each corner’s star), a dark field with a faint engraved compass rose, and a gold filigree frame (four corner pieces joined by straight edges, so it grows with its text)</pre>
+takes a Kind as sf_card_background() does: a gunmetal border that runs in to the first gold line (under each corner’s star), a dark field with a compass (eight points in one ring), and a gold filigree frame (four corner pieces joined by straight edges, so it grows with its text)</pre>
 				<p class="copy">A test of a gilded look for Kind cards, in <code>php/rpg/components/ornate-card.php</code> and <code>css/sf-ornate-card.css</code>. Nothing uses it yet, and it isn’t in the creator.</p>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
