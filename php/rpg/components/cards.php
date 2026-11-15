@@ -8,7 +8,9 @@
 //                        natural weapons (an NPC's or monster's Attacks)
 //   sf_card_chassis()    An AI Core's chassis: an Item card holding
 //                        Physical stats and Traits
-//   sf_card_background() Kinds, Origins, Professions and Pasts
+//   sf_card_kind()       Kinds, in a framed card of their own
+//   sf_card_background() Origins, Professions and Pasts (a Kind goes to
+//                        sf_card_kind())
 //
 // The Character Creator's and Player Tools' cards are the reference. These
 // draw the same markup as the creator's components
@@ -478,6 +480,10 @@ document.addEventListener('click', function (e) {
 	 * $bonusNote is added to each Bonus, like Edwin's ", placed in Grace".
 	 */
 	function sf_card_background( $b, $bonusNote = '' ) {
+		if ( 'Kind' === $b['slot'] ) {
+			sf_card_kind( $b );
+			return;
+		}
 		$plane = strtolower( $b['plane'] );
 		echo '<div class="sf-card sf-background-card' . ( 'isekai' === $plane ? ' sf-card--dreft' : '' ) . '">';
 		echo '<div class="sf-card-bar"><h3 class="sf-card-name">' . sf_card_setting_icon( $plane ) . sf_card_e( $b['name'] ) . '</h3>';
@@ -497,52 +503,157 @@ document.addEventListener('click', function (e) {
 		};
 		$features = $b['features'] ?? array();
 
-		if ( 'Kind' === $b['slot'] ) {
-			// Each stat's bonus and maximum, grouped Physical / Social / Mental
-			if ( ! empty( $b['stats'] ) ) {
-				echo '<div class="stat-ranges">';
-				foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
-					echo '<div><div class="stat-ranges-group">' . $group . '</div>';
-					foreach ( $stats as $s ) {
-						$x = $b['stats'][ $s ];
-						echo '<div class="stat-range"><span>' . ucfirst( $s ) . '</span><span class="num">+' . (int) $x['bonus'] . '<span class="muted">/' . (int) $x['max'] . '</span></span></div>';
-					}
-					echo '</div>';
-				}
-				echo '</div>';
-			}
-			$rows = $row( 'Grants', $b['grants'] ?? array(), true );
-			if ( $rows ) {
-				echo '<div class="sf-background-rows">' . $rows . '</div>';
-			}
-			if ( $features ) {
-				echo '<ul class="sf-card-features">';
-				foreach ( $features as $f ) {
-					echo '<li><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</li>';
-				}
-				echo '</ul>';
-			}
-		} else {
-			$rows  = $row( 'Bonus', array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() ), true );
-			$rows .= $row( 'Grants', $b['grants'] ?? array(), true );
-			$rows .= $row( 'Choose', $b['choices'] ?? array(), false );
-			$rows .= $row( 'Background Keywords', $b['backgroundKeywords'] ?? array(), false );
-			foreach ( $features as $f ) {
-				$rows .= '<p><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</p>';
-			}
-			if ( $rows ) {
-				echo '<div class="sf-background-rows">' . $rows . '</div>';
-			}
+		$rows  = $row( 'Bonus', array_map( function ( $x ) use ( $bonusNote ) { return $x . $bonusNote; }, $b['bonus'] ?? array() ), true );
+		$rows .= $row( 'Grants', $b['grants'] ?? array(), true );
+		$rows .= $row( 'Choose', $b['choices'] ?? array(), false );
+		$rows .= $row( 'Background Keywords', $b['backgroundKeywords'] ?? array(), false );
+		foreach ( $features as $f ) {
+			$rows .= '<p><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</p>';
+		}
+		if ( $rows ) {
+			echo '<div class="sf-background-rows">' . $rows . '</div>';
 		}
 
-		// A Kind's lore entry shares the first word of its id (tatot-orcoid is Tatot)
 		$lore = $b['lore'] ?? '';
-		if ( ! $lore && 'Kind' === $b['slot'] && function_exists( 'sf_lore_titles' ) && isset( sf_lore_titles()[ strtok( $b['id'], '-' ) ] ) ) {
-			$lore = strtok( $b['id'], '-' );
-		}
 		if ( $lore && function_exists( 'sf_lore_link' ) ) {
 			echo '<p class="sf-card-note">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
 		}
 		echo '</div></div>';
+	}
+	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
+	// the card's key color (silver for The Settled Systems, Dreft's green for
+	// Isekai), with a four-pointed star in the top left corner, around a dark
+	// field with a faint starfield and an eight-point compass. The same
+	// markup as the creator's KindCard (cards.tsx).
+
+	// A four-pointed star
+	function sf_card_kind_star( $cx, $cy, $r ) {
+		$s = $r * 0.22;
+		return 'M' . $cx . ' ' . ( $cy - $r ) . 'L' . ( $cx + $s ) . ' ' . ( $cy - $s ) . 'L' . ( $cx + $r ) . ' ' . $cy . 'L' . ( $cx + $s ) . ' ' . ( $cy + $s ) . 'L' . $cx . ' ' . ( $cy + $r ) . 'L' . ( $cx - $s ) . ' ' . ( $cy + $s ) . 'L' . ( $cx - $r ) . ' ' . $cy . 'L' . ( $cx - $s ) . ' ' . ( $cy - $s ) . 'Z';
+	}
+
+	// The compass: eight long diamonds meeting at the middle, each split
+	// down its length into a light and a dark face. The four cardinal ones
+	// close over the middle, and the four smaller intercardinal ones come out
+	// from under them. The rose is turned 15° off north.
+	function sf_card_kind_emblem() {
+		$c    = 150;
+		$p    = function ( $x, $y ) { return sprintf( '%.1f %.1f', $x, $y ); };
+		$rose = '';
+		foreach ( array( array( 45, 96, 46, 13 ), array( 0, 132, 24, 24 ) ) as $winds ) {
+			list( $offset, $len, $at, $width ) = $winds;
+			for ( $i = 0; $i < 4; $i++ ) {
+				$a     = deg2rad( $offset + $i * 90 - 90 );
+				$ux    = cos( $a );
+				$uy    = sin( $a );
+				$tip   = $p( $c + $ux * $len, $c + $uy * $len );
+				$rose .= '<path class="sf-kind-rose-light" d="M' . $c . ' ' . $c . 'L' . $p( $c + $ux * $at + $uy * $width, $c + $uy * $at - $ux * $width ) . 'L' . $tip . 'Z"/>'
+					. '<path class="sf-kind-rose-dark" d="M' . $c . ' ' . $c . 'L' . $p( $c + $ux * $at - $uy * $width, $c + $uy * $at + $ux * $width ) . 'L' . $tip . 'Z"/>';
+			}
+		}
+		return '<svg class="sf-kind-emblem" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><circle class="sf-kind-rose-ring" cx="150" cy="150" r="142" stroke-width="4"/><g transform="rotate(15 150 150)">' . $rose . '</g></svg>';
+	}
+
+	// The starfield: one fixed sky (top %, left %, opacity, delay in
+	// seconds), shifted by the Kind's id so cards side by side differ. The
+	// same lists as the creator's KIND_DOTS and KIND_TWINKLES.
+	function sf_card_kind_stars( $seed ) {
+		$dots     = array( array(32.4,15.1,0.54,0.5),array(53.6,36.6,0.28,3.6),array(3.7,43.4,0.28,0.6),array(42.5,82.7,0.31,1.6),array(62.7,94.8,0.51,2.8),array(97.6,4.7,0.64,2.0),array(14.4,11.8,0.39,5.7),array(18.1,58.2,0.54,2.6),array(54.8,6.3,0.28,1.4),array(68.0,42.8,0.39,4.1),array(45.3,30.0,0.61,4.9),array(24.4,57.4,0.49,6.1),array(72.9,28.8,0.69,0.8),array(41.8,75.7,0.32,3.4),array(3.9,66.8,0.59,4.0),array(87.5,31.4,0.56,4.2),array(58.0,45.6,0.63,6.6),array(47.4,66.4,0.28,4.9),array(64.7,99.3,0.62,2.0),array(38.6,66.9,0.26,3.2),array(16.8,11.7,0.28,5.4),array(12.9,24.8,0.43,6.1),array(8.1,44.9,0.5,6.2),array(81.9,86.4,0.38,2.9),array(35.9,88.4,0.68,1.1),array(17.6,23.2,0.36,3.4),array(58.9,26.3,0.25,2.9),array(36.9,56.6,0.68,4.8),array(51.5,61.8,0.55,0.4),array(90.0,78.0,0.64,5.6),array(39.2,39.9,0.3,4.4),array(6.2,6.7,0.34,1.1),array(34.0,5.3,0.25,1.1),array(10.1,36.4,0.26,6.1),array(61.4,14.9,0.36,2.4),array(36.4,12.3,0.63,7.0),array(46.6,48.4,0.29,0.7),array(34.3,26.5,0.62,1.1),array(2.3,95.1,0.49,1.0),array(54.3,2.7,0.49,6.8),array(86.3,69.6,0.37,2.6),array(16.7,77.2,0.49,5.5),array(33.0,22.3,0.62,6.9),array(85.3,80.6,0.62,5.2),array(22.7,51.8,0.41,0.2),array(2.8,27.9,0.37,4.8) );
+		$twinkles = array( array(88.3,45.6,11.2),array(91.0,88.2,4.4),array(26.5,27.1,2.4),array(25.2,60.4,10.8) );
+		$sum = 0;
+		foreach ( str_split( $seed ) as $ch ) {
+			$sum += ord( $ch );
+		}
+		$dy    = ( $sum * 13 ) % 100;
+		$dx    = ( $sum * 29 ) % 100;
+		$wrap  = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v + $d, 100 ) ); };
+		$inner = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v - 8 + $d, 84 ) + 8 ); };
+		$html  = '<div class="sf-kind-stars">';
+		foreach ( $dots as $i => $x ) {
+			$html .= '<span class="sf-kind-dot' . ( 0 === $i % 5 ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . ';animation-delay:' . $x[3] . 's"></span>';
+		}
+		foreach ( $twinkles as $x ) {
+			$html .= '<span class="sf-kind-twinkle" style="top:' . $inner( $x[0], $dy ) . '%;left:' . $inner( $x[1], $dx ) . '%;animation-delay:' . $x[2] . 's"></span>';
+		}
+		return $html . '</div>';
+	}
+
+	/**
+	 * A Kind's card: its name and summary, each focus stat's bonus and
+	 * maximum, the Traits every character of the Kind holds, its features,
+	 * a link to its lore entry, then "Kind ✦" and its setting at the foot.
+	 * Takes a Kind as the creator exports it (sample-character.json,
+	 * dreftian-backgrounds.json).
+	 */
+	function sf_card_kind( $b ) {
+		static $n = 0;
+		$n++;
+		$plane    = strtolower( $b['plane'] );
+		$isekai   = 'isekai' === $plane;
+		$key      = $isekai ? 'green' : 'silver';
+		$gradient = 'sf-kind-' . $key . '-' . $n;
+		$stops    = array(
+			'silver' => array( '#ffffff', '#c3c8cf', '#7b8189', '#e3e6ea', '#9aa0a8' ),
+			'green'  => array( '#d4f2e0', '#6fb38d', '#2c5a44', '#a6dcbc', '#4f8f6d' ),
+		);
+
+		echo '<article class="sf-kind-card' . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel">';
+		echo '<svg class="sf-kind-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="' . $gradient . '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">';
+		foreach ( array( 0, 0.35, 0.6, 0.85, 1 ) as $i => $offset ) {
+			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
+		}
+		echo '</linearGradient></defs></svg>';
+		echo '<div class="sf-kind-field" aria-hidden="true">' . sf_card_kind_stars( $b['id'] ?? $b['name'] ) . sf_card_kind_emblem() . '</div>';
+		// One corner piece, drawn top left and turned by CSS for the others:
+		// the line steps in around the star at the top left, and rounds off
+		// at the other three
+		foreach ( array( 'tl', 'tr', 'bl', 'br' ) as $where ) {
+			$star = 'tl' === $where;
+			echo '<svg class="sf-kind-corner sf-kind-corner--' . $where . '" viewBox="0 0 100 100" aria-hidden="true" focusable="false">'
+				. '<path fill="none" stroke="url(#' . $gradient . ')" stroke-width="2" d="' . ( $star ? 'M100 10H28A18 18 0 0 1 10 28V100' : 'M100 10H16A6 6 0 0 0 10 16V100' ) . '"/>'
+				. ( $star ? '<path fill="url(#' . $gradient . ')" d="' . sf_card_kind_star( 13.5, 13.5, 8 ) . '"/>' : '' )
+				. '</svg>';
+		}
+		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
+
+		echo '<div class="sf-kind-content">';
+		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
+		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
+		// Its lore entry shares the first word of its id (tatot-orcoid is Tatot)
+		$lore = $b['lore'] ?? '';
+		if ( ! $lore && function_exists( 'sf_lore_titles' ) && isset( sf_lore_titles()[ strtok( $b['id'] ?? '', '-' ) ] ) ) {
+			$lore = strtok( $b['id'], '-' );
+		}
+		if ( $lore && function_exists( 'sf_lore_link' ) ) {
+			echo '<p class="sf-kind-lore">More in the lore: ' . sf_lore_link( $lore, sf_lore_titles()[ $lore ] ?? $lore ) . '</p>';
+		}
+		if ( ! empty( $b['stats'] ) ) {
+			echo '<div class="sf-kind-stats">';
+			foreach ( array( 'Physical' => array( 'endurance', 'power', 'grace' ), 'Social' => array( 'empathy', 'persuasion', 'demeanor' ), 'Mental' => array( 'logic', 'intuition', 'memory' ) ) as $group => $stats ) {
+				echo '<div><div class="sf-kind-label">' . $group . '</div>';
+				foreach ( $stats as $s ) {
+					$x = $b['stats'][ $s ] ?? array( 'bonus' => 0, 'max' => 0 );
+					echo '<div class="sf-kind-stat"><abbr title="' . ucfirst( $s ) . '">' . ucfirst( substr( $s, 0, 3 ) ) . '</abbr><span class="sf-kind-num">+' . (int) $x['bonus'] . '<span>/' . (int) $x['max'] . '</span></span></div>';
+				}
+				echo '</div>';
+			}
+			echo '</div>';
+		}
+		if ( ! empty( $b['grants'] ) ) {
+			echo '<div class="sf-kind-grants"><span class="sf-kind-label">Grants</span>';
+			foreach ( $b['grants'] as $g ) {
+				echo '<span class="sf-kind-chip">' . sf_card_e( $g ) . '</span>';
+			}
+			echo '</div>';
+		}
+		if ( ! empty( $b['features'] ) ) {
+			echo '<ul class="sf-kind-features">';
+			foreach ( $b['features'] as $f ) {
+				echo '<li><strong>' . sf_card_e( $f['name'] ) . '.</strong> ' . sf_card_e( $f['description'] ) . '</li>';
+			}
+			echo '</ul>';
+		}
+		echo '<p class="sf-kind-foot">Kind<span aria-hidden="true">✦</span>' . ( $isekai ? 'Isekai' : 'The Settled Systems' ) . '</p>';
+		echo '</div></div></article>';
 	}
 }
