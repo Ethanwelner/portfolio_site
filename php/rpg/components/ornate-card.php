@@ -44,30 +44,31 @@ if ( ! function_exists( 'sf_card_ornate' ) ) {
 			. '</g><g fill="url(#sf-ornate-gold)">' . sf_card_ornate_star( 17, 17, 13 ) . '<circle cx="37.8" cy="37.8" r="2.2"/></g></svg>';
 	}
 
-	// The compass behind the text: eight points (the four cardinal points
-	// longest), each split down its middle into a light and a dark face,
-	// inside one ring
+	// The compass behind the text: eight long diamonds meeting at the
+	// middle, each split down its length into a light and a dark face. The
+	// four smaller intercardinal ones lie under the four cardinal ones.
 	function sf_card_ornate_emblem() {
-		$c     = 150;
-		$pt    = function ( $deg, $r ) use ( $c ) {
-			$a = deg2rad( $deg - 90 );
-			return sprintf( '%.1f %.1f', $c + cos( $a ) * $r, $c + sin( $a ) * $r );
+		$c       = 150;
+		$diamond = function ( $deg, $len, $at, $width ) use ( $c ) {
+			$a  = deg2rad( $deg - 90 );
+			$ux = cos( $a );
+			$uy = sin( $a );
+			$p  = function ( $x, $y ) { return sprintf( '%.1f %.1f', $x, $y ); };
+			$tip   = $p( $c + $ux * $len, $c + $uy * $len );
+			$left  = $p( $c + $ux * $at + $uy * $width, $c + $uy * $at - $ux * $width );
+			$right = $p( $c + $ux * $at - $uy * $width, $c + $uy * $at + $ux * $width );
+			return '<path class="sf-ornate-rose-light" d="M' . $c . ' ' . $c . 'L' . $left . 'L' . $tip . 'Z"/>'
+				. '<path class="sf-ornate-rose-dark" d="M' . $c . ' ' . $c . 'L' . $right . 'L' . $tip . 'Z"/>';
 		};
-		$light = '';
-		$dark  = '';
-		// The intercardinal points first, so the cardinal ones lie over them
-		foreach ( array( array( 45, 92, 16 ), array( 0, 132, 22 ) ) as $winds ) {
-			list( $offset, $len, $base ) = $winds;
+		$rose = '';
+		foreach ( array( array( 45, 92, 20, 12 ), array( 0, 132, 28, 17 ) ) as $winds ) {
+			list( $offset, $len, $at, $width ) = $winds;
 			for ( $i = 0; $i < 4; $i++ ) {
-				$deg    = $offset + $i * 90;
-				$tip    = $pt( $deg, $len );
-				$light .= 'M' . $c . ' ' . $c . 'L' . $tip . 'L' . $pt( $deg - 45, $base ) . 'Z';
-				$dark  .= 'M' . $c . ' ' . $c . 'L' . $tip . 'L' . $pt( $deg + 45, $base ) . 'Z';
+				$rose .= $diamond( $offset + $i * 90, $len, $at, $width );
 			}
 		}
 		return '<svg class="sf-ornate-emblem" viewBox="0 0 300 300" aria-hidden="true" focusable="false">'
-			. '<circle class="sf-ornate-rose-ring" cx="150" cy="150" r="142" stroke-width="8"/>'
-			. '<path class="sf-ornate-rose-dark" d="' . $dark . '"/><path class="sf-ornate-rose-light" d="' . $light . '"/></svg>';
+			. '<circle class="sf-ornate-rose-ring" cx="150" cy="150" r="142" stroke-width="8"/>' . $rose . '</svg>';
 	}
 
 	/**
