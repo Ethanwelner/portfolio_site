@@ -2,7 +2,7 @@
 // The short-form sheet for Strange Frontiers NPCs and monsters: the name and
 // what it is with its Movement, the core Stats and focus Stats laid out as
 // on a Kind card with live HP, VP, SP (and MP for anything with Magic)
-// beside them, then its Attacks, Traits and Items as cards. One component, so every NPC and
+// beside them, then its Items (Attacks first) and Traits as cards. One component, so every NPC and
 // monster reads the same way, wherever it's dropped in.
 //
 // It's the full character sheet's short-form sibling (components/sheet.php
@@ -28,21 +28,23 @@
 //   'stats'       => array( 'Physical' => 12, 'Endurance' => 10, …,
 //                           'Magic' => 2 ),     // Magic is optional
 //   'resources'   => array( 'hp' => 40 ),       // optional, over the rules
-//   'attacks'     => array( … ),                // sf_card_item() arrays
+//   'attacks'     => array( … ),                // sf_card_item() arrays, first
+//                                               // in the Items box
 //   'traits'      => array( … ),                // sf_card_trait() arrays
 //   'items'       => array( … ),                // sf_card_item() arrays
 // ), array( 'fold' => 'closed' ) );
 //
 // Options, as with the cards:
 //
-//   fold     'closed': the Attacks, Traits and Items start closed to their
+//   fold     'closed': the Items and Traits start closed to their
 //            name's bar, each opening from its chevron, for a page that
 //            lists many NPCs; 'open' starts them open but folding. Without
 //            it they're always open, for a page with one.
 //   heading  the name's heading level, 'h5' by default, so the sheet fits
 //            the page's outline
 //
-// Anything left out isn't drawn: no Attacks box for an NPC without Attacks.
+// Anything left out isn't drawn: no Traits box for an NPC without Traits.
+// Attacks and Items share the Items box, Attacks first.
 require_once __DIR__ . '/cards.php';
 
 if ( ! function_exists( 'sf_npc_sheet' ) ) {
@@ -181,18 +183,16 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		echo '</div>';
 
-		// The Attacks as item cards, the Traits as trait cards, then any Items
+		// Its Attacks and any other Items together as item cards, then the
+		// Traits as trait cards
 		$with_fold = function ( $card ) use ( $fold ) {
 			return '' === $fold ? $card : $card + array( 'fold' => $fold );
 		};
-		sf_npc_cards( 'Attacks', $npc['attacks'] ?? array(), function ( $a ) use ( $with_fold ) {
-			sf_card_item( $with_fold( $a ) );
+		sf_npc_cards( 'Items', array_merge( $npc['attacks'] ?? array(), $npc['items'] ?? array() ), function ( $i ) use ( $with_fold ) {
+			sf_card_item( $with_fold( $i ) );
 		} );
 		sf_npc_cards( 'Traits', $npc['traits'] ?? array(), function ( $t ) use ( $with_fold ) {
 			sf_card_trait( $with_fold( $t ) );
-		} );
-		sf_npc_cards( 'Items', $npc['items'] ?? array(), function ( $i ) use ( $with_fold ) {
-			sf_card_item( $with_fold( $i ) );
 		} );
 
 		echo '</div>';

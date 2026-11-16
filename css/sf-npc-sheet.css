@@ -3,7 +3,7 @@
    ========================================
    The short-form sheet (php/rpg/components/npc-sheet.php): the name and
    what it is with Movement, the Stats as on a Kind card with live HP, VP,
-   SP and MP beside them, then Attacks, Traits and Items as cards. The full character sheet's sibling (css/sf-sheet.css): the same
+   SP and MP beside them, then Items and Traits as cards. The full character sheet's sibling (css/sf-sheet.css): the same
    dark panel and grays, cut down to what a GM needs at the table.
 
    It carries its own colors, so it looks the same in a lore entry, a popup
@@ -339,7 +339,7 @@
     }
 }
 
-/* ---- Attacks, Traits and Items ---- */
+/* ---- Items (Attacks first) and Traits ---- */
 
 /* A box's title, with a rule running out to the right */
 .sf-npc-title {
@@ -367,7 +367,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
     align-items: start;
-    gap: 12px;
+    /* 24px across, so an Item's count badge, hanging 13px off its card's
+       left edge, clears the card beside it */
+    gap: 12px 24px;
     margin: 0;
     padding: 0;
     list-style: none;
