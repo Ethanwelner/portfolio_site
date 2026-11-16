@@ -484,7 +484,11 @@ document.addEventListener('click', function (e) {
 			sf_card_kind( $b );
 			return;
 		}
-		sf_card_kind_frame( $b, $b['slot'], 'orbits', 'sf-background-card' );
+		// Each slot's art: an Origin the dark planet under a dense starfield,
+		// a Profession the compass, a Past the column of planets lit by a
+		// faded sun (the creator's SLOT_BACKGROUNDS)
+		$art = array( 'origin' => 'planet', 'profession' => 'compass', 'past' => 'sun' );
+		sf_card_kind_frame( $b, $b['slot'], $art[ strtolower( $b['slot'] ) ] ?? 'orbits', 'sf-background-card' );
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 
 		$row = function ( $label, $list, $accent ) {
