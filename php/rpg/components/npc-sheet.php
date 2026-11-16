@@ -135,8 +135,8 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 
 		// The Stats as on a Kind card (php/rpg/components/cards.php): each core
-		// Stat's name in its color with its number, its focus Stats under it
-		// by their first three letters, then its resource under those (HP
+		// Stat's name in its color with its number, its focus Stats under it,
+		// then its resource under those (HP
 		// under Physical, VP Social, SP Mental, MP Magic), live as in Player
 		// Tools: −, the value over its max, + and restore to full, with a
 		// meter under it. The page's script (php/javascript-loads.php) moves
@@ -148,7 +148,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			echo '<div class="sf-npc-group sf-npc-group--' . $group . '"><div class="sf-npc-label">' . $label . '<span class="sf-npc-value">' . (int) ( $npc['stats'][ $label ] ?? 0 ) . '</span></div>';
 			if ( isset( SF_NPC_FOCUS[ $group ] ) ) {
 				foreach ( SF_NPC_FOCUS[ $group ] as $stat ) {
-					echo '<div class="sf-npc-stat"><abbr title="' . $stat . '">' . substr( $stat, 0, 3 ) . '</abbr><span class="sf-npc-value">' . (int) ( $npc['stats'][ $stat ] ?? 0 ) . '</span></div>';
+					echo '<div class="sf-npc-stat"><span class="sf-npc-stat-name">' . $stat . '</span><span class="sf-npc-value">' . (int) ( $npc['stats'][ $stat ] ?? 0 ) . '</span></div>';
 				}
 			} else {
 				// Magic has no focus Stats: what its points give

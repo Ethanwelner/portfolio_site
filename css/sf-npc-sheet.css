@@ -204,21 +204,18 @@
     }
 }
 
-/* Each focus Stat's first three letters and its number, the labels as wide
-   as the widest (MEM), so the numbers line up */
+/* Each focus Stat's name and its number, the numbers lined up on the
+   right */
 .sf-npc-stat {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+}
 
-    abbr {
-        min-width: 1.75em;
-        color: var(--npc-soft);
-        font-family: 'bebas_neueregular', sans-serif;
-        letter-spacing: .06em;
-        text-decoration: none;
-        cursor: help;
-    }
+.sf-npc-stat-name {
+    color: var(--npc-soft);
+    font-family: 'bebas_neueregular', sans-serif;
+    letter-spacing: .06em;
 }
 
 /* What Magic's points give, where the others list focus Stats */
