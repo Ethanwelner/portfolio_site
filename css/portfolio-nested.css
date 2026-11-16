@@ -38,6 +38,11 @@ html.sf-page {
     scroll-behavior: auto;
 }
 
+/* The component library link in the header shows on Strange Frontiers pages only */
+html:not(.sf-page) .sf-components-link {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
