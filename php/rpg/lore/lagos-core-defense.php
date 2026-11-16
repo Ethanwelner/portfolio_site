@@ -29,7 +29,7 @@
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
-			<div class="text-cols">
+			<div>
 				<p class="copy">
 					Lagos-Core Defense grew to prominence during the bloody days of <?php echo sf_lore_link('centafrica', 'Centafrica’s'); ?> expansion. Based in Lagos, the cybernetics epicenter of Africa, the firm specializes in producing the most cutting-edge combat systems, battle cybernetics, and military drones in the Settled Systems. Lagos-Core’s products can be seen across terrestrial militaries with models like the Mokele-mbembe, a stealth-operated land-attack craft, while models such as the Owuru security drone can be seen patrolling the exteriors of stations and Arks throughout space.
 				</p>

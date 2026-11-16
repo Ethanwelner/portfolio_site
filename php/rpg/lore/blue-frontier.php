@@ -29,7 +29,7 @@
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
-			<div class="text-cols">
+			<div>
 				<p class="copy">
 					Blue Frontier is the largest biomedical concern in the <?php echo sf_lore_link('american-empire', 'American Empire'); ?>. Renowned for sitting at the cutting edge of exotic medical research and pharmacology, the corporation maintains dozens of labs across the Settled Systems researching the paraphysical. Headquartered aboard its administration craft, the Omnium Novorum, Blue Frontier operates a flotilla of exploratory gate facilities and support craft that can consistently be seen tailing <?php echo sf_lore_link('tetra', 'Tetra'); ?>, where most of its planar research offices and personnel are located.
 				</p>

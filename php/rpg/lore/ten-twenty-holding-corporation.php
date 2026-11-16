@@ -29,7 +29,7 @@
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
-			<div class="text-cols">
+			<div>
 				<p class="copy">
 					10/20 Holding Corporation is the largest asset management and financial services corporation in the Settled Systems. With a headquarters based out of its well-armored and grandiose administration craft, The Pluto, 10/20 provides safe, discreet, and secure management of the wealth and investments of the Settled Systems’ elite and powerful, as well as numerous Solar 100 clients. The firm is currently under investigation by the <?php echo sf_lore_link('stellar-democratic-union', 'SDU'); ?> for money laundering and sanctions evasion, and the Pluto’s rare excursions out of the safe harbors of Syndicate territory tend to see it at rest alongside Chinese or American Empire holdings.
 				</p>
