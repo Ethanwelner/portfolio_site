@@ -667,6 +667,7 @@ document.addEventListener('click', function (e) {
 
 		echo '<div class="sf-kind-content">';
 		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
+		echo '<p class="sf-kind-setting">Kind<span aria-hidden="true">✦</span>' . ( $isekai ? 'Isekai' : 'The Settled Systems' ) . '</p>';
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
@@ -694,7 +695,6 @@ document.addEventListener('click', function (e) {
 			}
 			echo '</ul>';
 		}
-		echo '<p class="sf-kind-foot">Kind<span aria-hidden="true">✦</span>' . ( $isekai ? 'Isekai' : 'The Settled Systems' ) . '</p>';
 		echo '</div></div></article>';
 	}
 }
