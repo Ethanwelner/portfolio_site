@@ -263,7 +263,7 @@
 			"slot": "Origin",
 			"name": "Dreft",
 			"plane": "isekai",
-			"summary": "Born and raised in the Kingdom of Dreft, whether in Port Herminst, a coastal town, a farming village or the mountains.",
+			"summary": "Raised in the Kingdom of Dreft: Port Herminst, a coastal town, a farming village or the mountains.",
 			"lore": "dreft",
 			"features": [],
 			"bonus": [
@@ -290,7 +290,7 @@
 			"slot": "Origin",
 			"name": "Kingdom of Karsef",
 			"plane": "isekai",
-			"summary": "You grew up in the Kingdom of Karsef, across the Corsine Pass from Dreft, and an old rival of it.",
+			"summary": "Raised in the Kingdom of Karsef, Dreft’s neighbor and rival across the Corsine Pass.",
 			"lore": "kingdom-of-karsef",
 			"features": [],
 			"bonus": [
@@ -317,7 +317,7 @@
 			"slot": "Origin",
 			"name": "Kingdom of Sorellion",
 			"plane": "isekai",
-			"summary": "You grew up in the Kingdom of Sorellion, one of Dreft’s neighbors on Isekai.",
+			"summary": "Raised in the Kingdom of Sorellion, Dreft’s neighbor across the Moffit river.",
 			"lore": "kingdom-of-sorellion",
 			"features": [],
 			"bonus": [
@@ -341,7 +341,7 @@
 			"slot": "Origin",
 			"name": "The Drovus Empire",
 			"plane": "isekai",
-			"summary": "You grew up in the Drovus Empire, which has spent the last decade swallowing its neighbors, the Sunrise Princedoms among them.",
+			"summary": "Raised in the powerful Drovus Empire, Dreft’s expansive neighbor.",
 			"lore": "drovus-empire",
 			"features": [],
 			"bonus": [
