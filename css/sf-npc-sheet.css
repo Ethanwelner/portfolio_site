@@ -91,6 +91,62 @@
     padding: 4px 24px 0 4px;
 }
 
+/* The level blob, then the name and what it is */
+.sf-npc-who {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* The level: the character sheet's blob (css/sf-sheet.css's
+   .sf-sheet-level) at 56px, in the site's black, morphing and turning
+   while its purple glow pulses, with a tiny "Level" over the number in
+   Bebas. A pseudo-element, so the number stays upright; still with
+   reduced motion. */
+.sf-npc-level {
+    position: relative;
+    isolation: isolate;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    color: var(--npc-text);
+    font-family: var(--title, 'bebas_neueregular');
+    line-height: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background-color: var(--sf-gray-800);
+        box-shadow: 0 0 5px 0 var(--sf-purple-400);
+        animation:
+            sf-sheet-blob-morph 8s ease-in-out infinite,
+            sf-sheet-blob-spin 20s linear infinite,
+            sf-sheet-blob-glow 3s ease-in-out infinite alternate;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
+
+.sf-npc-level-label {
+    margin-top: 2px;
+    font-size: .625rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.sf-npc-level-number {
+    font-size: 1.625rem;
+}
+
 .sf-npc-name {
     margin: 0;
     color: inherit;
@@ -333,6 +389,10 @@
 
     .sf-npc-box {
         border: 1px solid var(--npc-edge);
+    }
+
+    .sf-npc-level::before {
+        animation: none;
     }
 
     /* Printed, just the value, with room left to write it in */

@@ -20,6 +20,8 @@
 // sf_npc_sheet( array(
 //   'name'        => 'Murk Legs',
 //   'kind'        => 'Monster, Isekai',         // what it is, under the name
+//   'level'       => 15,                        // optional, over the core
+//                                               // Stats' total
 //   'description' => '…',                       // optional, a line or two
 //   'move'        => '10 m',
 //   'resistances' => '2 Blunt, 1 Slashing',      // optional
@@ -113,13 +115,21 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 		echo '<div class="sf-npc">';
 
-		// The name and what it is, then its resistances and Movement
+		// Its level, name and what it is, then its resistances and Movement
+		// Its level in the character sheet's blob, left of the name: each
+		// level is a core point, so it's the core Stats' total unless the NPC
+		// sets its own
+		$level = isset( $npc['level'] ) ? (int) $npc['level'] : array_sum( array_map( function ( $label ) use ( $npc ) {
+			return (int) ( $npc['stats'][ $label ] ?? 0 );
+		}, $groups ) );
 		echo '<div class="sf-npc-head"><div class="sf-npc-who">';
+		echo '<div class="sf-npc-level" title="Level ' . $level . '"><span class="sf-npc-level-label">Level</span><span class="sf-npc-level-number">' . $level . '</span></div>';
+		echo '<div>';
 		echo '<' . $heading . ' class="sf-npc-name">' . sf_npc_e( $npc['name'] ) . '</' . $heading . '>';
 		if ( ! empty( $npc['kind'] ) ) {
 			echo '<p class="sf-npc-kind">' . sf_npc_e( $npc['kind'] ) . '</p>';
 		}
-		echo '</div><div class="sf-npc-aside">';
+		echo '</div></div><div class="sf-npc-aside">';
 		// Its resistances as a shield badge, as on item and chassis cards
 		if ( ! empty( $npc['resistances'] ) ) {
 			echo sf_item_stats( 'shield', $npc['resistances'] );
