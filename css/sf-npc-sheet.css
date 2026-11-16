@@ -170,22 +170,47 @@
     gap: 8px 16px;
 }
 
-/* The resistances' badge, styled as on an item card (css/sf-cards.css,
-   whose badge rules are scoped to cards): the shield in its olive circle,
-   then each damage type's icon and number */
-.sf-npc-aside .chip.equipment-stat {
-    display: inline-flex;
-    flex-wrap: nowrap;
+/* Its resistances as on the character sheet (css/sf-sheet.css's
+   .sf-resistance-list): the shield, in the soft gray, then each damage
+   type's icon and its number, bold, along a line */
+.sf-npc-resistances {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 2px 10px;
-    padding: 0 .5rem 0 0;
-    background-color: var(--sf-olive-900);
-    border: 1px solid var(--sf-olive-600);
-    border-radius: calc((1lh + .4rem + 2px) / 2) 4px 4px calc((1lh + .4rem + 2px) / 2);
-    color: var(--sf-olive-100);
-    font-size: .875rem;
-    font-weight: 600;
-    white-space: nowrap;
+    gap: 8px 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.125rem;
+
+    svg {
+        flex: none;
+        width: 1.35em;
+        height: 1.35em;
+        margin: 0;
+        fill: currentColor;
+    }
+}
+
+.sf-npc-resistances-icon {
+    display: inline-flex;
+    margin-right: -6px;
+    color: var(--npc-soft);
+
+    svg {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+.sf-npc-resistance {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    > .sf-npc-value {
+        font-weight: 700;
+    }
 }
 
 /* Movement: the character sheet's person-running icon, then the distance */
