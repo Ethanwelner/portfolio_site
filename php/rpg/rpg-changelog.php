@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/16/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Gene Hacking: 29 new Traits for Humans with the Gene Hacking keyword. Skills edit abilities into the body: Tailored Features, Golden Voice, Pheromone Glands, Nootropic Edit, Keen Senses, Enhanced Metabolism, Steady Chemistry, Oxygen-Rich Blood, Adaptive Skin and Climate Tolerance. Nine more each add 1 to a focus stat and to its max, so an edited Human can pass 15: Hardy Constitution (Endurance), Fast-Twitch Muscle (Power), Refined Coordination (Grace), Social Attunement (Empathy), Magnetic Charm (Persuasion), Iron Nerves (Demeanor), Neural Density (Logic), Heightened Instinct (Intuition) and Eidetic Edit (Memory). Abilities: Regenerative Tissue, Night Eyes, Thick Hide, Engineered Immunity, Tetrachromacy, Dense Bones, Radiation Hardening, Gills, Clotting Factor and Toxin Glands.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/15/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Nations: The Ural Federation and Xanthus now have full histories, from the Russian Federation’s collapse to the Ural Federation’s present borders, and from Xanthus’s days as a Centafrican mining colony to its refusals of the Stellar Democratic Union. The Ural Federation’s territories and languages are filled out, and every other nation’s history is revised, with new entries for China, India, the Lunar Syndicate, the Free American States, Kashgar and Dreft.</li>
