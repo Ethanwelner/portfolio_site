@@ -467,11 +467,11 @@ document.addEventListener('click', function (e) {
 	}
 
 	/**
-	 * A Background card, as the creator's: the name with its slot and plane
-	 * as chips, the summary, then for a Kind its stats' bonus and maximum,
-	 * its Grants and its features, and for a package what it gives as
-	 * labeled rows of chips, Bonus and Grants in the lighter gray, and its
-	 * features.
+	 * A Background card (an Origin, Profession or Past), as the creator's:
+	 * drawn on the Kind card's frame (sf_card_kind_frame(), below), its slot
+	 * and setting over the name ("Origin ✦ The Settled Systems"), its
+	 * summary, then what it gives as labeled rows of chips, Bonus and Grants
+	 * in the lighter gray, and its features. A Kind goes to sf_card_kind().
 	 *
 	 * Takes a background as the creator exports it (sample-character.json,
 	 * dreftian-backgrounds.json): id, slot (Kind | Origin | Profession |
@@ -484,12 +484,8 @@ document.addEventListener('click', function (e) {
 			sf_card_kind( $b );
 			return;
 		}
-		$plane = strtolower( $b['plane'] );
-		echo '<div class="sf-card sf-background-card' . ( 'isekai' === $plane ? ' sf-card--dreft' : '' ) . '">';
-		echo '<div class="sf-card-bar"><h3 class="sf-card-name">' . sf_card_setting_icon( $plane ) . sf_card_e( $b['name'] ) . '</h3>';
-		echo '<span class="sf-card-chips"><span class="sf-chip">' . sf_card_e( $b['slot'] ) . '</span><span class="sf-chip sf-chip--muted">' . sf_card_e( $plane ) . '</span></span></div>';
-		echo '<div class="sf-card-body">';
-		echo '<p>' . sf_card_e( $b['summary'] ) . '</p>';
+		sf_card_kind_frame( $b, $b['slot'], 'orbits', 'sf-background-card' );
+		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 
 		$row = function ( $label, $list, $accent ) {
 			if ( ! $list ) {
@@ -513,7 +509,7 @@ document.addEventListener('click', function (e) {
 		if ( $rows ) {
 			echo '<div class="sf-background-rows">' . $rows . '</div>';
 		}
-		echo '</div></div>';
+		echo '</div></div></article>';
 	}
 	// ---- The Kind card: a thin gunmetal border running in to a 2px line in
 	// the card's key color (silver for The Settled Systems, Dreft's green for
@@ -620,15 +616,15 @@ document.addEventListener('click', function (e) {
 	}
 
 	/**
-	 * A Kind's card: its name and summary, each focus stat's bonus and
-	 * maximum, the Traits every character of the Kind holds, its features,
-	 * a link to its lore entry, then "Kind ✦" and its setting at the foot.
-	 * Takes a Kind as the creator exports it (sample-character.json,
-	 * dreftian-backgrounds.json), and what's drawn behind the content:
-	 * 'orbits' (the solar system, the default), 'sun', 'compass' or
+	 * The Kind card's frame, which Background cards share: the opening
+	 * markup up to and including the content's label and setting over the
+	 * name ("Kind ✦ The Settled Systems"). The caller echoes the rest of the
+	 * content, then closes it with '</div></div></article>'. The same markup
+	 * as the creator's KindFrame (cards.tsx). $background is what's drawn
+	 * behind the content: 'orbits' (the default), 'sun', 'compass' or
 	 * 'planet'.
 	 */
-	function sf_card_kind( $b, $background = 'orbits' ) {
+	function sf_card_kind_frame( $b, $label, $background = 'orbits', $class = '' ) {
 		static $n = 0;
 		$n++;
 		$plane    = strtolower( $b['plane'] );
@@ -639,8 +635,9 @@ document.addEventListener('click', function (e) {
 			'silver' => array( '#949798', '#949798', '#626466', '#626466', '#626466' ),
 			'green'  => array( '#47b767', '#47b767', '#47b767', '#47b767', '#47b767' ),
 		);
+		$settings = array( 'earth' => 'The Settled Systems', 'isekai' => 'Isekai', 'any' => 'Any Setting' );
 
-		echo '<article class="sf-kind-card sf-kind-card--bg-' . $background . ( $isekai ? ' sf-kind-card--dreft' : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
+		echo '<article class="sf-kind-card sf-kind-card--bg-' . $background . ( $isekai ? ' sf-kind-card--dreft' : '' ) . ( $class ? ' ' . $class : '' ) . '"><div class="sf-kind-panel"><span class="sf-kind-plate" aria-hidden="true"></span>';
 		echo '<svg class="sf-kind-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="' . $gradient . '" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100" y2="100">';
 		foreach ( array( 0, 0.35, 0.6, 0.85, 1 ) as $i => $offset ) {
 			echo '<stop offset="' . $offset . '" stop-color="' . $stops[ $key ][ $i ] . '"/>';
@@ -666,8 +663,21 @@ document.addEventListener('click', function (e) {
 		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
 
 		echo '<div class="sf-kind-content">';
-		echo '<p class="sf-kind-setting">Kind<span aria-hidden="true">✦</span>' . ( $isekai ? 'Isekai' : 'The Settled Systems' ) . '</p>';
+		echo '<p class="sf-kind-setting">' . sf_card_e( $label ) . '<span aria-hidden="true">✦</span>' . ( $settings[ $plane ] ?? sf_card_e( ucfirst( $plane ) ) ) . '</p>';
 		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
+	}
+
+	/**
+	 * A Kind's card, on the frame above: "Kind ✦" and its setting over its
+	 * name, its summary, each focus stat's bonus and maximum, the Traits
+	 * every character of the Kind holds, and its features. Takes a Kind as
+	 * the creator exports it (sample-character.json,
+	 * dreftian-backgrounds.json), and what's drawn behind the content:
+	 * 'orbits' (the solar system, the default), 'sun', 'compass' or
+	 * 'planet'.
+	 */
+	function sf_card_kind( $b, $background = 'orbits' ) {
+		sf_card_kind_frame( $b, 'Kind', $background );
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
