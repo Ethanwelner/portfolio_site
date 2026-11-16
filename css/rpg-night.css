@@ -104,7 +104,11 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
     height: 300%;
     margin-left: -150%;
     transform-origin: 50% 100%;
-    animation: rpg-sky-rotate 250s linear infinite;
+    /* The turn moves in 30 steps a second (about a pixel each at the
+       screen's corners) rather than every frame: the white panels blend
+       the sky through them, so each change redraws the whole screen, and a
+       120Hz display would redraw it 120 times a second */
+    animation: rpg-sky-rotate 250s steps(7500) infinite;
     backface-visibility: hidden;
     /* A sparse grain behind the stars, turning with them: the Strange
        Frontiers cards' grain (--sf-grain in sf-cards.css, copied here since
@@ -129,13 +133,14 @@ body:has(.personal-shell.is-personal:not(.is-sliding)) > .rpg-night {
 }
 
 .rpg-sky-field-a {
-    animation: rpg-sky-field-twinkle 5s ease-in-out infinite;
+    /* The fields' slow pulses step about 30 times a second too */
+    animation: rpg-sky-field-twinkle 5s steps(75) infinite;
 }
 
 .rpg-sky-field-b {
     width: 2px;
     height: 2px;
-    animation: rpg-sky-field-twinkle 7.5s ease-in-out infinite 1.4s;
+    animation: rpg-sky-field-twinkle 7.5s steps(110) infinite 1.4s;
 }
 
 .rpg-sky-field-a {
