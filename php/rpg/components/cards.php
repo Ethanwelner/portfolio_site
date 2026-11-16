@@ -666,8 +666,8 @@ document.addEventListener('click', function (e) {
 		echo '<span class="sf-kind-edge sf-kind-edge--top"></span><span class="sf-kind-edge sf-kind-edge--right"></span><span class="sf-kind-edge sf-kind-edge--bottom"></span><span class="sf-kind-edge sf-kind-edge--left"></span>';
 
 		echo '<div class="sf-kind-content">';
-		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
 		echo '<p class="sf-kind-setting">Kind<span aria-hidden="true">✦</span>' . ( $isekai ? 'Isekai' : 'The Settled Systems' ) . '</p>';
+		echo '<h3 class="sf-kind-name">' . sf_card_e( $b['name'] ) . '</h3>';
 		echo '<p class="sf-kind-summary">' . sf_card_e( $b['summary'] ) . '</p>';
 		if ( ! empty( $b['stats'] ) ) {
 			echo '<div class="sf-kind-stats">';
