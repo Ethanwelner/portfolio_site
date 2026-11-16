@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/16/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Corporations: every corporation now lists its employees and market cap, from Plum Technologies’ 435,000 employees and 14 trillion ERC to Tetra Frontiers Co.’s 1,650 plus contractors and 120 billion ERC. The Yellow River Research Institute is state-owned, so it has no market cap.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/15/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Nations: The Ural Federation and Xanthus now have full histories, from the Russian Federation’s collapse to the Ural Federation’s present borders, and from Xanthus’s days as a Centafrican mining colony to its refusals of the Stellar Democratic Union. The Ural Federation’s territories and languages are filled out, and every other nation’s history is revised, with new entries for China, India, the Lunar Syndicate, the Free American States, Kashgar and Dreft.</li>
