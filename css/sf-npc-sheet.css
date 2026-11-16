@@ -167,7 +167,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 16px;
+    /* 32px across, so the resistances and Movement read as two things */
+    gap: 8px 32px;
 }
 
 /* Its resistances as on the character sheet (css/sf-sheet.css's
