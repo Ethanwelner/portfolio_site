@@ -64,7 +64,7 @@
 					<li>Tycho Mine Complex (Luna)</li>
 					<li>Luna Orbita (Lunar Orbit)</li>
 					<li><?php echo sf_lore_link('stellar-metals', 'Stellar Metals'); ?> Station (Deep Space)</li>
-					<li><?php echo sf_lore_link('ten-twenty-holding-corporation', '10/20 Holding Corporation'); ?> Headquarters (Deep Space)</li>
+					<li><?php echo sf_lore_link('ten-twenty-holding-corporation', 'The Pluto'); ?> (Deep Space)</li>
 				</ul>
 			</div>
 		</div>
