@@ -136,9 +136,14 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 		// The Stats as on a Kind card (php/rpg/components/cards.php): each core
 		// Stat's name in its color with its number, its focus Stats under it
-		// by their first three letters, in columns; then HP, VP, SP and MP to
-		// their right, dropping under them when there's no room
-		echo '<div class="sf-npc-box sf-npc-vitals"><div class="sf-npc-stats">';
+		// by their first three letters, then its resource under those (HP
+		// under Physical, VP Social, SP Mental, MP Magic), live as in Player
+		// Tools: −, the value over its max, + and restore to full, with a
+		// meter under it. The page's script (php/javascript-loads.php) moves
+		// the value; nothing is saved, so a reload puts it back to full.
+		$resources = sf_npc_resources( $npc );
+		$by_group  = array( 'physical' => 'hp', 'social' => 'vp', 'mental' => 'sp', 'magic' => 'mp' );
+		echo '<div class="sf-npc-box sf-npc-stats">';
 		foreach ( $groups as $group => $label ) {
 			echo '<div class="sf-npc-group sf-npc-group--' . $group . '"><div class="sf-npc-label">' . $label . '<span class="sf-npc-value">' . (int) ( $npc['stats'][ $label ] ?? 0 ) . '</span></div>';
 			if ( isset( SF_NPC_FOCUS[ $group ] ) ) {
@@ -149,26 +154,22 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 				// Magic has no focus Stats: what its points give
 				echo '<p class="sf-npc-note">3 MP per point</p>';
 			}
+			$id = $by_group[ $group ];
+			if ( isset( $resources[ $id ] ) ) {
+				$value = (int) $resources[ $id ];
+				$abbr  = strtoupper( $id );
+				echo '<div class="sf-npc-resource sf-npc-resource--' . $id . '" data-npc-resource data-max="' . $value . '" data-current="' . $value . '">'
+					. '<strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . $abbr . '</strong>'
+					. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
+					. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
+					. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
+					. sf_button( sf_npc_icon( 'restore' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
+					. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
+					. '</div>';
+			}
 			echo '</div>';
 		}
-		echo '</div><ul class="sf-npc-resources">';
-		// Each one live, as in Player Tools: −, the value over its max, + and
-		// restore to full, with a meter under it. The page's script
-		// (php/javascript-loads.php) moves the value; nothing is saved, so a
-		// reload puts it back to full.
-		foreach ( sf_npc_resources( $npc ) as $id => $value ) {
-			$value = (int) $value;
-			$abbr  = strtoupper( $id );
-			echo '<li class="sf-npc-resource sf-npc-resource--' . $id . '" data-npc-resource data-max="' . $value . '" data-current="' . $value . '">'
-				. '<strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . $abbr . '</strong>'
-				. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
-				. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
-				. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
-				. sf_button( sf_npc_icon( 'restore' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
-				. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
-				. '</li>';
-		}
-		echo '</ul></div>';
+		echo '</div>';
 
 		// The Attacks as item cards, the Traits as trait cards, then any Items
 		$with_fold = function ( $card ) use ( $fold ) {

@@ -163,30 +163,22 @@
     line-height: 1.5;
 }
 
-/* ---- The Stats, then HP, VP, SP and MP on their right, in one box. The
-   trackers drop under the Stats when there's no room beside them. ---- */
+/* ---- The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats),
+   each group's resource under it: each group as wide as its tracker, from
+   the left, wrapping when there's no room ---- */
 
-.sf-npc-vitals {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px 32px;
-}
-
-/* The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats): each
-   group as wide as its stats, from the left, wrapping when there's no
-   room */
 .sf-npc-stats {
-    flex: 1 1 18rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 12px 40px;
+    gap: 16px 32px;
     font-size: 1rem;
 }
 
 .sf-npc-group {
     --stat-color: var(--sf-neon-500);
+    display: flex;
+    flex-direction: column;
 }
 
 .sf-npc-group--physical { --stat-color: var(--sf-red-500); }
@@ -236,36 +228,23 @@
     font-size: .875rem;
 }
 
-/* HP, VP, SP and MP two across, live as in Player Tools: the name, −, the
-   value over its max, + and restore to full on one line, and a meter in
-   the resource's color under them. The page's script
+/* Its resource under its focus Stats, live as in Player Tools: the name,
+   −, the value over its max, + and restore to full on one line, and a
+   meter in the resource's color under them. The page's script
    (php/javascript-loads.php) moves the value. */
-.sf-npc-resources {
-    flex: none;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px 24px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
 .sf-npc-resource {
     display: grid;
     grid-template-columns: 2.25ch auto 5.5em auto auto;
     align-items: center;
     gap: 4px 6px;
+    /* At the foot of its column, so the trackers line up even under Magic,
+       which has no focus Stats */
+    margin-top: auto;
+    padding-top: 10px;
     font-size: 1.125rem;
 
     > .sf-npc-value {
         text-align: center;
-    }
-}
-
-/* On a narrow sheet, one across */
-@container npc (max-width: 480px) {
-    .sf-npc-resources {
-        grid-template-columns: auto;
     }
 }
 
