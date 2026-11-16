@@ -3,6 +3,15 @@
 <script>
 	(function () {
 		var root = document.documentElement;
+		// Strange Frontiers pages drop the smooth scroll (css/portfolio-nested.css):
+		// the Creator, Player Tools and the Game Master Tools, and personal.php when
+		// it opens on its Strange Frontiers pane (the same hashes as
+		// php/javascript-loads.php's isFrontiersHash)
+		var hash = (location.hash || "").replace(/^#/, "").toLowerCase();
+		var frontiersHash = ["frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "incidents", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations", "dreft-map", "building-a-dreftian", "tetra-exploration"].indexOf(hash) !== -1 || hash.indexOf("lore-") === 0;
+		if (/\/(creator|game-tools|game-master)\.php$/.test(location.pathname) || frontiersHash) {
+			root.classList.add("sf-page");
+		}
 		// The pages in nav order: personal.php, then the Character Creator, Player Tools and the Game Master Tools.
 		var place = function (url) {
 			var path = new URL(url, location.href).pathname;
