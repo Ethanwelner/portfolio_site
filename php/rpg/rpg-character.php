@@ -60,7 +60,7 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 		<!-- Building a Character leads the section, as in the Mechanics Doc,
 		     with the backgrounds Edwin uses (from the creator) beside it -->
 		<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-		<div class="flex-6 content-stack content-stack-sm">
+		<div class="flex-4 content-stack content-stack-sm">
 			<h3>Building a Character</h3>
 			<p class="copy">The sheet below belongs to Edwin Humble, a Level 6 Human smuggler, and shows how the systems in this section come together on a finished character. Every character is built from four Backgrounds, a starting set of Stat points, and the Traits those points grant.</p>
 			<p class="copy">Every character selects a Kind, Origin, Profession, and Past. Together these Backgrounds set a character’s starting Stats and Traits and tie them to the world:</p>
