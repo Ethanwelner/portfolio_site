@@ -2,9 +2,8 @@
    STRANGE FRONTIERS NPC AND MONSTER SHEET
    ========================================
    The short-form sheet (php/rpg/components/npc-sheet.php): the name and
-   what it is, HP, VP, SP, MP and Movement on one line, the core Stats with
-   their focus Stats as plain numbers, then Attacks, Traits and Items as
-   cards. The full character sheet's sibling (css/sf-sheet.css): the same
+   what it is with Movement, the Stats as on a Kind card with live HP, VP,
+   SP and MP beside them, then Attacks, Traits and Items as cards. The full character sheet's sibling (css/sf-sheet.css): the same
    dark panel and grays, cut down to what a GM needs at the table.
 
    It carries its own colors, so it looks the same in a lore entry, a popup
@@ -78,8 +77,7 @@
     border-radius: 12px;
 }
 
-/* ---- The name and what it is, then HP, VP, SP, MP and Movement along
-   the same line, wrapping under it when there's no room ---- */
+/* ---- The name and what it is, then Movement on the right ---- */
 
 .sf-npc-head {
     display: flex;
@@ -106,30 +104,16 @@
     font-size: .875rem;
 }
 
-.sf-npc-resources {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sf-npc-resource {
+/* Movement: the character sheet's person-running icon, then the distance */
+.sf-npc-move {
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     gap: 6px;
+    margin: 0;
     font-size: 1.125rem;
 }
 
-.sf-npc-resource-name--hp { color: var(--sf-red-500); }
-.sf-npc-resource-name--vp { color: var(--sf-purple-500); }
-.sf-npc-resource-name--sp { color: var(--sf-yellow-400); }
-.sf-npc-resource-name--mp { color: var(--sf-blue-400); }
-
-/* Movement's person-running icon, in place of a name, sitting on the line */
 .sf-npc-resource-name--move {
-    align-self: center;
     display: inline-flex;
 }
 
@@ -139,19 +123,124 @@
     fill: currentColor;
 }
 
-/* HP, VP, SP and MP, live as in Player Tools: the name, −, the value over
-   its max, + and restore to full on one line, and a meter in the
-   resource's color under them. The page's script (php/javascript-loads.php)
-   moves the value. */
-.sf-npc-resource[data-npc-resource] {
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto auto;
+.sf-npc-value {
+    font-variant-numeric: tabular-nums;
+}
+
+.sf-npc-description {
+    margin: 0;
+    padding: 0 4px;
+    color: var(--npc-soft);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+/* ---- The Stats, then HP, VP, SP and MP on their right, in one box. The
+   trackers drop under the Stats when there's no room beside them. ---- */
+
+.sf-npc-vitals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 32px;
+}
+
+/* The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats): each
+   group as wide as its stats, the spare room shared evenly around them,
+   wrapping when there's no room */
+.sf-npc-stats {
+    flex: 1 1 18rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 12px 24px;
+    font-size: 1rem;
+}
+
+.sf-npc-group {
+    --stat-color: var(--sf-neon-500);
+}
+
+.sf-npc-group--physical { --stat-color: var(--sf-red-500); }
+.sf-npc-group--social { --stat-color: var(--sf-purple-500); }
+.sf-npc-group--mental { --stat-color: var(--sf-yellow-400); }
+.sf-npc-group--magic { --stat-color: var(--sf-blue-400); }
+
+/* The core Stat's name in its color, in Bebas like a Kind card's labels,
+   with its number */
+.sf-npc-label {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    color: var(--stat-color);
+    font-family: 'bebas_neueregular', sans-serif;
+    font-size: 1.125rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    .sf-npc-value {
+        color: var(--npc-text);
+    }
+}
+
+/* Each focus Stat's first three letters and its number, the labels as wide
+   as the widest (MEM), so the numbers line up */
+.sf-npc-stat {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    abbr {
+        min-width: 1.75em;
+        color: var(--npc-soft);
+        font-family: 'bebas_neueregular', sans-serif;
+        letter-spacing: .06em;
+        text-decoration: none;
+        cursor: help;
+    }
+}
+
+/* What Magic's points give, where the others list focus Stats */
+.sf-npc-note {
+    margin: 0;
+    color: var(--npc-soft);
+    font-size: .875rem;
+}
+
+/* HP, VP, SP and MP stacked, live as in Player Tools: the name, −, the
+   value over its max, + and restore to full on one line, and a meter in
+   the resource's color under them. The page's script
+   (php/javascript-loads.php) moves the value. */
+.sf-npc-resources {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sf-npc-resource {
+    display: grid;
+    grid-template-columns: 2.25ch auto 5.5em auto auto;
     align-items: center;
     gap: 4px 6px;
+    font-size: 1.125rem;
 
-    > .sf-npc-resource-name {
-        margin-right: 2px;
+    > .sf-npc-value {
+        text-align: center;
     }
+}
+
+.sf-npc-resource--hp { --resource-color: var(--sf-red-500); }
+.sf-npc-resource--vp { --resource-color: var(--sf-purple-500); }
+.sf-npc-resource--sp { --resource-color: var(--sf-yellow-400); }
+.sf-npc-resource--mp { --resource-color: var(--sf-blue-400); }
+
+.sf-npc-resource-name {
+    color: var(--resource-color);
 }
 
 .sf-npc-max {
@@ -181,113 +270,6 @@
         background: var(--resource-color, var(--sf-neon-500));
         transition: width 200ms;
     }
-}
-
-.sf-npc-resource--hp { --resource-color: var(--sf-red-500); }
-.sf-npc-resource--vp { --resource-color: var(--sf-purple-500); }
-.sf-npc-resource--sp { --resource-color: var(--sf-yellow-400); }
-.sf-npc-resource--mp { --resource-color: var(--sf-blue-400); }
-
-.sf-npc-value {
-    font-variant-numeric: tabular-nums;
-}
-
-.sf-npc-description {
-    margin: 0;
-    padding: 0 4px;
-    color: var(--npc-soft);
-    font-size: .875rem;
-    line-height: 1.5;
-}
-
-/* ---- The core Stats side by side, each in its resource's color (Physical
-   red, Social purple, Mental yellow, Magic blue), stacked on phones ---- */
-
-.sf-npc-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
-    gap: 12px;
-}
-
-.sf-npc-group {
-    --stat-color: var(--sf-neon-500);
-}
-
-.sf-npc-group--physical { --stat-color: var(--sf-red-500); }
-.sf-npc-group--social { --stat-color: var(--sf-purple-500); }
-.sf-npc-group--mental { --stat-color: var(--sf-yellow-400); }
-.sf-npc-group--magic { --stat-color: var(--sf-blue-400); }
-
-/* The core Stat's icon in a circle of its color's dark shade, its name,
-   then its number in the color */
-.sf-npc-core {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    font-size: 1.125rem;
-
-    strong {
-        font-weight: 600;
-    }
-
-    .sf-npc-value {
-        margin-left: auto;
-        color: var(--stat-color);
-        font-weight: 700;
-    }
-}
-
-.sf-npc-badge {
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--stat-color) 50%, black);
-    color: var(--sf-gray-0);
-}
-
-.sf-npc .sf-npc-badge-icon {
-    flex: none;
-    width: 1.3rem;
-    height: 1.3rem;
-    fill: currentColor;
-}
-
-/* The focus Stats, a ruled line each, 15px in from the core Stat */
-.sf-npc-focus {
-    margin: 0;
-    padding-left: 15px;
-    font-size: .9375rem;
-
-    > div {
-        display: flex;
-        justify-content: space-between;
-        padding: 3px 0;
-        border-top: 1px solid var(--npc-rule);
-    }
-
-    dt {
-        color: var(--npc-soft);
-        font-weight: 400;
-    }
-
-    dd {
-        margin: 0;
-        font-weight: 600;
-    }
-}
-
-/* What Magic's points give, where the others list focus Stats */
-.sf-npc-note {
-    margin: 0;
-    padding: 3px 0 0 15px;
-    border-top: 1px solid var(--npc-rule);
-    color: var(--npc-soft);
-    font-size: .9375rem;
 }
 
 /* ---- Attacks, Traits and Items ---- */
