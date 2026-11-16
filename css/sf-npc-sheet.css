@@ -375,6 +375,14 @@
     list-style: none;
 }
 
+/* An Item's count, centered on its card's top line. The cards' 14.15px
+   (css/sf-cards.css) centers it on a Player Tools row, 30px tall with its
+   Equip box and value; an NPC's Items have neither, so their row is 24px
+   and the count sits 11px down. */
+.sf-npc .sf-item-count {
+    top: 11px;
+}
+
 /* Printed, it goes light, with dark text */
 @media print {
     .sf-npc {
