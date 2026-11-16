@@ -522,7 +522,7 @@ $sf_list = function ( $items ) {
 };
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sf-page">
 	<head>
 		<?php include 'php/head-loads.php'; ?>
 		<meta name="robots" content="noindex, nofollow">

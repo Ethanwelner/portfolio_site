@@ -30,6 +30,14 @@ html {
     scrollbar-color: var(--portfolio-medium-gray) var(--portfolio-gray);
 }
 
+/* Strange Frontiers pages scroll without the smooth animation, so a refresh
+   lands where you were instead of scrolling there from the top. html.sf-page
+   is set by php/rpg/page-slide.php (and on the component library); personal.php
+   keeps it in step with its Strange Frontiers pane */
+html.sf-page {
+    scroll-behavior: auto;
+}
+
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;

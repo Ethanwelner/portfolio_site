@@ -169,6 +169,9 @@
 				return;
 			}
 
+			// Strange Frontiers scrolls without the smooth animation (html.sf-page)
+			document.documentElement.classList.toggle( "sf-page", page === "frontiers" );
+
 			var already = $shell.hasClass( "is-" + page );
 			$( ".personal-pane" ).removeClass( "is-visible" );
 			$( ".pane-" + page ).addClass( "is-visible" );
