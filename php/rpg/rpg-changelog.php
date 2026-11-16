@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Gene Hacking: 29 new Traits for Humans with the Gene Hacking keyword. Skills edit abilities into the body: Tailored Features, Golden Voice, Pheromone Glands, Nootropic Edit, Keen Senses, Enhanced Metabolism, Steady Chemistry, Oxygen-Rich Blood, Adaptive Skin and Climate Tolerance. Nine more each add 1 to a focus stat and to its max, so an edited Human can pass 15: Hardy Constitution (Endurance), Fast-Twitch Muscle (Power), Refined Coordination (Grace), Social Attunement (Empathy), Magnetic Charm (Persuasion), Iron Nerves (Demeanor), Neural Density (Logic), Heightened Instinct (Intuition) and Eidetic Edit (Memory). Abilities: Regenerative Tissue, Night Eyes, Thick Hide, Engineered Immunity, Tetrachromacy, Dense Bones, Radiation Hardening, Gills, Clotting Factor and Toxin Glands.</li>
 						<li>Corporations: every corporation now lists its employees and market cap, from Plum Technologies’ 435,000 employees and 14 trillion ERC to Tetra Frontiers Co.’s 1,650 plus contractors and 120 billion ERC. The Yellow River Research Institute is state-owned, so it has no market cap.</li>
 					</ul>
 				</article>
