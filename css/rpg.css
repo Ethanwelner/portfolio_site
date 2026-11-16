@@ -1594,9 +1594,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 /* Explaining Traits' Example Traits tab: each category's cards in a grid of three
    columns, two at 1200px and below, one at 767px and below, each card as tall as
    the tallest in its row. */
-/* Building a Dreftian's Backgrounds tab (php/rpg/dreftian-starters.php):
-   Origins, Professions and Pasts each a full-width row of background
-   cards, two to a row, as tall as the taller of the pair */
+/* Background cards two to a row, as tall as the taller of the pair:
+   Building a Dreftian's Backgrounds tab (php/rpg/dreftian-starters.php),
+   where Origins, Professions and Pasts each get a full-width row, and
+   Edwin's four beside Building a Character (php/rpg/rpg-character.php) */
 .bg-card-grid {
     display: grid;
     gap: 12px;

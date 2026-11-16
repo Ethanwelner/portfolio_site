@@ -83,8 +83,9 @@ $sf_effect = function ( $text ) use ( $sf_e ) {
 		</div>
 		<div class="flex-6 content-stack">
 			<h3>Backgrounds used in the sample character sheet</h3>
-			<!-- Each background as the creator's card (php/rpg/background-card.php) -->
-			<div class="content-stack content-stack-xs">
+			<!-- Each background as the creator's card (php/rpg/background-card.php),
+			     two by two -->
+			<div class="bg-card-grid">
 				<?php
 				include_once __DIR__ . '/background-card.php';
 				// The Origin's bonus point went into Grace
