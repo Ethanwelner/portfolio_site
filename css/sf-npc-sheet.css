@@ -139,6 +139,55 @@
     fill: currentColor;
 }
 
+/* HP, VP, SP and MP, live as in Player Tools: the name, −, the value over
+   its max, + and restore to full on one line, and a meter in the
+   resource's color under them. The page's script (php/javascript-loads.php)
+   moves the value. */
+.sf-npc-resource[data-npc-resource] {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    gap: 4px 6px;
+
+    > .sf-npc-resource-name {
+        margin-right: 2px;
+    }
+}
+
+.sf-npc-max {
+    color: var(--npc-soft);
+    font-size: .875rem;
+}
+
+/* Above its max (a boss given extra), the value takes the resource's color */
+.sf-npc-resource.is-over .sf-npc-current {
+    color: var(--resource-color);
+}
+
+.sf-npc-step-icon {
+    width: .75em;
+    height: .75em;
+    fill: currentColor;
+}
+
+.sf-npc-meter {
+    grid-column: 1 / -1;
+    height: 3px;
+    background: rgb(255 255 255 / 12%);
+
+    > span {
+        display: block;
+        height: 100%;
+        background: var(--resource-color, var(--sf-neon-500));
+        transition: width 200ms;
+    }
+}
+
+.sf-npc-resource--hp { --resource-color: var(--sf-red-500); }
+.sf-npc-resource--vp { --resource-color: var(--sf-purple-500); }
+.sf-npc-resource--sp { --resource-color: var(--sf-yellow-400); }
+.sf-npc-resource--mp { --resource-color: var(--sf-blue-400); }
+
 .sf-npc-value {
     font-variant-numeric: tabular-nums;
 }
@@ -291,5 +340,11 @@
 
     .sf-npc-box {
         border: 1px solid var(--npc-edge);
+    }
+
+    /* Printed, just the value, with room left to write it in */
+    .sf-npc-step,
+    .sf-npc-meter {
+        display: none;
     }
 }

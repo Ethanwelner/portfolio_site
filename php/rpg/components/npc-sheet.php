@@ -57,6 +57,18 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		return htmlspecialchars( (string) $text, ENT_QUOTES, 'UTF-8' );
 	}
 
+	// The resources' −, + and restore icons, the creator's (ui.tsx's Sign and
+	// Icon), taking the button's text color
+	function sf_npc_icon( $name ) {
+		$icons = array(
+			'minus'   => array( '0 0 448 512', 'M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z' ),
+			'plus'    => array( '0 0 448 512', 'M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z' ),
+			'restore' => array( '0 0 512 512', 'M496 48V192c0 17.69-14.31 32-32 32H320c-17.69 0-32-14.31-32-32s14.31-32 32-32h63.39c-29.97-39.7-77.25-63.78-127.6-63.78C167.7 96.22 96 167.9 96 256s71.69 159.8 159.8 159.8c34.88 0 68.03-11.03 95.88-31.94c14.22-10.53 34.22-7.75 44.81 6.375c10.59 14.16 7.75 34.22-6.375 44.81c-39.03 29.28-85.36 44.86-134.2 44.86C132.5 479.9 32 379.4 32 256s100.5-223.9 223.9-223.9c69.15 0 134 32.47 176.1 86.12V48c0-17.69 14.31-32 32-32S496 30.31 496 48z' ),
+		);
+		list( $box, $d ) = $icons[ $name ];
+		return '<svg class="sf-npc-step-icon" xmlns="http://www.w3.org/2000/svg" viewBox="' . $box . '" aria-hidden="true"><path d="' . $d . '"/></svg>';
+	}
+
 	// HP, VP, SP and MP by the creator's rules, with any the NPC sets over them
 	function sf_npc_resources( $npc ) {
 		$stat = function ( $name ) use ( $npc ) {
@@ -108,8 +120,21 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			echo '<p class="sf-npc-kind">' . sf_npc_e( $npc['kind'] ) . '</p>';
 		}
 		echo '</div><ul class="sf-npc-resources">';
+		// Each one live, as in Player Tools: −, the value over its max, + and
+		// restore to full, with a meter under it. The page's script
+		// (php/javascript-loads.php) moves the value; nothing is saved, so a
+		// reload puts it back to full.
 		foreach ( sf_npc_resources( $npc ) as $id => $value ) {
-			echo '<li class="sf-npc-resource"><strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . strtoupper( $id ) . '</strong><span class="sf-npc-value">' . (int) $value . '</span></li>';
+			$value = (int) $value;
+			$abbr  = strtoupper( $id );
+			echo '<li class="sf-npc-resource sf-npc-resource--' . $id . '" data-npc-resource data-max="' . $value . '" data-current="' . $value . '">'
+				. '<strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . $abbr . '</strong>'
+				. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
+				. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
+				. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
+				. sf_button( sf_npc_icon( 'restore' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
+				. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
+				. '</li>';
 		}
 		if ( ! empty( $npc['move'] ) ) {
 			// Movement as the character sheet's person-running icon (php/rpg/components/sheet.php)
