@@ -19,6 +19,7 @@
     /* The frame's band and line (see the frame, below) */
     --npc-plate: var(--sf-gray-500);
     --npc-line: var(--sf-gray-300);
+    container: npc / inline-size;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -77,7 +78,8 @@
     border-radius: 12px;
 }
 
-/* ---- The name and what it is, then Movement on the right ---- */
+/* ---- The name and what it is, then its resistances and Movement on the
+   right ---- */
 
 .sf-npc-head {
     display: flex;
@@ -102,6 +104,32 @@
     margin: 0;
     color: var(--npc-soft);
     font-size: .875rem;
+}
+
+/* Its resistances' shield badge, then Movement */
+.sf-npc-aside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+}
+
+/* The resistances' badge, styled as on an item card (css/sf-cards.css,
+   whose badge rules are scoped to cards): the shield in its olive circle,
+   then each damage type's icon and number */
+.sf-npc-aside .chip.equipment-stat {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2px 10px;
+    padding: 0 .5rem 0 0;
+    background-color: var(--sf-olive-900);
+    border: 1px solid var(--sf-olive-600);
+    border-radius: calc((1lh + .4rem + 2px) / 2) 4px 4px calc((1lh + .4rem + 2px) / 2);
+    color: var(--sf-olive-100);
+    font-size: .875rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Movement: the character sheet's person-running icon, then the distance */
@@ -146,14 +174,14 @@
 }
 
 /* The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats): each
-   group as wide as its stats, the spare room shared evenly around them,
-   wrapping when there's no room */
+   group as wide as its stats, from the left, wrapping when there's no
+   room */
 .sf-npc-stats {
     flex: 1 1 18rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 12px 24px;
+    justify-content: flex-start;
+    gap: 12px 40px;
     font-size: 1rem;
 }
 
@@ -208,15 +236,15 @@
     font-size: .875rem;
 }
 
-/* HP, VP, SP and MP stacked, live as in Player Tools: the name, −, the
+/* HP, VP, SP and MP two across, live as in Player Tools: the name, −, the
    value over its max, + and restore to full on one line, and a meter in
    the resource's color under them. The page's script
    (php/javascript-loads.php) moves the value. */
 .sf-npc-resources {
     flex: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 24px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -231,6 +259,13 @@
 
     > .sf-npc-value {
         text-align: center;
+    }
+}
+
+/* On a narrow sheet, one across */
+@container npc (max-width: 480px) {
+    .sf-npc-resources {
+        grid-template-columns: auto;
     }
 }
 

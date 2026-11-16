@@ -41,6 +41,14 @@ require_once __DIR__ . '/stats.php';
 require_once __DIR__ . '/buttons.php';
 
 if ( ! function_exists( 'sf_card_e' ) ) {
+	// A formula's focus stats by their first three letters, as on a Kind
+	// card, to save room in a badge: "Power - 5" -> "Pow - 5"
+	function sf_card_short_stats( $text ) {
+		return preg_replace_callback( '~\b(Endurance|Power|Grace|Empathy|Persuasion|Demeanor|Logic|Intuition|Memory)\b~', function ( $m ) {
+			return substr( $m[1], 0, 3 );
+		}, (string) $text );
+	}
+
 	function sf_card_e( $text ) {
 		return htmlspecialchars( (string) $text, ENT_QUOTES, 'UTF-8' );
 	}
@@ -257,7 +265,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * damage       Optional. As the creator words it: "7 Piercing",
 	 *              "6 Slashing / 4 Piercing" for a choice.
 	 * formula      Optional. A damage formula shown in place of the number,
-	 *              with the number after it: "Power - 5" (10).
+	 *              with the number after it, its focus stats by their first
+	 *              three letters: "Power - 5" shows as Pow - 5 (10), the
+	 *              full formula on hover.
 	 * ranged       Optional. True for crosshairs instead of a sword.
 	 * range        Optional. Max Range, like "3 m".
 	 * area         Optional. Area of Effect, like "3 m".
@@ -283,7 +293,7 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( ! empty( $i['damage'] ) ) {
 			$lead = ! empty( $i['ranged'] ) ? 'crosshairs' : 'sword';
 			if ( ! empty( $i['formula'] ) && preg_match( '~^\s*(-?\d+)\s+(.+?)\s*$~', $i['damage'], $m ) ) {
-				$badges .= '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . sf_card_e( $i['formula'] . ' ' . $m[2] . ': ' . $m[1] . ' ' . $m[2] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . sf_card_e( $i['formula'] ) . ' <span class="sf-damage-total">(' . (int) $m[1] . ')</span></span></span></span>';
+				$badges .= '<span class="sf-item-badge-group"><span class="chip equipment-stat" title="' . sf_card_e( $i['formula'] . ' ' . $m[2] . ': ' . $m[1] . ' ' . $m[2] ) . '">' . sf_item_stat_lead( $lead ) . '<span class="equipment-stat-value">' . sf_damage_icon( $m[2] ) . sf_card_e( sf_card_short_stats( $i['formula'] ) ) . ' <span class="sf-damage-total">(' . (int) $m[1] . ')</span></span></span></span>';
 			} elseif ( preg_match( '~^\s*(\d+)\s+(\w+)\s*\+\s*(.+?)\s*$~', $i['damage'], $m ) ) {
 				// Damage plus a Stat, like Fists' "1 Blunt + Power": the type's
 				// icon, then "1 + Power", as the creator's badges show it
