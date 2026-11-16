@@ -1175,3 +1175,26 @@
 		update();
 	})();
 </script>
+<script>
+	// The NPC and monster sheet's live HP, VP, SP and MP
+	// (php/rpg/components/npc-sheet.php): − and + move the value by 1 (as
+	// in Player Tools, it can pass the max, and HP can go below 0 while VP,
+	// SP and MP stop there), restore puts it
+	// back to the max, and the meter follows. Delegated, so sheets in lore
+	// popups work too. Nothing is saved.
+	document.addEventListener( "click", function ( event ) {
+		var button = event.target.closest( "[data-npc-step], [data-npc-restore]" );
+		if ( !button ) return;
+		var row = button.closest( "[data-npc-resource]" );
+		if ( !row ) return;
+		var max = parseInt( row.getAttribute( "data-max" ), 10 ) || 0;
+		var current = parseInt( row.getAttribute( "data-current" ), 10 ) || 0;
+		current = button.hasAttribute( "data-npc-restore" ) ? max : current + parseInt( button.getAttribute( "data-npc-step" ), 10 );
+		if ( !row.classList.contains( "sf-npc-resource--hp" ) ) current = Math.max( 0, current );
+		row.setAttribute( "data-current", current );
+		row.querySelector( ".sf-npc-current" ).textContent = current;
+		row.classList.toggle( "is-over", current > max );
+		row.querySelector( ".sf-npc-meter > span" ).style.width = ( max > 0 ? Math.max( 0, Math.min( 100, current / max * 100 ) ) : 0 ) + "%";
+		row.querySelector( "[data-npc-restore]" ).disabled = current >= max;
+	} );
+</script>
