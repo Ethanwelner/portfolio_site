@@ -587,9 +587,17 @@ document.addEventListener('click', function (e) {
 		$dx    = ( $sum * 29 ) % 100;
 		$wrap  = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v + $d, 100 ) ); };
 		$inner = function ( $v, $d ) { return sprintf( '%.1f', fmod( $v - 8 + $d, 84 ) + 8 ); };
-		$html  = '<div class="sf-kind-stars">';
-		foreach ( $dots as $i => $x ) {
-			$html .= '<span class="sf-kind-dot' . ( 0 === $i % ( $dense ? 7 : 5 ) ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . ';animation-delay:' . $x[3] . 's"></span>';
+		// The dots in three layers that each pulse as one, a third of a beat
+		// apart, so a card runs three animations rather than one per dot
+		$html = '<div class="sf-kind-stars">';
+		for ( $layer = 0; $layer < 3; $layer++ ) {
+			$html .= '<div class="sf-kind-dots">';
+			foreach ( $dots as $i => $x ) {
+				if ( $layer === $i % 3 ) {
+					$html .= '<span class="sf-kind-dot' . ( 0 === $i % ( $dense ? 7 : 5 ) ? ' is-big' : '' ) . '" style="top:' . $wrap( $x[0], $dy ) . '%;left:' . $wrap( $x[1], $dx ) . '%;opacity:' . $x[2] . '"></span>';
+				}
+			}
+			$html .= '</div>';
 		}
 		foreach ( $twinkles as $x ) {
 			$html .= '<span class="sf-kind-twinkle" style="top:' . $inner( $x[0], $dy ) . '%;left:' . $inner( $x[1], $dx ) . '%;animation-delay:' . $x[2] . 's"></span>';
