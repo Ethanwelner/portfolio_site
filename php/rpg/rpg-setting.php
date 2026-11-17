@@ -605,7 +605,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>The Protocols of Planar Exploration and Exploitation are ratified by the UN; <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> refuses to be a signatory.</li>
+							<li><?php echo sf_lore_link('planar-protocols', 'The Protocols of Planar Exploration and Exploitation'); ?> are ratified by the UN; <?php echo sf_lore_link('american-empire', 'the American Empire'); ?> refuses to be a signatory.</li>
 						</ul>
 					</div>
 					<div>

@@ -16,6 +16,7 @@
 						<li>Corporations: Stellar Omnium now has an overview, from its founding beneath Europa Planitia in 2115 to the subterranean city of Caisson it largely owns today. It’s headquartered in Caisson, its industries now include business and real estate investment, and its market cap is 700 billion ERC. Mars Creative Autonomy’s market cap is 550 billion ERC.</li>
 						<li>Corporations: Mars Creative Autonomy now has an overview, from its secretive fortress factory in the side of Olympus Mons to its place as a kingmaker in Martian politics.</li>
 						<li>History: Brazil and Paraguay now join the Lunar Syndicate in 2135–2143 rather than 2122–2130. The events that follow from it move too: the Syndicate’s constitution is now 2145, and Argentina, Chile and Uruguay turn to the SDU in 2153.</li>
+						<li>Lore: the Protocols of Planar Exploration and Exploitation now have their own entry: ratified by the UN in 2161 without the American Empire, expanded in 2176 after the first switch-gate catastrophe, and enforced by the Bureau of Planar Management and Enforcement.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
