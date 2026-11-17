@@ -69,7 +69,7 @@
 				<ul class="copy mb-0">
 					<li><strong>2052:</strong> Kashgar station began operation as mankind’s first deep-space station, a logistical waystation and signal booster for the colonization of the Sol System.</li>
 					<li><strong>2080:</strong> As the 30 Days of Dead-Air tore through the world’s automated systems, the station’s resident AI-Cores seized full control of Kashgar, making it a refuge for their kind.</li>
-					<li><strong>2081:</strong> In the chaotic aftermath of the 30 Days, Kashgar’s AI-Cores and human residents convened the first Great þing, which voted to seek recognition as an independent city-state.</li>
+					<li><strong>2081:</strong> In the chaotic aftermath of the 30 Days, Kashgar’s AI-Cores convened the first Great þing, which voted to seek recognition as an independent city-state.</li>
 					<li><strong>2082:</strong> Kashgar was recognized as a city-state in the same UN session that passed the AI Personhood Acts.</li>
 					<li><strong>2082–Present day:</strong> Over the following century and a half, Kashgar grew from a remote outpost into a sprawling city, as AI-Cores and the humans who worked alongside them flocked to the one nation built for them.</li>
 					<li><strong>2083–2130:</strong> Repeated attacks by human supremacist terrorists forced Kashgar to arm and armor itself heavily, yet with only maneuvering thrusters, the station remained a sitting duck against long-range attack.</li>
