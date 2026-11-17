@@ -98,7 +98,7 @@ function sf_lore_titles() {
 		'plum-technologies' => 'Plum Technologies',
 		'saltwater-energetics' => 'Saltwater Energetics',
 		'shine' => 'Shine!',
-		'sistemas-de-controle-amazonia' => 'Sistemas de Controle Amazônia',
+		'sistemas-de-controle-amazonia' => 'Sistemas de Controle Amazônia (Amazon Control Systems)',
 		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',
 		'tetra-frontiers-co' => 'Tetra Frontiers Co.',
