@@ -14,6 +14,7 @@
 						<li>Corporations: every corporation now lists its employees and market cap, from Plum Technologies’ 435,000 employees and 14 trillion ERC to Tetra Frontiers Co.’s 1,650 plus contractors and 120 billion ERC. The Yellow River Research Institute is state-owned, so it has no market cap.</li>
 						<li>Murk Legs: its Mental focus stats now add up to the 6 its 2 Mental gives: Logic 1, Intuition 4 and Memory 1, for 6 SP. It also resists 2 Blunt and 1 Slashing.</li>
 						<li>Corporations: 10/20 Holding Corporation, Blue Frontier, Lagos-Core Defense and Luna-HI now have overviews. 10/20 is headquartered aboard its administration craft, The Pluto, Blue Frontier aboard the Omnium Novorum, Lagos-Core Defense in Lagos, Centafrica, and Luna-HI on Luna Orbita. The Eighth Lunar Industrial Syndicate’s territories now list The Pluto.</li>
+						<li>Corporations: Lunar Gentech and Měishǒu Jítuán (Beautiful Hand Group) now have overviews. Lunar Gentech is headquartered at the Campo Clavius Protein Mill on Luna, and Měishǒu Jítuán in Shenzhen, China. Luna-HI is now one of the largest logistics concerns in the Settled Systems and the second largest shareholder in the Eighth Lunar Industrial Syndicate.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
