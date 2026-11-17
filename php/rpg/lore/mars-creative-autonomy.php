@@ -10,7 +10,7 @@
 		</div>
 		<div>
 			<dt>Market Cap</dt>
-			<dd>1.5 trillion ERC</dd>
+			<dd>550 billion ERC</dd>
 		</div>
 		<div>
 			<dt>Industry</dt>

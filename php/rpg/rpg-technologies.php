@@ -207,7 +207,7 @@
 									<ul class="copy mb-0">
 										<li>Kashgar Mindworks (Kashgar Ark)</li>
 										<li>Mars Creative Autonomy (Olympus Mons Caldera, Mars)</li>
-										<li>Stellar Omnium (Europa Planitia)</li>
+										<li>Stellar Omnium (Caisson, Europa Planitia)</li>
 									</ul>
 								</div>
 							</div>

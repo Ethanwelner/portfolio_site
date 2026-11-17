@@ -13,6 +13,7 @@
 						<li>History: the Second Major AI Panic of 2080 is now the 30 Days of Dead-Air, and it lasted thirty days rather than most of a year. The decades of rebuilding and reform that followed, from the AI Personhood Act in 2082 to the rebirth of science in 2118, are now known as the Second Renaissance. The timeline, the nations’ histories and the AI, Robotics and Biology overviews use the new names.</li>
 						<li>AI-Cores: “AI Core” is now hyphenated as “AI-Core” throughout the setting. Mars Creative Autonomy is headquartered in the Olympus Mons Caldera, Mars.</li>
 						<li>Corporations: Kashgar Mindworks now has an overview, the story of how Kashgar’s AI-Cores seized the station’s production facility during the 30 Days of Dead-Air. Its market cap is 850 billion ERC. Kashgar’s history no longer has human residents at the first Great þing, since the station’s human crew didn’t survive.</li>
+						<li>Corporations: Stellar Omnium now has an overview, from its founding beneath Europa Planitia in 2115 to the subterranean city of Caisson it largely owns today. It’s headquartered in Caisson, its industries now include business and real estate investment, and its market cap is 700 billion ERC. Mars Creative Autonomy’s market cap is 550 billion ERC.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
