@@ -15,6 +15,7 @@
 						<li>Corporations: Kashgar Mindworks now has an overview, the story of how Kashgar’s AI-Cores seized the station’s production facility during the 30 Days of Dead-Air. Its market cap is 850 billion ERC. Kashgar’s history no longer has human residents at the first Great þing, since the station’s human crew didn’t survive.</li>
 						<li>Corporations: Stellar Omnium now has an overview, from its founding beneath Europa Planitia in 2115 to the subterranean city of Caisson it largely owns today. It’s headquartered in Caisson, its industries now include business and real estate investment, and its market cap is 700 billion ERC. Mars Creative Autonomy’s market cap is 550 billion ERC.</li>
 						<li>Corporations: Mars Creative Autonomy now has an overview, from its secretive fortress factory in the side of Olympus Mons to its place as a kingmaker in Martian politics.</li>
+						<li>History: Brazil and Paraguay now join the Lunar Syndicate in 2135–2143 rather than 2122–2130. The events that follow from it move too: the Syndicate’s constitution is now 2145, and Argentina, Chile and Uruguay turn to the SDU in 2153.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
