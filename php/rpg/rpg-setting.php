@@ -510,15 +510,6 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2122 – 2130</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li>Brazil and Paraguay, both in significant economic decline, blackmail <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Lunar Syndicate'); ?> into favorable purchase agreements, becoming Earth territories of the Lunar state.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
 							<h6><strong>2123</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -546,15 +537,6 @@
 					</div>
 					<div>
 						<div class="line-container">
-							<h6><strong>2132</strong></h6>
-							<div class="line"></div>
-						</div>
-						<ul class="copy">
-							<li><?php echo sf_lore_link('lunar-industrial-syndicate', 'The Lunar Syndicate'); ?> adopts a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
-						</ul>
-					</div>
-					<div>
-						<div class="line-container">
 							<h6><strong>2135</strong></h6>
 							<div class="line"></div>
 						</div>
@@ -564,11 +546,29 @@
 					</div>
 					<div>
 						<div class="line-container">
+							<h6><strong>2135 – 2143</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li>Brazil and Paraguay, both in significant economic decline, blackmail <?php echo sf_lore_link('lunar-industrial-syndicate', 'the Lunar Syndicate'); ?> into favorable purchase agreements, becoming Earth territories of the Lunar state.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
 							<h6><strong>2141</strong></h6>
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
 							<li><strong>295/c/29:</strong> “<?php echo sf_lore_link('pataliputra', 'Pataliputra'); ?>” is discovered by the Indian Institute of Science, Bengaluru.</li>
+						</ul>
+					</div>
+					<div>
+						<div class="line-container">
+							<h6><strong>2145</strong></h6>
+							<div class="line"></div>
+						</div>
+						<ul class="copy">
+							<li><?php echo sf_lore_link('lunar-industrial-syndicate', 'The Lunar Syndicate'); ?> adopts a constitution outlining basic governing principles and defining the nature of its “Citizens” and their rights.</li>
 						</ul>
 					</div>
 					<div>
