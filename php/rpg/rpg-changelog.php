@@ -17,6 +17,7 @@
 						<li>Corporations: Mars Creative Autonomy now has an overview, from its secretive fortress factory in the side of Olympus Mons to its place as a kingmaker in Martian politics.</li>
 						<li>History: Brazil and Paraguay now join the Lunar Syndicate in 2135–2143 rather than 2122–2130. The events that follow from it move too: the Syndicate’s constitution is now 2145, and Argentina, Chile and Uruguay turn to the SDU in 2153.</li>
 						<li>Lore: the Protocols of Planar Exploration and Exploitation now have their own entry: ratified by the UN in 2161 without the American Empire, expanded in 2176 after the first switch-gate catastrophe, and enforced by the Bureau of Planar Management and Enforcement.</li>
+						<li>Corporations: Holy Oak Discovery Services now has an overview, from inheriting New York University’s planar claims after the first switch-gate catastrophe to its facilities in the imperial military’s “Gate Farm.” It’s headquartered in Holy Oak, Oregon.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
