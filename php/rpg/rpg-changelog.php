@@ -17,6 +17,7 @@
 						<li>Corporations: Lunar Gentech and Měishǒu Jítuán (Beautiful Hand Group) now have overviews. Lunar Gentech is headquartered at the Campo Clavius Protein Mill on Luna, and Měishǒu Jítuán in Shenzhen, China. Luna-HI is now one of the largest logistics concerns in the Settled Systems and the second largest shareholder in the Eighth Lunar Industrial Syndicate.</li>
 						<li>Character Creator: every Origin’s description is now a single, shorter line that sticks to the setting’s lore.</li>
 						<li>Corporations: Luxoptica and Mumbai Ecological Solutions now have overviews. Luxoptica is headquartered in Milan, in the Stellar Democratic Union, and Mumbai Ecological Solutions in Mumbai, in the Kingdom of India.</li>
+						<li>Corporations: General Robotics and Saltwater Energetics now have overviews. General Robotics is headquartered in Chicago, in the American Empire, and Saltwater Energetics aboard Oppenheimer’s Folly, a repurposed Foreman-class carrier.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
