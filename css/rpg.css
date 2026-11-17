@@ -1546,6 +1546,25 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Building a Character (php/rpg/rpg-character.php): the text 4 to the
+   background cards' 6, and as the row narrows, neither is crushed. The
+   text keeps at least 22rem; the cards go from two by two to one column
+   once two wouldn't each get 18rem, and the cards then wrap under the text
+   once they'd go under 18rem themselves. */
+.sample-backgrounds {
+    > :first-child {
+        min-width: min(22rem, 100%);
+    }
+
+    > :last-child {
+        min-width: min(18rem, 100%);
+    }
+
+    .bg-card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, max(18rem, calc((100% - 12px) / 2))), 1fr));
+    }
+}
+
 /* Explaining Stats' Stat Types tab (php/rpg/rpg-stats.php): Physical, Social and Mental
    as rows, one above the other, each with its three focus Stats side by side. The
    Stats stack at 960px and below. */
@@ -1594,9 +1613,10 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 /* Explaining Traits' Example Traits tab: each category's cards in a grid of three
    columns, two at 1200px and below, one at 767px and below, each card as tall as
    the tallest in its row. */
-/* Building a Dreftian's Backgrounds tab (php/rpg/dreftian-starters.php):
-   Origins, Professions and Pasts each a full-width row of background
-   cards, two to a row, as tall as the taller of the pair */
+/* Background cards two to a row, as tall as the taller of the pair:
+   Building a Dreftian's Backgrounds tab (php/rpg/dreftian-starters.php),
+   where Origins, Professions and Pasts each get a full-width row, and
+   Edwin's four beside Building a Character (php/rpg/rpg-character.php) */
 .bg-card-grid {
     display: grid;
     gap: 12px;

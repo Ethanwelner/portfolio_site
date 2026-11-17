@@ -10,6 +10,11 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Gene Hacking: 29 new Traits for Humans with the Gene Hacking keyword. Skills edit abilities into the body: Tailored Features, Golden Voice, Pheromone Glands, Nootropic Edit, Keen Senses, Enhanced Metabolism, Steady Chemistry, Oxygen-Rich Blood, Adaptive Skin and Climate Tolerance. Nine more each add 1 to a focus stat and to its max, so an edited Human can pass 15: Hardy Constitution (Endurance), Fast-Twitch Muscle (Power), Refined Coordination (Grace), Social Attunement (Empathy), Magnetic Charm (Persuasion), Iron Nerves (Demeanor), Neural Density (Logic), Heightened Instinct (Intuition) and Eidetic Edit (Memory). Abilities: Regenerative Tissue, Night Eyes, Thick Hide, Engineered Immunity, Tetrachromacy, Dense Bones, Radiation Hardening, Gills, Clotting Factor and Toxin Glands.</li>
+						<li>Corporations: every corporation now lists its employees and market cap, from Plum Technologies’ 435,000 employees and 14 trillion ERC to Tetra Frontiers Co.’s 1,650 plus contractors and 120 billion ERC. The Yellow River Research Institute is state-owned, so it has no market cap.</li>
+						<li>Murk Legs: its Mental focus stats now add up to the 6 its 2 Mental gives: Logic 1, Intuition 4 and Memory 1, for 6 SP. It also resists 2 Blunt and 1 Slashing.</li>
+						<li>Corporations: 10/20 Holding Corporation, Blue Frontier, Lagos-Core Defense and Luna-HI now have overviews. 10/20 is headquartered aboard its administration craft, The Pluto, Blue Frontier aboard the Omnium Novorum, Lagos-Core Defense in Lagos, Centafrica, and Luna-HI on Luna Orbita. The Eighth Lunar Industrial Syndicate’s territories now list The Pluto.</li>
+						<li>Corporations: Lunar Gentech and Měishǒu Jítuán (Beautiful Hand Group) now have overviews. Lunar Gentech is headquartered at the Campo Clavius Protein Mill on Luna, and Měishǒu Jítuán in Shenzhen, China. Luna-HI is now one of the largest logistics concerns in the Settled Systems and the second largest shareholder in the Eighth Lunar Industrial Syndicate.</li>
 						<li>Character Creator: every Origin’s description is now a single, shorter line that sticks to the setting’s lore.</li>
 					</ul>
 				</article>

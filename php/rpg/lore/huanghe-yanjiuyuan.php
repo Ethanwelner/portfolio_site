@@ -6,11 +6,11 @@
 		</div>
 		<div>
 			<dt>Employees</dt>
-			<dd></dd>
+			<dd>11,000</dd>
 		</div>
 		<div>
 			<dt>Market Cap</dt>
-			<dd></dd>
+			<dd>N/A (state-owned)</dd>
 		</div>
 		<div>
 			<dt>Industry</dt>

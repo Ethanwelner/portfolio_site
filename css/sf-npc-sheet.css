@@ -2,9 +2,8 @@
    STRANGE FRONTIERS NPC AND MONSTER SHEET
    ========================================
    The short-form sheet (php/rpg/components/npc-sheet.php): the name and
-   what it is, HP, VP, SP, MP and Movement on one line, the core Stats with
-   their focus Stats as plain numbers, then Attacks, Traits and Items as
-   cards. The full character sheet's sibling (css/sf-sheet.css): the same
+   what it is with Movement, the Stats as on a Kind card with live HP, VP,
+   SP and MP beside them, then Items and Traits as cards. The full character sheet's sibling (css/sf-sheet.css): the same
    dark panel and grays, cut down to what a GM needs at the table.
 
    It carries its own colors, so it looks the same in a lore entry, a popup
@@ -17,27 +16,70 @@
     --npc-text: var(--panel-text, var(--sf-gray-100));
     --npc-soft: var(--panel-soft, var(--sf-gray-200));
     --npc-rule: rgb(255 255 255 / 18%);
+    /* The frame's band and line (see the frame, below) */
+    --npc-plate: var(--sf-gray-500);
+    --npc-line: var(--sf-gray-300);
+    container: npc / inline-size;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 12px;
-    background-color: var(--npc-frame);
-    border: 1px solid var(--npc-edge);
-    border-radius: 12px;
+    padding: 1rem;
+    /* ---- The frame, as on the character sheet (css/sf-sheet.css): a 6px
+       band in Gray that stops 40px short of the top right corner on both
+       edges, then a 2px line in Medium Gray just inside it, with a 24px
+       quarter-circle cut out of the top right corner, the line following
+       it, and the star in it (::before) ---- */
+    border: 1px solid transparent;
+    border-radius: 23px 0 23px 23px;
+    background:
+        linear-gradient(var(--npc-plate), var(--npc-plate)) left top / calc(100% - 40px) 40px no-repeat border-box,
+        linear-gradient(var(--npc-plate), var(--npc-plate)) left bottom / 100% calc(100% - 40px) no-repeat border-box;
     box-shadow: 0 4px 10px #00000030;
     color: var(--npc-text);
     font-family: 'Open Sans', sans-serif;
+
+    /* The line and the fill inside it, cut out about the corner: the fill
+       out to 25px, the line out to 23px. Drawn first, with everything in the
+       sheet positioned (below), so it stays under the content without making
+       the sheet a stacking context that would trap its popups. */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border: 2px solid transparent;
+        border-radius: 18px 0 18px 18px;
+        background:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath fill='%23949798' d='M7.5 0L9.15 5.85L15 7.5L9.15 9.15L7.5 15L5.85 9.15L0 7.5L5.85 5.85Z'/%3E%3C/svg%3E") right .5px top .5px / 15px 15px no-repeat border-box,
+            radial-gradient(circle at calc(100% - 1px) 1px, transparent 25px, var(--npc-frame) 25.5px) padding-box,
+            radial-gradient(circle at calc(100% - 1px) 1px, transparent 23px, var(--npc-line) 23.5px) border-box;
+        background-origin: border-box;
+        pointer-events: none;
+    }
 }
 
+/* Positioned, so the sheet's boxes paint over its frame (::before) */
+:where(.sf-npc > *) {
+    position: relative;
+}
+
+/* The darker boxes, grained like the character sheet's: the strong grain
+   (css/sf-cards.css) faded into the box gray over 48px at the sides and top
+   and over the bottom half */
 .sf-npc-box {
     min-width: 0;
     padding: 14px 16px;
     background-color: var(--npc-box);
+    background-image:
+        linear-gradient(to right, var(--npc-box), transparent 48px, transparent calc(100% - 48px), var(--npc-box)),
+        linear-gradient(to bottom, var(--npc-box), transparent 48px, transparent 45%, var(--npc-box)),
+        var(--sf-grain-strong);
+    background-size: auto, auto, 200px 200px;
     border-radius: 12px;
 }
 
-/* ---- The name and what it is, then HP, VP, SP, MP and Movement along
-   the same line, wrapping under it when there's no room ---- */
+/* ---- The name and what it is, then its resistances and Movement on the
+   right ---- */
 
 .sf-npc-head {
     display: flex;
@@ -45,7 +87,64 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px 16px;
-    padding: 4px 4px 0;
+    /* Clears the frame's cut-out and star in the top right corner */
+    padding: 4px 24px 0 4px;
+}
+
+/* The level blob, then the name and what it is */
+.sf-npc-who {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* The level: the character sheet's blob (css/sf-sheet.css's
+   .sf-sheet-level) at 56px, in the site's black, morphing and turning
+   while its purple glow pulses, with a tiny "Level" over the number in
+   Bebas. A pseudo-element, so the number stays upright; still with
+   reduced motion. */
+.sf-npc-level {
+    position: relative;
+    isolation: isolate;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    color: var(--npc-text);
+    font-family: var(--title, 'bebas_neueregular');
+    line-height: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background-color: var(--sf-gray-800);
+        box-shadow: 0 0 5px 0 var(--sf-purple-400);
+        animation:
+            sf-sheet-blob-morph 8s ease-in-out infinite,
+            sf-sheet-blob-spin 20s linear infinite,
+            sf-sheet-blob-glow 3s ease-in-out infinite alternate;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
+
+.sf-npc-level-label {
+    margin-top: 2px;
+    font-size: .625rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.sf-npc-level-number {
+    font-size: 1.625rem;
 }
 
 .sf-npc-name {
@@ -63,26 +162,76 @@
     font-size: .875rem;
 }
 
-.sf-npc-resources {
+/* Its resistances' shield badge, then Movement */
+.sf-npc-aside {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 18px;
+    align-items: center;
+    /* 32px across, so the resistances and Movement read as two things */
+    gap: 8px 32px;
+}
+
+/* Its resistances as on the character sheet (css/sf-sheet.css's
+   .sf-resistance-list): the shield, in the soft gray, then each damage
+   type's icon and its number, bold, along a line */
+.sf-npc-resistances {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
     margin: 0;
     padding: 0;
     list-style: none;
+    font-size: 1.125rem;
+
+    svg {
+        flex: none;
+        width: 1.35em;
+        height: 1.35em;
+        margin: 0;
+        fill: currentColor;
+    }
 }
 
-.sf-npc-resource {
+.sf-npc-resistances-icon {
     display: inline-flex;
-    align-items: baseline;
+    margin-right: -6px;
+    color: var(--npc-soft);
+
+    svg {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+.sf-npc-resistance {
+    display: inline-flex;
+    align-items: center;
     gap: 6px;
+
+    > .sf-npc-value {
+        font-weight: 700;
+    }
+}
+
+/* Movement: the character sheet's person-running icon, then the distance */
+.sf-npc-move {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
     font-size: 1.125rem;
 }
 
-.sf-npc-resource-name--hp { color: var(--sf-red-500); }
-.sf-npc-resource-name--vp { color: var(--sf-purple-500); }
-.sf-npc-resource-name--sp { color: var(--sf-yellow-400); }
-.sf-npc-resource-name--mp { color: var(--sf-blue-400); }
+.sf-npc-resource-name--move {
+    display: inline-flex;
+}
+
+.sf-npc-move-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: currentColor;
+}
 
 .sf-npc-value {
     font-variant-numeric: tabular-nums;
@@ -96,17 +245,22 @@
     line-height: 1.5;
 }
 
-/* ---- The core Stats side by side, each in its resource's color (Physical
-   red, Social purple, Mental yellow, Magic blue), stacked on phones ---- */
+/* ---- The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats),
+   each group's resource under it: each group as wide as its tracker, from
+   the left, wrapping when there's no room ---- */
 
 .sf-npc-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px 32px;
+    font-size: 1rem;
 }
 
 .sf-npc-group {
     --stat-color: var(--sf-neon-500);
+    display: flex;
+    flex-direction: column;
 }
 
 .sf-npc-group--physical { --stat-color: var(--sf-red-500); }
@@ -114,79 +268,104 @@
 .sf-npc-group--mental { --stat-color: var(--sf-yellow-400); }
 .sf-npc-group--magic { --stat-color: var(--sf-blue-400); }
 
-/* The core Stat's icon in a circle of its color's dark shade, its name,
-   then its number in the color */
-.sf-npc-core {
+/* The core Stat's name in its color, in Bebas like a Kind card's labels,
+   with its number */
+.sf-npc-label {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    color: var(--stat-color);
+    font-family: 'bebas_neueregular', sans-serif;
     font-size: 1.125rem;
-
-    strong {
-        font-weight: 600;
-    }
+    letter-spacing: .08em;
+    text-transform: uppercase;
 
     .sf-npc-value {
-        margin-left: auto;
-        color: var(--stat-color);
-        font-weight: 700;
+        color: var(--npc-text);
     }
 }
 
-.sf-npc-badge {
-    flex: none;
+/* Each focus Stat's name and its number, the numbers lined up on the
+   right */
+.sf-npc-stat {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    background-color: color-mix(in srgb, var(--stat-color) 50%, black);
-    color: var(--sf-gray-0);
+    justify-content: space-between;
+    gap: 24px;
 }
 
-.sf-npc .sf-npc-badge-icon {
-    flex: none;
-    width: 1.3rem;
-    height: 1.3rem;
-    fill: currentColor;
-}
-
-/* The focus Stats, a ruled line each, 15px in from the core Stat */
-.sf-npc-focus {
-    margin: 0;
-    padding-left: 15px;
-    font-size: .9375rem;
-
-    > div {
-        display: flex;
-        justify-content: space-between;
-        padding: 3px 0;
-        border-top: 1px solid var(--npc-rule);
-    }
-
-    dt {
-        color: var(--npc-soft);
-        font-weight: 400;
-    }
-
-    dd {
-        margin: 0;
-        font-weight: 600;
-    }
+.sf-npc-stat-name {
+    color: var(--npc-soft);
+    font-family: 'bebas_neueregular', sans-serif;
+    letter-spacing: .06em;
 }
 
 /* What Magic's points give, where the others list focus Stats */
 .sf-npc-note {
     margin: 0;
-    padding: 3px 0 0 15px;
-    border-top: 1px solid var(--npc-rule);
     color: var(--npc-soft);
-    font-size: .9375rem;
+    font-size: .875rem;
 }
 
-/* ---- Attacks, Traits and Items ---- */
+/* Its resource under its focus Stats, live as in Player Tools: the name,
+   −, the value over its max, + and restore to full on one line, and a
+   meter in the resource's color under them. The page's script
+   (php/javascript-loads.php) moves the value. */
+.sf-npc-resource {
+    display: grid;
+    grid-template-columns: 2.25ch auto 5.5em auto auto;
+    align-items: center;
+    gap: 4px 6px;
+    /* At the foot of its column, so the trackers line up even under Magic,
+       which has no focus Stats */
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 1.125rem;
+
+    > .sf-npc-value {
+        text-align: center;
+    }
+}
+
+.sf-npc-resource--hp { --resource-color: var(--sf-red-500); }
+.sf-npc-resource--vp { --resource-color: var(--sf-purple-500); }
+.sf-npc-resource--sp { --resource-color: var(--sf-yellow-400); }
+.sf-npc-resource--mp { --resource-color: var(--sf-blue-400); }
+
+.sf-npc-resource-name {
+    color: var(--resource-color);
+}
+
+.sf-npc-max {
+    color: var(--npc-soft);
+    font-size: .875rem;
+}
+
+/* Above its max (a boss given extra), the value takes the resource's color */
+.sf-npc-resource.is-over .sf-npc-current {
+    color: var(--resource-color);
+}
+
+.sf-npc-step-icon {
+    width: .75em;
+    height: .75em;
+    fill: currentColor;
+}
+
+.sf-npc-meter {
+    grid-column: 1 / -1;
+    height: 3px;
+    background: rgb(255 255 255 / 12%);
+
+    > span {
+        display: block;
+        height: 100%;
+        background: var(--resource-color, var(--sf-neon-500));
+        transition: width 200ms;
+    }
+}
+
+/* ---- Items (Attacks first) and Traits ---- */
 
 /* A box's title, with a rule running out to the right */
 .sf-npc-title {
@@ -214,10 +393,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
     align-items: start;
-    gap: 12px;
+    /* 24px across, so an Item's count badge, hanging 13px off its card's
+       left edge, clears the card beside it */
+    gap: 12px 24px;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/* An Item's count, centered on its card's top line. The cards' 14.15px
+   (css/sf-cards.css) centers it on a Player Tools row, 30px tall with its
+   Equip box and value; an NPC's Items have neither, so their row is 24px
+   and the count sits 11px down. */
+.sf-npc .sf-item-count {
+    top: 11px;
 }
 
 /* Printed, it goes light, with dark text */
@@ -229,10 +418,22 @@
         --npc-text: var(--sf-gray-800);
         --npc-soft: var(--sf-gray-500);
         --npc-rule: rgb(0 0 0 / 15%);
+        --npc-plate: var(--sf-gray-100);
+        --npc-line: var(--sf-gray-300);
         box-shadow: none;
     }
 
     .sf-npc-box {
         border: 1px solid var(--npc-edge);
+    }
+
+    .sf-npc-level::before {
+        animation: none;
+    }
+
+    /* Printed, just the value, with room left to write it in */
+    .sf-npc-step,
+    .sf-npc-meter {
+        display: none;
     }
 }

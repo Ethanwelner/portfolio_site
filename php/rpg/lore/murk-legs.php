@@ -8,6 +8,7 @@ sf_npc_sheet(
 		'name'    => 'Murk Legs',
 		'kind'    => 'Monster, Isekai',
 		'move'    => '10 m',
+		'resistances' => '2 Blunt, 1 Slashing',
 		'stats'   => array(
 			'Physical'   => 12,
 			'Endurance'  => 10,
@@ -18,9 +19,9 @@ sf_npc_sheet(
 			'Persuasion' => 1,
 			'Demeanor'   => 0,
 			'Mental'     => 2,
-			'Logic'      => 2,
+			'Logic'      => 1,
 			'Intuition'  => 4,
-			'Memory'     => 2,
+			'Memory'     => 1,
 		),
 		'attacks' => array(
 			array(
