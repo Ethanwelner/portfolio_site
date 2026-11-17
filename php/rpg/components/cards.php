@@ -6,7 +6,7 @@
 //                        Conditions, Circumstances and Other Traits
 //   sf_card_item()       Weapons, wearables, equipment, magic Items and
 //                        natural weapons (an NPC's or monster's Attacks)
-//   sf_card_chassis()    An AI Core's chassis: an Item card holding
+//   sf_card_chassis()    An AI-Core's chassis: an Item card holding
 //                        Physical stats and Traits
 //   sf_card_kind()       Kinds, in a framed card of their own
 //   sf_card_background() Origins, Professions and Pasts (a Kind goes to
@@ -422,7 +422,7 @@ document.addEventListener('click', function (e) {
 	}
 
 	/**
-	 * A Chassis card, as the creator's ChassisCard: the body an AI Core
+	 * A Chassis card, as the creator's ChassisCard: the body an AI-Core
 	 * inhabits, an Item card that holds part of a character sheet. Its top
 	 * line is an Item card's with its HP, which − and + change, as on a
 	 * character sheet; its armor's resistances badge leads its chips. Open,
@@ -430,7 +430,7 @@ document.addEventListener('click', function (e) {
 	 * block (sf_stat_block), its Attacks as Item cards (natural weapons) and
 	 * the Traits it gives whoever inhabits it, as Trait cards
 	 * (sf_card_trait). Its HP sit on its top line, worked out as a
-	 * character's are: 10 plus its Physical focus stats. An AI Core has no
+	 * character's are: 10 plus its Physical focus stats. An AI-Core has no
 	 * Physical stats of its own: its chassis's are its, and so are its HP.
 	 *
 	 * physical  array( 'core' => 4, 'stats' => array( array( 'name' =>

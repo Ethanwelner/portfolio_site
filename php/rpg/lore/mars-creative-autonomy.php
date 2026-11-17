@@ -2,7 +2,7 @@
 	<dl class="copy attr-list">
 		<div>
 			<dt>Headquartered</dt>
-			<dd>Suriloo Mars</dd>
+			<dd>Olympus Mons Caldera, Mars</dd>
 		</div>
 		<div>
 			<dt>Employees</dt>
@@ -10,11 +10,11 @@
 		</div>
 		<div>
 			<dt>Market Cap</dt>
-			<dd>1.5 trillion ERC</dd>
+			<dd>550 billion ERC</dd>
 		</div>
 		<div>
 			<dt>Industry</dt>
-			<dd>AI Cores</dd>
+			<dd>AI-Cores</dd>
 		</div>
 	</dl>
 </div>

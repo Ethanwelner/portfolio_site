@@ -367,7 +367,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>The second AI panic.</li>
+							<li>The 30 Days of Dead-Air.</li>
 							<li>Rathore is killed and his automated regime collapses. A young religious demagogue occupies the Parliament House in New Delhi.</li>
 						</ul>
 					</div>
@@ -387,7 +387,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li>AI Personhood Act enacted.</li>
+							<li>AI Personhood Act enacted. The Second Renaissance begins, lasting until the rebirth of science in 2118.</li>
 						</ul>
 					</div>
 					<div>
