@@ -14,7 +14,7 @@
 		</div>
 		<div>
 			<dt>Industry</dt>
-			<dd>AI Cores</dd>
+			<dd>AI-Cores</dd>
 		</div>
 	</dl>
 </div>

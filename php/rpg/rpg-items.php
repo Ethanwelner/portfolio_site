@@ -37,7 +37,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								A character has a limit to the weight of Items it can lug around, and that’s measured with Item weight and carry weight. Every Item a character can carry has a weight in kilograms. A bundle, like a quiver of 20 Arrows or a stack of MREs, lists its weight per bundle. A character’s carry weight is 20 kg plus 10 kg per point of their Physical core stat; an AI Core’s comes from its chassis. Only equipped Items count against it, and what they weigh gives the character one of the four Conditions below.
+								A character has a limit to the weight of Items it can lug around, and that’s measured with Item weight and carry weight. Every Item a character can carry has a weight in kilograms. A bundle, like a quiver of 20 Arrows or a stack of MREs, lists its weight per bundle. A character’s carry weight is 20 kg plus 10 kg per point of their Physical core stat; an AI-Core’s comes from its chassis. Only equipped Items count against it, and what they weigh gives the character one of the four Conditions below.
 							</p>
 							<table class="copy sf-table">
 								<thead>

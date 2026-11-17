@@ -355,7 +355,7 @@ $sf_used_in = array(
 		'php/rpg/rpg-character.php: the sample sheet’s Items (read-only Equip, closed)',
 	),
 	'chassis'    => array(
-		'Nowhere yet: the AI Core chassis system is new. The creator’s ChassisCard (src/app/components/cards.tsx) is ready for the Character Creator and Player Tools.',
+		'Nowhere yet: the AI-Core chassis system is new. The creator’s ChassisCard (src/app/components/cards.tsx) is ready for the Character Creator and Player Tools.',
 	),
 	'kind'       => array(
 		'php/rpg/background-card.php: sf_background_card(), for a Kind beside the sample sheet, in its popups and in Building a Dreftian',
@@ -396,10 +396,10 @@ $sf_mage_stats = array(
 	array( 'group' => 'mental', 'core' => 3, 'stats' => array( $sf_stat( 'Logic', 1, 4 ), $sf_stat( 'Intuition', 1, 4 ), $sf_stat( 'Memory', 1, 4 ) ) ),
 	array( 'group' => 'magic', 'core' => 3, 'bonus' => 1 ),
 );
-// Chassis cards: placeholder AI Core chassis, each an Item card with its
+// Chassis cards: placeholder AI-Core chassis, each an Item card with its
 // Physical stats (the core's 3 focus points a point, each its own maximum:
 // no Level raises them), its HP
-// (10 plus those stats), its Attacks and the Traits it gives. Mechanical is the AI Core Kind's own Condition.
+// (10 plus those stats), its Attacks and the Traits it gives. Mechanical is the AI-Core Kind's own Condition.
 $sf_mechanical = array(
 	'kind'   => 'condition',
 	'name'   => 'Mechanical',
@@ -585,7 +585,7 @@ $sf_list = function ( $items ) {
 				<h3 class="sub-title mb-3">Strange Frontiers Components</h3>
 				<div class="copy stinger black mb-3">Component Library</div>
 				<p class="copy">There’s one button component and one card per kind of card: Trait, Item, Kind and Background. Buttons come from <code>php/rpg/components/buttons.php</code>, styled by <code>css/sf-buttons.css</code>, a copy of the creator’s <code>src/app/buttons.css</code>.</p>
-				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis, Kind and Background. A Kind gets a framed card, which Background cards (Origins, Professions and Pasts) share: a key-colored line inside a thin solid gray border, framing a solar system's rings over a faint starfield, with a cut-out at the top left around a star. A Chassis card is an Item card that holds part of a character sheet: an AI Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
+				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis, Kind and Background. A Kind gets a framed card, which Background cards (Origins, Professions and Pasts) share: a key-colored line inside a thin solid gray border, framing a solar system's rings over a faint starfield, with a cut-out at the top left around a star. A Chassis card is an Item card that holds part of a character sheet: an AI-Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count (a consumable’s only), an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
 				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
