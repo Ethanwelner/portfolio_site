@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/17/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>History: the Second Major AI Panic of 2080 is now the 30 Days of Dead-Air, and it lasted thirty days rather than most of a year. The decades of rebuilding and reform that followed, from the AI Personhood Act in 2082 to the rebirth of science in 2118, are now known as the Second Renaissance. The timeline, the nations’ histories and the AI, Robotics and Biology overviews use the new names.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/16/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Gene Hacking: 29 new Traits for Humans with the Gene Hacking keyword. Skills edit abilities into the body: Tailored Features, Golden Voice, Pheromone Glands, Nootropic Edit, Keen Senses, Enhanced Metabolism, Steady Chemistry, Oxygen-Rich Blood, Adaptive Skin and Climate Tolerance. Nine more each add 1 to a focus stat and to its max, so an edited Human can pass 15: Hardy Constitution (Endurance), Fast-Twitch Muscle (Power), Refined Coordination (Grace), Social Attunement (Empathy), Magnetic Charm (Persuasion), Iron Nerves (Demeanor), Neural Density (Logic), Heightened Instinct (Intuition) and Eidetic Edit (Memory). Abilities: Regenerative Tissue, Night Eyes, Thick Hide, Engineered Immunity, Tetrachromacy, Dense Bones, Radiation Hardening, Gills, Clotting Factor and Toxin Glands.</li>
