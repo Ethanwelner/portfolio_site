@@ -276,7 +276,7 @@
 										<li>Plum Technologies (38%)</li>
 										<li>Měishǒu Jítuán (Beautiful Hand Group) (16%)</li>
 										<li>Luxoptica (15%)</li>
-										<li>Shine! (12%)</li>
+										<li>Shine! Enterprises (12%)</li>
 										<li>Lagos-Core Defense (6%)</li>
 									</ol>
 								</div>
