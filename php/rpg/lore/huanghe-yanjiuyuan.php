@@ -6,7 +6,7 @@
 		</div>
 		<div>
 			<dt>Employees</dt>
-			<dd>11,000</dd>
+			<dd>18,000</dd>
 		</div>
 		<div>
 			<dt>Market Cap</dt>
