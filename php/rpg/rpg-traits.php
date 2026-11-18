@@ -70,7 +70,7 @@
                 <p class="copy">
                   Some Traits, such as all Knowledges, can be Ranked Up. These are different from Traits with successive requirements, such as Marksman being a requisite for Master Marksman. Ranked Traits do not change when Ranked Up, but multiply their bonuses by their Rank. As an example, Pilot: Small Boat (3) is at Rank 3 and provides a +30 Roll Modifier to piloting Skill Checks, representing the Trait's bonus of 10 multiplied by its Rank.
                   <br><br>
-                  A Trait can only be Ranked Up beyond Rank 1 if the character has each required Stat for that Trait greater than or equal to 3 times the new Rank. As an example, a character wishing to Rank Pilot: Small Boat to Rank 3 would need Grace and Memory Stats of at least 9.
+                  A Trait can only be Ranked Up beyond Rank 1 if the character has each of that Trait’s required Stats at or above its requirement multiplied by the new Rank. As an example, if Pilot: Small Boat needs Grace 3 and Memory 2, a character wishing to Rank it to 3 would need Grace 9 and Memory 6.
                 </p>
               </div>
               <div class="content-stack content-stack-xs">
