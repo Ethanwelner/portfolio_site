@@ -79,6 +79,7 @@
 				<ul class="copy mb-0">
 					<li>New Columbia (Luna)</li>
 					<li>New York (Ark)</li>
+					<li>The Gate Farm (Oort Cloud)</li>
 				</ul>
 			</div>
 		</div>

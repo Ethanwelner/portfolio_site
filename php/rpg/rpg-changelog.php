@@ -12,6 +12,8 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
 						<li>Corporations: the last four, Huánghé Yánjiūyuàn (Yellow River Research Institute), Plum Technologies, Stohnroth and Tetra Frontiers Co., now have overviews, so every corporation has one. Huánghé Yánjiūyuàn is headquartered on 天堂之门 (Gate to Heaven) Station, Plum Technologies aboard its administration craft, Immaculate Sunrise, Stohnroth in DresBerlin, and Tetra Frontiers Co. in its offices on Tetra. Plum’s and Tetra Frontiers Co.’s industries are filled out.</li>
+						<li>Known Planes: Flatland is now 514/f/05, so plane numbers rise with discovery date. Tetra Frontiers Co.’s 538/k/226 - “Wow an Namus” and 561/r/251 - “Marine Snow” join Known Planes, with their lore coming soon.</li>
+						<li>The American Empire’s Stellar Territories now list the Gate Farm, its military’s secret site in the Oort Cloud, and Saltwater Energetics’ headquarters sits near it.</li>
 					</ul>
 				</article>
 				<article class="blog-post">

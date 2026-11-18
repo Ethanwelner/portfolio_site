@@ -595,7 +595,7 @@
 							<div class="line"></div>
 						</div>
 						<ul class="copy">
-							<li><strong>419/f/05:</strong> “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
+							<li><strong>514/f/05:</strong> “<?php echo sf_lore_link('flatland', 'Flatland'); ?>” is discovered by the <?php echo sf_lore_link('huanghe-yanjiuyuan', 'Huánghé Yánjiūyuàn (Yellow River Research Institute)'); ?>.</li>
 							<li>First experimental <?php echo sf_lore_link('lorentz-field-generator', 'Lorentz field generators'); ?> are tested.</li>
 						</ul>
 					</div>
