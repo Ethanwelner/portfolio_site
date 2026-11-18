@@ -50,6 +50,12 @@ sf_npc_sheet(
 				'flags'  => array( 'Permanent' ),
 				'effect' => 'Characters trying to perceive any visual information about this character must succeed on an Intuition check of 20 (10 per Rank). If they fail, they can’t make sense of what they’re looking at and see only a dark, shimmering haze.',
 			),
+			array(
+				'kind'   => 'condition',
+				'name'   => 'Fearsome',
+				'flags'  => array( 'Permanent' ),
+				'effect' => 'Any character wishing to Attack this character must first succeed on a Demeanor check of 13. If they fail, their Attack Action fails and they gain the Frightened Condition at Rank 3.',
+			),
 		),
 	)
 );
