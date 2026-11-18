@@ -97,7 +97,7 @@ function sf_lore_titles() {
 		'meishou-jituan' => 'Měishǒu Jítuán (Beautiful Hand Group)',
 		'plum-technologies' => 'Plum Technologies',
 		'saltwater-energetics' => 'Saltwater Energetics',
-		'shine' => 'Shine!',
+		'shine' => 'Shine! Enterprises',
 		'sistemas-de-controle-amazonia' => 'Sistemas de Controle Amazônia (Amazon Control Systems)',
 		'stellar-metals' => 'Stellar Metals',
 		'stellar-omnium' => 'Stellar Omnium',

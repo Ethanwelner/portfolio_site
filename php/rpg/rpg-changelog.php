@@ -19,6 +19,7 @@
 						<li>Lore: the Protocols of Planar Exploration and Exploitation now have their own entry: ratified by the UN in 2161 without the American Empire, expanded in 2176 after the first switch-gate catastrophe, and enforced by the Bureau of Planar Management and Enforcement.</li>
 						<li>Corporations: Holy Oak Discovery Services now has an overview, from inheriting New York University’s planar claims after the first switch-gate catastrophe to its facilities in the imperial military’s “Gate Farm.” It’s headquartered in Holy Oak, Oregon.</li>
 						<li>Corporations: Sistemas de Controle Amazônia (Amazon Control Systems) now has an overview: the premier firm in orbital lift and recovery, headquartered in São Paulo, and now the Eighth Lunar Industrial Syndicate’s largest individual corporate shareholder. Its industries now include orbital lift and lifter recovery.</li>
+						<li>Corporations: Jensen &amp; Kim and Shine! Enterprises now have overviews. Jensen &amp; Kim is headquartered in Sejong City and adds Insurance to its industries; Shine! Enterprises, formerly listed as Shine!, is headquartered in Tokyo and adds Fashion and Cosmetics.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
