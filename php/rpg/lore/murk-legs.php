@@ -48,7 +48,7 @@ sf_npc_sheet(
 				'name'   => 'Dark Haze',
 				'rank'   => 2,
 				'flags'  => array( 'Permanent' ),
-				'effect' => 'Characters trying to perceive any visual information about this character must succeed on an Intuition check of 20 (10 per Rank). If they fail, they can’t make sense of what they’re looking at and see only a dark, shimmering haze.',
+				'effect' => 'Characters trying to perceive any visual information about this character must succeed on an Intuition check of 20 (10 per Rank), once per Incident. If they fail, they can’t make sense of what they’re looking at and see only a dark, shimmering haze: for the rest of the Incident they can still Attack the haze, but at -6, as if this character were in Heavy Cover.',
 			),
 			array(
 				'kind'   => 'condition',

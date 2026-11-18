@@ -16,6 +16,10 @@
 						<li>Mechanics: Attack Rolls no longer add a Stat by default, and weapons no longer list an Attack Stat. Wield Skills now give +3 per Rank to Attack Rolls with their weapon, so a character’s Attack grows as they Rank their Wield Skill, which needs every required Stat at 3 × the new Rank. Some weapons, spells and abilities still add a Stat through their own rules.</li>
 						<li>Combat Instincts: a new Ranked Ability, Intuition 6, giving +1 Priority per Rank.</li>
 						<li>Trait Ranks: Ranking a Trait past 1 now needs each of its required Stats at its requirement multiplied by the new Rank, rather than 3 times the Rank. Pilot: Small Boat at Grace 3 and Memory 2 needs Grace 9 and Memory 6 for Rank 3.</li>
+						<li>Trait Ranks: Ranks cap at 3. No Trait can be Ranked past Rank 3.</li>
+						<li>Advantage: on Attack Rolls, each source of Advantage gives +3.</li>
+						<li>Greater Heal and the Greater Healing Potion are gone. Specific schools of magic will get their own enhancing Abilities and Skills instead.</li>
+						<li>Dark Haze: the Intuition check is made once per Incident. A character who fails sees only the haze for the rest of the Incident, but can still Attack it at -6, as if it were in Heavy Cover.</li>
 						<li>Sleep: now an Attack (Attack Stat: Magic) against 5 + the target’s Demeanor as if it were their Defense; on a hit, the target falls Asleep.</li>
 						<li>Rage: a Raging character is immune to the Frightened Condition.</li>
 						<li>Heal: the caster spends up to 1 MP per Rank and restores 4 HP for each MP spent, instead of 4 HP per Rank plus their Magic for 1 MP.</li>
