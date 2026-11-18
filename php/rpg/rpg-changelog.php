@@ -12,7 +12,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Murk Legs: now Fearsome, a new Condition. Any character wishing to Attack a Fearsome character must first succeed on a Demeanor check of 13; if they fail, their Attack fails and they gain the Frightened Condition at Rank 3.</li>
 						<li>Charmed: only takes effect if the target fails a Demeanor check of 10 + 5 per Rank.</li>
-						<li>Mind Spike and Mind Shatter: the Attack is made against the target’s highest Mental focus Stat (Logic, Intuition or Memory) as if it were their Defense.</li>
+						<li>Mind Spike and Mind Shatter: the Attack is made against 4 + the target’s highest Mental focus Stat (Logic, Intuition or Memory) as if it were their Defense.</li>
 						<li>Mechanics: a weapon’s Attack Stat is only added to Attack Rolls once the character has that weapon’s Wield Skill at Rank 2 or higher. Every Wield Skill now says so, and the +3 still comes at Rank 1.</li>
 						<li>Wield Skills: no Wield Skill needs all three Physical Stats any more. Longsword now needs Memory 4 instead of Endurance, for learning forms. War Axe needs Demeanor 3 instead of Grace, for finding the inner rage. Greatsword needs Demeanor 4 instead of Endurance, for the nerve to hold the front rank. Polearm needs Empathy 3 instead of Endurance, for fighting in formation. Spear and Shortsword need Intuition 2 instead of Endurance, for reading the quarry or the opponent. Machine Gun needs Logic 2 instead of Grace, for managing bursts and belts.</li>
 						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
