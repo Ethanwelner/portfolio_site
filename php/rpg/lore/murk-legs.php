@@ -49,14 +49,14 @@ sf_npc_sheet(
 				'class'  => 'rules-new',
 				'rank'   => 2,
 				'flags'  => array( 'Permanent' ),
-				'effect' => 'Characters trying to perceive any visual information about this character must succeed on an Intuition check of 20 (10 per Rank), once per Incident. If they fail, they can’t make sense of what they’re looking at and see only a dark, shimmering haze: for the rest of the Incident they can still Attack the haze, but at -6, as if this character were in Heavy Cover.',
+				'effect' => 'Characters trying to perceive any visual information about this character must succeed on an Intuition check of 20 (10 per Rank). A character who fails can’t make sense of what they’re looking at and sees only a dark, shimmering haze. They can still Attack the haze, but at -6, as if this character were in Heavy Cover. They can try the check again each Round, and once they succeed, the Dark Haze has no effect on them for the rest of the Incident.',
 			),
 			array(
 				'kind'   => 'condition',
 				'name'   => 'Fearsome',
 				'class'  => 'rules-new',
 				'flags'  => array( 'Permanent' ),
-				'effect' => 'Any character wishing to Attack this character must first succeed on a Demeanor check of 13. If they fail, their Attack Action fails and they gain the Frightened Condition at Rank 3.',
+				'effect' => 'The first time in an Incident that a character wishes to Attack this character, they must succeed on a Demeanor check of 13. If they fail, that Attack fails and they gain the Frightened Condition at Rank 3. Either way, they don’t make the check again for the rest of the Incident.',
 			),
 		),
 	)

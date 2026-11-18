@@ -10,7 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
-						<li>Murk Legs: now Fearsome, a new Condition. Any character wishing to Attack a Fearsome character must first succeed on a Demeanor check of 13; if they fail, their Attack fails and they gain the Frightened Condition at Rank 3.</li>
+						<li>Murk Legs: now Fearsome, a new Condition. The first time in an Incident that a character wishes to Attack a Fearsome character, they must succeed on a Demeanor check of 13; if they fail, that Attack fails and they gain the Frightened Condition at Rank 3. They don’t check again for the rest of the Incident.</li>
 						<li>Charmed: only takes effect if the target fails a Demeanor check of 10 + 5 per Rank.</li>
 						<li>Mind Spike and Mind Shatter: the Attack is made against 5 + the target’s highest Mental focus Stat (Logic, Intuition or Memory) as if it were their Defense.</li>
 						<li>Mechanics: Attack Rolls no longer add a Stat by default, and weapons no longer list an Attack Stat. Wield Skills now give +3 per Rank to Attack Rolls with their weapon, so a character’s Attack grows as they Rank their Wield Skill, which needs every required Stat at 3 × the new Rank. Some weapons, spells and abilities still add a Stat through their own rules.</li>
@@ -19,7 +19,7 @@
 						<li>Trait Ranks: Ranks cap at 3. No Trait can be Ranked past Rank 3.</li>
 						<li>Advantage: on Attack Rolls, each source of Advantage gives +3.</li>
 						<li>Greater Heal and the Greater Healing Potion are gone. Specific schools of magic will get their own enhancing Abilities and Skills instead.</li>
-						<li>Dark Haze: the Intuition check is made once per Incident. A character who fails sees only the haze for the rest of the Incident, but can still Attack it at -6, as if it were in Heavy Cover.</li>
+						<li>Dark Haze: a character who fails the Intuition check can still Attack the haze at -6, as if it were in Heavy Cover. They can try the check again each Round, and once they succeed, the Dark Haze has no effect on them for the rest of the Incident.</li>
 						<li>Sleep: now an Attack (Attack Stat: Magic) against 5 + the target’s Demeanor as if it were their Defense; on a hit, the target falls Asleep.</li>
 						<li>Rage: a Raging character is immune to the Frightened Condition.</li>
 						<li>Heal: the caster spends up to 1 MP per Rank and restores 4 HP for each MP spent, instead of 4 HP per Rank plus their Magic for 1 MP.</li>
