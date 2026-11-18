@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/18/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/17/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>History: the Second Major AI Panic of 2080 is now the 30 Days of Dead-Air, and it lasted thirty days rather than most of a year. The decades of rebuilding and reform that followed, from the AI Personhood Act in 2082 to the rebirth of science in 2118, are now known as the Second Renaissance. The timeline, the nations’ histories and the AI, Robotics and Biology overviews use the new names.</li>
