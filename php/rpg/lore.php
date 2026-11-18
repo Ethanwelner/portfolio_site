@@ -13,6 +13,7 @@ function sf_lore_titles() {
 		'first-interstellar-expansion' => 'First Interstellar Expansion',
 		'first-switch-gate-catastrophe' => 'The First Switch-Gate Catastrophe',
 		'paraloka' => '1/a/384 - “<i>Paraloka</i>”',
+		'ersatz' => '41/a/187 - “<i>Ersatz</i>”',
 		'isekai' => '516/a/198 - “<i>Isekai</i>”',
 		'gastown' => '76/f/55 - “<i>Gastown</i>”',
 		'pairidaeza' => '210/c/18 - “<i>Pairidaeza</i>”',
