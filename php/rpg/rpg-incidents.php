@@ -136,7 +136,7 @@
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li>Many weapons will gain a benefit to their Attack Roll based on a character's Stats. Weapons that do so will list the relevant Stat. A character only adds that Stat once they have the weapon’s Wield Skill at Rank 2 or higher.</li>
+								<li>Attack Rolls don’t add a Stat by default. A character’s Wield Skill for the weapon adds +3 per Rank instead. Some weapons, spells and abilities have their own rules that add a Stat, and they’ll list it.</li>
 								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
 								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
 							</ul>

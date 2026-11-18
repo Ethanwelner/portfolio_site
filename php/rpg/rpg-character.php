@@ -215,7 +215,7 @@ $sf_conditions = sf_sheet_title( 'Conditions', '', 'h4', true, 'condition' ) . '
 // description
 $sf_sheet_items = array(
 	array( 'name' => 'Sturdy Leather Jacket', 'category' => 'Armor', 'value' => 200, 'currency' => 'ERC', 'weight' => 2, 'slot' => 'Outerwear', 'resistances' => '1 Blunt, 1 Slashing', 'description' => 'A heavy leather jacket. Turns a scrape or a cold wind, not much more.', 'equip' => 'on' ),
-	array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'weight' => 0.9, 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
+	array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'weight' => 0.9, 'attack' => 'Ranged', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.', 'equip' => 'on' ),
 	array( 'name' => 'Disguise Kit', 'category' => 'Gear', 'value' => 150, 'currency' => 'ERC', 'weight' => 3, 'description' => 'Makeup, wigs, false hair and a few changes of clothes.', 'equip' => 'off' ),
 	array( 'name' => 'Comm Unit', 'category' => 'Gear', 'value' => 800, 'currency' => 'ERC', 'weight' => 0.2, 'description' => 'A personal communicator and computer. Doesn’t reach across a switch gate without a relay.', 'equip' => 'off' ),
 );
