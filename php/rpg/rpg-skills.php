@@ -224,7 +224,7 @@
 								<li>Requesting Advantage is an expression of both the Stats written on a character sheet and the character's backstory and role-playing attributes.</li>
 								<li>Some Kinds, Backgrounds, or Professions will grant the right to request Advantage in a broad set of circumstances, such as a character with a small stature being able to request Advantage when hiding or a professional soldier's ability to request Advantage when learning to wield a new weapon.</li>
 								<li>The GM can allow or deny requested Advantage and will determine the appropriate expression of the Advantage.</li>
-								<li>On Attack Rolls, each source of Advantage gives +3.</li>
+								<li><mark class="rules-new">On Attack Rolls, each source of Advantage gives +3.</mark></li>
 								<li>Ex. A character with a background as a fisherman may be able to request Advantage, thanks to their past on rocky seas, when they need to keep their balance on an airship in severe turbulence. The GM could choose to give them a +5 Roll Modifier to their Grace Skill Check to stay standing.</li>
 								<li>Ex. A pilot is flying the ship they built by hand and know by heart. The GM could choose to give them a bonus to a Skill Check or even waive the need for the Skill Check if the act could be considered routine.</li>
 							</ul>

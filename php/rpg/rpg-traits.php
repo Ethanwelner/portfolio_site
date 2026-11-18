@@ -70,7 +70,7 @@
                 <p class="copy">
                   Some Traits, such as all Knowledges, can be Ranked Up. These are different from Traits with successive requirements, such as Marksman being a requisite for Master Marksman. Ranked Traits do not change when Ranked Up, but multiply their bonuses by their Rank. As an example, Pilot: Small Boat (3) is at Rank 3 and provides a +30 Roll Modifier to piloting Skill Checks, representing the Trait's bonus of 10 multiplied by its Rank.
                   <br><br>
-                  A Trait can only be Ranked Up beyond Rank 1 if the character has each of that Trait’s required Stats at or above its requirement multiplied by the new Rank. As an example, if Pilot: Small Boat needs Grace 3 and Memory 2, a character wishing to Rank it to 3 would need Grace 9 and Memory 6. Ranks cap at 3: no Trait can be Ranked past Rank 3.
+                  <mark class="rules-new">A Trait can only be Ranked Up beyond Rank 1 if the character has each of that Trait’s required Stats at or above its requirement multiplied by the new Rank. As an example, if Pilot: Small Boat needs Grace 3 and Memory 2, a character wishing to Rank it to 3 would need Grace 9 and Memory 6. Ranks cap at 3: no Trait can be Ranked past Rank 3.</mark>
                 </p>
               </div>
               <div class="content-stack content-stack-xs">
@@ -326,6 +326,7 @@ Rank *5 added to Skill Check rolls involving riding a basic animal.',
                   <?php sf_card_trait( array(
                   	'kind' => 'skill',
                   	'name' => 'Wield: Longsword',
+                  	'class' => 'rules-new',
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Longsword without a Skill Check.
 Rank *5 added to Skill Check rolls involving a Longsword.
@@ -335,6 +336,7 @@ Rank *5 added to Skill Check rolls involving a Longsword.
                   <?php sf_card_trait( array(
                   	'kind' => 'skill',
                   	'name' => 'Wield: Musket',
+                  	'class' => 'rules-new',
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Musket without a Skill Check.
 Rank *5 added to Skill Check rolls involving a Musket.
