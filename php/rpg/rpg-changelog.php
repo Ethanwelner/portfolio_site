@@ -11,6 +11,7 @@
 					<p class="copy mb-3"><i>11/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
+						<li>Corporations: the last four, Huánghé Yánjiūyuàn (Yellow River Research Institute), Plum Technologies, Stohnroth and Tetra Frontiers Co., now have overviews, so every corporation has one. Huánghé Yánjiūyuàn is headquartered on 天堂之门 (Gate to Heaven) Station, Plum Technologies aboard its administration craft, Immaculate Sunrise, Stohnroth in DresBerlin, and Tetra Frontiers Co. in its offices on Tetra. Plum’s and Tetra Frontiers Co.’s industries are filled out.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
