@@ -2328,3 +2328,13 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     gap: 16px;
 }
 
+/* Rules added while testing combat (11/18/2026), highlighted neon yellow so
+   they're easy to find and work into the copy. Remove the class to clear one. */
+mark.rules-new {
+	background: #e6ff00;
+	color: #111;
+	padding: 0 2px;
+}
+.sf-card.rules-new {
+	box-shadow: 0 0 0 3px #e6ff00;
+}

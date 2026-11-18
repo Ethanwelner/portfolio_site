@@ -10,6 +10,20 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Murk Legs: now Fearsome, a new Condition. Any character wishing to Attack a Fearsome character must first succeed on a Demeanor check of 13; if they fail, their Attack fails and they gain the Frightened Condition at Rank 3.</li>
+						<li>Charmed: only takes effect if the target fails a Demeanor check of 10 + 5 per Rank.</li>
+						<li>Mind Spike and Mind Shatter: the Attack is made against 5 + the target’s highest Mental focus Stat (Logic, Intuition or Memory) as if it were their Defense.</li>
+						<li>Mechanics: Attack Rolls no longer add a Stat by default, and weapons no longer list an Attack Stat. Wield Skills now give +3 per Rank to Attack Rolls with their weapon, so a character’s Attack grows as they Rank their Wield Skill, which needs every required Stat at 3 × the new Rank. Some weapons, spells and abilities still add a Stat through their own rules.</li>
+						<li>Combat Instincts: a new Ranked Ability, Intuition 6, giving +1 Priority per Rank.</li>
+						<li>Trait Ranks: Ranking a Trait past 1 now needs each of its required Stats at its requirement multiplied by the new Rank, rather than 3 times the Rank. Pilot: Small Boat at Grace 3 and Memory 2 needs Grace 9 and Memory 6 for Rank 3.</li>
+						<li>Trait Ranks: Ranks cap at 3. No Trait can be Ranked past Rank 3.</li>
+						<li>Advantage: on Attack Rolls, each source of Advantage gives +3.</li>
+						<li>Greater Heal and the Greater Healing Potion are gone. Specific schools of magic will get their own enhancing Abilities and Skills instead.</li>
+						<li>Dark Haze: the Intuition check is made once per Incident. A character who fails sees only the haze for the rest of the Incident, but can still Attack it at -6, as if it were in Heavy Cover.</li>
+						<li>Sleep: now an Attack (Attack Stat: Magic) against 5 + the target’s Demeanor as if it were their Defense; on a hit, the target falls Asleep.</li>
+						<li>Rage: a Raging character is immune to the Frightened Condition.</li>
+						<li>Heal: the caster spends up to 1 MP per Rank and restores 4 HP for each MP spent, instead of 4 HP per Rank plus their Magic for 1 MP.</li>
+						<li>Wield Skills: no Wield Skill needs all three Physical Stats any more. Longsword now needs Memory 4 instead of Endurance, for learning forms. War Axe needs Demeanor 3 instead of Grace, for finding the inner rage. Greatsword needs Demeanor 4 instead of Endurance, for the nerve to hold the front rank. Polearm needs Empathy 3 instead of Endurance, for fighting in formation. Spear and Shortsword need Intuition 2 instead of Endurance, for reading the quarry or the opponent. Machine Gun needs Logic 2 instead of Grace, for managing bursts and belts.</li>
 						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
 						<li>Corporations: the last four, Huánghé Yánjiūyuàn (Yellow River Research Institute), Plum Technologies, Stohnroth and Tetra Frontiers Co., now have overviews, so every corporation has one. Huánghé Yánjiūyuàn is headquartered on 天堂之门 (Gate to Heaven) Station, Plum Technologies aboard its administration craft, Immaculate Sunrise, Stohnroth in DresBerlin, and Tetra Frontiers Co. in its offices on Tetra. Plum’s and Tetra Frontiers Co.’s industries are filled out.</li>
 						<li>Known Planes: Flatland is now 514/f/05, so plane numbers rise with discovery date. Tetra Frontiers Co.’s 538/k/226 - “Wow an Namus” and 561/r/251 - “Marine Snow” join Known Planes, and so does 41/a/187 - “Ersatz,” whose paraphysics Saltwater Energetics once tried to harness, all with their lore coming soon.</li>

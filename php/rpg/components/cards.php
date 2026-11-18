@@ -173,6 +173,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		$fold   = $t['fold'] ?? '';
 		$keep   = ! empty( $t['keep'] ) && $fold;
 		$classes = 'sf-card sf-trait-card sf-trait-card--' . $kind . ( 'isekai' === $plane ? ' sf-card--dreft' : '' );
+		if ( ! empty( $t['class'] ) ) {
+			$classes .= ' ' . $t['class'];
+		}
 		if ( $fold ) {
 			$classes .= 'open' === $fold ? ' is-open' : ' is-closed';
 		}
