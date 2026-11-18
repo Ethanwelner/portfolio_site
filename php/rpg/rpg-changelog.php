@@ -11,6 +11,10 @@
 					<p class="copy mb-3"><i>11/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Corporations: Stellar Metals now has an overview and its industries, Asteroid Mining and Mineral Beneficiation.</li>
+						<li>Corporations: the last four, Huánghé Yánjiūyuàn (Yellow River Research Institute), Plum Technologies, Stohnroth and Tetra Frontiers Co., now have overviews, so every corporation has one. Huánghé Yánjiūyuàn is headquartered on 天堂之门 (Gate to Heaven) Station, Plum Technologies aboard its administration craft, Immaculate Sunrise, Stohnroth in DresBerlin, and Tetra Frontiers Co. in its offices on Tetra. Plum’s and Tetra Frontiers Co.’s industries are filled out.</li>
+						<li>Known Planes: Flatland is now 514/f/05, so plane numbers rise with discovery date. Tetra Frontiers Co.’s 538/k/226 - “Wow an Namus” and 561/r/251 - “Marine Snow” join Known Planes, and so does 41/a/187 - “Ersatz,” whose paraphysics Saltwater Energetics once tried to harness, all with their lore coming soon.</li>
+						<li>The American Empire’s Stellar Territories now list the Gate Farm, its military’s secret site in the Oort Cloud, and Saltwater Energetics’ headquarters sits near it.</li>
+						<li>Corporations: new employee counts and market caps. Plum Technologies now employs 1,500,000, Luna-HI 180,000, Saltwater Energetics 150,000, Shine! Enterprises 120,000, Stellar Omnium 60,000, 10/20 Holding Corporation 20,000 and Huánghé Yánjiūyuàn 18,000. Saltwater Energetics is now worth 1.4 trillion ERC, Stellar Omnium and Stohnroth 550 billion and Mars Creative Autonomy 450 billion.</li>
 					</ul>
 				</article>
 				<article class="blog-post">

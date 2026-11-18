@@ -6,11 +6,11 @@
 		</div>
 		<div>
 			<dt>Employees</dt>
-			<dd>21,000</dd>
+			<dd>60,000</dd>
 		</div>
 		<div>
 			<dt>Market Cap</dt>
-			<dd>700 billion ERC</dd>
+			<dd>550 billion ERC</dd>
 		</div>
 		<div>
 			<dt>Industry</dt>
