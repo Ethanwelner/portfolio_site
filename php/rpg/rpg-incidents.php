@@ -56,11 +56,7 @@
 						</ul>
 						</li>
 					</ul>
-					<p class="copy">These will be explained in the following sections. Every character can also take these Actions:</p>
-					<ul class="copy">
-						<li><mark class="rules-new">Aim: As a Full RP Action, a character takes aim at a target they can see. Their first Ranged Attack against it next Round has Advantage.</mark></li>
-						<li><mark class="rules-new">Suppressing Fire: As a Full Action, a character with a weapon that has the Suppression keyword, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack or Move. It deals no damage, but it buys allies a Round to move or flank.</mark></li>
-					</ul>
+					<p class="copy">These will be explained in the following sections.</p>
 				</div>
 			</div>
 			<div class="image-placeholder" aria-hidden="true">Image</div>
@@ -264,6 +260,17 @@
 								</li>
 								<li><mark class="rules-new">Cover only protects against Attacks from the side it covers. An attacker flanking a character in Cover, attacking from well off to one side of it (more than 45° from the direction it faces), ignores that Cover.</mark></li>
 							</ul>
+							</div>
+							<div class="content-stack content-stack-xs">
+								<div class="line-container">
+									<h5><strong>Ranged Combat Actions</strong></h5>
+									<div class="line"></div>
+								</div>
+								<p class="copy">Every character can take these Actions.</p>
+								<ul class="copy">
+									<li><mark class="rules-new">Aim: As a Full RP Action, a character takes aim at a target they can see. Their first Ranged Attack against it next Round has Advantage.</mark></li>
+									<li><mark class="rules-new">Suppressing Fire: As a Full Action, a character with a weapon that has the Suppression keyword, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack or Move. It deals no damage, but it buys allies a Round to move or flank.</mark></li>
+								</ul>
 						</div>
 					</div>
 				</div>
