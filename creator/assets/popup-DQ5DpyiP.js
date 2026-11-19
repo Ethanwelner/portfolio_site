@@ -4884,7 +4884,7 @@ backgroundKeywords: [modern-ranged, archaic-ranged]\r
 category: ability\r
 ranked: true\r
 minStats: { intuition: 5, grace: 3 }\r
-effect: "When this character makes a Ranged Attack, they may spend up to 1 SP per Rank before rolling. The Attack ignores 3 Defense for each SP spent."\r
+effect: "When this character makes a Ranged Attack, they may spend up to 1 SP per Rank before rolling. The Attack Roll gains +3 for each SP spent."\r
 `,Eh=`id: chain-lightning\r
 name: "Chain Lightning"\r
 status: draft\r
@@ -5321,7 +5321,7 @@ category: ability\r
 ranked: true\r
 minStats: { grace: 4, persuasion: 4 }\r
 prerequisites: [swordsman]\r
-effect: "When this character makes a Melee Attack with a sword, they may spend up to 1 VP per Rank before rolling. The Attack ignores 3 Defense for each VP spent."\r
+effect: "When this character makes a Melee Attack with a sword, they may spend up to 1 VP per Rank before rolling. The Attack Roll gains +3 for each VP spent."\r
 `,ig=`id: field-medicine\r
 name: "Field Medicine"\r
 status: draft\r
@@ -6107,7 +6107,7 @@ category: ability\r
 ranked: true\r
 minStats: { magic: 4, logic: 3 }\r
 list: magic\r
-effect: "When this character uses a Cast: Action that makes an Attack, they may spend up to 1 extra MP per Rank. The Attack ignores 3 of the target's Defense, or of whatever it's made against instead, for each extra MP spent."\r
+effect: "When this character uses a Cast: Action that makes an Attack, they may spend up to 1 extra MP per Rank. The Attack Roll gains +3 for each extra MP spent."\r
 `,s_=`id: pressure-point\r
 name: "Pressure Point"\r
 status: draft\r
@@ -6633,7 +6633,7 @@ category: ability\r
 ranked: true\r
 minStats: { grace: 5, empathy: 3 }\r
 prerequisites: [brawler]\r
-effect: "When this character makes an Attack with a natural weapon, they may spend up to 1 VP per Rank before rolling. The Attack ignores 3 Defense for each VP spent."\r
+effect: "When this character makes an Attack with a natural weapon, they may spend up to 1 VP per Rank before rolling. The Attack Roll gains +3 for each VP spent."\r
 `,J_=`id: unburden\r
 name: "Unburden"\r
 status: placeholder\r

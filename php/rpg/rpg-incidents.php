@@ -149,10 +149,10 @@
 									<tr><th>Roll</th><th>Severity</th><th>Result</th></tr>
 								</thead>
 								<tbody>
-									<tr class="rules-new"><td>+0 to +2</td><td>Glancing Blow</td><td>-1 damage to the Attack</td></tr>
-									<tr class="rules-new"><td>+3 to +5</td><td>Solid Hit</td><td>Attack damages as normal</td></tr>
-									<tr class="rules-new"><td>+6 to +8</td><td>Devastating Hit</td><td>+1 damage to the Attack</td></tr>
-									<tr class="rules-new"><td>+9 or higher</td><td>Critical Hit</td><td>+3 damage to the Attack</td></tr>
+									<tr><td>+0 to +2</td><td>Glancing Blow</td><td>-1 damage to the Attack</td></tr>
+									<tr><td>+3 to +5</td><td>Solid Hit</td><td>Attack damages as normal</td></tr>
+									<tr><td>+6 to +8</td><td>Devastating Hit</td><td>+1 damage to the Attack</td></tr>
+									<tr><td>+9 or higher</td><td>Critical Hit</td><td>+3 damage to the Attack</td></tr>
 								</tbody>
 							</table>
 							<p class="copy">
@@ -165,10 +165,10 @@
 									<tr><th>Roll</th><th>Severity</th><th>Result</th></tr>
 								</thead>
 								<tbody>
-									<tr class="rules-new"><td>-1 to -3</td><td>Deflected</td><td>—</td></tr>
-									<tr class="rules-new"><td>-4 to -6</td><td>Near Miss</td><td>—</td></tr>
-									<tr class="rules-new"><td>-7 to -9</td><td>Overextended</td><td>—</td></tr>
-									<tr class="rules-new"><td>-10 or lower</td><td>Critical Failure</td><td>Character gains the Flat-Footed Condition the following combat Round</td></tr>
+									<tr><td>-1 to -3</td><td>Deflected</td><td>—</td></tr>
+									<tr><td>-4 to -6</td><td>Near Miss</td><td>—</td></tr>
+									<tr><td>-7 to -9</td><td>Overextended</td><td>—</td></tr>
+									<tr><td>-10 or lower</td><td>Critical Failure</td><td>Character gains the Flat-Footed Condition the following combat Round</td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -202,8 +202,7 @@
 								<li>An Attack with a Spear is a Devastating Hit; the Spear’s 7 Piercing damage would combine with the Devastating Hit for 7+1 Piercing damage compared against the target's Resistances. The target is wearing chainmail, providing them with a Resistance of 1 against Piercing. The result of the Attack is that the target suffers 7 Piercing damage (7+1 - 1).</li>
 								<li>Attacks may do multiple types of damage, such as a fragmentation grenade doing 7 Blunt and 5 Piercing damage, representing both the shock of the explosion and its shrapnel. In cases where an Attack does multiple types of damage all are compared against the target's Resistances and are applied.</li>
 								<li>Some weapons list a choice of damage types, such as the Longsword’s 8 Slashing / 6 Piercing. When Attacking with one, the player must choose which type of damage the Attack deals.</li>
-								<li><mark class="rules-new">Some weapons, ammunition and abilities have Breach. An Attack with Breach 3 ignores 3 of the target’s Resistance against each of its damage types, down to 0.</mark></li>
-								<li><mark class="rules-new">Some abilities let an Attack ignore Defense. An Attack that ignores 3 Defense is rolled as if the target’s Defense were 3 lower, or whatever the Attack is made against instead, like a Mental Stat. It doesn’t change Cover penalties.</mark></li>
+								<li>Some abilities will cause an Attack to roll against a number other than the target’s Defense. In these cases the target does not benefit from effects that are increasing its Defense.</li>
 							</ul>
 						</div>
 					</div>
