@@ -2,8 +2,9 @@
 // Stat sheets for the Another World adventure's encounters, in the
 // Adventures section's Monsters tab. Each is an sf_npc_sheet()
 // (components/npc-sheet.php), the same short form as Murk Legs.
-// People are built like characters: Human's +1 to every focus Stat, three
-// package bonus points, then 1 core point and 3 focus points per Level.
+// People are built like characters: Human's 1 in every focus Stat, the
+// Origin's bonus point (Dreft's is Physical), then 1 core point and 3 focus
+// points per Level. Traits a Profession grants skip their Stat requirements.
 // Monsters are built from Physical only.
 require_once __DIR__ . '/components/npc-sheet.php';
 
@@ -25,7 +26,7 @@ sf_npc_sheet(
 		'resistances' => '2 Blunt, 1 Slashing, 2 Cold',
 		'stats'   => array(
 			'Physical'   => 1,
-			'Endurance'  => 2,
+			'Endurance'  => 1,
 			'Power'      => 3,
 			'Grace'      => 3,
 			'Social'     => 0,
@@ -34,7 +35,7 @@ sf_npc_sheet(
 			'Demeanor'   => 1,
 			'Mental'     => 0,
 			'Logic'      => 1,
-			'Intuition'  => 2,
+			'Intuition'  => 1,
 			'Memory'     => 1,
 		),
 		'attacks' => array(
@@ -58,7 +59,6 @@ sf_npc_sheet(
 				'resistances' => '2 Blunt, 1 Slashing, 2 Cold',
 			),
 		),
-		'traits'  => array( $sf_wield( 'Spear', 1 ) ),
 	),
 	array( 'fold' => 'closed' )
 );
@@ -113,12 +113,12 @@ sf_npc_sheet(
 		'resistances' => '2 Blunt, 3 Slashing, 2 Piercing',
 		'stats'   => array(
 			'Physical'   => 5,
-			'Endurance'  => 6,
+			'Endurance'  => 5,
 			'Power'      => 7,
 			'Grace'      => 7,
 			'Social'     => 1,
 			'Empathy'    => 1,
-			'Persuasion' => 4,
+			'Persuasion' => 3,
 			'Demeanor'   => 2,
 			'Mental'     => 2,
 			'Logic'      => 2,
@@ -153,21 +153,24 @@ sf_npc_sheet(
 			),
 		),
 		'traits'  => array(
-			$sf_wield( 'Longsword', 1 ),
+			array( 'from' => 'Dreft Mercenary' ) + $sf_wield( 'Longsword', 1 ),
 			array(
 				'kind'   => 'ability',
 				'name'   => 'Shield Wall',
+				'from'   => 'Dreft Mercenary',
 				'effect' => 'This character gains the Shieldwall Action.',
 				'action' => 'Shieldwall: While holding a shield, this character may take the Defend Action as part of a shield wall. This character and every ally within 1 m who is holding a shield and also Defending gain an additional +4 Defense for the Round.',
 			),
 			array(
 				'kind'   => 'skill',
 				'name'   => 'Haggler',
+				'from'   => 'Dreft Mercenary',
 				'effect' => 'This character gains +5 to Persuasion or Demeanor checks relating to haggling, bartering, and price negotiations.',
 			),
 			array(
 				'kind'   => 'knowledge',
 				'name'   => 'Bandits & Brigands',
+				'from'   => 'Dreft Mercenary',
 				'rank'   => 1,
 				'effect' => 'This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places.',
 			),
