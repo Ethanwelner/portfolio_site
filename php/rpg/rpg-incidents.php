@@ -132,15 +132,13 @@
 								Attacks are rolled on a d20. Add any bonuses to the roll; the total must meet or exceed the target's Defense.
 							</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Every conscious character has a Defense of 10, so an Attack with no modifiers hits on a 10 or better, a little more than half the time.</mark> Cover, Conditions, Equipment and abilities move it a little either way (see <a href="#tab-incidents-defense" class="lore-link" data-tab-open="tab-incidents-defense">Defenses and Defending</a>).</li>
+								<li>Every conscious character has a Defense of 10, so an Attack with no modifiers hits on a 10 or better, a little more than half the time. Cover, Conditions, Equipment and abilities move it a little either way (see <a href="#tab-incidents-defense" class="lore-link" data-tab-open="tab-incidents-defense">Defenses and Defending</a>).</li>
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Attack Rolls don’t add a Stat, and Wield Skills don’t add to them either. A character attacking with a weapon they have no Wield Skill for takes -3; natural weapons don’t need one. Everything else that changes the odds is small and situational: Advantage, cover, Conditions, and the abilities that set them up. Fights are won by positioning and ability use, not by stacking bonuses to hit.</mark></li>
 								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
-								<li><mark class="rules-new">Aim: As a Full RP Action, a character takes aim at a target they can see. Their first Ranged Attack against it next Round has Advantage.</mark></li>
-								<li><mark class="rules-new">Suppressing Fire: As a Full Action, a character with an automatic weapon, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack or Move. It deals no damage, but it buys allies a Round to move or flank.</mark></li>
-								<li><mark class="rules-new">Several Conditions open a character up to Attacks: Flat-Footed (-3 Defense), Prone (-3 Defense against Melee, +3 against Ranged from beyond 10 m), Frightened and Slowed (-1 Defense per Rank), Restrained and Blinded (-6 Defense).</mark></li>
+								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
+								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
 							</ul>
 							<p class="copy">
 								Attacks meeting or exceeding Defense are hits, and the result of the hit is measured by the hit’s Severity. Attack Severity determines effects in rules as well as the GM’s choices. Severity is based on how much the Attack exceeds the character's defensive value. Some offensive and defensive mechanics will trigger based on Attack Severity.
@@ -222,7 +220,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								<mark class="rules-new">A conscious character’s base Defense is 10. Physical core Stat points no longer add to it.</mark> It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
+								<mark class="rules-new">A conscious character’s base Defense is 10.</mark> It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
 								<br><br>
 								A character that has elected to take a Defend Action gains +3 to their Defense for the Round. Items, Traits, or other mechanics may trigger when a character elects to Defend. For example, a character with a Wooden Shield would gain an additional +4 Defense while Defending.
 							</p>
@@ -261,8 +259,18 @@
 									<li>Ranged Attacks against targets in Heavy Cover suffer a -6 penalty</li>
 								</ul>
 								</li>
-								<li><mark class="rules-new">Cover only protects against Attacks from the side it covers. An attacker flanking a character in Cover, attacking from well off to one side of it (more than 45° from the direction it faces), ignores that Cover.</mark></li>
 							</ul>
+							</div>
+							<div class="content-stack content-stack-xs">
+								<div class="line-container">
+									<h5><strong>Ranged Combat Actions</strong></h5>
+									<div class="line"></div>
+								</div>
+								<p class="copy">Every character can take these Actions.</p>
+								<ul class="copy">
+									<li>Aim: As a Full RP Action, a character takes aim at a target they can see. Their first Ranged Attack against it next Round has Advantage.</li>
+									<li>Suppressing Fire: As a Full Action, a character with a weapon that has the Suppression keyword, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack or Move. It deals no damage, but it buys allies a Round to move or flank.</li>
+								</ul>
 						</div>
 					</div>
 				</div>

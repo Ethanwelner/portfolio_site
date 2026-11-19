@@ -68,9 +68,9 @@
                   <div class="line"></div>
                 </div>
                 <p class="copy">
-                  Some Traits, such as all Knowledges, can be Ranked Up. These are different from Traits with successive requirements, such as Marksman being a requisite for Master Marksman. Ranked Traits do not change when Ranked Up, but multiply their bonuses by their Rank. As an example, Pilot: Small Boat (3) is at Rank 3 and provides a +30 Roll Modifier to piloting Skill Checks, representing the Trait's bonus of 10 multiplied by its Rank.
+                  Some Traits, such as all Knowledge, can be Ranked Up. These are different from Traits with successive requirements, such as Marksman being a requisite for Master Marksman. Ranked Traits do not change when Ranked Up, but multiply their bonuses by their Rank. As an example, Pilot: Small Boat (3) is at Rank 3 and provides a +30 Roll Modifier to piloting Skill Checks, representing the Trait's bonus of 10 multiplied by its Rank.
                   <br><br>
-                  <mark class="rules-new">A Trait can only be Ranked Up beyond Rank 1 if the character has each of that Trait’s required Stats at or above its requirement multiplied by the new Rank. As an example, if Pilot: Small Boat needs Grace 3 and Memory 2, a character wishing to Rank it to 3 would need Grace 9 and Memory 6. Ranks cap at 3: no Trait can be Ranked past Rank 3.</mark>
+                  A Trait can only be Ranked Up if the character has the Trait’s base Stat requirements multiplied by the Rank being taken. As an example, if Pilot: Small Boat needs Grace 3 and Memory 2, a character wishing to Rank it to 3 would need Grace 9 and Memory 6. No Trait can be Ranked past Rank 3.
                 </p>
               </div>
               <div class="content-stack content-stack-xs">
@@ -326,19 +326,19 @@ Rank *5 added to Skill Check rolls involving riding a basic animal.',
                   <?php sf_card_trait( array(
                   	'kind' => 'skill',
                   	'name' => 'Wield: Longsword',
-                  	'class' => 'rules-new',
                   	'rank' => 1,
-                  	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Longsword without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Longsword.',
+                  	'effect' => '- This character can use and maintain a Longsword without a Skill Check.
+- Rank *5 added to Skill Check rolls involving a Longsword.
+- Rank *1 added to Attack Rolls using a Longsword.',
                   	'needs' => 'Grace 4, Power 4, Memory 4',
                   ) ); ?>
                   <?php sf_card_trait( array(
                   	'kind' => 'skill',
                   	'name' => 'Wield: Musket',
-                  	'class' => 'rules-new',
                   	'rank' => 1,
-                  	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Musket without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Musket.',
+                  	'effect' => '- This character can use and maintain a Musket without a Skill Check.
+- Rank *5 added to Skill Check rolls involving a Musket.
+- Rank *1 added to Attack Rolls using a Musket.',
                   	'needs' => 'Grace 3, Power 2, Intuition 3',
                   ) ); ?>
                   <?php sf_card_trait( array(

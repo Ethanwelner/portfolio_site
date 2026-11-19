@@ -1441,6 +1441,7 @@ damage: "9 Piercing"\r
 attackType: "Ranged"\r
 maxRange: "600 m"\r
 reload: "Full"\r
+modifiers: "Suppression"\r
 value: 9000\r
 currency: "ERC"\r
 weight: 10\r
@@ -1579,6 +1580,7 @@ damage: "9 Piercing"\r
 attackType: "Ranged"\r
 maxRange: "600 m"\r
 reload: "Full"\r
+modifiers: "Suppression"\r
 notes: "Built into the Combat Walker Chassis; the Machine Gun's numbers."\r
 `,Ed=`id: mule-drone\r
 name: "Mule Drone"\r
@@ -2532,6 +2534,7 @@ damage: "8 Piercing"\r
 attackType: "Ranged"\r
 maxRange: "100 m"\r
 reload: "Partial"\r
+modifiers: "Suppression"\r
 value: 2500\r
 currency: "ERC"\r
 weight: 3\r
@@ -13824,7 +13827,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, power: 3, intuition: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Bow.\\n- This character is capable of performing the basic tasks of maintaining a Bow without a skill check."\r
+effect: "- This character can use and maintain a Bow without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Bow.\\n- Rank *1 added to Attack Rolls using a Bow."\r
+modifiers: "Attack Rolls +1 per Rank (Bow)"\r
 `,Qk=`id: wielder-crossbow\r
 name: "Wield: Crossbow"\r
 status: draft\r
@@ -13836,7 +13840,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 2, power: 2, intuition: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Crossbow.\\n- This character is capable of performing the basic tasks of maintaining a Crossbow without a skill check."\r
+effect: "- This character can use and maintain a Crossbow without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Crossbow.\\n- Rank *1 added to Attack Rolls using a Crossbow."\r
+modifiers: "Attack Rolls +1 per Rank (Crossbow)"\r
 `,$k=`id: wielder-dagger\r
 name: "Wield: Dagger"\r
 status: draft\r
@@ -13848,7 +13853,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Dagger.\\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check."\r
+effect: "- This character can use and maintain a Dagger without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Dagger.\\n- Rank *1 added to Attack Rolls using a Dagger."\r
+modifiers: "Attack Rolls +1 per Rank (Dagger)"\r
 `,eA=`id: wielder-flamethrower\r
 name: "Wield: Flamethrower"\r
 status: draft\r
@@ -13860,7 +13866,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { endurance: 3, power: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Flamethrower.\\n- This character is capable of performing the basic tasks of maintaining a Flamethrower without a skill check."\r
+effect: "- This character can use and maintain a Flamethrower without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Flamethrower.\\n- Rank *1 added to Attack Rolls using a Flamethrower."\r
+modifiers: "Attack Rolls +1 per Rank (Flamethrower)"\r
 `,tA=`id: wielder-greatsword\r
 name: "Wield: Greatsword"\r
 status: draft\r
@@ -13872,7 +13879,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 5, grace: 3, demeanor: 4 }\r
-effect: "- Rank *5 added to skill check rolls involving a Greatsword.\\n- This character is capable of performing the basic tasks of maintaining a Greatsword without a skill check."\r
+effect: "- This character can use and maintain a Greatsword without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Greatsword.\\n- Rank *1 added to Attack Rolls using a Greatsword."\r
+modifiers: "Attack Rolls +1 per Rank (Greatsword)"\r
 `,nA=`id: wielder-grenade\r
 name: "Wield: Grenade"\r
 status: draft\r
@@ -13884,7 +13892,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 2, intuition: 3, power: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Grenade.\\n- This character is capable of performing the basic tasks of maintaining a Grenade without a skill check."\r
+effect: "- This character can use and maintain a Grenade without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Grenade.\\n- Rank *1 added to Attack Rolls using a Grenade."\r
+modifiers: "Attack Rolls +1 per Rank (Grenade)"\r
 `,rA=`id: wielder-longsword\r
 name: "Wield: Longsword"\r
 status: draft\r
@@ -13896,7 +13905,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 4, power: 4, memory: 4 }\r
-effect: "- Rank *5 added to skill check rolls involving a Longsword.\\n- This character is capable of performing the basic tasks of maintaining a Longsword without a skill check."\r
+effect: "- This character can use and maintain a Longsword without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Longsword.\\n- Rank *1 added to Attack Rolls using a Longsword."\r
+modifiers: "Attack Rolls +1 per Rank (Longsword)"\r
 `,iA=`id: wielder-mace\r
 name: "Wield: Mace"\r
 status: draft\r
@@ -13908,7 +13918,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 4, endurance: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Mace.\\n- This character is capable of performing the basic tasks of maintaining a Mace without a skill check."\r
+effect: "- This character can use and maintain a Mace without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Mace.\\n- Rank *1 added to Attack Rolls using a Mace."\r
+modifiers: "Attack Rolls +1 per Rank (Mace)"\r
 `,aA=`id: wielder-machine-gun\r
 name: "Wield: Machine Gun"\r
 status: draft\r
@@ -13920,7 +13931,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 3, endurance: 3, logic: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Machine Gun.\\n- This character is capable of performing the basic tasks of maintaining a Machine Gun without a skill check."\r
+effect: "- This character can use and maintain a Machine Gun without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Machine Gun.\\n- Rank *1 added to Attack Rolls using a Machine Gun."\r
+modifiers: "Attack Rolls +1 per Rank (Machine Gun)"\r
 `,oA=`id: wielder-missile-launcher\r
 name: "Wield: Missile Launcher"\r
 status: draft\r
@@ -13932,7 +13944,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { intuition: 3, logic: 2, endurance: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Missile Launcher.\\n- This character is capable of performing the basic tasks of maintaining a Missile Launcher without a skill check."\r
+effect: "- This character can use and maintain a Missile Launcher without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Missile Launcher.\\n- Rank *1 added to Attack Rolls using a Missile Launcher."\r
+modifiers: "Attack Rolls +1 per Rank (Missile Launcher)"\r
 `,sA=`id: wielder-mortar\r
 name: "Wield: Mortar"\r
 status: draft\r
@@ -13944,7 +13957,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { logic: 3, intuition: 3, endurance: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Mortar.\\n- This character is capable of performing the basic tasks of maintaining a Mortar without a skill check."\r
+effect: "- This character can use and maintain a Mortar without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Mortar.\\n- Rank *1 added to Attack Rolls using a Mortar."\r
+modifiers: "Attack Rolls +1 per Rank (Mortar)"\r
 `,cA=`id: wielder-musket\r
 name: "Wield: Musket"\r
 status: draft\r
@@ -13956,7 +13970,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, power: 2, intuition: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Musket.\\n- This character is capable of performing the basic tasks of maintaining a Musket without a skill check."\r
+effect: "- This character can use and maintain a Musket without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Musket.\\n- Rank *1 added to Attack Rolls using a Musket."\r
+modifiers: "Attack Rolls +1 per Rank (Musket)"\r
 `,lA=`id: wielder-pistol\r
 name: "Wield: Pistol"\r
 status: draft\r
@@ -13968,7 +13983,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Pistol.\\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check."\r
+effect: "- This character can use and maintain a Pistol without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Pistol.\\n- Rank *1 added to Attack Rolls using a Pistol."\r
+modifiers: "Attack Rolls +1 per Rank (Pistol)"\r
 `,uA=`id: wielder-polearm\r
 name: "Wield: Polearm"\r
 status: draft\r
@@ -13980,7 +13996,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 4, grace: 3, empathy: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Polearm.\\n- This character is capable of performing the basic tasks of maintaining a Polearm without a skill check."\r
+effect: "- This character can use and maintain a Polearm without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Polearm.\\n- Rank *1 added to Attack Rolls using a Polearm."\r
+modifiers: "Attack Rolls +1 per Rank (Polearm)"\r
 `,dA=`id: wielder-rifle\r
 name: "Wield: Rifle"\r
 status: draft\r
@@ -13992,7 +14009,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Rifle without a skill check."\r
+effect: "- This character can use and maintain a Rifle without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Rifle.\\n- Rank *1 added to Attack Rolls using a Rifle."\r
+modifiers: "Attack Rolls +1 per Rank (Rifle)"\r
 `,fA=`id: wielder-shortsword\r
 name: "Wield: Shortsword"\r
 status: draft\r
@@ -14004,7 +14022,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, power: 2, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Shortsword.\\n- This character is capable of performing the basic tasks of maintaining a Shortsword without a skill check."\r
+effect: "- This character can use and maintain a Shortsword without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Shortsword.\\n- Rank *1 added to Attack Rolls using a Shortsword."\r
+modifiers: "Attack Rolls +1 per Rank (Shortsword)"\r
 `,pA=`id: wielder-shotgun\r
 name: "Wield: Shotgun"\r
 status: draft\r
@@ -14016,7 +14035,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 2, power: 3, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Shotgun.\\n- This character is capable of performing the basic tasks of maintaining a Shotgun without a skill check."\r
+effect: "- This character can use and maintain a Shotgun without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Shotgun.\\n- Rank *1 added to Attack Rolls using a Shotgun."\r
+modifiers: "Attack Rolls +1 per Rank (Shotgun)"\r
 `,mA=`id: wielder-siege-engine\r
 name: "Wield: Siege Engine"\r
 status: draft\r
@@ -14028,7 +14048,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { logic: 3, intuition: 3, power: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Siege Engine.\\n- This character is capable of performing the basic tasks of maintaining a Siege Engine without a skill check."\r
+effect: "- This character can use and maintain a Siege Engine without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Siege Engine.\\n- Rank *1 added to Attack Rolls using a Siege Engine."\r
+modifiers: "Attack Rolls +1 per Rank (Siege Engine)"\r
 `,hA=`id: wielder-sling\r
 name: "Wield: Sling"\r
 status: draft\r
@@ -14040,7 +14061,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a Sling.\\n- This character is capable of performing the basic tasks of maintaining a Sling without a skill check."\r
+effect: "- This character can use and maintain a Sling without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Sling.\\n- Rank *1 added to Attack Rolls using a Sling."\r
+modifiers: "Attack Rolls +1 per Rank (Sling)"\r
 `,gA=`id: wielder-sniper-rifle\r
 name: "Wield: Sniper Rifle"\r
 status: draft\r
@@ -14052,7 +14074,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { intuition: 5, grace: 3, endurance: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Sniper Rifle.\\n- This character is capable of performing the basic tasks of maintaining a Sniper Rifle without a skill check."\r
+effect: "- This character can use and maintain a Sniper Rifle without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Sniper Rifle.\\n- Rank *1 added to Attack Rolls using a Sniper Rifle."\r
+modifiers: "Attack Rolls +1 per Rank (Sniper Rifle)"\r
 `,_A=`id: wielder-spear\r
 name: "Wield: Spear"\r
 status: draft\r
@@ -14064,7 +14087,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, power: 3, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Spear.\\n- This character is capable of performing the basic tasks of maintaining a Spear without a skill check."\r
+effect: "- This character can use and maintain a Spear without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Spear.\\n- Rank *1 added to Attack Rolls using a Spear."\r
+modifiers: "Attack Rolls +1 per Rank (Spear)"\r
 `,vA=`id: wielder-staff\r
 name: "Wield: Staff"\r
 status: draft\r
@@ -14076,7 +14100,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, endurance: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Staff.\\n- This character is capable of performing the basic tasks of maintaining a Staff without a skill check."\r
+effect: "- This character can use and maintain a Staff without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Staff.\\n- Rank *1 added to Attack Rolls using a Staff."\r
+modifiers: "Attack Rolls +1 per Rank (Staff)"\r
 `,yA=`id: wielder-stun-baton\r
 name: "Wield: Stun Baton"\r
 status: draft\r
@@ -14088,7 +14113,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 2, grace: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Stun Baton.\\n- This character is capable of performing the basic tasks of maintaining a Stun Baton without a skill check."\r
+effect: "- This character can use and maintain a Stun Baton without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Stun Baton.\\n- Rank *1 added to Attack Rolls using a Stun Baton."\r
+modifiers: "Attack Rolls +1 per Rank (Stun Baton)"\r
 `,bA=`id: wielder-taser\r
 name: "Wield: Taser"\r
 status: draft\r
@@ -14100,7 +14126,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Taser.\\n- This character is capable of performing the basic tasks of maintaining a Taser without a skill check."\r
+effect: "- This character can use and maintain a Taser without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Taser.\\n- Rank *1 added to Attack Rolls using a Taser."\r
+modifiers: "Attack Rolls +1 per Rank (Taser)"\r
 `,xA=`id: wielder-throwing-weapon\r
 name: "Wield: Throwing Weapon"\r
 status: draft\r
@@ -14112,7 +14139,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { grace: 3, intuition: 3, power: 2 }\r
-effect: "- Rank *5 added to skill check rolls involving a Throwing Weapon.\\n- This character is capable of performing the basic tasks of maintaining a Throwing Weapon without a skill check."\r
+effect: "- This character can use and maintain a Throwing Weapon without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a Throwing Weapon.\\n- Rank *1 added to Attack Rolls using a Throwing Weapon."\r
+modifiers: "Attack Rolls +1 per Rank (Throwing Weapon)"\r
 `,SA=`id: wielder-war-axe\r
 name: "Wield: War Axe"\r
 status: draft\r
@@ -14124,7 +14152,8 @@ category: skill\r
 list: wield\r
 ranked: true\r
 minStats: { power: 5, endurance: 4, demeanor: 3 }\r
-effect: "- Rank *5 added to skill check rolls involving a War Axe.\\n- This character is capable of performing the basic tasks of maintaining a War Axe without a skill check."\r
+effect: "- This character can use and maintain a War Axe without a Skill Check.\\n- Rank *5 added to Skill Check rolls involving a War Axe.\\n- Rank *1 added to Attack Rolls using a War Axe."\r
+modifiers: "Attack Rolls +1 per Rank (War Axe)"\r
 `,CA=`id: wrangler\r
 name: "Wrangler"\r
 status: draft\r

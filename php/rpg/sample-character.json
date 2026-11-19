@@ -220,7 +220,7 @@
 			"category": "Skill",
 			"plane": "any",
 			"summary": "Fighting with, and maintaining, daggers and knives.",
-			"effect": "- Rank *5 added to skill check rolls involving a Dagger.\n- This character is capable of performing the basic tasks of maintaining a Dagger without a skill check.",
+			"effect": "- This character can use and maintain a Dagger without a Skill Check.\n- Rank *5 added to Skill Check rolls involving a Dagger.\n- Rank *1 added to Attack Rolls using a Dagger.",
 			"badges": [
 				"Profession",
 				"Past"
@@ -293,7 +293,7 @@
 			"category": "Skill",
 			"plane": "any",
 			"summary": "Fighting with, and maintaining, a pistol.",
-			"effect": "- Rank *5 added to skill check rolls involving a Pistol.\n- This character is capable of performing the basic tasks of maintaining a Pistol without a skill check.",
+			"effect": "- This character can use and maintain a Pistol without a Skill Check.\n- Rank *5 added to Skill Check rolls involving a Pistol.\n- Rank *1 added to Attack Rolls using a Pistol.",
 			"badges": [],
 			"from": "universal pick"
 		},
