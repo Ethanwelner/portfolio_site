@@ -8,6 +8,10 @@
 // Monsters are built from Physical only.
 require_once __DIR__ . '/components/npc-sheet.php';
 
+// The component library (rpg-components.php) shows these same sheets open;
+// the Monsters tab, which lists several, starts them closed.
+$sf_encounters_fold = $sf_encounters_fold ?? 'closed';
+
 $sf_wield = function ( $weapon, $rank ) {
 	return array(
 		'kind'   => 'skill',
@@ -60,7 +64,7 @@ sf_npc_sheet(
 			),
 		),
 	),
-	array( 'fold' => 'closed' )
+	array( 'fold' => $sf_encounters_fold )
 );
 
 sf_npc_sheet(
@@ -101,7 +105,7 @@ sf_npc_sheet(
 			),
 		),
 	),
-	array( 'fold' => 'closed' )
+	array( 'fold' => $sf_encounters_fold )
 );
 
 sf_npc_sheet(
@@ -176,5 +180,5 @@ sf_npc_sheet(
 			),
 		),
 	),
-	array( 'fold' => 'closed' )
+	array( 'fold' => $sf_encounters_fold )
 );
