@@ -316,7 +316,7 @@
                                             </div>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
-                                            <p class="copy mb-0">Content coming soon</p>
+                                            <div class="content-stack"><?php include 'php/rpg/encounters.php'; ?></div>
                                         </div>
                                     </div>
                                 </div>

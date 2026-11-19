@@ -376,6 +376,7 @@ $sf_used_in = array(
 	),
 	'npc'        => array(
 		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry',
+		'php/rpg/encounters.php: the Bandit, Skeleton and Dreftian Mercenary, in the Adventures section’s Monsters tab (closed)',
 	),
 	'sheet'      => array(
 		'php/rpg/rpg-character.php: the sample sheet (sample)',
@@ -848,6 +849,8 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 					<?php $sf_theme_toggle(); ?>
 					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
 					<?php include 'php/rpg/lore/murk-legs.php'; ?>
+					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters: Bandit, Skeleton and Dreftian Mercenary, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
+					<?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?>
 					<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
 					<?php
 					sf_npc_sheet(

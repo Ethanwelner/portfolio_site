@@ -9,6 +9,12 @@
    It carries its own colors, so it looks the same in a lore entry, a popup
    or a light section. */
 
+/* Sheets listed one after another, like the encounters in the component
+   library, get the same room as a content-stack */
+:not(.content-stack) > .sf-npc + .sf-npc {
+	margin-top: 48px;
+}
+
 .sf-npc {
     --npc-frame: var(--panel-box, var(--sf-gray-600));
     --npc-box: var(--panel, var(--sf-gray-700));
