@@ -1199,7 +1199,7 @@ summary: "Armored gloves with hydraulic strikers across the knuckles."\r
 tags: [martial arts, punch, exotic]\r
 type: equipment\r
 category: gear\r
-modifiers: "Punches deal +3 Blunt damage and have Breach 1"\r
+modifiers: "Punches deal +3 Blunt damage and have (Breach: 1)"\r
 slot: "Gloves"\r
 value: 6000\r
 currency: "ERC"\r
@@ -1225,7 +1225,7 @@ category: weapon\r
 damage: "15 Blunt"\r
 attackType: "Melee"\r
 maxRange: "2 m"\r
-modifiers: "Breach 4"\r
+modifiers: "(Breach: 4)"\r
 value: 60000\r
 currency: "ERC"\r
 weight: 14\r
@@ -1563,7 +1563,7 @@ category: weapon\r
 damage: "10 Slashing / 9 Piercing"\r
 attackType: "Melee"\r
 maxRange: "1 m"\r
-modifiers: "Breach 3"\r
+modifiers: "(Breach: 3)"\r
 value: 15000\r
 currency: "ERC"\r
 weight: 1\r
@@ -1609,7 +1609,7 @@ category: weapon\r
 damage: "12 Piercing"\r
 attackType: "Melee"\r
 maxRange: "3 m"\r
-modifiers: "Breach 2"\r
+modifiers: "(Breach: 2)"\r
 value: 2500\r
 currency: "Luras"\r
 weight: 2\r
@@ -1707,7 +1707,7 @@ summary: "A magazine of armor-piercing rounds for a pistol, rifle, submachine gu
 tags: [ammunition, firearm]\r
 type: misc\r
 category: consumable\r
-modifiers: "Breach 3 (Pistol, Rifle, Submachine Gun, Machine Gun)"\r
+modifiers: "(Breach: 3) (Pistol, Rifle, Submachine Gun, Machine Gun)"\r
 uses: "uses 1: per reload"\r
 value: 400\r
 currency: "ERC"\r
@@ -2055,7 +2055,7 @@ damage: "14 Piercing"\r
 attackType: "Ranged"\r
 maxRange: "800 m"\r
 reload: "Partial"\r
-modifiers: "Breach 4"\r
+modifiers: "(Breach: 4)"\r
 value: 60000\r
 currency: "ERC"\r
 weight: 6\r
@@ -2714,7 +2714,7 @@ category: weapon\r
 damage: "13 Slashing"\r
 attackType: "Melee"\r
 maxRange: "2 m"\r
-modifiers: "Breach 2"\r
+modifiers: "(Breach: 2)"\r
 value: 25000\r
 currency: "ERC"\r
 weight: 3\r
@@ -5342,7 +5342,7 @@ backgroundKeywords: [close-combat]\r
 category: ability\r
 ranked: true\r
 minStats: { grace: 5, intuition: 4 }\r
-effect: "When this character makes a Melee Attack with a bladed weapon, they may spend up to 1 SP per Rank before rolling. The Attack has Breach 2 for each SP spent."\r
+effect: "When this character makes a Melee Attack with a bladed weapon, they may spend up to 1 SP per Rank before rolling. The Attack has (Breach: 2) for each SP spent."\r
 `,og=`id: fireball\r
 name: "Fireball"\r
 status: draft\r
@@ -6119,7 +6119,7 @@ category: ability\r
 ranked: true\r
 minStats: { intuition: 6, memory: 3 }\r
 prerequisites: [martial-artist]\r
-effect: "When this character makes an Attack with a natural weapon, they may spend up to 1 SP per Rank before rolling. The Attack has Breach 3 for each SP spent."\r
+effect: "When this character makes an Attack with a natural weapon, they may spend up to 1 SP per Rank before rolling. The Attack has (Breach: 3) for each SP spent."\r
 `,c_=`id: radiation-hardening\r
 name: "Radiation Hardening"\r
 status: draft\r
@@ -6372,7 +6372,7 @@ ranked: true\r
 minStats: { magic: 5, memory: 3 }\r
 prerequisites: [empower-spell]\r
 list: magic\r
-effect: "When this character uses a Cast: Action that makes an Attack, they may spend up to 1 extra MP per Rank. The spell has Breach 2 for each extra MP spent."\r
+effect: "When this character uses a Cast: Action that makes an Attack, they may spend up to 1 extra MP per Rank. The spell has (Breach: 2) for each extra MP spent."\r
 `,O_=`id: spider-climb\r
 name: "Spider Climb"\r
 status: draft\r
@@ -6595,7 +6595,7 @@ backgroundKeywords: [modern-ranged]\r
 category: ability\r
 ranked: true\r
 minStats: { logic: 5, memory: 3 }\r
-effect: "When this character makes a Ranged Attack with a firearm, they may spend up to 1 SP per Rank before rolling. The Attack has Breach 2 for each SP spent."\r
+effect: "When this character makes a Ranged Attack with a firearm, they may spend up to 1 SP per Rank before rolling. The Attack has (Breach: 2) for each SP spent."\r
 `,G_=`id: thunderclap\r
 name: "Thunderclap"\r
 status: placeholder\r
