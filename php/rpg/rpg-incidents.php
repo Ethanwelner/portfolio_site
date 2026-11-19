@@ -136,8 +136,9 @@
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Attack Rolls don’t add a Stat. A character’s Wield Skill for the weapon adds +1 per Rank.</mark></li>
 								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
+								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
+								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
 							</ul>
 							<p class="copy">
 								Attacks meeting or exceeding Defense are hits, and the result of the hit is measured by the hit’s Severity. Attack Severity determines effects in rules as well as the GM’s choices. Severity is based on how much the Attack exceeds the character's defensive value. Some offensive and defensive mechanics will trigger based on Attack Severity.
