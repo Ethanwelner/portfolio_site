@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/19/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Mechanics: Flanking, higher ground and attacking unseen no longer give +3 to Attack Rolls. The only stock bonus is firing from a significantly elevated position at a ranged target, +3 to hit, alongside Aim.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/18/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Mechanics: two new Attack keywords. Breach X ignores X of the target’s Resistance against each damage type, and an Attack that ignores X Defense is rolled as if the target’s Defense were X lower.</li>
