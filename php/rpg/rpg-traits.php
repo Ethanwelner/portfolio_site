@@ -329,8 +329,7 @@ Rank *5 added to Skill Check rolls involving riding a basic animal.',
                   	'class' => 'rules-new',
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Longsword without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Longsword.
-+3 per Rank to Attack Rolls made with a Longsword.',
+Rank *5 added to Skill Check rolls involving a Longsword.',
                   	'needs' => 'Grace 4, Power 4, Memory 4',
                   ) ); ?>
                   <?php sf_card_trait( array(
@@ -339,8 +338,7 @@ Rank *5 added to Skill Check rolls involving a Longsword.
                   	'class' => 'rules-new',
                   	'rank' => 1,
                   	'effect' => 'This character is capable of performing the basic tasks of using and maintaining a Musket without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Musket.
-+3 per Rank to Attack Rolls made with a Musket.',
+Rank *5 added to Skill Check rolls involving a Musket.',
                   	'needs' => 'Grace 3, Power 2, Intuition 3',
                   ) ); ?>
                   <?php sf_card_trait( array(
@@ -420,21 +418,21 @@ Rank *5 added to Skill Check rolls involving a Musket.
                   	'rank' => 1,
                   	'effect' => 'This character gains the Grapple Action.
 Rank *5 added to Skill Check rolls involving grappling or escaping a hold.',
-                  	'action' => 'Grapple: This character may make an Attack Roll with Power against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character\'s Grappler Rank for as long as this character keeps hold, and this character can\'t move while holding them.',
+                  	'action' => 'Grapple: This character may make an Attack Roll against a character within 1 m. On a hit, the target gains the Rooted Condition at a Rank equal to this character\'s Grappler Rank for as long as this character keeps hold, and this character can\'t move while holding them.',
                   	'needs' => 'Power 4, Endurance 3, Grace 2, Brawler',
                   ) ); ?>
                   <?php sf_card_trait( array(
                   	'kind' => 'ability',
                   	'name' => 'Takedown',
                   	'effect' => 'This character gains the Takedown Action.',
-                  	'action' => 'Takedown: This character may make an Attack Roll with Power or Grace against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition.',
+                  	'action' => 'Takedown: This character may make an Attack Roll against a character within 1 m. On a Solid Hit or better, the target gains the Prone Condition.',
                   	'needs' => 'Power 4, Grace 4, Grappler',
                   ) ); ?>
                   <?php sf_card_trait( array(
                   	'kind' => 'ability',
                   	'name' => 'Disarm',
                   	'effect' => 'This character gains the Disarm Action.',
-                  	'action' => 'Disarm: This character may make an Attack Roll with Grace against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet.',
+                  	'action' => 'Disarm: This character may make an Attack Roll against a character within 1 m who is holding a weapon. On a Solid Hit or better, the target drops the weapon at their feet.',
                   	'needs' => 'Grace 5, Intuition 3, Brawler',
                   ) ); ?>
                   <?php sf_card_trait( array(
