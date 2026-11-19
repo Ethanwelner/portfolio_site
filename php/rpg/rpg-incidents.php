@@ -139,7 +139,7 @@
 								<li><mark class="rules-new">Attack Rolls don’t add a Stat by default. A character’s Wield Skill for the weapon adds +3 per Rank instead. Some weapons, spells and abilities have their own rules that add a Stat, and they’ll list it.</mark></li>
 								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
 								<li><mark class="rules-new">Aim: As a Full RP Action, a character takes aim at a target they can see. Their first Ranged Attack against it next Round has Advantage.</mark></li>
-								<li><mark class="rules-new">Suppressing Fire: As a Full Action, a character with an automatic weapon, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack, and it can only Move to reach cover. It deals no damage, but it buys allies a Round to move or flank.</mark></li>
+								<li><mark class="rules-new">Suppressing Fire: As a Full Action, a character with an automatic weapon, like a Machine Gun or Submachine Gun, fires into an area 5 m across within range. Every character in it must succeed on a Demeanor check of 10 + 3 per Rank of the shooter’s Wield Skill or gain the Pinned Condition, and on its next Round it must take a Full Defend Action, keeping its head down: it can’t Attack or Move. It deals no damage, but it buys allies a Round to move or flank.</mark></li>
 								<li><mark class="rules-new">Several Conditions open a character up to Attacks: Flat-Footed (-3 Defense), Prone (-3 Defense against Melee, +3 against Ranged from beyond 10 m), Frightened and Slowed (-1 Defense per Rank), Restrained and Blinded (-6 Defense).</mark></li>
 								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
 								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
@@ -263,6 +263,7 @@
 									<li>Ranged Attacks against targets in Heavy Cover suffer a -6 penalty</li>
 								</ul>
 								</li>
+								<li><mark class="rules-new">Cover only protects against Attacks from the side it covers. An attacker flanking a character in Cover, attacking from well off to one side of it (more than 45° from the direction it faces), ignores that Cover.</mark></li>
 							</ul>
 						</div>
 					</div>
