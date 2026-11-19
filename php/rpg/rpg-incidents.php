@@ -140,7 +140,7 @@
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Attack Rolls don’t add a Stat, and Wield Skills don’t add to them either.</mark></li>
+								<li><mark class="rules-new">Attack Rolls don’t add a Stat. A character’s Wield Skill for the weapon adds +1 per Rank.</mark></li>
 								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
 							</ul>
 							<p class="copy">
