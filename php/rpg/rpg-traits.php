@@ -328,9 +328,9 @@ Rank *5 added to Skill Check rolls involving riding a basic animal.',
                   	'name' => 'Wield: Longsword',
                   	'class' => 'rules-new',
                   	'rank' => 1,
-                  	'effect' => 'This character can use and maintain a Longsword without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Longsword.
-Rank *1 added to Attack Rolls using a Longsword.',
+                  	'effect' => '- This character can use and maintain a Longsword without a Skill Check.
+- Rank *5 added to Skill Check rolls involving a Longsword.
+- Rank *1 added to Attack Rolls using a Longsword.',
                   	'needs' => 'Grace 4, Power 4, Memory 4',
                   ) ); ?>
                   <?php sf_card_trait( array(
@@ -338,9 +338,9 @@ Rank *1 added to Attack Rolls using a Longsword.',
                   	'name' => 'Wield: Musket',
                   	'class' => 'rules-new',
                   	'rank' => 1,
-                  	'effect' => 'This character can use and maintain a Musket without a Skill Check.
-Rank *5 added to Skill Check rolls involving a Musket.
-Rank *1 added to Attack Rolls using a Musket.',
+                  	'effect' => '- This character can use and maintain a Musket without a Skill Check.
+- Rank *5 added to Skill Check rolls involving a Musket.
+- Rank *1 added to Attack Rolls using a Musket.',
                   	'needs' => 'Grace 3, Power 2, Intuition 3',
                   ) ); ?>
                   <?php sf_card_trait( array(
