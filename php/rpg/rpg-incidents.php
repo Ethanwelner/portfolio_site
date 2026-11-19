@@ -203,6 +203,8 @@
 								<li>An Attack with a Spear is a Devastating Hit; the Spear’s 5 Piercing damage would combine with the Devastating Hit for 5+1 Piercing damage compared against the target's Resistances. The target is wearing chainmail, providing them with a Resistance of 1 against Piercing. The result of the Attack is that the target suffers 5 Piercing damage (5+1 - 1).</li>
 								<li>Attacks may do multiple types of damage, such as a fragmentation grenade doing 5 Blunt and 5 Piercing damage, representing both the shock of the explosion and its shrapnel. In cases where an Attack does multiple types of damage all are compared against the target's Resistances and are applied.</li>
 								<li>Some weapons list a choice of damage types, such as the Longsword’s 6 Slashing / 4 Piercing. When Attacking with one, the player must choose which type of damage the Attack deals.</li>
+								<li><mark class="rules-new">Some weapons, ammunition and abilities have Breach. An Attack with Breach 3 ignores 3 of the target’s Resistance against each of its damage types, down to 0.</mark></li>
+								<li><mark class="rules-new">Some abilities let an Attack ignore Defense. An Attack that ignores 3 Defense is rolled as if the target’s Defense were 3 lower, or whatever the Attack is made against instead, like a Mental Stat. It doesn’t change Cover penalties.</mark></li>
 							</ul>
 						</div>
 					</div>
