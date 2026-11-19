@@ -108,10 +108,10 @@ function sf_equipment_card($name, $category, $plane, $description, $value, $curr
 function sf_example_items() {
 	return [
 		'Weapons' => [
-			['Longsword', 'Weapon', 'Any', 'A long, straight sword wielded in one or two hands.', 600, 'ERC', '6 Slashing / 4 Piercing'],
-			['Crossbow', 'Weapon', 'Any', 'A bow mounted on a stock, slow to load but easy to aim.', 500, 'ERC', '5 Piercing'],
-			['Rifle', 'Weapon', 'Earth', 'A modern rifle, the standard arm of soldiers across the Settled Systems.', 1200, 'ERC', '7 Piercing'],
-			['Missile Launcher', 'Weapon', 'Earth', 'A shoulder-fired tube for rockets and guided missiles.', 25000, 'ERC', '5 Blunt, 5 Heat'],
+			['Longsword', 'Weapon', 'Any', 'A long, straight sword wielded in one or two hands.', 600, 'ERC', '10 Slashing / 8 Piercing'],
+			['Crossbow', 'Weapon', 'Any', 'A bow mounted on a stock, slow to load but easy to aim.', 500, 'ERC', '9 Piercing'],
+			['Rifle', 'Weapon', 'Earth', 'A modern rifle, the standard arm of soldiers across the Settled Systems.', 1200, 'ERC', '11 Piercing'],
+			['Missile Launcher', 'Weapon', 'Earth', 'A shoulder-fired tube for rockets and guided missiles.', 25000, 'ERC', '9 Blunt, 5 Heat'],
 		],
 		'Wearables' => [
 			['Chainmail', 'Wearable', 'Any', 'A shirt of interlocking iron rings.', 1200, 'ERC', '', '1 Blunt, 3 Slashing, 1 Piercing'],
@@ -141,7 +141,7 @@ function sf_item_type_examples() {
 	return [
 		'Wearables' => ['Power Armor', 'Wearable', 'Earth', 'A powered, sealed suit of heavy armor plates, worn like a small vehicle.', 250000, 'ERC', '', '6 Blunt, 6 Slashing, 6 Piercing, 2 Heat, 2 Cold, 2 Radiation'],
 		'Equipment' => ['Grappling Hook', 'Equipment', 'Any', 'A folding hook for catching ledges and walls.', 50, 'ERC'],
-		'Weapons' => ['Longbow', 'Weapon', 'Any', 'A tall bow with a heavy draw and a long reach.', 400, 'ERC', '4 Piercing'],
+		'Weapons' => ['Longbow', 'Weapon', 'Any', 'A tall bow with a heavy draw and a long reach.', 400, 'ERC', '8 Piercing'],
 		'Structures' => ['Tent', 'Structure', 'Any', 'A canvas or synthetic tent for two.', 200, 'ERC'],
 		'Vehicles' => ['Rowboat', 'Vehicle', 'Any', 'A small wooden boat with oars. Occupants: 4.', 1500, 'ERC'],
 		'Animals, Robots, and Animal-like NPCs' => ['Pack Animal', 'Animal', 'Any', 'A sturdy animal for carrying loads or pulling a cart.', 2500, 'ERC'],
