@@ -2338,3 +2338,7 @@ mark.rules-new {
 .sf-card.rules-new {
 	box-shadow: 0 0 0 3px #e6ff00;
 }
+tr.rules-new td {
+	background: #e6ff00;
+	color: #111;
+}
