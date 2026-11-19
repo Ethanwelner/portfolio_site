@@ -258,7 +258,6 @@
 									<li>Ranged Attacks against targets in Heavy Cover suffer a -6 penalty</li>
 								</ul>
 								</li>
-								<li><mark class="rules-new">Cover only protects against Attacks from the side it covers. An attacker flanking a character in Cover, attacking from well off to one side of it (more than 45° from the direction it faces), ignores that Cover.</mark></li>
 							</ul>
 							</div>
 							<div class="content-stack content-stack-xs">
