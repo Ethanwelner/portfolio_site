@@ -219,7 +219,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								<mark class="rules-new">A conscious character’s base Defense is 10. Physical core Stat points no longer add to it.</mark> It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
+								<mark class="rules-new">A conscious character’s base Defense is 10.</mark> It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
 								<br><br>
 								A character that has elected to take a Defend Action gains +3 to their Defense for the Round. Items, Traits, or other mechanics may trigger when a character elects to Defend. For example, a character with a Wooden Shield would gain an additional +4 Defense while Defending.
 							</p>
