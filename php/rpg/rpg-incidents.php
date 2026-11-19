@@ -136,7 +136,6 @@
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
 								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
 								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
 							</ul>
@@ -150,10 +149,10 @@
 									<tr><th>Roll</th><th>Severity</th><th>Result</th></tr>
 								</thead>
 								<tbody>
-									<tr class="rules-new"><td>+0 to +2</td><td>Glancing Blow</td><td>-1 damage to the Attack</td></tr>
-									<tr class="rules-new"><td>+3 to +5</td><td>Solid Hit</td><td>Attack damages as normal</td></tr>
-									<tr class="rules-new"><td>+6 to +8</td><td>Devastating Hit</td><td>+1 damage to the Attack</td></tr>
-									<tr class="rules-new"><td>+9 or higher</td><td>Critical Hit</td><td>+3 damage to the Attack</td></tr>
+									<tr><td>+0 to +2</td><td>Glancing Blow</td><td>-1 damage to the Attack</td></tr>
+									<tr><td>+3 to +5</td><td>Solid Hit</td><td>Attack damages as normal</td></tr>
+									<tr><td>+6 to +8</td><td>Devastating Hit</td><td>+1 damage to the Attack</td></tr>
+									<tr><td>+9 or higher</td><td>Critical Hit</td><td>+3 damage to the Attack</td></tr>
 								</tbody>
 							</table>
 							<p class="copy">
@@ -166,10 +165,10 @@
 									<tr><th>Roll</th><th>Severity</th><th>Result</th></tr>
 								</thead>
 								<tbody>
-									<tr class="rules-new"><td>-1 to -3</td><td>Deflected</td><td>—</td></tr>
-									<tr class="rules-new"><td>-4 to -6</td><td>Near Miss</td><td>—</td></tr>
-									<tr class="rules-new"><td>-7 to -9</td><td>Overextended</td><td>—</td></tr>
-									<tr class="rules-new"><td>-10 or lower</td><td>Critical Failure</td><td>Character gains the Flat-Footed Condition the following combat Round</td></tr>
+									<tr><td>-1 to -3</td><td>Deflected</td><td>—</td></tr>
+									<tr><td>-4 to -6</td><td>Near Miss</td><td>—</td></tr>
+									<tr><td>-7 to -9</td><td>Overextended</td><td>—</td></tr>
+									<tr><td>-10 or lower</td><td>Critical Failure</td><td>Character gains the Flat-Footed Condition the following combat Round</td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -203,8 +202,7 @@
 								<li>An Attack with a Spear is a Devastating Hit; the Spear’s 7 Piercing damage would combine with the Devastating Hit for 7+1 Piercing damage compared against the target's Resistances. The target is wearing chainmail, providing them with a Resistance of 1 against Piercing. The result of the Attack is that the target suffers 7 Piercing damage (7+1 - 1).</li>
 								<li>Attacks may do multiple types of damage, such as a fragmentation grenade doing 7 Blunt and 5 Piercing damage, representing both the shock of the explosion and its shrapnel. In cases where an Attack does multiple types of damage all are compared against the target's Resistances and are applied.</li>
 								<li>Some weapons list a choice of damage types, such as the Longsword’s 8 Slashing / 6 Piercing. When Attacking with one, the player must choose which type of damage the Attack deals.</li>
-								<li><mark class="rules-new">Some weapons, ammunition and abilities have Breach. An Attack with Breach 3 ignores 3 of the target’s Resistance against each of its damage types, down to 0.</mark></li>
-								<li><mark class="rules-new">Some abilities let an Attack ignore Defense. An Attack that ignores 3 Defense is rolled as if the target’s Defense were 3 lower, or whatever the Attack is made against instead, like a Mental Stat. It doesn’t change Cover penalties.</mark></li>
+								<li>Some abilities will cause an Attack to roll against a number other than the target’s Defense. In these cases the target does not benefit from effects that are increasing its Defense.</li>
 							</ul>
 						</div>
 					</div>
@@ -220,7 +218,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">
-								<mark class="rules-new">A conscious character’s base Defense is 10.</mark> It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
+								A conscious character able to defend themselves has a base Defense of 10. It can be modified a little by Equipment, Conditions, cover, or Abilities. The Defenses of an unconscious or otherwise defenseless character are 0. It is at GM discretion when and where a character without the Conditions of Unconscious or Defenseless may be considered defenseless, such as when they are attacked by surprise or are performing a task which requires all their concentration.
 								<br><br>
 								A character that has elected to take a Defend Action gains +3 to their Defense for the Round. Items, Traits, or other mechanics may trigger when a character elects to Defend. For example, a character with a Wooden Shield would gain an additional +4 Defense while Defending.
 							</p>
@@ -242,10 +240,11 @@
 							<ul class="copy">
 								<li>An Attack Action attempting an Attack against a target outside of a Melee weapon's Max Range is considered a failure, and does not occur.</li>
 							</ul>
-							<p class="copy">A Ranged weapon can be used on any target up to its Maximum Range, but suffers penalties based on its or its target's circumstances.</p>
+							<p class="copy">A Ranged weapon can be used on any target up to its Maximum Range, but may have its roll modified based on the character’s or the target’s circumstances.</p>
 							<ul class="copy">
 								<li>Ranged weapons suffer a -2 penalty to their Hit Roll when Attacking a target outside of half their Max Range.</li>
 								<li>A Ranged weapon Attack made while within the Attack range of a hostile character or NPC’s Melee weapon suffers a -3 penalty to hit.</li>
+								<li>A character firing from a significantly elevated position at a ranged target gains a +3 bonus to hit.</li>
 							</ul>
 							<p class="copy">If a character or NPC is partially obscured behind an object, be it a wall, rock, or vehicle, they are considered to be in Cover. Characters are assumed to use any available Cover unless they say otherwise. There are two types of Cover, Light Cover and Heavy Cover. The GM determines what kind of Cover is being conveyed, but Cover may be affected by other game mechanics.</p>
 							<ul class="copy">
