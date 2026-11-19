@@ -136,7 +136,6 @@
 							</ul>
 							<p class="copy">Attacks must be made using a weapon. A character or NPC without access to a weapon cannot Attack.</p>
 							<ul class="copy">
-								<li><mark class="rules-new">Each of these gives Advantage on an Attack, +3 apiece: Flanking, when another of the attacker’s allies can reach the target in Melee from a different side; Higher ground, when the attacker is well above the target; Unseen, when the target can’t see or detect the attacker; and Aiming (below).</mark></li>
 								<li>Traits may allow a character or NPC to select a Stat to benefit an Attack.</li>
 								<li>In situations where multiple rules allow a character to add a Stat to their roll they do not stack, and the character only gains the Stat bonus once for the Attack.</li>
 							</ul>
@@ -242,10 +241,11 @@
 							<ul class="copy">
 								<li>An Attack Action attempting an Attack against a target outside of a Melee weapon's Max Range is considered a failure, and does not occur.</li>
 							</ul>
-							<p class="copy">A Ranged weapon can be used on any target up to its Maximum Range, but suffers penalties based on its or its target's circumstances.</p>
+							<p class="copy">A Ranged weapon can be used on any target up to its Maximum Range, but may have its roll modified based on the character’s or the target’s circumstances.</p>
 							<ul class="copy">
 								<li>Ranged weapons suffer a -2 penalty to their Hit Roll when Attacking a target outside of half their Max Range.</li>
 								<li>A Ranged weapon Attack made while within the Attack range of a hostile character or NPC’s Melee weapon suffers a -3 penalty to hit.</li>
+								<li>A character firing from a significantly elevated position at a ranged target gains a +3 bonus to hit.</li>
 							</ul>
 							<p class="copy">If a character or NPC is partially obscured behind an object, be it a wall, rock, or vehicle, they are considered to be in Cover. Characters are assumed to use any available Cover unless they say otherwise. There are two types of Cover, Light Cover and Heavy Cover. The GM determines what kind of Cover is being conveyed, but Cover may be affected by other game mechanics.</p>
 							<ul class="copy">
