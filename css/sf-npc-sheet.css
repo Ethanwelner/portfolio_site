@@ -11,8 +11,21 @@
 
 /* Sheets listed one after another, like the encounters in the component
    library, get the same room as a content-stack */
-:not(.content-stack) > .sf-npc + .sf-npc {
+:not(.content-stack, .sf-npc-grid) > .sf-npc + .sf-npc {
 	margin-top: 48px;
+}
+
+/* Sheets in half-width columns: two across, the same gaps as split-cols
+   (css/rpg.css), one column at 959px and below */
+.sf-npc-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	align-items: start;
+	gap: 48px 40px;
+
+	@media (max-width: 959px) {
+		grid-template-columns: minmax(0, 1fr);
+	}
 }
 
 .sf-npc {
@@ -333,6 +346,22 @@
     }
 }
 
+/* A half-width sheet (under 640px, as in .sf-npc-grid): the groups in
+   equal columns at least 200px wide, two across rather than one per row,
+   the trackers' value a little narrower so two fit; one column on a
+   phone */
+@container npc (max-width: 640px) {
+    .sf-npc-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+        gap: 16px 20px;
+    }
+
+    .sf-npc-resource {
+        grid-template-columns: 2.25ch auto 4.5em auto auto;
+    }
+}
+
 .sf-npc-resource--hp { --resource-color: var(--sf-red-500); }
 .sf-npc-resource--vp { --resource-color: var(--sf-purple-500); }
 .sf-npc-resource--sp { --resource-color: var(--sf-yellow-400); }
@@ -405,6 +434,15 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/* A scrolling list (the character sheet's .sf-sheet-scroll): room for the
+   Item cards' count circles, hanging 13px past their left edge, and for
+   Condition cards' headers, which a scrolling list would clip; the margins
+   give the room back so nothing moves */
+.sf-npc-cards.sf-sheet-scroll {
+    padding: 2px 14px;
+    margin: -2px -14px;
 }
 
 /* An Item's count, centered on its card's top line. The cards' 14.15px

@@ -92,12 +92,14 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		return array_merge( $resources, $npc['resources'] ?? array() );
 	}
 
-	// A box of cards under its ruled title
-	function sf_npc_cards( $title, $cards, $draw ) {
+	// A box of cards under its ruled title. $scroll is the character sheet's
+	// long-list class (css/sf-sheet.css): the list stops at 60vh (Items at
+	// min(60vh, 640px), as on the sheet) and scrolls inside its box.
+	function sf_npc_cards( $title, $cards, $draw, $scroll = 'sf-sheet-scroll' ) {
 		if ( empty( $cards ) ) {
 			return;
 		}
-		echo '<div class="sf-npc-box"><h6 class="sf-npc-title">' . $title . '</h6><ul class="sf-npc-cards">';
+		echo '<div class="sf-npc-box"><h6 class="sf-npc-title">' . $title . '</h6><ul class="sf-npc-cards ' . $scroll . '">';
 		foreach ( $cards as $card ) {
 			echo '<li>';
 			$draw( $card );
@@ -198,7 +200,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		};
 		sf_npc_cards( 'Items', array_merge( $npc['attacks'] ?? array(), $npc['items'] ?? array() ), function ( $i ) use ( $with_fold ) {
 			sf_card_item( $with_fold( $i ) );
-		} );
+		}, 'sf-sheet-scroll sf-sheet-scroll--short' );
 		sf_npc_cards( 'Traits', $npc['traits'] ?? array(), function ( $t ) use ( $with_fold ) {
 			sf_card_trait( $with_fold( $t ) );
 		} );

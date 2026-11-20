@@ -99,6 +99,8 @@ function sf_equipment_card($name, $category, $plane, $description, $value, $curr
 		'damage'      => $damage,
 		'resistances' => $resistances,
 		'ranged'      => in_array($name, sf_ranged_items(), true),
+		// Every weapon says how it Attacks, as the creator's attackType does
+		'attack'      => '' === $damage ? '' : ( in_array($name, sf_ranged_items(), true) ? 'Ranged' : 'Melee' ),
 	]);
 }
 
