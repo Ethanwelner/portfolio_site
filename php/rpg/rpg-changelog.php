@@ -13,6 +13,7 @@
 						<li>Items: every weapon and natural weapon now says how it attacks, Melee Attack or Ranged Attack, and thrown weapons get a Thrown badge. Natural weapons, from Fists to Murk Legs’ claws, carry a Natural Weapon badge, and built-in weapons a Built-in badge, rather than saying so in their descriptions.</li>
 						<li>Character Creator: potions, flasks and oils show what they do as rules under the item, apart from their descriptions, which are flavor only. Acid, Explosive, Frost and Thunder Flasks say they work like Acid Spray, Fireball, Hoarfrost and Thunderclap.</li>
 						<li>Setting: Religions &amp; Philosophies gets its first new philosophies of 2230: Euhemerism, which reads every myth as a garbled memory of planar contact; Cyclical Creationism, the AI cult reborn among human supremacists; the Second Exodites, Christian explorers searching the planes for God; and Panpsychism, which takes the gate address as proof that thought underlies reality.</li>
+						<li>Setting: Theosophy joins the Major Religions, revived in 2126 by Bartholomew Kresh after The Gift shook trust in Western religious institutions, and now the third-largest faith in the Settled Systems.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
