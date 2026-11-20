@@ -742,7 +742,7 @@
 							<h5><strong>Major Religions</strong></h5>
 							<div class="line"></div>
 						</div>
-						<div class="content-stack content-stack-xs">
+						<div class="content-stack">
 							<div>
 								<h6 class="mb-2"><strong>Theosophy</strong></h6>
 								<div class="text-cols">
@@ -814,7 +814,7 @@
 							<h5><strong>New Philosophies and Religious Ideas in 2230</strong></h5>
 							<div class="line"></div>
 						</div>
-						<div class="content-stack content-stack-xs">
+						<div class="content-stack">
 							<div>
 								<h6 class="mb-2"><strong>Euhemerism (Everything is Trueism)</strong></h6>
 								<div class="text-cols">
