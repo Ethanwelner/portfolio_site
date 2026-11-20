@@ -705,6 +705,7 @@ tags: [social, clothing]\r
 type: wearable\r
 category: gear\r
 slot: "Clothing"\r
+resistances: "1 Cold"\r
 value: 800\r
 currency: "ERC"\r
 weight: 1.5\r
@@ -4847,18 +4848,19 @@ category: ability\r
 minStats: { grace: 3, endurance: 2 }\r
 effect: "This character gains the Bolt Action."\r
 action: "Bolt: This character takes Full Movement at +5 Priority for the Round. This character gains the Flat-Footed Condition the following Round."\r
-`,Ch=`id: boxing\r
-name: "Boxing"\r
-status: draft\r
-plane: any\r
-summary: "Trained fighting with the fists, in and out of the ring."\r
-tags: [combat, unarmed, boxing, sport]\r
-backgroundKeywords: [hand-to-hand, performance]\r
-category: ability\r
-ranked: true\r
-minStats: { power: 3, grace: 3, endurance: 3 }\r
-prerequisites: [brawler]\r
-effect: "- This character can Attack with the Haymaker and Uppercut natural weapons.\\n- Rank *5 added to Skill Check rolls involving boxing."\r
+`,Ch=`id: boxing
+name: "Boxing"
+status: draft
+plane: any
+summary: "Trained fighting with the fists, in and out of the ring."
+tags: [combat, unarmed, boxing, sport]
+backgroundKeywords: [hand-to-hand, performance]
+category: ability
+ranked: true
+minStats: { power: 3, grace: 3, endurance: 3 }
+prerequisites: [brawler]
+effect: "- This character can Attack with the Haymaker and Uppercut natural weapons.\\n- Rank *5 added to Skill Check rolls involving boxing.\\n- +3 to Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."
+modifiers: "Attack Rolls +3 (punches)"
 `,wh=`id: burden\r
 name: "Burden"\r
 status: placeholder\r
