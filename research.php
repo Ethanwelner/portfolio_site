@@ -77,7 +77,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-14">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Analytics and Personas</h3>
+					    	<h3 id="analytics-and-personas" class="sub-title mb-3">Analytics and Personas</h3>
 					    	<h3 class="copy stinger green mb-3">Interviews and Data </h3>
 					    	<div class="copy green-text mb-3"><b>
 					    		Google Analytics (GA4)<br/>
@@ -117,7 +117,7 @@
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Using Data to Improve Support Experiences</h3>
+					    	<h3 id="using-data-to-improve-support-experiences" class="sub-title mb-3">Using Data to Improve Support Experiences</h3>
 					    	<div class="copy stinger green mb-3">UX Supports Support</div>
 					    	<p class="copy">
 					    		In my time at Meazure Learning, I had the fortune to be able to overhaul the support documentation and chat support functions (Zendesk and Genesys, respectively). This was a highly data-driven endeavor that involved planning the information architecture of both portions of the support platform and then getting gritty and rewriting articles and chat replies, redesigning layouts, and reconstructing an AI chatbot's call and response structure. All in service of getting users to the answers they need with a minimum of fuss.
@@ -138,7 +138,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-14">
 				    	<div>
-					    	<h3 class="sub-title mb-3">User Guides, Tutorials, and Surveys</h3>
+					    	<h3 id="user-guides-tutorials-and-surveys" class="sub-title mb-3">User Guides, Tutorials, and Surveys</h3>
 					    	<div class="copy stinger green mb-3">Tools for Understanding and Supporting Users</div>
 					    	<p class="copy">
 					    		While at QuantHub, I used Pendo to better understand how users interacted with our products and provide support directly within the experience. I tracked product usage to identify areas of confusion or friction, created contextual user guides and tutorials to help users navigate those areas, and deployed surveys to gather feedback directly from users. Together, these tools gave me a way to combine behavioral data and user feedback to identify opportunities for improving both the product and the support experience.
@@ -173,7 +173,7 @@
 				    <div class="d-inline-flex flex-1 align-items-center "></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Building Documentation to Support Research and Disseminate Information</h3>
+					    	<h3 id="building-documentation-to-support-research-and-disseminate-information" class="sub-title mb-3">Building Documentation to Support Research and Disseminate Information</h3>
 					    	<div class="copy stinger green mb-3">Knowledge Should Be Shared</div>
 					    	<p class="copy">
 					    		In my career I’ve often acted as the go-between for marketing, product, and design. I’ve written many instructional documents, standards docs, and fact-finding research docs.

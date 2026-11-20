@@ -2957,3 +2957,7 @@ a:hover svg.resume-svg {
         transform: translateY(-400px);
     }
 } 
+/* Project headings are link targets (e.g. uiux.php#simplifying-lti); leave room above them when jumped to. */
+h3.sub-title[id] {
+    scroll-margin-top: 2rem;
+}
