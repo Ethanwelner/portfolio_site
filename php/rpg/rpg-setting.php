@@ -744,6 +744,23 @@
 						</div>
 						<div class="content-stack content-stack-xs">
 							<div>
+								<h6 class="mb-2"><strong>Theosophy</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										Far removed from the occultist quackery of its 19th-century founding, modern Theosophy seeks to uncover the “Universal Religion” inherent to a multi-planar reality through the syncretic combination of historical and contemporary religious and philosophical beliefs while incorporating new theistic and philosophical concepts introduced through planar exploration. Theosophy has few fundamental dictums; at its baseline the faith posits the existence of a single divine absolute, and that reality as we know it is both an emanation and observation of this multitudinous, indescribable absolute. It further posits that the divine purpose of a human life is the emancipation of the soul from the karmic cycle of rebirth, and a reabsorption into this divine absolute. Drawing heavily from Western monotheistic and emanation philosophies, alongside Eastern ideas of rebirth, inner reflection, and spiritual liberation, the faith seeks to address the problems presented by the scientifically observable proof of realities beyond our own.
+									</p>
+									<p class="copy">
+										Theosophy was revived in 2126 by the firebrand orator and former Evangelical Christian media host Bartholomew Kresh, first as a cult of personality, but it quickly spread outward as trust in Western religious institutions began to collapse in the wake of <?php echo sf_lore_link('the-gift', 'The Gift'); ?>. The movement’s first convocation took place in Busan, Corea, in 2132, with an attendance of over 100,000. Kresh himself attended, and vigorously debated other religious leaders, philosophers, and scientists on the necessity of a “new religion” that could “Free the human mind and soul to explore other worlds without the anchor of beliefs incompatible with the evidence of their eyes.” While little of liturgical weight was agreed at this first convocation, the sole operating principle of the original 1875 Theosophical Society was enshrined once again as the founding principle of the new religion.
+									</p>
+									<p class="copy fst-italic">
+										The only tenet to which all members should subscribe was a commitment “to form a nucleus of the Universal Brotherhood of Humanity without distinction of race, creed, sex, caste or color.”
+									</p>
+									<p class="copy mb-0">
+										In the century since its revival, Theosophy has continued its meteoric rise, becoming the third-largest faith in the Settled Systems by followers, and is set by the end of the century to eclipse all others. With the notable exception of the <?php echo sf_lore_link('kingdom-of-india', 'Kingdom of India'); ?>, Theosophic temples can be found across human civilization, in this plane and others. Its centers of worship also act as vibrant centers of debate, and with little truly settled the cult practices of one Theosophic temple may be notably different from one in another star system, or even another country. The Convocation is still held quadrennially, and great thinkers, scientists, philosophers, and religious leaders attend to bring new thought, revelation, and discovery to the community.
+									</p>
+								</div>
+							</div>
+							<div>
 								<h6 class="mb-2"><strong>Christianity</strong></h6>
 								<div class="text-cols">
 									<p class="copy">
