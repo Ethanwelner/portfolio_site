@@ -5280,7 +5280,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, power: 6, intuition: 6, endurance: 4 }\r
 prerequisites: [swordsman]\r
-effect: "- This character gains the Flurry Action.\\n- This character can request Advantage on Attack Rolls made with swords."\r
+effect: "- This character gains the Flurry Action.\\n- This character gains +1 to Attack Rolls made with swords."\r
+modifiers: "Attack Rolls +1 (swords)"\r
 action: "Flurry: As a Full RP Action, this character makes two Attacks with a sword, against the same target or two targets within its reach, each at -3 to the Attack Roll."\r
 `,tg=`id: fear\r
 name: "Fear"\r
