@@ -26,7 +26,7 @@ if ( ! function_exists( 'sf_monster_trait' ) ) {
 		);
 		$actions = array(
 			'Pounce'     => "Pounce: This character moves up to its full Movement and Attacks with its {$weapon} as one Action. On a Solid Hit or better, the target gains the Prone Condition.",
-			'Drag Under' => 'Drag Under: This character pulls a character it has Seized under the water. That character is Blinded and loses 1d6 Hit Points at the start of each Round until it breaks free.',
+			'Drag Under' => 'Drag Under: This character pulls a character it has Seized under the water. That character is Blinded and loses 1d6 Hit Points at the start of each Round until it breaks free. This character lets go of a character who becomes Incapacitated.',
 		);
 		if ( isset( $actions[ $name ] ) ) {
 			return array(

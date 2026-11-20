@@ -28,7 +28,7 @@ sf_npc_sheet(
 		'attacks' => array(
 			array(
 				'name'    => 'Massive Claws',
-				'damage'  => '10 Slashing',
+				'damage'  => '9 Slashing',
 				'range'   => '3 m',
 				'area'    => '3 m',
 				'chips'   => array( 'Melee' ),
@@ -36,7 +36,7 @@ sf_npc_sheet(
 			),
 			array(
 				'name'    => 'Horrid Bite',
-				'damage'  => '15 Piercing',
+				'damage'  => '12 Piercing',
 				'chips'   => array( 'Melee', '(Breach: 2)' ),
 				'range'   => '3 m',
 				'description' => 'Natural weapon.',

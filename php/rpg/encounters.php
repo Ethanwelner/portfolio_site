@@ -156,7 +156,7 @@ sf_npc_sheet(
 		'kind'        => 'Monster, Isekai',
 		'move'        => '10 m',
 		'resistances' => '3 Blunt, 3 Slashing, 3 Piercing',
-		'resources'   => array( 'hp' => 64 ),
+		'resources'   => array( 'hp' => 54 ),
 		'stats'       => array(
 			'Physical'   => 8,
 			'Endurance'  => 9,
@@ -186,9 +186,9 @@ sf_npc_sheet(
 			sf_monster_trait( 'Seize', null, array( 'weapon' => 'Jaws' ) ),
 			sf_monster_trait( 'Drag Under' ),
 			sf_monster_trait( 'Regeneration', 1 ),
-			sf_monster_trait( 'Massive', 3 ),
+			sf_monster_trait( 'Massive', 2 ),
 			sf_monster_trait( 'Natural Armor', 3 ),
-			sf_monster_trait( 'Honed Instincts', 2 ),
+			sf_monster_trait( 'Honed Instincts', 1 ),
 		),
 	),
 	array( 'fold' => $sf_encounters_fold )
