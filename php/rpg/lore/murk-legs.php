@@ -1,4 +1,5 @@
 <?php require_once dirname( __DIR__ ) . '/components/npc-sheet.php'; ?>
+<?php require_once dirname( __DIR__ ) . '/components/monster-traits.php'; ?>
 <p class="copy">
 	Stats for a typical Murk Legs. The full entry is coming soon.
 </p>
@@ -8,7 +9,8 @@ sf_npc_sheet(
 		'name'    => 'Murk Legs',
 		'kind'    => 'Monster, Isekai',
 		'move'    => '10 m',
-		'resistances' => '2 Blunt, 1 Slashing',
+		'resistances' => '4 Blunt, 3 Slashing, 2 Piercing',
+		'resources'   => array( 'hp' => 66 ),
 		'stats'   => array(
 			'Physical'   => 12,
 			'Endurance'  => 10,
@@ -35,12 +37,17 @@ sf_npc_sheet(
 			array(
 				'name'    => 'Horrid Bite',
 				'damage'  => '15 Piercing',
+				'chips'   => array( 'Melee', '(Breach: 2)' ),
 				'range'   => '3 m',
-				'chips'   => array( 'Melee' ),
 				'description' => 'Natural weapon.',
 			),
 		),
 		'traits'  => array(
+			sf_monster_trait( 'Apex' ),
+			sf_monster_trait( 'Many Limbs', null, array( 'weapon' => 'Massive Claws' ) ),
+			sf_monster_trait( 'Massive', 2 ),
+			sf_monster_trait( 'Natural Armor', 2 ),
+			sf_monster_trait( 'Honed Instincts', 3 ),
 			array(
 				'kind'   => 'condition',
 				'name'   => 'Dark Haze',

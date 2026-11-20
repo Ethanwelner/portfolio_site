@@ -10,6 +10,8 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Monsters: Monster Traits, the bespoke Traits that make a monster dangerous without gear: Honed Instincts, Natural Armor, Massive, Many Limbs, Apex, Ambusher, Cornered, Regeneration, Seize, Pounce and Drag Under. Two new monsters for the Another World adventure: the Briar Boar and the Mire Lurker.</li>
+						<li>Murk Legs: now an Apex monster with Many Limbs on its Massive Claws, Massive 2 (66 HP), Natural Armor 2, Honed Instincts 3, and (Breach: 2) on its Horrid Bite.</li>
 						<li>Mechanics: Flanking, higher ground and attacking unseen no longer give +3 to Attack Rolls. The only stock bonus is firing from a significantly elevated position at a ranged target, +3 to hit, alongside Aim.</li>
 					</ul>
 				</article>
