@@ -75,7 +75,7 @@
 
 				<div class="d-flex flex-column align-items-center text-center mobile-text-left flex-18">
 		    		<div class="feature">
-				    	<div><h3 class="sub-title mb-3">QuantHub Learner Experience</h3></div>
+				    	<div><h3 id="quanthub-learner-experience" class="sub-title mb-3">QuantHub Learner Experience</h3></div>
 				    	<div class="copy stinger red mb-3">Designing For All Age Ranges</div>
 				    	<p class="copy">
 							QuantHub is a B2C and B2B2C provider of online learning materials, activities, tests, and accreditations, specializing in teaching AI and technology tools to K-12, higher education, and corporate training audiences.
@@ -141,7 +141,7 @@
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
 				    	<div class="lti-copy">
-					    	<h3 class="sub-title mb-3">Simplifying LTI</h3>
+					    	<h3 id="simplifying-lti" class="sub-title mb-3">Simplifying LTI</h3>
 					    	<div class="copy stinger red mb-3">Making the Most Important Part Easier</div>
 					    	<p class="copy">
 								I redesigned and completely reflowed the LTI integration workflow that teachers use to set up their classes and connect QuantHub to Blackboard and other LMS platforms. The existing process brought together several different systems and required teachers to navigate a fairly complicated series of steps just to get their classes set up and start using our learning materials. I worked to bring those systems together into a single, much clearer experience, while greatly improving the interface and reducing the number of clicks required to complete mandatory actions.
@@ -162,7 +162,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Meazure Learning's Responsivity and Accessibility Redesign</h3>
+					    	<h3 id="meazure-learnings-responsivity-and-accessibility-redesign" class="sub-title mb-3">Meazure Learning's Responsivity and Accessibility Redesign</h3>
 					    	<div class="copy stinger red mb-3">A Design and Front-End Overhaul To Bring Responsivity and Accessibility</div>
 					    	<p class="copy">
 					    		Meazure Learning is an end-to-end online proctoring and testing platform provider that helps academic students and career professionals take exams and assessments from their homes. With today's heavy emphasis on accessibility and interoperability, the front end of the platform needed to become responsive and accessible. In addition, the platform needed a significant overhaul to many of its functions and components to declutter and provide an intuitive interface for a wide variety of users.
@@ -208,7 +208,7 @@
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-7  mobile-order-first">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Examity’s Test Taker Flow Overhaul</h3>
+					    	<h3 id="examitys-test-taker-flow-overhaul" class="sub-title mb-3">Examity’s Test Taker Flow Overhaul</h3>
 					    	<div class="copy stinger red mb-3">An Implementation of a Suite of New Functionalities and Rebranding</div>
 					    	<p class="copy">
 					    		Examity provided an extension-based testing security solution that connected users to their own test providers' platform while monitoring device and real-life security issues to help maintain academic integrity. It gave users the ability to schedule, purchase, and launch exams from within its authenticated web app.
@@ -272,7 +272,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Sequoia Redesign</h3>
+					    	<h3 id="sequoia-redesign" class="sub-title mb-3">Sequoia Redesign</h3>
 					    	<div class="copy stinger red mb-3">User Friendly Template and CMS System for Web and Mail</div>
 					    	<p class="copy">The Sequoia system is a large SaaS platform that allows real estate brokerages of any size to have and maintain a performant, reliable, and good-looking web presence that not only surfaces their inventory but also has deep marketing integrations and personnel management. It's a top-to-bottom, full-service system for getting a brand online to the fullest capacity.
 					    	<br><br>

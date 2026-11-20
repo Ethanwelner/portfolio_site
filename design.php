@@ -75,7 +75,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div class="learning-copy">
-					    	<h3 class="sub-title mb-3">Bringing Life to Learning</h3>
+					    	<h3 id="bringing-life-to-learning" class="sub-title mb-3">Bringing Life to Learning</h3>
 					    	<div class="copy stinger yellow mb-3">Animation, Color, Scale</div>
 					    	<p class="copy">
 					    		Keeping K-12 students engaged in sometimes dry topics can be a struggle, but guiding their focus to the elements of a lesson that you want them to focus on is critical to keeping them on track with the class.
@@ -159,7 +159,7 @@
 				    <div class="d-inline-flex align-items-center flex-1"></div>
 				    <div class="d-inline-flex align-items-center flex-5 mobile-order-first">
 				    	<div class="teacher-copy">
-					    	<h3 class="sub-title mb-3">Helping QuantHub Enable Teachers</h3>
+					    	<h3 id="helping-quanthub-enable-teachers" class="sub-title mb-3">Helping QuantHub Enable Teachers</h3>
 					    	<div class="copy stinger yellow mb-3">Teachers Are Busy Enough, So The Software Needs To Be Simple</div>
 					    	<p class="copy">
 					    		As a fast-moving startup QuantHub had a lot of spinning plates, one of which was an ever in-progress set of new and updated features for teachers on the platform. Over time that experience had become messy and uncoordinated, with different pages having different look-and-feel, verbiage, and even different branding. I undertook a concerted effort with three objectives.
@@ -191,7 +191,7 @@
 						<div class="preparedness-gallery-container">
 							<div class="preparedness-gallery">
 						    	<div>
-							    	<h3 class="sub-title mb-3">Guardian Preparedness Check</h3>
+							    	<h3 id="guardian-preparedness-check" class="sub-title mb-3">Guardian Preparedness Check</h3>
 							    	<div class="copy stinger yellow mb-3">A Modern Implementation Of Hardware Compatibility Testing</div>
 							    	<p class="copy">
 										The Guardian Browser is Meazure Learning's custom Chromium-based browser built in Electron and used for high-end test proctoring. It’s a bespoke high-security web browser built to lock down a user’s system while they’re taking an academic or professional test. The app runs a two-way video and audio stream while sharing the user's screen and up to two additional camera angles, all threaded and compressed locally.
@@ -232,7 +232,7 @@
 
 		    	<div class="d-flex flex-column align-items-center text-center mobile-text-left email-gallery-container">
 		    		<div class="feature">
-				    	<div><h3 class="sub-title mb-3">Examity Overhaul Email Redesign & Recode</h3></div>
+				    	<div><h3 id="examity-overhaul-email-redesign-recode" class="sub-title mb-3">Examity Overhaul Email Redesign & Recode</h3></div>
 				    	<div class="copy stinger yellow mb-3">Fun To Design, Tough To Code</div>
 				    	<p class="copy">
 							Following the successful redesign and rebranding of the core Examity product line, I was tasked with overhauling the Examity email library. I sought to bring the same user-centric and component-driven design process to this task that served us so well in the overall redesign. Emails are a tricky beast; there’s no true coding standard, and each email client renders them differently in subtle and not-so-subtle ways. For this project, hardware testing across multiple devices, browsers, and operating systems was a must.
@@ -257,7 +257,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Forecaster 121</h3>
+					    	<h3 id="forecaster-121" class="sub-title mb-3">Forecaster 121</h3>
 					    	<div class="copy stinger yellow mb-3">Designing for Luxury</div>
 					    	<p class="copy">
 					    		How do you differentiate the brand of a luxury condo complex in a city where a new one pops up every week? Finding an answer was the task when I was asked to handle the marketing for Forecaster 121.
@@ -323,7 +323,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div class="proto-content-anim">
-					    	<h3 class="sub-title mb-3">Rapid Prototyping My Own Portfolio</h3>
+					    	<h3 id="rapid-prototyping-my-own-portfolio" class="sub-title mb-3">Rapid Prototyping My Own Portfolio</h3>
 					    	<div class="copy stinger yellow mb-3">A Speed Test to Put my Professional Skills To The Test</div>
 					    	<p class="copy">The design process is an exercise in research and understanding as well as design. A design portfolio is meant to be a piece itself, and the experience that it delivers comes across just as strongly as any of the projects or stories it tells. In rebuilding this site, I wanted to make sure it came across as human, striking, and unique. Being personal but also professional is a tough needle to thread, but I decided to try to do it in a weekend.
 					    	<br><br>

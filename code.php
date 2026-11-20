@@ -79,7 +79,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Coding and Development</h3>
+					    	<h3 id="coding-and-development" class="sub-title mb-3">Coding and Development</h3>
 					    	<div class="copy stinger blue mb-3">Good UX Engineering Can Pull It All Together</div>
 					    	<p class="copy">
 					    		As technology has grown in complexity and need, I've learned multiple languages, standards, and libraries to help build and prototype personal and professional projects.
@@ -211,7 +211,7 @@
 				    <div class="d-inline-flex flex-1 align-items-center"></div>
 				    <div class="d-inline-flex align-items-center flex-7 mobile-order-first">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Building With AI</h3>
+					    	<h3 id="building-with-ai" class="sub-title mb-3">Building With AI</h3>
 					    	<div class="copy stinger blue mb-3">Human Judgment, Accelerated</div>
 					    	<p class="copy">
 					    		Over the last two years, I’ve incorporated AI coding tools into my development workflow, using Cursor, Claude Code, Codex, and others to research unfamiliar technologies, explore approaches, write code, debug problems, and ship working software. I’ve also worked closely with engineers to pair program through implementations and resolve issues that arose from code generated without sufficient human oversight.
@@ -235,7 +235,7 @@
 				    <div class="flex-2 d-none d-xl-inline-flex"></div>
 				    <div class="d-inline-flex align-items-center flex-7">
 				    	<div>
-					    	<h3 class="sub-title mb-3">Building For Accessibility</h3>
+					    	<h3 id="building-for-accessibility" class="sub-title mb-3">Building For Accessibility</h3>
 					    	<div class="copy stinger blue mb-3">One In Four People Benefit</div>
 					    	<p class="copy">
 					    		Accessibility isn’t just for government; by most accounts, between 15% and 25% of all adults have some form of disability. Designing and coding for accessibility are important to the modern world. I’ve spent years designing for clients with strict accessibility requirements, and I’ve worked within the WCAG standards for most of that time.
