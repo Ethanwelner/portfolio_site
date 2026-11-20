@@ -705,6 +705,7 @@ tags: [social, clothing]\r
 type: wearable\r
 category: gear\r
 slot: "Clothing"\r
+resistances: "1 Cold"\r
 value: 800\r
 currency: "ERC"\r
 weight: 1.5\r
@@ -4847,18 +4848,19 @@ category: ability\r
 minStats: { grace: 3, endurance: 2 }\r
 effect: "This character gains the Bolt Action."\r
 action: "Bolt: This character takes Full Movement at +5 Priority for the Round. This character gains the Flat-Footed Condition the following Round."\r
-`,Ch=`id: boxing\r
-name: "Boxing"\r
-status: draft\r
-plane: any\r
-summary: "Trained fighting with the fists, in and out of the ring."\r
-tags: [combat, unarmed, boxing, sport]\r
-backgroundKeywords: [hand-to-hand, performance]\r
-category: ability\r
-ranked: true\r
-minStats: { power: 3, grace: 3, endurance: 3 }\r
-prerequisites: [brawler]\r
-effect: "- This character can Attack with the Haymaker and Uppercut natural weapons.\\n- Rank *5 added to Skill Check rolls involving boxing."\r
+`,Ch=`id: boxing
+name: "Boxing"
+status: draft
+plane: any
+summary: "Trained fighting with the fists, in and out of the ring."
+tags: [combat, unarmed, boxing, sport]
+backgroundKeywords: [hand-to-hand, performance]
+category: ability
+ranked: true
+minStats: { power: 3, grace: 3, endurance: 3 }
+prerequisites: [brawler]
+effect: "- This character can Attack with the Haymaker and Uppercut natural weapons.\\n- Rank *5 added to Skill Check rolls involving boxing.\\n- +3 to Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."
+modifiers: "Attack Rolls +3 (punches)"
 `,wh=`id: burden\r
 name: "Burden"\r
 status: placeholder\r
@@ -5253,7 +5255,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, intuition: 6, power: 4, endurance: 4 }\r
 prerequisites: [archer]\r
-effect: "- This character gains the Volley Action.\\n- This character can request Advantage on Attack Rolls made with bows and crossbows."\r
+effect: "- This character gains the Volley Action.\\n- This character gains +1 to Attack Rolls made with bows and crossbows."\r
+modifiers: "Attack Rolls +1 (bows and crossbows)"\r
 action: "Volley: As a Full RP Action, this character makes two Attacks with a bow, against the same target or two targets within 5 m of each other, each at -3 to the Attack Roll."\r
 `,$h=`id: expert-boxer\r
 name: "Expert Boxer"\r
@@ -5266,7 +5269,8 @@ category: ability\r
 mastery: true\r
 minStats: { power: 8, grace: 6, endurance: 6, intuition: 4 }\r
 prerequisites: [boxing]\r
-effect: "- This character can Attack with the Superman Punch natural weapon.\\n- This character can request Advantage on Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
+effect: "- This character can Attack with the Superman Punch natural weapon.\\n- This character gains +1 to Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
+modifiers: "Attack Rolls +1 (punches)"\r
 `,eg=`id: expert-swordsman\r
 name: "Expert Swordsman"\r
 status: draft\r
@@ -5278,7 +5282,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, power: 6, intuition: 6, endurance: 4 }\r
 prerequisites: [swordsman]\r
-effect: "- This character gains the Flurry Action.\\n- This character can request Advantage on Attack Rolls made with swords."\r
+effect: "- This character gains the Flurry Action.\\n- This character gains +1 to Attack Rolls made with swords."\r
+modifiers: "Attack Rolls +1 (swords)"\r
 action: "Flurry: As a Full RP Action, this character makes two Attacks with a sword, against the same target or two targets within its reach, each at -3 to the Attack Roll."\r
 `,tg=`id: fear\r
 name: "Fear"\r
@@ -5876,7 +5881,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, power: 6, endurance: 6, intuition: 5 }\r
 prerequisites: [martial-artist]\r
-effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character can request Advantage on Attack Rolls made with natural weapons."\r
+effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character gains +1 to Attack Rolls made with natural weapons."\r
+modifiers: "Attack Rolls +1 (natural weapons)"\r
 `,Wg=`id: master-flamecraft\r
 name: "Master Flamecraft"\r
 status: draft\r
