@@ -5255,7 +5255,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, intuition: 6, power: 4, endurance: 4 }\r
 prerequisites: [archer]\r
-effect: "- This character gains the Volley Action.\\n- This character can request Advantage on Attack Rolls made with bows and crossbows."\r
+effect: "- This character gains the Volley Action.\\n- This character gains +1 to Attack Rolls made with bows and crossbows."\r
+modifiers: "Attack Rolls +1 (bows and crossbows)"\r
 action: "Volley: As a Full RP Action, this character makes two Attacks with a bow, against the same target or two targets within 5 m of each other, each at -3 to the Attack Roll."\r
 `,$h=`id: expert-boxer\r
 name: "Expert Boxer"\r
@@ -5268,7 +5269,8 @@ category: ability\r
 mastery: true\r
 minStats: { power: 8, grace: 6, endurance: 6, intuition: 4 }\r
 prerequisites: [boxing]\r
-effect: "- This character can Attack with the Superman Punch natural weapon.\\n- This character can request Advantage on Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
+effect: "- This character can Attack with the Superman Punch natural weapon.\\n- This character gains +1 to Attack Rolls made with punches: Fists, Haymaker, Uppercut and Superman Punch."\r
+modifiers: "Attack Rolls +1 (punches)"\r
 `,eg=`id: expert-swordsman\r
 name: "Expert Swordsman"\r
 status: draft\r
@@ -5879,7 +5881,8 @@ category: ability\r
 mastery: true\r
 minStats: { grace: 8, power: 6, endurance: 6, intuition: 5 }\r
 prerequisites: [martial-artist]\r
-effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character can request Advantage on Attack Rolls made with natural weapons."\r
+effect: "- This character can Attack with the Bicycle Kick and Five Fingered Palm of Death natural weapons.\\n- This character gains +1 to Attack Rolls made with natural weapons."\r
+modifiers: "Attack Rolls +1 (natural weapons)"\r
 `,Wg=`id: master-flamecraft\r
 name: "Master Flamecraft"\r
 status: draft\r
