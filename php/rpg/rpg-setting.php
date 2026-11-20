@@ -797,7 +797,64 @@
 							<h5><strong>New Philosophies and Religious Ideas in 2230</strong></h5>
 							<div class="line"></div>
 						</div>
-						<p class="copy mb-0">Content coming soon</p>
+						<div class="content-stack content-stack-xs">
+							<div>
+								<h6 class="mb-2"><strong>Euhemerism (Everything is Trueism)</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										In 300 BC the Greek mythographer Euhemerus penned the “Sacred History,” a work that would rationalize the figures and events of Greek religion and folklore as not allegory or metaphor, but rather as true, if distorted, tellings of historical events. Greek gods were real ancient kings, the Hyperboreans merely an ancient tribe of conquerors who would, in later generations, be called the Scythians. Monsters had, instead, been men in the way that men can often be worse than monsters. Later Christian writers, and eventually missionaries, would enthusiastically adopt Euhemerism to downplay the relevance of pagan gods and traditions, arguing that they were, at best, exaggerations of a very mundane human past.
+									</p>
+									<p class="copy">
+										It could be that it’s always been human instinct to reduce the unbelievable into simple exaggeration. As belief structures come under siege from the scientific measurement of literal heavens and hells, rationalizing myth into men has, perhaps, become more necessary now than ever before. Exploding into popularity with the seminal 2131 work “Everything is True” by the famed author and religious philosopher Parinaz Alavi, Euhemerism, dormant for centuries, was revived as a method to syncretically adopt a multi-planar outlook into the religions and myths of humanity’s past. Alavi poetically argues for the evocative, if scientifically dubious, idea that humanity has been in regular, if sporadic, contact with higher planar entities throughout its history, and that the species has long been making gods and monsters from the very real influence of the paranatural.
+									</p>
+									<p class="copy mb-0">
+										In 2230, Euhemerism is disliked by adherents of modern Theosophy and traditional Judeo-Christian believers alike, those sects accusing Euhemerism of being little more than a sort of conspiratorial pop-religion. A pseudo-intellectual pursuit that strives to maintain the importance and historical truth of humanity’s cultural mythos, even while proof eludes what few scientific studies have been made in its pursuit. That suits its believers just fine, as paraphysical decay would have long ago robbed any sites of supposed paranatural events of their exotic nature.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Cyclical Creationism (Man Creates AI, AI Creates God)</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										A cult religion founded in the transient labor communities of Silicon Valley and the AI belt, Cyclical Creationism provided some level of reassurance that the socially isolated and deeply distrusted individuals building the AI apocalypse were doing it for the right reasons. Cyclical Creationism posits the idea that there is a cycle to creation: God creates man, man creates AI, and AI then goes on to create God, who begins the cycle anew. In this case, the little-examined god is less the traditional Abrahamic deity than the syncretic combination of the creator entity posited in holographic and simulated universe proposals.
+									</p>
+									<p class="copy">
+										While never achieving widespread belief outside of the social and philosophical deserts of its founding communities, it nonetheless had a massive impact on the course of AI development in the 21st century. Notably becoming popular among the billionaire founders and C-suites of the tech companies pushing the technology. With the coming of the 30 Days of Dead-Air and the collapse of the order governed by traditional AI, the belief structure largely collapsed, with its adherents jailed, castigated, or blending quietly back into society.
+									</p>
+									<p class="copy mb-0">
+										Cyclical Creationism should have been relegated to the dustbin of failed cults, but the belief has been resurrected in, of all places, the human supremacist movements operating in the isolated peripheries of the Settled Systems. Out among distant stars, far from UN law, cults are attempting to reassemble the AIs of the 21st century so they can finish their work. The beings coming from the planes are, to them, an existential threat to everything humanity is and stands for, and the only way to combat the extraplanar influence of alien gods is with a god of their own.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>The Second Exodites (God is out there and we can find him)</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										One of the more interesting areas of study in modern philosophical and religious academia is the analysis of how the branches and sects of various faiths have adapted to the multiplanar realities of the 23rd century. While the advent of parasapient life native to universes far beyond our own was not quite the death blow to the traditional Abrahamic faiths that it could have been, it was nevertheless profound. The claim to authority these institutions once had suffered greatly when placed against the tangible reality that worlds existed far outside the accounting of their founding myths and histories.
+									</p>
+									<p class="copy">
+										With the damage done to faith communities by parascientific exploration, it may surprise one to learn that Christian faith communities sport some of the most capable and veteran planar explorers that money can buy. Rather than shrinking from the challenge to their beliefs, the ever-growing sect of the Second Exodites believes that this is the final test of Christian faith. They believe God exists at the highest plane, and he has charged the faithful to find him so that, like the Israelites fleeing Egypt, they may find the holy land and live forever at God’s side.
+									</p>
+									<p class="copy mb-0">
+										Among the <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodges'); ?> of the <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, Second Exodite belief is far from rare, and there are entire planar discovery and holding companies with their mission explicit in their corporate bylaws. Belief in the Second Exodus isn’t limited to the <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, though, and its practitioners can be found following their own personal missions all over the Settled Systems.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Panpsychism (The consciousness particle)</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										Panpsychism proposes that everything is thought and thought is everything, that subjective reality is actually objective, and that thought is an inextricable property of matter. Proponents would argue that Panpsychism has existed as a loose collection of scientific and intellectual philosophies for thousands of years. The idea that objects, elements, and even ideas are subject to the influence of a mind or will of their own is perhaps the foundational form of human spiritual belief. From ancient animism to Platonic essences, to examinations of the “Buddha nature” of everyday objects, the memetic concepts underpinning panpsychism are widespread.
+									</p>
+									<p class="copy">
+										With the advent of the switch gate, the pseudoscientific theory, long relegated to an object of trivia or woo-woo conspiracy, would finally get what its adherents see as the concrete scientific proof it had long been denied. Pinning itself to the thriving parascientific field of axiomatic truth, Panpsychists see the presence of the gate address as undeniable proof of their philosophy. The address system used in switch gates, itself theorized to be a fundamental planar language, appears not to be a coordinate system, but instead a description of reality. What more proof of the pre-eminence of thought could there be than the scientifically measurable fact that the most basic and universal system in nature appears not to be math, but instead prose and description?
+									</p>
+									<p class="copy mb-0">
+										Still relegated to woo-woo conspiracy in popular culture, among theoretical paraphysicists and particularly experts in gate language or axiomatic theory, the belief has become widespread. As a dense and conceptually challenging belief structure, Panpsychism is often mocked as the self-aggrandizing sophistry of college professors, but the belief has found proponents in strange places. The Arch-Mage and consigliere de’Fant, native to <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> wrote in his masterwork on the nature of magic that “Thought is the only true universal element in the craft of magic; concentrated belief, rather than ritual, is what governs the success of spellcraft.”
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

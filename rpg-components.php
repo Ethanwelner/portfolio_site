@@ -145,6 +145,7 @@ foreach ( array( 'Weapons', 'Wearables', 'Equipment' ) as $group ) {
 			'damage'      => $x[6] ?? '',
 			'resistances' => $x[7] ?? '',
 			'ranged'      => in_array( $x[0], sf_ranged_items(), true ),
+			'attack'      => empty( $x[6] ) ? '' : ( in_array( $x[0], sf_ranged_items(), true ) ? 'Ranged' : 'Melee' ),
 		);
 	}
 }
@@ -163,8 +164,8 @@ $sf_items[] = array(
 	'formula'     => 'Power - 5',
 	'range'       => '3 m',
 	'area'        => '3 m',
-	'chips'       => array( 'Melee' ),
-	'description' => 'Natural weapon.',
+	'attack'      => 'Melee',
+	'natural'     => true,
 );
 $sf_items[] = array(
 	'name'        => 'Breath Weapon',
@@ -172,8 +173,9 @@ $sf_items[] = array(
 	'ranged'      => true,
 	'range'       => '10 m',
 	'area'        => '3 m',
-	'chips'       => array( 'Ranged' ),
-	'description' => 'Natural weapon, granted by Natural Breath Weapon.',
+	'attack'      => 'Ranged',
+	'natural'     => true,
+	'lead'        => 'Granted by Natural Breath Weapon.',
 );
 
 // The same Item card as each interface draws it: a catalog's (always open),
@@ -424,7 +426,9 @@ $sf_laborer    = array(
 			'name'        => 'Hydraulic Fist',
 			'damage'      => '2 Blunt + Power',
 			'range'       => '1 m',
-			'chips'       => array( 'Melee', 'Natural weapon' ),
+			'attack'      => 'Melee',
+			'natural'     => true,
+			'chips'       => array( 'Built-in' ),
 			'description' => 'A work fist on a hydraulic arm, built to bend steel.',
 		),
 	),
@@ -499,7 +503,8 @@ $sf_combat     = array(
 			'stat'        => 'Grace',
 			'reload'      => 'Full',
 			'chips'       => array( 'Built-in' ),
-			'description' => 'A heavy automatic gun on a turret in the frame’s body. It can’t be taken off or disarmed.',
+			'description' => 'A heavy automatic gun on a turret in the frame’s body.',
+			'lead'        => 'It can’t be taken off or disarmed.',
 		),
 	),
 	'hp_bonus'    => 10,
@@ -657,7 +662,7 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: value + currency, attack, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
+optional: value + currency, attack (Melee, Ranged or "Ranged, Thrown"), natural, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
 options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
@@ -848,10 +853,11 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
 					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
-					<?php include 'php/rpg/lore/murk-legs.php'; ?>
+					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters: Bandit, Skeleton and Dreftian Mercenary, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
-					<?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?>
+					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
 					<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
+					<div class="sf-npc-grid">
 					<?php
 					sf_npc_sheet(
 						array(
@@ -866,18 +872,19 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 								'Magic' => 2,
 							),
 							'attacks'     => array(
-								array( 'name' => 'Walking Staff', 'damage' => '4 Blunt', 'formula' => 'Power', 'range' => '2 m', 'chips' => array( 'Melee' ), 'description' => 'A gnarled ash staff.' ),
+								array( 'name' => 'Walking Staff', 'damage' => '4 Blunt', 'formula' => 'Power', 'range' => '2 m', 'attack' => 'Melee', 'description' => 'A gnarled ash staff.' ),
 							),
 							'traits'      => array(
 								array( 'kind' => 'skill', 'name' => 'Herbalism', 'rank' => 2, 'effect' => 'Rank ×5 added to Skill Checks involving herbs and remedies.' ),
 							),
 							'items'       => array(
-								array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial, brewed at Rank 1.', 'count' => 2 ),
+								array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial.', 'lead' => 'Brewed at Rank 1.', 'count' => 2 ),
 							),
 						),
 						array( 'fold' => 'closed' )
 					);
 					?>
+					</div>
 				</div>
 			</div>
 		</div>

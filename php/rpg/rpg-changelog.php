@@ -8,6 +8,14 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/20/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Items: every weapon and natural weapon now says how it attacks, Melee Attack or Ranged Attack, and thrown weapons get a Thrown badge. Natural weapons, from Fists to Murk Legs’ claws, carry a Natural Weapon badge, and built-in weapons a Built-in badge, rather than saying so in their descriptions.</li>
+						<li>Character Creator: potions, flasks and oils show what they do as rules under the item, apart from their descriptions, which are flavor only. Acid, Explosive, Frost and Thunder Flasks say they work like Acid Spray, Fireball, Hoarfrost and Thunderclap.</li>
+						<li>Setting: Religions &amp; Philosophies gets its first new philosophies of 2230: Euhemerism, which reads every myth as a garbled memory of planar contact; Cyclical Creationism, the AI cult reborn among human supremacists; the Second Exodites, Christian explorers searching the planes for God; and Panpsychism, which takes the gate address as proof that thought underlies reality.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/19/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Monsters: Monster Traits, the bespoke Traits that make a monster dangerous without gear: Honed Instincts, Natural Armor, Massive, Many Limbs, Apex, Ambusher, Cornered, Regeneration, Seize, Pounce and Drag Under. Two new monsters for the Another World adventure: the Briar Boar and the Mire Lurker.</li>

@@ -14,6 +14,7 @@ $sf_magic_items = array(
 			'name'        => 'Santar’s Sword of Rust',
 			'description' => 'A longsword whose edge is forever slick with magical acid.',
 			'damage'      => '8 Slashing, 4 Corrosive / 6 Piercing, 4 Corrosive',
+			'attack'      => 'Melee',
 			'effects'     => array(
 				array( 'Item – Rustblade (2)', 'The sword has the Corrosive Weapon Condition at Rank 2, its damage already added above.' ),
 			),

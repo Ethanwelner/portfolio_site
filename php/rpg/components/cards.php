@@ -259,11 +259,16 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * category     Weapon, Armor, Gear, Artifact...
 	 * value        Optional. Its value, with currency (ERC or Luras).
 	 * weight       Optional. Its weight in kilograms, like 0.9: "0.9 kg".
-	 * attack       Optional. How it Attacks: Melee, Ranged, Thrown.
+	 * attack       Optional. How it Attacks: Melee, Ranged, or "Ranged, Thrown":
+	 *              a "Melee Attack" or "Ranged Attack" chip, and "Thrown".
+	 *              Every weapon and natural weapon sets it; never a bare
+	 *              "Melee" or "Ranged" chip.
+	 * natural      Optional. True for a natural weapon: a "Natural Weapon"
+	 *              chip after its attack.
 	 * stat         Optional. Its Attack Stat: Power, Grace...
 	 * reload       Optional. Its reload: Partial, Full...
 	 * slot         Optional. The slot it takes: Body Armor, Outerwear...
-	 * chips        Optional. More chips, like Natural weapon.
+	 * chips        Optional. More chips, like Built-in or (Breach: 1).
 	 * plane        Optional. Any, Earth, Isekai: a chip after the rest.
 	 * damage       Optional. As the creator words it: "7 Piercing",
 	 *              "6 Slashing / 4 Piercing" for a choice.
@@ -281,7 +286,8 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 * hp           Optional. array( now, max ): a chassis's HP, with − and +.
 	 * resists_in_chips  Optional. True: the resistances badge leads the
 	 *              chips line instead of the top line (a chassis).
-	 * description  Optional. In italics.
+	 * description  Optional. In italics: flavor only, never rules. Rules go
+	 *              in the chips or the lead.
 	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
 	 * count        Optional. How many of a counted item (a consumable), in a
@@ -350,7 +356,12 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( isset( $i['weight'] ) ) {
 			$chips[] = $i['weight'] . ' kg';
 		}
-		$chips[] = empty( $i['attack'] ) ? '' : $i['attack'] . ' Attack';
+		if ( ! empty( $i['attack'] ) ) {
+			$kinds   = array_map( 'trim', explode( ',', $i['attack'] ) );
+			$chips[] = array_shift( $kinds ) . ' Attack';
+			$chips   = array_merge( $chips, $kinds );
+		}
+		$chips[] = empty( $i['natural'] ) ? '' : 'Natural Weapon';
 		$chips[] = $i['stat'] ?? '';
 		$chips[] = empty( $i['reload'] ) ? '' : 'Reload: ' . $i['reload'] . ' Action';
 		$chips[] = empty( $i['slot'] ) ? '' : 'Slot: ' . $i['slot'];

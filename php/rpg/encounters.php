@@ -136,7 +136,7 @@ sf_npc_sheet(
 				'damage' => '7 Piercing',
 				'attack' => 'Melee',
 				'range'  => '1 m',
-				'description' => 'Natural weapon.',
+				'natural' => true,
 			),
 		),
 		'traits'      => array(
@@ -177,8 +177,8 @@ sf_npc_sheet(
 				'damage' => '9 Piercing',
 				'attack' => 'Melee',
 				'range'  => '2 m',
+				'natural' => true,
 				'chips'  => array( '(Breach: 1)' ),
-				'description' => 'Natural weapon.',
 			),
 		),
 		'traits'      => array(
