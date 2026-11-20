@@ -7,6 +7,7 @@
 // points per Level. Traits a Profession grants skip their Stat requirements.
 // Monsters are built from Physical only.
 require_once __DIR__ . '/components/npc-sheet.php';
+require_once __DIR__ . '/components/monster-traits.php';
 
 // The component library (rpg-components.php) shows these same sheets open;
 // the Monsters tab, which lists several, starts them closed.
@@ -103,6 +104,91 @@ sf_npc_sheet(
 				'flags'  => array( 'Permanent' ),
 				'effect' => 'This character doesn’t breathe, eat, sleep or bleed. It is immune to the Asleep, Charmed and Frightened Conditions and to Psychic damage.',
 			),
+		),
+	),
+	array( 'fold' => $sf_encounters_fold )
+);
+
+sf_npc_sheet(
+	array(
+		'name'        => 'Briar Boar',
+		'kind'        => 'Monster, Isekai',
+		'move'        => '12 m',
+		'resistances' => '1 Blunt, 1 Slashing, 1 Piercing',
+		'resources'   => array( 'hp' => 32 ),
+		'stats'       => array(
+			'Physical'   => 4,
+			'Endurance'  => 5,
+			'Power'      => 5,
+			'Grace'      => 2,
+			'Social'     => 0,
+			'Empathy'    => 0,
+			'Persuasion' => 0,
+			'Demeanor'   => 0,
+			'Mental'     => 0,
+			'Logic'      => 0,
+			'Intuition'  => 0,
+			'Memory'     => 0,
+		),
+		'attacks'     => array(
+			array(
+				'name'   => 'Gore',
+				'damage' => '7 Piercing',
+				'attack' => 'Melee',
+				'range'  => '1 m',
+				'description' => 'Natural weapon.',
+			),
+		),
+		'traits'      => array(
+			sf_monster_trait( 'Pounce', null, array( 'weapon' => 'Gore' ) ),
+			sf_monster_trait( 'Cornered' ),
+			sf_monster_trait( 'Massive', 1 ),
+			sf_monster_trait( 'Natural Armor', 1 ),
+			sf_monster_trait( 'Honed Instincts', 1 ),
+		),
+	),
+	array( 'fold' => $sf_encounters_fold )
+);
+
+sf_npc_sheet(
+	array(
+		'name'        => 'Mire Lurker',
+		'kind'        => 'Monster, Isekai',
+		'move'        => '10 m',
+		'resistances' => '3 Blunt, 3 Slashing, 3 Piercing',
+		'resources'   => array( 'hp' => 54 ),
+		'stats'       => array(
+			'Physical'   => 8,
+			'Endurance'  => 9,
+			'Power'      => 9,
+			'Grace'      => 6,
+			'Social'     => 0,
+			'Empathy'    => 0,
+			'Persuasion' => 0,
+			'Demeanor'   => 0,
+			'Mental'     => 0,
+			'Logic'      => 0,
+			'Intuition'  => 0,
+			'Memory'     => 0,
+		),
+		'attacks'     => array(
+			array(
+				'name'   => 'Jaws',
+				'damage' => '9 Piercing',
+				'attack' => 'Melee',
+				'range'  => '2 m',
+				'chips'  => array( '(Breach: 1)' ),
+				'description' => 'Natural weapon.',
+			),
+		),
+		'traits'      => array(
+			sf_monster_trait( 'Ambusher' ),
+			sf_monster_trait( 'Seize', null, array( 'weapon' => 'Jaws' ) ),
+			sf_monster_trait( 'Drag Under' ),
+			sf_monster_trait( 'Regeneration', 1 ),
+			sf_monster_trait( 'Massive', 2 ),
+			sf_monster_trait( 'Natural Armor', 3 ),
+			sf_monster_trait( 'Honed Instincts', 1 ),
 		),
 	),
 	array( 'fold' => $sf_encounters_fold )
