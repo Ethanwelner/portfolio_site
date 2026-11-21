@@ -885,6 +885,23 @@
 									</p>
 								</div>
 							</div>
+							<div>
+								<h6 class="mb-2"><strong>Strong Souls</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										An extraplanar religious philosophy imported by explorers and parasapient emigrants alike hailing from <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> Strong Souls presents an inherently humanist and relatable relationship to an individual’s soul. Similar in some ways to the Eastern spiritual concept of karma, Strong Souls both posits the existence of the immortal soul and ascribes attributes of health and vitality to it. Strong Souls as a broad concept appears to be a universal concept in the polytheistic and highly localized religious cultures of its founding plane. It posits that one is born with a healthy, but empty soul. Positive experiences, actions, and beliefs serve to fill one’s soul, nourishing it and making it strong. Negative actions, on the other hand, have the opposite effect, “filling the soul with bile,” and starving it.
+									</p>
+									<p class="copy">
+										Within the religious belief systems of its native plane, a strong soul is a prerequisite for a good afterlife, with the various gods of their pantheons going so far as to dismiss or even devour the thin, wispy souls of the wicked or malevolent. Beyond the worship of different named deities, and the cults and traditions associated, the religious movements of Isekai find their greatest contrast in the specifics of what constitutes good or evil, and the exact nature of the soul to the world and their respective deities. To some religious cultures, such as the worshippers of Salno, the goddess of the harvest, marriage, light, and nature, animals and plants possess souls every bit as strong as a member of parasapient society, and those who prove worthy find themselves born into nature’s cycle anew. To others, such as followers of Rotonto, the collectivist god of war, family, and the home, the strongest souls are kept for his personal guard in the never-ending battle against the Screaming Stars.
+									</p>
+									<p class="copy">
+										To the residents of that plane, the truth of this concept is incontrovertible, and indeed those who were deeply cruel or malevolent in life often seem to return as the region’s well-recorded “Bogey Spirits,” or can even rise from the grave as undead abominations. Popular conjecture is that these individuals were cast out from their respective afterlives. Abandoned by their gods, they had little choice but to return to the world. The presence of some sort of karmic weight or measure seems to be present within the systems of “magic” practice in that plane as well, and one’s past actions do appear to have material impact on the effectiveness of some spells.
+									</p>
+									<p class="copy mb-0">
+										Strong Souls has been incorporated into several religious traditions within the Settled Systems, most notably being a common belief among Theosophist faithful. Guest lecturers from 516/a/198 have even spoken on the topic at the quadrennial Theosophic Convocation.
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -11,6 +11,7 @@
 					<p class="copy mb-3"><i>11/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Setting: Planar Transcendentalism joins the new philosophies of 2230, an agnostic creed that finds the sacred in lived experience, and planar travel, rather than scripture. The Second Exodites are now also called “Seconders.”</li>
+						<li>Setting: Strong Souls, a belief brought over from Isekai, joins the new philosophies: a soul is born empty, good deeds make it strong, and the gods of Isekai turn away thin, wicked souls. It has caught on among Theosophists.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
