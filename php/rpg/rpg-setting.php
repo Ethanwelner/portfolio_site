@@ -850,7 +850,7 @@
 										One of the more interesting areas of study in modern philosophical and religious academia is the analysis of how the branches and sects of various faiths have adapted to the multiplanar realities of the 23rd century. While the advent of parasapient life native to universes far beyond our own was not quite the death blow to the traditional Abrahamic faiths that it could have been, it was nevertheless profound. The claim to authority these institutions once had suffered greatly when placed against the tangible reality that worlds existed far outside the accounting of their founding myths and histories.
 									</p>
 									<p class="copy">
-										With the damage done to faith communities by parascientific exploration, it may surprise one to learn that Christian faith communities sport some of the most capable and veteran planar explorers that money can buy. Rather than shrinking from the challenge to their beliefs, the ever-growing sect of the Second Exodites believes that this is the final test of Christian faith. They believe God exists at the highest plane, and he has charged the faithful to find him so that, like the Israelites fleeing Egypt, they may find the holy land and live forever at God’s side.
+										With the damage done to faith communities by parascientific exploration, it may surprise one to learn that Christian faith communities sport some of the most capable and veteran planar explorers that money can buy. Rather than shrinking from the challenge to their beliefs, the ever-growing sect of the Second Exodites, or “Seconders,” believes that this is the final test of Christian faith. They believe God exists at the highest plane, and he has charged the faithful to find him so that, like the Israelites fleeing Egypt, they may find the holy land and live forever at God’s side.
 									</p>
 									<p class="copy mb-0">
 										Among the <?php echo sf_lore_link('explorers-lodge', 'Explorers’ Lodges'); ?> of the <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, Second Exodite belief is far from rare, and there are entire planar discovery and holding companies with their mission explicit in their corporate bylaws. Belief in the Second Exodus isn’t limited to the <?php echo sf_lore_link('american-empire', 'American Empire'); ?>, though, and its practitioners can be found following their own personal missions all over the Settled Systems.
@@ -868,6 +868,37 @@
 									</p>
 									<p class="copy mb-0">
 										Still relegated to woo-woo conspiracy in popular culture, among theoretical paraphysicists and particularly experts in gate language or axiomatic theory, the belief has become widespread. As a dense and conceptually challenging belief structure, Panpsychism is often mocked as the self-aggrandizing sophistry of college professors, but the belief has found proponents in strange places. The Arch-Mage and consigliere de’Fant, native to <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> wrote in his masterwork on the nature of magic that “Thought is the only true universal element in the craft of magic; concentrated belief, rather than ritual, is what governs the success of spellcraft.”
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Planar Transcendentalism</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										In the decades following the reveal of <?php echo sf_lore_link('the-gift', 'The Gift'); ?>, Abrahamic religious communities were riven over dogmatic organizational issues at the group level, and deeply personal crises of faith at the individual. While many simply kept on as they always had in light of challenges to their faith, the impact of a multi-planar reality was nevertheless profound. Worlds beyond our own have been seen, they’d been traveled to, parts of them were being brought back, and none of it looked like what was described in scripture. The idea that Earth and humanity were paramount and truly special had been struck a decisive blow.
+									</p>
+									<p class="copy">
+										At the same time, the need for spiritual reassurance was, if anything, at an all-time high. Grand and impossible questions were being asked of the value of humanity in light of a terrifyingly expanded and bizarre universe. While Theosophy was setting the world on fire with its New Age attempt at rectifying these issues, another 19th-century religious philosophy was also seeing a bit of a resurgence. Championed by famed figures like Henry David Thoreau and Ralph Waldo Emerson, Transcendentalism sought to bring a return of romanticism and the appeal of nature and the key value of human intuition to a doggedly stoic and dogmatically religious society. The 1835 writings of Sophia Peabody Hawthorne in the <i>Cuba Journal</i> best sum up the overriding tenet to modern Planar Transcendentalism: “It is pure, single Nature, alone in her power &amp; loveliness, that touches subdues and exalts the soul—We do not remember the godlike here—but we think of GOD here.”
+									</p>
+									<p class="copy mb-0">
+										Modern Planar Transcendentalism makes no claims about who, or what, exists beyond human experience. It’s an agnostic creed, birthed as a self-defense mechanism against the strange and irrefutable. Its adherents are content to leave the question of God to the Theosophists and the Seconders. What it asks of its practitioners is simpler, and harder: go and find out for yourself. To a Transcendentalist, the sacred isn’t found in scripture or sermons, but in intuition and lived experience: the frigid cold of a mountain stream, the breadth of an alien sky, the silence of space, and yes, even the impossible colors of another plane. If the universe has become terrifyingly large, the answer isn’t to run from it, but to go and stand in it. For the creed’s adherents, planar travel is less an industry than a pilgrimage, and it’s no coincidence that the movement’s ranks are thick with surveyors, explorers, and gate hands who have seen more of creation than any prophet ever did.
+									</p>
+								</div>
+							</div>
+							<div>
+								<h6 class="mb-2"><strong>Strong Souls</strong></h6>
+								<div class="text-cols">
+									<p class="copy">
+										An extraplanar religious philosophy imported by explorers and parasapient emigrants alike hailing from <?php echo sf_lore_link('isekai', '516/a/198 - “<i>Isekai</i>,”'); ?> Strong Souls presents an inherently humanist and relatable relationship to an individual’s soul. Similar in some ways to the Eastern spiritual concept of karma, Strong Souls both posits the existence of the immortal soul and ascribes attributes of health and vitality to it. Strong Souls as a broad concept appears to be a universal concept in the polytheistic and highly localized religious cultures of its founding plane. It posits that one is born with a healthy, but empty soul. Positive experiences, actions, and beliefs serve to fill one’s soul, nourishing it and making it strong. Negative actions, on the other hand, have the opposite effect, “filling the soul with bile,” and starving it.
+									</p>
+									<p class="copy">
+										Within the religious belief systems of its native plane, a strong soul is a prerequisite for a good afterlife, with the various gods of their pantheons going so far as to dismiss or even devour the thin, wispy souls of the wicked or malevolent. Beyond the worship of different named deities, and the cults and traditions associated, the religious movements of Isekai find their greatest contrast in the specifics of what constitutes good or evil, and the exact nature of the soul to the world and their respective deities. To some religious cultures, such as the worshippers of Salno, the goddess of the harvest, marriage, light, and nature, animals and plants possess souls every bit as strong as a member of parasapient society, and those who prove worthy find themselves born into nature’s cycle anew. To others, such as followers of Rotonto, the collectivist god of war, family, and the home, the strongest souls are kept for his personal guard in the never-ending battle against the Screaming Stars.
+									</p>
+									<p class="copy">
+										To the residents of that plane, the truth of this concept is incontrovertible, and indeed those who were deeply cruel or malevolent in life often seem to return as the region’s well-recorded “Bogey Spirits,” or can even rise from the grave as undead abominations. Popular conjecture is that these individuals were cast out from their respective afterlives. Abandoned by their gods, they had little choice but to return to the world. The presence of some sort of karmic weight or measure seems to be present within the systems of “magic” practice in that plane as well, and one’s past actions do appear to have material impact on the effectiveness of some spells.
+									</p>
+									<p class="copy mb-0">
+										Strong Souls has been incorporated into several religious traditions within the Settled Systems, most notably being a common belief among Theosophist faithful. Guest lecturers from 516/a/198 have even spoken on the topic at the quadrennial Theosophic Convocation.
 									</p>
 								</div>
 							</div>
