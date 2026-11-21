@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/21/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Setting: Planar Transcendentalism joins the new philosophies of 2230, an agnostic creed that finds the sacred in lived experience, and planar travel, rather than scripture. The Second Exodites are now also called “Seconders.”</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/20/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Items: every weapon and natural weapon now says how it attacks, Melee Attack or Ranged Attack, and thrown weapons get a Thrown badge. Natural weapons, from Fists to Murk Legs’ claws, carry a Natural Weapon badge, and built-in weapons a Built-in badge, rather than saying so in their descriptions.</li>
