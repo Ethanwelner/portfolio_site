@@ -8,6 +8,13 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/22/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>Explaining Stats: a character who reaches 0 Hit Points is dead. They gain the Dead Condition, can take no Actions and perceive nothing, and their Hit Points can only be restored by something that says it can bring a character back from the dead. Items have the same in Destroyed.</li>
+						<li>Planar Exploration: Black Box, Turtle Box, Screamer and Expedition Drone are now one Exploration Technologies entry, Exploration Drones, with a section for each inside its Details. The Black Box, Turtle Box, Screamer and Expedition Drone are all written up.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Special Stats, like Magic, now take no more than 10 points instead of 20. Traits, Equipment, or other effects can still raise one above 10. Archmage now needs Magic 10 instead of 12.</li>
