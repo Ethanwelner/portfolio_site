@@ -910,13 +910,13 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 				<div class="line-container"><h5><strong>Monster Sheet</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_monster_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'threat' =&gt; 8, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, … ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( sf_monster_trait( 'Natural Armor', 2 ), … ) ), array( 'fold' =&gt; 'closed' ) );
 For monsters and enemies, anything the party fights; their Traits come from php/rpg/components/monster-traits.php. In place of a character level, the blob shows a threat level, 1 to 10, with its tier after what it is: 1–2 Minor, 3–4 Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary (a dash until it's set). The same fields and options as the NPC sheet. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them.
-Its frame: a deep red band, a red line with a gold star in the corner, and a gold filigree line with a gold skull at its top with gold noise gathered in the field’s corners. array( 'background' =&gt; 'storm' ) in the options draws the storm background in its field (a starry night, slowly drifting black and white storm clouds, lightning now and then); the NPC sheet takes it too.</pre>
+Its frame: a deep red band, a red line with a gold star in the corner, and a gold filigree line with a gold skull at its top with gold noise gathered in the field’s corners. Its field has the storm background (a starry night, slowly drifting storm clouds tinted #4D5D5A, lightning now and then); array( 'background' =&gt; 'none' ) in the options leaves it out, and the NPC sheet takes array( 'background' =&gt; 'storm' ) too.</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['monster'] ); ?>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its frame, then the same with the storm background</p>
-					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ), array( 'background' => 'storm' ) ); ?></div></div>
+					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its frame and storm, then the same with no background</p>
+					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ), array( 'background' => 'none' ) ); ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, cards open, as in its lore entry</p>
 					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>

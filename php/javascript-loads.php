@@ -1258,8 +1258,8 @@
 			var sky = canvas.parentNode.querySelector( ".sf-npc-sky" );
 			if ( sky ) {
 				sky.animate( [
-					{ opacity: 0.4 }, { opacity: 0.9, offset: 0.04 }, { opacity: 0.5, offset: 0.12 },
-					{ opacity: 0.85, offset: 0.2 }, { opacity: 0.4 }
+					{ filter: "brightness(1)" }, { filter: "brightness(2.6)", offset: 0.04 }, { filter: "brightness(1.3)", offset: 0.12 },
+					{ filter: "brightness(2.4)", offset: 0.2 }, { filter: "brightness(1)" }
 				], flicker );
 			}
 		}
