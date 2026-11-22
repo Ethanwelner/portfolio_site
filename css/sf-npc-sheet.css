@@ -132,9 +132,8 @@
    (olive-300): a 3px line inside the frame line, 12px in from the sheet's edge.
    Corner pieces (one SVG, flipped for each corner) cross it with short
    ticks; the top right's piece arcs it around the notch. Straight edges
-   join them, so the sheet grows with its content, and a 28px diamond with a
-   Monster Red heart breaks it at the top and the bottom, over the boxes'
-   edges. ---- */
+   join them, so the sheet grows with its content, and a skull breaks it at
+   the top's middle. ---- */
 .sf-npc-filigree {
     position: absolute;
     inset: 0;
@@ -153,11 +152,6 @@
     .sf-npc-fil-outer {
         stroke-width: 3;
     }
-
-    .sf-npc-fil-accent {
-        fill: var(--sf-red-700);
-        stroke: none;
-    }
 }
 
 /* The skull in the frame's notch, where the NPC sheet has its star (the
@@ -166,12 +160,24 @@
    edge, its right edge and the gold line's arc around the notch (its jaw is
    what comes nearest the arc). 3px here, inside the sheet's 1px border. */
 .sf-npc-filigree .sf-npc-fil-skull {
-    top: 3px;
-    right: 3px;
-    width: 15.66px;
-    height: 19px;
     fill: var(--sf-red-700);
     stroke: none;
+
+    &.sf-npc-fil-skull--corner {
+        top: 3px;
+        right: 3px;
+        width: 15.66px;
+        height: 19px;
+    }
+
+    /* The top line's: 22px tall, centered on the line (13.5px in) at the
+       sheet's middle, the line stopping about 11px short of it either side */
+    &.sf-npc-fil-skull--top {
+        top: 2.5px;
+        left: calc(50% - 9.07px);
+        width: 18.14px;
+        height: 22px;
+    }
 }
 
 .sf-npc-fil-corner {
@@ -184,10 +190,9 @@
     &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
 }
 
-/* The edges: the line, 3px (12–15px in), the top and bottom ones with a
-   gap 25px either side of the sheet's middle for the diamond, so the line
-   stops about 12px short of it (the top edge is 8px off center, since its
-   right end clears the notch) */
+/* The edges: the line, 3px (12–15px in), the top one with a gap 20px
+   either side of the sheet's middle for the skull (8px off its own center,
+   since its right end clears the notch) */
 .sf-npc-fil-edge {
     position: absolute;
     background: currentColor;
@@ -197,15 +202,14 @@
         left: 40px;
         right: 40px;
         height: 3px;
-        --fil-gap: 50%;
-        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
-        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
     }
 
     &.sf-npc-fil-edge--top {
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 20px), transparent 0 calc(var(--fil-gap) + 20px), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 20px), transparent 0 calc(var(--fil-gap) + 20px), #000 0);
     }
 
     &.sf-npc-fil-edge--bottom {
@@ -229,51 +233,19 @@
     }
 }
 
-.sf-npc-filigree .sf-npc-fil-diamond {
-    /* Over the top and bottom boxes, which it overlaps a little */
-    z-index: 1;
-    left: calc(50% - 18px);
-    width: 36px;
-    height: 36px;
-    /* Filled with the field, so the box under it doesn't show through */
-    fill: var(--npc-frame);
-    stroke-width: 1.5;
-
-    /* Centered 17px in, just inside the line */
-    &.sf-npc-fil-diamond--top { top: -1px; }
-    &.sf-npc-fil-diamond--bottom { bottom: -1px; }
-}
-
-/* The monster sheet's wear: the band, the gold line and the filigree
-   (12–22px in) worn through to the field's black in isolated splotches, as
-   on an old printed tarot card. One SVG tile (2000px): a coarse grain in
-   Card Edge (gray-900) kept only inside a few large (250–500px), smooth,
-   low-frequency noise blots,
-   so most of the border stays clean. Over the border only (the sheet's
-   outer 25px, the content and the notch cut out), and over the diamonds.
-   Not printed. */
-.sf-npc-wear {
-    position: absolute;
-    z-index: 1;
-    inset: -1px;
-    padding: 25px;
-    /* The card's own corners, so no speck lands outside them */
-    border-radius: 24px 0 24px 24px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
-    -webkit-mask:
-        radial-gradient(circle at calc(100% - 6px) 6px, transparent 23px, #000 23.5px),
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: source-in, xor;
-    mask:
-        radial-gradient(circle at calc(100% - 6px) 6px, transparent 23px, #000 23.5px),
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    mask-composite: intersect, exclude;
-    pointer-events: none;
+/* The monster sheet's wear: the gold filigree line (.sf-npc-filigree--line)
+   worn through to the field's black in isolated splotches, as on an old
+   printed tarot card. A mask over the line, one SVG tile (2000px): solid
+   except for a coarse grain kept only inside a few large (250–500px),
+   smooth, low-frequency noise blots, so most of the line stays clean. The
+   band, the frame line and the skulls aren't worn. Not in print. */
+.sf-npc-filigree--line {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
 
     @media print {
-        display: none;
+        -webkit-mask: none;
+        mask: none;
     }
 }
 
