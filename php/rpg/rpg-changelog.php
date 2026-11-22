@@ -16,6 +16,7 @@
 						<li>Monsters: the Briar Boar is now the Hedge Boar, and the Mire Lurker is now the Bog Lurker.</li>
 						<li>Character Creator: new Necromancy spell Grave Call (Magic 3), a melee Attack for 1 MP that deals 4 Death per Rank, and 4 more per Rank against a Severely Injured target.</li>
 						<li>Character Creator: new metamagic Traits. Lingering Spell raises the Rank of Conditions a spell gives, Far Casting extends a spell's range, Extended Casting extends its duration, and nine Focus Traits (Searing, Rime, Storm, Caustic, Grave, Mind, Crushing, Piercing and Static) add +3 damage of one type for each extra MP spent.</li>
+						<li>Character Creator: new crafting Skills for making Artifacts, Enchantments and Potions. Sparing Hand and Master of Reagents need fewer reagents, Wellspring Crafting covers 5 MP of a making for free, and Reagent Substitution swaps one reagent for another of the same rarity and equal or greater value.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
