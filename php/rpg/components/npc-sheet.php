@@ -137,13 +137,13 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	}
 
 	// The storm clouds' color pop (css/sf-npc-sheet.css, .sf-npc-sky), once a
-	// page: the clouds turned to a red-600 duotone (#c14a40 as fractions of
-	// their gray), dimmed by a third, then pushed about by turbulence, after
+	// page: the clouds in black and white, their gray at 40%, then pushed
+	// about by turbulence, after
 	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
 	// bursts at the pen's speed (its detail climbing 1 to 10 every 0.75s, its
 	// seed about 10 a second, its stretch growing), three bursts in a 20s
 	// loop at uneven gaps, and holds still between them. The still one, for
-	// reduced motion, keeps the color and one fixed push.
+	// reduced motion, keeps the gray and one fixed push.
 	function sf_npc_color_pop_filter() {
 		static $done = false;
 		if ( $done ) {
@@ -151,7 +151,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		$done  = true;
 		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
-			. '<feColorMatrix type="matrix" values="0.5 0 0 0 0  0.19 0 0 0 0  0.17 0 0 0 0  0 0 0 1 0" in="gray" result="tint" />';
+			. '<feColorMatrix type="matrix" values="0.4 0 0 0 0  0.4 0 0 0 0  0.4 0 0 0 0  0 0 0 1 0" in="gray" result="tint" />';
 		$push  = '<feColorMatrix type="saturate" values="30" in="noise" result="vivid" />'
 			. '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -15" in="vivid" result="map" />'
 			. '<feDisplacementMap in="tint" in2="map" scale="15" xChannelSelector="R" yChannelSelector="A" />';
