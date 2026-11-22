@@ -21,7 +21,7 @@
 					<ul class="copy">
 						<li>When a character gains a Level, they get 1 point to spend in any core Stat.</li>
 						<li>Each point added to Physical, Social, or Mental gives 3 points to spend in the focus Stats of that category.</li>
-						<li>No more than 20 points can be spent on any core, focus, or Special Stat, and some Kinds set lower maximums. Traits, Equipment, or other effects can still raise a Stat’s total above 20.</li>
+						<li>No more than 20 points can be spent on any core or focus Stat, and no more than 10 on a Special Stat. Some Kinds set lower maximums. Traits, Equipment, or other effects can still raise a Stat’s total above these limits.</li>
 					</ul>
 					<p class="copy">Beyond Physical, Social, and Mental, some Traits open additional core Stats, called Special Stats. All Special Stats work the same way:</p>
 					<ul class="copy">
@@ -269,7 +269,7 @@
 							Beyond Physical, Social, and Mental, there are also Special Stats, core Stats that only some characters may have access to, such as Magic. A character can only spend points into a Special Stat if a Trait grants them access to it, like the Magic Access that most Kinds of Dreft receive through their Magical Heritage. A character without that access can’t put points into it, no matter how many Levels they gain.
 						</p>
 						<p class="copy">
-							Special Stats do not have focus Stats. Instead, every point spent into a Special Stat grants 3 of that Stat’s Special Stat points, such as Mana Points (MP) for Magic. As with every other Stat, no more than 20 points can be spent into a Special Stat, though Traits, Equipment, or other effects can raise its total above 20.
+							Special Stats do not have focus Stats. Instead, every point spent into a Special Stat grants 3 of that Stat’s Special Stat points, such as Mana Points (MP) for Magic. No more than 10 points can be spent into a Special Stat, though Traits, Equipment, or other effects can raise its total above 10.
 						</p>
 						<p class="copy">
 							Traits built on a Special Stat list it among their Stat requirements, such as a spell that needs Magic 3, and a character without access to that Stat can't meet them. Traits that are only related to it, like Relic Handling, don't require it and are open to any character who meets their other requirements.
