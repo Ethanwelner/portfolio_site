@@ -21,7 +21,7 @@
 //   'traits'  => array( … ),             // components/monster-traits.php
 // ), array( 'fold' => 'closed' ) );
 //
-// Its frame has a deep red band and a red line with a gold star in the
+// Its frame has a deep teal band and a teal line with a gold star in the
 // corner, a gold filigree line inside with a gold skull at its top (a
 // larger one in flames for a boss), and gold
 // noise gathered in the field's corners. Its field has the storm background
