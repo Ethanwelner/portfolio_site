@@ -316,7 +316,7 @@
                                             </div>
                                         </div>
                                         <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
-                                            <div class="content-stack"><?php include 'php/rpg/encounters.php'; ?></div>
+                                            <div class="sf-npc-grid"><?php include 'php/rpg/encounters.php'; ?></div>
                                         </div>
                                     </div>
                                 </div>
