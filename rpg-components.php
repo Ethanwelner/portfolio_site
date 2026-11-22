@@ -282,8 +282,8 @@ $sf_color_groups = array(
 	'red'     => array( 'Hit Points.', array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
 		array( '600', '#c14a40', 'Brick Red', 'Not used yet, for filling out the scale' ),
-		array( '700', '#a53027', 'Monster Red', 'A monster sheet’s frame line and corner skull' ),
-		array( '800', '#6f2f2a', 'Oxblood', 'Not used yet, for filling out the scale' ),
+		array( '700', '#a53027', 'Monster Red', 'A monster sheet’s corner skull and diamond hearts' ),
+		array( '800', '#6f2f2a', 'Oxblood', 'A monster sheet’s frame line' ),
 		array( '900', '#4a1f1b', 'Monster Frame', 'A monster sheet’s frame band' ),
 	) ),
 	'crimson' => array( 'Danger.', array(

@@ -40,8 +40,8 @@
        SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
     --sf-red-500: #e2574c;     /* HP */
     --sf-red-600: #c14a40;     /* not used yet */
-    --sf-red-700: #a53027;     /* a monster sheet's frame line and corner skull */
-    --sf-red-800: #6f2f2a;     /* not used yet */
+    --sf-red-700: #a53027;     /* a monster sheet's corner skull */
+    --sf-red-800: #6f2f2a;     /* a monster sheet's frame line */
     --sf-red-900: #4a1f1b;     /* a monster sheet's frame band */
     --sf-crimson-300: #ff5c86; /* bad, on dark */
     --sf-crimson-500: #eb0844; /* danger, damage */
