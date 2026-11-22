@@ -95,17 +95,24 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// A box of cards under its ruled title. $scroll is the character sheet's
 	// long-list class (css/sf-sheet.css): the list stops at 60vh (Items at
 	// min(60vh, 640px), as on the sheet) and scrolls inside its box.
-	function sf_npc_cards( $title, $cards, $draw, $scroll = 'sf-sheet-scroll' ) {
+	// $columns lays the cards out in columns that each run top to bottom, so
+	// cards of different lengths don't leave gaps the way a grid's rows do;
+	// the scrolling moves to a wrapper, since columns of a set height spill
+	// sideways instead of scrolling.
+	function sf_npc_cards( $title, $cards, $draw, $scroll = 'sf-sheet-scroll', $columns = false ) {
 		if ( empty( $cards ) ) {
 			return;
 		}
-		echo '<div class="sf-npc-box"><h6 class="sf-npc-title">' . $title . '</h6><ul class="sf-npc-cards ' . $scroll . '">';
+		echo '<div class="sf-npc-box"><h6 class="sf-npc-title">' . $title . '</h6>';
+		echo $columns
+			? '<div class="sf-npc-scroll ' . $scroll . '"><ul class="sf-npc-cards sf-npc-cards--columns">'
+			: '<ul class="sf-npc-cards ' . $scroll . '">';
 		foreach ( $cards as $card ) {
 			echo '<li>';
 			$draw( $card );
 			echo '</li>';
 		}
-		echo '</ul></div>';
+		echo $columns ? '</ul></div></div>' : '</ul></div>';
 	}
 
 	function sf_npc_sheet( $npc, $options = array() ) {
@@ -203,7 +210,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}, 'sf-sheet-scroll sf-sheet-scroll--short' );
 		sf_npc_cards( 'Traits', $npc['traits'] ?? array(), function ( $t ) use ( $with_fold ) {
 			sf_card_trait( $with_fold( $t ) );
-		} );
+		}, 'sf-sheet-scroll', true );
 
 		echo '</div>';
 	}

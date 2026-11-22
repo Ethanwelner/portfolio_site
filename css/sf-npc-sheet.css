@@ -440,9 +440,28 @@
    Item cards' count circles, hanging 13px past their left edge, and for
    Condition cards' headers, which a scrolling list would clip; the margins
    give the room back so nothing moves */
-.sf-npc-cards.sf-sheet-scroll {
+.sf-npc-cards.sf-sheet-scroll,
+.sf-npc-scroll.sf-sheet-scroll {
     padding: 2px 14px;
     margin: -2px -14px;
+}
+
+/* The Traits: columns as wide as the grid's (at least 360px, 24px apart),
+   each running top to bottom, so a short card doesn't leave a gap beside a
+   long one. A card stays whole in its column. */
+.sf-npc-cards--columns {
+    display: block;
+    column-width: 360px;
+    column-gap: 24px;
+
+    > li {
+        break-inside: avoid;
+    }
+
+    /* 12px between cards; at the top of a column the break drops it */
+    > li + li {
+        margin-top: 12px;
+    }
 }
 
 /* An Item's count, centered on its card's top line. The cards' 14.15px
