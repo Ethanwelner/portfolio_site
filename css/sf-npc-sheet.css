@@ -186,7 +186,8 @@
 
 /* The edges: the outer line 3px (12–15px in) and the inner one 1px
    (21–22px in) as backgrounds, the top and bottom ones with a gap for the
-   diamond at the sheet's middle (the top edge is 8px off center, since its
+   diamond at the sheet's middle, 19px either side so the lines stop about
+   6px short of it (the top edge is 8px off center, since its
    right end clears the notch) */
 .sf-npc-fil-edge {
     position: absolute;
@@ -198,8 +199,8 @@
         right: 40px;
         height: 10px;
         --fil-gap: 50%;
-        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 13px), transparent 0 calc(var(--fil-gap) + 13px), #000 0);
-        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 13px), transparent 0 calc(var(--fil-gap) + 13px), #000 0);
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
     }
 
     &.sf-npc-fil-edge--top {
