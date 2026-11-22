@@ -13,6 +13,8 @@
 //   'name'    => 'Murk Legs',
 //   'kind'    => 'Monster, Isekai',
 //   'threat'  => 8,                      // Deadly
+//   'boss'    => true,                   // optional: the tough one in its
+//                                        // threat band, a flaming skull
 //   'move'    => '10 m',
 //   'stats'   => array( 'Physical' => 12, 'Endurance' => 10, … ),
 //   'attacks' => array( … ),
@@ -20,7 +22,8 @@
 // ), array( 'fold' => 'closed' ) );
 //
 // Its frame has a deep red band and a red line with a gold star in the
-// corner, a gold filigree line inside with a gold skull at its top, and gold
+// corner, a gold filigree line inside with a gold skull at its top (a
+// larger one in flames for a boss), and gold
 // noise gathered in the field's corners. Its field has the storm background
 // (drifting clouds tinted #202826, lightning now and then) unless the
 // options say 'background' => 'none'.

@@ -166,7 +166,8 @@
     stroke: none;
 }
 
-/* A Deadly monster's skull (.sf-npc--deadly): the whole Burning Skull, its
+/* A boss's skull (.sf-npc--boss, 'boss' => true: the tough one in its
+   threat band): the whole Burning Skull, its
    flames too, 32px and centered on the line, the flames rising past the
    frame's top a little */
 .sf-npc-filigree .sf-npc-fil-skull--flaming {
@@ -215,12 +216,12 @@
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
-        /* Wider for a Deadly monster's flaming skull */
+        /* Wider for a boss's flaming skull */
         --fil-skull-gap: 20px;
         -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
         mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
 
-        .sf-npc--deadly & {
+        .sf-npc--boss & {
             --fil-skull-gap: 24px;
         }
     }
