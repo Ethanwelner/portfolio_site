@@ -426,12 +426,10 @@
 }
 
 /* The monster sheet's sections (the top row, description, Stats, Items and
-   Traits boxes): no grain, and see-through, so the storm and noise behind
-   them show. All take the description's darker treatment, the well color
-   (--npc-well) at 70%. */
+   Traits boxes): no background at all, so the content sits straight on the
+   field over the storm and noise. They keep their padding. */
 .sf-npc--monster :is(.sf-npc-box, .sf-npc-description) {
-    background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
-    background-image: none;
+    background: none;
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
