@@ -111,11 +111,11 @@
     --npc-frame: var(--sf-gray-900);
     padding: 26px;
 
-    /* The top row's box cut away about the filigree's arc in the corner
-       (the notch's center is 22px out from the box's corner) */
+    /* The top row's box cut away about the filigree's inner arc in the
+       corner (the notch's center is 21px out from the box's corner) */
     .sf-npc-head {
-        -webkit-mask: radial-gradient(circle at calc(100% + 22px) -22px, transparent 42px, #000 42.5px);
-        mask: radial-gradient(circle at calc(100% + 22px) -22px, transparent 42px, #000 42.5px);
+        -webkit-mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
+        mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
     }
 
     &::before {
@@ -128,8 +128,8 @@
 
 /* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
    sf_npc_filigree()), after a tarot card's gold border, in Monster Line: a
-   1px double line 12px and 17px in from the sheet's edge, inside the frame
-   line. Corner pieces (one SVG, flipped for each corner) cross the outer
+   double line inside the frame line, a 2px one 12px in from the sheet's
+   edge and a 1px one 21px in. Corner pieces (one SVG, flipped for each corner) cross the outer
    line with short ticks and fly a small flag in Monster Star inside the
    inner one; the top right's piece arcs both lines around the notch.
    Straight edges join them, so the sheet grows with its content, and a
@@ -149,20 +149,25 @@
         stroke-width: 1;
     }
 
+    /* The outer line, 2px */
+    .sf-npc-fil-outer {
+        stroke-width: 2;
+    }
+
     .sf-npc-fil-accent {
         fill: var(--sf-red-700);
         stroke: none;
     }
 }
 
-/* The burning skull in the frame's notch, where the NPC sheet has its star
-   (game-icons.net's Burning Skull by Lorc, CC BY 3.0): 18px, centered where
-   the star is, 12px in from the corner */
+/* The skull in the frame's notch, where the NPC sheet has its star (the
+   skull from game-icons.net's Burning Skull by Lorc, CC BY 3.0, without its
+   flames): 22px wide, its top level with the frame's band, in the corner */
 .sf-npc-filigree .sf-npc-fil-skull {
-    top: 3px;
-    right: 3px;
-    width: 18px;
-    height: 18px;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 27px;
     fill: var(--sf-red-700);
     stroke: none;
 }
@@ -177,9 +182,10 @@
     &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
 }
 
-/* The edges: both lines as 1px backgrounds 5px apart, the top and bottom
-   ones with a gap for the diamond at the sheet's middle (the top edge is
-   8px off center, since its right end clears the notch) */
+/* The edges: the outer line 2px (12–14px in) and the inner one 1px
+   (21–22px in) as backgrounds, the top and bottom ones with a gap for the
+   diamond at the sheet's middle (the top edge is 8px off center, since its
+   right end clears the notch) */
 .sf-npc-fil-edge {
     position: absolute;
     --fil-line: linear-gradient(currentColor, currentColor);
@@ -188,26 +194,41 @@
     &.sf-npc-fil-edge--bottom {
         left: 40px;
         right: 40px;
-        height: 6px;
-        background: var(--fil-line) 0 0 / 100% 1px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
+        height: 10px;
         --fil-gap: 50%;
         -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
         mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
     }
 
-    &.sf-npc-fil-edge--top { top: 12px; right: 56px; --fil-gap: calc(50% + 8px); }
-    &.sf-npc-fil-edge--bottom { bottom: 12px; }
+    &.sf-npc-fil-edge--top {
+        top: 12px;
+        right: 56px;
+        --fil-gap: calc(50% + 8px);
+        background: var(--fil-line) 0 0 / 100% 2px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
+    }
+
+    &.sf-npc-fil-edge--bottom {
+        bottom: 12px;
+        background: var(--fil-line) 0 100% / 100% 2px no-repeat, var(--fil-line) 0 0 / 100% 1px no-repeat;
+    }
 
     &.sf-npc-fil-edge--left,
     &.sf-npc-fil-edge--right {
         top: 40px;
         bottom: 40px;
-        width: 6px;
-        background: var(--fil-line) 0 0 / 1px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
+        width: 10px;
     }
 
-    &.sf-npc-fil-edge--left { left: 12px; }
-    &.sf-npc-fil-edge--right { right: 12px; top: 56px; }
+    &.sf-npc-fil-edge--left {
+        left: 12px;
+        background: var(--fil-line) 0 0 / 2px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
+    }
+
+    &.sf-npc-fil-edge--right {
+        right: 12px;
+        top: 56px;
+        background: var(--fil-line) 100% 0 / 2px 100% no-repeat, var(--fil-line) 0 0 / 1px 100% no-repeat;
+    }
 }
 
 .sf-npc-fil-diamond {
@@ -215,8 +236,9 @@
     width: 28px;
     height: 28px;
 
-    &.sf-npc-fil-diamond--top { top: 1px; }
-    &.sf-npc-fil-diamond--bottom { bottom: 1px; }
+    /* Centered between the lines, 17px in */
+    &.sf-npc-fil-diamond--top { top: 3px; }
+    &.sf-npc-fil-diamond--bottom { bottom: 3px; }
 }
 
 /* The noise in the monster sheet's corners, in gold: the night sky's

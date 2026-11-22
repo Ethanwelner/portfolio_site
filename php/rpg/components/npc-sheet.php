@@ -210,28 +210,31 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// field's corners (.sf-npc-dust).
 	function sf_npc_filigree() {
 		$corner = '<svg class="sf-npc-fil-corner sf-npc-fil-corner--%s" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-			. '<path d="M12.5 40V12.5H40M17.5 40V17.5H40M8.5 12.5h4M12.5 8.5v4M22.5 22v11" />'
-			. '<path class="sf-npc-fil-accent" d="M23 22l6 3l-6 3z" /></svg>';
+			. '<path class="sf-npc-fil-outer" d="M13 40V13H40M9 13h4M13 9v4" />'
+			. '<path d="M21.5 40V21.5H40M24.5 24.5v6.5" />'
+			. '<path class="sf-npc-fil-accent" d="M25 24.5l4.5 2.25l-4.5 2.25z" /></svg>';
 		$diamond = '<svg class="sf-npc-fil-diamond sf-npc-fil-diamond--%s" viewBox="0 0 28 28" aria-hidden="true" focusable="false">'
-			. '<path d="M14 4L24 14L14 24L4 14Z" />'
-			. '<path class="sf-npc-fil-accent" d="M14 10L18 14L14 18L10 14Z" /></svg>';
+			. '<path d="M14 5L23 14L14 23L5 14Z" />'
+			. '<path class="sf-npc-fil-accent" d="M14 10.5L17.5 14L14 17.5L10.5 14Z" /></svg>';
 		echo '<div class="sf-npc-dust" aria-hidden="true"></div><div class="sf-npc-filigree" aria-hidden="true">';
 		foreach ( array( 'tl', 'bl', 'br' ) as $where ) {
 			printf( $corner, $where );
 		}
 		// The top right, around the notch: the lines meet arcs about the
-		// notch's center (5px in from the corner), 5.5px inside the field's
-		// own arc like the straight lines
+		// notch's center (5px in from the corner), as far inside the field's
+		// own arc (26px) as the straight lines are inside its edge
 		echo '<svg class="sf-npc-fil-corner sf-npc-fil-corner--tr" viewBox="0 0 56 56" aria-hidden="true" focusable="false">'
-			. '<path d="M56 12.5H35.6A31.5 31.5 0 0 1 12.5 35.6V56M56 17.5H39.3A36.5 36.5 0 0 1 17.5 39.3V56" /></svg>';
+			. '<path class="sf-npc-fil-outer" d="M56 13H35.98A32 32 0 0 1 13 35.98V56" />'
+			. '<path d="M56 21.5H41.99A40.5 40.5 0 0 1 21.5 41.99V56" /></svg>';
 		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
 			echo '<span class="sf-npc-fil-edge sf-npc-fil-edge--' . $side . '"></span>';
 		}
 		printf( $diamond, 'top' );
 		printf( $diamond, 'bottom' );
-		// The burning skull in the notch, in place of the NPC sheet's star
-		// (game-icons.net's Burning Skull by Lorc, CC BY 3.0)
-		echo '<svg class="sf-npc-fil-skull" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="m268.725 389.28 3.74 28.7h-30.89l3.74-28.7a11.705 11.705 0 1 1 23.41 0zm33.84-71.83a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm-94.4 0a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm245.71-62c0 98.2-48.22 182.68-117.39 220.24-46 28.26-112.77 28.26-156.19 2.5-71.72-36.21-122.17-122.29-122.17-222.73 0-78.16 30.54-147.63 77.89-191.67 0 0-42.08 82.86 9.1 135-11.67-173.77 169.28-63 118-184 151.79 83.33 9.14 105 84.1 148.21 0 0 66.21 47 36.4-91.73 42.95 43.99 70.25 110.3 70.25 184.19zm-68.54 29.87c-2.45-65.49-54.88-119.59-120.26-124.07-3.06-.21-6.15-.31-9.16-.31a129.4 129.4 0 0 0-129.43 129.35 132.15 132.15 0 0 0 24.51 76v25a35 35 0 0 0 34.74 34.69h6.26v16.61a34.66 34.66 0 0 0 34.71 34.39h61.78a34.48 34.48 0 0 0 34.51-34.39v-16.61h5.38a34.89 34.89 0 0 0 34.62-34.75v-28a129.32 129.32 0 0 0 22.33-77.9z" /></svg>';
+		// The skull in the notch, in place of the NPC sheet's star: the skull
+		// from game-icons.net's Burning Skull by Lorc (CC BY 3.0), without its
+		// flames, its eyes and nose cut out
+		echo '<svg class="sf-npc-fil-skull" viewBox="120 154 272 330" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M268.725 389.28l3.74 28.7h-30.89l3.74-28.7a11.705 11.705 0 1 1 23.41 0zm33.84-71.83a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm-94.4 0a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zM385.335 285.32c-2.45-65.49-54.88-119.59-120.26-124.07-3.06-.21-6.15-.31-9.16-.31a129.4 129.4 0 0 0-129.43 129.35 132.15 132.15 0 0 0 24.51 76v25a35 35 0 0 0 34.74 34.69h6.26v16.61a34.66 34.66 0 0 0 34.71 34.39h61.78a34.48 34.48 0 0 0 34.51-34.39v-16.61h5.38a34.89 34.89 0 0 0 34.62-34.75v-28a129.32 129.32 0 0 0 22.33-77.9z" /></svg>';
 		echo '</div>';
 	}
 
