@@ -154,7 +154,7 @@
 }
 
 /* The skull on the top line (the skull from game-icons.net's Burning Skull
-   by Lorc, CC BY 3.0, without its flames), in Monster Red: 22px tall,
+   by Lorc, CC BY 3.0, without its flames), in the filigree's gold: 22px tall,
    centered on the line (13.5px in) at the sheet's middle, the line stopping
    about 11px short of it either side */
 .sf-npc-filigree .sf-npc-fil-skull {
@@ -162,7 +162,7 @@
     left: calc(50% - 9.07px);
     width: 18.14px;
     height: 22px;
-    fill: var(--sf-red-700);
+    fill: var(--sf-olive-300);
     stroke: none;
 }
 
