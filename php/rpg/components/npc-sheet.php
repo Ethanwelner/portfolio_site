@@ -22,7 +22,10 @@
 //   'kind'        => 'Monster, Isekai',         // what it is, under the name
 //   'level'       => 15,                        // optional, over the core
 //                                               // Stats' total
-//   'description' => '…',                       // optional, a line or two
+//   'description' => '…',                       // a short description and
+//                                               // how the GM plays it; its
+//                                               // box says Content coming
+//                                               // soon until it's written
 //   'move'        => '10 m',
 //   'resistances' => '2 Blunt, 1 Slashing',      // optional
 //   'stats'       => array( 'Physical' => 12, 'Endurance' => 10, …,
@@ -159,9 +162,12 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		echo '</div></div>';
 
-		if ( ! empty( $npc['description'] ) ) {
-			echo '<p class="sf-npc-description">' . sf_npc_e( $npc['description'] ) . '</p>';
-		}
+		// Its description, between the name and the Stats, as the character
+		// sheet's description box (read-only here): a short description and
+		// how the GM plays it, or Content coming soon until it's written
+		echo '<div class="sf-npc-description' . ( empty( $npc['description'] ) ? ' is-coming-soon' : '' ) . '"><p>'
+			. ( ! empty( $npc['description'] ) ? sf_npc_e( $npc['description'] ) : 'Content coming soon.' )
+			. '</p></div>';
 
 		// The Stats as on a Kind card (php/rpg/components/cards.php): each core
 		// Stat's name in its color with its number, its focus Stats under it,
