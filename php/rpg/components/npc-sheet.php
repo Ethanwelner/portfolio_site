@@ -1,9 +1,14 @@
 <?php
-// The short-form sheet for Strange Frontiers NPCs and monsters: the name and
-// what it is with its Movement, the core Stats and focus Stats laid out as
-// on a Kind card with live HP, VP, SP (and MP for anything with Magic)
-// beside them, then its Items (Attacks first) and Traits as cards. One component, so every NPC and
-// monster reads the same way, wherever it's dropped in.
+// The NPC sheet: the short-form sheet for Strange Frontiers NPCs (people the
+// party meets, not foes): the name and what it is with its Movement, its
+// description, the core Stats and focus Stats laid out as on a Kind card
+// with live HP, VP, SP (and MP for anything with Magic) beside them, then
+// its Items (Attacks first) and Traits as cards.
+//
+// Monsters and enemies get their own component, the monster sheet
+// (components/monster-sheet.php, sf_monster_sheet()). The two draw the
+// same sheet for now, through sf_npc_sheet_draw() below, each with its own
+// class on the sheet (.sf-npc--npc, .sf-npc--monster) to change it by.
 //
 // It's the full character sheet's short-form sibling (components/sheet.php
 // draws the player's sheet): the same frame, dark boxes and cards,
@@ -18,10 +23,11 @@
 // Magic. An NPC can set its own (a boss with extra HP) with 'resources'.
 //
 // sf_npc_sheet( array(
-//   'name'        => 'Murk Legs',
-//   'kind'        => 'Monster, Isekai',         // what it is, under the name
+//   'name'        => 'Hedge Witch',
+//   'kind'        => 'NPC, Dreft',              // what it is, under the name
 //   'level'       => 15,                        // optional, over the core
-//                                               // Stats' total
+//                                               // Stats' total (NPCs; a
+//                                               // monster has 'threat')
 //   'description' => '…',                       // a short description and
 //                                               // how the GM plays it; its
 //                                               // box says Content coming
@@ -62,6 +68,13 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 	function sf_npc_e( $text ) {
 		return htmlspecialchars( (string) $text, ENT_QUOTES, 'UTF-8' );
+	}
+
+	// A monster's threat level, 1 to 10, as its tier: 1–2 Minor, 3–4
+	// Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary
+	function sf_threat_tier( $threat ) {
+		$tiers = array( 'Minor', 'Standard', 'Elite', 'Deadly', 'Legendary' );
+		return $tiers[ max( 0, min( 4, (int) ceil( $threat / 2 ) - 1 ) ) ];
 	}
 
 	// The resources' −, + and restore icons, the creator's (ui.tsx's Sign and
@@ -118,7 +131,14 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		echo $columns ? '</ul></div></div>' : '</ul></div>';
 	}
 
+	// An NPC's sheet
 	function sf_npc_sheet( $npc, $options = array() ) {
+		sf_npc_sheet_draw( $npc, $options, 'npc' );
+	}
+
+	// The sheet the NPC sheet and the monster sheet (components/
+	// monster-sheet.php) share, with the one's class: 'npc' or 'monster'
+	function sf_npc_sheet_draw( $npc, $options, $variant ) {
 		$fold    = $options['fold'] ?? '';
 		$heading = in_array( $options['heading'] ?? 'h5', array( 'h2', 'h3', 'h4', 'h5', 'h6' ), true ) ? ( $options['heading'] ?? 'h5' ) : 'h5';
 		$names   = array( 'hp' => 'Hit Points', 'vp' => 'Vibe Points', 'sp' => 'Savvy Points', 'mp' => 'Mana Points' );
@@ -127,21 +147,31 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			$groups['magic'] = 'Magic';
 		}
 
-		echo '<div class="sf-npc">';
+		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
 
 		// Its level, name and what it is, then its resistances and Movement
-		// Its level in the character sheet's blob, left of the name: each
-		// level is a core point, so it's the core Stats' total unless the NPC
-		// sets its own
-		$level = isset( $npc['level'] ) ? (int) $npc['level'] : array_sum( array_map( function ( $label ) use ( $npc ) {
-			return (int) ( $npc['stats'][ $label ] ?? 0 );
-		}, $groups ) );
+		// In the character sheet's blob, left of the name: an NPC's level
+		// (each level is a core point, so it's the core Stats' total unless
+		// the NPC sets its own), or a monster's threat level, since a level
+		// doesn't say how dangerous a monster is. A monster's threat tier
+		// follows what it is under its name.
+		$tier = '';
 		echo '<div class="sf-npc-head"><div class="sf-npc-who">';
-		echo '<div class="sf-npc-level" title="Level ' . $level . '"><span class="sf-npc-level-label">Level</span><span class="sf-npc-level-number">' . $level . '</span></div>';
+		if ( 'monster' === $variant ) {
+			$threat = isset( $npc['threat'] ) ? (int) $npc['threat'] : null;
+			$tier   = null === $threat ? '' : sf_threat_tier( $threat );
+			echo '<div class="sf-npc-level sf-npc-threat" title="' . ( null === $threat ? 'Threat level not set' : 'Threat ' . $threat . ', ' . $tier ) . '"><span class="sf-npc-level-label">Threat</span><span class="sf-npc-level-number">' . ( null === $threat ? '–' : $threat ) . '</span></div>';
+		} else {
+			$level = isset( $npc['level'] ) ? (int) $npc['level'] : array_sum( array_map( function ( $label ) use ( $npc ) {
+				return (int) ( $npc['stats'][ $label ] ?? 0 );
+			}, $groups ) );
+			echo '<div class="sf-npc-level" title="Level ' . $level . '"><span class="sf-npc-level-label">Level</span><span class="sf-npc-level-number">' . $level . '</span></div>';
+		}
 		echo '<div>';
 		echo '<' . $heading . ' class="sf-npc-name">' . sf_npc_e( $npc['name'] ) . '</' . $heading . '>';
-		if ( ! empty( $npc['kind'] ) ) {
-			echo '<p class="sf-npc-kind">' . sf_npc_e( $npc['kind'] ) . '</p>';
+		$kind = array_filter( array( $npc['kind'] ?? '', ! empty( $tier ) ? $tier . ' threat' : '' ) );
+		if ( $kind ) {
+			echo '<p class="sf-npc-kind">' . implode( ' · ', array_map( 'sf_npc_e', $kind ) ) . '</p>';
 		}
 		echo '</div></div><div class="sf-npc-aside">';
 		// Its resistances as on the character sheet (css/sf-sheet.css's

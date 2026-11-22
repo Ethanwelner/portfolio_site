@@ -1,13 +1,14 @@
-<?php require_once dirname( __DIR__ ) . '/components/npc-sheet.php'; ?>
+<?php require_once dirname( __DIR__ ) . '/components/monster-sheet.php'; ?>
 <?php require_once dirname( __DIR__ ) . '/components/monster-traits.php'; ?>
 <p class="copy">
 	Stats for a typical Murk Legs. The full entry is coming soon.
 </p>
 <?php
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'    => 'Murk Legs',
 		'kind'    => 'Monster, Isekai',
+		'threat'  => 8,
 		'move'    => '10 m',
 		'resistances' => '4 Blunt, 3 Slashing, 2 Piercing',
 		'resources'   => array( 'hp' => 66 ),

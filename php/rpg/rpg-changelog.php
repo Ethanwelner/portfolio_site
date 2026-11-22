@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Monsters: monster and enemy sheets show a threat level from 1 to 10 in place of a character level, since a level doesn’t say how dangerous a monster is, with its tier beside it: Minor, Standard, Elite, Deadly or Legendary. The Bandit and Skeleton are Minor, the Hedge Boar and Dreftian Mercenary Standard, the Bog Lurker Elite and Murk Legs Deadly.</li>
 						<li>Explaining Stats: a character who reaches 0 Hit Points is dead. They gain the Dead Condition, can take no Actions and perceive nothing, and their Hit Points can only be restored by something that says it can bring a character back from the dead. Items have the same in Destroyed.</li>
 						<li>Planar Exploration: Black Box, Turtle Box, Screamer and Expedition Drone are now one Exploration Technologies entry, Exploration Drones, with a section for each inside its Details. The Black Box, Turtle Box, Screamer and Expedition Drone are all written up.</li>
 						<li>Monsters: the Briar Boar is now the Hedge Boar, and the Mire Lurker is now the Bog Lurker.</li>

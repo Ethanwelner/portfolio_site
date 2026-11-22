@@ -2,7 +2,7 @@
 // Monster Traits: the bespoke Traits that make a monster dangerous without
 // gear or Wield Skills. One place for their wording, so every monster sheet
 // (php/rpg/encounters.php, php/rpg/lore/murk-legs.php) reads the same. Each
-// returns an sf_card_trait() array for an sf_npc_sheet()'s 'traits'.
+// returns an sf_card_trait() array for an sf_monster_sheet()'s 'traits'.
 //
 // sf_monster_trait( 'Natural Armor', 2 )
 // sf_monster_trait( 'Many Limbs', null, array( 'weapon' => 'Massive Claws' ) )
