@@ -99,7 +99,8 @@
 }
 
 /* The monster sheet's frame: the band in Card Edge (gray-900) and the line
-   just inside it in Monster Line (red-800). Its field is Card Edge too, black
+   just inside it in gold, Item Accent (olive-300), like a tarot card's
+   gilt border. Its field is Card Edge too, black
    like a tarot card's, with a filigree and noise in its corners (below),
    and 10px more room around the content for them. Its grays are the cool
    ones, as on the NPC sheet. In the corner, in place of the NPC sheet's
@@ -107,7 +108,7 @@
    below). */
 .sf-npc--monster {
     --npc-plate: var(--sf-gray-900);
-    --npc-line: var(--sf-red-800);
+    --npc-line: var(--sf-olive-300);
     --npc-frame: var(--sf-gray-900);
     padding: 26px;
 
@@ -127,14 +128,13 @@
 }
 
 /* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
-   sf_npc_filigree()), after a tarot card's gold border, in Monster Line: a
-   double line inside the frame line, a 2px one 12px in from the sheet's
-   edge and a 1px one 21px in. Corner pieces (one SVG, flipped for each corner) cross the outer
-   line with short ticks and fly a small flag in Monster Star inside the
-   inner one; the top right's piece arcs both lines around the notch.
-   Straight edges join them, so the sheet grows with its content, and a
-   diamond with a Monster Star heart breaks both lines at the top and the
-   bottom. ---- */
+   sf_npc_filigree()), after a tarot card's gold border, in the frame line's
+   gold: a double line inside the frame line, a 3px one 12px in from the
+   sheet's edge and a 1px one 21px in. Corner pieces (one SVG, flipped for
+   each corner) cross the outer line with short ticks; the top right's piece
+   arcs both lines around the notch. Straight edges join them, so the sheet
+   grows with its content, and a 28px diamond with a Monster Star heart
+   breaks both lines at the top and the bottom, over the boxes' edges. ---- */
 .sf-npc-filigree {
     position: absolute;
     inset: 0;
@@ -149,9 +149,9 @@
         stroke-width: 1;
     }
 
-    /* The outer line, 2px */
+    /* The outer line, 3px */
     .sf-npc-fil-outer {
-        stroke-width: 2;
+        stroke-width: 3;
     }
 
     .sf-npc-fil-accent {
@@ -182,7 +182,7 @@
     &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
 }
 
-/* The edges: the outer line 2px (12–14px in) and the inner one 1px
+/* The edges: the outer line 3px (12–15px in) and the inner one 1px
    (21–22px in) as backgrounds, the top and bottom ones with a gap for the
    diamond at the sheet's middle (the top edge is 8px off center, since its
    right end clears the notch) */
@@ -196,20 +196,20 @@
         right: 40px;
         height: 10px;
         --fil-gap: 50%;
-        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
-        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 13px), transparent 0 calc(var(--fil-gap) + 13px), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 13px), transparent 0 calc(var(--fil-gap) + 13px), #000 0);
     }
 
     &.sf-npc-fil-edge--top {
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
-        background: var(--fil-line) 0 0 / 100% 2px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
+        background: var(--fil-line) 0 0 / 100% 3px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
     }
 
     &.sf-npc-fil-edge--bottom {
         bottom: 12px;
-        background: var(--fil-line) 0 100% / 100% 2px no-repeat, var(--fil-line) 0 0 / 100% 1px no-repeat;
+        background: var(--fil-line) 0 100% / 100% 3px no-repeat, var(--fil-line) 0 0 / 100% 1px no-repeat;
     }
 
     &.sf-npc-fil-edge--left,
@@ -221,24 +221,29 @@
 
     &.sf-npc-fil-edge--left {
         left: 12px;
-        background: var(--fil-line) 0 0 / 2px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
+        background: var(--fil-line) 0 0 / 3px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
     }
 
     &.sf-npc-fil-edge--right {
         right: 12px;
         top: 56px;
-        background: var(--fil-line) 100% 0 / 2px 100% no-repeat, var(--fil-line) 0 0 / 1px 100% no-repeat;
+        background: var(--fil-line) 100% 0 / 3px 100% no-repeat, var(--fil-line) 0 0 / 1px 100% no-repeat;
     }
 }
 
-.sf-npc-fil-diamond {
-    left: calc(50% - 14px);
-    width: 28px;
-    height: 28px;
+.sf-npc-filigree .sf-npc-fil-diamond {
+    /* Over the top and bottom boxes, which it overlaps a little */
+    z-index: 1;
+    left: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    /* Filled with the field, so the box under it doesn't show through */
+    fill: var(--npc-frame);
+    stroke-width: 1.5;
 
     /* Centered between the lines, 17px in */
-    &.sf-npc-fil-diamond--top { top: 3px; }
-    &.sf-npc-fil-diamond--bottom { bottom: 3px; }
+    &.sf-npc-fil-diamond--top { top: -1px; }
+    &.sf-npc-fil-diamond--bottom { bottom: -1px; }
 }
 
 /* The noise in the monster sheet's corners, in gold: the night sky's

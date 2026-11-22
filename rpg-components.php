@@ -283,7 +283,7 @@ $sf_color_groups = array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
 		array( '600', '#c14a40', 'Brick Red', 'Not used yet, for filling out the scale' ),
 		array( '700', '#a53027', 'Monster Star', 'A monster sheet’s corner star' ),
-		array( '800', '#6f2f2a', 'Monster Line', 'A monster sheet’s frame line' ),
+		array( '800', '#6f2f2a', 'Oxblood', 'Not used yet, for filling out the scale' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
 		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),
@@ -305,7 +305,7 @@ $sf_color_groups = array(
 	) ),
 	'olive'   => array( 'Item cards.', array(
 		array( '100', '#d6d1b4', 'Item Text', 'Chip text, hovered count buttons' ),
-		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes' ),
+		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes; a monster sheet’s gold frame line and filigree' ),
 		array( '400', '#a29d82', 'Item Muted', 'Item labels, the selected outline' ),
 		array( '600', '#6d6a5a', 'Item Edge', 'An Item card’s edge and its chips’ borders' ),
 		array( '900', '#25241e', 'Item Field', 'Fields and chips inside an Item card' ),

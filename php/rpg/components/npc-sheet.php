@@ -203,19 +203,17 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// The monster sheet's filigree (css/sf-npc-sheet.css, .sf-npc-filigree),
 	// after a tarot card's gold border: a double line inside the frame line,
 	// drawn as corner pieces joined by straight edges so it grows with the
-	// sheet. Each corner crosses the outer line with short ticks and flies a
-	// small flag inside the inner one; the top right corner arcs around the
-	// frame's notch instead. A diamond breaks the lines at the top and the
+	// sheet. Each corner crosses the outer line with short ticks; the top
+	// right corner arcs around the frame's notch instead. A diamond breaks the lines at the top and the
 	// bottom, and a burning skull sits in the notch. Then the noise in the
 	// field's corners (.sf-npc-dust).
 	function sf_npc_filigree() {
 		$corner = '<svg class="sf-npc-fil-corner sf-npc-fil-corner--%s" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
-			. '<path class="sf-npc-fil-outer" d="M13 40V13H40M9 13h4M13 9v4" />'
-			. '<path d="M21.5 40V21.5H40M24.5 24.5v6.5" />'
-			. '<path class="sf-npc-fil-accent" d="M25 24.5l4.5 2.25l-4.5 2.25z" /></svg>';
-		$diamond = '<svg class="sf-npc-fil-diamond sf-npc-fil-diamond--%s" viewBox="0 0 28 28" aria-hidden="true" focusable="false">'
-			. '<path d="M14 5L23 14L14 23L5 14Z" />'
-			. '<path class="sf-npc-fil-accent" d="M14 10.5L17.5 14L14 17.5L10.5 14Z" /></svg>';
+			. '<path class="sf-npc-fil-outer" d="M13.5 40V13.5H40M8.5 13.5h5M13.5 8.5v5" />'
+			. '<path d="M21.5 40V21.5H40" /></svg>';
+		$diamond = '<svg class="sf-npc-fil-diamond sf-npc-fil-diamond--%s" viewBox="0 0 36 36" aria-hidden="true" focusable="false">'
+			. '<path d="M18 4L32 18L18 32L4 18Z" />'
+			. '<path class="sf-npc-fil-accent" d="M18 12L24 18L18 24L12 18Z" /></svg>';
 		echo '<div class="sf-npc-dust" aria-hidden="true"></div><div class="sf-npc-filigree" aria-hidden="true">';
 		foreach ( array( 'tl', 'bl', 'br' ) as $where ) {
 			printf( $corner, $where );
@@ -224,7 +222,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// notch's center (5px in from the corner), as far inside the field's
 		// own arc (26px) as the straight lines are inside its edge
 		echo '<svg class="sf-npc-fil-corner sf-npc-fil-corner--tr" viewBox="0 0 56 56" aria-hidden="true" focusable="false">'
-			. '<path class="sf-npc-fil-outer" d="M56 13H35.98A32 32 0 0 1 13 35.98V56" />'
+			. '<path class="sf-npc-fil-outer" d="M56 13.5H36.37A32.5 32.5 0 0 1 13.5 36.37V56" />'
 			. '<path d="M56 21.5H41.99A40.5 40.5 0 0 1 21.5 41.99V56" /></svg>';
 		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
 			echo '<span class="sf-npc-fil-edge sf-npc-fil-edge--' . $side . '"></span>';
