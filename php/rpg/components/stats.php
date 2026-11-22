@@ -44,6 +44,8 @@ require_once dirname( __DIR__ ) . '/core-stat-icons.php';
 
 if ( ! function_exists( 'sf_stat_block' ) ) {
 	define( 'SF_STAT_SLOTS', 20 );
+	// Special Stats, like Magic, take no more than 10 points
+	define( 'SF_SPECIAL_STAT_SLOTS', 10 );
 	define( 'SF_MP_PER_MAGIC', 3 );
 
 	function sf_stat_e( $text ) {
@@ -64,10 +66,13 @@ if ( ! function_exists( 'sf_stat_block' ) ) {
 		return $html . '</div>';
 	}
 
-	// Magic's bar: a diamond per point, any bonus first
+	// Magic's bar: a diamond per point, any bonus first. A Special Stat takes
+	// no more than 10 points, so it has 10 slots, more only when a bonus takes
+	// it past 10.
 	function sf_stat_core_bar( $bonus, $value ) {
-		$html = '<div class="sf-stat-line" aria-hidden="true">';
-		for ( $n = 0; $n < SF_STAT_SLOTS; $n++ ) {
+		$html  = '<div class="sf-stat-line" aria-hidden="true">';
+		$slots = min( SF_STAT_SLOTS, max( SF_SPECIAL_STAT_SLOTS, $value ) );
+		for ( $n = 0; $n < $slots; $n++ ) {
 			$fill  = $n < $bonus ? 'bonus' : ( $n < $value ? 'filled' : 'empty' );
 			$html .= '<span class="sf-stat-slot sf-stat-slot--diamond is-' . $fill . '"></span>';
 		}

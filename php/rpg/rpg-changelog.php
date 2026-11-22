@@ -10,6 +10,7 @@
 				<article class="blog-post">
 					<p class="copy mb-3"><i>11/21/2026</i></p>
 					<ul class="copy changelog-list mb-0">
+						<li>Special Stats, like Magic, now take no more than 10 points instead of 20. Traits, Equipment, or other effects can still raise one above 10. Archmage now needs Magic 10 instead of 12.</li>
 						<li>Setting: Planar Transcendentalism joins the new philosophies of 2230, an agnostic creed that finds the sacred in lived experience, and planar travel, rather than scripture. The Second Exodites are now also called “Seconders.”</li>
 						<li>Setting: Strong Souls, a belief brought over from Isekai, joins the new philosophies: a soul is born empty, good deeds make it strong, and the gods of Isekai turn away thin, wicked souls. It has caught on among Theosophists.</li>
 					</ul>
