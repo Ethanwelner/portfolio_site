@@ -221,7 +221,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// doesn't say how dangerous a monster is. A monster's threat tier
 		// follows what it is under its name.
 		$tier = '';
-		echo '<div class="sf-npc-head"><div class="sf-npc-who">';
+		echo '<div class="sf-npc-box sf-npc-head"><div class="sf-npc-who">';
 		if ( 'monster' === $variant ) {
 			$threat = isset( $npc['threat'] ) ? (int) $npc['threat'] : null;
 			$tier   = null === $threat ? '' : sf_threat_tier( $threat );

@@ -143,7 +143,8 @@
    drawn twice. Under, a red-600 duotone that a turbulence filter keeps
    wavering (#sf-color-pop, printed once a page by npc-sheet.php); over it,
    the clouds' shadows as still black ink, so the color shows, shifting,
-   only through their light parts. */
+   only through their light parts. Dimmed to 40%, so they stay behind the
+   sheet's content. */
 .sf-npc-sky {
     --sf-npc-clouds:
         url("../img/storm_cloud_3.webp") left -12% top 30% / 48% auto no-repeat,
@@ -162,6 +163,7 @@
         radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
         linear-gradient(#000 35%, transparent 85%);
     mask-composite: intersect;
+    opacity: .4;
     pointer-events: none;
 
     &::before,
@@ -212,6 +214,12 @@
     .sf-npc-description {
         background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
     }
+
+    /* The top row's box sits on the darkest of the night, so it's nearly
+       solid to read as a box */
+    .sf-npc-head {
+        background-color: color-mix(in srgb, var(--npc-box) 90%, transparent);
+    }
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
@@ -235,7 +243,7 @@
 }
 
 /* ---- The name and what it is, then its resistances and Movement on the
-   right ---- */
+   right, in a box like the sheet's other sections (.sf-npc-box) ---- */
 
 .sf-npc-head {
     display: flex;
@@ -243,8 +251,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px 16px;
-    /* Clears the frame's cut-out and star in the top right corner */
-    padding: 4px 24px 0 4px;
+    padding: 12px 16px;
+    /* Its top right corner cut away around the frame's notch and star, with
+       the same room the frame line keeps from it */
+    -webkit-mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
+    mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
 }
 
 /* The level blob, then the name and what it is */
