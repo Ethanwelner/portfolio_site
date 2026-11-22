@@ -1198,3 +1198,81 @@
 		row.querySelector( "[data-npc-restore]" ).disabled = current >= max;
 	} );
 </script>
+<script>
+	// The monster sheet's lightning (php/rpg/components/npc-sheet.php's
+	// .sf-npc-lightning, after mnald12's CodePen "Lightning strike"): once a
+	// second each sheet on screen has a 1 in 14 chance of a strike, at most
+	// one every 5s. A strike draws a jagged silver bolt from the clouds about
+	// halfway down the sheet, with a few thinner branches, then flickers the
+	// bolt and the clouds (.sf-npc-sky) bright twice and fades them back.
+	// Looks for sheets each time, so sheets in lore popups strike too. Never
+	// with reduced motion or while the tab is hidden.
+	(function () {
+		var motion = window.matchMedia ? window.matchMedia( "(prefers-reduced-motion: reduce)" ) : null;
+		var flicker = { duration: 1100, easing: "ease-out" };
+
+		function bolt( ctx, x, y, endY, width, spread, branches ) {
+			ctx.lineWidth = width;
+			ctx.beginPath();
+			ctx.moveTo( x, y );
+			while ( y < endY ) {
+				var nx = x + ( Math.random() * 2 - 1 ) * spread;
+				var ny = y + 4 + Math.random() * spread * 1.4;
+				ctx.lineTo( nx, ny );
+				if ( branches && Math.random() < 0.08 ) {
+					ctx.stroke();
+					bolt( ctx, nx, ny, ny + ( endY - ny ) * ( 0.3 + Math.random() * 0.4 ), width / 2, spread * 0.8, false );
+					ctx.lineWidth = width;
+					ctx.beginPath();
+					ctx.moveTo( nx, ny );
+				}
+				x = nx;
+				y = ny;
+			}
+			ctx.stroke();
+		}
+
+		function strike( canvas ) {
+			var w = canvas.clientWidth, h = canvas.clientHeight;
+			var ratio = window.devicePixelRatio || 1;
+			canvas.width = Math.round( w * ratio );
+			canvas.height = Math.round( h * ratio );
+			var ctx = canvas.getContext( "2d" );
+			ctx.scale( ratio, ratio );
+			ctx.lineCap = "round";
+			ctx.lineJoin = "round";
+			ctx.strokeStyle = "rgb(225 230 240)";
+			ctx.shadowColor = "aliceblue";
+			ctx.shadowBlur = 10;
+			// The flash, faint over the whole field
+			ctx.fillStyle = "rgb(255 255 255 / 6%)";
+			ctx.fillRect( 0, 0, w, h );
+			var y = h * ( 0.06 + Math.random() * 0.1 );
+			bolt( ctx, w * ( 0.15 + Math.random() * 0.7 ), y, h * ( 0.35 + Math.random() * 0.25 ), 2, 12, true );
+
+			canvas.animate( [
+				{ opacity: 0 }, { opacity: 1, offset: 0.04 }, { opacity: 0.15, offset: 0.12 },
+				{ opacity: 1, offset: 0.2 }, { opacity: 0 }
+			], flicker );
+			var sky = canvas.parentNode.querySelector( ".sf-npc-sky" );
+			if ( sky ) {
+				sky.animate( [
+					{ opacity: 0.4 }, { opacity: 0.9, offset: 0.04 }, { opacity: 0.5, offset: 0.12 },
+					{ opacity: 0.85, offset: 0.2 }, { opacity: 0.4 }
+				], flicker );
+			}
+		}
+
+		setInterval( function () {
+			if ( document.hidden || ( motion && motion.matches ) ) return;
+			var now = Date.now();
+			document.querySelectorAll( ".sf-npc-lightning" ).forEach( function ( canvas ) {
+				if ( now - ( canvas._sfLast || 0 ) < 5000 || Math.random() >= 1 / 14 ) return;
+				var r = canvas.getBoundingClientRect();
+				if ( !r.width || r.bottom < 0 || r.top > window.innerHeight ) return;
+				canvas._sfLast = now;
+				strike( canvas );
+			} );
+		}, 1000 );
+	})();
+</script>

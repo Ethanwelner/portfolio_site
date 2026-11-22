@@ -153,13 +153,34 @@
    wavering (#sf-color-pop, printed once a page by npc-sheet.php); over it,
    the clouds' shadows as still black ink, so the gray shows, shifting,
    only through their light parts. Dimmed to 40%, so they stay behind the
-   sheet's content. */
+   sheet's content.
+
+   Each cloud drifts sideways on its own slow loop (--sf-drift-1–4, 40px
+   either way over 50–80s), stepped four times a second so the filtered
+   layers aren't redrawn every frame; at that speed a step is a fraction of
+   a pixel. Lightning lights them up now and then (.sf-npc-lightning).
+   Still with reduced motion. */
+@property --sf-drift-1 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-2 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-3 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-4 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+
+@keyframes sf-drift-1 { from { --sf-drift-1: -40px; } to { --sf-drift-1: 40px; } }
+@keyframes sf-drift-2 { from { --sf-drift-2: 40px; } to { --sf-drift-2: -40px; } }
+@keyframes sf-drift-3 { from { --sf-drift-3: -40px; } to { --sf-drift-3: 40px; } }
+@keyframes sf-drift-4 { from { --sf-drift-4: 40px; } to { --sf-drift-4: -40px; } }
+
 .sf-npc-sky {
     --sf-npc-clouds:
-        url("../img/storm_cloud_3.webp") left -12% top 30% / 48% auto no-repeat,
-        url("../img/storm_cloud_4.webp") right -14% top 24% / 58% auto no-repeat,
-        url("../img/storm_cloud_2.webp") right -10% top 2% / 55% auto no-repeat,
-        url("../img/storm_cloud_1.webp") left -16% top 0 / 72% auto no-repeat;
+        url("../img/storm_cloud_3.webp") left calc(-12% + var(--sf-drift-1)) top 30% / 48% auto no-repeat,
+        url("../img/storm_cloud_4.webp") right calc(-14% + var(--sf-drift-2)) top 24% / 58% auto no-repeat,
+        url("../img/storm_cloud_2.webp") right calc(-10% + var(--sf-drift-3)) top 2% / 55% auto no-repeat,
+        url("../img/storm_cloud_1.webp") left calc(-16% + var(--sf-drift-4)) top 0 / 72% auto no-repeat;
+    animation:
+        sf-drift-1 50s steps(200) -13s infinite alternate,
+        sf-drift-2 65s steps(260) -40s infinite alternate,
+        sf-drift-3 80s steps(320) -22s infinite alternate,
+        sf-drift-4 70s steps(280) -51s infinite alternate;
     position: absolute;
     inset: 6px;
     overflow: hidden;
@@ -205,8 +226,41 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .sf-npc-sky {
+        animation: none;
+    }
+
     .sf-npc-sky::before {
         filter: url(#sf-color-pop-still);
+    }
+}
+
+/* The monster sheet's lightning (after mnald12's CodePen "Lightning
+   strike"): now and then a jagged bolt with a few branches drops from the
+   clouds, and the clouds flash. Drawn on this canvas by the page's script
+   (php/javascript-loads.php), in the field over the clouds and under the
+   boxes, with the field's corners and notch, fading out further down the
+   sheet than the clouds do. Only while the sheet is on screen, and never
+   with reduced motion or in print. */
+.sf-npc-lightning {
+    position: absolute;
+    inset: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border-radius: 16px 0 16px 16px;
+    -webkit-mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        linear-gradient(#000 45%, transparent 90%);
+    -webkit-mask-composite: source-in;
+    mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        linear-gradient(#000 45%, transparent 90%);
+    mask-composite: intersect;
+    opacity: 0;
+    pointer-events: none;
+
+    @media print {
+        display: none;
     }
 }
 

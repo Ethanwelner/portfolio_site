@@ -207,10 +207,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 
 		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
-		// A monster sheet's night and storm clouds, in its field behind
-		// everything (css/sf-npc-sheet.css)
+		// A monster sheet's night, storm clouds and lightning, in its field
+		// behind everything (css/sf-npc-sheet.css)
 		if ( 'monster' === $variant ) {
-			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div>';
+			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div><canvas class="sf-npc-lightning" aria-hidden="true"></canvas>';
 			sf_npc_color_pop_filter();
 		}
 
