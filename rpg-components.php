@@ -281,9 +281,9 @@ $sf_color_groups = array(
 	) ),
 	'red'     => array( 'Hit Points.', array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
-		array( '600', '#c14a40', 'Monster Line', 'A monster sheet’s frame line' ),
-		array( '700', '#a53027', 'Deep Red', 'Not used yet, for filling out the scale' ),
-		array( '800', '#6f2f2a', 'Monster Frame', 'A monster sheet’s frame band' ),
+		array( '600', '#c14a40', 'Color Pop', 'The red in a monster sheet’s storm clouds' ),
+		array( '700', '#a53027', 'Monster Frame', 'A monster sheet’s frame band' ),
+		array( '800', '#6f2f2a', 'Monster Line', 'A monster sheet’s frame line' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
 		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),

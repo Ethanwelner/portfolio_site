@@ -39,9 +39,9 @@
     /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
        SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
     --sf-red-500: #e2574c;     /* HP */
-    --sf-red-600: #c14a40;     /* a monster sheet's frame line */
-    --sf-red-700: #a53027;     /* not used yet */
-    --sf-red-800: #6f2f2a;     /* a monster sheet's frame band */
+    --sf-red-600: #c14a40;     /* the color pop's red */
+    --sf-red-700: #a53027;     /* a monster sheet's frame band */
+    --sf-red-800: #6f2f2a;     /* a monster sheet's frame line */
     --sf-crimson-300: #ff5c86; /* bad, on dark */
     --sf-crimson-500: #eb0844; /* danger, damage */
     --sf-crimson-700: #b8063a; /* bad, on light */
