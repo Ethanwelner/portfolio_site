@@ -204,8 +204,8 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// as corner pieces joined by straight edges so it grows with the sheet.
 	// Each corner crosses it with short ticks; the top right corner arcs it
 	// around the frame's notch instead. A skull breaks it at the top's
-	// middle, and a gold star sits in the notch. Then the noise in the
-	// field's corners (.sf-npc-dust).
+	// middle, and a gold star sits in the notch. (The gold noise in the
+	// field's corners, .sf-npc-dust, is drawn under the storm's clouds.)
 	function sf_npc_filigree() {
 		$corner = '<svg class="sf-npc-fil-corner sf-npc-fil-corner--%s" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
 			. '<path class="sf-npc-fil-outer" d="M13.5 40V13.5H40M8.5 13.5h5M13.5 8.5v5" /></svg>';
@@ -214,7 +214,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		$skull = '<svg class="sf-npc-fil-skull" viewBox="120 154 272 330" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M268.725 389.28l3.74 28.7h-30.89l3.74-28.7a11.705 11.705 0 1 1 23.41 0zm33.84-71.83a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm-94.4 0a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zM385.335 285.32c-2.45-65.49-54.88-119.59-120.26-124.07-3.06-.21-6.15-.31-9.16-.31a129.4 129.4 0 0 0-129.43 129.35 132.15 132.15 0 0 0 24.51 76v25a35 35 0 0 0 34.74 34.69h6.26v16.61a34.66 34.66 0 0 0 34.71 34.39h61.78a34.48 34.48 0 0 0 34.51-34.39v-16.61h5.38a34.89 34.89 0 0 0 34.62-34.75v-28a129.32 129.32 0 0 0 22.33-77.9z" /></svg>';
 		// The line, worn in splotches (.sf-npc-filigree--line), then the
 		// skull and star on their own, unworn
-		echo '<div class="sf-npc-dust" aria-hidden="true"></div><div class="sf-npc-filigree sf-npc-filigree--line" aria-hidden="true">';
+		echo '<div class="sf-npc-filigree sf-npc-filigree--line" aria-hidden="true">';
 		foreach ( array( 'tl', 'bl', 'br' ) as $where ) {
 			printf( $corner, $where );
 		}
@@ -247,14 +247,20 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 		$storm = 'storm' === ( $options['background'] ?? ( 'monster' === $variant ? 'storm' : 'none' ) );
 		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . ( $storm ? ' sf-npc--bg-storm' : '' ) . '">';
-		// The storm background: the night, its storm clouds and lightning, in
-		// the field behind everything (css/sf-npc-sheet.css)
+		// In the field behind everything (css/sf-npc-sheet.css), bottom up:
+		// the storm's night, the monster sheet's gold noise in its corners
+		// (.sf-npc-dust), the storm's clouds and lightning, then the monster
+		// sheet's filigree
 		if ( $storm ) {
-			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div><canvas class="sf-npc-lightning" aria-hidden="true"></canvas>';
+			echo '<div class="sf-npc-night" aria-hidden="true"></div>';
+		}
+		if ( 'monster' === $variant ) {
+			echo '<div class="sf-npc-dust" aria-hidden="true"></div>';
+		}
+		if ( $storm ) {
+			echo '<div class="sf-npc-sky" aria-hidden="true"></div><canvas class="sf-npc-lightning" aria-hidden="true"></canvas>';
 			sf_npc_color_pop_filter();
 		}
-		// The monster sheet's filigree and the noise in its corners, over any
-		// background
 		if ( 'monster' === $variant ) {
 			sf_npc_filigree();
 		}
