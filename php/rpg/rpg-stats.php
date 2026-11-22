@@ -320,6 +320,7 @@
 							<p class="copy">
 								As HP are lost, a character or object will gain or lose Temporary Condition Traits such as Injured or Incapacitated. The HP-related Traits are listed following this section. Several of these Traits have no inherent effect but interact with other game systems. Additionally, a character may gain Temporary Condition Traits that describe specific injuries they've incurred. These are not directly tied to the character's Hit Point total, though Condition Traits such as Severe Bleeding may cause a character to keep losing HP at a steady rate until their injury is treated. Typically such conditions are conveyed through RP reasons or through Effects or Abilities attached to the thing that harmed them.
 							</p>
+							<p class="copy">The following conditions are automatically conveyed and removed when the conditions are met or lost:</p>
 							<ul class="copy">
 								<li><strong>Healthy - Conveyed - Condition</strong><br>
 								Temporary (This character is at their maximum HP)</li>
