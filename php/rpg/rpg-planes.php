@@ -325,7 +325,7 @@
 												<li>Dangerous, incompatible, or empty planes may never progress past the stage of automated surveying.</li>
 												<li>The first exchanges are made with “turtle” boxes: small, hardy recording devices.
 													<ul>
-														<li>Turtle boxes are often purpose-built for the expected conditions in a plane and measure radiological signatures, astronomical telemetry, climate conditions, soil samples, and much more.</li>
+														<li>Turtle boxes are often purpose-built for the expected conditions in a plane and measure radiological signatures, astronomical observations, climate conditions, soil samples, and much more.</li>
 													</ul>
 												</li>
 												<li>If the turtle box is not received in the next exchange, a “screamer” is sent next.
@@ -413,7 +413,7 @@
 					<div class="bumper"></div>
 					<h4 class="lore-title mb-3">Exploration Technologies</h4>
 					<div class="content-stack">
-						<?php foreach (['switch-gates', 'black-box', 'turtle-box', 'screamer', 'switch-port', 'expedition-drone'] as $slug) { sf_lore_entry_details($slug); } ?>
+						<?php foreach (['switch-gates', 'exploration-drones', 'switch-port'] as $slug) { sf_lore_entry_details($slug); } ?>
 					</div>
 				</div>
 
