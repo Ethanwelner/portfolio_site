@@ -51,6 +51,11 @@
 //            it they're always open, for a page with one.
 //   heading  the name's heading level, 'h5' by default, so the sheet fits
 //            the page's outline
+//   background  what's drawn in the field behind the content, like the
+//            Kind card's $background: 'storm' (a starry night under slowly
+//            drifting black and white storm clouds, with lightning now and
+//            then). Without it, nothing: an NPC sheet's plain field, or a
+//            monster sheet's black field with its filigree and corner noise.
 //
 // Anything left out isn't drawn: no Traits box for an NPC without Traits.
 // Attacks and Items share the Items box, Attacks first.
@@ -195,6 +200,37 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			. '</filter></svg>';
 	}
 
+	// The monster sheet's filigree (css/sf-npc-sheet.css, .sf-npc-filigree),
+	// after a tarot card's gold border: a double line inside the frame line,
+	// drawn as corner pieces joined by straight edges so it grows with the
+	// sheet. Each corner crosses the outer line with short ticks and flies a
+	// small flag inside the inner one; the top right corner arcs around the
+	// frame's notch instead. A diamond breaks the lines at the top and the
+	// bottom. Then the noise in the field's corners (.sf-npc-dust).
+	function sf_npc_filigree() {
+		$corner = '<svg class="sf-npc-fil-corner sf-npc-fil-corner--%s" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
+			. '<path d="M12.5 40V12.5H40M17.5 40V17.5H40M8.5 12.5h4M12.5 8.5v4M22.5 22v11" />'
+			. '<path class="sf-npc-fil-accent" d="M23 22l6 3l-6 3z" /></svg>';
+		$diamond = '<svg class="sf-npc-fil-diamond sf-npc-fil-diamond--%s" viewBox="0 0 28 28" aria-hidden="true" focusable="false">'
+			. '<path d="M14 4L24 14L14 24L4 14Z" />'
+			. '<path class="sf-npc-fil-accent" d="M14 10L18 14L14 18L10 14Z" /></svg>';
+		echo '<div class="sf-npc-dust" aria-hidden="true"></div><div class="sf-npc-filigree" aria-hidden="true">';
+		foreach ( array( 'tl', 'bl', 'br' ) as $where ) {
+			printf( $corner, $where );
+		}
+		// The top right, around the notch: the lines meet arcs about the
+		// notch's center (5px in from the corner), 5.5px inside the field's
+		// own arc like the straight lines
+		echo '<svg class="sf-npc-fil-corner sf-npc-fil-corner--tr" viewBox="0 0 56 56" aria-hidden="true" focusable="false">'
+			. '<path d="M56 12.5H35.6A31.5 31.5 0 0 1 12.5 35.6V56M56 17.5H39.3A36.5 36.5 0 0 1 17.5 39.3V56" /></svg>';
+		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
+			echo '<span class="sf-npc-fil-edge sf-npc-fil-edge--' . $side . '"></span>';
+		}
+		printf( $diamond, 'top' );
+		printf( $diamond, 'bottom' );
+		echo '</div>';
+	}
+
 	// The sheet the NPC sheet and the monster sheet (components/
 	// monster-sheet.php) share, with the one's class: 'npc' or 'monster'
 	function sf_npc_sheet_draw( $npc, $options, $variant ) {
@@ -206,12 +242,18 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			$groups['magic'] = 'Magic';
 		}
 
-		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
-		// A monster sheet's night, storm clouds and lightning, in its field
-		// behind everything (css/sf-npc-sheet.css)
-		if ( 'monster' === $variant ) {
+		$storm = 'storm' === ( $options['background'] ?? '' );
+		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . ( $storm ? ' sf-npc--bg-storm' : '' ) . '">';
+		// The storm background: the night, its storm clouds and lightning, in
+		// the field behind everything (css/sf-npc-sheet.css)
+		if ( $storm ) {
 			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div><canvas class="sf-npc-lightning" aria-hidden="true"></canvas>';
 			sf_npc_color_pop_filter();
+		}
+		// The monster sheet's filigree and the noise in its corners, over any
+		// background
+		if ( 'monster' === $variant ) {
+			sf_npc_filigree();
 		}
 
 		// Its level, name and what it is, then its resistances and Movement

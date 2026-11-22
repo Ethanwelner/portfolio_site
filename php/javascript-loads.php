@@ -1199,7 +1199,8 @@
 	} );
 </script>
 <script>
-	// The monster sheet's lightning (php/rpg/components/npc-sheet.php's
+	// The storm background's lightning, on NPC and monster sheets
+	// (php/rpg/components/npc-sheet.php's
 	// .sf-npc-lightning, after mnald12's CodePen "Lightning strike"): once a
 	// second each sheet on screen has a 1 in 14 chance of a strike, at most
 	// one every 5s. A strike draws a jagged silver bolt from the clouds about

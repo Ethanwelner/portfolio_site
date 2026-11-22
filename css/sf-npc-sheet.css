@@ -99,12 +99,23 @@
 }
 
 /* The monster sheet's frame: the band in Card Edge (gray-900) and the line
-   just inside it in Monster Line (red-800). Its grays are the cool ones, as
-   on the NPC sheet. The star in the corner is Monster Star (red-700,
-   #a53027), in place of the NPC sheet's gray. */
+   just inside it in Monster Line (red-800). Its field is Card Edge too, black
+   like a tarot card's, with a filigree and noise in its corners (below),
+   and 10px more room around the content for them. Its grays are the cool
+   ones, as on the NPC sheet. The star in the corner is Monster Star
+   (red-700, #a53027), in place of the NPC sheet's gray. */
 .sf-npc--monster {
     --npc-plate: var(--sf-gray-900);
     --npc-line: var(--sf-red-800);
+    --npc-frame: var(--sf-gray-900);
+    padding: 26px;
+
+    /* The top row's box cut away about the filigree's arc in the corner
+       (the notch's center is 22px out from the box's corner) */
+    .sf-npc-head {
+        -webkit-mask: radial-gradient(circle at calc(100% + 22px) -22px, transparent 42px, #000 42.5px);
+        mask: radial-gradient(circle at calc(100% + 22px) -22px, transparent 42px, #000 42.5px);
+    }
 
     &::before {
         background:
@@ -115,7 +126,125 @@
     }
 }
 
-/* The monster sheet's night, behind its clouds: the field shades from Card
+/* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
+   sf_npc_filigree()), after a tarot card's gold border, in Monster Line: a
+   1px double line 12px and 17px in from the sheet's edge, inside the frame
+   line. Corner pieces (one SVG, flipped for each corner) cross the outer
+   line with short ticks and fly a small flag in Monster Star inside the
+   inner one; the top right's piece arcs both lines around the notch.
+   Straight edges join them, so the sheet grows with its content, and a
+   diamond with a Monster Star heart breaks both lines at the top and the
+   bottom. ---- */
+.sf-npc-filigree {
+    position: absolute;
+    inset: 0;
+    color: var(--npc-line);
+    pointer-events: none;
+
+    svg {
+        position: absolute;
+        overflow: visible;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1;
+    }
+
+    .sf-npc-fil-accent {
+        fill: var(--sf-red-700);
+        stroke: none;
+    }
+}
+
+.sf-npc-fil-corner {
+    width: 40px;
+    height: 40px;
+
+    &.sf-npc-fil-corner--tl { top: 0; left: 0; }
+    &.sf-npc-fil-corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+    &.sf-npc-fil-corner--br { right: 0; bottom: 0; transform: scale(-1); }
+    &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
+}
+
+/* The edges: both lines as 1px backgrounds 5px apart, the top and bottom
+   ones with a gap for the diamond at the sheet's middle (the top edge is
+   8px off center, since its right end clears the notch) */
+.sf-npc-fil-edge {
+    position: absolute;
+    --fil-line: linear-gradient(currentColor, currentColor);
+
+    &.sf-npc-fil-edge--top,
+    &.sf-npc-fil-edge--bottom {
+        left: 40px;
+        right: 40px;
+        height: 6px;
+        background: var(--fil-line) 0 0 / 100% 1px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
+        --fil-gap: 50%;
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 11px), transparent 0 calc(var(--fil-gap) + 11px), #000 0);
+    }
+
+    &.sf-npc-fil-edge--top { top: 12px; right: 56px; --fil-gap: calc(50% + 8px); }
+    &.sf-npc-fil-edge--bottom { bottom: 12px; }
+
+    &.sf-npc-fil-edge--left,
+    &.sf-npc-fil-edge--right {
+        top: 40px;
+        bottom: 40px;
+        width: 6px;
+        background: var(--fil-line) 0 0 / 1px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
+    }
+
+    &.sf-npc-fil-edge--left { left: 12px; }
+    &.sf-npc-fil-edge--right { right: 12px; top: 56px; }
+}
+
+.sf-npc-fil-diamond {
+    left: calc(50% - 14px);
+    width: 28px;
+    height: 28px;
+
+    &.sf-npc-fil-diamond--top { top: 1px; }
+    &.sf-npc-fil-diamond--bottom { bottom: 1px; }
+}
+
+/* The noise in the monster sheet's corners: the night sky's sparse grain
+   (css/rpg-night.css), a good deal denser, gathered in the field's four
+   corners and thinning to a trace across the middle, as a tarot card's
+   speckled black. The field inside the frame line, with its corners and
+   notch. */
+.sf-npc-dust {
+    position: absolute;
+    inset: 6px;
+    border-radius: 16px 0 16px 16px;
+    -webkit-mask: radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px);
+    mask: radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px);
+    pointer-events: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.91' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 2.6 -1.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 160px 160px;
+        -webkit-mask:
+            radial-gradient(circle at 0 0, #000, transparent 280px),
+            radial-gradient(circle at 100% 0, #000, transparent 280px),
+            radial-gradient(circle at 0 100%, #000, transparent 280px),
+            radial-gradient(circle at 100% 100%, #000, transparent 280px),
+            linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 15%));
+        mask:
+            radial-gradient(circle at 0 0, #000, transparent 280px),
+            radial-gradient(circle at 100% 0, #000, transparent 280px),
+            radial-gradient(circle at 0 100%, #000, transparent 280px),
+            radial-gradient(circle at 100% 100%, #000, transparent 280px),
+            linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 15%));
+    }
+}
+
+/* ---- The storm background ('background' => 'storm', .sf-npc--bg-storm),
+   on either sheet ---- */
+
+/* The storm's night, behind its clouds: the field shades from Card
    Edge (gray-900, the darkest a component goes, to meet the clouds' deep
    shadows) at the top to its own Panel Box at the bottom, under a
    starscape (::before): the night sky's sparse grain (css/rpg-night.css,
@@ -142,7 +271,7 @@
     }
 }
 
-/* The monster sheet's storm clouds, in its field behind the boxes: four
+/* The storm's clouds, in the field behind the boxes: four
    cloud images (img/storm_cloud_1–4.webp, white on transparency) spread
    down the top of the sheet, two high and two lower, overlapping, over the
    night and its stars (.sf-npc-night). It covers the field inside the frame
@@ -235,7 +364,7 @@
     }
 }
 
-/* The monster sheet's lightning (after mnald12's CodePen "Lightning
+/* The storm's lightning (after mnald12's CodePen "Lightning
    strike"): now and then a jagged bolt with a few branches drops from the
    clouds, and the clouds flash. Drawn on this canvas by the page's script
    (php/javascript-loads.php), in the field over the clouds and under the
@@ -265,7 +394,7 @@
 }
 
 /* The monster sheet's sections (the description, Stats, Items and Traits
-   boxes): no grain, and see-through, so the dot map behind them shows. Each
+   boxes): no grain, and see-through, so the noise behind them shows. Each
    is its warm gray at 70%, which over the warm field reads close to the
    solid box. */
 .sf-npc--monster {
@@ -758,7 +887,8 @@
 /* Printed, it goes light, with dark text */
 @media print {
     .sf-npc-night,
-    .sf-npc-sky {
+    .sf-npc-sky,
+    .sf-npc-dust {
         display: none;
     }
 

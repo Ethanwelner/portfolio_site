@@ -18,6 +18,10 @@
 //   'attacks' => array( … ),
 //   'traits'  => array( … ),             // components/monster-traits.php
 // ), array( 'fold' => 'closed' ) );
+//
+// Its frame has a gray band, a red line and a red star, with a double-line
+// filigree inside and noise gathered in the field's corners. 'background'
+// => 'storm' in the options adds the storm clouds and lightning.
 require_once __DIR__ . '/npc-sheet.php';
 
 if ( ! function_exists( 'sf_monster_sheet' ) ) {
