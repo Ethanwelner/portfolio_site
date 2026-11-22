@@ -9,6 +9,7 @@ sf_monster_sheet(
 		'name'    => 'Murk Legs',
 		'kind'    => 'Monster, Isekai',
 		'threat'  => 8,
+		'boss'    => true,
 		'move'    => '10 m',
 		'resistances' => '4 Blunt, 3 Slashing, 2 Piercing',
 		'resources'   => array( 'hp' => 66 ),

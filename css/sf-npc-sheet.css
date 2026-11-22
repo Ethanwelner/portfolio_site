@@ -98,15 +98,215 @@
     }
 }
 
-/* The monster sheet's frame in red: the band Monster Frame (red-800) and
-   the line just inside it Monster Line (red-600). Its grays are the cool
-   ones, as on the NPC sheet. */
+/* The monster sheet's frame: the band in Monster Frame (teal-900) and the
+   line just inside it in Monster Line (teal-800), a blue-leaning teal at
+   the old reds' lightness and saturation, with a gold filigree inside
+   that (below). Its field is Card Edge too, black
+   like a tarot card's, with a filigree and noise in its corners (below),
+   and 10px more room around the content for them. Its grays are the cool
+   ones, as on the NPC sheet. The star in the corner is the filigree's gold
+   (.sf-npc-fil-star, below). */
 .sf-npc--monster {
-    --npc-plate: var(--sf-red-800);
-    --npc-line: var(--sf-red-600);
+    --npc-plate: var(--sf-teal-900);
+    --npc-line: var(--sf-teal-800);
+    --npc-frame: var(--sf-gray-900);
+    padding: 26px;
+
+    /* The top row's box cut away about the filigree's inner arc in the
+       corner (the notch's center is 21px out from the box's corner) */
+    .sf-npc-head {
+        -webkit-mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
+        mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
+    }
+
+    &::before {
+        background:
+            radial-gradient(circle at calc(100% - 1px) 1px, transparent 25px, var(--npc-frame) 25.5px) padding-box,
+            radial-gradient(circle at calc(100% - 1px) 1px, transparent 23px, var(--npc-line) 23.5px) border-box;
+        background-origin: border-box;
+    }
 }
 
-/* The monster sheet's night, behind its clouds: the field shades from Card
+/* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
+   sf_npc_filigree()), after a tarot card's gold border, in Item Accent
+   (olive-300): a 3px line inside the frame line, 12px in from the sheet's edge.
+   Corner pieces (one SVG, flipped for each corner) cross it with short
+   ticks; the top right's piece arcs it around the notch. Straight edges
+   join them, so the sheet grows with its content, and a skull breaks it at
+   the top's middle. ---- */
+.sf-npc-filigree {
+    position: absolute;
+    inset: 0;
+    color: var(--sf-olive-300);
+    pointer-events: none;
+
+    svg {
+        position: absolute;
+        overflow: visible;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1;
+    }
+
+    /* The line, 3px */
+    .sf-npc-fil-outer {
+        stroke-width: 3;
+    }
+}
+
+/* The skull on the top line (the skull from game-icons.net's Burning Skull
+   by Lorc, CC BY 3.0, without its flames), in the filigree's gold: 30px tall,
+   centered on the line (13.5px in) at the sheet's middle, the line stopping
+   about 11px short of it either side, its top past the frame's */
+.sf-npc-filigree .sf-npc-fil-skull {
+    top: -1.5px;
+    left: calc(50% - 12.36px);
+    width: 24.73px;
+    height: 30px;
+    fill: var(--sf-olive-300);
+    stroke: none;
+}
+
+/* A boss's skull (.sf-npc--boss, 'boss' => true: the tough one in its
+   threat band): the whole Burning Skull, its
+   flames too, 44px and centered on the line, the flames rising well past
+   the frame's top */
+.sf-npc-filigree .sf-npc-fil-skull--flaming {
+    top: -8.5px;
+    left: calc(50% - 22px);
+    width: 44px;
+    height: 44px;
+}
+
+/* The star in the frame's notch, the NPC sheet's star in the filigree's
+   gold, where the NPC sheet has it (15px, 4.5px in from the top right) */
+.sf-npc-filigree .sf-npc-fil-star {
+    top: 4.5px;
+    right: 4.5px;
+    width: 15px;
+    height: 15px;
+    fill: var(--sf-olive-300);
+    stroke: none;
+}
+
+.sf-npc-fil-corner {
+    width: 40px;
+    height: 40px;
+
+    &.sf-npc-fil-corner--tl { top: 0; left: 0; }
+    &.sf-npc-fil-corner--bl { bottom: 0; left: 0; transform: scaleY(-1); }
+    &.sf-npc-fil-corner--br { right: 0; bottom: 0; transform: scale(-1); }
+    &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
+}
+
+/* The edges: the line, 3px (12–15px in), the top one with a gap 20px
+   either side of the sheet's middle for the skull (8px off its own center,
+   since its right end clears the notch) */
+.sf-npc-fil-edge {
+    position: absolute;
+    background: currentColor;
+
+    &.sf-npc-fil-edge--top,
+    &.sf-npc-fil-edge--bottom {
+        left: 40px;
+        right: 40px;
+        height: 3px;
+    }
+
+    &.sf-npc-fil-edge--top {
+        top: 12px;
+        right: 56px;
+        --fil-gap: calc(50% + 8px);
+        /* Wider for a boss's flaming skull */
+        --fil-skull-gap: 23px;
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
+
+        .sf-npc--boss & {
+            --fil-skull-gap: 29px;
+        }
+    }
+
+    &.sf-npc-fil-edge--bottom {
+        bottom: 12px;
+    }
+
+    &.sf-npc-fil-edge--left,
+    &.sf-npc-fil-edge--right {
+        top: 40px;
+        bottom: 40px;
+        width: 3px;
+    }
+
+    &.sf-npc-fil-edge--left {
+        left: 12px;
+    }
+
+    &.sf-npc-fil-edge--right {
+        right: 12px;
+        top: 56px;
+    }
+}
+
+/* The monster sheet's wear: the gold filigree line (.sf-npc-filigree--line)
+   worn through to the field's black in isolated splotches, as on an old
+   printed tarot card. A mask over the line, one SVG tile (2000px): solid
+   except for a coarse grain kept only inside a few large (250–500px),
+   smooth, low-frequency noise blots, so most of the line stays clean. The
+   band, the frame line, the skull and the star aren't worn. Not in print. */
+.sf-npc-filigree--line {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
+
+    @media print {
+        -webkit-mask: none;
+        mask: none;
+    }
+}
+
+/* The noise in the monster sheet's corners, in gold: the night sky's
+   sparse grain (css/rpg-night.css), denser and at 240px so each speck is
+   a couple of pixels and shows its color, gathered in the
+   field's bottom corners and thinning to a trace across the middle (none
+   at the top, so the stars show there), as a
+   tarot card's speckled black. The grain is a mask over a gold sheen, a
+   diagonal of Item Accent (olive-300) and SP yellow (yellow-400), so the
+   specks run from pale to bright gold across the sheet. The field inside
+   the frame line, with its corners and notch. */
+.sf-npc-dust {
+    position: absolute;
+    inset: 6px;
+    border-radius: 16px 0 16px 16px;
+    -webkit-mask: radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px);
+    mask: radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px);
+    pointer-events: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--sf-olive-300), var(--sf-yellow-400) 25%, var(--sf-olive-400) 50%, var(--sf-yellow-400) 75%, var(--sf-olive-300));
+        /* The grain, kept only where the bottom corners (or the faint middle)
+           are; none at the top, where the storm's stars show */
+        -webkit-mask:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.91' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 3 -1.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0 / 240px 240px,
+            radial-gradient(circle at 0 100%, #000, transparent 280px),
+            radial-gradient(circle at 100% 100%, #000, transparent 280px),
+            linear-gradient(transparent 20%, rgb(0 0 0 / 15%) 50%);
+        -webkit-mask-composite: source-in, source-over, source-over, source-over;
+        mask:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.91' numOctaves='1' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 3 -1.7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0 / 240px 240px,
+            radial-gradient(circle at 0 100%, #000, transparent 280px),
+            radial-gradient(circle at 100% 100%, #000, transparent 280px),
+            linear-gradient(transparent 20%, rgb(0 0 0 / 15%) 50%);
+        mask-composite: intersect, add, add, add;
+    }
+}
+
+/* ---- The storm background ('background' => 'storm', .sf-npc--bg-storm),
+   on either sheet ---- */
+
+/* The storm's night, behind its clouds: the field shades from Card
    Edge (gray-900, the darkest a component goes, to meet the clouds' deep
    shadows) at the top to its own Panel Box at the bottom, under a
    starscape (::before): the night sky's sparse grain (css/rpg-night.css,
@@ -133,23 +333,47 @@
     }
 }
 
-/* The monster sheet's storm clouds, in its field behind the boxes: four
+/* The storm's clouds, in the field behind the boxes: four
    cloud images (img/storm_cloud_1–4.webp, white on transparency) spread
    down the top of the sheet, two high and two lower, overlapping, over the
    night and its stars (.sf-npc-night). It covers the field inside the frame
    line (6px in), with its corners and notch, and fades out down the sheet.
 
-   A color pop (after Johan Lagerqvist's CodePen "Color Pop"): the clouds
-   drawn twice. Under, a red-600 duotone that a turbulence filter keeps
-   wavering (#sf-color-pop, printed once a page by npc-sheet.php); over it,
-   the clouds' shadows as still black ink, so the color shows, shifting,
-   only through their light parts. */
+   After Johan Lagerqvist's CodePen "Color Pop": the clouds tinted, their
+   shading running from the field's own black (gray-900) up to #202728 at
+   their lightest, so no edge reads darker than the field,
+   and a turbulence filter that glitches them in short bursts
+   (#sf-color-pop, printed once a page by npc-sheet.php). Dark enough at full
+   opacity to stay behind the sheet's content.
+
+   Each cloud drifts sideways on its own slow loop (--sf-drift-1–4, 40px
+   either way over 50–80s), stepped four times a second so the filtered
+   layers aren't redrawn every frame; at that speed a step is a fraction of
+   a pixel. Lightning lights them up now and then (.sf-npc-lightning).
+   Still with reduced motion. */
+@property --sf-drift-1 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-2 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-3 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --sf-drift-4 { syntax: "<length>"; inherits: true; initial-value: 0px; }
+
+@keyframes sf-drift-1 { from { --sf-drift-1: -40px; } to { --sf-drift-1: 40px; } }
+@keyframes sf-drift-2 { from { --sf-drift-2: 40px; } to { --sf-drift-2: -40px; } }
+@keyframes sf-drift-3 { from { --sf-drift-3: -40px; } to { --sf-drift-3: 40px; } }
+@keyframes sf-drift-4 { from { --sf-drift-4: 40px; } to { --sf-drift-4: -40px; } }
+
 .sf-npc-sky {
+    /* The lightning script (php/javascript-loads.php's CLOUDS) mirrors these
+       placements to start its bolts at the clouds' lower edges */
     --sf-npc-clouds:
-        url("../img/storm_cloud_3.webp") left -12% top 30% / 48% auto no-repeat,
-        url("../img/storm_cloud_4.webp") right -14% top 24% / 58% auto no-repeat,
-        url("../img/storm_cloud_2.webp") right -10% top 2% / 55% auto no-repeat,
-        url("../img/storm_cloud_1.webp") left -16% top 0 / 72% auto no-repeat;
+        url("../img/storm_cloud_3.webp") left calc(-12% + var(--sf-drift-1)) top 30% / 48% auto no-repeat,
+        url("../img/storm_cloud_4.webp") right calc(-14% + var(--sf-drift-2)) top 24% / 58% auto no-repeat,
+        url("../img/storm_cloud_2.webp") right calc(-10% + var(--sf-drift-3)) top 2% / 55% auto no-repeat,
+        url("../img/storm_cloud_1.webp") left calc(-16% + var(--sf-drift-4)) top 0 / 72% auto no-repeat;
+    animation:
+        sf-drift-1 50s steps(200) -13s infinite alternate,
+        sf-drift-2 65s steps(260) -40s infinite alternate,
+        sf-drift-3 80s steps(320) -22s infinite alternate,
+        sf-drift-4 70s steps(280) -51s infinite alternate;
     position: absolute;
     inset: 6px;
     overflow: hidden;
@@ -164,24 +388,13 @@
     mask-composite: intersect;
     pointer-events: none;
 
-    &::before,
-    &::after {
+    /* The clouds, tinted, glitching in bursts */
+    &::before {
         content: "";
         position: absolute;
         inset: 0;
         background: var(--sf-npc-clouds);
-    }
-
-    /* The color, wavering */
-    &::before {
         filter: url(#sf-color-pop);
-    }
-
-    /* The ink: the shadows in solid black, the lights left clear for the
-       color (#sf-cloud-ink; the pen multiplies a black and white copy,
-       which here would leave white edges where the color wavers off) */
-    &::after {
-        filter: url(#sf-cloud-ink);
     }
 }
 
@@ -194,24 +407,49 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .sf-npc-sky {
+        animation: none;
+    }
+
     .sf-npc-sky::before {
         filter: url(#sf-color-pop-still);
     }
 }
 
-/* The monster sheet's sections (the description, Stats, Items and Traits
-   boxes): no grain, and see-through, so the dot map behind them shows. Each
-   is its warm gray at 70%, which over the warm field reads close to the
-   solid box. */
-.sf-npc--monster {
-    .sf-npc-box {
-        background-color: color-mix(in srgb, var(--npc-box) 70%, transparent);
-        background-image: none;
-    }
+/* The storm's lightning (after mnald12's CodePen "Lightning
+   strike"): now and then a jagged bolt with a few branches drops from the
+   clouds, and the clouds flash. Drawn on this canvas by the page's script
+   (php/javascript-loads.php), in the field over the clouds and under the
+   boxes, with the field's corners and notch, fading out further down the
+   sheet than the clouds do. Only while the sheet is on screen, and never
+   with reduced motion or in print. */
+.sf-npc-lightning {
+    position: absolute;
+    inset: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border-radius: 16px 0 16px 16px;
+    -webkit-mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        linear-gradient(#000 45%, transparent 90%);
+    -webkit-mask-composite: source-in;
+    mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        linear-gradient(#000 45%, transparent 90%);
+    mask-composite: intersect;
+    opacity: 0;
+    pointer-events: none;
 
-    .sf-npc-description {
-        background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
+    @media print {
+        display: none;
     }
+}
+
+/* The monster sheet's sections (the top row, description, Stats, Items and
+   Traits boxes): no background at all, so the content sits straight on the
+   field over the storm and noise. They keep their padding. */
+.sf-npc--monster :is(.sf-npc-box, .sf-npc-description) {
+    background: none;
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
@@ -235,7 +473,7 @@
 }
 
 /* ---- The name and what it is, then its resistances and Movement on the
-   right ---- */
+   right, in a box like the sheet's other sections (.sf-npc-box) ---- */
 
 .sf-npc-head {
     display: flex;
@@ -243,8 +481,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 8px 16px;
-    /* Clears the frame's cut-out and star in the top right corner */
-    padding: 4px 24px 0 4px;
+    padding: 12px 16px;
+    /* Its top right corner cut away around the frame's notch and star, with
+       the same room the frame line keeps from it */
+    -webkit-mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
+    mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
 }
 
 /* The level blob, then the name and what it is */
@@ -690,7 +931,8 @@
 /* Printed, it goes light, with dark text */
 @media print {
     .sf-npc-night,
-    .sf-npc-sky {
+    .sf-npc-sky,
+    .sf-npc-dust {
         display: none;
     }
 

@@ -281,9 +281,14 @@ $sf_color_groups = array(
 	) ),
 	'red'     => array( 'Hit Points.', array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
-		array( '600', '#c14a40', 'Monster Line', 'A monster sheet’s frame line' ),
+		array( '600', '#c14a40', 'Brick Red', 'Not used yet, for filling out the scale' ),
 		array( '700', '#a53027', 'Deep Red', 'Not used yet, for filling out the scale' ),
-		array( '800', '#6f2f2a', 'Monster Frame', 'A monster sheet’s frame band' ),
+		array( '800', '#6f2f2a', 'Oxblood', 'Not used yet, for filling out the scale' ),
+		array( '900', '#4a1f1b', 'Deep Oxblood', 'Not used yet, for filling out the scale' ),
+	) ),
+	'teal'    => array( 'Monster sheets: red-800’s lightness and saturation and red-900’s lightness, at a blue-leaning teal (185°).', array(
+		array( '800', '#2a696f', 'Monster Line', 'A monster sheet’s frame line' ),
+		array( '900', '#224043', 'Monster Frame', 'A monster sheet’s frame band' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
 		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),
@@ -305,7 +310,7 @@ $sf_color_groups = array(
 	) ),
 	'olive'   => array( 'Item cards.', array(
 		array( '100', '#d6d1b4', 'Item Text', 'Chip text, hovered count buttons' ),
-		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes' ),
+		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes; a monster sheet’s gold filigree, skull and star' ),
 		array( '400', '#a29d82', 'Item Muted', 'Item labels, the selected outline' ),
 		array( '600', '#6d6a5a', 'Item Edge', 'An Item card’s edge and its chips’ borders' ),
 		array( '900', '#25241e', 'Item Field', 'Fields and chips inside an Item card' ),
@@ -908,13 +913,16 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 			<div class="container">
 				<div class="line-container"><h5><strong>Monster Sheet</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_monster_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'threat' =&gt; 8, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, … ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( sf_monster_trait( 'Natural Armor', 2 ), … ) ), array( 'fold' =&gt; 'closed' ) );
-For monsters and enemies, anything the party fights; their Traits come from php/rpg/components/monster-traits.php. In place of a character level, the blob shows a threat level, 1 to 10, with its tier after what it is: 1–2 Minor, 3–4 Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary (a dash until it's set). The same fields and options as the NPC sheet. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them.</pre>
+For monsters and enemies, anything the party fights; their Traits come from php/rpg/components/monster-traits.php. In place of a character level, the blob shows a threat level, 1 to 10, with its tier after what it is: 1–2 Minor, 3–4 Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary (a dash until it's set). The same fields and options as the NPC sheet. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them.
+'boss' =&gt; true marks the tough one within its threat band (its tier doesn't change) with a larger skull in flames. Its frame: a deep teal band, a teal line with a gold star in the corner, and a gold filigree line with a gold skull at its top with gold noise gathered in the field’s corners. Its field has the storm background (a starry night, slowly drifting storm clouds tinted #202728, lightning now and then); array( 'background' =&gt; 'none' ) in the options leaves it out, and the NPC sheet takes array( 'background' =&gt; 'storm' ) too.</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['monster'] ); ?>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its background</p>
-					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div></div>
+					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its frame and storm, then the same with no background</p>
+					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ), array( 'background' => 'none' ) ); ?></div></div>
+					<p class="sf-library-label" style="margin-top: 32px">A blank boss, 'boss' =&gt; true, its skull in flames</p>
+					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Boss', 'boss' => true ) ); ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, cards open, as in its lore entry</p>
 					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>

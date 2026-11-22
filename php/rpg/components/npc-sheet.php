@@ -51,6 +51,12 @@
 //            it they're always open, for a page with one.
 //   heading  the name's heading level, 'h5' by default, so the sheet fits
 //            the page's outline
+//   background  what's drawn in the field behind the content, like the
+//            Kind card's $background: 'storm' (a starry night under slowly
+//            drifting storm clouds tinted #202728, with lightning now and
+//            then), the monster sheet's default, or 'none', the NPC sheet's
+//            (its plain field; on a monster sheet, the black field with its
+//            filigree and corner noise).
 //
 // Anything left out isn't drawn: no Traits box for an NPC without Traits.
 // Attacks and Items share the Items box, Attacks first.
@@ -137,13 +143,16 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	}
 
 	// The storm clouds' color pop (css/sf-npc-sheet.css, .sf-npc-sky), once a
-	// page: the clouds turned to a red-600 duotone (#c14a40 as fractions of
-	// their gray), dimmed by a third, then pushed about by turbulence, after
+	// page: the clouds' grays (about 45% to white in the images) remapped
+	// from the field's own black (gray-900) up to #202728 at their lightest,
+	// so no shading reads darker than the field, then pushed about by
+	// turbulence, after
 	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
 	// bursts at the pen's speed (its detail climbing 1 to 10 every 0.75s, its
-	// seed about 10 a second, its stretch growing), three bursts in a 20s
-	// loop at uneven gaps, and holds still between them. The still one, for
-	// reduced motion, keeps the color and one fixed push.
+	// seed about 10 a second, its stretch growing), three bursts in a 40s
+	// loop at uneven gaps. Between them the push is off (the displacement's
+	// scale drops to 0), so the clouds rest unglitched. The still one, for
+	// reduced motion, is the tint alone.
 	function sf_npc_color_pop_filter() {
 		static $done = false;
 		if ( $done ) {
@@ -151,22 +160,22 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		$done  = true;
 		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
-			. '<feColorMatrix type="matrix" values="0.5 0 0 0 0  0.19 0 0 0 0  0.17 0 0 0 0  0 0 0 1 0" in="gray" result="tint" />';
-		$push  = '<feColorMatrix type="saturate" values="30" in="noise" result="vivid" />'
-			. '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -15" in="vivid" result="map" />'
-			. '<feDisplacementMap in="tint" in2="map" scale="15" xChannelSelector="R" yChannelSelector="A" />';
+			. '<feColorMatrix type="matrix" values="0.0713 0 0 0 0.0542  0.1093 0 0 0 0.0449  0.1070 0 0 0 0.0499  0 0 0 1 0" in="gray" result="tint" />';
 
-		// The bursts: start and length in seconds, in a 20s loop, stepped
-		// every 0.05s; each holds its last frame until the next
-		$loop   = 20;
-		$bursts = array( array( 0, 0.4 ), array( 7, 0.25 ), array( 12.5, 0.35 ) );
+		// The bursts: start and length in seconds, in a 40s loop, stepped
+		// every 0.05s; the push is on (15) only while one runs
+		$loop   = 40;
+		$bursts = array( array( 0, 0.4 ), array( 14, 0.25 ), array( 25, 0.35 ) );
 		$times  = array();
 		$detail = array();
 		$seeds  = array();
 		$fq     = array();
 		$seed   = 1;
+		$on     = array();
 		foreach ( $bursts as $burst ) {
 			list( $start, $length ) = $burst;
+			$on[] = round( $start / $loop, 4 );
+			$on[] = round( ( $start + $length ) / $loop, 4 );
 			for ( $t = 0; $t < $length - 0.001; $t += 0.05 ) {
 				$times[]  = round( ( $start + $t ) / $loop, 4 );
 				$detail[] = 1 + (int) floor( 9 * fmod( $t, 0.75 ) / 0.75 );
@@ -175,6 +184,11 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			}
 		}
 		$keys   = implode( ';', $times );
+		$push   = '<feColorMatrix type="saturate" values="30" in="noise" result="vivid" />'
+			. '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -15" in="vivid" result="map" />'
+			. '<feDisplacementMap in="tint" in2="map" scale="0" xChannelSelector="R" yChannelSelector="A">'
+			. '<animate attributeName="scale" values="' . implode( ';', array_map( function ( $i ) { return $i % 2 ? 0 : 15; }, array_keys( $on ) ) ) . '" keyTimes="' . implode( ';', $on ) . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
+			. '</feDisplacementMap>';
 		$noise  = '<feTurbulence type="turbulence" baseFrequency="0.002 0.008" numOctaves="1" seed="1" result="noise">'
 			. '<animate attributeName="baseFrequency" values="' . implode( ';', $fq ) . '" keyTimes="' . $keys . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
 			. '<animate attributeName="numOctaves" values="' . implode( ';', $detail ) . '" keyTimes="' . $keys . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
@@ -184,15 +198,47 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		echo '<svg class="sf-npc-filters" width="0" height="0" aria-hidden="true" focusable="false">'
 			. '<filter id="sf-color-pop" color-interpolation-filters="sRGB">' . $color
 			. $noise . $push . '</filter>'
-			. '<filter id="sf-color-pop-still" color-interpolation-filters="sRGB">' . $color
-			. '<feTurbulence type="turbulence" baseFrequency="0.002 0.008" numOctaves="2" seed="5" result="noise" />'
-			. $push . '</filter>'
-			// The ink over it: the clouds' darker half as solid black, their
-			// lighter half clear, so the color shows only there
-			. '<filter id="sf-cloud-ink" color-interpolation-filters="sRGB">'
-			. '<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.13 -7.15 -0.72 0 6" in="SourceGraphic" result="dark" />'
-			. '<feComposite in="dark" in2="SourceAlpha" operator="in" />'
-			. '</filter></svg>';
+			. '<filter id="sf-color-pop-still" color-interpolation-filters="sRGB">' . $color . '</filter></svg>';
+	}
+
+	// The monster sheet's filigree (css/sf-npc-sheet.css, .sf-npc-filigree),
+	// after a tarot card's gold border: a line inside the frame line, drawn
+	// as corner pieces joined by straight edges so it grows with the sheet.
+	// Each corner crosses it with short ticks; the top right corner arcs it
+	// around the frame's notch instead. A skull breaks it at the top's
+	// middle, and a gold star sits in the notch. (The gold noise in the
+	// field's corners, .sf-npc-dust, is drawn under the storm's clouds.)
+	// $flaming: a boss's skull, larger and in its flames.
+	function sf_npc_filigree( $flaming = false ) {
+		$corner = '<svg class="sf-npc-fil-corner sf-npc-fil-corner--%s" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
+			. '<path class="sf-npc-fil-outer" d="M13.5 40V13.5H40M8.5 13.5h5M13.5 8.5v5" /></svg>';
+		// The skull from game-icons.net's Burning Skull by Lorc (CC BY 3.0),
+		// without its flames, its eyes and nose cut out
+		$skull = '<svg class="sf-npc-fil-skull" viewBox="120 154 272 330" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M268.725 389.28l3.74 28.7h-30.89l3.74-28.7a11.705 11.705 0 1 1 23.41 0zm33.84-71.83a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm-94.4 0a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zM385.335 285.32c-2.45-65.49-54.88-119.59-120.26-124.07-3.06-.21-6.15-.31-9.16-.31a129.4 129.4 0 0 0-129.43 129.35 132.15 132.15 0 0 0 24.51 76v25a35 35 0 0 0 34.74 34.69h6.26v16.61a34.66 34.66 0 0 0 34.71 34.39h61.78a34.48 34.48 0 0 0 34.51-34.39v-16.61h5.38a34.89 34.89 0 0 0 34.62-34.75v-28a129.32 129.32 0 0 0 22.33-77.9z" /></svg>';
+		// A boss's: the whole Burning Skull, flames and all
+		if ( $flaming ) {
+			$skull = '<svg class="sf-npc-fil-skull sf-npc-fil-skull--flaming" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="m268.725 389.28 3.74 28.7h-30.89l3.74-28.7a11.705 11.705 0 1 1 23.41 0zm33.84-71.83a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm-94.4 0a29.5 29.5 0 1 0 29.5 29.5 29.5 29.5 0 0 0-29.51-29.5zm245.71-62c0 98.2-48.22 182.68-117.39 220.24-46 28.26-112.77 28.26-156.19 2.5-71.72-36.21-122.17-122.29-122.17-222.73 0-78.16 30.54-147.63 77.89-191.67 0 0-42.08 82.86 9.1 135-11.67-173.77 169.28-63 118-184 151.79 83.33 9.14 105 84.1 148.21 0 0 66.21 47 36.4-91.73 42.95 43.99 70.25 110.3 70.25 184.19zm-68.54 29.87c-2.45-65.49-54.88-119.59-120.26-124.07-3.06-.21-6.15-.31-9.16-.31a129.4 129.4 0 0 0-129.43 129.35 132.15 132.15 0 0 0 24.51 76v25a35 35 0 0 0 34.74 34.69h6.26v16.61a34.66 34.66 0 0 0 34.71 34.39h61.78a34.48 34.48 0 0 0 34.51-34.39v-16.61h5.38a34.89 34.89 0 0 0 34.62-34.75v-28a129.32 129.32 0 0 0 22.33-77.9z" /></svg>';
+		}
+		// The line, worn in splotches (.sf-npc-filigree--line), then the
+		// skull and star on their own, unworn
+		echo '<div class="sf-npc-filigree sf-npc-filigree--line" aria-hidden="true">';
+		foreach ( array( 'tl', 'bl', 'br' ) as $where ) {
+			printf( $corner, $where );
+		}
+		// The top right, around the notch: the line meets an arc about the
+		// notch's center (5px in from the corner), as far inside the field's
+		// own arc (26px) as the straight line is inside its edge
+		echo '<svg class="sf-npc-fil-corner sf-npc-fil-corner--tr" viewBox="0 0 56 56" aria-hidden="true" focusable="false">'
+			. '<path class="sf-npc-fil-outer" d="M56 13.5H36.37A32.5 32.5 0 0 1 13.5 36.37V56" /></svg>';
+		foreach ( array( 'top', 'right', 'bottom', 'left' ) as $side ) {
+			echo '<span class="sf-npc-fil-edge sf-npc-fil-edge--' . $side . '"></span>';
+		}
+		echo '</div><div class="sf-npc-filigree" aria-hidden="true">';
+		// The skull on the top line, at the middle, and the NPC sheet's star
+		// in the notch, in gold
+		echo $skull;
+		echo '<svg class="sf-npc-fil-star" viewBox="0 0 15 15" aria-hidden="true" focusable="false"><path d="M7.5 0L9.15 5.85L15 7.5L9.15 9.15L7.5 15L5.85 9.15L0 7.5L5.85 5.85Z" /></svg>';
+		echo '</div>';
 	}
 
 	// The sheet the NPC sheet and the monster sheet (components/
@@ -206,12 +252,27 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 			$groups['magic'] = 'Magic';
 		}
 
-		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
-		// A monster sheet's night and storm clouds, in its field behind
-		// everything (css/sf-npc-sheet.css)
+		$storm  = 'storm' === ( $options['background'] ?? ( 'monster' === $variant ? 'storm' : 'none' ) );
+		// A boss: the tough one within its threat band, marked by a flaming
+		// skull on the filigree (its tier doesn't change)
+		$boss   = 'monster' === $variant && ! empty( $npc['boss'] );
+		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . ( $storm ? ' sf-npc--bg-storm' : '' ) . ( $boss ? ' sf-npc--boss' : '' ) . '">';
+		// In the field behind everything (css/sf-npc-sheet.css), bottom up:
+		// the storm's night, the monster sheet's gold noise in its corners
+		// (.sf-npc-dust), the storm's clouds and lightning, then the monster
+		// sheet's filigree
+		if ( $storm ) {
+			echo '<div class="sf-npc-night" aria-hidden="true"></div>';
+		}
 		if ( 'monster' === $variant ) {
-			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div>';
+			echo '<div class="sf-npc-dust" aria-hidden="true"></div>';
+		}
+		if ( $storm ) {
+			echo '<div class="sf-npc-sky" aria-hidden="true"></div><canvas class="sf-npc-lightning" aria-hidden="true"></canvas>';
 			sf_npc_color_pop_filter();
+		}
+		if ( 'monster' === $variant ) {
+			sf_npc_filigree( $boss );
 		}
 
 		// Its level, name and what it is, then its resistances and Movement
@@ -221,7 +282,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// doesn't say how dangerous a monster is. A monster's threat tier
 		// follows what it is under its name.
 		$tier = '';
-		echo '<div class="sf-npc-head"><div class="sf-npc-who">';
+		echo '<div class="sf-npc-box sf-npc-head"><div class="sf-npc-who">';
 		if ( 'monster' === $variant ) {
 			$threat = isset( $npc['threat'] ) ? (int) $npc['threat'] : null;
 			$tier   = null === $threat ? '' : sf_threat_tier( $threat );

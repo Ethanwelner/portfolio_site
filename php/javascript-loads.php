@@ -1198,3 +1198,146 @@
 		row.querySelector( "[data-npc-restore]" ).disabled = current >= max;
 	} );
 </script>
+<script>
+	// The storm background's lightning, on NPC and monster sheets
+	// (php/rpg/components/npc-sheet.php's
+	// .sf-npc-lightning, after mnald12's CodePen "Lightning strike"): once a
+	// second each sheet on screen has a 1 in 14 chance of a strike, at most
+	// one every 5s. A strike draws a jagged silver bolt down from the lower
+	// edge of a cloud, with a few thinner branches, then flickers the bolt
+	// and the clouds (.sf-npc-sky) bright twice and fades them back. Where
+	// the clouds are is worked out from their CSS (CLOUDS, below) and their
+	// drift at that moment; with no cloud edge in the sky's visible top, the
+	// strike is skipped.
+	// Looks for sheets each time, so sheets in lore popups strike too. Never
+	// with reduced motion or while the tab is hidden.
+	(function () {
+		var motion = window.matchMedia ? window.matchMedia( "(prefers-reduced-motion: reduce)" ) : null;
+		var flicker = { duration: 1100, easing: "ease-out" };
+
+		// The clouds as css/sf-npc-sheet.css's --sf-npc-clouds places them,
+		// in its order: which edge they're placed from and that offset (a
+		// fraction of the room left beside them), their top (likewise), their
+		// width as a fraction of the sky's, and their drift property. Keep in
+		// step with the CSS.
+		var CLOUDS = [
+			{ edge: "left", x: -0.12, y: 0.30, w: 0.48, drift: "--sf-drift-1" },
+			{ edge: "right", x: -0.14, y: 0.24, w: 0.58, drift: "--sf-drift-2" },
+			{ edge: "right", x: -0.10, y: 0.02, w: 0.55, drift: "--sf-drift-3" },
+			{ edge: "left", x: -0.16, y: 0, w: 0.72, drift: "--sf-drift-4" }
+		];
+		// The sky fades out from 35% to 85% of its height; a bolt starts only
+		// from a cloud edge above this
+		var VISIBLE = 0.6;
+		var images = {};
+
+		function cloudImages( sky ) {
+			var urls = ( getComputedStyle( sky, "::before" ).backgroundImage.match( /url\("?([^")]+)"?\)/g ) || [] )
+				.map( function ( u ) { return u.replace( /^url\("?|"?\)$/g, "" ); } );
+			if ( urls.length !== CLOUDS.length ) return null;
+			var all = urls.map( function ( url ) {
+				if ( !images[ url ] ) {
+					images[ url ] = new Image();
+					images[ url ].src = url;
+				}
+				return images[ url ];
+			} );
+			return all.every( function ( im ) { return im.complete && im.naturalWidth; } ) ? all : null;
+		}
+
+		// A point just inside the lower edge of a cloud, in the sky's own
+		// pixels (the lightning canvas covers the same field), or null
+		function cloudBottom( sky ) {
+			var imgs = cloudImages( sky );
+			if ( !imgs ) return null;
+			var W = sky.clientWidth, H = sky.clientHeight, k = 0.25;
+			var map = document.createElement( "canvas" );
+			map.width = Math.max( 1, Math.round( W * k ) );
+			map.height = Math.max( 1, Math.round( H * k ) );
+			var mctx = map.getContext( "2d" );
+			var style = getComputedStyle( sky );
+			CLOUDS.forEach( function ( c, i ) {
+				var cw = W * c.w, ch = cw * imgs[ i ].naturalHeight / imgs[ i ].naturalWidth;
+				var drift = parseFloat( style.getPropertyValue( c.drift ) ) || 0;
+				var off = c.x * ( W - cw ) + drift;
+				var x = "left" === c.edge ? off : W - cw - off;
+				var y = c.y * ( H - ch );
+				mctx.drawImage( imgs[ i ], x * k, y * k, cw * k, ch * k );
+			} );
+			var data = mctx.getImageData( 0, 0, map.width, map.height ).data;
+			var maxRow = Math.floor( map.height * VISIBLE );
+			for ( var tries = 0; tries < 40; tries++ ) {
+				var col = Math.floor( map.width * ( 0.12 + Math.random() * 0.76 ) );
+				for ( var row = maxRow; row >= 0; row-- ) {
+					if ( data[ ( row * map.width + col ) * 4 + 3 ] > 160 ) {
+						return { x: col / k, y: row / k - 4 };
+					}
+				}
+			}
+			return null;
+		}
+
+		function bolt( ctx, x, y, endY, width, spread, branches ) {
+			ctx.lineWidth = width;
+			ctx.beginPath();
+			ctx.moveTo( x, y );
+			while ( y < endY ) {
+				var nx = x + ( Math.random() * 2 - 1 ) * spread;
+				var ny = y + 4 + Math.random() * spread * 1.4;
+				ctx.lineTo( nx, ny );
+				if ( branches && Math.random() < 0.08 ) {
+					ctx.stroke();
+					bolt( ctx, nx, ny, ny + ( endY - ny ) * ( 0.3 + Math.random() * 0.4 ), width / 2, spread * 0.8, false );
+					ctx.lineWidth = width;
+					ctx.beginPath();
+					ctx.moveTo( nx, ny );
+				}
+				x = nx;
+				y = ny;
+			}
+			ctx.stroke();
+		}
+
+		function strike( canvas ) {
+			var sky = canvas.parentNode.querySelector( ".sf-npc-sky" );
+			var start = sky && cloudBottom( sky );
+			if ( !start ) return;
+			var w = canvas.clientWidth, h = canvas.clientHeight;
+			var ratio = window.devicePixelRatio || 1;
+			canvas.width = Math.round( w * ratio );
+			canvas.height = Math.round( h * ratio );
+			var ctx = canvas.getContext( "2d" );
+			ctx.scale( ratio, ratio );
+			ctx.lineCap = "round";
+			ctx.lineJoin = "round";
+			ctx.strokeStyle = "rgb(225 230 240)";
+			ctx.shadowColor = "aliceblue";
+			ctx.shadowBlur = 10;
+			// The flash, faint over the whole field
+			ctx.fillStyle = "rgb(255 255 255 / 6%)";
+			ctx.fillRect( 0, 0, w, h );
+			bolt( ctx, start.x, start.y, start.y + h * ( 0.18 + Math.random() * 0.17 ), 2, 12, true );
+
+			canvas.animate( [
+				{ opacity: 0 }, { opacity: 1, offset: 0.04 }, { opacity: 0.15, offset: 0.12 },
+				{ opacity: 1, offset: 0.2 }, { opacity: 0 }
+			], flicker );
+			sky.animate( [
+				{ filter: "brightness(1)" }, { filter: "brightness(2.6)", offset: 0.04 }, { filter: "brightness(1.3)", offset: 0.12 },
+				{ filter: "brightness(2.4)", offset: 0.2 }, { filter: "brightness(1)" }
+			], flicker );
+		}
+
+		setInterval( function () {
+			if ( document.hidden || ( motion && motion.matches ) ) return;
+			var now = Date.now();
+			document.querySelectorAll( ".sf-npc-lightning" ).forEach( function ( canvas ) {
+				if ( now - ( canvas._sfLast || 0 ) < 5000 || Math.random() >= 1 / 14 ) return;
+				var r = canvas.getBoundingClientRect();
+				if ( !r.width || r.bottom < 0 || r.top > window.innerHeight ) return;
+				canvas._sfLast = now;
+				strike( canvas );
+			} );
+		}, 1000 );
+	})();
+</script>
