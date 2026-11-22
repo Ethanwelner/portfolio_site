@@ -22,7 +22,7 @@
 // Its frame has a deep red band and a red line with a gold star in the
 // corner, a gold filigree line inside with a gold skull at its top, and gold
 // noise gathered in the field's corners. Its field has the storm background
-// (drifting clouds tinted #4D5D5A, lightning now and then) unless the
+// (drifting clouds tinted #2F4A44, lightning now and then) unless the
 // options say 'background' => 'none'.
 require_once __DIR__ . '/npc-sheet.php';
 
