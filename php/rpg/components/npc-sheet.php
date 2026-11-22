@@ -192,7 +192,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 					. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
 					. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
 					. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
-					. sf_button( sf_npc_icon( 'restore' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
+					. sf_button( sf_npc_icon( 'restore' ), array( 'kind' => 'bare', 'class' => 'sf-npc-restore', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
 					. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
 					. '</div>';
 			}

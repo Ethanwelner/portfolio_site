@@ -274,6 +274,13 @@
     justify-content: flex-start;
     gap: 16px 32px;
     font-size: 1rem;
+
+    /* With a Special Stat like Magic, four groups: two by two, each as
+       wide as its widest column */
+    &:has(> .sf-npc-group--magic) {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+    }
 }
 
 .sf-npc-group {
@@ -332,7 +339,7 @@
    (php/javascript-loads.php) moves the value. */
 .sf-npc-resource {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto 1fr;
     align-items: center;
     gap: 4px 6px;
     /* At the foot of its column, so the trackers line up even under Magic,
@@ -343,18 +350,60 @@
 
     > .sf-npc-value {
         text-align: center;
+        white-space: nowrap;
     }
 }
 
-/* A half-width sheet (under 640px, as in .sf-npc-grid): the groups in
-   equal columns at least 200px wide, two across rather than one per row,
-   the trackers' value a little narrower so two fit; one column on a
-   phone */
+/* A half-width sheet (under 640px, as in .sf-npc-grid): Physical, Social
+   and Mental in one row of three equal columns, or two by two when a
+   Special Stat like Magic makes a fourth. Each focus Stat's number sits
+   closer to its name so a column holds it. */
 @container npc (max-width: 640px) {
     .sf-npc-stats {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-        gap: 16px 20px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px 12px;
+
+        &:has(> .sf-npc-group--magic) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    /* Each group measures its own width, for its tracker below */
+    .sf-npc-group {
+        container: npc-group / inline-size;
+    }
+
+    .sf-npc-stat {
+        gap: 8px;
+    }
+}
+
+/* A phone-width sheet, too narrow for three columns: one group per row */
+@container npc (max-width: 340px) {
+    .sf-npc-stats,
+    .sf-npc-stats:has(> .sf-npc-group--magic) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* A group too narrow for its tracker on one line (under 176px: a third of
+   a half-width sheet, or a quarter when two by two): the resource's name
+   and value on top, −, + and restore under them, then the meter */
+@container npc-group (max-width: 175px) {
+    .sf-npc-resource {
+        grid-template-columns: auto auto 1fr;
+        grid-template-areas:
+            "name value value"
+            "less more full"
+            "meter meter meter";
+
+        > .sf-npc-resource-name { grid-area: name; }
+        > .sf-npc-value { grid-area: value; text-align: right; white-space: nowrap; }
+        > .sf-npc-step:nth-of-type(1) { grid-area: less; }
+        > .sf-npc-step:nth-of-type(2) { grid-area: more; }
+        > .sf-npc-restore { grid-area: full; }
+        > .sf-npc-meter { grid-area: meter; }
     }
 }
 
@@ -381,6 +430,21 @@
     width: .75em;
     height: .75em;
     fill: currentColor;
+}
+
+/* Restore to full: just its icon at the right end of the line, faded so
+   − and + lead, and full strength under the pointer. Disabled at full. */
+.sf-npc-restore {
+    justify-self: end;
+    color: var(--npc-soft);
+
+    &:hover:not(:disabled) {
+        color: var(--npc-text);
+    }
+
+    &:disabled {
+        opacity: .35;
+    }
 }
 
 .sf-npc-meter {
@@ -492,6 +556,7 @@
 
     /* Printed, just the value, with room left to write it in */
     .sf-npc-step,
+    .sf-npc-restore,
     .sf-npc-meter {
         display: none;
     }
