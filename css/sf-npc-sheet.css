@@ -98,12 +98,12 @@
     }
 }
 
-/* The monster sheet's frame in red: the band Monster Frame (red-700) and
-   the line just inside it Monster Line (red-800). Its grays are the cool
-   ones, as on the NPC sheet. The star in the corner is the band's red
-   (red-700, #a53027), in place of the NPC sheet's gray. */
+/* The monster sheet's frame: the band in Card Edge (gray-900) and the line
+   just inside it in Monster Line (red-800). Its grays are the cool ones, as
+   on the NPC sheet. The star in the corner is Monster Star (red-700,
+   #a53027), in place of the NPC sheet's gray. */
 .sf-npc--monster {
-    --npc-plate: var(--sf-red-700);
+    --npc-plate: var(--sf-gray-900);
     --npc-line: var(--sf-red-800);
 
     &::before {

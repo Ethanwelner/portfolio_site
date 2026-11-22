@@ -261,7 +261,7 @@ $sf_color_groups = array(
 		array( '600', '#343638', 'Panel Box', 'The sheet’s frame (--panel-box)' ),
 		array( '700', '#292b2c', 'Panel', 'The sheet’s boxes and the dark popup (--panel)' ),
 		array( '800', '#1f2122', 'Card', 'A card’s background (--portfolio-black)' ),
-		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
+		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge, and a monster sheet’s frame band' ),
 	) ),
 	'warm'    => array( 'Warm grays, not used yet.', array(
 		array( '600', '#363534', 'Warm Panel Box', 'Not used yet: Panel Box made warm' ),
@@ -282,7 +282,7 @@ $sf_color_groups = array(
 	'red'     => array( 'Hit Points.', array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
 		array( '600', '#c14a40', 'Brick Red', 'Not used yet, for filling out the scale' ),
-		array( '700', '#a53027', 'Monster Frame', 'A monster sheet’s frame band' ),
+		array( '700', '#a53027', 'Monster Star', 'A monster sheet’s corner star' ),
 		array( '800', '#6f2f2a', 'Monster Line', 'A monster sheet’s frame line' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
