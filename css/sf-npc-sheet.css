@@ -98,17 +98,17 @@
     }
 }
 
-/* The monster sheet's frame: the band in Monster Frame (red-900), and the
-   line just inside it in gold, Item Accent (olive-300), like a tarot card's
-   gilt border. Its field is Card Edge too, black
+/* The monster sheet's frame: the band in Monster Frame (red-900) and the
+   line just inside it in Monster Red (red-700), with a gold filigree inside
+   that (below). Its field is Card Edge too, black
    like a tarot card's, with a filigree and noise in its corners (below),
    and 10px more room around the content for them. Its grays are the cool
    ones, as on the NPC sheet. In the corner, in place of the NPC sheet's
-   star, a burning skull in Monster Star (red-700, #a53027; .sf-npc-fil-skull,
+   star, a skull in Monster Red (red-700, #a53027; .sf-npc-fil-skull,
    below). */
 .sf-npc--monster {
     --npc-plate: var(--sf-red-900);
-    --npc-line: var(--sf-olive-300);
+    --npc-line: var(--sf-red-700);
     --npc-frame: var(--sf-gray-900);
     padding: 26px;
 
@@ -128,17 +128,17 @@
 }
 
 /* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
-   sf_npc_filigree()), after a tarot card's gold border, in the frame line's
-   gold: a 3px line inside the frame line, 12px in from the sheet's edge.
+   sf_npc_filigree()), after a tarot card's gold border, in Item Accent
+   (olive-300): a 3px line inside the frame line, 12px in from the sheet's edge.
    Corner pieces (one SVG, flipped for each corner) cross it with short
    ticks; the top right's piece arcs it around the notch. Straight edges
    join them, so the sheet grows with its content, and a 28px diamond with a
-   Monster Star heart breaks it at the top and the bottom, over the boxes'
+   Monster Red heart breaks it at the top and the bottom, over the boxes'
    edges. ---- */
 .sf-npc-filigree {
     position: absolute;
     inset: 0;
-    color: var(--npc-line);
+    color: var(--sf-olive-300);
     pointer-events: none;
 
     svg {
