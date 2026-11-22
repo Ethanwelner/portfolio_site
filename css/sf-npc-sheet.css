@@ -214,12 +214,6 @@
     .sf-npc-description {
         background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
     }
-
-    /* The top row's box sits on the darkest of the night, so it's nearly
-       solid to read as a box */
-    .sf-npc-head {
-        background-color: color-mix(in srgb, var(--npc-box) 90%, transparent);
-    }
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
