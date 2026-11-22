@@ -166,6 +166,16 @@
     stroke: none;
 }
 
+/* A Deadly monster's skull (.sf-npc--deadly): the whole Burning Skull, its
+   flames too, 32px and centered on the line, the flames rising past the
+   frame's top a little */
+.sf-npc-filigree .sf-npc-fil-skull--flaming {
+    top: -2.5px;
+    left: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+}
+
 /* The star in the frame's notch, the NPC sheet's star in the filigree's
    gold, where the NPC sheet has it (15px, 4.5px in from the top right) */
 .sf-npc-filigree .sf-npc-fil-star {
@@ -205,8 +215,14 @@
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
-        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 20px), transparent 0 calc(var(--fil-gap) + 20px), #000 0);
-        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 20px), transparent 0 calc(var(--fil-gap) + 20px), #000 0);
+        /* Wider for a Deadly monster's flaming skull */
+        --fil-skull-gap: 20px;
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
+
+        .sf-npc--deadly & {
+            --fil-skull-gap: 24px;
+        }
     }
 
     &.sf-npc-fil-edge--bottom {
