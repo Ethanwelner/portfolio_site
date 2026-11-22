@@ -20,6 +20,11 @@
     --sf-gray-800: #1f2122;  /* Card */
     --sf-gray-900: #161819;  /* Card Edge */
 
+    /* Warm grays: Panel Box's lightness, warmer, for the monster sheet */
+    --sf-warm-600: #373534;  /* Warm Panel Box */
+    --sf-warm-700: #2c2a29;  /* Warm Panel */
+    --sf-warm-800: #21201f;  /* Warm Card */
+
     /* Isekai greens */
     --sf-green-300: #6fd18a; /* good, on the dark panel */
     --sf-green-500: #47b767; /* Green */
@@ -34,6 +39,9 @@
     /* Each resource's color, on the sheets and in Player Tools: HP red, VP purple,
        SP yellow, MP blue. All clear 4.5:1 on the sheets' dark backgrounds. */
     --sf-red-500: #e2574c;     /* HP */
+    --sf-red-600: #c14a40;     /* a monster sheet's frame line */
+    --sf-red-700: #a53027;     /* not used yet */
+    --sf-red-800: #6f2f2a;     /* a monster sheet's frame band */
     --sf-crimson-300: #ff5c86; /* bad, on dark */
     --sf-crimson-500: #eb0844; /* danger, damage */
     --sf-crimson-700: #b8063a; /* bad, on light */

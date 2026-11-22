@@ -1,12 +1,12 @@
 <?php
 // Stat sheets for the Another World adventure's encounters, in the
-// Adventures section's Monsters tab. Each is an sf_npc_sheet()
-// (components/npc-sheet.php), the same short form as Murk Legs.
+// Adventures section's Monsters tab. Each is an sf_monster_sheet()
+// (components/monster-sheet.php), the same short form as Murk Legs.
 // People are built like characters: Human's 1 in every focus Stat, the
 // Origin's bonus point (Dreft's is Physical), then 1 core point and 3 focus
 // points per Level. Traits a Profession grants skip their Stat requirements.
 // Monsters are built from Physical only.
-require_once __DIR__ . '/components/npc-sheet.php';
+require_once __DIR__ . '/components/monster-sheet.php';
 require_once __DIR__ . '/components/monster-traits.php';
 
 // The component library (rpg-components.php) shows these same sheets open;
@@ -22,11 +22,11 @@ $sf_wield = function ( $weapon, $rank ) {
 	);
 };
 
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'    => 'Bandit',
 		'kind'    => 'Human',
-		'level'   => 1,
+		'threat'  => 1, // built at Level 1
 		'move'    => '10 m',
 		'resistances' => '2 Blunt, 1 Slashing, 2 Cold',
 		'stats'   => array(
@@ -68,11 +68,11 @@ sf_npc_sheet(
 	array( 'fold' => $sf_encounters_fold )
 );
 
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'    => 'Skeleton',
 		'kind'    => 'Monster, Undead',
-		'level'   => 4,
+		'threat'  => 2, // built at Level 4
 		'move'    => '10 m',
 		'resistances' => '3 Piercing, 2 Slashing, -2 Blunt',
 		'stats'   => array(
@@ -109,10 +109,11 @@ sf_npc_sheet(
 	array( 'fold' => $sf_encounters_fold )
 );
 
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'        => 'Hedge Boar',
 		'kind'        => 'Monster, Isekai',
+		'threat'      => 3,
 		'move'        => '12 m',
 		'resistances' => '1 Blunt, 1 Slashing, 1 Piercing',
 		'resources'   => array( 'hp' => 32 ),
@@ -150,10 +151,11 @@ sf_npc_sheet(
 	array( 'fold' => $sf_encounters_fold )
 );
 
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'        => 'Bog Lurker',
 		'kind'        => 'Monster, Isekai',
+		'threat'      => 6,
 		'move'        => '10 m',
 		'resistances' => '3 Blunt, 3 Slashing, 3 Piercing',
 		'resources'   => array( 'hp' => 54 ),
@@ -194,11 +196,11 @@ sf_npc_sheet(
 	array( 'fold' => $sf_encounters_fold )
 );
 
-sf_npc_sheet(
+sf_monster_sheet(
 	array(
 		'name'    => 'Dreftian Mercenary',
 		'kind'    => 'Human',
-		'level'   => 8,
+		'threat'  => 4, // built at Level 8
 		'move'    => '10 m',
 		'resistances' => '2 Blunt, 3 Slashing, 2 Piercing',
 		'stats'   => array(

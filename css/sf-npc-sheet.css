@@ -1,8 +1,11 @@
 /* ========================================
    STRANGE FRONTIERS NPC AND MONSTER SHEET
    ========================================
-   The short-form sheet (php/rpg/components/npc-sheet.php): the name and
-   what it is with Movement, the Stats as on a Kind card with live HP, VP,
+   The short-form sheets, two components drawn alike for now: the NPC
+   sheet (php/rpg/components/npc-sheet.php, .sf-npc--npc) and the monster
+   sheet (php/rpg/components/monster-sheet.php, .sf-npc--monster). Rules on
+   .sf-npc are both's; style one apart with its own class. Each has the
+   name and what it is with Movement, the Stats as on a Kind card with live HP, VP,
    SP and MP beside them, then Items and Traits as cards. The full character sheet's sibling (css/sf-sheet.css): the same
    dark panel and grays, cut down to what a GM needs at the table.
 
@@ -31,6 +34,8 @@
 .sf-npc {
     --npc-frame: var(--panel-box, var(--sf-gray-600));
     --npc-box: var(--panel, var(--sf-gray-700));
+    /* The description's darker box */
+    --npc-well: var(--portfolio-black, var(--sf-gray-800));
     --npc-edge: var(--card-border, var(--sf-gray-400));
     --npc-text: var(--panel-text, var(--sf-gray-100));
     --npc-soft: var(--panel-soft, var(--sf-gray-200));
@@ -91,6 +96,19 @@
         border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='148' height='148' viewBox='0 0 148 148'%3E%3Cdefs%3E%3Cfilter id='b' filterUnits='userSpaceOnUse' x='0' y='0' width='148' height='148'%3E%3CfeGaussianBlur stdDeviation='5'/%3E%3C/filter%3E%3Cmask id='m' maskUnits='userSpaceOnUse' x='0' y='0' width='148' height='148'%3E%3Crect width='148' height='148' fill='white'/%3E%3Cpath d='M47 24H84V64H124V101A23 23 0 0 1 101 124H47A23 23 0 0 1 24 101V47A23 23 0 0 1 47 24ZM47 29H95.02A23 23 0 0 0 119 52.98V101A18 18 0 0 1 101 119H47A18 18 0 0 1 29 101V47A18 18 0 0 1 47 29Z' fill='black'/%3E%3C/mask%3E%3C/defs%3E%3Cg mask='url(%23m)'%3E%3Cpath d='M47 24H84V64H124V101A23 23 0 0 1 101 124H47A23 23 0 0 1 24 101V47A23 23 0 0 1 47 24ZM47 29H95.02A23 23 0 0 0 119 52.98V101A18 18 0 0 1 101 119H47A18 18 0 0 1 29 101V47A18 18 0 0 1 47 29Z' transform='translate(0 4)' fill='black' fill-opacity='.19' filter='url(%23b)'/%3E%3C/g%3E%3C/svg%3E") 64 / 64px;
         pointer-events: none;
     }
+}
+
+/* The monster sheet: its frame in red, the band Monster Frame (red-800)
+   and the line just inside it Monster Line (red-600), and its grays warm in
+   place of the cool ones: Warm Panel Box (warm-600) behind, Warm Panel
+   (warm-700) boxes, and Warm Card (warm-800) for the description box and
+   the level's blob */
+.sf-npc--monster {
+    --npc-plate: var(--sf-red-800);
+    --npc-line: var(--sf-red-600);
+    --npc-frame: var(--sf-warm-600);
+    --npc-box: var(--sf-warm-700);
+    --npc-well: var(--sf-warm-800);
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
@@ -158,7 +176,7 @@
         inset: 0;
         z-index: -1;
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        background-color: var(--sf-gray-800);
+        background-color: var(--npc-well);
         box-shadow: 0 0 5px 0 var(--sf-purple-400);
         animation:
             sf-sheet-blob-morph 8s ease-in-out infinite,
@@ -277,7 +295,7 @@
    corners, no title */
 .sf-npc-description {
     padding: 9.6px 12px;
-    background-color: var(--portfolio-black);
+    background-color: var(--npc-well);
     border-radius: 16px;
 
     p {
@@ -571,6 +589,7 @@
     .sf-npc {
         --npc-frame: var(--sf-gray-50);
         --npc-box: var(--sf-gray-0);
+        --npc-well: var(--sf-gray-50);
         --npc-edge: var(--sf-gray-100);
         --npc-text: var(--sf-gray-800);
         --npc-soft: var(--sf-gray-500);

@@ -11,6 +11,7 @@ require_once 'php/rpg/components/buttons.php';
 require_once 'php/rpg/components/stats.php';
 require_once 'php/rpg/components/sheet.php';
 require_once 'php/rpg/components/npc-sheet.php';
+require_once 'php/rpg/components/monster-sheet.php';
 include_once 'php/rpg/magic-items.php';
 
 $sf_sample = json_decode( file_get_contents( 'php/rpg/sample-character.json' ), true );
@@ -262,6 +263,11 @@ $sf_color_groups = array(
 		array( '800', '#1f2122', 'Card', 'A card’s background (--portfolio-black)' ),
 		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
 	) ),
+	'warm'    => array( 'Warm grays, for the monster sheet.', array(
+		array( '600', '#373534', 'Warm Panel Box', 'A monster sheet’s background, Panel Box made warm' ),
+		array( '700', '#2c2a29', 'Warm Panel', 'A monster sheet’s boxes, Panel made warm' ),
+		array( '800', '#21201f', 'Warm Card', 'A monster sheet’s description box and level blob, Card made warm' ),
+	) ),
 	'green'   => array( 'Isekai greens.', array(
 		array( '300', '#6fd18a', 'Good', 'Good values on the dark panel (--panel-good)' ),
 		array( '500', '#47b767', 'Green', 'A picked card’s ring and check (--portfolio-green)' ),
@@ -275,6 +281,9 @@ $sf_color_groups = array(
 	) ),
 	'red'     => array( 'Hit Points.', array(
 		array( '500', '#e2574c', 'HP', 'Hit Points and the Physical stats (--frontiers-hp)' ),
+		array( '600', '#c14a40', 'Monster Line', 'A monster sheet’s frame line' ),
+		array( '700', '#a53027', 'Deep Red', 'Not used yet, for filling out the scale' ),
+		array( '800', '#6f2f2a', 'Monster Frame', 'A monster sheet’s frame band' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
 		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),
@@ -348,12 +357,12 @@ $sf_used_in = array(
 		'php/rpg/rpg-traits.php: Trait Categories and Example Traits',
 		'php/rpg/rpg-incidents.php: Dress Wounds',
 		'php/rpg/rpg-character.php: the sample sheet’s Healthy Condition, Abilities (closed, keeping their effect), Skills (closed), Other Traits, and its Knowledges’ popups',
-		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Traits (Murk Legs’ Dark Haze)',
+		'php/rpg/components/npc-sheet.php and monster-sheet.php: an NPC’s or monster’s Traits (Murk Legs’ Dark Haze)',
 	),
 	'item'       => array(
 		'php/rpg/items.php: sf_equipment_card(), the Item Types and Example Items',
 		'php/rpg/magic-items.php: sf_magic_item_card(), Artifacts, Enchantments and Potions',
-		'php/rpg/components/npc-sheet.php: an NPC’s or monster’s Attacks and Items (Murk Legs)',
+		'php/rpg/components/npc-sheet.php and monster-sheet.php: an NPC’s or monster’s Attacks and Items (Murk Legs)',
 		'php/rpg/rpg-character.php: the sample sheet’s Items (read-only Equip, closed)',
 	),
 	'chassis'    => array(
@@ -377,8 +386,11 @@ $sf_used_in = array(
 		'Every popup in the Character Creator and Player Tools (dark): a Knowledge’s or Kind’s card (card), the portrait, Add a Condition and Switch character (narrow), Add items and Choose Traits (wide), Rules problems (src/app/components/popup.tsx)',
 	),
 	'npc'        => array(
+		'Not on a page yet: only this page’s made-up Hedge Witch',
+	),
+	'monster'    => array(
 		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry',
-		'php/rpg/encounters.php: the Bandit, Skeleton and Dreftian Mercenary, in the Adventures section’s Monsters tab (closed)',
+		'php/rpg/encounters.php: the Another World encounters, in the Adventures section’s Monsters tab (closed)',
 	),
 	'sheet'      => array(
 		'php/rpg/rpg-character.php: the sample sheet (sample)',
@@ -584,7 +596,8 @@ $sf_list = function ( $items ) {
 			<a href="#lib-stat-block"><badge class="badge">Stats</badge></a>
 			<a href="#lib-sheet-layout"><badge class="badge">Sheet</badge></a>
 			<a href="#lib-popup"><badge class="badge">Popup</badge></a>
-			<a href="#lib-npc-and-monster-sheet"><badge class="badge">NPC Sheet</badge></a>
+			<a href="#lib-npc-sheet"><badge class="badge">NPC Sheet</badge></a>
+			<a href="#lib-monster-sheet"><badge class="badge">Monster Sheet</badge></a>
 		</nav>
 		<div class="sf-library-band">
 			<div class="container">
@@ -594,7 +607,7 @@ $sf_list = function ( $items ) {
 				<p class="copy">For the cards, there’s one per kind of card: Trait, Item, Chassis, Kind and Background. A Kind gets a framed card, which Background cards (Origins, Professions and Pasts) share: a key-colored line inside a thin solid gray border, framing a solar system's rings over a faint starfield, with a cut-out at the top left around a star. A Chassis card is an Item card that holds part of a character sheet: an AI-Core’s body, with its HP, Physical stats, Attacks and the Traits it gives. The Character Creator’s and Player Tools’ cards are the reference. The site draws the same markup from <code>php/rpg/components/cards.php</code>, and <code>css/sf-cards.css</code> is a copy of the creator’s <code>src/app/cards.css</code>, so a card looks the same everywhere: in a light section, a dark one or a popup.</p>
 				<p class="copy">Each card takes options that say how it behaves where it’s used, under the same names in the creator and here. A Trait card can fold (opening from the chevron at the end of its bar, and only there) and keep its effect in view while it’s closed. An Item card can show a count (a consumable’s only), an Equip box and fold. The creator adds the live ones the site can’t: a working Equip box, Edit and Note on items, and picking a card.</p>
 				<p class="copy">The stat block works the same way: <code>php/rpg/components/stats.php</code> draws the creator’s markup, and <code>css/sf-stats.css</code> is a copy of the creator’s <code>src/app/stats.css</code>. Player Tools’ sheet is the reference.</p>
-				<p class="copy">NPCs and monsters get the short-form sheet, <code>php/rpg/components/npc-sheet.php</code>, styled by <code>css/sf-npc-sheet.css</code>. It’s the site’s own for now.</p>
+				<p class="copy">NPCs and monsters each get a short-form sheet: the NPC sheet, <code>php/rpg/components/npc-sheet.php</code>, and the monster sheet, <code>php/rpg/components/monster-sheet.php</code>, for anything the party fights. They draw the same sheet for now, styled by <code>css/sf-npc-sheet.css</code>, each with its own class to change it by. They’re the site’s own for now.</p>
 				<p class="copy">The popup too: <code>php/rpg/components/popup.php</code> draws the creator’s markup (the backdrop, the panel and the X on its corner), and <code>css/sf-popup.css</code> is a copy of the creator’s <code>src/app/popup.css</code>.</p>
 				<p class="copy">So does the character sheet’s layout: <code>php/rpg/components/sheet.php</code> draws the creator’s markup, and <code>css/sf-sheet.css</code> is a copy of the creator’s <code>src/app/sheet.css</code>. Player Tools’ sheet is the reference, and each sheet’s context sets what it draws.</p>
 				<p class="copy mb-0">This page isn’t linked from anywhere. Under each component is where the site uses it.</p>
@@ -841,22 +854,18 @@ options: tone (light: the white panel, a dark X; dark: the creator's gray, a lig
 			</div>
 		</div>
 
-		<!-- NPC and monster sheet -->
-		<div class="sf-library-band" id="lib-npc-and-monster-sheet">
+		<!-- NPC sheet -->
+		<div class="sf-library-band" id="lib-npc-sheet">
 			<div class="container">
-				<div class="line-container"><h5><strong>NPC and Monster Sheet</strong></h5><div class="line"></div></div>
-				<pre class="sf-library-api">sf_npc_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'description' =&gt; …, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, …, 'Magic' =&gt; 2 ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( … ), 'items' =&gt; array( … ) ), array( 'fold' =&gt; 'closed' ) );
-HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them. Magic, description, attacks, traits and items are optional: what's left out isn't drawn.
+				<div class="line-container"><h5><strong>NPC Sheet</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_npc_sheet( array( 'name' =&gt; 'Hedge Witch', 'kind' =&gt; 'NPC, Dreft', 'description' =&gt; …, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 1, 'Endurance' =&gt; 2, …, 'Magic' =&gt; 2 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( … ), 'items' =&gt; array( … ) ), array( 'fold' =&gt; 'closed' ) );
+For NPCs, the people the party meets. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them. Magic, description, attacks, traits and items are optional: what's left out isn't drawn; the description box says Content coming soon until it's set.
 options: fold ('closed' or 'open': the cards fold, for a page with many), heading (the name's level, h5 by default)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['npc'] ); ?>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
-					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
-					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters: Bandit, Skeleton and Dreftian Mercenary, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
-					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
-					<p class="sf-library-label" style="margin-top: 32px">A made-up NPC to show the options (not setting content): Magic, a description and Items, its cards folded</p>
+					<p class="sf-library-label">A made-up NPC to show the options (not setting content): Magic with Restoration and Necromancy spells, a description and Items, its cards folded</p>
 					<div class="sf-npc-grid">
 					<?php
 					sf_npc_sheet(
@@ -876,6 +885,9 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 							),
 							'traits'      => array(
 								array( 'kind' => 'skill', 'name' => 'Herbalism', 'rank' => 2, 'effect' => 'Rank ×5 added to Skill Checks involving herbs and remedies.' ),
+								array( 'kind' => 'ability', 'name' => 'Heal', 'rank' => 1, 'types' => array( 'Restoration', 'Potion' ), 'effect' => 'This character gains the Cast Heal Action.', 'action' => 'Cast Heal: This character may spend up to 1 MP per Rank to heal a living character within 3 m per Rank, restoring 4 HP for each MP spent.' ),
+								array( 'kind' => 'ability', 'name' => 'Staunch', 'rank' => 1, 'types' => array( 'Restoration', 'Potion' ), 'effect' => 'This character gains the Cast Staunch Action.', 'action' => 'Cast Staunch: This character may spend 1 MP to end the Severe Bleeding Condition on a character within 3 m.' ),
+								array( 'kind' => 'ability', 'name' => 'Grave Touch', 'rank' => 1, 'types' => array( 'Necromancy' ), 'effect' => 'This character gains the Cast Grave Touch Action.', 'action' => 'Cast Grave Touch: This character may spend 1 MP to Attack a target with a temporary weapon that has the following profile: (Melee) (max range 1 m) (5 Death per Rank).' ),
 							),
 							'items'       => array(
 								array( 'name' => 'Healing Potion', 'category' => 'Potion', 'description' => 'A small vial.', 'lead' => 'Brewed at Rank 1.', 'count' => 2 ),
@@ -885,6 +897,24 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 					);
 					?>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Monster sheet -->
+		<div class="sf-library-band" id="lib-monster-sheet">
+			<div class="container">
+				<div class="line-container"><h5><strong>Monster Sheet</strong></h5><div class="line"></div></div>
+				<pre class="sf-library-api">sf_monster_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'threat' =&gt; 8, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, … ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( sf_monster_trait( 'Natural Armor', 2 ), … ) ), array( 'fold' =&gt; 'closed' ) );
+For monsters and enemies, anything the party fights; their Traits come from php/rpg/components/monster-traits.php. In place of a character level, the blob shows a threat level, 1 to 10, with its tier after what it is: 1–2 Minor, 3–4 Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary (a dash until it's set). The same fields and options as the NPC sheet. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them.</pre>
+				<p class="sf-library-label">Used in</p>
+				<?php $sf_list( $sf_used_in['monster'] ); ?>
+				<div class="sf-library-stage is-dark">
+					<?php $sf_theme_toggle(); ?>
+					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
+					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
+					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
+					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
 				</div>
 			</div>
 		</div>
