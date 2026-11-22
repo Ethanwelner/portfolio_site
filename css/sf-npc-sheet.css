@@ -186,8 +186,9 @@
 
 /* The edges: the outer line 3px (12–15px in) and the inner one 1px
    (21–22px in) as backgrounds, the top and bottom ones with a gap for the
-   diamond at the sheet's middle, 19px either side so the lines stop about
-   6px short of it (the top edge is 8px off center, since its
+   diamond at the sheet's middle: 25px either side for the outer line, so it
+   stops about 12px short of it, and 19px for the inner one, about 6px short
+   (the top edge is 8px off center, since its
    right end clears the notch) */
 .sf-npc-fil-edge {
     position: absolute;
@@ -199,20 +200,33 @@
         right: 40px;
         height: 10px;
         --fil-gap: 50%;
-        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
-        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
+        /* Each line's gap: the outer line's over its 3px, the inner's over
+           the rest (--fil-outer-at and --fil-inner-at place them) */
+        --fil-cut-outer: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
+        --fil-cut-inner: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
+        background:
+            var(--fil-line) var(--fil-outer-at) / 100% 3px no-repeat,
+            var(--fil-line) var(--fil-inner-at) / 100% 1px no-repeat;
+        -webkit-mask:
+            var(--fil-cut-outer) var(--fil-outer-at) / 100% 3px no-repeat,
+            var(--fil-cut-inner) var(--fil-inner-at) / 100% 7px no-repeat;
+        mask:
+            var(--fil-cut-outer) var(--fil-outer-at) / 100% 3px no-repeat,
+            var(--fil-cut-inner) var(--fil-inner-at) / 100% 7px no-repeat;
     }
 
     &.sf-npc-fil-edge--top {
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
-        background: var(--fil-line) 0 0 / 100% 3px no-repeat, var(--fil-line) 0 100% / 100% 1px no-repeat;
+        --fil-outer-at: 0 0;
+        --fil-inner-at: 0 100%;
     }
 
     &.sf-npc-fil-edge--bottom {
         bottom: 12px;
-        background: var(--fil-line) 0 100% / 100% 3px no-repeat, var(--fil-line) 0 0 / 100% 1px no-repeat;
+        --fil-outer-at: 0 100%;
+        --fil-inner-at: 0 0;
     }
 
     &.sf-npc-fil-edge--left,
