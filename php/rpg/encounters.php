@@ -111,7 +111,7 @@ sf_npc_sheet(
 
 sf_npc_sheet(
 	array(
-		'name'        => 'Briar Boar',
+		'name'        => 'Hedge Boar',
 		'kind'        => 'Monster, Isekai',
 		'move'        => '12 m',
 		'resistances' => '1 Blunt, 1 Slashing, 1 Piercing',
@@ -152,7 +152,7 @@ sf_npc_sheet(
 
 sf_npc_sheet(
 	array(
-		'name'        => 'Mire Lurker',
+		'name'        => 'Bog Lurker',
 		'kind'        => 'Monster, Isekai',
 		'move'        => '10 m',
 		'resistances' => '3 Blunt, 3 Slashing, 3 Piercing',

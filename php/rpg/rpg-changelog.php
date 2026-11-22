@@ -12,6 +12,7 @@
 					<ul class="copy changelog-list mb-0">
 						<li>Explaining Stats: a character who reaches 0 Hit Points is dead. They gain the Dead Condition, can take no Actions and perceive nothing, and their Hit Points can only be restored by something that says it can bring a character back from the dead. Items have the same in Destroyed.</li>
 						<li>Planar Exploration: Black Box, Turtle Box, Screamer and Expedition Drone are now one Exploration Technologies entry, Exploration Drones, with a section for each inside its Details. The Black Box, Turtle Box, Screamer and Expedition Drone are all written up.</li>
+						<li>Monsters: the Briar Boar is now the Hedge Boar, and the Mire Lurker is now the Bog Lurker.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
