@@ -261,7 +261,7 @@ $sf_color_groups = array(
 		array( '600', '#343638', 'Panel Box', 'The sheet’s frame (--panel-box)' ),
 		array( '700', '#292b2c', 'Panel', 'The sheet’s boxes and the dark popup (--panel)' ),
 		array( '800', '#1f2122', 'Card', 'A card’s background (--portfolio-black)' ),
-		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge, and a monster sheet’s frame band' ),
+		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
 	) ),
 	'warm'    => array( 'Warm grays, not used yet.', array(
 		array( '600', '#363534', 'Warm Panel Box', 'Not used yet: Panel Box made warm' ),
@@ -307,7 +307,7 @@ $sf_color_groups = array(
 		array( '100', '#d6d1b4', 'Item Text', 'Chip text, hovered count buttons' ),
 		array( '300', '#b5ae86', 'Item Accent', 'The item button, icon badges, checked boxes; a monster sheet’s gold frame line and filigree' ),
 		array( '400', '#a29d82', 'Item Muted', 'Item labels, the selected outline' ),
-		array( '600', '#6d6a5a', 'Item Edge', 'An Item card’s edge and its chips’ borders' ),
+		array( '600', '#6d6a5a', 'Item Edge', 'An Item card’s edge and its chips’ borders; a monster sheet’s frame band' ),
 		array( '900', '#25241e', 'Item Field', 'Fields and chips inside an Item card' ),
 	) ),
 );
@@ -909,7 +909,7 @@ options: fold ('closed' or 'open': the cards fold, for a page with many), headin
 				<div class="line-container"><h5><strong>Monster Sheet</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_monster_sheet( array( 'name' =&gt; 'Murk Legs', 'kind' =&gt; 'Monster, Isekai', 'threat' =&gt; 8, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 12, 'Endurance' =&gt; 10, … ), 'resources' =&gt; array( 'hp' =&gt; 40 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( sf_monster_trait( 'Natural Armor', 2 ), … ) ), array( 'fold' =&gt; 'closed' ) );
 For monsters and enemies, anything the party fights; their Traits come from php/rpg/components/monster-traits.php. In place of a character level, the blob shows a threat level, 1 to 10, with its tier after what it is: 1–2 Minor, 3–4 Standard, 5–6 Elite, 7–8 Deadly, 9–10 Legendary (a dash until it's set). The same fields and options as the NPC sheet. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them.
-Its frame: a black band, a gold line with a red skull in the corner, and a gold double-line filigree with gold noise gathered in the field’s corners. array( 'background' =&gt; 'storm' ) in the options draws the storm background in its field (a starry night, slowly drifting black and white storm clouds, lightning now and then); the NPC sheet takes it too.</pre>
+Its frame: a dark gold band, a gold line with a red skull in the corner, and a gold double-line filigree with gold noise gathered in the field’s corners. array( 'background' =&gt; 'storm' ) in the options draws the storm background in its field (a starry night, slowly drifting black and white storm clouds, lightning now and then); the NPC sheet takes it too.</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['monster'] ); ?>
 				<div class="sf-library-stage is-dark">

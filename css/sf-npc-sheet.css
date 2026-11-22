@@ -98,16 +98,16 @@
     }
 }
 
-/* The monster sheet's frame: the band in Card Edge (gray-900) and the line
-   just inside it in gold, Item Accent (olive-300), like a tarot card's
-   gilt border. Its field is Card Edge too, black
+/* The monster sheet's frame: the band in a darker gold, Item Edge
+   (olive-600), and the line just inside it in gold, Item Accent
+   (olive-300), like a tarot card's gilt border. Its field is Card Edge too, black
    like a tarot card's, with a filigree and noise in its corners (below),
    and 10px more room around the content for them. Its grays are the cool
    ones, as on the NPC sheet. In the corner, in place of the NPC sheet's
    star, a burning skull in Monster Star (red-700, #a53027; .sf-npc-fil-skull,
    below). */
 .sf-npc--monster {
-    --npc-plate: var(--sf-gray-900);
+    --npc-plate: var(--sf-olive-600);
     --npc-line: var(--sf-olive-300);
     --npc-frame: var(--sf-gray-900);
     padding: 26px;
