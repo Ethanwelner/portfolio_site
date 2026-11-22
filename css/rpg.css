@@ -2050,10 +2050,47 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         }
     }
 
-    /* The Character Creator and Player Tools have no side gutters in their
-       column, so their content takes 30px padding, level with the nav. */
+}
+
+/* The Character Creator, Player Tools and the Game Master Tools: their
+   full-width bands (.breakout, like the footer) are 100vw wide, which takes
+   in the window's scrollbar, so they ran about 8px past each side of the page
+   and it scrolled sideways. The page clips them at its own edges. Clip, not
+   hidden, so nothing inside becomes a scroll box and the sticky d20 and chat
+   column still sticks. */
+.creator-shell {
+    overflow-x: clip;
+}
+
+/* The Character Creator, Player Tools and the Game Master Tools have no side
+   gutters in their column, so below 1400px their content runs the width of
+   the page with 30px padding, level with the nav from 1200px to 1399px, and
+   keeps it at every narrower width instead of going back to the site's wider
+   margins; on phones it's the site's 20px. */
+@media only screen and (max-width: 1399px) {
     .creator-shell .container {
+        max-width: min(1920px, 100%);
         padding-inline: 30px;
+    }
+}
+
+/* Their nav stays 30px from the sides with it, as from 1200px to 1399px,
+   down to phones (which have the site's own 20px) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    body:has(.creator-shell) {
+        :is(.logo-bug, .section-logo-bug, .scroll-links, .section-scroll-links) {
+            left: 30px;
+        }
+
+        :is(.about-social-container, .section-about-social-container) {
+            right: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .creator-shell .container {
+        padding-inline: 20px;
     }
 }
 

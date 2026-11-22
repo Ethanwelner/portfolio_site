@@ -4765,20 +4765,20 @@ minStats: { grace: 4, intuition: 4, power: 2 }\r
 prerequisiteTags: [archery]\r
 effect: "- This character gains the Aimed Shot Action.\\n- Rank *5 added to Skill Check rolls involving archery."\r
 action: "Aimed Shot: This character Attacks with a bow or crossbow at +4 to the Attack Roll, but loses 6 Priority for the Round."\r
-`,mh=`id: archmage
-name: "Archmage"
-status: draft
-plane: any
-summary: "Among the greatest mages of their age."
-tags: [magic, metamagic, expert]
-backgroundKeywords: [magic]
-category: ability
-mastery: true
-minStats: { magic: 10, intuition: 8 }
-prerequisites: [master-mage]
-# On the Magic list: its own tab on the Traits step, open to every character.
-list: magic
-effect: "When using a Cast: Action, this character may spend 1 less MP on it."
+`,mh=`id: archmage\r
+name: "Archmage"\r
+status: draft\r
+plane: any\r
+summary: "Among the greatest mages of their age."\r
+tags: [magic, metamagic, expert]\r
+backgroundKeywords: [magic]\r
+category: ability\r
+mastery: true\r
+minStats: { magic: 10, intuition: 8 }\r
+prerequisites: [master-mage]\r
+# On the Magic list: its own tab on the Traits step, open to every character.\r
+list: magic\r
+effect: "When using a Cast: Action, this character may spend 1 less MP on it."\r
 `,hh=`id: armor-training\r
 name: "Armor Training"\r
 status: draft\r
