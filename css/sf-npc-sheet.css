@@ -128,12 +128,12 @@
 
 /* ---- The monster sheet's filigree (php/rpg/components/npc-sheet.php's
    sf_npc_filigree()), after a tarot card's gold border, in the frame line's
-   gold: a double line inside the frame line, a 3px one 12px in from the
-   sheet's edge and a 1px one 21px in. Corner pieces (one SVG, flipped for
-   each corner) cross the outer line with short ticks; the top right's piece
-   arcs both lines around the notch. Straight edges join them, so the sheet
-   grows with its content, and a 28px diamond with a Monster Star heart
-   breaks both lines at the top and the bottom, over the boxes' edges. ---- */
+   gold: a 3px line inside the frame line, 12px in from the sheet's edge.
+   Corner pieces (one SVG, flipped for each corner) cross it with short
+   ticks; the top right's piece arcs it around the notch. Straight edges
+   join them, so the sheet grows with its content, and a 28px diamond with a
+   Monster Star heart breaks it at the top and the bottom, over the boxes'
+   edges. ---- */
 .sf-npc-filigree {
     position: absolute;
     inset: 0;
@@ -148,7 +148,7 @@
         stroke-width: 1;
     }
 
-    /* The outer line, 3px */
+    /* The line, 3px */
     .sf-npc-fil-outer {
         stroke-width: 3;
     }
@@ -183,67 +183,48 @@
     &.sf-npc-fil-corner--tr { top: 0; right: 0; width: 56px; height: 56px; transform: scaleX(-1); }
 }
 
-/* The edges: the outer line 3px (12–15px in) and the inner one 1px
-   (21–22px in) as backgrounds, the top and bottom ones with a gap for the
-   diamond at the sheet's middle: 25px either side for the outer line, so it
-   stops about 12px short of it, and 19px for the inner one, about 6px short
-   (the top edge is 8px off center, since its
+/* The edges: the line, 3px (12–15px in), the top and bottom ones with a
+   gap 25px either side of the sheet's middle for the diamond, so the line
+   stops about 12px short of it (the top edge is 8px off center, since its
    right end clears the notch) */
 .sf-npc-fil-edge {
     position: absolute;
-    --fil-line: linear-gradient(currentColor, currentColor);
+    background: currentColor;
 
     &.sf-npc-fil-edge--top,
     &.sf-npc-fil-edge--bottom {
         left: 40px;
         right: 40px;
-        height: 10px;
+        height: 3px;
         --fil-gap: 50%;
-        /* Each line's gap: the outer line's over its 3px, the inner's over
-           the rest (--fil-outer-at and --fil-inner-at place them) */
-        --fil-cut-outer: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
-        --fil-cut-inner: linear-gradient(to right, #000 calc(var(--fil-gap) - 19px), transparent 0 calc(var(--fil-gap) + 19px), #000 0);
-        background:
-            var(--fil-line) var(--fil-outer-at) / 100% 3px no-repeat,
-            var(--fil-line) var(--fil-inner-at) / 100% 1px no-repeat;
-        -webkit-mask:
-            var(--fil-cut-outer) var(--fil-outer-at) / 100% 3px no-repeat,
-            var(--fil-cut-inner) var(--fil-inner-at) / 100% 7px no-repeat;
-        mask:
-            var(--fil-cut-outer) var(--fil-outer-at) / 100% 3px no-repeat,
-            var(--fil-cut-inner) var(--fil-inner-at) / 100% 7px no-repeat;
+        -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
+        mask: linear-gradient(to right, #000 calc(var(--fil-gap) - 25px), transparent 0 calc(var(--fil-gap) + 25px), #000 0);
     }
 
     &.sf-npc-fil-edge--top {
         top: 12px;
         right: 56px;
         --fil-gap: calc(50% + 8px);
-        --fil-outer-at: 0 0;
-        --fil-inner-at: 0 100%;
     }
 
     &.sf-npc-fil-edge--bottom {
         bottom: 12px;
-        --fil-outer-at: 0 100%;
-        --fil-inner-at: 0 0;
     }
 
     &.sf-npc-fil-edge--left,
     &.sf-npc-fil-edge--right {
         top: 40px;
         bottom: 40px;
-        width: 10px;
+        width: 3px;
     }
 
     &.sf-npc-fil-edge--left {
         left: 12px;
-        background: var(--fil-line) 0 0 / 3px 100% no-repeat, var(--fil-line) 100% 0 / 1px 100% no-repeat;
     }
 
     &.sf-npc-fil-edge--right {
         right: 12px;
         top: 56px;
-        background: var(--fil-line) 100% 0 / 3px 100% no-repeat, var(--fil-line) 0 0 / 1px 100% no-repeat;
     }
 }
 
@@ -257,7 +238,7 @@
     fill: var(--npc-frame);
     stroke-width: 1.5;
 
-    /* Centered between the lines, 17px in */
+    /* Centered 17px in, just inside the line */
     &.sf-npc-fil-diamond--top { top: -1px; }
     &.sf-npc-fil-diamond--bottom { bottom: -1px; }
 }
