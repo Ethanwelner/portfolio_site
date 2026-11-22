@@ -44,7 +44,7 @@
     --sf-red-800: #6f2f2a;     /* not used yet */
     --sf-red-900: #4a1f1b;     /* not used yet */
     --sf-teal-800: #2a696f;    /* a monster sheet's frame line: red-800's lightness and saturation at a blue-leaning teal (185°) */
-    --sf-teal-900: #1b464a;    /* a monster sheet's frame band: red-900's, likewise */
+    --sf-teal-900: #224043;    /* a monster sheet's frame band: red-900's lightness at the same teal, less saturated (33%) */
     --sf-crimson-300: #ff5c86; /* bad, on dark */
     --sf-crimson-500: #eb0844; /* danger, damage */
     --sf-crimson-700: #b8063a; /* bad, on light */
