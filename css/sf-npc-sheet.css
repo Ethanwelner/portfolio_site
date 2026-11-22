@@ -162,12 +162,14 @@
 
 /* The skull in the frame's notch, where the NPC sheet has its star (the
    skull from game-icons.net's Burning Skull by Lorc, CC BY 3.0, without its
-   flames): 22px wide, its top level with the frame's band, in the corner */
+   flames): 19px tall, with the same 4px between it and the card's top
+   edge, its right edge and the gold line's arc around the notch (its jaw is
+   what comes nearest the arc). 3px here, inside the sheet's 1px border. */
 .sf-npc-filigree .sf-npc-fil-skull {
-    top: 0;
-    right: 0;
-    width: 22px;
-    height: 27px;
+    top: 3px;
+    right: 3px;
+    width: 15.66px;
+    height: 19px;
     fill: var(--sf-red-700);
     stroke: none;
 }
