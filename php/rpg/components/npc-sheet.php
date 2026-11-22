@@ -136,6 +136,65 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		sf_npc_sheet_draw( $npc, $options, 'npc' );
 	}
 
+	// The storm clouds' color pop (css/sf-npc-sheet.css, .sf-npc-sky), once a
+	// page: the clouds turned to a red-600 duotone (#c14a40 as fractions of
+	// their gray), dimmed by a third, then pushed about by turbulence, after
+	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
+	// bursts at the pen's speed (its detail climbing 1 to 10 every 0.75s, its
+	// seed about 10 a second, its stretch growing), three bursts in a 20s
+	// loop at uneven gaps, and holds still between them. The still one, for
+	// reduced motion, keeps the color and one fixed push.
+	function sf_npc_color_pop_filter() {
+		static $done = false;
+		if ( $done ) {
+			return;
+		}
+		$done  = true;
+		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
+			. '<feColorMatrix type="matrix" values="0.5 0 0 0 0  0.19 0 0 0 0  0.17 0 0 0 0  0 0 0 1 0" in="gray" result="tint" />';
+		$push  = '<feColorMatrix type="saturate" values="30" in="noise" result="vivid" />'
+			. '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -15" in="vivid" result="map" />'
+			. '<feDisplacementMap in="tint" in2="map" scale="15" xChannelSelector="R" yChannelSelector="A" />';
+
+		// The bursts: start and length in seconds, in a 20s loop, stepped
+		// every 0.05s; each holds its last frame until the next
+		$loop   = 20;
+		$bursts = array( array( 0, 0.4 ), array( 7, 0.25 ), array( 12.5, 0.35 ) );
+		$times  = array();
+		$detail = array();
+		$seeds  = array();
+		$fq     = array();
+		$seed   = 1;
+		foreach ( $bursts as $burst ) {
+			list( $start, $length ) = $burst;
+			for ( $t = 0; $t < $length - 0.001; $t += 0.05 ) {
+				$times[]  = round( ( $start + $t ) / $loop, 4 );
+				$detail[] = 1 + (int) floor( 9 * fmod( $t, 0.75 ) / 0.75 );
+				$seeds[]  = $seed = $seed % 100 + 1;
+				$fq[]     = '0.002 ' . round( 0.008 + 0.002 * $t / $length, 5 );
+			}
+		}
+		$keys   = implode( ';', $times );
+		$noise  = '<feTurbulence type="turbulence" baseFrequency="0.002 0.008" numOctaves="1" seed="1" result="noise">'
+			. '<animate attributeName="baseFrequency" values="' . implode( ';', $fq ) . '" keyTimes="' . $keys . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
+			. '<animate attributeName="numOctaves" values="' . implode( ';', $detail ) . '" keyTimes="' . $keys . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
+			. '<animate attributeName="seed" values="' . implode( ';', $seeds ) . '" keyTimes="' . $keys . '" calcMode="discrete" dur="' . $loop . 's" repeatCount="indefinite" />'
+			. '</feTurbulence>';
+
+		echo '<svg class="sf-npc-filters" width="0" height="0" aria-hidden="true" focusable="false">'
+			. '<filter id="sf-color-pop" color-interpolation-filters="sRGB">' . $color
+			. $noise . $push . '</filter>'
+			. '<filter id="sf-color-pop-still" color-interpolation-filters="sRGB">' . $color
+			. '<feTurbulence type="turbulence" baseFrequency="0.002 0.008" numOctaves="2" seed="5" result="noise" />'
+			. $push . '</filter>'
+			// The ink over it: the clouds' darker half as solid black, their
+			// lighter half clear, so the color shows only there
+			. '<filter id="sf-cloud-ink" color-interpolation-filters="sRGB">'
+			. '<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.13 -7.15 -0.72 0 6" in="SourceGraphic" result="dark" />'
+			. '<feComposite in="dark" in2="SourceAlpha" operator="in" />'
+			. '</filter></svg>';
+	}
+
 	// The sheet the NPC sheet and the monster sheet (components/
 	// monster-sheet.php) share, with the one's class: 'npc' or 'monster'
 	function sf_npc_sheet_draw( $npc, $options, $variant ) {
@@ -148,10 +207,11 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 
 		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
-		// A monster sheet's dot map, in its field behind everything
-		// (css/sf-npc-sheet.css)
+		// A monster sheet's night and storm clouds, in its field behind
+		// everything (css/sf-npc-sheet.css)
 		if ( 'monster' === $variant ) {
-			echo '<div class="sf-npc-dots" aria-hidden="true"></div>';
+			echo '<div class="sf-npc-night" aria-hidden="true"></div><div class="sf-npc-sky" aria-hidden="true"></div>';
+			sf_npc_color_pop_filter();
 		}
 
 		// Its level, name and what it is, then its resistances and Movement
@@ -211,35 +271,39 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// Tools: −, the value over its max, + and restore to full, with a
 		// meter under it. The page's script (php/javascript-loads.php) moves
 		// the value; nothing is saved, so a reload puts it back to full.
+		// A sheet without 'stats' (the library's blank monster sheet) skips
+		// the box.
 		$resources = sf_npc_resources( $npc );
 		$by_group  = array( 'physical' => 'hp', 'social' => 'vp', 'mental' => 'sp', 'magic' => 'mp' );
-		echo '<div class="sf-npc-box sf-npc-stats">';
-		foreach ( $groups as $group => $label ) {
-			echo '<div class="sf-npc-group sf-npc-group--' . $group . '"><div class="sf-npc-label">' . $label . '<span class="sf-npc-value">' . (int) ( $npc['stats'][ $label ] ?? 0 ) . '</span></div>';
-			if ( isset( SF_NPC_FOCUS[ $group ] ) ) {
-				foreach ( SF_NPC_FOCUS[ $group ] as $stat ) {
-					echo '<div class="sf-npc-stat"><span class="sf-npc-stat-name">' . $stat . '</span><span class="sf-npc-value">' . (int) ( $npc['stats'][ $stat ] ?? 0 ) . '</span></div>';
+		if ( ! empty( $npc['stats'] ) ) {
+			echo '<div class="sf-npc-box sf-npc-stats">';
+			foreach ( $groups as $group => $label ) {
+				echo '<div class="sf-npc-group sf-npc-group--' . $group . '"><div class="sf-npc-label">' . $label . '<span class="sf-npc-value">' . (int) ( $npc['stats'][ $label ] ?? 0 ) . '</span></div>';
+				if ( isset( SF_NPC_FOCUS[ $group ] ) ) {
+					foreach ( SF_NPC_FOCUS[ $group ] as $stat ) {
+						echo '<div class="sf-npc-stat"><span class="sf-npc-stat-name">' . $stat . '</span><span class="sf-npc-value">' . (int) ( $npc['stats'][ $stat ] ?? 0 ) . '</span></div>';
+					}
+				} else {
+					// Magic has no focus Stats: what its points give
+					echo '<p class="sf-npc-note">3 MP per point</p>';
 				}
-			} else {
-				// Magic has no focus Stats: what its points give
-				echo '<p class="sf-npc-note">3 MP per point</p>';
-			}
-			$id = $by_group[ $group ];
-			if ( isset( $resources[ $id ] ) ) {
-				$value = (int) $resources[ $id ];
-				$abbr  = strtoupper( $id );
-				echo '<div class="sf-npc-resource sf-npc-resource--' . $id . '" data-npc-resource data-max="' . $value . '" data-current="' . $value . '">'
-					. '<strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . $abbr . '</strong>'
-					. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
-					. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
-					. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
-					. sf_button( sf_npc_icon( 'restore' ), array( 'kind' => 'bare', 'class' => 'sf-npc-restore', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
-					. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
-					. '</div>';
+				$id = $by_group[ $group ];
+				if ( isset( $resources[ $id ] ) ) {
+					$value = (int) $resources[ $id ];
+					$abbr  = strtoupper( $id );
+					echo '<div class="sf-npc-resource sf-npc-resource--' . $id . '" data-npc-resource data-max="' . $value . '" data-current="' . $value . '">'
+						. '<strong class="sf-npc-resource-name sf-npc-resource-name--' . $id . '" title="' . $names[ $id ] . '">' . $abbr . '</strong>'
+						. sf_button( sf_npc_icon( 'minus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '-1', 'aria-label' => '1 less ' . $abbr ) ) )
+						. '<span class="sf-npc-value" aria-live="polite"><span class="sf-npc-current">' . $value . '</span><span class="sf-npc-max"> / ' . $value . '</span></span>'
+						. sf_button( sf_npc_icon( 'plus' ), array( 'round' => 'xs', 'class' => 'sf-npc-step', 'attrs' => array( 'data-npc-step' => '1', 'aria-label' => '1 more ' . $abbr ) ) )
+						. sf_button( sf_npc_icon( 'restore' ), array( 'kind' => 'bare', 'class' => 'sf-npc-restore', 'disabled' => true, 'attrs' => array( 'data-npc-restore' => '', 'aria-label' => 'Restore ' . $abbr . ' to full', 'title' => 'Restore to full' ) ) )
+						. '<span class="sf-npc-meter" aria-hidden="true"><span style="width: 100%"></span></span>'
+						. '</div>';
+				}
+				echo '</div>';
 			}
 			echo '</div>';
 		}
-		echo '</div>';
 
 		// Its Attacks and any other Items together as item cards, then the
 		// Traits as trait cards
