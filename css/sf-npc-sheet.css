@@ -332,7 +332,7 @@
    (php/javascript-loads.php) moves the value. */
 .sf-npc-resource {
     display: grid;
-    grid-template-columns: 2.25ch auto 5.5em auto auto;
+    grid-template-columns: auto auto auto auto auto;
     align-items: center;
     gap: 4px 6px;
     /* At the foot of its column, so the trackers line up even under Magic,
@@ -355,10 +355,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
         gap: 16px 20px;
-    }
-
-    .sf-npc-resource {
-        grid-template-columns: 2.25ch auto 4.5em auto auto;
     }
 }
 
