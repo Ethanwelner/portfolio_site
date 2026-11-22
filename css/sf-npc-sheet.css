@@ -103,9 +103,8 @@
    that (below). Its field is Card Edge too, black
    like a tarot card's, with a filigree and noise in its corners (below),
    and 10px more room around the content for them. Its grays are the cool
-   ones, as on the NPC sheet. In the corner, in place of the NPC sheet's
-   star, a skull in Monster Red (red-700, #a53027; .sf-npc-fil-skull,
-   below). */
+   ones, as on the NPC sheet. The star in the corner is the filigree's gold
+   (.sf-npc-fil-star, below). */
 .sf-npc--monster {
     --npc-plate: var(--sf-red-900);
     --npc-line: var(--sf-red-800);
@@ -154,30 +153,28 @@
     }
 }
 
-/* The skull in the frame's notch, where the NPC sheet has its star (the
-   skull from game-icons.net's Burning Skull by Lorc, CC BY 3.0, without its
-   flames): 19px tall, with the same 4px between it and the card's top
-   edge, its right edge and the gold line's arc around the notch (its jaw is
-   what comes nearest the arc). 3px here, inside the sheet's 1px border. */
+/* The skull on the top line (the skull from game-icons.net's Burning Skull
+   by Lorc, CC BY 3.0, without its flames), in Monster Red: 22px tall,
+   centered on the line (13.5px in) at the sheet's middle, the line stopping
+   about 11px short of it either side */
 .sf-npc-filigree .sf-npc-fil-skull {
+    top: 2.5px;
+    left: calc(50% - 9.07px);
+    width: 18.14px;
+    height: 22px;
     fill: var(--sf-red-700);
     stroke: none;
+}
 
-    &.sf-npc-fil-skull--corner {
-        top: 3px;
-        right: 3px;
-        width: 15.66px;
-        height: 19px;
-    }
-
-    /* The top line's: 22px tall, centered on the line (13.5px in) at the
-       sheet's middle, the line stopping about 11px short of it either side */
-    &.sf-npc-fil-skull--top {
-        top: 2.5px;
-        left: calc(50% - 9.07px);
-        width: 18.14px;
-        height: 22px;
-    }
+/* The star in the frame's notch, the NPC sheet's star in the filigree's
+   gold, where the NPC sheet has it (15px, 4.5px in from the top right) */
+.sf-npc-filigree .sf-npc-fil-star {
+    top: 4.5px;
+    right: 4.5px;
+    width: 15px;
+    height: 15px;
+    fill: var(--sf-olive-300);
+    stroke: none;
 }
 
 .sf-npc-fil-corner {
@@ -238,7 +235,7 @@
    printed tarot card. A mask over the line, one SVG tile (2000px): solid
    except for a coarse grain kept only inside a few large (250–500px),
    smooth, low-frequency noise blots, so most of the line stays clean. The
-   band, the frame line and the skulls aren't worn. Not in print. */
+   band, the frame line, the skull and the star aren't worn. Not in print. */
 .sf-npc-filigree--line {
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in' result='worn'/%3E%3CfeFlood flood-color='%23fff'/%3E%3CfeComposite in2='worn' operator='out'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
