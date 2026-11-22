@@ -286,9 +286,9 @@ $sf_color_groups = array(
 		array( '800', '#6f2f2a', 'Oxblood', 'Not used yet, for filling out the scale' ),
 		array( '900', '#4a1f1b', 'Deep Oxblood', 'Not used yet, for filling out the scale' ),
 	) ),
-	'teal'    => array( 'Monster sheets: red-800 and red-900’s lightness and saturation at the storm clouds’ hue.', array(
-		array( '800', '#2a6f5e', 'Monster Line', 'A monster sheet’s frame line' ),
-		array( '900', '#1b4a3e', 'Monster Frame', 'A monster sheet’s frame band' ),
+	'teal'    => array( 'Monster sheets: red-800 and red-900’s lightness and saturation at a blue-leaning teal (185°).', array(
+		array( '800', '#2a696f', 'Monster Line', 'A monster sheet’s frame line' ),
+		array( '900', '#1b464a', 'Monster Frame', 'A monster sheet’s frame band' ),
 	) ),
 	'crimson' => array( 'Danger.', array(
 		array( '300', '#ff5c86', 'Bad on Dark', 'Bad status in the builder' ),
