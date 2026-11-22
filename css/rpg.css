@@ -2052,6 +2052,16 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
 
 }
 
+/* The Character Creator, Player Tools and the Game Master Tools: their
+   full-width bands (.breakout, like the footer) are 100vw wide, which takes
+   in the window's scrollbar, so they ran about 8px past each side of the page
+   and it scrolled sideways. The page clips them at its own edges. Clip, not
+   hidden, so nothing inside becomes a scroll box and the sticky d20 and chat
+   column still sticks. */
+.creator-shell {
+    overflow-x: clip;
+}
+
 /* The Character Creator, Player Tools and the Game Master Tools have no side
    gutters in their column, so below 1400px their content runs the width of
    the page with 30px padding, level with the nav from 1200px to 1399px, and
