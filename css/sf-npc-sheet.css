@@ -323,12 +323,11 @@
    night and its stars (.sf-npc-night). It covers the field inside the frame
    line (6px in), with its corners and notch, and fades out down the sheet.
 
-   A color pop (after Johan Lagerqvist's CodePen "Color Pop"): the clouds
-   drawn twice. Under, the clouds tinted #2F4A44 (their lightest parts that
-   color) that a turbulence filter keeps wavering (#sf-color-pop, printed
-   once a page by npc-sheet.php); over it, the clouds' shadows as still
-   black ink, so the tint shows, shifting, only through their light parts.
-   Dark enough at full opacity to stay behind the sheet's content.
+   After Johan Lagerqvist's CodePen "Color Pop": the clouds tinted #2F4A44
+   (their lightest parts that color, their shading running down to black),
+   and a turbulence filter that glitches them in short bursts
+   (#sf-color-pop, printed once a page by npc-sheet.php). Dark enough at full
+   opacity to stay behind the sheet's content.
 
    Each cloud drifts sideways on its own slow loop (--sf-drift-1–4, 40px
    either way over 50–80s), stepped four times a second so the filtered
@@ -370,24 +369,13 @@
     mask-composite: intersect;
     pointer-events: none;
 
-    &::before,
-    &::after {
+    /* The clouds, tinted, glitching in bursts */
+    &::before {
         content: "";
         position: absolute;
         inset: 0;
         background: var(--sf-npc-clouds);
-    }
-
-    /* The color, wavering */
-    &::before {
         filter: url(#sf-color-pop);
-    }
-
-    /* The ink: the shadows in solid black, the lights left clear for the
-       color (#sf-cloud-ink; the pen multiplies a black and white copy,
-       which here would leave white edges where the color wavers off) */
-    &::after {
-        filter: url(#sf-cloud-ink);
     }
 }
 

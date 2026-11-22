@@ -196,13 +196,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		echo '<svg class="sf-npc-filters" width="0" height="0" aria-hidden="true" focusable="false">'
 			. '<filter id="sf-color-pop" color-interpolation-filters="sRGB">' . $color
 			. $noise . $push . '</filter>'
-			. '<filter id="sf-color-pop-still" color-interpolation-filters="sRGB">' . $color . '</filter>'
-			// The ink over it: the clouds' darker half as solid black, their
-			// lighter half clear, so the color shows only there
-			. '<filter id="sf-cloud-ink" color-interpolation-filters="sRGB">'
-			. '<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.13 -7.15 -0.72 0 6" in="SourceGraphic" result="dark" />'
-			. '<feComposite in="dark" in2="SourceAlpha" operator="in" />'
-			. '</filter></svg>';
+			. '<filter id="sf-color-pop-still" color-interpolation-filters="sRGB">' . $color . '</filter></svg>';
 	}
 
 	// The monster sheet's filigree (css/sf-npc-sheet.css, .sf-npc-filigree),
