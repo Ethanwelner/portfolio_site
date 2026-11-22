@@ -149,7 +149,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// turbulence, after
 	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
 	// bursts at the pen's speed (its detail climbing 1 to 10 every 0.75s, its
-	// seed about 10 a second, its stretch growing), three bursts in a 20s
+	// seed about 10 a second, its stretch growing), three bursts in a 40s
 	// loop at uneven gaps. Between them the push is off (the displacement's
 	// scale drops to 0), so the clouds rest unglitched. The still one, for
 	// reduced motion, is the tint alone.
@@ -162,10 +162,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
 			. '<feColorMatrix type="matrix" values="0.0709 0 0 0 0.0541  0.1145 0 0 0 0.0425  0.0964 0 0 0 0.0546  0 0 0 1 0" in="gray" result="tint" />';
 
-		// The bursts: start and length in seconds, in a 20s loop, stepped
+		// The bursts: start and length in seconds, in a 40s loop, stepped
 		// every 0.05s; the push is on (15) only while one runs
-		$loop   = 20;
-		$bursts = array( array( 0, 0.4 ), array( 7, 0.25 ), array( 12.5, 0.35 ) );
+		$loop   = 40;
+		$bursts = array( array( 0, 0.4 ), array( 14, 0.25 ), array( 25, 0.35 ) );
 		$times  = array();
 		$detail = array();
 		$seeds  = array();
