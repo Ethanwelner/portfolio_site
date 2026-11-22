@@ -53,7 +53,7 @@
 //            the page's outline
 //   background  what's drawn in the field behind the content, like the
 //            Kind card's $background: 'storm' (a starry night under slowly
-//            drifting storm clouds tinted #202826, with lightning now and
+//            drifting storm clouds tinted #202728, with lightning now and
 //            then), the monster sheet's default, or 'none', the NPC sheet's
 //            (its plain field; on a monster sheet, the black field with its
 //            filigree and corner noise).
@@ -144,7 +144,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 	// The storm clouds' color pop (css/sf-npc-sheet.css, .sf-npc-sky), once a
 	// page: the clouds' grays (about 45% to white in the images) remapped
-	// from the field's own black (gray-900) up to #202826 at their lightest,
+	// from the field's own black (gray-900) up to #202728 at their lightest,
 	// so no shading reads darker than the field, then pushed about by
 	// turbulence, after
 	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
@@ -160,7 +160,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		$done  = true;
 		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
-			. '<feColorMatrix type="matrix" values="0.0709 0 0 0 0.0541  0.1145 0 0 0 0.0425  0.0964 0 0 0 0.0546  0 0 0 1 0" in="gray" result="tint" />';
+			. '<feColorMatrix type="matrix" values="0.0713 0 0 0 0.0542  0.1093 0 0 0 0.0449  0.1070 0 0 0 0.0499  0 0 0 1 0" in="gray" result="tint" />';
 
 		// The bursts: start and length in seconds, in a 40s loop, stepped
 		// every 0.05s; the push is on (15) only while one runs

@@ -25,7 +25,7 @@
 // corner, a gold filigree line inside with a gold skull at its top (a
 // larger one in flames for a boss), and gold
 // noise gathered in the field's corners. Its field has the storm background
-// (drifting clouds tinted #202826, lightning now and then) unless the
+// (drifting clouds tinted #202728, lightning now and then) unless the
 // options say 'background' => 'none'.
 require_once __DIR__ . '/npc-sheet.php';
 
