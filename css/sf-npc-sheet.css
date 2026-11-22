@@ -256,12 +256,26 @@
     font-variant-numeric: tabular-nums;
 }
 
+/* The description, as the character sheet's description box (css/rpg.css's
+   .sf-sheet-description): plain text on the darkest box with round
+   corners, no title */
 .sf-npc-description {
-    margin: 0;
-    padding: 0 4px;
-    color: var(--npc-soft);
-    font-size: .875rem;
-    line-height: 1.5;
+    padding: 9.6px 12px;
+    background-color: var(--portfolio-black);
+    border-radius: 16px;
+
+    p {
+        margin: 0;
+        color: var(--npc-text);
+        font-size: 14.4px;
+        line-height: 1.5;
+    }
+
+    /* Until it's written */
+    &.is-coming-soon p {
+        color: var(--npc-soft);
+        font-style: italic;
+    }
 }
 
 /* ---- The Stats as on a Kind card (css/sf-cards.css's .sf-kind-stats),
@@ -339,7 +353,9 @@
    (php/javascript-loads.php) moves the value. */
 .sf-npc-resource {
     display: grid;
-    grid-template-columns: auto auto auto auto 1fr;
+    /* The name and restore take equal shares of the spare room at either
+       end, so −, the value and + sit centered between them */
+    grid-template-columns: 1fr auto auto auto 1fr;
     align-items: center;
     gap: 4px 6px;
     /* At the foot of its column, so the trackers line up even under Magic,
@@ -389,20 +405,22 @@
 
 /* A group too narrow for its tracker on one line (under 176px: a third of
    a half-width sheet, or a quarter when two by two): the resource's name
-   and value on top, −, + and restore under them, then the meter */
+   with − and + centered beside it, restore under the name and the value
+   under − and +, then the meter */
 @container npc-group (max-width: 175px) {
     .sf-npc-resource {
-        grid-template-columns: auto auto 1fr;
+        grid-template-columns: 1fr auto auto 1fr;
+        column-gap: 3px;
         grid-template-areas:
-            "name value value"
-            "less more full"
-            "meter meter meter";
+            "name less more ."
+            "full value value ."
+            "meter meter meter meter";
 
-        > .sf-npc-resource-name { grid-area: name; }
-        > .sf-npc-value { grid-area: value; text-align: right; white-space: nowrap; }
+        > .sf-npc-resource-name { grid-area: name; justify-self: start; }
+        > .sf-npc-value { grid-area: value; justify-self: center; white-space: nowrap; }
         > .sf-npc-step:nth-of-type(1) { grid-area: less; }
         > .sf-npc-step:nth-of-type(2) { grid-area: more; }
-        > .sf-npc-restore { grid-area: full; }
+        > .sf-npc-restore { grid-area: full; justify-self: start; }
         > .sf-npc-meter { grid-area: meter; }
     }
 }
