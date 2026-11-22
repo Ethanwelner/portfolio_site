@@ -102,8 +102,9 @@
    just inside it in Monster Line (red-800). Its field is Card Edge too, black
    like a tarot card's, with a filigree and noise in its corners (below),
    and 10px more room around the content for them. Its grays are the cool
-   ones, as on the NPC sheet. The star in the corner is Monster Star
-   (red-700, #a53027), in place of the NPC sheet's gray. */
+   ones, as on the NPC sheet. In the corner, in place of the NPC sheet's
+   star, a burning skull in Monster Star (red-700, #a53027; .sf-npc-fil-skull,
+   below). */
 .sf-npc--monster {
     --npc-plate: var(--sf-gray-900);
     --npc-line: var(--sf-red-800);
@@ -119,7 +120,6 @@
 
     &::before {
         background:
-            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpath fill='%23a53027' d='M7.5 0L9.15 5.85L15 7.5L9.15 9.15L7.5 15L5.85 9.15L0 7.5L5.85 5.85Z'/%3E%3C/svg%3E") right .5px top .5px / 15px 15px no-repeat border-box,
             radial-gradient(circle at calc(100% - 1px) 1px, transparent 25px, var(--npc-frame) 25.5px) padding-box,
             radial-gradient(circle at calc(100% - 1px) 1px, transparent 23px, var(--npc-line) 23.5px) border-box;
         background-origin: border-box;
@@ -153,6 +153,18 @@
         fill: var(--sf-red-700);
         stroke: none;
     }
+}
+
+/* The burning skull in the frame's notch, where the NPC sheet has its star
+   (game-icons.net's Burning Skull by Lorc, CC BY 3.0): 18px, centered where
+   the star is, 12px in from the corner */
+.sf-npc-filigree .sf-npc-fil-skull {
+    top: 3px;
+    right: 3px;
+    width: 18px;
+    height: 18px;
+    fill: var(--sf-red-700);
+    stroke: none;
 }
 
 .sf-npc-fil-corner {
