@@ -111,6 +111,43 @@
     --npc-well: var(--sf-warm-800);
 }
 
+/* The monster sheet's dot map, in its field behind the boxes: a grid of
+   faint dots, each shown or not by a noise mask (fractal noise plus a
+   gradient, cut to on or off), so the dots thin out at random from dense
+   at the top of the sheet to none at the bottom. It covers the field inside
+   the frame line (6px in) with the field's corners and notch, and comes
+   first so the boxes paint over it. */
+.sf-npc-dots {
+    position: absolute;
+    inset: 6px;
+    border-radius: 16px 0 16px 16px;
+    background: radial-gradient(circle, rgb(255 255 255 / 10%) 1px, transparent 1.5px) 0 0 / 6px 6px;
+    -webkit-mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='1600' viewBox='0 0 400 1600' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='d' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='7' result='t'/%3E%3CfeColorMatrix in='t' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0' result='n'/%3E%3CfeComposite in='n' in2='SourceGraphic' operator='arithmetic' k2='2' k3='1' k4='-1.25' result='s'/%3E%3CfeComponentTransfer in='s' result='b'%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3CfeFlood flood-color='white'/%3E%3CfeComposite in2='b' operator='in'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='400' height='1600' fill='url(%23g)' filter='url(%23d)'/%3E%3C/svg%3E") 0 0 / 100% 100%;
+    -webkit-mask-composite: source-in;
+    mask:
+        radial-gradient(circle at calc(100% + 1px) -1px, transparent 25.5px, #000 26px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='1600' viewBox='0 0 400 1600' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='white'/%3E%3Cstop offset='1' stop-color='white' stop-opacity='0'/%3E%3C/linearGradient%3E%3Cfilter id='d' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='7' result='t'/%3E%3CfeColorMatrix in='t' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0' result='n'/%3E%3CfeComposite in='n' in2='SourceGraphic' operator='arithmetic' k2='2' k3='1' k4='-1.25' result='s'/%3E%3CfeComponentTransfer in='s' result='b'%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3CfeFlood flood-color='white'/%3E%3CfeComposite in2='b' operator='in'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='400' height='1600' fill='url(%23g)' filter='url(%23d)'/%3E%3C/svg%3E") 0 0 / 100% 100%;
+    mask-composite: intersect;
+    pointer-events: none;
+}
+
+/* The monster sheet's sections (the description, Stats, Items and Traits
+   boxes): no grain, and see-through, so the dot map behind them shows. Each
+   is its warm gray at 70%, which over the warm field reads close to the
+   solid box. */
+.sf-npc--monster {
+    .sf-npc-box {
+        background-color: color-mix(in srgb, var(--npc-box) 70%, transparent);
+        background-image: none;
+    }
+
+    .sf-npc-description {
+        background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
+    }
+}
+
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
 :where(.sf-npc > *) {
     position: relative;
@@ -586,6 +623,10 @@
 
 /* Printed, it goes light, with dark text */
 @media print {
+    .sf-npc-dots {
+        display: none;
+    }
+
     .sf-npc {
         --npc-frame: var(--sf-gray-50);
         --npc-box: var(--sf-gray-0);
