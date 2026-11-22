@@ -4938,7 +4938,7 @@ tags: [magic, metamagic, damage, acid, corrosion]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, empathy: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Corrosive damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Corrosive damage for each extra MP spent."
@@ -5076,7 +5076,7 @@ tags: [magic, metamagic, damage, blunt]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, power: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Blunt damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Blunt damage for each extra MP spent."
@@ -5581,7 +5581,7 @@ tags: [magic, metamagic, damage, death]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, persuasion: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Death damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Death damage for each extra MP spent."
@@ -6138,7 +6138,7 @@ tags: [magic, metamagic, damage, psychic]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, intuition: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Psychic damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Psychic damage for each extra MP spent."
@@ -6256,7 +6256,7 @@ tags: [magic, metamagic, damage, piercing]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, grace: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Piercing damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Piercing damage for each extra MP spent."
@@ -6325,7 +6325,7 @@ tags: [magic, metamagic, damage, ice, cold]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, demeanor: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Cold damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Cold damage for each extra MP spent."
@@ -6400,7 +6400,7 @@ tags: [magic, metamagic, damage, fire]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, endurance: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Heat damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Heat damage for each extra MP spent."
@@ -6610,7 +6610,7 @@ tags: [magic, metamagic, damage, emp]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, logic: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing EMP damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 EMP damage for each extra MP spent."
@@ -6680,7 +6680,7 @@ tags: [magic, metamagic, damage, lightning, storm]
 backgroundKeywords: [magic]
 category: ability
 ranked: true
-minStats: { magic: 4 }
+minStats: { magic: 4, logic: 3 }
 prerequisites: [empower-spell]
 list: magic
 effect: "When this character uses a Cast: Action that makes an Attack dealing Electrical damage, they may spend up to 1 extra MP per Rank. On a hit, the spell deals +3 Electrical damage for each extra MP spent."
