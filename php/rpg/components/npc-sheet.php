@@ -143,8 +143,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	}
 
 	// The storm clouds' color pop (css/sf-npc-sheet.css, .sf-npc-sky), once a
-	// page: the clouds tinted #202826 (their lightest parts that color, their
-	// shadows black), then pushed about by turbulence, after
+	// page: the clouds' grays (about 45% to white in the images) remapped
+	// from the field's own black (gray-900) up to #202826 at their lightest,
+	// so no shading reads darker than the field, then pushed about by
+	// turbulence, after
 	// Johan Lagerqvist's CodePen "Color Pop". The turbulence changes in
 	// bursts at the pen's speed (its detail climbing 1 to 10 every 0.75s, its
 	// seed about 10 a second, its stretch growing), three bursts in a 20s
@@ -158,7 +160,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 		$done  = true;
 		$color = '<feColorMatrix type="saturate" values="0" in="SourceGraphic" result="gray" />'
-			. '<feColorMatrix type="matrix" values="0.125 0 0 0 0  0.157 0 0 0 0  0.151 0 0 0 0  0 0 0 1 0" in="gray" result="tint" />';
+			. '<feColorMatrix type="matrix" values="0.0709 0 0 0 0.0541  0.1145 0 0 0 0.0425  0.0964 0 0 0 0.0546  0 0 0 1 0" in="gray" result="tint" />';
 
 		// The bursts: start and length in seconds, in a 20s loop, stepped
 		// every 0.05s; the push is on (15) only while one runs
