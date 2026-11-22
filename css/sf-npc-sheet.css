@@ -426,19 +426,13 @@
     }
 }
 
-/* The monster sheet's sections (the description, Stats, Items and Traits
-   boxes): no grain, and see-through, so the noise behind them shows. Each
-   is its warm gray at 70%, which over the warm field reads close to the
-   solid box. */
-.sf-npc--monster {
-    .sf-npc-box {
-        background-color: color-mix(in srgb, var(--npc-box) 70%, transparent);
-        background-image: none;
-    }
-
-    .sf-npc-description {
-        background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
-    }
+/* The monster sheet's sections (the top row, description, Stats, Items and
+   Traits boxes): no grain, and see-through, so the storm and noise behind
+   them show. All take the description's darker treatment, the well color
+   (--npc-well) at 70%. */
+.sf-npc--monster :is(.sf-npc-box, .sf-npc-description) {
+    background-color: color-mix(in srgb, var(--npc-well) 70%, transparent);
+    background-image: none;
 }
 
 /* Positioned, so the sheet's boxes paint over its frame (::before) */
