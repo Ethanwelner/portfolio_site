@@ -263,10 +263,10 @@ $sf_color_groups = array(
 		array( '800', '#1f2122', 'Card', 'A card’s background (--portfolio-black)' ),
 		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
 	) ),
-	'warm'    => array( 'Warm grays, for the monster sheet.', array(
-		array( '600', '#363534', 'Warm Panel Box', 'A monster sheet’s background, Panel Box made warm' ),
-		array( '700', '#2c2a29', 'Warm Panel', 'A monster sheet’s boxes, Panel made warm' ),
-		array( '800', '#21201f', 'Warm Card', 'A monster sheet’s description box and level blob, Card made warm' ),
+	'warm'    => array( 'Warm grays, not used yet.', array(
+		array( '600', '#363534', 'Warm Panel Box', 'Not used yet: Panel Box made warm' ),
+		array( '700', '#2c2a29', 'Warm Panel', 'Not used yet: Panel made warm' ),
+		array( '800', '#21201f', 'Warm Card', 'Not used yet: Card made warm' ),
 	) ),
 	'green'   => array( 'Isekai greens.', array(
 		array( '300', '#6fd18a', 'Good', 'Good values on the dark panel (--panel-good)' ),
@@ -546,6 +546,8 @@ $sf_list = function ( $items ) {
 		<meta name="robots" content="noindex, nofollow">
 		<title>Strange Frontiers Components</title>
 		<style>
+			/* The Monster Sheet section's blank sheet, tall enough to show its background */
+			.sf-library-blank-sheet .sf-npc { min-height: 640px; }
 			/* The page in Light Edge (gray-150) */
 			body.white-bg { background-color: var(--sf-gray-150); }
 			.sf-library-band { padding: 48px 0; }
@@ -911,7 +913,9 @@ For monsters and enemies, anything the party fights; their Traits come from php/
 				<?php $sf_list( $sf_used_in['monster'] ); ?>
 				<div class="sf-library-stage is-dark">
 					<?php $sf_theme_toggle(); ?>
-					<p class="sf-library-label">Murk Legs, cards open, as in its lore entry</p>
+					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its background</p>
+					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div></div>
+					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, cards open, as in its lore entry</p>
 					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
 					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
