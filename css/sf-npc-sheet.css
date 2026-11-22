@@ -154,27 +154,27 @@
 }
 
 /* The skull on the top line (the skull from game-icons.net's Burning Skull
-   by Lorc, CC BY 3.0, without its flames), in the filigree's gold: 22px tall,
+   by Lorc, CC BY 3.0, without its flames), in the filigree's gold: 30px tall,
    centered on the line (13.5px in) at the sheet's middle, the line stopping
-   about 11px short of it either side */
+   about 11px short of it either side, its top past the frame's */
 .sf-npc-filigree .sf-npc-fil-skull {
-    top: 2.5px;
-    left: calc(50% - 9.07px);
-    width: 18.14px;
-    height: 22px;
+    top: -1.5px;
+    left: calc(50% - 12.36px);
+    width: 24.73px;
+    height: 30px;
     fill: var(--sf-olive-300);
     stroke: none;
 }
 
 /* A boss's skull (.sf-npc--boss, 'boss' => true: the tough one in its
    threat band): the whole Burning Skull, its
-   flames too, 32px and centered on the line, the flames rising past the
-   frame's top a little */
+   flames too, 44px and centered on the line, the flames rising well past
+   the frame's top */
 .sf-npc-filigree .sf-npc-fil-skull--flaming {
-    top: -2.5px;
-    left: calc(50% - 16px);
-    width: 32px;
-    height: 32px;
+    top: -8.5px;
+    left: calc(50% - 22px);
+    width: 44px;
+    height: 44px;
 }
 
 /* The star in the frame's notch, the NPC sheet's star in the filigree's
@@ -217,12 +217,12 @@
         right: 56px;
         --fil-gap: calc(50% + 8px);
         /* Wider for a boss's flaming skull */
-        --fil-skull-gap: 20px;
+        --fil-skull-gap: 23px;
         -webkit-mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
         mask: linear-gradient(to right, #000 calc(var(--fil-gap) - var(--fil-skull-gap)), transparent 0 calc(var(--fil-gap) + var(--fil-skull-gap)), #000 0);
 
         .sf-npc--boss & {
-            --fil-skull-gap: 24px;
+            --fil-skull-gap: 29px;
         }
     }
 
