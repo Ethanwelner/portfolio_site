@@ -264,7 +264,7 @@ $sf_color_groups = array(
 		array( '900', '#161819', 'Card Edge', 'A Trait or Background card’s 1px edge' ),
 	) ),
 	'warm'    => array( 'Warm grays, for the monster sheet.', array(
-		array( '600', '#373534', 'Warm Panel Box', 'A monster sheet’s background, Panel Box made warm' ),
+		array( '600', '#363534', 'Warm Panel Box', 'A monster sheet’s background, Panel Box made warm' ),
 		array( '700', '#2c2a29', 'Warm Panel', 'A monster sheet’s boxes, Panel made warm' ),
 		array( '800', '#21201f', 'Warm Card', 'A monster sheet’s description box and level blob, Card made warm' ),
 	) ),

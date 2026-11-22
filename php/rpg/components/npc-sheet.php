@@ -148,6 +148,11 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 
 		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . '">';
+		// A monster sheet's dot map, in its field behind everything
+		// (css/sf-npc-sheet.css)
+		if ( 'monster' === $variant ) {
+			echo '<div class="sf-npc-dots" aria-hidden="true"></div>';
+		}
 
 		// Its level, name and what it is, then its resistances and Movement
 		// In the character sheet's blob, left of the name: an NPC's level
