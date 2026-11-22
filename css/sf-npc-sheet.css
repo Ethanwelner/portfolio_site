@@ -264,8 +264,8 @@
 
 /* The monster sheet's wear: the band, the gold line and the filigree
    (12–22px in) worn through to the field's black in isolated splotches, as
-   on an old printed tarot card. One SVG tile (1000px): a coarse grain in
-   Card Edge (gray-900) kept only inside a few large (120–250px), smooth,
+   on an old printed tarot card. One SVG tile (2000px): a coarse grain in
+   Card Edge (gray-900) kept only inside a few large (250–500px), smooth,
    low-frequency noise blots,
    so most of the border stays clean. Over the border only (the sheet's
    outer 25px, the content and the notch cut out), and over the diamonds.
@@ -277,7 +277,7 @@
     padding: 25px;
     /* The card's own corners, so no speck lands outside them */
     border-radius: 24px 0 24px 24px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.6' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 1000px 1000px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2000' height='2000'%3E%3Cfilter id='w' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0025' numOctaves='2' seed='7' stitchTiles='stitch' result='b'/%3E%3CfeColorMatrix in='b' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 0 0 0 -4.4' result='blots'/%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.3' numOctaves='2' seed='3' stitchTiles='stitch' result='g'/%3E%3CfeColorMatrix in='g' values='0 0 0 0 .086 0 0 0 0 .094 0 0 0 0 .098 5 0 0 0 -2.2' result='grain'/%3E%3CfeComposite in='grain' in2='blots' operator='in'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E") 0 0 / 2000px 2000px;
     -webkit-mask:
         radial-gradient(circle at calc(100% - 6px) 6px, transparent 23px, #000 23.5px),
         linear-gradient(#000 0 0) content-box,
