@@ -344,6 +344,8 @@
 @keyframes sf-drift-4 { from { --sf-drift-4: 40px; } to { --sf-drift-4: -40px; } }
 
 .sf-npc-sky {
+    /* The lightning script (php/javascript-loads.php's CLOUDS) mirrors these
+       placements to start its bolts at the clouds' lower edges */
     --sf-npc-clouds:
         url("../img/storm_cloud_3.webp") left calc(-12% + var(--sf-drift-1)) top 30% / 48% auto no-repeat,
         url("../img/storm_cloud_4.webp") right calc(-14% + var(--sf-drift-2)) top 24% / 58% auto no-repeat,
