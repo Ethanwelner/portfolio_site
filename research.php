@@ -4,7 +4,7 @@
 
 	<head>
 		<!-- this loads the head code -->
-		<?php $og = array('title' => 'Research and Analytics | Ethan Welner', 'description' => 'Research work: rebuilding Meazure's support docs and AI chatbot, Pendo guides and surveys at QuantHub, analytics and personas.', 'image' => 'img/og/og-research.jpg'); ?>
+		<?php $og = array('title' => 'Research and Analytics | Ethan Welner', 'description' => 'Research work: rebuilding Meazure’s support docs and AI chatbot, Pendo guides and surveys at QuantHub, analytics and personas.', 'image' => 'img/og/og-research.jpg'); ?>
 		<?php include 'php/head-loads.php'; ?>
 		<title>Ethan Welner Portfolio</title>
 	</head>
