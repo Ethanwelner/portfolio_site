@@ -198,7 +198,7 @@
 								<div class="line"></div>
 							</div>
 							<p class="copy">Resistances are used to reduce incoming damage by a specified amount. Resistances begin at zero. Incoming damage will always have a type, and some forms of Attacks will do multiple types of damage at once. A fiery explosion will do both Blunt damage from the blast and Heat damage from the fireball. Resistances are predominantly conveyed through Equipment, but some Traits may provide additional Resistances. A character's Resistances are cumulative; if a character has both leather armor and scaly skin, their Resistance to Slashing will be higher than if they had either alone. Some Items or abilities will have the keyword (Breach: X), where X is how much of the target’s Resistance the Attack ignores. An Attack with (Breach: 3) ignores 3 of the target’s Resistance against each of its damage types.<br><br>
-								Some Resistances will have coverage areas specified, such as a helmet providing significant protection, but only on the head. How and where a character is hit is covered in the section on combat. Resistances can, in rare cases, be a negative value. In these cases, they increase the damage taken by that amount.</p>
+								Some Resistances will have coverage areas specified, such as a helmet providing significant protection, but only on the head. How and where a character is hit is covered in the section on combat. Unresistable damage ignores all Resistances. Resistances can, in rare cases, be a negative value. In these cases, they increase the damage taken by that amount.</p>
 						</div>
 						<div class="content-stack content-stack-sm">
 							<div class="line-container">
