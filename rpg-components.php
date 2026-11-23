@@ -570,11 +570,12 @@ $sf_list = function ( $items ) {
 			.sf-library-stage-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
 			.sf-library-stage-bar .sf-library-label { margin: 0; }
 			.sf-library-theme { display: flex; gap: 6px; }
-			.sf-library-label { margin: 0 0 12px; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
+			.sf-library-label { margin: 0 0 16px; font-size: .75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .6; }
 			.sf-library-used { margin: 0 0 24px; font-size: .875rem; }
 			.sf-library-used li { margin-bottom: 4px; }
 			.sf-library-api { margin: 0 0 24px; padding: 12px 16px; background: var(--portfolio-near-white); border: 1px solid var(--portfolio-light-gray); border-radius: 4px; font-size: .8125rem; white-space: pre-wrap; }
-			.sf-card-grid + .sf-library-label { margin-top: 32px; }
+			/* A label after the panel's first: 48px clear of the row above */
+			.sf-library-stage > :not(.sf-library-stage-bar) + .sf-library-label { margin-top: 48px; }
 			.sf-library-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr)); align-items: start; gap: 16px; }
 			.sf-library-buttons { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px 32px; margin-bottom: 24px; }
 			.sf-library-button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; max-width: 220px; }
@@ -805,7 +806,7 @@ options: max (true: each stat's maximum beside its number). The creator adds edi
 						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats ); ?></div>
 						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_edwin_stats, array( 'max' => true ) ); ?></div>
 					</div>
-					<p class="sf-library-label" style="margin-top: 32px">Magic, a diamond per point, with a package’s bonus point first</p>
+					<p class="sf-library-label">Magic, a diamond per point, with a package’s bonus point first</p>
 					<div class="sf-library-stats">
 						<div class="sf-library-stat-box"><?php sf_stat_block( $sf_mage_stats ); ?></div>
 					</div>
@@ -938,13 +939,13 @@ For monsters and enemies, anything the party fights; their Traits come from php/
 					<?php $sf_theme_toggle(); ?>
 					<p class="sf-library-label">A blank monster sheet, only a name, held to 640px tall to show its frame and storm, then the same with no background</p>
 					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ), array( 'background' => 'none' ) ); ?></div></div>
-					<p class="sf-library-label" style="margin-top: 32px">A blank boss, 'boss' =&gt; true, its skull in flames</p>
+					<p class="sf-library-label">A blank boss, 'boss' =&gt; true, its skull in flames</p>
 					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Boss', 'boss' => true ) ); ?></div></div>
-					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, as in its lore entry</p>
+					<p class="sf-library-label">Murk Legs, as in its lore entry</p>
 					<?php include 'php/rpg/lore/murk-legs.php'; // it brings its own .sf-npc-grid ?>
-					<p class="sf-library-label" style="margin-top: 32px">Murk Legs on a full-width row, 'layout' =&gt; 'wide': Items and Traits in a second column beside the name, description and Stats</p>
+					<p class="sf-library-label">Murk Legs on a full-width row, 'layout' =&gt; 'wide': Items and Traits in a second column beside the name, description and Stats</p>
 					<?php sf_monster_sheet( sf_murk_legs(), array( 'layout' => 'wide' ) ); ?>
-					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
+					<p class="sf-library-label">The Another World encounters (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
 					<div class="sf-npc-grid"><?php include 'php/rpg/encounters.php'; ?></div>
 				</div>
 			</div>
