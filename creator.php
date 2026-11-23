@@ -14,6 +14,7 @@ if (! $creator) {
 
     <head>
         <!-- this loads the head code -->
+        <?php $og = array('title' => 'Strange Frontiers: AI Character Creator', 'description' => 'An AI-assisted character builder for Strange Frontiers, my tabletop RPG. Describe a character in your own words; Claude picks from the game’s real rules data, a rules engine checks every choice, and you can change anything afterward.', 'image' => 'img/og/og-creator.jpg'); ?>
         <?php include 'php/head-loads.php'; ?>
         <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg-night.css'); ?>"/>
         <?php foreach ($creator['css'] as $href): ?>
