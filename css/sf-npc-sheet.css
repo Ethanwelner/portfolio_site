@@ -927,6 +927,55 @@
     }
 }
 
+/* ---- The wide layout ('layout' => 'wide'), for a sheet on a full-width
+   row: the name, description and Stats in the first column, the Items and
+   Traits in the second, each column its own top to bottom. Each column
+   measures itself as the sheet (container npc), so it lays out like a
+   half-width sheet. Under 720px, one column again. ---- */
+.sf-npc-cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px 24px;
+
+    @container npc-wide (max-width: 719px) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.sf-npc-col {
+    container: npc / inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+/* The wide sheet also answers to npc-wide, so the rules below can ask how
+   wide the whole sheet is from inside a column (which is npc itself) */
+.sf-npc--wide {
+    container-name: npc npc-wide;
+}
+
+/* Side by side, the top row sits clear of the frame's notch, so it keeps
+   its whole box; the Items box under the notch takes the cut instead */
+@container npc-wide (min-width: 720px) {
+    .sf-npc--wide .sf-npc-head {
+        -webkit-mask: none;
+        mask: none;
+    }
+
+    .sf-npc--wide .sf-npc-col + .sf-npc-col > :first-child {
+        -webkit-mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
+        mask: radial-gradient(circle at calc(100% + 17px) -17px, transparent 40px, #000 40.5px);
+    }
+
+    .sf-npc--monster.sf-npc--wide .sf-npc-col + .sf-npc-col > :first-child {
+        -webkit-mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
+        mask: radial-gradient(circle at calc(100% + 21px) -21px, transparent 45px, #000 45.5px);
+    }
+}
+
 /* Printed, it goes light, with dark text */
 @media print {
     .sf-npc-night,
