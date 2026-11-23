@@ -4,6 +4,7 @@
 
 	<head>
 		<!-- this loads the head code -->
+		<?php $og = array('title' => 'Code and AI | Ethan Welner', 'description' => 'Front-end development, building with AI coding tools, and designing and coding for accessibility.', 'image' => 'img/og/og-home.jpg'); ?>
 		<?php include 'php/head-loads.php'; ?>
 		<title>Ethan Welner Portfolio</title>
 
