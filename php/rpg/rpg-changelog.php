@@ -17,7 +17,7 @@
 						<li>Character Creator: new Necromancy spell Grave Call (Magic 3), a melee Attack for 1 MP that deals 4 Death per Rank, and 4 more per Rank against a Severely Injured target.</li>
 						<li>Character Creator: new metamagic Traits. Lingering Spell raises the Rank of Conditions a spell gives, Far Casting extends a spell's range, Extended Casting extends its duration, and nine Focus Traits (Searing, Rime, Storm, Caustic, Grave, Mind, Crushing, Piercing and Static) add +3 damage of one type for each extra MP spent.</li>
 						<li>Character Creator: new crafting Skills for making Artifacts, Enchantments and Potions. Sparing Hand and Master of Reagents need fewer reagents, Wellspring Crafting covers 5 MP of a making for free, and Reagent Substitution swaps one reagent for another of the same rarity and equal or greater value.</li>
-						<li>Incidents: Environments. Reduced Visibility, High, Low and Zero Gravity, No Atmosphere and Difficult Ground are environmental Conditions every character in such a place gains. New Conditions: Hovering, which leaves a character unable to move except by crawling along or pushing off surfaces, and Suffocating, which grows a Rank every Round without air and from Rank 6 deals damage equal to its Ranks. Unresistable damage ignores all Resistances.</li>
+						<li>Incidents: Environments. Reduced Visibility, High, Low and Zero Gravity, No Atmosphere and Difficult Ground are environmental Conditions every character in such a place gains. Unresistable damage ignores all Resistances.</li>
 					</ul>
 				</article>
 				<article class="blog-post">

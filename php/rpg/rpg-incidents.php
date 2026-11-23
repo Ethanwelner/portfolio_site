@@ -418,17 +418,6 @@
 								'name' => 'Difficult Ground',
 								'effect' => "This character’s Movement is halved.",
 							) ); ?>
-							<?php sf_card_trait( array(
-								'kind' => 'condition',
-								'name' => 'Hovering',
-								'effect' => "This character floats free of the ground. Without the Flight Condition, it can move only by crawling along surfaces or pushing off from them.",
-							) ); ?>
-							<?php sf_card_trait( array(
-								'kind' => 'condition',
-								'name' => 'Suffocating',
-								'flags' => array( 'Ranked' ),
-								'effect' => "This character gains 1 Rank of Suffocating at the start of every Round it can’t breathe. From Rank 6, it takes Unresistable damage equal to its Ranks at the end of every Round.",
-							) ); ?>
 						</div>
 					</div>
 				</div>
