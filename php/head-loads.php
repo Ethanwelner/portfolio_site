@@ -17,6 +17,29 @@ if (!headers_sent()) {
 <meta name="Ethan Welner - Home" content="Ethan Welner Portfolio">
 <meta name="theme-color" content="#eb0844">
 
+<?php
+// Link previews (LinkedIn, Slack, iMessage). A page can set $og before including this file; anything it
+// leaves out falls back to the site defaults. Images are JPGs because LinkedIn doesn't reliably show WebP.
+$og = array_merge(array(
+	'title' => 'Ethan Welner | Senior Product Designer',
+	'description' => 'Senior product designer with 15 years in B2B SaaS, edtech and govtech. Case studies, design systems, and work shipped in code.',
+	'image' => 'img/og/og-home.jpg',
+), isset($og) && is_array($og) ? $og : array());
+$og_base = 'https://ethanwelner.com/';
+$og_path = strtok(isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/', '?');
+$og_e = function ($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); };
+?>
+<meta name="description" content="<?php echo $og_e($og['description']); ?>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ethan Welner">
+<meta property="og:title" content="<?php echo $og_e($og['title']); ?>">
+<meta property="og:description" content="<?php echo $og_e($og['description']); ?>">
+<meta property="og:url" content="<?php echo $og_e(rtrim($og_base, '/') . $og_path); ?>">
+<meta property="og:image" content="<?php echo $og_e($og_base . $og['image']); ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+
 <!-- favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">

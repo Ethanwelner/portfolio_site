@@ -4,6 +4,7 @@
 
 	<head>
 		<!-- this loads the head code -->
+		<?php $og = array('title' => 'Product and Visual Design | Ethan Welner', 'description' => 'Product and visual design work: QuantHub learning activities and teacher tools, Meazure's Guardian preparedness check, and more.', 'image' => 'img/og/og-design.jpg'); ?>
 		<?php include 'php/head-loads.php'; ?>
 		<title>Ethan Welner Portfolio</title>
 

@@ -3,6 +3,7 @@
 
 	<head>
 		<!-- this loads the head code -->
+		<?php $og = array('title' => 'UI/UX Case Studies | Ethan Welner', 'description' => 'Case studies: QuantHub's learner experience redesign and LTI setup, Meazure Learning's accessibility redesign, Examity's test-taker flow, and the Sequoia platform.', 'image' => 'img/og/og-uiux.jpg'); ?>
 		<?php include 'php/head-loads.php'; ?>
 		<title>Ethan Welner Portfolio</title>
 	</head>
