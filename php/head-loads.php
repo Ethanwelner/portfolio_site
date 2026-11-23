@@ -27,6 +27,31 @@ $og = array_merge(array(
 ), isset($og) && is_array($og) ? $og : array());
 $og_base = 'https://ethanwelner.com/';
 $og_path = strtok(isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '/', '?');
+
+// One project's own preview: link to e.g. uiux.php?project=simplifying-lti#simplifying-lti. The page is the
+// same; only the card LinkedIn shows changes. Keys match the project heading ids.
+$og_projects = array(
+	'simplifying-lti' => array(
+		'title' => 'Simplifying LTI: Teacher Setup From 5 Steps to 1 | Ethan Welner',
+		'description' => 'Redesigned how teachers set up classes and connect QuantHub to their LMS, bringing several systems into one flow and cutting setup from 5 steps to 1.',
+		'image' => 'img/og/og-lti.jpg',
+	),
+	'quanthub-learner-experience' => array(
+		'title' => 'QuantHub Learner Experience Redesign | Ethan Welner',
+		'description' => 'Redesigned QuantHub’s learning platform for K-12 through corporate learners. Learner CSAT reached 80% favorable after launch.',
+		'image' => 'img/og/og-uiux.jpg',
+	),
+	'guardian-preparedness-check' => array(
+		'title' => 'Guardian Preparedness Check | Ethan Welner',
+		'description' => 'Designed the hardware and connection check for Meazure Learning’s secure exam browser, used before high-stakes proctored tests.',
+		'image' => 'img/og/og-guardian.jpg',
+	),
+);
+$og_project = isset($_GET['project']) && is_string($_GET['project']) ? $_GET['project'] : '';
+if (isset($og_projects[$og_project])) {
+	$og = array_merge($og, $og_projects[$og_project]);
+	$og_path .= '?project=' . rawurlencode($og_project);
+}
 $og_e = function ($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); };
 ?>
 <meta name="description" content="<?php echo $og_e($og['description']); ?>">
