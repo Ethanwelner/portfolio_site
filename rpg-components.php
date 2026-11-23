@@ -941,7 +941,7 @@ For monsters and enemies, anything the party fights; their Traits come from php/
 					<p class="sf-library-label" style="margin-top: 32px">A blank boss, 'boss' =&gt; true, its skull in flames</p>
 					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Boss', 'boss' => true ) ); ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, cards open, as in its lore entry</p>
-					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
+					<?php include 'php/rpg/lore/murk-legs.php'; // it brings its own .sf-npc-grid ?>
 					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
 					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
 				</div>
