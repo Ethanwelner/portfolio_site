@@ -59,7 +59,8 @@ $sf_magic_items = array(
 	),
 	'Potions'      => array(
 		array(
-			'name'        => 'Healing Potion (3)',
+			'name'        => 'Healing Potion',
+			'rank'        => 3,
 			'description' => 'The common healing potion, brewed by a skilled hand.',
 			'value'       => 60,
 			'lead'        => 'Whoever drinks it:',
@@ -68,7 +69,8 @@ $sf_magic_items = array(
 			),
 		),
 		array(
-			'name'        => 'Firewalker’s Draught (2)',
+			'name'        => 'Firewalker’s Draught',
+			'rank'        => 2,
 			'description' => 'A two-effect potion for running through a burning building, or out of one.',
 			'value'       => 160,
 			'lead'        => 'Whoever drinks it:',

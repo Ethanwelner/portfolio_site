@@ -1,15 +1,17 @@
 <div class="info-cols">
-	<dl class="copy flex-1 attr-list">
+	<dl class="copy attr-list">
+		<div>
+			<dt>Nationality</dt>
+			<dd><?php echo sf_lore_link('lunar-industrial-syndicate', 'The Eighth Lunar Industrial Syndicate'); ?></dd>
+		</div>
+		<div>
+			<dt>Orbit</dt>
+			<dd>Deep Space</dd>
+		</div>
 		<div>
 			<dt>Population</dt>
 			<dd></dd>
 		</div>
-		<div>
-			<dt>Nationality</dt>
-			<dd></dd>
-		</div>
-	</dl>
-	<dl class="copy flex-1 attr-list">
 		<div>
 			<dt>Major Industries</dt>
 			<dd></dd>
@@ -31,18 +33,7 @@
 				<h5><strong>Overview</strong></h5>
 				<div class="line"></div>
 			</div>
-			<div class="text-cols">
-				<p class="copy mb-0">
-					Content coming soon
-				</p>
-			</div>
-		</div>
-		<div>
-			<div class="line-container">
-				<h5><strong>History</strong></h5>
-				<div class="line"></div>
-			</div>
-			<div class="text-cols">
+			<div>
 				<p class="copy mb-0">
 					Content coming soon
 				</p>

@@ -188,6 +188,14 @@ $sf_item_modes = array(
 	array( 'Sheet: equip “on”, fold “closed”', array( 'equip' => 'on', 'fold' => 'closed' ) ),
 	array( 'Sheet: equip “off”, fold “open”', array( 'equip' => 'off', 'fold' => 'open' ) ),
 );
+// A counted Item (a consumable) on a sheet: its count in the circle on the
+// card's left edge, with the extra room on its left that only a count gets,
+// and the Rank it was brewed at in the square before its name
+$sf_counted_modes = array(
+	array( 'Sheet: count 3, fold “closed”', array( 'count' => 3, 'fold' => 'closed' ) ),
+	array( 'Sheet: count 3, fold “open”', array( 'count' => 3, 'fold' => 'open' ) ),
+);
+$sf_counted = $sf_magic_items['Potions'][0] + array( 'category' => 'Potion', 'plane' => 'Isekai', 'currency' => 'Luras' );
 $sf_pistol = array( 'name' => 'Pistol', 'category' => 'Weapon', 'value' => 600, 'currency' => 'ERC', 'attack' => 'Ranged', 'stat' => 'Grace', 'reload' => 'Partial', 'damage' => '7 Piercing', 'ranged' => true, 'range' => '50 m', 'description' => 'A modern handgun.' );
 
 // Background cards: Edwin's four, then a Dreftian Kind with its Stats and a
@@ -682,7 +690,7 @@ options: fold ('open' | 'closed'), keep (true: the effect stays in view while it
 			<div class="container">
 				<div class="line-container"><h5><strong>Item Card</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_card_item( array( 'name' =&gt; 'Rifle', 'category' =&gt; 'Weapon', 'plane' =&gt; 'Earth', 'value' =&gt; 1200, 'currency' =&gt; 'ERC', 'damage' =&gt; '7 Piercing', 'ranged' =&gt; true, 'description' =&gt; '…' ) );
-optional: value + currency, attack (Melee, Ranged or "Ranged, Thrown"), natural, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
+optional: rank, value + currency, attack (Melee, Ranged or "Ranged, Thrown"), natural, stat, reload, slot, chips, plane, damage, formula, ranged, range, area, resistances, resists_in_chips, mp (with − and +), mp_now, hp (with − and +), description, lead, effects, body, class
 options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['item'] ); ?>
@@ -694,6 +702,15 @@ options: count, equip ('on' | 'off'), fold ('open' | 'closed')</pre>
 							<div>
 								<p class="copy small mb-2"><?php echo sf_card_e( $mode[0] ); ?></p>
 								<?php sf_card_item( $sf_pistol + $mode[1] ); ?>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					<p class="sf-library-label">A counted Item (a consumable), with the Rank it was brewed at</p>
+					<div class="sf-library-items">
+						<?php foreach ( $sf_counted_modes as $mode ) : ?>
+							<div>
+								<p class="copy small mb-2"><?php echo sf_card_e( $mode[0] ); ?></p>
+								<?php sf_card_item( $sf_counted + $mode[1] ); ?>
 							</div>
 						<?php endforeach; ?>
 					</div>

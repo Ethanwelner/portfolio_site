@@ -8,6 +8,12 @@
 
 			<div class="changelog-entries">
 				<article class="blog-post">
+					<p class="copy mb-3"><i>11/23/2026</i></p>
+					<ul class="copy changelog-list mb-0">
+						<li>The Stars: the Stations tab now lists Antiluna Colony (formerly Antiliuna), Aksum, Luna Orbita, Stellar Metals Station, 天堂之门 (Gate to Heaven) Station and New Canaan, each with its nationality and orbit where known.</li>
+					</ul>
+				</article>
+				<article class="blog-post">
 					<p class="copy mb-3"><i>11/22/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>Monsters: monster and enemy sheets show a threat level from 1 to 10 in place of a character level, since a level doesn’t say how dangerous a monster is, with its tier beside it: Minor, Standard, Elite, Deadly or Legendary. The Bandit and Skeleton are Minor, the Hedge Boar and Dreftian Mercenary Standard, the Bog Lurker Elite and Murk Legs Deadly.</li>
