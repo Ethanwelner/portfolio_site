@@ -77,7 +77,7 @@
 							</svg>
 						</a>
 
-						<a href="personal.php#strangefrontiers" class="hero-project">
+						<a href="https://strangefrontiersrpg.com/" class="hero-project">
 							<span class="hero-project-lead">Check out my current project</span>
 							<span class="hero-project-title frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</span>
 						</a>
