@@ -248,7 +248,7 @@
 			</div>
 			<div class="tech-field-panel" id="skills-samples" role="tabpanel" aria-labelledby="tab-skills-samples">
 				<div class="content-stack content-stack-xs">
-					<p class="copy mb-0">Target values for common Skill Checks, before any Difficulty Modifiers.</p>
+					<p class="copy mb-0">Sample target values for common Skill Checks, before any Difficulty Modifiers. A GM can and should feel free to alter these values for what is appropriate at their table.</p>
 					<table class="copy sf-table sf-check-table">
 						<thead>
 							<tr><th>Skill Check</th><th>Stats</th><th>Targets</th></tr>
