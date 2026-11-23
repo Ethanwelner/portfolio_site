@@ -6,7 +6,11 @@
 		</div>
 		<div>
 			<dt>Nationality</dt>
-			<dd></dd>
+			<dd><?php echo sf_lore_link('centafrica', 'Centafrica'); ?></dd>
+		</div>
+		<div>
+			<dt>Orbit</dt>
+			<dd>Inner Sol System (Elliptical)</dd>
 		</div>
 	</dl>
 	<dl class="copy flex-1 attr-list">
