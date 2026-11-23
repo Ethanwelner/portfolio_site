@@ -2,12 +2,26 @@
 <html lang="en">
 
     <head>
+        <script>
+            // Strange Frontiers moved to strangefrontiersrpg.com (php/sf-moved.php). Its old links here were
+            // personal.php#<section>, and only the browser sees the #, so this sends them on.
+            (function () {
+                function forward() {
+                    var hash = (location.hash || "").replace(/^#/, "").toLowerCase();
+                    var sf = ["frontiers", "strange-frontiers", "strangefrontiers", "thesetting", "setting", "adventure", "rpg-adventure", "mechanics", "rpg-mechanics", "rpg-setting", "changelog", "change-log", "rpg-changelog", "stats", "traits", "skills", "incidents", "items", "character", "thesciences", "technologies", "hierarchy", "timeline", "introduction", "thestars", "spacecraft", "parabiology", "locations", "dreft-map", "building-a-dreftian", "tetra-exploration"];
+                    if (sf.indexOf(hash) !== -1 || hash.indexOf("lore-") === 0) {
+                        location.replace("https://strangefrontiersrpg.com/" + (hash === "strangefrontiers" || hash === "frontiers" || hash === "strange-frontiers" ? "" : location.hash));
+                    }
+                }
+                forward();
+                window.addEventListener("hashchange", forward);
+            })();
+        </script>
         <!-- this loads the head code -->
         <?php include 'php/head-loads.php'; ?>
         <link rel="stylesheet" type="text/css" href="<?php echo asset_url('css/rpg-night.css'); ?>"/>
         <?php include 'php/rpg/page-slide.php'; ?>
         <title>Ethan Welner Portfolio</title>
-        <link rel="alternate" type="application/rss+xml" title="Strange Frontiers Change Log" href="rpg-feed.php">
     </head>
     <body>
 
@@ -48,8 +62,6 @@
                 <!-- about me link -->
                 <button type="button" class="section-about-me black-text repaint about-me-link">About Me</button>
         </div>
-
-        <?php include 'php/rpg/rpg-search.php'; ?>
 
         <div class="personal-shell is-personal">
             <div class="section-clip personal-hero-clip">
@@ -108,316 +120,6 @@
                     </div>
 
                     <?php include 'php/footer.php'; ?>
-                </div>
-
-                <div class="personal-pane pane-frontiers" data-page="frontiers">
-                    <div class="section short-section black-bg d-flex black-section z-4">
-                        <div class="section-clip d-flex align-items-center justify-content-center">
-                            <div class="title section-title d-inline-flex z-2">
-                                <div class="hero-statement pre-slide-in">
-                                    <h1 class="title hero-title frontiers-accent frontiers-glitch" data-text="Strange Frontiers">Strange Frontiers</h1>
-                                    <h2 class="title section-title">A Custom AI Native</h2>
-                                    <h3 class="sub-title non-title">PnP Role-Playing Game</h3>
-                                </div>
-                            </div>
-                            <div class="rpg-tabs">
-                                <div class="container d-flex">
-                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                    <div class="flex-14">
-                                        <div class="rpg-tab-list" role="tablist" aria-label="Strange Frontiers sections">
-                                            <button type="button" class="rpg-tab is-active" role="tab" id="tab-setting" aria-controls="rpg-setting" aria-selected="true">Setting</button>
-                                            <button type="button" class="rpg-tab" role="tab" id="tab-adventure" aria-controls="rpg-adventure" aria-selected="false">Adventures</button>
-                                            <button type="button" class="rpg-tab" role="tab" id="tab-mechanics" aria-controls="rpg-mechanics" aria-selected="false">Mechanics</button>
-                                            <button type="button" class="rpg-tab" role="tab" id="tab-changelog" aria-controls="rpg-changelog" aria-selected="false">Change Log</button>
-                                        </div>
-                                    </div>
-                                    <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section unlimited white-bg rpg-panel" id="rpg-mechanics" role="tabpanel" aria-labelledby="tab-mechanics">
-                        <div class="rpg-links-rail">
-                            <?php $rpgLinksKind = 'mechanics'; $rpgLinksTone = 'black'; include 'php/rpg/rpg-links.php'; ?>
-                        </div>
-                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
-                            <?php include 'php/rpg/rpg-stats.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-traits.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-skills.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-incidents.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-items.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-character.php'; ?>
-                        </div>
-                    </div>
-
-                    <div class="section unlimited white-bg rpg-panel is-active" id="rpg-setting" role="tabpanel" aria-labelledby="tab-setting">
-                        <div class="rpg-links-rail">
-                            <?php $rpgLinksKind = 'setting'; $rpgLinksTone = 'black'; include 'php/rpg/rpg-links.php'; ?>
-                        </div>
-                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
-                            <?php include 'php/rpg/rpg-setting.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-technologies.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-planes.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-spacecraft.php'; ?>
-                            <div class="separator"></div>
-
-                            <?php include 'php/rpg/rpg-parabiology.php'; ?>
-                            <div class="separator"></div>
-                        </div>
-                    </div>
-
-                    <div class="section unlimited white-bg rpg-panel" id="rpg-adventure" role="tabpanel" aria-labelledby="tab-adventure">
-                        <div class="rpg-links-rail">
-                            <?php $rpgLinksKind = 'adventure'; $rpgLinksTone = 'black'; include 'php/rpg/rpg-links.php'; ?>
-                        </div>
-                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
-                            <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                <div class="flex-14">
-                                    <h3 class="sub-title mb-3" id="adventure">Another World</h3>
-                                    <p class="copy">
-                                        This is a placeholder stub of content intended to present the vision for this adventure module. I will be using it as the first module I write for the game and as a platform for fleshing out the setting’s deeper narratives.
-                                    </p>
-                                    <div class="tech-fields tech-fields-light mt-4">
-                                        <div class="tech-field-tab-list" role="tablist" aria-label="Another World">
-                                            <button type="button" class="tech-field-tab is-active" role="tab" id="tab-adventure-hook" aria-controls="adventure-hook" aria-selected="true">Adventure Hook</button>
-                                            <button type="button" class="tech-field-tab" role="tab" id="tab-adventure-magic" aria-controls="adventure-magic" aria-selected="false">Magic</button>
-                                            <button type="button" class="tech-field-tab" role="tab" id="tab-adventure-monsters" aria-controls="adventure-monsters" aria-selected="false">Monsters</button>
-                                        </div>
-                                        <div class="tech-field-panel is-active" id="adventure-hook" role="tabpanel" aria-labelledby="tab-adventure-hook">
-                                            <ul class="copy mb-0">
-                                                <li>Takes place on <?php echo sf_lore_link('isekai', 'Isekai'); ?> and <?php echo sf_lore_link('tetra', 'Tetra'); ?>.</li>
-                                                <li><?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?> is hiring planar explorers and Isekai subject-matter experts to stabilize a tense political situation in the Kingdom of Dreft.
-                                                    <ul>
-                                                        <li>Dreft is the monarchical, multi-species, early medieval kingdom where the only known <?php echo sf_lore_link('switch-gates', 'switch gate'); ?> lock to Isekai is located.</li>
-                                                        <li>The Queen of Dreft has recently been assassinated, and a succession crisis is underway.</li>
-                                                        <li>Some political factions in Dreft would seek to see the interplanar foreigners expelled.
-                                                            <ul>
-                                                                <li>Interactions between Dreft and humanity have not always been stable or peaceful, and the impact of continued trade with humanity has deeply transformed the religion and culture of Dreft.</li>
-                                                                <li>Dreft has been made a pariah state and a target for much larger nearby kingdoms, including the powerful Drovus Empire.</li>
-                                                                <li>Many citizens would like to see these strange foreigners leave forever and allow the kingdom to return to its cultural roots and heritage.</li>
-                                                                <li>Other citizens see the kingdom’s advancement and its increase in status and power as the only things that will protect them from nearby powers that would seek to conquer them.</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Tetra Frontiers Co. has rights to all economic activity occurring through the Isekai gate.
-                                                    <ul>
-                                                        <li>A closing of the gate or an attack on security personnel could ignite an interplanar conflict.</li>
-                                                        <li>A closing of the gate would significantly harm the income of Tetra Frontiers Co., which has profited heavily from the trade of “magical” exotic items and materials, as well as a form of high-class “tourism.”
-                                                            <ul>
-                                                                <li>In secret, a second gate on Isekai is being attuned, but it’s located on another continent in a wilderness region full of high-fantasy monsters, so it would take substantial investment to become profitable.</li>
-                                                                <li>Isekai is among the most well-known and famous planar locations in the settled systems due to its nature as what is practically a high-fantasy parody; the loss of the plane would deeply harm Tetra Frontiers Co.’s corporate image.</li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>Competitors and opposition to TFC are engaging in corporate espionage.
-                                                    <ul>
-                                                        <li>There is significant money to be made smuggling banned exotic materials out of Isekai.</li>
-                                                        <li>Competing planar exploration and holding companies would pay top dollar for the coordinates to Isekai.</li>
-                                                        <li>Human supremacist groups would like to see Isekai closed permanently, and having Dreft collapse would be a strong argument for banning switch gate access to planes with sentient inhabitants.</li>
-                                                        <li>Other human supremacist groups would like to see Dreft conquered and integrated into a conceptual human empire.</li>
-                                                    </ul>
-                                                </li>
-                                                <li>Players can opt to be from either Earth baseline or Isekai.
-                                                    <ul>
-                                                        <li>If the players opt to be from Earth baseline, they can be planar explorers, researchers, diplomats, security services, or any other relevant role that TFC may have hired them for.</li>
-                                                        <li>If they are from Isekai, they can be royal guards, gate locals, foreign mercenaries, or any number of other fantastical professions or peoples.</li>
-                                                        <li>Player parties can be both, with tens of thousands of expatriates out of Isekai already inhabiting Tetra and the rest of the settled systems, and TFC having a local base of operations in Isekai and thousands of permanent residents.</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tech-field-panel" id="adventure-magic" role="tabpanel" aria-labelledby="tab-adventure-magic">
-                                            <!-- Magic Specific Rules, from the Mechanics Doc, each with example Items (php/rpg/magic-items.php) -->
-                                            <?php include_once 'php/rpg/magic-items.php'; ?>
-                                            <div class="content-stack">
-                                                <div class="content-stack content-stack-xs">
-                                                    <div class="line-container">
-                                                        <h5><strong>Artifact Construction</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <ul class="copy mb-0">
-                                                        <li>A way to permanently affix a magical effect onto an Item.</li>
-                                                        <li>The chosen Item keeps its previous properties but gains 5 Item HP for each Rank of Cast effect imbued into it.</li>
-                                                        <li>When constructing the artifact, its maker decides whether each effect targets the Item itself or affects the Item’s wearer.</li>
-                                                        <li>The caster must spend 5 times the total MP that would be required to cast every Cast effect being imbued into the Item. This MP can be spent over the course of the artifact’s construction; it doesn’t need to be spent all at once.</li>
-                                                        <li>Construction requires 3 times the reagents used for each Cast effect, and the reagents are consumed in the process.</li>
-                                                        <li>Most commonly imbues effects from Cast Actions with the artifact attribute.</li>
-                                                        <li>The effect lasts a number of years equal to 3 times the total Ranks of the imbued effects.</li>
-                                                        <li>An artifact can be re-empowered, refreshing its duration, in a ritual that costs as much MP as the total cost of the Cast Actions it’s imbued with and uses the reagents for each Cast effect once more.</li>
-                                                        <li>Artifacts can have predominantly RP-based effects, or novel effects that use existing Cast Actions in ways other than those above, but constructing them requires a GM-approved process.</li>
-                                                    </ul>
-                                                    <?php sf_magic_item_examples( 'Artifacts' ); ?>
-                                                </div>
-                                                <div class="content-stack content-stack-xs">
-                                                    <div class="line-container">
-                                                        <h5><strong>Enchantment</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <ul class="copy mb-0">
-                                                        <li>Works with any spell.</li>
-                                                        <li>A way to affix a rechargeable spell effect onto an Item.</li>
-                                                        <li>While holding or wearing the Item, its wielder can use the Cast Action of the spell enchanted onto it.</li>
-                                                        <li>To activate the Item, the wielder makes a Magic Skill Check with a difficulty of 5 per Rank of the enchanted Cast Action. If the check fails, the Action fails, but no MP is spent.</li>
-                                                        <li>A character doesn’t need the Magic Stat to use an enchanted Item.</li>
-                                                        <li>Enchanting an Item requires reagents, which are consumed in the process; MP equal to four times the cost of the spell it grants; and three hours per Rank of the spell’s effect.</li>
-                                                        <li>Each use of the enchantment spends MP stored in the Item equal to the cost of the Cast Action it allows.</li>
-                                                        <li>A magic user recharges the Item by spending their own MP to add the same amount to its store.</li>
-                                                        <li>The Item keeps its MP charge permanently, but if its charge sits below what its Cast Action costs for 1 week per Rank of that Action, the enchantment is lost and the Item is no longer enchanted.</li>
-                                                        <li>An Item can only have one enchantment at a time.</li>
-                                                    </ul>
-                                                    <?php sf_magic_item_examples( 'Enchantments' ); ?>
-                                                </div>
-                                                <div class="content-stack content-stack-xs">
-                                                    <div class="line-container">
-                                                        <h5><strong>Potion Making</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <ul class="copy mb-0">
-                                                        <li>A way to affix a spell effect onto a consumable.</li>
-                                                        <li>Requires an Intuition or Magic Skill Check with a difficulty of 5 for every Rank of every effect in the potion. If the check fails, the potion loses one Rank of one Cast Action, chosen by the GM, for every 5 by which the check failed.</li>
-                                                        <li>Requires reagents, which are consumed in the concoction; MP equal to the cost of casting the Cast Actions imbued into the potion; and one hour per Rank of the potion’s effect.</li>
-                                                        <li>A potion can have multiple effects at once.</li>
-                                                    </ul>
-                                                    <?php sf_magic_item_examples( 'Potions' ); ?>
-                                                </div>
-                                                <div class="content-stack content-stack-xs">
-                                                    <div class="line-container">
-                                                        <h5><strong>Reagents</strong></h5>
-                                                        <div class="line"></div>
-                                                    </div>
-                                                    <ul class="copy mb-0">
-                                                        <li>Reagents are common, uncommon or rare materials with magical attributes, harvested from Isekai or other planes.<ul><li>Common reagents can be farmed or harvested, and may be mundane.</li><li>Uncommon reagents are rarer or more expensive items, sometimes only found on monsters or other animals.</li><li>Rare reagents come from monsters or rare plants and animals.</li></ul></li>
-                                                        <li>Each spell school has its own set of reagents. The spell schools are Enchantment, Enervation, Elemental, Conjuration, Illusion, Divination, Necromancy, Restoration and Mentalism.</li>
-                                                        <li>Reagents are found by searching the wilderness or on the bodies of animals or monsters. Not every reagent requires killing the subject: leaves, flowers, seeds, horns, teeth, hair, blood and more can be taken while leaving it alive.</li>
-                                                        <li>Monsters list the reagents they provide.</li>
-                                                        <li>Reagents can be gathered in the wilds with an Intuition gather check, but without Knowledge Ranks in what reagents look like, or whether they’re even there, there is little hope of success.</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tech-field-panel" id="adventure-monsters" role="tabpanel" aria-labelledby="tab-adventure-monsters">
-                                            <div class="sf-npc-grid"><?php include 'php/rpg/encounters.php'; ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="breakout shadow-diffuse black-bg white-text">
-                                <?php $rpgLinksKind = 'adventure'; $rpgLinksTone = 'white'; include 'php/rpg/rpg-links.php'; ?>
-                                <div class="separator"></div>
-                                <div class="container">
-                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                        <div class="flex-14">
-                                            <h3 class="sub-title mb-3" id="dreft-map">516/a/198 - “<i>Isekai</i>” and the Kingdom of Dreft</h3>
-                                            <div class="copy stinger white mb-3">The Plane, Land, Ecology, and People</div>
-                                        </div>
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                    </div>
-                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                        <div class="flex-14">
-                                            <div class="mb-5">
-                                                <?php
-                                                $dreftLocations = '<dl class="copy flex-1 attr-list"><div><dt>Locations</dt><dd>' . sf_lore_link('tetra-switch-port', 'Tetra (Switch Port Town)') . ', ' . sf_lore_link('herminst', 'Port Herminst') . ', ' . sf_lore_link('glintl', 'Glintl') . ', ' . sf_lore_link('illinsdott', 'Illinsdott') . ', ' . sf_lore_link('kings-woods', 'The King’s Woods') . ', ' . sf_lore_link('mende-river', 'The Mende River') . ', ' . sf_lore_link('moffit-river', 'The Moffit River') . ', ' . sf_lore_link('corsine-mountains', 'The Corsine Mountains') . '</dd></div></dl>';
-                                                sf_lore_body_summary('dreft', $dreftLocations);
-                                                ?>
-                                            </div>
-                                            <img loading="lazy" data-src="img/kingdom_of_dreft18.webp" alt="Map of Isekai showing the Kingdom of Dreft and its neighbors: Port Herminst and Glintl on the western coast, Illinsdott and the switch port town of Tetra at the edge of the King’s Woods, the Corsine Mountains to the south, the Drovus Empire to the north, and the Kingdoms of Sorellion and Karsef to the east." class="breakout-img">
-                                            <div class="tech-fields mt-5">
-                                                <div class="tech-field-tab-list" role="tablist" aria-label="Isekai and the Kingdom of Dreft">
-                                                    <button type="button" class="tech-field-tab is-active" role="tab" id="tab-dreft-locations" aria-controls="dreft-locations" aria-selected="true">Locations</button>
-                                                    <button type="button" class="tech-field-tab" role="tab" id="tab-dreft-institutions" aria-controls="dreft-institutions" aria-selected="false">Institutions</button>
-                                                    <button type="button" class="tech-field-tab" role="tab" id="tab-dreft-religions" aria-controls="dreft-religions" aria-selected="false">Religions</button>
-                                                </div>
-                                                <div class="tech-field-panel is-active" id="dreft-locations" role="tabpanel" aria-labelledby="tab-dreft-locations">
-                                                    <div class="tab-panel-cols">
-                                                        <?php foreach (['tetra-switch-port', 'herminst', 'glintl', 'illinsdott', 'kings-woods', 'mende-river', 'moffit-river', 'corsine-mountains'] as $slug) { echo '<div class="content-stack content-stack-xs">'; sf_lore_entry($slug, 'line'); echo '</div>'; } ?>
-                                                    </div>
-                                                </div>
-                                                <div class="tech-field-panel" id="dreft-institutions" role="tabpanel" aria-labelledby="tab-dreft-institutions">
-                                                    <ul class="copy mb-0">
-                                                        <li><strong>The Crown</strong> – Dreft’s monarchy, seated at the royal palace in Port Herminst. Queen Walpurgis the Third has died with no surviving heirs, and a succession crisis is underway.</li>
-                                                        <li><strong>The Royal Guard</strong> – Sworn to the crown, which currently has no one wearing it.</li>
-                                                        <li><strong>The Noble Houses</strong> – The traditional noble class overseeing Dreft’s farmland and frontier territories. In the succession crisis they back Duchess Bereznia.</li>
-                                                        <li><strong>The Trade Guilds</strong> – The guilds of craftsmen and traders, grown rich on the gate trade. Led by Askellyn, a merchant from the Corsine Mountains, they back the queen’s niece, Lady Grisht Walpurgis.</li>
-                                                        <li><strong>The Merchant Clans</strong> – Trade families grown rich off the switch port, and resented for it. Tatot are over-represented among them and the trading guilds.</li>
-                                                        <li><strong>The Hunting Guilds</strong> – Keep posts and track the monster bounties put up by the kingdom or locals.</li>
-                                                        <li><strong>The Licensed Schools of Magic</strong> – Port Herminst’s schools teach officially sanctioned, and supposedly safe, magic. Magic practiced outside them is hedge witchery.</li>
-                                                        <li><strong>The Crown’s Soldiers and the Local Militias</strong> – The crown’s soldiers defend the kingdom, with Isek over-represented among them; towns and villages call up militias against bandits and monsters when the soldiers are far away.</li>
-                                                        <li><strong><?php echo sf_lore_link('tetra-frontiers-co', 'Tetra Frontiers Co.'); ?></strong> – Operates the heavily fortified switch port in the King’s Woods and holds the rights to all economic activity through the Isekai gate.</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="tech-field-panel" id="dreft-religions" role="tabpanel" aria-labelledby="tab-dreft-religions">
-                                                    <p class="copy mb-0">Content coming soon</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                    </div>
-                                    <div class="separator"></div>
-                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap mb-4">
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                        <div class="flex-14">
-                                            <h3 class="sub-title mb-3" id="building-a-dreftian">Building a Dreftian</h3>
-                                            <div class="copy stinger white mb-3">Kinds, Origins, Professions, Pasts</div>
-                                        </div>
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                    </div>
-                                    <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                        <div class="flex-14">
-                                            <?php include 'php/rpg/dreftian-starters.php'; ?>
-                                        </div>
-                                        <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                    </div>
-                                </div>
-                                <div class="separator"></div>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="d-flex flex-fill flex-wrap flex-xs-nowrap">
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                                <div class="flex-14">
-                                    <h3 class="sub-title mb-3" id="tetra-exploration">Ark Tetra and Planar Exploration</h3>
-                                    <div class="copy stinger black mb-3">Overview and History</div>
-                                    <?php // Ark Tetra's lore entry from The Stars (php/rpg/lore/tetra.php), without its heading or anchor so the id stays unique
-                                    sf_lore_body('tetra'); ?>
-                                </div>
-                                <div class="flex-2 d-none d-xl-inline-flex"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="section unlimited white-bg rpg-panel" id="rpg-changelog" role="tabpanel" aria-labelledby="tab-changelog">
-                        <div class="container d-flex flex-wrap mt-5 mt-lg-0">
-                            <?php include 'php/rpg/rpg-changelog.php'; ?>
-                        </div>
-                    </div>
-
-                    <div class="rpg-night-footer">
-                        <?php $footerAttribution = true; include 'php/footer.php'; $footerAttribution = false; ?>
-                    </div>
                 </div>
 
             </div>

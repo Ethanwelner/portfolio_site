@@ -316,7 +316,8 @@
 			}
 
 			var hash = personalHash();
-			if ( isFrontiersHash( hash ) ) {
+			// Strange Frontiers moved to its own site; personal.php forwards its hashes there.
+			if ( isFrontiersHash( hash ) && $( ".pane-frontiers" ).length ) {
 				showPersonalPage( "frontiers", animate );
 				activatePaneTab( rpgTabFromHash(), false );
 				return;
