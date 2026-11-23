@@ -290,6 +290,9 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 	 *              in the chips or the lead.
 	 * lead         Optional. Its rules, after the description.
 	 * effects      Optional. array( array( label, text ), ... ).
+	 * rank         Optional. The Rank it was made at (a potion's), in a
+	 *              rounded square before its name, as on a Trait card.
+	 *              Never baked into name as "(3)".
 	 * count        Optional. How many of a counted item (a consumable), in a
 	 *              circle on its left edge. One-of-a-kind items have none.
 	 * equip        Optional. 'on' or 'off': its Equip box, read-only.
@@ -332,7 +335,8 @@ if ( ! function_exists( 'sf_card_e' ) ) {
 		if ( ! empty( $i['equip'] ) ) {
 			echo '<label class="sf-item-equip" title="Equip"><input type="checkbox" aria-label="Equip"' . ( 'on' === $i['equip'] ? ' checked' : '' ) . ' disabled><span class="sf-item-equip-label">Equip</span></label>';
 		}
-		echo '<span class="sf-item-main"><span class="equipment-name">' . sf_card_e( $i['name'] ) . '</span>';
+		$rank = isset( $i['rank'] ) ? '<span class="sf-card-rank" title="Rank ' . (int) $i['rank'] . '" aria-label="Rank ' . (int) $i['rank'] . '">' . (int) $i['rank'] . '</span>' : '';
+		echo '<span class="sf-item-main"><span class="equipment-name">' . $rank . sf_card_e( $i['name'] ) . '</span>';
 		if ( $badges ) {
 			echo '<div class="equipment-stats sf-item-badges">' . $badges . '</div>';
 		}

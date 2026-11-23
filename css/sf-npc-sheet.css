@@ -447,8 +447,10 @@
 
 /* The monster sheet's sections (the top row, description, Stats, Items and
    Traits boxes): no background at all, so the content sits straight on the
-   field over the storm and noise. They keep their padding. */
+   field over the storm and noise, with only 8px of padding, since there's
+   no box edge to keep the content off. */
 .sf-npc--monster :is(.sf-npc-box, .sf-npc-description) {
+    padding: 8px;
     background: none;
 }
 
@@ -499,9 +501,14 @@
    .sf-sheet-level) at 56px, in the site's black, morphing and turning
    while its purple glow pulses, with a tiny "Level" over the number in
    Bebas. A pseudo-element, so the number stays upright; still with
-   reduced motion. */
+   reduced motion. It overlays the sheet's top left corner, poking a
+   little past its top and left edges, so it takes no room in the top
+   row. */
 .sf-npc-level {
-    position: relative;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    z-index: 2;
     isolation: isolate;
     flex: none;
     display: flex;
@@ -918,14 +925,6 @@
     > li + li {
         margin-top: 12px;
     }
-}
-
-/* An Item's count, centered on its card's top line. The cards' 14.15px
-   (css/sf-cards.css) centers it on a Player Tools row, 30px tall with its
-   Equip box and value; an NPC's Items have neither, so their row is 24px
-   and the count sits 11px down. */
-.sf-npc .sf-item-count {
-    top: 11px;
 }
 
 /* Printed, it goes light, with dark text */

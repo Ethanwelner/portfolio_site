@@ -65,5 +65,7 @@ sf_monster_sheet(
 				'effect' => 'The first time in an Incident that a character wishes to Attack this character, they must succeed on a Demeanor check of 13. If they fail, that Attack fails and they gain the Frightened Condition at Rank 3. A character must only make this check once per Incident.',
 			),
 		),
-	)
+	),
+	// Its Items and Traits start closed and fold, like the other monsters'
+	array( 'fold' => 'closed' )
 );

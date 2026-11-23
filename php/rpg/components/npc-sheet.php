@@ -276,23 +276,27 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		}
 
 		// Its level, name and what it is, then its resistances and Movement
-		// In the character sheet's blob, left of the name: an NPC's level
+		// In the character sheet's blob, over the sheet's top left corner: an NPC's level
 		// (each level is a core point, so it's the core Stats' total unless
 		// the NPC sets its own), or a monster's threat level, since a level
 		// doesn't say how dangerous a monster is. A monster's threat tier
 		// follows what it is under its name.
 		$tier = '';
-		echo '<div class="sf-npc-box sf-npc-head"><div class="sf-npc-who">';
 		if ( 'monster' === $variant ) {
 			$threat = isset( $npc['threat'] ) ? (int) $npc['threat'] : null;
 			$tier   = null === $threat ? '' : sf_threat_tier( $threat );
-			echo '<div class="sf-npc-level sf-npc-threat" title="' . ( null === $threat ? 'Threat level not set' : 'Threat ' . $threat . ', ' . $tier ) . '"><span class="sf-npc-level-label">Threat</span><span class="sf-npc-level-number">' . ( null === $threat ? '–' : $threat ) . '</span></div>';
+			$badge = '<div class="sf-npc-level sf-npc-threat" title="' . ( null === $threat ? 'Threat level not set' : 'Threat ' . $threat . ', ' . $tier ) . '"><span class="sf-npc-level-label">Threat</span><span class="sf-npc-level-number">' . ( null === $threat ? '–' : $threat ) . '</span></div>';
 		} else {
 			$level = isset( $npc['level'] ) ? (int) $npc['level'] : array_sum( array_map( function ( $label ) use ( $npc ) {
 				return (int) ( $npc['stats'][ $label ] ?? 0 );
 			}, $groups ) );
-			echo '<div class="sf-npc-level" title="Level ' . $level . '"><span class="sf-npc-level-label">Level</span><span class="sf-npc-level-number">' . $level . '</span></div>';
+			$badge = '<div class="sf-npc-level" title="Level ' . $level . '"><span class="sf-npc-level-label">Level</span><span class="sf-npc-level-number">' . $level . '</span></div>';
 		}
+		// The blob sits over the sheet's top left corner, outside the top
+		// row's box (whose mask would clip it), so the name starts flush
+		// with the content's left edge
+		echo $badge;
+		echo '<div class="sf-npc-box sf-npc-head"><div class="sf-npc-who">';
 		echo '<div>';
 		echo '<' . $heading . ' class="sf-npc-name">' . sf_npc_e( $npc['name'] ) . '</' . $heading . '>';
 		$kind = array_filter( array( $npc['kind'] ?? '', ! empty( $tier ) ? $tier . ' threat' : '' ) );
