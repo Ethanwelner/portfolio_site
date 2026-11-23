@@ -228,8 +228,8 @@
 					</div>
 
 					<div class="tech-field-panel" id="craft-stations" role="tabpanel" aria-labelledby="tab-craft-stations">
-						<div class="content-stack">
-							<?php foreach (['antiluna-colony', 'aksum', 'luna-orbita', 'stellar-metals-station', 'gate-to-heaven-station', 'new-canaan'] as $slug) { sf_lore_entry($slug, 'h4', 'mb-3'); } ?>
+						<div class="content-stack lore-grid">
+							<?php foreach (['antiluna-colony', 'aksum', 'luna-orbita', 'stellar-metals-station', 'gate-to-heaven-station', 'new-canaan'] as $slug) { sf_lore_entry($slug, 'line'); } ?>
 						</div>
 					</div>
 
