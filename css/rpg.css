@@ -919,6 +919,11 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         font-weight: 700;
     }
 
+    /* Long first-column labels, like the Sample Skill Checks (rpg-skills.php) */
+    &.sf-table-wrap td:first-child {
+        white-space: normal;
+    }
+
     .black-bg & :is(th, td) {
         border-bottom-color: rgb(255 255 255 / 25%);
     }

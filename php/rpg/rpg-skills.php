@@ -46,6 +46,7 @@
 			<div class="tech-field-tab-list" role="tablist" aria-label="Skill Checks">
 				<button type="button" class="tech-field-tab is-active" role="tab" id="tab-skills-ranges" aria-controls="skills-ranges" aria-selected="true">Difficulty Ranges</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-skills-advantage" aria-controls="skills-advantage" aria-selected="false">Advantage and Competence</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-skills-samples" aria-controls="skills-samples" aria-selected="false">Sample Skill Checks</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="skills-ranges" role="tabpanel" aria-labelledby="tab-skills-ranges">
@@ -241,6 +242,89 @@
 								<li>A bard skilled with a guitar and a bass can likely request Competence with a lute, but the GM may consider the violin a step too far.</li>
 							</ul>
 							<p class="copy">Many Traits that grant expertise in a skill also grant implied Competence in related Skills.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tech-field-panel" id="skills-samples" role="tabpanel" aria-labelledby="tab-skills-samples">
+				<div class="content-stack">
+					<p class="copy mb-0">Target values for common Skill Checks, before any Difficulty Modifiers.</p>
+					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
+						<div class="flex-7 content-stack">
+							<div class="content-stack content-stack-xs">
+								<div class="line-container">
+									<h5><strong>Physical</strong></h5>
+									<div class="line"></div>
+								</div>
+								<table class="copy sf-table sf-table-wrap">
+									<thead>
+										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Holding your breath for one minute</td><td>Endurance</td><td>5</td></tr>
+										<tr><td>Climbing a knotted rope</td><td>Power</td><td>8</td></tr>
+										<tr><td>Swimming across a calm lake</td><td>Endurance</td><td>10</td></tr>
+										<tr><td>Forcing open a stuck door</td><td>Power</td><td>12</td></tr>
+										<tr><td>Balancing along a narrow ledge</td><td>Grace</td><td>15</td></tr>
+										<tr><td>Staying awake through a full night’s watch</td><td>Endurance</td><td>15</td></tr>
+										<tr><td>Picking a simple lock</td><td>Grace</td><td>18</td></tr>
+										<tr><td>Palming a card while someone watches</td><td>Grace</td><td>22</td></tr>
+										<tr><td>Swimming against a strong river current</td><td>Power, Endurance</td><td>25</td></tr>
+										<tr><td>Running a marathon</td><td>Endurance</td><td>30</td></tr>
+										<tr><td>Free climbing a sheer rock face</td><td>Power, Grace</td><td>35</td></tr>
+										<tr><td>Catching a thrown knife by the handle</td><td>Grace</td><td>40</td></tr>
+										<tr><td>Bending a steel bar</td><td>Power</td><td>45</td></tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="flex-6 content-stack">
+							<div class="content-stack content-stack-xs">
+								<div class="line-container">
+									<h5><strong>Social</strong></h5>
+									<div class="line"></div>
+								</div>
+								<table class="copy sf-table sf-table-wrap">
+									<thead>
+										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Haggling a fair price from a market trader</td><td>Persuasion</td><td>10</td></tr>
+										<tr><td>Performing well enough to earn tips</td><td>Persuasion</td><td>12</td></tr>
+										<tr><td>Keeping a straight face while bluffing</td><td>Demeanor</td><td>15</td></tr>
+										<tr><td>Talking your way past a bored guard</td><td>Persuasion</td><td>15</td></tr>
+										<tr><td>Telling whether someone is lying</td><td>Empathy</td><td>20</td></tr>
+										<tr><td>Holding your nerve under fire</td><td>Demeanor</td><td>20</td></tr>
+										<tr><td>Comforting a grieving stranger</td><td>Empathy</td><td>20</td></tr>
+										<tr><td>Calming a panicked crowd</td><td>Persuasion, Demeanor</td><td>30</td></tr>
+										<tr><td>Convincing a Bureau inspector to overlook a violation</td><td>Persuasion, Demeanor</td><td>35</td></tr>
+										<tr><td>Making peaceful intentions understood to a parasapient with no shared language</td><td>Empathy, Persuasion</td><td>40</td></tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="content-stack content-stack-xs">
+								<div class="line-container">
+									<h5><strong>Mental</strong></h5>
+									<div class="line"></div>
+								</div>
+								<table class="copy sf-table sf-table-wrap">
+									<thead>
+										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
+									</thead>
+									<tbody>
+										<tr><td>Recalling a well-known historical date</td><td>Memory</td><td>5</td></tr>
+										<tr><td>Finding your way around a city you’ve visited</td><td>Memory</td><td>15</td></tr>
+										<tr><td>Noticing a pickpocket</td><td>Intuition</td><td>18</td></tr>
+										<tr><td>Tracking an animal through a forest</td><td>Intuition</td><td>20</td></tr>
+										<tr><td>Spotting an ambush in dense woods</td><td>Intuition</td><td>25</td></tr>
+										<tr><td>Repairing a broken radio with spare parts</td><td>Logic, Grace</td><td>25</td></tr>
+										<tr><td>Solving a cipher</td><td>Logic</td><td>30</td></tr>
+										<tr><td>Diagnosing an illness from its symptoms</td><td>Logic, Memory</td><td>30</td></tr>
+										<tr><td>Piloting a truck through a debris field</td><td>Grace, Intuition</td><td>40</td></tr>
+										<tr><td>Calculating a switch gate address by hand</td><td>Logic, Memory</td><td>55</td></tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
