@@ -933,6 +933,39 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     }
 }
 
+/* Sample Skill Checks (rpg-skills.php): a group heading row per core Stat, and
+   each check's graded targets as label-and-number pairs */
+.sf-check-table {
+    .sf-table-group th {
+        padding-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    tbody tr:first-child th {
+        padding-top: 8px;
+    }
+}
+
+.sf-check-targets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-flex;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+}
+
 /* Collapsible "Details" section under an attribute block: plane, Ark, and
    corporation lore entries in php/rpg/lore/, the Nations tab in rpg-setting.php, and
    the Starships tab in rpg-spacecraft.php.

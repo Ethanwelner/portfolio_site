@@ -19,6 +19,7 @@
 						<li>Character Creator: new crafting Skills for making Artifacts, Enchantments and Potions. Sparing Hand and Master of Reagents need fewer reagents, Wellspring Crafting covers 5 MP of a making for free, and Reagent Substitution swaps one reagent for another of the same rarity and equal or greater value.</li>
 						<li>Incidents: Environments. Reduced Visibility, High, Low and Zero Gravity, No Atmosphere and Difficult Ground are environmental Conditions every character in such a place gains. Unresistable damage ignores all Resistances.</li>
 						<li>Conditions: Hovering leaves a character able to move only by crawling along or pushing off surfaces unless it can fly. Suffocating gains a Rank every Round a character can’t breathe, deals damage equal to its Ranks from Rank 6, and goes away with the first breath.</li>
+						<li>Skill Checks: Sample Skill Checks, 26 common checks with graded targets, like jumping a gap (Power): 5 ft is 8, 10 ft is 15, 20 ft is 35 and 40 ft is 70, or talking your way past a guard (Persuasion): bored is 10, attentive is 20, suspicious is 30 and on high alert is 45.</li>
 					</ul>
 				</article>
 				<article class="blog-post">
