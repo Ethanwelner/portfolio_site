@@ -333,9 +333,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 		// Its description, between the name and the Stats, as the character
 		// sheet's description box (read-only here): a short description and
-		// how the GM plays it, or Content coming soon until it's written
+		// how the GM plays it, or three sentences of placeholder Latin until
+		// it's written, so an unwritten sheet holds a description's room
 		echo '<div class="sf-npc-description' . ( empty( $npc['description'] ) ? ' is-coming-soon' : '' ) . '"><p>'
-			. ( ! empty( $npc['description'] ) ? sf_npc_e( $npc['description'] ) : 'Content coming soon.' )
+			. ( ! empty( $npc['description'] ) ? sf_npc_e( $npc['description'] ) : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' )
 			. '</p></div>';
 
 		// The Stats as on a Kind card (php/rpg/components/cards.php): each core
