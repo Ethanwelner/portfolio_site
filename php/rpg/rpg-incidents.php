@@ -69,6 +69,7 @@
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-defense" aria-controls="incidents-defense" aria-selected="false">Defense and Cover</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-rp" aria-controls="incidents-rp" aria-selected="false">Role-Playing Actions</button>
 				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-injuries" aria-controls="incidents-injuries" aria-selected="false">Injuries</button>
+				<button type="button" class="tech-field-tab" role="tab" id="tab-incidents-environments" aria-controls="incidents-environments" aria-selected="false">Environments</button>
 			</div>
 
 			<div class="tech-field-panel is-active" id="incidents-rounds" role="tabpanel" aria-labelledby="tab-incidents-rounds">
@@ -369,6 +370,53 @@
 								'effect' => 'This character gains the Dress Wounds Action.',
 								'action' => 'Dress Wounds: As a Full RP Action, this character may dress the wounds of itself or another character within reach, giving them the Bandaged Condition.',
 								'needs' => 'Intuition 2',
+							) ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tech-field-panel" id="incidents-environments" role="tabpanel" aria-labelledby="tab-incidents-environments">
+				<!-- Environments, from the Mechanics Doc's Incidents tab -->
+				<div class="content-stack">
+					<p class="copy mb-0">
+						Incidents can occur in many places and under many different environmental conditions. The default expectation of an Incident is that it occurs in an otherwise safe, breathable environment with Earth-like gravity and the laws of physics one might expect. In distant star systems and far-off planes, however, the norm may be very different. During an Incident in an environment that changes how the game is played, every involved character gains one or more environmental Conditions. A default set of environmental Conditions is listed below, but GMs are encouraged to create their own.
+					</p>
+					<div class="content-stack content-stack-xs">
+						<div class="line-container">
+							<h5><strong>Environmental Conditions</strong></h5>
+							<div class="line"></div>
+						</div>
+						<div class="trait-card-grid">
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'Reduced Visibility',
+								'flags' => array( 'Ranked' ),
+								'effect' => "This character can see 50 m, minus 10 m per Rank, up to Rank 4. It can’t draw Line of Sight for Actions beyond that distance.",
+							) ); ?>
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'High Gravity',
+								'effect' => "This character’s encumbrance Condition is treated as one step more severe. A Heavily Encumbered character stays Heavily Encumbered.",
+							) ); ?>
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'Low Gravity',
+								'effect' => "This character’s encumbrance Condition is treated as one step less severe.",
+							) ); ?>
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'Zero Gravity',
+								'effect' => "This character is Unencumbered and gains the Hovering Condition.",
+							) ); ?>
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'No Atmosphere',
+								'effect' => "- Without protective equipment, this character takes 1 Cold and 1 Blunt Unresistable damage every Round.\n- If this character needs to breathe, it gains the Suffocating Condition.\n- Effects and Actions that rely on an atmosphere fail.",
+							) ); ?>
+							<?php sf_card_trait( array(
+								'kind' => 'condition',
+								'name' => 'Difficult Ground',
+								'effect' => "This character’s Movement is halved.",
 							) ); ?>
 						</div>
 					</div>
