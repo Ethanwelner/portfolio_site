@@ -919,11 +919,6 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
         font-weight: 700;
     }
 
-    /* Long first-column labels, like the Sample Skill Checks (rpg-skills.php) */
-    &.sf-table-wrap td:first-child {
-        white-space: normal;
-    }
-
     .black-bg & :is(th, td) {
         border-bottom-color: rgb(255 255 255 / 25%);
     }
@@ -935,6 +930,39 @@ body:has(.personal-shell.is-frontiers:not(.is-sliding)) .rpg-search {
     td:empty::before {
         content: "\2014";
         opacity: 0.4;
+    }
+}
+
+/* Sample Skill Checks (rpg-skills.php): a group heading row per core Stat, and
+   each check's graded targets as label-and-number pairs */
+.sf-check-table {
+    .sf-table-group th {
+        padding-top: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    tbody tr:first-child th {
+        padding-top: 8px;
+    }
+}
+
+.sf-check-targets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-flex;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    strong {
+        font-weight: 700;
     }
 }
 

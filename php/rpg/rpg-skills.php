@@ -247,86 +247,44 @@
 				</div>
 			</div>
 			<div class="tech-field-panel" id="skills-samples" role="tabpanel" aria-labelledby="tab-skills-samples">
-				<div class="content-stack">
+				<div class="content-stack content-stack-xs">
 					<p class="copy mb-0">Target values for common Skill Checks, before any Difficulty Modifiers.</p>
-					<div class="d-flex flex-wrap flex-xs-nowrap split-cols">
-						<div class="flex-7 content-stack">
-							<div class="content-stack content-stack-xs">
-								<div class="line-container">
-									<h5><strong>Physical</strong></h5>
-									<div class="line"></div>
-								</div>
-								<table class="copy sf-table sf-table-wrap">
-									<thead>
-										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
-									</thead>
-									<tbody>
-										<tr><td>Holding your breath for one minute</td><td>Endurance</td><td>5</td></tr>
-										<tr><td>Climbing a knotted rope</td><td>Power</td><td>8</td></tr>
-										<tr><td>Swimming across a calm lake</td><td>Endurance</td><td>10</td></tr>
-										<tr><td>Forcing open a stuck door</td><td>Power</td><td>12</td></tr>
-										<tr><td>Balancing along a narrow ledge</td><td>Grace</td><td>15</td></tr>
-										<tr><td>Staying awake through a full night’s watch</td><td>Endurance</td><td>15</td></tr>
-										<tr><td>Picking a simple lock</td><td>Grace</td><td>18</td></tr>
-										<tr><td>Palming a card while someone watches</td><td>Grace</td><td>22</td></tr>
-										<tr><td>Swimming against a strong river current</td><td>Power, Endurance</td><td>25</td></tr>
-										<tr><td>Running a marathon</td><td>Endurance</td><td>30</td></tr>
-										<tr><td>Free climbing a sheer rock face</td><td>Power, Grace</td><td>35</td></tr>
-										<tr><td>Catching a thrown knife by the handle</td><td>Grace</td><td>40</td></tr>
-										<tr><td>Bending a steel bar</td><td>Power</td><td>45</td></tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="flex-6 content-stack">
-							<div class="content-stack content-stack-xs">
-								<div class="line-container">
-									<h5><strong>Social</strong></h5>
-									<div class="line"></div>
-								</div>
-								<table class="copy sf-table sf-table-wrap">
-									<thead>
-										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
-									</thead>
-									<tbody>
-										<tr><td>Haggling a fair price from a market trader</td><td>Persuasion</td><td>10</td></tr>
-										<tr><td>Performing well enough to earn tips</td><td>Persuasion</td><td>12</td></tr>
-										<tr><td>Keeping a straight face while bluffing</td><td>Demeanor</td><td>15</td></tr>
-										<tr><td>Talking your way past a bored guard</td><td>Persuasion</td><td>15</td></tr>
-										<tr><td>Telling whether someone is lying</td><td>Empathy</td><td>20</td></tr>
-										<tr><td>Holding your nerve under fire</td><td>Demeanor</td><td>20</td></tr>
-										<tr><td>Comforting a grieving stranger</td><td>Empathy</td><td>20</td></tr>
-										<tr><td>Calming a panicked crowd</td><td>Persuasion, Demeanor</td><td>30</td></tr>
-										<tr><td>Convincing a Bureau inspector to overlook a violation</td><td>Persuasion, Demeanor</td><td>35</td></tr>
-										<tr><td>Making peaceful intentions understood to a parasapient with no shared language</td><td>Empathy, Persuasion</td><td>40</td></tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="content-stack content-stack-xs">
-								<div class="line-container">
-									<h5><strong>Mental</strong></h5>
-									<div class="line"></div>
-								</div>
-								<table class="copy sf-table sf-table-wrap">
-									<thead>
-										<tr><th>Skill Check</th><th>Stats</th><th>Target</th></tr>
-									</thead>
-									<tbody>
-										<tr><td>Recalling a well-known historical date</td><td>Memory</td><td>5</td></tr>
-										<tr><td>Finding your way around a city you’ve visited</td><td>Memory</td><td>15</td></tr>
-										<tr><td>Noticing a pickpocket</td><td>Intuition</td><td>18</td></tr>
-										<tr><td>Tracking an animal through a forest</td><td>Intuition</td><td>20</td></tr>
-										<tr><td>Spotting an ambush in dense woods</td><td>Intuition</td><td>25</td></tr>
-										<tr><td>Repairing a broken radio with spare parts</td><td>Logic, Grace</td><td>25</td></tr>
-										<tr><td>Solving a cipher</td><td>Logic</td><td>30</td></tr>
-										<tr><td>Diagnosing an illness from its symptoms</td><td>Logic, Memory</td><td>30</td></tr>
-										<tr><td>Piloting a truck through a debris field</td><td>Grace, Intuition</td><td>40</td></tr>
-										<tr><td>Calculating a switch gate address by hand</td><td>Logic, Memory</td><td>55</td></tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
+					<table class="copy sf-table sf-check-table">
+						<thead>
+							<tr><th>Skill Check</th><th>Stats</th><th>Targets</th></tr>
+						</thead>
+						<tbody>
+								<tr class="sf-table-group"><th colspan="3">Physical</th></tr>
+								<tr><td>Jumping a gap</td><td>Power</td><td><ul class="sf-check-targets"><li><span>5 ft</span><strong>8</strong></li><li><span>10 ft</span><strong>15</strong></li><li><span>15 ft</span><strong>25</strong></li><li><span>20 ft</span><strong>35</strong></li><li><span>30 ft</span><strong>50</strong></li><li><span>40 ft</span><strong>70</strong></li></ul></td></tr>
+								<tr><td>Climbing</td><td>Power, Grace</td><td><ul class="sf-check-targets"><li><span>A ladder</span><strong>0</strong></li><li><span>A knotted rope</span><strong>8</strong></li><li><span>A tree</span><strong>12</strong></li><li><span>A brick wall</span><strong>25</strong></li><li><span>A sheer rock face</span><strong>35</strong></li><li><span>An overhang</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Lifting</td><td>Power</td><td><ul class="sf-check-targets"><li><span>25 kg</span><strong>5</strong></li><li><span>50 kg</span><strong>12</strong></li><li><span>100 kg</span><strong>25</strong></li><li><span>200 kg</span><strong>40</strong></li><li><span>300 kg</span><strong>55</strong></li></ul></td></tr>
+								<tr><td>Forcing a door</td><td>Power</td><td><ul class="sf-check-targets"><li><span>Stuck</span><strong>12</strong></li><li><span>Locked wooden door</span><strong>20</strong></li><li><span>Reinforced</span><strong>35</strong></li><li><span>Blast door</span><strong>60</strong></li></ul></td></tr>
+								<tr><td>Swimming</td><td>Endurance</td><td><ul class="sf-check-targets"><li><span>A calm pool</span><strong>0</strong></li><li><span>A calm lake</span><strong>10</strong></li><li><span>Ocean swells</span><strong>20</strong></li><li><span>A strong current</span><strong>30</strong></li><li><span>Storm surf</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Holding your breath</td><td>Endurance</td><td><ul class="sf-check-targets"><li><span>30 seconds</span><strong>0</strong></li><li><span>1 minute</span><strong>5</strong></li><li><span>2 minutes</span><strong>15</strong></li><li><span>4 minutes</span><strong>30</strong></li><li><span>8 minutes</span><strong>50</strong></li></ul></td></tr>
+								<tr><td>Running</td><td>Endurance</td><td><ul class="sf-check-targets"><li><span>5 km</span><strong>8</strong></li><li><span>10 km</span><strong>15</strong></li><li><span>A half marathon</span><strong>22</strong></li><li><span>A marathon</span><strong>30</strong></li><li><span>100 km</span><strong>50</strong></li></ul></td></tr>
+								<tr><td>Balancing</td><td>Grace</td><td><ul class="sf-check-targets"><li><span>A wide beam</span><strong>5</strong></li><li><span>A narrow ledge</span><strong>15</strong></li><li><span>A tightrope</span><strong>30</strong></li><li><span>A tightrope in high wind</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Sneaking past someone</td><td>Grace</td><td><ul class="sf-check-targets"><li><span>Distracted</span><strong>10</strong></li><li><span>Watchful</span><strong>20</strong></li><li><span>An alert sentry</span><strong>30</strong></li><li><span>A trained hunter</span><strong>40</strong></li></ul></td></tr>
+								<tr><td>Picking a lock</td><td>Grace</td><td><ul class="sf-check-targets"><li><span>A simple padlock</span><strong>18</strong></li><li><span>A door lock</span><strong>25</strong></li><li><span>A high-security lock</span><strong>40</strong></li><li><span>A vault</span><strong>55</strong></li></ul></td></tr>
+								<tr class="sf-table-group"><th colspan="3">Social</th></tr>
+								<tr><td>Talking your way past a guard</td><td>Persuasion</td><td><ul class="sf-check-targets"><li><span>Bored</span><strong>10</strong></li><li><span>Attentive</span><strong>20</strong></li><li><span>Suspicious</span><strong>30</strong></li><li><span>On high alert</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Haggling</td><td>Persuasion</td><td><ul class="sf-check-targets"><li><span>A fair price</span><strong>10</strong></li><li><span>A good deal</span><strong>20</strong></li><li><span>A steal</span><strong>35</strong></li></ul></td></tr>
+								<tr><td>Lying convincingly</td><td>Persuasion, Demeanor</td><td><ul class="sf-check-targets"><li><span>A small fib</span><strong>5</strong></li><li><span>A cover story</span><strong>20</strong></li><li><span>A false identity under questioning</span><strong>35</strong></li><li><span>An interrogation</span><strong>50</strong></li></ul></td></tr>
+								<tr><td>Spotting a lie</td><td>Empathy</td><td><ul class="sf-check-targets"><li><span>A poor liar</span><strong>10</strong></li><li><span>A practiced liar</span><strong>20</strong></li><li><span>A professional</span><strong>35</strong></li><li><span>A trained spy</span><strong>50</strong></li></ul></td></tr>
+								<tr><td>Calming someone down</td><td>Empathy, Persuasion</td><td><ul class="sf-check-targets"><li><span>An upset friend</span><strong>5</strong></li><li><span>A grieving stranger</span><strong>20</strong></li><li><span>A panicked crowd</span><strong>30</strong></li><li><span>A rioting mob</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Keeping your nerve</td><td>Demeanor</td><td><ul class="sf-check-targets"><li><span>A tense standoff</span><strong>10</strong></li><li><span>Under fire</span><strong>20</strong></li><li><span>Facing a monster</span><strong>30</strong></li><li><span>Facing something from a higher plane</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Making first contact</td><td>Empathy, Persuasion</td><td><ul class="sf-check-targets"><li><span>A shared language</span><strong>10</strong></li><li><span>Gestures only</span><strong>30</strong></li><li><span>No shared senses</span><strong>50</strong></li></ul></td></tr>
+								<tr class="sf-table-group"><th colspan="3">Mental</th></tr>
+								<tr><td>Recalling a fact</td><td>Memory</td><td><ul class="sf-check-targets"><li><span>Common knowledge</span><strong>0</strong></li><li><span>Well-known history</span><strong>5</strong></li><li><span>Specialist trivia</span><strong>20</strong></li><li><span>An obscure detail</span><strong>35</strong></li></ul></td></tr>
+								<tr><td>Noticing something hidden</td><td>Intuition</td><td><ul class="sf-check-targets"><li><span>In plain sight</span><strong>5</strong></li><li><span>Tucked away</span><strong>15</strong></li><li><span>Deliberately concealed</span><strong>25</strong></li><li><span>Expertly hidden</span><strong>40</strong></li></ul></td></tr>
+								<tr><td>Tracking</td><td>Intuition</td><td><ul class="sf-check-targets"><li><span>A fresh trail in mud</span><strong>5</strong></li><li><span>A day-old trail</span><strong>15</strong></li><li><span>Over rocky ground</span><strong>30</strong></li><li><span>A week old, after rain</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Finding your way</td><td>Memory, Intuition</td><td><ul class="sf-check-targets"><li><span>A city you know</span><strong>5</strong></li><li><span>A city you’ve visited</span><strong>15</strong></li><li><span>Unfamiliar wilderness</span><strong>25</strong></li><li><span>An alien plane</span><strong>40</strong></li></ul></td></tr>
+								<tr><td>Repairing machinery</td><td>Logic, Grace</td><td><ul class="sf-check-targets"><li><span>Replacing a fuse</span><strong>5</strong></li><li><span>A radio, from spare parts</span><strong>25</strong></li><li><span>A damaged engine</span><strong>35</strong></li><li><span>A switch gate, in the field</span><strong>55</strong></li></ul></td></tr>
+								<tr><td>Breaking a code</td><td>Logic</td><td><ul class="sf-check-targets"><li><span>A simple cipher</span><strong>15</strong></li><li><span>A military cipher</span><strong>35</strong></li><li><span>An alien script</span><strong>60</strong></li></ul></td></tr>
+								<tr><td>Hacking</td><td>Logic</td><td><ul class="sf-check-targets"><li><span>A home network</span><strong>15</strong></li><li><span>A corporate system</span><strong>30</strong></li><li><span>A military network</span><strong>45</strong></li></ul></td></tr>
+								<tr><td>Diagnosing an illness</td><td>Logic, Memory</td><td><ul class="sf-check-targets"><li><span>A common cold</span><strong>5</strong></li><li><span>A common illness</span><strong>20</strong></li><li><span>A rare disease</span><strong>35</strong></li><li><span>A parabiological affliction</span><strong>50</strong></li></ul></td></tr>
+								<tr><td>Piloting</td><td>Grace, Intuition</td><td><ul class="sf-check-targets"><li><span>Calm conditions</span><strong>0</strong></li><li><span>Bad weather</span><strong>15</strong></li><li><span>A tight landing</span><strong>25</strong></li><li><span>A debris field</span><strong>40</strong></li><li><span>An asteroid field at speed</span><strong>55</strong></li></ul></td></tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
