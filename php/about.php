@@ -24,8 +24,8 @@
 			<div class="section-title d-inline-flex z-2 flex-11 align-items-center">
 				<div class="hero-statement title">
 					<h3 class="section-title">Hi, I'm <span class="emphasis red-text highlight-text">Ethan</span>. <img class="headshot d-inline-block d-sm-none" loading="lazy" data-src="img/headshot_crop.webp" alt="Portrait of Ethan Welner"></h3>
-					<h3 class="section-title">I've been <span class="yellow-text non-title">designing</span> for 20 years</h3>
-					<h3 class="section-title">And <span class="blue-text">{ coding }</span> for 14.</h3>
+					<h3 class="section-title">I've been <span class="yellow-text non-title">designing</span> for 15 years</h3>
+					<h3 class="section-title">And <span class="blue-text">{ coding }</span> for 12.</h3>
 					<h3 class="sub-title non-title">I'm currently doing it in Philly.</h3>
 					<a href="img/ewelner_Resume_2026.pdf?v=2026-11-20" target="_blank" rel="noopener noreferrer" class="copy-title non-title red-text mt-2 mt-sm-4 d-inline-flex align-items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="64.248" viewBox="0 0 48 64.248" class="mr-3 resume-svg">
