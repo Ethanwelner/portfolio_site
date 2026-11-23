@@ -11,6 +11,7 @@
 					<p class="copy mb-3"><i>11/23/2026</i></p>
 					<ul class="copy changelog-list mb-0">
 						<li>The Stars: the Stations tab now lists Antiluna Colony (formerly Antiliuna), Aksum, Luna Orbita, Stellar Metals Station, 天堂之门 (Gate to Heaven) Station and New Canaan, each with its nationality and orbit where known.</li>
+						<li>The Stars: Large Ships’ notable ships now include the administration craft <i>The Pluto</i> (10/20 Holding Corporation) and <i>Immaculate Sunrise</i> (Plum Technologies).</li>
 					</ul>
 				</article>
 				<article class="blog-post">

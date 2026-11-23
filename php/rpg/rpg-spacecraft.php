@@ -148,7 +148,7 @@
 										</div>
 										<div>
 											<dt>Notable Ships</dt>
-											<dd><i>Babylon’s Arrow</i></dd>
+											<dd><i>Babylon’s Arrow</i>, <i>The Pluto</i>, <i>Immaculate Sunrise</i></dd>
 										</div>
 									</dl>
 								</div>

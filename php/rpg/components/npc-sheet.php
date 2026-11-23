@@ -45,10 +45,14 @@
 //
 // Options, as with the cards:
 //
-//   fold     'closed': the Items and Traits start closed to their
-//            name's bar, each opening from its chevron, for a page that
-//            lists many NPCs; 'open' starts them open but folding. Without
-//            it they're always open, for a page with one.
+//   fold     'closed', the default: the Items and Traits start closed to
+//            their name's bar, each opening from its chevron; 'open' starts
+//            them open but folding; '' keeps them always open, with no
+//            chevrons.
+//   layout   'wide': for a sheet given a full-width row, its Items and
+//            Traits in a second column beside the name, description and
+//            Stats (one column again below 720px). Without it, everything
+//            stacks, for a half-width column (.sf-npc-grid).
 //   heading  the name's heading level, 'h5' by default, so the sheet fits
 //            the page's outline
 //   background  what's drawn in the field behind the content, like the
@@ -244,7 +248,7 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 	// The sheet the NPC sheet and the monster sheet (components/
 	// monster-sheet.php) share, with the one's class: 'npc' or 'monster'
 	function sf_npc_sheet_draw( $npc, $options, $variant ) {
-		$fold    = $options['fold'] ?? '';
+		$fold    = $options['fold'] ?? 'closed';
 		$heading = in_array( $options['heading'] ?? 'h5', array( 'h2', 'h3', 'h4', 'h5', 'h6' ), true ) ? ( $options['heading'] ?? 'h5' ) : 'h5';
 		$names   = array( 'hp' => 'Hit Points', 'vp' => 'Vibe Points', 'sp' => 'Savvy Points', 'mp' => 'Mana Points' );
 		$groups  = array( 'physical' => 'Physical', 'social' => 'Social', 'mental' => 'Mental' );
@@ -256,7 +260,8 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// A boss: the tough one within its threat band, marked by a flaming
 		// skull on the filigree (its tier doesn't change)
 		$boss   = 'monster' === $variant && ! empty( $npc['boss'] );
-		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . ( $storm ? ' sf-npc--bg-storm' : '' ) . ( $boss ? ' sf-npc--boss' : '' ) . '">';
+		$wide   = 'wide' === ( $options['layout'] ?? '' );
+		echo '<div class="sf-npc sf-npc--' . ( 'monster' === $variant ? 'monster' : 'npc' ) . ( $storm ? ' sf-npc--bg-storm' : '' ) . ( $boss ? ' sf-npc--boss' : '' ) . ( $wide ? ' sf-npc--wide' : '' ) . '">';
 		// In the field behind everything (css/sf-npc-sheet.css), bottom up:
 		// the storm's night, the monster sheet's gold noise in its corners
 		// (.sf-npc-dust), the storm's clouds and lightning, then the monster
@@ -296,6 +301,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		// row's box (whose mask would clip it), so the name starts flush
 		// with the content's left edge
 		echo $badge;
+		// Wide, the name, description and Stats are the first column
+		if ( $wide ) {
+			echo '<div class="sf-npc-cols"><div class="sf-npc-col">';
+		}
 		echo '<div class="sf-npc-box sf-npc-head"><div class="sf-npc-who">';
 		echo '<div>';
 		echo '<' . $heading . ' class="sf-npc-name">' . sf_npc_e( $npc['name'] ) . '</' . $heading . '>';
@@ -372,6 +381,10 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 
 		// Its Attacks and any other Items together as item cards, then the
 		// Traits as trait cards
+		// (wide, in the second column)
+		if ( $wide ) {
+			echo '</div><div class="sf-npc-col">';
+		}
 		$with_fold = function ( $card ) use ( $fold ) {
 			return '' === $fold ? $card : $card + array( 'fold' => $fold );
 		};
@@ -381,6 +394,9 @@ if ( ! function_exists( 'sf_npc_sheet' ) ) {
 		sf_npc_cards( 'Traits', $npc['traits'] ?? array(), function ( $t ) use ( $with_fold ) {
 			sf_card_trait( $with_fold( $t ) );
 		}, 'sf-sheet-scroll', true );
+		if ( $wide ) {
+			echo '</div></div>';
+		}
 
 		echo '</div>';
 	}

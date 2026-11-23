@@ -402,8 +402,8 @@ $sf_used_in = array(
 		'Not on a page yet: only this page’s made-up Hedge Witch',
 	),
 	'monster'    => array(
-		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry',
-		'php/rpg/encounters.php: the Another World encounters, in the Adventures section’s Monsters tab (closed)',
+		'php/rpg/lore/murk-legs.php: Murk Legs, in its lore entry (its sheet: php/rpg/murk-legs-sheet.php)',
+		'php/rpg/encounters.php: the Another World encounters, in the Adventures section’s Monsters tab',
 	),
 	'sheet'      => array(
 		'php/rpg/rpg-character.php: the sample sheet (sample)',
@@ -591,8 +591,8 @@ $sf_list = function ( $items ) {
 			.sf-library-kinds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 400px)); align-items: start; gap: 24px; }
 			.sf-library-backgrounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); align-items: start; gap: 16px; }
 			/* The section nav: Strange Frontiers' subpage nav (css/rpg.css's .rpg-links), fixed at the top left in a gutter the page keeps clear for it; on narrow screens it's hidden */
-			.sf-library-nav.rpg-links { position: fixed; top: 48px; left: 32px; z-index: 10; }
-			@media (min-width: 1200px) { body:has(.sf-library-nav) { padding-left: 176px; } }
+			.sf-library-nav.rpg-links { position: fixed; top: 48px; left: 24px; z-index: 10; }
+			@media (min-width: 1200px) { body:has(.sf-library-nav) { padding-left: 78px; } }
 			@media (max-width: 1199px) { .sf-library-nav.rpg-links { display: none; } }
 			html { scroll-padding-top: 24px; }
 		</style>
@@ -612,7 +612,7 @@ $sf_list = function ( $items ) {
 			<a href="#lib-sheet-layout"><badge class="badge">Sheet</badge></a>
 			<a href="#lib-popup"><badge class="badge">Popup</badge></a>
 			<a href="#lib-npc-sheet"><badge class="badge">NPC Sheet</badge></a>
-			<a href="#lib-monster-sheet"><badge class="badge">Monster Sheet</badge></a>
+			<a href="#lib-monster-sheet"><badge class="badge">Foe Sheet</badge></a>
 		</nav>
 		<div class="sf-library-band">
 			<div class="container">
@@ -884,7 +884,7 @@ options: tone (light: the white panel, a dark X; dark: the creator's gray, a lig
 				<div class="line-container"><h5><strong>NPC Sheet</strong></h5><div class="line"></div></div>
 				<pre class="sf-library-api">sf_npc_sheet( array( 'name' =&gt; 'Hedge Witch', 'kind' =&gt; 'NPC, Dreft', 'description' =&gt; …, 'move' =&gt; '10 m', 'stats' =&gt; array( 'Physical' =&gt; 1, 'Endurance' =&gt; 2, …, 'Magic' =&gt; 2 ), 'attacks' =&gt; array( … ), 'traits' =&gt; array( … ), 'items' =&gt; array( … ) ), array( 'fold' =&gt; 'closed' ) );
 For NPCs, the people the party meets. HP, VP, SP and MP follow the creator's rules (HP 10 + Physical focus Stats, VP Social, SP Mental, MP 3 per Magic); 'resources' sets any over them. Magic, description, attacks, traits and items are optional: what's left out isn't drawn; the description box says Content coming soon until it's set.
-options: fold ('closed' or 'open': the cards fold, for a page with many), heading (the name's level, h5 by default)</pre>
+options: fold ('closed', the default: the cards start folded; 'open': open but folding; '': always open), heading (the name's level, h5 by default), layout ('wide': Items and Traits in a second column, for a full-width row)</pre>
 				<p class="sf-library-label">Used in</p>
 				<?php $sf_list( $sf_used_in['npc'] ); ?>
 				<div class="sf-library-stage is-dark">
@@ -940,10 +940,12 @@ For monsters and enemies, anything the party fights; their Traits come from php/
 					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ) ); ?></div><div><?php sf_monster_sheet( array( 'name' => 'Blank Monster' ), array( 'background' => 'none' ) ); ?></div></div>
 					<p class="sf-library-label" style="margin-top: 32px">A blank boss, 'boss' =&gt; true, its skull in flames</p>
 					<div class="sf-npc-grid sf-library-blank-sheet"><div><?php sf_monster_sheet( array( 'name' => 'Blank Boss', 'boss' => true ) ); ?></div></div>
-					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, cards open, as in its lore entry</p>
-					<div class="sf-npc-grid"><div><?php include 'php/rpg/lore/murk-legs.php'; ?></div></div>
-					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters, cards open (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
-					<div class="sf-npc-grid"><?php $sf_encounters_fold = 'open'; include 'php/rpg/encounters.php'; ?></div>
+					<p class="sf-library-label" style="margin-top: 32px">Murk Legs, as in its lore entry</p>
+					<?php include 'php/rpg/lore/murk-legs.php'; // it brings its own .sf-npc-grid ?>
+					<p class="sf-library-label" style="margin-top: 32px">Murk Legs on a full-width row, 'layout' =&gt; 'wide': Items and Traits in a second column beside the name, description and Stats</p>
+					<?php sf_monster_sheet( sf_murk_legs(), array( 'layout' => 'wide' ) ); ?>
+					<p class="sf-library-label" style="margin-top: 32px">The Another World encounters (php/rpg/encounters.php, the same sheets as the Monsters tab)</p>
+					<div class="sf-npc-grid"><?php include 'php/rpg/encounters.php'; ?></div>
 				</div>
 			</div>
 		</div>

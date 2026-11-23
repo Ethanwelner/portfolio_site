@@ -9,9 +9,6 @@
 require_once __DIR__ . '/components/monster-sheet.php';
 require_once __DIR__ . '/components/monster-traits.php';
 
-// The component library (rpg-components.php) shows these same sheets open;
-// the Monsters tab, which lists several, starts them closed.
-$sf_encounters_fold = $sf_encounters_fold ?? 'closed';
 
 $sf_wield = function ( $weapon, $rank ) {
 	return array(
@@ -64,8 +61,7 @@ sf_monster_sheet(
 				'resistances' => '2 Blunt, 1 Slashing, 2 Cold',
 			),
 		),
-	),
-	array( 'fold' => $sf_encounters_fold )
+	)
 );
 
 sf_monster_sheet(
@@ -105,8 +101,7 @@ sf_monster_sheet(
 				'effect' => 'This character doesn’t breathe, eat, sleep or bleed. It is immune to the Asleep, Charmed and Frightened Conditions and to Psychic damage.',
 			),
 		),
-	),
-	array( 'fold' => $sf_encounters_fold )
+	)
 );
 
 sf_monster_sheet(
@@ -147,8 +142,7 @@ sf_monster_sheet(
 			sf_monster_trait( 'Natural Armor', 1 ),
 			sf_monster_trait( 'Honed Instincts', 1 ),
 		),
-	),
-	array( 'fold' => $sf_encounters_fold )
+	)
 );
 
 sf_monster_sheet(
@@ -192,8 +186,7 @@ sf_monster_sheet(
 			sf_monster_trait( 'Natural Armor', 3 ),
 			sf_monster_trait( 'Honed Instincts', 1 ),
 		),
-	),
-	array( 'fold' => $sf_encounters_fold )
+	)
 );
 
 sf_monster_sheet(
@@ -267,6 +260,5 @@ sf_monster_sheet(
 				'effect' => 'This character has knowledge of the criminal underworld of Isekai and can be assumed to be familiar with its groups and places.',
 			),
 		),
-	),
-	array( 'fold' => $sf_encounters_fold )
+	)
 );
